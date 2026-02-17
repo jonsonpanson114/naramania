@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>奈良県入札情報アグリゲーター - Beige Luxury (JP)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Zen+Old+Mincho:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3a3a3a', // Charcoal
+                        secondary: '#5c5c5c',
+                        accent: '#c5a059', // Muted Gold
+                        'accent-light': '#e8dcc2',
+                        surface: '#ffffff',
+                        background: '#fdfbf7', // Warm Cream
+                        sidebar: '#f7f4ef',   // Beige
+                        border: '#e6e2d8',
+                    },
+                    fontFamily: {
+                        sans: ['"Shippori Mincho"', 'serif'], // Global serif for elegance
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 20px rgba(197, 160, 89, 0.08)',
+                        'card': '0 2px 10px rgba(0, 0, 0, 0.03)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #fdfbf7;
+            color: #3a3a3a;
+            font-family: 'Shippori Mincho', serif;
+        }
+
+        .sidebar-link {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 1px;
+            background-color: #c5a059;
+            transition: width 0.3s ease;
+        }
+
+        .sidebar-link.active {
+            color: #c5a059;
+            font-weight: 600;
+        }
+
+        .sidebar-link.active::after {
+            width: 80%;
+            /* Slightly wider for JP text */
+        }
+
+        .gold-border-bottom {
+            background: linear-gradient(to right, transparent, #c5a059, transparent);
+            height: 1px;
+            opacity: 0.3;
+        }
+    </style>
+</head>
+
+<body class="flex">
+
+    <!-- Sidebar -->
+    <aside class="w-64 bg-sidebar h-screen flex flex-col fixed left-0 top-0 z-20 border-r border-border">
+        <div class="p-10 flex flex-col items-center gap-4 mb-2">
+            <div class="w-14 h-14 flex items-center justify-center border border-accent/30 rotate-45">
+                <div class="w-12 h-12 border border-accent/30 flex items-center justify-center -rotate-45">
+                    <span class="text-2xl font-serif text-accent">N</span>
+                </div>
+            </div>
+            <div class="text-center">
+                <h1 class="font-serif text-lg tracking-widest text-primary">奈良入札情報</h1>
+            </div>
+        </div>
+
+        <div class="gold-border-bottom w-1/2 mx-auto mb-8"></div>
+
+        <nav class="flex-1 px-8 space-y-6 text-center">
+            <div class="sidebar-link active text-sm tracking-widest cursor-pointer py-2">
+                ダッシュボード
+            </div>
+            <div
+                class="sidebar-link text-secondary hover:text-accent transition text-sm tracking-widest cursor-pointer py-2">
+                案件検索
+            </div>
+            <div
+                class="sidebar-link text-secondary hover:text-accent transition text-sm tracking-widest cursor-pointer py-2">
+                保存済み
+            </div>
+            <div
+                class="sidebar-link text-secondary hover:text-accent transition text-sm tracking-widest cursor-pointer py-2">
+                設定
+            </div>
+        </nav>
+
+        <div class="p-8 text-center">
+            <div class="inline-block relative">
+                <img src="https://ui-avatars.com/api/?name=User&background=c5a059&color=fff" alt="User"
+                    class="w-10 h-10 rounded-full mx-auto mb-2 opacity-90">
+                <div class="w-full h-full absolute top-0 left-0 rounded-full border border-accent/20 scale-125"></div>
+            </div>
+            <p class="text-xs font-serif text-primary mt-3 tracking-widest">山田 太郎</p>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 ml-64 p-16">
+
+        <!-- Header -->
+        <header class="flex justify-between items-end mb-16">
+            <div>
+                <p class="text-xs text-accent tracking-widest mb-3 font-semibold">2026年 2月 17日</p>
+                <h2 class="text-3xl font-light text-primary tracking-widest">案件一覧</h2>
+            </div>
+            <div class="flex items-center gap-8">
+                <div class="relative group">
+                    <input type="text" placeholder="キーワード検索..."
+                        class="bg-transparent border-b border-border py-2 pl-0 pr-8 focus:outline-none focus:border-accent w-56 text-sm transition text-primary placeholder-gray-400">
+                    <span
+                        class="absolute right-0 top-2 text-gray-400 text-xs text-secondary group-hover:text-accent transition">検索</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Stats Cards (Minimalist) -->
+        <div class="grid grid-cols-3 gap-10 mb-20">
+            <!-- Card 1 -->
+            <div
+                class="bg-white p-8 relative shadow-soft border border-white hover:border-accent/10 transition duration-500">
+                <p class="text-secondary text-xs tracking-widest mb-4">新着案件</p>
+                <div class="flex items-end gap-3">
+                    <h3 class="text-5xl font-serif text-primary font-normal">12</h3>
+                    <span class="text-xs text-accent mb-2 tracking-widest">件</span>
+                </div>
+                <p class="text-[10px] text-gray-400 mt-4 tracking-widest">本日更新</p>
+            </div>
+            <!-- Card 2 -->
+            <div
+                class="bg-white p-8 relative shadow-soft border border-white hover:border-accent/10 transition duration-500">
+                <p class="text-secondary text-xs tracking-widest mb-4">期限間近</p>
+                <div class="flex items-end gap-3">
+                    <h3 class="text-5xl font-serif text-primary font-normal">5</h3>
+                    <span class="text-xs text-accent mb-2 tracking-widest">件</span>
+                </div>
+                <p class="text-[10px] text-gray-400 mt-4 tracking-widest">今週締切</p>
+            </div>
+            <!-- Card 3 -->
+            <div
+                class="bg-white p-8 relative shadow-soft border border-white hover:border-accent/10 transition duration-500">
+                <p class="text-secondary text-xs tracking-widest mb-4">全案件数</p>
+                <div class="flex items-end gap-3">
+                    <h3 class="text-5xl font-serif text-primary font-normal">384</h3>
+                    <span class="text-xs text-accent mb-2 tracking-widest">件</span>
+                </div>
+                <p class="text-[10px] text-gray-400 mt-4 tracking-widest">全自治体合計</p>
+            </div>
+        </div>
+
+        <!-- Filter Menu -->
+        <div class="flex justify-center mb-12">
+            <div class="flex items-center gap-12 border-b border-border pb-6 px-12">
+                <button class="text-primary text-xs tracking-widest relative font-semibold">
+                    すべて
+                    <span
+                        class="absolute -bottom-[25px] left-1/2 -translate-x-1/2 w-1 h-1 bg-accent rounded-full"></span>
+                </button>
+                <button class="text-gray-400 hover:text-primary transition text-xs tracking-widest">測量・コンサル</button>
+                <button class="text-gray-400 hover:text-primary transition text-xs tracking-widest">業務委託</button>
+                <button class="text-gray-400 hover:text-primary transition text-xs tracking-widest">建築</button>
+                <!-- Removed Civil Engineering (土木) and Goods (物品) as requested -->
+            </div>
+        </div>
+
+        <!-- Table -->
+        <div class="bg-white shadow-card p-4">
+            <table class="w-full text-left border-collapse">
+                <thead>
+                    <tr class="text-gray-400 text-xs tracking-widest border-b border-border">
+                        <th class="p-6 font-normal w-24">状態</th>
+                        <th class="p-6 font-normal w-32">地域</th>
+                        <th class="p-6 font-normal">案件名</th>
+                        <th class="p-6 font-normal w-32">種別</th>
+                        <th class="p-6 font-normal w-32">公告日</th>
+                        <th class="p-6 font-normal w-32">期限</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Item 1 -->
+                    <tr
+                        class="hover:bg-sidebar transition duration-500 group cursor-pointer border-b border-dashed border-border">
+                        <td class="p-6">
+                            <span
+                                class="text-[10px] tracking-widest text-secondary border border-border px-2 py-1">受付中</span>
+                        </td>
+                        <td class="p-6 text-sm text-secondary">奈良県</td>
+                        <td class="p-6">
+                            <p
+                                class="text-base text-primary tracking-wider group-hover:text-accent transition duration-300">
+                                県立医科大学附属病院空調設備改修工事</p>
+                        </td>
+                        <td class="p-6 text-xs text-gray-400 tracking-widest">建築</td>
+                        <td class="p-6 text-xs text-gray-400">2月16日</td>
+                        <td class="p-6 text-sm text-primary">3月05日</td>
+                    </tr>
+                    <!-- Item 2 -->
+                    <tr
+                        class="hover:bg-sidebar transition duration-500 group cursor-pointer border-b border-dashed border-border">
+                        <td class="p-6">
+                            <span
+                                class="text-[10px] tracking-widest text-accent border border-accent/30 px-2 py-1 bg-accent/5">締切間近</span>
+                        </td>
+                        <td class="p-6 text-sm text-secondary">奈良市</td>
+                        <td class="p-6">
+                            <p
+                                class="text-base text-primary tracking-wider group-hover:text-accent transition duration-300">
+                                令和７年度　学校給食調理業務委託（北部エリア）</p>
+                        </td>
+                        <td class="p-6 text-xs text-gray-400 tracking-widest">業務委託</td>
+                        <td class="p-6 text-xs text-gray-400">2月10日</td>
+                        <td class="p-6 text-sm text-primary">2月19日</td>
+                    </tr>
+                    <!-- Item 3 -->
+                    <tr
+                        class="hover:bg-sidebar transition duration-500 group cursor-pointer border-b border-dashed border-border opacity-60">
+                        <td class="p-6">
+                            <span
+                                class="text-[10px] tracking-widest text-gray-300 border border-gray-200 px-2 py-1">受付終了</span>
+                        </td>
+                        <td class="p-6 text-sm text-secondary">生駒市</td>
+                        <td class="p-6">
+                            <p
+                                class="text-base text-secondary tracking-wider group-hover:text-accent transition duration-300">
+                                生駒市消防署高山出張所建設工事に伴う設計業務委託</p>
+                        </td>
+                        <td class="p-6 text-xs text-gray-400 tracking-widest">コンサル</td>
+                        <td class="p-6 text-xs text-gray-400">2月01日</td>
+                        <td class="p-6 text-sm text-secondary">2月15日</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </main>
+</body>
+
+</html>

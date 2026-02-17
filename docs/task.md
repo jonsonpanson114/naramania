@@ -1,0 +1,21 @@
+- [ ] Project Initialization and Planning
+  - [x] Create implementation plan <!-- id: 0 -->
+  - [x] Generate design mockups <!-- id: 13 -->
+  - [x] Refine design (Elegant/Professional) <!-- id: 14 -->
+  - [x] Refine design (Gorgeous/Premium) <!-- id: 15 -->
+  - [x] Refine design (Light Beige Luxury) <!-- id: 16 -->
+  - [ ] Set up Next.js project structure <!-- id: 1 -->
+- [ ] Backend & Scraper Development
+  - [ ] Design data schema (Supabase/PostgreSQL or local JSON for prototype) <!-- id: 2 -->
+  - [ ] Implement Nara Prefecture scraper <!-- id: 3 -->
+  - [ ] Implement Nara City scraper <!-- id: 4 -->
+  - [ ] Implement Kashihara City scraper <!-- id: 5 -->
+  - [ ] Implement Ikoma City scraper <!-- id: 6 -->
+  - [ ] Integrate PDF parsing logic (Gemini/pdfplumber) <!-- id: 7 -->
+- [ ] Frontend Development
+  - [ ] Build main dashboard (Aggregated list) <!-- id: 8 -->
+  - [ ] Implement search and filter functionality <!-- id: 9 -->
+  - [ ] Create individual detail views <!-- id: 10 -->
+- [ ] Automation & Deployment
+  - [ ] Set up scheduled scraping jobs <!-- id: 11 -->
+  - [ ] Deploy to Vercel/Netlify <!-- id: 12 -->
