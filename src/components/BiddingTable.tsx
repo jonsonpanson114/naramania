@@ -8,7 +8,7 @@ interface BiddingTableProps {
     items: BiddingItem[];
 }
 
-type FilterType = 'すべて' | '測量・コンサル' | '業務委託' | '建築';
+type FilterType = 'すべて' | '落札' | '締切間近' | '測量・コンサル' | '業務委託' | '建築';
 
 export function BiddingTable({ items }: BiddingTableProps) {
     const [activeFilter, setActiveFilter] = useState<FilterType>('すべて');
@@ -16,11 +16,24 @@ export function BiddingTable({ items }: BiddingTableProps) {
     // Filter logic
     const filteredItems = items.filter(item => {
         if (activeFilter === 'すべて') return true;
-        if (activeFilter === '測量・コンサル') return item.type === 'コンサル'; // Mapping UI term to Type
+        if (activeFilter === '落札') return item.status === '落札';
+        if (activeFilter === '締切間近') return item.status === '締切間近';
+        if (activeFilter === '測量・コンサル') return item.type === 'コンサル';
         if (activeFilter === '業務委託') return item.type === '委託';
         if (activeFilter === '建築') return item.type === '建築' || item.type === '工事';
         return true;
     });
+
+    // Count per tab
+    const counts: Record<FilterType, number> = {
+        'すべて': items.length,
+        '落札': items.filter(i => i.status === '落札').length,
+        '締切間近': items.filter(i => i.status === '締切間近').length,
+        '測量・コンサル': items.filter(i => i.type === 'コンサル').length,
+        '業務委託': items.filter(i => i.type === '委託').length,
+        '建築': items.filter(i => i.type === '建築' || i.type === '工事').length,
+    };
+
 
     // Format date utility
     const formatDate = (dateStr: string) => {
@@ -32,21 +45,33 @@ export function BiddingTable({ items }: BiddingTableProps) {
 
     return (
         <div className="space-y-8">
-            {/* Filter Menu */}
             <div className="flex justify-center">
-                <div className="flex items-center gap-12 border-b border-border/40 pb-6 px-12">
-                    {(['すべて', '測量・コンサル', '業務委託', '建築'] as FilterType[]).map((filter) => (
+                <div className="flex items-center gap-10 border-b border-border/40 pb-6 px-12">
+                    {(['すべて', '落札', '締切間近', '測量・コンサル', '業務委託', '建築'] as FilterType[]).map((filter) => (
                         <button
                             key={filter}
                             onClick={() => setActiveFilter(filter)}
-                            className={`text-[10px] tracking-[0.4em] relative font-bold font-serif transition-all duration-300 uppercase ${activeFilter === filter ? 'text-primary' : 'text-gray-400 hover:text-primary'
+                            className={`text-[10px] tracking-[0.3em] relative font-bold font-serif transition-all duration-300 uppercase flex items-center gap-1.5 ${activeFilter === filter
+                                    ? filter === '落札' ? 'text-green-600'
+                                        : filter === '締切間近' ? 'text-amber-600'
+                                            : 'text-primary'
+                                    : 'text-gray-400 hover:text-primary'
                                 }`}
                         >
                             {filter}
+                            <span className={`text-[9px] px-1.5 py-0.5 rounded-full font-sans ${activeFilter === filter
+                                    ? filter === '落札' ? 'bg-green-100 text-green-700'
+                                        : filter === '締切間近' ? 'bg-amber-100 text-amber-700'
+                                            : 'bg-primary/10 text-primary'
+                                    : 'bg-gray-100 text-gray-400'
+                                }`}>
+                                {counts[filter]}
+                            </span>
                             {activeFilter === filter && (
                                 <motion.span
                                     layoutId="activeFilterDot"
-                                    className="absolute -bottom-[25px] left-1/2 -translate-x-1/2 w-1.5 h-1.5 bg-accent rounded-full shadow-[0_0_10px_rgba(var(--accent-rgb),0.5)]"
+                                    className={`absolute -bottom-[25px] left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full ${filter === '落札' ? 'bg-green-500' : filter === '締切間近' ? 'bg-amber-500' : 'bg-accent'
+                                        } shadow-[0_0_10px_rgba(var(--accent-rgb),0.5)]`}
                                     transition={{ type: "spring", stiffness: 300, damping: 30 }}
                                 ></motion.span>
                             )}
@@ -54,6 +79,7 @@ export function BiddingTable({ items }: BiddingTableProps) {
                     ))}
                 </div>
             </div>
+
 
             {/* Table Container */}
             <motion.div
