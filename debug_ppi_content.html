@@ -1,0 +1,2426 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html lang="ja"><head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>入札情報サービス</title>
+<link rel="StyleSheet" type="text/css" href="./css/menu_common.css">
+<link rel="StyleSheet" type="text/css" href="./css/common.css">
+<script type="text/javascript" src="./js/common.js" charset="UTF-8"></script>
+<script type="text/javascript" src="./js/jquery/jquery-1.10.2.js" charset="UTF-8"></script>
+
+
+
+
+<script type="text/javascript">
+
+function init() {
+
+}
+
+	//	ADD 加古川-2019-17_公開情報制限機能 START 2020.06.01
+	function doLogin()
+	{
+		document.location.href = 'PPUBC00110';
+	}
+
+	function doLogoff()
+	{
+		document.forms["PPUBC00100"].action = "./PPUBC00100!logoff";
+		document.forms["PPUBC00100"].submit();
+	}
+
+	window.onbeforeunload = function()
+	{
+		if ((event.clientY < 0) || event.altKey)
+		{
+			document.forms["PPUBC00100"].action = "./PPUBC00100!logoff";
+			document.forms["PPUBC00100"].submit();
+		}
+	}
+	//	ADD 加古川-2019-17_公開情報制限機能 END 2020.06.01
+
+	// ADD 田原本町-2020-06 お知らせ添付機能追加 START 2020.11.30
+//	function download1() {
+//		document.forms[0].action="./PPUBC00100!download1";
+//		document.forms[0].submit();
+//	}
+	function download1(osiraseNo){
+		document.forms[0].action="PPUBC00100!download1?osiraseNo=" + osiraseNo;
+		document.forms[0].submit();
+	}
+	function download2(osiraseNo) {
+		document.forms[0].action="PPUBC00100!download2?osiraseNo=" + osiraseNo;
+		document.forms[0].submit();
+	}
+	function download3(osiraseNo) {
+		document.forms[0].action="PPUBC00100!download3?osiraseNo=" + osiraseNo;
+		document.forms[0].submit();
+	}
+	// ADD 田原本町-2020-06 お知らせ添付機能追加 END 2020.11.30
+</script>
+
+</head>
+
+<body onload="init();" style="">
+
+<form id="PPUBC00100" name="PPUBC00100" action="./PPUBC00100" method="POST">
+
+	<input type="hidden" name="osiraseNo" value="" id="PPUBC00100_osiraseNo">
+
+	<div id="screen">
+
+		
+		
+
+
+
+
+
+		<!-- START MENU -->
+		<div id="navigation">
+		
+			
+			
+			
+
+
+
+			<a style="position: absolute; left: 0px; top: 0px" href="https://www.city.nara.lg.jp/"><img src="./image/logo_0001.png" alt="○○市"></a>
+
+			
+
+
+			
+		
+			<br>
+			<br>
+			<br>
+
+			<div id="" class="menu PPUBC0010000" onmouseover="this.className='menu-on'" onmouseout="resumemenuclass(this)" onclick="location.href='PPUBC00100!link?screenId=PPUBC00100&amp;chotatsu_kbn=00';">メインメニュー</div>
+			<div class="menu" onclick="menuonclickfolding(00)">建設工事</div>
+			<div id="menu-group-1" style="width: 150px; margin: 0px; padding: 0px; display: none;">
+				<div class="submenu PPUBC0020000 PPUBC0030000" onmouseover="changeMenuClass(this)" onclick="location.href='PPUBC00100!link?screenId=PPUBC00200&amp;chotatsu_kbn=00';" onmouseout="resumemenuclass(this)" style="font-size: 80%">発注見通し</div>
+				<div class="submenu PPUBC0040000 PPUBC0050000" onmouseover="changeMenuClass(this)" onclick="location.href='PPUBC00100!link?screenId=PPUBC00400&amp;chotatsu_kbn=00';" onmouseout="resumemenuclass(this)" style="font-size: 80%">入札公告情報</div>
+				<div class="submenu PPUBC0070000 PPUBC0080000" onmouseover="changeMenuClass(this)" onclick="location.href='PPUBC00100!link?screenId=PPUBC00700&amp;chotatsu_kbn=00';" onmouseout="resumemenuclass(this)" style="font-size: 80%">入札・契約結果</div>
+			</div>
+
+			<div class="menu" onclick="menuonclickfolding(01)">業務委託</div>
+			<div id="menu-group-2" style="width: 150px; margin: 0px; padding: 0px; display: none;">
+				<div class="submenu PPUBC0020001 PPUBC0030001" onmouseover="changeMenuClass(this)" onclick="location.href='PPUBC00100!link?screenId=PPUBC00200&amp;chotatsu_kbn=01';" onmouseout="resumemenuclass(this)" style="font-size: 80%">発注見通し</div>
+				<div class="submenu PPUBC0040001 PPUBC0050001" onmouseover="changeMenuClass(this)" onclick="location.href='PPUBC00100!link?screenId=PPUBC00400&amp;chotatsu_kbn=01';" onmouseout="resumemenuclass(this)" style="font-size: 80%">入札公告情報</div>
+				<div class="submenu PPUBC0070001 PPUBC0080001" onmouseover="changeMenuClass(this)" onclick="location.href='PPUBC00100!link?screenId=PPUBC00700&amp;chotatsu_kbn=01';" onmouseout="resumemenuclass(this)" style="font-size: 80%">入札・契約結果</div>
+			</div>
+
+
+			<div class="menu" onclick="menuonclickfolding(11)">物品</div>
+			<div id="menu-group-3" style="width: 150px; margin: 0px; padding: 0px; display: none;">
+				<div class="submenu PPUBC0021011 PPUBC0031011" onmouseover="changeMenuClass(this)" onclick="location.href='PPUBC00100!link?screenId=PPUBC00210&amp;chotatsu_kbn=11';" onmouseout="resumemenuclass(this)" style="font-size: 80%">発注見通し</div>
+				<div class="submenu PPUBC0041011 PPUBC0051011" onmouseover="changeMenuClass(this)" onclick="location.href='PPUBC00100!link?screenId=PPUBC00410&amp;chotatsu_kbn=11';" onmouseout="resumemenuclass(this)" style="font-size: 80%">入札公告情報</div>
+				<div class="submenu PPUBC0071011 PPUBC0081011" onmouseover="changeMenuClass(this)" onclick="location.href='PPUBC00100!link?screenId=PPUBC00710&amp;chotatsu_kbn=11';" onmouseout="resumemenuclass(this)" style="font-size: 80%">入札・契約結果</div>
+			</div>
+			
+
+
+			
+				<div class="menu" onclick="menuonclickfolding(20)">共通</div>
+				<div id="menu-group-4" style="width: 150px; margin: 0px; padding: 0px; display: none;">
+					<div class="submenu PPUBC0110011" onmouseover="changeMenuClass(this)" onclick="location.href='PPUBC00100!link?screenId=PPUBC01100&amp;chotatsu_kbn=20';" onmouseout="resumemenuclass(this)" style="font-size: 80%">様式ダウンロード</div>
+				</div>
+			
+
+
+			<br>
+			
+
+			
+			<div id="help-box">
+			    <div id="help-outer">
+			        <div id="help-inner">
+			■操作に関するお問い合わせ<br>
+			ヘルプデスク<br>
+			<table>
+				<tbody><tr>
+			
+				
+					<td style="white-space: nowrap;margin:0;padding:0">TEL：0570-00-4743</td>
+				</tr>
+				<tr>
+					<td style="white-space: nowrap;margin:0;padding:0">Mail :
+					
+						<a href="mailto:nara-help@efftis.jp">nara-help@efftis.jp</a></td>
+				</tr>
+				<tr>
+				
+				
+				
+				<td style="white-space: nowrap;margin:0;padding:0"> 受付時間 : 平日9時～17時<br></td>
+				
+				</tr>
+				<tr>
+					<td style="white-space: nowrap;margin:0;padding:0">　　 (12:00～13:00は除く)<br></td>
+				</tr>
+			</tbody></table>
+			
+			
+			<br>
+			■制度に関するお問い合わせ<br>
+			
+			
+			
+
+
+			奈良市役所 総務部<br>
+			契約課 契約係<br>
+			<table>
+				<tbody><tr>
+					<td style="white-space: nowrap;margin:0;padding:0">TEL ：0742-34-4743</td>
+				</tr>
+				<tr>
+					<td style="white-space: nowrap;margin:0;padding:0">FAX ：0742-35-4856</td>
+				</tr>
+			</tbody></table>
+
+
+			
+			
+			        </div>
+			    </div>
+			</div>
+		</div>
+<script type="text/javascript">
+var screenid = 'PPUBC00100';
+function setActiveScreen(){
+
+	if(screenid!='PPUBC0010000'){
+		$("."+screenid).addClass("submenu-on");
+	}else{
+		$("."+screenid).addClass("menu-on");
+	}
+}
+function changeMenuClass(obj){
+	if($(obj).hasClass("submenu")){
+		$(obj).addClass("submenu-on");
+		$(obj).removeClass("submenu");
+	}else{
+		$(obj).addClass("menu-on");
+		$(obj).removeClass("menu");
+	}
+}
+function resumemenuclass(obj){
+	if($(obj).hasClass("submenu-on")){
+		$(obj).removeClass("submenu-on");
+		$(obj).addClass("submenu");
+	}else{
+		$(obj).removeClass("menu-on");
+		$(obj).addClass("menu");
+	}
+	setActiveScreen();
+}
+
+
+function menufolding() {
+	var ChotatsuKbnid = '';
+	if(ChotatsuKbnid == '00'){
+		document.getElementById("menu-group-1").style.display = "block";
+	    document.getElementById("menu-group-2").style.display = "none";
+		document.getElementById("menu-group-3").style.display = "none";
+	
+		document.getElementById("menu-group-4").style.display = "none";
+	
+	}else if(ChotatsuKbnid == '01'){
+		document.getElementById("menu-group-1").style.display = "none";
+	    document.getElementById("menu-group-2").style.display = "block";
+		document.getElementById("menu-group-3").style.display = "none";
+	
+		document.getElementById("menu-group-4").style.display = "none";
+	
+	}else if(ChotatsuKbnid == '11'){
+		document.getElementById("menu-group-1").style.display = "none";
+	    document.getElementById("menu-group-2").style.display = "none";
+		document.getElementById("menu-group-3").style.display = "block";
+	
+		document.getElementById("menu-group-4").style.display = "none";
+	}else if(ChotatsuKbnid == '20'){
+		document.getElementById("menu-group-1").style.display = "none";
+	    document.getElementById("menu-group-2").style.display = "none";
+		document.getElementById("menu-group-3").style.display = "none";
+		document.getElementById("menu-group-4").style.display = "block";
+	
+	}else{
+		document.getElementById("menu-group-1").style.display = "none";
+	    document.getElementById("menu-group-2").style.display = "none";
+		document.getElementById("menu-group-3").style.display = "none";
+	
+		document.getElementById("menu-group-4").style.display = "none";
+	
+	}
+	if(screenid=='PPUBC0010000' || screenid=='PPUBC0010001' || screenid=='PPUBC0010011' || screenid=='PPUBC0010012'){
+		document.getElementById("menu-group-1").style.display = "none";
+	    document.getElementById("menu-group-2").style.display = "none";
+		document.getElementById("menu-group-3").style.display = "none";
+	
+		document.getElementById("menu-group-4").style.display = "none";
+	
+	}
+}
+
+function menuonclickfolding(kbnid) {
+	if(kbnid == '00'){
+		document.getElementById("menu-group-1").style.display = "block";
+	    document.getElementById("menu-group-2").style.display = "none";
+		document.getElementById("menu-group-3").style.display = "none";
+	
+		document.getElementById("menu-group-4").style.display = "none";
+	
+	}else if(kbnid == '01'){
+		document.getElementById("menu-group-1").style.display = "none";
+	    document.getElementById("menu-group-2").style.display = "block";
+		document.getElementById("menu-group-3").style.display = "none";
+	
+		document.getElementById("menu-group-4").style.display = "none";
+	
+	}else if(kbnid == '11'){
+		document.getElementById("menu-group-1").style.display = "none";
+	    document.getElementById("menu-group-2").style.display = "none";
+		document.getElementById("menu-group-3").style.display = "block";
+	
+		document.getElementById("menu-group-4").style.display = "none";
+	}else if(kbnid == '20'){
+		document.getElementById("menu-group-1").style.display = "none";
+	    document.getElementById("menu-group-2").style.display = "none";
+		document.getElementById("menu-group-3").style.display = "none";
+		document.getElementById("menu-group-4").style.display = "block";
+	
+	}else{
+		document.getElementById("menu-group-1").style.display = "none";
+	    document.getElementById("menu-group-2").style.display = "none";
+		document.getElementById("menu-group-3").style.display = "none";
+	
+		document.getElementById("menu-group-4").style.display = "none";
+	
+	}
+}
+
+
+setActiveScreen();
+
+menufolding();
+
+
+</script>
+		<!-- END MENU -->
+
+		<div id="body">
+
+			<div id="main">
+
+				
+				
+<!-- ADD 加古川-2019-17_公開情報制限機能 START 2020.06.01 -->
+
+<!-- ADD 加古川-2019-17_公開情報制限機能 END 2020.06.01 -->
+
+<table class="title_table">
+	<tbody><tr>
+		
+		<!-- <th class="title">入札情報サービス</th>-->
+		<th class="title_left"></th>
+		<th class="title_center">入札情報サービス</th>
+		<th class="title_right"></th>
+	</tr>
+	<!-- ADD 加古川-2019-17_公開情報制限機能 START 2020.06.01 -->
+	
+		
+		
+		
+	
+
+	
+	
+	
+	
+	<!-- ADD 加古川-2019-17_公開情報制限機能 END 2020.06.01 -->
+	<!-- UPD 加古川-2019-17_公開情報制限機能 START 2020.06.01 -->
+	
+	<!-- UPD 加古川-2019-99 障害No222対応 START 2020.06.01 -->
+	
+	
+</tbody></table>
+				<br>
+				
+				
+
+
+
+<span class="actionMessage">
+<div style="text-align:center"></div>
+</span>
+
+<span class="actionError">
+<div style="text-align:center"></div>
+</span>
+
+
+				<!-- ADD 加古川-2019-17_公開情報制限機能 START 2020.06.01 -->
+				
+				<!-- ADD 加古川-2019-17_公開情報制限機能 END 2020.06.01 -->
+
+				<table class="view-data" width="100%">
+					<tbody><tr>
+						<th class="view-data" style="font-size:115%" width="160" rowspan="3">建設工事</th>
+						<td class="view-data" width="32%" align="left" style="font-size: 16px;">
+							<a href="#" onclick="location.href='PPUBC00100!link?screenId=PPUBC00200&amp;chotatsu_kbn=00'">発注見通し</a>
+						</td>
+						<th class="view-data" style="font-size:115%" width="160" rowspan="3">業務委託</th>
+						<td class="view-data" width="32%" align="left" style="font-size: 16px;">
+							<a href="#" onclick="location.href='PPUBC00100!link?screenId=PPUBC00200&amp;chotatsu_kbn=01'">発注見通し</a>
+						</td>
+					</tr>
+					<tr>
+						<td class="view-data" align="left" style="font-size: 16px;">
+							<!-- UPD 加古川-2019-17_公開情報制限機能 START 2020.06.01 -->
+							<!-- <a href="#" onclick="location.href='PPUBC00100!link?screenId=PPUBC00400&chotatsu_kbn=00'">入札公告情報</a> -->
+							
+							
+							
+								<a href="#" onclick="location.href='PPUBC00100!link?screenId=PPUBC00400&amp;chotatsu_kbn=00'">入札公告情報</a>
+							
+							
+							<!-- UPD 加古川-2019-17_公開情報制限機能 END 2020.06.01 -->
+						</td>
+<!--  ADD 加古川-2019-32 物品対応 START 2020.03.12 -->
+						<td class="view-data" align="left" style="font-size: 16px;">
+							<!-- UPD 加古川-2019-17_公開情報制限機能 START 2020.06.01 -->
+							<!-- <a href="#" onclick="location.href='PPUBC00100!link?screenId=PPUBC00410&chotatsu_kbn=11'">入札公告情報</a> -->
+							
+							
+							
+							
+							
+								<a href="#" onclick="location.href='PPUBC00100!link?screenId=PPUBC00400&amp;chotatsu_kbn=01'">入札公告情報</a>
+							
+							
+							
+							<!-- UPD 加古川-2019-17_公開情報制限機能 END 2020.06.01 -->
+						</td>
+<!--  ADD 加古川-2019-32 物品対応 END 2020.03.12 -->
+					</tr>
+					<tr>
+						<td class="view-data" align="left" style="font-size: 16px;">
+							<a href="#" onclick="location.href='PPUBC00100!link?screenId=PPUBC00700&amp;chotatsu_kbn=00'">入札契約結果</a>
+						</td>
+						<td class="view-data" align="left" style="font-size: 16px;">
+							<a href="#" onclick="location.href='PPUBC00100!link?screenId=PPUBC00700&amp;chotatsu_kbn=01'">入札契約結果</a>
+						</td>
+					</tr>
+				</tbody></table>
+				<br>
+				<table class="view-data" width="100%">
+					<tbody><tr>
+						<th class="view-data" style="font-size:115%" width="160" rowspan="3">物品</th>
+						<td class="view-data" align="left" width="32%" style="font-size: 16px;">
+							<a href="#" onclick="location.href='PPUBC00100!link?screenId=PPUBC00210&amp;chotatsu_kbn=11'">発注見通し</a>
+						</td>
+						<th width="160" rowspan="3" style="padding: 5px 5px 5px 5px"></th>
+						<td width="32%" style="padding: 5px 5px 5px 5px">
+						</td>
+					</tr>
+					<tr>
+						<td class="view-data" align="left" style="font-size: 16px;">
+							<!-- UPD 加古川-2019-17_公開情報制限機能 START 2020.06.01 -->
+							<!-- <a href="#" onclick="location.href='PPUBC00100!link?screenId=PPUBC00400&chotatsu_kbn=01'">入札公告情報</a> -->
+							
+							
+							
+							
+							
+								<a href="#" onclick="location.href='PPUBC00100!link?screenId=PPUBC00410&amp;chotatsu_kbn=11'">入札公告情報</a>
+							
+							
+							
+							<!-- UPD 加古川-2019-17_公開情報制限機能 END 2020.06.01 -->
+						</td>
+					</tr>
+
+					<tr>
+						<td class="view-data" align="left" style="font-size: 16px;">
+							<a href="#" onclick="location.href='PPUBC00100!link?screenId=PPUBC00710&amp;chotatsu_kbn=11'">入札契約結果</a>
+						</td>
+					</tr>
+					
+					
+					
+				</tbody></table>
+				<br>
+				
+				
+				<head2><b>お知らせ</b></head2>
+				
+				
+				<table class="view-data" width="100%">
+					<thead>
+						<tr class="view-data">
+						
+						
+							<th class="view-data" width="150" align="center" nowrap="">公開日</th>
+						
+							<th class="view-data" align="center" nowrap="">お知らせ内容</th>
+		  				<!-- UPD 加古川-2019 課題No41対応 START 2020.06.01 START 2020.06.01 -->
+<!--
+							<th class="view-data" width="150" align="center" nowrap>所属</th>
+ -->
+							<th class="view-data" width="160" align="center" nowrap="">所属</th>
+		  				<!-- UPD 加古川-2019 課題No41対応 END 2020.06.01 START 2020.06.01 -->
+						</tr>
+					</thead>
+					<tbody>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和7年10月24日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+										<b><font color="#FF0000">【重要】</font></b>
+									
+									<b>建設工事等に係る制限付一般競争入札及び指名競争入札に参加の事業者様へ<br><br>　先日から事後審査型の入札を実施しており、制限付一般競争入札では「事後審査通知書」を落札候補者の皆様に、指名競争入札では「保留通知書」を参加者の皆様にお送りしております。これらの書類の到着に際し、参加事業者様で行っていただくことはございません。<br><br>　また、制限付一般競争入札において、第一落札候補者の事業者様へは「事後審査資料提出依頼書」をお送りしていますが、追加資料の提出依頼がない限りは、資料をご提出いただく必要はございません。<br><br>（これまでの事前審査と特に変わるところはございません。）</b>
+									
+									
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和7年09月12日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+										<b><font color="#FF0000">【重要】</font></b>
+									
+									<b>【重要】令和７年１０月１日公告分から「事後審査型」競争入札を実施します。<br><br>　令和７年１０月１日以降の公告となる建設工事及び建設工事に係る業務委託の入札案件については、建設業法に基づく建設業許可、経営事項審査の状況等の確認を行うため、事後審査型競争入札として実施します。<br><br>〇制限付一般競争入札及び指名競争入札<br>　基本的には、令和７年９月の公告分までの入札方法と変わりません。<br><br>〇一般競争入札<br>　令和７年１０月１日公告分の入札から、原則電子入札システムにおける参加申請のみで入札参加の受付をします。<br><br>詳しくは、添付ファイルをご覧ください。</b>
+									
+									
+										<br>
+										<a href="javaScript:void(0);" onclick="download1('793');return false;">
+											事後審査型競争入札実施についてのお知らせ[PDF形式](66.5KB)
+										</a>
+									
+									
+										<br>
+										<a href="javaScript:void(0);" onclick="download2('793');return false;">
+											事後審査型競争入札フロー図[PDF形式](96.3KB)
+										</a>
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和7年08月05日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+										<b><font color="#FF0000">【重要】</font></b>
+									
+									<b>Windows10のシステム動作環境からの除外について<br>マイクロソフト社によるWindows10のサポートが令和7年10月14日（火）に終了することに伴い、Windows10を電子入札システムの動作環境から除外します。<br>サポートが終了したOSは、脆弱性への対応や新たな問題が発生した場合のサポートが受けられなくなるため、現在、Windows10をご利用の方は、サポート終了前にWindows11への移行をお願いします。</b>
+									
+									
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和7年04月22日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+										<b><font color="#FF0000">【重要】</font></b>
+									
+									<b>物品購入等に係るオープンカウンター（公開型見積合せ）について、案件公開日を次のとおり変更します。<br>詳細は、添付ファイルをご確認ください。<br><br>　変更後：週１回（５月１４日以降の毎週水曜日）※その日が閉庁日の場合は、直後の開庁日に公開<br>　変更前：週２回（火曜日及び木曜日）<br><br>　５月８日（木）まではこれまでどおり火曜日及び木曜日に公開し、５月14日から毎週水曜日の公開とします。<br><br>　</b>
+									
+									
+										<br>
+										<a href="javaScript:void(0);" onclick="download1('732');return false;">
+											事業者向け通知文[PDF形式](102.6KB)
+										</a>
+									
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和7年01月06日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+										<b><font color="#FF0000">【重要】</font></b>
+									
+									<b>落札者の皆様（物品購入及び印刷製本に限ります。）<br><br>　これまで落札決定通知書及び契約書等を電子メールで送付しておりましたが、今後はメール送付を行わず、入札情報サービスの結果公開にて代えさせていただきます。（結果は翌日の正午までに公開予定です。）<br>　入札書又は見積書を提出した案件について、結果が公開され次第、電子入札システムの落札決定通知（見積合せを除きます。）及び契約書又は請書（入札情報サービスの結果公開画面に添付）により、担当課と契約等の手続きを行っていただきますようお願いいたします。<br><br>　<br></b>
+									
+									
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和6年12月18日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+										<b><font color="#FF0000">【重要】</font></b>
+									
+									<b>令和7・8・9年度奈良市・奈良市企業局物品購入等入札参加資格審査の申請（追加受付）について、ご案内します。<br>【受付期間】令和６年12月16日～令和9年9月30日<br>【申請方法】オンラインによる申請<br>くわしくは市ホームページ（https://www.city.nara.lg.jp/site/nyusatu-keiyaku/10480.html）に掲載しています。</b>
+									
+									
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和6年08月30日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+										<b><font color="#FF0000">【重要】</font></b>
+									
+									<b>経営事項審査結果通知書の更新・有効期限切れに注意してください<br><br>「経営事項審査」とは、公共工事を発注者から直接請け負おうとする建設業者が必ず受けなければならない審査です。経営事項審査を受けていない場合、建設工事の入札に参加することはできません。また、経営事項審査結果通知書の有効期限は、建設業法により審査基準日から1年7ヶ月となっています。この期間を過ぎた後、更新後の経営事項審査結果通知書を受領するまでの期間は建設工事の入札に参加することはできません。有効期限が切れる前に、経営事項審査の更新手続きを行ってください。</b>
+									
+									
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和6年08月26日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+										<b><font color="#FF0000">【重要】</font></b>
+									
+									<b>　令和6年9月2日以降に掲示する電子入札の案件に係る入札公告につきましては、掲示板への掲載を廃止し、入札情報サービスへの掲載のみに変更することとしましたので、以下のとおりお知らせいたします。<br><br>　■対象案件：電子入札システムを利用して行う建設工事、建設コンサルタント等業務又は物品購入等に係る入札<br>　■掲載場所：入札情報サービス</b>
+									
+									
+										<br>
+										<a href="javaScript:void(0);" onclick="download1('633');return false;">
+											紙による入札公告の廃止について（令和６年９月２日から）[PDF形式](84KB)
+										</a>
+									
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和6年05月09日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+										<b><font color="#FF0000">【重要】</font></b>
+									
+									<b>落札者の皆様<br><br>　落札者決定通知については、落札者決定後お時間をいただき、内容を確認してから、開札の翌日（その日が土・日・祝日に当たるときは、翌開庁日）までに落札者に電子メールで送信します。<br><br>　（紙面の落札者決定通知をご希望の場合は、契約課窓口でその旨お申し出ください。印刷してお渡しします。）<br><br>　ご了承くださいますようお願いいたします。<br></b>
+									
+									
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和8年02月18日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>2月18日 公開の物品の見積合せ（オープンカウンター）が、17件あります。</b>
+									
+									
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和8年02月16日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>２月１６日午後３時００分：「東登美ヶ丘小学校他２校屋外トイレ改築工事」の　<br>一般競争入札　入札の詳細　８入札に参加する者に必要な資格に関する事項　４．事業者用件（４）の同種工事について、<br>記載を改めておりますので、ご確認をお願いいたします。<br><br><br>２月１６日公告の建設工事又は建設工事に係る業務委託等の一般競争入札が３件あります。<br><br>様式については、それぞれの案件の入札公告詳細ページからダウンロードし、必要事項を案件名等を入力のうえご提出ください。</b>
+									
+									
+										<br>
+										<a href="javaScript:void(0);" onclick="download1('866');return false;">
+											入札情報サービス添付書類（改）[その他](526.3KB)
+										</a>
+									
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和8年02月16日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>（１）２月１６日公告の建設工事等の制限付一般競争入札が５件あります。<br>（２）２月１６日公告の建築設計等の制限付一般競争入札はありません。</b>
+									
+									
+										<br>
+										<a href="javaScript:void(0);" onclick="download1('861');return false;">
+											8-2-16_工事公告文 (JVあり)[PDF形式](371.4KB)
+										</a>
+									
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和8年02月12日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>2月12日公告の物品の一般競争入札が、1件あります。</b>
+									
+									
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和8年02月06日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>2月6日公告の物品の一般競争入札が、1件あります。</b>
+									
+									
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和8年02月04日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>2月4日公告の物品の一般競争入札が、1件あります。</b>
+									
+									
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和8年02月04日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>2月4日 公開の物品の見積合せ（オープンカウンター）が、6件あります。</b>
+									
+									
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和8年02月02日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>２月５日１１時１５分　追記<br>　一般競争入札の入札参加申請の方法について、公告文（共通）に追記しております。なお入札参加申請は電子入札システムで申請していただくことに変更はございません。<br><br>２月２日公告の建設工事又は建設工事に係る業務委託等の一般競争入札が４件あります。<br><br>様式については、それぞれの案件の入札公告詳細ページからダウンロードし、必要事項を案件名等を入力のうえご提出ください。</b>
+									
+									
+										<br>
+										<a href="javaScript:void(0);" onclick="download1('856');return false;">
+											２月５日修正_入札情報サービス添付書類[その他](680.6KB)
+										</a>
+									
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和8年02月02日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>（１）２月２日公告の建設工事等の制限付一般競争入札が５件あります。<br>（２）２月２日公告の建築設計等の制限付一般競争入札が１件あります。</b>
+									
+									
+										<br>
+										<a href="javaScript:void(0);" onclick="download1('855');return false;">
+											8-2-2_工事公告文 (JVあり)[PDF形式](384.6KB)
+										</a>
+									
+									
+									
+										<br>
+										<a href="javaScript:void(0);" onclick="download3('855');return false;">
+											8-2-2（委託）公告文[PDF形式](291.4KB)
+										</a>
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和8年02月02日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>2月2日公告の物品の一般競争入札が、1件あります。</b>
+									
+									
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和8年01月28日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>1月28日 公開の物品の見積合せ（オープンカウンター）が、6件あります。</b>
+									
+									
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和8年01月21日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>1月21日 公開の物品の見積合せ（オープンカウンター）が、3件あります。</b>
+									
+									
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和8年01月15日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>１月１５日公告の建設工事又は建設工事に係る業務委託等の一般競争入札が４件あります。<br><br>様式については、それぞれの案件の入札公告詳細ページからダウンロードし、必要事項を案件名等を入力のうえご提出ください。</b>
+									
+									
+										<br>
+										<a href="javaScript:void(0);" onclick="download1('850');return false;">
+											入札情報サービス添付書類[その他](677.6KB)
+										</a>
+									
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和8年01月15日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>（１）１月１５日公告の建設工事等の制限付一般競争入札が９件あります。<br>（２）１月１５日公告の建築設計等の制限付一般競争入札はありません。<br>-----------------------------------------------------------------------------------<br>【お知らせ】<br>奈良市・奈良市企業局　建設工事等入札参加資格審査申請は、現在受付中です。<br>受付期間は、令和８年１月３１日までです。<br>市内本店・市内営業所の事業者様におかれましては、令和８・９年度の入札参加に必要です。<br>申請期間内に早めの申請をお願いします。<br>https://www.city.nara.lg.jp/site/nyusatu-keiyaku/225553.html</b>
+									
+									
+									
+										<br>
+										<a href="javaScript:void(0);" onclick="download2('849');return false;">
+											8-1-15_工事公告文 (JVあり)[PDF形式](254.4KB)
+										</a>
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和8年01月14日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>1月14日 公開の物品の見積合せ（オープンカウンター）が、2件あります。</b>
+									
+									
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和8年01月07日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>庁用燃料（ガソリン、軽油及び灯油）（配達）について、下記のとおり公告しますのでお知らせいたします。<br>詳細は別添の公告文等をご確認ください。<br><br>品名：庁用燃料（ガソリン、軽油及び灯油）（配達）<br>公告日：令和８年１月７日公告<br>入札参加申請：令和８年１月１６日午後５時まで<br>入札日及び開札日：令和８年１月２９日<br>　※ガソリン、軽油及び灯油について、それぞれ入札書を作成してください。<br><br></b>
+									
+									
+										<br>
+										<a href="javaScript:void(0);" onclick="download1('848');return false;">
+											0_入札公告文[PDF形式](196.4KB)
+										</a>
+									
+									
+										<br>
+										<a href="javaScript:void(0);" onclick="download2('848');return false;">
+											様式一式[その他](71.5KB)
+										</a>
+									
+									
+										<br>
+										<a href="javaScript:void(0);" onclick="download3('848');return false;">
+											仕様書[その他](834.3KB)
+										</a>
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和8年01月07日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>1月7日 公開の物品の見積合せ（オープンカウンター）が、1件あります。</b>
+									
+									
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和8年01月06日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>1月6日公告の物品の一般競争入札が、1件あります。</b>
+									
+									
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和8年01月05日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>令和7年12月24日公開の物品「予防接種予診票綴り他７件」（契約番号1202500160）について、「見積合せ説明書」の差し替えを行いました。仕様書そのほか条件等についての変更はありません。</b>
+									
+									
+										<br>
+										<a href="javaScript:void(0);" onclick="download1('846');return false;">
+											★R8.1.5差し替え★見積合せ説明書[PDF形式](165.8KB)
+										</a>
+									
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和8年01月05日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>１月５日公告の建設工事の一般競争入札ＪＶ案件が１件あります。<br><br>様式等は以下からご利用ください。<br><br><a href="https://www.city.nara.lg.jp/site/nyusatu-keiyaku/10151.html">https://www.city.nara.lg.jp/site/nyusatu-keiyaku/10151.html</a></b>
+									
+									
+										<br>
+										<a href="javaScript:void(0);" onclick="download1('844');return false;">
+											公告文　一条中高一貫校部室棟新築その他工事[PDF形式](147.8KB)
+										</a>
+									
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和7年12月24日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>12月24日 公開の物品の見積合せ（オープンカウンター）が、3件あります。</b>
+									
+									
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和7年12月15日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>１２月１５日公告の建設工事又は建設工事に係る業務委託等の一般競争入札が2件あります。<br><br>様式については、それぞれの案件の入札公告詳細ページからダウンロードし、必要事項を案件名等を入力のうえご提出ください。<br><br>なお、令和８年１月５日公告につきましては、１件（建築）の予定です。</b>
+									
+									
+										<br>
+										<a href="javaScript:void(0);" onclick="download1('839');return false;">
+											入札情報サービス添付書類[その他](459.4KB)
+										</a>
+									
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和7年12月15日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>（１）１２月１５日公告の建設工事等の制限付一般競争入札が4件あります。<br>（２）１２月１５日公告の建築設計等の制限付一般競争入札が１件あります。<br>なお、制限付一般競争入札については、令和８年１月５日公告はありません。<br>-----------------------------------------------------------------------------------<br>【お知らせ】<br>奈良市・奈良市企業局　建設工事等入札参加資格審査申請は、現在受付中です。<br>受付期間は、令和８年１月３１日までです。<br>市内本店・市内営業所の事業者様におかれましては、令和８・９年度の入札参加に必要です。<br>申請期間内に早めの申請をお願いします。<br><a href="https://www.city.nara.lg.jp/site/nyusatu-keiyaku/225553.html">https://www.city.nara.lg.jp/site/nyusatu-keiyaku/225553.html</a></b>
+									
+									
+										<br>
+										<a href="javaScript:void(0);" onclick="download1('836');return false;">
+											7-12-15_工事公告文[PDF形式](338.3KB)
+										</a>
+									
+									
+										<br>
+										<a href="javaScript:void(0);" onclick="download2('836');return false;">
+											7-12-15（委託）公告文[PDF形式](300KB)
+										</a>
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和7年12月01日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>１２月１日公告の建設工事又は建設工事に係る業務委託等の一般競争入札が１件あります。<br><br>様式については、それぞれの案件の入札公告詳細ページからダウンロードし、必要事項を案件名等を入力のうえご提出ください。</b>
+									
+									
+										<br>
+										<a href="javaScript:void(0);" onclick="download1('834');return false;">
+											入札情報サービス添付書類[その他](293.1KB)
+										</a>
+									
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和7年12月01日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>（１）12月1日公告の建設工事等の制限付一般競争入札が５件あります。<br>（２）12月1日公告の建築設計等の制限付一般競争入札はありません。</b>
+									
+									
+										<br>
+										<a href="javaScript:void(0);" onclick="download1('833');return false;">
+											7-12-1_工事公告文[PDF形式](351.5KB)
+										</a>
+									
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和7年11月17日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>１１月１７日公告の建設工事又は建設工事に係る業務委託等の一般競争入札が２件あります。<br><br>様式については、それぞれの案件の入札公告詳細ページからダウンロードし、必要事項を案件名等を入力のうえご提出ください。</b>
+									
+									
+										<br>
+										<a href="javaScript:void(0);" onclick="download1('832');return false;">
+											入札情報サービス添付書類その他[その他](399.6KB)
+										</a>
+									
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和7年11月17日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>（１）11月17日公告の建設工事等の制限付一般競争入札が８件あります。<br>（２）11月17日公告の建築設計等の制限付一般競争入札が１件あります。</b>
+									
+									
+										<br>
+										<a href="javaScript:void(0);" onclick="download1('830');return false;">
+											7-11-17_工事公告文[PDF形式](330.6KB)
+										</a>
+									
+									
+										<br>
+										<a href="javaScript:void(0);" onclick="download2('830');return false;">
+											7-11-17(（委託）公告文[PDF形式](300.7KB)
+										</a>
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和7年11月04日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>1１月４日公告の建設工事に係る業務委託の一般競争入札が１件あります。<br><br>様式については、それぞれの案件の入札公告詳細ページからダウンロードし、必要事項を案件名等を入力のうえご提出ください。</b>
+									
+									
+										<br>
+										<a href="javaScript:void(0);" onclick="download1('825');return false;">
+											入札情報サービス添付書類[その他](295KB)
+										</a>
+									
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和7年11月04日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>（１）11月4日公告の建設工事等の制限付一般競争入札が１3件あります。<br>（２）11月4日公告の建築設計等の制限付一般競争入札はありません。</b>
+									
+									
+										<br>
+										<a href="javaScript:void(0);" onclick="download1('819');return false;">
+											7-11-4_工事公告文[PDF形式](371.1KB)
+										</a>
+									
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和7年10月15日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>10月15日公告の修繕、建設工事又は建設工事に係る業務委託等の一般競争入札が４件あります。<br><br>様式については、それぞれの案件の入札公告詳細ページからダウンロードし、必要事項を案件名等を入力のうえご提出ください。</b>
+									
+									
+									
+										<br>
+										<a href="javaScript:void(0);" onclick="download2('817');return false;">
+											入札情報サービス添付書類その他[その他](676.1KB)
+										</a>
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和7年10月15日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>（１）10月1５日公告の建設工事等の制限付一般競争入札が１１件あります。<br>（２）10月1５日公告の建築設計等の制限付一般競争入札はありません。</b>
+									
+									
+										<br>
+										<a href="javaScript:void(0);" onclick="download1('815');return false;">
+											7-10-15_工事公告文[PDF形式](195.2KB)
+										</a>
+									
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和7年10月01日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>１０月１日公告の建設工事の一般競争入札ＪＶ案件が１件あります。<br><br>様式等は以下からご利用ください。<br><br><a href="https://www.city.nara.lg.jp/site/nyusatu-keiyaku/10151.html">https://www.city.nara.lg.jp/site/nyusatu-keiyaku/10151.html</a></b>
+									
+									
+										<br>
+										<a href="javaScript:void(0);" onclick="download1('814');return false;">
+											公告文　一条中高一貫校部室棟新築その他工事[PDF形式](144.9KB)
+										</a>
+									
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和7年10月01日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>１０月２２日１６時１０分　追記<br>　建設工事等の制限付一般競争入札のうち、下記のとおり開札日を変更したのでお知らせいたします。<br>　　工事名：道路修繕工事（道修５２）<br>　　開札日：令和７年１０月２８日午前１０時（変更前　令和７年１０月２３日午前１０時３０分）<br>　　入札期限：令和７年１０月２７日午後５時まで（変更前　令和７年１０月２２日午後５時まで）<br>------------------------------------------------------------------------------------------------<br>（１）10月1日公告の建設工事等の制限付一般競争入札が１４件あります。<br>（２）10月1日公告の建築設計等の制限付一般競争入札が１件あります。<br></b>
+									
+									
+										<br>
+										<a href="javaScript:void(0);" onclick="download1('807');return false;">
+											7-10-1_工事公告(1022修正）[PDF形式](365.8KB)
+										</a>
+									
+									
+										<br>
+										<a href="javaScript:void(0);" onclick="download2('807');return false;">
+											7-10-1（委託）公告文[PDF形式](178.5KB)
+										</a>
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和7年09月08日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>９月８日公告の「奈良市・奈良市企業局電子入札ＡＳＰサービス提供業務」にかかる一般競争入札（郵便入札）があります。<br>公告文、仕様書等は添付ファイルをご確認ください。</b>
+									
+									
+										<br>
+										<a href="javaScript:void(0);" onclick="download1('801');return false;">
+											公告（入札情報サービス）[その他](1.4MB)
+										</a>
+									
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和7年06月19日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>令和７年６月１７日及び６月１９日に開札しました「衛生浄化センター運転管理委託」について、開札結果は添付ファイルのとおりです。</b>
+									
+									
+										<br>
+										<a href="javaScript:void(0);" onclick="download1('853');return false;">
+											衛生浄化センター開札録（２回目）[PDF形式](69.5KB)
+										</a>
+									
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和7年03月21日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>令和７年３月１７日に開札しました「環境清美工場の各種測定分析」及び３月１９日に開札しました「環境清美工場のダイオキシン類測定分析」について、開札結果は添付ファイルのとおりです。</b>
+									
+									
+										<br>
+										<a href="javaScript:void(0);" onclick="download1('720');return false;">
+											【開札録】R7.3.17環境清美工場の各種測定分析[PDF形式](79KB)
+										</a>
+									
+									
+										<br>
+										<a href="javaScript:void(0);" onclick="download2('720');return false;">
+											【開札録】R7.3.19 環境清美工場のダイオキシン類測定分析[PDF形式](110.6KB)
+										</a>
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和7年03月19日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>令和７年３月執行の物品の入札（電子入札案件を除く。）について、結果を添付ファイルからご確認いただけます。</b>
+									
+									
+										<br>
+										<a href="javaScript:void(0);" onclick="download1('721');return false;">
+											開札録　令和６年度３月分[PDF形式](212.8KB)
+										</a>
+									
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和7年01月10日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>令和７年１月執行の物品の入札（電子入札案件を除く。）について、結果を添付ファイルからご確認いただけます。</b>
+									
+									
+										<br>
+										<a href="javaScript:void(0);" onclick="download1('691');return false;">
+											〇R7.1.10開札録（入札情報サービス公開用）[PDF形式](76.4KB)
+										</a>
+									
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和6年12月25日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>令和６年１２月２４日に開札しました「朱雀小学校他２校屋外トイレ改築工事」について、開札結果は添付ファイルのとおりです。</b>
+									
+									
+										<br>
+										<a href="javaScript:void(0);" onclick="download1('683');return false;">
+											開札録：朱雀小学校他２校屋外トイレ改築工事[PDF形式](103.9KB)
+										</a>
+									
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和6年12月12日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>令和６年１２月１１日に開札しました「佐保台バンビーホーム増築工事」については、入札者が１者のため入札不成立となりました。</b>
+									
+									
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和6年12月11日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>令和６年１２月１０日に開札しました「椿井バンビーホーム増築その他工事」については、入札者が１者のため入札不成立となりました。</b>
+									
+									
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和6年11月07日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>令和６年１１月執行の物品の入札（電子入札案件を除く。）について、結果を添付ファイルからご確認いただけます。</b>
+									
+									
+										<br>
+										<a href="javaScript:void(0);" onclick="download1('661');return false;">
+											令和６年１１月　開札録[PDF形式](85.7KB)
+										</a>
+									
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和6年08月08日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>令和６年８月執行の物品の入札（電子入札案件を除く。）について、結果を添付ファイルからご確認いただけます。</b>
+									
+									
+										<br>
+										<a href="javaScript:void(0);" onclick="download1('627');return false;">
+											令和６年８月　物品開札録[PDF形式](87.9KB)
+										</a>
+									
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和6年07月12日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>令和６年７月執行の物品の入札（電子入札案件を除く。）について、結果を添付ファイルからご確認いただけます。</b>
+									
+									
+										<br>
+										<a href="javaScript:void(0);" onclick="download1('619');return false;">
+											令和６年７月　開札録[PDF形式](95KB)
+										</a>
+									
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和6年06月20日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>令和６年６月執行の物品の入札（電子入札案件を除く。）について、結果を添付ファイルからご確認いただけます。</b>
+									
+									
+										<br>
+										<a href="javaScript:void(0);" onclick="download1('620');return false;">
+											令和６年６月　開札録[PDF形式](81.7KB)
+										</a>
+									
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和6年03月28日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>令和６年３月執行の建設工事等の入札（電子入札案件を除く。）について、結果を添付ファイルからご確認いただけます。（３月２７日更新）</b>
+									
+									
+									
+										<br>
+										<a href="javaScript:void(0);" onclick="download2('547');return false;">
+											３月開札録[PDF形式](117.6KB)
+										</a>
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和5年12月08日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>令和５年１２月執行の建設工事等の入札（電子入札案件を除く。）について、結果を添付ファイルからご確認いただけます。（１２月７日更新）</b>
+									
+									
+										<br>
+										<a href="javaScript:void(0);" onclick="download1('495');return false;">
+											12月開札録[PDF形式](120.6KB)
+										</a>
+									
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和5年11月29日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>令和５年１１月執行の建設工事等の入札（電子入札案件を除く。）について、結果を添付ファイルからご確認いただけます。（１１月２９日更新）</b>
+									
+									
+									
+										<br>
+										<a href="javaScript:void(0);" onclick="download2('475');return false;">
+											11月開札録[PDF形式](532.2KB)
+										</a>
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和5年10月18日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>令和５年１０月執行の建設工事等の入札（電子入札案件を除く。）について、結果を添付ファイルからご確認いただけます。</b>
+									
+									
+										<br>
+										<a href="javaScript:void(0);" onclick="download1('466');return false;">
+											１０月開札録[PDF形式](101.1KB)
+										</a>
+									
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和5年10月18日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>令和５年９月執行の建設工事等の入札（電子入札案件を除く。）について、結果を添付ファイルからご確認いただけます。</b>
+									
+									
+										<br>
+										<a href="javaScript:void(0);" onclick="download1('465');return false;">
+											９月開札録[PDF形式](92.7KB)
+										</a>
+									
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和5年08月30日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>令和５年８月執行の建設工事等の入札（電子入札案件を除く。）について、結果を添付ファイルからご確認いただけます。<br><br>（１０月１８日：１件追加しました。）</b>
+									
+									
+									
+										<br>
+										<a href="javaScript:void(0);" onclick="download2('425');return false;">
+											８月開札録[PDF形式](154.2KB)
+										</a>
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和5年07月18日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>令和５年７月執行の建設工事等の入札（電子入札案件を除く。）について、結果を添付ファイルからご確認いただけます。</b>
+									
+									
+										<br>
+										<a href="javaScript:void(0);" onclick="download1('405');return false;">
+											7月開札録[PDF形式](82.2KB)
+										</a>
+									
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和5年06月16日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>令和５年６月執行の建設工事等の入札（電子入札案件を除く。）について、結果を添付ファイルからご確認いただけます。</b>
+									
+									
+										<br>
+										<a href="javaScript:void(0);" onclick="download1('386');return false;">
+											6月開札録[PDF形式](234.6KB)
+										</a>
+									
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和5年03月30日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>令和５年３月執行の建設工事等の入札（電子入札案件を除く。）について、結果を添付ファイルからご確認いただけます。</b>
+									
+									
+										<br>
+										<a href="javaScript:void(0);" onclick="download1('319');return false;">
+											3月分開札録[PDF形式](1.1MB)
+										</a>
+									
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和5年02月01日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>令和５年２月執行の建設工事等の入札（電子入札案件を除く。）について、結果を添付ファイルからご確認いただけます。</b>
+									
+									
+										<br>
+										<a href="javaScript:void(0);" onclick="download1('305');return false;">
+											2月分開札録[PDF形式](110.3KB)
+										</a>
+									
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和5年01月31日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>令和５年１月執行の建設工事等の入札（電子入札案件を除く。）について、結果を添付ファイルからご確認いただけます。</b>
+									
+									
+										<br>
+										<a href="javaScript:void(0);" onclick="download1('294');return false;">
+											1月分開札録[PDF形式](428.6KB)
+										</a>
+									
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和4年12月28日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>令和４年１２月執行の建設工事等の入札（電子入札案件を除く。）について、結果を添付ファイルからご確認いただけます。</b>
+									
+									
+										<br>
+										<a href="javaScript:void(0);" onclick="download1('276');return false;">
+											12月分開札録[PDF形式](801.7KB)
+										</a>
+									
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和4年11月29日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>Windows8.1のサポートが令和5年1月10日（火）に終了します。<br>電子入札システムでは、Windows8.1のサポート終了日に推奨環境から除外します。<br>現在、Windows8.1をご利用の方は、サポート終了前にWindows10、11への移行をお願いします。<br></b>
+									
+									
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和4年11月28日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>令和４年１１月執行の建設工事等の入札（電子入札案件を除く。）について、結果を添付ファイルからご確認いただけます。</b>
+									
+									
+										<br>
+										<a href="javaScript:void(0);" onclick="download1('257');return false;">
+											11月分開札録[PDF形式](1.1MB)
+										</a>
+									
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和4年10月21日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>令和４年１０月執行の建設工事等の入札（電子入札案件を除く。）について、結果を添付ファイルからご確認いただけます。</b>
+									
+									
+										<br>
+										<a href="javaScript:void(0);" onclick="download1('237');return false;">
+											10月分開札録[PDF形式](616.7KB)
+										</a>
+									
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和4年09月27日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>令和４年9月執行の建設工事等の入札（電子入札案件を除く。）について、結果を添付ファイルからご確認いただけます。</b>
+									
+									
+									
+										<br>
+										<a href="javaScript:void(0);" onclick="download2('221');return false;">
+											9月分開札録[PDF形式](708.4KB)
+										</a>
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和4年08月31日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>令和４年8月執行の建設工事等の入札（電子入札案件を除く。）について、結果を添付ファイルからご確認いただけます。</b>
+									
+									
+									
+										<br>
+										<a href="javaScript:void(0);" onclick="download2('209');return false;">
+											8月分開札録[PDF形式](940.8KB)
+										</a>
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和4年07月25日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>令和４年7月執行の建設工事等の入札（電子入札案件を除く。）について、結果を添付ファイルからご確認いただけます。</b>
+									
+									
+										<br>
+										<a href="javaScript:void(0);" onclick="download1('202');return false;">
+											7月分開札録[PDF形式](691KB)
+										</a>
+									
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和4年06月30日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>令和４年6月執行の建設工事等の入札（電子入札案件を除く。）について、結果を添付ファイルからご確認いただけます。</b>
+									
+									
+										<br>
+										<a href="javaScript:void(0);" onclick="download1('172');return false;">
+											6月分開札録[PDF形式](1.4MB)
+										</a>
+									
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和4年06月01日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>令和4年6月1日より奈良市電子入札システムは、Windows11に対応しました。<br>Windows11の利用にあたり、電子入札の初期設定が終っている場合は、特別な設定作業等は必要ありません。</b>
+									
+									
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和4年06月01日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>奈良市電子入札システムは、令和4年6月1日から次期ブラウザである「Microsoft Edge」及び「Google Chrome」に対応しました。<br>ブラウザの設定変更方法の詳細は、<a href="https://www.city.nara.lg.jp/site/nyusatu-keiyaku/61696.html">市ホームページ</a>に掲載されている初期設定マニュアルをご確認ください。</b>
+									
+									
+										<br>
+										<a href="javaScript:void(0);" onclick="download1('164');return false;">
+											初期設定マニュアル[PDF形式](1.2MB)
+										</a>
+									
+									
+										<br>
+										<a href="javaScript:void(0);" onclick="download2('164');return false;">
+											既定ブラウザの変更方法[PDF形式](541.5KB)
+										</a>
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+							<tr>
+								<td class="view-details" align="left">
+									令和4年05月31日
+								</td>
+
+
+								<td style="word-break : break-all;" class="view-details" align="left">
+
+									
+									<b>令和４年5月執行の建設工事等の入札（電子入札案件を除く。）について、結果を添付ファイルからご確認いただけます。</b>
+									
+									
+									
+										<br>
+										<a href="javaScript:void(0);" onclick="download2('159');return false;">
+											5月分開札録[PDF形式](432.6KB)
+										</a>
+									
+									
+									
+								</td>
+								<td class="view-details" align="left">
+									奈良市　契約課契約係
+								</td>
+							</tr>
+						
+					</tbody>
+				</table>
+				
+				
+				<br>
+				<br>
+				<br>
+			</div>
+		</div>
+	</div>
+</form>
+
+
+
+
+
+</body></html>
