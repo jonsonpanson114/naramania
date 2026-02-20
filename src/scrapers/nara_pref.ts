@@ -1,129 +1,207 @@
+import { chromium, Frame } from 'playwright';
+import { BiddingItem, Scraper, BiddingType } from '../types/bidding';
 
-import { chromium, Browser, Page } from 'playwright';
-import { BiddingItem, Scraper, BiddingType, BiddingStatus } from '../types/bidding';
-import crypto from 'crypto';
+// 奈良県 PPI入札情報システム（ppi06.t-elbs.jp）
+// 平日8:00〜20:00のみアクセス可能
+const PPI_BASE = 'http://www.ppi06.t-elbs.jp/DENCHO';
+const PPI_TOP = `${PPI_BASE}/PpiJGyomuStart.do?kinouid=GP5000_Top`;
+
+// 工事カテゴリでスキップする業種
+const KOJI_GYOSHU_SKIP = [
+    '土木一式', '舗装', '鋼橋', 'PC橋', '造園', '法面処理', '道路等維持修繕',
+    'しゅんせつ', 'グラウト', 'さく井', '上下水道設備', '交通安全施設', '土木施設除草業務',
+    '通信設備',
+];
+
+// 検索対象カテゴリ
+// maxPages: 入札結果は累積が多いため最新3ページ（75件）のみ取得
+const SEARCH_TARGETS = [
+    { gyoshuKbnCd: '00', menuLabel: '案件情報', status: '受付中' as const, type: '建築' as BiddingType, label: '工事/案件情報', skipGyoshu: true, filterYear: '', maxPages: 0 },
+    { gyoshuKbnCd: '00', menuLabel: '入札結果', status: '落札' as const, type: '建築' as BiddingType, label: '工事/入札結果', skipGyoshu: true, filterYear: '2025', maxPages: 3 },
+    { gyoshuKbnCd: '01', menuLabel: '案件情報', status: '受付中' as const, type: 'コンサル' as BiddingType, label: 'コンサル/案件情報', skipGyoshu: false, filterYear: '', maxPages: 0 },
+    { gyoshuKbnCd: '01', menuLabel: '入札結果', status: '落札' as const, type: 'コンサル' as BiddingType, label: 'コンサル/入札結果', skipGyoshu: false, filterYear: '2025', maxPages: 3 },
+];
+
+// "R08.02.20 09:00" → "2026-02-20"
+function parsePpiDate(text: string): string {
+    const m = text.match(/R(\d+)\.(\d+)\.(\d+)/);
+    if (m) {
+        const year = 2018 + parseInt(m[1]);
+        return `${year}-${m[2].padStart(2, '0')}-${m[3].padStart(2, '0')}`;
+    }
+    return new Date().toISOString().split('T')[0];
+}
+
+interface RawRow {
+    gyoshu: string;
+    title: string;
+    ankenId: string;
+    dateText: string;
+    bidDateText: string;
+}
+
+// 結果テーブル（class="border"）からデータ行を抽出
+// GP5510_1015 (案件情報): 12列 → 業種=cells[6], 日付=cells[7], 開札=cells[8], 工事名=cells[9]
+// GP5515_1015 (入札結果):  9列 → 業種=cells[5], 日付=cells[6], 工事名=cells[7]
+async function extractRows(fra1: Frame): Promise<RawRow[]> {
+    return await fra1.evaluate(() => {
+        const table = Array.from(document.querySelectorAll('table')).find(t => t.className === 'border');
+        if (!table) return [];
+        const rows = Array.from(table.querySelectorAll('tr')).slice(2);
+        const results: RawRow[] = [];
+        for (const row of rows) {
+            const cells = Array.from(row.querySelectorAll('th, td'));
+            const isKekka = cells.length <= 10; // GP5515_1015 is 9 cols, GP5510_1015 is 12 cols
+            if (cells.length < 8) continue;
+            const gyoshuIdx  = isKekka ? 5 : 6;
+            const dateIdx    = isKekka ? 6 : 7;
+            const bidDateIdx = isKekka ? -1 : 8;
+            const titleIdx   = isKekka ? 7 : 9;
+            const gyoshu = (cells[gyoshuIdx] as HTMLElement).innerText?.trim()?.split('\n')[0] || '';
+            const titleEl = cells[titleIdx] as HTMLElement;
+            if (!titleEl) continue;
+            const title = titleEl.innerText?.trim()?.replace(/\n/g, '') || '';
+            if (!title) continue;
+            const linkEl = titleEl.querySelector('a');
+            const href = linkEl?.getAttribute('href') || '';
+            const m = href.match(/'(\w+)'\)/);
+            results.push({
+                gyoshu,
+                title,
+                ankenId: m ? m[1] : '',
+                dateText: (cells[dateIdx] as HTMLElement).innerText?.trim()?.split('\n')[0] || '',
+                bidDateText: bidDateIdx >= 0 ? ((cells[bidDateIdx] as HTMLElement).innerText?.trim()?.split('\n')[0] || '') : '',
+            });
+        }
+        return results;
+    });
+}
+
+// 総ページ数を取得（25件/ページ）
+async function getTotalPages(fra1: Frame): Promise<number> {
+    return await fra1.evaluate(() => {
+        const m = document.body?.innerText?.match(/(\d+)件が該当/);
+        return m ? Math.ceil(parseInt(m[1]) / 25) : 0;
+    });
+}
 
 export class NaraPrefScraper implements Scraper {
     municipality: '奈良県' = '奈良県';
-    private portalUrl = 'https://www.pref.nara.jp/10553.htm';
 
     async scrape(): Promise<BiddingItem[]> {
-        const browser = await chromium.launch();
-        const items: BiddingItem[] = [];
+        const browser = await chromium.launch({ headless: true });
+        const allItems: BiddingItem[] = [];
 
         try {
             const page = await browser.newPage();
-            console.log('--- Nara Pref Scraper: Accessing Portal ---');
-            await page.goto(this.portalUrl, { timeout: 30000 });
 
-            // Robust link discovery
-            const ppiLink = await page.evaluate(() => {
-                const anchors = Array.from(document.querySelectorAll('a'));
-                const target = anchors.find(a => a.href.includes('TopStart.do') || a.innerText.includes('入札情報公開システム'));
-                return target ? target.href : null;
-            });
-
-            if (!ppiLink) throw new Error('PPI Link not found');
-
-            console.log(`Navigating to PPI System: ${ppiLink}`);
-            await page.goto(ppiLink, { waitUntil: 'networkidle' });
-            await page.waitForTimeout(5000);
-
-            // Handle Frames
-            const frames = page.frames();
-            const menuFrame = frames.find(f => f.url().includes('Menu') || f.name().toLowerCase().includes('menu'));
-
-            if (!menuFrame) {
-                console.warn('Menu frame not found. Available frames:', frames.map(f => f.name() || f.url()));
-            }
-
-            // 1. Project Info (案件情報)
-            if (menuFrame) {
-                console.log('--- Searching for Project Info (P5510) ---');
+            for (const { gyoshuKbnCd, menuLabel, status, type, label, skipGyoshu, filterYear, maxPages } of SEARCH_TARGETS) {
+                console.log(`[奈良県] ${label} 取得中...`);
                 try {
-                    await menuFrame.click('#P5510', { timeout: 5000 });
-                } catch {
-                    await menuFrame.getByText('案件情報').first().click().catch(() => { });
-                }
-                await page.waitForTimeout(3000);
-
-                const mainFrame = page.frames().find(f => f.url().includes('Main') || f.name().toLowerCase().includes('main'));
-                if (mainFrame) {
-                    await mainFrame.click('#btnSearch', { timeout: 5000 }).catch(() => { });
+                    // 毎回トップページから開始（セッションはCookieで維持）
+                    await page.goto(PPI_TOP, { waitUntil: 'domcontentloaded', timeout: 30000 });
                     await page.waitForTimeout(5000);
-                    await this.extractRows(mainFrame, items, '奈良県', '受付中');
-                }
-            }
 
-            // 2. Bidding Results (入札結果)
-            // Need to re-identify menu frame potentially after navigation if it reloaded
-            const menuFrameResults = page.frames().find(f => f.url().includes('Menu') || f.name().toLowerCase().includes('menu'));
-            if (menuFrameResults) {
-                console.log('--- Searching for Bidding Results (P5520) ---');
-                try {
-                    await menuFrameResults.click('#P5520', { timeout: 5000 });
-                } catch {
-                    await menuFrameResults.getByText('入札結果').first().click().catch(() => { });
-                }
-                await page.waitForTimeout(3000);
+                    // メニューフレームを取得（GP5000_10Fの子フレーム）
+                    const gp10f = page.frames().find(f => f.url().includes('GP5000_10F'));
+                    const menuFrame = gp10f?.childFrames().find(f => f.url().includes('GP5000_Menu'));
+                    const fra1 = page.frame('fra_main1');
+                    if (!menuFrame || !fra1) {
+                        console.warn(`[奈良県] ${label}: フレーム取得失敗`);
+                        continue;
+                    }
 
-                const mainFrame = page.frames().find(f => f.url().includes('Main') || f.name().toLowerCase().includes('main'));
-                if (mainFrame) {
-                    await mainFrame.click('#btnSearch', { timeout: 5000 }).catch(() => { });
-                    await page.waitForTimeout(5000);
-                    await this.extractRows(mainFrame, items, '奈良県', '落札');
+                    // メニューから対象ページに遷移
+                    // gyoshuKbnCd=00の案件情報=1番目, 入札結果=2番目, 01=3・4番目
+                    const menuUrl = menuLabel === '案件情報'
+                        ? `/DENCHO/GP5510_1010?gyoshuKbnCd=${gyoshuKbnCd}`
+                        : `/DENCHO/GP5515_1010?gyoshuKbnCd=${gyoshuKbnCd}`;
+
+                    await Promise.all([
+                        fra1.waitForNavigation({ waitUntil: 'domcontentloaded', timeout: 20000 }),
+                        menuFrame.evaluate((url: string) => (window as any).pf_VidDsp_btnReferenceClick(url), menuUrl),
+                    ]);
+                    await page.waitForTimeout(2000);
+
+                    console.log(`[奈良県] ${label}: 検索フォーム URL=${fra1.url()}`);
+
+                    // 年度フィルタを設定（入札結果は令和7年度=2025に限定）
+                    if (filterYear) {
+                        await fra1.selectOption('select[name="keisaiNen"]', filterYear).catch(() => {});
+                        await page.waitForTimeout(300);
+                    }
+
+                    // 検索実行
+                    await fra1.evaluate(() => {
+                        const topW = window.top as any;
+                        if (topW?.fra_hidden) topW.fra_hidden.submit_flag = 0;
+                        (window as any).fnc_btnSearch_Clicked();
+                    });
+                    await fra1.waitForNavigation({ waitUntil: 'domcontentloaded', timeout: 30000 });
+                    await page.waitForTimeout(2000);
+
+                    console.log(`[奈良県] ${label}: 結果URL=${fra1.url()}`);
+
+                    const totalPages = await getTotalPages(fra1);
+                    const limitPages = maxPages > 0 ? Math.min(totalPages, maxPages) : totalPages;
+                    console.log(`[奈良県] ${label}: ${totalPages}ページ（取得: ${limitPages}ページ）`);
+
+                    // ページを処理（入札結果は上限あり）
+                    for (let pageNum = 1; pageNum <= limitPages; pageNum++) {
+                        if (pageNum > 1) {
+                            const moved = await fra1.evaluate((n: number) => {
+                                const fn = (window as any).pf_VidDsp_btnMovePage;
+                                if (typeof fn === 'function') { fn(n); return true; }
+                                return false;
+                            }, pageNum);
+                            if (!moved) break;
+                            await fra1.waitForNavigation({ waitUntil: 'domcontentloaded', timeout: 20000 }).catch(() => {});
+                            await page.waitForTimeout(1500);
+                        }
+
+                        const rows = await extractRows(fra1);
+                        for (const row of rows) {
+                            if (skipGyoshu && KOJI_GYOSHU_SKIP.some(kw => row.gyoshu.includes(kw))) {
+                                continue;
+                            }
+
+                            const announcementDate = parsePpiDate(row.dateText);
+                            const biddingDate = row.bidDateText ? parsePpiDate(row.bidDateText) : undefined;
+
+                            allItems.push({
+                                id: `nara-pref-${row.ankenId || row.title.slice(0, 20)}`,
+                                municipality: '奈良県',
+                                title: row.title,
+                                type,
+                                announcementDate,
+                                biddingDate,
+                                link: `${PPI_BASE}/GP5510_1020?ankenId=${row.ankenId}`,
+                                status,
+                            });
+                        }
+                        console.log(`[奈良県] ${label} p.${pageNum}: ${rows.length}行`);
+                    }
+
+                } catch (e: any) {
+                    console.warn(`[奈良県] ${label} エラー:`, e.message?.split('\n')[0]);
                 }
             }
 
         } catch (e: any) {
-            console.error('Nara Pref Scraper Error:', e.message || e);
+            console.error('[奈良県] スクレイパーエラー:', e.message || e);
         } finally {
             await browser.close();
         }
 
-        if (items.length === 0) {
-            console.warn('Fallback: Adding sample data for Nara Pref');
-            items.push({
-                id: crypto.randomUUID(),
-                municipality: '奈良県',
-                title: '令和6年度 県単工事（建築）第123号 奈良公園周辺整備',
-                type: '建築',
-                announcementDate: new Date().toISOString().split('T')[0],
-                biddingDate: '2026-03-25',
-                link: this.portalUrl,
-                status: '受付中'
-            });
-        }
+        // 重複をIDで除外
+        const seen = new Set<string>();
+        const unique = allItems.filter(item => {
+            if (seen.has(item.id)) return false;
+            seen.add(item.id);
+            return true;
+        });
 
-        return items;
-    }
-
-    private async extractRows(frame: any, items: BiddingItem[], municipality: any, status: any) {
-        try {
-            const rows = await frame.locator('table tr').all();
-            console.log(`Found ${rows.length} rows for status: ${status}`);
-            for (let i = 1; i < rows.length; i++) {
-                const cells = await rows[i].locator('td').all();
-                if (cells.length >= 6) {
-                    const title = (await cells[2].innerText()).trim();
-                    const date = (await cells[3].innerText()).trim();
-
-                    if (title && !title.includes('案件名') && !title.includes('工事名')) {
-                        items.push({
-                            id: crypto.randomUUID(),
-                            municipality,
-                            title,
-                            type: '建築',
-                            announcementDate: date.replace(/\//g, '-'),
-                            biddingDate: status === '落札' ? date.replace(/\//g, '-') : '未定',
-                            link: 'https://pref.nara.jp/ppi/',
-                            status
-                        });
-                    }
-                }
-            }
-        } catch (e) {
-            console.warn('Error extracting rows from frame:', e);
-        }
+        console.log(`[奈良県] 合計 ${unique.length} 件`);
+        return unique;
     }
 }
