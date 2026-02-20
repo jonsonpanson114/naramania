@@ -5,6 +5,7 @@ import { Sidebar } from '@/components/Sidebar';
 import { Header } from '@/components/Header';
 import { StatsCard } from '@/components/StatsCard';
 import { BiddingTable } from '@/components/BiddingTable';
+import { NewsSection } from '@/components/NewsSection';
 
 // Async Server Component
 export default async function Home() {
@@ -57,6 +58,9 @@ export default async function Home() {
 
         {/* Main Table */}
         <BiddingTable items={allItems} />
+
+        {/* News Section */}
+        <NewsSection />
 
       </main>
     </div>
