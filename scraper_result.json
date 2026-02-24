@@ -1,20 +1,22 @@
 [
   {
-    "id": "9bc984db-5fef-4848-9ed2-effe791edc3a",
-    "municipality": "奈良市",
-    "title": "測量・建築設計の制限付一般競争入札公告",
-    "type": "設計",
+    "id": "kashihara-5072001304",
+    "municipality": "橿原市",
+    "title": "五井町市有地土壌汚染調査業務（深度方向調査）",
+    "type": "コンサル",
     "announcementDate": "2026-02-24",
-    "link": "https://www.city.nara.lg.jp/site/nyusatu-keiyaku/10608.html",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/7/12117.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5072001304.pdf",
     "status": "受付中"
   },
   {
-    "id": "be5c3f13-3a17-4f42-8d62-48d8a120aad9",
-    "municipality": "奈良市",
-    "title": "入札参加資格者一覧表（物品、建設工事、コンサル）",
+    "id": "kashihara-5072001274",
+    "municipality": "橿原市",
+    "title": "交通安全施設整備工事に伴う補償調査業務委託R7",
     "type": "コンサル",
     "announcementDate": "2026-02-24",
-    "link": "https://www.city.nara.lg.jp/site/nyusatu-keiyaku/232714.html",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/7/12117.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5072001274.pdf",
     "status": "受付中"
   },
   {
@@ -27,6 +29,66 @@
     "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
     "status": "落札",
     "winningContractor": "株式会社広成"
+  },
+  {
+    "id": "nara-city-0000002288",
+    "municipality": "奈良市",
+    "title": "若草中学校エレベーター新設工事",
+    "type": "建築",
+    "announcementDate": "2026-02-16",
+    "biddingDate": "2026-03-17",
+    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+    "status": "受付中"
+  },
+  {
+    "id": "nara-city-0000002289",
+    "municipality": "奈良市",
+    "title": "佐保川小学校エレベーター新設工事",
+    "type": "建築",
+    "announcementDate": "2026-02-16",
+    "biddingDate": "2026-03-18",
+    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+    "status": "受付中"
+  },
+  {
+    "id": "nara-city-0000002290",
+    "municipality": "奈良市",
+    "title": "済美南小学校エレベーター新設工事",
+    "type": "建築",
+    "announcementDate": "2026-02-16",
+    "biddingDate": "2026-03-19",
+    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+    "status": "受付中"
+  },
+  {
+    "id": "nara-city-0000002291",
+    "municipality": "奈良市",
+    "title": "東登美ヶ丘小学校他２校屋外トイレ改築工事",
+    "type": "建築",
+    "announcementDate": "2026-02-16",
+    "biddingDate": "2026-03-19",
+    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+    "status": "受付中"
+  },
+  {
+    "id": "nara-city-0000002292",
+    "municipality": "奈良市",
+    "title": "橋梁長寿命化工法検討業務委託（長引桃香野線（八幡橋））",
+    "type": "委託",
+    "announcementDate": "2026-02-16",
+    "biddingDate": "2026-03-19",
+    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+    "status": "受付中"
+  },
+  {
+    "id": "nara-city-0000002293",
+    "municipality": "奈良市",
+    "title": "西ノ京駅前広場設計業務委託（西ノ京町地内他・中部第３３８号線他）",
+    "type": "委託",
+    "announcementDate": "2026-02-16",
+    "biddingDate": "2026-03-19",
+    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+    "status": "受付中"
   },
   {
     "id": "nara-city-0000002267",
@@ -51,6 +113,108 @@
     "winningContractor": "森髙建設株式会社"
   },
   {
+    "id": "nara-city-0000002279",
+    "municipality": "奈良市",
+    "title": "西消防署自家給油取扱所新築工事",
+    "type": "建築",
+    "announcementDate": "2026-02-02",
+    "biddingDate": "2026-03-04",
+    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+    "status": "受付中"
+  },
+  {
+    "id": "nara-city-0000002280",
+    "municipality": "奈良市",
+    "title": "南消防署西大寺分署仮眠室改修工事",
+    "type": "建築",
+    "announcementDate": "2026-02-02",
+    "biddingDate": "2026-02-25",
+    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+    "status": "受付中"
+  },
+  {
+    "id": "nara-city-0000002282",
+    "municipality": "奈良市",
+    "title": "横断歩道橋長寿命化修繕工事（西部第７２２号線他（中町１号歩道橋））",
+    "type": "建築",
+    "announcementDate": "2026-02-02",
+    "biddingDate": "2026-03-10",
+    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+    "status": "受付中"
+  },
+  {
+    "id": "nara-city-0000002261",
+    "municipality": "奈良市",
+    "title": "交通安全施設整備工事（学園南一丁目地内他・西部第３３５号線他）",
+    "type": "建築",
+    "announcementDate": "2026-02-02",
+    "biddingDate": "2026-02-02",
+    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+    "status": "落札",
+    "winningContractor": "北浦工務店"
+  },
+  {
+    "id": "nara-city-0000002281",
+    "municipality": "奈良市",
+    "title": "近鉄高の原駅前交番新築に伴う建築設計業務委託",
+    "type": "委託",
+    "announcementDate": "2026-02-02",
+    "biddingDate": "2026-02-25",
+    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+    "status": "受付中"
+  },
+  {
+    "id": "nara-city-0000002283",
+    "municipality": "奈良市",
+    "title": "道路浸水対策測量設計業務委託（法蓮町地内・北部第４０８号線他）",
+    "type": "委託",
+    "announcementDate": "2026-02-02",
+    "biddingDate": "2026-03-10",
+    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+    "status": "受付中"
+  },
+  {
+    "id": "nara-city-0000002284",
+    "municipality": "奈良市",
+    "title": "道路浸水対策測量設計業務委託（三条宮前町地内・中部第６４９号線他）",
+    "type": "委託",
+    "announcementDate": "2026-02-02",
+    "biddingDate": "2026-03-11",
+    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+    "status": "受付中"
+  },
+  {
+    "id": "nara-city-0000002285",
+    "municipality": "奈良市",
+    "title": "ＪＲ奈良駅南特定土地区画整理事業に伴う交差点詳細設計業務委託",
+    "type": "委託",
+    "announcementDate": "2026-02-02",
+    "biddingDate": "2026-03-12",
+    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+    "status": "受付中"
+  },
+  {
+    "id": "nara-city-0000002260",
+    "municipality": "奈良市",
+    "title": "交通安全施設整備工事（その１）（その２）（芝辻町二丁目地内・西九条佐保線）",
+    "type": "建築",
+    "announcementDate": "2026-01-30",
+    "biddingDate": "2026-01-30",
+    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+    "status": "落札",
+    "winningContractor": "北浦工務店"
+  },
+  {
+    "id": "kashihara-proposal-5073001364",
+    "municipality": "橿原市",
+    "title": "橿原市立中学校休日部活動の地域展開に伴う地域クラブ運営業務委託 (圧縮ファイル: 152.0KB)",
+    "type": "委託",
+    "announcementDate": "2026-01-30",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/7/8272.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073001364.zip",
+    "status": "受付中"
+  },
+  {
     "id": "kashihara-result-5071001244",
     "municipality": "橿原市",
     "title": "各幼稚園空調機設置工事",
@@ -59,11 +223,7 @@
     "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
     "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071001244k.pdf",
     "status": "落札",
-    "winningContractor": "㈱ヨシムラエアサプライ",
-    "isIntelligenceExtracted": true,
-    "estimatedPrice": "17,380,000円",
-    "constructionPeriod": "契約日の翌日 から 令和 8年 3月31日",
-    "description": "橿原市内一円の各幼稚園において空調機を設置する工事です。"
+    "winningContractor": "㈱ヨシムラエアサプライ"
   },
   {
     "id": "kashihara-result-5072001239",
@@ -74,8 +234,79 @@
     "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18375.html",
     "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5072001239k.pdf",
     "status": "落札",
-    "winningContractor": "㈲坪岡建築事務所",
-    "isIntelligenceExtracted": true
+    "winningContractor": "㈲坪岡建築事務所"
+  },
+  {
+    "id": "nara-city-0000002255",
+    "municipality": "奈良市",
+    "title": "橋梁架替工事他に伴う現場技術業務委託（西部第３５０号線（あやめ新橋）他）",
+    "type": "委託",
+    "announcementDate": "2026-01-27",
+    "biddingDate": "2026-01-27",
+    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+    "status": "落札",
+    "winningContractor": "株式会社ピーエムコンサルタント"
+  },
+  {
+    "id": "nara-city-0000002257",
+    "municipality": "奈良市",
+    "title": "六条奈良阪線（東西工区）支障物件調査業務委託（その２）",
+    "type": "委託",
+    "announcementDate": "2026-01-27",
+    "biddingDate": "2026-01-27",
+    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+    "status": "落札",
+    "winningContractor": "株式会社キミコン"
+  },
+  {
+    "id": "nara-city-0000002259",
+    "municipality": "奈良市",
+    "title": "東登美ヶ丘小学校他２校屋外トイレ改築工事",
+    "type": "建築",
+    "announcementDate": "2026-01-15",
+    "biddingDate": "2026-02-06",
+    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+    "status": "受付中"
+  },
+  {
+    "id": "nara-city-0000002271",
+    "municipality": "奈良市",
+    "title": "春日中学校屋内運動場バスケットゴール取替工事",
+    "type": "建築",
+    "announcementDate": "2026-01-15",
+    "biddingDate": "2026-02-25",
+    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+    "status": "受付中"
+  },
+  {
+    "id": "nara-city-0000002272",
+    "municipality": "奈良市",
+    "title": "中部公民館舞台設備改修工事",
+    "type": "建築",
+    "announcementDate": "2026-01-15",
+    "biddingDate": "2026-02-25",
+    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+    "status": "受付中"
+  },
+  {
+    "id": "nara-city-0000002273",
+    "municipality": "奈良市",
+    "title": "ＪＲ奈良駅南特定土地区画整理事業機械電気設備設置工事",
+    "type": "建築",
+    "announcementDate": "2026-01-15",
+    "biddingDate": "2026-02-25",
+    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+    "status": "受付中"
+  },
+  {
+    "id": "nara-city-0000002274",
+    "municipality": "奈良市",
+    "title": "支障物件調査業務委託（針町地内・（仮称）針ＴＲＳバイパス線）",
+    "type": "委託",
+    "announcementDate": "2026-01-15",
+    "biddingDate": "2026-02-25",
+    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+    "status": "受付中"
   },
   {
     "id": "nara-city-0000002249",
@@ -89,6 +320,28 @@
     "winningContractor": "株式会社セリオス"
   },
   {
+    "id": "nara-city-0000002256",
+    "municipality": "奈良市",
+    "title": "近鉄大和西大寺駅北口駅前広場等引継ぎ図書作成業務委託",
+    "type": "委託",
+    "announcementDate": "2026-01-13",
+    "biddingDate": "2026-01-13",
+    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+    "status": "落札",
+    "winningContractor": "五洋設計株式会社"
+  },
+  {
+    "id": "nara-city-0000002245",
+    "municipality": "奈良市",
+    "title": "市内街路灯工事（西部その２）",
+    "type": "建築",
+    "announcementDate": "2025-12-23",
+    "biddingDate": "2025-12-23",
+    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+    "status": "落札",
+    "winningContractor": "前川電気"
+  },
+  {
     "id": "nara-city-0000002250",
     "municipality": "奈良市",
     "title": "第１０号（古市）市営住宅解体工事",
@@ -98,6 +351,39 @@
     "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
     "status": "落札",
     "winningContractor": "平井建設株式会社"
+  },
+  {
+    "id": "nara-city-0000002239",
+    "municipality": "奈良市",
+    "title": "高の原駅前広場整備に伴う工事監督支援業務委託",
+    "type": "委託",
+    "announcementDate": "2025-12-23",
+    "biddingDate": "2025-12-23",
+    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+    "status": "落札",
+    "winningContractor": "株式会社エハラ"
+  },
+  {
+    "id": "nara-city-0000002244",
+    "municipality": "奈良市",
+    "title": "市内街路灯工事（東部その２）",
+    "type": "建築",
+    "announcementDate": "2025-12-22",
+    "biddingDate": "2025-12-22",
+    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+    "status": "落札",
+    "winningContractor": "山添設備"
+  },
+  {
+    "id": "nara-city-0000002247",
+    "municipality": "奈良市",
+    "title": "交通安全施設修繕工事（交安修１４）",
+    "type": "建築",
+    "announcementDate": "2025-12-18",
+    "biddingDate": "2025-12-18",
+    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+    "status": "落札",
+    "winningContractor": "大和株式会社"
   },
   {
     "id": "kashihara-result-5071001189",
@@ -111,6 +397,28 @@
     "winningContractor": "㈱タカギ工業"
   },
   {
+    "id": "kashihara-result-5071001192",
+    "municipality": "橿原市",
+    "title": "市単独農道舗装修繕工事",
+    "type": "建築",
+    "announcementDate": "2025-12-18",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071001192k.pdf",
+    "status": "落札",
+    "winningContractor": "㈱森本組"
+  },
+  {
+    "id": "kashihara-result-5071001197",
+    "municipality": "橿原市",
+    "title": "醍醐地下歩道屋根修繕工事7-1",
+    "type": "建築",
+    "announcementDate": "2025-12-18",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071001197k.pdf",
+    "status": "落札",
+    "winningContractor": "㈱イシダ工業"
+  },
+  {
     "id": "kashihara-result-5072001184",
     "municipality": "橿原市",
     "title": "耳成西小学校受水槽改修工事に伴う設計委託",
@@ -120,6 +428,39 @@
     "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5072001184k.pdf",
     "status": "落札",
     "winningContractor": "㈲坪岡建築事務所"
+  },
+  {
+    "id": "kashihara-result-5073001201",
+    "municipality": "橿原市",
+    "title": "本薬師寺跡、藤原京右京八条三坊発掘調査委託業務",
+    "type": "委託",
+    "announcementDate": "2025-12-18",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18373.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073001201k.pdf",
+    "status": "落札",
+    "winningContractor": "㈲FCS"
+  },
+  {
+    "id": "nara-city-0000002246",
+    "municipality": "奈良市",
+    "title": "交通安全施設修繕工事（交安修９）",
+    "type": "建築",
+    "announcementDate": "2025-12-17",
+    "biddingDate": "2025-12-17",
+    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+    "status": "落札",
+    "winningContractor": "日本道路保安株式会社"
+  },
+  {
+    "id": "nara-city-0000002248",
+    "municipality": "奈良市",
+    "title": "通学路整備工事（学園大和町三丁目地内他・西部第３７２号線他）",
+    "type": "建築",
+    "announcementDate": "2025-12-16",
+    "biddingDate": "2025-12-16",
+    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+    "status": "落札",
+    "winningContractor": "日本道路保安株式会社"
   },
   {
     "id": "nara-city-0000002237",
@@ -164,6 +505,16 @@
     "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
     "status": "落札",
     "winningContractor": "株式会社エンタコンサルタント"
+  },
+  {
+    "id": "nara-city-0000002229",
+    "municipality": "奈良市",
+    "title": "交通安全施設修繕工事（交安修１３）",
+    "type": "建築",
+    "announcementDate": "2025-12-03",
+    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+    "status": "落札",
+    "winningContractor": "阪神装路株式会社"
   },
   {
     "id": "nara-city-0000002226",
@@ -218,6 +569,69 @@
     "winningContractor": "株式会社システムクリエイト"
   },
   {
+    "id": "kashihara-result-5071001098",
+    "municipality": "橿原市",
+    "title": "今井都市緑地公園施設更新工事",
+    "type": "建築",
+    "announcementDate": "2025-11-19",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071001098k.pdf",
+    "status": "落札",
+    "winningContractor": "㈱丸高組"
+  },
+  {
+    "id": "kashihara-result-5071001069",
+    "municipality": "橿原市",
+    "title": "阿弥陀児童公園岩塊撤去工事",
+    "type": "建築",
+    "announcementDate": "2025-11-19",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071001069k.pdf",
+    "status": "落札",
+    "winningContractor": "㈱ベスト産業"
+  },
+  {
+    "id": "kashihara-result-5071001071",
+    "municipality": "橿原市",
+    "title": "交通安全施設整備工事7-2",
+    "type": "建築",
+    "announcementDate": "2025-11-19",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071001071k.pdf",
+    "status": "落札",
+    "winningContractor": "㈱大興建設"
+  },
+  {
+    "id": "kashihara-result-5071001086",
+    "municipality": "橿原市",
+    "title": "5号転倒ゲート補修工事",
+    "type": "建築",
+    "announcementDate": "2025-11-19",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071001086k.pdf",
+    "status": "落札"
+  },
+  {
+    "id": "kashihara-result-5072001078",
+    "municipality": "橿原市",
+    "title": "昆虫館受変電設備改修工事に伴う設計委託",
+    "type": "コンサル",
+    "announcementDate": "2025-11-19",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18375.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5072001078k.pdf",
+    "status": "落札"
+  },
+  {
+    "id": "kashihara-result-5072001074",
+    "municipality": "橿原市",
+    "title": "市営住宅内装等改修工事に伴う設計委託",
+    "type": "コンサル",
+    "announcementDate": "2025-11-19",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18375.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5072001074k.pdf",
+    "status": "落札"
+  },
+  {
     "id": "nara-city-0000002175",
     "municipality": "奈良市",
     "title": "史跡大安寺旧境内六条大路及び塔院北半区域整備実施設計業務委託",
@@ -240,6 +654,28 @@
     "winningContractor": "株式会社エース"
   },
   {
+    "id": "kashihara-result-5071000984",
+    "municipality": "橿原市",
+    "title": "新賀公園施設更新工事",
+    "type": "建築",
+    "announcementDate": "2025-10-23",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000984k.pdf",
+    "status": "落札",
+    "winningContractor": "輝登建設㈱"
+  },
+  {
+    "id": "kashihara-result-5071001006",
+    "municipality": "橿原市",
+    "title": "八木グリーンタウン公園他施設更新工事",
+    "type": "建築",
+    "announcementDate": "2025-10-23",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071001006k.pdf",
+    "status": "落札",
+    "winningContractor": "㈱大谷建設"
+  },
+  {
     "id": "kashihara-result-5071001007",
     "municipality": "橿原市",
     "title": "せせらぎの道木橋改修工事",
@@ -249,6 +685,27 @@
     "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071001007k.pdf",
     "status": "落札",
     "winningContractor": "SECOND SEED  事業主"
+  },
+  {
+    "id": "kashihara-result-5071001005",
+    "municipality": "橿原市",
+    "title": "耳成地区公民館屋根改修工事",
+    "type": "建築",
+    "announcementDate": "2025-10-23",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071001005k.pdf",
+    "status": "落札"
+  },
+  {
+    "id": "kashihara-result-5071001001",
+    "municipality": "橿原市",
+    "title": "交通安全施設整備工事7－1",
+    "type": "建築",
+    "announcementDate": "2025-10-23",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071001001k.pdf",
+    "status": "落札",
+    "winningContractor": "㈱名村造園"
   },
   {
     "id": "nara-city-0000002111",
@@ -284,6 +741,26 @@
     "winningContractor": "株式会社昭和設計"
   },
   {
+    "id": "kashihara-proposal-5073000834",
+    "municipality": "橿原市",
+    "title": "橿原市グランドデザイン策定業務 (圧縮ファイル: 738.2KB)",
+    "type": "委託",
+    "announcementDate": "2025-10-03",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/7/8272.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000834.zip",
+    "status": "受付中"
+  },
+  {
+    "id": "nara-city-0000002196",
+    "municipality": "奈良市",
+    "title": "奈良市総合福祉センター体育館空調設備設置に伴う建築設備設計業務委託",
+    "type": "委託",
+    "announcementDate": "2025-10-01",
+    "biddingDate": "2025-10-24",
+    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+    "status": "受付中"
+  },
+  {
     "id": "kashihara-result-5072000944",
     "municipality": "橿原市",
     "title": "畝傍中学校EV棟増築工事に伴う工事監理業務委託",
@@ -317,6 +794,50 @@
     "winningContractor": "株式会社アーバンパイオニア設計"
   },
   {
+    "id": "nara-city-0000002098",
+    "municipality": "奈良市",
+    "title": "道路浸水対策測量設計業務委託（西大寺国見町一丁目地内・中部第６９５号線他）",
+    "type": "委託",
+    "announcementDate": "2025-09-18",
+    "biddingDate": "2025-09-18",
+    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+    "status": "落札",
+    "winningContractor": "株式会社エース"
+  },
+  {
+    "id": "kashihara-result-5071000951",
+    "municipality": "橿原市",
+    "title": "市道路改良工事(内膳町)",
+    "type": "建築",
+    "announcementDate": "2025-09-18",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000951k.pdf",
+    "status": "落札",
+    "winningContractor": "㈱宮下興業"
+  },
+  {
+    "id": "kashihara-result-5071000960",
+    "municipality": "橿原市",
+    "title": "市道路整備工事7-1",
+    "type": "建築",
+    "announcementDate": "2025-09-18",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000960k.pdf",
+    "status": "落札",
+    "winningContractor": "㈱ベスト産業"
+  },
+  {
+    "id": "kashihara-result-5071000941",
+    "municipality": "橿原市",
+    "title": "通学路整備工事7-1",
+    "type": "建築",
+    "announcementDate": "2025-09-18",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000941k.pdf",
+    "status": "落札",
+    "winningContractor": "三貴建設  事業主"
+  },
+  {
     "id": "kashihara-result-5071000888",
     "municipality": "橿原市",
     "title": "保健センター南館高圧受電設備引込ケーブル・構内PAS新設工事",
@@ -326,6 +847,50 @@
     "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000888k.pdf",
     "status": "落札",
     "winningContractor": "㈱タケガミ電気水道"
+  },
+  {
+    "id": "kashihara-result-5071000922",
+    "municipality": "橿原市",
+    "title": "市道路舗装維持修繕工事7－4",
+    "type": "建築",
+    "announcementDate": "2025-09-18",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000922k.pdf",
+    "status": "落札",
+    "winningContractor": "㈱松村組"
+  },
+  {
+    "id": "kashihara-result-5071000958",
+    "municipality": "橿原市",
+    "title": "市道路舗装維持修繕工事7－10",
+    "type": "建築",
+    "announcementDate": "2025-09-18",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000958k.pdf",
+    "status": "落札",
+    "winningContractor": "㈱吉田組"
+  },
+  {
+    "id": "kashihara-result-5071000923",
+    "municipality": "橿原市",
+    "title": "市道路舗装維持修繕工事7－7",
+    "type": "建築",
+    "announcementDate": "2025-09-18",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000923k.pdf",
+    "status": "落札",
+    "winningContractor": "輝登建設㈱"
+  },
+  {
+    "id": "nara-city-0000002096",
+    "municipality": "奈良市",
+    "title": "道路浸水対策測量設計業務委託（学園大和町六丁目地内・二条谷田線他）",
+    "type": "委託",
+    "announcementDate": "2025-09-17",
+    "biddingDate": "2025-09-17",
+    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+    "status": "落札",
+    "winningContractor": "株式会社日建技術コンサルタント"
   },
   {
     "id": "nara-city-0000002101",
@@ -350,6 +915,38 @@
     "winningContractor": "株式会社明友技建"
   },
   {
+    "id": "nara-city-0000002103",
+    "municipality": "奈良市",
+    "title": "六条奈良阪線（東西工区）支障物件調査業務委託",
+    "type": "委託",
+    "announcementDate": "2025-09-17",
+    "biddingDate": "2025-09-17",
+    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+    "status": "落札",
+    "winningContractor": "株式会社中央クリエイト"
+  },
+  {
+    "id": "nara-city-0000002172",
+    "municipality": "奈良市",
+    "title": "右京コミュニティスポーツ会館空調設備設置に伴う建築設備設計業務委託",
+    "type": "委託",
+    "announcementDate": "2025-09-16",
+    "biddingDate": "2025-10-10",
+    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+    "status": "受付中"
+  },
+  {
+    "id": "nara-city-0000002078",
+    "municipality": "奈良市",
+    "title": "道路附属物定期点検業務委託（登美ヶ丘中町線（学園前駅北歩道橋）他）",
+    "type": "委託",
+    "announcementDate": "2025-09-01",
+    "biddingDate": "2025-09-01",
+    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+    "status": "落札",
+    "winningContractor": "株式会社八州"
+  },
+  {
     "id": "nara-city-0000002079",
     "municipality": "奈良市",
     "title": "設計業務委託（芝辻町四丁目地内・中部第５９１号線他）",
@@ -372,6 +969,39 @@
     "winningContractor": "株式会社システムクリエイト"
   },
   {
+    "id": "kashihara-result-5071000851",
+    "municipality": "橿原市",
+    "title": "市道路改良工事(川西町)",
+    "type": "建築",
+    "announcementDate": "2025-08-21",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000851k.pdf",
+    "status": "落札",
+    "winningContractor": "㈱南村組"
+  },
+  {
+    "id": "kashihara-result-5071000829",
+    "municipality": "橿原市",
+    "title": "市道路整備工事(十市町)",
+    "type": "建築",
+    "announcementDate": "2025-08-21",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000829k.pdf",
+    "status": "落札",
+    "winningContractor": "㈱広澤建設"
+  },
+  {
+    "id": "kashihara-result-5071000841",
+    "municipality": "橿原市",
+    "title": "交通安全施設設置工事7－1",
+    "type": "建築",
+    "announcementDate": "2025-08-21",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000841k.pdf",
+    "status": "落札",
+    "winningContractor": "㈱島田水道設備"
+  },
+  {
     "id": "kashihara-result-5071000837",
     "municipality": "橿原市",
     "title": "真菅小学校プールサイド改修工事",
@@ -381,6 +1011,17 @@
     "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000837k.pdf",
     "status": "落札",
     "winningContractor": "観音寺辻本建設㈱"
+  },
+  {
+    "id": "kashihara-result-5071000850",
+    "municipality": "橿原市",
+    "title": "市道路舗装維持修繕工事7-9",
+    "type": "建築",
+    "announcementDate": "2025-08-21",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000850k.pdf",
+    "status": "落札",
+    "winningContractor": "㈱森本組"
   },
   {
     "id": "kashihara-result-5072000848",
@@ -403,6 +1044,17 @@
     "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5072000836k.pdf",
     "status": "落札",
     "winningContractor": "㈱内藤建築事務所"
+  },
+  {
+    "id": "kashihara-result-5072000798",
+    "municipality": "橿原市",
+    "title": "一級河川曽我川護岸設計業務委託（雲梯町）",
+    "type": "コンサル",
+    "announcementDate": "2025-08-21",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18375.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5072000798k.pdf",
+    "status": "落札",
+    "winningContractor": "㈱吹上技研コンサルタント"
   },
   {
     "id": "nara-city-0000002060",
@@ -436,6 +1088,17 @@
     "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
     "status": "落札",
     "winningContractor": "株式会社ノア技術コンサルタント"
+  },
+  {
+    "id": "nara-city-0000002057",
+    "municipality": "奈良市",
+    "title": "道路浸水対策測量設計業務委託（西大寺芝町一丁目地内・中部第７号線他）",
+    "type": "委託",
+    "announcementDate": "2025-08-08",
+    "biddingDate": "2025-08-08",
+    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+    "status": "落札",
+    "winningContractor": "第一設計監理株式会社"
   },
   {
     "id": "nara-city-0000002061",
@@ -482,6 +1145,17 @@
     "winningContractor": "株式会社礎建築事務所"
   },
   {
+    "id": "nara-city-0000002029",
+    "municipality": "奈良市",
+    "title": "支障物件調査業務委託（東九条町地内・南部第９０・１１８号線）",
+    "type": "委託",
+    "announcementDate": "2025-07-30",
+    "biddingDate": "2025-07-30",
+    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+    "status": "落札",
+    "winningContractor": "写測エンジニアリング株式会社"
+  },
+  {
     "id": "nara-city-0000002032",
     "municipality": "奈良市",
     "title": "第１０号（古市）市営住宅及び第１９号（梅園）市営住宅解体工事に伴う建築設計業務委託",
@@ -491,6 +1165,17 @@
     "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
     "status": "落札",
     "winningContractor": "岡田建築設計事務所"
+  },
+  {
+    "id": "kashihara-result-5071000725",
+    "municipality": "橿原市",
+    "title": "電線共同溝敷設工事（第7－6工区）",
+    "type": "建築",
+    "announcementDate": "2025-07-24",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000725k.pdf",
+    "status": "落札",
+    "winningContractor": "山﨑工業㈱"
   },
   {
     "id": "kashihara-result-5071000665",
@@ -515,6 +1200,39 @@
     "winningContractor": "㈱松吉組"
   },
   {
+    "id": "kashihara-result-5071000715",
+    "municipality": "橿原市",
+    "title": "市道路舗装維持修繕工事7－6",
+    "type": "建築",
+    "announcementDate": "2025-07-24",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000715k.pdf",
+    "status": "落札",
+    "winningContractor": "㈱松本組"
+  },
+  {
+    "id": "kashihara-result-5071000742",
+    "municipality": "橿原市",
+    "title": "市道路舗装維持修繕工事7-5",
+    "type": "建築",
+    "announcementDate": "2025-07-24",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000742k.pdf",
+    "status": "落札",
+    "winningContractor": "松平建設㈱"
+  },
+  {
+    "id": "kashihara-result-5072000695",
+    "municipality": "橿原市",
+    "title": "令和7年度 橿原市地番図等修正及び航空写真図化業務",
+    "type": "委託",
+    "announcementDate": "2025-07-24",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18375.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5072000695k.pdf",
+    "status": "落札",
+    "winningContractor": "国際航業㈱"
+  },
+  {
     "id": "kashihara-result-5072000586",
     "municipality": "橿原市",
     "title": "各小中学校特別教室等空調設備設置計画策定業務",
@@ -524,6 +1242,50 @@
     "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5072000586k.pdf",
     "status": "落札",
     "winningContractor": "国際航業㈱"
+  },
+  {
+    "id": "kashihara-result-5072000621",
+    "municipality": "橿原市",
+    "title": "産業用地整備基本計画策定業務委託",
+    "type": "建築",
+    "announcementDate": "2025-07-24",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18375.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5072000621k.pdf",
+    "status": "落札",
+    "winningContractor": "日本測地設計㈱"
+  },
+  {
+    "id": "kashihara-result-5072000655",
+    "municipality": "橿原市",
+    "title": "歩道橋定期点検業務委託",
+    "type": "委託",
+    "announcementDate": "2025-07-24",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18375.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5072000655k.pdf",
+    "status": "落札",
+    "winningContractor": "㈱エイト日本技術開発"
+  },
+  {
+    "id": "kashihara-result-5072000706",
+    "municipality": "橿原市",
+    "title": "嘱託登記業務（慈明寺町）",
+    "type": "委託",
+    "announcementDate": "2025-07-24",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18375.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5072000706k.pdf",
+    "status": "落札",
+    "winningContractor": "土地家屋調査士"
+  },
+  {
+    "id": "kashihara-result-5073000694",
+    "municipality": "橿原市",
+    "title": "本庁舎周辺樹木剪定業務",
+    "type": "委託",
+    "announcementDate": "2025-07-24",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18373.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000694k.pdf",
+    "status": "落札",
+    "winningContractor": "㈱脇田建設"
   },
   {
     "id": "nara-city-0000001991",
@@ -546,6 +1308,37 @@
     "winningContractor": "株式会社日建技術コンサルタント"
   },
   {
+    "id": "nara-city-0000001989",
+    "municipality": "奈良市",
+    "title": "橋梁長寿命化修繕・耐震補強設計業務委託（中部第１５３号線（外山橋）他）",
+    "type": "委託",
+    "announcementDate": "2025-07-16",
+    "biddingDate": "2025-07-16",
+    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+    "status": "落札",
+    "winningContractor": "内外エンジニアリング株式会社"
+  },
+  {
+    "id": "nara-city-0000001993",
+    "municipality": "奈良市",
+    "title": "高の原駅前広場整備事業支障物件調査業務委託",
+    "type": "委託",
+    "announcementDate": "2025-07-16",
+    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+    "status": "落札",
+    "winningContractor": "写測エンジニアリング株式会社"
+  },
+  {
+    "id": "nara-city-0000002077",
+    "municipality": "奈良市",
+    "title": "橋梁架替工事他に伴う現場技術業務委託（西部第３５０号線（あやめ新橋）他）",
+    "type": "委託",
+    "announcementDate": "2025-07-15",
+    "biddingDate": "2025-08-29",
+    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+    "status": "受付中"
+  },
+  {
     "id": "nara-city-0000002031",
     "municipality": "奈良市",
     "title": "測量業務委託（芝辻町四丁目地内・中部第５９１号線他）",
@@ -557,6 +1350,38 @@
     "winningContractor": "五洋設計株式会社"
   },
   {
+    "id": "kashihara-result-5071000280",
+    "municipality": "橿原市",
+    "title": "八木中学校長寿命化改良工事（第1期）",
+    "type": "建築",
+    "announcementDate": "2025-07-01",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000280k.pdf",
+    "status": "落札",
+    "winningContractor": "大日本土木・崎山組特定建設工事共同企業体"
+  },
+  {
+    "id": "kashihara-proposal-5073000716",
+    "municipality": "橿原市",
+    "title": "藤原宮跡ARアプリ作成業務 (圧縮ファイル: 967.1KB)",
+    "type": "委託",
+    "announcementDate": "2025-06-27",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/7/8272.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000716.zip",
+    "status": "受付中"
+  },
+  {
+    "id": "kashihara-result-5071000560",
+    "municipality": "橿原市",
+    "title": "市道路改良工事(十市町)",
+    "type": "建築",
+    "announcementDate": "2025-06-26",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000560k.pdf",
+    "status": "落札",
+    "winningContractor": "㈱広澤建設"
+  },
+  {
     "id": "kashihara-result-5071000510",
     "municipality": "橿原市",
     "title": "市営住宅内装等改修工事",
@@ -566,6 +1391,39 @@
     "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000510k.pdf",
     "status": "落札",
     "winningContractor": "㈱ゆうび建設"
+  },
+  {
+    "id": "kashihara-result-5071000575",
+    "municipality": "橿原市",
+    "title": "市道路舗装維持修繕工事7-3",
+    "type": "建築",
+    "announcementDate": "2025-06-26",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000575k.pdf",
+    "status": "落札",
+    "winningContractor": "松平建設㈱"
+  },
+  {
+    "id": "kashihara-result-5071000553",
+    "municipality": "橿原市",
+    "title": "市道路舗装維持修繕工事7－2",
+    "type": "建築",
+    "announcementDate": "2025-06-26",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000553k.pdf",
+    "status": "落札",
+    "winningContractor": "観音寺辻本建設㈱"
+  },
+  {
+    "id": "kashihara-result-5072000516",
+    "municipality": "橿原市",
+    "title": "橿原市地籍調査業務委託7-1",
+    "type": "委託",
+    "announcementDate": "2025-06-26",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18375.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5072000516k.pdf",
+    "status": "落札",
+    "winningContractor": "㈱松本コンサルタント"
   },
   {
     "id": "kashihara-result-5072000523",
@@ -612,6 +1470,70 @@
     "winningContractor": "ＮＴＣコンサルタンツ㈱"
   },
   {
+    "id": "kashihara-result-5072000571",
+    "municipality": "橿原市",
+    "title": "公園施設長寿命化計画更新業務委託",
+    "type": "委託",
+    "announcementDate": "2025-06-26",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18375.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5072000571k.pdf",
+    "status": "落札",
+    "winningContractor": "㈱ニュージェック"
+  },
+  {
+    "id": "kashihara-result-5072000537",
+    "municipality": "橿原市",
+    "title": "市道路改良工事に伴う嘱託登記業務(十市町)",
+    "type": "建築",
+    "announcementDate": "2025-06-26",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18375.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5072000537k.pdf",
+    "status": "落札",
+    "winningContractor": "西浦新二土地家屋調査士事務所"
+  },
+  {
+    "id": "kashihara-result-5072000551",
+    "municipality": "橿原市",
+    "title": "史跡藤原京跡 公共嘱託登記業務委託",
+    "type": "委託",
+    "announcementDate": "2025-06-26",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18375.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5072000551k.pdf",
+    "status": "落札",
+    "winningContractor": "土地家屋調査士"
+  },
+  {
+    "id": "kashihara-result-5073000481",
+    "municipality": "橿原市",
+    "title": "河川施設除草業務委託",
+    "type": "委託",
+    "announcementDate": "2025-06-26",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18373.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000481k.pdf",
+    "status": "落札",
+    "winningContractor": "㈱南村組"
+  },
+  {
+    "id": "nara-city-0000001958",
+    "municipality": "奈良市",
+    "title": "橋梁塗装塗替設計業務委託（八幡橋）",
+    "type": "委託",
+    "announcementDate": "2025-06-24",
+    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+    "status": "落札",
+    "winningContractor": "株式会社日建技術コンサルタント"
+  },
+  {
+    "id": "nara-city-0000001957",
+    "municipality": "奈良市",
+    "title": "橋梁長寿命化修繕設計業務委託（中部第１３４２号線（無名橋２０９）他）",
+    "type": "委託",
+    "announcementDate": "2025-06-23",
+    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+    "status": "落札",
+    "winningContractor": "株式会社日本構造橋梁研究所"
+  },
+  {
     "id": "nara-city-0000001959",
     "municipality": "奈良市",
     "title": "測量設計業務委託（北椿尾町地内・東部第３００号線）",
@@ -620,6 +1542,111 @@
     "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
     "status": "落札",
     "winningContractor": "近畿技術コンサルタンツ株式会社"
+  },
+  {
+    "id": "nara-city-0000002027",
+    "municipality": "奈良市",
+    "title": "ＪＲ奈良駅高架下公衆トイレ改修に伴う建築設計業務委託",
+    "type": "委託",
+    "announcementDate": "2025-06-16",
+    "biddingDate": "2025-07-31",
+    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+    "status": "受付中"
+  },
+  {
+    "id": "nara-city-0000002028",
+    "municipality": "奈良市",
+    "title": "南消防署西大寺分署仮眠室改修に伴う建築設計業務委託",
+    "type": "委託",
+    "announcementDate": "2025-06-16",
+    "biddingDate": "2025-08-04",
+    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+    "status": "受付中"
+  },
+  {
+    "id": "nara-city-0000001992",
+    "municipality": "奈良市",
+    "title": "平城西バンビーホーム増築に伴う建築設計業務委託",
+    "type": "委託",
+    "announcementDate": "2025-06-02",
+    "biddingDate": "2025-07-16",
+    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+    "status": "受付中"
+  },
+  {
+    "id": "nara-city-0000001961",
+    "municipality": "奈良市",
+    "title": "第１９号（梅園）市営住宅解体工事に伴う建築設計業務委託",
+    "type": "委託",
+    "announcementDate": "2025-06-02",
+    "biddingDate": "2025-06-25",
+    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+    "status": "受付中"
+  },
+  {
+    "id": "kashihara-proposal-5073000578",
+    "municipality": "橿原市",
+    "title": "橿原市標準準拠システム移行業務 (圧縮ファイル: 6.7MB)",
+    "type": "委託",
+    "announcementDate": "2025-05-30",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/7/8272.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000578.zip",
+    "status": "受付中"
+  },
+  {
+    "id": "kashihara-result-5073000301",
+    "municipality": "橿原市",
+    "title": "公営住宅・改良住宅 草刈・剪定・消毒委託業務",
+    "type": "委託",
+    "announcementDate": "2025-05-21",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18373.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000301k.pdf",
+    "status": "落札",
+    "winningContractor": "米田造園（佑）  米田"
+  },
+  {
+    "id": "kashihara-result-5073000274",
+    "municipality": "橿原市",
+    "title": "市営香久山墓園植栽管理業務",
+    "type": "委託",
+    "announcementDate": "2025-05-21",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18373.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000274k.pdf",
+    "status": "落札",
+    "winningContractor": "㈱大和菊花園"
+  },
+  {
+    "id": "kashihara-result-5073000259",
+    "municipality": "橿原市",
+    "title": "かしはら万葉ホール周辺植栽場所の剪定等管理業務",
+    "type": "委託",
+    "announcementDate": "2025-05-21",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18373.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000259k.pdf",
+    "status": "落札",
+    "winningContractor": "米田造園（宏）  米田"
+  },
+  {
+    "id": "kashihara-result-5073000227",
+    "municipality": "橿原市",
+    "title": "橿原文化会館前広場管理業務",
+    "type": "委託",
+    "announcementDate": "2025-05-21",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18373.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000227k.pdf",
+    "status": "落札",
+    "winningContractor": "㈱ＡＺ"
+  },
+  {
+    "id": "kashihara-result-5073000256",
+    "municipality": "橿原市",
+    "title": "今井町内植栽剪定・刈り込み業務委託",
+    "type": "委託",
+    "announcementDate": "2025-05-21",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18373.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000256k.pdf",
+    "status": "落札",
+    "winningContractor": "堀川造園"
   },
   {
     "id": "kashihara-result-5071000284",
@@ -655,6 +1682,83 @@
     "winningContractor": "㈱森本組"
   },
   {
+    "id": "kashihara-result-5073000325",
+    "municipality": "橿原市",
+    "title": "街路樹植栽管理作業委託 6工区",
+    "type": "委託",
+    "announcementDate": "2025-05-20",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18373.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000325k.pdf",
+    "status": "落札",
+    "winningContractor": "㈱南村組"
+  },
+  {
+    "id": "kashihara-result-5073000300",
+    "municipality": "橿原市",
+    "title": "街路樹植栽管理作業委託 2工区",
+    "type": "委託",
+    "announcementDate": "2025-05-20",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18373.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000300k.pdf",
+    "status": "落札",
+    "winningContractor": "橿原造園"
+  },
+  {
+    "id": "kashihara-result-5073000271",
+    "municipality": "橿原市",
+    "title": "市内公園等植栽管理委託 第1工区",
+    "type": "委託",
+    "announcementDate": "2025-05-20",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18373.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000271k.pdf",
+    "status": "落札",
+    "winningContractor": "㈱名村造園"
+  },
+  {
+    "id": "kashihara-result-5073000288",
+    "municipality": "橿原市",
+    "title": "街路樹植栽管理作業委託 4工区",
+    "type": "委託",
+    "announcementDate": "2025-05-20",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18373.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000288k.pdf",
+    "status": "落札",
+    "winningContractor": "松平建設㈱"
+  },
+  {
+    "id": "kashihara-result-5073000273",
+    "municipality": "橿原市",
+    "title": "白橿町公園緑地植栽管理委託",
+    "type": "委託",
+    "announcementDate": "2025-05-20",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18373.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000273k.pdf",
+    "status": "落札",
+    "winningContractor": "田村園"
+  },
+  {
+    "id": "kashihara-result-5071000319",
+    "municipality": "橿原市",
+    "title": "幹線街路維持修繕工事",
+    "type": "建築",
+    "announcementDate": "2025-05-15",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000319k.pdf",
+    "status": "落札",
+    "winningContractor": "㈱広澤建設"
+  },
+  {
+    "id": "kashihara-result-5071000322",
+    "municipality": "橿原市",
+    "title": "市道路舗装維持修繕工事7－1",
+    "type": "建築",
+    "announcementDate": "2025-05-15",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000322k.pdf",
+    "status": "落札",
+    "winningContractor": "㈱松本組"
+  },
+  {
     "id": "kashihara-result-5072000314",
     "municipality": "橿原市",
     "title": "第1こども園床及び空調設備等改修工事に伴う設計委託",
@@ -675,6 +1779,72 @@
     "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5072000223k.pdf",
     "status": "落札",
     "winningContractor": "国際航業㈱"
+  },
+  {
+    "id": "kashihara-result-5072000262",
+    "municipality": "橿原市",
+    "title": "公共登記嘱託業務（雲梯町・慈明寺町）",
+    "type": "委託",
+    "announcementDate": "2025-05-15",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18375.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5072000262k.pdf",
+    "status": "落札",
+    "winningContractor": "西浦登記測量事務所"
+  },
+  {
+    "id": "kashihara-result-5073000289",
+    "municipality": "橿原市",
+    "title": "街路樹植栽管理作業委託 5工区",
+    "type": "委託",
+    "announcementDate": "2025-05-15",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18373.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000289k.pdf",
+    "status": "落札",
+    "winningContractor": "香久山造園 米田"
+  },
+  {
+    "id": "kashihara-result-5073000287",
+    "municipality": "橿原市",
+    "title": "街路樹植栽管理作業委託 3工区",
+    "type": "委託",
+    "announcementDate": "2025-05-15",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18373.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000287k.pdf",
+    "status": "落札",
+    "winningContractor": "向造園"
+  },
+  {
+    "id": "kashihara-result-5073000328",
+    "municipality": "橿原市",
+    "title": "街路樹植栽管理作業委託 7工区",
+    "type": "委託",
+    "announcementDate": "2025-05-15",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18373.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000328k.pdf",
+    "status": "落札",
+    "winningContractor": "香久山造園 米田"
+  },
+  {
+    "id": "kashihara-result-5073000299",
+    "municipality": "橿原市",
+    "title": "街路樹植栽管理作業委託 1工区",
+    "type": "委託",
+    "announcementDate": "2025-05-15",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18373.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000299k.pdf",
+    "status": "落札",
+    "winningContractor": "西川造園"
+  },
+  {
+    "id": "kashihara-result-5073000272",
+    "municipality": "橿原市",
+    "title": "市内公園等植栽管理委託 第2工区",
+    "type": "委託",
+    "announcementDate": "2025-05-15",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18373.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000272k.pdf",
+    "status": "落札",
+    "winningContractor": "松平建設㈱"
   },
   {
     "id": "kashihara-result-5071000096",
@@ -708,6 +1878,17 @@
     "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000017k.pdf",
     "status": "落札",
     "winningContractor": "㈱タケガミ電気水道"
+  },
+  {
+    "id": "kashihara-result-5071000031",
+    "municipality": "橿原市",
+    "title": "耳成小学校等下水接続工事",
+    "type": "建築",
+    "announcementDate": "2025-04-22",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000031k.pdf",
+    "status": "落札",
+    "winningContractor": "㈱岡本設備"
   },
   {
     "id": "kashihara-result-5071000011",
