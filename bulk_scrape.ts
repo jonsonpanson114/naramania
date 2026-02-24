@@ -251,11 +251,29 @@ async function scrapeIkoma(): Promise<ScrapedItem[]> {
 }
 
 // --- Utilities ---
+function isTargetArchitectureProject(title: string): boolean {
+    // Exclude Civil Engineering keywords completely
+    const civilKeywords = ['土木', '道路', '舗装', '橋梁', '河川', '下水', '上水', '水道', '砂防', '法面', '除草', '浚渫', 'トンネル', '防護柵', '標識', '街路樹', '伐採', '側溝', '擁壁', 'ため池'];
+    if (civilKeywords.some(kw => title.includes(kw))) {
+        if (!title.includes('建築') && !title.includes('設備')) { // Exception if it explicitly says architecture/equipment
+            return false;
+        }
+    }
+
+    // Require specific Architecture / Design keywords to ensure quality
+    const archKeywords = ['建築', '設計', '電気', '空調', '管工事', '設備', 'コンサル', '測量', '改修', '防水', '外壁', '内装', 'トイレ', '便所', 'エレベーター', '照明', '屋上', '消防', '解体', '新築', '増築'];
+    if (archKeywords.some(kw => title.includes(kw))) {
+        return true;
+    }
+
+    return false; // Aggressively prune everything else (like generic links or unqualified construction)
+}
+
 function guessType(text: string): string {
+    if (text.includes('設計')) return '設計';
     if (text.includes('測量') || text.includes('コンサル')) return 'コンサル';
-    if (text.includes('委託')) return '委託';
-    if (text.includes('建築')) return '建築';
-    if (text.includes('工事')) return '建築';
+    if (text.includes('電気') || text.includes('空調') || text.includes('設備') || text.includes('管工事')) return '設備';
+    if (text.includes('建築') || text.includes('改修') || text.includes('防水') || text.includes('新築') || text.includes('外壁')) return '建築';
     return 'その他';
 }
 
@@ -300,9 +318,12 @@ async function main() {
 
     const allItems = [...existingItems, ...results.flat()];
 
+    // Aggressively filter out civil engineering and keep only architecture/design
+    const archItems = allItems.filter(item => isTargetArchitectureProject(item.title));
+
     // Dedup by title
     const seen = new Set<string>();
-    const deduped = allItems.filter(item => {
+    const deduped = archItems.filter(item => {
         if (seen.has(item.title)) return false;
         seen.add(item.title);
         return true;

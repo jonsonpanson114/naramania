@@ -20,6 +20,7 @@ export interface BiddingItem {
   designFirm?: string; // 設計事務所
   constructionPeriod?: string; // 工期
   pdfUrl?: string; // Link to the actual PDF document
+  isIntelligenceExtracted?: boolean; // True if Gemini has processed the PDF
 }
 
 export interface Scraper {

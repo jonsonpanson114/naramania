@@ -52,18 +52,18 @@ export function BiddingTable({ items }: BiddingTableProps) {
                             key={filter}
                             onClick={() => setActiveFilter(filter)}
                             className={`text-[10px] tracking-[0.3em] relative font-bold font-serif transition-all duration-300 uppercase flex items-center gap-1.5 ${activeFilter === filter
-                                    ? filter === '落札' ? 'text-green-600'
-                                        : filter === '締切間近' ? 'text-amber-600'
-                                            : 'text-primary'
-                                    : 'text-gray-400 hover:text-primary'
+                                ? filter === '落札' ? 'text-green-600'
+                                    : filter === '締切間近' ? 'text-amber-600'
+                                        : 'text-primary'
+                                : 'text-gray-400 hover:text-primary'
                                 }`}
                         >
                             {filter}
                             <span className={`text-[9px] px-1.5 py-0.5 rounded-full font-sans ${activeFilter === filter
-                                    ? filter === '落札' ? 'bg-green-100 text-green-700'
-                                        : filter === '締切間近' ? 'bg-amber-100 text-amber-700'
-                                            : 'bg-primary/10 text-primary'
-                                    : 'bg-gray-100 text-gray-400'
+                                ? filter === '落札' ? 'bg-green-100 text-green-700'
+                                    : filter === '締切間近' ? 'bg-amber-100 text-amber-700'
+                                        : 'bg-primary/10 text-primary'
+                                : 'bg-gray-100 text-gray-400'
                                 }`}>
                                 {counts[filter]}
                             </span>
@@ -125,6 +125,24 @@ export function BiddingTable({ items }: BiddingTableProps) {
                                                 <a href={`/project/${item.id}`} className="text-[15px] text-primary tracking-wide group-hover:text-accent transition-colors duration-300 font-serif block truncate max-w-xl leading-relaxed">
                                                     {item.title}
                                                 </a>
+
+                                                {/* Price & Period tags */}
+                                                {(item.estimatedPrice || item.constructionPeriod) && (
+                                                    <div className="flex gap-3 mt-1 text-[11px] font-sans tracking-wide text-secondary/80">
+                                                        {item.estimatedPrice && (
+                                                            <span className="flex items-center gap-1.5 bg-accent/5 px-2 py-0.5 rounded border border-accent/20 text-accent-dark font-medium">
+                                                                <span className="opacity-70">💰</span> {item.estimatedPrice}
+                                                            </span>
+                                                        )}
+                                                        {item.constructionPeriod && (
+                                                            <span className="flex items-center gap-1.5 bg-gray-50 px-2 py-0.5 rounded border border-gray-200">
+                                                                <span className="opacity-70">📅</span> {item.constructionPeriod}
+                                                            </span>
+                                                        )}
+                                                    </div>
+                                                )}
+
+                                                {/* Winners */}
                                                 {(item.winningContractor || item.designFirm) && (
                                                     <div className="flex gap-3 mt-1.5 text-[10px] font-sans tracking-wider uppercase">
                                                         {item.winningContractor && (

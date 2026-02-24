@@ -29,13 +29,21 @@ async function main() {
         }
     }
 
-    // 重複除外（同じIDのものを除く）
-    const seen = new Set<string>();
-    const unique = allItems.filter(item => {
-        if (seen.has(item.id)) return false;
-        seen.add(item.id);
-        return true;
+    // 重複除外（同じIDで複数ある場合は落札ステータスを優先）
+    // 落札で上書きする際、受付中データのbiddingDate（入札予定日）を引き継ぐ
+    const seen = new Map<string, BiddingItem>();
+    allItems.forEach(item => {
+        const existing = seen.get(item.id);
+        if (!existing) {
+            seen.set(item.id, item);
+        } else if (item.status === '落札') {
+            seen.set(item.id, {
+                ...item,
+                biddingDate: item.biddingDate ?? existing.biddingDate,
+            });
+        }
     });
+    const unique = Array.from(seen.values());
 
     // 公告日の降順でソート
     unique.sort((a, b) =>

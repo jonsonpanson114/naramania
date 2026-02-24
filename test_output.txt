@@ -1,0 +1,16 @@
+[dotenv@17.3.1] injecting env (0) from .env.local -- tip: 笞呻ｸ・ write to custom object with { processEnv: myObject }
+[1] Downloading & Extracting Text from https://www.city.kashihara.nara.jp/material/files/group/20/5072001304.pdf...
+Downloading PDF from: https://www.city.kashihara.nara.jp/material/files/group/20/5072001304.pdf
+[2] Extracted 2 pages of text (1691 characters).
+[3] Sending to Gemini for Intelligence Extraction...
+
+=== 虫 EXTRACTED INTELLIGENCE 虫 ===
+{
+  "estimatedPrice": "20,495,200蜀・(豸郁ｲｻ遞・0%蜷ｫ繧)",
+  "winningContractor": null,
+  "designFirm": null,
+  "constructionPeriod": "莉､蜥・8蟷ｴ 3譛・1譌･ 縺ｾ縺ｧ",
+  "description": "讖ｿ蜴溷ｸゅ′莠比ｺ慕伴蝨ｰ蜀・・蟶よ怏蝨ｰ縺ｧ螳滓命縺吶ｋ縲∝悄螢梧ｱ壽沒蟇ｾ遲匁ｳ輔↓蝓ｺ縺･縺乗ｷｱ蠎ｦ譁ｹ蜷代・蝨溷｣梧ｱ壽沒隱ｿ譟ｻ讌ｭ蜍吶ょｱ･陦梧悄髢薙・莉､蜥・蟷ｴ3譛・1譌･縺ｾ縺ｧ縲・
+}
+=====================================
+

@@ -22,12 +22,28 @@ export async function downloadAndExtractText(url: string): Promise<PDFData | nul
         });
 
         const buffer = Buffer.from(response.data);
-        const data = await pdf(buffer);
 
-        return {
-            text: data.text,
-            numpages: data.numpages
-        };
+        // Check if using pdf-parse v2 (Class API) or v1 (Function API)
+        if (pdf.PDFParse) {
+            const parser = new pdf.PDFParse({ data: buffer });
+            const textResult = await parser.getText();
+            let fullText = '';
+            if (textResult && textResult.pages) {
+                fullText = textResult.pages.map((p: any) => p.text).join('\n\n');
+            } else if (textResult && textResult.text) {
+                fullText = textResult.text;
+            }
+            return {
+                text: fullText,
+                numpages: textResult?.pages?.length || 0
+            };
+        } else {
+            const data = await pdf(buffer);
+            return {
+                text: data.text,
+                numpages: data.numpages
+            };
+        }
     } catch (error: any) {
         console.error(`Error processing PDF from ${url}:`, error.message || error);
         return null;
