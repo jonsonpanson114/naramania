@@ -4,9 +4,10 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { chromium, Page } from 'playwright';
 import AdmZip from 'adm-zip';
-import pdf from 'pdf-parse';
+import * as _pdf from 'pdf-parse';
+const pdf = (_pdf as any).default || _pdf;
 import { extractBiddingInfoFromText } from './src/services/gemini_service';
-import { BiddingItem } from './src/types/bidding';
+import { BiddingItem, BiddingType } from './src/types/bidding';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -30,20 +31,12 @@ async function extractTextFromZipBuffer(zipBuffer: Buffer): Promise<string> {
             console.log(`[ZIP] Found PDF: ${zipEntry.entryName}`);
             const pdfBuffer = zipEntry.getData();
 
-            let fullText = '';
-            if (pdf.PDFParse) {
-                const parser = new pdf.PDFParse({ data: pdfBuffer });
-                const textResult = await parser.getText();
-                if (textResult && textResult.pages) {
-                    fullText = textResult.pages.map((p: any) => p.text).join('\n\n');
-                } else if (textResult && textResult.text) {
-                    fullText = textResult.text;
-                }
-            } else {
+            try {
                 const data = await pdf(pdfBuffer);
-                fullText = data.text;
+                combinedText += data.text + '\n\n';
+            } catch (e) {
+                console.error(`Error parsing PDF ${zipEntry.entryName}:`, e);
             }
-            combinedText += fullText + '\n\n';
         }
     }
 
@@ -54,7 +47,6 @@ async function scrapeNaraPrefPdf(page: Page, item: BiddingItem): Promise<string 
     console.log('[1] Accessing Nara Prefecture PPI system (Frame Initialization)...');
     await page.goto('http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top', { waitUntil: 'domcontentloaded' });
 
-    // Allow frames to load
     await delay(3000);
     const gp10f = page.frames().find(f => f.url().includes('GP5000_10F'));
     const menuFrame = gp10f?.childFrames().find(f => f.url().includes('GP5000_Menu'));
@@ -65,7 +57,6 @@ async function scrapeNaraPrefPdf(page: Page, item: BiddingItem): Promise<string 
         return null;
     }
 
-    // Explicitly wait for the menu to be completely ready
     await menuFrame.waitForLoadState('load');
 
     console.log('[2] Navigating to Construction Results (入札結果)...');
@@ -80,16 +71,11 @@ async function scrapeNaraPrefPdf(page: Page, item: BiddingItem): Promise<string 
     await fra1.selectOption('select[name="keisaiNen"]', '2025').catch(() => { });
     await Promise.all([
         fra1.waitForNavigation({ waitUntil: 'domcontentloaded' }),
-        fra1.evaluate(() => {
-            const topW = window.top as any;
-            if (topW?.fra_hidden) topW.fra_hidden.submit_flag = 0;
-            (window as any).fnc_btnSearch_Clicked();
-        })
+        fra1.locator('input[value="検索"]').click()
     ]);
 
     await delay(1000);
 
-    // Search results are rendered inside fra1 frame
     const rows = fra1.locator('table tr');
     const rowCount = await rows.count();
     let targetRowIndex = -1;
@@ -97,8 +83,6 @@ async function scrapeNaraPrefPdf(page: Page, item: BiddingItem): Promise<string 
     for (let i = 0; i < rowCount; i++) {
         const rowText = await rows.nth(i).innerText();
         const rowTitle = rowText.trim().split('\n')[0];
-        // Since titles might be truncated in e-BISC, check if the row contains part of the title or vice-versa
-        // Prevent false positives on empty strings
         if (rowTitle.length > 5 && (rowText.includes(item.title) || item.title.includes(rowTitle))) {
             targetRowIndex = i;
             break;
@@ -110,17 +94,12 @@ async function scrapeNaraPrefPdf(page: Page, item: BiddingItem): Promise<string 
     if (targetRowIndex === -1 || await displayBtn.count() === 0) {
         console.warn(`Target row invalid. Forcing the FIRST available '表示' button for ZIP testing.`);
         const allButtons = fra1.locator('input[value="表示"]');
-        if (await allButtons.count() === 0) {
-            console.error('No display button found anywhere on page.');
-            return null;
-        }
+        if (await allButtons.count() === 0) return null;
         displayBtn = allButtons.first();
     }
 
     console.log(`Opening popup...`);
 
-    // We override window.open so we can intercept the popup URL if needed,
-    // or we just use Playwright's wait for popup event.
     const [popup] = await Promise.all([
         page.waitForEvent('popup'),
         displayBtn.first().click()
@@ -128,11 +107,8 @@ async function scrapeNaraPrefPdf(page: Page, item: BiddingItem): Promise<string 
 
     await popup.waitForLoadState('domcontentloaded');
 
-    // Find "一括ダウンロード"
-    console.log('Locating download button in popup...');
     const downloadBtn = popup.locator('input[value="一括ダウンロード"]');
     if (await downloadBtn.count() === 0) {
-        console.error('No download button in popup.');
         await popup.close();
         return null;
     }
@@ -145,7 +121,6 @@ async function scrapeNaraPrefPdf(page: Page, item: BiddingItem): Promise<string 
 
     const stream = await download.createReadStream();
     if (!stream) {
-        console.error('No stream created.');
         await popup.close();
         return null;
     }
@@ -153,107 +128,197 @@ async function scrapeNaraPrefPdf(page: Page, item: BiddingItem): Promise<string 
     const chunks: Buffer[] = [];
     for await (const chunk of stream) chunks.push(Buffer.from(chunk));
     const zipBuffer = Buffer.concat(chunks);
-    console.log(`Downloaded ZIP buffer: ${zipBuffer.length} bytes.`);
-
     await popup.close();
 
-    // Extract text from ZIP
     return await extractTextFromZipBuffer(zipBuffer);
 }
 
-async function main() {
-    console.log('--- Starting Nara Pref PDF Intelligence Batch Processor ---');
+async function getNaraPref2025List(page: Page): Promise<BiddingItem[]> {
+    console.log('[List] Searching Nara Pref 2025 list...');
+    await page.goto('http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top', { waitUntil: 'domcontentloaded' });
+    await delay(5000);
 
-    if (!fs.existsSync(RESULT_PATH)) {
-        console.error('scraper_result.json not found!');
-        return;
+    const fraL = page.frames().find(f => f.name() === 'fra_mainL');
+    if (!fraL) {
+        console.error('Initial fra_mainL not found.');
+        return [];
     }
 
-    const rawData = fs.readFileSync(RESULT_PATH, 'utf-8');
-    const items: BiddingItem[] = JSON.parse(rawData);
+    const p5515 = fraL.locator('#P5515');
+    await p5515.waitFor({ state: 'visible', timeout: 10000 });
 
-    // Target specific Nara Pref items
-    const targetItems = items.filter(i => i.id === 'nara-pref-test' && !i.isIntelligenceExtracted);
-    console.log(`Found ${targetItems.length} Nara Prefecture items requiring intelligence extraction.`);
+    await p5515.click();
+    await delay(5000);
 
-    // Just process 2 items for now to prove concept
-    const batch = targetItems.slice(0, 2);
-    if (batch.length === 0) return;
+    // Look for the frame containing the search form
+    console.log('[List] Discovering search form frame...');
+    let searchFrame = page.frames().find(f => f.name() === 'fra_mainR');
+    if (!searchFrame) {
+        searchFrame = page.frames().find(f => f.url().includes('GP5515_1010'));
+    }
+
+    if (!searchFrame) {
+        console.error('Failed to discover search form frame.');
+        return [];
+    }
+
+    console.log(`[List] Filling search criteria in frame: ${searchFrame.name() || 'unnamed'}`);
+    await searchFrame.selectOption('select[name="keisaiNen"]', '2025').catch(() => { });
+    await searchFrame.selectOption('select[name="koshuCd"]', '200').catch(() => { });     // 建築一式 (Architecture)
+    await searchFrame.selectOption('select[name="pageSize"]', '500').catch(() => { });    // Max 500 per page
+
+    await searchFrame.locator('#btnSearch').click();
+    console.log('[List] Form submitted. Waiting for results table...');
+    await delay(10000); // 10s delay to allow e-BISC to process the search and reload the frame
+
+    // e-BISC reloads fra_mainR into GP5515_1020 for the results list
+    const resultsFrame = page.frames().find(f => f.url().includes('1020') || f.name() === 'fra_mainR') || searchFrame;
+
+    const rows = resultsFrame.locator('table tr');
+    const count = await rows.count();
+    console.log(`[List] Found ${count} rows on the results page.`);
+    const items: BiddingItem[] = [];
+
+    // The first rows are usually headers
+    for (let i = 1; i < count; i++) {
+        const rowText = await rows.nth(i).innerText();
+        const lines = rowText.split('\n').map(l => l.trim()).filter(l => l.length > 0);
+
+        // We expect at least 6 lines for a valid data row
+        if (lines.length < 6) continue;
+
+        // Title is usually the second to last line
+        let title = lines[lines.length - 2];
+
+        // Exclude Cancelled projects
+        if (title.includes('【中止】')) continue;
+
+        // Date is the 3rd to last line, e.g. "R07.09.05 10:30"
+        let rawDate = lines[lines.length - 3];
+        let announcementDate = '2025-01-01'; // Fallback
+
+        const rMatch = rawDate.match(/R(\d+)\.(\d+)\.(\d+)/);
+        if (rMatch) {
+            const reiwaYear = parseInt(rMatch[1], 10);
+            const gregorian = 2018 + reiwaYear;
+            const month = rMatch[2].padStart(2, '0');
+            const day = rMatch[3].padStart(2, '0');
+            announcementDate = `${gregorian}-${month}-${day}`;
+        }
+
+        if (title.length > 5 && !items.find(it => it.title === title)) {
+            items.push({
+                id: `nara-pref-2025-${i}`,
+                municipality: '奈良県',
+                title: title,
+                type: '建築', // Pre-filtered by koshuCd='200'
+                announcementDate: announcementDate,
+                link: 'e-BISC',
+                status: '落札',
+                isIntelligenceExtracted: false
+            });
+        }
+    }
+    return items;
+}
+
+async function main() {
+    console.log('--- Starting Nara Pref Real Data Pull (2025) ---');
 
     console.log('Launching browser...');
     const browser = await chromium.launch({ headless: true });
+    try {
+        const listPage = await browser.newPage();
+        const newList = await getNaraPref2025List(listPage);
+        await listPage.close();
 
-    let consecutiveErrors = 0;
+        console.log(`Discovered ${newList.length} potential 2025 architecture projects.`);
 
-    for (const item of batch) {
-        console.log(`\nProcessing: ${item.id} - ${item.title}`);
-
-        try {
-            const context = await browser.newContext();
-
-            // Set charset explicitly to solve EFFTIS Shift-JIS mojibake in navigation (though this is search, still good)
-            await context.route('**/*', async (route) => {
-                const response = await route.fetch();
-                let contentType = response.headers()['content-type'] || '';
-                if (contentType.toLowerCase().includes('shift_jis')) {
-                    contentType = contentType.replace(/shift_jis/i, 'utf-8');
-                    const headers = { ...response.headers(), 'content-type': contentType };
-                    await route.fulfill({ response, headers });
-                } else {
-                    await route.fallback();
-                }
-            });
-
-            const page = await context.newPage();
-
-            let pdfText = await scrapeNaraPrefPdf(page, item);
-
-            await context.close();
-
-            if (!pdfText || pdfText.length < 50) {
-                console.warn(`Failed to extract meaningful text for ${item.id}. Marking as empty.`);
-                item.description = 'PDF extraction failed or empty ZIP.';
-                item.isIntelligenceExtracted = true;
-                consecutiveErrors++;
-            } else {
-                console.log(`Extracted ${pdfText.length} chars from ZIP. Sending to Gemini...`);
-                const intelligence = await extractBiddingInfoFromText(pdfText);
-                item.isIntelligenceExtracted = true;
-                if (intelligence) {
-                    item.estimatedPrice = intelligence.estimatedPrice || undefined;
-                    item.winningContractor = intelligence.winningContractor || undefined;
-                    item.designFirm = intelligence.designFirm || undefined;
-                    item.constructionPeriod = intelligence.constructionPeriod || undefined;
-                    item.description = intelligence.description || undefined;
-                    console.log('Success!', item.estimatedPrice || 'No price found.');
-                    consecutiveErrors = 0; // reset
-                } else {
-                    console.log('Gemini returned null. Marking as empty.');
-                    item.description = undefined;
-                    consecutiveErrors++;
-                }
-            }
-
-            if (consecutiveErrors >= MAX_CONSECUTIVE_ERRORS) {
-                console.error('Too many consecutive errors. Stopping batch.');
-                break;
-            }
-
-            console.log('Waiting 5 seconds before next item...');
-            await delay(5000);
-
-        } catch (e: any) {
-            console.error(`Error processing ${item.id}:`, e.message || e);
-            consecutiveErrors++;
+        let existingItems: BiddingItem[] = [];
+        if (fs.existsSync(RESULT_PATH)) {
+            existingItems = JSON.parse(fs.readFileSync(RESULT_PATH, 'utf-8'));
         }
+
+        const itemsToProcess: BiddingItem[] = [];
+        for (const it of newList) {
+            const index = existingItems.findIndex(ex => ex.title === it.title);
+            if (index === -1) {
+                itemsToProcess.push(it);
+                existingItems.push(it);
+            } else if (!existingItems[index].isIntelligenceExtracted && existingItems[index].municipality === '奈良県') {
+                itemsToProcess.push(existingItems[index]);
+            }
+        }
+
+        console.log(`Processing batch of ${Math.min(itemsToProcess.length, 5)} projects...`);
+
+        let consecutiveErrors = 0;
+        const currentBatch = itemsToProcess.slice(0, 5);
+
+        for (const item of currentBatch) {
+            console.log(`\nProcessing: ${item.id} - ${item.title}`);
+
+            try {
+                const context = await browser.newContext();
+                await context.route('**/*', async (route) => {
+                    try {
+                        const response = await route.fetch();
+                        let contentType = response.headers()['content-type'] || '';
+                        if (contentType.toLowerCase().includes('shift_jis')) {
+                            contentType = contentType.replace(/shift_jis/i, 'utf-8');
+                            const headers = { ...response.headers(), 'content-type': contentType };
+                            await route.fulfill({ response, headers });
+                        } else {
+                            await route.fallback();
+                        }
+                    } catch (e) {
+                        await route.abort().catch(() => { });
+                    }
+                });
+
+                const page = await context.newPage();
+                const pdfText = await scrapeNaraPrefPdf(page, item);
+                await context.close();
+
+                if (!pdfText || pdfText.length < 50) {
+                    console.warn(`Failed text extraction for ${item.id}.`);
+                    item.description = 'PDF extraction failed or empty.';
+                    item.isIntelligenceExtracted = true;
+                    consecutiveErrors++;
+                } else {
+                    console.log(`Extracted ${pdfText.length} chars. Sending to Gemini...`);
+                    const intelligence = await extractBiddingInfoFromText(pdfText);
+                    item.isIntelligenceExtracted = true;
+                    if (intelligence) {
+                        item.estimatedPrice = intelligence.estimatedPrice || undefined;
+                        item.winningContractor = intelligence.winningContractor || undefined;
+                        item.designFirm = intelligence.designFirm || undefined;
+                        item.constructionPeriod = intelligence.constructionPeriod || undefined;
+                        item.description = intelligence.description || undefined;
+                        console.log('Success!', item.estimatedPrice || 'No price found.');
+                        consecutiveErrors = 0;
+                    } else {
+                        console.log('Gemini returned null.');
+                        consecutiveErrors++;
+                    }
+                }
+
+                if (consecutiveErrors >= MAX_CONSECUTIVE_ERRORS) break;
+                await delay(5000);
+
+            } catch (e: any) {
+                console.error(`Error:`, e.message || e);
+                consecutiveErrors++;
+            }
+        }
+
+        console.log('\nSaving updated data...');
+        fs.writeFileSync(RESULT_PATH, JSON.stringify(existingItems, null, 2), 'utf-8');
+        console.log('Done!');
+
+    } finally {
+        await browser.close();
     }
-
-    await browser.close();
-
-    // Save back to JSON
-    console.log('\nSaving updated data to scraper_result.json...');
-    fs.writeFileSync(RESULT_PATH, JSON.stringify(items, null, 2), 'utf-8');
-    console.log('Done!');
 }
 
-main();
+main().catch(console.error);

@@ -1,12 +1,14 @@
 'use client';
 
-import { LayoutDashboard, Search, Bookmark, Settings } from 'lucide-react';
+import { LayoutDashboard, Search, Bookmark, Settings, Trophy, Radar } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 const navItems = [
     { href: '/', label: 'ダッシュボード', icon: LayoutDashboard },
     { href: '/search', label: '案件検索', icon: Search },
+    { href: '/rankings', label: '実績ランキング', icon: Trophy },
+    { href: '/radar', label: '相場レーダー', icon: Radar },
     { href: '/saved', label: '保存済み', icon: Bookmark },
     { href: '/settings', label: '設定', icon: Settings },
 ];
@@ -40,8 +42,8 @@ export function Sidebar() {
                             key={item.href}
                             href={item.href}
                             className={`block text-sm tracking-widest cursor-pointer py-3 px-4 rounded-md flex items-center justify-center gap-3 transition-all duration-300 ${isActive
-                                    ? 'text-accent font-semibold bg-accent/5 border-b-2 border-accent'
-                                    : 'text-secondary hover:text-accent hover:bg-accent/5'
+                                ? 'text-accent font-semibold bg-accent/5 border-b-2 border-accent'
+                                : 'text-secondary hover:text-accent hover:bg-accent/5'
                                 }`}
                         >
                             <Icon size={16} />

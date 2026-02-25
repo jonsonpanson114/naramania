@@ -1,0 +1,994 @@
+<!DOCTYPE html><html lang="ja"><head>
+
+
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+</head><body onload="js_localInitial();" onbeforeunload="pf_Vid_globalBeforeUnload();" scroll="yes">
+
+
+<title>入札情報サービス</title>
+
+
+
+<link rel="stylesheet" href="CSS/PPI_PKG/Pmain.css" type="text/css" media="screen">
+<link rel="stylesheet" href="CSS/PPI_PKG/Pime.css" type="text/css" media="screen">
+<link rel="stylesheet" href="CSS/PPI_PKG/Pmenu.css" type="text/css" media="screen">
+<link rel="stylesheet" href="CSS/PPI_PKG/Pprint.css" type="text/css" media="print">
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="CSS/style_sheet.css" id="styleSheet" type="text/css">
+<link rel="stylesheet" href="CSS/style_sheet_add.css" type="text/css">
+<link rel="stylesheet" href="CSS/style_sheet_cg.css" type="text/css">
+
+<link rel="stylesheet" href="CSS/commonO.css" type="text/css">
+<link rel="stylesheet" href="CSS/ime.css" type="text/css">
+
+<link rel="stylesheet" href="CSS/PPI_PKG/ppi.css" type="text/css">
+
+
+
+<script src="/DENCHO/js/Global.js" type="text/javascript"></script>
+<script src="/DENCHO/js/Command.js" type="text/javascript"></script>
+<script src="/DENCHO/js/ShortcutKeyCtrl.js" type="text/javascript"></script>
+<script src="/DENCHO/js/Calendar.js" type="text/javascript"></script>
+<script src="/DENCHO/js/ComPrint.js" type="text/javascript"></script>
+<script src="/DENCHO/js/ShozokuSel.js" type="text/javascript"></script>
+<script src="/DENCHO/js/SyokuinSel.js" type="text/javascript"></script>
+<script src="/DENCHO/js/ComHanyoCodeSel.js" type="text/javascript"></script>
+
+
+<script src="/DENCHO/js/staveware-common.js" type="text/javascript"></script>
+<script src="/DENCHO/js/stvclinputchecker.js" type="text/javascript"></script>
+<script src="/DENCHO/js/Inputcheck.js" type="text/javascript"></script><script type="text/javascript" src="js/InputcheckErrStr.js"></script>
+<script src="/DENCHO/js/InputcheckEx.js" type="text/javascript"></script>
+<script src="/DENCHO/js/Message.js" type="text/javascript"></script>
+<script src="/DENCHO/js/Focuscheck.js" type="text/javascript"></script>
+
+<script src="/DENCHO/js/ContManagementCommon_demo.js" type="text/javascript"></script>
+<script src="/DENCHO/js/writeHeader.js" type="text/javascript"></script>
+<script src="/DENCHO/js/print.js" type="text/javascript"></script>
+<script src="/DENCHO/js/DispChildWindow.js" type="text/javascript"></script>
+<input type="hidden" id="COM_GENGOU_KAISI" name="COM_GENGOU_KAISI" value="明治,大正,昭和,平成,令和;18680908,19120731,19261226,19890108,20190501">
+<input type="hidden" id="COM_SYSDATE" name="COM_SYSDATE" value="20260225">
+
+<input type="hidden" id="COM_HOLIDAYS" name="COM_HOLIDAYS" value="">
+
+
+<object id="printPreview" width="0" height="0" classid="CLSID:8856F961-340A-11D0-A96B-00C04FD705A2"></object>
+
+
+
+
+<script src="/DENCHO/jsp/ppi_pkg/common/PPICommon.js" type="text/javascript"></script>
+<script src="/DENCHO/jsp/ppi_pkg/common/PPIGComUtil.js" type="text/javascript"></script>
+
+
+<script src="jsp/ppi_pkg/P5515/GP5515_1015.js" type="text/javascript"></script>
+
+
+<!--チェック関数呼び出しのJavaScript生成の記述 -->
+<script type="text/javascript" src="/js/stvclinputchecker.js"></script>
+<script type="text/javascript">
+<!--//
+//******************************************************************
+// エラーメッセージ関数(自動生成)
+// チェックファイルの<error-message>を解析し、
+// 定義されているエラーメッセージを生成するメソッドを登録する.
+//******************************************************************
+ErrMsg = new Array();// エラーメッセージ
+function ErrMessage() {
+	ErrMsg[0] = new Array("inputitem-notexist",
+		new Function("name", "keys", "__id__", " return \"設定ミス: 項目「\" + __id__ + \"」の値が入力中に存在しません(画面内項目名と規則設定ファイルの不整合)。\""));
+	ErrMsg[1] = new Array("custom-class/jp.co.toshiba.dencho.common.base.util.ComMsg",
+		new Function("name", "keys", " return (existKey(keys, \"KI0556\")&& !existKey(keys, \"\")? (\"二度押し禁止WARN\") : \"\") + (existKey(keys, \"KI0529\")&& !existKey(keys, \"\")? (\"出力帳票を選択してください。WARN\") : \"\") + (existKey(keys, \"KI0593\")&& !existKey(keys, \"\")? (\"画面内容が変更されています。【ＢＲ】登録してください。WARN\") : \"\") + (existKey(keys, \"KI0644\")&& !existKey(keys, \"\")? (\"出力可能な帳票はありません。WARN\") : \"\") + (existKey(keys, \"KI8001\")&& !existKey(keys, \"\")? (\"「入力チェック」【ＢＲ】【ＢＲ】【ＢＲ】画面上部のメッセージを確認して下さい。WARN\") : \"\") + (existKey(keys, \"KO0003\")&& !existKey(keys, \"\")? (\"印刷します。【ＢＲ】よろしいですか？INFO\") : \"\") + (existKey(keys, \"KO0509\")&& !existKey(keys, \"\")? (\"変更されていますがよろしいですか？WARN\") : \"\") + (existKey(keys, \"KO0510\")&& !existKey(keys, \"\")? (\"祝日又は休日を選択しますか？WARN\") : \"\") + (existKey(keys, \"KO0511\")&& !existKey(keys, \"\")? (\"祝日又は休日のため、選択できません。WARN\") : \"\") + (existKey(keys, \"KO0512\")&& !existKey(keys, \"\")? (\"閉庁日を選択しますか？WARN\") : \"\") + (existKey(keys, \"KO0513\")&& !existKey(keys, \"\")? (\"閉庁日のため、選択できません。WARN\") : \"\") + (existKey(keys, \"10077\")&& !existKey(keys, \"\")? (\"変更されていますがよろしいですか？WARN\") : \"\") + (existKey(keys, \"10070\")&& !existKey(keys, \"\")? (\"「{0}」　1を入力してください。WARN\") : \"\") + (existKey(keys, \"10072\")&& !existKey(keys, \"\")? (\"登録します。【ＢＲ】よろしいですか？WARN\") : \"\") + (existKey(keys, \"10018\")&& !existKey(keys, \"\")? (\"「 {0} 」　{1}桁以下で入力して下さい。WARN\") : \"\") + (existKey(keys, \"10001\")&& !existKey(keys, \"\")? (\"「 {0} 」　必須入力項目です。WARN\") : \"\") + (existKey(keys, \"KI0560\")&& !existKey(keys, \"\")? (\"「 {0} 」　前後が正しくありません。WARN\") : \"\") + (existKey(keys, \"KI0652\")&& !existKey(keys, \"\")? (\"日付を正しく入力してください。【ＢＲ】{0}WARN\") : \"\") + (existKey(keys, \"10103\")&& !existKey(keys, \"\")? (\"入力されたメールアドレス（確認用）がメールアドレスと一致しません。WARN\") : \"\") + (existKey(keys, \"10139\")&& !existKey(keys, \"\")? (\"「 {0} 」　半角英数字および記号で入力して下さい。WARN\") : \"\") + (existKey(keys, \"10140\")&& !existKey(keys, \"\")? (\"「 {0} 」　英大文字１文字以上、英小文字１文字以上、数字または記号1文字以上を含む文字列で入力して下さい。WARN\") : \"\") + (existKey(keys, \"10141\")&& !existKey(keys, \"\")? (\"「 {0} 」　ユーザＩＤに含まれる3文字以上連続する文字は使用できません。WARN\") : \"\") + (existKey(keys, \"10145\")&& !existKey(keys, \"\")? (\"入力されたパスワード（確認用）がパスワードと一致しません。WARN\") : \"\") + (existKey(keys, \"10047\")&& !existKey(keys, \"\")? (\"「 {0} 」「 {1}」　日付の前後関係が不正です。WARN\") : \"\") + (existKey(keys, \"10058\")&& !existKey(keys, \"\")? (\"「 {0} 」は{1}以前を指定してください。WARN\") : \"\") + (existKey(keys, \"10059\")&& !existKey(keys, \"\")? (\"「 {0} 」は{1}以降を指定してください。WARN\") : \"\") + (existKey(keys, \"10084\")&& !existKey(keys, \"\")? (\"{0}が、本務の有効開始日({1})と終了日({2})の範囲を超えています。範囲内で設定してください。WARN\") : \"\") + (existKey(keys, \"10055\")&& !existKey(keys, \"\")? (\"「 {0} 」　前後が正しくありません。WARN\") : \"\") + (existKey(keys, \"10054\")&& !existKey(keys, \"\")? (\"{0}を選択してください。WARN\") : \"\") + (existKey(keys, \"10082\")&& !existKey(keys, \"\")? (\"コード＿共有テーブルも[削除]します。【ＢＲ】よろしいですか？WARN\") : \"\") + (existKey(keys, \"10083\")&& !existKey(keys, \"\")? (\"ＰＲＭ＿管理テーブルと【ＢＲ】ＰＲＭ＿共有テーブルも[削除]します。【ＢＲ】よろしいですか？WARN\") : \"\") + (existKey(keys, \"10066\")&& !existKey(keys, \"\")? (\"コード種別が重複しています【ＢＲ】もう一度入力してください。WARN\") : \"\") + (existKey(keys, \"10071\")&& !existKey(keys, \"\")? (\"コード種別名称が重複しています【ＢＲ】もう一度入力してください。WARN\") : \"\") + (existKey(keys, \"10078\")&& !existKey(keys, \"\")? (\"ＰＲＭ＿共有テーブルも[削除]します。【ＢＲ】よろしいですか？WARN\") : \"\") + (existKey(keys, \"10065\")&& !existKey(keys, \"\")? (\"コード種別{0}から順に選択してください。WARN\") : \"\") + (existKey(keys, \"10066\")&& !existKey(keys, \"\")? (\"コード種別が重複しています【ＢＲ】もう一度入力してください。WARN\") : \"\") + (existKey(keys, \"10067\")&& !existKey(keys, \"\")? (\"コード＿管理テーブルにこのコード種別は存在しません【ＢＲ】コード管理編集画面でコード種別を追加して下さい。WARN\") : \"\") + (existKey(keys, \"10087\")&& !existKey(keys, \"\")? (\"ＰＲＭ管理一覧に戻り【ＢＲ】コード種別を入力してください。WARN\") : \"\") + (existKey(keys, \"10068\")&& !existKey(keys, \"\")? (\"コードが重複しています【ＢＲ】もう一度入力してください。WARN\") : \"\") + (existKey(keys, \"10056\")&& !existKey(keys, \"\")? (\"該当するデータはありません。WARN\") : \"\") + (existKey(keys, \"10057\")&& !existKey(keys, \"\")? (\"検索結果が{0}件を超えました。WARN\") : \"\") + (existKey(keys, \"10073\")&& !existKey(keys, \"\")? (\"削除します。【ＢＲ】よろしいですか？WARN\") : \"\") + (existKey(keys, \"10074\")&& !existKey(keys, \"\")? (\"登録しました。INFO\") : \"\") + (existKey(keys, \"10075\")&& !existKey(keys, \"\")? (\"削除しました。INFO\") : \"\") + (existKey(keys, \"10079\")&& !existKey(keys, \"\")? (\"入力された事業は重複しています。WARN\") : \"\") + (existKey(keys, \"10088\")&& !existKey(keys, \"\")? (\"選択された事業に対応する細事業も同時に削除します。　よろしいですか？WARN\") : \"\") + (existKey(keys, \"10089\")&& !existKey(keys, \"\")? (\"上位の事業データがありません。事業データを登録してから細事業データを登録してください。WARN\") : \"\") + (existKey(keys, \"10090\")&& !existKey(keys, \"\")? (\"更新します。【ＢＲ】よろしいですか？WARN\") : \"\") + (existKey(keys, \"10091\")&& !existKey(keys, \"\")? (\"更新しました。INFO\") : \"\") + (existKey(keys, \"10092\")&& !existKey(keys, \"\")? (\"{0}以降{1}までの日付を指定する必要があります。WARN\") : \"\") + (existKey(keys, \"10093\")&& !existKey(keys, \"\")? (\"無効な日付が指定されています。WARN\") : \"\") + (existKey(keys, \"10094\")&& !existKey(keys, \"\")? (\"無効な時分が入力されています。WARN\") : \"\") + (existKey(keys, \"10097\")&& !existKey(keys, \"\")? (\"Windows31J非対応文字が含まれているため、「{0}」を「?」に置き換えます。WARN\") : \"\") + (existKey(keys, \"10080\")&& !existKey(keys, \"\")? (\"入力された節は重複しています。WARN\") : \"\") + (existKey(keys, \"10081\")&& !existKey(keys, \"\")? (\"「細節」=「00」かつ「細々節」<>「00」の場合のみ、「細々節レベルフラグ」の「細々節あり」を選択可能です。WARN\") : \"\") + (existKey(keys, \"10085\")&& !existKey(keys, \"\")? (\"選択された節に対応する細節、細々節も同時に削除します。　よろしいですか？WARN\") : \"\") + (existKey(keys, \"10086\")&& !existKey(keys, \"\")? (\"上位の節データがありません。節データを登録してから細節・細々節データを登録してください。WARN\") : \"\") + (existKey(keys, \"10109\")&& !existKey(keys, \"\")? (\"業務グループを[削除]します。所属メンバー及びプログラム許可も[削除]されます。【ＢＲ】よろしいですか？\") : \"\") + (existKey(keys, \"10111\")&& !existKey(keys, \"\")? (\"全ての部署を[登録]します。【ＢＲ】よろしいですか？WARN\") : \"\") + (existKey(keys, \"10112\")&& !existKey(keys, \"\")? (\"実行メニューを削除します。【ＢＲ】よろしいですか？【ＢＲ】（業務グループ設定されたメニュー情報含む）\") : \"\") + (existKey(keys, \"not-blank\")&& !existKey(keys, \"\")? (\"{0}は必須入力です。WARN\") : \"\") + (existKey(keys, \"comChk.DATE\")&& !existKey(keys, \"\")? (\"「 {0} 」　無効な日付が入力されています。WARN\") : \"\") + (existKey(keys, \"comChk.JIBUN\")&& !existKey(keys, \"\")? (\"「 {0} 」　無効な時分が入力されています。WARN\") : \"\") + (existKey(keys, \"comChk.HANNM1\")&& !existKey(keys, \"\")? (\"「 {0} 」　半角数字を入力して下さい。WARN\") : \"\") + (existKey(keys, \"date-value-invalid\")&& !existKey(keys, \"\")? (\"{0}に無効な日付が指定されています。WARN\") : \"\") + (existKey(keys, \"date-value.begin-end\")&& !existKey(keys, \"\")? (\"{0}には{1}以降{2}までの日付を指定する必要があります。WARN\") : \"\") + (existKey(keys, \"length.min-max\")&& !existKey(keys, \"\")? (\"{0}の長さは{1}文字以上{2}文字以下です。WARN\") : \"\") + (existKey(keys, \"length.min\")&& !existKey(keys, \"\")? (\"{0}の長さは{1}文字以上です。WARN\") : \"\") + (existKey(keys, \"length.max\")&& !existKey(keys, \"\")? (\"{0}の長さは{1}文字以下です。WARN\") : \"\") + (existKey(keys, \"ank-length.min-max\")&& !existKey(keys, \"\")? (\"{0}の長さは半角{1}文字以上{2}文字以下です。WARN\") : \"\") + (existKey(keys, \"ank-length.min\")&& !existKey(keys, \"\")? (\"{0}の長さは半角{1}文字以上です。WARN\") : \"\") + (existKey(keys, \"ank-length.max\")&& !existKey(keys, \"\")? (\"{0}の長さは半角{1}文字以下です。WARN\") : \"\") + (existKey(keys, \"ank-length\")&& !existKey(keys, \"\")? (\"「 {0} 」　{1}桁で入力して下さい。WARN\") : \"\") + (existKey(keys, \"char-type.fw-all\")&& !existKey(keys, \"\")? (\"『全角文字』\") : \"\") + (existKey(keys, \"char-type.hw-all\")&& !existKey(keys, \"\")? (\"『半角文字』\") : \"\") + (existKey(keys, \"char-type.fw-alpha\")&& !existKey(keys, \"\")? (\"『全角アルファベット』\") : \"\") + (existKey(keys, \"char-type.fw-alpha\")&& !existKey(keys, \"\")? (\"『全角アルファベット』\") : \"\") + (existKey(keys, \"char-type.hw-alpha-u\")&& !existKey(keys, \"\")? (\"『半角アルファベット大文字』\") : \"\") + (existKey(keys, \"char-type.hw-alpha-l\")&& !existKey(keys, \"\")? (\"『半角アルファベット小文字』\") : \"\") + (existKey(keys, \"char-type.fw-space\")&& !existKey(keys, \"\")? (\"『全角スペース』\") : \"\") + (existKey(keys, \"char-type.hw-space\")&& !existKey(keys, \"\")? (\"『半角スペース』\") : \"\") + (existKey(keys, \"char-type.fw-number\")&& !existKey(keys, \"\")? (\"『全角数字』\") : \"\") + (existKey(keys, \"char-type.hw-number\")&& !existKey(keys, \"\")? (\"『半角数字』\") : \"\") + (existKey(keys, \"char-type.kanji\")&& !existKey(keys, \"\")? (\"『漢字』\") : \"\") + (existKey(keys, \"char-type.hiragana\")&& !existKey(keys, \"\")? (\"『ひらがな』\") : \"\") + (existKey(keys, \"char-type.fw-katakana\")&& !existKey(keys, \"\")? (\"『全角カタカナ』\") : \"\") + (existKey(keys, \"char-type.hw-katakana\")&& !existKey(keys, \"\")? (\"『半角カタカナ』\") : \"\") + (existKey(keys, \"char-type.charcode\")&& !existKey(keys, \"\")? (\"『指定した文字コード』\") : \"\") + (existKey(keys, \"char-type.hw-katakana-variants\")&& !existKey(keys, \"\")? (\"『半角カタカナ（文字のみ）』\") : \"\") + (existKey(keys, \"char-type.old-hw-all\")&& !existKey(keys, \"\")? (\"『半角文字』\") : \"\") + (existKey(keys, \"char-type.old-fw-all\")&& !existKey(keys, \"\")? (\"『全角文字』\") : \"\") + (existKey(keys, \"char-type.old-hiragana\")&& !existKey(keys, \"\")? (\"『ひらがな』\") : \"\") + (existKey(keys, \"char-type.old-fw-katakana\")&& !existKey(keys, \"\")? (\"『全角カタカナ』\") : \"\") + (existKey(keys, \"char-type.old-hw-katakana\")&& !existKey(keys, \"\")? (\"『半角カタカナ』\") : \"\") + (existKey(keys, \"char-type.old-kanji\")&& !existKey(keys, \"\")? (\"『漢字』\") : \"\") + (existKey(keys, \"char-type/prohibit.common1\")&& !existKey(keys, \"\")? (\"{0}に\") : \"\") + (existKey(keys, \"char-type/prohibit.common2\")&& !existKey(keys, \"\")? (\"を含めることはできません。WARN\") : \"\") + (existKey(keys, \"char-type/permit.common1\")&& !existKey(keys, \"\")? (\"{0}には\") : \"\") + (existKey(keys, \"char-type/permit.common2\")&& !existKey(keys, \"\")? (\"のみ使用することができます。WARN\") : \"\") + (existKey(keys, \"number-value.min-max\")&& !existKey(keys, \"\")? (\"{0}には{1}以上{2}以下の数値を指定する必要があります。WARN\") : \"\") + (existKey(keys, \"number-value.min\")&& !existKey(keys, \"\")? (\"{0}には{1}以上の数値を指定する必要があります。WARN\") : \"\") + (existKey(keys, \"number-value.max\")&& !existKey(keys, \"\")? (\"{0}には{1}以下の数値を指定する必要があります。WARN\") : \"\") + (existKey(keys, \"date-value.begin\")&& !existKey(keys, \"\")? (\"{0}には{1}以降の日付を指定する必要があります。WARN\") : \"\") + (existKey(keys, \"date-value.end\")&& !existKey(keys, \"\")? (\"{0}には{1}までの日付を指定する必要があります。WARN\") : \"\") + (existKey(keys, \"regexp\")&& !existKey(keys, \"\")? (\"{0}の書式が違います。WARN\") : \"\") + (existKey(keys, \"char-code/permit.min-max\")&& !existKey(keys, \"\")? (\"{0}の文字コードは{1}以上{2}以下の必要があります。WARN\") : \"\") + (existKey(keys, \"char-code/permit.min\")&& !existKey(keys, \"\")? (\"{0}の文字コードは{1}以上の必要があります。WARN\") : \"\") + (existKey(keys, \"char-code/permit.max\")&& !existKey(keys, \"\")? (\"{0}の文字コードは{1}以下の必要があります。WARN\") : \"\") + (existKey(keys, \"char-code/prohibit.min-max\")&& !existKey(keys, \"\")? (\"{0}の文字コードは{1}以上{2}以下を含めることができません。WARN\") : \"\") + (existKey(keys, \"char-code/prohibit.min\")&& !existKey(keys, \"\")? (\"{0}の文字コードは{1}以上を含めることができません。WARN\") : \"\") + (existKey(keys, \"char-code/prohibit.max\")&& !existKey(keys, \"\")? (\"{0}の文字コードは{1}以下を含めることができません。WARN\") : \"\") + (existKey(keys, \"comChk.HTMLC1\")&& !existKey(keys, \"\")? (\"「 {0} 」　使用できない文字が含まれています。「{1}」WARN\") : \"\") + (existKey(keys, \"comChk.MONEY1\")&& !existKey(keys, \"\")? (\"「 {0} 」　半角数字の金額を入力して下さい。WARN\") : \"\") + (existKey(keys, \"comChk.ZENKA1\")&& !existKey(keys, \"\")? (\"「 {0} 」　全角で入力して下さい。WARN\") : \"\") + (existKey(keys, \"comChk.ZENKH1\")&& !existKey(keys, \"\")? (\"「 {0} 」　全角もしくは半角ハイフンを入力して下さい。WARN\") : \"\") + (existKey(keys, \"comChk.ZENKE1\")&& !existKey(keys, \"\")? (\"「 {0} 」　全角カナもしくは全角英数字で入力して下さい。WARN\") : \"\") + (existKey(keys, \"comChk.ZENME1\")&& !existKey(keys, \"\")? (\"「 {0} 」　全角英数字で入力して下さい。WARN\") : \"\") + (existKey(keys, \"comChk.HANME1\")&& !existKey(keys, \"\")? (\"「 {0} 」　半角英数字で入力して下さい。WARN\") : \"\") + (existKey(keys, \"comChk.ALLBR1\")&& !existKey(keys, \"\")? (\"「 {0} 」　スペース以外を入力して下さい。WARN\") : \"\") + (existKey(keys, \"comChk.SQLER1\")&& !existKey(keys, \"\")? (\"「 {0} 」　SQLエラー文字以外を入力して下さい。WARN\") : \"\") + (existKey(keys, \"comChk.PREFIX\")&& !existKey(keys, \"\")? (\"「 {0} 」　文字列の先頭に ”{1}” が必要です。WARN\") : \"\") + (existKey(keys, \"comChk.MULTI1\")&& !existKey(keys, \"\")? (\"「 {0} 」　{1}行以内で入力して下さい。WARN\") : \"\") + (existKey(keys, \"comChk.ZENKAZENS\")&& !existKey(keys, \"\")? (\"「 {0} 」　全角カナもしくは全角スペースで入力して下さい。WARN\") : \"\") + (existKey(keys, \"comChk.EMAIL\")&& !existKey(keys, \"\")? (\"「 {0} 」　無効なメールアドレスが入力されています。WARN\") : \"\") + (existKey(keys, \"comChk.TELFAX\")&& !existKey(keys, \"\")? (\"「 {0} 」　無効な電話・FAX番号が入力されています。WARN\") : \"\") + (existKey(keys, \"10105\")&& !existKey(keys, \"\")? (\"「旧パスワード」と違うパスワードを入力してください。\") : \"\") + (existKey(keys, \"10106\")&& !existKey(keys, \"\")? (\"2回入力されたパスワードが一致しないため、再度入力してください。\") : \"\") + (existKey(keys, \"10107\")&& !existKey(keys, \"\")? (\"既存データが存在しています。\") : \"\") + (existKey(keys, \"10108\")&& !existKey(keys, \"\")? (\"ログイン名「 {0}」が登録されていません。\") : \"\") + (existKey(keys, \"10006\")&& !existKey(keys, \"\")? (\"「 {0} 」　半角{1}文字以上{2}文字以下で入力して下さい。WARN\") : \"\") + (existKey(keys, \"PPI_I0001\")&& !existKey(keys, \"\")? (\"案件を登録しました。\") : \"\") + (existKey(keys, \"PPI_I0002\")&& !existKey(keys, \"\")? (\"公開実行しました。\") : \"\") + (existKey(keys, \"PPI_I0003\")&& !existKey(keys, \"\")? (\"公開を中止しました。\") : \"\") + (existKey(keys, \"PPI_I0004\")&& !existKey(keys, \"\")? (\"公開実行しました。\") : \"\") + (existKey(keys, \"PPI_I0005\")&& !existKey(keys, \"\")? (\"登録しました。\") : \"\") + (existKey(keys, \"PPI_I0006\")&& !existKey(keys, \"\")? (\"表示項目を設定しました。\") : \"\") + (existKey(keys, \"PPI_I0007\")&& !existKey(keys, \"\")? (\"案件を削除しました。\") : \"\") + (existKey(keys, \"PPI_I0008\")&& !existKey(keys, \"\")? (\"削除しました。\") : \"\") + (existKey(keys, \"PPI_W0001\")&& !existKey(keys, \"\")? (\"指定の条件を満たす{0}がありませんでした。WARN\") : \"\") + (existKey(keys, \"PPI_E0001\")&& !existKey(keys, \"\")? (\"{0}テーブルにデータが存在しません。ERROR\") : \"\") + (existKey(keys, \"PPI_E0002\")&& !existKey(keys, \"\")? (\"{0}が{1}を超えています。ERROR\") : \"\") + (existKey(keys, \"PPI_E0003\")&& !existKey(keys, \"\")? (\"{0}が存在しません。ERROR\") : \"\") + (existKey(keys, \"PPI_E0004\")&& !existKey(keys, \"\")? (\"{0}は必須項目です。ERROR\") : \"\") + (existKey(keys, \"PPI_E0005\")&& !existKey(keys, \"\")? (\"プロパティ取得に失敗しました。ERROR\") : \"\") + (existKey(keys, \"PPI_E0006\")&& !existKey(keys, \"\")? (\"選択された案件は、現在公開中のため修正できません。\") : \"\") + (existKey(keys, \"PPI_E0007\")&& !existKey(keys, \"\")? (\"選択された案件は他のユーザによって使用されています。\") : \"\") + (existKey(keys, \"PPI_E0008\")&& !existKey(keys, \"\")? (\"案件「{0}」は、現在公開中のため削除できません。\") : \"\") + (existKey(keys, \"PPI_E0009\")&& !existKey(keys, \"\")? (\"案件「{0}」を含む{1}件は他のユーザによって使用されています。\") : \"\") + (existKey(keys, \"PPI_E0010\")&& !existKey(keys, \"\")? (\"選択された件名は既に削除されています。\") : \"\") + (existKey(keys, \"PPI_E0011\")&& !existKey(keys, \"\")? (\"添付書類のファイルサイズ合計が制限を超えています。\") : \"\") + (existKey(keys, \"PPI_E0012\")&& !existKey(keys, \"\")? (\"CSVフォーマットエラーです。\") : \"\") + (existKey(keys, \"PPI_E0013\")&& !existKey(keys, \"\")? (\"指定されたファイルには案件が入力されていません。\") : \"\") + (existKey(keys, \"PPI_E0017\")&& !existKey(keys, \"\")? (\"{0}と{1}が一致していません。ERROR\") : \"\") + (existKey(keys, \"00_ankenNoLabel\")&& !existKey(keys, \"\")? (\"調達案件番号\") : \"\") + (existKey(keys, \"00_kojiNoLabel\")&& !existKey(keys, \"\")? (\"工事番号\") : \"\") + (existKey(keys, \"00_kojiNoNmLabel\")&& !existKey(keys, \"\")? (\"工事番号名称\") : \"\") + (existKey(keys, \"00_denshiKamiKubunLabel\")&& !existKey(keys, \"\")? (\"電子／紙\") : \"\") + (existKey(keys, \"00_yoteiKihonKakakuLabel\")&& !existKey(keys, \"\")? (\"予定基本価格(税抜き)\") : \"\") + (existKey(keys, \"00_shosaiYoteiKihonKakakuLabel\")&& !existKey(keys, \"\")? (\"予定基本価格(税抜き)\") : \"\") + (existKey(keys, \"00_yoteiKihonKakakuRandomLabel\")&& !existKey(keys, \"\")? (\"予定基本価格 ランダム係数\") : \"\") + (existKey(keys, \"00_saiteiseigenKihonKakakuLabel\")&& !existKey(keys, \"\")? (\"最低制限基本価格(税抜き)\") : \"\") + (existKey(keys, \"00_shosaiSaiteiseigenKihonKakakuLabel\")&& !existKey(keys, \"\")? (\"最低制限基本価格(税抜き)\") : \"\") + (existKey(keys, \"00_saiteiseigenKihonKakakuRandomLabel\")&& !existKey(keys, \"\")? (\"最低制限基本価格 ランダム係数\") : \"\") + (existKey(keys, \"00_shitsumonKaitouLabel\")&& !existKey(keys, \"\")? (\"質問回答\") : \"\") + (existKey(keys, \"00_gyoshaNoLabel\")&& !existKey(keys, \"\")? (\"登録番号\") : \"\") + (existKey(keys, \"00_houjinNoLabel\")&& !existKey(keys, \"\")? (\"法人番号\") : \"\") + (existKey(keys, \"00_gyoshaKubunLabel\")&& !existKey(keys, \"\")? (\"業者区分\") : \"\") + (existKey(keys, \"00_shogoMatahaMeishoLabel\")&& !existKey(keys, \"\")? (\"商号又は名称\") : \"\") + (existKey(keys, \"00_shogoMatahaMeishoKanaLabel\")&& !existKey(keys, \"\")? (\"商号又は名称(カナ)\") : \"\") + (existKey(keys, \"00_honshaNoJushoLabel\")&& !existKey(keys, \"\")? (\"所在地\") : \"\") + (existKey(keys, \"00_shimeiTeishiNoRiyuLabel\")&& !existKey(keys, \"\")? (\"指名停止の理由\") : \"\") + (existKey(keys, \"00_shimeiTeishiKikanLabel\")&& !existKey(keys, \"\")? (\"指名停止期間\") : \"\") + (existKey(keys, \"00_shigaiKubunLabel\")&& !existKey(keys, \"\")? (\"市外区分\") : \"\") + (existKey(keys, \"00_shigai_br_kubunLabel\")&& !existKey(keys, \"\")? (\"市外<BR>区分\") : \"\") + (existKey(keys, \"00_kakudukeRankLabel\")&& !existKey(keys, \"\")? (\"格付ランク\") : \"\") + (existKey(keys, \"00_gyoshuLabel\")&& !existKey(keys, \"\")? (\"業種\") : \"\") + (existKey(keys, \"00_nyuHoLabel\")&& !existKey(keys, \"\")? (\"入保\") : \"\") + (existKey(keys, \"00_daihyoshaMatahaJuninshaLabel\")&& !existKey(keys, \"\")? (\"代表者名\") : \"\") + (existKey(keys, \"00_telLabel\")&& !existKey(keys, \"\")? (\"電話番号\") : \"\") + (existKey(keys, \"00_faxLabel\")&& !existKey(keys, \"\")? (\"FAX番号\") : \"\") + (existKey(keys, \"00_nyusatsuKigenLabel\")&& !existKey(keys, \"\")? (\"入札参加有効期限\") : \"\") + (existKey(keys, \"00_meiboKigenLabel\")&& !existKey(keys, \"\")? (\"名簿登録有効期限\") : \"\") + (existKey(keys, \"00_telFaxLabel\")&& !existKey(keys, \"\")? (\"電話番号／FAX番号\") : \"\") + (existKey(keys, \"00_daihyoshaMeiLabel\")&& !existKey(keys, \"\")? (\"代表者名\") : \"\") + (existKey(keys, \"00_yakushokuMeiLabel\")&& !existKey(keys, \"\")? (\"（役職名）\") : \"\") + (existKey(keys, \"00_kyokaKubunLabel\")&& !existKey(keys, \"\")? (\"許可区分\") : \"\") + (existKey(keys, \"00_sougoutenLabel\")&& !existKey(keys, \"\")? (\"総合点\") : \"\") + (existKey(keys, \"00_shukantenLabel\")&& !existKey(keys, \"\")? (\"主観点\") : \"\") + (existKey(keys, \"00_kyakkantenLabel\")&& !existKey(keys, \"\")? (\"客観点\") : \"\") + (existKey(keys, \"00_shosaiYoteiKakakuLabel\")&& !existKey(keys, \"\")? (\"予定価格(税抜き)\") : \"\") + (existKey(keys, \"00_shosaiSaiteiseigenKakakuLabel\")&& !existKey(keys, \"\")? (\"最低制限価格(税抜き)\") : \"\") + (existKey(keys, \"00_shosaiChousaKijunKakakuLabel\")&& !existKey(keys, \"\")? (\"調査基準価格(税抜き)\") : \"\") + (existKey(keys, \"00_shosaiRakusatsuKingakuLabel\")&& !existKey(keys, \"\")? (\"落札金額(税抜き)\") : \"\") + (existKey(keys, \"01_ankenNoLabel\")&& !existKey(keys, \"\")? (\"調達案件番号\") : \"\") + (existKey(keys, \"01_kojiNoLabel\")&& !existKey(keys, \"\")? (\"業務番号\") : \"\") + (existKey(keys, \"01_kojiNoNmLabel\")&& !existKey(keys, \"\")? (\"業務番号名称\") : \"\") + (existKey(keys, \"01_denshiKamiKubunLabel\")&& !existKey(keys, \"\")? (\"電子／紙\") : \"\") + (existKey(keys, \"01_yoteiKihonKakakuLabel\")&& !existKey(keys, \"\")? (\"予定基本価格(税抜き)\") : \"\") + (existKey(keys, \"01_shosaiYoteiKihonKakakuLabel\")&& !existKey(keys, \"\")? (\"予定基本価格(税抜き)\") : \"\") + (existKey(keys, \"01_yoteiKihonKakakuRandomLabel\")&& !existKey(keys, \"\")? (\"予定基本価格 ランダム係数\") : \"\") + (existKey(keys, \"01_saiteiseigenKihonKakakuLabel\")&& !existKey(keys, \"\")? (\"最低制限基本価格(税抜き)\") : \"\") + (existKey(keys, \"01_shosaiSaiteiseigenKihonKakakuLabel\")&& !existKey(keys, \"\")? (\"最低制限基本価格(税抜き)\") : \"\") + (existKey(keys, \"01_saiteiseigenKihonKakakuRandomLabel\")&& !existKey(keys, \"\")? (\"最低制限基本価格 ランダム係数\") : \"\") + (existKey(keys, \"01_shitsumonKaitouLabel\")&& !existKey(keys, \"\")? (\"質問回答\") : \"\") + (existKey(keys, \"01_gyoshaNoLabel\")&& !existKey(keys, \"\")? (\"登録番号\") : \"\") + (existKey(keys, \"01_houjinNoLabel\")&& !existKey(keys, \"\")? (\"法人番号\") : \"\") + (existKey(keys, \"01_gyoshaKubunLabel\")&& !existKey(keys, \"\")? (\"業者区分\") : \"\") + (existKey(keys, \"01_shogoMatahaMeishoLabel\")&& !existKey(keys, \"\")? (\"商号又は名称\") : \"\") + (existKey(keys, \"01_shogoMatahaMeishoKanaLabel\")&& !existKey(keys, \"\")? (\"商号又は名称(カナ)\") : \"\") + (existKey(keys, \"01_honshaNoJushoLabel\")&& !existKey(keys, \"\")? (\"所在地\") : \"\") + (existKey(keys, \"01_shimeiTeishiNoRiyuLabel\")&& !existKey(keys, \"\")? (\"指名停止の理由\") : \"\") + (existKey(keys, \"01_shimeiTeishiKikanLabel\")&& !existKey(keys, \"\")? (\"指名停止期間\") : \"\") + (existKey(keys, \"01_shigaiKubunLabel\")&& !existKey(keys, \"\")? (\"市外区分\") : \"\") + (existKey(keys, \"01_shigai_br_kubunLabel\")&& !existKey(keys, \"\")? (\"市外<BR>区分\") : \"\") + (existKey(keys, \"01_kakudukeRankLabel\")&& !existKey(keys, \"\")? (\"格付ランク\") : \"\") + (existKey(keys, \"01_gyoshuLabel\")&& !existKey(keys, \"\")? (\"業種\") : \"\") + (existKey(keys, \"01_nyuHoLabel\")&& !existKey(keys, \"\")? (\"入保\") : \"\") + (existKey(keys, \"01_daihyoshaMatahaJuninshaLabel\")&& !existKey(keys, \"\")? (\"代表者名\") : \"\") + (existKey(keys, \"01_telLabel\")&& !existKey(keys, \"\")? (\"電話番号\") : \"\") + (existKey(keys, \"01_faxLabel\")&& !existKey(keys, \"\")? (\"FAX番号\") : \"\") + (existKey(keys, \"01_nyusatsuKigenLabel\")&& !existKey(keys, \"\")? (\"入札参加有効期限\") : \"\") + (existKey(keys, \"01_meiboKigenLabel\")&& !existKey(keys, \"\")? (\"名簿登録有効期限\") : \"\") + (existKey(keys, \"01_telFaxLabel\")&& !existKey(keys, \"\")? (\"電話番号／FAX番号\") : \"\") + (existKey(keys, \"01_daihyoshaMeiLabel\")&& !existKey(keys, \"\")? (\"代表者名\") : \"\") + (existKey(keys, \"01_yakushokuMeiLabel\")&& !existKey(keys, \"\")? (\"（役職名）\") : \"\") + (existKey(keys, \"01_kyokaKubunLabel\")&& !existKey(keys, \"\")? (\"許可区分\") : \"\") + (existKey(keys, \"01_sougoutenLabel\")&& !existKey(keys, \"\")? (\"総合点\") : \"\") + (existKey(keys, \"01_shukantenLabel\")&& !existKey(keys, \"\")? (\"主観点\") : \"\") + (existKey(keys, \"01_kyakkantenLabel\")&& !existKey(keys, \"\")? (\"客観点\") : \"\") + (existKey(keys, \"01_shosaiYoteiKakakuLabel\")&& !existKey(keys, \"\")? (\"予定価格(税抜き)\") : \"\") + (existKey(keys, \"01_shosaiSaiteiseigenKakakuLabel\")&& !existKey(keys, \"\")? (\"最低制限価格(税抜き)\") : \"\") + (existKey(keys, \"01_shosaiChousaKijunKakakuLabel\")&& !existKey(keys, \"\")? (\"調査基準価格(税抜き)\") : \"\") + (existKey(keys, \"01_shosaiRakusatsuKingakuLabel\")&& !existKey(keys, \"\")? (\"落札金額(税抜き)\") : \"\") + (existKey(keys, \"02_ankenNoLabel\")&& !existKey(keys, \"\")? (\"調達案件番号\") : \"\") + (existKey(keys, \"02_kojiNoLabel\")&& !existKey(keys, \"\")? (\"業務番号\") : \"\") + (existKey(keys, \"02_kojiNoNmLabel\")&& !existKey(keys, \"\")? (\"業務番号名称\") : \"\") + (existKey(keys, \"02_denshiKamiKubunLabel\")&& !existKey(keys, \"\")? (\"電子／紙\") : \"\") + (existKey(keys, \"02_yoteiKihonKakakuLabel\")&& !existKey(keys, \"\")? (\"予定基本価格(税抜き)\") : \"\") + (existKey(keys, \"02_shosaiYoteiKihonKakakuLabel\")&& !existKey(keys, \"\")? (\"予定基本価格(税抜き)\") : \"\") + (existKey(keys, \"02_yoteiKihonKakakuRandomLabel\")&& !existKey(keys, \"\")? (\"予定基本価格 ランダム係数\") : \"\") + (existKey(keys, \"02_saiteiseigenKihonKakakuLabel\")&& !existKey(keys, \"\")? (\"最低制限基本価格(税抜き)\") : \"\") + (existKey(keys, \"02_shosaiSaiteiseigenKihonKakakuLabel\")&& !existKey(keys, \"\")? (\"最低制限基本価格(税抜き)\") : \"\") + (existKey(keys, \"02_saiteiseigenKihonKakakuRandomLabel\")&& !existKey(keys, \"\")? (\"最低制限基本価格 ランダム係数\") : \"\") + (existKey(keys, \"02_shitsumonKaitouLabel\")&& !existKey(keys, \"\")? (\"質問回答\") : \"\") + (existKey(keys, \"02_gyoshaNoLabel\")&& !existKey(keys, \"\")? (\"登録番号\") : \"\") + (existKey(keys, \"02_houjinNoLabel\")&& !existKey(keys, \"\")? (\"法人番号\") : \"\") + (existKey(keys, \"02_gyoshaKubunLabel\")&& !existKey(keys, \"\")? (\"業者区分\") : \"\") + (existKey(keys, \"02_shogoMatahaMeishoLabel\")&& !existKey(keys, \"\")? (\"商号又は名称\") : \"\") + (existKey(keys, \"02_shogoMatahaMeishoKanaLabel\")&& !existKey(keys, \"\")? (\"商号又は名称(カナ)\") : \"\") + (existKey(keys, \"02_honshaNoJushoLabel\")&& !existKey(keys, \"\")? (\"所在地\") : \"\") + (existKey(keys, \"02_shimeiTeishiNoRiyuLabel\")&& !existKey(keys, \"\")? (\"指名停止の理由\") : \"\") + (existKey(keys, \"02_shimeiTeishiKikanLabel\")&& !existKey(keys, \"\")? (\"指名停止期間\") : \"\") + (existKey(keys, \"02_shigaiKubunLabel\")&& !existKey(keys, \"\")? (\"市外区分\") : \"\") + (existKey(keys, \"02_shigai_br_kubunLabel\")&& !existKey(keys, \"\")? (\"市外<BR>区分\") : \"\") + (existKey(keys, \"02_kakudukeRankLabel\")&& !existKey(keys, \"\")? (\"格付ランク\") : \"\") + (existKey(keys, \"02_gyoshuLabel\")&& !existKey(keys, \"\")? (\"業種\") : \"\") + (existKey(keys, \"02_nyuHoLabel\")&& !existKey(keys, \"\")? (\"入保\") : \"\") + (existKey(keys, \"02_daihyoshaMatahaJuninshaLabel\")&& !existKey(keys, \"\")? (\"代表者名\") : \"\") + (existKey(keys, \"02_telLabel\")&& !existKey(keys, \"\")? (\"電話番号\") : \"\") + (existKey(keys, \"02_faxLabel\")&& !existKey(keys, \"\")? (\"FAX番号\") : \"\") + (existKey(keys, \"02_nyusatsuKigenLabel\")&& !existKey(keys, \"\")? (\"入札参加有効期限\") : \"\") + (existKey(keys, \"02_meiboKigenLabel\")&& !existKey(keys, \"\")? (\"名簿登録有効期限\") : \"\") + (existKey(keys, \"02_telFaxLabel\")&& !existKey(keys, \"\")? (\"電話番号／FAX番号\") : \"\") + (existKey(keys, \"02_daihyoshaMeiLabel\")&& !existKey(keys, \"\")? (\"代表者名\") : \"\") + (existKey(keys, \"02_yakushokuMeiLabel\")&& !existKey(keys, \"\")? (\"（役職名）\") : \"\") + (existKey(keys, \"02_kyokaKubunLabel\")&& !existKey(keys, \"\")? (\"許可区分\") : \"\") + (existKey(keys, \"02_sougoutenLabel\")&& !existKey(keys, \"\")? (\"総合点\") : \"\") + (existKey(keys, \"02_shukantenLabel\")&& !existKey(keys, \"\")? (\"主観点\") : \"\") + (existKey(keys, \"02_kyakkantenLabel\")&& !existKey(keys, \"\")? (\"客観点\") : \"\") + (existKey(keys, \"02_shosaiYoteiKakakuLabel\")&& !existKey(keys, \"\")? (\"予定価格(税抜き)\") : \"\") + (existKey(keys, \"02_shosaiSaiteiseigenKakakuLabel\")&& !existKey(keys, \"\")? (\"最低制限価格(税抜き)\") : \"\") + (existKey(keys, \"02_shosaiChousaKijunKakakuLabel\")&& !existKey(keys, \"\")? (\"調査基準価格(税抜き)\") : \"\") + (existKey(keys, \"02_shosaiRakusatsuKingakuLabel\")&& !existKey(keys, \"\")? (\"落札金額(税抜き)\") : \"\") + (existKey(keys, \"03_ankenNoLabel\")&& !existKey(keys, \"\")? (\"調達案件番号\") : \"\") + (existKey(keys, \"03_kojiNoLabel\")&& !existKey(keys, \"\")? (\"案件番号\") : \"\") + (existKey(keys, \"03_kojiNoNmLabel\")&& !existKey(keys, \"\")? (\"案件番号名称\") : \"\") + (existKey(keys, \"03_denshiKamiKubunLabel\")&& !existKey(keys, \"\")? (\"電子／紙\") : \"\") + (existKey(keys, \"03_yoteiKihonKakakuLabel\")&& !existKey(keys, \"\")? (\"予定基本価格(税抜き)\") : \"\") + (existKey(keys, \"03_shosaiYoteiKihonKakakuLabel\")&& !existKey(keys, \"\")? (\"予定基本価格(税抜き)\") : \"\") + (existKey(keys, \"03_yoteiKihonKakakuRandomLabel\")&& !existKey(keys, \"\")? (\"予定基本価格 ランダム係数\") : \"\") + (existKey(keys, \"03_saiteiseigenKihonKakakuLabel\")&& !existKey(keys, \"\")? (\"最低制限基本価格(税抜き)\") : \"\") + (existKey(keys, \"03_shosaiSaiteiseigenKihonKakakuLabel\")&& !existKey(keys, \"\")? (\"最低制限基本価格(税抜き)\") : \"\") + (existKey(keys, \"03_saiteiseigenKihonKakakuRandomLabel\")&& !existKey(keys, \"\")? (\"最低制限基本価格 ランダム係数\") : \"\") + (existKey(keys, \"03_shitsumonKaitouLabel\")&& !existKey(keys, \"\")? (\"質問回答\") : \"\") + (existKey(keys, \"03_gyoshaNoLabel\")&& !existKey(keys, \"\")? (\"登録番号\") : \"\") + (existKey(keys, \"03_houjinNoLabel\")&& !existKey(keys, \"\")? (\"法人番号\") : \"\") + (existKey(keys, \"03_gyoshaKubunLabel\")&& !existKey(keys, \"\")? (\"業者区分\") : \"\") + (existKey(keys, \"03_shogoMatahaMeishoLabel\")&& !existKey(keys, \"\")? (\"商号又は名称\") : \"\") + (existKey(keys, \"03_shogoMatahaMeishoKanaLabel\")&& !existKey(keys, \"\")? (\"商号又は名称(カナ)\") : \"\") + (existKey(keys, \"03_honshaNoJushoLabel\")&& !existKey(keys, \"\")? (\"所在地\") : \"\") + (existKey(keys, \"03_shimeiTeishiNoRiyuLabel\")&& !existKey(keys, \"\")? (\"指名停止の理由\") : \"\") + (existKey(keys, \"03_shimeiTeishiKikanLabel\")&& !existKey(keys, \"\")? (\"指名停止期間\") : \"\") + (existKey(keys, \"03_shigaiKubunLabel\")&& !existKey(keys, \"\")? (\"市外区分\") : \"\") + (existKey(keys, \"03_shigai_br_kubunLabel\")&& !existKey(keys, \"\")? (\"市外<BR>区分\") : \"\") + (existKey(keys, \"03_kakudukeRankLabel\")&& !existKey(keys, \"\")? (\"格付ランク\") : \"\") + (existKey(keys, \"03_gyoshuLabel\")&& !existKey(keys, \"\")? (\"業種\") : \"\") + (existKey(keys, \"03_nyuHoLabel\")&& !existKey(keys, \"\")? (\"入保\") : \"\") + (existKey(keys, \"03_daihyoshaMatahaJuninshaLabel\")&& !existKey(keys, \"\")? (\"代表者名\") : \"\") + (existKey(keys, \"03_telLabel\")&& !existKey(keys, \"\")? (\"電話番号\") : \"\") + (existKey(keys, \"03_faxLabel\")&& !existKey(keys, \"\")? (\"FAX番号\") : \"\") + (existKey(keys, \"03_nyusatsuKigenLabel\")&& !existKey(keys, \"\")? (\"入札参加有効期限\") : \"\") + (existKey(keys, \"03_meiboKigenLabel\")&& !existKey(keys, \"\")? (\"名簿登録有効期限\") : \"\") + (existKey(keys, \"03_telFaxLabel\")&& !existKey(keys, \"\")? (\"電話番号／FAX番号\") : \"\") + (existKey(keys, \"03_daihyoshaMeiLabel\")&& !existKey(keys, \"\")? (\"代表者名\") : \"\") + (existKey(keys, \"03_yakushokuMeiLabel\")&& !existKey(keys, \"\")? (\"（役職名）\") : \"\") + (existKey(keys, \"03_kyokaKubunLabel\")&& !existKey(keys, \"\")? (\"許可区分\") : \"\") + (existKey(keys, \"03_sougoutenLabel\")&& !existKey(keys, \"\")? (\"総合点\") : \"\") + (existKey(keys, \"03_shukantenLabel\")&& !existKey(keys, \"\")? (\"主観点\") : \"\") + (existKey(keys, \"03_kyakkantenLabel\")&& !existKey(keys, \"\")? (\"客観点\") : \"\") + (existKey(keys, \"03_shosaiYoteiKakakuLabel\")&& !existKey(keys, \"\")? (\"予定価格(税抜き)\") : \"\") + (existKey(keys, \"03_shosaiSaiteiseigenKakakuLabel\")&& !existKey(keys, \"\")? (\"最低制限価格(税抜き)\") : \"\") + (existKey(keys, \"03_shosaiChousaKijunKakakuLabel\")&& !existKey(keys, \"\")? (\"調査基準価格(税抜き)\") : \"\") + (existKey(keys, \"03_shosaiRakusatsuKingakuLabel\")&& !existKey(keys, \"\")? (\"落札金額(税抜き)\") : \"\") + (existKey(keys, \"99_ankenNoLabel\")&& !existKey(keys, \"\")? (\"調達案件番号\") : \"\") + (existKey(keys, \"99_kojiNoLabel\")&& !existKey(keys, \"\")? (\"業務番号\") : \"\") + (existKey(keys, \"99_kojiNoNmLabel\")&& !existKey(keys, \"\")? (\"業務番号名称\") : \"\") + (existKey(keys, \"99_denshiKamiKubunLabel\")&& !existKey(keys, \"\")? (\"電子／紙\") : \"\") + (existKey(keys, \"99_yoteiKihonKakakuLabel\")&& !existKey(keys, \"\")? (\"予定基本価格(税抜き)\") : \"\") + (existKey(keys, \"99_shosaiYoteiKihonKakakuLabel\")&& !existKey(keys, \"\")? (\"予定基本価格\") : \"\") + (existKey(keys, \"99_yoteiKihonKakakuRandomLabel\")&& !existKey(keys, \"\")? (\"予定基本価格 ランダム係数\") : \"\") + (existKey(keys, \"99_saiteiseigenKihonKakakuLabel\")&& !existKey(keys, \"\")? (\"最低制限基本価格(税抜き)\") : \"\") + (existKey(keys, \"99_shosaiSaiteiseigenKihonKakakuLabel\")&& !existKey(keys, \"\")? (\"最低制限基本価格\") : \"\") + (existKey(keys, \"99_saiteiseigenKihonKakakuRandomLabel\")&& !existKey(keys, \"\")? (\"最低制限基本価格 ランダム係数\") : \"\") + (existKey(keys, \"99_shitsumonKaitouLabel\")&& !existKey(keys, \"\")? (\"質問回答\") : \"\") + (existKey(keys, \"99_gyoshaNoLabel\")&& !existKey(keys, \"\")? (\"登録番号\") : \"\") + (existKey(keys, \"99_houjinNoLabel\")&& !existKey(keys, \"\")? (\"法人番号\") : \"\") + (existKey(keys, \"99_gyoshaKubunLabel\")&& !existKey(keys, \"\")? (\"業者区分\") : \"\") + (existKey(keys, \"99_shogoMatahaMeishoLabel\")&& !existKey(keys, \"\")? (\"商号又は名称\") : \"\") + (existKey(keys, \"99_shogoMatahaMeishoKanaLabel\")&& !existKey(keys, \"\")? (\"商号又は名称(カナ)\") : \"\") + (existKey(keys, \"99_honshaNoJushoLabel\")&& !existKey(keys, \"\")? (\"本社の住所\") : \"\") + (existKey(keys, \"99_shimeiTeishiNoRiyuLabel\")&& !existKey(keys, \"\")? (\"指名停止の理由\") : \"\") + (existKey(keys, \"99_shimeiTeishiKikanLabel\")&& !existKey(keys, \"\")? (\"指名停止期間\") : \"\") + (existKey(keys, \"99_shigaiKubunLabel\")&& !existKey(keys, \"\")? (\"市外区分\") : \"\") + (existKey(keys, \"99_shigai_br_kubunLabel\")&& !existKey(keys, \"\")? (\"市外<BR>区分\") : \"\") + (existKey(keys, \"99_kakudukeRankLabel\")&& !existKey(keys, \"\")? (\"格付ランク\") : \"\") + (existKey(keys, \"99_gyoshuLabel\")&& !existKey(keys, \"\")? (\"業種\") : \"\") + (existKey(keys, \"99_nyuHoLabel\")&& !existKey(keys, \"\")? (\"入保\") : \"\") + (existKey(keys, \"99_daihyoshaMatahaJuninshaLabel\")&& !existKey(keys, \"\")? (\"代表者名\") : \"\") + (existKey(keys, \"99_telLabel\")&& !existKey(keys, \"\")? (\"電話番号\") : \"\") + (existKey(keys, \"99_faxLabel\")&& !existKey(keys, \"\")? (\"FAX番号\") : \"\") + (existKey(keys, \"99_nyusatsuKigenLabel\")&& !existKey(keys, \"\")? (\"入札参加有効期限\") : \"\") + (existKey(keys, \"99_meiboKigenLabel\")&& !existKey(keys, \"\")? (\"名簿登録有効期限\") : \"\") + (existKey(keys, \"99_telFaxLabel\")&& !existKey(keys, \"\")? (\"電話番号／FAX番号\") : \"\") + (existKey(keys, \"99_daihyoshaMeiLabel\")&& !existKey(keys, \"\")? (\"代表者名\") : \"\") + (existKey(keys, \"99_yakushokuMeiLabel\")&& !existKey(keys, \"\")? (\"（役職名）\") : \"\") + (existKey(keys, \"99_kyokaKubunLabel\")&& !existKey(keys, \"\")? (\"許可区分\") : \"\") + (existKey(keys, \"99_sougoutenLabel\")&& !existKey(keys, \"\")? (\"総合点\") : \"\") + (existKey(keys, \"99_shukantenLabel\")&& !existKey(keys, \"\")? (\"主観点\") : \"\") + (existKey(keys, \"99_kyakkantenLabel\")&& !existKey(keys, \"\")? (\"客観点\") : \"\") + (existKey(keys, \"99_shosaiYoteiKakakuLabel\")&& !existKey(keys, \"\")? (\"予定価格(税抜き)\") : \"\") + (existKey(keys, \"99_shosaiSaiteiseigenKakakuLabel\")&& !existKey(keys, \"\")? (\"最低制限価格(税抜き)\") : \"\") + (existKey(keys, \"99_shosaiChousaKijunKakakuLabel\")&& !existKey(keys, \"\")? (\"調査基準価格(税抜き)\") : \"\") + (existKey(keys, \"99_shosaiRakusatsuKingakuLabel\")&& !existKey(keys, \"\")? (\"落札金額(税抜き)\") : \"\")"));
+	ErrMsg[2] = new Array("char-type/permit",
+		new Function("name", "keys", " return \"\" + name + \"には\" + (existKey(keys, \"fw-all\")&& !existKey(keys, \"\")? (\"『全角文字』\") : \"\") + (existKey(keys, \"hw-all\")&& !existKey(keys, \"\")? (\"『半角文字』\") : \"\") + (existKey(keys, \"fw-alpha\")&& !existKey(keys, \"\")? (\"『全角アルファベット』\") : \"\") + (existKey(keys, \"hw-alpha\")&& !existKey(keys, \"\")? (\"『半角アルファベット』\") : \"\") + (existKey(keys, \"hw-alpha-u\")&& !existKey(keys, \"\")? (\"『半角アルファベット大文字』\") : \"\") + (existKey(keys, \"hw-alpha-l\")&& !existKey(keys, \"\")? (\"『半角アルファベット小文字』\") : \"\") + (existKey(keys, \"fw-space\")&& !existKey(keys, \"\")? (\"『全角スペース』\") : \"\") + (existKey(keys, \"hw-space\")&& !existKey(keys, \"\")? (\"『半角スペース』\") : \"\") + (existKey(keys, \"fw-number\")&& !existKey(keys, \"\")? (\"『全角数字』\") : \"\") + (existKey(keys, \"hw-number\")&& !existKey(keys, \"\")? (\"『半角数字』\") : \"\") + (existKey(keys, \"kanji\")&& !existKey(keys, \"\")? (\"『漢字』\") : \"\") + (existKey(keys, \"hiragana\")&& !existKey(keys, \"\")? (\"『ひらがな』\") : \"\") + (existKey(keys, \"fw-katakana\")&& !existKey(keys, \"\")? (\"『全角カタカナ』\") : \"\") + (existKey(keys, \"hw-katakana\")&& !existKey(keys, \"\")? (\"『半角カタカナ』\") : \"\") + (existKey(keys, \"charcode\")&& !existKey(keys, \"\")? (\"『指定した文字コード』\") : \"\") + (existKey(keys, \"hw-katakana-variants\")&& !existKey(keys, \"\")? (\"『半角カタカナ（文字のみ）』\") : \"\") + (existKey(keys, \"old-hw-all\")&& !existKey(keys, \"\")? (\"『半角文字』\") : \"\") + (existKey(keys, \"old-fw-all\")&& !existKey(keys, \"\")? (\"『全角文字』\") : \"\") + (existKey(keys, \"old-hiragana\")&& !existKey(keys, \"\")? (\"『ひらがな』\") : \"\") + (existKey(keys, \"old-fw-katakana\")&& !existKey(keys, \"\")? (\"『全角カタカナ』\") : \"\") + (existKey(keys, \"old-hw-katakana\")&& !existKey(keys, \"\")? (\"『半角カタカナ』\") : \"\") + (existKey(keys, \"old-kanji\")&& !existKey(keys, \"\")? (\"『漢字』\") : \"\") + \"のみ使用することができます。WARN\""));
+		this.getErrorIndex = _getErrorIndex;
+}
+
+function _getErrorIndex( errorid ){
+	var errIdx = -1;
+	for (var j=0; j<ErrMsg.length; j++ ){
+		if(ErrMsg[j][0] == errorid ){
+			errIdx=j; break;
+		}
+	}
+	return errIdx;
+}
+
+//***********************************************
+// 入力チェックchartypeルール(自動生成）
+// ※staveware-inputchecker.properties参照
+//***********************************************
+if (window["charTypeMap"] == null) {
+	window["charTypeMap"] = new Function();
+}
+charTypeMap["fw-alpha"] = "[\uff21-\uff3a\uff41-\uff5a]";
+charTypeMap["hw-alpha"] = "[\u0041-\u005a\u0061-\u007a]";
+charTypeMap["hw-alpha-u"] = "[\u0041-\u005a]";
+charTypeMap["hw-alpha-l"] = "[\u0061-\u007a]";
+charTypeMap["fw-number"] = "[\uff10-\uff19]";
+charTypeMap["hw-number"] = "[\u0030-\u0039]";
+charTypeMap["kanji"] = "[\u4e00-\u9fa5\uf900-\ufa2d]";
+charTypeMap["hiragana"] = "[\u3041-\u3093\u30fc]";
+charTypeMap["fw-katakana"] = "[\u30a1-\u30f6\u30fc]";
+charTypeMap["hw-katakana"] = "[\uff61-\uff9f]";
+charTypeMap["hw-katakana-variants"] = "[\uff65-\uff9f]";
+charTypeMap["old-fw-all"] = "[\u0000-\u001f\u00a0-\uff60\uffa0-\uffff]";
+charTypeMap["old-hw-all"] = "[\u0020-\u009f\uff61-\uff9f]";
+charTypeMap["old-hiragana"] = "[\u3040-\u309f]";
+charTypeMap["old-hw-katakana"] = "[\uff61-\uff9f]";
+charTypeMap["old-fw-katakana"] = "[\u30a0-\u30ff]";
+charTypeMap["old-kanji"] = "[\u2e80-\u2eff\u2f00-\u2fdf\u3100-\u312f\u31a0-\u31bf\u3400-\u4dbf\u4e00-\u9faf\uf900-\ufaff]";
+
+//********************************************************
+// 入力チェック処理関数(自動生成）
+// 定義されているitemを生成するメソッドを登録する.
+//*********************************************************
+checkItems = new Array();
+function ItemChecker() {
+
+	checkItems[0] = new Array("msg_COM",
+		function(iCheck, errout, errData, val, itemID){
+
+			checkList = new Array();
+			listIndex = 0;
+			if(!(iCheck.checkCustomClass(val, "jp.co.toshiba.dencho.common.base.util.ComMsg",null))) {
+				errIndex = errData.getErrorIndex("custom-class/jp.co.toshiba.dencho.common.base.util.ComMsg");
+				errout.push(ErrMsg[errIndex][1]("msg_COM", checkList));
+				if (errout.length > 0) {
+					if (false == true) {
+						return true;
+					}
+				}
+			}
+			return true;
+
+		}, false, "");
+	checkItems[1] = new Array("callFunc",
+		function(iCheck, errout, errData, val, itemID){
+
+			checkList = new Array();
+			listIndex = 0;
+			checkList[listIndex++] = "fw-alpha";
+			if(!(iCheck.checkCharType(val, checkList, "permit", true))) {
+				errIndex = errData.getErrorIndex("char-type/permit");
+				errout.push(ErrMsg[errIndex][1]("callFunc", checkList));
+				if (errout.length > 0) {
+					if (false == true) {
+						return true;
+					}
+				}
+			}
+			checkList = new Array();
+			listIndex = 0;
+			checkList[listIndex++] = "hw-alpha";
+			if(!(iCheck.checkCharType(val, checkList, "permit", true))) {
+				errIndex = errData.getErrorIndex("char-type/permit");
+				errout.push(ErrMsg[errIndex][1]("callFunc", checkList));
+				if (errout.length > 0) {
+					if (false == true) {
+						return true;
+					}
+				}
+			}
+			checkList = new Array();
+			listIndex = 0;
+			checkList[listIndex++] = "hw-alpha-u";
+			if(!(iCheck.checkCharType(val, checkList, "permit", true))) {
+				errIndex = errData.getErrorIndex("char-type/permit");
+				errout.push(ErrMsg[errIndex][1]("callFunc", checkList));
+				if (errout.length > 0) {
+					if (false == true) {
+						return true;
+					}
+				}
+			}
+			checkList = new Array();
+			listIndex = 0;
+			checkList[listIndex++] = "hw-alpha-l";
+			if(!(iCheck.checkCharType(val, checkList, "permit", true))) {
+				errIndex = errData.getErrorIndex("char-type/permit");
+				errout.push(ErrMsg[errIndex][1]("callFunc", checkList));
+				if (errout.length > 0) {
+					if (false == true) {
+						return true;
+					}
+				}
+			}
+			checkList = new Array();
+			listIndex = 0;
+			checkList[listIndex++] = "fw-number";
+			if(!(iCheck.checkCharType(val, checkList, "permit", true))) {
+				errIndex = errData.getErrorIndex("char-type/permit");
+				errout.push(ErrMsg[errIndex][1]("callFunc", checkList));
+				if (errout.length > 0) {
+					if (false == true) {
+						return true;
+					}
+				}
+			}
+			checkList = new Array();
+			listIndex = 0;
+			checkList[listIndex++] = "hw-number";
+			if(!(iCheck.checkCharType(val, checkList, "permit", true))) {
+				errIndex = errData.getErrorIndex("char-type/permit");
+				errout.push(ErrMsg[errIndex][1]("callFunc", checkList));
+				if (errout.length > 0) {
+					if (false == true) {
+						return true;
+					}
+				}
+			}
+			checkList = new Array();
+			listIndex = 0;
+			checkList[listIndex++] = "kanji";
+			if(!(iCheck.checkCharType(val, checkList, "permit", true))) {
+				errIndex = errData.getErrorIndex("char-type/permit");
+				errout.push(ErrMsg[errIndex][1]("callFunc", checkList));
+				if (errout.length > 0) {
+					if (false == true) {
+						return true;
+					}
+				}
+			}
+			checkList = new Array();
+			listIndex = 0;
+			checkList[listIndex++] = "hiragana";
+			if(!(iCheck.checkCharType(val, checkList, "permit", true))) {
+				errIndex = errData.getErrorIndex("char-type/permit");
+				errout.push(ErrMsg[errIndex][1]("callFunc", checkList));
+				if (errout.length > 0) {
+					if (false == true) {
+						return true;
+					}
+				}
+			}
+			checkList = new Array();
+			listIndex = 0;
+			checkList[listIndex++] = "fw-katakana";
+			if(!(iCheck.checkCharType(val, checkList, "permit", true))) {
+				errIndex = errData.getErrorIndex("char-type/permit");
+				errout.push(ErrMsg[errIndex][1]("callFunc", checkList));
+				if (errout.length > 0) {
+					if (false == true) {
+						return true;
+					}
+				}
+			}
+			checkList = new Array();
+			listIndex = 0;
+			checkList[listIndex++] = "hw-katakana";
+			if(!(iCheck.checkCharType(val, checkList, "permit", true))) {
+				errIndex = errData.getErrorIndex("char-type/permit");
+				errout.push(ErrMsg[errIndex][1]("callFunc", checkList));
+				if (errout.length > 0) {
+					if (false == true) {
+						return true;
+					}
+				}
+			}
+			checkList = new Array();
+			listIndex = 0;
+			checkList[listIndex++] = "hw-katakana-variants";
+			if(!(iCheck.checkCharType(val, checkList, "permit", true))) {
+				errIndex = errData.getErrorIndex("char-type/permit");
+				errout.push(ErrMsg[errIndex][1]("callFunc", checkList));
+				if (errout.length > 0) {
+					if (false == true) {
+						return true;
+					}
+				}
+			}
+			checkList = new Array();
+			listIndex = 0;
+			checkList[listIndex++] = "old-fw-all";
+			if(!(iCheck.checkCharType(val, checkList, "permit", true))) {
+				errIndex = errData.getErrorIndex("char-type/permit");
+				errout.push(ErrMsg[errIndex][1]("callFunc", checkList));
+				if (errout.length > 0) {
+					if (false == true) {
+						return true;
+					}
+				}
+			}
+			checkList = new Array();
+			listIndex = 0;
+			checkList[listIndex++] = "old-hw-all";
+			if(!(iCheck.checkCharType(val, checkList, "permit", true))) {
+				errIndex = errData.getErrorIndex("char-type/permit");
+				errout.push(ErrMsg[errIndex][1]("callFunc", checkList));
+				if (errout.length > 0) {
+					if (false == true) {
+						return true;
+					}
+				}
+			}
+			checkList = new Array();
+			listIndex = 0;
+			checkList[listIndex++] = "old-hiragana";
+			if(!(iCheck.checkCharType(val, checkList, "permit", true))) {
+				errIndex = errData.getErrorIndex("char-type/permit");
+				errout.push(ErrMsg[errIndex][1]("callFunc", checkList));
+				if (errout.length > 0) {
+					if (false == true) {
+						return true;
+					}
+				}
+			}
+			checkList = new Array();
+			listIndex = 0;
+			checkList[listIndex++] = "old-hw-katakana";
+			if(!(iCheck.checkCharType(val, checkList, "permit", true))) {
+				errIndex = errData.getErrorIndex("char-type/permit");
+				errout.push(ErrMsg[errIndex][1]("callFunc", checkList));
+				if (errout.length > 0) {
+					if (false == true) {
+						return true;
+					}
+				}
+			}
+			checkList = new Array();
+			listIndex = 0;
+			checkList[listIndex++] = "old-fw-katakana";
+			if(!(iCheck.checkCharType(val, checkList, "permit", true))) {
+				errIndex = errData.getErrorIndex("char-type/permit");
+				errout.push(ErrMsg[errIndex][1]("callFunc", checkList));
+				if (errout.length > 0) {
+					if (false == true) {
+						return true;
+					}
+				}
+			}
+			checkList = new Array();
+			listIndex = 0;
+			checkList[listIndex++] = "old-kanji";
+			if(!(iCheck.checkCharType(val, checkList, "permit", true))) {
+				errIndex = errData.getErrorIndex("char-type/permit");
+				errout.push(ErrMsg[errIndex][1]("callFunc", checkList));
+				if (errout.length > 0) {
+					if (false == true) {
+						return true;
+					}
+				}
+			}
+			return true;
+
+		}, false, "");
+	this.getItemIndex = _getItemIndex;
+}
+
+function _getItemIndex(itemid) {
+	var checkerIdx=-1;
+	for (var k=0; k<checkItems.length; k++) {
+
+		if (checkItems[k][0] == itemid && checkItems[k][2] == false) {
+			checkerIdx=k; break;
+		}
+
+		if (checkItems[k][2] == true && fitPattern(itemid, checkItems[k][0], checkItems[k][3])) {
+
+			checkerIdx=k; break;
+		}
+	}
+	return checkerIdx;
+}
+
+//***********************************************
+// 入力チェック処理関数(自動生成）
+//***********************************************
+function stvCLInputCheckFunc(checkObjs) {
+
+	var iCheck = new ClientInputCheck();
+	iCheck.setBrowserType();
+	var errData = new ErrMessage();
+	var checker = new ItemChecker();
+	var errResult = new Object();
+	var isFoundError = false;
+	for (var i=0; i<checkObjs.length; i++){
+
+		var itemID = checkObjs[i].id;
+		var val = checkObjs[i].value;
+		var errout = new Array();
+		var errString = "";
+
+		var checkerIdx = checker.getItemIndex(itemID);
+
+		if (checkerIdx >= 0) {
+			var result = checkItems[checkerIdx][1](iCheck, errout, errData, val, itemID);
+			if (result == false) {
+				continue;
+			}
+		}
+		if (errout.length > 0) {
+			isFoundError = true;
+
+			if (errout.length == 1) {
+				errString = errout[0];
+			} else {
+				for (var num=0; num<errout.length; num++) {
+					errString += errout[num]+"<br>";
+				}
+			}
+
+			 errResult[itemID]=errString;
+		} else { 
+			continue; 
+		}
+	}
+
+	var errCheckResult = null;
+	if(isFoundError) {
+		errCheckResult = {"fieldErrors": errResult};
+	}
+	return errCheckResult;
+}
+//-->
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<div id="com_msg" style="display:none;position:absolute; max-height:100px;
+padding-right:15px; overflow-y:auto;overflow-x:hidden;" onmouseover="this.style.filter='alpha(opacity=100)'" onmouseout="this.style.filter='alpha(opacity=100)'"></div>
+<div id="adjust" style="display:none;"></div>
+
+
+
+<p></p>
+<p></p>
+
+
+
+
+<form id="form" name="frm_main" action="/DENCHO/GP5515_1015.action" target="_self" method="POST" autocomplete="off">
+
+
+
+<input type="hidden" id="hdn_modifyFlag" name="hdn_modifyFlag" value="false">
+
+<input type="hidden" id="hdn_statusMessage" name="hdn_statusMessage" value="">
+
+<input type="hidden" id="currentPage" name="currentPage" value="1">
+<input type="hidden" id="maxPage" name="maxPage" value="1">
+<input type="hidden" id="ankenSize" name="ankenSize" value="17">
+<input type="hidden" id="nendoDisp" name="nendoDisp" value="令和 7年度">
+<input type="hidden" id="destinationPage" name="destinationPage" value="">
+
+<input type="hidden" id="keisaiNen" name="keisaiNen" value="2025">
+<input type="hidden" id="pageSize" name="pageSize" value="500">
+<input type="hidden" id="hacchuBuCd" name="hacchuBuCd" value="">
+<input type="hidden" id="hacchuJimuCd" name="hacchuJimuCd" value="">
+<input type="hidden" id="koshuCd" name="koshuCd" value="200">
+<input type="hidden" id="nyusatsuTypeCd" name="nyusatsuTypeCd" value="">
+<input type="hidden" id="ankenNm" name="ankenNm" value="">
+<input type="hidden" id="ankenJusho" name="ankenJusho" value="">
+
+<input type="hidden" id="hidukeJiHiduke" name="hidukeJiHiduke" value="">
+<input type="hidden" id="hidukeItaHiduke" name="hidukeItaHiduke" value="">
+
+<input type="hidden" id="kanriNo" name="kanriNo" value="">
+<input type="hidden" id="kojiNo" name="kojiNo" value="">
+<input type="hidden" id="kojiNoNm" name="kojiNoNm" value="">
+<input type="hidden" id="denshiKamiKubun" name="denshiKamiKubun" value="">
+<input type="hidden" id="gyoshuKbnCd" name="gyoshuKbnCd" value="00">
+
+<input type="hidden" id="selectKanriNo" name="selectKanriNo" value="">
+
+
+
+<table class="HEAD borderless" border="0" style="width:100%">
+  <tbody><tr class="TITLE">
+    <td class="DANTAI">奈良県</td>
+    <td class="nowrap">
+      入札結果／案件参照&nbsp;&nbsp;検索結果表示
+    </td>
+  </tr>
+</tbody></table>
+<hr>
+
+
+
+
+  <table class="borderless">
+    <colgroup>
+      <col style="width:300px">
+      <col style="width:680px">
+    </colgroup>
+    <tbody><tr>
+      <td>
+        <table class="MESSAGE borderless"><tbody><tr><td>17件が該当しました</td></tr></tbody></table>
+      </td>
+      <td style="text-align:right">
+        <div class="PAGER"><span>1</span>
+</div>
+      </td>
+    </tr>
+  </tbody></table>
+
+<div class="SCROLL1">
+  <table class="border">
+    <colgroup>
+
+    <col style="width:20px">
+    <col style="width:50px">
+    <col style="width:100px">
+    <col style="width:90px">
+    <col style="width:240px">
+    <col style="width:130px">
+    <col style="width:90px">
+    <col style="width:210px">
+    <col style="width:205px">
+
+    </colgroup>
+    <tbody><tr>
+      <th colspan="2">検索対象</th>
+      <td colspan="8" style="border-top:none; border-right:none;">年度：令和 7年度</td>
+    </tr>
+    <tr>
+      <th>No.</th>
+      <th>添付<br>書類</th>
+      <th>発注部局名<br>発注所属名</th>
+
+      <th>
+            
+            <div class="label" id="denshiKamiKubunLabel">電子／紙</div>
+      </th>
+
+      <th>入札方式</th>
+      <th>業種</th>
+      <th>開札日時</th> 
+      <th>
+        工事名
+      </th>
+      <th>
+        工事場所
+      </th>
+    </tr>
+
+
+
+    <tr>
+      <th>1</th>
+      <td><input id="btn_file1" type="button" value="表示" onclick="pf_VidDsp_FileSelect('0515','29001013060020250219')"></td>
+      <td>県土マネジメント部<br>建設産業課（県マネ部本課／食農部本課／奈良公園室／旧奈良県水道局）</td>
+
+      <td>電子入札<br></td>
+
+      <td>一般競争入札［参加申請型］（総合評価）<br></td>
+      <td>建築一式<br></td>
+      <td>R08.01.26 10:00<br></td>
+      <td>
+
+          <a href="javascript:pf_VidDsp_btnKokokuClick('5515','29001013060020250219')">
+              
+              奈良県立大学（仮称）教育研究棟新築工事（建築工事）　第７－３７号<br>
+          </a>
+
+      </td>
+      <td>－<br></td>
+    </tr>
+
+
+
+    <tr>
+      <th>2</th>
+      <td><input id="btn_file2" type="button" value="表示" onclick="pf_VidDsp_FileSelect('0515','29001013060020250152')"></td>
+      <td>県土マネジメント部<br>建設産業課（県マネ部本課／食農部本課／奈良公園室／旧奈良県水道局）</td>
+
+      <td>電子入札<br></td>
+
+      <td>一般競争入札［参加申請型］（総合評価）<br></td>
+      <td>建築一式<br></td>
+      <td>R07.10.07 10:00<br></td>
+      <td>
+
+          <a href="javascript:pf_VidDsp_btnKokokuClick('5515','29001013060020250152')">
+              
+              【中止】奈良県立大学（仮称）教育研究棟新築工事（建築工事）　第７－２６号<br>
+          </a>
+
+      </td>
+      <td>－<br></td>
+    </tr>
+
+
+
+    <tr>
+      <th>3</th>
+      <td><input id="btn_file3" type="button" value="表示" onclick="pf_VidDsp_FileSelect('0515','29001013305020250032')"></td>
+      <td>県土マネジメント部<br>流域下水道センター（旧奈良県水道局（出先機関））</td>
+
+      <td>電子入札<br></td>
+
+      <td>一般競争入札（参加申請なし）<br></td>
+      <td>建築一式<br></td>
+      <td>R07.09.05 10:30<br></td>
+      <td>
+
+          <a href="javascript:pf_VidDsp_btnKokokuClick('5515','29001013305020250032')">
+              
+              大宇陀ポンプ場耐震工事（防災・安全交付金事業）　Ｒ７大宇陀Ｐ第１５号<br>
+          </a>
+
+      </td>
+      <td>宇陀市大宇陀野依　地内<br></td>
+    </tr>
+
+
+
+    <tr>
+      <th>4</th>
+      <td><input id="btn_file4" type="button" value="表示" onclick="pf_VidDsp_FileSelect('0515','29005007060120250020')"></td>
+      <td>奈良県広域水道企業団<br>広域水道センター</td>
+
+      <td>電子入札<br></td>
+
+      <td>一般競争入札［参加申請型］（総合評価）<br></td>
+      <td>建築一式<br></td>
+      <td>R07.09.05 10:00<br></td>
+      <td>
+
+          <a href="javascript:pf_VidDsp_btnKokokuClick('5515','29005007060120250020')">
+              
+              桜井浄水場管理本館修繕工事<br>
+          </a>
+
+      </td>
+      <td>桜井市初瀬地内<br></td>
+    </tr>
+
+
+
+    <tr>
+      <th>5</th>
+      <td><input id="btn_file5" type="button" value="表示" onclick="pf_VidDsp_FileSelect('0515','29001013060020250144')"></td>
+      <td>県土マネジメント部<br>建設産業課（県マネ部本課／食農部本課／奈良公園室／旧奈良県水道局）</td>
+
+      <td>電子入札<br></td>
+
+      <td>一般競争入札［参加申請型］（総合評価）<br></td>
+      <td>建築一式<br></td>
+      <td>R07.09.02 10:00<br></td>
+      <td>
+
+          <a href="javascript:pf_VidDsp_btnKokokuClick('5515','29001013060020250144')">
+              
+              ヘリポート管理事務所屋上防水及びトイレ改修工事　第７－３３号<br>
+          </a>
+
+      </td>
+      <td>－<br></td>
+    </tr>
+
+
+
+    <tr>
+      <th>6</th>
+      <td><input id="btn_file6" type="button" value="表示" onclick="pf_VidDsp_FileSelect('0515','29001013060020250148')"></td>
+      <td>県土マネジメント部<br>建設産業課（県マネ部本課／食農部本課／奈良公園室／旧奈良県水道局）</td>
+
+      <td>電子入札<br></td>
+
+      <td>一般競争入札（参加申請なし）<br></td>
+      <td>建築一式<br></td>
+      <td>R07.09.01 10:00<br></td>
+      <td>
+
+          <a href="javascript:pf_VidDsp_btnKokokuClick('5515','29001013060020250148')">
+              
+              県営住宅紀寺団地４号棟（１０１号室）住戸改修工事　第７－１６号<br>
+          </a>
+
+      </td>
+      <td>－<br></td>
+    </tr>
+
+
+
+    <tr>
+      <th>7</th>
+      <td><input id="btn_file7" type="button" value="表示" onclick="pf_VidDsp_FileSelect('0515','29005007060120250013')"></td>
+      <td>奈良県広域水道企業団<br>広域水道センター</td>
+
+      <td>電子入札<br></td>
+
+      <td>一般競争入札［参加申請型］（総合評価）<br></td>
+      <td>建築一式<br></td>
+      <td>R07.08.26 10:00<br></td>
+      <td>
+
+          <a href="javascript:pf_VidDsp_btnKokokuClick('5515','29005007060120250013')">
+              
+              【中止】桜井浄水場管理本館修繕工事<br>
+          </a>
+
+      </td>
+      <td>桜井市初瀬地内<br></td>
+    </tr>
+
+
+
+    <tr>
+      <th>8</th>
+      <td><input id="btn_file8" type="button" value="表示" onclick="pf_VidDsp_FileSelect('0515','29001013060020250125')"></td>
+      <td>県土マネジメント部<br>建設産業課（県マネ部本課／食農部本課／奈良公園室／旧奈良県水道局）</td>
+
+      <td>電子入札<br></td>
+
+      <td>一般競争入札［参加申請型］（総合評価）<br></td>
+      <td>建築一式<br></td>
+      <td>R07.08.18 10:00<br></td>
+      <td>
+
+          <a href="javascript:pf_VidDsp_btnKokokuClick('5515','29001013060020250125')">
+              
+              精華学院体育館外壁・内装等改修工事　第７－２５号<br>
+          </a>
+
+      </td>
+      <td>－<br></td>
+    </tr>
+
+
+
+    <tr>
+      <th>9</th>
+      <td><input id="btn_file9" type="button" value="表示" onclick="pf_VidDsp_FileSelect('0515','29001013060020250069')"></td>
+      <td>県土マネジメント部<br>建設産業課（県マネ部本課／食農部本課／奈良公園室／旧奈良県水道局）</td>
+
+      <td>電子入札<br></td>
+
+      <td>一般競争入札［参加申請型］（総合評価）<br></td>
+      <td>建築一式<br></td>
+      <td>R07.06.24 10:00<br></td>
+      <td>
+
+          <a href="javascript:pf_VidDsp_btnKokokuClick('5515','29001013060020250069')">
+              
+              県営住宅橿原ニュータウン団地（４，５，８号棟）屋上防水・外壁等改修工事（県営住宅環境改善事業（防災・安全））　第７－１３号<br>
+          </a>
+
+      </td>
+      <td>－<br></td>
+    </tr>
+
+
+
+    <tr>
+      <th>10</th>
+      <td><input id="btn_file10" type="button" value="表示" onclick="pf_VidDsp_FileSelect('0515','29001013305020250006')"></td>
+      <td>県土マネジメント部<br>流域下水道センター（旧奈良県水道局（出先機関））</td>
+
+      <td>電子入札<br></td>
+
+      <td>一般競争入札［参加申請型］（総合評価）<br></td>
+      <td>建築一式<br></td>
+      <td>R07.06.24 09:00<br></td>
+      <td>
+
+          <a href="javascript:pf_VidDsp_btnKokokuClick('5515','29001013305020250006')">
+              
+              浄化センター西ポンプ棟他屋上防水更新工事（防災・安全交付金事業）　Ｒ７浄化第５５５号<br>
+          </a>
+
+      </td>
+      <td>大和郡山市額田部南町　地内<br></td>
+    </tr>
+
+
+
+    <tr>
+      <th>11</th>
+      <td><input id="btn_file11" type="button" value="表示" onclick="pf_VidDsp_FileSelect('0515','29001013060020250055')"></td>
+      <td>県土マネジメント部<br>建設産業課（県マネ部本課／食農部本課／奈良公園室／旧奈良県水道局）</td>
+
+      <td>電子入札<br></td>
+
+      <td>一般競争入札［参加申請型］（総合評価）<br></td>
+      <td>建築一式<br></td>
+      <td>R07.06.18 10:00<br></td>
+      <td>
+
+          <a href="javascript:pf_VidDsp_btnKokokuClick('5515','29001013060020250055')">
+              
+              【中止】高円芸術高校格技場（５）屋根改修工事　第７－１２号<br>
+          </a>
+
+      </td>
+      <td>－<br></td>
+    </tr>
+
+
+
+    <tr>
+      <th>12</th>
+      <td><input id="btn_file12" type="button" value="表示" onclick="pf_VidDsp_FileSelect('0515','29001013060020250051')"></td>
+      <td>県土マネジメント部<br>建設産業課（県マネ部本課／食農部本課／奈良公園室／旧奈良県水道局）</td>
+
+      <td>電子入札<br></td>
+
+      <td>一般競争入札［参加申請型］（総合評価）<br></td>
+      <td>建築一式<br></td>
+      <td>R07.06.17 10:30<br></td>
+      <td>
+
+          <a href="javascript:pf_VidDsp_btnKokokuClick('5515','29001013060020250051')">
+              
+              【中止】ヘリポート管理事務所屋上防水及びトイレ改修工事　第７－１７号<br>
+          </a>
+
+      </td>
+      <td>－<br></td>
+    </tr>
+
+
+
+    <tr>
+      <th>13</th>
+      <td><input id="btn_file13" type="button" value="表示" onclick="pf_VidDsp_FileSelect('0515','29001013060020250049')"></td>
+      <td>県土マネジメント部<br>建設産業課（県マネ部本課／食農部本課／奈良公園室／旧奈良県水道局）</td>
+
+      <td>電子入札<br></td>
+
+      <td>一般競争入札［参加申請型］（総合評価）<br></td>
+      <td>建築一式<br></td>
+      <td>R07.06.17 10:00<br></td>
+      <td>
+
+          <a href="javascript:pf_VidDsp_btnKokokuClick('5515','29001013060020250049')">
+              
+              県営住宅売間団地１４号棟及び１５号棟屋上防水・外壁等改修工事（県営住宅環境改善事業（防災・安全））　第７－１９号<br>
+          </a>
+
+      </td>
+      <td>－<br></td>
+    </tr>
+
+
+
+    <tr>
+      <th>14</th>
+      <td><input id="btn_file14" type="button" value="表示" onclick="pf_VidDsp_FileSelect('0515','29001013060020250047')"></td>
+      <td>県土マネジメント部<br>建設産業課（県マネ部本課／食農部本課／奈良公園室／旧奈良県水道局）</td>
+
+      <td>電子入札<br></td>
+
+      <td>一般競争入札［参加申請型］（総合評価）<br></td>
+      <td>建築一式<br></td>
+      <td>R07.06.17 09:30<br></td>
+      <td>
+
+          <a href="javascript:pf_VidDsp_btnKokokuClick('5515','29001013060020250047')">
+              
+              県営住宅橿原団地Ｂ１～Ｂ４号棟屋上防水・外壁等改修工事（県営住宅環境改善事業（防災・安全））　第７－１号<br>
+          </a>
+
+      </td>
+      <td>－<br></td>
+    </tr>
+
+
+
+    <tr>
+      <th>15</th>
+      <td><input id="btn_file15" type="button" value="表示" onclick="pf_VidDsp_FileSelect('0515','29001013060020250033')"></td>
+      <td>県土マネジメント部<br>建設産業課（県マネ部本課／食農部本課／奈良公園室／旧奈良県水道局）</td>
+
+      <td>電子入札<br></td>
+
+      <td>一般競争入札［参加申請型］（総合評価）<br></td>
+      <td>建築一式<br></td>
+      <td>R07.06.11 10:00<br></td>
+      <td>
+
+          <a href="javascript:pf_VidDsp_btnKokokuClick('5515','29001013060020250033')">
+              
+              大和広陵高校管理教室棟（１）及び普通特別教室棟（２～４）屋上防水改修工事　第７－１８号<br>
+          </a>
+
+      </td>
+      <td>－<br></td>
+    </tr>
+
+
+
+    <tr>
+      <th>16</th>
+      <td><input id="btn_file16" type="button" value="表示" onclick="pf_VidDsp_FileSelect('0515','29001013060020240279')"></td>
+      <td>県土マネジメント部<br>建設産業課（県マネ部本課／食農部本課／奈良公園室／旧奈良県水道局）</td>
+
+      <td>電子入札<br></td>
+
+      <td>一般競争入札［参加申請型］（総合評価）<br></td>
+      <td>建築一式<br></td>
+      <td>R07.06.04 10:00<br></td>
+      <td>
+
+          <a href="javascript:pf_VidDsp_btnKokokuClick('5515','29001013060020240279')">
+              
+              国際高校管理教室棟（８～１０）屋上防水・外壁等改修工事　第７－１４号<br>
+          </a>
+
+      </td>
+      <td>－<br></td>
+    </tr>
+
+
+
+    <tr>
+      <th>17</th>
+      <td><input id="btn_file17" type="button" value="表示" onclick="pf_VidDsp_FileSelect('0515','29001013060020240270')"></td>
+      <td>県土マネジメント部<br>建設産業課（県マネ部本課／食農部本課／奈良公園室／旧奈良県水道局）</td>
+
+      <td>電子入札<br></td>
+
+      <td>一般競争入札［参加申請型］（総合評価）<br></td>
+      <td>建築一式<br></td>
+      <td>R07.04.07 10:00<br></td>
+      <td>
+
+          <a href="javascript:pf_VidDsp_btnKokokuClick('5515','29001013060020240270')">
+              
+              大渕池公園（西地区）ファミリー広場公衆トイレ新築工事（補助都市計画公園事業（防災・安全交付金））　第６－２６号<br>
+          </a>
+
+      </td>
+      <td>－<br></td>
+    </tr>
+
+
+
+  </tbody></table>
+</div>
+  <br>
+
+
+<hr>
+<table class="BTN borderless" border="0" style="width:100%">
+  <tbody><tr>
+    <!-- back -->
+    <td class="nowrap" style="text-align:LEFT;width:25%;white-space: nowrap;">
+      <input type="button" id="btn_back1" name="back1" class="button" value="メニューへ" onclick="pf_VidDsp_btnMenuClick()">
+      <input type="button" id="btn_back2" name="back2" class="button" value="条件入力へ" onclick="pf_VidDsp_btnRtnClick()">
+      <input type="button" id="btn_back3" name="back3" class="button" value="画面印刷" onclick="pf_VidDsp_btnPrintClick()">
+    </td>
+    <!-- data -->
+    <td class="nowrap" style="text-align:LEFT;width:25%">
+    </td>
+    <!-- etc -->
+    <td class="nowrap" style="text-align:LEFT;width:25%">
+    </td>
+    <!-- next -->
+    <td class="nowrap" style="text-align:LEFT;width:25%">
+    </td>
+  </tr>
+</tbody></table>
+
+
+</form>
+
+
+
+
+
+
+
+
+
+
+</body></html>
