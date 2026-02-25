@@ -23,6 +23,7 @@ async function main() {
         new YamatokoriyamaCityScraper(),
         new KatsuragiCityScraper(),
         new GojoCityScraper(),
+        new TenriCityScraper(),
     ];
 
     const allItems: BiddingItem[] = [];
