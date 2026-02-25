@@ -4,6 +4,9 @@ import { KashiharaCityScraper } from './kashihara_city';
 import { IkomaCityScraper } from './ikoma_city';
 import { YamatoTakadaCityScraper } from './yamato_takada_city';
 import { YamatokoriyamaCityScraper } from './yamatokoriyama_city';
+import { KatsuragiCityScraper } from './katsuragi_city';
+import { GojoCityScraper } from './gojo_city';
+import { TenriCityScraper } from './tenri_city';
 import { BiddingItem } from '../types/bidding';
 import fs from 'fs';
 import path from 'path';
@@ -18,6 +21,8 @@ async function main() {
         new IkomaCityScraper(),
         new YamatoTakadaCityScraper(),
         new YamatokoriyamaCityScraper(),
+        new KatsuragiCityScraper(),
+        new GojoCityScraper(),
     ];
 
     const allItems: BiddingItem[] = [];
