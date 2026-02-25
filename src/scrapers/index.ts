@@ -7,6 +7,8 @@ import { YamatokoriyamaCityScraper } from './yamatokoriyama_city';
 import { KatsuragiCityScraper } from './katsuragi_city';
 import { GojoCityScraper } from './gojo_city';
 import { TenriCityScraper } from './tenri_city';
+import { SakuraiCityScraper } from './sakurai_city';
+import { TawaramotoTownScraper } from './tawaramoto_town';
 import { BiddingItem } from '../types/bidding';
 import fs from 'fs';
 import path from 'path';
@@ -24,6 +26,8 @@ async function main() {
         new KatsuragiCityScraper(),
         new GojoCityScraper(),
         new TenriCityScraper(),
+        new SakuraiCityScraper(),
+        new TawaramotoTownScraper(),
     ];
 
     const allItems: BiddingItem[] = [];
