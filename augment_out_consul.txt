@@ -1,0 +1,224 @@
+[dotenv@17.3.1] injecting env (1) from .env.local -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+--- Starting Nara Pref Real Data Pull (2025) ---
+Launching browser...
+[List] Searching Nara Pref 2025 list for 建築...
+[List] Discovering search form frame...
+[List] Filling search criteria in frame: fra_main1
+[List] Form submitted. Waiting for results table...
+[List] Found 24 rows on the results page.
+[List] Searching Nara Pref 2025 list for 設計...
+[List] Discovering search form frame...
+[List] Filling search criteria in frame: fra_main1
+[List] Form submitted. Waiting for results table...
+[List] Found 73 rows on the results page.
+Discovered 46 potential 2025 projects across both categories.
+Processing batch of 5 projects...
+
+Processing: nara-pref-2025-13 - 国際高校受変電設備改修及び管理教室棟（８，９）空調設備設置工事監理業務　委（監）第７－１７号
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Construction Results (入札結果)...
+[3] Performing wildcard search to find: 国際高校受変電設備改修及び管理教室棟（８，９）空調設備設置工事監理業務　委（監）第７－１７号
+Target row invalid. Forcing the FIRST available '表示' button for ZIP testing.
+Opening popup...
+Intercepting download stream...
+[Popup] Auto-accepting dialog: 添付ファイルを一括ダウンロードします。
+よろしいですか？
+[ZIP] Downloaded ZIP with 1 entries.
+[ZIP Entry] 20260121-eizen-7-34-n.zip
+[ZIP Entry] Found nested ZIP: 20260121-eizen-7-34-n.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 2 entries.
+[ZIP Entry] 20260121-eizen-7-34-n/�Z�p�]���_����\.pdf
+[ZIP Entry] 20260121-eizen-7-34-n/�J�D�^.pdf
+Extracted 1317 chars. Sending to Gemini...
+Success! ７７，２９５，９００円 （消費税等抜き ７０，２６９，０００円）
+
+Processing: nara-pref-2025-16 - 高取国際高校受変電設備改修工事設計業務　委（設）第７－２０号
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Construction Results (入札結果)...
+[3] Performing wildcard search to find: 高取国際高校受変電設備改修工事設計業務　委（設）第７－２０号
+Target row invalid. Forcing the FIRST available '表示' button for ZIP testing.
+Opening popup...
+Intercepting download stream...
+[Popup] Auto-accepting dialog: 添付ファイルを一括ダウンロードします。
+よろしいですか？
+[ZIP] Downloaded ZIP with 1 entries.
+[ZIP Entry] 20260121-eizen-7-34-n.zip
+[ZIP Entry] Found nested ZIP: 20260121-eizen-7-34-n.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 2 entries.
+[ZIP Entry] 20260121-eizen-7-34-n/�Z�p�]���_����\.pdf
+[ZIP Entry] 20260121-eizen-7-34-n/�J�D�^.pdf
+Extracted 1317 chars. Sending to Gemini...
+Success! 77,295,900円 （消費税等抜き 70,269,000円）
+
+Processing: nara-pref-2025-18 - 添上高校受変電設備改修工事監理業務　委（監）第７－１６号
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Construction Results (入札結果)...
+[3] Performing wildcard search to find: 添上高校受変電設備改修工事監理業務　委（監）第７－１６号
+Target row invalid. Forcing the FIRST available '表示' button for ZIP testing.
+Opening popup...
+Intercepting download stream...
+[Popup] Auto-accepting dialog: 添付ファイルを一括ダウンロードします。
+よろしいですか？
+[ZIP] Downloaded ZIP with 1 entries.
+[ZIP Entry] 20260121-eizen-7-34-n.zip
+[ZIP Entry] Found nested ZIP: 20260121-eizen-7-34-n.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 2 entries.
+[ZIP Entry] 20260121-eizen-7-34-n/�Z�p�]���_����\.pdf
+[ZIP Entry] 20260121-eizen-7-34-n/�J�D�^.pdf
+Extracted 1317 chars. Sending to Gemini...
+Success! 77,295,900円 (消費税等抜き 70,269,000円)
+
+Processing: nara-pref-2025-19 - 桜井浄水場管理本館修繕工事監理業務委託
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Construction Results (入札結果)...
+[3] Performing wildcard search to find: 桜井浄水場管理本館修繕工事監理業務委託
+Target row invalid. Forcing the FIRST available '表示' button for ZIP testing.
+Opening popup...
+Intercepting download stream...
+[Popup] Auto-accepting dialog: 添付ファイルを一括ダウンロードします。
+よろしいですか？
+[ZIP] Downloaded ZIP with 1 entries.
+[ZIP Entry] 20260121-eizen-7-34-n.zip
+[ZIP Entry] Found nested ZIP: 20260121-eizen-7-34-n.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 2 entries.
+[ZIP Entry] 20260121-eizen-7-34-n/�Z�p�]���_����\.pdf
+[ZIP Entry] 20260121-eizen-7-34-n/�J�D�^.pdf
+Extracted 1317 chars. Sending to Gemini...
+Gemini API Error: GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.
+    at handleResponseNotOk (C:\Users\jonso\.gemini\antigravity\playground\azimuthal-pioneer\naramania\node_modules\@google\generative-ai\dist\index.js:434:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async makeRequest (C:\Users\jonso\.gemini\antigravity\playground\azimuthal-pioneer\naramania\node_modules\@google\generative-ai\dist\index.js:403:9)
+    at async generateContent (C:\Users\jonso\.gemini\antigravity\playground\azimuthal-pioneer\naramania\node_modules\@google\generative-ai\dist\index.js:867:22)
+Gemini returned null.
+    at async extractBiddingInfoFromText (C:\Users\jonso\.gemini\antigravity\playground\azimuthal-pioneer\naramania\src\services\gemini_service.ts:59:24)
+    at async main (C:\Users\jonso\.gemini\antigravity\playground\azimuthal-pioneer\naramania\augment_nara_pref.ts:307:42) {
+  status: 503,
+  statusText: 'Service Unavailable',
+  errorDetails: undefined
+}
+
+Processing: nara-pref-2025-21 - 県営住宅橿原ニュータウン団地（４，５，８号棟）屋上防水・外壁等改修工事監理業務（県営住宅環境改善事業(防災・安全))　委（監）第７－２７号
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Construction Results (入札結果)...
+[3] Performing wildcard search to find: 県営住宅橿原ニュータウン団地（４，５，８号棟）屋上防水・外壁等改修工事監理業務（県営住宅環境改善事業(防災・安全))　委（監）第７－２７号
+Target row invalid. Forcing the FIRST available '表示' button for ZIP testing.
+Opening popup...
+Intercepting download stream...
+[Popup] Auto-accepting dialog: 添付ファイルを一括ダウンロードします。
+よろしいですか？
+[ZIP] Downloaded ZIP with 1 entries.
+[ZIP Entry] 20260121-eizen-7-34-n.zip
+[ZIP Entry] Found nested ZIP: 20260121-eizen-7-34-n.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 2 entries.
+[ZIP Entry] 20260121-eizen-7-34-n/�Z�p�]���_����\.pdf
+[ZIP Entry] 20260121-eizen-7-34-n/�J�D�^.pdf
+Extracted 1317 chars. Sending to Gemini...
+Success! 77,295,900円（消費税等込み）、70,269,000円（消費税等抜き）
+
+Processing: nara-pref-2025-26 - 旧生駒職員住宅及び旧生駒待機宿舎等除却工事設計業務　委（設）第７－１０号
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Construction Results (入札結果)...
+[3] Performing wildcard search to find: 旧生駒職員住宅及び旧生駒待機宿舎等除却工事設計業務　委（設）第７－１０号
+Target row invalid. Forcing the FIRST available '表示' button for ZIP testing.
+Opening popup...
+Intercepting download stream...
+[Popup] Auto-accepting dialog: 添付ファイルを一括ダウンロードします。
+よろしいですか？
+[ZIP] Downloaded ZIP with 1 entries.
+[ZIP Entry] 20260121-eizen-7-34-n.zip
+[ZIP Entry] Found nested ZIP: 20260121-eizen-7-34-n.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 2 entries.
+[ZIP Entry] 20260121-eizen-7-34-n/�Z�p�]���_����\.pdf
+[ZIP Entry] 20260121-eizen-7-34-n/�J�D�^.pdf
+Extracted 1317 chars. Sending to Gemini...
+Success! 77,295,900円（消費税等抜き 70,269,000円）
+
+Processing: nara-pref-2025-27 - 柳本駐車場公衆トイレ改修工事監理業務　委（監）第７－２３号
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Construction Results (入札結果)...
+[3] Performing wildcard search to find: 柳本駐車場公衆トイレ改修工事監理業務　委（監）第７－２３号
+Target row invalid. Forcing the FIRST available '表示' button for ZIP testing.
+Opening popup...
+Intercepting download stream...
+[Popup] Auto-accepting dialog: 添付ファイルを一括ダウンロードします。
+よろしいですか？
+[ZIP] Downloaded ZIP with 1 entries.
+[ZIP Entry] 20260121-eizen-7-34-n.zip
+[ZIP Entry] Found nested ZIP: 20260121-eizen-7-34-n.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 2 entries.
+[ZIP Entry] 20260121-eizen-7-34-n/�Z�p�]���_����\.pdf
+[ZIP Entry] 20260121-eizen-7-34-n/�J�D�^.pdf
+Extracted 1317 chars. Sending to Gemini...
+Gemini API Error: GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.
+    at handleResponseNotOk (C:\Users\jonso\.gemini\antigravity\playground\azimuthal-pioneer\naramania\node_modules\@google\generative-ai\dist\index.js:434:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async makeRequest (C:\Users\jonso\.gemini\antigravity\playground\azimuthal-pioneer\naramania\node_modules\@google\generative-ai\dist\index.js:403:9)
+    at async generateContent (C:\Users\jonso\.gemini\antigravity\playground\azimuthal-pioneer\naramania\node_modules\@google\generative-ai\dist\index.js:867:22)
+Gemini returned null.
+    at async extractBiddingInfoFromText (C:\Users\jonso\.gemini\antigravity\playground\azimuthal-pioneer\naramania\src\services\gemini_service.ts:59:24)
+    at async main (C:\Users\jonso\.gemini\antigravity\playground\azimuthal-pioneer\naramania\augment_nara_pref.ts:307:42) {
+  status: 503,
+  statusText: 'Service Unavailable',
+  errorDetails: undefined
+}
+
+Processing: nara-pref-2025-32 - 中央卸売市場卸売場棟空調設備更新工事設計業務委託　委（設）第７－１号
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Construction Results (入札結果)...
+[3] Performing wildcard search to find: 中央卸売市場卸売場棟空調設備更新工事設計業務委託　委（設）第７－１号
+Target row invalid. Forcing the FIRST available '表示' button for ZIP testing.
+Opening popup...
+Intercepting download stream...
+[Popup] Auto-accepting dialog: 添付ファイルを一括ダウンロードします。
+よろしいですか？
+[ZIP] Downloaded ZIP with 1 entries.
+[ZIP Entry] 20260121-eizen-7-34-n.zip
+[ZIP Entry] Found nested ZIP: 20260121-eizen-7-34-n.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 2 entries.
+[ZIP Entry] 20260121-eizen-7-34-n/�Z�p�]���_����\.pdf
+[ZIP Entry] 20260121-eizen-7-34-n/�J�D�^.pdf
+Extracted 1317 chars. Sending to Gemini...
+Gemini returned null.
+Gemini API Error: GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.
+    at handleResponseNotOk (C:\Users\jonso\.gemini\antigravity\playground\azimuthal-pioneer\naramania\node_modules\@google\generative-ai\dist\index.js:434:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async makeRequest (C:\Users\jonso\.gemini\antigravity\playground\azimuthal-pioneer\naramania\node_modules\@google\generative-ai\dist\index.js:403:9)
+    at async generateContent (C:\Users\jonso\.gemini\antigravity\playground\azimuthal-pioneer\naramania\node_modules\@google\generative-ai\dist\index.js:867:22)
+    at async extractBiddingInfoFromText (C:\Users\jonso\.gemini\antigravity\playground\azimuthal-pioneer\naramania\src\services\gemini_service.ts:59:24)
+    at async main (C:\Users\jonso\.gemini\antigravity\playground\azimuthal-pioneer\naramania\augment_nara_pref.ts:307:42) {
+  status: 503,
+  statusText: 'Service Unavailable',
+  errorDetails: undefined
+}
+
+Processing: nara-pref-2025-33 - 吉野保健所本館屋上防水・外壁改修工事設計業務　委（設）第７－１５号
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Construction Results (入札結果)...
+[3] Performing wildcard search to find: 吉野保健所本館屋上防水・外壁改修工事設計業務　委（設）第７－１５号
+Target row invalid. Forcing the FIRST available '表示' button for ZIP testing.
+Opening popup...
+Intercepting download stream...
+[Popup] Auto-accepting dialog: 添付ファイルを一括ダウンロードします。
+よろしいですか？
+[ZIP] Downloaded ZIP with 1 entries.
+[ZIP Entry] 20260121-eizen-7-34-n.zip
+[ZIP Entry] Found nested ZIP: 20260121-eizen-7-34-n.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 2 entries.
+[ZIP Entry] 20260121-eizen-7-34-n/�Z�p�]���_����\.pdf
+[ZIP Entry] 20260121-eizen-7-34-n/�J�D�^.pdf
+Extracted 1317 chars. Sending to Gemini...
+Gemini returned null.
+Gemini API Error: GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.
+    at handleResponseNotOk (C:\Users\jonso\.gemini\antigravity\playground\azimuthal-pioneer\naramania\node_modules\@google\generative-ai\dist\index.js:434:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+
+Saving updated data...
+    at async makeRequest (C:\Users\jonso\.gemini\antigravity\playground\azimuthal-pioneer\naramania\node_modules\@google\generative-ai\dist\index.js:403:9)
+    at async generateContent (C:\Users\jonso\.gemini\antigravity\playground\azimuthal-pioneer\naramania\node_modules\@google\generative-ai\dist\index.js:867:22)
+    at async extractBiddingInfoFromText (C:\Users\jonso\.gemini\antigravity\playground\azimuthal-pioneer\naramania\src\services\gemini_service.ts:59:24)
+    at async main (C:\Users\jonso\.gemini\antigravity\playground\azimuthal-pioneer\naramania\augment_nara_pref.ts:307:42) {
+  status: 503,
+  statusText: 'Service Unavailable',
+  errorDetails: undefined
+}
+Done!

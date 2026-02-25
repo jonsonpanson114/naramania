@@ -1,10 +1,18 @@
 
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-const API_KEY = process.env.GOOGLE_GENERATIVE_AI_API_KEY || "";
+let genAI: GoogleGenerativeAI | null = null;
+let model: any = null;
 
-const genAI = new GoogleGenerativeAI(API_KEY);
-const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
+function getModel() {
+    if (!model) {
+        const apiKey = process.env.GOOGLE_GENERATIVE_AI_API_KEY || "";
+        if (!apiKey) return null;
+        genAI = new GoogleGenerativeAI(apiKey);
+        model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
+    }
+    return model;
+}
 
 export interface ExtractedBiddingInfo {
     estimatedPrice?: string;
@@ -15,7 +23,8 @@ export interface ExtractedBiddingInfo {
 }
 
 export async function extractBiddingInfoFromText(text: string): Promise<ExtractedBiddingInfo | null> {
-    if (!API_KEY) {
+    const currentModel = getModel();
+    if (!currentModel) {
         console.warn("No Gemini API key found. Skipping extraction.");
         return null;
     }
@@ -47,7 +56,7 @@ ${text}
 `;
 
     try {
-        const result = await model.generateContent(prompt);
+        const result = await currentModel.generateContent(prompt);
         const response = await result.response;
         const responseText = response.text();
 

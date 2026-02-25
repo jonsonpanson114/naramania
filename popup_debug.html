@@ -1,0 +1,194 @@
+<!DOCTYPE html><html lang="ja"><head>
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="Shift_JIS">
+
+
+<title>ダウンロード選択画面</title>
+
+
+
+<link rel="stylesheet" href="CSS/PPI_PKG/Pmain.css" type="text/css">
+<link rel="stylesheet" href="CSS/PPI_PKG/Pmenu.css" type="text/css">
+<link rel="stylesheet" href="CSS/PPI_PKG/ppi.css" type="text/css">
+</head><body onload="js_localInitial();">
+
+
+
+<script src="/DENCHO/js/Global.js" type="text/javascript"></script>
+<script src="/DENCHO/js/Command.js" type="text/javascript"></script>
+<script src="/DENCHO/js/ShortcutKeyCtrl.js" type="text/javascript"></script>
+<script src="/DENCHO/js/Calendar.js" type="text/javascript"></script>
+<script src="/DENCHO/js/ComPrint.js" type="text/javascript"></script>
+<script src="/DENCHO/js/ShozokuSel.js" type="text/javascript"></script>
+<script src="/DENCHO/js/SyokuinSel.js" type="text/javascript"></script>
+<script src="/DENCHO/js/ComHanyoCodeSel.js" type="text/javascript"></script>
+
+
+<script src="/DENCHO/js/staveware-common.js" type="text/javascript"></script>
+<script src="/DENCHO/js/stvclinputchecker.js" type="text/javascript"></script>
+<script src="/DENCHO/js/Inputcheck.js" type="text/javascript"></script><script type="text/javascript" src="js/InputcheckErrStr.js"></script>
+<script src="/DENCHO/js/InputcheckEx.js" type="text/javascript"></script>
+<script src="/DENCHO/js/Message.js" type="text/javascript"></script>
+<script src="/DENCHO/js/Focuscheck.js" type="text/javascript"></script>
+
+<script src="/DENCHO/js/ContManagementCommon_demo.js" type="text/javascript"></script>
+<script src="/DENCHO/js/writeHeader.js" type="text/javascript"></script>
+<script src="/DENCHO/js/print.js" type="text/javascript"></script>
+<script src="/DENCHO/js/DispChildWindow.js" type="text/javascript"></script>
+<input type="hidden" id="COM_GENGOU_KAISI" name="COM_GENGOU_KAISI" value="明治,大正,昭和,平成,令和;18680908,19120731,19261226,19890108,20190501" style="">
+<input type="hidden" id="COM_SYSDATE" name="COM_SYSDATE" value="20260225" style="">
+
+<input type="hidden" id="COM_HOLIDAYS" name="COM_HOLIDAYS" value="" style="">
+
+
+<object id="printPreview" width="0" height="0" classid="CLSID:8856F961-340A-11D0-A96B-00C04FD705A2"></object>
+
+
+
+<script src="jsp/ppi_pkg/common//PPICommon.js" type="text/javascript"></script>
+<script src="jsp/ppi_pkg/P9505/GP9505_1015.js" type="text/javascript"></script>
+
+
+
+
+
+
+<div id="com_msg" style="display:none;position:absolute; max-height:100px;
+padding-right:15px; overflow-y:auto;overflow-x:hidden;" onmouseover="this.style.filter='alpha(opacity=100)'" onmouseout="this.style.filter='alpha(opacity=100)'"></div>
+<div id="adjust" style="display:none;"></div>
+
+
+
+<p></p>
+<p></p>
+
+
+
+
+
+<form id="form" name="frm_main" action="/DENCHO/GP9505_1015.action" target="_self" method="POST" autocomplete="off">
+
+
+
+<input type="hidden" id="hdn_statusMessage" name="hdn_statusMessage" value="" style="">
+
+<input type="hidden" id="kanriNo" name="kanriNo" value="29001013060020250219" style="">
+<input type="hidden" id="companyCd" name="companyCd" value="" style="">
+
+
+
+    <input type="hidden" id="kinouId" name="kinouId" value="0515" style="">
+
+
+
+<table class="HEAD borderless" border="0" style="width:100%">
+    <tbody><tr class="TITLE">
+        <td>ダウンロード選択画面</td>
+    </tr>
+</tbody></table>
+<hr>
+
+<div class="borderless" style="width:795;height:190;overflow:auto;">
+
+
+<table border="0" class="borderless" style="width:790px">
+
+
+  
+  
+	 <tbody><tr class="download_file_base">
+
+
+        <td colspan="4" style="text-align:left">
+
+	 		<br>
+	 		<div style="font-size:1em; color:red;">添付書類は直接開けない場合があります。<br>かならず保存を行ってから開いてください。<br></div>
+	 		<br>
+	 	</td>
+	 </tr>
+
+  </tbody></table>
+  <table border="1" class="border" style="width:790">
+      <colgroup>
+          <col style="width:200px">
+          <col style="width:150px">
+          <col style="width:350px">
+          <col style="width:90px">
+      </colgroup>
+      <tbody><tr>
+          <th>添付書類名</th>
+          <th>ファイル名</th>
+          <th>備考</th>
+          <th>サイズ</th>
+      </tr>
+
+     
+	  <tr>
+	    <td class="nowrap">
+
+          
+          
+	        
+
+
+              開札録
+
+          
+
+	    </td>
+
+        <td class="nowrap">
+          20251119-eizen-7-37-n.zip
+        </td>
+        <td class="nowrap">
+          
+             －
+          
+          
+        </td>
+
+	    <td class="nowrap">
+
+
+          143894バイト
+
+	    </td>
+	  </tr>
+     
+  
+
+</tbody></table>
+</div>
+
+<br>
+<br>
+<br>
+
+<table class="BTN borderless" border="0" style="width:100%">
+    <tbody><tr>
+        <td style="text-align:CENTER" class="nowrap">
+            <input type="button" class="button" value="閉じる" onclick="window.close()" style="">
+
+            
+            
+                
+                
+                    <input type="button" class="button" value="一括ダウンロード" onclick="js_allDownload('GP9505_1015_allDownload')" style="">
+                
+            
+
+        </td>
+    </tr>
+</tbody></table>
+
+</form>
+
+
+
+
+
+
+
+</body></html>

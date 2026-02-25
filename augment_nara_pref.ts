@@ -1,11 +1,13 @@
-import 'dotenv/config';
+import dotenv from 'dotenv';
+dotenv.config({ path: '.env.local' });
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { chromium, Page } from 'playwright';
 import AdmZip from 'adm-zip';
-import * as _pdf from 'pdf-parse';
-const pdf = (_pdf as any).default || _pdf;
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
+const pdf = require('pdf-parse');
 import { extractBiddingInfoFromText } from './src/services/gemini_service';
 import { BiddingItem, BiddingType } from './src/types/bidding';
 
@@ -16,31 +18,49 @@ const RESULT_PATH = path.join(__dirname, 'scraper_result.json');
 const BATCH_SIZE = 1; // Process one by one due to Playwright overhead
 const MAX_CONSECUTIVE_ERRORS = 3;
 
-async function delay(ms: number) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
+const delay = (ms: number) => new Promise(res => setTimeout(res, ms));
 
 async function extractTextFromZipBuffer(zipBuffer: Buffer): Promise<string> {
-    const zip = new AdmZip(zipBuffer);
-    const zipEntries = zip.getEntries();
+    try {
+        const zip = new AdmZip(zipBuffer);
+        const zipEntries = zip.getEntries();
+        let textOut = '';
 
-    let combinedText = '';
-
-    for (const zipEntry of zipEntries) {
-        if (!zipEntry.isDirectory && zipEntry.entryName.toLowerCase().endsWith('.pdf')) {
-            console.log(`[ZIP] Found PDF: ${zipEntry.entryName}`);
-            const pdfBuffer = zipEntry.getData();
-
-            try {
-                const data = await pdf(pdfBuffer);
-                combinedText += data.text + '\n\n';
-            } catch (e) {
-                console.error(`Error parsing PDF ${zipEntry.entryName}:`, e);
+        console.log(`[ZIP] Downloaded ZIP with ${zipEntries.length} entries.`);
+        for (const entry of zipEntries) {
+            console.log(`[ZIP Entry] ${entry.entryName}`);
+            if (!entry.isDirectory) {
+                const entryNameLower = entry.entryName.toLowerCase();
+                if (entryNameLower.endsWith('.pdf')) {
+                    const pdfData = entry.getData();
+                    try {
+                        if (pdf.PDFParse) {
+                            const parser = new pdf.PDFParse({ data: pdfData });
+                            const textResult = await parser.getText();
+                            if (textResult && textResult.pages) {
+                                textOut += textResult.pages.map((p: any) => p.text).join('\n') + '\n';
+                            } else if (textResult && textResult.text) {
+                                textOut += textResult.text + '\n';
+                            }
+                        } else {
+                            const data = await (pdf as any)(pdfData);
+                            textOut += data.text + '\n';
+                        }
+                    } catch (e) {
+                        console.error(`Error parsing PDF ${entry.entryName}:`, e);
+                    }
+                } else if (entryNameLower.endsWith('.zip')) {
+                    console.log(`[ZIP Entry] Found nested ZIP: ${entry.entryName}, extracting recursively...`);
+                    const nestedZipData = entry.getData();
+                    textOut += await extractTextFromZipBuffer(nestedZipData);
+                }
             }
         }
+        return textOut.trim();
+    } catch (e) {
+        console.log(`[ZIP Error] Failed to read ZIP buffer: ${e}`);
+        return '';
     }
-
-    return combinedText.trim();
 }
 
 async function scrapeNaraPrefPdf(page: Page, item: BiddingItem): Promise<string | null> {
@@ -68,6 +88,7 @@ async function scrapeNaraPrefPdf(page: Page, item: BiddingItem): Promise<string 
     await delay(1000);
 
     console.log(`[3] Performing wildcard search to find: ${item.title}`);
+
     await fra1.selectOption('select[name="keisaiNen"]', '2025').catch(() => { });
     await Promise.all([
         fra1.waitForNavigation({ waitUntil: 'domcontentloaded' }),
@@ -107,6 +128,11 @@ async function scrapeNaraPrefPdf(page: Page, item: BiddingItem): Promise<string 
 
     await popup.waitForLoadState('domcontentloaded');
 
+    popup.on('dialog', async dialog => {
+        console.log(`[Popup] Auto-accepting dialog: ${dialog.message()}`);
+        await dialog.accept();
+    });
+
     const downloadBtn = popup.locator('input[value="一括ダウンロード"]');
     if (await downloadBtn.count() === 0) {
         await popup.close();
@@ -133,8 +159,8 @@ async function scrapeNaraPrefPdf(page: Page, item: BiddingItem): Promise<string 
     return await extractTextFromZipBuffer(zipBuffer);
 }
 
-async function getNaraPref2025List(page: Page): Promise<BiddingItem[]> {
-    console.log('[List] Searching Nara Pref 2025 list...');
+async function getNaraPref2025CategoryList(page: Page, menuId: string, koshuCd: string, categoryName: string): Promise<BiddingItem[]> {
+    console.log(`[List] Searching Nara Pref 2025 list for ${categoryName}...`);
     await page.goto('http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top', { waitUntil: 'domcontentloaded' });
     await delay(5000);
 
@@ -144,17 +170,18 @@ async function getNaraPref2025List(page: Page): Promise<BiddingItem[]> {
         return [];
     }
 
-    const p5515 = fraL.locator('#P5515');
-    await p5515.waitFor({ state: 'visible', timeout: 10000 });
+    const pMenu = fraL.locator(`#${menuId}`);
+    await pMenu.waitFor({ state: 'visible', timeout: 10000 });
 
-    await p5515.click();
+    await pMenu.click();
     await delay(5000);
 
     // Look for the frame containing the search form
     console.log('[List] Discovering search form frame...');
-    let searchFrame = page.frames().find(f => f.name() === 'fra_mainR');
+    let searchFrame = page.frames().find(f => f.name() === 'fra_mainR' || f.url().includes('1010'));
     if (!searchFrame) {
-        searchFrame = page.frames().find(f => f.url().includes('GP5515_1010'));
+        await page.waitForTimeout(5000);
+        searchFrame = page.frames().find(f => f.name() === 'fra_mainR' || f.url().includes('1010'));
     }
 
     if (!searchFrame) {
@@ -164,7 +191,7 @@ async function getNaraPref2025List(page: Page): Promise<BiddingItem[]> {
 
     console.log(`[List] Filling search criteria in frame: ${searchFrame.name() || 'unnamed'}`);
     await searchFrame.selectOption('select[name="keisaiNen"]', '2025').catch(() => { });
-    await searchFrame.selectOption('select[name="koshuCd"]', '200').catch(() => { });     // 建築一式 (Architecture)
+    await searchFrame.selectOption('select[name="koshuCd"]', koshuCd).catch(() => { });     // 建築系
     await searchFrame.selectOption('select[name="pageSize"]', '500').catch(() => { });    // Max 500 per page
 
     await searchFrame.locator('#btnSearch').click();
@@ -211,7 +238,7 @@ async function getNaraPref2025List(page: Page): Promise<BiddingItem[]> {
                 id: `nara-pref-2025-${i}`,
                 municipality: '奈良県',
                 title: title,
-                type: '建築', // Pre-filtered by koshuCd='200'
+                type: categoryName === '建築' ? '建築' : '委託',
                 announcementDate: announcementDate,
                 link: 'e-BISC',
                 status: '落札',
@@ -222,17 +249,23 @@ async function getNaraPref2025List(page: Page): Promise<BiddingItem[]> {
     return items;
 }
 
+async function getNaraPref2025List(page: Page): Promise<BiddingItem[]> {
+    const listConstruction = await getNaraPref2025CategoryList(page, 'P5515', '200', '建築');
+    const listConsulting = await getNaraPref2025CategoryList(page, 'P6015', '300000', '設計');
+    return [...listConstruction, ...listConsulting];
+}
+
 async function main() {
     console.log('--- Starting Nara Pref Real Data Pull (2025) ---');
 
     console.log('Launching browser...');
     const browser = await chromium.launch({ headless: true });
     try {
-        const listPage = await browser.newPage();
-        const newList = await getNaraPref2025List(listPage);
-        await listPage.close();
+        const page = await browser.newPage();
 
-        console.log(`Discovered ${newList.length} potential 2025 architecture projects.`);
+        const newList = await getNaraPref2025List(page);
+
+        console.log(`Discovered ${newList.length} potential 2025 projects across both categories.`);
 
         let existingItems: BiddingItem[] = [];
         if (fs.existsSync(RESULT_PATH)) {
@@ -253,29 +286,13 @@ async function main() {
         console.log(`Processing batch of ${Math.min(itemsToProcess.length, 5)} projects...`);
 
         let consecutiveErrors = 0;
-        const currentBatch = itemsToProcess.slice(0, 5);
+        const currentBatch = itemsToProcess;
 
         for (const item of currentBatch) {
             console.log(`\nProcessing: ${item.id} - ${item.title}`);
 
             try {
                 const context = await browser.newContext();
-                await context.route('**/*', async (route) => {
-                    try {
-                        const response = await route.fetch();
-                        let contentType = response.headers()['content-type'] || '';
-                        if (contentType.toLowerCase().includes('shift_jis')) {
-                            contentType = contentType.replace(/shift_jis/i, 'utf-8');
-                            const headers = { ...response.headers(), 'content-type': contentType };
-                            await route.fulfill({ response, headers });
-                        } else {
-                            await route.fallback();
-                        }
-                    } catch (e) {
-                        await route.abort().catch(() => { });
-                    }
-                });
-
                 const page = await context.newPage();
                 const pdfText = await scrapeNaraPrefPdf(page, item);
                 await context.close();

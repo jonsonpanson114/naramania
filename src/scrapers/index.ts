@@ -2,6 +2,8 @@ import { NaraPrefScraper } from './nara_pref';
 import { NaraCityScraper } from './nara_city';
 import { KashiharaCityScraper } from './kashihara_city';
 import { IkomaCityScraper } from './ikoma_city';
+import { YamatoTakadaCityScraper } from './yamato_takada_city';
+import { YamatokoriyamaCityScraper } from './yamatokoriyama_city';
 import { BiddingItem } from '../types/bidding';
 import fs from 'fs';
 import path from 'path';
@@ -14,6 +16,8 @@ async function main() {
         new NaraCityScraper(),
         new KashiharaCityScraper(),
         new IkomaCityScraper(),
+        new YamatoTakadaCityScraper(),
+        new YamatokoriyamaCityScraper(),
     ];
 
     const allItems: BiddingItem[] = [];
