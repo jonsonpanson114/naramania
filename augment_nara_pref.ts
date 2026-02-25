@@ -87,15 +87,19 @@ async function scrapeNaraPrefPdf(page: Page, item: BiddingItem): Promise<string 
 
     await delay(1000);
 
-    console.log(`[3] Performing wildcard search to find: ${item.title}`);
+    console.log(`[3] Performing search to find: ${item.title}`);
 
     await fra1.selectOption('select[name="keisaiNen"]', '2025').catch(() => { });
+    const koshuCd = item.type === '委託' || item.type === 'コンサル' ? '300000' : '200';
+    await fra1.selectOption('select[name="koshuCd"]', koshuCd).catch(() => { });
+    await fra1.selectOption('select[name="pageSize"]', '500').catch(() => { });
+
     await Promise.all([
         fra1.waitForNavigation({ waitUntil: 'domcontentloaded' }),
         fra1.locator('input[value="検索"]').click()
     ]);
 
-    await delay(1000);
+    await delay(2000);
 
     const rows = fra1.locator('table tr');
     const rowCount = await rows.count();
@@ -113,10 +117,8 @@ async function scrapeNaraPrefPdf(page: Page, item: BiddingItem): Promise<string 
     let displayBtn = rows.nth(targetRowIndex).locator('input[value="表示"]');
 
     if (targetRowIndex === -1 || await displayBtn.count() === 0) {
-        console.warn(`Target row invalid. Forcing the FIRST available '表示' button for ZIP testing.`);
-        const allButtons = fra1.locator('input[value="表示"]');
-        if (await allButtons.count() === 0) return null;
-        displayBtn = allButtons.first();
+        console.error(`Target row NOT FOUND for: ${item.title}`);
+        return null;
     }
 
     console.log(`Opening popup...`);
@@ -238,7 +240,7 @@ async function getNaraPref2025CategoryList(page: Page, menuId: string, koshuCd: 
                 id: `nara-pref-2025-${i}`,
                 municipality: '奈良県',
                 title: title,
-                type: categoryName === '建築' ? '建築' : '委託',
+                type: categoryName === '建築' ? '建築' : 'コンサル',
                 announcementDate: announcementDate,
                 link: 'e-BISC',
                 status: '落札',
@@ -251,7 +253,7 @@ async function getNaraPref2025CategoryList(page: Page, menuId: string, koshuCd: 
 
 async function getNaraPref2025List(page: Page): Promise<BiddingItem[]> {
     const listConstruction = await getNaraPref2025CategoryList(page, 'P5515', '200', '建築');
-    const listConsulting = await getNaraPref2025CategoryList(page, 'P6015', '300000', '設計');
+    const listConsulting = await getNaraPref2025CategoryList(page, 'P6015', '300000', 'コンサル');
     return [...listConstruction, ...listConsulting];
 }
 
@@ -286,7 +288,7 @@ async function main() {
         console.log(`Processing batch of ${Math.min(itemsToProcess.length, 5)} projects...`);
 
         let consecutiveErrors = 0;
-        const currentBatch = itemsToProcess;
+        const currentBatch = itemsToProcess.slice(0, 10);
 
         for (const item of currentBatch) {
             console.log(`\nProcessing: ${item.id} - ${item.title}`);
