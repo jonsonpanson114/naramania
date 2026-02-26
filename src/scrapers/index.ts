@@ -6,6 +6,7 @@ import { YamatoTakadaCityScraper } from './yamato_takada_city';
 import { YamatokoriyamaCityScraper } from './yamatokoriyama_city';
 import { KatsuragiCityScraper } from './katsuragi_city';
 import { GojoCityScraper } from './gojo_city';
+import { GoseCityScraper } from './gose_city';
 import { TenriCityScraper } from './tenri_city';
 import { SakuraiCityScraper } from './sakurai_city';
 import { TawaramotoTownScraper } from './tawaramoto_town';
@@ -15,6 +16,7 @@ import { KawanishiCityScraper } from './kawanishi_city';
 import { MiyakeCityScraper } from './miyake_city';
 import { YamazomuraScraper, HiragawaScraper } from './yamazohiragawa_city';
 import { AndoCityScraper } from './ando_city';
+import { TakatoriTownScraper, IkarugaTownScraper } from './takatori_ikaruga';
 import { BiddingItem } from '../types/bidding';
 import fs from 'fs';
 import path from 'path';
@@ -31,6 +33,7 @@ async function main() {
         new YamatokoriyamaCityScraper(),
         new KatsuragiCityScraper(),
         new GojoCityScraper(),
+        new GoseCityScraper(),
         new TenriCityScraper(),
         new SakuraiCityScraper(),
         new TawaramotoTownScraper(),
@@ -41,6 +44,8 @@ async function main() {
         new HiragawaScraper(),
         new MiyakeCityScraper(),
         new AndoCityScraper(),
+        new TakatoriTownScraper(),
+        new IkarugaTownScraper(),
     ];
 
     const allItems: BiddingItem[] = [];
