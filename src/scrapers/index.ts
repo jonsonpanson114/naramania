@@ -10,6 +10,7 @@ import { TenriCityScraper } from './tenri_city';
 import { SakuraiCityScraper } from './sakurai_city';
 import { TawaramotoTownScraper } from './tawaramoto_town';
 import { KoryoTownScraper } from './koryo_town';
+import { KashibaCityScraper } from './kashiba_city';
 import { BiddingItem } from '../types/bidding';
 import fs from 'fs';
 import path from 'path';
@@ -30,6 +31,7 @@ async function main() {
         new SakuraiCityScraper(),
         new TawaramotoTownScraper(),
         new KoryoTownScraper(),
+        new KashibaCityScraper(),
     ];
 
     const allItems: BiddingItem[] = [];
