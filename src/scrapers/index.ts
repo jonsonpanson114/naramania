@@ -13,6 +13,7 @@ import { KoryoTownScraper } from './koryo_town';
 import { KashibaCityScraper } from './kashiba_city';
 import { KawanishiCityScraper } from './kawanishi_city';
 import { MiyakeCityScraper } from './miyake_city';
+import { YamazomuraScraper, HiragawaScraper } from './yamazohiragawa_city';
 import { BiddingItem } from '../types/bidding';
 import fs from 'fs';
 import path from 'path';
@@ -35,6 +36,7 @@ async function main() {
         new KoryoTownScraper(),
         new KashibaCityScraper(),
         new YamazomuraScraper(),
+        new HiragawaScraper(),
         new MiyakeCityScraper(),
     ];
 

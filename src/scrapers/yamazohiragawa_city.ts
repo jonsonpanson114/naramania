@@ -1,6 +1,6 @@
 import axios from 'axios';
 import * as cheerio from 'cheerio';
-import { BiddingItem, Scraper } from '../types/bidding';
+import { BiddingItem, Scraper, Municipality } from '../types/bidding';
 
 // 山添村（yamazomura）
 const YAMAZO_URL = 'https://www.vill.yamazomura.nara.jp/nyusatsu.html';
@@ -12,7 +12,7 @@ const HIRAGAWA_URL = 'https://www.vill.hiragawa.nara.jp/nyusatsu.html';
 const SKIP_KEYWORDS = [
     '道路', '舗装', '下水道', '河川', '砂防', '水道', '管工事', '橋梁', '護岸',
     '側溝', '水路', '排水', 'マンホール', '配水管', '布設替', '管路', '電気通信',
-    '造園', 'カルバート', '樋門', '土木', '舗装維持', '除草', 'バッテリー',
+    '造園', 'カルバート', '樋門', '土木', '舗装維持', '除草', 'バッテリー', '橋', '測量', '下水道',
 ];
 
 function shouldSkip(title: string): boolean {
@@ -42,25 +42,27 @@ async function scrapeSmallTown(url: string, municipality: string): Promise<Biddi
         console.log(`[${municipality}] セクション: ${sectionTitle}`);
 
         // リンクテーブルまたはリンクリスト
-        const rows = resultSection.next().next().find('table tr, ul li').all();
+        const rows = resultSection.next().next().find('table tr, ul li').toArray();
 
-        for (const row of rows) {
+        for (const element of rows) {
+            const row = $(element);
             const link = row.find('a').first();
             const title = link ? link.text().trim().replace(/\s+/g, ' ') : '';
 
             if (!title) continue;
             if (shouldSkip(title)) continue;
 
-            const href = link ? link.attr('href') || '';
+            const href = link ? link.attr('href') || '' : '';
 
             items.push({
                 id: `${municipality}-${title.slice(0, 20)}`,
-                municipality,
+                municipality: municipality as Municipality,
                 title,
                 type: '建築',
                 announcementDate: new Date().toISOString().split('T')[0],
                 link: href.startsWith('http') ? href : `https://www.vill.${municipality.toLowerCase()}.nara.jp${href}`,
                 status: '落札',
+                winnerType: 'ゼネコン',
             });
         }
 

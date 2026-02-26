@@ -10,6 +10,7 @@ const require = createRequire(import.meta.url);
 const pdf = require('pdf-parse');
 import { extractBiddingInfoFromText } from './src/services/gemini_service';
 import { BiddingItem, BiddingType } from './src/types/bidding';
+import { shouldKeepItem, classifyWinner } from './src/scrapers/common/filter';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -283,6 +284,9 @@ async function getNaraPref2025CategoryList(page: Page, menuId: string, koshuCd: 
         // Exclude Cancelled projects
         if (title.includes('【中止】')) continue;
 
+        // Exclude Civil Engineering
+        if (!shouldKeepItem(title)) continue;
+
         // Date is the 3rd to last line, e.g. "R07.09.05 10:30"
         let rawDate = lines[lines.length - 3];
         let announcementDate = '2025-01-01'; // Fallback
@@ -366,6 +370,9 @@ async function main() {
                         item.designFirm = intelligence.designFirm || undefined;
                         item.constructionPeriod = intelligence.constructionPeriod || undefined;
                         item.description = intelligence.description || undefined;
+                        if (item.winningContractor) {
+                            item.winnerType = classifyWinner(item.winningContractor);
+                        }
                         console.log('Success!', item.estimatedPrice || 'No price found.');
                         consecutiveErrors = 0;
                     } else {

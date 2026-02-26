@@ -1,6 +1,7 @@
 import axios from 'axios';
 import * as cheerio from 'cheerio';
 import { BiddingItem, Scraper, BiddingType } from '../types/bidding';
+import { shouldKeepItem, classifyWinner } from './common/filter';
 
 const BASE_URL = 'https://www.city.kashihara.nara.jp';
 
@@ -25,7 +26,7 @@ const KEKKA_PAGES = [
 const GYOSHU_SKIP = [
     '土木一式', '土木工事', '舗装工事', '法面工事', '河川工事',
     '砂防工事', '造園工事', '水道工事', '管工事', '電気工事',
-    '通信工事', '機械設備',
+    '通信工事', '機械設備', '橋梁', '橋', '測量', '地質調査',
 ];
 
 // 案件名に基づくスキップキーワード（業種列のない結果・プロポーザルページ用）
@@ -150,6 +151,11 @@ export class KashiharaCityScraper implements Scraper {
                             return;
                         }
 
+                        if (!shouldKeepItem(title, gyoshu)) {
+                            console.log(`[橿原市] スキップ（土木キーワード）: ${title}`);
+                            return;
+                        }
+
                         items.push({
                             id: `kashihara-${contractNo}`,
                             municipality: '橿原市',
@@ -159,6 +165,7 @@ export class KashiharaCityScraper implements Scraper {
                             link: url,
                             pdfUrl: normalizePdfUrl(pdfHref),
                             status: '受付中',
+                            winnerType: biddingType === '建築' ? 'ゼネコン' : '設計事務所',
                         });
                     });
                 });
@@ -203,6 +210,11 @@ export class KashiharaCityScraper implements Scraper {
 
                         if (TITLE_SKIP.some(kw => title.includes(kw))) {
                             console.log(`[橿原市] スキップ（土木系）: ${title}`);
+                            return;
+                        }
+
+                        if (!shouldKeepItem(title)) {
+                            console.log(`[橿原市] スキップ（土木キーワード）: ${title}`);
                             return;
                         }
 
@@ -265,6 +277,7 @@ export class KashiharaCityScraper implements Scraper {
                                 link: url,
                                 pdfUrl: normalizePdfUrl(pdfHref),
                                 status: '落札',
+                                winnerType: classifyByTitle(title) === '建築' ? 'ゼネコン' : '設計事務所',
                             });
                         });
                     }
