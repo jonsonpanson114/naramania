@@ -8,30 +8,40 @@ interface BiddingTableProps {
     items: BiddingItem[];
 }
 
-type FilterType = 'すべて' | '落札' | 'ゼネコン決定' | '設計事務所決定' | '受付中' | '締切間近';
+type MainFilter = 'すべて' | '落札' | '受付中' | '締切間近';
+type SubFilter = 'すべて' | 'ゼネコン' | '設計事務所';
 
 export function BiddingTable({ items }: BiddingTableProps) {
-    const [activeFilter, setActiveFilter] = useState<FilterType>('すべて');
+    const [mainFilter, setMainFilter] = useState<MainFilter>('すべて');
+    const [subFilter, setSubFilter] = useState<SubFilter>('すべて');
 
     // Filter logic
     const filteredItems = items.filter(item => {
-        if (activeFilter === 'すべて') return true;
-        if (activeFilter === '落札') return item.status === '落札';
-        if (activeFilter === 'ゼネコン決定') return item.status === '落札' && item.winnerType === 'ゼネコン';
-        if (activeFilter === '設計事務所決定') return item.status === '落札' && item.winnerType === '設計事務所';
-        if (activeFilter === '受付中') return item.status === '受付中';
-        if (activeFilter === '締切間近') return item.status === '締切間近';
+        if (mainFilter === 'すべて') return true;
+        if (mainFilter === '受付中') return item.status === '受付中';
+        if (mainFilter === '締切間近') return item.status === '締切間近';
+        if (mainFilter === '落札') {
+            if (item.status !== '落札') return false;
+            if (subFilter === 'すべて') return true;
+            // Map "設計事務所" subfilter to item.winnerType
+            return item.winnerType === subFilter;
+        }
         return true;
     });
 
     // Count per tab
-    const counts: Record<FilterType, number> = {
-        'すべて': items.length,
-        '落札': items.filter(i => i.status === '落札').length,
-        'ゼネコン決定': items.filter(i => i.status === '落札' && i.winnerType === 'ゼネコン').length,
-        '設計事務所決定': items.filter(i => i.status === '落札' && i.winnerType === '設計事務所').length,
-        '受付中': items.filter(i => i.status === '受付中').length,
-        '締切間近': items.filter(i => i.status === '締切間近').length,
+    const counts = {
+        main: {
+            'すべて': items.length,
+            '落札': items.filter(i => i.status === '落札').length,
+            '受付中': items.filter(i => i.status === '受付中').length,
+            '締切間近': items.filter(i => i.status === '締切間近').length,
+        },
+        sub: {
+            'すべて': items.filter(i => i.status === '落札').length,
+            'ゼネコン': items.filter(i => i.status === '落札' && i.winnerType === 'ゼネコン').length,
+            '設計事務所': items.filter(i => i.status === '落札' && i.winnerType === '設計事務所').length,
+        }
     };
 
     // Format date utility
@@ -43,34 +53,38 @@ export function BiddingTable({ items }: BiddingTableProps) {
     };
 
     return (
-        <div className="space-y-8">
+        <div className="space-y-4">
+            {/* Main Filters */}
             <div className="flex justify-center">
-                <div className="flex items-center gap-6 border-b border-border/40 pb-6 px-4">
-                    {(['すべて', '落札', 'ゼネコン決定', '設計事務所決定', '受付中', '締切間近'] as FilterType[]).map((filter) => (
+                <div className="flex items-center gap-8 border-b border-border/40 pb-4 px-4">
+                    {(['すべて', '落札', '受付中', '締切間近'] as MainFilter[]).map((filter) => (
                         <button
                             key={filter}
-                            onClick={() => setActiveFilter(filter)}
-                            className={`text-[9px] tracking-[0.2em] relative font-bold font-serif transition-all duration-300 uppercase flex items-center gap-1.5 ${activeFilter === filter
-                                ? filter.includes('落札') || filter.includes('決定') ? 'text-green-600'
+                            onClick={() => {
+                                setMainFilter(filter);
+                                if (filter !== '落札') setSubFilter('すべて');
+                            }}
+                            className={`text-[10px] tracking-[0.25em] relative font-bold font-serif transition-all duration-300 uppercase flex items-center gap-2 ${mainFilter === filter
+                                ? filter === '落札' ? 'text-green-600'
                                     : filter === '締切間近' ? 'text-amber-600'
                                         : 'text-primary'
                                 : 'text-gray-400 hover:text-primary'
                                 }`}
                         >
                             {filter}
-                            <span className={`text-[8px] px-1.5 py-0.5 rounded-full font-sans ${activeFilter === filter
-                                ? filter.includes('落札') || filter.includes('決定') ? 'bg-green-100 text-green-700'
+                            <span className={`text-[8px] px-1.5 py-0.5 rounded-full font-sans ${mainFilter === filter
+                                ? filter === '落札' ? 'bg-green-100 text-green-700'
                                     : filter === '締切間近' ? 'bg-amber-100 text-amber-700'
                                         : 'bg-primary/10 text-primary'
                                 : 'bg-gray-100 text-gray-400'
                                 }`}>
-                                {counts[filter]}
+                                {counts.main[filter]}
                             </span>
-                            {activeFilter === filter && (
+                            {mainFilter === filter && (
                                 <motion.span
-                                    layoutId="activeFilterDot"
-                                    className={`absolute -bottom-[25px] left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full ${filter.includes('落札') || filter.includes('決定') ? 'bg-green-500' : filter === '締切間近' ? 'bg-amber-500' : 'bg-accent'
-                                        } shadow-[0_0_10px_rgba(var(--accent-rgb),0.5)]`}
+                                    layoutId="mainFilterDot"
+                                    className={`absolute -bottom-[17px] left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full ${filter === '落札' ? 'bg-green-500' : filter === '締切間近' ? 'bg-amber-500' : 'bg-accent'
+                                        }`}
                                     transition={{ type: "spring", stiffness: 300, damping: 30 }}
                                 ></motion.span>
                             )}
@@ -78,6 +92,38 @@ export function BiddingTable({ items }: BiddingTableProps) {
                     ))}
                 </div>
             </div>
+
+            {/* Sub Filters (Only for Awarded) */}
+            <AnimatePresence>
+                {mainFilter === '落札' && (
+                    <motion.div
+                        initial={{ opacity: 0, y: -10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -10 }}
+                        className="flex justify-center pt-2 pb-6"
+                    >
+                        <div className="flex items-center gap-4 bg-gray-50/50 p-1 rounded-full border border-gray-100 backdrop-blur-sm">
+                            {(['すべて', 'ゼネコン', '設計事務所'] as SubFilter[]).map((filter) => (
+                                <button
+                                    key={filter}
+                                    onClick={() => setSubFilter(filter)}
+                                    className={`px-4 py-1.5 rounded-full text-[9px] font-bold tracking-wider transition-all duration-300 flex items-center gap-2 ${subFilter === filter
+                                        ? filter === 'ゼネコン' ? 'bg-indigo-600 text-white shadow-md'
+                                            : filter === '設計事務所' ? 'bg-amber-600 text-white shadow-md'
+                                                : 'bg-emerald-600 text-white shadow-md'
+                                        : 'text-gray-400 hover:text-gray-600'
+                                        }`}
+                                >
+                                    {filter}
+                                    <span className={`text-[8px] px-1.5 py-0.5 rounded-full ${subFilter === filter ? 'bg-white/20' : 'bg-gray-200/50'}`}>
+                                        {counts.sub[filter]}
+                                    </span>
+                                </button>
+                            ))}
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
 
 
             {/* Table Container */}
