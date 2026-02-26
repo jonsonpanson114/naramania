@@ -8,7 +8,7 @@ interface BiddingTableProps {
     items: BiddingItem[];
 }
 
-type MainFilter = 'すべて' | '落札' | '受付中' | '締切間近';
+type MainFilter = 'すべて' | '建築' | '設計' | '落札';
 type SubFilter = 'すべて' | 'ゼネコン' | '設計事務所';
 
 export function BiddingTable({ items }: BiddingTableProps) {
@@ -18,12 +18,24 @@ export function BiddingTable({ items }: BiddingTableProps) {
     // Filter logic
     const filteredItems = items.filter(item => {
         if (mainFilter === 'すべて') return true;
-        if (mainFilter === '受付中') return item.status === '受付中';
-        if (mainFilter === '締切間近') return item.status === '締切間近';
+
+        // Construction (建築) -> Shows currently open construction items
+        if (mainFilter === '建築') {
+            const isConstructionType = item.type === '建築' || item.type === '工事';
+            const isActiveStatus = item.status === '受付中' || item.status === '締切間近';
+            return isConstructionType && isActiveStatus;
+        }
+
+        // Design (設計) -> Shows currently open consulting/design items
+        if (mainFilter === '設計') {
+            const isDesignType = item.type === '委託' || item.type === 'コンサル';
+            const isActiveStatus = item.status === '受付中' || item.status === '締切間近';
+            return isDesignType && isActiveStatus;
+        }
+
         if (mainFilter === '落札') {
             if (item.status !== '落札') return false;
             if (subFilter === 'すべて') return true;
-            // Map "設計事務所" subfilter to item.winnerType
             return item.winnerType === subFilter;
         }
         return true;
@@ -33,9 +45,9 @@ export function BiddingTable({ items }: BiddingTableProps) {
     const counts = {
         main: {
             'すべて': items.length,
+            '建築': items.filter(i => (i.type === '建築' || i.type === '工事') && (i.status === '受付中' || i.status === '締切間近')).length,
+            '設計': items.filter(i => (i.type === '委託' || i.type === 'コンサル') && (i.status === '受付中' || i.status === '締切間近')).length,
             '落札': items.filter(i => i.status === '落札').length,
-            '受付中': items.filter(i => i.status === '受付中').length,
-            '締切間近': items.filter(i => i.status === '締切間近').length,
         },
         sub: {
             'すべて': items.filter(i => i.status === '落札').length,
@@ -57,7 +69,7 @@ export function BiddingTable({ items }: BiddingTableProps) {
             {/* Main Filters */}
             <div className="flex justify-center">
                 <div className="flex items-center gap-8 border-b border-border/40 pb-4 px-4">
-                    {(['すべて', '落札', '受付中', '締切間近'] as MainFilter[]).map((filter) => (
+                    {(['すべて', '建築', '設計', '落札'] as MainFilter[]).map((filter) => (
                         <button
                             key={filter}
                             onClick={() => {
@@ -66,16 +78,18 @@ export function BiddingTable({ items }: BiddingTableProps) {
                             }}
                             className={`text-[10px] tracking-[0.25em] relative font-bold font-serif transition-all duration-300 uppercase flex items-center gap-2 ${mainFilter === filter
                                 ? filter === '落札' ? 'text-green-600'
-                                    : filter === '締切間近' ? 'text-amber-600'
-                                        : 'text-primary'
+                                    : filter === '建築' ? 'text-indigo-600'
+                                        : filter === '設計' ? 'text-amber-600'
+                                            : 'text-primary'
                                 : 'text-gray-400 hover:text-primary'
                                 }`}
                         >
                             {filter}
                             <span className={`text-[8px] px-1.5 py-0.5 rounded-full font-sans ${mainFilter === filter
                                 ? filter === '落札' ? 'bg-green-100 text-green-700'
-                                    : filter === '締切間近' ? 'bg-amber-100 text-amber-700'
-                                        : 'bg-primary/10 text-primary'
+                                    : filter === '建築' ? 'bg-indigo-100 text-indigo-700'
+                                        : filter === '設計' ? 'bg-amber-100 text-amber-700'
+                                            : 'bg-primary/10 text-primary'
                                 : 'bg-gray-100 text-gray-400'
                                 }`}>
                                 {counts.main[filter]}
@@ -83,7 +97,7 @@ export function BiddingTable({ items }: BiddingTableProps) {
                             {mainFilter === filter && (
                                 <motion.span
                                     layoutId="mainFilterDot"
-                                    className={`absolute -bottom-[17px] left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full ${filter === '落札' ? 'bg-green-500' : filter === '締切間近' ? 'bg-amber-500' : 'bg-accent'
+                                    className={`absolute -bottom-[17px] left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full ${filter === '落札' ? 'bg-green-500' : filter === '建築' ? 'bg-indigo-500' : filter === '設計' ? 'bg-amber-500' : 'bg-accent'
                                         }`}
                                     transition={{ type: "spring", stiffness: 300, damping: 30 }}
                                 ></motion.span>
