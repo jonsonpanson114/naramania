@@ -14,6 +14,7 @@ import { KashibaCityScraper } from './kashiba_city';
 import { KawanishiCityScraper } from './kawanishi_city';
 import { MiyakeCityScraper } from './miyake_city';
 import { YamazomuraScraper, HiragawaScraper } from './yamazohiragawa_city';
+import { AndoCityScraper } from './ando_city';
 import { BiddingItem } from '../types/bidding';
 import fs from 'fs';
 import path from 'path';
@@ -35,9 +36,11 @@ async function main() {
         new TawaramotoTownScraper(),
         new KoryoTownScraper(),
         new KashibaCityScraper(),
+        new KawanishiCityScraper(),
         new YamazomuraScraper(),
         new HiragawaScraper(),
         new MiyakeCityScraper(),
+        new AndoCityScraper(),
     ];
 
     const allItems: BiddingItem[] = [];
