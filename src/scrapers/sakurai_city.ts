@@ -1,40 +1,23 @@
 import axios from 'axios';
 import * as cheerio from 'cheerio';
-import crypto from 'crypto';
 import { BiddingItem, Scraper, BiddingType } from '../types/bidding';
 
-// 桜井市 入札情報（静的HTMLテーブル、axios+cheerio）
-// テーブル構造: 区分 | 工事（委託）名 | 場所 | 業種・ランク等
-const BASE = 'https://www.city.sakurai.lg.jp';
-const ANNOUNCE_URL = `${BASE}/sosiki/soumu/kanzaikeiyaku/nyuusatukeiyakukensa/6596.html`;
-// 入札結果はEPI-Cloudへのリンクのみ → スキップ
+const ANNOUNCE_URL = 'https://www.city.sakurai.lg.jp/sosiki/soumu/kanzaikeiyaku/nyuusatukeiyakukensa/6596.html';
 
-const SKIP_GYOSHU = [
-    '土木', '管渠', '舗装', '下水', '河川', '造園', '電気通信', '水道',
-    '農業', '橋梁',
-];
-const SKIP_TITLE = [
-    '廃棄物', '物品', '車両', '清掃', '警備', 'システム',
-];
+// スキップする業種キーワード
+const SKIP_KEYWORDS = ['土木', '舗装', '管渠', '下水道', '道路', '河川', '砂防', '水道', '管工事', '電気通信', '造園', '機械'];
 
-function shouldSkip(title: string, gyoshu: string): boolean {
-    return SKIP_GYOSHU.some(kw => gyoshu.includes(kw) || title.includes(kw))
-        || SKIP_TITLE.some(kw => title.includes(kw));
+function shouldSkip(title: string, category: string): boolean {
+    const combined = title + category;
+    return SKIP_KEYWORDS.some(kw => combined.includes(kw));
 }
 
-function classifyType(title: string, gyoshu: string): BiddingType {
-    const t = title + gyoshu;
-    if (t.includes('設計') || t.includes('測量') || t.includes('コンサル')) return 'コンサル';
-    if (t.includes('委託') || t.includes('業務')) return '委託';
+function classifyType(category: string): BiddingType {
+    if (category.includes('委託') || category.includes('業務') || category.includes('コンサル') || category.includes('設計')) return 'コンサル';
     return '建築';
 }
 
-function makeId(title: string): string {
-    return `sakurai-${crypto.createHash('md5').update(title).digest('hex').slice(0, 8)}`;
-}
-
-// h3見出しから日付を抽出: "X月Y日公告" 形式
-// 令和7年度 = 2025年4月〜2026年3月 → 4〜12月は2025年, 1〜3月は2026年
+// h3 見出しから日付を取得: 「X月Y日公告」→ YYYY-MM-DD
 function parseDateFromHeading(heading: string): string {
     const m = heading.match(/(\d+)月(\d+)日/);
     if (!m) return new Date().toISOString().split('T')[0];
@@ -44,69 +27,62 @@ function parseDateFromHeading(heading: string): string {
     return `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
 }
 
-const HEADERS = { 'User-Agent': 'Mozilla/5.0 (compatible; naramania-scraper/1.0)' };
-
 export class SakuraiCityScraper implements Scraper {
     municipality: '桜井市' = '桜井市';
 
     async scrape(): Promise<BiddingItem[]> {
-        const allItems: BiddingItem[] = [];
-        console.log('[桜井市] 入札公告 取得中...');
+        const items: BiddingItem[] = [];
 
         try {
-            const res = await axios.get(ANNOUNCE_URL, { timeout: 20000, headers: HEADERS });
+            const res = await axios.get(ANNOUNCE_URL, {
+                headers: { 'User-Agent': 'Mozilla/5.0' },
+                timeout: 15000,
+            });
             const $ = cheerio.load(res.data);
 
-            // テーブルの直前のh3見出し（日付）を追跡
-            let currentDate = new Date().toISOString().split('T')[0];
+            // h3 見出しを順に処理
+            $('h3').each((_, h3El) => {
+                const h3Text = $(h3El).text().trim();
+                const annoDate = parseDateFromHeading(h3Text);
 
-            // h3とtableを順に処理
-            $('h3, table').each((_, el) => {
-                if (el.tagName === 'h3') {
-                    const text = $(el).text().trim();
-                    const d = parseDateFromHeading(text);
-                    if (d) currentDate = d;
-                    return;
-                }
-                if (el.tagName !== 'table') return;
+                // h3 の次の table を取得
+                const table = $(h3El).nextAll('table, div.wysiwyg').first();
+                const actualTable = table.is('table') ? table : table.find('table').first();
+                if (!actualTable.length) return;
 
-                // テーブルヘッダーの確認（区分|工事名|場所|業種）
-                const rows = $(el).find('tr').toArray();
-                if (rows.length < 2) return;
-                const headers = $(rows[0]).find('th, td').map((_, c) => $(c).text().trim()).toArray();
-                const titleIdx = headers.findIndex(h => h.includes('工事') || h.includes('委託') || h.includes('業務名'));
-                const gyoshuIdx = headers.findIndex(h => h.includes('業種') || h.includes('ランク'));
+                actualTable.find('tbody tr').each((rowIdx, tr) => {
+                    const tds = $(tr).find('td');
+                    if (tds.length < 2) return;
 
-                if (titleIdx < 0) return;
+                    const category = $(tds[0]).text().trim(); // 区分（工事/委託）
+                    const title = $(tds[1]).text().replace(/\s+/g, ' ').trim();    // 工事（委託）名
+                    const location = tds.length > 2 ? $(tds[2]).text().trim() : '';
+                    const koushu = tds.length > 3 ? $(tds[3]).text().trim() : '';
 
-                for (let i = 1; i < rows.length; i++) {
-                    const cells = $(rows[i]).find('td').map((_, c) => $(c).text().replace(/\s+/g, ' ').trim()).toArray();
-                    if (cells.length <= titleIdx) continue;
+                    // ヘッダー行スキップ
+                    if (!title || category === '区分' || title === '工事（委託）名') return;
+                    // スキップ判定
+                    if (shouldSkip(title, koushu)) return;
 
-                    const title = cells[titleIdx]?.trim();
-                    const gyoshu = gyoshuIdx >= 0 ? (cells[gyoshuIdx] || '') : '';
-
-                    if (!title || title.length < 4) continue;
-                    if (shouldSkip(title, gyoshu)) continue;
-
-                    allItems.push({
-                        id: makeId(title),
+                    const id = `sakurai-${annoDate}-${title.slice(0, 30)}`.replace(/\s+/g, '-');
+                    items.push({
+                        id,
                         municipality: '桜井市',
                         title,
-                        type: classifyType(title, gyoshu),
-                        announcementDate: currentDate,
+                        type: classifyType(category + koushu),
+                        announcementDate: annoDate,
                         link: ANNOUNCE_URL,
                         status: '受付中',
+                        ...(location ? { description: location } : {}),
                     });
-                }
+                });
             });
 
-            console.log(`[桜井市] 入札公告: ${allItems.length}件`);
         } catch (e: any) {
-            console.error('[桜井市] スクレイパーエラー:', e.message || e);
+            console.error('[桜井市] エラー:', e.message || e);
         }
 
-        console.log(`[桜井市] 合計 ${allItems.length} 件`);
-        return allItems;
+        console.log(`[桜井市] 合計 ${items.length} 件`);
+        return items;
     }
 }

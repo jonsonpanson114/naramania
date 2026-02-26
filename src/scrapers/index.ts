@@ -8,6 +8,13 @@ import { KatsuragiCityScraper } from './katsuragi_city';
 import { GojoCityScraper } from './gojo_city';
 import { TenriCityScraper } from './tenri_city';
 import { SakuraiCityScraper } from './sakurai_city';
+import { TawaramotoTownScraper } from './tawaramoto_town';
+import { KoryoTownScraper } from './koryo_town';
+import { KashibaCityScraper } from './kashiba_city';
+import { KawanishiCityScraper } from './kawanishi_city';
+import { MiyakeCityScraper } from './miyake_city';
+import { YamazomuraScraper, HiragawaScraper } from './yamazohiragawa_city';
+import { AndoCityScraper } from './ando_city';
 import { BiddingItem } from '../types/bidding';
 import fs from 'fs';
 import path from 'path';
@@ -26,6 +33,14 @@ async function main() {
         new GojoCityScraper(),
         new TenriCityScraper(),
         new SakuraiCityScraper(),
+        new TawaramotoTownScraper(),
+        new KoryoTownScraper(),
+        new KashibaCityScraper(),
+        new KawanishiCityScraper(),
+        new YamazomuraScraper(),
+        new HiragawaScraper(),
+        new MiyakeCityScraper(),
+        new AndoCityScraper(),
     ];
 
     const allItems: BiddingItem[] = [];
@@ -43,47 +58,16 @@ async function main() {
 
     // 重複除外（同じIDで複数ある場合は落札ステータスを優先）
     // 落札で上書きする際、受付中データのbiddingDate（入札予定日）を引き継ぐ
-    const outputPath = path.join(process.cwd(), 'scraper_result.json');
-    let existingData: Record<string, BiddingItem> = {};
-    if (fs.existsSync(outputPath)) {
-        try {
-            const parsed = JSON.parse(fs.readFileSync(outputPath, 'utf-8'));
-            parsed.forEach((d: BiddingItem) => existingData[d.id] = d);
-        } catch (e) { }
-    }
-
     const seen = new Map<string, BiddingItem>();
     allItems.forEach(item => {
-        const existing = seen.get(item.id) || existingData[item.id];
-
-        // Preserve intelligence if it exists
-        const preservedIntelligence = existing && existing.isIntelligenceExtracted ? {
-            isIntelligenceExtracted: true,
-            estimatedPrice: existing.estimatedPrice,
-            winningContractor: existing.winningContractor,
-            designFirm: existing.designFirm,
-            constructionPeriod: existing.constructionPeriod,
-            description: existing.description,
-            // also preserve link and pdf fields if better
-            pdfUrl: existing.pdfUrl || item.pdfUrl
-        } : { isIntelligenceExtracted: false };
-
+        const existing = seen.get(item.id);
         if (!existing) {
-            seen.set(item.id, { ...item, ...preservedIntelligence });
-        } else if (item.status === '落札' || !existing.status || existing.status === '受付中') {
+            seen.set(item.id, item);
+        } else if (item.status === '落札') {
             seen.set(item.id, {
-                ...existing,
                 ...item,
                 biddingDate: item.biddingDate ?? existing.biddingDate,
-                ...preservedIntelligence,
             });
-        }
-    });
-
-    // Also bring back existing items that were NOT found in this run (so we don't lose old records!)
-    Object.values(existingData).forEach(ex => {
-        if (!seen.has(ex.id)) {
-            seen.set(ex.id, ex);
         }
     });
     const unique = Array.from(seen.values());
@@ -97,6 +81,7 @@ async function main() {
     console.log(`合計: ${unique.length} 件（重複除外後）`);
 
     // scraper_result.json に保存（プロジェクトルート）
+    const outputPath = path.join(process.cwd(), 'scraper_result.json');
     fs.writeFileSync(outputPath, JSON.stringify(unique, null, 2), 'utf-8');
     console.log(`結果を保存: ${outputPath}`);
 

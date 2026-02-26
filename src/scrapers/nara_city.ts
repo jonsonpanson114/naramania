@@ -1,5 +1,6 @@
 import { chromium } from 'playwright';
 import { BiddingItem, Scraper, BiddingType } from '../types/bidding';
+import { shouldKeepItem, classifyWinner } from './common/filter';
 // 奈良市の入札情報公開システム（efftis）
 const EFFTIS_BASE = 'https://nara.efftis.jp/PPI/Public';
 const EFFTIS_TOP = `${EFFTIS_BASE}/PPUBC00100?kikanno=0201`;
@@ -13,7 +14,7 @@ const SEARCH_TARGETS = [
 ];
 
 // 土木系工種をスキップ
-const SKIP_KOUSHUS = ['土木一式', '舗装工事', '法面工事', '河川', '砂防', '造園工事', '水道施設', '管工事', 'さく井', '電気通信工事'];
+const SKIP_KOUSHUS = ['土木一式', '舗装工事', '法面工事', '河川', '砂防', '造園工事', '水道施設', '管工事', 'さく井', '電気通信工事', '橋梁', '橋', '測量', '下水道'];
 
 function shouldSkipKoushu(koushu: string): boolean {
     return SKIP_KOUSHUS.some(kw => koushu.includes(kw));
@@ -103,6 +104,7 @@ export class NaraCityScraper implements Scraper {
 
                         if (!title || !contractNo || contractNo.includes('契約番号')) continue;
                         if (shouldSkipKoushu(koushu)) continue;
+                        if (!shouldKeepItem(title, koushu)) continue;
 
                         // i+1 行目の列数で構造を判定
                         const nextCells = await rows[i + 1].locator('td').all();
@@ -142,6 +144,8 @@ export class NaraCityScraper implements Scraper {
                             if (href) link = href.startsWith('http') ? href : `${EFFTIS_BASE}/${href}`;
                         } catch { }
 
+                        const winningContractor = status === '落札' && cell5 ? cell5 : undefined;
+
                         allItems.push({
                             id: `nara-city-${contractNo}`,
                             municipality: '奈良市',
@@ -151,7 +155,8 @@ export class NaraCityScraper implements Scraper {
                             biddingDate,
                             link,
                             status,
-                            ...(status === '落札' && cell5 ? { winningContractor: cell5 } : {}),
+                            winningContractor: winningContractor,
+                            winnerType: classifyWinner(winningContractor || ''),
                         });
                     }
 

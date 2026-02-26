@@ -1,5 +1,6 @@
 import { chromium, Frame } from 'playwright';
 import { BiddingItem, Scraper, BiddingType } from '../types/bidding';
+import { shouldKeepItem } from './common/filter';
 
 // 奈良県 PPI入札情報システム（ppi06.t-elbs.jp）
 // 平日8:00〜20:00のみアクセス可能
@@ -10,7 +11,7 @@ const PPI_TOP = `${PPI_BASE}/PpiJGyomuStart.do?kinouid=GP5000_Top`;
 const KOJI_GYOSHU_SKIP = [
     '土木一式', '舗装', '鋼橋', 'PC橋', '造園', '法面処理', '道路等維持修繕',
     'しゅんせつ', 'グラウト', 'さく井', '上下水道設備', '交通安全施設', '土木施設除草業務',
-    '通信設備',
+    '通信設備', '橋梁', '橋', '測量',
 ];
 
 // 検索対象カテゴリ
@@ -53,10 +54,10 @@ async function extractRows(fra1: Frame): Promise<RawRow[]> {
             const cells = Array.from(row.querySelectorAll('th, td'));
             const isKekka = cells.length <= 10; // GP5515_1015 is 9 cols, GP5510_1015 is 12 cols
             if (cells.length < 8) continue;
-            const gyoshuIdx  = isKekka ? 5 : 6;
-            const dateIdx    = isKekka ? 6 : 7;
+            const gyoshuIdx = isKekka ? 5 : 6;
+            const dateIdx = isKekka ? 6 : 7;
             const bidDateIdx = isKekka ? -1 : 8;
-            const titleIdx   = isKekka ? 7 : 9;
+            const titleIdx = isKekka ? 7 : 9;
             const gyoshu = (cells[gyoshuIdx] as HTMLElement).innerText?.trim()?.split('\n')[0] || '';
             const titleEl = cells[titleIdx] as HTMLElement;
             if (!titleEl) continue;
@@ -127,7 +128,7 @@ export class NaraPrefScraper implements Scraper {
 
                     // 年度フィルタを設定（入札結果は令和7年度=2025に限定）
                     if (filterYear) {
-                        await fra1.selectOption('select[name="keisaiNen"]', filterYear).catch(() => {});
+                        await fra1.selectOption('select[name="keisaiNen"]', filterYear).catch(() => { });
                         await page.waitForTimeout(300);
                     }
 
@@ -155,13 +156,17 @@ export class NaraPrefScraper implements Scraper {
                                 return false;
                             }, pageNum);
                             if (!moved) break;
-                            await fra1.waitForNavigation({ waitUntil: 'domcontentloaded', timeout: 20000 }).catch(() => {});
+                            await fra1.waitForNavigation({ waitUntil: 'domcontentloaded', timeout: 20000 }).catch(() => { });
                             await page.waitForTimeout(1500);
                         }
 
                         const rows = await extractRows(fra1);
                         for (const row of rows) {
                             if (skipGyoshu && KOJI_GYOSHU_SKIP.some(kw => row.gyoshu.includes(kw))) {
+                                continue;
+                            }
+
+                            if (!shouldKeepItem(row.title, row.gyoshu)) {
                                 continue;
                             }
 
@@ -177,6 +182,7 @@ export class NaraPrefScraper implements Scraper {
                                 biddingDate,
                                 link: `${PPI_BASE}/GP5510_1020?ankenId=${row.ankenId}`,
                                 status,
+                                winnerType: type === '建築' ? 'ゼネコン' : '設計事務所',
                             });
                         }
                         console.log(`[奈良県] ${label} p.${pageNum}: ${rows.length}行`);
