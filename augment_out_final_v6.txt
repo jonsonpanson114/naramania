@@ -1,0 +1,401 @@
+[dotenv@17.3.1] injecting env (1) from .env.local -- tip: 柏 prevent committing .env to code: https://dotenvx.com/precommit
+--- Starting Nara Pref Real Data Pull (2025) ---
+Launching browser...
+Discovered 132 unextracted projects from existing dataset.
+Processing batch of 132 projects...
+
+Processing: nara-pref-29001013060020250258 - 豌台ｿ怜忽迚ｩ鬢ｨ譛ｬ鬢ｨ蜀・｣・所縺ｳ遨ｺ隱ｿ險ｭ蛯咏ｭ画隼菫ｮ蟾･莠玖ｨｭ險域･ｭ蜍吶蟋費ｼ郁ｨｭ・臥ｬｬ・暦ｼ搾ｼ抵ｼ門捷
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Information for 繧ｳ繝ｳ繧ｵ繝ｫ...
+Menu P6005 not visible
+Error: locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator('#P6005')
+
+
+Processing: nara-pref-29001013060020250256 - 螟ｧ貂墓ｱ蜈ｬ蝨抵ｼ郁･ｿ蝨ｰ蛹ｺ・牙・遶･蠎・ｴ蜿翫・蟆大ｹｴ驕句虚蠎・ｴ蜈ｬ陦・ヨ繧､繝ｬ譁ｰ遽牙ｷ･莠句渕譛ｬ繝ｻ螳滓命險ｭ險域･ｭ蜍呻ｼ郁｣懷勧驛ｽ蟶りｨ育判蜈ｬ蝨剃ｺ区･ｭ(髦ｲ轣ｽ繝ｻ螳牙・莠､莉倬≡))縲蟋費ｼ郁ｨｭ・臥ｬｬ・暦ｼ搾ｼ抵ｼ灘捷
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Information for 繧ｳ繝ｳ繧ｵ繝ｫ...
+Menu P6005 not visible
+Error: locator.click: Timeout 30000ms exceeded.
+
+Call log:
+Processing: nara-pref-29001013060020250257 - 螟ｧ貂墓ｱ蜈ｬ蝨抵ｼ域擲蝨ｰ蛹ｺ・牙・陦・ヨ繧､繝ｬ謾ｹ遽牙ｷ･莠句所縺ｳ菴楢ご鬢ｨ繝医う繝ｬ謾ｹ菫ｮ繝ｻ遨ｺ隱ｿ險ｭ蛯呵ｨｭ鄂ｮ蟾･莠玖ｨｭ險域･ｭ蜍呻ｼ郁｣懷勧驛ｽ蟶りｨ育判蜈ｬ蝨剃ｺ区･ｭ(髦ｲ轣ｽ繝ｻ螳牙・莠､莉倬≡))縲蟋費ｼ郁ｨｭ・臥ｬｬ・暦ｼ搾ｼ抵ｼ泌捷
+  - waiting for locator('#P6005')
+
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Information for 繧ｳ繝ｳ繧ｵ繝ｫ...
+Menu P6005 not visible
+Error: locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator('#P6005')
+
+
+Processing: nara-pref-29001013050520250348 - 鬮倡ｬ蟾昴隕ｳ貂ｬ讌ｭ蜍吝ｧ碑ｨ暦ｼ育ｷ頑･閾ｪ辟ｶ轣ｽ螳ｳ髦ｲ豁｢蟇ｾ遲紋ｺ区･ｭ蛯ｵ蟇ｾ雎｡莠区･ｭ・郁・譎ゅ・迚ｹ蛻･・会ｼ峨隨ｬ縲・ｮ・搾ｼ托ｼ托ｼ撰ｼ榊ｧ費ｼ搾ｼ代蜿ｷ
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Information for 繧ｳ繝ｳ繧ｵ繝ｫ...
+Menu P6005 not visible
+Error: locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator('#P6005')
+
+
+Processing: nara-pref-29001013052520250205 - 逕ｺ荳ｦ蟾昴蝨ｰ荳区ｰｴ菴崎ｦｳ貂ｬ讌ｭ蜍呻ｼ磯亟轣ｽ繝ｻ螳牙・遉ｾ莨夊ｳ・悽謨ｴ蛯吩ｺ､莉倬≡莠区･ｭ・育ｷ乗ｵ・亟繝ｻ蠎・沺邉ｻ・会ｼ峨隨ｬ縲・托ｼ呻ｼ榊ｧ費ｼ悶蜿ｷ
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+Error: page.goto: net::ERR_NAME_NOT_RESOLVED at http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top
+Call log:
+  - navigating to "http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top", waiting until "domcontentloaded"
+
+
+Processing: nara-pref-29001013060020250254 - 蠎・沺蛹悶・蜈ｱ蜷悟喧險育判・域ｱ壽ｰｴ蜃ｦ逅・命險ｭ縺ｮ邨ｱ蟒・粋・画耳騾ｲ讀懆ｨ主ｧ碑ｨ暦ｼ育､ｾ莨夊ｳ・悽謨ｴ蛯咏ｷ丞粋莠､莉倬≡莠区･ｭ・峨・ｲ・玲ｵ・喧蟋皮ｬｬ・難ｼ大捷繝ｻ隨ｬ莠悟ｧ皮ｬｬ・托ｼ貞捷繝ｻ豬・喧逵悟腰蟋皮ｬｬ・灘捷
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+Error: page.goto: net::ERR_INTERNET_DISCONNECTED at http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top
+Call log:
+  - navigating to "http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top", waiting until "domcontentloaded"
+
+
+Processing: nara-pref-29005007060120250071 - 譯應ｺ墓ｵ・ｰｴ蝣ｴ蠑・｡樊峩譁ｰ蟾･莠句ｮ滓命險ｭ險域･ｭ蜍吝ｧ碑ｨ・[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+Error: page.goto: net::ERR_INTERNET_DISCONNECTED at http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top
+Call log:
+  - navigating to "http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top", waiting until "domcontentloaded"
+
+
+Processing: nara-pref-29005007060120250072 - 譯應ｺ墓ｵ・ｰｴ蝣ｴ豼・ｸｮ讒ｽ繧ｹ繝ｩ繝・ず謗ｻ蟇・ｩ滓峩譁ｰ蟾･莠句ｮ滓命險ｭ險域･ｭ蜍吝ｧ碑ｨ・[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+Error: page.goto: net::ERR_INTERNET_DISCONNECTED at http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top
+Call log:
+  - navigating to "http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top", waiting until "domcontentloaded"
+
+
+Processing: nara-pref-29005007060120250074 - 螟ｩ逅・・繝ｳ繝怜ｴ髮ｻ豌苓ｨｭ蛯呎峩譁ｰ蟾･莠・[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+Error: page.goto: net::ERR_INTERNET_DISCONNECTED at http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top
+Call log:
+  - navigating to "http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top", waiting until "domcontentloaded"
+
+
+Processing: nara-pref-29001013305020250067 - 蜷蛾㍽蟾晄ｵ・喧繧ｻ繝ｳ繧ｿ繝ｼ莉冶先ｰｴ蛹冶ｩｳ邏ｰ險ｭ險亥ｧ碑ｨ暦ｼ磯亟轣ｽ繝ｻ螳牙・莠､莉倬≡莠区･ｭ・峨・ｲ・怜翠驥主ｧ皮ｬｬ・門捷
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Information for 繧ｳ繝ｳ繧ｵ繝ｫ...
+Menu P6005 not visible
+Error: locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator('#P6005')
+
+
+Processing: nara-pref-29001013305020250068 - 隨ｬ莠梧ｵ・喧繧ｻ繝ｳ繧ｿ繝ｼ莉冶先ｰｴ蛹冶ｩｳ邏ｰ險ｭ險亥ｧ碑ｨ暦ｼ磯亟轣ｽ繝ｻ螳牙・莠､莉倬≡莠区･ｭ・峨・ｲ・玲ｵ・喧蟋皮ｬｬ・難ｼ灘捷繝ｻ隨ｬ莠悟ｧ皮ｬｬ・托ｼ灘捷
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Information for 繧ｳ繝ｳ繧ｵ繝ｫ...
+Menu P6005 not visible
+Error: locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator('#P6005')
+
+
+Processing: nara-pref-29001013060020250252 - 豬・喧繧ｻ繝ｳ繧ｿ繝ｼ豎壽ｳ･豸亥喧繧ｿ繝ｳ繧ｯ讖滓｢ｰ譽滂ｼ灘捷貂ｩ豌ｴ繝偵・繧ｿ譖ｴ譁ｰ蟾･莠具ｼ磯亟轣ｽ繝ｻ螳牙・莠､莉倬≡莠区･ｭ・峨・ｲ・玲ｵ・喧隨ｬ・包ｼ包ｼ吝捷
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Information for 蟒ｺ遽・..
+Menu P5005 not visible
+Error: locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator('#P5005')
+
+
+Processing: nara-pref-29005007060120250067 - 蠕｡謇豬・ｰｴ蝣ｴ髮ｻ豌玲｣滓隼菫ｮ蟾･莠具ｼ域ｶ育↓險ｭ蛯吝ｷ･莠具ｼ・[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Information for 蟒ｺ遽・..
+Menu P5005 not visible
+Error: locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator('#P5005')
+
+
+Processing: nara-pref-29001013305020250069 - 豬・喧繧ｻ繝ｳ繧ｿ繝ｼ豁｣髢謾ｹ菫ｮ隧ｳ邏ｰ險ｭ險亥ｧ碑ｨ励・ｲ・玲ｵ・喧逵悟腰蟋皮ｬｬ・大捷
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Information for 繧ｳ繝ｳ繧ｵ繝ｫ...
+Menu P6005 not visible
+Error: locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator('#P6005')
+
+
+Processing: nara-pref-29005007060120250069 - 蠕｡謇豬・ｰｴ蝣ｴ髮ｻ豌玲｣滓隼菫ｮ蟾･莠狗屮逅・･ｭ蜍吝ｧ碑ｨ・[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Information for 繧ｳ繝ｳ繧ｵ繝ｫ...
+Menu P6005 not visible
+Error: locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator('#P6005')
+
+
+Processing: nara-pref-29001013052020250265 - 譖ｽ謌大ｷ晢ｼ域收蝪夲ｼ峨迴ｾ蝣ｴ謚陦捺･ｭ蜍吝ｧ碑ｨ暦ｼ育音螳夐・蟶よｲｳ蟾晢ｼ域ｲｳ蟾晄隼菫ｮ・会ｼ亥嵜陬懈ｭ｣・会ｼ峨陬懶ｼ暦ｼ搾ｼ費ｼ榊ｧ費ｼ搾ｼ・[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+Error: frame.waitForLoadState: Timeout 30000ms exceeded.
+
+Processing: nara-pref-29001013052020250267 - 鬟幃ｳ･蟾昴迴ｾ蝣ｴ謚陦捺･ｭ蜍吝ｧ碑ｨ暦ｼ育音螳夐・蟶よｲｳ蟾晢ｼ域ｲｳ蟾晄隼菫ｮ・会ｼ亥嵜陬懈ｭ｣・会ｼ峨陬懶ｼ托ｼ搾ｼ抵ｼ搾ｼ費ｼ榊ｧ費ｼ搾ｼ・[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Information for 繧ｳ繝ｳ繧ｵ繝ｫ...
+Menu P6005 not visible
+Error: locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator('#P6005')
+
+
+Processing: nara-pref-29001013052020250266 - 螟ｧ蜥悟ｷ昴迴ｾ蝣ｴ謚陦捺･ｭ蜍吝ｧ碑ｨ暦ｼ育音螳夐・蟶よｲｳ蟾晢ｼ域ｲｳ蟾晄隼菫ｮ・会ｼ亥嵜陬懈ｭ｣・会ｼ峨陬懶ｼ托ｼ搾ｼ抵ｼ榊ｧ費ｼ搾ｼ・[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+Error: frame.waitForLoadState: Timeout 30000ms exceeded.
+
+Processing: nara-pref-29001013052020250269 - 蟇ｺ蟾昴迴ｾ蝣ｴ謚陦捺･ｭ蜍吝ｧ碑ｨ暦ｼ育音螳夐・蟶よｲｳ蟾晢ｼ域ｲｳ蟾晄隼菫ｮ・会ｼ亥嵜陬懈ｭ｣・会ｼ峨陬懶ｼ抵ｼ搾ｼ抵ｼ榊ｧ費ｼ搾ｼ・[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+Error: page.goto: net::ERR_INTERNET_DISCONNECTED at http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top
+Call log:
+  - navigating to "http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top", waiting until "domcontentloaded"
+
+
+Processing: nara-pref-29001013052020250270 - 譖ｽ謌大ｷ晢ｼ亥ｷ晁･ｿ・峨迴ｾ蝣ｴ謚陦捺･ｭ蜍吝ｧ碑ｨ暦ｼ育音螳夐・蟶よｲｳ蟾晢ｼ域ｲｳ蟾晄隼菫ｮ・会ｼ亥嵜陬懈ｭ｣・会ｼ峨陬懶ｼ暦ｼ搾ｼ難ｼ榊ｧ費ｼ搾ｼ・[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+Error: page.goto: net::ERR_INTERNET_DISCONNECTED at http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top
+
+Call log:
+  - navigating to "http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top", waiting until "domcontentloaded"
+
+Processing: nara-pref-29001013052020250268 - 鬟幃ｳ･蟾昴迴ｾ蝣ｴ謚陦捺･ｭ蜍吝ｧ碑ｨ暦ｼ育音螳夐・蟶よｲｳ蟾晢ｼ域ｲｳ蟾晄隼菫ｮ・会ｼ亥嵜陬懈ｭ｣・会ｼ峨陬懶ｼ托ｼ搾ｼ抵ｼ搾ｼ費ｼ榊ｧ費ｼ搾ｼ・[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+Error: page.goto: net::ERR_INTERNET_DISCONNECTED at http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top
+Call log:
+  - navigating to "http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top", waiting until "domcontentloaded"
+
+
+Processing: nara-pref-29001013052020250263 - 荳闊ｬ蝗ｽ驕難ｼ托ｼ厄ｼ門捷莉悶迴ｾ蝣ｴ謚陦捺･ｭ蜍吝ｧ碑ｨ暦ｼ磯％霍ｯ繝｡繝ｳ繝・リ繝ｳ繧ｹ・亥嵜驕薙ヨ繝ｳ繝阪Ν辣ｧ譏取峩譁ｰ・会ｼ峨・費ｼ搾ｼ｡・搾ｼ費ｼｬ・榊ｧ費ｼ搾ｼ・[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+Error: page.goto: net::ERR_INTERNET_DISCONNECTED at http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top
+Call log:
+  - navigating to "http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top", waiting until "domcontentloaded"
+
+
+Processing: nara-pref-29001013050520250342 - 螟ｩ逅・ム繝莉也樟蝣ｴ謚陦捺･ｭ蜍吝ｧ碑ｨ暦ｼ医ム繝繝｡繝ｳ繝・リ繝ｳ繧ｹ莠区･ｭ・峨隨ｬ縲・托ｼ搾ｼ抵ｼ榊ｧ費ｼ搾ｼ偵蜿ｷ
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+Error: page.goto: net::ERR_INTERNET_DISCONNECTED at http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top
+Call log:
+  - navigating to "http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top", waiting until "domcontentloaded"
+
+
+Processing: nara-pref-29001013050520250340 - 逵溽岼蝣ょｷ昴迴ｾ蝣ｴ謚陦捺･ｭ蜍吝ｧ碑ｨ暦ｼ育ｷ頑･閾ｪ辟ｶ轣ｽ螳ｳ髦ｲ豁｢蟇ｾ遲紋ｺ区･ｭ蛯ｵ蟇ｾ雎｡莠区･ｭ・郁・譎ゅ・迚ｹ蛻･・会ｼ峨隨ｬ縲・ｮ・搾ｼ托ｼ托ｼ難ｼ榊ｧ費ｼ搾ｼ代蜿ｷ
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+Error: page.goto: net::ERR_INTERNET_DISCONNECTED at http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top
+Call log:
+  - navigating to "http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top", waiting until "domcontentloaded"
+
+
+Processing: nara-pref-29001013050520250343 - 遘狗ｯ蟾昴迴ｾ蝣ｴ謚陦捺･ｭ蜍吝ｧ碑ｨ暦ｼ育音螳夐・蟶よｲｳ蟾晄ｵｸ豌ｴ陲ｫ螳ｳ蟇ｾ遲匁耳騾ｲ莠区･ｭ・域ｲｳ蟾晄隼菫ｮ・会ｼ井ｸｭ險茨ｼ会ｼ亥嵜陬懶ｼ会ｼ峨隨ｬ縲陬懶ｼ難ｼ搾ｼ托ｼ榊ｧ費ｼ搾ｼ代蜿ｷ
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+Error: page.goto: net::ERR_INTERNET_DISCONNECTED at http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top
+Call log:
+  - navigating to "http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top", waiting until "domcontentloaded"
+
+
+Processing: nara-pref-29001013050520250345 - 遘狗ｯ蟾昴迴ｾ蝣ｴ謚陦捺･ｭ蜍吝ｧ碑ｨ暦ｼ育音螳夐・蟶よｲｳ蟾晄ｵｸ豌ｴ陲ｫ螳ｳ蟇ｾ遲匁耳騾ｲ莠区･ｭ・域ｲｳ蟾晄隼菫ｮ・会ｼ井ｸｭ險茨ｼ会ｼ亥嵜陬懶ｼ会ｼ峨隨ｬ縲陬懶ｼ難ｼ搾ｼ抵ｼ榊ｧ費ｼ搾ｼ代蜿ｷ
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+Error: page.goto: net::ERR_INTERNET_DISCONNECTED at http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top
+Call log:
+  - navigating to "http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top", waiting until "domcontentloaded"
+
+
+Processing: nara-pref-29001013053520250202 - 荳闊ｬ蝗ｽ驕難ｼ托ｼ厄ｼ伜捷縲逕ｰ髟ｷ轢ｬ繝医Φ繝阪Ν辣ｧ譏主ｷ･莠九蝨滓惠謚陦捺･ｭ蜍呵｣懷勧讌ｭ蜍吝ｧ碑ｨ暦ｼ磯％霍ｯ繝｡繝ｳ繝・リ繝ｳ繧ｹ莠区･ｭ・亥嵜驕薙ヨ繝ｳ繝阪Ν辣ｧ譏取峩譁ｰ・会ｼ峨・費ｼ搾ｼ｡・搾ｼ暦ｼｬ・榊ｧ費ｼ・[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+Error: page.goto: net::ERR_INTERNET_DISCONNECTED at http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top
+Call log:
+  - navigating to "http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top", waiting until "domcontentloaded"
+
+
+Processing: nara-pref-29001013252020250039 - ・磯・・芽･ｿ荵晄擅菴蝉ｿ晉ｷ壹螟ｧ螳ｮ逕ｺ荳我ｸ∫岼蝨ｰ蛹ｺ莉也畑蝨ｰ隱ｿ譟ｻ轤ｹ讀懃ｭ画橿陦捺･ｭ蜍吝ｧ碑ｨ暦ｼ茨ｼ井ｻｮ遘ｰ・牙･郁憶・ｩ・｣蜻ｨ霎ｺ謨ｴ蛯呵｣懷勧陦苓ｷｯ莠区･ｭ・峨・假ｼ搾ｼ托ｼ撰ｼ搾ｼ｡・ｧ・托ｼ咲畑蟋費ｼ搾ｼ托ｼ剃ｻ・[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+Error: page.goto: net::ERR_INTERNET_DISCONNECTED at http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top
+Call log:
+  - navigating to "http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top", waiting until "domcontentloaded"
+
+
+Processing: nara-pref-29001013051020250225 - 隨ｬ陬懶ｼ托ｼ搾ｼ難ｼ榊ｧ費ｼ搾ｼ大捷縲蝨ｰ阡ｵ髯｢蟾昴蝨滓惠謚陦捺･ｭ蜍呵｣懷勧蟋碑ｨ玲･ｭ蜍呻ｼ育音螳夐・蟶よｲｳ蟾晄ｵｸ豌ｴ陲ｫ螳ｳ蟇ｾ遲匁耳騾ｲ莠区･ｭ・域ｲｳ蟾晄隼菫ｮ・会ｼ井ｸｭ險亥・・会ｼ亥嵜陬懈ｭ｣・会ｼ・[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+Error: page.goto: net::ERR_INTERNET_DISCONNECTED at http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top
+Call log:
+  - navigating to "http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top", waiting until "domcontentloaded"
+
+
+Processing: nara-pref-29001013051020250227 - 隨ｬ陬懶ｼ包ｼ搾ｼ費ｼ榊ｧ費ｼ搾ｼ大捷縲遶懃伐蟾昴蝨滓惠謚陦捺･ｭ蜍呵｣懷勧蟋碑ｨ玲･ｭ蜍呻ｼ育音螳夐・蟶よｲｳ蟾晄ｵｸ豌ｴ陲ｫ螳ｳ蟇ｾ遲匁耳騾ｲ莠区･ｭ・域ｲｳ蟾晄隼菫ｮ・会ｼ井ｸｭ險亥・・会ｼ亥嵜陬懈ｭ｣・会ｼ・[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+Error: page.goto: net::ERR_INTERNET_DISCONNECTED at http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top
+Call log:
+  - navigating to "http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top", waiting until "domcontentloaded"
+
+
+Processing: nara-pref-29001013051520250266 - 闡帑ｸ句ｷ昴蝨滓惠謚陦捺･ｭ蜍呵｣懷勧蟋碑ｨ暦ｼ育音螳夐・蟶よｲｳ蟾晄ｵｸ豌ｴ陲ｫ螳ｳ蟇ｾ遲匁耳騾ｲ莠区･ｭ・域ｲｳ蟾晄隼菫ｮ・会ｼ峨隨ｬ縲・包ｼ搾ｼ費ｼ榊ｧ費ｼ薙蜿ｷ
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+Error: page.goto: net::ERR_INTERNET_DISCONNECTED at http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top
+Call log:
+  - navigating to "http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top", waiting until "domcontentloaded"
+
+
+Processing: nara-pref-29005007060120250065 - 豬・ｰｴ蝣ｴ險ｭ蛯吝ｷ･莠狗屮逅・･ｭ蜍吝ｧ碑ｨ・[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+Error: page.goto: net::ERR_INTERNET_DISCONNECTED at http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top
+Call log:
+  - navigating to "http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top", waiting until "domcontentloaded"
+
+
+Processing: nara-pref-29005007060120250066 - 騾∵ｰｴ譁ｽ險ｭ險ｭ蛯吝ｷ･莠狗屮逅・･ｭ蜍吝ｧ碑ｨ・[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+Error: page.goto: net::ERR_INTERNET_DISCONNECTED at http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top
+Call log:
+  - navigating to "http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top", waiting until "domcontentloaded"
+
+
+Processing: nara-pref-29005007060120250063 - 譯應ｺ墓ｵ・ｰｴ蝣ｴ險ｭ蛯吝ｷ･莠狗屮逅・･ｭ蜍吝ｧ碑ｨ・[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+Error: page.goto: net::ERR_INTERNET_DISCONNECTED at http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top
+Call log:
+  - navigating to "http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top", waiting until "domcontentloaded"
+
+
+Processing: nara-pref-29005007060120250062 - 螳牙ｵ騾｣邨｡邂｡謨ｴ蛯吩ｺ区･ｭ蟾･莠狗屮逅・･ｭ蜍吝ｧ碑ｨ・[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+Error: page.goto: net::ERR_INTERNET_DISCONNECTED at http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top
+Call log:
+  - navigating to "http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top", waiting until "domcontentloaded"
+
+
+Processing: nara-pref-29001013051020250215 - 隨ｬ陬懶ｼ包ｼ搾ｼ費ｼ榊ｧ費ｼ搾ｼ貞捷縲遶懃伐蟾昴蟆冗ｬ讖矩％霍ｯ莠亥ｙ險ｭ險域･ｭ蜍呻ｼ育音螳夐・蟶よｲｳ蟾晄ｵｸ豌ｴ陲ｫ螳ｳ蟇ｾ遲匁耳騾ｲ莠区･ｭ・域ｲｳ蟾晄隼菫ｮ・会ｼ井ｸｭ險亥・・会ｼ亥嵜陬懈ｭ｣・会ｼ・[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+Error: page.goto: net::ERR_INTERNET_DISCONNECTED at http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top
+Call log:
+  - navigating to "http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top", waiting until "domcontentloaded"
+
+
+Processing: nara-pref-29001013052520250190 - 關ｩ蜴溷慍蛹ｺ縲譁憺擇蟇ｾ遲門ｷ･隧ｳ邏ｰ險ｭ險域･ｭ蜍吝ｧ碑ｨ暦ｼ磯亟轣ｽ繝ｻ螳牙・莠､莉倬≡莠区･ｭ・亥漉驛ｨ繝ｻ譚ｱ驛ｨ・会ｼ域･蛯ｾ譁懶ｼ会ｼ峨隨ｬ縲・包ｼ難ｼ搾ｼ托ｼ抵ｼ榊ｧ費ｼ代蜿ｷ
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+Error: page.goto: net::ERR_INTERNET_DISCONNECTED at http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top
+Call log:
+  - navigating to "http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top", waiting until "domcontentloaded"
+
+
+Processing: nara-pref-29001013060020250230 - 縲蝉ｸｭ豁｢縲鷹ｦ呵茅鬮俶｡蜿玲ｰｴ讒ｽ蜿翫・豸育↓豌ｴ讒ｽ謾ｹ菫ｮ蟾･莠九隨ｬ・暦ｼ搾ｼ難ｼ門捷
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+Error: page.goto: net::ERR_INTERNET_DISCONNECTED at http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top
+Call log:
+  - navigating to "http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top", waiting until "domcontentloaded"
+
+
+Processing: nara-pref-29001013052020250262 - 逵悟霧逡大慍蟶ｯ邱丞粋謨ｴ蛯吩ｺ区･ｭ縲蜈ｫ逕ｰ蝨ｰ蛹ｺ縲蟆丞ｳｶ莠募ｰ險ｭ蛯呎隼濶ｯ蟾･莠九隨ｬ・ｲ・暦ｼ｢・大ｷ･・托ｼ貞捷
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+Error: page.goto: net::ERR_INTERNET_DISCONNECTED at http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top
+Call log:
+  - navigating to "http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top", waiting until "domcontentloaded"
+
+
+Processing: nara-pref-29001013060020250233 - 縲蝉ｸｭ豁｢縲鷹ｦ呵茅鬮俶｡蜿玲ｰｴ讒ｽ蜿翫・豸育↓豌ｴ讒ｽ謾ｹ菫ｮ蟾･莠狗屮逅・･ｭ蜍吶蟋費ｼ育屮・臥ｬｬ・暦ｼ搾ｼ抵ｼ吝捷
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+Error: page.goto: net::ERR_INTERNET_DISCONNECTED at http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top
+Call log:
+  - navigating to "http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top", waiting until "domcontentloaded"
+
+
+Processing: nara-pref-29005007060120250058 - 蠕｡謇豬・ｰｴ蝣ｴ髮ｻ豌玲｣滓隼菫ｮ蟾･莠具ｼ亥ｻｺ遽牙ｷ･莠具ｼ・[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+Error: page.goto: net::ERR_INTERNET_DISCONNECTED at http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top
+Call log:
+  - navigating to "http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top", waiting until "domcontentloaded"
+
+
+Processing: nara-pref-29005007060120250060 - 蠕｡謇豬・ｰｴ蝣ｴ髮ｻ豌玲｣滓隼菫ｮ蟾･莠具ｼ郁ｨｭ蛯吝ｷ･莠具ｼ・[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+Error: page.goto: net::ERR_INTERNET_DISCONNECTED at http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top
+Call log:
+  - navigating to "http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top", waiting until "domcontentloaded"
+
+
+Processing: nara-pref-29001013053520250188 - 蟷ｳ豐ｼ逕ｰ蝨ｰ蛹ｺ縲蝨ｰ縺吶∋繧願ｦｳ貂ｬ讌ｭ蜍吝ｧ碑ｨ暦ｼ磯亟轣ｽ繝ｻ螳牙・莠､莉倬≡莠区･ｭ・亥漉驛ｨ繝ｻ譚ｱ驛ｨ・会ｼ亥慍縺吶∋繧奇ｼ会ｼ郁｣懈ｭ｣・会ｼ峨陬懶ｼ暦ｼ抵ｼ搾ｼ抵ｼ榊ｧ費ｼ・[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+Error: page.goto: net::ERR_INTERNET_DISCONNECTED at http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top
+Call log:
+  - navigating to "http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top", waiting until "domcontentloaded"
+
+
+Processing: nara-pref-29001013060020250234 - 縲蝉ｸｭ豁｢縲代・繝ｪ繝昴・繝育ｮ｡逅・ｺ句漁謇蜿怜､蛾崕險ｭ蛯咏ｭ画峩譁ｰ蜿翫・荳ｭ豌ｴ險ｭ蛯呎隼菫ｮ蟾･莠狗屮逅・･ｭ蜍吶蟋費ｼ育屮・臥ｬｬ・暦ｼ搾ｼ難ｼ灘捷
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+Error: page.goto: net::ERR_INTERNET_DISCONNECTED at http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top
+Call log:
+  - navigating to "http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top", waiting until "domcontentloaded"
+
+
+Processing: nara-pref-29001013305020250061 - 菴蝉ｿ晏ｷ晏ｹｹ邱夂ｮ｡貂蜀・ｿｮ郢戊ｩｳ邏ｰ險ｭ險亥ｧ碑ｨ暦ｼ医◎縺ｮ・托ｼ峨・ｲ・玲ｵ・ｧ皮ｬｬ・托ｼ門捷
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+Error: page.goto: net::ERR_INTERNET_DISCONNECTED at http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top
+Call log:
+  - navigating to "http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top", waiting until "domcontentloaded"
+
+
+Processing: nara-pref-29001013305020250060 - 菴蝉ｿ晏ｷ晏ｹｹ邱夂ｮ｡貂蜀・ｿｮ郢戊ｩｳ邏ｰ險ｭ險亥ｧ碑ｨ暦ｼ医◎縺ｮ・抵ｼ峨・ｲ・玲ｵ・ｧ皮ｬｬ・抵ｼ仙捷
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+Error: page.goto: net::ERR_INTERNET_DISCONNECTED at http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top
+Call log:
+  - navigating to "http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top", waiting until "domcontentloaded"
+
+
+Processing: nara-pref-29001013052520250187 - 逵悟霧逡大慍蟶ｯ邱丞粋謨ｴ蛯吩ｺ区･ｭ縲螟ｧ螳・凰謾ｿ蟋句圏驛ｨ蝨ｰ蛹ｺ縲迯｣螳ｳ髦ｲ豁｢譟ｵ謨ｴ蛯呵ｨ育判讀懆ｨ取･ｭ蜍吝ｧ碑ｨ励隨ｬ・ｲ・暦ｼ｣・大ｧ費ｼ泌捷
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+Error: page.goto: net::ERR_INTERNET_DISCONNECTED at http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top
+Call log:
+  - navigating to "http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top", waiting until "domcontentloaded"
+
+
+Processing: nara-pref-29001013060020250245 - 鬥呵茅鬮俶｡邂｡逅・蕗螳､譽滂ｼ茨ｼ托ｼ抵ｼ鯉ｼ托ｼ包ｼ牙､門｣∵隼菫ｮ蟾･莠狗屮逅・･ｭ蜍吶蟋費ｼ育屮・臥ｬｬ・暦ｼ搾ｼ抵ｼ門捷
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+Error: page.goto: net::ERR_INTERNET_DISCONNECTED at http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top
+Call log:
+  - navigating to "http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top", waiting until "domcontentloaded"
+
+
+Processing: nara-pref-29005007060120250057 - 蠕｡謇蟶らｬｬ・斐ヶ繝ｩ繝ｳ繝∬ｩｳ邏ｰ險ｭ險域･ｭ蜍吝ｧ碑ｨ・[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+Error: page.goto: net::ERR_INTERNET_DISCONNECTED at http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top
+Call log:
+  - navigating to "http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top", waiting until "domcontentloaded"
+
+
+Processing: nara-pref-29001013060020250227 - 豬・喧繧ｻ繝ｳ繧ｿ繝ｼ・堤ｳｻ蜿榊ｿ懈ｧｽ謨｣豌苓｣・ｽｮ譖ｴ譁ｰ蟾･莠具ｼ磯亟轣ｽ繝ｻ螳牙・莠､莉倬≡莠区･ｭ・峨・ｲ・玲ｵ・喧隨ｬ・包ｼ包ｼ伜捷
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+Error: page.goto: net::ERR_INTERNET_DISCONNECTED at http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top
+Call log:
+  - navigating to "http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top", waiting until "domcontentloaded"
+
+
+Processing: nara-pref-29001013052520250182 - 荳闊ｬ蝗ｽ驕難ｼ難ｼ厄ｼ吝捷縲讎帛次繝医Φ繝阪Ν縲繝医Φ繝阪Ν辣ｧ譏趣ｼｬ・･・､蛹門ｷ･莠具ｼ育ｷ頑･閾ｪ辟ｶ轣ｽ螳ｳ髦ｲ豁｢蟇ｾ遲紋ｺ区･ｭ・育┌蛛憺崕・会ｼ峨隨ｬ縲・包ｼ費ｼ抵ｼ搾ｼ輔蜿ｷ
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+Error: page.goto: net::ERR_INTERNET_DISCONNECTED at http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top
+Call log:
+  - navigating to "http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top", waiting until "domcontentloaded"
+
+
+Processing: nara-pref-29001013050520250332 - 鮖ｿ驥主恍蝨ｰ蛹ｺ縲蝨ｰ縺吶∋繧願ｦｳ貂ｬ讌ｭ蜍吝ｧ碑ｨ暦ｼ磯亟轣ｽ繝ｻ螳牙・莠､莉倬≡莠区･ｭ・亥慍縺吶∋繧奇ｼ会ｼ郁｣懈ｭ｣・会ｼ峨隨ｬ縲陬懶ｼ托ｼ抵ｼ搾ｼ托ｼ榊ｧ費ｼ搾ｼ代蜿ｷ
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+Error: page.goto: net::ERR_INTERNET_DISCONNECTED at http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top
+Call log:
+  - navigating to "http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top", waiting until "domcontentloaded"
+
+
+Processing: nara-pref-29001013052020250260 - 縺九ｓ縺倥ｇ縺・ｷ昴逋ｻ險俶耳騾ｲ讌ｭ蜍吝ｧ碑ｨ暦ｼ育匳險俶耳騾ｲ・峨・托ｼ榊ｧ費ｼ搾ｼ・[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+Error: page.goto: net::ERR_INTERNET_DISCONNECTED at http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top
+Call log:
+  - navigating to "http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top", waiting until "domcontentloaded"
+
+
+Processing: nara-pref-29001013060020250243 - 鬥呵茅鬮俶｡邂｡逅・蕗螳､譽滂ｼ茨ｼ托ｼ抵ｼ鯉ｼ托ｼ包ｼ牙､門｣∵隼菫ｮ蟾･莠九隨ｬ・暦ｼ搾ｼ難ｼ泌捷
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+Error: page.goto: net::ERR_INTERNET_DISCONNECTED at http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top
+Call log:
+  - navigating to "http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top", waiting until "domcontentloaded"
+
+
+Processing: nara-pref-29001013051020250210 - 隨ｬ・ｫ・搾ｼ托ｼ托ｼ撰ｼ榊ｧ費ｼ搾ｼ大捷縲荳我ｻ｣蟾昴豐ｻ豌ｴ蟇ｾ遲匁､懆ｨ取･ｭ蜍呻ｼ育ｷ頑･閾ｪ辟ｶ轣ｽ螳ｳ髦ｲ豁｢蟇ｾ遲紋ｺ区･ｭ蛯ｵ蟇ｾ雎｡莠区･ｭ・郁・譎ゅ・迚ｹ蛻･・会ｼ・[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+Error: page.goto: net::ERR_INTERNET_DISCONNECTED at http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top
+
+Call log:
+  - navigating to "http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top", waiting until "domcontentloaded"
+
+Processing: nara-pref-29001013050520250331 - 螟ｩ逅・ム繝蜿怜､蛾崕險ｭ蛯咏ｭ画隼濶ｯ隧ｳ邏ｰ險ｭ險域･ｭ蜍吝ｧ碑ｨ暦ｼ医ム繝繝｡繝ｳ繝・リ繝ｳ繧ｹ莠区･ｭ・井ｸｭ險亥・・会ｼ亥嵜陬懈ｭ｣・会ｼ峨隨ｬ縲陬懶ｼ抵ｼ托ｼ搾ｼ托ｼ榊ｧ費ｼ搾ｼ代蜿ｷ
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+Error: page.goto: net::ERR_INTERNET_DISCONNECTED at http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top
+Call log:
+  - navigating to "http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top", waiting until "domcontentloaded"
+
+
+Processing: nara-pref-29001013051520250261 - 譖ｽ謌大ｷ昴莠区･ｭ謳榊､ｱ陬懷─隱ｿ譟ｻ讌ｭ蜍吝ｧ碑ｨ暦ｼ育ｷ頑･閾ｪ辟ｶ轣ｽ螳ｳ髦ｲ豁｢蟇ｾ遲紋ｺ区･ｭ蛯ｵ蟇ｾ雎｡莠区･ｭ・郁・譎ゅ・迚ｹ蛻･・会ｼ峨隨ｬ縲・ｴ・搾ｼ托ｼ撰ｼ抵ｼ咲畑蟋費ｼ代蜿ｷ
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+Error: page.goto: net::ERR_INTERNET_DISCONNECTED at http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top
+Call log:
+  - navigating to "http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top", waiting until "domcontentloaded"
+
+
+Processing: nara-pref-29001013305020250059 - 菴蝉ｿ晏ｷ晏ｹｹ邱夲ｼ茨ｼｭ・ｮ・擾ｼ趣ｼ厄ｼ暦ｽ橸ｼ厄ｼ呻ｼ牙慍荳区ｰｴ蠖ｱ髻ｿ隗｣譫占ｪｿ譟ｻ蟋碑ｨ励・ｲ・玲ｵ・喧逵悟腰蟋皮ｬｬ・貞捷
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+Failed to get required frames.
+Failed text extraction for nara-pref-29001013305020250059.
+
+Saving updated data...
+Done!

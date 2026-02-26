@@ -1,4 +1,4 @@
-[dotenv@17.3.1] injecting env (1) from .env.local -- tip: 笞呻ｸ・ enable debug logging with { debug: true }
+[dotenv@17.3.1] injecting env (1) from .env.local -- tip: 笞｡・・secrets for agents: https://dotenvx.com/as2
 --- Starting Nara Pref Real Data Pull (2025) ---
 Launching browser...
 Discovered 132 unextracted projects from existing dataset.
@@ -9,13 +9,22 @@ Processing: nara-pref-29001013060020250258 - 豌台ｿ怜忽迚ｩ鬢ｨ譛ｬ�
 [2] Navigating to Construction Results (蜈･譛ｭ邨先棡)...
 [3] Performing search to find: 豌台ｿ怜忽迚ｩ鬢ｨ譛ｬ鬢ｨ蜀・｣・所縺ｳ遨ｺ隱ｿ險ｭ蛯咏ｭ画隼菫ｮ蟾･莠玖ｨｭ險域･ｭ蜍吶蟋費ｼ郁ｨｭ・臥ｬｬ・暦ｼ搾ｼ抵ｼ門捷
   -> setting keisaiNen
+keisaiNen failed
+  -> setting koshuCd
+koshuCd failed
   -> setting pageSize
+pageSize failed
   -> clicking search
+Click timeout locator.click: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator('input[type="button"][value*="讀懃ｴ｢"], #btnSearch').first()
+
+Navigation timeout frame.waitForNavigation: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for navigation until "domcontentloaded"
+============================================================
   -> waiting for 2000ms...
-Rows found on search results page: 506
-Row[0] title: 螂郁憶逵・蜈･譛ｭ邨先棡・乗｡井ｻｶ蜿ら・ﾂﾂ讀懃ｴ｢邨先棡陦ｨ遉ｺ
-Row[1] title: 820莉ｶ縺瑚ｩｲ蠖薙＠縺ｾ縺励◆
-Row[2] title: 820莉ｶ縺瑚ｩｲ蠖薙＠縺ｾ縺励◆
+Rows found on search results page: 0
 Target row NOT FOUND for: 豌台ｿ怜忽迚ｩ鬢ｨ譛ｬ鬢ｨ蜀・｣・所縺ｳ遨ｺ隱ｿ險ｭ蛯咏ｭ画隼菫ｮ蟾･莠玖ｨｭ險域･ｭ蜍吶蟋費ｼ郁ｨｭ・臥ｬｬ・暦ｼ搾ｼ抵ｼ門捷
 Failed text extraction for nara-pref-29001013060020250258.
 
@@ -24,17 +33,48 @@ Processing: nara-pref-29001013060020250256 - 螟ｧ貂墓ｱ蜈ｬ蝨抵ｼ�
 [2] Navigating to Construction Results (蜈･譛ｭ邨先棡)...
 [3] Performing search to find: 螟ｧ貂墓ｱ蜈ｬ蝨抵ｼ郁･ｿ蝨ｰ蛹ｺ・牙・遶･蠎・ｴ蜿翫・蟆大ｹｴ驕句虚蠎・ｴ蜈ｬ陦・ヨ繧､繝ｬ譁ｰ遽牙ｷ･莠句渕譛ｬ繝ｻ螳滓命險ｭ險域･ｭ蜍呻ｼ郁｣懷勧驛ｽ蟶りｨ育判蜈ｬ蝨剃ｺ区･ｭ(髦ｲ轣ｽ繝ｻ螳牙・莠､莉倬≡))縲蟋費ｼ郁ｨｭ・臥ｬｬ・暦ｼ搾ｼ抵ｼ灘捷
   -> setting keisaiNen
+keisaiNen failed
+  -> setting koshuCd
+koshuCd failed
   -> setting pageSize
+pageSize failed
   -> clicking search
+Click timeout locator.click: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator('input[type="button"][value*="讀懃ｴ｢"], #btnSearch').first()
+
+Navigation timeout frame.waitForNavigation: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for navigation until "domcontentloaded"
+============================================================
   -> waiting for 2000ms...
-Rows found on search results page: 506
-Row[0] title: 螂郁憶逵・蜈･譛ｭ邨先棡・乗｡井ｻｶ蜿ら・ﾂﾂ讀懃ｴ｢邨先棡陦ｨ遉ｺ
-Row[1] title: 820莉ｶ縺瑚ｩｲ蠖薙＠縺ｾ縺励◆
-Row[2] title: 820莉ｶ縺瑚ｩｲ蠖薙＠縺ｾ縺励◆
+Rows found on search results page: 0
 Target row NOT FOUND for: 螟ｧ貂墓ｱ蜈ｬ蝨抵ｼ郁･ｿ蝨ｰ蛹ｺ・牙・遶･蠎・ｴ蜿翫・蟆大ｹｴ驕句虚蠎・ｴ蜈ｬ陦・ヨ繧､繝ｬ譁ｰ遽牙ｷ･莠句渕譛ｬ繝ｻ螳滓命險ｭ險域･ｭ蜍呻ｼ郁｣懷勧驛ｽ蟶りｨ育判蜈ｬ蝨剃ｺ区･ｭ(髦ｲ轣ｽ繝ｻ螳牙・莠､莉倬≡))縲蟋費ｼ郁ｨｭ・臥ｬｬ・暦ｼ搾ｼ抵ｼ灘捷
 Failed text extraction for nara-pref-29001013060020250256.
 
 Processing: nara-pref-29001013060020250257 - 螟ｧ貂墓ｱ蜈ｬ蝨抵ｼ域擲蝨ｰ蛹ｺ・牙・陦・ヨ繧､繝ｬ謾ｹ遽牙ｷ･莠句所縺ｳ菴楢ご鬢ｨ繝医う繝ｬ謾ｹ菫ｮ繝ｻ遨ｺ隱ｿ險ｭ蛯呵ｨｭ鄂ｮ蟾･莠玖ｨｭ險域･ｭ蜍呻ｼ郁｣懷勧驛ｽ蟶りｨ育判蜈ｬ蝨剃ｺ区･ｭ(髦ｲ轣ｽ繝ｻ螳牙・莠､莉倬≡))縲蟋費ｼ郁ｨｭ・臥ｬｬ・暦ｼ搾ｼ抵ｼ泌捷
-Error: browserContext.newPage: Target page, context or browser has been closed
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Construction Results (蜈･譛ｭ邨先棡)...
+[3] Performing search to find: 螟ｧ貂墓ｱ蜈ｬ蝨抵ｼ域擲蝨ｰ蛹ｺ・牙・陦・ヨ繧､繝ｬ謾ｹ遽牙ｷ･莠句所縺ｳ菴楢ご鬢ｨ繝医う繝ｬ謾ｹ菫ｮ繝ｻ遨ｺ隱ｿ險ｭ蛯呵ｨｭ鄂ｮ蟾･莠玖ｨｭ險域･ｭ蜍呻ｼ郁｣懷勧驛ｽ蟶りｨ育判蜈ｬ蝨剃ｺ区･ｭ(髦ｲ轣ｽ繝ｻ螳牙・莠､莉倬≡))縲蟋費ｼ郁ｨｭ・臥ｬｬ・暦ｼ搾ｼ抵ｼ泌捷
+  -> setting keisaiNen
+keisaiNen failed
+  -> setting koshuCd
+koshuCd failed
+  -> setting pageSize
+pageSize failed
+  -> clicking search
+Click timeout locator.click: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator('input[type="button"][value*="讀懃ｴ｢"], #btnSearch').first()
 
-Processing: nara-pref-29001013050520250348 - 鬮倡ｬ蟾昴隕ｳ貂ｬ讌ｭ蜍吝ｧ碑ｨ暦ｼ育ｷ頑･閾ｪ辟ｶ轣ｽ螳ｳ髦ｲ豁｢蟇ｾ遲紋ｺ区･ｭ蛯ｵ蟇ｾ雎｡莠区･ｭ・郁・譎ゅ・迚ｹ蛻･・会ｼ峨隨ｬ縲・ｮ・搾ｼ托ｼ托ｼ撰ｼ榊ｧ費ｼ搾ｼ代蜿ｷ
+Navigation timeout frame.waitForNavigation: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for navigation until "domcontentloaded"
+============================================================
+  -> waiting for 2000ms...
+Rows found on search results page: 0
+Target row NOT FOUND for: 螟ｧ貂墓ｱ蜈ｬ蝨抵ｼ域擲蝨ｰ蛹ｺ・牙・陦・ヨ繧､繝ｬ謾ｹ遽牙ｷ･莠句所縺ｳ菴楢ご鬢ｨ繝医う繝ｬ謾ｹ菫ｮ繝ｻ遨ｺ隱ｿ險ｭ蛯呵ｨｭ鄂ｮ蟾･莠玖ｨｭ險域･ｭ蜍呻ｼ郁｣懷勧驛ｽ蟶りｨ育判蜈ｬ蝨剃ｺ区･ｭ(髦ｲ轣ｽ繝ｻ螳牙・莠､莉倬≡))縲蟋費ｼ郁ｨｭ・臥ｬｬ・暦ｼ搾ｼ抵ｼ泌捷
+Failed text extraction for nara-pref-29001013060020250257.
+
+Saving updated data...
+Done!

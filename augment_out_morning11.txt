@@ -1,0 +1,27 @@
+[dotenv@17.3.1] injecting env (1) from .env.local -- tip: ､・agentic secret storage: https://dotenvx.com/as2
+--- Starting Nara Pref Real Data Pull (2025) ---
+Launching browser...
+Discovered 128 unextracted projects from existing dataset.
+Processing batch of 128 projects...
+
+Processing: nara-pref-29001013052520250205 - 逕ｺ荳ｦ蟾昴蝨ｰ荳区ｰｴ菴崎ｦｳ貂ｬ讌ｭ蜍呻ｼ磯亟轣ｽ繝ｻ螳牙・遉ｾ莨夊ｳ・悽謨ｴ蛯吩ｺ､莉倬≡莠区･ｭ・育ｷ乗ｵ・亟繝ｻ蠎・沺邉ｻ・会ｼ峨隨ｬ縲・托ｼ呻ｼ榊ｧ費ｼ悶蜿ｷ
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Construction Results (蜈･譛ｭ邨先棡)...
+[3] Performing search to find: 逕ｺ荳ｦ蟾昴蝨ｰ荳区ｰｴ菴崎ｦｳ貂ｬ讌ｭ蜍呻ｼ磯亟轣ｽ繝ｻ螳牙・遉ｾ莨夊ｳ・悽謨ｴ蛯吩ｺ､莉倬≡莠区･ｭ・育ｷ乗ｵ・亟繝ｻ蠎・沺邉ｻ・会ｼ峨隨ｬ縲・托ｼ呻ｼ榊ｧ費ｼ悶蜿ｷ
+  -> setting keisaiNen
+keisaiNen failed
+  -> setting koshuCd
+koshuCd failed
+  -> setting pageSize
+pageSize failed
+  -> clicking search
+Click timeout locator.click: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator('input[type="button"][value*="讀懃ｴ｢"], #btnSearch').first()
+
+  -> waiting for 2000ms...
+Rows found on search results page: 0
+Target row NOT FOUND for: 逕ｺ荳ｦ蟾昴蝨ｰ荳区ｰｴ菴崎ｦｳ貂ｬ讌ｭ蜍呻ｼ磯亟轣ｽ繝ｻ螳牙・遉ｾ莨夊ｳ・悽謨ｴ蛯吩ｺ､莉倬≡莠区･ｭ・育ｷ乗ｵ・亟繝ｻ蠎・沺邉ｻ・会ｼ峨隨ｬ縲・托ｼ呻ｼ榊ｧ費ｼ悶蜿ｷ
+Failed text extraction for nara-pref-29001013052520250205.
+
+Processing: nara-pref-29001013060020250254 - 蠎・沺蛹悶・蜈ｱ蜷悟喧險育判・域ｱ壽ｰｴ蜃ｦ逅・命險ｭ縺ｮ邨ｱ蟒・粋・画耳騾ｲ讀懆ｨ主ｧ碑ｨ暦ｼ育､ｾ莨夊ｳ・悽謨ｴ蛯咏ｷ丞粋莠､莉倬≡莠区･ｭ・峨・ｲ・玲ｵ・喧蟋皮ｬｬ・難ｼ大捷繝ｻ隨ｬ莠悟ｧ皮ｬｬ・托ｼ貞捷繝ｻ豬・喧逵悟腰蟋皮ｬｬ・灘捷

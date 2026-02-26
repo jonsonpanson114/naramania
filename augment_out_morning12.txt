@@ -1,0 +1,41 @@
+[dotenv@17.3.1] injecting env (1) from .env.local -- tip: 柏 prevent building .env in docker: https://dotenvx.com/prebuild
+--- Starting Nara Pref Real Data Pull (2025) ---
+Launching browser...
+Discovered 127 unextracted projects from existing dataset.
+Processing batch of 127 projects...
+
+Processing: nara-pref-29001013060020250254 - 蠎・沺蛹悶・蜈ｱ蜷悟喧險育判・域ｱ壽ｰｴ蜃ｦ逅・命險ｭ縺ｮ邨ｱ蟒・粋・画耳騾ｲ讀懆ｨ主ｧ碑ｨ暦ｼ育､ｾ莨夊ｳ・悽謨ｴ蛯咏ｷ丞粋莠､莉倬≡莠区･ｭ・峨・ｲ・玲ｵ・喧蟋皮ｬｬ・難ｼ大捷繝ｻ隨ｬ莠悟ｧ皮ｬｬ・托ｼ貞捷繝ｻ豬・喧逵悟腰蟋皮ｬｬ・灘捷
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Construction Results (蜈･譛ｭ邨先棡)...
+[3] Performing search to find: 蠎・沺蛹悶・蜈ｱ蜷悟喧險育判・域ｱ壽ｰｴ蜃ｦ逅・命險ｭ縺ｮ邨ｱ蟒・粋・画耳騾ｲ讀懆ｨ主ｧ碑ｨ暦ｼ育､ｾ莨夊ｳ・悽謨ｴ蛯咏ｷ丞粋莠､莉倬≡莠区･ｭ・峨・ｲ・玲ｵ・喧蟋皮ｬｬ・難ｼ大捷繝ｻ隨ｬ莠悟ｧ皮ｬｬ・托ｼ貞捷繝ｻ豬・喧逵悟腰蟋皮ｬｬ・灘捷
+  -> setting keisaiNen
+  -> setting koshuCd
+  -> setting pageSize
+  -> clicking search
+  -> waiting for 2000ms...
+Rows found on search results page: 0
+Target row NOT FOUND for: 蠎・沺蛹悶・蜈ｱ蜷悟喧險育判・域ｱ壽ｰｴ蜃ｦ逅・命險ｭ縺ｮ邨ｱ蟒・粋・画耳騾ｲ讀懆ｨ主ｧ碑ｨ暦ｼ育､ｾ莨夊ｳ・悽謨ｴ蛯咏ｷ丞粋莠､莉倬≡莠区･ｭ・峨・ｲ・玲ｵ・喧蟋皮ｬｬ・難ｼ大捷繝ｻ隨ｬ莠悟ｧ皮ｬｬ・托ｼ貞捷繝ｻ豬・喧逵悟腰蟋皮ｬｬ・灘捷
+Failed text extraction for nara-pref-29001013060020250254.
+
+Processing: nara-pref-29005007060120250071 - 譯應ｺ墓ｵ・ｰｴ蝣ｴ蠑・｡樊峩譁ｰ蟾･莠句ｮ滓命險ｭ險域･ｭ蜍吝ｧ碑ｨ・[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Construction Results (蜈･譛ｭ邨先棡)...
+[3] Performing search to find: 譯應ｺ墓ｵ・ｰｴ蝣ｴ蠑・｡樊峩譁ｰ蟾･莠句ｮ滓命險ｭ險域･ｭ蜍吝ｧ碑ｨ・  -> setting keisaiNen
+  -> setting koshuCd
+  -> setting pageSize
+  -> clicking search
+  -> waiting for 2000ms...
+Rows found on search results page: 0
+Target row NOT FOUND for: 譯應ｺ墓ｵ・ｰｴ蝣ｴ蠑・｡樊峩譁ｰ蟾･莠句ｮ滓命險ｭ險域･ｭ蜍吝ｧ碑ｨ・Failed text extraction for nara-pref-29005007060120250071.
+
+Processing: nara-pref-29005007060120250072 - 譯應ｺ墓ｵ・ｰｴ蝣ｴ豼・ｸｮ讒ｽ繧ｹ繝ｩ繝・ず謗ｻ蟇・ｩ滓峩譁ｰ蟾･莠句ｮ滓命險ｭ險域･ｭ蜍吝ｧ碑ｨ・[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Construction Results (蜈･譛ｭ邨先棡)...
+[3] Performing search to find: 譯應ｺ墓ｵ・ｰｴ蝣ｴ豼・ｸｮ讒ｽ繧ｹ繝ｩ繝・ず謗ｻ蟇・ｩ滓峩譁ｰ蟾･莠句ｮ滓命險ｭ險域･ｭ蜍吝ｧ碑ｨ・  -> setting keisaiNen
+  -> setting koshuCd
+  -> setting pageSize
+  -> clicking search
+  -> waiting for 2000ms...
+Rows found on search results page: 0
+
+Saving updated data...
+Target row NOT FOUND for: 譯應ｺ墓ｵ・ｰｴ蝣ｴ豼・ｸｮ讒ｽ繧ｹ繝ｩ繝・ず謗ｻ蟇・ｩ滓峩譁ｰ蟾･莠句ｮ滓命險ｭ險域･ｭ蜍吝ｧ碑ｨ・Failed text extraction for nara-pref-29005007060120250072.
+Done!

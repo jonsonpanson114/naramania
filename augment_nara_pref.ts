@@ -16,7 +16,7 @@ const __dirname = path.dirname(__filename);
 
 const RESULT_PATH = path.join(__dirname, 'scraper_result.json');
 const BATCH_SIZE = 1; // Process one by one due to Playwright overhead
-const MAX_CONSECUTIVE_ERRORS = 3;
+const MAX_CONSECUTIVE_ERRORS = 10;
 
 const delay = (ms: number) => new Promise(res => setTimeout(res, ms));
 
@@ -64,59 +64,122 @@ async function extractTextFromZipBuffer(zipBuffer: Buffer): Promise<string> {
 }
 
 async function scrapeNaraPrefPdf(page: Page, item: BiddingItem): Promise<string | null> {
+    page.on('dialog', async dialog => {
+        console.log(`[Dialog] Auto-accepting dialog: ${dialog.message()}`);
+        await dialog.accept().catch(() => { });
+    });
+
     console.log('[1] Accessing Nara Prefecture PPI system (Frame Initialization)...');
     await page.goto('http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top', { waitUntil: 'domcontentloaded' });
 
     await delay(3000);
     const gp10f = page.frames().find(f => f.url().includes('GP5000_10F'));
     const menuFrame = gp10f?.childFrames().find(f => f.url().includes('GP5000_Menu'));
-    const fra1 = page.frame('fra_main1');
+    let searchFrame = page.frames().find(f => f.name() === 'fra_main1' || f.name() === 'fra_mainR');
 
-    if (!menuFrame || !fra1) {
+    if (!menuFrame || !searchFrame) {
         console.error('Failed to get required frames.');
         return null;
     }
 
     await menuFrame.waitForLoadState('load');
 
-    console.log('[2] Navigating to Construction Results (入札結果)...');
+    console.log(`[2] Navigating to ${item.status === '落札' ? 'Results' : 'Information'} for ${item.type}...`);
+    let menuId = '';
+    if (item.type === 'コンサル' || item.type === '委託') {
+        menuId = item.status === '落札' ? 'P6015' : 'P6010';
+    } else {
+        menuId = item.status === '落札' ? 'P5515' : 'P5510';
+    }
+    const pMenu = menuFrame.locator(`#${menuId}`);
+    await pMenu.waitFor({ state: 'visible', timeout: 10000 }).catch(() => console.warn(`Menu ${menuId} not visible`));
+
     await Promise.all([
-        fra1.waitForNavigation({ waitUntil: 'domcontentloaded' }),
-        menuFrame.evaluate((url: string) => (window as any).pf_VidDsp_btnReferenceClick(url), '/DENCHO/GP5515_1010?gyoshuKbnCd=00')
+        page.waitForLoadState('networkidle'),
+        pMenu.click()
     ]);
 
-    await delay(1000);
+    await delay(4000);
 
-    console.log(`[3] Performing wildcard search to find: ${item.title}`);
+    searchFrame = page.frames().find(f => f.url().includes('1010'));
+    if (!searchFrame) {
+        await delay(5000);
+        searchFrame = page.frames().find(f => f.url().includes('1010'));
+    }
 
-    await fra1.selectOption('select[name="keisaiNen"]', '2025').catch(() => { });
-    await Promise.all([
-        fra1.waitForNavigation({ waitUntil: 'domcontentloaded' }),
-        fra1.locator('input[value="検索"]').click()
-    ]);
+    if (!searchFrame) {
+        console.error('Failed to locate search frame 1010 after navigation.');
+        return null;
+    }
 
-    await delay(1000);
+    const targetId = item.id.replace('nara-pref-', '');
+    console.log(`[3] Performing search for ID: ${targetId} and Title: ${item.title.substring(0, 30)}...`);
 
-    const rows = fra1.locator('table tr');
-    const rowCount = await rows.count();
+    const performSearch = async (useId: boolean) => {
+        // 年度 (FY2025)
+        await searchFrame!.selectOption('select[name="keisaiNen"]', '2025').catch(() => { });
+        // 業種 (Clear filter)
+        await searchFrame!.selectOption('select[name="koshuCd"]', '').catch(() => { });
+        await searchFrame!.selectOption('select[name="pageSize"]', '100').catch(() => { });
+
+        if (useId) {
+            console.log(`  -> Pattern 1: Searching by ankenNo: ${targetId}`);
+            await searchFrame!.fill('input[name="ankenNo"]', targetId).catch(() => { });
+            await searchFrame!.fill('input[name="ankenNm"]', '').catch(() => { });
+        } else {
+            const searchTitle = item.title.replace(/[　\s].*/, '').substring(0, 30);
+            console.log(`  -> Pattern 2: Searching by Title: ${searchTitle}`);
+            await searchFrame!.fill('input[name="ankenNo"]', '').catch(() => { });
+            await searchFrame!.fill('input[name="ankenNm"]', searchTitle).catch(() => { });
+        }
+
+        const searchBtn = searchFrame!.locator('input[type="button"][value*="検索"], #btnSearch').first();
+        await Promise.all([
+            page.waitForLoadState('networkidle'),
+            searchBtn.click({ timeout: 15000 }).catch(e => console.warn('Search click timeout', e.message))
+        ]);
+        await delay(5000); // Base wait for results
+    };
+
+    // Try Pattern 1
+    await performSearch(true);
+    let resultsFrame = page.frames().find(f => f.url().includes('1015') || f.url().includes('1020')) || searchFrame;
+    let rows = resultsFrame.locator('div.SCROLL1 table tr'); // Results are always in SCROLL1
+    let rowCount = await rows.count();
+
+    // If only header or no results (handled by global handler)
+    if (rowCount <= 1) {
+        console.log(`  -> Pattern 1 failed (No results: ${rowCount}). Trying Pattern 2...`);
+        await performSearch(false);
+        resultsFrame = page.frames().find(f => f.url().includes('1015') || f.url().includes('1020')) || searchFrame;
+        rows = resultsFrame.locator('div.SCROLL1 table tr');
+        rowCount = await rows.count();
+    }
+
+    console.log(`Rows found on search results page: ${rowCount}`);
     let targetRowIndex = -1;
 
     for (let i = 0; i < rowCount; i++) {
-        const rowText = await rows.nth(i).innerText();
-        const rowTitle = rowText.trim().split('\n')[0];
-        if (rowTitle.length > 5 && (rowText.includes(item.title) || item.title.includes(rowTitle))) {
+        const rowHtml = await rows.nth(i).innerHTML().catch(() => '');
+        if (rowHtml.includes(targetId)) {
             targetRowIndex = i;
             break;
+        }
+        // Fallback: title match
+        if (i > 0) { // Skip header
+            const rowText = await rows.nth(i).innerText().catch(() => '');
+            if (rowText.includes(item.title) || (item.title.length > 10 && rowText.includes(item.title.substring(0, 10)))) {
+                targetRowIndex = i;
+                break;
+            }
         }
     }
 
     let displayBtn = rows.nth(targetRowIndex).locator('input[value="表示"]');
 
     if (targetRowIndex === -1 || await displayBtn.count() === 0) {
-        console.warn(`Target row invalid. Forcing the FIRST available '表示' button for ZIP testing.`);
-        const allButtons = fra1.locator('input[value="表示"]');
-        if (await allButtons.count() === 0) return null;
-        displayBtn = allButtons.first();
+        console.error(`Target row NOT FOUND for: ${item.title}`);
+        return null;
     }
 
     console.log(`Opening popup...`);
@@ -256,34 +319,20 @@ async function getNaraPref2025List(page: Page): Promise<BiddingItem[]> {
 }
 
 async function main() {
-    console.log('--- Starting Nara Pref Real Data Pull (2025) ---');
-
-    console.log('Launching browser...');
-    const browser = await chromium.launch({ headless: true });
+    let browser = await chromium.launch({ headless: true });
     try {
-        const page = await browser.newPage();
-
-        const newList = await getNaraPref2025List(page);
-
-        console.log(`Discovered ${newList.length} potential 2025 projects across both categories.`);
+        console.log('--- Starting Nara Pref Real Data Pull (2025) ---');
+        console.log('Launching browser...');
 
         let existingItems: BiddingItem[] = [];
         if (fs.existsSync(RESULT_PATH)) {
             existingItems = JSON.parse(fs.readFileSync(RESULT_PATH, 'utf-8'));
         }
 
-        const itemsToProcess: BiddingItem[] = [];
-        for (const it of newList) {
-            const index = existingItems.findIndex(ex => ex.title === it.title);
-            if (index === -1) {
-                itemsToProcess.push(it);
-                existingItems.push(it);
-            } else if (!existingItems[index].isIntelligenceExtracted && existingItems[index].municipality === '奈良県') {
-                itemsToProcess.push(existingItems[index]);
-            }
-        }
+        const itemsToProcess = existingItems.filter(ex => ex.municipality === '奈良県' && !ex.isIntelligenceExtracted);
 
-        console.log(`Processing batch of ${Math.min(itemsToProcess.length, 5)} projects...`);
+        console.log(`Discovered ${itemsToProcess.length} unextracted projects from existing dataset.`);
+        console.log(`Processing batch of ${itemsToProcess.length} projects...`);
 
         let consecutiveErrors = 0;
         const currentBatch = itemsToProcess;
@@ -291,11 +340,16 @@ async function main() {
         for (const item of currentBatch) {
             console.log(`\nProcessing: ${item.id} - ${item.title}`);
 
+            if (!browser.isConnected()) {
+                console.warn('Browser disconnected, re-launching...');
+                browser = await chromium.launch({ headless: true });
+            }
+
+            let context;
             try {
-                const context = await browser.newContext();
+                context = await browser.newContext();
                 const page = await context.newPage();
                 const pdfText = await scrapeNaraPrefPdf(page, item);
-                await context.close();
 
                 if (!pdfText || pdfText.length < 50) {
                     console.warn(`Failed text extraction for ${item.id}.`);
@@ -320,12 +374,20 @@ async function main() {
                     }
                 }
 
+                // Save after each item to prevent data loss
+                fs.writeFileSync(RESULT_PATH, JSON.stringify(existingItems, null, 2), 'utf-8');
+
                 if (consecutiveErrors >= MAX_CONSECUTIVE_ERRORS) break;
                 await delay(5000);
 
             } catch (e: any) {
-                console.error(`Error:`, e.message || e);
+                console.error(`Error processing ${item.id}:`, e.message || e);
                 consecutiveErrors++;
+                if (e.message.includes('browser has been closed') || e.message.includes('disconnected')) {
+                    await browser.close().catch(() => { });
+                }
+            } finally {
+                if (context) await context.close().catch(() => { });
             }
         }
 
@@ -334,7 +396,7 @@ async function main() {
         console.log('Done!');
 
     } finally {
-        await browser.close();
+        await browser.close().catch(() => { });
     }
 }
 

@@ -1,14 +1,8 @@
-Launching browser...
-[List] Accessing Nara Pref PPI system...
-
-Clicking 業務 button: #P6015
-[List] Discovering search form frame for 業務...
---- koshuCd Options ---
-Value:  -> 
-Value: 100000 -> 建設コンサルタント
-Value: 200000 -> 測量
-Value: 300000 -> 建築設計
-Value: 400000 -> 地質調査
-Value: 500000 -> 補償コンサルタント
-Value: 600000 -> その他
-Value: 9900000 -> 特殊工事（道路暗渠清掃）
+--- Frame Tree ---
+- Name: "", URL: http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top
+  - Name: "fra_header", URL: http://www.ppi06.t-elbs.jp/DENCHO/jsp/common/base/NONE.html
+  - Name: "fra_main1", URL: http://www.ppi06.t-elbs.jp/DENCHO/GP5000_10F?dantaiCd=1111
+    - Name: "fra_mainL", URL: http://www.ppi06.t-elbs.jp/DENCHO/GP5000_Menu
+    - Name: "fra_mainR", URL: http://www.ppi06.t-elbs.jp/DENCHO/GP5000_Information
+  - Name: "fra_hidden", URL: http://www.ppi06.t-elbs.jp/DENCHO/jsp/common/base/NONE.jsp
+  - Name: "fra_target", URL: http://www.ppi06.t-elbs.jp/DENCHO/jsp/common/base/NONE.html

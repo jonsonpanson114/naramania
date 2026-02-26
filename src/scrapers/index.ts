@@ -34,6 +34,9 @@ async function main() {
         new TawaramotoTownScraper(),
         new KoryoTownScraper(),
         new KashibaCityScraper(),
+        new YamazomuraScraper(),
+        new HiragawaScraper(),
+    ];
         new KawanishiCityScraper(),
         new MiyakeCityScraper(),
     ];
