@@ -107,57 +107,64 @@ export class YamatoTakadaCityScraper implements Scraper {
             const $ = cheerio.load(res.data);
             const beforeCount = allItems.length;
 
-            // h2(月) + p(件名/担当課/落札業者/落札金額) の構造
+            // 新しい構造: h2(月) → strong(案件タイトル) → table(落札業者/落札金額)
             const REIWA7_BASE = 2025;
             let currentMonth = 1;
-            let currentTitle = '';
-            let currentContractor = '';
-            let itemStarted = false;
 
-            function flushItem() {
-                if (!itemStarted || !currentTitle) return;
-                if (shouldSkip('', currentTitle)) return;
-                const month = String(currentMonth).padStart(2, '0');
-                allItems.push({
-                    id: makeId(currentTitle + '-result'),
-                    municipality: '大和高田市',
-                    title: currentTitle,
-                    type: classifyType('', currentTitle),
-                    announcementDate: `${REIWA7_BASE}-${month}-01`,
-                    link: RESULT_PAGE,
-                    status: '落札',
-                    ...(currentContractor ? { winningContractor: currentContractor } : {}),
-                });
-                currentTitle = '';
-                currentContractor = '';
-                itemStarted = false;
-            }
+            // 各 h2 (月) セクションを処理
+            $('h2').each((_, h2El) => {
+                const h2Text = $(h2El).text().trim();
+                const monthMatch = h2Text.match(/(\d+)月/);
+                if (!monthMatch) return;
+                currentMonth = parseInt(monthMatch[1]);
 
-            $('h2, p').each((_, el) => {
-                const tag = el.tagName?.toLowerCase();
-                const text = $(el).text().trim();
+                // h2 の後にある strong + table のペアを取得
+                let nextEl = $(h2El).next();
+                while (nextEl.length > 0) {
+                    // 次の h2 か ドキュメントの終わりに達したら終了
+                    if (nextEl[0].tagName === 'H2') break;
 
-                if (tag === 'h2') {
-                    flushItem();
-                    const m = text.match(/(\d+)月/);
-                    if (m) currentMonth = parseInt(m[1]);
-                } else if (tag === 'p') {
-                    const strongText = $(el).find('strong').first().text().trim();
-                    if (strongText) {
-                        // 新案件開始
-                        flushItem();
-                        currentTitle = strongText;
-                        itemStarted = true;
-                    } else if (itemStarted) {
-                        if (text.startsWith('落札業者：') || text.startsWith('落札業者:')) {
-                            currentContractor = text.replace(/^落札業者[：:]/, '').trim();
-                        } else if (text.startsWith('落札者：') || text.startsWith('落札者:')) {
-                            currentContractor = text.replace(/^落札者[：:]/, '').trim();
+                    const strongEl = nextEl.find('strong').first();
+                    const tableEl = nextEl.find('table').first();
+
+                    if (strongEl.length > 0 && tableEl.length > 0) {
+                        const title = strongEl.text().trim();
+
+                        // テーブルから落札業者を取得
+                        let contractor = '';
+                        tableEl.find('tr').each((_, tr) => {
+                            const tds = $(tr).find('td');
+                            if (tds.length >= 2) {
+                                const label = tds.eq(0).text().trim();
+                                const value = tds.eq(1).text().trim();
+                                if (label === '落札業者' || label === '落札者') {
+                                    contractor = value;
+                                }
+                            }
+                        });
+
+                        if (title && !shouldSkip('', title)) {
+                            const month = String(currentMonth).padStart(2, '0');
+                            // 「不成立」や「なし」は除外
+                            if (!contractor || contractor === '不成立' || contractor === 'なし') {
+                                contractor = '';
+                            }
+                            allItems.push({
+                                id: makeId(title + '-result'),
+                                municipality: '大和高田市',
+                                title,
+                                type: classifyType('', title),
+                                announcementDate: `${REIWA7_BASE}-${month}-01`,
+                                link: RESULT_PAGE,
+                                status: '落札',
+                                ...(contractor ? { winningContractor: contractor } : {}),
+                            });
                         }
                     }
+
+                    nextEl = nextEl.next();
                 }
             });
-            flushItem();
 
             console.log(`[大和高田市] 入札結果: ${allItems.length - beforeCount}件`);
         } catch (e: any) {
