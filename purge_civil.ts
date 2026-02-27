@@ -1,5 +1,5 @@
 import fs from 'fs';
-import { isCivilEngineering } from './src/scrapers/common/filter';
+import { isCivilEngineering } from './src/scrapers/common/filter.ts';
 
 const RESULT_PATH = 'scraper_result.json';
 

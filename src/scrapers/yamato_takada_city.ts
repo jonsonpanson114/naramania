@@ -2,6 +2,7 @@ import axios from 'axios';
 import * as cheerio from 'cheerio';
 import crypto from 'crypto';
 import { BiddingItem, Scraper, BiddingType } from '../types/bidding';
+import { shouldKeepItem } from './common/filter';
 
 // 大和高田市 入札情報
 const BASE = 'https://www.city.yamatotakada.nara.jp';
@@ -14,8 +15,7 @@ const RESULT_PAGE = `${BASE}/soshikikarasagasu/keiyakukanrishitsu/nyusatsu_keiya
 // 土木系をスキップ
 const SKIP_GYOSHU = ['舗装', '土木', '管渠', '下水', '河川', '造園', '電気通信', '水道'];
 
-function shouldSkip(gyoshu: string, title: string): boolean {
-    return SKIP_GYOSHU.some(kw => gyoshu.includes(kw) || title.includes(kw));
+    return !shouldKeepItem(title, gyoshu);
 }
 
 function classifyType(gyoshu: string, title: string): BiddingType {

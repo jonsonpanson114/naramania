@@ -1,5 +1,6 @@
 import { chromium } from 'playwright';
 import { BiddingItem, Scraper } from '../types/bidding';
+import { shouldKeepItem } from './common/filter';
 
 const EPI_URL = 'https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=062006E007200640';
 
@@ -13,8 +14,7 @@ const SKIP_KEYWORDS = [
     '造園', 'カルバート', '樋門', '土木', '舗装維持',
 ];
 
-function shouldSkip(title: string): boolean {
-    return SKIP_KEYWORDS.some(kw => title.includes(kw));
+    return false; // Deprecated
 }
 
 function parseJpDate(str: string): string {
@@ -95,7 +95,7 @@ async function scrapeKashibaCity(): Promise<BiddingItem[]> {
                 const amountText = cells.length >= 7 ? (await cells[6].textContent() || '').trim().replace(/[,円\s]/g, '') : '';
 
                 if (!title || !pubDate) continue;
-                if (shouldSkip(title)) continue;
+                if (!shouldKeepItem(title)) continue;
 
                 items.push({
                     id: `kashiba-${contractNo || pubDate + '-' + title.slice(0, 10)}`,

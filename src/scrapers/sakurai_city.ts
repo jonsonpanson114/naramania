@@ -1,6 +1,7 @@
 import axios from 'axios';
 import * as cheerio from 'cheerio';
 import { BiddingItem, Scraper, BiddingType } from '../types/bidding';
+import { shouldKeepItem } from './common/filter';
 
 const ANNOUNCE_URL = 'https://www.city.sakurai.lg.jp/sosiki/soumu/kanzaikeiyaku/nyuusatukeiyakukensa/6596.html';
 
@@ -8,8 +9,7 @@ const ANNOUNCE_URL = 'https://www.city.sakurai.lg.jp/sosiki/soumu/kanzaikeiyaku/
 const SKIP_KEYWORDS = ['土木', '舗装', '管渠', '下水道', '道路', '河川', '砂防', '水道', '管工事', '電気通信', '造園', '機械'];
 
 function shouldSkip(title: string, category: string): boolean {
-    const combined = title + category;
-    return SKIP_KEYWORDS.some(kw => combined.includes(kw));
+    return !shouldKeepItem(title, category);
 }
 
 function classifyType(category: string): BiddingType {

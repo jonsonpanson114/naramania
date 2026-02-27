@@ -10,14 +10,8 @@ const TAKATORI_RSS = 'http://www.town.takatori.nara.jp/rss/rss.xml';
 const IKARUGA_RSS = 'https://www.town.ikaruga.nara.jp/rss/rss.xml';
 
 // スキップキーワード
-const SKIP_KEYWORDS = [
-    '道路', '舗装', '下水道', '河川', '砂防', '水道', '管工事', '橋梁', '護岸',
-    '側溝', '水路', '排水', 'マンホール', '配水管', '布設替', '管路', '電気通信',
-    '造園', 'カルバート', '樋門', '土木', '舗装維持', '除草', 'バッテリー',
-];
-
 function shouldSkip(title: string): boolean {
-    return SKIP_KEYWORDS.some(kw => title.includes(kw));
+    return !shouldKeepItem(title, '');
 }
 
 function classifyType(title: string): '建築' | 'コンサル' | 'その他' {

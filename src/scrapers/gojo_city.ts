@@ -2,6 +2,7 @@ import axios from 'axios';
 import * as cheerio from 'cheerio';
 import crypto from 'crypto';
 import { BiddingItem, Scraper, BiddingType } from '../types/bidding';
+import { shouldKeepItem } from './common/filter';
 
 // 五條市 入札情報（SMART CMS tree.json API経由）
 const BASE = 'https://www.city.gojo.lg.jp';
@@ -19,8 +20,7 @@ const SKIP_KEYWORDS = [
 ];
 
 function titleSeemsRelevant(title: string): boolean {
-    if (SKIP_KEYWORDS.some(kw => title.includes(kw))) return false;
-    return INCLUDE_KEYWORDS.some(kw => title.includes(kw));
+    return shouldKeepItem(title);
 }
 
 function classifyType(title: string): BiddingType {

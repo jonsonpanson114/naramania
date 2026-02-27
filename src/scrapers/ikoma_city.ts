@@ -1,6 +1,7 @@
 import { chromium } from 'playwright';
 import { BiddingItem, Scraper, BiddingType } from '../types/bidding';
 import crypto from 'crypto';
+import { shouldKeepItem } from './common/filter';
 
 // 生駒市の入札情報公開システム（epi-cloud）
 // 構造: 機関選択フォーム → 工事/コンサル ボタン → 案件一覧
@@ -25,9 +26,7 @@ function classifyType(title: string, gyoshu: string): BiddingType {
     return '建築';
 }
 
-function shouldSkip(text: string): boolean {
-    const skip = ['土木', '舗装', '法面', '河川', '砂防', '造園', '管工事', '電気工事'];
-    return skip.some(kw => text.includes(kw));
+    return false; // Deprecated in favor of shouldKeepItem
 }
 
 async function extractFromResultsPage(page: any, status: '受付中' | '落札'): Promise<BiddingItem[]> {
@@ -58,8 +57,8 @@ async function extractFromResultsPage(page: any, status: '受付中' | '落札')
                 gyoshu = (await cells[1].innerText()).trim();
             }
 
-            if (shouldSkip(text) || shouldSkip(gyoshu)) {
-                console.log(`[生駒市] スキップ: ${text}`);
+            if (!shouldKeepItem(text, gyoshu)) {
+                console.log(`[生駒市] スキップ（ノイズ）: ${text}`);
                 continue;
             }
 

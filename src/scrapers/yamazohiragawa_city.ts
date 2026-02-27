@@ -1,6 +1,7 @@
 import axios from 'axios';
 import * as cheerio from 'cheerio';
 import { BiddingItem, Scraper, Municipality } from '../types/bidding';
+import { shouldKeepItem } from './common/filter';
 
 // 山添村（yamazomura）
 const YAMAZO_URL = 'https://www.vill.yamazomura.nara.jp/nyusatsu.html';
@@ -16,7 +17,7 @@ const SKIP_KEYWORDS = [
 ];
 
 function shouldSkip(title: string): boolean {
-    return SKIP_KEYWORDS.some(kw => title.includes(kw));
+    return !shouldKeepItem(title);
 }
 
 async function scrapeSmallTown(url: string, municipality: string): Promise<BiddingItem[]> {

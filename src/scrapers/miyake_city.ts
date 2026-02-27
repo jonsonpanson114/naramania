@@ -1,6 +1,7 @@
 import axios from 'axios';
 import * as cheerio from 'cheerio';
 import { BiddingItem, Scraper } from '../types/bidding';
+import { shouldKeepItem } from './common/filter';
 
 // 三宅町入札情報ページ
 // RSSフィード + HTMLで公開
@@ -15,7 +16,7 @@ const SKIP_KEYWORDS = [
 ];
 
 function shouldSkip(title: string): boolean {
-    return SKIP_KEYWORDS.some(kw => title.includes(kw));
+    return !shouldKeepItem(title);
 }
 
 async function scrapeMiyakeCity(): Promise<BiddingItem[]> {

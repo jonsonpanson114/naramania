@@ -1,5 +1,6 @@
 import { chromium } from 'playwright';
 import { BiddingItem, Scraper } from '../types/bidding';
+import { shouldKeepItem } from './common/filter';
 
 // 川西町入札情報ページ
 // 令和7年度の過去の落札結果は、月別ページで公開されている
@@ -14,7 +15,7 @@ const SKIP_KEYWORDS = [
 ];
 
 function shouldSkip(title: string): boolean {
-    return SKIP_KEYWORDS.some(kw => title.includes(kw));
+    return !shouldKeepItem(title);
 }
 
 // "令和7年4月分" → "2025-04"

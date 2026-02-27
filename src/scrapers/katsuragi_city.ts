@@ -2,6 +2,7 @@ import axios from 'axios';
 import * as cheerio from 'cheerio';
 import crypto from 'crypto';
 import { BiddingItem, Scraper, BiddingType } from '../types/bidding';
+import { shouldKeepItem } from './common/filter';
 
 // 葛城市 入札情報（静的HTMLテーブル）
 const BASE = 'https://www.city.katsuragi.nara.jp';
@@ -20,8 +21,7 @@ const SKIP_KEYWORDS = [
 ];
 
 function titleSeemsRelevant(title: string): boolean {
-    if (SKIP_KEYWORDS.some(kw => title.includes(kw))) return false;
-    return INCLUDE_KEYWORDS.some(kw => title.includes(kw));
+    return shouldKeepItem(title);
 }
 
 function classifyType(title: string): BiddingType {

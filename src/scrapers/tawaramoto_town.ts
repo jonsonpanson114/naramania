@@ -1,5 +1,6 @@
 import { chromium } from 'playwright';
 import { BiddingItem, Scraper, BiddingType } from '../types/bidding';
+import { shouldKeepItem } from './common/filter';
 
 // 田原本町の入札情報サービス（EffTis PPI）
 const EFFTIS_BASE = 'https://tawaramoto.efftis.jp/PPI/Public';
@@ -16,7 +17,7 @@ const SEARCH_TARGETS = [
 const SKIP_KOUSHUS = ['土木一式', '舗装', '機械器具設置', '鋼構造物', '河川', '砂防', '造園', '水道施設', '管工事', 'さく井', '電気通信'];
 
 function shouldSkipKoushu(koushu: string): boolean {
-    return SKIP_KOUSHUS.some(kw => koushu.includes(kw));
+    return !shouldKeepItem('', koushu);
 }
 
 function parseJapaneseDate(text: string): string {
@@ -94,6 +95,7 @@ export class TawaramotoTownScraper implements Scraper {
 
                         if (!title || !contractNo || contractNo.includes('契約番号')) continue;
                         if (shouldSkipKoushu(koushu)) continue;
+                        if (!shouldKeepItem(title, koushu)) continue;
 
                         // 田原本町の行構造（常に3行）:
                         //   主行 (7セル): 契約番号|担当課|件名|工種|入札方式|状況|ボタン

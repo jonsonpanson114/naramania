@@ -1,6 +1,7 @@
 import axios from 'axios';
 import * as cheerio from 'cheerio';
 import { BiddingItem, Scraper, BiddingType } from '../types/bidding';
+import { shouldKeepItem } from './common/filter';
 
 const BASE_URL = 'https://www.town.koryo.nara.jp';
 // 指名競争入札結果カテゴリページ
@@ -18,7 +19,7 @@ const SKIP_KEYWORDS = [
 ];
 
 function shouldSkip(title: string): boolean {
-    return SKIP_KEYWORDS.some(kw => title.includes(kw));
+    return !shouldKeepItem(title);
 }
 
 function classifyType(section: string, title: string): BiddingType {

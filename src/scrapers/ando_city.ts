@@ -1,6 +1,7 @@
 import axios from 'axios';
 import * as cheerio from 'cheerio';
 import { BiddingItem, Scraper } from '../types/bidding';
+import { shouldKeepItem } from './common/filter';
 
 // 安堵町
 const RSS_URL = 'https://www.town.ando.nara.jp/rss/rss.xml';
@@ -13,7 +14,7 @@ const SKIP_KEYWORDS = [
 ];
 
 function shouldSkip(title: string): boolean {
-    return SKIP_KEYWORDS.some(kw => title.includes(kw));
+    return !shouldKeepItem(title);
 }
 
 function classifyType(title: string): '建築' | 'その他' {

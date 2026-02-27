@@ -2,6 +2,7 @@ import axios from 'axios';
 import * as cheerio from 'cheerio';
 import crypto from 'crypto';
 import { BiddingItem, Scraper, BiddingType } from '../types/bidding';
+import { shouldKeepItem } from './common/filter';
 
 // 天理市 入札情報
 // 入札公告: 1ページに全案件の案件概要テーブルが埋め込まれた静的HTML
@@ -16,9 +17,7 @@ const SKIP_KEYWORDS = [
 ];
 const SKIP_TYPES = ['土木工事', '管工事', '電気工事', '電気通信工事', '舗装工事'];
 
-function shouldSkip(title: string, type: string): boolean {
-    return SKIP_KEYWORDS.some(kw => title.includes(kw) || type.includes(kw))
-        || SKIP_TYPES.some(t => type.includes(t));
+    return !shouldKeepItem(title + type);
 }
 
 function classifyType(title: string, type: string): BiddingType {

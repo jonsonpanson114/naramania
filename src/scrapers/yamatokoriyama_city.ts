@@ -2,6 +2,7 @@ import axios from 'axios';
 import * as cheerio from 'cheerio';
 import crypto from 'crypto';
 import { BiddingItem, Scraper, BiddingType } from '../types/bidding';
+import { shouldKeepItem } from './common/filter';
 
 // 大和郡山市 入札情報（SMART CMS JSON API 経由）
 const BASE = 'https://www.city.yamatokoriyama.lg.jp';
@@ -22,8 +23,7 @@ const SKIP_TITLE_KEYWORDS = [
 ];
 
 function titleSeemsRelevant(title: string): boolean {
-    if (SKIP_TITLE_KEYWORDS.some(kw => title.includes(kw))) return false;
-    return INCLUDE_TITLE_KEYWORDS.some(kw => title.includes(kw));
+    return shouldKeepItem(title);
 }
 
 function classifyType(title: string): BiddingType {

@@ -1,0 +1,1566 @@
+[dotenv@17.3.1] injecting env (1) from .env.local -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+--- Starting Nara Pref Real Data Pull (2025) ---
+Launching browser...
+Discovered 65 unextracted projects from existing dataset.
+Processing batch of 65 projects...
+
+Processing: nara-pref-29006003060520250038 - 大渕池公園　現場技術業務委託（補助都市計画公園事業（防災・安全））　３－１０－Ｂ１－委－５
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Information for コンサル...
+[3] Performing search for ID: 29006003060520250038 and Title: 大渕池公園　現場技術業務委託（補助都市計画公園事業（防災・安...
+  -> Pattern 1: Searching by ankenNo: 29006003060520250038
+Rows found on search results page: 3
+Opening popup...
+Intercepting download stream...
+[Popup] Auto-accepting dialog: 添付ファイルを一括ダウンロードします。
+よろしいですか？
+[ZIP] Downloaded ZIP with 3 entries.
+[ZIP Entry] �����A�������A���D������.zip
+[ZIP Entry] Found nested ZIP: �����A�������A���D������.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 3 entries.
+[ZIP Entry] 20260205-narakoen-3-10-B1-i-5-k.pdf
+[ZIP Entry] 20260205-narakoen-3-10-B1-i-5-s.pdf
+[ZIP Entry] 20260205-narakoen-3-10-B1-i-5-j.pdf
+[ZIP Entry] ���L�d�l���A�}�ʁA�������݌v����.zip
+[ZIP Entry] Found nested ZIP: ���L�d�l���A�}�ʁA�������݌v����.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 5 entries.
+[ZIP Entry] 0192700028SPEC.pdf
+[ZIP Entry] 0292700028SUMM.pdf
+[ZIP Entry] 0392700028POSI.pdf
+[ZIP Entry] 0492700028ESTI.pdf
+[ZIP Entry] 0592700028REPO.pdf
+[ZIP Entry] �������D�Q�����i�m�F�\�������i3-10-B1-��-5�j.doc
+Extracted 40020 chars. Sending to Gemini...
+Success! 23,463,000円（消費税及び地方消費税(計 10%)を含みます。）
+
+Processing: nara-pref-29001013050520250340 - 真目堂川　現場技術業務委託（緊急自然災害防止対策事業債対象事業（臨時・特別））　第　Ｎ－１１３－委－１　号
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Information for コンサル...
+[3] Performing search for ID: 29001013050520250340 and Title: 真目堂川　現場技術業務委託（緊急自然災害防止対策事業債対象事...
+  -> Pattern 1: Searching by ankenNo: 29001013050520250340
+Rows found on search results page: 3
+Opening popup...
+Intercepting download stream...
+[Popup] Auto-accepting dialog: 添付ファイルを一括ダウンロードします。
+よろしいですか？
+[ZIP] Downloaded ZIP with 2 entries.
+[ZIP Entry] �݌v�}����(N-113-��-1).zip
+[ZIP Entry] Found nested ZIP: �݌v�}����(N-113-��-1).zip, extracting recursively...
+[ZIP] Downloaded ZIP with 5 entries.
+[ZIP Entry] 0501300029REPO.pdf
+[ZIP Entry] 0101300029SPEC.pdf
+[ZIP Entry] 0201300029SUMM.pdf
+[ZIP Entry] 0301300029POSI.pdf
+[ZIP Entry] 0401300029ESTI.pdf
+[ZIP Entry] ���D��������(N-113-��-1).zip
+[ZIP Entry] Found nested ZIP: ���D��������(N-113-��-1).zip, extracting recursively...
+[ZIP] Downloaded ZIP with 6 entries.
+[ZIP Entry] 建設工事の請負契約等における電子契約について【奈良土木】.docx
+[ZIP Entry] 【一般】電子入札心得等（委託）R6.10～.pdf
+[ZIP Entry] JOUKENSYO（N-113-委-1）.pdf
+[ZIP Entry] KOUKOKU（N-113-委-1）.pdf
+[ZIP Entry] SETUMEISYO（N-113-委-1）.pdf
+[ZIP Entry] YOUSHIKI（N-113-委-1）.docx
+Extracted 42254 chars. Sending to Gemini...
+Success! 22,957,000円（消費税及び地方消費税(計 10%)を含みます。）
+
+Processing: nara-pref-29001013252020250039 - （都）西九条佐保線　大宮町三丁目地区他用地調査点検等技術業務委託（（仮称）奈良ＩＣ周辺整備補助街路事業）　８－１０－ＡＧ１－用委－１２他
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Information for コンサル...
+[3] Performing search for ID: 29001013252020250039 and Title: （都）西九条佐保線　大宮町三丁目地区他用地調査点検等技術業務...
+  -> Pattern 1: Searching by ankenNo: 29001013252020250039
+Rows found on search results page: 3
+Opening popup...
+Intercepting download stream...
+[Popup] Auto-accepting dialog: 添付ファイルを一括ダウンロードします。
+よろしいですか？
+[ZIP] Downloaded ZIP with 2 entries.
+[ZIP Entry] �݌v�}���y8-10-AG1-�p��-12���z.zip
+[ZIP Entry] Found nested ZIP: �݌v�}���y8-10-AG1-�p��-12���z.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 3 entries.
+[ZIP Entry] ESTI(8-10-AG1-用委-12他).pdf
+[ZIP Entry] POSI(8-10-AG1-用委-12他).pdf
+[ZIP Entry] SPEC(8-10-AG1用委-12他).pdf
+[ZIP Entry] �y8-10-AG1-�p��-12���z.zip
+[ZIP Entry] Found nested ZIP: �y8-10-AG1-�p��-12���z.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 9 entries.
+[ZIP Entry] 入札条件書.pdf
+[ZIP Entry] 配置予定技術者の資格等に関する報告書.doc
+[ZIP Entry] 【8-10-AG1-用委-12他】公告.pdf
+[ZIP Entry] 【8-10-AG1-用委-12他】説明書.pdf
+[ZIP Entry] ★契約保証について（委託）.pdf
+[ZIP Entry] 09電子契約同意書兼メールアドレス確認書.docx
+[ZIP Entry] 競争入札参加資格確認申請書.doc
+[ZIP Entry] 個人情報取扱特記事項.pdf
+[ZIP Entry] 入札者心得.pdf
+Extracted 37637 chars. Sending to Gemini...
+Success! 1,771,000円（消費税及び地方消費税(計 10%)を含む）
+
+Processing: nara-pref-29005007060120250070 - 【訂正】水道施設現場監理業務委託
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Information for コンサル...
+[3] Performing search for ID: 29005007060120250070 and Title: 【訂正】水道施設現場監理業務委託...
+  -> Pattern 1: Searching by ankenNo: 29005007060120250070
+Rows found on search results page: 3
+Opening popup...
+Intercepting download stream...
+[Popup] Auto-accepting dialog: 添付ファイルを一括ダウンロードします。
+よろしいですか？
+[ZIP] Downloaded ZIP with 1 entries.
+[ZIP Entry] �y�����z0227-8-suidoshisetsu-gemba-kanri.zip
+[ZIP Entry] Found nested ZIP: �y�����z0227-8-suidoshisetsu-gemba-kanri.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 16 entries.
+[ZIP Entry] 【訂正】0227-8-suidoshisetsu-gemba-kanri/
+[ZIP Entry] 【訂正】0227-8-suidoshisetsu-gemba-kanri/0227-8-suidoshisetsu-gemba-kanri-setsumeisho/
+[ZIP Entry] 【訂正】0227-8-suidoshisetsu-gemba-kanri/0227-8-suidoshisetsu-gemba-kanri-setsumeisho/入札説明書.pdf
+[ZIP Entry] 【訂正】0227-8-suidoshisetsu-gemba-kanri/0227-8-suidoshisetsu-gemba-kanri-setsumeisho/施工体制確認様式.pdf
+[ZIP Entry] 【訂正】0227-8-suidoshisetsu-gemba-kanri/0227-8-suidoshisetsu-gemba-kanri-setsumeisho/競争入札参加資格確認申請書等.pdf
+[ZIP Entry] 【訂正】0227-8-suidoshisetsu-gemba-kanri/0227-8-suidoshisetsu-gemba-kanri-shiyosho/
+[ZIP Entry] 【訂正】0227-8-suidoshisetsu-gemba-kanri/0227-8-suidoshisetsu-gemba-kanri-shiyosho/0108300003SPEC.pdf
+[ZIP Entry] 【訂正】0227-8-suidoshisetsu-gemba-kanri/0227-8-suidoshisetsu-gemba-kanri-shiyosho/0208300003SUMM.pdf
+[ZIP Entry] 【訂正】0227-8-suidoshisetsu-gemba-kanri/0227-8-suidoshisetsu-gemba-kanri-shiyosho/0308300003ESTI.pdf
+[ZIP Entry] 【訂正】0227-8-suidoshisetsu-gemba-kanri/0227-8-suidoshisetsu-gemba-kanri-shiyosho/0408300003REPO.pdf
+[ZIP Entry] 【訂正】0227-8-suidoshisetsu-gemba-kanri/0227-8-suidoshisetsu-gemba-kanri-yoshiki/
+[ZIP Entry] 【訂正】0227-8-suidoshisetsu-gemba-kanri/0227-8-suidoshisetsu-gemba-kanri-yoshiki/01　入札参加資格確認申請書等.doc
+[ZIP Entry] 【訂正】0227-8-suidoshisetsu-gemba-kanri/0227-8-suidoshisetsu-gemba-kanri-yoshiki/02　施工体制確認様式.xlsx
+[ZIP Entry] 【訂正】0227-8-suidoshisetsu-gemba-kanri/0227-8-suidoshisetsu-gemba-kanri-yoshiki/05　電子契約.zip
+[ZIP Entry] Found nested ZIP: 【訂正】0227-8-suidoshisetsu-gemba-kanri/0227-8-suidoshisetsu-gemba-kanri-yoshiki/05　電子契約.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 3 entries.
+[ZIP Entry] 電子契約/
+[ZIP Entry] 電子契約/densikeiyakudouisyo.docx
+[ZIP Entry] 電子契約/建設工事の請負契約等における電子契約について.docx
+[ZIP Entry] 【訂正】0227-8-suidoshisetsu-gemba-kanri/【訂正】0227-8-suidoshisetsu-gemba-kanri-jyouken.pdf
+[ZIP Entry] 【訂正】0227-8-suidoshisetsu-gemba-kanri/【訂正】0227-8-suidoshisetsu-gemba-kanri-koukoku.pdf
+Extracted 41468 chars. Sending to Gemini...
+Success! 21,571,000円（消費税及び地方消費税（計 10％）を含みます。）
+
+Processing: nara-pref-29005007060120250065 - 浄水場設備工事監理業務委託
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Information for コンサル...
+[3] Performing search for ID: 29005007060120250065 and Title: 浄水場設備工事監理業務委託...
+  -> Pattern 1: Searching by ankenNo: 29005007060120250065
+Rows found on search results page: 3
+Opening popup...
+Intercepting download stream...
+[Popup] Auto-accepting dialog: 添付ファイルを一括ダウンロードします。
+よろしいですか？
+[ZIP] Downloaded ZIP with 1 entries.
+[ZIP Entry] 0227-jyousuijyo-koji-kanri.zip
+[ZIP Entry] Found nested ZIP: 0227-jyousuijyo-koji-kanri.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 16 entries.
+[ZIP Entry] 0227-jyousuijyo-koji-kanri/
+[ZIP Entry] 0227-jyousuijyo-koji-kanri/0227-jyousuijyo-koji-kanri-jyouken.pdf
+[ZIP Entry] 0227-jyousuijyo-koji-kanri/0227-jyousuijyo-koji-kanri-koukoku.pdf
+[ZIP Entry] 0227-jyousuijyo-koji-kanri/0227-jyousuijyo-koji-kanri-setsumeisho/
+[ZIP Entry] 0227-jyousuijyo-koji-kanri/0227-jyousuijyo-koji-kanri-setsumeisho/入札説明書.pdf
+[ZIP Entry] 0227-jyousuijyo-koji-kanri/0227-jyousuijyo-koji-kanri-setsumeisho/施工体制確認書類.pdf
+[ZIP Entry] 0227-jyousuijyo-koji-kanri/0227-jyousuijyo-koji-kanri-setsumeisho/競争入札参加資格確認申請書等.pdf
+[ZIP Entry] 0227-jyousuijyo-koji-kanri/0227-jyousuijyo-koji-kanri-shiyousho/
+[ZIP Entry] 0227-jyousuijyo-koji-kanri/0227-jyousuijyo-koji-kanri-shiyousho/0110100004SPEC.pdf
+[ZIP Entry] 0227-jyousuijyo-koji-kanri/0227-jyousuijyo-koji-kanri-shiyousho/0210100004SUMM.pdf
+[ZIP Entry] 0227-jyousuijyo-koji-kanri/0227-jyousuijyo-koji-kanri-shiyousho/0310100004ESTI.pdf
+[ZIP Entry] 0227-jyousuijyo-koji-kanri/0227-jyousuijyo-koji-kanri-shiyousho/0410100004REPO.pdf
+[ZIP Entry] 0227-jyousuijyo-koji-kanri/0227-jyousuijyo-koji-kanri-youshiki/
+[ZIP Entry] 0227-jyousuijyo-koji-kanri/0227-jyousuijyo-koji-kanri-youshiki/01　競争入札参加資格確認申請書等.doc
+[ZIP Entry] 0227-jyousuijyo-koji-kanri/0227-jyousuijyo-koji-kanri-youshiki/02　施工体制確認書類.xlsx
+[ZIP Entry] 0227-jyousuijyo-koji-kanri/0227-jyousuijyo-koji-kanri-youshiki/03　電子契約.zip
+[ZIP Entry] Found nested ZIP: 0227-jyousuijyo-koji-kanri/0227-jyousuijyo-koji-kanri-youshiki/03　電子契約.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 3 entries.
+[ZIP Entry] 電子契約/
+[ZIP Entry] 電子契約/densikeiyakudouisyo.docx
+[ZIP Entry] 電子契約/建設工事の請負契約等における電子契約について.docx
+Extracted 42526 chars. Sending to Gemini...
+Success! 43,153,000円（消費税及び地方消費税（計 10％）を含む）
+
+Processing: nara-pref-29005007060120250064 - 広域水道センター現場監理業務委託
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Information for コンサル...
+[3] Performing search for ID: 29005007060120250064 and Title: 広域水道センター現場監理業務委託...
+  -> Pattern 1: Searching by ankenNo: 29005007060120250064
+Rows found on search results page: 3
+Opening popup...
+Intercepting download stream...
+[Popup] Auto-accepting dialog: 添付ファイルを一括ダウンロードします。
+よろしいですか？
+[ZIP] Downloaded ZIP with 1 entries.
+[ZIP Entry] 0227-center-koji-kanri.zip
+[ZIP Entry] Found nested ZIP: 0227-center-koji-kanri.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 16 entries.
+[ZIP Entry] 0227-center-koji-kanri/
+[ZIP Entry] 0227-center-koji-kanri/0227-center-koji-kanri-jyouken.pdf
+[ZIP Entry] 0227-center-koji-kanri/0227-center-koji-kanri-koukoku.pdf
+[ZIP Entry] 0227-center-koji-kanri/0227-center-koji-kanri-setsumeisho/
+[ZIP Entry] 0227-center-koji-kanri/0227-center-koji-kanri-setsumeisho/入札説明書.pdf
+[ZIP Entry] 0227-center-koji-kanri/0227-center-koji-kanri-setsumeisho/施工体制確認書類.pdf
+[ZIP Entry] 0227-center-koji-kanri/0227-center-koji-kanri-setsumeisho/競争入札参加資格確認申請書等.pdf
+[ZIP Entry] 0227-center-koji-kanri/0227-center-koji-kanri-shiyousho/
+[ZIP Entry] 0227-center-koji-kanri/0227-center-koji-kanri-shiyousho/0109700001SPEC.pdf
+[ZIP Entry] 0227-center-koji-kanri/0227-center-koji-kanri-shiyousho/0209700001SUMM.pdf
+[ZIP Entry] 0227-center-koji-kanri/0227-center-koji-kanri-shiyousho/0309700001ESTI.pdf
+[ZIP Entry] 0227-center-koji-kanri/0227-center-koji-kanri-shiyousho/0409700001REPO.pdf
+[ZIP Entry] 0227-center-koji-kanri/0227-center-koji-kanri-youshiki/
+[ZIP Entry] 0227-center-koji-kanri/0227-center-koji-kanri-youshiki/01　競争入札参加資格確認申請書等.doc
+[ZIP Entry] 0227-center-koji-kanri/0227-center-koji-kanri-youshiki/02　施工体制確認書類.xlsx
+[ZIP Entry] 0227-center-koji-kanri/0227-center-koji-kanri-youshiki/03　電子契約.zip
+[ZIP Entry] Found nested ZIP: 0227-center-koji-kanri/0227-center-koji-kanri-youshiki/03　電子契約.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 3 entries.
+[ZIP Entry] 電子契約/
+[ZIP Entry] 電子契約/densikeiyakudouisyo.docx
+[ZIP Entry] 電子契約/建設工事の請負契約等における電子契約について.docx
+Extracted 42095 chars. Sending to Gemini...
+Success! 21,571,000円（消費税及び地方消費税（計 10％）を含みます。）
+
+Processing: nara-pref-29005007060120250063 - 桜井浄水場設備工事監理業務委託
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Information for コンサル...
+[3] Performing search for ID: 29005007060120250063 and Title: 桜井浄水場設備工事監理業務委託...
+  -> Pattern 1: Searching by ankenNo: 29005007060120250063
+Rows found on search results page: 3
+Opening popup...
+Intercepting download stream...
+[Popup] Auto-accepting dialog: 添付ファイルを一括ダウンロードします。
+よろしいですか？
+[ZIP] Downloaded ZIP with 1 entries.
+[ZIP Entry] 0227-sakurai-koji-kanri.zip
+[ZIP Entry] Found nested ZIP: 0227-sakurai-koji-kanri.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 16 entries.
+[ZIP Entry] 0227-sakurai-koji-kanri/
+[ZIP Entry] 0227-sakurai-koji-kanri/0227-sakurai-koji-kanri-jyouken.pdf
+[ZIP Entry] 0227-sakurai-koji-kanri/0227-sakurai-koji-kanri-koukoku.pdf
+[ZIP Entry] 0227-sakurai-koji-kanri/0227-sakurai-koji-kanri-setsumeisho/
+[ZIP Entry] 0227-sakurai-koji-kanri/0227-sakurai-koji-kanri-setsumeisho/入札説明書.pdf
+[ZIP Entry] 0227-sakurai-koji-kanri/0227-sakurai-koji-kanri-setsumeisho/施工体制確認書類.pdf
+[ZIP Entry] 0227-sakurai-koji-kanri/0227-sakurai-koji-kanri-setsumeisho/競争入札参加資格確認申請書等.pdf
+[ZIP Entry] 0227-sakurai-koji-kanri/0227-sakurai-koji-kanri-shiyousho/
+[ZIP Entry] 0227-sakurai-koji-kanri/0227-sakurai-koji-kanri-shiyousho/0210400005SPEC.pdf
+[ZIP Entry] 0227-sakurai-koji-kanri/0227-sakurai-koji-kanri-shiyousho/0410400005SUMM.pdf
+[ZIP Entry] 0227-sakurai-koji-kanri/0227-sakurai-koji-kanri-shiyousho/0610400005ESTI.pdf
+[ZIP Entry] 0227-sakurai-koji-kanri/0227-sakurai-koji-kanri-shiyousho/0710400005REPO.pdf
+[ZIP Entry] 0227-sakurai-koji-kanri/0227-sakurai-koji-kanri-youshiki/
+[ZIP Entry] 0227-sakurai-koji-kanri/0227-sakurai-koji-kanri-youshiki/01　競争入札参加資格確認申請書等.doc
+[ZIP Entry] 0227-sakurai-koji-kanri/0227-sakurai-koji-kanri-youshiki/02　施工体制確認書類.xlsx
+[ZIP Entry] 0227-sakurai-koji-kanri/0227-sakurai-koji-kanri-youshiki/03　電子契約.zip
+[ZIP Entry] Found nested ZIP: 0227-sakurai-koji-kanri/0227-sakurai-koji-kanri-youshiki/03　電子契約.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 3 entries.
+[ZIP Entry] 電子契約/
+[ZIP Entry] 電子契約/densikeiyakudouisyo.docx
+[ZIP Entry] 電子契約/建設工事の請負契約等における電子契約について.docx
+Extracted 41906 chars. Sending to Gemini...
+Success! 金42,669,000円（消費税及び地方消費税（計10％）を含みます。）
+
+Processing: nara-pref-29005007060120250073 - 【再】送水管工事監理業務委託１
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Information for コンサル...
+[3] Performing search for ID: 29005007060120250073 and Title: 【再】送水管工事監理業務委託１...
+  -> Pattern 1: Searching by ankenNo: 29005007060120250073
+Rows found on search results page: 3
+Opening popup...
+Intercepting download stream...
+[Popup] Auto-accepting dialog: 添付ファイルを一括ダウンロードします。
+よろしいですか？
+[ZIP] Downloaded ZIP with 1 entries.
+[ZIP Entry] 0227-3-sosuikan-koji-kanri-1.zip
+[ZIP Entry] Found nested ZIP: 0227-3-sosuikan-koji-kanri-1.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 16 entries.
+[ZIP Entry] 0227-3-sosuikan-koji-kanri-1/
+[ZIP Entry] 0227-3-sosuikan-koji-kanri-1/0227-3-sosuikan-koji-kanri-1-jyouken.pdf
+[ZIP Entry] 0227-3-sosuikan-koji-kanri-1/0227-3-sosuikan-koji-kanri-1-koukoku.pdf
+[ZIP Entry] 0227-3-sosuikan-koji-kanri-1/0227-3-sosuikan-koji-kanri-1-setsumeisho/
+[ZIP Entry] 0227-3-sosuikan-koji-kanri-1/0227-3-sosuikan-koji-kanri-1-setsumeisho/入札説明書.pdf
+[ZIP Entry] 0227-3-sosuikan-koji-kanri-1/0227-3-sosuikan-koji-kanri-1-setsumeisho/施工体制確認様式.pdf
+[ZIP Entry] 0227-3-sosuikan-koji-kanri-1/0227-3-sosuikan-koji-kanri-1-setsumeisho/競争入札参加資格確認申請書等.pdf
+[ZIP Entry] 0227-3-sosuikan-koji-kanri-1/0227-3-sosuikan-koji-kanri-1-shiyosho/
+[ZIP Entry] 0227-3-sosuikan-koji-kanri-1/0227-3-sosuikan-koji-kanri-1-shiyosho/01 08900001SPEC.pdf
+[ZIP Entry] 0227-3-sosuikan-koji-kanri-1/0227-3-sosuikan-koji-kanri-1-shiyosho/02 08900001SUMM.pdf
+[ZIP Entry] 0227-3-sosuikan-koji-kanri-1/0227-3-sosuikan-koji-kanri-1-shiyosho/03 08900001ESTI.pdf
+[ZIP Entry] 0227-3-sosuikan-koji-kanri-1/0227-3-sosuikan-koji-kanri-1-shiyosho/04 08900001REPO.pdf
+[ZIP Entry] 0227-3-sosuikan-koji-kanri-1/0227-3-sosuikan-koji-kanri-1-yoshiki/
+[ZIP Entry] 0227-3-sosuikan-koji-kanri-1/0227-3-sosuikan-koji-kanri-1-yoshiki/01　入札参加資格確認申請書等.doc
+[ZIP Entry] 0227-3-sosuikan-koji-kanri-1/0227-3-sosuikan-koji-kanri-1-yoshiki/02　施工体制確認様式.xlsx
+[ZIP Entry] 0227-3-sosuikan-koji-kanri-1/0227-3-sosuikan-koji-kanri-1-yoshiki/05　電子契約.zip
+[ZIP Entry] Found nested ZIP: 0227-3-sosuikan-koji-kanri-1/0227-3-sosuikan-koji-kanri-1-yoshiki/05　電子契約.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 3 entries.
+[ZIP Entry] 電子契約/
+[ZIP Entry] 電子契約/densikeiyakudouisyo.docx
+[ZIP Entry] 電子契約/建設工事の請負契約等における電子契約について.docx
+Extracted 42426 chars. Sending to Gemini...
+Success! 43,153,000円（消費税及び地方消費税（計10％）を含みます。）
+
+Processing: nara-pref-29005007060120250062 - 安堵連絡管整備事業工事監理業務委託
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Information for コンサル...
+[3] Performing search for ID: 29005007060120250062 and Title: 安堵連絡管整備事業工事監理業務委託...
+  -> Pattern 1: Searching by ankenNo: 29005007060120250062
+Rows found on search results page: 3
+Opening popup...
+Intercepting download stream...
+[Popup] Auto-accepting dialog: 添付ファイルを一括ダウンロードします。
+よろしいですか？
+[ZIP] Downloaded ZIP with 1 entries.
+[ZIP Entry] 0227-2-ando-renrakukan-kanrigyomu.zip
+[ZIP Entry] Found nested ZIP: 0227-2-ando-renrakukan-kanrigyomu.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 16 entries.
+[ZIP Entry] 0227-2-ando-renrakukan-kanrigyomu/
+[ZIP Entry] 0227-2-ando-renrakukan-kanrigyomu/0227-2-ando-renrakukan-kanrigyomu-jyouken.pdf
+[ZIP Entry] 0227-2-ando-renrakukan-kanrigyomu/0227-2-ando-renrakukan-kanrigyomu-koukoku.pdf
+[ZIP Entry] 0227-2-ando-renrakukan-kanrigyomu/0227-2-ando-renrakukan-kanrigyomu-setsumeisho/
+[ZIP Entry] 0227-2-ando-renrakukan-kanrigyomu/0227-2-ando-renrakukan-kanrigyomu-setsumeisho/入札説明書.pdf
+[ZIP Entry] 0227-2-ando-renrakukan-kanrigyomu/0227-2-ando-renrakukan-kanrigyomu-setsumeisho/施工体制確認様式.pdf
+[ZIP Entry] 0227-2-ando-renrakukan-kanrigyomu/0227-2-ando-renrakukan-kanrigyomu-setsumeisho/競争入札参加資格確認申請書等.pdf
+[ZIP Entry] 0227-2-ando-renrakukan-kanrigyomu/0227-2-ando-renrakukan-kanrigyomu-shiyosho/
+[ZIP Entry] 0227-2-ando-renrakukan-kanrigyomu/0227-2-ando-renrakukan-kanrigyomu-shiyosho/0108600002SPEC.pdf
+[ZIP Entry] 0227-2-ando-renrakukan-kanrigyomu/0227-2-ando-renrakukan-kanrigyomu-shiyosho/0208600002SUMM.pdf
+[ZIP Entry] 0227-2-ando-renrakukan-kanrigyomu/0227-2-ando-renrakukan-kanrigyomu-shiyosho/0308600002ESTI .pdf
+[ZIP Entry] 0227-2-ando-renrakukan-kanrigyomu/0227-2-ando-renrakukan-kanrigyomu-shiyosho/0408600002REPO.pdf
+[ZIP Entry] 0227-2-ando-renrakukan-kanrigyomu/0227-2-ando-renrakukan-kanrigyomu-yoshiki/
+[ZIP Entry] 0227-2-ando-renrakukan-kanrigyomu/0227-2-ando-renrakukan-kanrigyomu-yoshiki/01　入札参加資格確認申請書等.doc
+[ZIP Entry] 0227-2-ando-renrakukan-kanrigyomu/0227-2-ando-renrakukan-kanrigyomu-yoshiki/02　施工体制確認様式.xlsx
+[ZIP Entry] 0227-2-ando-renrakukan-kanrigyomu/0227-2-ando-renrakukan-kanrigyomu-yoshiki/05　電子契約.zip
+[ZIP Entry] Found nested ZIP: 0227-2-ando-renrakukan-kanrigyomu/0227-2-ando-renrakukan-kanrigyomu-yoshiki/05　電子契約.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 3 entries.
+[ZIP Entry] 電子契約/
+[ZIP Entry] 電子契約/densikeiyakudouisyo.docx
+[ZIP Entry] 電子契約/建設工事の請負契約等における電子契約について.docx
+Extracted 42114 chars. Sending to Gemini...
+Success! 金43,153,000円（消費税及び地方消費税（計 10％）を含みます。）
+
+Processing: nara-pref-29005007060120250066 - 送水施設設備工事監理業務委託
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Information for コンサル...
+[3] Performing search for ID: 29005007060120250066 and Title: 送水施設設備工事監理業務委託...
+  -> Pattern 1: Searching by ankenNo: 29005007060120250066
+Rows found on search results page: 3
+Opening popup...
+Intercepting download stream...
+[Popup] Auto-accepting dialog: 添付ファイルを一括ダウンロードします。
+よろしいですか？
+[ZIP] Downloaded ZIP with 1 entries.
+[ZIP Entry] 0227-sousui-koji-kanri.zip
+[ZIP Entry] Found nested ZIP: 0227-sousui-koji-kanri.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 16 entries.
+[ZIP Entry] 0227-sousui-koji-kanri/
+[ZIP Entry] 0227-sousui-koji-kanri/0227-sousui-koji-kanri-jyouken.pdf
+[ZIP Entry] 0227-sousui-koji-kanri/0227-sousui-koji-kanri-koukoku.pdf
+[ZIP Entry] 0227-sousui-koji-kanri/0227-sousui-koji-kanri-setsumeisho/
+[ZIP Entry] 0227-sousui-koji-kanri/0227-sousui-koji-kanri-setsumeisho/入札説明書.pdf
+[ZIP Entry] 0227-sousui-koji-kanri/0227-sousui-koji-kanri-setsumeisho/施工体制確認書類.pdf
+[ZIP Entry] 0227-sousui-koji-kanri/0227-sousui-koji-kanri-setsumeisho/競争入札参加資格確認申請書等.pdf
+[ZIP Entry] 0227-sousui-koji-kanri/0227-sousui-koji-kanri-shiyousho/
+[ZIP Entry] 0227-sousui-koji-kanri/0227-sousui-koji-kanri-shiyousho/0110100003SPEC.pdf
+[ZIP Entry] 0227-sousui-koji-kanri/0227-sousui-koji-kanri-shiyousho/0210100003SUMM.pdf
+[ZIP Entry] 0227-sousui-koji-kanri/0227-sousui-koji-kanri-shiyousho/0310100003ESTI.pdf
+[ZIP Entry] 0227-sousui-koji-kanri/0227-sousui-koji-kanri-shiyousho/0410100003REPO.pdf
+[ZIP Entry] 0227-sousui-koji-kanri/0227-sousui-koji-kanri-youshiki/
+[ZIP Entry] 0227-sousui-koji-kanri/0227-sousui-koji-kanri-youshiki/01　競争入札参加資格確認申請書等.doc
+[ZIP Entry] 0227-sousui-koji-kanri/0227-sousui-koji-kanri-youshiki/02　施工体制確認書類.xlsx
+[ZIP Entry] 0227-sousui-koji-kanri/0227-sousui-koji-kanri-youshiki/03　電子契約.zip
+[ZIP Entry] Found nested ZIP: 0227-sousui-koji-kanri/0227-sousui-koji-kanri-youshiki/03　電子契約.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 3 entries.
+[ZIP Entry] 電子契約/
+[ZIP Entry] 電子契約/densikeiyakudouisyo.docx
+[ZIP Entry] 電子契約/建設工事の請負契約等における電子契約について.docx
+Extracted 42325 chars. Sending to Gemini...
+Success! 金４３，１５３，０００円（消費税及び地方消費税（計 10％）を含みます。）
+
+Processing: nara-pref-29001013052520250190 - 萩原地区　斜面対策工詳細設計業務委託（防災・安全交付金事業（南部・東部）（急傾斜））　第　５３－１２－委１　号
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Results for コンサル...
+[3] Performing search for ID: 29001013052520250190 and Title: 萩原地区　斜面対策工詳細設計業務委託（防災・安全交付金事業（...
+  -> Pattern 1: Searching by ankenNo: 29001013052520250190
+Rows found on search results page: 102
+Opening popup...
+Intercepting download stream...
+[Popup] Auto-accepting dialog: 添付ファイルを一括ダウンロードします。
+よろしいですか？
+[ZIP] Downloaded ZIP with 1 entries.
+[ZIP Entry] �J�D�^�i��T�R�|�P�Q�|�ςP���j.pdf
+Extracted 1013 chars. Sending to Gemini...
+Success! ５，８３０，０００円 （消費税等抜き ５，３００，０００円）
+
+Processing: nara-pref-29001013060020250230 - 【中止】香芝高校受水槽及び消火水槽改修工事　第７－３６号
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Results for 建築...
+[3] Performing search for ID: 29001013060020250230 and Title: 【中止】香芝高校受水槽及び消火水槽改修工事　第７－３６号...
+  -> Pattern 1: Searching by ankenNo: 29001013060020250230
+Rows found on search results page: 102
+Opening popup...
+Failed text extraction for nara-pref-29001013060020250230.
+
+Processing: nara-pref-29001013052020250262 - 県営畑地帯総合整備事業　八田地区　小島井堰設備改良工事　第Ｒ７Ｂ１工１２号
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Results for 建築...
+[3] Performing search for ID: 29001013052020250262 and Title: 県営畑地帯総合整備事業　八田地区　小島井堰設備改良工事　第Ｒ...
+  -> Pattern 1: Searching by ankenNo: 29001013052020250262
+Rows found on search results page: 102
+Opening popup...
+Intercepting download stream...
+[Popup] Auto-accepting dialog: 添付ファイルを一括ダウンロードします。
+よろしいですか？
+[ZIP] Downloaded ZIP with 1 entries.
+[ZIP Entry] �J�D�^�i�q�V�a�P�H�P�Q���j.pdf
+Extracted 466 chars. Sending to Gemini...
+Success! 40,700,000円（消費税等抜き37,000,000円）
+
+Processing: nara-pref-29001013060020250233 - 【中止】香芝高校受水槽及び消火水槽改修工事監理業務　委（監）第７－２９号
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Results for コンサル...
+[3] Performing search for ID: 29001013060020250233 and Title: 【中止】香芝高校受水槽及び消火水槽改修工事監理業務　委（監）...
+  -> Pattern 1: Searching by ankenNo: 29001013060020250233
+Rows found on search results page: 102
+Opening popup...
+Failed text extraction for nara-pref-29001013060020250233.
+
+Processing: nara-pref-29005007060120250060 - 【中止】御所浄水場電気棟改修工事（設備工事）
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Information for 建築...
+[3] Performing search for ID: 29005007060120250060 and Title: 【中止】御所浄水場電気棟改修工事（設備工事）...
+  -> Pattern 1: Searching by ankenNo: 29005007060120250060
+Rows found on search results page: 3
+Opening popup...
+Intercepting download stream...
+[Popup] Auto-accepting dialog: 添付ファイルを一括ダウンロードします。
+よろしいですか？
+[ZIP] Downloaded ZIP with 1 entries.
+[ZIP Entry] 0226-gose-denkitoukoji-setsubi.zip
+[ZIP Entry] Found nested ZIP: 0226-gose-denkitoukoji-setsubi.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 26 entries.
+[ZIP Entry] 0226-gose-denkitoukoji-setsubi/
+[ZIP Entry] 0226-gose-denkitoukoji-setsubi/0226-gose-denkitoukoji-setsubi-jyouken.pdf
+[ZIP Entry] 0226-gose-denkitoukoji-setsubi/0226-gose-denkitoukoji-setsubi-koukoku.pdf
+[ZIP Entry] 0226-gose-denkitoukoji-setsubi/0226-gose-denkitoukoji-setsubi-setsumeisho/
+[ZIP Entry] 0226-gose-denkitoukoji-setsubi/0226-gose-denkitoukoji-setsubi-setsumeisho/入札説明書.pdf
+[ZIP Entry] 0226-gose-denkitoukoji-setsubi/0226-gose-denkitoukoji-setsubi-setsumeisho/別表 配置予定技術者.pdf
+[ZIP Entry] 0226-gose-denkitoukoji-setsubi/0226-gose-denkitoukoji-setsubi-setsumeisho/技術提案書【事後】.pdf
+[ZIP Entry] 0226-gose-denkitoukoji-setsubi/0226-gose-denkitoukoji-setsubi-setsumeisho/現場確認申込書.pdf
+[ZIP Entry] 0226-gose-denkitoukoji-setsubi/0226-gose-denkitoukoji-setsubi-setsumeisho/競争入札参加資格確認申請書.pdf
+[ZIP Entry] 0226-gose-denkitoukoji-setsubi/0226-gose-denkitoukoji-setsubi-setsumeisho/落札者決定基準.pdf
+[ZIP Entry] 0226-gose-denkitoukoji-setsubi/0226-gose-denkitoukoji-setsubi-setsumeisho/電子入札参加申込書.pdf
+[ZIP Entry] 0226-gose-denkitoukoji-setsubi/0226-gose-denkitoukoji-setsubi-shiyousho/
+[ZIP Entry] 0226-gose-denkitoukoji-setsubi/0226-gose-denkitoukoji-setsubi-shiyousho/01000082COMM.pdf
+[ZIP Entry] 0226-gose-denkitoukoji-setsubi/0226-gose-denkitoukoji-setsubi-shiyousho/02000082SPEC.pdf
+[ZIP Entry] 0226-gose-denkitoukoji-setsubi/0226-gose-denkitoukoji-setsubi-shiyousho/03000082DRAW.pdf
+[ZIP Entry] 0226-gose-denkitoukoji-setsubi/0226-gose-denkitoukoji-setsubi-shiyousho/04000082POSI.pdf
+[ZIP Entry] 0226-gose-denkitoukoji-setsubi/0226-gose-denkitoukoji-setsubi-shiyousho/05000082EST.pdf
+[ZIP Entry] 0226-gose-denkitoukoji-setsubi/0226-gose-denkitoukoji-setsubi-youshiki/
+[ZIP Entry] 0226-gose-denkitoukoji-setsubi/0226-gose-denkitoukoji-setsubi-youshiki/01　現場確認申込書.xls
+[ZIP Entry] 0226-gose-denkitoukoji-setsubi/0226-gose-denkitoukoji-setsubi-youshiki/02　電子入札参加申込書.doc
+[ZIP Entry] 0226-gose-denkitoukoji-setsubi/0226-gose-denkitoukoji-setsubi-youshiki/03　【総評】入札金額の内訳書の様式・記載例について（単体）.zip
+[ZIP Entry] Found nested ZIP: 0226-gose-denkitoukoji-setsubi/0226-gose-denkitoukoji-setsubi-youshiki/03　【総評】入札金額の内訳書の様式・記載例について（単体）.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 5 entries.
+[ZIP Entry] 03　【総評】入札金額の内訳書の様式・記載例について（単体）/
+[ZIP Entry] 03　【総評】入札金額の内訳書の様式・記載例について（単体）/01　【総評】入札金額の内訳書の様式・記載例について.docx
+[ZIP Entry] 03　【総評】入札金額の内訳書の様式・記載例について（単体）/02　工事費内訳書及び低入札価格調査意向確認書（別記様式１）.xlsx
+[ZIP Entry] 03　【総評】入札金額の内訳書の様式・記載例について（単体）/03　低入札価格調査辞退届.docx
+[ZIP Entry] 03　【総評】入札金額の内訳書の様式・記載例について（単体）/記載例（企業団は工事番号を設定しておりません）.pdf
+[ZIP Entry] 0226-gose-denkitoukoji-setsubi/0226-gose-denkitoukoji-setsubi-youshiki/04　技術提案評価型【事後】.xls
+[ZIP Entry] 0226-gose-denkitoukoji-setsubi/0226-gose-denkitoukoji-setsubi-youshiki/05　競争入札参加資格確認申請書.doc
+[ZIP Entry] 0226-gose-denkitoukoji-setsubi/0226-gose-denkitoukoji-setsubi-youshiki/06　監理技術者の兼務等に関する様式等.zip
+[ZIP Entry] Found nested ZIP: 0226-gose-denkitoukoji-setsubi/0226-gose-denkitoukoji-setsubi-youshiki/06　監理技術者の兼務等に関する様式等.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 5 entries.
+[ZIP Entry] 監理技術者の兼務等に関する様式等/
+[ZIP Entry] 監理技術者の兼務等に関する様式等/参考様式1.doc
+[ZIP Entry] 監理技術者の兼務等に関する様式等/参考様式2.doc
+[ZIP Entry] 監理技術者の兼務等に関する様式等/参考様式3.doc
+[ZIP Entry] 監理技術者の兼務等に関する様式等/監理技術者の兼務等に関する様式等.docx
+[ZIP Entry] 0226-gose-denkitoukoji-setsubi/0226-gose-denkitoukoji-setsubi-youshiki/07　工期又は請負代金の額に影響を及ぼす事象に関する情報の通知.zip
+[ZIP Entry] Found nested ZIP: 0226-gose-denkitoukoji-setsubi/0226-gose-denkitoukoji-setsubi-youshiki/07　工期又は請負代金の額に影響を及ぼす事象に関する情報の通知.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 4 entries.
+[ZIP Entry] 工期又は請負代金の額に影響を及ぼす事象に関する情報の通知/
+[ZIP Entry] 工期又は請負代金の額に影響を及ぼす事象に関する情報の通知/工期又は請負代金の額に影響を及ぼす事象に関する情報の通知.docx
+[ZIP Entry] 工期又は請負代金の額に影響を及ぼす事象に関する情報の通知/通知書様式.docx
+[ZIP Entry] 工期又は請負代金の額に影響を及ぼす事象に関する情報の通知/通知書（記載例）.pdf
+[ZIP Entry] 0226-gose-denkitoukoji-setsubi/0226-gose-denkitoukoji-setsubi-youshiki/08　電子契約.zip
+[ZIP Entry] Found nested ZIP: 0226-gose-denkitoukoji-setsubi/0226-gose-denkitoukoji-setsubi-youshiki/08　電子契約.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 3 entries.
+[ZIP Entry] 電子契約/
+[ZIP Entry] 電子契約/densikeiyakudouisyo.docx
+[ZIP Entry] 電子契約/建設工事の請負契約等における電子契約について.docx
+Extracted 191461 chars. Sending to Gemini...
+Success! 74,558,000円（消費税及び地方消費税（計10％）を含みます。）
+
+Processing: nara-pref-29005007060120250058 - 【中止】御所浄水場電気棟改修工事（建築工事）
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Information for 建築...
+[3] Performing search for ID: 29005007060120250058 and Title: 【中止】御所浄水場電気棟改修工事（建築工事）...
+  -> Pattern 1: Searching by ankenNo: 29005007060120250058
+Rows found on search results page: 3
+Opening popup...
+Intercepting download stream...
+[Popup] Auto-accepting dialog: 添付ファイルを一括ダウンロードします。
+よろしいですか？
+[ZIP] Downloaded ZIP with 1 entries.
+[ZIP Entry] 0226-gose-denkitoukoji-kenchiku.zip
+[ZIP Entry] Found nested ZIP: 0226-gose-denkitoukoji-kenchiku.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 27 entries.
+[ZIP Entry] 0226-gose-denkitoukoji-kenchiku/
+[ZIP Entry] 0226-gose-denkitoukoji-kenchiku/0226-gose-denkitoukoji-kenchiku-jyoukensho.pdf
+[ZIP Entry] 0226-gose-denkitoukoji-kenchiku/0226-gose-denkitoukoji-kenchiku-koukoku.pdf
+[ZIP Entry] 0226-gose-denkitoukoji-kenchiku/0226-gose-denkitoukoji-kenchiku-setsumeisho/
+[ZIP Entry] 0226-gose-denkitoukoji-kenchiku/0226-gose-denkitoukoji-kenchiku-setsumeisho/【差し替え】技術提案書【事後】.pdf
+[ZIP Entry] 0226-gose-denkitoukoji-kenchiku/0226-gose-denkitoukoji-kenchiku-setsumeisho/入札.pdf
+[ZIP Entry] 0226-gose-denkitoukoji-kenchiku/0226-gose-denkitoukoji-kenchiku-setsumeisho/入札説明書.pdf
+[ZIP Entry] 0226-gose-denkitoukoji-kenchiku/0226-gose-denkitoukoji-kenchiku-setsumeisho/別表 配置予定技術者.pdf
+[ZIP Entry] 0226-gose-denkitoukoji-kenchiku/0226-gose-denkitoukoji-kenchiku-setsumeisho/現場確認申込書.pdf
+[ZIP Entry] 0226-gose-denkitoukoji-kenchiku/0226-gose-denkitoukoji-kenchiku-setsumeisho/競争入札参加資格確認申請書.pdf
+[ZIP Entry] 0226-gose-denkitoukoji-kenchiku/0226-gose-denkitoukoji-kenchiku-setsumeisho/落札者決定基準.pdf
+[ZIP Entry] 0226-gose-denkitoukoji-kenchiku/0226-gose-denkitoukoji-kenchiku-setsumeisho/電子入札参加申込書.pdf
+[ZIP Entry] 0226-gose-denkitoukoji-kenchiku/0226-gose-denkitoukoji-kenchiku-shiyousho/
+[ZIP Entry] 0226-gose-denkitoukoji-kenchiku/0226-gose-denkitoukoji-kenchiku-shiyousho/0100000080COMM.pdf
+[ZIP Entry] 0226-gose-denkitoukoji-kenchiku/0226-gose-denkitoukoji-kenchiku-shiyousho/0200000080SPEC.pdf
+[ZIP Entry] 0226-gose-denkitoukoji-kenchiku/0226-gose-denkitoukoji-kenchiku-shiyousho/0300000080DRAW.pdf
+[ZIP Entry] 0226-gose-denkitoukoji-kenchiku/0226-gose-denkitoukoji-kenchiku-shiyousho/0400000080POSI.pdf
+[ZIP Entry] 0226-gose-denkitoukoji-kenchiku/0226-gose-denkitoukoji-kenchiku-shiyousho/0500000080ESTI.pdf
+[ZIP Entry] 0226-gose-denkitoukoji-kenchiku/0226-gose-denkitoukoji-kenchiku-youshiki/
+[ZIP Entry] 0226-gose-denkitoukoji-kenchiku/0226-gose-denkitoukoji-kenchiku-youshiki/01　現場確認申込書（御所浄水場電気棟改修工事（建築工事））.xls
+[ZIP Entry] 0226-gose-denkitoukoji-kenchiku/0226-gose-denkitoukoji-kenchiku-youshiki/02　電子入札参加申込書（御所浄水場電気棟改修工事（建築工事））.doc
+[ZIP Entry] 0226-gose-denkitoukoji-kenchiku/0226-gose-denkitoukoji-kenchiku-youshiki/03　【総評】入札金額の内訳書の様式・記載例について（単体）.zip
+[ZIP Entry] Found nested ZIP: 0226-gose-denkitoukoji-kenchiku/0226-gose-denkitoukoji-kenchiku-youshiki/03　【総評】入札金額の内訳書の様式・記載例について（単体）.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 5 entries.
+[ZIP Entry] 03　【総評】入札金額の内訳書の様式・記載例について（単体）/
+[ZIP Entry] 03　【総評】入札金額の内訳書の様式・記載例について（単体）/01　【総評】入札金額の内訳書の様式・記載例について.docx
+[ZIP Entry] 03　【総評】入札金額の内訳書の様式・記載例について（単体）/02　工事費内訳書及び低入札価格調査意向確認書（別記様式１）.xlsx
+[ZIP Entry] 03　【総評】入札金額の内訳書の様式・記載例について（単体）/03　低入札価格調査辞退届.docx
+[ZIP Entry] 03　【総評】入札金額の内訳書の様式・記載例について（単体）/記載例（企業団は工事番号を設定しておりません）.pdf
+[ZIP Entry] 0226-gose-denkitoukoji-kenchiku/0226-gose-denkitoukoji-kenchiku-youshiki/04　【差し替え】技術提案評価型【事後】（御所浄水場電気棟改修工事（建築工事））.xls
+[ZIP Entry] 0226-gose-denkitoukoji-kenchiku/0226-gose-denkitoukoji-kenchiku-youshiki/05　競争入札参加資格確認申請書（御所浄水場電気棟改修工事（建築工事））.doc
+[ZIP Entry] 0226-gose-denkitoukoji-kenchiku/0226-gose-denkitoukoji-kenchiku-youshiki/06　監理技術者の兼務等に関する様式等.zip
+[ZIP Entry] Found nested ZIP: 0226-gose-denkitoukoji-kenchiku/0226-gose-denkitoukoji-kenchiku-youshiki/06　監理技術者の兼務等に関する様式等.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 5 entries.
+[ZIP Entry] 監理技術者の兼務等に関する様式等/
+[ZIP Entry] 監理技術者の兼務等に関する様式等/参考様式1.doc
+[ZIP Entry] 監理技術者の兼務等に関する様式等/参考様式2.doc
+[ZIP Entry] 監理技術者の兼務等に関する様式等/参考様式3.doc
+[ZIP Entry] 監理技術者の兼務等に関する様式等/監理技術者の兼務等に関する様式等.docx
+[ZIP Entry] 0226-gose-denkitoukoji-kenchiku/0226-gose-denkitoukoji-kenchiku-youshiki/07　工期又は請負代金の額に影響を及ぼす事象に関する情報の通知.zip
+[ZIP Entry] Found nested ZIP: 0226-gose-denkitoukoji-kenchiku/0226-gose-denkitoukoji-kenchiku-youshiki/07　工期又は請負代金の額に影響を及ぼす事象に関する情報の通知.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 4 entries.
+[ZIP Entry] 工期又は請負代金の額に影響を及ぼす事象に関する情報の通知/
+[ZIP Entry] 工期又は請負代金の額に影響を及ぼす事象に関する情報の通知/工期又は請負代金の額に影響を及ぼす事象に関する情報の通知.docx
+[ZIP Entry] 工期又は請負代金の額に影響を及ぼす事象に関する情報の通知/通知書様式.docx
+[ZIP Entry] 工期又は請負代金の額に影響を及ぼす事象に関する情報の通知/通知書（記載例）.pdf
+[ZIP Entry] 0226-gose-denkitoukoji-kenchiku/0226-gose-denkitoukoji-kenchiku-youshiki/08　電子契約.zip
+[ZIP Entry] Found nested ZIP: 0226-gose-denkitoukoji-kenchiku/0226-gose-denkitoukoji-kenchiku-youshiki/08　電子契約.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 3 entries.
+[ZIP Entry] 電子契約/
+[ZIP Entry] 電子契約/densikeiyakudouisyo.docx
+[ZIP Entry] 電子契約/建設工事の請負契約等における電子契約について.docx
+Extracted 215168 chars. Sending to Gemini...
+Success! 34,287,000円（消費税及び地方消費税（計１０％）を含む）
+
+Processing: nara-pref-29001013060020250234 - 【中止】ヘリポート管理事務所受変電設備等更新及び中水設備改修工事監理業務　委（監）第７－３３号
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Results for コンサル...
+[3] Performing search for ID: 29001013060020250234 and Title: 【中止】ヘリポート管理事務所受変電設備等更新及び中水設備改修...
+  -> Pattern 1: Searching by ankenNo: 29001013060020250234
+Rows found on search results page: 102
+Opening popup...
+Failed text extraction for nara-pref-29001013060020250234.
+
+Processing: nara-pref-29001013305020250061 - 佐保川幹線管渠内修繕詳細設計委託（その１）　Ｒ７浄委第１６号
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Results for コンサル...
+[3] Performing search for ID: 29001013305020250061 and Title: 佐保川幹線管渠内修繕詳細設計委託（その１）　Ｒ７浄委第１６号...
+  -> Pattern 1: Searching by ankenNo: 29001013305020250061
+Rows found on search results page: 102
+Opening popup...
+Intercepting download stream...
+[Popup] Auto-accepting dialog: 添付ファイルを一括ダウンロードします。
+よろしいですか？
+[ZIP] Downloaded ZIP with 1 entries.
+[ZIP Entry] R7ji16-�J�D�^.pdf
+Extracted 684 chars. Sending to Gemini...
+Success! ７，５３５，０００円 （消費税等抜き ６，８５０，０００円）
+
+Processing: nara-pref-29001013305020250060 - 佐保川幹線管渠内修繕詳細設計委託（その２）　Ｒ７浄委第２０号
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Results for コンサル...
+[3] Performing search for ID: 29001013305020250060 and Title: 佐保川幹線管渠内修繕詳細設計委託（その２）　Ｒ７浄委第２０号...
+  -> Pattern 1: Searching by ankenNo: 29001013305020250060
+Rows found on search results page: 102
+Opening popup...
+Intercepting download stream...
+[Popup] Auto-accepting dialog: 添付ファイルを一括ダウンロードします。
+よろしいですか？
+[ZIP] Downloaded ZIP with 1 entries.
+[ZIP Entry] R7ji16-�J�D�^.pdf
+Extracted 684 chars. Sending to Gemini...
+Success! 7,535,000円 （消費税等抜き 6,850,000円）
+
+Processing: nara-pref-29005007060120250059 - 御所浄水場２系ろ過池No.１～６逆洗弁更新工事
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Information for 建築...
+[3] Performing search for ID: 29005007060120250059 and Title: 御所浄水場２系ろ過池No.１～６逆洗弁更新工事...
+  -> Pattern 1: Searching by ankenNo: 29005007060120250059
+Rows found on search results page: 3
+Opening popup...
+Intercepting download stream...
+[Popup] Auto-accepting dialog: 添付ファイルを一括ダウンロードします。
+よろしいですか？
+[ZIP] Downloaded ZIP with 1 entries.
+[ZIP Entry] 0225-2kei-rokachi-gyakusenben-koshinkoji.zip
+[ZIP Entry] Found nested ZIP: 0225-2kei-rokachi-gyakusenben-koshinkoji.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 29 entries.
+[ZIP Entry] 0225-2kei-rokachi-gyakusenben-koshinkoji/
+[ZIP Entry] 0225-2kei-rokachi-gyakusenben-koshinkoji/0225-2kei-rokachi-gyakusenben-koshinkoji-joukensho.pdf
+[ZIP Entry] 0225-2kei-rokachi-gyakusenben-koshinkoji/0225-2kei-rokachi-gyakusenben-koshinkoji-koukoku.pdf
+[ZIP Entry] 0225-2kei-rokachi-gyakusenben-koshinkoji/0225-2kei-rokachi-gyakusenben-koshinkoji-setsumeisho/
+[ZIP Entry] 0225-2kei-rokachi-gyakusenben-koshinkoji/0225-2kei-rokachi-gyakusenben-koshinkoji-setsumeisho/入札説明書.pdf
+[ZIP Entry] 0225-2kei-rokachi-gyakusenben-koshinkoji/0225-2kei-rokachi-gyakusenben-koshinkoji-setsumeisho/別表 配置予定技術者.pdf
+[ZIP Entry] 0225-2kei-rokachi-gyakusenben-koshinkoji/0225-2kei-rokachi-gyakusenben-koshinkoji-setsumeisho/技術提案書【事後】.pdf
+[ZIP Entry] 0225-2kei-rokachi-gyakusenben-koshinkoji/0225-2kei-rokachi-gyakusenben-koshinkoji-setsumeisho/現場確認申込書.pdf
+[ZIP Entry] 0225-2kei-rokachi-gyakusenben-koshinkoji/0225-2kei-rokachi-gyakusenben-koshinkoji-setsumeisho/競争入札参加資格確認申請書.pdf
+[ZIP Entry] 0225-2kei-rokachi-gyakusenben-koshinkoji/0225-2kei-rokachi-gyakusenben-koshinkoji-setsumeisho/落札者決定基準.pdf
+[ZIP Entry] 0225-2kei-rokachi-gyakusenben-koshinkoji/0225-2kei-rokachi-gyakusenben-koshinkoji-setsumeisho/電子入札参加申込書.pdf
+[ZIP Entry] 0225-2kei-rokachi-gyakusenben-koshinkoji/0225-2kei-rokachi-gyakusenben-koshinkoji-shiyousho/
+[ZIP Entry] 0225-2kei-rokachi-gyakusenben-koshinkoji/0225-2kei-rokachi-gyakusenben-koshinkoji-shiyousho/0112200006COMM.pdf
+[ZIP Entry] 0225-2kei-rokachi-gyakusenben-koshinkoji/0225-2kei-rokachi-gyakusenben-koshinkoji-shiyousho/0212200006SPEC.pdf
+[ZIP Entry] 0225-2kei-rokachi-gyakusenben-koshinkoji/0225-2kei-rokachi-gyakusenben-koshinkoji-shiyousho/0312200006DRAW.pdf
+[ZIP Entry] 0225-2kei-rokachi-gyakusenben-koshinkoji/0225-2kei-rokachi-gyakusenben-koshinkoji-shiyousho/0412200006SUMM.pdf
+[ZIP Entry] 0225-2kei-rokachi-gyakusenben-koshinkoji/0225-2kei-rokachi-gyakusenben-koshinkoji-shiyousho/0512200006POSI.pdf
+[ZIP Entry] 0225-2kei-rokachi-gyakusenben-koshinkoji/0225-2kei-rokachi-gyakusenben-koshinkoji-shiyousho/0612200006ESTI.pdf
+[ZIP Entry] 0225-2kei-rokachi-gyakusenben-koshinkoji/0225-2kei-rokachi-gyakusenben-koshinkoji-shiyousho/0712200006REPO.pdf
+[ZIP Entry] 0225-2kei-rokachi-gyakusenben-koshinkoji/0225-2kei-rokachi-gyakusenben-koshinkoji-shiyousho/0812200006QUOT.pdf
+[ZIP Entry] 0225-2kei-rokachi-gyakusenben-koshinkoji/0225-2kei-rokachi-gyakusenben-koshinkoji-youshiki/
+[ZIP Entry] 0225-2kei-rokachi-gyakusenben-koshinkoji/0225-2kei-rokachi-gyakusenben-koshinkoji-youshiki/01　現場確認申込書.xls
+[ZIP Entry] 0225-2kei-rokachi-gyakusenben-koshinkoji/0225-2kei-rokachi-gyakusenben-koshinkoji-youshiki/02　電子入札参加申込書.doc
+[ZIP Entry] 0225-2kei-rokachi-gyakusenben-koshinkoji/0225-2kei-rokachi-gyakusenben-koshinkoji-youshiki/03　【総評】入札金額の内訳書の様式・記載例について（単体）.zip
+[ZIP Entry] Found nested ZIP: 0225-2kei-rokachi-gyakusenben-koshinkoji/0225-2kei-rokachi-gyakusenben-koshinkoji-youshiki/03　【総評】入札金額の内訳書の様式・記載例について（単体）.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 5 entries.
+[ZIP Entry] 03　【総評】入札金額の内訳書の様式・記載例について（単体）/
+[ZIP Entry] 03　【総評】入札金額の内訳書の様式・記載例について（単体）/01　【総評】入札金額の内訳書の様式・記載例について.docx
+[ZIP Entry] 03　【総評】入札金額の内訳書の様式・記載例について（単体）/02　工事費内訳書及び低入札価格調査意向確認書（別記様式１）.xlsx
+[ZIP Entry] 03　【総評】入札金額の内訳書の様式・記載例について（単体）/03　低入札価格調査辞退届.docx
+[ZIP Entry] 03　【総評】入札金額の内訳書の様式・記載例について（単体）/記載例（企業団は工事番号を設定しておりません）.pdf
+[ZIP Entry] 0225-2kei-rokachi-gyakusenben-koshinkoji/0225-2kei-rokachi-gyakusenben-koshinkoji-youshiki/04　技術提案評価型【事後】.xls
+[ZIP Entry] 0225-2kei-rokachi-gyakusenben-koshinkoji/0225-2kei-rokachi-gyakusenben-koshinkoji-youshiki/05　競争入札参加資格確認申請書.doc
+[ZIP Entry] 0225-2kei-rokachi-gyakusenben-koshinkoji/0225-2kei-rokachi-gyakusenben-koshinkoji-youshiki/06　監理技術者の兼務等に関する様式等.zip
+[ZIP Entry] Found nested ZIP: 0225-2kei-rokachi-gyakusenben-koshinkoji/0225-2kei-rokachi-gyakusenben-koshinkoji-youshiki/06　監理技術者の兼務等に関する様式等.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 5 entries.
+[ZIP Entry] 監理技術者の兼務等に関する様式等/
+[ZIP Entry] 監理技術者の兼務等に関する様式等/参考様式1.doc
+[ZIP Entry] 監理技術者の兼務等に関する様式等/参考様式2.doc
+[ZIP Entry] 監理技術者の兼務等に関する様式等/参考様式3.doc
+[ZIP Entry] 監理技術者の兼務等に関する様式等/監理技術者の兼務等に関する様式等.docx
+[ZIP Entry] 0225-2kei-rokachi-gyakusenben-koshinkoji/0225-2kei-rokachi-gyakusenben-koshinkoji-youshiki/07　工期又は請負代金の額に影響を及ぼす事象に関する情報の通知.zip
+[ZIP Entry] Found nested ZIP: 0225-2kei-rokachi-gyakusenben-koshinkoji/0225-2kei-rokachi-gyakusenben-koshinkoji-youshiki/07　工期又は請負代金の額に影響を及ぼす事象に関する情報の通知.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 4 entries.
+[ZIP Entry] 工期又は請負代金の額に影響を及ぼす事象に関する情報の通知/
+[ZIP Entry] 工期又は請負代金の額に影響を及ぼす事象に関する情報の通知/工期又は請負代金の額に影響を及ぼす事象に関する情報の通知.docx
+[ZIP Entry] 工期又は請負代金の額に影響を及ぼす事象に関する情報の通知/通知書様式.docx
+[ZIP Entry] 工期又は請負代金の額に影響を及ぼす事象に関する情報の通知/通知書（記載例）.pdf
+[ZIP Entry] 0225-2kei-rokachi-gyakusenben-koshinkoji/0225-2kei-rokachi-gyakusenben-koshinkoji-youshiki/08　電子契約.zip
+[ZIP Entry] Found nested ZIP: 0225-2kei-rokachi-gyakusenben-koshinkoji/0225-2kei-rokachi-gyakusenben-koshinkoji-youshiki/08　電子契約.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 3 entries.
+[ZIP Entry] 電子契約/
+[ZIP Entry] 電子契約/densikeiyakudouisyo.docx
+[ZIP Entry] 電子契約/建設工事の請負契約等における電子契約について.docx
+Extracted 109305 chars. Sending to Gemini...
+Success! 110,256,300円（消費税及び地方消費税（計１０％）込み）
+
+Processing: nara-pref-29001013060020250220 - 奈良県立大学（仮称）教育研究棟新築工事（機械設備工事）　第７－３８号
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Results for 建築...
+[3] Performing search for ID: 29001013060020250220 and Title: 奈良県立大学（仮称）教育研究棟新築工事（機械設備工事）　第７...
+  -> Pattern 1: Searching by ankenNo: 29001013060020250220
+Rows found on search results page: 102
+Opening popup...
+Intercepting download stream...
+[Popup] Auto-accepting dialog: 添付ファイルを一括ダウンロードします。
+よろしいですか？
+[ZIP] Downloaded ZIP with 1 entries.
+[ZIP Entry] 20251119-eizen-7-38-n.zip
+[ZIP Entry] Found nested ZIP: 20251119-eizen-7-38-n.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 2 entries.
+[ZIP Entry] 20251119-eizen-7-38-n/�Z�p�]���_����\�i��V�|�R�W���j.pdf
+[ZIP Entry] 20251119-eizen-7-38-n/�J�D�^.pdf
+Extracted 1012 chars. Sending to Gemini...
+Success! 554,400,000円 (消費税等抜き 504,000,000円)
+
+Processing: nara-pref-29001013060020250219 - 奈良県立大学（仮称）教育研究棟新築工事（建築工事）　第７－３７号
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Results for 建築...
+[3] Performing search for ID: 29001013060020250219 and Title: 奈良県立大学（仮称）教育研究棟新築工事（建築工事）　第７－３...
+  -> Pattern 1: Searching by ankenNo: 29001013060020250219
+Rows found on search results page: 102
+Opening popup...
+Intercepting download stream...
+[Popup] Auto-accepting dialog: 添付ファイルを一括ダウンロードします。
+よろしいですか？
+[ZIP] Downloaded ZIP with 1 entries.
+[ZIP Entry] 20251119-eizen-7-38-n.zip
+[ZIP Entry] Found nested ZIP: 20251119-eizen-7-38-n.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 2 entries.
+[ZIP Entry] 20251119-eizen-7-38-n/�Z�p�]���_����\�i��V�|�R�W���j.pdf
+[ZIP Entry] 20251119-eizen-7-38-n/�J�D�^.pdf
+Extracted 1012 chars. Sending to Gemini...
+Success! 554,400,000円（消費税等抜き 504,000,000円）
+
+Processing: nara-pref-29001013052520250187 - 県営畑地帯総合整備事業　大宇陀政始北部地区　獣害防止柵整備計画検討業務委託　第Ｒ７Ｃ１委４号
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Results for コンサル...
+[3] Performing search for ID: 29001013052520250187 and Title: 県営畑地帯総合整備事業　大宇陀政始北部地区　獣害防止柵整備計...
+  -> Pattern 1: Searching by ankenNo: 29001013052520250187
+Rows found on search results page: 102
+Opening popup...
+Intercepting download stream...
+[Popup] Auto-accepting dialog: 添付ファイルを一括ダウンロードします。
+よろしいですか？
+[ZIP] Downloaded ZIP with 1 entries.
+[ZIP Entry] �J�D�^�m��q�V�b�P�ςS���n .pdf
+Extracted 578 chars. Sending to Gemini...
+Success! 7,997,000 円（消費税抜 7,270,000 円）
+
+Processing: nara-pref-29001013060020250245 - 香芝高校管理教室棟（１２，１５）外壁改修工事監理業務　委（監）第７－２６号
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Information for コンサル...
+[3] Performing search for ID: 29001013060020250245 and Title: 香芝高校管理教室棟（１２，１５）外壁改修工事監理業務　委（監...
+  -> Pattern 1: Searching by ankenNo: 29001013060020250245
+Rows found on search results page: 3
+Opening popup...
+Intercepting download stream...
+[Popup] Auto-accepting dialog: 添付ファイルを一括ダウンロードします。
+よろしいですか？
+[ZIP] Downloaded ZIP with 6 entries.
+[ZIP Entry] 20260123-eizen-7-26-koukoku.pdf
+[ZIP Entry] 20260123-eizen-7-26-setumeisyo.zip
+[ZIP Entry] Found nested ZIP: 20260123-eizen-7-26-setumeisyo.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 3 entries.
+[ZIP Entry] 20260123-eizen-7-26-setumeisyo/04 �������D�Q�����i�m�F�\����.pdf
+[ZIP Entry] 20260123-eizen-7-26-setumeisyo/���D������.pdf
+[ZIP Entry] 20260123-eizen-7-26-setumeisyo/���ݍH���̐����_�񓙂ɂ�����d�q�_��ɂ���.pdf
+[ZIP Entry] 20260123-eizen-7-26-youshiki.zip
+[ZIP Entry] Found nested ZIP: 20260123-eizen-7-26-youshiki.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 1 entries.
+[ZIP Entry] 20260123-eizen-7-26-youshiki/04 �������D�Q�����i�m�F�\����.doc
+[ZIP Entry] 20260123-eizen-7-26-siyousyo.zip
+[ZIP Entry] Found nested ZIP: 20260123-eizen-7-26-siyousyo.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 4 entries.
+[ZIP Entry] 20260123-eizen-7-26-siyousyo/2_���������.pdf
+[ZIP Entry] 20260123-eizen-7-26-siyousyo/3-1_���L�d�l���iR70401�j.pdf
+[ZIP Entry] 20260123-eizen-7-26-siyousyo/3-2_�ʎ� �K�p�(R40401�����iR70401�ꕔ�C���j).pdf
+[ZIP Entry] 20260123-eizen-7-26-siyousyo/4_�}��.pdf
+[ZIP Entry] kokoroe.pdf
+[ZIP Entry] oshirase .zip
+[ZIP Entry] Found nested ZIP: oshirase .zip, extracting recursively...
+[ZIP] Downloaded ZIP with 2 entries.
+[ZIP Entry] oshirase/06_�y���m�点�z�i�݌v�E�ė��Ɩ��ϑ��p�j��ʁE�w�����p.pdf
+[ZIP Entry] oshirase/koukeiyaku.pdf
+Extracted 33887 chars. Sending to Gemini...
+Success! 3,256,000円（消費税及び地方消費税(計10％)を含みます。）
+
+Processing: nara-pref-29005007060120250057 - 御所市第４ブランチ詳細設計業務委託
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Information for コンサル...
+[3] Performing search for ID: 29005007060120250057 and Title: 御所市第４ブランチ詳細設計業務委託...
+  -> Pattern 1: Searching by ankenNo: 29005007060120250057
+Rows found on search results page: 3
+Opening popup...
+Intercepting download stream...
+[Popup] Auto-accepting dialog: 添付ファイルを一括ダウンロードします。
+よろしいですか？
+[ZIP] Downloaded ZIP with 1 entries.
+[ZIP Entry] 0216-gose-dai4b-sekkei-itaku.zip
+[ZIP Entry] Found nested ZIP: 0216-gose-dai4b-sekkei-itaku.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 18 entries.
+[ZIP Entry] 0216-gose-dai4b-sekkei-itaku/
+[ZIP Entry] 0216-gose-dai4b-sekkei-itaku/0216-gose-dai4b-sekkei-itaku-jyouken.pdf
+[ZIP Entry] 0216-gose-dai4b-sekkei-itaku/0216-gose-dai4b-sekkei-itaku-koukoku.pdf
+[ZIP Entry] 0216-gose-dai4b-sekkei-itaku/0216-gose-dai4b-sekkei-itaku-setsumeisho/
+[ZIP Entry] 0216-gose-dai4b-sekkei-itaku/0216-gose-dai4b-sekkei-itaku-setsumeisho/入札説明書.pdf
+[ZIP Entry] 0216-gose-dai4b-sekkei-itaku/0216-gose-dai4b-sekkei-itaku-setsumeisho/施工体制確認様式.pdf
+[ZIP Entry] 0216-gose-dai4b-sekkei-itaku/0216-gose-dai4b-sekkei-itaku-setsumeisho/競争入札参加資格確認申請書.pdf
+[ZIP Entry] 0216-gose-dai4b-sekkei-itaku/0216-gose-dai4b-sekkei-itaku-shiyousho/
+[ZIP Entry] 0216-gose-dai4b-sekkei-itaku/0216-gose-dai4b-sekkei-itaku-shiyousho/0108600005COMM.pdf
+[ZIP Entry] 0216-gose-dai4b-sekkei-itaku/0216-gose-dai4b-sekkei-itaku-shiyousho/0208600005SPEC.pdf
+[ZIP Entry] 0216-gose-dai4b-sekkei-itaku/0216-gose-dai4b-sekkei-itaku-shiyousho/0308600005SUMM.pdf
+[ZIP Entry] 0216-gose-dai4b-sekkei-itaku/0216-gose-dai4b-sekkei-itaku-shiyousho/0408600005POSI.pdf
+[ZIP Entry] 0216-gose-dai4b-sekkei-itaku/0216-gose-dai4b-sekkei-itaku-shiyousho/0508600005ESTI.pdf
+[ZIP Entry] 0216-gose-dai4b-sekkei-itaku/0216-gose-dai4b-sekkei-itaku-shiyousho/0608600005REPO.pdf
+[ZIP Entry] 0216-gose-dai4b-sekkei-itaku/0216-gose-dai4b-sekkei-itaku-youshiki/
+[ZIP Entry] 0216-gose-dai4b-sekkei-itaku/0216-gose-dai4b-sekkei-itaku-youshiki/01　競争入札参加資格確認申請書.doc
+[ZIP Entry] 0216-gose-dai4b-sekkei-itaku/0216-gose-dai4b-sekkei-itaku-youshiki/02　施工体制確認様式.xlsx
+[ZIP Entry] 0216-gose-dai4b-sekkei-itaku/0216-gose-dai4b-sekkei-itaku-youshiki/03　電子契約.zip
+[ZIP Entry] Found nested ZIP: 0216-gose-dai4b-sekkei-itaku/0216-gose-dai4b-sekkei-itaku-youshiki/03　電子契約.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 3 entries.
+[ZIP Entry] 電子契約/
+[ZIP Entry] 電子契約/densikeiyakudouisyo.docx
+[ZIP Entry] 電子契約/建設工事の請負契約等における電子契約について.docx
+Extracted 50040 chars. Sending to Gemini...
+Success! 15,081,000 円（消費税及び地方消費税（計１０％）を含みます。）
+
+Processing: nara-pref-29001013060020250227 - 浄化センター２系反応槽散気装置更新工事（防災・安全交付金事業）　Ｒ７浄化第５５８号
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Results for 建築...
+[3] Performing search for ID: 29001013060020250227 and Title: 浄化センター２系反応槽散気装置更新工事（防災・安全交付金事業...
+  -> Pattern 1: Searching by ankenNo: 29001013060020250227
+Rows found on search results page: 102
+Opening popup...
+Intercepting download stream...
+[Popup] Auto-accepting dialog: 添付ファイルを一括ダウンロードします。
+よろしいですか？
+[ZIP] Downloaded ZIP with 1 entries.
+[ZIP Entry] 20251222-gesui-2kh-R7d558-n.zip
+[ZIP Entry] Found nested ZIP: 20251222-gesui-2kh-R7d558-n.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 2 entries.
+[ZIP Entry] 20251222-gesui-2kh-R7d558-n/�Z�p�]�_����\.pdf
+[ZIP Entry] 20251222-gesui-2kh-R7d558-n/�J�D�^.pdf
+Extracted 911 chars. Sending to Gemini...
+Success! １，５１２，５００，０００円 （消費税等抜き １，３７５，０００，０００円）
+
+Processing: nara-pref-29001013050520250332 - 鹿野園地区　地すべり観測業務委託（防災・安全交付金事業（地すべり）（補正））　第　補１２－１－委－１　号
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Information for コンサル...
+[3] Performing search for ID: 29001013050520250332 and Title: 鹿野園地区　地すべり観測業務委託（防災・安全交付金事業（地す...
+  -> Pattern 1: Searching by ankenNo: 29001013050520250332
+Rows found on search results page: 3
+Opening popup...
+Intercepting download stream...
+[Popup] Auto-accepting dialog: 添付ファイルを一括ダウンロードします。
+よろしいですか？
+[ZIP] Downloaded ZIP with 2 entries.
+[ZIP Entry] �݌v�}����(��12-1-��-1).zip
+[ZIP Entry] Found nested ZIP: �݌v�}����(��12-1-��-1).zip, extracting recursively...
+[ZIP] Downloaded ZIP with 6 entries.
+[ZIP Entry] 0156900001SPEC.pdf
+[ZIP Entry] 0256900001DRAW.pdf
+[ZIP Entry] 0356900001SUMM.pdf
+[ZIP Entry] 0456900001POSI.pdf
+[ZIP Entry] 0556900001ESTI.pdf
+[ZIP Entry] 0656900001REPO.pdf
+[ZIP Entry] ���D��������(��12-1-��-1).zip
+[ZIP Entry] Found nested ZIP: ���D��������(��12-1-��-1).zip, extracting recursively...
+[ZIP] Downloaded ZIP with 6 entries.
+[ZIP Entry] JOUKENSYO(��12-1-��-1).pdf
+[ZIP Entry] KOUKOKU�i��12-1-��-1�j.pdf
+[ZIP Entry] SETUMEISYO�i��12-1-��-1�j.pdf
+[ZIP Entry] YOUSHIKI�i��12-1-��-1�j.docx
+[ZIP Entry] ���ݍH���̐����_�񓙂ɂ�����d�q�_��ɂ��āy�ޗǓy�؁z.docx
+[ZIP Entry] �y��ʁz�d�q���D�S�����i�ϑ��jR6.10�`.pdf
+Extracted 43371 chars. Sending to Gemini...
+Success! 17,039,000 円（消費税及び地方消費税(計１０％)を含みます。）
+
+Processing: nara-pref-29001013052020250260 - かんじょう川　登記推進業務委託（登記推進）　１－委－２
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Results for コンサル...
+[3] Performing search for ID: 29001013052020250260 and Title: かんじょう川　登記推進業務委託（登記推進）　１－委－２...
+  -> Pattern 1: Searching by ankenNo: 29001013052020250260
+Rows found on search results page: 102
+Opening popup...
+Intercepting download stream...
+[Popup] Auto-accepting dialog: 添付ファイルを一括ダウンロードします。
+よろしいですか？
+[ZIP] Downloaded ZIP with 1 entries.
+[ZIP Entry] �J�D�^�i1-��-2�j.pdf
+Extracted 817 chars. Sending to Gemini...
+Success! 12,784円 (消費税等抜き 11,622円)
+
+Processing: nara-pref-29001013060020250243 - 香芝高校管理教室棟（１２，１５）外壁改修工事　第７－３４号
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Information for 建築...
+[3] Performing search for ID: 29001013060020250243 and Title: 香芝高校管理教室棟（１２，１５）外壁改修工事　第７－３４号...
+  -> Pattern 1: Searching by ankenNo: 29001013060020250243
+Rows found on search results page: 3
+Opening popup...
+Intercepting download stream...
+[Popup] Auto-accepting dialog: 添付ファイルを一括ダウンロードします。
+よろしいですか？
+[ZIP] Downloaded ZIP with 5 entries.
+[ZIP Entry] 20250121-eizen-7-34-koukoku.pdf
+[ZIP Entry] 20250121-eizen-7-34-setumeisyo.zip
+[ZIP Entry] Found nested ZIP: 20250121-eizen-7-34-setumeisyo.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 8 entries.
+[ZIP Entry] 20250121-eizen-7-34-setumeisyo/03_7-34_���D�Ҍ����i���z�jR7.pdf
+[ZIP Entry] 20250121-eizen-7-34-setumeisyo/04 �������D�Q�����i�m�F�\������.pdf
+[ZIP Entry] 20250121-eizen-7-34-setumeisyo/���D������.pdf
+[ZIP Entry] 20250121-eizen-7-34-setumeisyo/�ʕ\�@�z�u�\��Z�p�҂̎��i.pdf
+[ZIP Entry] 20250121-eizen-7-34-setumeisyo/���ݍH���̐����_�񓙂ɂ�����d�q�_��ɂ���.pdf
+[ZIP Entry] 20250121-eizen-7-34-setumeisyo/�Z�p��ď��l���i����j.pdf
+[ZIP Entry] 20250121-eizen-7-34-setumeisyo/�z�u�Z�p�Ҋm�F���i�ʎ��l���j.pdf
+[ZIP Entry] 20250121-eizen-7-34-setumeisyo/�d�q���D�Q���\����.pdf
+[ZIP Entry] 20250121-eizen-7-34-youshiki.zip
+[ZIP Entry] Found nested ZIP: 20250121-eizen-7-34-youshiki.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 4 entries.
+[ZIP Entry] 20250121-eizen-7-34-youshiki/04 �������D�Q�����i�m�F�\������.doc
+[ZIP Entry] 20250121-eizen-7-34-youshiki/�Z�p��ď��l���i����j.xlsx
+[ZIP Entry] 20250121-eizen-7-34-youshiki/�z�u�Z�p�Ҋm�F���i�ʎ��l���j.docx
+[ZIP Entry] 20250121-eizen-7-34-youshiki/�d�q���D�Q���\����.doc
+[ZIP Entry] 20250121-eizen-7-34-joukensyo.zip
+[ZIP Entry] Found nested ZIP: 20250121-eizen-7-34-joukensyo.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 2 entries.
+[ZIP Entry] 20250121-eizen-7-34-joukensyo/04_�y���D�������̓ǂݑւ��ɂ��āz�i�H�������p�j��ʋ������D�i�����]�����D�����j .pdf
+[ZIP Entry] 20250121-eizen-7-34-joukensyo/������.pdf
+[ZIP Entry] 20250121-eizen-7-34-siyousyo.zip
+[ZIP Entry] Found nested ZIP: 20250121-eizen-7-34-siyousyo.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 3 entries.
+[ZIP Entry] 20250121-eizen-7-34-siyousyo/2.���������.pdf
+[ZIP Entry] 20250121-eizen-7-34-siyousyo/4.�H�������.pdf
+[ZIP Entry] 20250121-eizen-7-34-siyousyo/4.�H�������.xlsx
+Extracted 63290 chars. Sending to Gemini...
+Success! 84,018,000円（消費税及び地方消費税（計10％）を含む）
+
+Processing: nara-pref-29001013051020250210 - 第Ｋ－１１０－委－１号　三代川　治水対策検討業務（緊急自然災害防止対策事業債対象事業（臨時・特別））
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Information for コンサル...
+[3] Performing search for ID: 29001013051020250210 and Title: 第Ｋ－１１０－委－１号　三代川　治水対策検討業務（緊急自然災...
+  -> Pattern 1: Searching by ankenNo: 29001013051020250210
+Rows found on search results page: 3
+Opening popup...
+Intercepting download stream...
+[Popup] Auto-accepting dialog: 添付ファイルを一括ダウンロードします。
+よろしいですか？
+[ZIP] Downloaded ZIP with 1 entries.
+[ZIP Entry] ���D�֌W����-K-110-��-1.zip
+[ZIP Entry] Found nested ZIP: ���D�֌W����-K-110-��-1.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 15 entries.
+[ZIP Entry] ���D�֌W����-K-110-��-1/0165300008SPEC .pdf
+[ZIP Entry] ���D�֌W����-K-110-��-1/0265300008DRAW.pdf
+[ZIP Entry] ���D�֌W����-K-110-��-1/0365300008SUMM.pdf
+[ZIP Entry] ���D�֌W����-K-110-��-1/0465300008POSI .pdf
+[ZIP Entry] ���D�֌W����-K-110-��-1/0565300008ESTI.pdf
+[ZIP Entry] ���D�֌W����-K-110-��-1/���D����-K-110-��-1.pdf
+[ZIP Entry] ���D�֌W����-K-110-��-1/���D�����{���i�Ɩ��ϑ��p�j.pdf
+[ZIP Entry] ���D�֌W����-K-110-��-1/���D�����\��-K-110-��-1.pdf
+[ZIP Entry] ���D�֌W����-K-110-��-1/���D������-K-110-��-1.pdf
+[ZIP Entry] ���D�֌W����-K-110-��-1/�e��l��/�Z�p��ď��i���O�j-K-110-��-1.xlsx
+[ZIP Entry] ���D�֌W����-K-110-��-1/�e��l��/�Z�p��ď��i����j-K-110-��-1.xlsx
+[ZIP Entry] ���D�֌W����-K-110-��-1/�e��l��/�������D�Q�����i�m�F�\����-K-110-��-1.doc
+[ZIP Entry] ���D�֌W����-K-110-��-1/�e��l��/�d�q���D�Q���\����-K-110-��-1.doc
+[ZIP Entry] ���D�֌W����-K-110-��-1/���ݍH���̐����_�񓙂ɂ�����d�q�_��ɂ���.docx
+[ZIP Entry] ���D�֌W����-K-110-��-1/�Z�p��ď��ɂ�����]���-K-110-��-1.pdf
+Extracted 55356 chars. Sending to Gemini...
+Success! 28,622,000円（消費税及び地方消費税(計１０％)を含みます。）
+
+Processing: nara-pref-29001013051520250261 - 曽我川　事業損失補償調査業務委託（緊急自然災害防止対策事業債対象事業（臨時・特別））　第　Ｔ－１０２－用委１　号
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Results for コンサル...
+[3] Performing search for ID: 29001013051520250261 and Title: 曽我川　事業損失補償調査業務委託（緊急自然災害防止対策事業債...
+  -> Pattern 1: Searching by ankenNo: 29001013051520250261
+Rows found on search results page: 102
+Opening popup...
+Intercepting download stream...
+[Popup] Auto-accepting dialog: 添付ファイルを一括ダウンロードします。
+よろしいですか？
+[ZIP] Downloaded ZIP with 1 entries.
+[ZIP Entry] �J�D�^�iT-102-�p��1�j.pdf
+Extracted 1968 chars. Sending to Gemini...
+Success! 3,278,000円 (消費税等抜き 2,980,000円)
+
+Processing: nara-pref-29001013052020250258 - 明日香清水谷線　地質調査業務委託（緊急自然災害（補修））　４４１－委－６
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Results for コンサル...
+[3] Performing search for ID: 29001013052020250258 and Title: 明日香清水谷線　地質調査業務委託（緊急自然災害（補修））　４...
+  -> Pattern 1: Searching by ankenNo: 29001013052020250258
+Rows found on search results page: 102
+Opening popup...
+Intercepting download stream...
+[Popup] Auto-accepting dialog: 添付ファイルを一括ダウンロードします。
+よろしいですか？
+[ZIP] Downloaded ZIP with 1 entries.
+[ZIP Entry] �J�D�^�i441-��-6�jPPI.pdf
+Extracted 1416 chars. Sending to Gemini...
+Success! ５，１０４，０００円 （消費税等抜き ４，６４０，０００円）
+
+Processing: nara-pref-29001013305020250059 - 佐保川幹線（ＭＮｏ．６７～６９）地下水影響解析調査委託　Ｒ７浄化県単委第２号
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Results for コンサル...
+[3] Performing search for ID: 29001013305020250059 and Title: 佐保川幹線（ＭＮｏ．６７～６９）地下水影響解析調査委託　Ｒ７...
+  -> Pattern 1: Searching by ankenNo: 29001013305020250059
+Rows found on search results page: 102
+Opening popup...
+Intercepting download stream...
+[Popup] Auto-accepting dialog: 添付ファイルを一括ダウンロードします。
+よろしいですか？
+[ZIP] Downloaded ZIP with 1 entries.
+[ZIP Entry] �J�D�^�i�q�V�򉻌��P�ϑ�Q���j.pdf
+Extracted 638 chars. Sending to Gemini...
+Success! ７，７２２，０００円 （消費税等抜き ７，０２０，０００円）
+
+Processing: nara-pref-29001013305020250062 - 葛城川幹線管渠内修繕詳細設計委託　Ｒ７二委第１１号
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Information for コンサル...
+[3] Performing search for ID: 29001013305020250062 and Title: 葛城川幹線管渠内修繕詳細設計委託　Ｒ７二委第１１号...
+  -> Pattern 1: Searching by ankenNo: 29001013305020250062
+Rows found on search results page: 3
+Opening popup...
+Intercepting download stream...
+[Popup] Auto-accepting dialog: 添付ファイルを一括ダウンロードします。
+よろしいですか？
+[ZIP] Downloaded ZIP with 1 entries.
+[ZIP Entry] R7ni11-���D������.zip
+[ZIP Entry] Found nested ZIP: R7ni11-���D������.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 17 entries.
+[ZIP Entry] 電子契約サービス様式等/
+[ZIP Entry] 電子契約サービス様式等/記載例(pdf 237KB).pdf
+[ZIP Entry] 電子契約サービス様式等/電子契約 利用者用ガイド（事業者向け）.pdf
+[ZIP Entry] 電子契約サービス様式等/電子契約サービス_奈良県公式ホームページ.pdf
+[ZIP Entry] 電子契約サービス様式等/電子契約同意書兼メールアドレス確認書(docx 26KB).docx
+[ZIP Entry] R7ni11-01-入札公告.pdf
+[ZIP Entry] R7ni11-02-入札説明書.pdf
+[ZIP Entry] R7ni11-03-入札条件.pdf
+[ZIP Entry] R7ni11-04.-競争入札参加資格確認申請書.doc
+[ZIP Entry] R7ni11-05-施工体制様式.pdf
+[ZIP Entry] sonotakankei.pdf
+[ZIP Entry] 建設工事の請負契約等における電子契約について.docx
+[ZIP Entry] 0152600029SPEC.pdf
+[ZIP Entry] 0252600029DRAW.pdf
+[ZIP Entry] 0352600029SUMM.pdf
+[ZIP Entry] 0452600029POSI.pdf
+[ZIP Entry] 0552600029ESTI.pdf
+Extracted 51031 chars. Sending to Gemini...
+Success! 6,765,000円（消費税及び地方消費税（計 10％）を含みます。）
+
+Processing: nara-pref-29001013052520250181 - 田原地区　急傾斜地崩壊危険区域指定申請資料作成業務委託（防災・安全交付金事業（南部・東部）（急傾斜））第　５３－１３－委２　号
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Results for コンサル...
+[3] Performing search for ID: 29001013052520250181 and Title: 田原地区　急傾斜地崩壊危険区域指定申請資料作成業務委託（防災...
+  -> Pattern 1: Searching by ankenNo: 29001013052520250181
+Rows found on search results page: 102
+Opening popup...
+Intercepting download stream...
+[Popup] Auto-accepting dialog: 添付ファイルを一括ダウンロードします。
+よろしいですか？
+[ZIP] Downloaded ZIP with 1 entries.
+[ZIP Entry] �J�D�^�i��T�R�|�P�R�|�ςQ���j.pdf
+Extracted 790 chars. Sending to Gemini...
+Success! ４，９７２，０００円（消費税等抜き ４，５２０，０００円）
+
+Processing: nara-pref-29001013052520250178 - 県営畑地帯総合整備事業　伊那佐東部地区 パイプライン実施設計その３業務委託　第Ｒ７Ｃ１委３号
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Results for コンサル...
+[3] Performing search for ID: 29001013052520250178 and Title: 県営畑地帯総合整備事業　伊那佐東部地区 パイプライン実施設計...
+  -> Pattern 1: Searching by ankenNo: 29001013052520250178
+Rows found on search results page: 102
+Opening popup...
+Intercepting download stream...
+[Popup] Auto-accepting dialog: 添付ファイルを一括ダウンロードします。
+よろしいですか？
+[ZIP] Downloaded ZIP with 1 entries.
+[ZIP Entry] �J�D�^�m��q�V�b�P�ςS���n .pdf
+Extracted 578 chars. Sending to Gemini...
+Success! 7,997,000円 (税込) / 7,270,000円 (税抜)
+
+Processing: nara-pref-29001013305020250056 - 浄化センターコンデンサ盤等修繕工事（その３）　Ｒ７浄工第１２号
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Results for 建築...
+[3] Performing search for ID: 29001013305020250056 and Title: 浄化センターコンデンサ盤等修繕工事（その３）　Ｒ７浄工第１２...
+  -> Pattern 1: Searching by ankenNo: 29001013305020250056
+Rows found on search results page: 102
+Opening popup...
+Intercepting download stream...
+[Popup] Auto-accepting dialog: 添付ファイルを一括ダウンロードします。
+よろしいですか？
+[ZIP] Downloaded ZIP with 2 entries.
+[ZIP Entry] �J�D�^�i�q�V��H��P�Q���j.pdf
+[ZIP Entry] �Z�p�]���_����\�i�q�V��H��P�Q���j.pdf
+Extracted 875 chars. Sending to Gemini...
+Success! 88,440,000円 (消費税等抜き 80,400,000円)
+
+Processing: nara-pref-29001013051520250256 - 県営ため池整備事業　香芝地区　吉ヶ池耐震性能照査業務委託　第　R7B1委５　号
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Results for コンサル...
+[3] Performing search for ID: 29001013051520250256 and Title: 県営ため池整備事業　香芝地区　吉ヶ池耐震性能照査業務委託　第...
+  -> Pattern 1: Searching by ankenNo: 29001013051520250256
+Rows found on search results page: 102
+Opening popup...
+Intercepting download stream...
+[Popup] Auto-accepting dialog: 添付ファイルを一括ダウンロードします。
+よろしいですか？
+[ZIP] Downloaded ZIP with 1 entries.
+[ZIP Entry] �J�D�^(��R7B1��5��).pdf
+Extracted 770 chars. Sending to Gemini...
+Success! 7,975,000円 （消費税等抜き7,250,000円）
+
+Processing: nara-pref-29001013305020250058 - 第二浄化センター処理水配管等更新工事　Ｒ７第二県単第４号
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Results for 建築...
+[3] Performing search for ID: 29001013305020250058 and Title: 第二浄化センター処理水配管等更新工事　Ｒ７第二県単第４号...
+  -> Pattern 1: Searching by ankenNo: 29001013305020250058
+Rows found on search results page: 102
+Opening popup...
+Intercepting download stream...
+[Popup] Auto-accepting dialog: 添付ファイルを一括ダウンロードします。
+よろしいですか？
+[ZIP] Downloaded ZIP with 1 entries.
+[ZIP Entry] �J�D�^�i�q�V��񌧒P��S���j.pdf
+Extracted 491 chars. Sending to Gemini...
+Success! ４８，４００，０００円 （消費税等抜き ４４，０００，０００円）
+
+Processing: nara-pref-29001013053020250244 - 令和７年度　県営治山関係調査業務委託　第　単委４　号
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Results for コンサル...
+[3] Performing search for ID: 29001013053020250244 and Title: 令和７年度　県営治山関係調査業務委託　第　単委４　号...
+  -> Pattern 1: Searching by ankenNo: 29001013053020250244
+Rows found on search results page: 102
+Opening popup...
+Intercepting download stream...
+[Popup] Auto-accepting dialog: 添付ファイルを一括ダウンロードします。
+よろしいですか？
+[ZIP] Downloaded ZIP with 1 entries.
+[ZIP Entry] �J�D�^�i�P��4�j.pdf
+Extracted 530 chars. Sending to Gemini...
+Success! 7,150,000 円 （消費税等抜き 6,500,000 円）
+
+Processing: nara-pref-29001013060020250242 - 奈良県立大学（仮称）教育研究棟新築工事（電気設備工事）　第７－２７号
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Information for 建築...
+[3] Performing search for ID: 29001013060020250242 and Title: 奈良県立大学（仮称）教育研究棟新築工事（電気設備工事）　第７...
+  -> Pattern 1: Searching by ankenNo: 29001013060020250242
+Rows found on search results page: 3
+Opening popup...
+Intercepting download stream...
+[Popup] Auto-accepting dialog: 添付ファイルを一括ダウンロードします。
+よろしいですか？
+[ZIP] Downloaded ZIP with 5 entries.
+[ZIP Entry] 20260107-eizen-7-27-koukoku.pdf
+[ZIP Entry] 20260107-eizen-7-27-joukensyo.zip
+[ZIP Entry] Found nested ZIP: 20260107-eizen-7-27-joukensyo.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 2 entries.
+[ZIP Entry] 20260107-eizen-7-27-joukensyo/05_�y���D�������̓ǂݑւ��ɂ��āz�i�H�������p�j��ʋ������D�i�����]�����D�����j .pdf
+[ZIP Entry] 20260107-eizen-7-27-joukensyo/������.pdf
+[ZIP Entry] 20260107-eizen-7-27-siyousyo.zip
+[ZIP Entry] Found nested ZIP: 20260107-eizen-7-27-siyousyo.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 3 entries.
+[ZIP Entry] 20260107-eizen-7-27-siyousyo/02_���������.pdf
+[ZIP Entry] 20260107-eizen-7-27-siyousyo/03_�H������� (JV).pdf
+[ZIP Entry] 20260107-eizen-7-27-siyousyo/7-27����i�d�C�j_�H�������(JV).xlsx
+[ZIP Entry] �y�C����z20260107-eizen-7-27-setumeisyo.zip
+[ZIP Entry] Found nested ZIP: �y�C����z20260107-eizen-7-27-setumeisyo.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 10 entries.
+[ZIP Entry] �y�C����z20260107-eizen-7-27-setumeisyo/02 �ݔ��i���z�ݔ��j�@�Z�p��ĕ]���^�A�E��ƁE�Z�p�ҕ]���^�A-R7�i����j.pdf
+[ZIP Entry] �y�C����z20260107-eizen-7-27-setumeisyo/03 �d�q���D�Q���\����.pdf
+[ZIP Entry] �y�C����z20260107-eizen-7-27-setumeisyo/03_7-27_���D�Ҍ����i���z�ݔ��jR7.pdf
+[ZIP Entry] �y�C����z20260107-eizen-7-27-setumeisyo/04 �������D�Q�����i�m�F�\�������i�g��[�j.pdf
+[ZIP Entry] �y�C����z20260107-eizen-7-27-setumeisyo/04_7-27_113��Đ}������w(E).pdf
+[ZIP Entry] �y�C����z20260107-eizen-7-27-setumeisyo/��01_�Z�p��ĕ]���^�i���O�j-R6.pdf
+[ZIP Entry] �y�C����z20260107-eizen-7-27-setumeisyo/�y�C���z05 ���菑�E�ϔC��.pdf
+[ZIP Entry] �y�C����z20260107-eizen-7-27-setumeisyo/���D������.pdf
+[ZIP Entry] �y�C����z20260107-eizen-7-27-setumeisyo/�ʕ\�@�z�u�\��Z�p�҂̎��i.pdf
+[ZIP Entry] �y�C����z20260107-eizen-7-27-setumeisyo/���ݍH���̐����_�񓙂ɂ�����d�q�_��ɂ���.pdf
+[ZIP Entry] �y�C����z20260107-eizen-7-27-youshiki.zip
+[ZIP Entry] Found nested ZIP: �y�C����z20260107-eizen-7-27-youshiki.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 5 entries.
+[ZIP Entry] �y�C����z20260107-eizen-7-27-youshiki/03 �d�q���D�Q���\����.doc
+[ZIP Entry] �y�C����z20260107-eizen-7-27-youshiki/04 �������D�Q�����i�m�F�\�������i�g��[�j.doc
+[ZIP Entry] �y�C����z20260107-eizen-7-27-youshiki/��01_�Z�p��ĕ]���^�i���O�j-R6.xls
+[ZIP Entry] �y�C����z20260107-eizen-7-27-youshiki/�y�C���z05 ���菑�E�ϔC��.doc
+[ZIP Entry] �y�C����z20260107-eizen-7-27-youshiki/�y�C���z�Z�p��ď��i����j.xlsx
+Extracted 80904 chars. Sending to Gemini...
+Success! 483,472,000円（消費税及び地方消費税（計10％）を含みます。）
+
+Processing: nara-pref-29001013060020250231 - 中央卸売市場微量ＰＣＢ含有機器等更新工事　工第７－１号
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Information for 建築...
+[3] Performing search for ID: 29001013060020250231 and Title: 中央卸売市場微量ＰＣＢ含有機器等更新工事　工第７－１号...
+  -> Pattern 1: Searching by ankenNo: 29001013060020250231
+Rows found on search results page: 3
+Opening popup...
+Intercepting download stream...
+[Popup] Auto-accepting dialog: 添付ファイルを一括ダウンロードします。
+よろしいですか？
+[ZIP] Downloaded ZIP with 5 entries.
+[ZIP Entry] 20260106-ichiba-pcb-k7-1-setsumeisyo.zip
+[ZIP Entry] Found nested ZIP: 20260106-ichiba-pcb-k7-1-setsumeisyo.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 9 entries.
+[ZIP Entry] 20260106-ichiba-pcb-k7-1-setsumeisyo/���D������.pdf
+[ZIP Entry] 20260106-ichiba-pcb-k7-1-setsumeisyo/���ݍH���̐����_�񓙂ɂ�����d�q�_��ɂ���.pdf
+[ZIP Entry] 20260106-ichiba-pcb-k7-1-setsumeisyo/�{�H�̐��l��_�l���P�`�R.pdf
+[ZIP Entry] 20260106-ichiba-pcb-k7-1-setsumeisyo/����m�F�\����.pdf
+[ZIP Entry] 20260106-ichiba-pcb-k7-1-setsumeisyo/����g�D�\�i�l���P�A�l���Q�j.pdf
+[ZIP Entry] 20260106-ichiba-pcb-k7-1-setsumeisyo/��������p�}�ʃf�[�^���p�K��(�����s��).pdf
+[ZIP Entry] 20260106-ichiba-pcb-k7-1-setsumeisyo/�������D�Q�����i�m�F�\������.pdf
+[ZIP Entry] 20260106-ichiba-pcb-k7-1-setsumeisyo/���⏑�iFAX����E-mail�ɂ�鎿��p���j.pdf
+[ZIP Entry] 20260106-ichiba-pcb-k7-1-setsumeisyo/�H�_���{�H�̐��������{�v��.pdf
+[ZIP Entry] 20260106-ichiba-pcb-k7-1-youshiki.zip
+[ZIP Entry] Found nested ZIP: 20260106-ichiba-pcb-k7-1-youshiki.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 5 entries.
+[ZIP Entry] 20260106-ichiba-pcb-k7-1-youshiki/�{�H�̐��l��_�l���P�`�R.xls
+[ZIP Entry] 20260106-ichiba-pcb-k7-1-youshiki/����m�F�\����.xls
+[ZIP Entry] 20260106-ichiba-pcb-k7-1-youshiki/����g�D�\�i�l���P�A�l���Q�j.xls
+[ZIP Entry] 20260106-ichiba-pcb-k7-1-youshiki/�������D�Q�����i�m�F�\������.doc
+[ZIP Entry] 20260106-ichiba-pcb-k7-1-youshiki/���⏑�iFAX����E-mail�ɂ�鎿��p���j.doc
+[ZIP Entry] 20260106-ichiba-pcb-k7-1-joukensyo.pdf
+[ZIP Entry] 20260106-ichiba-pcb-k7-1-shiyousyo.zip
+[ZIP Entry] Found nested ZIP: 20260106-ichiba-pcb-k7-1-shiyousyo.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 3 entries.
+[ZIP Entry] 20260106-ichiba-pcb-k7-1-shiyousyo/01_�H������������i���d�@�p�j�i�H��7-1���j 1.pdf
+[ZIP Entry] 20260106-ichiba-pcb-k7-1-shiyousyo/02_���L�d�l���E�݌v�}��.pdf
+[ZIP Entry] 20260106-ichiba-pcb-k7-1-shiyousyo/06_�W���d�l���i���_��̏��玖���L�ځj.pdf
+[ZIP Entry] 20260106-ichiba-pcb-k7-1-koukoku.pdf
+Extracted 113819 chars. Sending to Gemini...
+Success! 15,796,000円（消費税及び地方消費税(計 10%)を含みます。）
+
+Processing: nara-pref-29001013050520250330 - 乾川　井堰詳細設計業務（緊急自然災害防止対策事業債対象事業（臨時・特別））　第　Ｎ－１０１－委－１　号
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Information for コンサル...
+[3] Performing search for ID: 29001013050520250330 and Title: 乾川　井堰詳細設計業務（緊急自然災害防止対策事業債対象事業（...
+  -> Pattern 1: Searching by ankenNo: 29001013050520250330
+Rows found on search results page: 3
+Opening popup...
+Intercepting download stream...
+[Popup] Auto-accepting dialog: 添付ファイルを一括ダウンロードします。
+よろしいですか？
+[ZIP] Downloaded ZIP with 2 entries.
+[ZIP Entry] �݌v�}����(N-101-��-1).zip
+[ZIP Entry] Found nested ZIP: �݌v�}����(N-101-��-1).zip, extracting recursively...
+[ZIP] Downloaded ZIP with 6 entries.
+[ZIP Entry] 0618100005REPO.pdf
+[ZIP Entry] 0118100005SPEC.pdf
+[ZIP Entry] 0218100005DRAW.pdf
+[ZIP Entry] 0318100005SUMM.pdf
+[ZIP Entry] 0418100005POSI.pdf
+[ZIP Entry] 0518100005ESTI.pdf
+[ZIP Entry] ���D��������(N-101-��-1).zip
+[ZIP Entry] Found nested ZIP: ���D��������(N-101-��-1).zip, extracting recursively...
+[ZIP] Downloaded ZIP with 11 entries.
+[ZIP Entry] JOUKENSYO�iN-101-��-1�j.pdf
+[ZIP Entry] KOUKOKU�iN-101-��-1�j.pdf
+[ZIP Entry] SETUMEISYO�iN-101-��-1�j.pdf
+[ZIP Entry] �Z�p��ď��l���i����j.xlsx
+[ZIP Entry] �������D�Q�����i�m�F�\�����iN-101-��-1�j.doc
+[ZIP Entry] �Ɩ��ϑ����󏑁@�L�ڗ�.pdf
+[ZIP Entry] �Ɩ��ϑ�����.xlsx
+[ZIP Entry] ���ݍH���̐����_�񓙂ɂ�����d�q�_��ɂ��āy�ޗǓy�؁z.docx
+[ZIP Entry] �d�q���D�Q���\�����i���R���j�iN-101-��-1�j.doc
+[ZIP Entry] �ʎ�-�P�i�Z�p��ď��ɌW��]�����ځj�iN-101-��-1�j.pdf
+[ZIP Entry] �y��ʁz�d�q���D�S�����i�ϑ��jR6.10�`.pdf
+Extracted 65599 chars. Sending to Gemini...
+Success! 33,913,000円（消費税及び地方消費税(計１０％)を含みます。）
+
+Processing: nara-pref-29001013052020250244 - 大和高田桜井線　測量業務委託（防災・安全（道環）他）　８－０５３－４－委－２他
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Results for コンサル...
+[3] Performing search for ID: 29001013052020250244 and Title: 大和高田桜井線　測量業務委託（防災・安全（道環）他）　８－０...
+  -> Pattern 1: Searching by ankenNo: 29001013052020250244
+Rows found on search results page: 102
+Opening popup...
+Intercepting download stream...
+[Popup] Auto-accepting dialog: 添付ファイルを一括ダウンロードします。
+よろしいですか？
+[ZIP] Downloaded ZIP with 1 entries.
+[ZIP Entry] �J�D�^�i8-053-4-��-2���jPPI.pdf
+Extracted 2653 chars. Sending to Gemini...
+Success! 5,335,000円 (消費税等抜き 4,850,000円)
+
+Processing: nara-pref-29001013060020250229 - 浄化センター２系３号初沈汚泥掻寄機更新工事（防災・安全交付金事業）　Ｒ７浄化第５６０号
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Information for 建築...
+[3] Performing search for ID: 29001013060020250229 and Title: 浄化センター２系３号初沈汚泥掻寄機更新工事（防災・安全交付金...
+  -> Pattern 1: Searching by ankenNo: 29001013060020250229
+Rows found on search results page: 3
+Opening popup...
+Intercepting download stream...
+[Popup] Auto-accepting dialog: 添付ファイルを一括ダウンロードします。
+よろしいですか？
+[ZIP] Downloaded ZIP with 5 entries.
+[ZIP Entry] 20260105-gesui-2k3g-R7d560-koukoku.pdf
+[ZIP Entry] 20260105-gesui-2k3g-R7d560-setsumeisyo.zip
+[ZIP Entry] Found nested ZIP: 20260105-gesui-2k3g-R7d560-setsumeisyo.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 11 entries.
+[ZIP Entry] 20260105-gesui-2k3g-R7d560-setsumeisyo/���D������.pdf
+[ZIP Entry] 20260105-gesui-2k3g-R7d560-setsumeisyo/�ʕ\�@�z�u�\��Z�p�ҁi�@�B���ݒu�H���j.pdf
+[ZIP Entry] 20260105-gesui-2k3g-R7d560-setsumeisyo/�ʕ\�@�z�u�\��Z�p�ҁi�����{�ݍH���j.pdf
+[ZIP Entry] 20260105-gesui-2k3g-R7d560-setsumeisyo/�H�������(R7�򉻑�560��).pdf
+[ZIP Entry] 20260105-gesui-2k3g-R7d560-setsumeisyo/���ݍH���̐����_�񓙂ɂ�����d�q�_��ɂ���.pdf
+[ZIP Entry] 20260105-gesui-2k3g-R7d560-setsumeisyo/�Z�p��ď��l���i���O�j.pdf
+[ZIP Entry] 20260105-gesui-2k3g-R7d560-setsumeisyo/�Z�p��ď��l���i����j.pdf
+[ZIP Entry] 20260105-gesui-2k3g-R7d560-setsumeisyo/����m�F�\����.pdf
+[ZIP Entry] 20260105-gesui-2k3g-R7d560-setsumeisyo/�������D�Q�����i�m�F�\������.pdf
+[ZIP Entry] 20260105-gesui-2k3g-R7d560-setsumeisyo/���D�Ҍ���.pdf
+[ZIP Entry] 20260105-gesui-2k3g-R7d560-setsumeisyo/�d�q���D�Q���\����.pdf
+[ZIP Entry] 20260105-gesui-2k3g-R7d560-youshiki.zip
+[ZIP Entry] Found nested ZIP: 20260105-gesui-2k3g-R7d560-youshiki.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 6 entries.
+[ZIP Entry] 20260105-gesui-2k3g-R7d560-youshiki/�H�������(R7�򉻑�560��).xls
+[ZIP Entry] 20260105-gesui-2k3g-R7d560-youshiki/�Z�p��ď��l���i���O�j.xls
+[ZIP Entry] 20260105-gesui-2k3g-R7d560-youshiki/�Z�p��ď��l���i����j.xlsx
+[ZIP Entry] 20260105-gesui-2k3g-R7d560-youshiki/����m�F�\����.xls
+[ZIP Entry] 20260105-gesui-2k3g-R7d560-youshiki/�������D�Q�����i�m�F�\������.doc
+[ZIP Entry] 20260105-gesui-2k3g-R7d560-youshiki/�d�q���D�Q���\����.doc
+[ZIP Entry] 20260105-gesui-2k3g-R7d560-joukensyo.pdf
+[ZIP Entry] 20260105-gesui-2k3g-R7d560-shiyousyo.zip
+[ZIP Entry] Found nested ZIP: 20260105-gesui-2k3g-R7d560-shiyousyo.zip, extracting recursively...
+[ZIP] Downloaded ZIP with 5 entries.
+[ZIP Entry] 20260105-gesui-2k3g-R7d560-shiyousyo/010-J1-560SPEC.pdf
+[ZIP Entry] 20260105-gesui-2k3g-R7d560-shiyousyo/020-J1-560DRAW.pdf
+[ZIP Entry] 20260105-gesui-2k3g-R7d560-shiyousyo/030-J1-560EXPL.pdf
+[ZIP Entry] 20260105-gesui-2k3g-R7d560-shiyousyo/040-J1-560ESTI.pdf
+[ZIP Entry] 20260105-gesui-2k3g-R7d560-shiyousyo/050-J1-560QUOT.pdf
+Extracted 130461 chars. Sending to Gemini...
+Success! 609,457,200 円（消費税及び地方消費税（計１０％）を含みます。）
+
+Processing: nara-pref-29006003060520250034 - 奈良公園　浮雲園地他照明長寿命化実施設計業務委託（奈良公園施設長寿命化対策事業（防災・安全））　２３１－委－３
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Results for コンサル...
+[3] Performing search for ID: 29006003060520250034 and Title: 奈良公園　浮雲園地他照明長寿命化実施設計業務委託（奈良公園施...
+  -> Pattern 1: Searching by ankenNo: 29006003060520250034
+Rows found on search results page: 102
+Opening popup...
+Intercepting download stream...
+[Popup] Auto-accepting dialog: 添付ファイルを一括ダウンロードします。
+よろしいですか？
+[ZIP] Downloaded ZIP with 2 entries.
+[ZIP Entry] �J�D�^�i231-��-3�j.pdf
+[ZIP Entry] ����R���ʒm���i231-��-3�j.pdf
+Extracted 1143 chars. Sending to Gemini...
+Success! １４，０５８，０００円 （消費税等抜き １２，７８０，０００円）
+
+Processing: nara-pref-29001013052020250242 - 中の川　測量業務委託（緊急自然災害債対象（臨時・特別）他）　Ｃ－１１９－委－１他
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Results for コンサル...
+[3] Performing search for ID: 29001013052020250242 and Title: 中の川　測量業務委託（緊急自然災害債対象（臨時・特別）他）　...
+  -> Pattern 1: Searching by ankenNo: 29001013052020250242
+Rows found on search results page: 102
+Opening popup...
+Intercepting download stream...
+[Popup] Auto-accepting dialog: 添付ファイルを一括ダウンロードします。
+よろしいですか？
+[ZIP] Downloaded ZIP with 1 entries.
+[ZIP Entry] �J�D�^�iC-119-��-1���jPPI.pdf
+Extracted 1443 chars. Sending to Gemini...
+Success! 1,804,000円 (消費税等抜き 1,640,000円)
+
+Processing: nara-pref-29001013052520250166 - 大野川　護岸詳細設計業務委託（緊急自然災害防止対策事業債対象事業（臨時・特別））　第　Ｕ－１１９－委１　号
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Results for コンサル...
+[3] Performing search for ID: 29001013052520250166 and Title: 大野川　護岸詳細設計業務委託（緊急自然災害防止対策事業債対象...
+  -> Pattern 1: Searching by ankenNo: 29001013052520250166
+Rows found on search results page: 102
+Opening popup...
+Intercepting download stream...
+[Popup] Auto-accepting dialog: 添付ファイルを一括ダウンロードします。
+よろしいですか？
+[ZIP] Downloaded ZIP with 1 entries.
+[ZIP Entry] �J�D�^�i��t�|�P�P�X�|�ςP���j.pdf
+Extracted 800 chars. Sending to Gemini...
+Success! 4,994,000円（消費税等抜き 4,540,000円）
+
+Processing: nara-pref-29001013052520250165 - 菅野川他　護岸詳細設計業務委託（緊急自然災害防止対策事業債対象事業（臨時・特別））　第　Ｕ－１２１－委１　号
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Results for コンサル...
+[3] Performing search for ID: 29001013052520250165 and Title: 菅野川他　護岸詳細設計業務委託（緊急自然災害防止対策事業債対...
+  -> Pattern 1: Searching by ankenNo: 29001013052520250165
+Rows found on search results page: 102
+Opening popup...
+Intercepting download stream...
+[Popup] Auto-accepting dialog: 添付ファイルを一括ダウンロードします。
+よろしいですか？
+[ZIP] Downloaded ZIP with 1 entries.
+[ZIP Entry] �J�D�^�i��t�|�P�Q�P�|�ςP���j.pdf
+Extracted 807 chars. Sending to Gemini...
+Success! 5,390,000円（消費税等抜き 4,900,000円）
+
+Processing: nara-pref-29001013052520250164 - 青蓮寺川　護岸詳細設計業務委託（緊急自然災害防止対策事業債対象事業（臨時・特別））　第　Ｕ－１２０－委１　号
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Results for コンサル...
+[3] Performing search for ID: 29001013052520250164 and Title: 青蓮寺川　護岸詳細設計業務委託（緊急自然災害防止対策事業債対...
+  -> Pattern 1: Searching by ankenNo: 29001013052520250164
+Rows found on search results page: 102
+Opening popup...
+Intercepting download stream...
+[Popup] Auto-accepting dialog: 添付ファイルを一括ダウンロードします。
+よろしいですか？
+[ZIP] Downloaded ZIP with 1 entries.
+[ZIP Entry] �J�D�^�i��t�|�P�Q�O�|�ςP���j.pdf
+Extracted 800 chars. Sending to Gemini...
+Success! ５，９４０，０００円 （消費税等抜き ５，４００，０００円）
+
+Processing: nara-pref-29001013252020250032 - （都）西九条佐保線　大安寺西三丁目地区事業損失調査業務委託（（仮称）奈良ＩＣ周辺整備補助街路事業）　８－１０－ＡＧ２－用委－２１
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Results for コンサル...
+[3] Performing search for ID: 29001013252020250032 and Title: （都）西九条佐保線　大安寺西三丁目地区事業損失調査業務委託（...
+  -> Pattern 1: Searching by ankenNo: 29001013252020250032
+Rows found on search results page: 102
+Opening popup...
+Intercepting download stream...
+[Popup] Auto-accepting dialog: 添付ファイルを一括ダウンロードします。
+よろしいですか？
+[ZIP] Downloaded ZIP with 1 entries.
+[ZIP Entry] �J�D�^�i8-10-AG2-�p��-21�j.pdf
+Extracted 1831 chars. Sending to Gemini...
+Success! １，５１８，０００円 （消費税等抜き １，３８０，０００円）
+
+Processing: nara-pref-29001013252020250031 - （都）西九条佐保線　三条桧町他地区用地調査点検等技術業務委託（（仮称）奈良ＩＣ周辺整備補助街路事業）　８－１０－ＡＧ２－用委－４
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Results for コンサル...
+[3] Performing search for ID: 29001013252020250031 and Title: （都）西九条佐保線　三条桧町他地区用地調査点検等技術業務委託...
+  -> Pattern 1: Searching by ankenNo: 29001013252020250031
+Rows found on search results page: 102
+Opening popup...
+Intercepting download stream...
+[Popup] Auto-accepting dialog: 添付ファイルを一括ダウンロードします。
+よろしいですか？
+[ZIP] Downloaded ZIP with 1 entries.
+[ZIP Entry] �J�D�^�i8-10-AG2-�p��-21�j.pdf
+Extracted 1831 chars. Sending to Gemini...
+Success! 1,518,000円 （消費税等抜き 1,380,000円）
+
+Processing: nara-pref-29001013252020250030 - （都）大安寺柏木線　八条四丁目地区用地調査点検等技術業務委託（（仮称）奈良ＩＣ周辺整備補助街路事業）　８－１０－ＡＧ５－用委－８
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Results for コンサル...
+[3] Performing search for ID: 29001013252020250030 and Title: （都）大安寺柏木線　八条四丁目地区用地調査点検等技術業務委託...
+  -> Pattern 1: Searching by ankenNo: 29001013252020250030
+Rows found on search results page: 102
+Opening popup...
+Intercepting download stream...
+[Popup] Auto-accepting dialog: 添付ファイルを一括ダウンロードします。
+よろしいですか？
+[ZIP] Downloaded ZIP with 1 entries.
+[ZIP Entry] �J�D�^�i8-10-AG5-�p��-8�j.pdf
+Extracted 1542 chars. Sending to Gemini...
+Success! １，７３８，０００円 （消費税等抜き １，５８０，０００円）
+
+Processing: nara-pref-29001013252020250029 - （都）西九条佐保線　三条桧町地区用地調査点検等技術業務委託（（仮称）奈良ＩＣ周辺整備補助街路事業）　８－１０－ＡＧ２－用委－３
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Results for コンサル...
+[3] Performing search for ID: 29001013252020250029 and Title: （都）西九条佐保線　三条桧町地区用地調査点検等技術業務委託（...
+  -> Pattern 1: Searching by ankenNo: 29001013252020250029
+Rows found on search results page: 102
+Opening popup...
+Intercepting download stream...
+[Popup] Auto-accepting dialog: 添付ファイルを一括ダウンロードします。
+よろしいですか？
+[ZIP] Downloaded ZIP with 1 entries.
+[ZIP Entry] �J�D�^�i8-10-AG2-�p��-21�j.pdf
+Extracted 1831 chars. Sending to Gemini...
+Success! 1,518,000円 (消費税等抜き 1,380,000円)
+
+Processing: nara-pref-29001013252020250028 - （都）西九条佐保線　大宮町三丁目地区用地調査点検等技術業務委託（（仮称）奈良ＩＣ周辺整備補助街路事業　８－１０－ＡＧ１－用委－７
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Results for コンサル...
+[3] Performing search for ID: 29001013252020250028 and Title: （都）西九条佐保線　大宮町三丁目地区用地調査点検等技術業務委...
+  -> Pattern 1: Searching by ankenNo: 29001013252020250028
+Rows found on search results page: 102
+Opening popup...
+Intercepting download stream...
+[Popup] Auto-accepting dialog: 添付ファイルを一括ダウンロードします。
+よろしいですか？
+[ZIP] Downloaded ZIP with 1 entries.
+[ZIP Entry] �J�D�^�i8-10-AG2-�p��-21�j.pdf
+Extracted 1831 chars. Sending to Gemini...
+Success! １，５１８，０００円（消費税等抜き １，３８０，０００円）
+
+Processing: nara-pref-29006003060520240023 - 大渕池公園　西地区駐車場他施工計画検討業務委託（補助都市計画公園事業（防災・安全交付金））　７１２－委－１
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Information for コンサル...
+[3] Performing search for ID: 29006003060520240023 and Title: 大渕池公園　西地区駐車場他施工計画検討業務委託（補助都市計画...
+  -> Pattern 1: Searching by ankenNo: 29006003060520240023
+[Dialog] Auto-accepting dialog: 指定の条件を満たす案件情報がありませんでした。
+  -> Pattern 1 failed (No results: 0). Trying Pattern 2...
+  -> Pattern 2: Searching by Title: 大渕池公園
+Rows found on search results page: 5
+Target row NOT FOUND for: 大渕池公園　西地区駐車場他施工計画検討業務委託（補助都市計画公園事業（防災・安全交付金））　７１２－委－１
+Failed text extraction for nara-pref-29006003060520240023.
+
+Processing: nara-pref-29006003060520240022 - 奈良公園　春日山送水管圧力調整水槽廻り配管布設替実施設計業務委託（奈良公園施設長寿命化対策事業）　８３２－委－５
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Information for コンサル...
+[3] Performing search for ID: 29006003060520240022 and Title: 奈良公園　春日山送水管圧力調整水槽廻り配管布設替実施設計業務...
+  -> Pattern 1: Searching by ankenNo: 29006003060520240022
+[Dialog] Auto-accepting dialog: 指定の条件を満たす案件情報がありませんでした。
+  -> Pattern 1 failed (No results: 0). Trying Pattern 2...
+  -> Pattern 2: Searching by Title: 奈良公園
+Rows found on search results page: 3
+Target row NOT FOUND for: 奈良公園　春日山送水管圧力調整水槽廻り配管布設替実施設計業務委託（奈良公園施設長寿命化対策事業）　８３２－委－５
+Failed text extraction for nara-pref-29006003060520240022.
+
+Processing: nara-pref-29006003060520240021 - 奈良公園　現場技術業務委託（奈良公園施設長寿命化対策事業（防災・安全））　８３１－委－３
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Information for コンサル...
+[3] Performing search for ID: 29006003060520240021 and Title: 奈良公園　現場技術業務委託（奈良公園施設長寿命化対策事業（防...
+  -> Pattern 1: Searching by ankenNo: 29006003060520240021
+[Dialog] Auto-accepting dialog: 指定の条件を満たす案件情報がありませんでした。
+  -> Pattern 1 failed (No results: 0). Trying Pattern 2...
+  -> Pattern 2: Searching by Title: 奈良公園
+Rows found on search results page: 3
+Target row NOT FOUND for: 奈良公園　現場技術業務委託（奈良公園施設長寿命化対策事業（防災・安全））　８３１－委－３
+Failed text extraction for nara-pref-29006003060520240021.
+
+Processing: nara-pref-29006003060520240013 - 奈良公園　鷺池底樋改修設計業務委託（猿沢池周辺地区整備事業）　８２７－委－３
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Information for コンサル...
+[3] Performing search for ID: 29006003060520240013 and Title: 奈良公園　鷺池底樋改修設計業務委託（猿沢池周辺地区整備事業）...
+  -> Pattern 1: Searching by ankenNo: 29006003060520240013
+[Dialog] Auto-accepting dialog: 指定の条件を満たす案件情報がありませんでした。
+  -> Pattern 1 failed (No results: 0). Trying Pattern 2...
+  -> Pattern 2: Searching by Title: 奈良公園
+Rows found on search results page: 3
+Target row NOT FOUND for: 奈良公園　鷺池底樋改修設計業務委託（猿沢池周辺地区整備事業）　８２７－委－３
+Failed text extraction for nara-pref-29006003060520240013.
+
+Processing: nara-pref-29006003060520240009 - 奈良公園　公園道照明施設設置工事（奈良公園環境改善事業）　８０８－５
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Information for 建築...
+[3] Performing search for ID: 29006003060520240009 and Title: 奈良公園　公園道照明施設設置工事（奈良公園環境改善事業）　８...
+  -> Pattern 1: Searching by ankenNo: 29006003060520240009
+[Dialog] Auto-accepting dialog: 指定の条件を満たす案件情報がありませんでした。
+  -> Pattern 1 failed (No results: 0). Trying Pattern 2...
+  -> Pattern 2: Searching by Title: 奈良公園
+[Dialog] Auto-accepting dialog: 指定の条件を満たす案件情報がありませんでした。
+Rows found on search results page: 0
+Target row NOT FOUND for: 奈良公園　公園道照明施設設置工事（奈良公園環境改善事業）　８０８－５
+Failed text extraction for nara-pref-29006003060520240009.
+
+Processing: nara-pref-29006003060520240004 - 平城宮跡歴史公園朱雀大路西側地区　キュービクル修繕工事（平城宮跡の利活用推進事業（西側地区・単独公共））　９２１－１
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Information for 建築...
+[3] Performing search for ID: 29006003060520240004 and Title: 平城宮跡歴史公園朱雀大路西側地区　キュービクル修繕工事（平城...
+  -> Pattern 1: Searching by ankenNo: 29006003060520240004
+[Dialog] Auto-accepting dialog: 指定の条件を満たす案件情報がありませんでした。
+  -> Pattern 1 failed (No results: 0). Trying Pattern 2...
+  -> Pattern 2: Searching by Title: 平城宮跡歴史公園朱雀大路西側地区
+[Dialog] Auto-accepting dialog: 指定の条件を満たす案件情報がありませんでした。
+Rows found on search results page: 0
+Target row NOT FOUND for: 平城宮跡歴史公園朱雀大路西側地区　キュービクル修繕工事（平城宮跡の利活用推進事業（西側地区・単独公共））　９２１－１
+Failed text extraction for nara-pref-29006003060520240004.
+
+Processing: nara-pref-29006003060520240003 - 平城宮跡歴史公園　朱雀門ライトアップ設備改修工事（朱雀門ライトアップ設備改修事業）　９４１－１
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Information for 建築...
+[3] Performing search for ID: 29006003060520240003 and Title: 平城宮跡歴史公園　朱雀門ライトアップ設備改修工事（朱雀門ライ...
+  -> Pattern 1: Searching by ankenNo: 29006003060520240003
+[Dialog] Auto-accepting dialog: 指定の条件を満たす案件情報がありませんでした。
+  -> Pattern 1 failed (No results: 0). Trying Pattern 2...
+  -> Pattern 2: Searching by Title: 平城宮跡歴史公園
+[Dialog] Auto-accepting dialog: 指定の条件を満たす案件情報がありませんでした。
+Rows found on search results page: 0
+Target row NOT FOUND for: 平城宮跡歴史公園　朱雀門ライトアップ設備改修工事（朱雀門ライトアップ設備改修事業）　９４１－１
+Failed text extraction for nara-pref-29006003060520240003.
+
+Processing: nara-pref-29006003060520240002 - 奈良公園　登大路園地他照明実施設計業務委託（奈良公園施設長寿命化対策事業（防災・安全）他）　８３１－委－１他
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Information for コンサル...
+[3] Performing search for ID: 29006003060520240002 and Title: 奈良公園　登大路園地他照明実施設計業務委託（奈良公園施設長寿...
+  -> Pattern 1: Searching by ankenNo: 29006003060520240002
+[Dialog] Auto-accepting dialog: 指定の条件を満たす案件情報がありませんでした。
+  -> Pattern 1 failed (No results: 0). Trying Pattern 2...
+  -> Pattern 2: Searching by Title: 奈良公園
+Rows found on search results page: 3
+Target row NOT FOUND for: 奈良公園　登大路園地他照明実施設計業務委託（奈良公園施設長寿命化対策事業（防災・安全）他）　８３１－委－１他
+Failed text extraction for nara-pref-29006003060520240002.
+
+Processing: nara-pref-29006006060520240002 - 奈良公園　水質改善対策調査業務委託（猿沢池周辺地区整備事業）　８２７－委－２
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Information for コンサル...
+[3] Performing search for ID: 29006006060520240002 and Title: 奈良公園　水質改善対策調査業務委託（猿沢池周辺地区整備事業）...
+  -> Pattern 1: Searching by ankenNo: 29006006060520240002
+[Dialog] Auto-accepting dialog: 指定の条件を満たす案件情報がありませんでした。
+  -> Pattern 1 failed (No results: 0). Trying Pattern 2...
+  -> Pattern 2: Searching by Title: 奈良公園
+Rows found on search results page: 3
+Target row NOT FOUND for: 奈良公園　水質改善対策調査業務委託（猿沢池周辺地区整備事業）　８２７－委－２
+Failed text extraction for nara-pref-29006006060520240002.
+
+Processing: nara-pref-29006006060520240001 - 奈良公園　交通量調査業務委託（奈良公園環境改善事業）
+[1] Accessing Nara Prefecture PPI system (Frame Initialization)...
+[2] Navigating to Information for コンサル...
+[3] Performing search for ID: 29006006060520240001 and Title: 奈良公園　交通量調査業務委託（奈良公園環境改善事業）...
+  -> Pattern 1: Searching by ankenNo: 29006006060520240001
+[Dialog] Auto-accepting dialog: 指定の条件を満たす案件情報がありませんでした。
+  -> Pattern 1 failed (No results: 0). Trying Pattern 2...
+  -> Pattern 2: Searching by Title: 奈良公園
+Rows found on search results page: 3
+Target row NOT FOUND for: 奈良公園　交通量調査業務委託（奈良公園環境改善事業）
+Failed text extraction for nara-pref-29006006060520240001.
+
+Saving updated data...
+Done!
