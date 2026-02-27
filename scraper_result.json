@@ -316,36 +316,6 @@
     "description": "奈良県御所市他、葛城川流域（81.18km2）における土砂・洪水氾濫対策計画検討業務。土砂流出の著しい葛城川流域を対象に、中小洪水時の土砂移動状況を踏まえた対策計画を策定します。具体的には、資料収集、現地調査、再現計算、氾濫箇所・施設配置・除石計画の検討、氾濫想定区域設定、B/C算出などを行います。"
   },
   {
-    "id": "nara-pref-29001013271020250042",
-    "municipality": "奈良県",
-    "title": "中和公園事務所　現場技術業務委託（補助都市計画公園事業（防災・安全）他）　繰２－３０－Ｂ１－委１　他",
-    "type": "コンサル",
-    "announcementDate": "2026-02-26",
-    "biddingDate": "2026-03-19",
-    "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29001013271020250042",
-    "status": "受付中",
-    "winnerType": "設計事務所",
-    "isIntelligenceExtracted": true,
-    "estimatedPrice": "10,659,000円（消費税及び地方消費税(計 10%)を含みます。）",
-    "constructionPeriod": "令和8年4月1日～令和8年9月30日",
-    "description": "中和公園事務所における現場技術業務委託。公園に関する工事・業務の監督補助、品質検査、設計積算資料の整理、馬見丘陵公園の植栽・施設管理図の補正など、土木技術業務全般を通じて公園事業の円滑な履行と品質確保を図る。"
-  },
-  {
-    "id": "nara-pref-29001013053020250288",
-    "municipality": "奈良県",
-    "title": "一般国道３７０号　測量業務委託（防災・安全交付金事業（国道災害防除・国補正））　補１－Ａ３７０－６－委１",
-    "type": "コンサル",
-    "announcementDate": "2026-02-25",
-    "biddingDate": "2026-03-11",
-    "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29001013053020250288",
-    "status": "受付中",
-    "winnerType": "設計事務所",
-    "isIntelligenceExtracted": true,
-    "estimatedPrice": "4,466,000円 (消費税及び地方消費税(計 10%)を含みます。)",
-    "constructionPeriod": "令和8年3月19日（予定）～令和8年6月30日",
-    "description": "奈良県吉野郡吉野町窪垣内地内の一般国道370号において、防災・安全交付金事業（国道災害防除・国補正）として、法面対策に活用するための測量成果を作成する業務。内容は4級基準点測量（N=4点）、現地測量（A=0.003km2）、路線測量（L=0.16km）を含む。"
-  },
-  {
     "id": "nara-city-0000002280",
     "municipality": "奈良市",
     "title": "南消防署西大寺分署仮眠室改修工事",
@@ -406,30 +376,6 @@
     "winnerType": "設計事務所"
   },
   {
-    "id": "nara-city-0000002274",
-    "municipality": "奈良市",
-    "title": "支障物件調査業務委託（針町地内・（仮称）針ＴＲＳバイパス線）",
-    "type": "委託",
-    "announcementDate": "2026-02-25",
-    "biddingDate": "2026-02-25",
-    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
-    "status": "落札",
-    "winningContractor": "福田総合コンサルタント株式会社",
-    "winnerType": "設計事務所"
-  },
-  {
-    "id": "kashihara-result-5071001343",
-    "municipality": "橿原市",
-    "title": "市道路整備工事7-2",
-    "type": "建築",
-    "announcementDate": "2026-02-25",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071001343k.pdf",
-    "status": "落札",
-    "winnerType": "ゼネコン",
-    "winningContractor": "㈱勇伸建設"
-  },
-  {
     "id": "kashihara-result-5071001360",
     "municipality": "橿原市",
     "title": "踏切道内誘導表示設置工事7-1",
@@ -454,18 +400,6 @@
     "winningContractor": "㈱南村組"
   },
   {
-    "id": "kashihara-result-5071001328",
-    "municipality": "橿原市",
-    "title": "市道路舗装維持修繕工事7－11",
-    "type": "建築",
-    "announcementDate": "2026-02-25",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071001328k.pdf",
-    "status": "落札",
-    "winnerType": "ゼネコン",
-    "winningContractor": "㈱森本組"
-  },
-  {
     "id": "kashihara-result-5072001304",
     "municipality": "橿原市",
     "title": "五井町市有地土壌汚染調査業務（深度方向調査）",
@@ -476,18 +410,6 @@
     "status": "落札",
     "winnerType": "設計事務所",
     "winningContractor": "㈱KGS"
-  },
-  {
-    "id": "kashihara-result-5072001274",
-    "municipality": "橿原市",
-    "title": "交通安全施設整備工事に伴う補償調査業務委託R7",
-    "type": "建築",
-    "announcementDate": "2026-02-25",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18375.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5072001274k.pdf",
-    "status": "落札",
-    "winnerType": "ゼネコン",
-    "winningContractor": "㈱五星"
   },
   {
     "id": "kashihara-result-5073001365",
@@ -697,51 +619,6 @@
     "description": "天理市岩屋町地内の高瀬川における河道監視を目的とした観測業務委託。傾斜計3台とカメラ2台を設置し、観測、点検、記録、データ取りまとめを行う。緊急自然災害防止対策事業債対象事業。"
   },
   {
-    "id": "nara-pref-29001013052520250205",
-    "municipality": "奈良県",
-    "title": "町並川　地下水位観測業務（防災・安全社会資本整備交付金事業（総流防・広域系））　第　１９－委６　号",
-    "type": "コンサル",
-    "announcementDate": "2026-02-18",
-    "biddingDate": "2026-03-09",
-    "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29001013052520250205",
-    "status": "受付中",
-    "winnerType": "設計事務所",
-    "isIntelligenceExtracted": true,
-    "estimatedPrice": "18,029,000円（消費税及び地方消費税(計 10%)を含みます。）",
-    "constructionPeriod": "令和8年3月16日（予定）～令和9年3月26日",
-    "description": "町並川のバイパス水路整備に伴う周辺井戸への地下水位低下影響を評価するため、既存の観測井戸12箇所で地下水位と水質を調査・観測し、これまでの調査結果と合わせて工事の影響を総合的に解析・取りまとめる業務。"
-  },
-  {
-    "id": "nara-pref-29001013053020250275",
-    "municipality": "奈良県",
-    "title": "主要地方道五條吉野線　測量業務委託（防災・安全交付金事業（地方道災害防除・国補正））　補１－Ｂ３９－６－委１",
-    "type": "コンサル",
-    "announcementDate": "2026-02-18",
-    "biddingDate": "2026-03-05",
-    "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29001013053020250275",
-    "status": "受付中",
-    "winnerType": "設計事務所",
-    "isIntelligenceExtracted": true,
-    "estimatedPrice": "4,444,000円（消費税及び地方消費税(計10%)を含みます。）",
-    "constructionPeriod": "令和8年3月13日（予定）～令和8年6月30日",
-    "description": "奈良県吉野郡吉野町楢井地内の主要地方道五條吉野線において、落石及び法面対策のため、4級基準点測量（3点）、現地測量（0.004km2）、路線測量（0.10km）を実施する測量業務委託。防災・安全交付金事業（地方道災害防除・国補正）の一環として、測量成果を作成する。"
-  },
-  {
-    "id": "nara-pref-29001013060020250254",
-    "municipality": "奈良県",
-    "title": "広域化・共同化計画（汚水処理施設の統廃合）推進検討委託（社会資本整備総合交付金事業）　Ｒ７浄化委第３１号・第二委第１２号・浄化県単委第３号",
-    "type": "コンサル",
-    "announcementDate": "2026-02-17",
-    "biddingDate": "2026-03-12",
-    "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29001013060020250254",
-    "status": "受付中",
-    "winnerType": "設計事務所",
-    "isIntelligenceExtracted": true,
-    "estimatedPrice": "25,960,000 円（消費税及び地方消費税(計１０％)を含みます。）",
-    "constructionPeriod": "令和8年3月30日（予定）～令和9年3月26日",
-    "description": "奈良県が策定した「奈良県汚水処理事業広域化・共同化計画」に基づき、大和川上流・宇陀川流域下水道を対象とした汚水処理施設の統廃合について推進検討を行う業務。主な内容は、施設の統廃合に伴う施設能力の検証、将来人口および汚水量の推計、バックアロケーション（建設負担金精算等）の検討、コスト縮減効果の検証、地元協議説明資料の作成などである。"
-  },
-  {
     "id": "nara-city-0000002258",
     "municipality": "奈良市",
     "title": "一条中高一貫校部室棟新築その他工事",
@@ -868,36 +745,6 @@
     "description": "奈良県広域水道企業団 天理ポンプ場において、電気設備更新工事が行われる。受変電設備、運転操作設備、監視制御設備の更新、および照明設備のLED化を含む。本工事は週休2日化を推進する工事として実施される。予定価格は431,371,600円（税込）、工期は令和8年3月23日から令和9年11月30日まで。"
   },
   {
-    "id": "nara-pref-29001013305020250067",
-    "municipality": "奈良県",
-    "title": "吉野川浄化センター他耐水化詳細設計委託（防災・安全交付金事業）　Ｒ７吉野委第６号",
-    "type": "コンサル",
-    "announcementDate": "2026-02-10",
-    "biddingDate": "2026-03-06",
-    "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29001013305020250067",
-    "status": "受付中",
-    "winnerType": "設計事務所",
-    "isIntelligenceExtracted": true,
-    "estimatedPrice": "金２４，５１９，０００円（消費税及び地方消費税(計１０％)を含みます。）",
-    "constructionPeriod": "令和８年３月２４日（予定） ～ 令和８年１２月１８日",
-    "description": "吉野川浄化センターおよび下市ポンプ場の耐水化対策に係る詳細設計委託業務。豪雨災害時でも下水道機能を確保するため、既存の耐水化計画を参考に施設の詳細設計を行うことを目的とします。"
-  },
-  {
-    "id": "nara-pref-29001013305020250068",
-    "municipality": "奈良県",
-    "title": "第二浄化センター他耐水化詳細設計委託（防災・安全交付金事業）　Ｒ７浄化委第３３号・第二委第１３号",
-    "type": "コンサル",
-    "announcementDate": "2026-02-10",
-    "biddingDate": "2026-03-06",
-    "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29001013305020250068",
-    "status": "受付中",
-    "winnerType": "設計事務所",
-    "isIntelligenceExtracted": true,
-    "estimatedPrice": "金１６，８８５，０００円（消費税及び地方消費税(計１０％)を含みます。）",
-    "constructionPeriod": "令和８年３月２４日（予定） ～ 令和８年１２月１８日",
-    "description": "奈良県内の第二浄化センター及び竜田川幹線中継ポンプ場において、豪雨災害時にも下水道機能を確保し、施設被害を最小限にするための耐水化対策詳細設計業務。R2・R3年度に策定された耐水化計画に基づき、施設改修等の詳細設計を行う。"
-  },
-  {
     "id": "高取町-2549",
     "municipality": "高取町",
     "title": "高取城鬼瓦　展示中！",
@@ -905,22 +752,6 @@
     "announcementDate": "2026-02-10",
     "link": "http://www.town.takatori.nara.jp/contents_detail.php?frmId=2549",
     "status": "受付中"
-  },
-  {
-    "id": "nara-pref-29001013060020250252",
-    "municipality": "奈良県",
-    "title": "浄化センター汚泥消化タンク機械棟３号温水ヒータ更新工事（防災・安全交付金事業）　Ｒ７浄化第５５９号",
-    "type": "建築",
-    "announcementDate": "2026-02-09",
-    "biddingDate": "2026-03-09",
-    "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29001013060020250252",
-    "status": "受付中",
-    "winnerType": "ゼネコン",
-    "isIntelligenceExtracted": true,
-    "estimatedPrice": "276,184,700円（消費税及び地方消費税（計10％）を含む。）",
-    "designFirm": "日本工営都市空間株式会社",
-    "constructionPeriod": "令和8年3月25日（予定）～ 令和9年8月31日",
-    "description": "奈良県大和郡山市額田部南町地内にある浄化センターの汚泥消化タンク機械棟において、3号温水ヒータの更新工事を行う。主な工事内容は、温水ヒータ、温水循環ポンプ（2台）、汚泥熱交換器の交換、およびこれらに伴う加温・ガス貯留コントロールセンタ、補助継電気盤、現場操作盤、温水循環流量計の設置・機能増設を含む機械・電気設備の更新。本工事は防災・安全交付金事業として実施され、週休2日化を推進する。"
   },
   {
     "id": "nara-pref-29005007060120250067",
@@ -994,62 +825,11 @@
     "biddingDate": "2026-02-26",
     "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29006003060520250038",
     "status": "受付中",
-    "winnerType": "設計事務所"
-  },
-  {
-    "id": "nara-pref-29001013050520250340",
-    "municipality": "奈良県",
-    "title": "真目堂川　現場技術業務委託（緊急自然災害防止対策事業債対象事業（臨時・特別））　第　Ｎ－１１３－委－１　号",
-    "type": "コンサル",
-    "announcementDate": "2026-02-05",
-    "biddingDate": "2026-02-26",
-    "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29001013050520250340",
-    "status": "受付中",
-    "winnerType": "設計事務所"
-  },
-  {
-    "id": "nara-pref-29001013252020250039",
-    "municipality": "奈良県",
-    "title": "（都）西九条佐保線　大宮町三丁目地区他用地調査点検等技術業務委託（（仮称）奈良ＩＣ周辺整備補助街路事業）　８－１０－ＡＧ１－用委－１２他",
-    "type": "コンサル",
-    "announcementDate": "2026-02-05",
-    "biddingDate": "2026-02-19",
-    "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29001013252020250039",
-    "status": "受付中",
-    "winnerType": "設計事務所"
-  },
-  {
-    "id": "nara-pref-29005007060120250070",
-    "municipality": "奈良県",
-    "title": "【訂正】水道施設現場監理業務委託",
-    "type": "コンサル",
-    "announcementDate": "2026-02-05",
-    "biddingDate": "2026-02-27",
-    "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29005007060120250070",
-    "status": "受付中",
-    "winnerType": "設計事務所"
-  },
-  {
-    "id": "nara-pref-29005007060120250065",
-    "municipality": "奈良県",
-    "title": "浄水場設備工事監理業務委託",
-    "type": "コンサル",
-    "announcementDate": "2026-02-05",
-    "biddingDate": "2026-02-27",
-    "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29005007060120250065",
-    "status": "受付中",
-    "winnerType": "設計事務所"
-  },
-  {
-    "id": "nara-pref-29005007060120250064",
-    "municipality": "奈良県",
-    "title": "広域水道センター現場監理業務委託",
-    "type": "コンサル",
-    "announcementDate": "2026-02-05",
-    "biddingDate": "2026-02-27",
-    "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29005007060120250064",
-    "status": "受付中",
-    "winnerType": "設計事務所"
+    "winnerType": "設計事務所",
+    "isIntelligenceExtracted": true,
+    "estimatedPrice": "23,463,000円（消費税及び地方消費税(計 10%)を含みます。）",
+    "constructionPeriod": "令和8年4月1日（予定）～令和9年3月31日",
+    "description": "奈良市芝辻町にある大渕池公園（補助都市計画公園事業（防災・安全））における公園整備工事に関する現場技術業務委託。具体的には、工事の管理・品質検査補助、および設計・積算資料の整理・作成補助を行い、工事の円滑な履行と品質確保、発注業務の効率化を図る。"
   },
   {
     "id": "nara-pref-29005007060120250063",
@@ -1060,29 +840,11 @@
     "biddingDate": "2026-02-27",
     "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29005007060120250063",
     "status": "受付中",
-    "winnerType": "設計事務所"
-  },
-  {
-    "id": "nara-pref-29005007060120250073",
-    "municipality": "奈良県",
-    "title": "【再】送水管工事監理業務委託１",
-    "type": "コンサル",
-    "announcementDate": "2026-02-05",
-    "biddingDate": "2026-02-27",
-    "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29005007060120250073",
-    "status": "受付中",
-    "winnerType": "設計事務所"
-  },
-  {
-    "id": "nara-pref-29005007060120250062",
-    "municipality": "奈良県",
-    "title": "安堵連絡管整備事業工事監理業務委託",
-    "type": "コンサル",
-    "announcementDate": "2026-02-05",
-    "biddingDate": "2026-02-27",
-    "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29005007060120250062",
-    "status": "受付中",
-    "winnerType": "設計事務所"
+    "winnerType": "設計事務所",
+    "isIntelligenceExtracted": true,
+    "estimatedPrice": "金42,669,000円（消費税及び地方消費税（計10％）を含みます。）",
+    "constructionPeriod": "令和8年4月1日（予定）～令和10年3月31日",
+    "description": "奈良県広域水道企業団の桜井浄水場における設備工事の監理業務委託。広域水道センター桜井浄水場浄水課が実施する工事の調査、設計、積算、監督、検査業務を支援し、工事の円滑な発注、履行、品質確保を図る現場技術業務。"
   },
   {
     "id": "nara-pref-29005007060120250066",
@@ -1093,17 +855,11 @@
     "biddingDate": "2026-02-27",
     "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29005007060120250066",
     "status": "受付中",
-    "winnerType": "設計事務所"
-  },
-  {
-    "id": "nara-pref-29001013052520250190",
-    "municipality": "奈良県",
-    "title": "萩原地区　斜面対策工詳細設計業務委託（防災・安全交付金事業（南部・東部）（急傾斜））　第　５３－１２－委１　号",
-    "type": "コンサル",
-    "announcementDate": "2026-02-04",
-    "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29001013052520250190",
-    "status": "落札",
-    "winnerType": "設計事務所"
+    "winnerType": "設計事務所",
+    "isIntelligenceExtracted": true,
+    "estimatedPrice": "金４３，１５３，０００円（消費税及び地方消費税（計 10％）を含みます。）",
+    "constructionPeriod": "令和 ８年 ４月 １日（予定）～ 令和１０年 ３月３１日",
+    "description": "奈良県広域水道企業団が発注する送水施設設備工事監理業務委託の公告。広域水道センター事業課設備建設係が実施する、のどか村送水ポンプ棟建設工事、送水施設受水地工事、水質監視装置更新工事などの調査、設計、積算、監督、検査、総務事務を支援し、円滑な発注、履行、品質確保、迅速な事務処理を図る現場技術業務委託。"
   },
   {
     "id": "nara-pref-29001013060020250230",
@@ -1113,7 +869,9 @@
     "announcementDate": "2026-02-03",
     "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29001013060020250230",
     "status": "落札",
-    "winnerType": "ゼネコン"
+    "winnerType": "ゼネコン",
+    "description": "PDF extraction failed or empty.",
+    "isIntelligenceExtracted": true
   },
   {
     "id": "nara-pref-29001013052020250262",
@@ -1123,7 +881,12 @@
     "announcementDate": "2026-02-03",
     "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29001013052020250262",
     "status": "落札",
-    "winnerType": "ゼネコン"
+    "winnerType": "ゼネコン",
+    "isIntelligenceExtracted": true,
+    "estimatedPrice": "40,700,000円（消費税等抜き37,000,000円）",
+    "winningContractor": "（株）ミズハ",
+    "constructionPeriod": "令和8年2月6日 から 令和9年3月19日 まで",
+    "description": "奈良県磯城郡田原本町八田地内において実施される、県営畑地帯総合整備事業「八田地区 小島井堰設備改良工事」の入札結果。小島井堰設備の改良工事を行います。"
   },
   {
     "id": "nara-pref-29001013060020250233",
@@ -1133,7 +896,9 @@
     "announcementDate": "2026-02-03",
     "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29001013060020250233",
     "status": "落札",
-    "winnerType": "設計事務所"
+    "winnerType": "設計事務所",
+    "description": "PDF extraction failed or empty.",
+    "isIntelligenceExtracted": true
   },
   {
     "id": "高取町-2547",
@@ -1196,7 +961,12 @@
     "biddingDate": "2026-02-26",
     "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29005007060120250060",
     "status": "受付中",
-    "winnerType": "ゼネコン"
+    "winnerType": "ゼネコン",
+    "isIntelligenceExtracted": true,
+    "estimatedPrice": "74,558,000円（消費税及び地方消費税（計10％）を含みます。）",
+    "designFirm": "内外エンジニアリング株式会社",
+    "constructionPeriod": "令和8年3月9日（予定）～ 令和8年10月8日",
+    "description": "奈良県御所市戸毛地内の御所浄水場電気棟（鉄筋コンクリート造、地上2階・地下1階建、延べ面積1,418.95㎡）の改修工事に伴う設備工事一式。本案件は、建設現場の週休2日化を推進する総合評価落札方式の電子入札です。"
   },
   {
     "id": "nara-pref-29005007060120250058",
@@ -1207,7 +977,12 @@
     "biddingDate": "2026-02-26",
     "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29005007060120250058",
     "status": "受付中",
-    "winnerType": "ゼネコン"
+    "winnerType": "ゼネコン",
+    "isIntelligenceExtracted": true,
+    "estimatedPrice": "34,287,000円（消費税及び地方消費税（計１０％）を含む）",
+    "designFirm": "内外エンジニアリング株式会社",
+    "constructionPeriod": "令和８年３月９日（予定）～ 令和８年１０月８日",
+    "description": "奈良県御所市戸毛地内にある御所浄水場の電気棟（鉄筋コンクリート造、地上2階・地下1階建、延べ面積1,418.95㎡）の建築改修工事一式。本工事は総合評価落札方式の電子入札案件で、建設現場の週休2日化を推進する発注者指定型工事です。"
   },
   {
     "id": "nara-city-0000002260",
@@ -1257,7 +1032,9 @@
     "announcementDate": "2026-01-29",
     "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29001013060020250234",
     "status": "落札",
-    "winnerType": "設計事務所"
+    "winnerType": "設計事務所",
+    "description": "PDF extraction failed or empty.",
+    "isIntelligenceExtracted": true
   },
   {
     "id": "nara-pref-29001013305020250061",
@@ -1267,7 +1044,13 @@
     "announcementDate": "2026-01-29",
     "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29001013305020250061",
     "status": "落札",
-    "winnerType": "設計事務所"
+    "winnerType": "設計事務所",
+    "isIntelligenceExtracted": true,
+    "estimatedPrice": "７，５３５，０００円 （消費税等抜き ６，８５０，０００円）",
+    "winningContractor": "株式会社弘洋第一コンサルタンツ 奈良営業所",
+    "designFirm": "株式会社弘洋第一コンサルタンツ 奈良営業所",
+    "constructionPeriod": "令和 ８年 ２月 ５日から令和 ８年 ６月３０日まで",
+    "description": "大和郡山市西奈良口町地内他における佐保川幹線管渠内の修繕に関する詳細設計委託案件です。"
   },
   {
     "id": "nara-pref-29001013305020250060",
@@ -1277,7 +1060,13 @@
     "announcementDate": "2026-01-29",
     "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29001013305020250060",
     "status": "落札",
-    "winnerType": "設計事務所"
+    "winnerType": "設計事務所",
+    "isIntelligenceExtracted": true,
+    "estimatedPrice": "7,535,000円 （消費税等抜き 6,850,000円）",
+    "winningContractor": "株式会社弘洋第一コンサルタンツ 奈良営業所",
+    "designFirm": "株式会社弘洋第一コンサルタンツ 奈良営業所",
+    "constructionPeriod": "令和8年2月5日から令和8年6月30日まで",
+    "description": "大和郡山市西奈良口町地内他における佐保川幹線管渠内修繕の詳細設計を委託する案件。（その1）"
   },
   {
     "id": "kashihara-result-5071001244",
@@ -1304,27 +1093,6 @@
     "winningContractor": "㈲坪岡建築事務所"
   },
   {
-    "id": "ando-0000003918-22",
-    "municipality": "安堵町",
-    "title": "令和8・9年度入札参加資格審査受付について（建設工事・測量コンサルタント）",
-    "type": "コンサル",
-    "announcementDate": "2026-01-29",
-    "link": "https://www.town.ando.nara.jp/0000003918.html",
-    "status": "受付終了"
-  },
-  {
-    "id": "nara-city-0000002257",
-    "municipality": "奈良市",
-    "title": "六条奈良阪線（東西工区）支障物件調査業務委託（その２）",
-    "type": "委託",
-    "announcementDate": "2026-01-27",
-    "biddingDate": "2026-01-27",
-    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
-    "status": "落札",
-    "winningContractor": "株式会社キミコン",
-    "winnerType": "ゼネコン"
-  },
-  {
     "id": "nara-pref-29005007060120250059",
     "municipality": "奈良県",
     "title": "御所浄水場２系ろ過池No.１～６逆洗弁更新工事",
@@ -1333,27 +1101,12 @@
     "biddingDate": "2026-02-25",
     "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29005007060120250059",
     "status": "受付中",
-    "winnerType": "ゼネコン"
-  },
-  {
-    "id": "nara-pref-29001013060020250220",
-    "municipality": "奈良県",
-    "title": "奈良県立大学（仮称）教育研究棟新築工事（機械設備工事）　第７－３８号",
-    "type": "建築",
-    "announcementDate": "2026-01-26",
-    "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29001013060020250220",
-    "status": "落札",
-    "winnerType": "ゼネコン"
-  },
-  {
-    "id": "nara-pref-29001013060020250219",
-    "municipality": "奈良県",
-    "title": "奈良県立大学（仮称）教育研究棟新築工事（建築工事）　第７－３７号",
-    "type": "建築",
-    "announcementDate": "2026-01-26",
-    "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29001013060020250219",
-    "status": "落札",
-    "winnerType": "ゼネコン"
+    "winnerType": "ゼネコン",
+    "isIntelligenceExtracted": true,
+    "estimatedPrice": "110,256,300円（消費税及び地方消費税（計１０％）込み）",
+    "designFirm": "関西技術コンサルタント株式会社",
+    "constructionPeriod": "令和８年３月６日（予定）～令和９年９月１０日",
+    "description": "奈良県広域水道企業団が発注する御所浄水場（御所市戸毛地内）の2系ろ過池No.1～6における逆洗弁6台の更新工事。浄水場の連続運転に影響を与えないよう配慮し、週休2日制を推進する総合評価落札方式の電子入札案件。"
   },
   {
     "id": "nara-pref-29001013052520250187",
@@ -1363,7 +1116,12 @@
     "announcementDate": "2026-01-26",
     "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29001013052520250187",
     "status": "落札",
-    "winnerType": "設計事務所"
+    "winnerType": "ゼネコン",
+    "isIntelligenceExtracted": true,
+    "estimatedPrice": "7,997,000 円（消費税抜 7,270,000 円）",
+    "winningContractor": "日本工営都市空間（株）",
+    "constructionPeriod": "令和 8 年 2 月 3 日 から 令和 8 年 3 月 19 日 まで",
+    "description": "県営畑地帯総合整備事業 大宇陀政始北部地区における獣害防止柵整備計画の検討業務を宇陀市大宇陀調子、大宇陀塚脇、大宇陀岩清水、大宇陀守道地内で実施する委託業務。"
   },
   {
     "id": "nara-pref-29001013060020250245",
@@ -1374,7 +1132,11 @@
     "biddingDate": "2026-02-16",
     "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29001013060020250245",
     "status": "受付中",
-    "winnerType": "設計事務所"
+    "winnerType": "設計事務所",
+    "isIntelligenceExtracted": true,
+    "estimatedPrice": "3,256,000円（消費税及び地方消費税(計10％)を含みます。）",
+    "constructionPeriod": "令和8年3月3日（予定）～令和8年10月30日",
+    "description": "奈良県香芝高校の管理教室棟（12号棟：RC造3階建て、延床面積1,634㎡、15号棟：RC造3階建て、延床面積1,323㎡）の外壁改修工事および付随する電気・機械設備工事の監理業務です。"
   },
   {
     "id": "nara-pref-29005007060120250057",
@@ -1385,7 +1147,11 @@
     "biddingDate": "2026-02-16",
     "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29005007060120250057",
     "status": "受付中",
-    "winnerType": "設計事務所"
+    "winnerType": "設計事務所",
+    "isIntelligenceExtracted": true,
+    "estimatedPrice": "15,081,000 円（消費税及び地方消費税（計１０％）を含みます。）",
+    "constructionPeriod": "令和8年2月26日（予定）～令和8年8月31日",
+    "description": "奈良県広域水道企業団は、御所市櫛羅地内～楢原地内における広域化施設整備計画に基づき、御所市第4ブランチ詳細設計業務を委託。西部調整池から御所市水道管への配管接続にあたり、末端の水圧不足を解消するため、西部調整池にポンプを設置し、最適なポンプ及び管路の布設計画を立案し、工事発注図書を作成する。"
   },
   {
     "id": "yamato-takada-6cc8e95d",
@@ -1404,7 +1170,12 @@
     "announcementDate": "2026-01-22",
     "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29001013060020250227",
     "status": "落札",
-    "winnerType": "ゼネコン"
+    "winnerType": "ゼネコン",
+    "isIntelligenceExtracted": true,
+    "estimatedPrice": "１，５１２，５００，０００円 （消費税等抜き １，３７５，０００，０００円）",
+    "winningContractor": "株式会社丸島アクアシステム",
+    "constructionPeriod": "令和 ８年 ２月１０日から令和１１年 １月３１日まで",
+    "description": "大和郡山市額田部南町地内にある浄化センターの2系反応槽散気装置を更新する工事です。本事業は防災・安全交付金事業として実施されます。"
   },
   {
     "id": "nara-pref-29001013050520250332",
@@ -1415,17 +1186,11 @@
     "biddingDate": "2026-02-12",
     "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29001013050520250332",
     "status": "受付中",
-    "winnerType": "設計事務所"
-  },
-  {
-    "id": "nara-pref-29001013052020250260",
-    "municipality": "奈良県",
-    "title": "かんじょう川　登記推進業務委託（登記推進）　１－委－２",
-    "type": "コンサル",
-    "announcementDate": "2026-01-22",
-    "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29001013052020250260",
-    "status": "落札",
-    "winnerType": "設計事務所"
+    "winnerType": "設計事務所",
+    "isIntelligenceExtracted": true,
+    "estimatedPrice": "17,039,000 円（消費税及び地方消費税(計１０％)を含みます。）",
+    "constructionPeriod": "令和8年2月18日～令和9年1月29日",
+    "description": "奈良市鹿野園地区における地すべり観測業務。平成7年に地すべり防止区域指定後、令和元年・2年の豪雨で滑動が活発化。対策工事後の地すべりブロックと背後ブロックの活動状況を把握するため、地盤伸縮計、水位計、パイプ歪計、ネットワークカメラ等の既設計測機器の観測、保守点検、データ整理、自動観測システムの運用を行う。"
   },
   {
     "id": "nara-pref-29001013060020250243",
@@ -1436,28 +1201,12 @@
     "biddingDate": "2026-02-16",
     "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29001013060020250243",
     "status": "受付中",
-    "winnerType": "ゼネコン"
-  },
-  {
-    "id": "nara-pref-29001013051020250210",
-    "municipality": "奈良県",
-    "title": "第Ｋ－１１０－委－１号　三代川　治水対策検討業務（緊急自然災害防止対策事業債対象事業（臨時・特別））",
-    "type": "コンサル",
-    "announcementDate": "2026-01-21",
-    "biddingDate": "2026-03-17",
-    "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29001013051020250210",
-    "status": "受付中",
-    "winnerType": "設計事務所"
-  },
-  {
-    "id": "nara-pref-29001013051520250261",
-    "municipality": "奈良県",
-    "title": "曽我川　事業損失補償調査業務委託（緊急自然災害防止対策事業債対象事業（臨時・特別））　第　Ｔ－１０２－用委１　号",
-    "type": "コンサル",
-    "announcementDate": "2026-01-20",
-    "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29001013051520250261",
-    "status": "落札",
-    "winnerType": "設計事務所"
+    "winnerType": "ゼネコン",
+    "isIntelligenceExtracted": true,
+    "estimatedPrice": "84,018,000円（消費税及び地方消費税（計10％）を含みます。）",
+    "designFirm": "株式会社ワールド設計",
+    "constructionPeriod": "令和8年6月1日～令和8年10月30日",
+    "description": "奈良県香芝高校のRC造3階建て管理教室棟（12棟、15棟）の外壁改修工事です。延床面積1,634㎡の12棟と、1,323㎡の15棟が対象で、これに伴う電気・機械設備工事も含まれます。"
   },
   {
     "id": "高取町-2537",
@@ -1467,37 +1216,6 @@
     "announcementDate": "2026-01-20",
     "link": "http://www.town.takatori.nara.jp/contents_detail.php?frmId=2537",
     "status": "受付中"
-  },
-  {
-    "id": "nara-pref-29001013052020250258",
-    "municipality": "奈良県",
-    "title": "明日香清水谷線　地質調査業務委託（緊急自然災害（補修））　４４１－委－６",
-    "type": "コンサル",
-    "announcementDate": "2026-01-19",
-    "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29001013052020250258",
-    "status": "落札",
-    "winnerType": "設計事務所"
-  },
-  {
-    "id": "nara-pref-29001013305020250059",
-    "municipality": "奈良県",
-    "title": "佐保川幹線（ＭＮｏ．６７～６９）地下水影響解析調査委託　Ｒ７浄化県単委第２号",
-    "type": "コンサル",
-    "announcementDate": "2026-01-19",
-    "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29001013305020250059",
-    "status": "落札",
-    "winnerType": "設計事務所"
-  },
-  {
-    "id": "nara-pref-29001013305020250062",
-    "municipality": "奈良県",
-    "title": "葛城川幹線管渠内修繕詳細設計委託　Ｒ７二委第１１号",
-    "type": "コンサル",
-    "announcementDate": "2026-01-15",
-    "biddingDate": "2026-01-29",
-    "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29001013305020250062",
-    "status": "受付中",
-    "winnerType": "設計事務所"
   },
   {
     "id": "nara-city-0000002259",
@@ -1510,16 +1228,6 @@
     "status": "受付中"
   },
   {
-    "id": "nara-pref-29001013052520250181",
-    "municipality": "奈良県",
-    "title": "田原地区　急傾斜地崩壊危険区域指定申請資料作成業務委託（防災・安全交付金事業（南部・東部）（急傾斜））第　５３－１３－委２　号",
-    "type": "コンサル",
-    "announcementDate": "2026-01-13",
-    "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29001013052520250181",
-    "status": "落札",
-    "winnerType": "設計事務所"
-  },
-  {
     "id": "nara-pref-29001013052520250178",
     "municipality": "奈良県",
     "title": "県営畑地帯総合整備事業　伊那佐東部地区 パイプライン実施設計その３業務委託　第Ｒ７Ｃ１委３号",
@@ -1527,7 +1235,12 @@
     "announcementDate": "2026-01-13",
     "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29001013052520250178",
     "status": "落札",
-    "winnerType": "設計事務所"
+    "winnerType": "ゼネコン",
+    "isIntelligenceExtracted": true,
+    "estimatedPrice": "7,997,000 円 （消費税抜 7,270,000 ）",
+    "winningContractor": "日本工営都市空間（株）",
+    "constructionPeriod": "令 和 8 年 2 月 3 日 から 令 和 8 年 3 月 19 日 まで",
+    "description": "奈良県宇陀市内の畑地帯（大宇陀政始北部地区）において、県営畑地帯総合整備事業の一環として、獣害防止柵の整備計画を検討する業務の委託。"
   },
   {
     "id": "ando-0000003793-29",
@@ -1564,7 +1277,12 @@
     "announcementDate": "2026-01-09",
     "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29001013305020250056",
     "status": "落札",
-    "winnerType": "ゼネコン"
+    "winnerType": "ゼネコン",
+    "isIntelligenceExtracted": true,
+    "estimatedPrice": "88,440,000円 (消費税等抜き 80,400,000円)",
+    "winningContractor": "株式会社明電エンジニアリング 関西支社",
+    "constructionPeriod": "令和 8年 1月26日から令和 8年12月25日まで",
+    "description": "大和郡山市額田部南町地内他で行われる浄化センターコンデンサ盤等修繕工事（その３）。企業・技術者評価型の一般競争入札により、株式会社明電エンジニアリング 関西支社が落札し、令和8年1月26日から令和8年12月25日までの工期で実施される。"
   },
   {
     "id": "nara-pref-29001013051520250256",
@@ -1574,7 +1292,12 @@
     "announcementDate": "2026-01-09",
     "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29001013051520250256",
     "status": "落札",
-    "winnerType": "設計事務所"
+    "winnerType": "ゼネコン",
+    "isIntelligenceExtracted": true,
+    "estimatedPrice": "7,975,000円 (消費税等抜き7,250,000円)",
+    "winningContractor": "日本工営都市空間（株）",
+    "constructionPeriod": "令和8年1月15日から令和8年7月31日まで",
+    "description": "県営ため池整備事業の一環として、香芝市磯壁地内の吉ヶ池の耐震性能を照査する業務委託。"
   },
   {
     "id": "高取町-2329",
@@ -1602,7 +1325,12 @@
     "announcementDate": "2026-01-08",
     "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29001013305020250058",
     "status": "落札",
-    "winnerType": "ゼネコン"
+    "winnerType": "ゼネコン",
+    "isIntelligenceExtracted": true,
+    "estimatedPrice": "４８，４００，０００円 （消費税等抜き ４４，０００，０００円）",
+    "winningContractor": "近畿環境サービス株式会社",
+    "constructionPeriod": "令和 ８年 １月１６日から令和 ９年 ３月２４日まで",
+    "description": "北葛城郡広陵町萱野地内にて、第二浄化センターの処理水配管等の更新を行う工事。"
   },
   {
     "id": "nara-pref-29001013053020250244",
@@ -1612,18 +1340,12 @@
     "announcementDate": "2026-01-08",
     "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29001013053020250244",
     "status": "落札",
-    "winnerType": "設計事務所"
-  },
-  {
-    "id": "nara-pref-29001013060020250242",
-    "municipality": "奈良県",
-    "title": "奈良県立大学（仮称）教育研究棟新築工事（電気設備工事）　第７－２７号",
-    "type": "建築",
-    "announcementDate": "2026-01-07",
-    "biddingDate": "2026-03-04",
-    "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29001013060020250242",
-    "status": "受付中",
-    "winnerType": "ゼネコン"
+    "winnerType": "ゼネコン",
+    "isIntelligenceExtracted": true,
+    "estimatedPrice": "7,150,000 円 （消費税等抜き 6,500,000 円）",
+    "winningContractor": "(株)果無 奈良営業所",
+    "constructionPeriod": "令和 8年 1月15日 から 令和 8年 3月26日まで",
+    "description": "令和7年度に奈良県吉野郡吉野町楢井地内で行われる県営治山関係の調査業務委託案件。"
   },
   {
     "id": "nara-pref-29001013060020250231",
@@ -1634,28 +1356,12 @@
     "biddingDate": "2026-01-28",
     "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29001013060020250231",
     "status": "受付中",
-    "winnerType": "ゼネコン"
-  },
-  {
-    "id": "nara-pref-29001013050520250330",
-    "municipality": "奈良県",
-    "title": "乾川　井堰詳細設計業務（緊急自然災害防止対策事業債対象事業（臨時・特別））　第　Ｎ－１０１－委－１　号",
-    "type": "コンサル",
-    "announcementDate": "2026-01-06",
-    "biddingDate": "2026-01-29",
-    "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29001013050520250330",
-    "status": "受付中",
-    "winnerType": "設計事務所"
-  },
-  {
-    "id": "nara-pref-29001013052020250244",
-    "municipality": "奈良県",
-    "title": "大和高田桜井線　測量業務委託（防災・安全（道環）他）　８－０５３－４－委－２他",
-    "type": "コンサル",
-    "announcementDate": "2026-01-06",
-    "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29001013052020250244",
-    "status": "落札",
-    "winnerType": "設計事務所"
+    "winnerType": "ゼネコン",
+    "isIntelligenceExtracted": true,
+    "estimatedPrice": "15,796,000円（消費税及び地方消費税(計 10%)を含みます。）",
+    "designFirm": "株式会社 尾川建築設計事務所",
+    "constructionPeriod": "令和8年2月10日（予定）～令和9年1月28日",
+    "description": "奈良県中央卸売市場において、微量PCB含有または含有の可能性のある変圧器、高圧コンデンサー、高圧リアクトル、接地コンデンサー、低圧コンデンサー、ネオン変圧器など電気設備機器の更新または撤去を行う工事。"
   },
   {
     "id": "高取町-27",
@@ -1675,7 +1381,12 @@
     "biddingDate": "2026-03-02",
     "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29001013060020250229",
     "status": "受付中",
-    "winnerType": "ゼネコン"
+    "winnerType": "ゼネコン",
+    "isIntelligenceExtracted": true,
+    "estimatedPrice": "609,457,200円（消費税及び地方消費税（計１０％）を含みます。）",
+    "designFirm": "株式会社日建技術コンサルタント",
+    "constructionPeriod": "令和８年３月１７日 （予定）～ 令和９年１１月３０日",
+    "description": "奈良県大和郡山市の浄化センターにおける2系3号初沈汚泥掻寄機、流入ゲート、パイプスキマ、覆蓋、現場操作盤などの機械設備更新工事。防災・安全交付金事業の一環として実施され、供用中の施設を稼働させながら渇水期に施工し、現場閉所の週休2日化を推進する案件です。"
   },
   {
     "id": "高取町-1667",
@@ -1835,7 +1546,13 @@
     "announcementDate": "2025-12-22",
     "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29006003060520250034",
     "status": "落札",
-    "winnerType": "設計事務所"
+    "winnerType": "設計事務所",
+    "isIntelligenceExtracted": true,
+    "estimatedPrice": "14,058,000円（消費税等抜き 12,780,000円）",
+    "winningContractor": "サンコーコンサルタント株式会社 奈良営業所",
+    "designFirm": "サンコーコンサルタント株式会社 奈良営業所",
+    "constructionPeriod": "令和7年12月27日から令和8年8月31日まで",
+    "description": "奈良公園内の浮雲園地他における照明設備の長寿命化を図るための実施設計業務委託。奈良公園施設の長寿命化対策事業（防災・安全）の一環として実施される。"
   },
   {
     "id": "nara-city-0000002244",
@@ -1850,16 +1567,6 @@
     "winnerType": "ゼネコン"
   },
   {
-    "id": "nara-pref-29001013052020250242",
-    "municipality": "奈良県",
-    "title": "中の川　測量業務委託（緊急自然災害債対象（臨時・特別）他）　Ｃ－１１９－委－１他",
-    "type": "コンサル",
-    "announcementDate": "2025-12-19",
-    "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29001013052020250242",
-    "status": "落札",
-    "winnerType": "設計事務所"
-  },
-  {
     "id": "高取町-127",
     "municipality": "高取町",
     "title": "子どもの予防接種",
@@ -1869,36 +1576,6 @@
     "status": "受付中"
   },
   {
-    "id": "nara-pref-29001013052520250166",
-    "municipality": "奈良県",
-    "title": "大野川　護岸詳細設計業務委託（緊急自然災害防止対策事業債対象事業（臨時・特別））　第　Ｕ－１１９－委１　号",
-    "type": "コンサル",
-    "announcementDate": "2025-12-18",
-    "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29001013052520250166",
-    "status": "落札",
-    "winnerType": "設計事務所"
-  },
-  {
-    "id": "nara-pref-29001013052520250165",
-    "municipality": "奈良県",
-    "title": "菅野川他　護岸詳細設計業務委託（緊急自然災害防止対策事業債対象事業（臨時・特別））　第　Ｕ－１２１－委１　号",
-    "type": "コンサル",
-    "announcementDate": "2025-12-18",
-    "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29001013052520250165",
-    "status": "落札",
-    "winnerType": "設計事務所"
-  },
-  {
-    "id": "nara-pref-29001013052520250164",
-    "municipality": "奈良県",
-    "title": "青蓮寺川　護岸詳細設計業務委託（緊急自然災害防止対策事業債対象事業（臨時・特別））　第　Ｕ－１２０－委１　号",
-    "type": "コンサル",
-    "announcementDate": "2025-12-18",
-    "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29001013052520250164",
-    "status": "落札",
-    "winnerType": "設計事務所"
-  },
-  {
     "id": "nara-pref-29001013252020250032",
     "municipality": "奈良県",
     "title": "（都）西九条佐保線　大安寺西三丁目地区事業損失調査業務委託（（仮称）奈良ＩＣ周辺整備補助街路事業）　８－１０－ＡＧ２－用委－２１",
@@ -1906,47 +1583,12 @@
     "announcementDate": "2025-12-18",
     "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29001013252020250032",
     "status": "落札",
-    "winnerType": "設計事務所"
-  },
-  {
-    "id": "nara-pref-29001013252020250031",
-    "municipality": "奈良県",
-    "title": "（都）西九条佐保線　三条桧町他地区用地調査点検等技術業務委託（（仮称）奈良ＩＣ周辺整備補助街路事業）　８－１０－ＡＧ２－用委－４",
-    "type": "コンサル",
-    "announcementDate": "2025-12-18",
-    "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29001013252020250031",
-    "status": "落札",
-    "winnerType": "設計事務所"
-  },
-  {
-    "id": "nara-pref-29001013252020250030",
-    "municipality": "奈良県",
-    "title": "（都）大安寺柏木線　八条四丁目地区用地調査点検等技術業務委託（（仮称）奈良ＩＣ周辺整備補助街路事業）　８－１０－ＡＧ５－用委－８",
-    "type": "コンサル",
-    "announcementDate": "2025-12-18",
-    "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29001013252020250030",
-    "status": "落札",
-    "winnerType": "設計事務所"
-  },
-  {
-    "id": "nara-pref-29001013252020250029",
-    "municipality": "奈良県",
-    "title": "（都）西九条佐保線　三条桧町地区用地調査点検等技術業務委託（（仮称）奈良ＩＣ周辺整備補助街路事業）　８－１０－ＡＧ２－用委－３",
-    "type": "コンサル",
-    "announcementDate": "2025-12-18",
-    "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29001013252020250029",
-    "status": "落札",
-    "winnerType": "設計事務所"
-  },
-  {
-    "id": "nara-pref-29001013252020250028",
-    "municipality": "奈良県",
-    "title": "（都）西九条佐保線　大宮町三丁目地区用地調査点検等技術業務委託（（仮称）奈良ＩＣ周辺整備補助街路事業　８－１０－ＡＧ１－用委－７",
-    "type": "コンサル",
-    "announcementDate": "2025-12-18",
-    "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29001013252020250028",
-    "status": "落札",
-    "winnerType": "設計事務所"
+    "winnerType": "ゼネコン",
+    "isIntelligenceExtracted": true,
+    "estimatedPrice": "１，５１８，０００円 （消費税等抜き １，３８０，０００円）",
+    "winningContractor": "株式会社平和ＩＴＣ 奈良営業所",
+    "constructionPeriod": "令和 ７年１２月２５日から令和 ８年 ３月１９日まで",
+    "description": "奈良市大安寺西三丁目地区における西九条佐保線（仮称）奈良IC周辺整備補助街路事業に関連する事業損失調査業務委託。"
   },
   {
     "id": "nara-city-0000002247",
@@ -1971,18 +1613,6 @@
     "status": "落札",
     "winnerType": "ゼネコン",
     "winningContractor": "㈱タカギ工業"
-  },
-  {
-    "id": "kashihara-result-5071001192",
-    "municipality": "橿原市",
-    "title": "市単独農道舗装修繕工事",
-    "type": "建築",
-    "announcementDate": "2025-12-18",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071001192k.pdf",
-    "status": "落札",
-    "winnerType": "ゼネコン",
-    "winningContractor": "㈱森本組"
   },
   {
     "id": "kashihara-result-5071001197",
@@ -2420,46 +2050,6 @@
     "status": "受付中"
   },
   {
-    "id": "yamato-takada-400f74df",
-    "municipality": "大和高田市",
-    "title": "陵91号線1号橋橋梁補修設計業務委託",
-    "type": "コンサル",
-    "announcementDate": "2025-10-01",
-    "link": "https://www.city.yamatotakada.nara.jp/soshikikarasagasu/keiyakukanrishitsu/nyusatsu_keiyaku/1/9099.html",
-    "status": "落札",
-    "winningContractor": "NiX JAPAN株式会社 奈良営業所"
-  },
-  {
-    "id": "yamato-takada-c3b62615",
-    "municipality": "大和高田市",
-    "title": "天89号線1号橋橋梁補修工事",
-    "type": "建築",
-    "announcementDate": "2025-10-01",
-    "link": "https://www.city.yamatotakada.nara.jp/soshikikarasagasu/keiyakukanrishitsu/nyusatsu_keiyaku/1/9099.html",
-    "status": "落札",
-    "winningContractor": "株式会社丸藤建設"
-  },
-  {
-    "id": "yamato-takada-f9ab9d2b",
-    "municipality": "大和高田市",
-    "title": "陵116号線1号橋橋梁補修工事",
-    "type": "建築",
-    "announcementDate": "2025-10-01",
-    "link": "https://www.city.yamatotakada.nara.jp/soshikikarasagasu/keiyakukanrishitsu/nyusatsu_keiyaku/1/9099.html",
-    "status": "落札",
-    "winningContractor": "株式会社SAKAE"
-  },
-  {
-    "id": "yamato-takada-537b7f1e",
-    "municipality": "大和高田市",
-    "title": "高163号線1号橋側歩道橋橋梁補修工事",
-    "type": "建築",
-    "announcementDate": "2025-10-01",
-    "link": "https://www.city.yamatotakada.nara.jp/soshikikarasagasu/keiyakukanrishitsu/nyusatsu_keiyaku/1/9099.html",
-    "status": "落札",
-    "winningContractor": "株式会社雄建"
-  },
-  {
     "id": "yamato-koriyama-b1fce4b1",
     "municipality": "大和郡山市",
     "title": "総合公園施設市営球場フェンス緩衝材修繕",
@@ -2480,40 +2070,6 @@
     "status": "落札",
     "winnerType": "ゼネコン",
     "winningContractor": "㈱内藤建築事務所"
-  },
-  {
-    "id": "koryo-2025-09-29-No38",
-    "municipality": "広陵町",
-    "title": "東部地区農業研修センター建替に伴う地形測量業務委託",
-    "type": "コンサル",
-    "announcementDate": "2025-09-29",
-    "biddingDate": "2025-09-29",
-    "link": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7349/NO38-2.pdf",
-    "status": "落札"
-  },
-  {
-    "id": "kashihara-result-5071000951",
-    "municipality": "橿原市",
-    "title": "市道路改良工事(内膳町)",
-    "type": "建築",
-    "announcementDate": "2025-09-18",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000951k.pdf",
-    "status": "落札",
-    "winnerType": "ゼネコン",
-    "winningContractor": "㈱宮下興業"
-  },
-  {
-    "id": "kashihara-result-5071000960",
-    "municipality": "橿原市",
-    "title": "市道路整備工事7-1",
-    "type": "建築",
-    "announcementDate": "2025-09-18",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000960k.pdf",
-    "status": "落札",
-    "winnerType": "ゼネコン",
-    "winningContractor": "㈱ベスト産業"
   },
   {
     "id": "kashihara-result-5071000941",
@@ -2540,42 +2096,6 @@
     "winningContractor": "㈱タケガミ電気水道"
   },
   {
-    "id": "kashihara-result-5071000922",
-    "municipality": "橿原市",
-    "title": "市道路舗装維持修繕工事7－4",
-    "type": "建築",
-    "announcementDate": "2025-09-18",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000922k.pdf",
-    "status": "落札",
-    "winnerType": "ゼネコン",
-    "winningContractor": "㈱松村組"
-  },
-  {
-    "id": "kashihara-result-5071000958",
-    "municipality": "橿原市",
-    "title": "市道路舗装維持修繕工事7－10",
-    "type": "建築",
-    "announcementDate": "2025-09-18",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000958k.pdf",
-    "status": "落札",
-    "winnerType": "ゼネコン",
-    "winningContractor": "㈱吉田組"
-  },
-  {
-    "id": "kashihara-result-5071000923",
-    "municipality": "橿原市",
-    "title": "市道路舗装維持修繕工事7－7",
-    "type": "建築",
-    "announcementDate": "2025-09-18",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000923k.pdf",
-    "status": "落札",
-    "winnerType": "ゼネコン",
-    "winningContractor": "輝登建設㈱"
-  },
-  {
     "id": "nara-city-0000002101",
     "municipality": "奈良市",
     "title": "鴻ノ池陸上競技場エレベーター新設に伴う建築設計業務委託",
@@ -2597,18 +2117,6 @@
     "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
     "status": "落札",
     "winningContractor": "株式会社明友技建",
-    "winnerType": "ゼネコン"
-  },
-  {
-    "id": "nara-city-0000002103",
-    "municipality": "奈良市",
-    "title": "六条奈良阪線（東西工区）支障物件調査業務委託",
-    "type": "委託",
-    "announcementDate": "2025-09-17",
-    "biddingDate": "2025-09-17",
-    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
-    "status": "落札",
-    "winningContractor": "株式会社中央クリエイト",
     "winnerType": "ゼネコン"
   },
   {
@@ -2704,30 +2212,6 @@
     "status": "落札"
   },
   {
-    "id": "kashihara-result-5071000851",
-    "municipality": "橿原市",
-    "title": "市道路改良工事(川西町)",
-    "type": "建築",
-    "announcementDate": "2025-08-21",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000851k.pdf",
-    "status": "落札",
-    "winnerType": "ゼネコン",
-    "winningContractor": "㈱南村組"
-  },
-  {
-    "id": "kashihara-result-5071000829",
-    "municipality": "橿原市",
-    "title": "市道路整備工事(十市町)",
-    "type": "建築",
-    "announcementDate": "2025-08-21",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000829k.pdf",
-    "status": "落札",
-    "winnerType": "ゼネコン",
-    "winningContractor": "㈱広澤建設"
-  },
-  {
     "id": "kashihara-result-5071000841",
     "municipality": "橿原市",
     "title": "交通安全施設設置工事7－1",
@@ -2752,18 +2236,6 @@
     "winningContractor": "観音寺辻本建設㈱"
   },
   {
-    "id": "kashihara-result-5071000850",
-    "municipality": "橿原市",
-    "title": "市道路舗装維持修繕工事7-9",
-    "type": "建築",
-    "announcementDate": "2025-08-21",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000850k.pdf",
-    "status": "落札",
-    "winnerType": "ゼネコン",
-    "winningContractor": "㈱森本組"
-  },
-  {
     "id": "kashihara-result-5072000848",
     "municipality": "橿原市",
     "title": "こども園・幼稚園 特殊建築物定期点検及び非構造部材点検業務（令和7年度）",
@@ -2786,18 +2258,6 @@
     "status": "落札",
     "winnerType": "ゼネコン",
     "winningContractor": "㈱内藤建築事務所"
-  },
-  {
-    "id": "kashihara-result-5072000798",
-    "municipality": "橿原市",
-    "title": "一級河川曽我川護岸設計業務委託（雲梯町）",
-    "type": "コンサル",
-    "announcementDate": "2025-08-21",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18375.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5072000798k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "㈱吹上技研コンサルタント"
   },
   {
     "id": "nara-city-0000002061",
@@ -2830,16 +2290,6 @@
     "biddingDate": "2025-09-01",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/javaScript:void(0);",
     "status": "受付中"
-  },
-  {
-    "id": "yamato-takada-1e7ef755",
-    "municipality": "大和高田市",
-    "title": "松塚地内農業用用排水路改修工事",
-    "type": "建築",
-    "announcementDate": "2025-08-01",
-    "link": "https://www.city.yamatotakada.nara.jp/soshikikarasagasu/keiyakukanrishitsu/nyusatsu_keiyaku/1/9099.html",
-    "status": "落札",
-    "winningContractor": "芳川建設"
   },
   {
     "id": "yamato-takada-2e98457e",
@@ -2881,18 +2331,6 @@
     "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
     "status": "落札",
     "winningContractor": "株式会社礎建築事務所",
-    "winnerType": "ゼネコン"
-  },
-  {
-    "id": "nara-city-0000002029",
-    "municipality": "奈良市",
-    "title": "支障物件調査業務委託（東九条町地内・南部第９０・１１８号線）",
-    "type": "委託",
-    "announcementDate": "2025-07-30",
-    "biddingDate": "2025-07-30",
-    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
-    "status": "落札",
-    "winningContractor": "写測エンジニアリング株式会社",
     "winnerType": "ゼネコン"
   },
   {
@@ -2954,30 +2392,6 @@
     "winningContractor": "㈱松吉組"
   },
   {
-    "id": "kashihara-result-5071000715",
-    "municipality": "橿原市",
-    "title": "市道路舗装維持修繕工事7－6",
-    "type": "建築",
-    "announcementDate": "2025-07-24",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000715k.pdf",
-    "status": "落札",
-    "winnerType": "ゼネコン",
-    "winningContractor": "㈱松本組"
-  },
-  {
-    "id": "kashihara-result-5071000742",
-    "municipality": "橿原市",
-    "title": "市道路舗装維持修繕工事7-5",
-    "type": "建築",
-    "announcementDate": "2025-07-24",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000742k.pdf",
-    "status": "落札",
-    "winnerType": "ゼネコン",
-    "winningContractor": "松平建設㈱"
-  },
-  {
     "id": "kashihara-result-5072000695",
     "municipality": "橿原市",
     "title": "令和7年度 橿原市地番図等修正及び航空写真図化業務",
@@ -3000,18 +2414,6 @@
     "status": "落札",
     "winnerType": "設計事務所",
     "winningContractor": "国際航業㈱"
-  },
-  {
-    "id": "kashihara-result-5072000621",
-    "municipality": "橿原市",
-    "title": "産業用地整備基本計画策定業務委託",
-    "type": "建築",
-    "announcementDate": "2025-07-24",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18375.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5072000621k.pdf",
-    "status": "落札",
-    "winnerType": "ゼネコン",
-    "winningContractor": "日本測地設計㈱"
   },
   {
     "id": "kashihara-result-5072000706",
@@ -3046,17 +2448,6 @@
     "biddingDate": "2025-07-24",
     "link": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7349/No20-2.pdf",
     "status": "落札"
-  },
-  {
-    "id": "nara-city-0000001993",
-    "municipality": "奈良市",
-    "title": "高の原駅前広場整備事業支障物件調査業務委託",
-    "type": "委託",
-    "announcementDate": "2025-07-16",
-    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
-    "status": "落札",
-    "winningContractor": "写測エンジニアリング株式会社",
-    "winnerType": "ゼネコン"
   },
   {
     "id": "katsuragi-5bc8ab65",
@@ -3131,26 +2522,6 @@
     "winningContractor": "大日本土木・崎山組特定建設工事共同企業体"
   },
   {
-    "id": "yamato-takada-49ec5d26",
-    "municipality": "大和高田市",
-    "title": "材木町他地内道路除草作業",
-    "type": "建築",
-    "announcementDate": "2025-07-01",
-    "link": "https://www.city.yamatotakada.nara.jp/soshikikarasagasu/keiyakukanrishitsu/nyusatsu_keiyaku/1/9099.html",
-    "status": "落札",
-    "winningContractor": "株式会社大国"
-  },
-  {
-    "id": "yamato-takada-7020d078",
-    "municipality": "大和高田市",
-    "title": "奥田他地内道路除草作業",
-    "type": "建築",
-    "announcementDate": "2025-07-01",
-    "link": "https://www.city.yamatotakada.nara.jp/soshikikarasagasu/keiyakukanrishitsu/nyusatsu_keiyaku/1/9099.html",
-    "status": "落札",
-    "winningContractor": "吉川組"
-  },
-  {
     "id": "yamato-takada-4da9a36b",
     "municipality": "大和高田市",
     "title": "市営住宅礒野団地4号棟外壁等改修工事設計業務委託",
@@ -3181,36 +2552,6 @@
     "winningContractor": "山口基礎"
   },
   {
-    "id": "yamato-takada-1bb8483d",
-    "municipality": "大和高田市",
-    "title": "大和高田当麻線用地補償総合技術業務委託",
-    "type": "委託",
-    "announcementDate": "2025-07-01",
-    "link": "https://www.city.yamatotakada.nara.jp/soshikikarasagasu/keiyakukanrishitsu/nyusatsu_keiyaku/1/9099.html",
-    "status": "落札",
-    "winningContractor": "株式会社URリンケージ 奈良営業所"
-  },
-  {
-    "id": "yamato-takada-21c424a6",
-    "municipality": "大和高田市",
-    "title": "大和高田市橋梁定期点検業務委託（No.1）",
-    "type": "委託",
-    "announcementDate": "2025-07-01",
-    "link": "https://www.city.yamatotakada.nara.jp/soshikikarasagasu/keiyakukanrishitsu/nyusatsu_keiyaku/1/9099.html",
-    "status": "落札",
-    "winningContractor": "株式会社トーニチコンサルタント 奈良事務所"
-  },
-  {
-    "id": "yamato-takada-71f1e552",
-    "municipality": "大和高田市",
-    "title": "大和高田市橋梁定期点検業務委託（No.2）",
-    "type": "委託",
-    "announcementDate": "2025-07-01",
-    "link": "https://www.city.yamatotakada.nara.jp/soshikikarasagasu/keiyakukanrishitsu/nyusatsu_keiyaku/1/9099.html",
-    "status": "落札",
-    "winningContractor": "株式会社アーバンパイオニア設計 奈良事務所"
-  },
-  {
     "id": "kashihara-proposal-5073000716",
     "municipality": "橿原市",
     "title": "藤原宮跡ARアプリ作成業務 (圧縮ファイル: 967.1KB)",
@@ -3219,18 +2560,6 @@
     "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/7/8272.html",
     "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000716.zip",
     "status": "受付中"
-  },
-  {
-    "id": "kashihara-result-5071000560",
-    "municipality": "橿原市",
-    "title": "市道路改良工事(十市町)",
-    "type": "建築",
-    "announcementDate": "2025-06-26",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000560k.pdf",
-    "status": "落札",
-    "winnerType": "ゼネコン",
-    "winningContractor": "㈱広澤建設"
   },
   {
     "id": "kashihara-result-5071000510",
@@ -3243,30 +2572,6 @@
     "status": "落札",
     "winnerType": "ゼネコン",
     "winningContractor": "㈱ゆうび建設"
-  },
-  {
-    "id": "kashihara-result-5071000575",
-    "municipality": "橿原市",
-    "title": "市道路舗装維持修繕工事7-3",
-    "type": "建築",
-    "announcementDate": "2025-06-26",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000575k.pdf",
-    "status": "落札",
-    "winnerType": "ゼネコン",
-    "winningContractor": "松平建設㈱"
-  },
-  {
-    "id": "kashihara-result-5071000553",
-    "municipality": "橿原市",
-    "title": "市道路舗装維持修繕工事7－2",
-    "type": "建築",
-    "announcementDate": "2025-06-26",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000553k.pdf",
-    "status": "落札",
-    "winnerType": "ゼネコン",
-    "winningContractor": "観音寺辻本建設㈱"
   },
   {
     "id": "kashihara-result-5072000516",
@@ -3329,18 +2634,6 @@
     "winningContractor": "㈱ニュージェック"
   },
   {
-    "id": "kashihara-result-5072000537",
-    "municipality": "橿原市",
-    "title": "市道路改良工事に伴う嘱託登記業務(十市町)",
-    "type": "建築",
-    "announcementDate": "2025-06-26",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18375.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5072000537k.pdf",
-    "status": "落札",
-    "winnerType": "ゼネコン",
-    "winningContractor": "西浦新二土地家屋調査士事務所"
-  },
-  {
     "id": "kashihara-result-5072000551",
     "municipality": "橿原市",
     "title": "史跡藤原京跡 公共嘱託登記業務委託",
@@ -3351,18 +2644,6 @@
     "status": "落札",
     "winnerType": "設計事務所",
     "winningContractor": "土地家屋調査士"
-  },
-  {
-    "id": "kashihara-result-5073000481",
-    "municipality": "橿原市",
-    "title": "河川施設除草業務委託",
-    "type": "委託",
-    "announcementDate": "2025-06-26",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18373.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000481k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "㈱南村組"
   },
   {
     "id": "koryo-2025-06-26-No14",
@@ -3383,16 +2664,6 @@
     "biddingDate": "2025-06-26",
     "link": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7349/No17-2.pdf",
     "status": "落札"
-  },
-  {
-    "id": "tawaramoto-2025000045",
-    "municipality": "田原本町",
-    "title": "田原本町清掃センター各種測定業務委託",
-    "type": "委託",
-    "announcementDate": "2025-06-19",
-    "biddingDate": "2025-07-14",
-    "link": "https://tawaramoto.efftis.jp/PPI/Public/javaScript:void(0);",
-    "status": "受付中"
   },
   {
     "id": "nara-city-0000002027",
@@ -3583,26 +2854,6 @@
     "status": "受付中"
   },
   {
-    "id": "tawaramoto-2025000044",
-    "municipality": "田原本町",
-    "title": "学校給食厨房排水管及びグリーストラップ洗浄清掃業務",
-    "type": "委託",
-    "announcementDate": "2025-05-29",
-    "biddingDate": "2025-06-23",
-    "link": "https://tawaramoto.efftis.jp/PPI/Public/javaScript:void(0);",
-    "status": "受付中"
-  },
-  {
-    "id": "tawaramoto-2025062306",
-    "municipality": "田原本町",
-    "title": "令和７年度下水道施設点検業務",
-    "type": "委託",
-    "announcementDate": "2025-05-29",
-    "biddingDate": "2025-06-23",
-    "link": "https://tawaramoto.efftis.jp/PPI/Public/javaScript:void(0);",
-    "status": "受付中"
-  },
-  {
     "id": "tawaramoto-2025063001",
     "municipality": "田原本町",
     "title": "小学校トイレ改修工事に伴う設備等設計・積算業務",
@@ -3611,16 +2862,6 @@
     "biddingDate": "2025-06-30",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/javaScript:void(0);",
     "status": "受付中"
-  },
-  {
-    "id": "koryo-2025-05-29-No8",
-    "municipality": "広陵町",
-    "title": "中新公民館用地造成設計業務委託",
-    "type": "コンサル",
-    "announcementDate": "2025-05-29",
-    "biddingDate": "2025-05-29",
-    "link": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7349/No8-2.pdf",
-    "status": "落札"
   },
   {
     "id": "koryo-2025-05-29-No9",
@@ -3811,18 +3052,6 @@
     "winningContractor": "㈱広澤建設"
   },
   {
-    "id": "kashihara-result-5071000322",
-    "municipality": "橿原市",
-    "title": "市道路舗装維持修繕工事7－1",
-    "type": "建築",
-    "announcementDate": "2025-05-15",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000322k.pdf",
-    "status": "落札",
-    "winnerType": "ゼネコン",
-    "winningContractor": "㈱松本組"
-  },
-  {
     "id": "kashihara-result-5072000314",
     "municipality": "橿原市",
     "title": "第1こども園床及び空調設備等改修工事に伴う設計委託",
@@ -3917,26 +3146,6 @@
     "status": "落札",
     "winnerType": "設計事務所",
     "winningContractor": "松平建設㈱"
-  },
-  {
-    "id": "katsuragi-3191e22f",
-    "municipality": "葛城市",
-    "title": "第7-809号 太鼓橋周辺歩道橋設置工事に伴う予備設計業務委託",
-    "type": "コンサル",
-    "announcementDate": "2025-05-15",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/2-04-01-2025-1.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/2-04-01-2025-1.pdf",
-    "status": "受付中"
-  },
-  {
-    "id": "katsuragi-28ed7891",
-    "municipality": "葛城市",
-    "title": "第7-701号 當麻新池貯留施設設置工事に伴う測量設計業務委託",
-    "type": "コンサル",
-    "announcementDate": "2025-05-15",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/2-04-02-2025-1.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/2-04-02-2025-1.pdf",
-    "status": "受付中"
   },
   {
     "id": "katsuragi-f23a4228",
@@ -4190,18 +3399,6 @@
     "winningContractor": "㈱タケガミ電気水道"
   },
   {
-    "id": "kashihara-result-5071000031",
-    "municipality": "橿原市",
-    "title": "耳成小学校等下水接続工事",
-    "type": "建築",
-    "announcementDate": "2025-04-22",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000031k.pdf",
-    "status": "落札",
-    "winnerType": "ゼネコン",
-    "winningContractor": "㈱岡本設備"
-  },
-  {
     "id": "kashihara-result-5071000011",
     "municipality": "橿原市",
     "title": "白橿中学校屋内運動場空調設備改修工事",
@@ -4274,16 +3471,6 @@
     "winningContractor": "㈱土屋総合設計"
   },
   {
-    "id": "yamato-koriyama-889321d6",
-    "municipality": "大和郡山市",
-    "title": "大和郡山市庁舎・管理施設電気工作物保安管理業務",
-    "type": "委託",
-    "announcementDate": "2025-04-18",
-    "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsunooshirase/r7/16256.html",
-    "status": "落札",
-    "winningContractor": "なし"
-  },
-  {
     "id": "katsuragi-5cd4c299",
     "municipality": "葛城市",
     "title": "葛城市都市計画マスタープラン策定業務委託",
@@ -4334,29 +3521,9 @@
     "status": "受付中"
   },
   {
-    "id": "tawaramoto-2025000022",
-    "municipality": "田原本町",
-    "title": "令和７年度　公園敷地除草・芝刈等管理業務",
-    "type": "委託",
-    "announcementDate": "2025-04-10",
-    "biddingDate": "2025-05-12",
-    "link": "https://tawaramoto.efftis.jp/PPI/Public/javaScript:void(0);",
-    "status": "受付中"
-  },
-  {
     "id": "tawaramoto-2025000023",
     "municipality": "田原本町",
     "title": "７－１交通安全施設維持工事（区画線）",
-    "type": "委託",
-    "announcementDate": "2025-04-10",
-    "biddingDate": "2025-05-12",
-    "link": "https://tawaramoto.efftis.jp/PPI/Public/javaScript:void(0);",
-    "status": "受付中"
-  },
-  {
-    "id": "tawaramoto-2025000024",
-    "municipality": "田原本町",
-    "title": "７－１交通安全施設維持工事（道路反射鏡）",
     "type": "委託",
     "announcementDate": "2025-04-10",
     "biddingDate": "2025-05-12",
@@ -4421,16 +3588,6 @@
     "announcementDate": "2025-04-10",
     "biddingDate": "2025-05-12",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/javaScript:void(0);",
-    "status": "受付中"
-  },
-  {
-    "id": "yamato-koriyama-cbe0c598",
-    "municipality": "大和郡山市",
-    "title": "大和郡山市庁舎・管理施設自家用電気工作物保安管理業務",
-    "type": "委託",
-    "announcementDate": "2025-04-01",
-    "biddingDate": "2025-04-18",
-    "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsu/R7/16148.html",
     "status": "受付中"
   },
   {
@@ -4534,29 +3691,9 @@
     "status": "受付中"
   },
   {
-    "id": "tawaramoto-2025000019",
-    "municipality": "田原本町",
-    "title": "令和７年国勢調査用地図作成業務",
-    "type": "委託",
-    "announcementDate": "2025-04-01",
-    "biddingDate": "2025-05-12",
-    "link": "https://tawaramoto.efftis.jp/PPI/Public/javaScript:void(0);",
-    "status": "受付中"
-  },
-  {
     "id": "tawaramoto-2025000020",
     "municipality": "田原本町",
     "title": "令和７年国勢調査　調査書類及び用品等の保管・仕分け・梱包・配送業務",
-    "type": "委託",
-    "announcementDate": "2025-04-01",
-    "biddingDate": "2025-04-28",
-    "link": "https://tawaramoto.efftis.jp/PPI/Public/javaScript:void(0);",
-    "status": "受付中"
-  },
-  {
-    "id": "tawaramoto-2025000021",
-    "municipality": "田原本町",
-    "title": "田原本町立小・中学校プール清掃及び設備保守点検等業務",
     "type": "委託",
     "announcementDate": "2025-04-01",
     "biddingDate": "2025-04-28",
@@ -4662,7 +3799,9 @@
     "biddingDate": "2025-04-08",
     "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29006003060520240023",
     "status": "受付中",
-    "winnerType": "設計事務所"
+    "winnerType": "設計事務所",
+    "description": "PDF extraction failed or empty.",
+    "isIntelligenceExtracted": true
   },
   {
     "id": "nara-pref-29006003060520240022",
@@ -4673,7 +3812,9 @@
     "biddingDate": "2025-03-24",
     "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29006003060520240022",
     "status": "受付中",
-    "winnerType": "設計事務所"
+    "winnerType": "設計事務所",
+    "description": "PDF extraction failed or empty.",
+    "isIntelligenceExtracted": true
   },
   {
     "id": "nara-pref-29006003060520240021",
@@ -4684,7 +3825,9 @@
     "biddingDate": "2025-02-27",
     "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29006003060520240021",
     "status": "受付中",
-    "winnerType": "設計事務所"
+    "winnerType": "設計事務所",
+    "description": "PDF extraction failed or empty.",
+    "isIntelligenceExtracted": true
   },
   {
     "id": "katsuragi-f7a67ff7",
@@ -4705,7 +3848,9 @@
     "biddingDate": "2024-12-20",
     "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29006003060520240013",
     "status": "受付中",
-    "winnerType": "設計事務所"
+    "winnerType": "設計事務所",
+    "description": "PDF extraction failed or empty.",
+    "isIntelligenceExtracted": true
   },
   {
     "id": "nara-pref-29006003060520240009",
@@ -4716,7 +3861,9 @@
     "biddingDate": "2024-11-13",
     "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29006003060520240009",
     "status": "受付中",
-    "winnerType": "ゼネコン"
+    "winnerType": "ゼネコン",
+    "description": "PDF extraction failed or empty.",
+    "isIntelligenceExtracted": true
   },
   {
     "id": "katsuragi-0c0940df",
@@ -4787,7 +3934,9 @@
     "biddingDate": "2024-09-02",
     "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29006003060520240004",
     "status": "受付中",
-    "winnerType": "ゼネコン"
+    "winnerType": "ゼネコン",
+    "description": "PDF extraction failed or empty.",
+    "isIntelligenceExtracted": true
   },
   {
     "id": "nara-pref-29006003060520240003",
@@ -4798,7 +3947,9 @@
     "biddingDate": "2024-08-22",
     "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29006003060520240003",
     "status": "受付中",
-    "winnerType": "ゼネコン"
+    "winnerType": "ゼネコン",
+    "description": "PDF extraction failed or empty.",
+    "isIntelligenceExtracted": true
   },
   {
     "id": "katsuragi-92898e6f",
@@ -4808,16 +3959,6 @@
     "announcementDate": "2024-07-12",
     "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/4-6-05-2024-1.pdf",
     "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/4-6-05-2024-1.pdf",
-    "status": "受付中"
-  },
-  {
-    "id": "katsuragi-6074156c",
-    "municipality": "葛城市",
-    "title": "委第06-302 号 公園施設長寿命化対策支援事業に伴う屋敷山公園噴水広場及び遊具更新測量設計業務委託",
-    "type": "コンサル",
-    "announcementDate": "2024-06-10",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/3-6-03-2024-1.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/3-6-03-2024-1.pdf",
     "status": "受付中"
   },
   {
@@ -4839,7 +3980,9 @@
     "biddingDate": "2024-06-27",
     "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29006003060520240002",
     "status": "受付中",
-    "winnerType": "設計事務所"
+    "winnerType": "設計事務所",
+    "description": "PDF extraction failed or empty.",
+    "isIntelligenceExtracted": true
   },
   {
     "id": "katsuragi-a5c7c5f3",
@@ -4849,16 +3992,6 @@
     "announcementDate": "2024-05-14",
     "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/2-5-05-2024-1.pdf",
     "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/2-5-05-2024-1.pdf",
-    "status": "受付中"
-  },
-  {
-    "id": "katsuragi-313426fc",
-    "municipality": "葛城市",
-    "title": "第6ー701号 白光田池貯留施設工事に伴う測量設計業務委託",
-    "type": "コンサル",
-    "announcementDate": "2024-05-14",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/2-5-06-2024-1.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/2-5-06-2024-1.pdf",
     "status": "受付中"
   },
   {
@@ -4880,18 +4013,9 @@
     "biddingDate": "2024-05-15",
     "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29006006060520240002",
     "status": "受付中",
-    "winnerType": "設計事務所"
-  },
-  {
-    "id": "nara-pref-29006006060520240001",
-    "municipality": "奈良県",
-    "title": "奈良公園　交通量調査業務委託（奈良公園環境改善事業）",
-    "type": "コンサル",
-    "announcementDate": "2024-04-16",
-    "biddingDate": "2024-05-10",
-    "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29006006060520240001",
-    "status": "受付中",
-    "winnerType": "設計事務所"
+    "winnerType": "設計事務所",
+    "description": "PDF extraction failed or empty.",
+    "isIntelligenceExtracted": true
   },
   {
     "id": "katsuragi-296f91b0",
@@ -5004,16 +4128,6 @@
     "status": "受付中"
   },
   {
-    "id": "katsuragi-4d0ac638",
-    "municipality": "葛城市",
-    "title": "岩谷池・土屋池貯留施設設置工事に伴う測量設計業務委託",
-    "type": "コンサル",
-    "announcementDate": "2023-07-13",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/7-13-4.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/7-13-4.pdf",
-    "status": "受付中"
-  },
-  {
     "id": "katsuragi-625c733a",
     "municipality": "葛城市",
     "title": "委第 05-305 号 公園施設長寿命化計画策定業務委託",
@@ -5051,16 +4165,6 @@
     "announcementDate": "2023-05-12",
     "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/2-4-1.pdf",
     "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/2-4-1.pdf",
-    "status": "受付中"
-  },
-  {
-    "id": "katsuragi-8b82d0bc",
-    "municipality": "葛城市",
-    "title": "當麻複合施設整備用地及び周辺エリア測量等業務委託",
-    "type": "コンサル",
-    "announcementDate": "2023-05-12",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/2-4-2.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/2-4-2.pdf",
     "status": "受付中"
   },
   {

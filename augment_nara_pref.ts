@@ -333,13 +333,15 @@ async function main() {
             existingItems = JSON.parse(fs.readFileSync(RESULT_PATH, 'utf-8'));
         }
 
-        const itemsToProcess = existingItems.filter(ex => ex.municipality === '奈良県' && !ex.isIntelligenceExtracted);
+        const currentBatch = existingItems.filter(ex => 
+            ex.municipality === '奈良県' && 
+            (!ex.isIntelligenceExtracted || (ex.status === '落札' && !ex.winningContractor))
+        );
 
-        console.log(`Discovered ${itemsToProcess.length} unextracted projects from existing dataset.`);
-        console.log(`Processing batch of ${itemsToProcess.length} projects...`);
+        console.log(`Discovered ${currentBatch.length} projects to process (unextracted or missing contractor info).`);
+        console.log(`Processing batch of ${currentBatch.length} projects...`);
 
         let consecutiveErrors = 0;
-        const currentBatch = itemsToProcess;
 
         for (const item of currentBatch) {
             console.log(`\nProcessing: ${item.id} - ${item.title}`);
