@@ -16,11 +16,12 @@ const KOJI_GYOSHU_SKIP = [
 
 // 検索対象カテゴリ
 // maxPages: 入札結果は累積が多いため最新3ページ（75件）のみ取得
+// detailBase: 詳細ページURL（案件情報=GP5510_1020, 入札結果=GP5515_1020）
 const SEARCH_TARGETS = [
-    { gyoshuKbnCd: '00', menuLabel: '案件情報', status: '受付中' as const, type: '建築' as BiddingType, label: '工事/案件情報', skipGyoshu: true, filterYear: '', maxPages: 0 },
-    { gyoshuKbnCd: '00', menuLabel: '入札結果', status: '落札' as const, type: '建築' as BiddingType, label: '工事/入札結果', skipGyoshu: true, filterYear: '2025', maxPages: 3 },
-    { gyoshuKbnCd: '01', menuLabel: '案件情報', status: '受付中' as const, type: 'コンサル' as BiddingType, label: 'コンサル/案件情報', skipGyoshu: false, filterYear: '', maxPages: 0 },
-    { gyoshuKbnCd: '01', menuLabel: '入札結果', status: '落札' as const, type: 'コンサル' as BiddingType, label: 'コンサル/入札結果', skipGyoshu: false, filterYear: '2025', maxPages: 3 },
+    { gyoshuKbnCd: '00', menuLabel: '案件情報', status: '受付中' as const, type: '建築' as BiddingType, label: '工事/案件情報', skipGyoshu: true, filterYear: '', maxPages: 0, detailBase: 'GP5510_1020' },
+    { gyoshuKbnCd: '00', menuLabel: '入札結果', status: '落札' as const, type: '建築' as BiddingType, label: '工事/入札結果', skipGyoshu: true, filterYear: '2025', maxPages: 3, detailBase: 'GP5515_1020' },
+    { gyoshuKbnCd: '01', menuLabel: '案件情報', status: '受付中' as const, type: 'コンサル' as BiddingType, label: 'コンサル/案件情報', skipGyoshu: false, filterYear: '', maxPages: 0, detailBase: 'GP5510_1020' },
+    { gyoshuKbnCd: '01', menuLabel: '入札結果', status: '落札' as const, type: 'コンサル' as BiddingType, label: 'コンサル/入札結果', skipGyoshu: false, filterYear: '2025', maxPages: 3, detailBase: 'GP5515_1020' },
 ];
 
 // "R08.02.20 09:00" → "2026-02-20"
@@ -86,6 +87,42 @@ async function getTotalPages(fra1: Frame): Promise<number> {
     });
 }
 
+// 入札結果詳細ページ（GP5515_1020）から落札業者名を抽出
+async function extractContractorFromFrame(fra1: Frame): Promise<string | undefined> {
+    try {
+        return await fra1.evaluate((): string | undefined => {
+            const text = (document.body as HTMLElement)?.innerText || '';
+
+            // テキストから「落札業者名」「落札業者」「落札者」パターンで検索
+            const textPatterns = [
+                /落札業者名\s+([^\n\r\t]+)/,
+                /落札業者\s+([^\n\r\t]+)/,
+                /落札者名?\s+([^\n\r\t]+)/,
+            ];
+            for (const p of textPatterns) {
+                const m = text.match(p);
+                if (m) {
+                    const name = m[1].trim().split(/\s{2,}/)[0].trim();
+                    if (name && name.length >= 2 && name.length <= 60) return name;
+                }
+            }
+
+            // テーブルのth/td構造を確認（隣接セルパターン）
+            const cells = Array.from(document.querySelectorAll('th, td'));
+            for (let i = 0; i < cells.length - 1; i++) {
+                const label = (cells[i] as HTMLElement).innerText?.trim() || '';
+                if (/落札(?:業者|者)/.test(label)) {
+                    const next = (cells[i + 1] as HTMLElement)?.innerText?.trim();
+                    if (next && next.length >= 2 && next.length <= 60) return next;
+                }
+            }
+            return undefined;
+        });
+    } catch {
+        return undefined;
+    }
+}
+
 export class NaraPrefScraper implements Scraper {
     municipality: '奈良県' = '奈良県';
 
@@ -96,7 +133,7 @@ export class NaraPrefScraper implements Scraper {
         try {
             const page = await browser.newPage();
 
-            for (const { gyoshuKbnCd, menuLabel, status, type, label, skipGyoshu, filterYear, maxPages } of SEARCH_TARGETS) {
+            for (const { gyoshuKbnCd, menuLabel, status, type, label, skipGyoshu, filterYear, maxPages, detailBase } of SEARCH_TARGETS) {
                 console.log(`[奈良県] ${label} 取得中...`);
                 try {
                     // 毎回トップページから開始（セッションはCookieで維持）
@@ -147,7 +184,8 @@ export class NaraPrefScraper implements Scraper {
                     const limitPages = maxPages > 0 ? Math.min(totalPages, maxPages) : totalPages;
                     console.log(`[奈良県] ${label}: ${totalPages}ページ（取得: ${limitPages}ページ）`);
 
-                    // ページを処理（入札結果は上限あり）
+                    // 1st pass: フィルタ済みの行を全ページから収集
+                    const filteredRows: Array<RawRow & { announcementDate: string; biddingDate?: string }> = [];
                     for (let pageNum = 1; pageNum <= limitPages; pageNum++) {
                         if (pageNum > 1) {
                             const moved = await fra1.evaluate((n: number) => {
@@ -162,30 +200,46 @@ export class NaraPrefScraper implements Scraper {
 
                         const rows = await extractRows(fra1);
                         for (const row of rows) {
-                            if (skipGyoshu && KOJI_GYOSHU_SKIP.some(kw => row.gyoshu.includes(kw))) {
-                                continue;
-                            }
-
-                            if (!shouldKeepItem(row.title, row.gyoshu)) {
-                                continue;
-                            }
-
-                            const announcementDate = parsePpiDate(row.dateText);
-                            const biddingDate = row.bidDateText ? parsePpiDate(row.bidDateText) : undefined;
-
-                            allItems.push({
-                                id: `nara-pref-${row.ankenId || row.title.slice(0, 20)}`,
-                                municipality: '奈良県',
-                                title: row.title,
-                                type,
-                                announcementDate,
-                                biddingDate,
-                                link: `${PPI_BASE}/GP5510_1020?ankenId=${row.ankenId}`,
-                                status,
-                                winnerType: type === '建築' ? 'ゼネコン' : '設計事務所',
+                            if (skipGyoshu && KOJI_GYOSHU_SKIP.some(kw => row.gyoshu.includes(kw))) continue;
+                            if (!shouldKeepItem(row.title, row.gyoshu)) continue;
+                            filteredRows.push({
+                                ...row,
+                                announcementDate: parsePpiDate(row.dateText),
+                                biddingDate: row.bidDateText ? parsePpiDate(row.bidDateText) : undefined,
                             });
                         }
                         console.log(`[奈良県] ${label} p.${pageNum}: ${rows.length}行`);
+                    }
+
+                    // 2nd pass: 各案件を allItems へ追加
+                    // 入札結果（落札）の場合は詳細ページ（GP5515_1020）から落札者を個別取得
+                    for (const row of filteredRows) {
+                        const detailUrl = `${PPI_BASE}/${detailBase}?ankenId=${row.ankenId}`;
+                        let winningContractor: string | undefined;
+
+                        if (status === '落札' && row.ankenId) {
+                            try {
+                                await fra1.goto(detailUrl, { waitUntil: 'domcontentloaded', timeout: 15000 });
+                                await page.waitForTimeout(800);
+                                winningContractor = await extractContractorFromFrame(fra1);
+                                console.log(`[奈良県] ${row.title.slice(0, 25)} → ${winningContractor || '落札者不明'}`);
+                            } catch (e: any) {
+                                console.warn(`[奈良県] 詳細ページ取得失敗: ${row.ankenId}`);
+                            }
+                        }
+
+                        allItems.push({
+                            id: `nara-pref-${row.ankenId || row.title.slice(0, 20)}`,
+                            municipality: '奈良県',
+                            title: row.title,
+                            type,
+                            announcementDate: row.announcementDate,
+                            biddingDate: row.biddingDate,
+                            link: detailUrl,
+                            status,
+                            winningContractor,
+                            winnerType: type === '建築' ? 'ゼネコン' : '設計事務所',
+                        });
                     }
 
                 } catch (e: any) {
