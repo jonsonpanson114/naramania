@@ -1,18 +1,13 @@
 import axios from 'axios';
 import * as cheerio from 'cheerio';
 import { BiddingItem, Scraper, Municipality } from '../types/bidding';
-import { shouldKeepItem, classifyWinner } from './common/filter';
+import { isRealBiddingItem, classifyWinner } from './common/filter';
 
 // 高取町（Takatori-cho）
 const TAKATORI_RSS = 'http://www.town.takatori.nara.jp/rss/rss.xml';
 
 // 斑鳩町（Ikaruga-cho）
 const IKARUGA_RSS = 'https://www.town.ikaruga.nara.jp/rss/rss.xml';
-
-// スキップキーワード
-function shouldSkip(title: string): boolean {
-    return !shouldKeepItem(title, '');
-}
 
 function classifyType(title: string): '建築' | 'コンサル' | 'その他' {
     if (title.includes('設計') || title.includes('測量') || title.includes('コンサル')) {
@@ -63,8 +58,8 @@ async function scrapeFromRss(rssUrl: string, municipality: Municipality): Promis
 
             if (!title || !link) return;
 
-            // 入札・契約・落札・工事に関する項目のみ抽出
-            if (!shouldKeepItem(title, '')) return;
+            // 入札・契約・落札・工事に関する項目のみ抽出（ポジティブフィルタ）
+            if (!isRealBiddingItem(title)) return;
 
             // ステータス判定
             let status: '受付中' | '締切間近' | '受付終了' | '落札' = '受付中';

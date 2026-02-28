@@ -20,6 +20,8 @@ const SKIP_KEYWORDS = [
 ];
 
 function titleSeemsRelevant(title: string): boolean {
+    // INCLUDE_KEYWORDS のいずれかを含む（建築・設計系）+ 土木系でない
+    if (!INCLUDE_KEYWORDS.some(kw => title.includes(kw))) return false;
     return shouldKeepItem(title);
 }
 

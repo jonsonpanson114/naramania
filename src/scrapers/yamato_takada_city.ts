@@ -15,9 +15,6 @@ const RESULT_PAGE = `${BASE}/soshikikarasagasu/keiyakukanrishitsu/nyusatsu_keiya
 // 土木系をスキップ
 const SKIP_GYOSHU = ['舗装', '土木', '管渠', '下水', '河川', '造園', '電気通信', '水道'];
 
-    return !shouldKeepItem(title, gyoshu);
-}
-
 function classifyType(gyoshu: string, title: string): BiddingType {
     const t = gyoshu + title;
     if (t.includes('コンサル') || t.includes('設計') || t.includes('測量')) return 'コンサル';

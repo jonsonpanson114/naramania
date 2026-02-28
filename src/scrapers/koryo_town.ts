@@ -3,6 +3,45 @@ import * as cheerio from 'cheerio';
 import { BiddingItem, Scraper, BiddingType } from '../types/bidding';
 import { shouldKeepItem } from './common/filter';
 
+async function extractContractorFromPdf(pdfUrl: string): Promise<string | undefined> {
+    try {
+        const res = await axios.get(pdfUrl, {
+            responseType: 'arraybuffer',
+            headers: { 'User-Agent': 'Mozilla/5.0' },
+            timeout: 20000,
+        });
+        // ESM dynamic import（pdfjs-dist はESMのみ）
+        const pdfjsLib = await import('pdfjs-dist/legacy/build/pdf.mjs') as any;
+        const data = new Uint8Array(res.data as ArrayBuffer);
+        const doc = await pdfjsLib.getDocument({
+            data,
+            useWorkerFetch: false,
+            isEvalSupported: false,
+            useSystemFonts: true,
+        }).promise;
+
+        let text = '';
+        for (let i = 1; i <= doc.numPages; i++) {
+            const page = await doc.getPage(i);
+            const content = await page.getTextContent();
+            text += content.items.map((s: any) => s.str).join(' ') + '\n';
+        }
+
+        // スペースを正規化して「商号、名称 [会社名] [数字] 〃」パターンで抽出
+        const normalized = text.replace(/\s+/g, ' ');
+        const m = normalized.match(/商号[,、]名称\s+(.+?)\s+\d\s+〃/);
+        if (m) return m[1].trim();
+
+        // フォールバック: 落札予定業者名
+        const m2 = normalized.match(/落札予定業者名\s+(.+?)\s+(?:\d+[,，]?\d*\s*円|$)/);
+        if (m2) return m2[1].trim();
+
+        return undefined;
+    } catch {
+        return undefined;
+    }
+}
+
 const BASE_URL = 'https://www.town.koryo.nara.jp';
 // 指名競争入札結果カテゴリページ
 const CATEGORY_URL = `${BASE_URL}/category/19-4-2-0-0-0-0-0-0-0.html`;
@@ -81,7 +120,13 @@ export class KoryoTownScraper implements Scraper {
             });
             const $ = cheerio.load(res.data);
 
-            // div.mol_attachfileblock ブロック単位でセクション + liを処理
+            // 1st pass: 同期的に候補を収集
+            type Candidate = {
+                id: string; title: string; type: BiddingType;
+                date: string; link: string; pdfUrl?: string;
+            };
+            const candidates: Candidate[] = [];
+
             $('div.mol_attachfileblock').each((_, block) => {
                 const sectionTitle = $(block).find('p.mol_attachfileblock_title').text().trim();
                 if (!sectionTitle.includes('入札結果')) return;
@@ -89,30 +134,44 @@ export class KoryoTownScraper implements Scraper {
                 $(block).find('ul li').each((_, li) => {
                     const text = $(li).text().replace(/\s+/g, ' ').trim();
                     if (!text) return;
-
                     const parsed = parseItem(text);
                     if (!parsed) return;
                     const { no, name, date } = parsed;
-                    if (!name) return;
-                    if (shouldSkip(name)) return;
+                    if (!name || shouldSkip(name)) return;
 
                     const pdfHref = $(li).find('a').attr('href') || '';
-                    const link = pdfHref
+                    const pdfUrl = pdfHref
                         ? (pdfHref.startsWith('http') ? pdfHref : `${BASE_URL}/${pdfHref.replace(/^\.\//, '')}`)
-                        : yearUrl;
-
-                    items.push({
+                        : '';
+                    candidates.push({
                         id: `koryo-${date}-No${no}`,
-                        municipality: '広陵町',
                         title: name,
                         type: classifyType(sectionTitle, name),
-                        announcementDate: date,
-                        biddingDate: date,
-                        link,
-                        status: '落札',
+                        date,
+                        link: pdfUrl || yearUrl,
+                        pdfUrl: pdfUrl || undefined,
                     });
                 });
             });
+
+            // 2nd pass: 非同期でPDFから落札者を抽出
+            for (const c of candidates) {
+                const winningContractor = c.pdfUrl
+                    ? await extractContractorFromPdf(c.pdfUrl)
+                    : undefined;
+                items.push({
+                    id: c.id,
+                    municipality: '広陵町',
+                    title: c.title,
+                    type: c.type,
+                    announcementDate: c.date,
+                    biddingDate: c.date,
+                    link: c.link,
+                    pdfUrl: c.pdfUrl,
+                    status: '落札',
+                    winningContractor,
+                });
+            }
 
         } catch (e: any) {
             console.error('[広陵町] エラー:', e.message || e);

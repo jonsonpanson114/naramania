@@ -102,7 +102,8 @@ async function scrapeDetailPage(url: string): Promise<{
                 const cells = $(rows[i]).find('td').map((_, c) => $(c).text().trim()).toArray();
                 if (cells.length <= titleIdx) continue;
                 const title = cells[titleIdx]?.trim();
-                if (!title || title.length < 4 || title === '件名' || title === '業務名') continue;
+                // 4文字以下は「入札方法」「開札結果」「落札金額」等のメタデータラベルなので除外
+                if (!title || title.length < 6 || title === '件名' || title === '業務名') continue;
 
                 const type = typeIdx >= 0 ? (cells[typeIdx] || '') : '';
                 const contractor = contractorIdx >= 0 ? (cells[contractorIdx] || '') : '';

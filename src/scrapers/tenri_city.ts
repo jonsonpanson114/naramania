@@ -17,9 +17,6 @@ const SKIP_KEYWORDS = [
 ];
 const SKIP_TYPES = ['土木工事', '管工事', '電気工事', '電気通信工事', '舗装工事'];
 
-    return !shouldKeepItem(title + type);
-}
-
 function classifyType(title: string, type: string): BiddingType {
     const t = title + type;
     if (t.includes('設計') || t.includes('測量') || t.includes('コンサル')) return 'コンサル';

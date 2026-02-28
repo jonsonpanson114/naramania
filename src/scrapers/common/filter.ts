@@ -2,6 +2,22 @@
  * 土木系案件を除外するための共通フィルタ
  */
 
+// RSS全体スクレイピング時に「本当に入札案件か」を確認するポジティブキーワード
+const BIDDING_POSITIVE_KEYWORDS = [
+    '入札', '公告', '落札', '工事', '設計',
+    '業務委託', '委託', '請負', '建設', '修繕', '改修', '新築', '解体', '契約',
+];
+
+/**
+ * RSS全体スクレイピング時に使用するポジティブフィルタ。
+ * 入札・工事関連キーワードを含む かつ タイトルが十分な長さ → true
+ * マラソン大会・職員採用・広報誌などのノイズを排除する。
+ */
+export function isRealBiddingItem(title: string): boolean {
+    if (title.length < 6) return false;
+    return BIDDING_POSITIVE_KEYWORDS.some(kw => title.includes(kw));
+}
+
 export const CIVIL_ENGINEERING_KEYWORDS = [
     '道路', '橋梁', '河川', '砂防', '舗装', '法面', 'ダム',
     '排水路', '側溝', '水路', '堤防', 'トンネル', 'ガードレール',

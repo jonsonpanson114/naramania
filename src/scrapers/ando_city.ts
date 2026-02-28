@@ -72,6 +72,10 @@ async function scrapeAndoCity(): Promise<BiddingItem[]> {
                 return;
             }
 
+            // 令和8年度以降は対象外（令和7年度のみ収集）
+            const fyMatch = title.match(/令和(\d+)年度/);
+            if (fyMatch && parseInt(fyMatch[1]) > 7) return;
+
             if (shouldSkip(title)) return;
 
             // ステータス判定

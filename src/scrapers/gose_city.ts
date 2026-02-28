@@ -1,18 +1,10 @@
 import axios from 'axios';
 import * as cheerio from 'cheerio';
 import { BiddingItem, Scraper } from '../types/bidding';
-import { shouldKeepItem, classifyWinner } from './common/filter';
+import { isRealBiddingItem, classifyWinner } from './common/filter';
 
 // 御所市
 const RSS_URL = 'https://www.city.gose.nara.jp/rss/rss.xml';
-
-// 月別ページURL: pattern like https://www.city.gose.nara.jp/category/6-9-0-0-0-0-0-0-0-0-0-0-0.html
-const MONTH_BASE = 'https://www.city.gose.nara.jp/category';
-
-// スキップキーワード
-function shouldSkip(title: string): boolean {
-    return !shouldKeepItem(title, '');
-}
 
 function classifyType(title: string): '建築' | 'コンサル' | 'その他' {
     if (title.includes('設計') || title.includes('測量') || title.includes('コンサル')) {
@@ -43,12 +35,12 @@ async function scrapeGoseCity(): Promise<BiddingItem[]> {
         const $ = cheerio.load(res.data);
 
         // RSS itemの抽出
-        $('item').each((i: number, el: any) => {
+        $('item').each((_i: number, el: any) => {
             const title = $(el).find('title').text().trim();
             const link = $(el).find('link').attr('href') || '';
             if (!title) return;
 
-            if (shouldKeepItem(title, '')) {
+            if (isRealBiddingItem(title)) {
                 const winningContractor = title.includes('落札') ? title.split('：').pop()?.trim() : undefined;
                 items.push({
                     id: `gose-${title.slice(0, 20)}`,

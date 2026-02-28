@@ -26,9 +26,6 @@ function classifyType(title: string, gyoshu: string): BiddingType {
     return '建築';
 }
 
-    return false; // Deprecated in favor of shouldKeepItem
-}
-
 async function extractFromResultsPage(page: any, status: '受付中' | '落札'): Promise<BiddingItem[]> {
     const items: BiddingItem[] = [];
     try {
