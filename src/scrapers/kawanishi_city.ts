@@ -55,7 +55,7 @@ async function scrapeKawanishiCity(): Promise<BiddingItem[]> {
             await page.waitForTimeout(2000);
 
             // ページタイトル（例: 令和7年4月分）
-            const pageTitle = await page.evaluate(() => document.querySelector('h1, h2, h3')?.textContent || '').trim();
+            const pageTitle = (await page.evaluate(() => document.querySelector('h1, h2, h3')?.textContent || '')).trim();
             console.log(`[川西町] ${pageTitle}`);
 
             // テーブルを探す
@@ -75,10 +75,12 @@ async function scrapeKawanishiCity(): Promise<BiddingItem[]> {
                     if (shouldSkip(title)) continue;
 
                     // 日付解析（ページタイトル等）
-                    const dateMatch = pageTitle.match(/(\d+)年(\d+)月/);
+                    const dateMatch = pageTitle.match(/(令和)?(\d+)年(\d+)月/);
                     let announcementDate = '';
                     if (dateMatch) {
-                        announcementDate = `${dateMatch[1]}-${String(dateMatch[2]).padStart(2, '0')}-01`;
+                        let y = parseInt(dateMatch[2]);
+                        if (dateMatch[1] === '令和' || pageTitle.includes('令和')) y += 2018;
+                        announcementDate = `${y}-${String(dateMatch[3]).padStart(2, '0')}-01`;
                     } else {
                         // デフォルト
                         announcementDate = new Date().toISOString().split('T')[0];

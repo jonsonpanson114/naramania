@@ -1,0 +1,36 @@
+name: Daily Scrape
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # 毎日日本時間午前9時 (UTC 0:00)
+  workflow_dispatch: # 手動実行用
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps chromium
+
+      - name: Run Scraper
+        run: npx tsx src/scrapers/index.ts
+        env:
+          NODE_ENV: production
+
+      - name: Commit and Push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add scraper_result.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: daily data update [skip ci]" && git push)

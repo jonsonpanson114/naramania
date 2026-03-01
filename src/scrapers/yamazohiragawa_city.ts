@@ -3,11 +3,11 @@ import * as cheerio from 'cheerio';
 import { BiddingItem, Scraper, Municipality } from '../types/bidding';
 import { shouldKeepItem } from './common/filter';
 
-// 山添村（yamazomura）
-const YAMAZO_URL = 'https://www.vill.yamazomura.nara.jp/nyusatsu.html';
+// 山添村（yamazoe）
+const YAMAZO_URL = 'https://www.vill.yamazoe.nara.jp/category/gyousei/nyusatsu';
 
-// 平群町（hiragawa）
-const HIRAGAWA_URL = 'https://www.vill.hiragawa.nara.jp/nyusatsu.html';
+// 平群町（heguri）
+const HEGURI_URL = 'https://www.town.heguri.nara.jp/soshiki/3/index.html';
 
 // スキップキーワード（他の小規模自治体向け）
 const SKIP_KEYWORDS = [
@@ -61,7 +61,7 @@ async function scrapeSmallTown(url: string, municipality: string): Promise<Biddi
                 title,
                 type: '建築',
                 announcementDate: new Date().toISOString().split('T')[0],
-                link: href.startsWith('http') ? href : `https://www.vill.${municipality.toLowerCase()}.nara.jp${href}`,
+                link: href.startsWith('http') ? href : `${url.split('/category')[0].split('/soshiki')[0]}${href}`,
                 status: '落札',
                 winnerType: 'ゼネコン',
             });
@@ -87,6 +87,6 @@ export class HiragawaScraper implements Scraper {
     municipality: '平群町' = '平群町';
 
     async scrape(): Promise<BiddingItem[]> {
-        return scrapeSmallTown(HIRAGAWA_URL, '平群町');
+        return scrapeSmallTown(HEGURI_URL, '平群町');
     }
 }

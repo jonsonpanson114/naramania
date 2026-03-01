@@ -1,6 +1,6 @@
 import axios from 'axios';
 import * as cheerio from 'cheerio';
-import { BiddingItem, Scraper } from '../types/bidding';
+import { BiddingItem, Scraper, BiddingType } from '../types/bidding';
 import { shouldKeepItem } from './common/filter';
 
 // 安堵町
@@ -17,7 +17,7 @@ function shouldSkip(title: string): boolean {
     return !shouldKeepItem(title);
 }
 
-function classifyType(title: string): '建築' | 'その他' {
+function classifyType(title: string): BiddingType {
     if (title.includes('設計') || title.includes('測量') || title.includes('コンサル')) {
         return 'コンサル';
     }

@@ -22,6 +22,10 @@ function classifyType(gyoshu: string, title: string): BiddingType {
     return '建築';
 }
 
+function shouldSkip(gyoshu: string, title: string): boolean {
+    return !shouldKeepItem(title, gyoshu);
+}
+
 function makeId(title: string): string {
     return `yamato-takada-${crypto.createHash('md5').update(title).digest('hex').slice(0, 8)}`;
 }
