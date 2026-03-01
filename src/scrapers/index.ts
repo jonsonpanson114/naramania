@@ -61,32 +61,63 @@ async function main() {
         }
     }
 
-    // 重複除外（同じIDで複数ある場合は落札ステータスを優先）
-    // 落札で上書きする際、受付中データのbiddingDate（入札予定日）を引き継ぐ
+    const outputPath = path.join(process.cwd(), 'scraper_result.json');
+
+    // 既存データを読み込んで、AI抽出済みや落札者ありのものを保護する
+    let existingItems: BiddingItem[] = [];
+    if (fs.existsSync(outputPath)) {
+        try {
+            const content = fs.readFileSync(outputPath, 'utf-8');
+            existingItems = JSON.parse(content);
+        } catch (e) {
+            console.warn('既存データの読み込みに失敗しました。');
+        }
+    }
+
+    // 重複除外 & マージ
     const seen = new Map<string, BiddingItem>();
+
+    // 既存データを先にMapに入れる（AI抽出フラグや落札情報を優先するため）
+    existingItems.forEach(item => {
+        seen.set(item.id, item);
+    });
+
+    // 新しくスクレイピングしたデータをマージ
     allItems.forEach(item => {
         const existing = seen.get(item.id);
         if (!existing) {
             seen.set(item.id, item);
-        } else if (item.status === '落札') {
-            seen.set(item.id, {
-                ...item,
-                biddingDate: item.biddingDate ?? existing.biddingDate,
-            });
+        } else {
+            // 既存がある場合、情報のマージを試みる
+            // 落札ステータスへの変更
+            if (item.status === '落札' && existing.status === '受付中') {
+                existing.status = '落札';
+            }
+            // 落札業者の追記（既存にない場合のみ）
+            if (item.winningContractor && !existing.winningContractor) {
+                existing.winningContractor = item.winningContractor;
+            }
+            // biddingDateの補完
+            if (item.biddingDate && !existing.biddingDate) {
+                existing.biddingDate = item.biddingDate;
+            }
         }
     });
+
     const unique = Array.from(seen.values());
 
     // 公告日の降順でソート
-    unique.sort((a, b) =>
-        new Date(b.announcementDate).getTime() - new Date(a.announcementDate).getTime()
-    );
+    unique.sort((a, b) => {
+        const dateA = a.announcementDate ? new Date(a.announcementDate).getTime() : 0;
+        const dateB = b.announcementDate ? new Date(b.announcementDate).getTime() : 0;
+        return dateB - dateA;
+    });
 
     console.log('\n=== 集計完了 ===');
-    console.log(`合計: ${unique.length} 件（重複除外後）`);
+    console.log(`新規取得: ${allItems.length} 件`);
+    console.log(`合計: ${unique.length} 件 (既存含めマージ後)`);
 
-    // scraper_result.json に保存（プロジェクトルート）
-    const outputPath = path.join(process.cwd(), 'scraper_result.json');
+    // 保存
     fs.writeFileSync(outputPath, JSON.stringify(unique, null, 2), 'utf-8');
     console.log(`結果を保存: ${outputPath}`);
 

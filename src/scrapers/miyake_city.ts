@@ -46,13 +46,21 @@ async function scrapeMiyakeCity(): Promise<BiddingItem[]> {
         for (const { text, href } of links) {
             // 日付パターン: "令和X年Y月M月D日" または "YYYY/MM/DD"
             const dateMatch = text.match(/令和(\d+)年(\d+)月(\d+)日/) ||
-                               text.match(/(\d{4})\/(\d{2})\/(\d{2})/);
+                text.match(/(\d{4})\/(\d{2})\/(\d{2})/);
 
             let announcementDate = '';
             if (dateMatch) {
-                const y = dateMatch[1];
+                let y = parseInt(dateMatch[1]);
                 const m = dateMatch[2];
                 const d = dateMatch[3];
+
+                // 令和の変換 (令和X年 → 2018 + X)
+                if (text.includes('令和')) {
+                    y += 2018;
+                } else if (y < 100) {
+                    y += 2000; // 簡易補完
+                }
+
                 announcementDate = `${y}-${String(m).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
             } else {
                 // RSSアイテムの場合
