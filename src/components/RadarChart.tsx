@@ -1,6 +1,6 @@
 'use client';
 
-import { ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from 'recharts';
+import { ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, Cell } from 'recharts';
 
 export default function RadarChart({ data }: { data: any[] }) {
     // Determine color based on type
@@ -36,8 +36,8 @@ export default function RadarChart({ data }: { data: any[] }) {
     };
 
     return (
-        <div className="h-96 w-full animate-fade-in">
-            <ResponsiveContainer width="100%" height="100%">
+        <div className="h-96 w-full animate-fade-in" style={{ minHeight: '320px' }}>
+            <div style={{ width: '100%', height: '100%' }}>
                 <ScatterChart margin={{ top: 20, right: 20, bottom: 20, left: 60 }}>
                     <CartesianGrid strokeDasharray="3 3" stroke="#f3f4f6" />
                     <XAxis type="number" dataKey="xIndex" name="Project" hide />
@@ -57,7 +57,7 @@ export default function RadarChart({ data }: { data: any[] }) {
                         ))}
                     </Scatter>
                 </ScatterChart>
-            </ResponsiveContainer>
+            </div>
         </div>
     );
 }

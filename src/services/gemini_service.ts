@@ -9,7 +9,7 @@ function getModel() {
         const apiKey = process.env.GOOGLE_GENERATIVE_AI_API_KEY || "";
         if (!apiKey) return null;
         genAI = new GoogleGenerativeAI(apiKey);
-        model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
+        model = genAI.getGenerativeModel({ model: "gemini-3.1-flash-lite-preview" });
     }
     return model;
 }
@@ -62,16 +62,28 @@ ${text}
 ---
 `;
 
-    try {
-        const result = await currentModel.generateContent(prompt);
-        const response = await result.response;
-        const responseText = response.text();
+    let retries = 5;
+    while (retries > 0) {
+        try {
+            const result = await currentModel.generateContent(prompt);
+            const response = await result.response;
+            const responseText = response.text();
 
-        // Clean up JSON if LLM returns markdown code blocks
-        const cleanJson = responseText.replace(/```json/g, "").replace(/```/g, "").trim();
-        return JSON.parse(cleanJson);
-    } catch (error) {
-        console.error("Gemini API Error:", error);
-        return null;
+            // Clean up JSON if LLM returns markdown code blocks
+            const cleanJson = responseText.replace(/```json/g, "").replace(/```/g, "").trim();
+            return JSON.parse(cleanJson);
+        } catch (error: any) {
+            const status = error.status;
+            if ((status === 503 || status === 429 || status === 500) && retries > 1) {
+                const waitTime = status === 429 ? 20000 : 10000;
+                console.warn(`Gemini API Error ${status}. Retrying in ${waitTime/1000}s... (${retries - 1} left)`);
+                await new Promise(resolve => setTimeout(resolve, waitTime));
+                retries--;
+                continue;
+            }
+            console.error("Gemini API Error:", error);
+            return null;
+        }
     }
+    return null;
 }

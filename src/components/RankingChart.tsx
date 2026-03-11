@@ -1,11 +1,11 @@
 'use client';
 
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Cell } from 'recharts';
 
 export default function RankingChart({ data, color }: { data: { name: string, count: number }[], color: string }) {
     return (
-        <div className="h-80 w-full animate-fade-in">
-            <ResponsiveContainer width="100%" height="100%">
+        <div className="h-80 w-full animate-fade-in" style={{ minHeight: '300px' }}>
+            <div style={{ width: '100%', height: '100%' }}>
                 <BarChart
                     data={data}
                     layout="vertical"
@@ -33,7 +33,7 @@ export default function RankingChart({ data, color }: { data: { name: string, co
                         ))}
                     </Bar>
                 </BarChart>
-            </ResponsiveContainer>
+            </div>
         </div>
     );
 }

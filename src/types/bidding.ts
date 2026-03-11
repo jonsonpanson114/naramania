@@ -1,4 +1,4 @@
-export type Municipality = '奈良県' | '奈良市' | '橿原市' | '生駒市' | '大和高田市' | '大和郡山市' | '葛城市' | '五條市' | '御所市' | '天理市' | '桜井市' | '田原本町' | '広陵町' | '香芝市' | '川西町' | '三宅町' | '山添村' | '平群町' | '安堵町' | '高取町' | '斑鳩町';
+export type Municipality = '奈良県' | '奈良市' | '橿原市' | '生駒市' | '大和高田市' | '大和郡山市' | '葛城市' | '五條市' | '御所市' | '天理市' | '桜井市' | '宇陀市' | '田原本町' | '広陵町' | '香芝市' | '川西町' | '三宅町' | '山添村' | '平群町' | '安堵町' | '高取町' | '斑鳩町' | '三郷町';
 
 export type BiddingType = '工事' | '委託' | 'コンサル' | '建築' | 'その他';
 
@@ -22,6 +22,7 @@ export interface BiddingItem {
   winnerType?: 'ゼネコン' | '設計事務所' | 'その他'; // 落札種別
   pdfUrl?: string; // Link to the actual PDF document
   isIntelligenceExtracted?: boolean; // True if Gemini has processed the PDF
+  extractionSource?: 'scraper' | 'gemini_3.1'; // Where the data came from
 }
 
 export interface Scraper {

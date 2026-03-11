@@ -16,6 +16,7 @@ import { KawanishiCityScraper } from './kawanishi_city';
 import { MiyakeCityScraper } from './miyake_city';
 import { YamazomuraScraper, HiragawaScraper } from './yamazohiragawa_city';
 import { AndoCityScraper } from './ando_city';
+import { UdaCityScraper } from './uda_city';
 import { TakatoriTownScraper, IkarugaTownScraper } from './takatori_ikaruga';
 import { BiddingItem } from '../types/bidding';
 import fs from 'fs';
@@ -36,6 +37,7 @@ async function main() {
         new GoseCityScraper(),
         new TenriCityScraper(),
         new SakuraiCityScraper(),
+        new UdaCityScraper(),
         new TawaramotoTownScraper(),
         new KoryoTownScraper(),
         new KashibaCityScraper(),

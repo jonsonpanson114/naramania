@@ -21,7 +21,7 @@ export default async function Home() {
       allItems = JSON.parse(fileContent);
     }
   } catch (error) {
-    console.error('Error loading scraper results:', error);
+    // エラー時は空配列を返す
   }
 
   // Sort by announcement date descending

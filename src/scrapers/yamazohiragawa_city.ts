@@ -3,11 +3,11 @@ import * as cheerio from 'cheerio';
 import { BiddingItem, Scraper, Municipality } from '../types/bidding';
 import { shouldKeepItem } from './common/filter';
 
-// 山添村（yamazoe）
-const YAMAZO_URL = 'https://www.vill.yamazoe.nara.jp/category/gyousei/nyusatsu';
+// 山添村（yamazoe） - 入札情報ページなし
+const YAMAZO_URL = '';  // 404エラー: オンラインでの入札情報公開なし
 
 // 平群町（heguri）
-const HEGURI_URL = 'https://www.town.heguri.nara.jp/soshiki/3/index.html';
+const HEGURI_URL = 'https://www.town.heguri.nara.jp/soshiki/list7-1.html';
 
 // スキップキーワード（他の小規模自治体向け）
 const SKIP_KEYWORDS = [
@@ -23,6 +23,11 @@ function shouldSkip(title: string): boolean {
 async function scrapeSmallTown(url: string, municipality: string): Promise<BiddingItem[]> {
     const items: BiddingItem[] = [];
 
+    if (!url) {
+        console.log(`[${municipality}] URLが設定されていません`);
+        return items;
+    }
+
     try {
         const res = await axios.get(url, {
             headers: { 'User-Agent': 'Mozilla/5.0' },
@@ -30,40 +35,36 @@ async function scrapeSmallTown(url: string, municipality: string): Promise<Biddi
         });
         const $ = cheerio.load(res.data);
 
-        // 入札結果セクションを探す
-        const resultSection = $('h2:contains("入札結果"), h3:contains("入札結果"), h4:contains("入札結果")')
-            .first();
-
-        if (!resultSection) {
-            console.warn(`[${municipality}] 入札結果セクションが見つかりません`);
-            return items;
-        }
-
-        const sectionTitle = resultSection.prev().text().trim();
-        console.log(`[${municipality}] セクション: ${sectionTitle}`);
-
-        // リンクテーブルまたはリンクリスト
-        const rows = resultSection.next().next().find('table tr, ul li').toArray();
-
-        for (const element of rows) {
+        // 平群町のページ構造: <li><span class="article_title"><a href="...">Title</a></span><span class="article_date">Date</span></li>
+        const ulItems = $('ul li').toArray();
+        for (const element of ulItems) {
             const row = $(element);
-            const link = row.find('a').first();
-            const title = link ? link.text().trim().replace(/\s+/g, ' ') : '';
+            const linkEl = row.find('a').first();
+            const title = linkEl ? linkEl.text().trim().replace(/\s+/g, ' ') : '';
+            const dateText = row.find('.article_date').text().trim();
 
             if (!title) continue;
             if (shouldSkip(title)) continue;
 
-            const href = link ? link.attr('href') || '' : '';
+            const hrefVal = linkEl ? linkEl.attr('href') : '';
+            if (!hrefVal) continue;
+
+            // 入札結果と入札公告を分類
+            const isResult = title.includes('開札結果') || title.includes('落札');
+            const status = isResult ? '落札' : '受付中';
+
+            const itemId = municipality + '-' + title.slice(0, 20);
+            const linkUrl = hrefVal.startsWith('http') ? hrefVal : 'https://www.town.heguri.nara.jp' + hrefVal;
 
             items.push({
-                id: `${municipality}-${title.slice(0, 20)}`,
+                id: itemId,
                 municipality: municipality as Municipality,
-                title,
+                title: title,
                 type: '建築',
                 announcementDate: new Date().toISOString().split('T')[0],
-                link: href.startsWith('http') ? href : `${url.split('/category')[0].split('/soshiki')[0]}${href}`,
-                status: '落札',
-                winnerType: 'ゼネコン',
+                link: linkUrl,
+                status: status,
+                winnerType: isResult ? 'ゼネコン' : undefined,
             });
         }
 
@@ -79,7 +80,8 @@ export class YamazomuraScraper implements Scraper {
     municipality: '山添村' = '山添村';
 
     async scrape(): Promise<BiddingItem[]> {
-        return scrapeSmallTown(YAMAZO_URL, '山添村');
+        console.log('[山添村] 入札情報ページなし（オンライン公開なし）');
+        return [];
     }
 }
 

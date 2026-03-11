@@ -71,7 +71,7 @@ export class TenriCityScraper implements Scraper {
                 const type = kv['工事種別'] || kv['業種'] || '';
 
                 if (!title) return;
-                if (shouldSkip(title, type)) return;
+                if (!shouldKeepItem(title, type)) return;
 
                 const annoDate = parseJapaneseDate(annoDateText) || new Date().toISOString().split('T')[0];
 
