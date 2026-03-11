@@ -23,6 +23,7 @@ export interface BiddingItem {
   pdfUrl?: string; // Link to the actual PDF document
   isIntelligenceExtracted?: boolean; // True if Gemini has processed the PDF
   extractionSource?: 'scraper' | 'gemini_3.1'; // Where the data came from
+  tags?: string[]; // AI generated tags for filtering
 }
 
 export interface Scraper {

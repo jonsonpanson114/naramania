@@ -1,22 +1,24 @@
+
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { downloadAndExtractText } from '../src/utils/pdf_utils.ts';
-import { extractBiddingInfoFromText } from '../src/services/gemini_service.ts';
+import { downloadPDFBuffer } from '../src/utils/pdf_utils.ts';
+import { extractBiddingInfoFromPDF, extractBiddingInfoFromText } from '../src/services/gemini_service.ts';
 import type { BiddingItem } from '../src/types/bidding.ts';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const RESULT_PATH = path.join(process.cwd(), 'scraper_result.json');
-const BATCH_SIZE = 100; // Larger batch now that we save on each step
+const BATCH_SIZE = 50;
 
 async function delay(ms: number) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 async function main() {
-    console.log('--- Starting PDF Intelligence Batch Processor (Gemini Edition) ---');
+    console.log('--- 🚀 Gemini 3.1 State-of-the-Art Processor ---');
+    console.log('[Native PDF + JSON Schema Enforcement]');
 
     if (!fs.existsSync(RESULT_PATH)) {
         console.error('scraper_result.json not found!');
@@ -26,70 +28,67 @@ async function main() {
     const rawData = fs.readFileSync(RESULT_PATH, 'utf-8');
     const items: BiddingItem[] = JSON.parse(rawData);
 
-    // Find items that HAVE a pdfUrl but DO NOT have isIntelligenceExtracted flag yet
-    // OR have winningContractor from scraper but not yet processed by Gemini
-    const targetItems = items.filter(i => i.pdfUrl && !i.isIntelligenceExtracted);
-    console.log(`Found ${targetItems.length} items requiring intelligence extraction.`);
+    // Target items: 
+    // 1. PDF exists but not processed by Gemini 3.1 yet
+    // 2. Processed but missing tags
+    const targetItems = items.filter(i => 
+        (i.pdfUrl && i.extractionSource !== 'gemini_3.1') || 
+        (i.description && (!i.tags || i.tags.length === 0))
+    );
+
+    console.log(`Found ${targetItems.length} items requiring intelligence or tagging.`);
 
     if (targetItems.length === 0) {
-        console.log('All PDF items have been processed! Exiting.');
+        console.log('All items are up to date! Exiting.');
         return;
     }
 
     const batch = targetItems.slice(0, BATCH_SIZE);
     console.log(`Processing batch of ${batch.length} items...`);
 
-    let processedCount = 0;
-
-    for (const item of batch) {
-        console.log(`\n[${processedCount + 1}/${batch.length}] Processing: ${item.id} - ${item.title}`);
+    for (let i = 0; i < batch.length; i++) {
+        const item = batch[i];
+        console.log(`\n[${i + 1}/${batch.length}] Processing: ${item.id} - ${item.title}`);
+        
         try {
-            console.log(`Downloading PDF: ${item.pdfUrl}`);
-            const pdfData = await downloadAndExtractText(item.pdfUrl!);
-
-            if (!pdfData || pdfData.text.length < 50) {
-                console.warn(`Failed to extract meaningful text for ${item.id}. Marking as empty.`);
-                item.description = 'PDF parse failed or empty.';
-                item.isIntelligenceExtracted = true;
-                item.extractionSource = 'scraper'; // Fallback to scraper info if PDF fails
-            } else {
-                console.log(`Extracted ${pdfData.text.length} chars. Sending to Gemini...`);
-                const intelligence = await extractBiddingInfoFromText(pdfData.text);
-                item.isIntelligenceExtracted = true;
-                item.extractionSource = 'gemini_3.1';
-
-                if (intelligence) {
-                    item.estimatedPrice = intelligence.estimatedPrice || item.estimatedPrice;
-                    item.winningContractor = intelligence.winningContractor || item.winningContractor;
-                    item.designFirm = intelligence.designFirm || item.designFirm;
-                    item.constructionPeriod = intelligence.constructionPeriod || item.constructionPeriod;
-                    item.description = intelligence.description || item.description;
-                    console.log(`Success! ${item.winningContractor || 'No contractor found.'}`);
-                } else {
-                    console.log('Gemini returned null. Marking as empty.');
+            if (item.pdfUrl && item.extractionSource !== 'gemini_3.1') {
+                console.log(`⚡ Using Native PDF Multimodal API: ${item.pdfUrl}`);
+                const pdfBuffer = await downloadPDFBuffer(item.pdfUrl);
+                if (pdfBuffer) {
+                    const info = await extractBiddingInfoFromPDF(pdfBuffer);
+                    if (info) {
+                        item.estimatedPrice = info.estimatedPrice || item.estimatedPrice;
+                        item.winningContractor = info.winningContractor || item.winningContractor;
+                        item.designFirm = info.designFirm || item.designFirm;
+                        item.constructionPeriod = info.constructionPeriod || item.constructionPeriod;
+                        item.description = info.description || item.description;
+                        item.tags = info.tags || item.tags;
+                        item.isIntelligenceExtracted = true;
+                        item.extractionSource = 'gemini_3.1';
+                        console.log(`✅ Extraction Success! Tags: ${item.tags?.join(', ')}`);
+                    }
+                }
+            } else if (item.description && (!item.tags || item.tags.length === 0)) {
+                console.log(`🏷️  Generating Tags from existing text...`);
+                const info = await extractBiddingInfoFromText(item.description);
+                if (info && info.tags) {
+                    item.tags = info.tags;
+                    console.log(`✅ Tagging Success! Tags: ${item.tags.join(', ')}`);
                 }
             }
 
-            processedCount++;
+            // Save frequently
+            if (i % 5 === 0) fs.writeFileSync(RESULT_PATH, JSON.stringify(items, null, 2));
 
-            // Save after each item to ensure progress isn't lost
-            fs.writeFileSync(RESULT_PATH, JSON.stringify(items, null, 2));
-            console.log('Waiting 5 seconds before next item...');
-            await delay(5000); // 5 second delay between items
+            await delay(2000); // Respect rate limits
 
         } catch (e: any) {
-            console.error(`Error processing ${item.id}:`, e.message || e);
-            // Even if an error occurs, we still save the current state to prevent data loss
-            fs.writeFileSync(RESULT_PATH, JSON.stringify(items, null, 2));
-            console.log('Waiting 5 seconds before next item (after error)...');
-            await delay(5000); // Still delay to avoid hammering on errors
+            console.error(`❌ Error processing ${item.id}:`, e.message || e);
         }
     }
 
-    // Save back to JSON
-    console.log('\nSaving updated data to scraper_result.json...');
     fs.writeFileSync(RESULT_PATH, JSON.stringify(items, null, 2), 'utf-8');
-    console.log('Done!');
+    console.log('\n--- Batch Complete! ---');
 }
 
 main();

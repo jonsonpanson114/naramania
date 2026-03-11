@@ -14,9 +14,24 @@ type SubFilter = 'すべて' | 'ゼネコン' | '設計事務所';
 export function BiddingTable({ items }: BiddingTableProps) {
     const [mainFilter, setMainFilter] = useState<MainFilter>('すべて');
     const [subFilter, setSubFilter] = useState<SubFilter>('すべて');
+    const [selectedTag, setSelectedTag] = useState<string | null>(null);
+
+    // Get popular tags from all items
+    const allTags = items.flatMap(i => i.tags || []);
+    const tagCounts = allTags.reduce((acc, tag) => {
+        acc[tag] = (acc[tag] || 0) + 1;
+        return acc;
+    }, {} as Record<string, number>);
+    const popularTags = Object.entries(tagCounts)
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 10)
+        .map(([tag]) => tag);
 
     // Filter logic
     const filteredItems = items.filter(item => {
+        // Tag filter takes priority if active
+        if (selectedTag && !item.tags?.includes(selectedTag)) return false;
+
         if (mainFilter === 'すべて') return true;
 
         // Construction (建築) -> Shows currently open construction items
@@ -139,6 +154,25 @@ export function BiddingTable({ items }: BiddingTableProps) {
                 )}
             </AnimatePresence>
 
+            {/* Tag Filter */}
+            <div className="flex flex-wrap justify-center gap-2 py-4 px-8 max-w-4xl mx-auto">
+                <button
+                    onClick={() => setSelectedTag(null)}
+                    className={`px-3 py-1 rounded-full text-[9px] font-bold tracking-wider transition-all border ${!selectedTag ? 'bg-primary text-white border-primary shadow-sm' : 'bg-transparent text-secondary border-border/40 hover:border-primary/40'}`}
+                >
+                    ALL TAGS
+                </button>
+                {popularTags.map(tag => (
+                    <button
+                        key={tag}
+                        onClick={() => setSelectedTag(tag === selectedTag ? null : tag)}
+                        className={`px-3 py-1 rounded-full text-[9px] font-bold tracking-wider transition-all border ${selectedTag === tag ? 'bg-blue-600 text-white border-blue-600 shadow-sm' : 'bg-blue-50/30 text-blue-600/70 border-blue-100 hover:border-blue-400'}`}
+                    >
+                        #{tag}
+                    </button>
+                ))}
+            </div>
+
 
             {/* Table Container */}
             <motion.div
@@ -208,6 +242,17 @@ export function BiddingTable({ items }: BiddingTableProps) {
                                                                 <span className="opacity-70">📅</span> {item.constructionPeriod}
                                                             </span>
                                                         )}
+                                                    </div>
+                                                )}
+
+                                                {/* Tags */}
+                                                {item.tags && item.tags.length > 0 && (
+                                                    <div className="flex gap-2 mt-1.5 flex-wrap">
+                                                        {item.tags.map(tag => (
+                                                            <span key={tag} className="text-[10px] bg-blue-50 text-blue-600 px-2 py-0.5 rounded-full border border-blue-100 font-bold tracking-wider">
+                                                                #{tag}
+                                                            </span>
+                                                        ))}
                                                     </div>
                                                 )}
 
