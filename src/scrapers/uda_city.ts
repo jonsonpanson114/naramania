@@ -28,11 +28,20 @@ function classifyType(title: string, gyoshu: string): BiddingType {
 async function extractFromResultsPage(page: any, status: '受付中' | '落札'): Promise<BiddingItem[]> {
     const items: BiddingItem[] = [];
     try {
-        const links = await page.locator('table a').all();
-        if (links.length === 0) {
-            console.log('[宇陀市] 案件リンクが見つかりません');
-            return items;
+        let links: any[] = [];
+        await page.waitForTimeout(10000);
+
+        const frames = page.frames();
+        for (const f of frames) {
+            try {
+                const found = await f.locator('table a').all().catch(() => []);
+                if (found.length > links.length) {
+                    links = found;
+                }
+            } catch (e) {}
         }
+
+        console.log(`[宇陀市] 結果フレーム発見: リンク数 ${links.length}`);
 
         for (const link of links) {
             const text = (await link.textContent())?.trim() || '';
@@ -43,13 +52,13 @@ async function extractFromResultsPage(page: any, status: '受付中' | '落札')
 
             const fullLink = href.startsWith('http') ? href : `${EPI_BASE}${href}`;
             const row = link.locator('xpath=ancestor::tr').first();
-            const cells = await row.locator('td').all();
+            const cells = await row.locator('td').all().catch(() => []);
 
             let dateText = '';
             let gyoshu = '';
             if (cells.length >= 3) {
-                dateText = (await cells[cells.length - 1].innerText()).trim();
-                gyoshu = (await cells[1].innerText()).trim();
+                dateText = (await cells[cells.length - 1].innerText().catch(() => '')).trim();
+                gyoshu = (await cells[1]?.innerText().catch(() => '') || '').trim();
             }
 
             if (!shouldKeepItem(text, gyoshu)) {
@@ -81,20 +90,7 @@ export class UdaCityScraper implements Scraper {
 
         try {
             const page = await browser.newPage();
-            console.log('[宇陀市] epi-cloudフォームにアクセス中...');
-
-            // メンテナンス時間チェック
-            const hour = new Date().getHours();
-            if (hour >= 23 || hour < 6) {
-                console.log('[宇陀市] メンテナンス時間内(23:00-06:00)のためスキップします');
-                return [];
-            }
-
-            const res = await page.goto(EPI_CLOUD_FORM, { waitUntil: 'domcontentloaded', timeout: 30000 });
-            if (!res || res.status() >= 400) {
-                throw new Error(`HTTP ${res?.status()}: epi-cloudにアクセスできません`);
-            }
-            await page.waitForTimeout(2000);
+            page.setDefaultTimeout(120000);
 
             const categories = [
                 { btnText: '工事', status: '受付中' as const },
@@ -103,37 +99,84 @@ export class UdaCityScraper implements Scraper {
 
             for (const { btnText, status } of categories) {
                 try {
-                    await page.goto(EPI_CLOUD_FORM, { waitUntil: 'domcontentloaded', timeout: 30000 });
-                    await page.waitForTimeout(1500);
+                    console.log(`\n[宇陀市] --- ${btnText} カテゴリ開始 ---`);
+                    await page.goto(EPI_CLOUD_FORM, { waitUntil: 'load' });
+                    await page.waitForTimeout(10000);
 
-                    const categoryBtn = page.getByText(btnText, { exact: true });
-                    if (await categoryBtn.count() > 0) {
-                        await categoryBtn.click({ timeout: 5000 });
-                        await page.waitForLoadState('domcontentloaded', { timeout: 15000 }).catch(() => { });
-                        await page.waitForTimeout(2000);
+                    const catSelector = `span:has-text("${btnText}"), a:has-text("${btnText}"), td:has-text("${btnText}")`;
+                    await page.locator(catSelector).first().click({ force: true, timeout: 30000 });
+                    console.log(`[宇陀市] ${btnText} をクリック。`);
+                    await page.waitForTimeout(20000);
 
-                        const searchBtn = page.locator('input[value*="検索"], input[value*="検　索"], button:has-text("検索")').first();
-                        if (await searchBtn.count() > 0) {
-                            await searchBtn.click({ timeout: 5000 }).catch(() => { });
-                            await page.waitForLoadState('domcontentloaded', { timeout: 20000 }).catch(() => { });
-                            await page.waitForTimeout(2000);
+                    let menuFound = false;
+                    for (const frame of page.frames()) {
+                        const menuSelectors = [
+                            'a:has-text("発注情報の検索")', 
+                            'a:has-text("発注情報検索")',
+                            'img[alt*="発注情報検索"]',
+                            'td:has-text("発注情報")',
+                            'span:has-text("発注情報")'
+                        ];
+                        
+                        for (const sel of menuSelectors) {
+                            const entry = frame.locator(sel).first();
+                            if (await entry.count() > 0) {
+                                console.log(`[宇陀市] メニュー発見: ${sel} (Frame: ${frame.name()})`);
+                                await entry.click({ force: true, timeout: 30000 });
+                                menuFound = true;
+                                break;
+                            }
                         }
-
-                        const items = await extractFromResultsPage(page, status);
-                        allItems.push(...items);
-                        console.log(`[宇陀市] ${btnText}: ${items.length}件`);
+                        if (menuFound) break;
                     }
+
+                    if (!menuFound) {
+                        console.warn(`[宇陀市] ${btnText}: メニューが見つかりません。`);
+                        continue;
+                    }
+
+                    await page.waitForTimeout(15000);
+
+                    let searchExecuted = false;
+                    const searchSelectors = [
+                        'input[value*="検索"]',
+                        'button:has-text("検索")',
+                        'img[alt*="検索"]',
+                        'a:has-text("検索")'
+                    ];
+
+                    for (const frame of page.frames()) {
+                        for (const sel of searchSelectors) {
+                            const btn = frame.locator(sel).first();
+                            if (await btn.count() > 0) {
+                                console.log(`[宇陀市] 検索ボタン発見: ${sel} (Frame: ${frame.name()})`);
+                                await btn.click({ force: true, timeout: 30000 });
+                                searchExecuted = true;
+                                await page.waitForTimeout(15000);
+                                const items = await extractFromResultsPage(frame, status);
+                                allItems.push(...items);
+                                break;
+                            }
+                        }
+                        if (searchExecuted) break;
+                    }
+
+                    if (!searchExecuted) {
+                        console.warn(`[宇陀市] ${btnText}: 検索ボタンが見つかりません。`);
+                    }
+
                 } catch (e: any) {
-                    console.warn(`[宇陀市] ${btnText} エラー:`, e.message?.split('\n')[0]);
+                    console.warn(`[宇陀市] ${btnText} カテゴリエラー:`, e.message?.split('\n')[0]);
                 }
             }
 
-        } catch (e: any) {
-            console.error('[宇陀市] スクレイパーエラー:', e.message || e);
+        } catch (error: any) {
+            console.error('[宇陀市] スクレイパーエラー:', error.message || error);
         } finally {
             await browser.close();
         }
 
+        console.log(`[宇陀市] 合計 ${allItems.length} 件取得`);
         return allItems;
     }
 }

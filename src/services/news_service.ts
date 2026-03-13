@@ -187,21 +187,33 @@ async function fetchKentsu(): Promise<NewsItem[]> {
     }
 }
 
+import { fetchNewsViaBrowser } from './news_browser_service';
+
 export async function fetchAllNews(): Promise<NewsItem[]> {
     const results = await Promise.allSettled([
         fetchShinpouNara(),
-        fetchConstNews(),
         fetchDecn(),
         fetchNaraNp(),
-        fetchKentsu(),
+        fetchNewsViaBrowser(), // 建設ニュースと建通新聞はブラウザ経由
     ]);
 
     const allItems: NewsItem[] = [];
     for (const result of results) {
-        if (result.status === 'fulfilled') allItems.push(...result.value);
+        if (result.status === 'fulfilled') {
+            allItems.push(...result.value);
+        }
     }
 
+    // 重複削除 (URLベース)
+    const unique = new Map<string, NewsItem>();
+    allItems.forEach(item => {
+        if (!unique.has(item.link)) {
+            unique.set(item.link, item);
+        }
+    });
+
+    const finalItems = Array.from(unique.values());
     // 日付降順
-    allItems.sort((a, b) => b.date.localeCompare(a.date));
-    return allItems;
+    finalItems.sort((a, b) => b.date.localeCompare(a.date));
+    return finalItems;
 }

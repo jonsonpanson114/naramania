@@ -1,0 +1,15 @@
+--- V11 Debug Start ---
+1. Main page. Clicking span:工事
+2. Frames: 3
+   Checking Frame: https://www.epi-cloud.fwd.ne.jp/koukai/do/KK000ShowAction
+   Text Sample: 
+   Scripts: [""]
+   Role Check (buttons/links): 0 / 0
+   Checking Frame: https://www.epi-cloud.fwd.ne.jp/koukai/do/koukai_menu
+   Text Sample:  
+   Scripts: ["https://www.epi-cloud.fwd.ne.jp/koukai/commons/koukai.js",""]
+   Role Check (buttons/links): 0 / 0
+   Checking Frame: https://www.epi-cloud.fwd.ne.jp/koukai/do/koukai_main
+   Text Sample: 入札情報の閲覧 ・このサイトでは、以下のことが行えます。 ・ 発注情報の検索 ・ 入札・契約結果情報の検索 ・ お知らせ ・ 入札情報公開サービスのトップメニューへ 
+   Scripts: ["https://www.epi-cloud.fwd.ne.jp/koukai/commons/koukai.js",""]
+   Role Check (buttons/links): 0 / 0

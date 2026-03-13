@@ -1,0 +1,5 @@
+--- Verify Extract Start ---
+❌ Error: locator.click: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for locator('input[value*="検索"]').first()[22m
+

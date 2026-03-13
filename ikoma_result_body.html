@@ -1,0 +1,440 @@
+
+
+<basefont size="3">
+<form name="KK401DynaActionForm" method="post" action="/koukai/do/KK401ShowAction">
+<table width="800" align="center">
+<tbody><tr>
+<td class="TopTitle , center">
+入札・契約結果情報検索  
+</td>
+</tr>
+</tbody></table>
+<div class="center">
+<table width="800" align="center">
+<tbody><tr>
+<td class="TopTitleLine"></td>
+</tr>
+</tbody></table>
+</div>
+<div class="center">
+<table width="800" align="center">
+<tbody><tr>
+<td align="left" class="Setumei">
+   <img src="../images/common/setumei.gif" onclick="popSetumei('KF401_s.html')">
+</td>
+<td align="right">
+<input type="button" value="検索" class="CystageBtn" onclick="doSearchF();" style="">
+<input type="button" value="クリア" class="CystageBtn" onclick="doClearF();" style="">
+</td>
+</tr>
+</tbody></table>
+</div>
+<table width="800" align="center" class="html5TableBorder">
+
+<tbody><tr>
+<td class="TableTitle mainCol1">
+<table border="0" width="100%">
+<tbody><tr>
+<td class="left, TableTitle">表示種別</td>
+<td class="right">
+<br>
+</td>
+</tr>
+
+</tbody></table>
+</td><td>
+	<select name="A094"><option value="" selected="selected">指定しない</option>
+<option value="030">入札・見積結果</option>
+<option value="040">契約結果</option></select>
+</td>
+
+
+<td class="TableTitle mainCol1">
+    <table width="100%" border="0">
+        <tbody>
+            <tr>
+                <td class="left, TableTitle">年度</td>
+                <td class="right"><br></td>
+            </tr>
+        </tbody>
+    </table>
+</td>
+<td>
+    <select name="nendo"><option value="" selected="selected">指定しない</option>
+<option value="2020">2020年度</option>
+<option value="2021">2021年度</option>
+<option value="2022">2022年度</option>
+<option value="2023">2023年度</option>
+<option value="2024">2024年度</option>
+<option value="2025">2025年度</option>
+<option value="2026">2026年度</option></select>
+</td>
+
+</tr>
+
+<tr>
+<td class="TableTitle mainCol1">
+<table border="0" width="100%">
+<tbody><tr>
+<td class="left, TableTitle">入札方式</td>
+<td class="right">
+<br>
+</td>
+</tr>
+
+</tbody></table>
+
+<!-- <TD colspan="3"> -->
+</td><td>
+
+	<select name="A046"><option value="" selected="selected">指定しない</option>
+<option value="1002012">一般競争入札（総合評価方式）</option>
+<option value="1009000">一般競争入札（事後審査型）</option></select>
+</td>
+
+
+<td class="TableTitle mainCol1">
+    <table width="100%" border="0">
+        <tbody>
+            <tr>
+                <td class="left, TableTitle">工種</td>
+                <td class="right"><br></td>
+            </tr>
+        </tbody>
+    </table>
+</td>
+<td>
+    <select name="gyosyu"><option value="" selected="selected">指定しない</option>
+<option value="01">土木一式工事</option>
+<option value="02">道路清掃業務</option>
+<option value="03">建築一式工事</option>
+<option value="04">プレハブ建築工事</option>
+<option value="05">大工工事</option>
+<option value="06">左官工事</option>
+<option value="07">とび・土工・コンクリート工事</option>
+<option value="08">道路付属物設置工事</option>
+<option value="09">土工事</option>
+<option value="10">外構工事</option>
+<option value="11">石工事</option>
+<option value="12">屋根工事</option>
+<option value="13">電気工事</option>
+<option value="14">管工事</option>
+<option value="15">管内更生工事等</option>
+<option value="16">タイル・レンガ・ブロック工事</option>
+<option value="17">鋼構造物工事</option>
+<option value="18">鉄筋工事</option>
+<option value="19">ほ装工事</option>
+<option value="20">しゅんせつ工事</option>
+<option value="21">板金工事</option>
+<option value="22">ガラス工事</option>
+<option value="23">塗装工事</option>
+<option value="24">防水工事</option>
+<option value="25">内装仕上工事</option>
+<option value="26">機械器具設置工事</option>
+<option value="27">熱絶縁工事</option>
+<option value="28">電気通信工事</option>
+<option value="29">造園工事</option>
+<option value="30">公園設備工事</option>
+<option value="31">さく井工事</option>
+<option value="32">建具工事</option>
+<option value="33">水道施設工事</option>
+<option value="34">消防施設工事</option>
+<option value="35">清掃施設工事</option>
+<option value="36">その他</option>
+<option value="37">解体工事</option></select>
+</td>
+
+
+</tr>
+
+<tr>
+<td class="TableTitle mainCol1">
+<table border="0" width="100%">
+<tbody><tr>
+<td class="left, TableTitle">工事名</td>
+<td class="right">
+<br>
+</td>
+</tr>
+
+</tbody></table>
+</td><td colspan="3">
+<input type="text" name="koujimei" maxlength="128" size="108" value="" style="">を含む
+</td>
+</tr>
+
+<tr>
+
+
+<td class="TableTitle mainCol1">
+    <table width="100%" border="0">
+        <tbody>
+            <tr>
+                <td class="left, TableTitle">契約管理番号</td>
+                <td class="right"><br></td>
+            </tr>
+        </tbody>
+    </table>
+</td>
+<td>
+    <input type="text" name="koujiNo" maxlength="20" size="40" value="" style="">を含む
+</td>
+
+<td class="TableTitle mainCol1">
+<table border="0" width="100%">
+<tbody><tr>
+<td class="left, TableTitle">工事場所</td>
+<td class="right">
+<br>
+</td>
+</tr>
+
+</tbody></table>
+</td><td>
+	<input type="text" name="koujibangou" maxlength="50" size="40" value="" style="">を含む
+</td>
+</tr>
+
+
+
+
+
+
+<tr>
+<td class="TableTitle mainCol1">
+<table border="0" width="100%">
+<tbody><tr>
+<td class="left, TableTitle">条件１</td>
+<td class="right">
+<br>
+</td>
+</tr>
+</tbody></table>
+</td>
+<td colspan="3">
+	<select name="ITEM_1_CONTENT"><option value="" selected="selected">指定しない</option></select>
+</td>
+</tr>
+
+
+
+<tr>
+<td class="TableTitle mainCol1">
+    <table width="100%" border="0">
+        <tbody>
+            <tr>
+                <td class="left, TableTitle">日付</td>
+                <td class="right"><br></td>
+            </tr>
+        </tbody>
+    </table>
+</td>
+<td colspan="3">
+    <select name="hizukeKubun"><option value="010" selected="selected">更新日</option>
+<option value="020">開札日</option></select>&nbsp;
+    <input type="text" name="date_start" maxlength="12" size="12" value="" style="">
+    <span class="html5Hand"><img border="0" src="../images/common/time.gif" onclick="CallwrtCalendar(document.forms[0].date_start,document.forms[0].date_start.value)"></span>
+ ～
+    <input type="text" name="date_end" maxlength="12" size="12" value="" style="">
+    <span class="html5Hand"><img border="0" src="../images/common/time.gif" onclick="CallwrtCalendar(document.forms[0].date_end,document.forms[0].date_end.value)"></span>
+</td>
+</tr>
+
+
+
+
+
+
+<tr>
+
+
+<td class="TableTitle mainCol1">
+    <table width="100%" border="0">
+        <tbody>
+            <tr>
+                <td class="left, TableTitle">表示順</td>
+                <td class="right"><br></td>
+            </tr>
+        </tbody>
+    </table>
+</td>
+<td class="mainCol2">
+    <select name="orderKey1"><option value="010" selected="selected">更新日</option>
+<option value="020">開札日</option>
+<option value="030">工事名</option>
+<option value="040">契約管理番号</option>
+<option value="050">入札方式</option>
+<option value="060">課所</option></select>
+の
+    <select name="orderKey2"><option value="010">昇順</option>
+<option value="020" selected="selected">降順</option></select>
+</td>
+
+<td class="TableTitle mainCol1">
+<table border="0" width="100%">
+<tbody><tr>
+<td class="left, TableTitle">表示件数</td>
+<td class="right">
+<br>
+</td>
+</tr>
+
+</tbody></table>
+</td><td>
+	<select name="A300"><option value="010">10</option>
+<option value="020">25</option>
+<option value="030">50</option>
+<option value="040">100</option></select>
+</td>
+</tr>
+
+</tbody></table>
+
+<br>
+<input type="hidden" name="perPage" value="10" style="">
+<input type="hidden" name="curPage" value="1" style="">
+<input type="hidden" name="recCount" value="" style="">
+
+<div class="center html5Width800">
+<table width="800" class="left">
+<tbody><tr>
+<td class="SurroundTable">・</td>
+<td class="SurroundTable">詳細を参照するには、工事名をクリックします。</td>
+</tr>
+</tbody></table>
+</div>
+<table width="800" border="0" align="center" cellpadding="1" cellspacing="1">
+	<tbody><tr><td align="left">
+	<script language="javascript">
+	var perPage = parseInt(document.forms[0].perPage.value);
+	var curPage = parseInt(document.forms[0].curPage.value);
+	var recCount = parseInt(document.forms[0].recCount.value);
+	var pageCount = Math.ceil(recCount / perPage);
+	
+	if (! isNaN(recCount)){
+		document.write("検索結果一覧：");
+		document.write(recCount);
+		document.write("件のうち");
+		if(recCount =="0"){
+			document.write("0");
+		}else{
+			document.write((curPage - 1) * perPage + 1);
+		}
+		document.write("－");
+		if((curPage * perPage) > recCount){
+			document.write(recCount);
+		}else{
+			document.write(curPage * perPage);
+		}
+		document.write("件を表示");		
+		document.write("</td><td align='right'>");
+        //
+        //
+        document.write("（全" + pageCount + "ページ）");
+        //
+		if(recCount!="0" && curPage !="1"){
+			document.write("&nbsp;&nbsp;<a href='../do/KK401SearchAction?page="+ (curPage -1) +"'><<前へ</a>");		
+		}
+        //
+        //
+        if (recCount != "0" && pageCount != "1") {
+            document.write("&nbsp;&nbsp;<input type='text' id='pageInput' style='text-align: right;' value='" + curPage + "' size='4'>");
+            document.write("ページ目");
+            document.write("<input type='button' value='表示' size='40' onClick='pageJump();' class='CystageBtn'/>");
+        }
+        //
+		if(recCount!="0" && curPage != pageCount){
+			document.write("&nbsp;&nbsp;<a href='../do/KK401SearchAction?page="+ (curPage +1) +"'>次へ>></a>");
+		}
+	}
+    //
+    //
+    function pageJump() {
+        var pageInput = document.getElementById("pageInput").value;
+        var pagePattern = /^[1-9][0-9]*$/g
+        pagePattern.compile(pagePattern);
+        if (pagePattern.test(pageInput) && parseInt(pageInput, 10) <= pageCount) {
+            window.open("../do/KK401SearchAction?page=" + pageInput, "_self");
+        } else {
+            alert("指定されたページ数が不正です。");
+        }
+    }
+    //
+	</script>
+	</td>
+	</tr>
+</tbody></table>
+
+<table width="800" align="center">
+<tbody><tr>
+	<td style="background-color : blue; height : 1px;">
+</td>
+</tr>
+</tbody></table>
+
+<table width="800" border="0" align="center" cellpadding="0" cellspacing="0">
+<tbody><tr>
+<td>
+
+<table width="780" class="html5TableBorder" style="TABLE-LAYOUT:fixed;word-break:break-all" align="left">
+	
+	<tbody><tr class="TableMenuBackGround">
+
+
+
+
+
+
+    <th class="TableTitle listCol1" height="30">表示種別</th>
+
+    <!-- <TH class='TableTitle listCol2'>開札日</TH> -->
+    <th class="TableTitle listCol2">開札日／<br>契約日</th>
+
+    <th class="TableTitle listCol3">工事名</th>
+    <th class="TableTitle listCol4">契約管理<br>番号</th>
+    <th class="TableTitle listCol5">入札方式</th>
+    <th class="TableTitle listCol6">落札者／<br>契約者</th>
+    <th class="TableTitle listCol7">落札金額(税抜)<br>／契約金額</th>
+    <th class="TableTitle listCol8">課所名</th>
+
+	</tr>
+	
+</tbody></table>
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+
+<table width="800" border="0" align="center" cellpadding="0" cellspacing="0">
+<tbody><tr>
+	<td align="left">
+	<div align="left">
+	<iframe id="frmMain" name="right" src="../do/KFK401FrameShow" width="100%" height="330" scrolling="auto" border="0" frameborder="0" framespacing="0">
+	</iframe>
+	</div>
+	</td>
+	</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+<table width="800" align="center">
+<tbody><tr>
+<td style="background-color : blue; height : 1px;">
+</td>
+</tr>
+</tbody></table>
+
+
+
+
+
+
+<input type="hidden" name="checkList" value="[Ljava.lang.String;@4cec3fe3" style="">
+</form>
+
+
+

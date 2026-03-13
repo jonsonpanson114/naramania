@@ -15,6 +15,10 @@ export function BiddingTable({ items }: BiddingTableProps) {
     const [mainFilter, setMainFilter] = useState<MainFilter>('すべて');
     const [subFilter, setSubFilter] = useState<SubFilter>('すべて');
     const [selectedTag, setSelectedTag] = useState<string | null>(null);
+    const [selectedMunicipality, setSelectedMunicipality] = useState<string | 'すべて'>('すべて');
+
+    // Get unique municipalities
+    const municipalities = Array.from(new Set(items.map(i => i.municipality))).sort();
 
     // Get popular tags from all items
     const allTags = items.flatMap(i => i.tags || []);
@@ -29,6 +33,9 @@ export function BiddingTable({ items }: BiddingTableProps) {
 
     // Filter logic
     const filteredItems = items.filter(item => {
+        // Municipality filter
+        if (selectedMunicipality !== 'すべて' && item.municipality !== selectedMunicipality) return false;
+
         // Tag filter takes priority if active
         if (selectedTag && !item.tags?.includes(selectedTag)) return false;
 
@@ -154,23 +161,43 @@ export function BiddingTable({ items }: BiddingTableProps) {
                 )}
             </AnimatePresence>
 
-            {/* Tag Filter */}
-            <div className="flex flex-wrap justify-center gap-2 py-4 px-8 max-w-4xl mx-auto">
-                <button
-                    onClick={() => setSelectedTag(null)}
-                    className={`px-3 py-1 rounded-full text-[9px] font-bold tracking-wider transition-all border ${!selectedTag ? 'bg-primary text-white border-primary shadow-sm' : 'bg-transparent text-secondary border-border/40 hover:border-primary/40'}`}
-                >
-                    ALL TAGS
-                </button>
-                {popularTags.map(tag => (
-                    <button
-                        key={tag}
-                        onClick={() => setSelectedTag(tag === selectedTag ? null : tag)}
-                        className={`px-3 py-1 rounded-full text-[9px] font-bold tracking-wider transition-all border ${selectedTag === tag ? 'bg-blue-600 text-white border-blue-600 shadow-sm' : 'bg-blue-50/30 text-blue-600/70 border-blue-100 hover:border-blue-400'}`}
+            {/* Municipality & Tag Filter Bar */}
+            <div className="flex flex-col md:flex-row items-center justify-center gap-6 py-6 px-8 bg-gray-50/30 rounded-2xl border border-gray-100/50 backdrop-blur-sm mx-auto max-w-6xl">
+                {/* Municipality Select */}
+                <div className="flex items-center gap-3">
+                    <span className="text-[10px] font-bold text-gray-400 tracking-widest uppercase">Region</span>
+                    <select
+                        value={selectedMunicipality}
+                        onChange={(e) => setSelectedMunicipality(e.target.value)}
+                        className="bg-white border border-border/60 rounded-lg px-4 py-2 text-xs font-serif font-bold text-primary focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent transition-all cursor-pointer shadow-sm"
                     >
-                        #{tag}
+                        <option value="すべて">すべての自治体 ({municipalities.length})</option>
+                        {municipalities.map(m => (
+                            <option key={m} value={m}>{m}</option>
+                        ))}
+                    </select>
+                </div>
+
+                <div className="hidden md:block w-px h-8 bg-border/40"></div>
+
+                {/* Tag Filter */}
+                <div className="flex flex-wrap justify-center gap-2">
+                    <button
+                        onClick={() => setSelectedTag(null)}
+                        className={`px-3 py-1.5 rounded-full text-[9px] font-bold tracking-wider transition-all border ${!selectedTag ? 'bg-primary text-white border-primary shadow-md' : 'bg-white text-secondary border-border/40 hover:border-primary/40'}`}
+                    >
+                        ALL TAGS
                     </button>
-                ))}
+                    {popularTags.map(tag => (
+                        <button
+                            key={tag}
+                            onClick={() => setSelectedTag(tag === selectedTag ? null : tag)}
+                            className={`px-3 py-1.5 rounded-full text-[9px] font-bold tracking-wider transition-all border ${selectedTag === tag ? 'bg-blue-600 text-white border-blue-600 shadow-md' : 'bg-blue-50/50 text-blue-600/70 border-blue-100 hover:border-blue-400'}`}
+                        >
+                            #{tag}
+                        </button>
+                    ))}
+                </div>
             </div>
 
 

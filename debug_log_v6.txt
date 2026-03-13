@@ -1,0 +1,31 @@
+--- V6 Debug Start ---
+1. Main page loaded. Sleeping...
+2. Frames found: 3
+3. Found koukai_main. Dumping BODY content...
+   BODY Length: 1720
+   BODY Sample: 
+<form name="kfkForm" method="post" action="">
+<div class="center">
+<table width="800" align="center">
+  <tbody>
+    <tr>
+      <td class="TopTitle , center"> 入札情報の閲覧 </td>
+    </tr>
+    <tr>
+      <td class="TopTitleLine"></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="center">
+<table width="800" align="center">
+<tbody><tr>
+   <td class="SurroundTable , center">・このサイトでは、以下のことが行えます。 </td>
+</tr>
+</tbody></table><p>
+
+</p><div class="center">
+</div><table>
+
+</table><table borfer="0" cellspac
+4. Inputs in frame: [{"val":"0000ZZZZZZ","type":"hidden","id":""},{"val":"","type":"hidden","id":""},{"val":"","type":"hidden","id":""}]
