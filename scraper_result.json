@@ -480,15 +480,6 @@
     "extractionSource": "gemini_3.1"
   },
   {
-    "id": "斑鳩町-https://www.town.ika",
-    "municipality": "斑鳩町",
-    "title": "道路工事に伴う斑鳩町コミュニティバス運行ルートの変更について",
-    "type": "建築",
-    "announcementDate": "2026-03-09",
-    "link": "https://www.town.ikaruga.nara.jp/0000003234.html",
-    "status": "受付中"
-  },
-  {
     "id": "nara-pref-29001013050520250347",
     "municipality": "奈良県",
     "title": "一般国道１６９号他　現場技術業務委託（防災安全交付金（交安）（重点）他）　第　８－Ｐ４－１３－１－委－１他　号",
@@ -520,16 +511,6 @@
     "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29001013051020250244",
     "status": "受付中",
     "winnerType": "設計事務所"
-  },
-  {
-    "id": "yamato-koriyama-f9e03e65",
-    "municipality": "大和郡山市",
-    "title": "地域スポーツ会館自動体外式除細動器(AED)購入",
-    "type": "建築",
-    "announcementDate": "2026-03-04",
-    "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsunooshirase/r7/17452.html",
-    "status": "落札",
-    "winningContractor": "大和中央製薬株式会社"
   },
   {
     "id": "nara-city-0000002279",
@@ -825,28 +806,6 @@
     "status": "受付中"
   },
   {
-    "id": "nara-pref-29001013052520250207",
-    "municipality": "奈良県",
-    "title": "津風呂川他　護岸詳細設計委託（緊急自然災害防止対策事業債対象事業（臨時・特別））　第　Ｕ－１０３－委１　号",
-    "type": "コンサル",
-    "announcementDate": "2026-02-26",
-    "biddingDate": "2026-03-16",
-    "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29001013052520250207",
-    "status": "受付中",
-    "winnerType": "設計事務所"
-  },
-  {
-    "id": "nara-pref-29001013051520250276",
-    "municipality": "奈良県",
-    "title": "葛城川流域土砂・洪水氾濫対策施設配置計画検討業務（防災・安全交付金事業（総流防）（補正））　第　補３０－１－委１　号",
-    "type": "コンサル",
-    "announcementDate": "2026-02-26",
-    "biddingDate": "2026-04-21",
-    "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29001013051520250276",
-    "status": "受付中",
-    "winnerType": "設計事務所"
-  },
-  {
     "id": "nara-pref-29001013271020250042",
     "municipality": "奈良県",
     "title": "中和公園事務所　現場技術業務委託（補助都市計画公園事業（防災・安全）他）　繰２－３０－Ｂ１－委１　他",
@@ -943,18 +902,6 @@
     "winnerType": "ゼネコン"
   },
   {
-    "id": "nara-city-0000002271",
-    "municipality": "奈良市",
-    "title": "春日中学校屋内運動場バスケットゴール取替工事",
-    "type": "建築",
-    "announcementDate": "2026-02-25",
-    "biddingDate": "2026-02-25",
-    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
-    "status": "落札",
-    "winningContractor": "弘安建設株式会社",
-    "winnerType": "ゼネコン"
-  },
-  {
     "id": "nara-city-0000002272",
     "municipality": "奈良市",
     "title": "中部公民館舞台設備改修工事",
@@ -991,28 +938,6 @@
     "winnerType": "設計事務所"
   },
   {
-    "id": "kashihara-result-5071001343",
-    "municipality": "橿原市",
-    "title": "市道路整備工事7-2",
-    "type": "建築",
-    "announcementDate": "2026-02-25",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071001343k.pdf",
-    "status": "落札",
-    "winnerType": "ゼネコン",
-    "winningContractor": "㈱勇伸建設",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "5,065,368円（税込）",
-    "constructionPeriod": "契約日の翌日 から 令和8年3月31日",
-    "description": "奈良県橿原市太田市町地内における「市道路整備工事7-2」の入札。事後審査型条件付き一般競争入札により執行され、㈱勇伸建設が5,065,368円で落札した。",
-    "tags": [
-      "土木",
-      "道路",
-      "整備"
-    ]
-  },
-  {
     "id": "kashihara-result-5071001360",
     "municipality": "橿原市",
     "title": "踏切道内誘導表示設置工事7-1",
@@ -1032,94 +957,6 @@
       "電気",
       "土木",
       "改修"
-    ]
-  },
-  {
-    "id": "kashihara-result-5071001350",
-    "municipality": "橿原市",
-    "title": "交通安全施設整備工事7－3",
-    "type": "建築",
-    "announcementDate": "2026-02-25",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071001350k.pdf",
-    "status": "落札",
-    "winnerType": "ゼネコン",
-    "winningContractor": "㈱南村組",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "20,802,100円（消費税込み）",
-    "constructionPeriod": "契約日の翌日から令和8年3月31日",
-    "description": "橿原市菖蒲町地内他における交通安全施設整備工事。事後審査型条件付き一般競争入札により、㈱南村組が18,138,780円で落札した。",
-    "tags": [
-      "土木",
-      "交通安全",
-      "工事"
-    ]
-  },
-  {
-    "id": "kashihara-result-5071001328",
-    "municipality": "橿原市",
-    "title": "市道路舗装維持修繕工事7－11",
-    "type": "建築",
-    "announcementDate": "2026-02-25",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071001328k.pdf",
-    "status": "落札",
-    "winnerType": "ゼネコン",
-    "winningContractor": "㈱森本組",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "8,574,500円（税込）",
-    "constructionPeriod": "契約日の翌日から令和8年3月31日",
-    "description": "橿原市久米町および曽我町地内における、市道路舗装の維持修繕工事。事後審査型条件付き一般競争入札により実施。",
-    "tags": [
-      "舗装",
-      "補修",
-      "土木"
-    ]
-  },
-  {
-    "id": "kashihara-result-5072001304",
-    "municipality": "橿原市",
-    "title": "五井町市有地土壌汚染調査業務（深度方向調査）",
-    "type": "委託",
-    "announcementDate": "2026-02-25",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18375.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5072001304k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "㈱KGS 奈良営業所",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "20,495,200円 (予定価格/設計金額), 落札金額: 7,370,000円",
-    "constructionPeriod": "契約日の翌日から令和8年3月31日まで",
-    "description": "橿原市五井町地内における、五井町市有地土壌汚染調査業務（深度方向調査）の請負。事後審査型条件付き一般競争入札により執行された。",
-    "tags": [
-      "土壌汚染",
-      "調査",
-      "土木"
-    ]
-  },
-  {
-    "id": "kashihara-result-5072001274",
-    "municipality": "橿原市",
-    "title": "交通安全施設整備工事に伴う補償調査業務委託R7",
-    "type": "建築",
-    "announcementDate": "2026-02-25",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18375.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5072001274k.pdf",
-    "status": "落札",
-    "winnerType": "ゼネコン",
-    "winningContractor": "株式会社五星 奈良事務所",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "1,903,000円（税込）",
-    "constructionPeriod": "契約日の翌日 ～ 令和8年3月31日",
-    "description": "橿原市新堂町地内における、交通安全施設整備工事に伴う補償調査業務委託。",
-    "tags": [
-      "調査",
-      "土木",
-      "測量"
     ]
   },
   {
@@ -1177,27 +1014,6 @@
     ]
   },
   {
-    "id": "kashihara-result-5073001303",
-    "municipality": "橿原市",
-    "title": "令和8年度 広報かしはら印刷等業務（5月号～4月号分）",
-    "type": "委託",
-    "announcementDate": "2026-02-25",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18369.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073001303k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "㈱サカタ企画印刷",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "21,092,016円 (消費税10%含む)",
-    "constructionPeriod": "令和8年4月1日 から 令和 9年 3月31日",
-    "description": "橿原市内一円を対象とした、令和8年度の広報かしはら（5月号から翌年4月号分）に係る印刷業務。",
-    "tags": [
-      "印刷",
-      "広報"
-    ]
-  },
-  {
     "id": "kashihara-result-5073001336",
     "municipality": "橿原市",
     "title": "成人保健事業に伴う検（健）診受診券業務",
@@ -1244,27 +1060,6 @@
     "announcementDate": "2026-02-24",
     "biddingDate": "2026-03-13",
     "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29005007060120250075",
-    "status": "受付中",
-    "winnerType": "設計事務所"
-  },
-  {
-    "id": "nara-pref-29001013305020250065",
-    "municipality": "奈良県",
-    "title": "宇陀川浄化センター汚泥処理棟初沈汚泥スクリーン修繕工事　Ｒ７宇工第４号",
-    "type": "建築",
-    "announcementDate": "2026-02-20",
-    "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29001013305020250065",
-    "status": "落札",
-    "winnerType": "ゼネコン"
-  },
-  {
-    "id": "nara-pref-29001013053020250287",
-    "municipality": "奈良県",
-    "title": "主要地方道五條吉野線　落石防護柵詳細設計委託（防災・安全交付金事業（地方道災害防除・国補正））　補１－Ｂ３９－６－委２",
-    "type": "コンサル",
-    "announcementDate": "2026-02-20",
-    "biddingDate": "2026-03-05",
-    "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29001013053020250287",
     "status": "受付中",
     "winnerType": "設計事務所"
   },
@@ -1316,17 +1111,6 @@
     "status": "受付中"
   },
   {
-    "id": "yamato-koriyama-17787022",
-    "municipality": "大和郡山市",
-    "title": "大和郡山市災害備蓄用毛布購入",
-    "type": "建築",
-    "announcementDate": "2026-02-20",
-    "biddingDate": "2026-02-20",
-    "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsunooshirase/r7/17435.html",
-    "status": "落札",
-    "winningContractor": "大和中央製薬株式会社"
-  },
-  {
     "id": "tenri-4ae2e734",
     "municipality": "天理市",
     "title": "天理市立山の辺小学校校舎1棟解体工事",
@@ -1364,16 +1148,6 @@
     ]
   },
   {
-    "id": "nara-pref-29001013051520250262",
-    "municipality": "奈良県",
-    "title": "葛下川　護岸設計業務委託（緊急自然災害防止対策事業債対象事業（臨時・特別））　第　Ｔ－１０９－委１　号",
-    "type": "コンサル",
-    "announcementDate": "2026-02-19",
-    "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5515_1020?ankenId=29001013051520250262",
-    "status": "落札",
-    "winnerType": "設計事務所"
-  },
-  {
     "id": "nara-pref-29001013052520250205",
     "municipality": "奈良県",
     "title": "町並川　地下水位観測業務（防災・安全社会資本整備交付金事業（総流防・広域系））　第　１９－委６　号",
@@ -1391,16 +1165,6 @@
       "調査",
       "土木"
     ]
-  },
-  {
-    "id": "yamato-koriyama-a0b87177",
-    "municipality": "大和郡山市",
-    "title": "第95・96回クリーンキャンペーン用ごみ袋・軍手購入",
-    "type": "建築",
-    "announcementDate": "2026-02-18",
-    "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsunooshirase/r7/12433.html",
-    "status": "落札",
-    "winningContractor": "株式会社テライ"
   },
   {
     "id": "nara-pref-29001013060020250254",
@@ -1638,26 +1402,6 @@
     ]
   },
   {
-    "id": "nara-pref-29001013060020250252",
-    "municipality": "奈良県",
-    "title": "浄化センター汚泥消化タンク機械棟３号温水ヒータ更新工事（防災・安全交付金事業）　Ｒ７浄化第５５９号",
-    "type": "建築",
-    "announcementDate": "2026-02-09",
-    "biddingDate": "2026-03-09",
-    "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29001013060020250252",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "estimatedPrice": "276,184,700円（消費税及び地方消費税（計１０％）を含みます。）",
-    "designFirm": "日本工営都市空間株式会社",
-    "constructionPeriod": "令和８年３月２５日 （予定）～ 令和９年８月３１日",
-    "description": "大和郡山市額田部南町の浄化センター汚泥消化タンク機械棟において、3号温水ヒータ、温水循環ポンプ（2台）、汚泥熱交換器といった機械設備に加え、加温・ガス貯留コントロールセンタや補助継電器盤、現場操作盤、温水循環流量計などの電気設備の更新工事を行う。（防災・安全交付金事業）",
-    "tags": [
-      "機械",
-      "電気",
-      "改修"
-    ]
-  },
-  {
     "id": "nara-city-0000002275",
     "municipality": "奈良市",
     "title": "第１９号（梅園）市営住宅解体工事",
@@ -1668,17 +1412,6 @@
     "status": "落札",
     "winningContractor": "森髙建設株式会社",
     "winnerType": "ゼネコン"
-  },
-  {
-    "id": "yamato-koriyama-8b79aff3",
-    "municipality": "大和郡山市",
-    "title": "大和郡山市自動体外式除細動器(AED)賃貸借業務",
-    "type": "委託",
-    "announcementDate": "2026-02-06",
-    "biddingDate": "2026-02-06",
-    "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsunooshirase/r7/15333.html",
-    "status": "落札",
-    "winningContractor": "大和中央製薬株式会社"
   },
   {
     "id": "nara-pref-29006003060520250038",
@@ -1873,32 +1606,6 @@
     ]
   },
   {
-    "id": "nara-city-0000002261",
-    "municipality": "奈良市",
-    "title": "交通安全施設整備工事（学園南一丁目地内他・西部第３３５号線他）",
-    "type": "建築",
-    "announcementDate": "2026-02-02",
-    "biddingDate": "2026-02-02",
-    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
-    "status": "落札",
-    "winningContractor": "北浦工務店",
-    "winnerType": "ゼネコン"
-  },
-  {
-    "id": "sakurai-2026-02-02-桜井市旧学校給食センター及び-桜井南幼稚園解体工事",
-    "municipality": "桜井市",
-    "title": "桜井市旧学校給食センター及び 桜井南幼稚園解体工事",
-    "type": "建築",
-    "announcementDate": "2026-02-02",
-    "link": "https://www.city.sakurai.lg.jp/sosiki/soumu/kanzaikeiyaku/nyuusatukeiyakukensa/6596.html",
-    "status": "受付中",
-    "description": "河西 地内",
-    "tags": [
-      "解体",
-      "建築"
-    ]
-  },
-  {
     "id": "nara-pref-29005007060120250060",
     "municipality": "奈良県",
     "title": "【中止】御所浄水場電気棟改修工事（設備工事）",
@@ -1919,18 +1626,6 @@
     ]
   },
   {
-    "id": "nara-city-0000002260",
-    "municipality": "奈良市",
-    "title": "交通安全施設整備工事（その１）（その２）（芝辻町二丁目地内・西九条佐保線）",
-    "type": "建築",
-    "announcementDate": "2026-01-30",
-    "biddingDate": "2026-01-30",
-    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
-    "status": "落札",
-    "winningContractor": "北浦工務店",
-    "winnerType": "ゼネコン"
-  },
-  {
     "id": "kashihara-proposal-5073001364",
     "municipality": "橿原市",
     "title": "橿原市立中学校休日部活動の地域展開に伴う地域クラブ運営業務委託 (圧縮ファイル: 152.0KB)",
@@ -1946,26 +1641,6 @@
       "部活動",
       "運営",
       "委託"
-    ]
-  },
-  {
-    "id": "katsuragi-9912fbac",
-    "municipality": "葛城市",
-    "title": "市立保育所・認定こども園交通誘導業務委託",
-    "type": "委託",
-    "announcementDate": "2026-01-30",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/9-05-01-2025-1.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/9-05-01-2025-1.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "12,411,000円（消費税及び地方消費税を除く）",
-    "constructionPeriod": "令和8年4月1日から令和9年3月31日まで",
-    "description": "葛城市内の市立保育所及び認定こども園における交通誘導業務。送迎車両の駐車場利用時間と小学生の登下校時間、および一般車両の交通量が重なることによる混雑が想定されるため、交通誘導員を配置し、出入口付近の安全対策と混雑整理を行う。",
-    "tags": [
-      "交通誘導",
-      "安全対策",
-      "業務委託"
     ]
   },
   {
@@ -2105,50 +1780,6 @@
     ]
   },
   {
-    "id": "kashihara-result-5073001213",
-    "municipality": "橿原市",
-    "title": "令和8年度こども園および学校給食関係者等の検便検査業務",
-    "type": "委託",
-    "announcementDate": "2026-01-29",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18369.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073001213k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "㈱関西環境センター",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "722,260円 (消費税10%含む)",
-    "constructionPeriod": "令和8年4月1日から令和9年3月31日まで",
-    "description": "橿原市内膳町・小房町地内における、令和8年度こども園および学校給食関係者等の検便検査業務の委託。",
-    "tags": [
-      "検査",
-      "委託",
-      "学校"
-    ]
-  },
-  {
-    "id": "kashihara-result-5073001245",
-    "municipality": "橿原市",
-    "title": "令和8年度後期高齢者医療制度に係る専用帳票印刷及び印字封入業務",
-    "type": "委託",
-    "announcementDate": "2026-01-29",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18369.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073001245k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "東洋印刷㈱",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "2,686,695円 (消費税10%含む)",
-    "constructionPeriod": "契約日の翌日 から 令和 9年 3月31日",
-    "description": "令和8年度における後期高齢者医療制度に関連した、専用帳票の印刷および印字・封入業務を委託する案件。",
-    "tags": [
-      "印刷",
-      "事務",
-      "委託"
-    ]
-  },
-  {
     "id": "kashihara-result-5073001217",
     "municipality": "橿原市",
     "title": "令和8年度クリーンセンターかしはら余剰電力売却",
@@ -2232,36 +1863,6 @@
     ]
   },
   {
-    "id": "nara-pref-29001013060020250231",
-    "municipality": "奈良県",
-    "title": "中央卸売市場微量ＰＣＢ含有機器等更新工事　工第７－１号",
-    "type": "建築",
-    "announcementDate": "2026-01-28",
-    "biddingDate": "2026-01-28",
-    "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29001013060020250231",
-    "status": "落札",
-    "isIntelligenceExtracted": true,
-    "estimatedPrice": "15,796,000円（消費税及び地方消費税(計 10%)を含みます。）",
-    "designFirm": "株式会社 尾川建築設計事務所",
-    "constructionPeriod": "令和 8年 2月10日（予定）～令和 9年 1月28日",
-    "description": "奈良県中央卸売市場において、微量PCB含有機器等の更新工事を実施。具体的には、変圧器2台、高圧コンデンサー5台、高圧リアクトル4台、接地コンデンサー1台、低圧コンデンサー10台、ネオン変圧器32台の更新または撤去を行う。",
-    "tags": [
-      "電気",
-      "改修",
-      "建築"
-    ]
-  },
-  {
-    "id": "yamato-koriyama-e341f16c",
-    "municipality": "大和郡山市",
-    "title": "第95・96回クリーンキャンペーン用ごみ袋・軍手購入",
-    "type": "建築",
-    "announcementDate": "2026-01-27",
-    "biddingDate": "2026-02-18",
-    "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsu/R7/12407.html",
-    "status": "受付中"
-  },
-  {
     "id": "kashiba-r7-k12-01",
     "municipality": "香芝市",
     "title": "令和７年度ストックマネジメント計画に基づくマンホール蓋取替え工事（３工区）",
@@ -2342,16 +1943,6 @@
       "設計",
       "測量"
     ]
-  },
-  {
-    "id": "yamato-koriyama-04303f18",
-    "municipality": "大和郡山市",
-    "title": "令和7年度大和郡山市災害備蓄用毛布購入業務",
-    "type": "委託",
-    "announcementDate": "2026-01-26",
-    "biddingDate": "2026-02-20",
-    "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsu/R7/17286.html",
-    "status": "受付中"
   },
   {
     "id": "nara-pref-29005007060120250057",
@@ -2667,26 +2258,6 @@
     "status": "受付中"
   },
   {
-    "id": "nara-pref-29001013060020250229",
-    "municipality": "奈良県",
-    "title": "浄化センター２系３号初沈汚泥掻寄機更新工事（防災・安全交付金事業）　Ｒ７浄化第５６０号",
-    "type": "建築",
-    "announcementDate": "2026-01-05",
-    "biddingDate": "2026-03-02",
-    "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29001013060020250229",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "estimatedPrice": "609,457,200円（消費税及び地方消費税（計10％）を含みます。）",
-    "designFirm": "株式会社日建技術コンサルタント",
-    "constructionPeriod": "令和8年3月17日（予定）～ 令和9年11月30日",
-    "description": "奈良県の浄化センター2系3号における初沈流入ゲート、汚泥掻寄機、パイプスキマ、覆蓋、および汚泥掻寄機現場操作盤の更新工事。防災・安全交付金事業として実施され、建設現場の週休2日化を推進する発注者指定型の総合評価落札方式による電子入札案件です。",
-    "tags": [
-      "土木",
-      "改修",
-      "電気"
-    ]
-  },
-  {
     "id": "koryo-2025-12-25-No58",
     "municipality": "広陵町",
     "title": "令和7年度特別史跡巣山古墳整備工事（その2）",
@@ -2759,26 +2330,6 @@
       "ＩＴ",
       "システム",
       "維持管理"
-    ]
-  },
-  {
-    "id": "katsuragi-2b3a6030",
-    "municipality": "葛城市",
-    "title": "特定健康診査受診券等印刷・封入封緘業務委託",
-    "type": "委託",
-    "announcementDate": "2025-12-24",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/9-04-02-2025-1.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/9-04-02-2025-1.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "1,358,000円（消費税及び地方消費税を除く）",
-    "constructionPeriod": "契約日から令和8年5月13日（水）まで",
-    "description": "葛城市の特定健康診査受診券等印刷・封入封緘業務委託。保険課が提供するデータを使用し、受診券・パンフレット類及び封筒の印刷、封入封緘を行い納品する業務。",
-    "tags": [
-      "印刷",
-      "事務",
-      "委託"
     ]
   },
   {
@@ -2911,79 +2462,6 @@
     "winnerType": "ゼネコン"
   },
   {
-    "id": "nara-pref-29001013052520250166",
-    "municipality": "奈良県",
-    "title": "大野川　護岸詳細設計業務委託（緊急自然災害防止対策事業債対象事業（臨時・特別））　第　Ｕ－１１９－委１　号",
-    "type": "コンサル",
-    "announcementDate": "2025-12-18",
-    "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29001013052520250166",
-    "status": "落札",
-    "winnerType": "ゼネコン",
-    "isIntelligenceExtracted": true,
-    "estimatedPrice": "４，９９４，０００円 （消費税等抜き ４，５４０，０００円）",
-    "winningContractor": "株式会社三協エンジニア",
-    "constructionPeriod": "令和 ７年１２月２６日から令和 ８年 ５月２９日まで",
-    "description": "大野川の護岸詳細設計業務委託。緊急自然災害防止対策事業債の対象事業です。",
-    "tags": [
-      "設計",
-      "土木",
-      "護岸"
-    ]
-  },
-  {
-    "id": "nara-pref-29001013052520250165",
-    "municipality": "奈良県",
-    "title": "菅野川他　護岸詳細設計業務委託（緊急自然災害防止対策事業債対象事業（臨時・特別））　第　Ｕ－１２１－委１　号",
-    "type": "コンサル",
-    "announcementDate": "2025-12-18",
-    "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29001013052520250165",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "isIntelligenceExtracted": true,
-    "estimatedPrice": "５，３９０，０００円 （消費税等抜き ４，９００，０００円）",
-    "winningContractor": "株式会社ノア技術コンサルタント",
-    "constructionPeriod": "令和 ７年１２月２６日から令和 ８年 ５月２９日まで",
-    "description": "菅野川他 護岸詳細設計業務委託（緊急自然災害防止対策事業債対象事業（臨時・特別））",
-    "tags": [
-      "設計",
-      "土木",
-      "測量"
-    ]
-  },
-  {
-    "id": "nara-pref-29001013052520250164",
-    "municipality": "奈良県",
-    "title": "青蓮寺川　護岸詳細設計業務委託（緊急自然災害防止対策事業債対象事業（臨時・特別））　第　Ｕ－１２０－委１　号",
-    "type": "コンサル",
-    "announcementDate": "2025-12-18",
-    "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29001013052520250164",
-    "status": "落札",
-    "winnerType": "ゼネコン",
-    "isIntelligenceExtracted": true,
-    "estimatedPrice": "５，９４０，０００円 （消費税等抜き ５，４００，０００円）",
-    "winningContractor": "株式会社ウィズテック",
-    "designFirm": "株式会社ウィズテック",
-    "constructionPeriod": "令和 ７年１２月２６日から令和 ８年 ５月２９日まで",
-    "description": "奈良県宇陀土木事務所による青蓮寺川護岸の詳細設計業務委託。緊急自然災害防止対策事業債対象事業で、株式会社ウィズテックが落札し、令和7年12月26日から令和8年5月29日までの工期で実施されます。",
-    "tags": [
-      "設計",
-      "土木",
-      "護岸"
-    ]
-  },
-  {
-    "id": "nara-city-0000002247",
-    "municipality": "奈良市",
-    "title": "交通安全施設修繕工事（交安修１４）",
-    "type": "建築",
-    "announcementDate": "2025-12-18",
-    "biddingDate": "2025-12-18",
-    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
-    "status": "落札",
-    "winningContractor": "大和株式会社",
-    "winnerType": "ゼネコン"
-  },
-  {
     "id": "kashihara-result-5071001189",
     "municipality": "橿原市",
     "title": "耳成地区公民館屋根等改修工事",
@@ -3003,28 +2481,6 @@
       "改修",
       "建築",
       "補修"
-    ]
-  },
-  {
-    "id": "kashihara-result-5071001192",
-    "municipality": "橿原市",
-    "title": "市単独農道舗装修繕工事",
-    "type": "建築",
-    "announcementDate": "2025-12-18",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071001192k.pdf",
-    "status": "落札",
-    "winnerType": "ゼネコン",
-    "winningContractor": "㈱森本組",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "7,102,700円（税込）",
-    "constructionPeriod": "契約日の翌日 から 令和8年3月18日",
-    "description": "奈良県橿原市一町地内における、市単独農道舗装修繕工事。事後審査型条件付き一般競争入札により執行された。",
-    "tags": [
-      "土木",
-      "補修",
-      "舗装"
     ]
   },
   {
@@ -3094,27 +2550,6 @@
     ]
   },
   {
-    "id": "kashihara-result-5073001178",
-    "municipality": "橿原市",
-    "title": "橿原市第1～第5こども園看板等設置業務",
-    "type": "委託",
-    "announcementDate": "2025-12-18",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18369.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073001178k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "クロカワ工芸㈱",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "888,800円 (消費税10%含む)",
-    "constructionPeriod": "契約日の翌日 から 令和8年3月31日",
-    "description": "橿原市四分町地内他における、第1から第5こども園の看板等設置業務。",
-    "tags": [
-      "建築",
-      "設置"
-    ]
-  },
-  {
     "id": "kashihara-result-5073001200",
     "municipality": "橿原市",
     "title": "橿原運動公園硬式野球場内外野段差整備業務",
@@ -3159,50 +2594,6 @@
     ]
   },
   {
-    "id": "kashihara-result-5073001177",
-    "municipality": "橿原市",
-    "title": "耳成西幼稚園通園支援バス運行業務",
-    "type": "委託",
-    "announcementDate": "2025-12-18",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18369.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073001177k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "佐原自動車㈱",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "16,684,800円 (消費税10%含む)",
-    "constructionPeriod": "令和8年4月1日から令和9年3月31日まで",
-    "description": "奈良県橿原市における「耳成西幼稚園通園支援バス運行業務」に関する案件。条件付き一般競争入札により、佐原自動車株式会社が落札した。",
-    "tags": [
-      "バス",
-      "運行",
-      "業務"
-    ]
-  },
-  {
-    "id": "kashihara-result-5073001160",
-    "municipality": "橿原市",
-    "title": "令和8年度介護保険料当初賦課決定通知書等印刷および封入封緘業務",
-    "type": "委託",
-    "announcementDate": "2025-12-18",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18369.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073001160k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "東洋印刷㈱",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "1,578,170円 (消費税10%含む)",
-    "constructionPeriod": "契約日の翌日 から 令和8年7月31日",
-    "description": "令和8年度の介護保険料当初賦課決定通知書等の印刷、および封入封緘業務を行う案件。条件付き一般競争入札（事後審査あり）により、東洋印刷株式会社が落札した。",
-    "tags": [
-      "印刷",
-      "業務",
-      "介護"
-    ]
-  },
-  {
     "id": "kashihara-result-5073001205",
     "municipality": "橿原市",
     "title": "橿原運動公園硬式野球場防護マット設置業務",
@@ -3223,40 +2614,6 @@
       "改修",
       "補修"
     ]
-  },
-  {
-    "id": "kashihara-result-5073001162",
-    "municipality": "橿原市",
-    "title": "デジタルカラー印刷機賃貸借業務",
-    "type": "委託",
-    "announcementDate": "2025-12-18",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18369.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073001162k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "南都リース㈱",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "27,500円（税込）",
-    "constructionPeriod": "令和8年3月1日から令和13年2月28日まで",
-    "description": "橿原市内膳町地内におけるデジタルカラー印刷機の賃貸借業務。条件付き一般競争入札（事後審査なし）により選定され、落札金額は27,500円（税込）で南都リース株式会社が契約。",
-    "tags": [
-      "印刷",
-      "賃貸",
-      "ＩＴ"
-    ]
-  },
-  {
-    "id": "nara-city-0000002246",
-    "municipality": "奈良市",
-    "title": "交通安全施設修繕工事（交安修９）",
-    "type": "建築",
-    "announcementDate": "2025-12-17",
-    "biddingDate": "2025-12-17",
-    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
-    "status": "落札",
-    "winningContractor": "日本道路保安株式会社",
-    "winnerType": "ゼネコン"
   },
   {
     "id": "nara-city-0000002248",
@@ -3317,95 +2674,6 @@
     "status": "落札",
     "winningContractor": "株式会社上村組",
     "estimatedPrice": "NaN円"
-  },
-  {
-    "id": "yamato-koriyama-6070e586",
-    "municipality": "大和郡山市",
-    "title": "条件付き一般競争入札のお知らせ（給食調理業務委託）(令和8年3月〜)",
-    "type": "委託",
-    "announcementDate": "2025-12-05",
-    "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsu/R7/17205.html",
-    "status": "受付中"
-  },
-  {
-    "id": "yamato-koriyama-5970a242",
-    "municipality": "大和郡山市",
-    "title": "令和8年デジタル複合機賃貸借",
-    "type": "建築",
-    "announcementDate": "2025-12-05",
-    "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsunooshirase/r7/17190.html",
-    "status": "落札",
-    "winningContractor": "デュプロ株式会社 奈良支店"
-  },
-  {
-    "id": "katsuragi-92316764",
-    "municipality": "葛城市",
-    "title": "新庄庁舎複合機の長期リース契約",
-    "type": "建築",
-    "announcementDate": "2025-12-04",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/9-02-02-2025-1.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/9-02-02-2025-1.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "340,000円／月（消費税及び地方消費税を除く）",
-    "constructionPeriod": "契約日から令和13年2月28日まで",
-    "description": "葛城市新庄庁舎の1階から5階に設置されているデジタル複合機6台の長期リース契約。月間使用予定枚数はモノクロ87,250枚、2色2,500枚、カラー22,830枚。",
-    "tags": [
-      "リース",
-      "複合機",
-      "事務機器"
-    ]
-  },
-  {
-    "id": "katsuragi-791b0ba5",
-    "municipality": "葛城市",
-    "title": "（仮称）當麻複合施設グランドピアノ・周辺備品一式の購入",
-    "type": "建築",
-    "announcementDate": "2025-12-04",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/9-02-03-2025-1-2.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/9-02-03-2025-1-2.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "9,076,000円（消費税及び地方消費税を除く）",
-    "constructionPeriod": "契約日から令和9年3月29日まで",
-    "description": "令和9年に開館予定の（仮称）當麻複合施設（多目的スタジオ）に設置するグランドピアノおよび周辺備品一式の購入に関する案件。入札参加資格として、ヤマハ（株）の特約店であること等が求められている。",
-    "tags": [
-      "備品",
-      "購入"
-    ]
-  },
-  {
-    "id": "katsuragi-30700ad4",
-    "municipality": "葛城市",
-    "title": "リサイクル物品（缶プレス等）売払い",
-    "type": "建築",
-    "announcementDate": "2025-12-04",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/01-05-02-01-02.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/01-05-02-01-02.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "7,221,000円（消費税及び地方消費税を除く）",
-    "constructionPeriod": "契約日から令和7年9月30日（火）まで",
-    "description": "葛城市が収集・分別したリサイクル物品（缶プレス等）の金属を売却する業務。着脱装置付きコンテナ専用車での引き取りが必要。",
-    "tags": [
-      "リサイクル",
-      "売却",
-      "環境"
-    ]
-  },
-  {
-    "id": "nara-city-0000002229",
-    "municipality": "奈良市",
-    "title": "交通安全施設修繕工事（交安修１３）",
-    "type": "建築",
-    "announcementDate": "2025-12-03",
-    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
-    "status": "落札",
-    "winningContractor": "阪神装路株式会社",
-    "winnerType": "ゼネコン"
   },
   {
     "id": "yamato-takada-16767867",
@@ -3473,37 +2741,6 @@
     "link": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7349/NO50-2.pdf",
     "status": "落札",
     "winningContractor": "株式会社山崎産業"
-  },
-  {
-    "id": "yamato-koriyama-aea1dfcf",
-    "municipality": "大和郡山市",
-    "title": "令和8年 デジタル複合機賃貸借",
-    "type": "建築",
-    "announcementDate": "2025-11-25",
-    "biddingDate": "2025-12-05",
-    "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsu/R7/17111.html",
-    "status": "受付中"
-  },
-  {
-    "id": "kashihara-result-5073001088",
-    "municipality": "橿原市",
-    "title": "令和7年度後期不用パソコン等売却",
-    "type": "委託",
-    "announcementDate": "2025-11-20",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18369.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073001088k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "㈱永輝商事 大阪支社",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "3,367,980円 (消費税10%含む)",
-    "constructionPeriod": "契約日の翌日 から 令和 8年 3月31日",
-    "description": "橿原市内一円における、令和7年度後期不用パソコン等の売却に関する入札案件。",
-    "tags": [
-      "売却",
-      "パソコン"
-    ]
   },
   {
     "id": "kashihara-result-5073001052",
@@ -3726,28 +2963,6 @@
     ]
   },
   {
-    "id": "kashihara-result-5071001071",
-    "municipality": "橿原市",
-    "title": "交通安全施設整備工事7-2",
-    "type": "建築",
-    "announcementDate": "2025-11-19",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071001071k.pdf",
-    "status": "落札",
-    "winnerType": "ゼネコン",
-    "winningContractor": "㈱大興建設",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "4,128,300円（税込）",
-    "constructionPeriod": "契約日の翌日から令和8年3月18日まで",
-    "description": "橿原市白橿町地内における交通安全施設整備工事。事後審査型条件付き一般競争入札により執行され、落札金額は3,602,500円（税込）にて㈱大興建設が受注した。",
-    "tags": [
-      "土木",
-      "工事",
-      "安全"
-    ]
-  },
-  {
     "id": "kashihara-result-5071001086",
     "municipality": "橿原市",
     "title": "5号転倒ゲート補修工事",
@@ -3908,60 +3123,6 @@
     ]
   },
   {
-    "id": "kashihara-result-5073001043",
-    "municipality": "橿原市",
-    "title": "令和8年度固定資産税・都市計画税納税通知書等の印刷、ブッキング及び封入封緘業務",
-    "type": "委託",
-    "announcementDate": "2025-11-19",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18369.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073001043k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "レスター工業㈱",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "2,533,740円 (消費税10%含む)",
-    "constructionPeriod": "契約日の翌日 から 令和8年3月31日",
-    "description": "令和8年度における固定資産税および都市計画税の納税通知書等の印刷、ブッキング（封入）、および封緘業務。",
-    "tags": [
-      "印刷",
-      "業務",
-      "封入"
-    ]
-  },
-  {
-    "id": "kashihara-result-5073001083",
-    "municipality": "橿原市",
-    "title": "音響設備機材賃貸借業務",
-    "type": "委託",
-    "announcementDate": "2025-11-19",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18369.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073001083k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "ＮＸ・ＴＣリース＆ファイナンス㈱ 大阪支店",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "257,510円 (消費税10%含む)",
-    "constructionPeriod": "令和8年3月1日から令和13年2月28日",
-    "description": "橿原市小房町地内における音響設備機材の賃貸借業務。条件付き一般競争入札により選定され、契約が締結された。",
-    "tags": [
-      "音響",
-      "賃貸",
-      "設備"
-    ]
-  },
-  {
-    "id": "yamato-koriyama-ff2479e7",
-    "municipality": "大和郡山市",
-    "title": "大和郡山市貸切バス賃貸借単価契約",
-    "type": "建築",
-    "announcementDate": "2025-11-14",
-    "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsunooshirase/r7/17157.html",
-    "status": "落札",
-    "winningContractor": "有限会社天理交通"
-  },
-  {
     "id": "tawaramoto-2025121501",
     "municipality": "田原本町",
     "title": "法貴寺ゲート他改修工事",
@@ -3979,16 +3140,6 @@
     "announcementDate": "2025-11-12",
     "biddingDate": "2025-11-19",
     "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsu/R7/17085.html",
-    "status": "受付中"
-  },
-  {
-    "id": "yamato-koriyama-764a21ac",
-    "municipality": "大和郡山市",
-    "title": "大和郡山市貸切バス賃貸借単価契約",
-    "type": "建築",
-    "announcementDate": "2025-11-06",
-    "biddingDate": "2025-11-14",
-    "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsu/R7/17083.html",
     "status": "受付中"
   },
   {
@@ -4112,70 +3263,6 @@
     ]
   },
   {
-    "id": "kashihara-result-5073001024",
-    "municipality": "橿原市",
-    "title": "橿原運動公園南エリアLED照明設備賃貸借事業",
-    "type": "委託",
-    "announcementDate": "2025-10-28",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18369.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073001024k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "東京センチュリー㈱",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "533,500円 (消費税10%含む)",
-    "constructionPeriod": "契約日の翌日から令和13年2月28日まで",
-    "description": "橿原運動公園南エリアにおけるLED照明設備の賃貸借事業。条件付き一般競争入札により執行され、東京センチュリー株式会社が落札した。",
-    "tags": [
-      "電気",
-      "照明",
-      "賃貸"
-    ]
-  },
-  {
-    "id": "kashihara-result-5073000933",
-    "municipality": "橿原市",
-    "title": "橿原市立今井認定こども園給食調理業務",
-    "type": "委託",
-    "announcementDate": "2025-10-28",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18369.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000933k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "一冨士フードサービス㈱ 近畿支社",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "26,637,600円 (消費税10%含む)",
-    "constructionPeriod": "令和8年4月1日から令和11年3月31日まで",
-    "description": "橿原市立今井認定こども園における給食調理業務。条件付き一般競争入札により選定された事業者が、令和8年4月1日から令和11年3月31日までの3年間、同施設の給食調理業務を遂行する。",
-    "tags": [
-      "給食",
-      "調理",
-      "業務"
-    ]
-  },
-  {
-    "id": "yamato-koriyama-76799219",
-    "municipality": "大和郡山市",
-    "title": "令和7年公用車賃貸借（その1）",
-    "type": "建築",
-    "announcementDate": "2025-10-24",
-    "biddingDate": "2025-11-04",
-    "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsu/R7/17069.html",
-    "status": "受付中"
-  },
-  {
-    "id": "yamato-koriyama-91ad3802",
-    "municipality": "大和郡山市",
-    "title": "令和7年公用車賃貸借（その2）",
-    "type": "建築",
-    "announcementDate": "2025-10-24",
-    "biddingDate": "2025-11-04",
-    "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsu/R7/17069.html",
-    "status": "受付中"
-  },
-  {
     "id": "kashihara-result-5071000984",
     "municipality": "橿原市",
     "title": "新賀公園施設更新工事",
@@ -4241,47 +3328,6 @@
     ]
   },
   {
-    "id": "kashihara-result-5071001001",
-    "municipality": "橿原市",
-    "title": "交通安全施設整備工事7－1",
-    "type": "建築",
-    "announcementDate": "2025-10-23",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071001001k.pdf",
-    "status": "落札",
-    "winnerType": "ゼネコン",
-    "winningContractor": "㈱名村造園",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "3,947,900円（消費税10%含む）",
-    "constructionPeriod": "契約日の翌日 から 令和8年2月27日",
-    "description": "橿原市醍醐町・高殿町地内における交通安全施設整備工事。事後審査型条件付き一般競争入札により実施され、落札金額は3,471,710円（税込）。",
-    "tags": [
-      "土木",
-      "交通安全",
-      "整備"
-    ]
-  },
-  {
-    "id": "gojo-9f41e1d5",
-    "municipality": "五條市",
-    "title": "令和7年度融雪剤購入単価契約（令和7年10月20日開札）",
-    "type": "建築",
-    "announcementDate": "2025-10-21",
-    "link": "https://www.city.gojo.lg.jp/soshiki/keiyakukensa/1_1/7/17899.html",
-    "pdfUrl": "https://www.city.gojo.lg.jp/material/files/group/4/kaisatuyuusetu.pdf",
-    "status": "落札",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "winningContractor": "福井金物店",
-    "description": "令和7年度の融雪剤（塩化カルシウム、粒状、25kg/袋）購入に関する単価契約。旧五條市内、旧西吉野村内、旧大塔村内の各配達先を対象とした指名競争入札。",
-    "tags": [
-      "購入",
-      "融雪",
-      "塩化カルシウム"
-    ]
-  },
-  {
     "id": "nara-city-0000002111",
     "municipality": "奈良市",
     "title": "南消防署西大寺分署仮眠室改修に伴う建築設計業務委託",
@@ -4336,66 +3382,6 @@
     "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsunooshirase/r7/17053.html",
     "status": "落札",
     "winningContractor": "鈴木工務店"
-  },
-  {
-    "id": "katsuragi-424591aa",
-    "municipality": "葛城市",
-    "title": "校務用パソコンの賃貸借",
-    "type": "建築",
-    "announcementDate": "2025-10-10",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/7-02-01-2025-1.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/7-02-01-2025-1.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "721,000円／月（消費税及び地方消費税を除く）",
-    "constructionPeriod": "契約日から令和13年2月28日まで",
-    "description": "葛城市における校務用ノートパソコンの老朽化と校務支援システムの更改に伴う端末調達（ChromeBook 370台）の賃貸借業務。",
-    "tags": [
-      "ＩＴ",
-      "賃貸借",
-      "パソコン"
-    ]
-  },
-  {
-    "id": "katsuragi-11868c06",
-    "municipality": "葛城市",
-    "title": "園務用パソコンの賃貸借",
-    "type": "建築",
-    "announcementDate": "2025-10-10",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/7-02-02-2025-1.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/7-02-02-2025-1.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "185,000円／月（消費税及び地方消費税を除く）",
-    "constructionPeriod": "契約日から令和12年12月31日まで",
-    "description": "市立保育所、こども園で使用している園務用ノートパソコンの老朽化に伴い、Windowsノートパソコン50台の調達（賃貸借）を行う案件。",
-    "tags": [
-      "パソコン",
-      "賃貸借",
-      "ＩＴ"
-    ]
-  },
-  {
-    "id": "katsuragi-848f85bf",
-    "municipality": "葛城市",
-    "title": "固定資産管理地図システム機器賃貸借業務",
-    "type": "委託",
-    "announcementDate": "2025-10-10",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/7-02-03-2025-1.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/7-02-03-2025-1.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "137,000円／月（消費税及び地方消費税を除く）",
-    "constructionPeriod": "契約日から令和13年2月28日まで",
-    "description": "固定資産管理地図システム（GIS）のソフトウェア改修およびサーバー、端末の機器更改に伴う5年間の長期継続リース契約。本業務は条件付一般競争入札（事後審査型）により実施される。",
-    "tags": [
-      "ＩＴ",
-      "維持管理",
-      "調査"
-    ]
   },
   {
     "id": "katsuragi-5e1757e8",
@@ -4455,26 +3441,6 @@
       "空調",
       "改修",
       "建築"
-    ]
-  },
-  {
-    "id": "katsuragi-4083da54",
-    "municipality": "葛城市",
-    "title": "新庄庁舎及び新庄健康福祉センター空調設備賃貸借業務",
-    "type": "委託",
-    "announcementDate": "2025-10-09",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/7-02-05-2025-1.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/7-02-05-2025-1.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "87,350,000円（消費税及び地方消費税を除く）",
-    "constructionPeriod": "契約日から令和15年6月30日まで",
-    "description": "葛城市の新庄庁舎及び新庄健康福祉センターにおける空調設備の賃貸借業務。新庄庁舎にはエアハンドリングユニット4台及び冷温水ポンプ2台、新庄健康福祉センターにはファンコイルユニット70台を導入・維持管理する内容。",
-    "tags": [
-      "空調",
-      "維持管理",
-      "賃貸借"
     ]
   },
   {
@@ -4599,17 +3565,6 @@
     "winningContractor": "岡本造園"
   },
   {
-    "id": "koryo-2025-09-29-No36",
-    "municipality": "広陵町",
-    "title": "広瀬川調整池護岸設計業務委託",
-    "type": "コンサル",
-    "announcementDate": "2025-09-29",
-    "biddingDate": "2025-09-29",
-    "link": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7349/NO36-2.pdf",
-    "status": "落札",
-    "winningContractor": "株式会社阪神コンサルタンツ"
-  },
-  {
     "id": "yamato-koriyama-cb668b9c",
     "municipality": "大和郡山市",
     "title": "郡山城跡企画展示用デジタルサイネージ作成・設置業務",
@@ -4630,79 +3585,6 @@
     "winningContractor": "株式会社 トーシン"
   },
   {
-    "id": "yamato-koriyama-6c6d3ca6",
-    "municipality": "大和郡山市",
-    "title": "大和郡山市表彰式記念品購入",
-    "type": "建築",
-    "announcementDate": "2025-09-25",
-    "biddingDate": "2025-09-25",
-    "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsunooshirase/r7/15476.html",
-    "status": "落札",
-    "winningContractor": "株式会社ショービドー"
-  },
-  {
-    "id": "kashihara-result-5073000955",
-    "municipality": "橿原市",
-    "title": "住基ネットワークシステム機器一式賃貸借",
-    "type": "委託",
-    "announcementDate": "2025-09-25",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18369.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000955k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "constructionPeriod": "令和7年12月1日から令和12年11月30日まで",
-    "description": "橿原市八木町・内膳町地内における住基ネットワークシステム機器一式賃貸借に関する案件。条件付き一般競争入札（事後審査なし）にて執行されたが、応札者がなく落札者は決定していない。",
-    "tags": [
-      "ＩＴ",
-      "賃貸借",
-      "システム"
-    ]
-  },
-  {
-    "id": "kashihara-result-5073000940",
-    "municipality": "橿原市",
-    "title": "貸室設備機材賃貸借業務",
-    "type": "委託",
-    "announcementDate": "2025-09-25",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18369.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000940k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "constructionPeriod": "令和8年3月1日から令和13年2月28日まで",
-    "description": "橿原市小房町地内における、貸室設備機材の賃貸借業務。条件付き一般競争入札（事後審査なし）にて執行されたが、応札者がおらず落札者はなし。",
-    "tags": [
-      "賃貸",
-      "設備",
-      "業務"
-    ]
-  },
-  {
-    "id": "kashihara-result-5073000906",
-    "municipality": "橿原市",
-    "title": "固定資産税家屋評価システム賃貸借業務",
-    "type": "委託",
-    "announcementDate": "2025-09-25",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18369.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000906k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "FLCS㈱ 関西支店",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "573,375円 (消費税10%含む)",
-    "constructionPeriod": "令和7年11月1日 から 令和12年10月31日",
-    "description": "橿原市内膳町地内における固定資産税家屋評価システムの賃貸借業務。条件付き一般競争入札（事後審査なし）により執行され、FLCS株式会社関西支店が落札。",
-    "tags": [
-      "ＩＴ",
-      "賃貸借",
-      "システム"
-    ]
-  },
-  {
     "id": "kashihara-result-5073000943",
     "municipality": "橿原市",
     "title": "橿原市休日夜間応急診療所医事業務",
@@ -4720,72 +3602,6 @@
       "医療",
       "業務委託",
       "入札"
-    ]
-  },
-  {
-    "id": "kashihara-result-5073000901",
-    "municipality": "橿原市",
-    "title": "橿原市立図書館カウンター受付案内等の業務委託",
-    "type": "委託",
-    "announcementDate": "2025-09-25",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18369.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000901k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "シダックス大新東ヒューマンサービス㈱ 近畿支店",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "11,220,000円（税込）",
-    "constructionPeriod": "令和7年10月1日 から 令和10年9月30日",
-    "description": "橿原市立図書館におけるカウンター受付案内等の業務委託。条件付き一般競争入札（事後審査あり）により、シダックス大新東ヒューマンサービス㈱近畿支店が落札。",
-    "tags": [
-      "業務委託",
-      "図書館",
-      "受付"
-    ]
-  },
-  {
-    "id": "kashihara-result-5071000951",
-    "municipality": "橿原市",
-    "title": "市道路改良工事(内膳町)",
-    "type": "建築",
-    "announcementDate": "2025-09-18",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000951k.pdf",
-    "status": "落札",
-    "winnerType": "ゼネコン",
-    "winningContractor": "㈱宮下興業",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "33,630,300円",
-    "constructionPeriod": "契約日の翌日 から 令和 8年 3月31日",
-    "description": "橿原市内膳町地内における市道路改良工事。事後審査型条件付き一般競争入札により執行され、落札金額は29,549,190円（税込）。",
-    "tags": [
-      "土木",
-      "道路",
-      "改良"
-    ]
-  },
-  {
-    "id": "kashihara-result-5071000960",
-    "municipality": "橿原市",
-    "title": "市道路整備工事7-1",
-    "type": "建築",
-    "announcementDate": "2025-09-18",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000960k.pdf",
-    "status": "落札",
-    "winnerType": "ゼネコン",
-    "winningContractor": "㈱ベスト産業",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "3,408,900円（税込）",
-    "constructionPeriod": "契約日の翌日 から 令和8年1月30日",
-    "description": "橿原市川西町地内における市道路整備工事。事後審査型条件付き一般競争入札により執行され、株式会社ベスト産業が落札した。",
-    "tags": [
-      "土木",
-      "道路",
-      "整備"
     ]
   },
   {
@@ -4833,115 +3649,6 @@
     ]
   },
   {
-    "id": "kashihara-result-5071000922",
-    "municipality": "橿原市",
-    "title": "市道路舗装維持修繕工事7－4",
-    "type": "建築",
-    "announcementDate": "2025-09-18",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000922k.pdf",
-    "status": "落札",
-    "winnerType": "ゼネコン",
-    "winningContractor": "㈱松村組",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "11,104,500円（税込）/ 10,095,000円（税抜）",
-    "constructionPeriod": "契約日の翌日 から 令和7年12月12日",
-    "description": "橿原市飛騨町地内他における市道路舗装維持修繕工事。",
-    "tags": [
-      "土木",
-      "舗装",
-      "補修"
-    ]
-  },
-  {
-    "id": "kashihara-result-5071000958",
-    "municipality": "橿原市",
-    "title": "市道路舗装維持修繕工事7－10",
-    "type": "建築",
-    "announcementDate": "2025-09-18",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000958k.pdf",
-    "status": "落札",
-    "winnerType": "ゼネコン",
-    "winningContractor": "㈱吉田組",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "8,250,000円（落札金額）",
-    "constructionPeriod": "契約日の翌日 から 令和8年1月30日",
-    "description": "橿原市新賀町および上品寺町地内における市道路舗装の維持修繕工事。事後審査型条件付き一般競争入札により実施。",
-    "tags": [
-      "土木",
-      "舗装",
-      "補修"
-    ]
-  },
-  {
-    "id": "kashihara-result-5071000923",
-    "municipality": "橿原市",
-    "title": "市道路舗装維持修繕工事7－7",
-    "type": "建築",
-    "announcementDate": "2025-09-18",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000923k.pdf",
-    "status": "落札",
-    "winnerType": "ゼネコン",
-    "winningContractor": "輝登建設㈱",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "6,341,500円（税込み）、5,765,000円（税抜き）",
-    "constructionPeriod": "契約日の翌日 から 令和7年12月12日",
-    "description": "橿原市一町地内における市道路舗装維持修繕工事。事後審査型条件付き一般競争入札により発注され、落札金額5,545,100円（税込み）で輝登建設株式会社が落札した。",
-    "tags": [
-      "舗装",
-      "補修",
-      "土木"
-    ]
-  },
-  {
-    "id": "kashihara-result-5073000956",
-    "municipality": "橿原市",
-    "title": "令和7年度自動車騒音等測定業務",
-    "type": "委託",
-    "announcementDate": "2025-09-18",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18369.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000956k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "㈱アクト音響振動調査事務所",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "858,000円 (消費税10%含む)",
-    "constructionPeriod": "契約日の翌日 から 令和 8年 3月 2日",
-    "description": "橿原市内一円を対象とした令和7年度自動車騒音等測定業務。条件付き一般競争入札（事後審査あり）により、㈱アクト音響振動調査事務所が落札した。",
-    "tags": [
-      "測量",
-      "調査",
-      "土木"
-    ]
-  },
-  {
-    "id": "kashihara-result-5073000900",
-    "municipality": "橿原市",
-    "title": "令和7年度周辺環境調査業務",
-    "type": "委託",
-    "announcementDate": "2025-09-18",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18369.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000900k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "㈱エヌ・イーサポート 大阪支社",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "3,960,000円 (消費税10%含む)",
-    "constructionPeriod": "契約日の翌日 から 令和8年3月31日",
-    "description": "令和7年度周辺環境調査業務。橿原市川西町地内他を対象とした環境調査を行う業務。",
-    "tags": [
-      "調査",
-      "環境"
-    ]
-  },
-  {
     "id": "kashihara-result-5073000903",
     "municipality": "橿原市",
     "title": "令和8年度市・県民税・森林環境税課税業務に係るデータパンチ業務委託",
@@ -4961,28 +3668,6 @@
       "データ入力",
       "税",
       "事務"
-    ]
-  },
-  {
-    "id": "kashihara-result-5073000897",
-    "municipality": "橿原市",
-    "title": "CADソフトウェア保守業務",
-    "type": "委託",
-    "announcementDate": "2025-09-18",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18369.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000897k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "リコージャパン㈱ デジタルサービス営業本部 奈良支社 奈良営業部",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "134,750円（消費税10%含む）",
-    "constructionPeriod": "令和7年11月1日から令和8年10月31日まで",
-    "description": "CADソフトウェア保守業務。橿原市八木町地内における、CADソフトウェアの保守を目的とした業務委託案件。",
-    "tags": [
-      "CAD",
-      "ソフトウェア",
-      "保守"
     ]
   },
   {
@@ -5074,16 +3759,6 @@
     "status": "受付中"
   },
   {
-    "id": "yamato-koriyama-306c4940",
-    "municipality": "大和郡山市",
-    "title": "コピー用紙購入単価契約",
-    "type": "建築",
-    "announcementDate": "2025-09-11",
-    "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsunooshirase/r7/16974.html",
-    "status": "落札",
-    "winningContractor": "津乃国屋"
-  },
-  {
     "id": "yamato-koriyama-4191b780",
     "municipality": "大和郡山市",
     "title": "城址会館トイレ用電源設備整備業務",
@@ -5091,36 +3766,6 @@
     "announcementDate": "2025-09-10",
     "biddingDate": "2025-10-03",
     "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsu/R7/16959.html",
-    "status": "受付中"
-  },
-  {
-    "id": "katsuragi-dd16fda6",
-    "municipality": "葛城市",
-    "title": "住民基本台帳ネットワークシステム関連機器の賃貸借",
-    "type": "建築",
-    "announcementDate": "2025-09-05",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/6-03-02-2025-1.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/6-03-02-2025-1.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "505,680円／月（消費税及び地方消費税を除く）",
-    "constructionPeriod": "契約日から令和12年11月30日まで",
-    "description": "住民基本台帳ネットワークシステム関連機器の更改に伴う賃貸借業務。前回の更改から5年が経過したことによる安定運用及びセキュリティ維持・強化を目的とする。奈良県の共同調達により決定した機器の賃貸借を行うもの。",
-    "tags": [
-      "ＩＴ",
-      "賃貸",
-      "維持管理"
-    ]
-  },
-  {
-    "id": "yamato-koriyama-924755d6",
-    "municipality": "大和郡山市",
-    "title": "大和郡山市コピー用紙購入単価契約",
-    "type": "建築",
-    "announcementDate": "2025-09-04",
-    "biddingDate": "2025-09-11",
-    "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsu/R7/16909.html",
     "status": "受付中"
   },
   {
@@ -5220,72 +3865,6 @@
     "winningContractor": "株式会社溜谷設計"
   },
   {
-    "id": "kashihara-result-5071000851",
-    "municipality": "橿原市",
-    "title": "市道路改良工事(川西町)",
-    "type": "建築",
-    "announcementDate": "2025-08-21",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000851k.pdf",
-    "status": "落札",
-    "winnerType": "ゼネコン",
-    "winningContractor": "㈱南村組",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "31,170,700円（税込）",
-    "constructionPeriod": "契約日の翌日 から 令和8年2月27日",
-    "description": "奈良県橿原市川西町地内における市道路改良工事。事後審査型条件付き一般競争入札により執行され、落札金額は27,439,500円。",
-    "tags": [
-      "土木",
-      "道路",
-      "改良"
-    ]
-  },
-  {
-    "id": "kashihara-result-5071000829",
-    "municipality": "橿原市",
-    "title": "市道路整備工事(十市町)",
-    "type": "建築",
-    "announcementDate": "2025-08-21",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000829k.pdf",
-    "status": "落札",
-    "winnerType": "ゼネコン",
-    "winningContractor": "㈱広澤建設",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "23,843,600円（税込）/ 21,676,000円（税抜）",
-    "constructionPeriod": "契約日の翌日から令和8年2月13日まで",
-    "description": "橿原市十市町地内における市道路整備工事。",
-    "tags": [
-      "土木",
-      "道路",
-      "整備"
-    ]
-  },
-  {
-    "id": "kashihara-result-5071000841",
-    "municipality": "橿原市",
-    "title": "交通安全施設設置工事7－1",
-    "type": "建築",
-    "announcementDate": "2025-08-21",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000841k.pdf",
-    "status": "落札",
-    "winnerType": "ゼネコン",
-    "winningContractor": "㈱島田水道設備",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "4,215,200円（税込）/ 3,832,000円（税抜）",
-    "constructionPeriod": "契約日の翌日 から 令和7年12月12日",
-    "description": "橿原市四条町地内他における交通安全施設設置工事。事後審査型条件付き一般競争入札により執行され、落札金額は3,701,289円（税込）。",
-    "tags": [
-      "土木",
-      "交通安全",
-      "設置"
-    ]
-  },
-  {
     "id": "kashihara-result-5071000837",
     "municipality": "橿原市",
     "title": "真菅小学校プールサイド改修工事",
@@ -5304,28 +3883,6 @@
     "tags": [
       "改修",
       "建築",
-      "土木"
-    ]
-  },
-  {
-    "id": "kashihara-result-5071000850",
-    "municipality": "橿原市",
-    "title": "市道路舗装維持修繕工事7-9",
-    "type": "建築",
-    "announcementDate": "2025-08-21",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000850k.pdf",
-    "status": "落札",
-    "winnerType": "ゼネコン",
-    "winningContractor": "㈱森本組",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "12,701,700円（税込）",
-    "constructionPeriod": "契約日の翌日から令和7年11月28日まで",
-    "description": "橿原市飯高町地内他における市道路舗装維持修繕工事。事後審査型条件付き一般競争入札により執行された。",
-    "tags": [
-      "舗装",
-      "補修",
       "土木"
     ]
   },
@@ -5375,28 +3932,6 @@
     ]
   },
   {
-    "id": "kashihara-result-5072000798",
-    "municipality": "橿原市",
-    "title": "一級河川曽我川護岸設計業務委託（雲梯町）",
-    "type": "コンサル",
-    "announcementDate": "2025-08-21",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18375.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5072000798k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "㈱吹上技研コンサルタント 奈良営業所",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "6,765,000円（税込）/ 6,150,000円（税抜）",
-    "constructionPeriod": "令和7年8月21日から令和8年3月19日まで",
-    "description": "橿原市雲梯町地内の「一級河川曽我川護岸設計業務委託」に関する事後審査型条件付き一般競争入札。護岸設計の実施を目的とする。",
-    "tags": [
-      "設計",
-      "土木",
-      "測量"
-    ]
-  },
-  {
     "id": "kashihara-result-5073000826",
     "municipality": "橿原市",
     "title": "一般廃棄物（処理残渣）運搬業務",
@@ -5416,27 +3951,6 @@
       "廃棄物",
       "運搬",
       "業務"
-    ]
-  },
-  {
-    "id": "kashihara-result-5073000804",
-    "municipality": "橿原市",
-    "title": "藤原宮跡周辺駐車場等警備業務",
-    "type": "委託",
-    "announcementDate": "2025-08-21",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18369.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000804k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "㈲アレスセキュリティーサービス",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "4,171,407円 (消費税10%含む)",
-    "constructionPeriod": "令和7年10月4日から令和8年4月12日",
-    "description": "奈良県橿原市縄手町地内他における、藤原宮跡周辺の駐車場等の警備業務。条件付き一般競争入札（事後審査あり）により実施された。",
-    "tags": [
-      "警備",
-      "駐車場"
     ]
   },
   {
@@ -5494,86 +4008,6 @@
     "status": "落札",
     "winningContractor": "株式会社礎建築事務所",
     "winnerType": "ゼネコン"
-  },
-  {
-    "id": "katsuragi-d1044275",
-    "municipality": "葛城市",
-    "title": "クライアント機運用管理ソフトのライセンス更新",
-    "type": "委託",
-    "announcementDate": "2025-08-07",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/5-02-01-2025-1.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/5-02-01-2025-1.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "912,000円（消費税及び地方消費税を除く）",
-    "constructionPeriod": "契約日 から 令和7年10月31日（金） まで",
-    "description": "葛城市庁舎内および出先機関にあるパソコンの操作ログ保存、遠隔管理、動作制限等の運用管理を行うためのソフトウェアライセンス更新業務。",
-    "tags": [
-      "ＩＴ",
-      "ソフトウェア",
-      "維持管理"
-    ]
-  },
-  {
-    "id": "katsuragi-94d2ba06",
-    "municipality": "葛城市",
-    "title": "業務効率化ソフトのライセンス購入",
-    "type": "委託",
-    "announcementDate": "2025-08-07",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/5-02-02-2025-1.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/5-02-02-2025-1.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "1,583,000円（税抜き）",
-    "constructionPeriod": "契約日から令和7年10月31日（金）まで",
-    "description": "行政サービス維持・向上のため、AI・RPA等のデジタル技術を活用した業務効率化および正確性の向上を目的とした、RPA関連ソフトウェアのライセンス購入。",
-    "tags": [
-      "ＩＴ",
-      "業務効率化",
-      "ソフトウェア"
-    ]
-  },
-  {
-    "id": "katsuragi-2bab74f8",
-    "municipality": "葛城市",
-    "title": "生活保護業務システム用端末等賃貸借業務",
-    "type": "委託",
-    "announcementDate": "2025-08-07",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/5-02-03-2025-1.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/5-02-03-2025-1.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "35,846円／月（消費税及び地方消費税を除く）",
-    "constructionPeriod": "契約日から令和12年10月31日まで",
-    "description": "Windows10のサポート終了に伴う端末入替のため、葛城市福祉事務所職員が利用する小型デスクトップ型パソコン及び周辺機器を賃貸借する業務。",
-    "tags": [
-      "ＩＴ",
-      "賃貸",
-      "システム"
-    ]
-  },
-  {
-    "id": "katsuragi-996067e7",
-    "municipality": "葛城市",
-    "title": "第7-303号 令和7年度葛城市区画線設置工事",
-    "type": "建築",
-    "announcementDate": "2025-08-07",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/5-02-04-2025-1.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/5-02-04-2025-1.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "5,517,000円（消費税及び地方消費税を除く）",
-    "constructionPeriod": "契約日から令和7年12月12日(金)まで",
-    "description": "葛城市内における令和7年度の区画線設置工事。主な工事内容は、区画線工（白線3,530m、グリーンベルト1,956m、青色塗装100m、路面標示248m）および交通管理工15人日。条件付一般競争入札（事後審査型）により施工業者を決定する。",
-    "tags": [
-      "土木",
-      "補修",
-      "交通"
-    ]
   },
   {
     "id": "tawaramoto-2025090101",
@@ -5699,16 +4133,6 @@
     "winningContractor": "油谷造園"
   },
   {
-    "id": "yamato-takada-132f5349",
-    "municipality": "大和高田市",
-    "title": "令和7年度区画線等設置工事（単価契約）",
-    "type": "建築",
-    "announcementDate": "2025-08-01",
-    "link": "https://www.city.yamatotakada.nara.jp/soshikikarasagasu/keiyakukanrishitsu/nyusatsu_keiyaku/1/9099.html",
-    "status": "落札",
-    "winningContractor": "柏田組"
-  },
-  {
     "id": "koryo-2025-07-31-No22",
     "municipality": "広陵町",
     "title": "広陵第1号近隣公園トイレ改修工事",
@@ -5820,50 +4244,6 @@
     ]
   },
   {
-    "id": "kashihara-result-5071000715",
-    "municipality": "橿原市",
-    "title": "市道路舗装維持修繕工事7－6",
-    "type": "建築",
-    "announcementDate": "2025-07-24",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000715k.pdf",
-    "status": "落札",
-    "winnerType": "ゼネコン",
-    "winningContractor": "㈱松本組",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "8,145,000円",
-    "constructionPeriod": "契約日の翌日から令和7年10月31日まで",
-    "description": "市道路舗装維持修繕工事７－６",
-    "tags": [
-      "道路",
-      "舗装",
-      "修繕"
-    ]
-  },
-  {
-    "id": "kashihara-result-5071000742",
-    "municipality": "橿原市",
-    "title": "市道路舗装維持修繕工事7-5",
-    "type": "建築",
-    "announcementDate": "2025-07-24",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000742k.pdf",
-    "status": "落札",
-    "winnerType": "ゼネコン",
-    "winningContractor": "松平建設㈱",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "7,076,000円",
-    "constructionPeriod": "契約日の翌日から令和7年10月31日まで",
-    "description": "市道路舗装維持修繕工事７-５",
-    "tags": [
-      "道路",
-      "舗装",
-      "修繕"
-    ]
-  },
-  {
     "id": "kashihara-result-5072000695",
     "municipality": "橿原市",
     "title": "令和7年度 橿原市地番図等修正及び航空写真図化業務",
@@ -5905,28 +4285,6 @@
       "空調",
       "計画",
       "業務"
-    ]
-  },
-  {
-    "id": "kashihara-result-5072000621",
-    "municipality": "橿原市",
-    "title": "産業用地整備基本計画策定業務委託",
-    "type": "建築",
-    "announcementDate": "2025-07-24",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18375.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5072000621k.pdf",
-    "status": "落札",
-    "winnerType": "ゼネコン",
-    "winningContractor": "日本測地設計㈱　奈良営業所",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "40,348,000円",
-    "constructionPeriod": "契約日の翌日から令和8年3月19日まで",
-    "description": "産業用地整備基本計画策定業務委託",
-    "tags": [
-      "調査",
-      "計画",
-      "業務委託"
     ]
   },
   {
@@ -6177,49 +4535,6 @@
     "estimatedPrice": "2,585,000円"
   },
   {
-    "id": "kashihara-result-5073000718",
-    "municipality": "橿原市",
-    "title": "橿原市立図書館カウンター受付案内等業務委託",
-    "type": "委託",
-    "announcementDate": "2025-07-23",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18369.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000718k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "応札者なし",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "constructionPeriod": "令和7年10月1日から令和10年9月30日まで",
-    "description": "橿原市立図書館カウンター受付案内等業務委託",
-    "tags": [
-      "業務委託",
-      "図書館",
-      "受付"
-    ]
-  },
-  {
-    "id": "kashihara-result-5073000605",
-    "municipality": "橿原市",
-    "title": "送迎用バス運行委託業務",
-    "type": "委託",
-    "announcementDate": "2025-07-23",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18369.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000605k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "㈲天理交通",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "constructionPeriod": "令和7年9月1日から令和8年8月31日まで",
-    "description": "送迎用バス運行委託業務",
-    "tags": [
-      "送迎",
-      "バス",
-      "運行委託"
-    ],
-    "estimatedPrice": "1,809,500円"
-  },
-  {
     "id": "kashihara-result-5073000745",
     "municipality": "橿原市",
     "title": "ICT支援員業務",
@@ -6239,27 +4554,6 @@
       "ICT",
       "支援",
       "業務"
-    ]
-  },
-  {
-    "id": "kashihara-result-5073000619",
-    "municipality": "橿原市",
-    "title": "令和7年度不用パソコン等売却",
-    "type": "委託",
-    "announcementDate": "2025-07-23",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18369.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000619k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "㈱永輝商事 大阪支社",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "constructionPeriod": "契約日の翌日 から 令和7年10月31日",
-    "description": "令和７年度不用パソコン等売却",
-    "tags": [
-      "物品",
-      "売却",
-      "パソコン"
     ]
   },
   {
@@ -6665,28 +4959,6 @@
     ]
   },
   {
-    "id": "kashihara-result-5071000560",
-    "municipality": "橿原市",
-    "title": "市道路改良工事(十市町)",
-    "type": "建築",
-    "announcementDate": "2025-06-26",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000560k.pdf",
-    "status": "落札",
-    "winnerType": "ゼネコン",
-    "winningContractor": "㈱広澤建設",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "11,162,800円",
-    "constructionPeriod": "令和7年7月1日から令和7年9月30日まで",
-    "description": "市道路改良工事(十市町)",
-    "tags": [
-      "道路",
-      "改良",
-      "工事"
-    ]
-  },
-  {
     "id": "kashihara-result-5071000510",
     "municipality": "橿原市",
     "title": "市営住宅内装等改修工事",
@@ -6706,50 +4978,6 @@
       "改修",
       "住宅",
       "建築"
-    ]
-  },
-  {
-    "id": "kashihara-result-5071000575",
-    "municipality": "橿原市",
-    "title": "市道路舗装維持修繕工事7-3",
-    "type": "建築",
-    "announcementDate": "2025-06-26",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000575k.pdf",
-    "status": "落札",
-    "winnerType": "ゼネコン",
-    "winningContractor": "松平建設㈱",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "29,247,000円",
-    "constructionPeriod": "契約日の翌日から令和7年10月31日",
-    "description": "市道路舗装維持修繕工事７-３",
-    "tags": [
-      "道路",
-      "舗装",
-      "修繕"
-    ]
-  },
-  {
-    "id": "kashihara-result-5071000553",
-    "municipality": "橿原市",
-    "title": "市道路舗装維持修繕工事7－2",
-    "type": "建築",
-    "announcementDate": "2025-06-26",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000553k.pdf",
-    "status": "落札",
-    "winnerType": "ゼネコン",
-    "winningContractor": "観音寺辻本建設㈱",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "6,980,000円",
-    "constructionPeriod": "契約日の翌日から令和7年9月30日まで",
-    "description": "市道路舗装維持修繕工事７－２",
-    "tags": [
-      "舗装",
-      "維持修繕",
-      "道路"
     ]
   },
   {
@@ -6864,28 +5092,6 @@
     ]
   },
   {
-    "id": "kashihara-result-5072000537",
-    "municipality": "橿原市",
-    "title": "市道路改良工事に伴う嘱託登記業務(十市町)",
-    "type": "建築",
-    "announcementDate": "2025-06-26",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18375.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5072000537k.pdf",
-    "status": "落札",
-    "winnerType": "ゼネコン",
-    "winningContractor": "西浦新二土地家屋調査士事務所",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "19,370円",
-    "constructionPeriod": "契約日の翌日 から 令和8年3月31日",
-    "description": "市道路改良工事に伴う嘱託登記業務(十市町)",
-    "tags": [
-      "登記",
-      "測量",
-      "調査"
-    ]
-  },
-  {
     "id": "kashihara-result-5072000551",
     "municipality": "橿原市",
     "title": "史跡藤原京跡 公共嘱託登記業務委託",
@@ -6905,28 +5111,6 @@
       "登記",
       "測量",
       "業務委託"
-    ]
-  },
-  {
-    "id": "kashihara-result-5073000481",
-    "municipality": "橿原市",
-    "title": "河川施設除草業務委託",
-    "type": "委託",
-    "announcementDate": "2025-06-26",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18373.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000481k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "㈱南村組",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "6,617,000円(消費税抜)",
-    "constructionPeriod": "契約日の翌日から令和7年12月26日まで",
-    "description": "河川施設除草業務委託",
-    "tags": [
-      "河川",
-      "除草",
-      "委託"
     ]
   },
   {
@@ -6950,38 +5134,6 @@
     "link": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7349/No15-2.pdf",
     "status": "落札",
     "winningContractor": "植清造園"
-  },
-  {
-    "id": "koryo-2025-06-26-No17",
-    "municipality": "広陵町",
-    "title": "真美ケ丘地区小中学校擁壁改修工事",
-    "type": "建築",
-    "announcementDate": "2025-06-26",
-    "biddingDate": "2025-06-26",
-    "link": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7349/No17-2.pdf",
-    "status": "落札",
-    "winningContractor": "株式会社乾興業"
-  },
-  {
-    "id": "kashihara-result-5073000540",
-    "municipality": "橿原市",
-    "title": "橿原市浚渫等委託業務",
-    "type": "委託",
-    "announcementDate": "2025-06-24",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18369.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000540k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "アクアソリューション株式会社",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "constructionPeriod": "契約日の翌日から令和8年3月31日まで",
-    "description": "橿原市浚渫等委託業務",
-    "tags": [
-      "浚渫",
-      "委託",
-      "維持管理"
-    ]
   },
   {
     "id": "kashihara-result-5073000536",
@@ -7069,27 +5221,6 @@
       "点検"
     ],
     "estimatedPrice": "2,992,000円"
-  },
-  {
-    "id": "kashihara-result-5073000545",
-    "municipality": "橿原市",
-    "title": "デジタルサイネージ等を活用した市内案内地図・市政案内板の設置および広告収益業務",
-    "type": "委託",
-    "announcementDate": "2025-06-24",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18369.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000545k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "大光宣伝㈱",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "constructionPeriod": "契約日の翌日から令和12年6月30日まで",
-    "description": "デジタルサイネージ等を活用した市内案内地図・市政案内板の設置および広告収益業務",
-    "tags": [
-      "デジタルサイネージ",
-      "広告",
-      "設置"
-    ]
   },
   {
     "id": "kashihara-result-5073000583",
@@ -7187,27 +5318,6 @@
     "biddingDate": "2025-07-14",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/javaScript:void(0);",
     "status": "受付中"
-  },
-  {
-    "id": "kashihara-result-5073000470",
-    "municipality": "橿原市",
-    "title": "議会広報誌印刷業務（第234号～237号）",
-    "type": "委託",
-    "announcementDate": "2025-06-19",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18369.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000470k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "株式会社アイプリコム",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "constructionPeriod": "令和7年7月1日から令和8年6月30日まで",
-    "description": "議会広報誌印刷業務（第２３４号～２３７号）",
-    "tags": [
-      "印刷",
-      "業務委託",
-      "広報"
-    ]
   },
   {
     "id": "nara-city-0000002027",
@@ -7342,26 +5452,6 @@
       "測量",
       "調査",
       "林道"
-    ]
-  },
-  {
-    "id": "katsuragi-6abd2231",
-    "municipality": "葛城市",
-    "title": "トイレカー（ユニバーサルタイプ）の購入",
-    "type": "建築",
-    "announcementDate": "2025-06-06",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/01-05-08-01.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/01-05-08-01.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "9,770,000円（消費税及び地方消費税を除く）",
-    "constructionPeriod": "契約日から令和8年3月25日まで",
-    "description": "葛城市が導入する小型のユニバーサルタイプ・トイレカー1台の新規購入案件。本案件は条件付一般競争入札（事後審査型）により実施され、入札は郵便方式で行われます。",
-    "tags": [
-      "車両",
-      "トイレ",
-      "備品"
     ]
   },
   {
@@ -7575,111 +5665,6 @@
     "winningContractor": "写測エンジニアリング株式会社奈良営業所"
   },
   {
-    "id": "kashihara-result-5073000203",
-    "municipality": "橿原市",
-    "title": "橿原市立畝傍東小学校学校給食調理業務",
-    "type": "委託",
-    "announcementDate": "2025-05-27",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18369.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000203k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "シダックス大新東ヒューマンサービス株式会社 近畿支店",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "constructionPeriod": "令和7年8月1日から令和10年7月31日まで",
-    "description": "橿原市立畝傍東小学校学校給食調理業務",
-    "tags": [
-      "給食",
-      "調理",
-      "業務委託"
-    ]
-  },
-  {
-    "id": "kashihara-result-5073000201",
-    "municipality": "橿原市",
-    "title": "橿原市立真菅北小学校学校給食調理業務",
-    "type": "委託",
-    "announcementDate": "2025-05-27",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18369.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000201k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "第1回入札",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "constructionPeriod": "令和7年8月1日から令和10年7月31日まで",
-    "description": "橿原市立真菅北小学校学校給食調理業務",
-    "tags": [
-      "学校給食",
-      "調理業務",
-      "業務委託"
-    ]
-  },
-  {
-    "id": "kashihara-result-5073000197",
-    "municipality": "橿原市",
-    "title": "橿原市立真菅小学校学校給食調理業務",
-    "type": "委託",
-    "announcementDate": "2025-05-27",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18369.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000197k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "constructionPeriod": "令和7年8月1日から令和10年7月31日まで",
-    "description": "橿原市立真菅小学校学校給食調理業務",
-    "tags": [
-      "給食",
-      "調理",
-      "業務委託"
-    ]
-  },
-  {
-    "id": "kashihara-result-5073000204",
-    "municipality": "橿原市",
-    "title": "橿原市立大成中学校学校給食調理業務",
-    "type": "委託",
-    "announcementDate": "2025-05-27",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18369.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000204k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "名阪食品株式会社 奈良事業部",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "constructionPeriod": "令和7年8月1日から令和10年7月31日まで",
-    "description": "橿原市立大成中学校学校給食調理業務",
-    "tags": [
-      "給食",
-      "調理",
-      "業務委託"
-    ]
-  },
-  {
-    "id": "kashihara-result-5073000196",
-    "municipality": "橿原市",
-    "title": "橿原市立今井小学校学校給食調理業務",
-    "type": "委託",
-    "announcementDate": "2025-05-27",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18369.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000196k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "シダックス大新東ヒューマンサービス㈱ 近畿支店",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "42,847,200円 (消費税10%含む)",
-    "constructionPeriod": "令和7年8月1日から令和10年7月31日まで",
-    "description": "橿原市立今井小学校における学校給食調理業務の委託。入札の結果、シダックス大新東ヒューマンサービス株式会社近畿支店が落札。",
-    "tags": [
-      "給食",
-      "調理",
-      "委託"
-    ]
-  },
-  {
     "id": "kashihara-result-5073000301",
     "municipality": "橿原市",
     "title": "公営住宅・改良住宅 草刈・剪定・消毒委託業務",
@@ -7885,28 +5870,6 @@
     ]
   },
   {
-    "id": "kashihara-result-5073000254",
-    "municipality": "橿原市",
-    "title": "令和7年度 橿原市河川水等水質検査業務",
-    "type": "委託",
-    "announcementDate": "2025-05-21",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18369.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000254k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "環境システム㈱ 奈良環境分析センター",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "1,970,738円 (消費税10%含む)",
-    "constructionPeriod": "契約日の翌日 から 令和8年3月31日",
-    "description": "令和7年度における橿原市内の河川水等の水質検査業務。条件付き一般競争入札により、環境システム株式会社奈良環境分析センターが落札した。",
-    "tags": [
-      "水質検査",
-      "河川",
-      "環境"
-    ]
-  },
-  {
     "id": "kashihara-result-5073000236",
     "municipality": "橿原市",
     "title": "令和7年度ダイオキシン類等分析検査",
@@ -8037,50 +6000,6 @@
     ]
   },
   {
-    "id": "kashihara-result-5073000325",
-    "municipality": "橿原市",
-    "title": "街路樹植栽管理作業委託 6工区",
-    "type": "委託",
-    "announcementDate": "2025-05-20",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18373.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000325k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "㈱南村組",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "13,138,400円 (税込) / 11,944,000円 (税抜)",
-    "constructionPeriod": "契約日の翌日から令和8年3月19日まで",
-    "description": "橿原市内一円における街路樹植栽管理作業委託（6工区）",
-    "tags": [
-      "植栽",
-      "維持管理",
-      "土木"
-    ]
-  },
-  {
-    "id": "kashihara-result-5073000300",
-    "municipality": "橿原市",
-    "title": "街路樹植栽管理作業委託 2工区",
-    "type": "委託",
-    "announcementDate": "2025-05-20",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18373.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000300k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "橿原造園",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "12,971,200円 (税込) / 11,792,000円 (税抜)",
-    "constructionPeriod": "契約日の翌日から令和8年3月19日まで",
-    "description": "橿原市内一円における街路樹植栽管理作業の委託業務。事後審査型条件付き一般競争入札により実施。",
-    "tags": [
-      "土木",
-      "維持管理",
-      "測量"
-    ]
-  },
-  {
     "id": "kashihara-result-5073000271",
     "municipality": "橿原市",
     "title": "市内公園等植栽管理委託 第1工区",
@@ -8100,28 +6019,6 @@
       "植栽",
       "公園",
       "維持管理"
-    ]
-  },
-  {
-    "id": "kashihara-result-5073000288",
-    "municipality": "橿原市",
-    "title": "街路樹植栽管理作業委託 4工区",
-    "type": "委託",
-    "announcementDate": "2025-05-20",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18373.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000288k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "松平建設㈱",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "10,447,800円（税込）/ 9,498,000円（税抜）",
-    "constructionPeriod": "契約日の翌日から令和8年3月19日まで",
-    "description": "橿原市内一円における街路樹植栽管理作業委託（4工区）。事後審査型条件付き一般競争入札により実施された。",
-    "tags": [
-      "土木",
-      "維持管理",
-      "測量"
     ]
   },
   {
@@ -8186,209 +6083,6 @@
       "選挙",
       "印刷",
       "事務"
-    ]
-  },
-  {
-    "id": "kashihara-result-5073000297",
-    "municipality": "橿原市",
-    "title": "選挙公報用封筒作成・封入業務（参議院議員通常選挙）",
-    "type": "委託",
-    "announcementDate": "2025-05-20",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18369.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000297k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "㈱アイプリコム",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "constructionPeriod": "契約日の翌日 から 令和 7年 7月22日",
-    "description": "参議院議員通常選挙における、選挙公報用封筒の作成および封入業務。",
-    "tags": [
-      "選挙",
-      "印刷",
-      "事務"
-    ]
-  },
-  {
-    "id": "kashihara-result-5073000283",
-    "municipality": "橿原市",
-    "title": "資格情報のお知らせ印刷及び封入業務",
-    "type": "委託",
-    "announcementDate": "2025-05-20",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18369.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000283k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "第1回入札",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "constructionPeriod": "契約日の翌日 から 令和7年7月31日",
-    "description": "橿原市内膳町地内における、資格情報のお知らせ印刷及び封入業務。条件付き一般競争入札（事後審査あり）として実施された。",
-    "tags": [
-      "印刷",
-      "事務",
-      "入札"
-    ]
-  },
-  {
-    "id": "kashihara-result-5073000281",
-    "municipality": "橿原市",
-    "title": "資格確認書印刷及び封入業務",
-    "type": "委託",
-    "announcementDate": "2025-05-20",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18369.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000281k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "constructionPeriod": "契約日の翌日 から 令和7年7月31日",
-    "description": "橿原市内膳町地内における、資格確認書印刷及び封入業務。条件付き一般競争入札（事後審査あり）にて執行されたが、応札者がなく、落札者は決定していない。",
-    "tags": [
-      "印刷",
-      "事務",
-      "業務"
-    ]
-  },
-  {
-    "id": "kashihara-result-5073000286",
-    "municipality": "橿原市",
-    "title": "令和7年度導入パソコン等賃貸借",
-    "type": "委託",
-    "announcementDate": "2025-05-20",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18369.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000286k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "FLCS㈱ 関西支店",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "171,124,800円 (消費税10%含む・予定総価格), 17,112,480円 (消費税10%含む・落札金額)",
-    "constructionPeriod": "令和7年10月1日から令和12年9月30日まで",
-    "description": "令和7年度におけるパソコン等の賃貸借案件。橿原市内一円を対象に、条件付き一般競争入札によって契約された。履行期間は約5年間。",
-    "tags": [
-      "ＩＴ",
-      "賃貸",
-      "パソコン"
-    ]
-  },
-  {
-    "id": "kashihara-result-5073000346",
-    "municipality": "橿原市",
-    "title": "小中学校校務用パソコン賃貸借業務",
-    "type": "委託",
-    "announcementDate": "2025-05-20",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18369.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000346k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "第1回入札",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "constructionPeriod": "令和7年9月1日から令和12年8月31日",
-    "description": "橿原市内小中学校における校務用パソコンの賃貸借業務。入札結果については落札の有無が「無」となっており、落札者や落札金額は未確定または公表されていない。",
-    "tags": [
-      "ＩＴ",
-      "賃貸借",
-      "パソコン"
-    ]
-  },
-  {
-    "id": "kashihara-result-5073000318",
-    "municipality": "橿原市",
-    "title": "小規模舗装道路維持修繕業務委託",
-    "type": "委託",
-    "announcementDate": "2025-05-20",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18369.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000318k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "㈱松本組",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "10,543,500円 (消費税10%含む)",
-    "constructionPeriod": "契約日の翌日 から 令和 8年 3月31日",
-    "description": "橿原市内一円における小規模な舗装道路の維持および修繕業務を委託する案件。条件付き一般競争入札（事後審査あり）により業者が決定された。",
-    "tags": [
-      "土木",
-      "補修",
-      "維持管理"
-    ]
-  },
-  {
-    "id": "kashihara-result-5073000321",
-    "municipality": "橿原市",
-    "title": "区画線設置業務委託",
-    "type": "委託",
-    "announcementDate": "2025-05-20",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18369.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000321k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "大和㈱",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "2,076,250円 (消費税10%含む)",
-    "constructionPeriod": "契約日の翌日 から 令和 8年 3月31日",
-    "description": "橿原市内一円における区画線設置業務委託。条件付き一般競争入札により実施され、大和株式会社が2,076,250円（税込）で落札した。",
-    "tags": [
-      "土木",
-      "補修"
-    ]
-  },
-  {
-    "id": "yamato-koriyama-bb0f9b92",
-    "municipality": "大和郡山市",
-    "title": "令和7年国勢調査 『調査区要図』『調査員用参考地図』作成・印刷業務",
-    "type": "委託",
-    "announcementDate": "2025-05-16",
-    "biddingDate": "2025-05-16",
-    "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsunooshirase/r7/16421.html",
-    "status": "落札",
-    "winningContractor": "株式会社ゼンリン 奈良営業所"
-  },
-  {
-    "id": "kashihara-result-5071000319",
-    "municipality": "橿原市",
-    "title": "幹線街路維持修繕工事",
-    "type": "建築",
-    "announcementDate": "2025-05-15",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000319k.pdf",
-    "status": "落札",
-    "winnerType": "ゼネコン",
-    "winningContractor": "㈱広澤建設",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "13,995,300円(税込) / 12,723,000円(税抜)",
-    "constructionPeriod": "契約日の翌日 から 令和8年3月18日",
-    "description": "橿原市内一円における幹線街路の維持修繕工事。事後審査型条件付き一般競争入札により実施され、落札金額は12,288,100円（税抜価格11,171,000円）で㈱広澤建設が請け負う。",
-    "tags": [
-      "維持管理",
-      "補修",
-      "土木"
-    ]
-  },
-  {
-    "id": "kashihara-result-5071000322",
-    "municipality": "橿原市",
-    "title": "市道路舗装維持修繕工事7－1",
-    "type": "建築",
-    "announcementDate": "2025-05-15",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000322k.pdf",
-    "status": "落札",
-    "winnerType": "ゼネコン",
-    "winningContractor": "㈱松本組",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "5,123,800円(税込) / 4,658,000円(税抜)",
-    "constructionPeriod": "契約日の翌日 から 令和7年7月31日",
-    "description": "橿原市太田市町地内における市道路舗装維持修繕工事。事後審査型条件付き一般競争入札により執行され、落札金額は4,467,870円（税込）で㈱松本組が落札した。",
-    "tags": [
-      "舗装",
-      "補修",
-      "土木"
     ]
   },
   {
@@ -8459,94 +6153,6 @@
     ]
   },
   {
-    "id": "kashihara-result-5073000289",
-    "municipality": "橿原市",
-    "title": "街路樹植栽管理作業委託 5工区",
-    "type": "委託",
-    "announcementDate": "2025-05-15",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18373.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000289k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "香久山造園",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "15,855,400円 (税込) / 14,414,000円 (税抜)",
-    "constructionPeriod": "契約日の翌日 から 令和8年3月19日",
-    "description": "橿原市内一円における街路樹植栽管理作業委託（5工区）に関する業務。事後審査型条件付き一般競争入札により、落札金額13,790,700円（税込）で香久山造園が落札した。",
-    "tags": [
-      "土木",
-      "維持管理",
-      "測量"
-    ]
-  },
-  {
-    "id": "kashihara-result-5073000287",
-    "municipality": "橿原市",
-    "title": "街路樹植栽管理作業委託 3工区",
-    "type": "委託",
-    "announcementDate": "2025-05-15",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18373.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000287k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "向造園",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "15,841,100円 (税込) / 14,401,000円 (税抜)",
-    "constructionPeriod": "契約日の翌日 から 令和8年3月19日",
-    "description": "橿原市内一円における街路樹植栽管理作業委託（3工区）に関する業務。事後審査型条件付き一般競争入札により、落札金額13,956,800円（税込）で向造園が受注した。",
-    "tags": [
-      "土木",
-      "維持管理",
-      "測量"
-    ]
-  },
-  {
-    "id": "kashihara-result-5073000328",
-    "municipality": "橿原市",
-    "title": "街路樹植栽管理作業委託 7工区",
-    "type": "委託",
-    "announcementDate": "2025-05-15",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18373.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000328k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "香久山造園",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "15,545,200円(税込) / 14,132,000円(税抜)",
-    "constructionPeriod": "契約日の翌日 から 令和 8年 3月19日",
-    "description": "橿原市内一円における街路樹植栽管理作業委託（7工区）の入札案件。事後審査型条件付き一般競争入札により実施され、香久山造園が13,886,400円で落札した。",
-    "tags": [
-      "植栽",
-      "維持管理",
-      "土木"
-    ]
-  },
-  {
-    "id": "kashihara-result-5073000299",
-    "municipality": "橿原市",
-    "title": "街路樹植栽管理作業委託 1工区",
-    "type": "委託",
-    "announcementDate": "2025-05-15",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18373.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000299k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "西川造園",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "13,669,700円（税込）",
-    "constructionPeriod": "契約日の翌日から令和8年3月19日まで",
-    "description": "橿原市内一円における街路樹の植栽管理作業委託（1工区）。事後審査型条件付き一般競争入札により、西川造園が11,973,940円（税込）で落札した。",
-    "tags": [
-      "植栽",
-      "維持管理",
-      "土木"
-    ]
-  },
-  {
     "id": "kashihara-result-5073000272",
     "municipality": "橿原市",
     "title": "市内公園等植栽管理委託 第2工区",
@@ -8569,26 +6175,6 @@
     ]
   },
   {
-    "id": "katsuragi-f23a4228",
-    "municipality": "葛城市",
-    "title": "第7-810号 葛城インターチェンジ周辺バス停留所予備設計業務委託",
-    "type": "コンサル",
-    "announcementDate": "2025-05-15",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/2-04-03-2025-1.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/2-04-03-2025-1.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "5,100,000円（消費税及び地方消費税を除く）",
-    "constructionPeriod": "契約日から令和8年1月30日まで",
-    "description": "葛城インターチェンジ周辺におけるバス停留所設置に向けた予備設計および測量業務。バス停留場関連の業務実績を有し、技術士（道路または都市計画及び地方計画）の資格を持つ管理技術者を配置できる者を対象とした条件付一般競争入札案件。",
-    "tags": [
-      "設計",
-      "測量",
-      "土木"
-    ]
-  },
-  {
     "id": "katsuragi-44025d88",
     "municipality": "葛城市",
     "title": "當麻小学校図書室他空調設備更新工事",
@@ -8607,26 +6193,6 @@
       "改修",
       "電気"
     ]
-  },
-  {
-    "id": "tawaramoto-2025000034",
-    "municipality": "田原本町",
-    "title": "田原本町立東小学校・北小学校・田原本小学校学校給食調理業務委託",
-    "type": "委託",
-    "announcementDate": "2025-05-15",
-    "biddingDate": "2025-06-09",
-    "link": "https://tawaramoto.efftis.jp/PPI/Public/javaScript:void(0);",
-    "status": "受付中"
-  },
-  {
-    "id": "tawaramoto-2025000035",
-    "municipality": "田原本町",
-    "title": "田原本町立南小学校・平野小学校学校給食調理業務委託",
-    "type": "委託",
-    "announcementDate": "2025-05-15",
-    "biddingDate": "2025-06-09",
-    "link": "https://tawaramoto.efftis.jp/PPI/Public/javaScript:void(0);",
-    "status": "受付中"
   },
   {
     "id": "tawaramoto-2025000036",
@@ -8671,49 +6237,6 @@
     ]
   },
   {
-    "id": "kashihara-result-5073000239",
-    "municipality": "橿原市",
-    "title": "かしはら万葉ホール人的警備委託業務",
-    "type": "委託",
-    "announcementDate": "2025-05-15",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18369.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000239k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "㈲プラス・ガード",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "17,556,000円 (消費税10%含む)",
-    "constructionPeriod": "令和7年6月1日 から 令和8年5月31日",
-    "description": "奈良県橿原市小房町地内他における、かしはら万葉ホールの人的警備委託業務。",
-    "tags": [
-      "警備",
-      "委託"
-    ]
-  },
-  {
-    "id": "kashihara-result-5073000222",
-    "municipality": "橿原市",
-    "title": "令和7年度橿原市役所本庁舎駐車場警備業務",
-    "type": "委託",
-    "announcementDate": "2025-05-15",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18369.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000222k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "㈲プラス・ガード",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "4,952,640円 (消費税10%含む)",
-    "constructionPeriod": "令和7年6月1日 から 令和8年5月31日",
-    "description": "令和7年度における橿原市役所本庁舎の駐車場警備業務。条件付き一般競争入札により選定された業者が、1年間の警備サービスを提供する。",
-    "tags": [
-      "警備",
-      "業務",
-      "駐車場"
-    ]
-  },
-  {
     "id": "kashihara-result-5073000078",
     "municipality": "橿原市",
     "title": "中央公民館夜間管理業務委託",
@@ -8731,27 +6254,6 @@
     "description": "奈良県橿原市小房町地内にある中央公民館の夜間管理業務委託。条件付き一般競争入札により、㈱ハウスクリーンサービスが落札した。",
     "tags": [
       "維持管理",
-      "委託"
-    ]
-  },
-  {
-    "id": "kashihara-result-5073000234",
-    "municipality": "橿原市",
-    "title": "令和7年度 奈文研展示資料室警備委託業務（令和7年6月～令和8年5月分）",
-    "type": "委託",
-    "announcementDate": "2025-05-15",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18369.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000234k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "㈲プラス・ガード",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "1,214,950円 (税込)",
-    "constructionPeriod": "令和7年6月1日から令和8年5月31日まで",
-    "description": "令和7年度における奈文研展示資料室の警備委託業務。条件付き一般競争入札により選定された業者が、令和7年6月1日から令和8年5月31日までの期間、奈良県橿原市木之本町地内の施設において警備業務を行う。",
-    "tags": [
-      "警備",
       "委託"
     ]
   },
@@ -8891,26 +6393,6 @@
     ]
   },
   {
-    "id": "katsuragi-82765ef3",
-    "municipality": "葛城市",
-    "title": "レーザープリンター設置設定委託",
-    "type": "委託",
-    "announcementDate": "2025-05-14",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/2-03-02-2025-1.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/2-03-02-2025-1.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "2,418,000円（消費税及び地方消費税を除く）",
-    "constructionPeriod": "契約日 から 令和7年8月31日(日) まで",
-    "description": "葛城市の庁舎及び各小中学校で使用しているレーザープリンターを更改するため、既存機器の撤去及び新たに調達するプリンターへの交換作業を行う委託業務。",
-    "tags": [
-      "ＩＴ",
-      "設置",
-      "電気"
-    ]
-  },
-  {
     "id": "katsuragi-f6425ccc",
     "municipality": "葛城市",
     "title": "体力づくりセンター各設備整備修繕",
@@ -8928,46 +6410,6 @@
       "修繕",
       "設備",
       "電気"
-    ]
-  },
-  {
-    "id": "katsuragi-2bce19d6",
-    "municipality": "葛城市",
-    "title": "衛星通信設備の購入",
-    "type": "建築",
-    "announcementDate": "2025-05-14",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/2-03-04-2025-1.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/2-03-04-2025-1.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "1,007,000円（消費税及び地方消費税を除く）",
-    "constructionPeriod": "契約日 から 令和8年3月31日(火) まで",
-    "description": "災害発生時に有線通信やモバイル通信環境が途絶した際、災害対策本部等においてインターネット環境を確保するため、災害時に有用な衛星通信設備を購入する案件。",
-    "tags": [
-      "通信",
-      "災害対策",
-      "設備"
-    ]
-  },
-  {
-    "id": "katsuragi-ebf212c8",
-    "municipality": "葛城市",
-    "title": "防災倉庫購入事業",
-    "type": "建築",
-    "announcementDate": "2025-05-14",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/2-03-05-2025-1.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/2-03-05-2025-1.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "4,536,000円（消費税及び地方消費税を除く）",
-    "constructionPeriod": "契約日から令和8年3月25日",
-    "description": "避難所の生活環境改善およびプライバシーへの配慮を目的とし、避難所用資機材やトイレなどを収納するための防災倉庫を購入する事業。",
-    "tags": [
-      "防災",
-      "倉庫",
-      "購入"
     ]
   },
   {
@@ -9158,27 +6600,6 @@
     "link": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7349/NO2-2.pdf",
     "status": "落札",
     "winningContractor": "有限会社ワーク"
-  },
-  {
-    "id": "gojo-855a43a0",
-    "municipality": "五條市",
-    "title": "令和7年度生コンクリート購入単価契約（令和7年4月25日開札）",
-    "type": "建築",
-    "announcementDate": "2025-04-28",
-    "link": "https://www.city.gojo.lg.jp/soshiki/keiyakukensa/1_1/7/17098.html",
-    "pdfUrl": "https://www.city.gojo.lg.jp/material/files/group/4/kouhyoukaisatu07425.pdf",
-    "status": "落札",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "43,010円（小型車4地区）, 33,880円（小型車7地区）, 50,050円（大型車4地区）, 40,480円（大型車7地区）",
-    "winningContractor": "鍛治金物店, 株式会社コーエイ 三在営業所",
-    "constructionPeriod": "令和7年度中",
-    "description": "令和7年度の生コンクリート購入単価契約に関する入札。小型車および大型車の各地区（4地区、5地区、7地区）を対象とした単価契約であり、鍛治金物店および株式会社コーエイ三在営業所が落札している。",
-    "tags": [
-      "土木",
-      "建築",
-      "維持管理"
-    ]
   },
   {
     "id": "yamato-koriyama-3eb15c34",
@@ -9527,20 +6948,6 @@
     "status": "落札"
   },
   {
-    "id": "kashihara-result-5073000077",
-    "municipality": "橿原市",
-    "title": "令和7年度 小中学校・幼稚園及びこども園プール清掃業務",
-    "type": "委託",
-    "announcementDate": "2025-04-22",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18369.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000077k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "（名）大和サービス",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1"
-  },
-  {
     "id": "kashihara-result-5073000060",
     "municipality": "橿原市",
     "title": "墓地、埋葬等に関する法律第9条に基づく葬祭執行委託業務",
@@ -9553,93 +6960,6 @@
     "winningContractor": "㈲竹田花香社",
     "isIntelligenceExtracted": true,
     "extractionSource": "gemini_3.1"
-  },
-  {
-    "id": "kashihara-result-5073000081",
-    "municipality": "橿原市",
-    "title": "令和7年度庁内LANシステム更新賃貸借業務",
-    "type": "委託",
-    "announcementDate": "2025-04-22",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18369.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000081k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "FLCS㈱ 関西支店",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "17,157,030円 (消費税10%含む)",
-    "constructionPeriod": "契約日の翌日 から 令和13年 2月28日",
-    "description": "令和7年度における庁内LANシステムの更新に伴う賃貸借業務。条件付き一般競争入札により実施され、FLCS株式会社関西支店が落札。",
-    "tags": [
-      "ＩＴ",
-      "賃貸借",
-      "システム"
-    ]
-  },
-  {
-    "id": "kashihara-result-5073000073",
-    "municipality": "橿原市",
-    "title": "市立小中学校・幼稚園及びこども園自動体外式除細動器（AED）賃貸借業務",
-    "type": "委託",
-    "announcementDate": "2025-04-22",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18369.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000073k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "大和中央製薬㈱",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "980,210円 (消費税10%含む)",
-    "constructionPeriod": "令和7年6月1日から令和12年5月31日まで",
-    "description": "橿原市内一円の市立小中学校・幼稚園及びこども園における自動体外式除細動器（AED）の賃貸借業務。",
-    "tags": [
-      "医療",
-      "賃貸",
-      "学校"
-    ]
-  },
-  {
-    "id": "kashihara-result-5073000040",
-    "municipality": "橿原市",
-    "title": "令和7年度 中学校バス送迎業務",
-    "type": "委託",
-    "announcementDate": "2025-04-22",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18369.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000040k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "佐原自動車㈱",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "3,207,600円 (消費税10%含む)",
-    "constructionPeriod": "令和7年6月2日から令和7年9月30日まで",
-    "description": "令和7年度における中学校のバス送迎業務委託。条件付き一般競争入札（事後審査なし）により選定された。",
-    "tags": [
-      "送迎",
-      "業務委託",
-      "バス"
-    ]
-  },
-  {
-    "id": "kashihara-result-5073000058",
-    "municipality": "橿原市",
-    "title": "令和7年度 広報かしはら印刷等業務（7月号～4月号分）",
-    "type": "委託",
-    "announcementDate": "2025-04-22",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18369.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000058k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "㈱サカタ企画印刷",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "19,331,400円 (消費税10%含む)",
-    "constructionPeriod": "令和7年6月1日から令和8年3月31日",
-    "description": "令和7年度の広報かしはら印刷等業務（7月号から4月号分）を対象とした条件付き一般競争入札。橿原市内一円を履行場所とし、落札者は株式会社サカタ企画印刷に決定。",
-    "tags": [
-      "印刷",
-      "広報"
-    ]
   },
   {
     "id": "yamato-koriyama-889321d6",
@@ -9677,49 +6997,6 @@
     "announcementDate": "2025-04-17",
     "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsu/R7/16236.html",
     "status": "受付中"
-  },
-  {
-    "id": "kashihara-result-5073000006",
-    "municipality": "橿原市",
-    "title": "令和7年度橿原市昆虫館駐車場警備業務",
-    "type": "委託",
-    "announcementDate": "2025-04-17",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18369.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000006k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "㈲アレスセキュリティーサービス",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "957,000円 (消費税10%含む)",
-    "constructionPeriod": "令和7年4月26日から令和7年9月30日",
-    "description": "令和7年度橿原市昆虫館における駐車場警備業務。条件付き一般競争入札により選定された業者が、指定期間内に警備業務を履行する。",
-    "tags": [
-      "警備",
-      "業務",
-      "駐車場"
-    ]
-  },
-  {
-    "id": "kashihara-result-5073000002",
-    "municipality": "橿原市",
-    "title": "令和7年度 市営香久山墓園 交通誘導警備業務",
-    "type": "委託",
-    "announcementDate": "2025-04-17",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18369.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000002k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "㈲アレスセキュリティーサービス",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "750,750円 (消費税10%含む)",
-    "constructionPeriod": "令和7年5月1日から令和8年3月25日まで",
-    "description": "奈良県橿原市南山町地内における、令和7年度市営香久山墓園の交通誘導警備業務。条件付き一般競争入札により選定された事業者が、約11ヶ月間にわたり警備業務を行う。",
-    "tags": [
-      "警備",
-      "交通誘導"
-    ]
   },
   {
     "id": "yamato-koriyama-36dc882c",
@@ -10003,26 +7280,6 @@
     ]
   },
   {
-    "id": "katsuragi-9f7f4a43",
-    "municipality": "葛城市",
-    "title": "葛城市学校給食センターから排出する食物残渣等の再資源化業務",
-    "type": "委託",
-    "announcementDate": "2025-04-10",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/01-05-03-01-02.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/01-05-03-01-02.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "1,936,000円（消費税及び地方消費税を除く）",
-    "constructionPeriod": "契約日から令和8年3月31日まで",
-    "description": "葛城市学校給食センターから排出される食物残渣等を収集運搬し、再資源化することで、ごみの減量化及び再生利用の促進を図る業務。",
-    "tags": [
-      "再資源化",
-      "廃棄物収集",
-      "業務委託"
-    ]
-  },
-  {
     "id": "katsuragi-f9f79d4c",
     "municipality": "葛城市",
     "title": "生活保護診療報酬明細書点検業務委託",
@@ -10041,146 +7298,6 @@
       "委託",
       "事務"
     ]
-  },
-  {
-    "id": "katsuragi-06268dc9",
-    "municipality": "葛城市",
-    "title": "ウイルス対策ソフトウェアのライセンス調達",
-    "type": "建築",
-    "announcementDate": "2025-04-10",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/01-05-05-01.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/01-05-05-01.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "667,000円（税抜き）",
-    "constructionPeriod": "契約日 から 令和7年6月10日まで",
-    "description": "葛城市庁内の各系統の端末で使用するウイルス対策ソフトウェアのライセンス（750ライセンス）調達。ライセンスの失効する令和7年6月11日から1年分を購入する。",
-    "tags": [
-      "IT",
-      "ソフトウェア",
-      "調達"
-    ]
-  },
-  {
-    "id": "katsuragi-237f82ce",
-    "municipality": "葛城市",
-    "title": "レーザープリンター賃貸借業務",
-    "type": "委託",
-    "announcementDate": "2025-04-10",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/01-05-06-01-2025.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/01-05-06-01-2025.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "684,000円／月（消費税及び地方消費税を除く）",
-    "constructionPeriod": "契約日から令和12年7月31日まで",
-    "description": "葛城市が実施するレーザープリンターの賃貸借業務。現在使用している機器が更改から5年以上経過し故障リスクが高まっているため、証明発行業務や事務作業に支障をきたさないよう、機器を更改することを目的とする。",
-    "tags": [
-      "賃貸借",
-      "事務機器",
-      "ＩＴ"
-    ]
-  },
-  {
-    "id": "katsuragi-4a2fb144",
-    "municipality": "葛城市",
-    "title": "デジタル複合機の賃貸借",
-    "type": "建築",
-    "announcementDate": "2025-04-10",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/01-05-07-01.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/01-05-07-01.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "47,035円/月（消費税及び地方消費税を除く）",
-    "constructionPeriod": "契約日から令和12年6月30日まで",
-    "description": "葛城市における既存デジタル複合機の老朽化に伴う入れ替え業務。リース料は定額契約、カウンター料金は単価契約とするデジタル複合機の賃貸借契約。",
-    "tags": [
-      "ＩＴ",
-      "賃貸借",
-      "事務機器"
-    ]
-  },
-  {
-    "id": "katsuragi-f5c9beb1",
-    "municipality": "葛城市",
-    "title": "特殊自動車（スキッドステアローダー）の購入",
-    "type": "建築",
-    "announcementDate": "2025-04-10",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/01-05-09-01.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/01-05-09-01.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "2,500,000円（税抜き）",
-    "constructionPeriod": "契約日から令和7年9月30日（火）まで",
-    "description": "葛城市が「おひさま堆肥」の製造工程で使用する、堆肥切り返し用の特殊自動車（スキッドステアローダー）を新規購入するための一般競争入札（事後審査型）。",
-    "tags": [
-      "特殊自動車",
-      "車両購入",
-      "機械"
-    ]
-  },
-  {
-    "id": "katsuragi-e7334cf6",
-    "municipality": "葛城市",
-    "title": "移動電源車購入",
-    "type": "建築",
-    "announcementDate": "2025-04-10",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/01-05-10-01-2.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/01-05-10-01-2.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "17,563,000円（税抜き）",
-    "constructionPeriod": "契約日 から 令和8年3月25日まで",
-    "description": "大規模停電時に、自家発電設備のない避難所において、通信や備蓄物資利用に必要な最低限の電力を確保するための移動電源車を購入する事業。",
-    "tags": [
-      "電気",
-      "防災",
-      "備品"
-    ]
-  },
-  {
-    "id": "katsuragi-a409851b",
-    "municipality": "葛城市",
-    "title": "避難所資機材購入",
-    "type": "建築",
-    "announcementDate": "2025-04-10",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/01-05-11-01.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/01-05-11-01.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "22,783,000円（消費税及び地方消費税を除く）",
-    "constructionPeriod": "契約日から令和8年3月25日まで",
-    "description": "避難所の生活環境改善を目的とし、避難所内でのトイレの充実やプライバシーへの配慮のために必要な資機材を購入する業務。",
-    "tags": [
-      "防災",
-      "備品購入",
-      "避難所"
-    ]
-  },
-  {
-    "id": "tawaramoto-2025000023",
-    "municipality": "田原本町",
-    "title": "７－１交通安全施設維持工事（区画線）",
-    "type": "委託",
-    "announcementDate": "2025-04-10",
-    "biddingDate": "2025-05-12",
-    "link": "https://tawaramoto.efftis.jp/PPI/Public/javaScript:void(0);",
-    "status": "受付中"
-  },
-  {
-    "id": "tawaramoto-2025000025",
-    "municipality": "田原本町",
-    "title": "７－１　交通安全施設維持工事（防護柵）",
-    "type": "委託",
-    "announcementDate": "2025-04-10",
-    "biddingDate": "2025-05-12",
-    "link": "https://tawaramoto.efftis.jp/PPI/Public/javaScript:void(0);",
-    "status": "受付中"
   },
   {
     "id": "tawaramoto-2025000027",
@@ -10253,26 +7370,6 @@
     "status": "受付中"
   },
   {
-    "id": "tawaramoto-2025000005",
-    "municipality": "田原本町",
-    "title": "基幹系パソコン更新賃貸借",
-    "type": "委託",
-    "announcementDate": "2025-04-01",
-    "biddingDate": "2025-05-12",
-    "link": "https://tawaramoto.efftis.jp/PPI/Public/javaScript:void(0);",
-    "status": "受付中"
-  },
-  {
-    "id": "tawaramoto-2025000009",
-    "municipality": "田原本町",
-    "title": "校務用パソコン導入賃貸借業務",
-    "type": "委託",
-    "announcementDate": "2025-04-01",
-    "biddingDate": "2025-04-28",
-    "link": "https://tawaramoto.efftis.jp/PPI/Public/javaScript:void(0);",
-    "status": "受付中"
-  },
-  {
     "id": "tawaramoto-2025000010",
     "municipality": "田原本町",
     "title": "田原本町立小・中学校ＩＣＴ教育環境整備業務",
@@ -10296,16 +7393,6 @@
     "id": "tawaramoto-2025000014",
     "municipality": "田原本町",
     "title": "田原本町ねたきり老人紙おむつ等給付事業",
-    "type": "委託",
-    "announcementDate": "2025-04-01",
-    "biddingDate": "2025-05-12",
-    "link": "https://tawaramoto.efftis.jp/PPI/Public/javaScript:void(0);",
-    "status": "受付中"
-  },
-  {
-    "id": "tawaramoto-2025000015",
-    "municipality": "田原本町",
-    "title": "消防ポンプ自動車",
     "type": "委託",
     "announcementDate": "2025-04-01",
     "biddingDate": "2025-05-12",
@@ -10373,26 +7460,6 @@
     "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/20250626giketu05140515.pdf"
   },
   {
-    "title": "第7-805号 新庄・寺口線道路改良工事に伴う測量設計業務委託",
-    "winningContractor": "（株）ＫＥＩＳＩＮ 葛城事務所",
-    "estimatedPrice": "1,650,000円",
-    "status": "落札",
-    "municipality": "葛城市",
-    "id": "katsuragi-第7-805号 新庄・寺口線道路改良工事に伴う測量設計業務委託-1772234756571",
-    "announcementDate": "2025-04-01",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/2025-6-25-kekkakouhyou-2.pdf"
-  },
-  {
-    "title": "委第07-309号 しあわせの森公園管理用道路測量設計業務委託",
-    "winningContractor": "スキャドロン（株） 奈良西営業所",
-    "estimatedPrice": "3,800,000円",
-    "status": "落札",
-    "municipality": "葛城市",
-    "id": "katsuragi-委第07-309号 しあわせの森公園管理用道路測量設計業務委託-1772234756571",
-    "announcementDate": "2025-04-01",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/2025-6-25-kekkakouhyou-2.pdf"
-  },
-  {
     "title": "新庄中学校北館昇降口防水改修工事",
     "winningContractor": "（株）生野建設",
     "estimatedPrice": "4,017,000円",
@@ -10401,36 +7468,6 @@
     "id": "katsuragi-新庄中学校北館昇降口防水改修工事-1772234756571",
     "announcementDate": "2025-04-01",
     "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/2025-6-25-kekkakouhyou-2.pdf"
-  },
-  {
-    "title": "太鼓橋周辺歩道橋設置工事に伴う予備設計業務委託",
-    "winningContractor": "（株）インテコ",
-    "estimatedPrice": "5,850,000 円",
-    "status": "落札",
-    "municipality": "葛城市",
-    "id": "katsuragi-太鼓橋周辺歩道橋設置工事に伴う予備設計業務委託-1772234759285",
-    "announcementDate": "2025-04-01",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/2025-06-13-kekkakouhyou.pdf"
-  },
-  {
-    "title": "當麻新池貯留施設設置工事に伴う測量設計業務委託",
-    "winningContractor": "内外エンジニアリング（株） 奈良営業所",
-    "estimatedPrice": "6,800,000 円",
-    "status": "落札",
-    "municipality": "葛城市",
-    "id": "katsuragi-當麻新池貯留施設設置工事に伴う測量設計業務委託-1772234759285",
-    "announcementDate": "2025-04-01",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/2025-06-13-kekkakouhyou.pdf"
-  },
-  {
-    "title": "葛城インターチェンジ周辺バス停留所予備設計業務委託",
-    "winningContractor": "（株）ウエスコ 奈良営業所",
-    "estimatedPrice": "4,080,000 円",
-    "status": "落札",
-    "municipality": "葛城市",
-    "id": "katsuragi-葛城インターチェンジ周辺バス停留所予備設計業務委託-1772234759285",
-    "announcementDate": "2025-04-01",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/2025-06-13-kekkakouhyou.pdf"
   },
   {
     "title": "當麻小学校図書室他空調設備更新工事",
@@ -10493,16 +7530,6 @@
     "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/2025-5-28-kekkakouhyou3.pdf"
   },
   {
-    "title": "いきいきセンター駐車場拡幅整備工事に係る測量設計業務委託",
-    "winningContractor": "（株）ＫＥＩＳＩＮ 葛城事務所",
-    "estimatedPrice": "7,400,000 円",
-    "status": "落札",
-    "municipality": "葛城市",
-    "id": "katsuragi-いきいきセンター駐車場拡幅整備工事に係る測量設計業務委託-1772234804193",
-    "announcementDate": "2025-04-01",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/2025-5-28-kekkakouhyou3.pdf"
-  },
-  {
     "title": "（仮称）當麻複合施設整備工事に伴う家屋事前調査業務委託",
     "winningContractor": "（株）ＫＥＩＳＩＮ 葛城事務所",
     "estimatedPrice": "5,500,000 円",
@@ -10519,36 +7546,6 @@
     "status": "落札",
     "municipality": "葛城市",
     "id": "katsuragi-第7-508号 市営住宅堂の久保団地空家解体設計委託業務-1772234804193",
-    "announcementDate": "2025-04-01",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/2025-5-28-kekkakouhyou3.pdf"
-  },
-  {
-    "title": "第7-808号 中戸13号線道路改良工事に伴う測量設計業務委託",
-    "winningContractor": "（株）大和測量設計事務所 葛城営業所",
-    "estimatedPrice": "6,300,000 円",
-    "status": "落札",
-    "municipality": "葛城市",
-    "id": "katsuragi-第7-808号 中戸13号線道路改良工事に伴う測量設計業務委託-1772234804193",
-    "announcementDate": "2025-04-01",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/2025-5-28-kekkakouhyou3.pdf"
-  },
-  {
-    "title": "第7-806号 兵家・南今市線道路改良工事に伴う測量設計業務委託",
-    "winningContractor": "（株）ＫＥＩＳＩＮ 葛城事務所",
-    "estimatedPrice": "6,100,000 円",
-    "status": "落札",
-    "municipality": "葛城市",
-    "id": "katsuragi-第7-806号 兵家・南今市線道路改良工事に伴う測量設計業務委託-1772234804193",
-    "announcementDate": "2025-04-01",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/2025-5-28-kekkakouhyou3.pdf"
-  },
-  {
-    "title": "第7-807号 新庄・疋田線道路改良工事伴う測量設計業務委託",
-    "winningContractor": "（株）ＫＥＩＳＩＮ 葛城事務所",
-    "estimatedPrice": "5,200,000 円",
-    "status": "落札",
-    "municipality": "葛城市",
-    "id": "katsuragi-第7-807号 新庄・疋田線道路改良工事伴う測量設計業務委託-1772234804193",
     "announcementDate": "2025-04-01",
     "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/2025-5-28-kekkakouhyou3.pdf"
   },
@@ -10601,46 +7598,6 @@
     "id": "katsuragi-生活保護診療報酬明細書点検業務委託-1772234810586",
     "announcementDate": "2025-04-01",
     "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/2025-05-14-kekkakouhyou3.pdf"
-  },
-  {
-    "title": "ウイルス対策ソフトウェアのライセンス調達",
-    "winningContractor": "キステム（株） 奈良本社",
-    "estimatedPrice": "547,500 円",
-    "status": "落札",
-    "municipality": "葛城市",
-    "id": "katsuragi-ウイルス対策ソフトウェアのライセンス調達-1772234810586",
-    "announcementDate": "2025-04-01",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/2025-05-14-kekkakouhyou3.pdf"
-  },
-  {
-    "title": "レーザープリンター賃貸借業務",
-    "winningContractor": "ＦＬＣＳ（株） 関西支店",
-    "estimatedPrice": "263,500 円",
-    "status": "落札",
-    "municipality": "葛城市",
-    "id": "katsuragi-レーザープリンター賃貸借業務-1772234810586",
-    "announcementDate": "2025-04-01",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/2025-05-14-kekkakouhyou3.pdf"
-  },
-  {
-    "title": "デジタル複合機の賃貸借",
-    "winningContractor": "奈良ＯＡシステム（株）",
-    "estimatedPrice": "40,185 円",
-    "status": "落札",
-    "municipality": "葛城市",
-    "id": "katsuragi-デジタル複合機の賃貸借-1772234810586",
-    "announcementDate": "2025-04-01",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/2025-05-14-kekkakouhyou3.pdf"
-  },
-  {
-    "title": "葛城市学校施設植木剪定・除草・防虫処理・伐採業務",
-    "winningContractor": "（株）中造園",
-    "estimatedPrice": "4,495,000 円",
-    "status": "落札",
-    "municipality": "葛城市",
-    "id": "katsuragi-葛城市学校施設植木剪定・除草・防虫処理・伐採業務-1772234994646",
-    "announcementDate": "2025-04-01",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/R070430.pdf"
   },
   {
     "title": "當麻スポーツセンター電気設備保守点検業務委託",
@@ -10719,36 +7676,6 @@
     "status": "落札",
     "municipality": "葛城市",
     "id": "katsuragi-リサイクル施設補修費等精査業務委託-1772235000309",
-    "announcementDate": "2025-04-01",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/R70428nyuusatubunn.pdf"
-  },
-  {
-    "title": "第7-502号 中道諸鍬線道路改良工事に伴う測量設計業務委託",
-    "winningContractor": "（株）ＫＥＩＳＩＮ 葛城事務所",
-    "estimatedPrice": "6,260,000 円",
-    "status": "落札",
-    "municipality": "葛城市",
-    "id": "katsuragi-第7-502号 中道諸鍬線道路改良工事に伴う測量設計業務委託-1772235000309",
-    "announcementDate": "2025-04-01",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/R70428nyuusatubunn.pdf"
-  },
-  {
-    "title": "第7-503号 兵家・南今市線道路改良工事に伴う建物事前調査業務委託",
-    "winningContractor": "（株）ＫＥＩＳＩＮ 葛城事務所",
-    "estimatedPrice": "1,470,000 円",
-    "status": "落札",
-    "municipality": "葛城市",
-    "id": "katsuragi-第7-503号 兵家・南今市線道路改良工事に伴う建物事前調査業務委託-1772235000309",
-    "announcementDate": "2025-04-01",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/R70428nyuusatubunn.pdf"
-  },
-  {
-    "title": "林道立石線改修工事に伴う測量設計委託",
-    "winningContractor": "（株）ＫＥＩＳＩＮ 葛城事務所",
-    "estimatedPrice": "2,800,000 円",
-    "status": "落札",
-    "municipality": "葛城市",
-    "id": "katsuragi-林道立石線改修工事に伴う測量設計委託-1772235000309",
     "announcementDate": "2025-04-01",
     "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/R70428nyuusatubunn.pdf"
   },
@@ -10853,62 +7780,12 @@
     "link": "https://www.city.gose.nara.jp/cmsfiles/contents/0000001/1024/R070620.pdf"
   },
   {
-    "title": "橋梁架替えに伴う予備設計業務",
-    "winningContractor": "㈱アーバンパイオニア設計 奈良事務所",
-    "estimatedPrice": "¥6,940,000",
-    "status": "落札",
-    "municipality": "御所市",
-    "id": "gose-result-橋梁架替えに伴う予備-1772235303644",
-    "announcementDate": "2025-04-01",
-    "link": "https://www.city.gose.nara.jp/cmsfiles/contents/0000001/1024/R070620.pdf"
-  },
-  {
-    "title": "橋梁定期点検業務",
-    "winningContractor": "㈱CTIウイング 奈良事務所",
-    "estimatedPrice": "¥20,290,000",
-    "status": "落札",
-    "municipality": "御所市",
-    "id": "gose-result-橋梁定期点検業務-1772235303644",
-    "announcementDate": "2025-04-01",
-    "link": "https://www.city.gose.nara.jp/cmsfiles/contents/0000001/1024/R070620.pdf"
-  },
-  {
-    "title": "史跡宮山古墳買上事業に伴う補償鑑定業務",
-    "winningContractor": "㈱倉田総合鑑定",
-    "estimatedPrice": "¥5,680,000",
-    "status": "落札",
-    "municipality": "御所市",
-    "id": "gose-result-史跡宮山古墳買上事業-1772235303644",
-    "announcementDate": "2025-04-01",
-    "link": "https://www.city.gose.nara.jp/cmsfiles/contents/0000001/1024/R070620.pdf"
-  },
-  {
     "title": "御所市営住宅特殊建築物定期点検業務",
     "winningContractor": "辰巳建築設計事務所",
     "estimatedPrice": "¥480,000",
     "status": "落札",
     "municipality": "御所市",
     "id": "gose-result-御所市営住宅特殊建築-1772235303644",
-    "announcementDate": "2025-04-01",
-    "link": "https://www.city.gose.nara.jp/cmsfiles/contents/0000001/1024/R070620.pdf"
-  },
-  {
-    "title": "道路設計に伴う測量業務",
-    "winningContractor": "IT測量",
-    "estimatedPrice": "¥1,710,000",
-    "status": "落札",
-    "municipality": "御所市",
-    "id": "gose-result-道路設計に伴う測量業-1772235303644",
-    "announcementDate": "2025-04-01",
-    "link": "https://www.city.gose.nara.jp/cmsfiles/contents/0000001/1024/R070620.pdf"
-  },
-  {
-    "title": "御所市公共下水道事業計画変更業務",
-    "winningContractor": "日本水工設計㈱ 奈良事務所",
-    "estimatedPrice": "¥11,340,000",
-    "status": "落札",
-    "municipality": "御所市",
-    "id": "gose-result-御所市公共下水道事業-1772235303644",
     "announcementDate": "2025-04-01",
     "link": "https://www.city.gose.nara.jp/cmsfiles/contents/0000001/1024/R070620.pdf"
   },
@@ -10973,26 +7850,6 @@
     "link": "https://www.city.gose.nara.jp/cmsfiles/contents/0000001/1024/R70722kaisatu.pdf"
   },
   {
-    "title": "（仮称）御所市第７分団車庫等整備事業に係る用地測量業務",
-    "winningContractor": "㈱コーダ技研",
-    "estimatedPrice": "4,080,000 円",
-    "status": "落札",
-    "municipality": "御所市",
-    "id": "gose-result-（仮称）御所市第７分-1772235307455",
-    "announcementDate": "2025-04-01",
-    "link": "https://www.city.gose.nara.jp/cmsfiles/contents/0000001/1024/R70722kaisatu.pdf"
-  },
-  {
-    "title": "交通安全対策に伴う測量業務",
-    "winningContractor": "㈱コーダ技研",
-    "estimatedPrice": "4,510,000 円",
-    "status": "落札",
-    "municipality": "御所市",
-    "id": "gose-result-交通安全対策に伴う測-1772235307455",
-    "announcementDate": "2025-04-01",
-    "link": "https://www.city.gose.nara.jp/cmsfiles/contents/0000001/1024/R70722kaisatu.pdf"
-  },
-  {
     "title": "市営住宅北方団地解体工事設計業務",
     "winningContractor": "的場総合設計",
     "estimatedPrice": "3,520,000 円",
@@ -11053,16 +7910,6 @@
     "link": "https://www.city.gose.nara.jp/cmsfiles/contents/0000001/1024/R070820.pdf"
   },
   {
-    "title": "交通安全対策に伴う詳細設計業務",
-    "winningContractor": "㈱東光コンサルタンツ",
-    "estimatedPrice": "5,490,000 円",
-    "status": "落札",
-    "municipality": "御所市",
-    "id": "gose-result-交通安全対策に伴う詳-1772235311282",
-    "announcementDate": "2025-04-01",
-    "link": "https://www.city.gose.nara.jp/cmsfiles/contents/0000001/1024/R070820.pdf"
-  },
-  {
     "title": "小林児童遊園⑦設計業務",
     "winningContractor": "㈱地球号",
     "estimatedPrice": "1,920,000 円",
@@ -11089,26 +7936,6 @@
     "status": "落札",
     "municipality": "御所市",
     "id": "gose-result-ため池改修-1772235313976",
-    "announcementDate": "2025-04-01",
-    "link": "https://www.city.gose.nara.jp/cmsfiles/contents/0000001/1024/R070919.pdf"
-  },
-  {
-    "title": "道路維持",
-    "winningContractor": "戸間組",
-    "estimatedPrice": "3,669,000 円",
-    "status": "落札",
-    "municipality": "御所市",
-    "id": "gose-result-道路維持-1772235313976",
-    "announcementDate": "2025-04-01",
-    "link": "https://www.city.gose.nara.jp/cmsfiles/contents/0000001/1024/R070919.pdf"
-  },
-  {
-    "title": "道路改良",
-    "winningContractor": "㈱かわむら建設",
-    "estimatedPrice": "5,850,000 円",
-    "status": "落札",
-    "municipality": "御所市",
-    "id": "gose-result-道路改良-1772235313976",
     "announcementDate": "2025-04-01",
     "link": "https://www.city.gose.nara.jp/cmsfiles/contents/0000001/1024/R070919.pdf"
   },
@@ -11153,26 +7980,6 @@
     "link": "https://www.city.gose.nara.jp/cmsfiles/contents/0000001/1024/R71020.pdf"
   },
   {
-    "title": "学校建設に伴う用地測量（その２）業務",
-    "winningContractor": "（有）森本測量社",
-    "estimatedPrice": "10,570,000",
-    "status": "落札",
-    "municipality": "御所市",
-    "id": "gose-result-学校建設に伴う用地測-1772235316049",
-    "announcementDate": "2025-04-01",
-    "link": "https://www.city.gose.nara.jp/cmsfiles/contents/0000001/1024/R71020.pdf"
-  },
-  {
-    "title": "水路改良",
-    "winningContractor": "松川組",
-    "estimatedPrice": "2,160,000 円",
-    "status": "落札",
-    "municipality": "御所市",
-    "id": "gose-result-水路改良-1772235319033",
-    "announcementDate": "2025-04-01",
-    "link": "https://www.city.gose.nara.jp/cmsfiles/contents/0000001/1024/R071120.pdf"
-  },
-  {
     "title": "市営住宅(今出団地107号･サン緑町Ⅱ35号･36号)空家修繕",
     "winningContractor": "（有）福本工務店",
     "estimatedPrice": "6,050,000 円",
@@ -11201,16 +8008,6 @@
     "id": "gose-result-御所市小・中学校再編-1772235320540",
     "announcementDate": "2025-04-01",
     "link": "https://www.city.gose.nara.jp/cmsfiles/contents/0000001/1024/R71219kaisatu.pdf"
-  },
-  {
-    "title": "水路設計に伴う測量業務",
-    "winningContractor": "㈱ナンワ",
-    "estimatedPrice": "2,840,000 円",
-    "status": "落札",
-    "municipality": "御所市",
-    "id": "gose-result-水路設計に伴う測量業-1772235322306",
-    "announcementDate": "2025-04-01",
-    "link": "https://www.city.gose.nara.jp/cmsfiles/contents/0000001/1024/R80120kaisatu.pdf"
   },
   {
     "title": "避難所誘導灯設置",
@@ -11323,16 +8120,6 @@
     "link": "https://www.town.tawaramoto.nara.jp/material/files/group/9/20250630.pdf"
   },
   {
-    "title": "令和７年度下水道施設点検業務",
-    "winningContractor": "(株)西日本設計 奈良事務所",
-    "estimatedPrice": "7,770,400",
-    "status": "落札",
-    "municipality": "田原本町",
-    "id": "tawaramoto-result-令和７年度下水道施設-1772235676630",
-    "announcementDate": "2025-04-01",
-    "link": "https://www.town.tawaramoto.nara.jp/material/files/group/9/20250630.pdf"
-  },
-  {
     "title": "田原本中学校校長室空調設備取替業務",
     "winningContractor": "大和電機工業（株）",
     "estimatedPrice": "695,200円",
@@ -11403,57 +8190,6 @@
     "link": "https://www.town.tawaramoto.nara.jp/material/files/group/11/20250428.pdf"
   },
   {
-    "id": "gojo-211633e4",
-    "municipality": "五條市",
-    "title": "令和7年度日用品・雑貨類購入単価契約（令和7年3月27日開札）",
-    "type": "建築",
-    "announcementDate": "2025-03-31",
-    "link": "https://www.city.gojo.lg.jp/soshiki/keiyakukensa/1_1/7/16967.html",
-    "pdfUrl": "https://www.city.gojo.lg.jp/material/files/group/4/kouhyoukaisaturoku_R7nitiyouhin.pdf",
-    "status": "落札",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1"
-  },
-  {
-    "id": "gojo-8e7cc577",
-    "municipality": "五條市",
-    "title": "令和7年度原材料等物品購入単価契約（令和7年3月27日開札）",
-    "type": "建築",
-    "announcementDate": "2025-03-31",
-    "link": "https://www.city.gojo.lg.jp/soshiki/keiyakukensa/1_1/7/16969.html",
-    "pdfUrl": "https://www.city.gojo.lg.jp/material/files/group/4/kouhyoukaisaturiku_R7genzairyou.pdf",
-    "status": "落札",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "winningContractor": "株式会社コーエイ三在営業所, たけや興業株式会社, 福井金物店",
-    "constructionPeriod": "令和7年度中",
-    "description": "令和7年度における原材料等物品（再生クラッシャラン、真砂土、クラッシャラン、砂、セメント、アスファルト常温混合物、Ｕ字溝、ワイヤーメッシュ等）の購入単価契約。",
-    "tags": [
-      "土木",
-      "資材購入"
-    ]
-  },
-  {
-    "id": "gojo-390f31eb",
-    "municipality": "五條市",
-    "title": "令和7年度コピー用紙購入単価契約（令和7年3月28日開札）",
-    "type": "建築",
-    "announcementDate": "2025-03-31",
-    "link": "https://www.city.gojo.lg.jp/soshiki/keiyakukensa/1_1/7/16973.html",
-    "pdfUrl": "https://www.city.gojo.lg.jp/material/files/group/4/kouhyoukaisaturoku_R7copy.pdf",
-    "status": "落札",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "A3：不明、A4：2,585円、B4：3,971円",
-    "winningContractor": "株式会社 大塚商会 ＬＡ関西営業部",
-    "description": "令和7年度におけるコピー用紙（A3、A4、B4）の購入単価契約。条件付き一般競争入札により実施され、全サイズにおいて株式会社大塚商会が落札した。",
-    "tags": [
-      "事務用品",
-      "コピー用紙",
-      "調達"
-    ]
-  },
-  {
     "id": "yamato-koriyama-232055bc",
     "municipality": "大和郡山市",
     "title": "大和郡山市庁舎等総合管理業務",
@@ -11494,16 +8230,6 @@
     "status": "受付中"
   },
   {
-    "id": "tawaramoto-2025000003",
-    "municipality": "田原本町",
-    "title": "後期高齢者の健康診査受診券発送に伴う印刷等の業務",
-    "type": "委託",
-    "announcementDate": "2025-03-28",
-    "biddingDate": "2025-04-14",
-    "link": "https://tawaramoto.efftis.jp/PPI/Public/javaScript:void(0);",
-    "status": "受付中"
-  },
-  {
     "id": "tawaramoto-2025000006",
     "municipality": "田原本町",
     "title": "マンホールポンプ保守点検管理委託業務",
@@ -11517,16 +8243,6 @@
     "id": "tawaramoto-2025000007",
     "municipality": "田原本町",
     "title": "南小学校理科室・保健室空調設備設置業務",
-    "type": "委託",
-    "announcementDate": "2025-03-28",
-    "biddingDate": "2025-04-14",
-    "link": "https://tawaramoto.efftis.jp/PPI/Public/javaScript:void(0);",
-    "status": "受付中"
-  },
-  {
-    "id": "tawaramoto-2025000012",
-    "municipality": "田原本町",
-    "title": "参議院議員通常選挙入場整理券印刷封入等委託業務",
     "type": "委託",
     "announcementDate": "2025-03-28",
     "biddingDate": "2025-04-14",
@@ -11554,32 +8270,12 @@
     "status": "受付中"
   },
   {
-    "id": "tawaramoto-2025000001",
-    "municipality": "田原本町",
-    "title": "広報たわらもと印刷製本等業務",
-    "type": "委託",
-    "announcementDate": "2025-03-19",
-    "biddingDate": "2025-04-01",
-    "link": "https://tawaramoto.efftis.jp/PPI/Public/javaScript:void(0);",
-    "status": "受付中"
-  },
-  {
     "id": "tawaramoto-2025000002",
     "municipality": "田原本町",
     "title": "戸籍振り仮名記載通知書",
     "type": "委託",
     "announcementDate": "2025-03-19",
     "biddingDate": "2025-04-01",
-    "link": "https://tawaramoto.efftis.jp/PPI/Public/javaScript:void(0);",
-    "status": "受付中"
-  },
-  {
-    "id": "tawaramoto-2025000008",
-    "municipality": "田原本町",
-    "title": "コピー用紙",
-    "type": "委託",
-    "announcementDate": "2025-03-19",
-    "biddingDate": "2025-04-14",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/javaScript:void(0);",
     "status": "受付中"
   },
@@ -11706,44 +8402,6 @@
     ]
   },
   {
-    "id": "katsuragi-9ad800f5",
-    "municipality": "葛城市",
-    "title": "マッサージチェアリース業務",
-    "type": "委託",
-    "announcementDate": "2024-11-08",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/8-9-1-2024-1.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/8-9-1-2024-1.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "13,800円／月（消費税及び地方消費税を除く）",
-    "constructionPeriod": "令和7年2月1日（土） から 令和10年1月31日（月） まで",
-    "description": "葛城市が実施するマッサージチェア（2台）のリース業務。既設のマッサージ器が経年劣化により更新が必要となったため、新たな機器をリース契約にて導入する。",
-    "tags": [
-      "リース",
-      "備品"
-    ]
-  },
-  {
-    "id": "gojo-756fab2e",
-    "municipality": "五條市",
-    "title": "令和6年度融雪剤購入単価契約（令和6年10月25日開札）",
-    "type": "建築",
-    "announcementDate": "2024-10-31",
-    "link": "https://www.city.gojo.lg.jp/soshiki/keiyakukensa/1_1/7/16309.html",
-    "pdfUrl": "https://www.city.gojo.lg.jp/material/files/group/4/kouhyoukaisaturokuyuusetuzai.pdf",
-    "status": "落札",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "winningContractor": "福井金物店",
-    "description": "令和6年度における融雪剤（塩化カルシウム、道路凍結防止剤）の購入単価契約。旧五條市内、旧西吉野村内、旧大塔村内の各配達先を対象とした25kg入りの袋単位での購入に関する入札。",
-    "tags": [
-      "融雪剤",
-      "購入",
-      "道路"
-    ]
-  },
-  {
     "id": "nara-pref-29006003060520240009",
     "municipality": "奈良県",
     "title": "奈良公園　公園道照明施設設置工事（奈良公園環境改善事業）　８０８－５",
@@ -11779,66 +8437,6 @@
       "公園",
       "改修",
       "土木"
-    ]
-  },
-  {
-    "id": "katsuragi-ff4deb62",
-    "municipality": "葛城市",
-    "title": "第6－305号 令和6年度葛城市区画線設置工事",
-    "type": "建築",
-    "announcementDate": "2024-10-09",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/7-9-4-2024-1.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/7-9-4-2024-1.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "5,350,000円（消費税及び地方消費税を除く）",
-    "constructionPeriod": "契約日から令和7年2月28日（金）まで",
-    "description": "令和6年度葛城市区画線設置工事。主な工事内容は、区画線工（白線3,525m、グリーンベルト1,950m、路面標示380m）および仮設工（交通誘導警備員12人日）。葛城市内全域を対象とした道路区画線設置等の維持・整備業務。",
-    "tags": [
-      "土木",
-      "道路",
-      "維持管理"
-    ]
-  },
-  {
-    "id": "gojo-63d2745a",
-    "municipality": "五條市",
-    "title": "令和6年度生コンクリート購入単価契約（下期）（令和6年9月25日開札）",
-    "type": "建築",
-    "announcementDate": "2024-09-26",
-    "link": "https://www.city.gojo.lg.jp/soshiki/keiyakukensa/1_1/7/16167.html",
-    "pdfUrl": "https://www.city.gojo.lg.jp/material/files/group/4/kaisaturokuR060925.pdf",
-    "status": "落札",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "40,865円（税込）, 33,880円（税込）, 47,795円（税込）, 40,480円（税込）",
-    "winningContractor": "鍛治金物店, 株式会社コーエイ 三在営業所",
-    "description": "令和6年度生コンクリート購入単価契約（下期）。五條市内の旧地域（旧五條市、旧西吉野村、旧大塔村）における小型車および大型車の生コンクリート納入に係る一般競争入札。",
-    "tags": [
-      "土木",
-      "資材",
-      "契約"
-    ]
-  },
-  {
-    "id": "gojo-83603c0a",
-    "municipality": "五條市",
-    "title": "令和6年度原材料等物品購入単価契約（下期）（令和6年9月25日開札）",
-    "type": "建築",
-    "announcementDate": "2024-09-26",
-    "link": "https://www.city.gojo.lg.jp/soshiki/keiyakukensa/1_1/7/16176.html",
-    "pdfUrl": "https://www.city.gojo.lg.jp/material/files/group/4/kaisaturokuR090625-2.pdf",
-    "status": "落札",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "winningContractor": "（株）コーエイ三在営業所、たけや興業（株）、福井金物店",
-    "constructionPeriod": "令和6年度下期",
-    "description": "令和6年度における原材料等の物品購入単価契約。セメント、瀝青質目地板（エラスタイト）、アスファルト常温混合物、真砂土、砂、砕石（クラッシャラン）、ワイヤーメッシュ、U字溝および蓋などの土木建築用資材を対象とした物品購入入札。",
-    "tags": [
-      "土木",
-      "建築",
-      "資材"
     ]
   },
   {
@@ -11903,26 +8501,6 @@
     ]
   },
   {
-    "id": "katsuragi-08aa24f2",
-    "municipality": "葛城市",
-    "title": "葛城市自動体外式除細動器（AED）賃貸借",
-    "type": "建築",
-    "announcementDate": "2024-08-09",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/5-10-1-2024-1.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/5-10-1-2024-1.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "47,700円／月（消費税及び地方消費税を除く）",
-    "constructionPeriod": "契約日 から 令和11年9月30日まで",
-    "description": "葛城市内8か所の公共施設に自動体外式除細動器（AED）を賃貸借で配置する業務。賃借期間は令和6年10月1日から60か月間。",
-    "tags": [
-      "AED",
-      "賃貸借",
-      "公共施設"
-    ]
-  },
-  {
     "id": "katsuragi-4493891c",
     "municipality": "葛城市",
     "title": "葛城市立就学前施設Wi-Fi 環境等整備業務委託事業",
@@ -11974,26 +8552,6 @@
       "改修",
       "電気",
       "建築"
-    ]
-  },
-  {
-    "id": "katsuragi-d85b4686",
-    "municipality": "葛城市",
-    "title": "デジタルカラー複合機の賃貸借",
-    "type": "建築",
-    "announcementDate": "2024-07-12",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/4-6-01-2024-1.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/4-6-01-2024-1.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "75,709円／月（消費税及び地方消費税を除く）",
-    "constructionPeriod": "契約日から令和11年8月31日まで",
-    "description": "葛城市における老朽化したデジタルカラー複合機の入れ替えに伴う賃貸借業務。本件は地方自治法に基づく長期継続契約として実施される。",
-    "tags": [
-      "ＩＴ",
-      "賃貸借",
-      "事務機器"
     ]
   },
   {
@@ -12056,66 +8614,6 @@
     ]
   },
   {
-    "id": "katsuragi-5327667d",
-    "municipality": "葛城市",
-    "title": "体力づくりセンタートレーニング機器リース契約",
-    "type": "建築",
-    "announcementDate": "2024-06-07",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/3-5-02-2024-1.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/3-5-02-2024-1.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "85,000円／月（消費税及び地方消費税を除く）",
-    "constructionPeriod": "令和6年8月1日から令和11年7月31日まで",
-    "description": "葛城市体力づくりセンターにおけるトレーニング機器のリース契約。パフォーマンスエリプティカル×2台とコードレスリカンベントバイクBFR×2台の計4台を対象とする。",
-    "tags": [
-      "リース",
-      "トレーニング機器",
-      "健康施設"
-    ]
-  },
-  {
-    "id": "katsuragi-3d4e4cbe",
-    "municipality": "葛城市",
-    "title": "葛城市議会ペーパーレス会議システム機器の賃貸借",
-    "type": "建築",
-    "announcementDate": "2024-06-07",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/3-5-03-2024-1.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/3-5-03-2024-1.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "184,000円／月（消費税及び地方消費税を除く）",
-    "constructionPeriod": "令和6年10月1日から令和11年9月30日まで",
-    "description": "葛城市議会におけるペーパーレス会議システム導入に伴う、必要機器（端末18台、収納キャビネット1台、無線アクセスポイント5台、ネットワークスイッチ1台）の60カ月間の賃貸借業務。",
-    "tags": [
-      "ＩＴ",
-      "システム",
-      "賃貸借"
-    ]
-  },
-  {
-    "id": "katsuragi-cc79fdf9",
-    "municipality": "葛城市",
-    "title": "特定健康診査受診勧奨印刷封入封緘業務",
-    "type": "委託",
-    "announcementDate": "2024-06-07",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/3-5-04-2024-1.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/3-5-04-2024-1.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "600,000円（消費税及び地方消費税を除く）",
-    "constructionPeriod": "契約日から令和6年9月4日まで",
-    "description": "葛城市の国民健康保険特定健康診査受診対象者に対し、受診勧奨を行うための印刷物（通知、パンフレット等）の作成、セロ窓付き封筒への封入封緘を行う業務。",
-    "tags": [
-      "印刷",
-      "事務",
-      "保健"
-    ]
-  },
-  {
     "id": "nara-pref-29006003060520240002",
     "municipality": "奈良県",
     "title": "奈良公園　登大路園地他照明実施設計業務委託（奈良公園施設長寿命化対策事業（防災・安全）他）　８３１－委－１他",
@@ -12151,26 +8649,6 @@
       "建築",
       "改修",
       "設備"
-    ]
-  },
-  {
-    "id": "katsuragi-70f39f3e",
-    "municipality": "葛城市",
-    "title": "第6ー806号 葛城IC周辺バス停留場検討業務委託",
-    "type": "委託",
-    "announcementDate": "2024-05-14",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/2-5-07-2024-1.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/2-5-07-2024-1.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "6,090,000円（税抜き）",
-    "constructionPeriod": "契約日から令和6年12月20日まで",
-    "description": "葛城市太田地内における「葛城IC周辺バス停留場検討業務委託」。主な業務内容は、バス停留場の整備に向けた設計業務および測量業務一式。",
-    "tags": [
-      "設計",
-      "測量",
-      "調査"
     ]
   },
   {
@@ -12211,26 +8689,6 @@
       "測量",
       "調査",
       "森林"
-    ]
-  },
-  {
-    "id": "katsuragi-d04aff6f",
-    "municipality": "葛城市",
-    "title": "教育保育施設向け体育指導研修業務委託",
-    "type": "委託",
-    "announcementDate": "2024-05-13",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/2-5-04-2024-1.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/2-5-04-2024-1.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "7,750円／１回当たり（消費税及び地方消費税を除く）",
-    "constructionPeriod": "契約日から令和7年3月31日まで",
-    "description": "葛城市内の公立保育所、こども園、幼稚園において、教育・保育の質向上を目的とし、職員向け体育指導研修と児童向けの体育指導教室を実施する業務の委託。",
-    "tags": [
-      "教育",
-      "研修",
-      "委託"
     ]
   },
   {
@@ -12305,46 +8763,6 @@
     ]
   },
   {
-    "id": "katsuragi-a91ebcb0",
-    "municipality": "葛城市",
-    "title": "中学校教育振興備品（楽器）の購入",
-    "type": "建築",
-    "announcementDate": "2024-04-15",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/1-6-04-2024-11.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/1-6-04-2024-11.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "7,429,000円（消費税及び地方消費税を除く）",
-    "constructionPeriod": "契約日から令和6年8月23日（金）まで",
-    "description": "市立中学校2校の部活動で使用している老朽化した楽器を更改する、中学校教育振興備品（楽器）の購入案件。",
-    "tags": [
-      "教育",
-      "備品購入",
-      "楽器"
-    ]
-  },
-  {
-    "id": "katsuragi-e9652302",
-    "municipality": "葛城市",
-    "title": "葛城市学校給食センターから排出する食物残渣等の堆肥化業務",
-    "type": "委託",
-    "announcementDate": "2024-04-12",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/1-5-03-2024-1.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/1-5-03-2024-1.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "1,914,000円（消費税及び地方消費税を除く）",
-    "constructionPeriod": "契約日 から 令和7年3月31日",
-    "description": "葛城市学校給食センターから排出される食物残渣等を収集・運搬し、堆肥化することで、ごみの減量化及び再生利用の促進を図る業務。",
-    "tags": [
-      "廃棄物",
-      "収集運搬",
-      "リサイクル"
-    ]
-  },
-  {
     "id": "katsuragi-52d092c1",
     "municipality": "葛城市",
     "title": "生活保護診療報酬明細書(レセプト)点検業務委託",
@@ -12362,46 +8780,6 @@
       "医療",
       "点検",
       "事務委託"
-    ]
-  },
-  {
-    "id": "katsuragi-9a68085e",
-    "municipality": "葛城市",
-    "title": "トイレカーの購入",
-    "type": "建築",
-    "announcementDate": "2024-04-12",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/1-5-06-2024-1.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/1-5-06-2024-1.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "15,680,000円（消費税及び地方消費税を除く）",
-    "constructionPeriod": "契約日から令和7年3月21日（金）まで",
-    "description": "葛城市における2個室（洋式便座）小型トイレカー2台の購入業務。条件付一般競争入札（事後審査型）にて実施される。",
-    "tags": [
-      "車両",
-      "物品購入",
-      "トイレ"
-    ]
-  },
-  {
-    "id": "katsuragi-d45d2a24",
-    "municipality": "葛城市",
-    "title": "電気自動車購入",
-    "type": "建築",
-    "announcementDate": "2024-04-12",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/1-5-07-2024-1.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/1-5-07-2024-1.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "11,150,000円（消費税及び地方消費税を除く）",
-    "constructionPeriod": "契約日から令和6年9月27日まで",
-    "description": "葛城市による電気自動車5台の購入案件。条件付一般競争入札（事後審査型）により実施される。",
-    "tags": [
-      "電気自動車",
-      "自動車",
-      "調達"
     ]
   },
   {
@@ -12426,46 +8804,6 @@
     ]
   },
   {
-    "id": "katsuragi-1a73946d",
-    "municipality": "葛城市",
-    "title": "天板拡張器具の購入（中学校分）",
-    "type": "建築",
-    "announcementDate": "2023-12-21",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/05122102.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/05122102.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "4,120,000円（消費税及び地方消費税を除く）",
-    "constructionPeriod": "契約日 から 令和6年2月29日まで",
-    "description": "子ども議会での提案を受け、タブレット端末利用時に机が狭いという課題に対応するため、市内中学校全学年分（1,150個）の机天板拡張器具を購入する業務。",
-    "tags": [
-      "備品",
-      "ＩＴ",
-      "教育"
-    ]
-  },
-  {
-    "id": "katsuragi-a5b7835b",
-    "municipality": "葛城市",
-    "title": "磐城第2保育所及び磐城認定こども園交通誘導員警備業務",
-    "type": "委託",
-    "announcementDate": "2023-12-21",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/051221002.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/051221002.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "10,618,000円（消費税及び地方消費税を除く）",
-    "constructionPeriod": "契約日から令和7年3月31日まで",
-    "description": "磐城第2保育所及び磐城認定こども園における、児童の送迎車両駐車場利用と小学生の登下校時間が重なることによる混雑対策として、交通誘導員を配置し出入口付近の安全対策と混雑整理を行う業務。",
-    "tags": [
-      "警備",
-      "交通誘導",
-      "安全対策"
-    ]
-  },
-  {
     "id": "katsuragi-c6392472",
     "municipality": "葛城市",
     "title": "令和6年度葛城市議会会議録作成等業務委託及び会議録検索システム配信事業",
@@ -12486,86 +8824,6 @@
     ]
   },
   {
-    "id": "katsuragi-0fb8a9a1",
-    "municipality": "葛城市",
-    "title": "新庄健康福祉センターデジタル複合機の賃貸借",
-    "type": "建築",
-    "announcementDate": "2023-12-21",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/0511102.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/0511102.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "25,000円／月（消費税及び地方消費税を除く）",
-    "constructionPeriod": "令和6年3月1日（金）から令和11年2月28日（水）まで",
-    "description": "新庄健康福祉センター事務室で使用しているデジタル複合機の老朽化に伴い、機器の入れ替えを行うための賃貸借契約案件。",
-    "tags": [
-      "賃貸借",
-      "事務機器",
-      "ＩＴ"
-    ]
-  },
-  {
-    "id": "katsuragi-9a4086ec",
-    "municipality": "葛城市",
-    "title": "磐城認定こども園調理室 調理器具の購入",
-    "type": "建築",
-    "announcementDate": "2023-11-10",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/0511101.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/0511101.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "2,680,000円（税抜き）",
-    "constructionPeriod": "契約日から令和6年3月13日まで",
-    "description": "令和6年3月8日竣工予定の「磐城認定こども園調理室」で使用する、包丁、ざる、ミキサー、電子レンジ、炊飯器等の調理器具を調達する案件。",
-    "tags": [
-      "調理器具",
-      "備品購入",
-      "厨房"
-    ]
-  },
-  {
-    "id": "katsuragi-e72c1bb7",
-    "municipality": "葛城市",
-    "title": "防犯カメラシステムの賃貸借",
-    "type": "建築",
-    "announcementDate": "2023-11-10",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/05111003.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/05111003.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "35,000円／月（消費税及び地方消費税を除く）",
-    "constructionPeriod": "令和6年2月1日から令和13年1月31日まで",
-    "description": "葛城市内の犯罪や事故・事件の防止を目的として、危険箇所2か所に防犯カメラを設置する賃貸借契約。地方自治法に基づく長期継続契約であり、履行期間は令和6年2月1日から令和13年1月31日までとなっている。",
-    "tags": [
-      "防犯カメラ",
-      "賃貸借",
-      "防犯"
-    ]
-  },
-  {
-    "id": "katsuragi-c8b44418",
-    "municipality": "葛城市",
-    "title": "リサイクル物品売り払い",
-    "type": "建築",
-    "announcementDate": "2023-10-11",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/101101.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/101101.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "4,652,000円（消費税及び地方消費税を除く）",
-    "constructionPeriod": "令和5年12月1日 から 令和6年3月31日 まで",
-    "description": "葛城市が行うリサイクル物品（缶プレス等）の売払い業務。収集して分別した缶プレス等の金属を売却するもので、条件付一般競争入札（事後審査型）により実施される。",
-    "tags": [
-      "売払い",
-      "リサイクル",
-      "廃棄物"
-    ]
-  },
-  {
     "id": "katsuragi-f116527a",
     "municipality": "葛城市",
     "title": "葛城市クリーンセンターリサイクル施設運転管理及び資源ごみ等収集運搬業務",
@@ -12583,46 +8841,6 @@
       "維持管理",
       "清掃",
       "廃棄物処理"
-    ]
-  },
-  {
-    "id": "katsuragi-fdd473fa",
-    "municipality": "葛城市",
-    "title": "不法投棄防止用監視カメラの購入",
-    "type": "建築",
-    "announcementDate": "2023-09-11",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/0911002.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/0911002.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "1,080,000円（税抜き）",
-    "constructionPeriod": "契約日から令和6年1月31日まで",
-    "description": "葛城市内（竹内他地内）の不法投棄のおそれがある場所に設置するため、不法投棄防止用監視カメラを購入する業務。",
-    "tags": [
-      "監視カメラ",
-      "防犯",
-      "購入"
-    ]
-  },
-  {
-    "id": "katsuragi-f31a5112",
-    "municipality": "葛城市",
-    "title": "市道区画線設置工事",
-    "type": "建築",
-    "announcementDate": "2023-09-11",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/0911003.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/0911003.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "7,061,000円（消費税及び地方消費税を除く）",
-    "constructionPeriod": "契約日から令和6年2月29日まで",
-    "description": "葛城市内における市道区画線設置工事。主な工事内容は、区画線設置工（白線 L=5210.3m、緑線 L=1922m）の施工。",
-    "tags": [
-      "土木",
-      "道路",
-      "工事"
     ]
   },
   {
@@ -12686,26 +8904,6 @@
     ]
   },
   {
-    "id": "katsuragi-74554a93",
-    "municipality": "葛城市",
-    "title": "ファイルサーバー等の賃貸借",
-    "type": "建築",
-    "announcementDate": "2023-08-08",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/09066.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/09066.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "561,000円／月（消費税及び地方消費税を除く）",
-    "constructionPeriod": "令和6年2月1日 から 令和11年1月31日まで",
-    "description": "葛城市が保有する基幹系、LGWAN系、インターネット系の各系統ファイルサーバー及びアクティブディレクトリ用サーバーの更改業務。導入から5年以上経過し故障リスクやOSサポート期限が到来しているため、安定稼働を目的として賃貸借方式にて機器を更改する。",
-    "tags": [
-      "ＩＴ",
-      "サーバー",
-      "賃貸借"
-    ]
-  },
-  {
     "id": "katsuragi-0c793b8e",
     "municipality": "葛城市",
     "title": "各児童公園遊具等修繕",
@@ -12763,46 +8961,6 @@
       "空調",
       "改修",
       "建築"
-    ]
-  },
-  {
-    "id": "katsuragi-4b0b180f",
-    "municipality": "葛城市",
-    "title": "第5-305号 市道区画線設置工事",
-    "type": "建築",
-    "announcementDate": "2023-07-14",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/7-14-3.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/7-14-3.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "2,615,000円（消費税及び地方消費税を除く）",
-    "constructionPeriod": "契約日から令和5年11月30日まで",
-    "description": "葛城市内における市道区画線設置工事。主な工事概要は、白線L=2,897m、文字L=78.8mの設置工事。",
-    "tags": [
-      "土木",
-      "道路",
-      "工事"
-    ]
-  },
-  {
-    "id": "katsuragi-40672cd2",
-    "municipality": "葛城市",
-    "title": "教育用パソコン機器賃貸借",
-    "type": "建築",
-    "announcementDate": "2023-07-13",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/7-13-2.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/7-13-2.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "1,852,760円/月（消費税及び地方消費税を除く）",
-    "constructionPeriod": "令和5年10月1日から令和10年9月30日まで",
-    "description": "葛城市立小中学校における教育用パソコン機器の賃貸借業務。令和5年5月16日に執行された「教育用パソコン更改業務」の入札にて決定した業者による納入物件を対象とし、60ヶ月間の賃貸借契約を行うもの。",
-    "tags": [
-      "ＩＴ",
-      "賃貸借",
-      "教育"
     ]
   },
   {
@@ -12903,26 +9061,6 @@
       "改修",
       "電気",
       "空調"
-    ]
-  },
-  {
-    "id": "katsuragi-d2277462",
-    "municipality": "葛城市",
-    "title": "葛城市広報編集装置賃貸借業務",
-    "type": "委託",
-    "announcementDate": "2023-06-08",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/3-1-1.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/3-1-1.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "16,800円／月（消費税及び地方消費税を除く）",
-    "constructionPeriod": "契約日から令和10年6月30日まで",
-    "description": "葛城市の広報編集作業（DTP作業）で使用するデスクトップ端末2台を、5年間（60ヶ月）のリース契約により導入する賃貸借業務。",
-    "tags": [
-      "ＩＴ",
-      "賃貸借",
-      "事務用品"
     ]
   },
   {
@@ -13046,26 +9184,6 @@
     ]
   },
   {
-    "id": "katsuragi-bef2c89b",
-    "municipality": "葛城市",
-    "title": "議場等音響映像システムタッチパネルインターフェイス等の賃貸借",
-    "type": "建築",
-    "announcementDate": "2023-05-11",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/2-1-051.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/2-1-051.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "58,000円／月（消費税及び地方消費税を除く）",
-    "constructionPeriod": "契約日から令和10年8月31日まで",
-    "description": "葛城市議場等で使用している音響映像システムについて、タッチパネルインターフェイス等の生産終了に伴う障害発生時の復旧困難を回避するため、関連機器の更新を行うもの。更新費用をリース料として支払う賃貸借契約。",
-    "tags": [
-      "音響映像",
-      "ＩＴ",
-      "賃貸借"
-    ]
-  },
-  {
     "id": "katsuragi-75aa38fa",
     "municipality": "葛城市",
     "title": "磐城認定こども園調理室等整備工事",
@@ -13084,26 +9202,6 @@
       "建築",
       "改修",
       "設計"
-    ]
-  },
-  {
-    "id": "katsuragi-1311c765",
-    "municipality": "葛城市",
-    "title": "葛城市立新庄中学校運動場北側擁壁改修工事",
-    "type": "建築",
-    "announcementDate": "2023-04-13",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/1-7-1.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/1-7-1.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "170,847,000円（税抜き）",
-    "constructionPeriod": "契約日 から 令和6年3月28日（木）まで",
-    "description": "葛城市新庄他地内における運動場北側擁壁の改修工事。老朽化した既存擁壁を撤去し、新たに同様の擁壁を築造する土木一式工事（電気設備および給水設備改修工事を含む）。",
-    "tags": [
-      "土木",
-      "改修",
-      "建築"
     ]
   },
   {
@@ -13189,66 +9287,6 @@
     ]
   },
   {
-    "id": "katsuragi-a4e93e06",
-    "municipality": "葛城市",
-    "title": "大型提示装置の購入（小学校1・2年分）",
-    "type": "建築",
-    "announcementDate": "2023-04-12",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/1-6-04.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/1-6-04.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "13,985,000円（消費税及び地方消費税を除く）",
-    "constructionPeriod": "契約日から令和5年8月25日まで",
-    "description": "令和4年度に導入した中学校全学年、小学校3～6年生に続き、小学校1・2年生の全ての普通教室に電子黒板機能付きの大型提示装置および書画カメラを調達する業務。",
-    "tags": [
-      "ＩＴ",
-      "備品",
-      "教育"
-    ]
-  },
-  {
-    "id": "katsuragi-db61ef12",
-    "municipality": "葛城市",
-    "title": "教育用パソコン更改業務",
-    "type": "委託",
-    "announcementDate": "2023-04-12",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/1-6-05.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/1-6-05.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "128,104,000円（消費税及び地方消費税を除く）",
-    "constructionPeriod": "契約日 から 令和5年9月30日まで",
-    "description": "市内小中学校の教職員が使用する校務用パソコンの賃貸借契約終了に伴う更改業務およびセキュリティ対策機器の導入。物品納入業者を決定後、別途リース業者も入札により決定し、60か月の長期継続契約を行う。",
-    "tags": [
-      "ＩＴ",
-      "機器導入",
-      "賃貸借"
-    ]
-  },
-  {
-    "id": "katsuragi-dde6bede",
-    "municipality": "葛城市",
-    "title": "教育保育施設体育指導研修業務委託",
-    "type": "委託",
-    "announcementDate": "2023-04-12",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/1-6-06.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/1-6-06.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "1,225,000円（消費税及び地方消費税を除く）",
-    "constructionPeriod": "契約日から令和6年3月31日まで",
-    "description": "市内公立保育所、こども園、幼稚園において、教育・保育の質向上を目的に、職員向け体育指導研修と児童向けの体育指導教室を実施する業務委託。",
-    "tags": [
-      "教育",
-      "保育",
-      "研修"
-    ]
-  },
-  {
     "id": "katsuragi-11f7b173",
     "municipality": "葛城市",
     "title": "葛城市立白鳳中学校音楽室空調設備更新工事",
@@ -13285,66 +9323,6 @@
     "tags": [
       "施設管理",
       "業務委託"
-    ]
-  },
-  {
-    "id": "katsuragi-d07e0b5f",
-    "municipality": "葛城市",
-    "title": "葛城市学校給食センター総合メンテナンス保守管理事業委託業務",
-    "type": "委託",
-    "announcementDate": "2023-04-11",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/1-5-02.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/1-5-02.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "854,000円/月（消費税及び地方消費税を除く）",
-    "constructionPeriod": "契約日から令和8年4月30日まで",
-    "description": "葛城市学校給食センターにおける、衛生設備ポンプ、ボイラー、受水槽、各種空調機（空冷電気式ヒートポンプ、空冷ガスヒートポンプ等）、ガスコージェネレーションシステム、自動制御装置等の保守点検業務委託。",
-    "tags": [
-      "保守管理",
-      "空調",
-      "設備"
-    ]
-  },
-  {
-    "id": "katsuragi-de4ee43d",
-    "municipality": "葛城市",
-    "title": "リサイクル物品の売り払い",
-    "type": "建築",
-    "announcementDate": "2023-04-11",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/1-5-4.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/1-5-4.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "4,297,000円（消費税及び地方消費税を除く）",
-    "constructionPeriod": "契約日から令和5年7月31日まで",
-    "description": "葛城市が行うリサイクル物品（缶プレス等）の売払い業務委託。収集して分別した缶プレス等の金属を売却する業務。",
-    "tags": [
-      "リサイクル",
-      "売払い",
-      "廃棄物"
-    ]
-  },
-  {
-    "id": "katsuragi-99e02d71",
-    "municipality": "葛城市",
-    "title": "学校給食用食器の購入",
-    "type": "建築",
-    "announcementDate": "2023-04-11",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/1-5-6.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/1-5-6.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "3,577,000円（消費税及び地方消費税を除く）",
-    "constructionPeriod": "契約日から令和5年8月4日まで",
-    "description": "葛城市学校給食センターにおける、老朽化した食器の入替業務。食器の使用が5年以上経過し、微細な傷により細菌検査で陽性反応が出るようになったため、今年度は汁椀の購入を実施する。",
-    "tags": [
-      "購入",
-      "学校給食",
-      "備品"
     ]
   },
   {
