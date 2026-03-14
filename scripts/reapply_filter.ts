@@ -16,10 +16,14 @@ function main() {
 
     const originalCount = items.length;
     const filteredItems = items.filter(item => {
-        // Here we test both title and previously saved 'gyoshu' if any,
-        // but since we only have 'title' and 'type' available in the new struct,
-        // let's just pass title. Gyoshu is usually included in the title or we can skip it.
-        return shouldKeepItem(item.title);
+        const textToMatch = [
+            item.title,
+            item.description || '',
+            item.winningContractor || '',
+            ...(item.tags || [])
+        ].join(' ');
+        
+        return shouldKeepItem(textToMatch);
     });
 
     const newCount = filteredItems.length;

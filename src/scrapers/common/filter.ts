@@ -64,10 +64,9 @@ export function isExclusionTarget(text: string): boolean {
 
 /**
  * 建築・コンサル系として保持すべき案件か判定する
- * (土木系キーワードを含まず、かつ建築、設計、調査、コンサル等のキーワードを含む場合に推奨)
  */
-export function shouldKeepItem(title: string, gyoshu?: string): boolean {
-    const target = `${title} ${gyoshu || ''}`;
+export function shouldKeepItem(title: string, otherText?: string): boolean {
+    const target = `${title} ${otherText || ''}`;
 
     // 除外キーワードが含まれていれば除外
     if (isExclusionTarget(target)) {
