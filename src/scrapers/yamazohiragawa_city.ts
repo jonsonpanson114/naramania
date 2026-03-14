@@ -35,15 +35,13 @@ async function scrapeSmallTown(url: string, municipality: string): Promise<Biddi
         });
         const $ = cheerio.load(res.data);
 
-        // 平群町のページ構造: <li><span class="article_title"><a href="...">Title</a></span><span class="article_date">Date</span></li>
-        const ulItems = $('ul li').toArray();
-        for (const element of ulItems) {
+        // 平群町のページ構造: <li class="article_item"><span class="article_title"><a href="...">Title</a></span>...</li>
+        const articleItems = $('.article_item, .article_title').closest('li').toArray();
+        for (const element of articleItems) {
             const row = $(element);
-            const linkEl = row.find('a').first();
+            const linkEl = row.find('.article_title a, a').first();
             const title = linkEl ? linkEl.text().trim().replace(/\s+/g, ' ') : '';
-            const dateText = row.find('.article_date').text().trim();
-
-            if (!title) continue;
+            if (!title || title === '本文へ' || title === '拡大' || title === 'サイトマップ') continue;
             if (shouldSkip(title)) continue;
 
             const hrefVal = linkEl ? linkEl.attr('href') : '';
