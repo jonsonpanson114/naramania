@@ -58,8 +58,19 @@ async function scrapeFromRss(rssUrl: string, municipality: Municipality): Promis
 
             if (!title || !link) return;
 
-            // 入札・契約・落札・工事に関する項目のみ抽出（ポジティブフィルタ）
+            // ①入札・契約・落札・工事に関する項目のみ抽出（ポジティブフィルタ）
             if (!isRealBiddingItem(title)) return;
+
+            // ②「入札そのもの」ではないページを除外
+            const NON_BIDDING_PATTERNS = [
+                '参加資格審査', '資格申請', '指定工事店', 'パブリックコメント',
+                'ダウンロードについて', '申請・変更', '申請について', 'について（お知らせ）',
+            ];
+            if (NON_BIDDING_PATTERNS.some(p => title.includes(p))) return;
+
+            // ③共通NGワードフィルター
+            const { shouldKeepItem } = require('./common/filter');
+            if (!shouldKeepItem(title)) return;
 
             // ステータス判定
             let status: '受付中' | '締切間近' | '受付終了' | '落札' = '受付中';
@@ -68,8 +79,6 @@ async function scrapeFromRss(rssUrl: string, municipality: Municipality): Promis
             if (title.includes('落札') || title.includes('結果')) {
                 status = '落札';
                 winningContractor = title.split('：').pop()?.trim();
-            } else if (title.includes('資格審査')) {
-                status = '受付終了';
             }
 
             const announcementDate = parseRssDate(pubDate);
