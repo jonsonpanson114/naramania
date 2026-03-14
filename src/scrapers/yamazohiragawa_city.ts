@@ -35,16 +35,30 @@ async function scrapeSmallTown(url: string, municipality: string): Promise<Biddi
         });
         const $ = cheerio.load(res.data);
 
-        // 平群町のページ構造: <li class="article_item"><span class="article_title"><a href="...">Title</a></span>...</li>
-        const articleItems = $('.article_item, .article_title').closest('li').toArray();
-        for (const element of articleItems) {
-            const row = $(element);
-            const linkEl = row.find('.article_title a, a').first();
-            const title = linkEl ? linkEl.text().trim().replace(/\s+/g, ' ') : '';
-            if (!title || title === '本文へ' || title === '拡大' || title === 'サイトマップ') continue;
-            if (shouldSkip(title)) continue;
+        // 平群町：入札情報ページのリンクのみを対象とする
+        // ナビゲーション・インフォリンクなどを除外する厳格なフィルタ適用
+        const NON_BIDDING_NAV = [
+            '地図でさがす', 'くらしの情報', 'しごとの情報', '観光情報', '町政情報',
+            '本文へ', 'ご利用ガイド', 'サイトマップ', 'Foreign language', '拡大',
+            '組織でさがす', 'カレンダーでさがす', 'リンク・著作権', '個人情報保護',
+            'アクセシビリティ', '広告バナー', '町役場へのアクセス', 'メールでのお問い合わせ',
+            '入札参加資格', '申請', '入札について',
+        ];
 
-            const hrefVal = linkEl ? linkEl.attr('href') : '';
+        const articleItems = $('a').toArray();
+        for (const element of articleItems) {
+            const linkEl = $(element);
+            const title = linkEl.text().trim().replace(/\s+/g, ' ');
+            if (!title || title.length < 6) continue;
+            if (NON_BIDDING_NAV.some(kw => title.includes(kw))) continue;
+
+            // 入札・工事・設計・委託・修繕・改修・解体を含むものだけ通す
+            const POSITIVE = ['入札', '公告', '工事', '設計', '委託', '修繕', '改修', '解体', '開札結果', '落札'];
+            if (!POSITIVE.some(kw => title.includes(kw))) continue;
+
+            if (!shouldKeepItem(title)) continue;
+
+            const hrefVal = linkEl.attr('href') || '';
             if (!hrefVal) continue;
 
             // 入札結果と入札公告を分類

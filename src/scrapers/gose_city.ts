@@ -40,20 +40,32 @@ async function scrapeGoseCity(): Promise<BiddingItem[]> {
             const link = $(el).find('link').attr('href') || '';
             if (!title) return;
 
-            if (isRealBiddingItem(title)) {
-                const winningContractor = title.includes('落札') ? title.split('：').pop()?.trim() : undefined;
-                items.push({
-                    id: `gose-${title.slice(0, 20)}`,
-                    municipality: '御所市',
-                    title,
-                    type: classifyType(title),
-                    announcementDate: parseRssDate(new Date().toString()), // Fallback to now for new entries
-                    link: link,
-                    status: title.includes('落札') ? '落札' : '受付中',
-                    winningContractor: winningContractor,
-                    winnerType: classifyWinner(winningContractor || '')
-                });
-            }
+            // ①入札・工事関連キーワードがあるか確認
+            if (!isRealBiddingItem(title)) return;
+
+            // ②「入札そのもの」ではないページを除外（ダウンロード案内、申請ガイドなど）
+            const NON_BIDDING_PATTERNS = [
+                'ダウンロードについて', '入札参加資格', '申請・変更', '申請について',
+                '一般競争入札公告（業務委託等）', // 汎用案内ページ
+            ];
+            if (NON_BIDDING_PATTERNS.some(p => title.includes(p))) return;
+
+            // ③ NGワードフィルター（共通）
+            const { shouldKeepItem } = require('./common/filter');
+            if (!shouldKeepItem(title)) return;
+
+            const winningContractor = title.includes('落札') ? title.split('：').pop()?.trim() : undefined;
+            items.push({
+                id: `gose-${title.slice(0, 20)}`,
+                municipality: '御所市',
+                title,
+                type: classifyType(title),
+                announcementDate: parseRssDate(new Date().toString()),
+                link: link,
+                status: title.includes('落札') ? '落札' : '受付中',
+                winningContractor: winningContractor,
+                winnerType: classifyWinner(winningContractor || '')
+            });
         });
 
     } catch (e: any) {
