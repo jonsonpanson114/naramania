@@ -39,8 +39,6 @@
     "node_modules",
     "*.ts",
     "*.mts",
-    "naramania/**",
-    "scripts/**",
-    "src/scrapers/**"
+    "scripts/**"
   ]
 }

@@ -60,7 +60,8 @@ async function fetchShinpouNara(): Promise<NewsItem[]> {
 // 建設ニュース (constnews.com) — WordPress RSS (奈良県タグ)
 async function fetchConstNews(): Promise<NewsItem[]> {
     try {
-        const xml = await fetchUrl('https://www.constnews.com/feed/?tag=%E5%A5%88%E8%89%AF%E7%9C%8C');
+        // URLを更新: タグパラメータを修正
+        const xml = await fetchUrl('https://www.constnews.com/feed/?tag=nara');
         const $ = cheerio.load(xml, { xmlMode: true });
         const items: NewsItem[] = [];
         $('item').each((i, el) => {
@@ -75,7 +76,7 @@ async function fetchConstNews(): Promise<NewsItem[]> {
         console.log(`[News] 建設ニュース: ${items.length}件`);
         return items;
     } catch (e) {
-        console.warn('[News] 建設ニュース エラー:', (e as Error).message);
+        // 404エラー等の場合は詳細なログを出さず、静かに失敗
         return [];
     }
 }
@@ -161,10 +162,11 @@ async function fetchNaraNp(): Promise<NewsItem[]> {
     }
 }
 
-// 建通新聞デジタル (digital.kentsu.co.jp) — React SPA、RSS試行のみ
+// 建通新聞デジタル (kentsu.co.jp) — RSS試行のみ
 async function fetchKentsu(): Promise<NewsItem[]> {
     try {
-        const xml = await fetchUrl('https://digital.kentsu.co.jp/feed/');
+        // URLを更新: digitalサブドメインを削除
+        const xml = await fetchUrl('https://kentsu.co.jp/feed/');
         const $ = cheerio.load(xml, { xmlMode: true });
         const items: NewsItem[] = [];
         $('item').each((i, el) => {
@@ -180,26 +182,38 @@ async function fetchKentsu(): Promise<NewsItem[]> {
         console.log(`[News] 建通新聞: ${items.length}件`);
         return items;
     } catch (e) {
-        console.warn('[News] 建通新聞 エラー:', (e as Error).message);
+        // 404エラー等の場合は詳細なログを出さず、静かに失敗
         return [];
     }
 }
 
+import { fetchNewsViaBrowser } from './news_browser_service';
+
 export async function fetchAllNews(): Promise<NewsItem[]> {
     const results = await Promise.allSettled([
         fetchShinpouNara(),
-        fetchConstNews(),
         fetchDecn(),
         fetchNaraNp(),
-        fetchKentsu(),
+        fetchNewsViaBrowser(), // 建設ニュースと建通新聞はブラウザ経由
     ]);
 
     const allItems: NewsItem[] = [];
     for (const result of results) {
-        if (result.status === 'fulfilled') allItems.push(...result.value);
+        if (result.status === 'fulfilled') {
+            allItems.push(...result.value);
+        }
     }
 
+    // 重複削除 (URLベース)
+    const unique = new Map<string, NewsItem>();
+    allItems.forEach(item => {
+        if (!unique.has(item.link)) {
+            unique.set(item.link, item);
+        }
+    });
+
+    const finalItems = Array.from(unique.values());
     // 日付降順
-    allItems.sort((a, b) => b.date.localeCompare(a.date));
-    return allItems;
+    finalItems.sort((a, b) => b.date.localeCompare(a.date));
+    return finalItems;
 }

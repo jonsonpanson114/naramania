@@ -18,34 +18,58 @@ export function isRealBiddingItem(title: string): boolean {
     return BIDDING_POSITIVE_KEYWORDS.some(kw => title.includes(kw));
 }
 
-export const CIVIL_ENGINEERING_KEYWORDS = [
-    '道路', '橋梁', '河川', '砂防', '舗装', '法面', 'ダム',
+export const EXCLUSION_KEYWORDS = [
+    // --- 土木・道路・インフラ系 (建築以外) ---
+    '道路', '橋梁', '河川', '砂防', '舗装', '法面', 'ダム', '護岸', '浚渫',
     '排水路', '側溝', '水路', '堤防', 'トンネル', 'ガードレール',
     '標識', '街灯', '除草', '清掃', '下水道', '上水道',
-    '橋', '土木', '砂利', 'アスファルト', '信号機',
+    '橋', '土木', '砂利', 'アスファルト', '信号機', '街路樹', '擁壁',
+    '防護柵', '区画線', '路面清掃', '除雪', '融雪', '消雪',
+    '土砂', '落石', '汚泥', '交通',
+
+    // --- 測量・地質・環境調査系 ---
     '測量', '地質', '用地', '補償', '境界', '物件調査',
-    '交通量', '騒音', '振動', '環境調査', 'アセスメント'
+    '交通量', '騒音', '振動', '環境調査', 'アセスメント',
+    '土地評価', '土壌汚染', '家屋調査', '流量観測',
+
+    // --- 物品・備品・消耗品・リース系 ---
+    '備品', '消耗品', '購入', 'リース', '賃貸借', '物品', 
+    '事務用品', '文房具', '用紙', '封筒', '印章', '印刷', '製本',
+    '家具', '机', '椅子', 'ロッカー', '棚', 'キャビネット',
+    '被服', '制服', '作業服', '寝具', 'タオル', 'テント',
+    '燃料', 'ガソリン', '軽油', '灯油', '重油', 'プロパンガス', '高圧ガス',
+    '医薬品', '試薬', '医療用品', '介護用品', '工業薬品', '厨房機器',
+    'ＯＡ機器', 'パソコン', 'ＰＣ', 'サーバー', '周辺機器', 'プリンタ', 'コピー機',
+    'ソフトウェア', 'ライセンス', '保守契約', '通信機器', '無線機',
+    '看板', '掲示板', '案内板', '車両', '特装車', '乗用車', '搬送',
+    '自動車', '自転車', 'タイヤ', '部品購入', '楽器', '体育用品',
+    '消防用品', '防災用品', '非常食', '記念品', '贈答品', '日用品',
+    'バス', 'タクシー', '送迎',
+
+    // --- その他一般ノイズ・役務 (建築・設計以外) ---
+    'マラソン', '職員採用', '広報', '官報', '給食', '警備', '受付', 
+    '補助金', '助成金', 'セミナー', '研修', 'イベント委託',
+    'システム開発', '保守管理', 'ポータルサイト', '健康診断'
 ];
 
 /**
- * 案件名や業種に土木系キーワードが含まれているか判定する
+ * 除外キーワードが含まれているか判定する
  * @param text 判定対象のテキスト
- * @returns 土木系であれば true
+ * @returns 除外対象であれば true
  */
-export function isCivilEngineering(text: string): boolean {
+export function isExclusionTarget(text: string): boolean {
     if (!text) return false;
-    return CIVIL_ENGINEERING_KEYWORDS.some(keyword => text.includes(keyword));
+    return EXCLUSION_KEYWORDS.some(keyword => text.includes(keyword));
 }
 
 /**
  * 建築・コンサル系として保持すべき案件か判定する
- * (土木系キーワードを含まず、かつ建築、設計、調査、コンサル等のキーワードを含む場合に推奨)
  */
-export function shouldKeepItem(title: string, gyoshu?: string): boolean {
-    const target = `${title} ${gyoshu || ''}`;
+export function shouldKeepItem(title: string, otherText?: string): boolean {
+    const target = `${title} ${otherText || ''}`;
 
-    // 土木系キーワードが含まれていれば除外
-    if (isCivilEngineering(target)) {
+    // 除外キーワードが含まれていれば除外
+    if (isExclusionTarget(target)) {
         return false;
     }
 

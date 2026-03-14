@@ -4,7 +4,6 @@ import crypto from 'crypto';
 import { shouldKeepItem } from './common/filter';
 
 // 生駒市の入札情報公開システム（epi-cloud）
-// 構造: 機関選択フォーム → 工事/コンサル ボタン → 案件一覧
 const EPI_CLOUD_FORM = 'https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680';
 const EPI_BASE = 'https://www.epi-cloud.fwd.ne.jp';
 
@@ -29,12 +28,20 @@ function classifyType(title: string, gyoshu: string): BiddingType {
 async function extractFromResultsPage(page: any, status: '受付中' | '落札'): Promise<BiddingItem[]> {
     const items: BiddingItem[] = [];
     try {
-        // 案件一覧テーブルを探す（data行はリンクを含む）
-        const links = await page.locator('table a').all();
-        if (links.length === 0) {
-            console.log('[生駒市] 案件リンクが見つかりません（現在公開中の案件なし）');
-            return items;
+        let links: any[] = [];
+        await page.waitForTimeout(10000); 
+
+        const frames = page.frames();
+        for (const f of frames) {
+            try {
+                const found = await f.locator('table a').all().catch(() => []);
+                if (found.length > links.length) {
+                    links = found;
+                }
+            } catch (e) {}
         }
+
+        console.log(`[生駒市] 結果フレーム発見: リンク数 ${links.length}`);
 
         for (const link of links) {
             const text = (await link.textContent())?.trim() || '';
@@ -45,17 +52,16 @@ async function extractFromResultsPage(page: any, status: '受付中' | '落札')
 
             const fullLink = href.startsWith('http') ? href : `${EPI_BASE}${href}`;
             const row = link.locator('xpath=ancestor::tr').first();
-            const cells = await row.locator('td').all();
+            const cells = await row.locator('td').all().catch(() => []);
 
             let dateText = '';
             let gyoshu = '';
             if (cells.length >= 3) {
-                dateText = (await cells[cells.length - 1].innerText()).trim();
-                gyoshu = (await cells[1].innerText()).trim();
+                dateText = (await cells[cells.length - 1].innerText().catch(() => '')).trim();
+                gyoshu = (await cells[1]?.innerText().catch(() => '') || '').trim();
             }
 
             if (!shouldKeepItem(text, gyoshu)) {
-                console.log(`[生駒市] スキップ（ノイズ）: ${text}`);
                 continue;
             }
 
@@ -84,16 +90,8 @@ export class IkomaCityScraper implements Scraper {
 
         try {
             const page = await browser.newPage();
+            page.setDefaultTimeout(120000);
 
-            // フォームページに移動
-            console.log('[生駒市] epi-cloudフォームにアクセス中...');
-            const res = await page.goto(EPI_CLOUD_FORM, { waitUntil: 'domcontentloaded', timeout: 30000 });
-            if (!res || res.status() >= 400) {
-                throw new Error(`HTTP ${res?.status()}: epi-cloudにアクセスできません`);
-            }
-            await page.waitForTimeout(2000);
-
-            // 対象カテゴリ（工事・コンサル）
             const categories = [
                 { btnText: '工事', status: '受付中' as const },
                 { btnText: 'コンサル', status: '受付中' as const },
@@ -101,49 +99,75 @@ export class IkomaCityScraper implements Scraper {
 
             for (const { btnText, status } of categories) {
                 try {
-                    // フォームページに戻る
-                    await page.goto(EPI_CLOUD_FORM, { waitUntil: 'domcontentloaded', timeout: 30000 });
-                    await page.waitForTimeout(1500);
+                    console.log(`\n[生駒市] --- ${btnText} カテゴリ開始 ---`);
+                    await page.goto(EPI_CLOUD_FORM, { waitUntil: 'load' });
+                    await page.waitForTimeout(10000);
 
-                    // カテゴリボタンをクリック → KK000ShowAction（検索フォーム付き一覧）へ遷移
-                    await page.getByText(btnText, { exact: true }).click({ timeout: 5000 });
-                    await page.waitForLoadState('domcontentloaded', { timeout: 15000 }).catch(() => {});
-                    await page.waitForTimeout(1500);
+                    // 1. カテゴリをクリック（サイドバーのリンクを優先）
+                    const catSelector = `span:has-text("${btnText}"), a:has-text("${btnText}"), td:has-text("${btnText}")`;
+                    await page.locator(catSelector).first().click({ force: true, timeout: 30000 });
+                    console.log(`[生駒市] ${btnText} をクリック。`);
+                    await page.waitForTimeout(20000);
 
-                    console.log(`[生駒市] ${btnText}: URL=${page.url()}`);
-
-                    // フレームが完全に読み込まれるまで待機
-                    await page.waitForLoadState('load', { timeout: 20000 }).catch(() => {});
-                    await page.waitForTimeout(3000);
-
-                    // koukai_mainフレームのHTML本文を取得
-                    const mainFrame = page.frames().find(f => f.url().includes('koukai_main'));
-                    if (mainFrame) {
-                        await mainFrame.waitForLoadState('load', { timeout: 10000 }).catch(() => {});
-                        const html = await mainFrame.content();
-                        // body部分だけ抽出（最大3000文字）
-                        const bodyMatch = html.match(/<body[^>]*>([\s\S]{0,3000})/i);
-                        console.log(`[生駒市] ${btnText}: koukai_main body=${bodyMatch ? bodyMatch[1].replace(/\s+/g, ' ') : 'なし'}`);
+                    // 2. メニューをクリック（全フレームを徹底探索・全てのパターンを網羅）
+                    let menuFound = false;
+                    for (const frame of page.frames()) {
+                        // サイドバー (frmLEFT等) と メイン (frmRIGHT等) 両方をチェック
+                        const menuSelectors = [
+                            'a:has-text("発注情報の検索")', 
+                            'a:has-text("発注情報検索")',
+                            'img[alt*="発注情報検索"]',
+                            'td:has-text("発注情報")',
+                            'span:has-text("発注情報")'
+                        ];
+                        
+                        for (const sel of menuSelectors) {
+                            const entry = frame.locator(sel).first();
+                            if (await entry.count() > 0) {
+                                console.log(`[生駒市] メニュー発見: ${sel} (Frame: ${frame.name()})`);
+                                await entry.click({ force: true, timeout: 30000 });
+                                menuFound = true;
+                                break;
+                            }
+                        }
+                        if (menuFound) break;
                     }
 
-                    // KK000ShowAction上の検索フォームを空のまま送信して全件表示
-                    // epi-cloudはinput[type="button"]を使うことが多い
-                    const searchBtn = page.locator('input[value*="検索"], input[value*="検　索"], button:has-text("検索")').first();
-                    if (await searchBtn.count() > 0) {
-                        console.log(`[生駒市] ${btnText}: 検索ボタンをクリック`);
-                        await searchBtn.click({ timeout: 5000 }).catch(() => {});
-                        await page.waitForLoadState('domcontentloaded', { timeout: 20000 }).catch(() => {});
-                        await page.waitForSelector('table', { timeout: 15000 }).catch(() => {});
-                        await page.waitForTimeout(2000);
-                    } else {
-                        console.log(`[生駒市] ${btnText}: 検索ボタンなし、現在のページをそのまま解析`);
-                        await page.waitForSelector('table', { timeout: 15000 }).catch(() => {});
-                        await page.waitForTimeout(1000);
+                    if (!menuFound) {
+                        console.warn(`[生駒市] ${btnText}: メニューが見つかりません。`);
+                        continue;
                     }
 
-                    const items = await extractFromResultsPage(page, status);
-                    allItems.push(...items);
-                    console.log(`[生駒市] ${btnText}: ${items.length}件`);
+                    await page.waitForTimeout(15000);
+
+                    // 3. 検索ボタン（「検索」の文字が入っているinput, button, imgを全探索）
+                    let searchExecuted = false;
+                    const searchSelectors = [
+                        'input[value*="検索"]',
+                        'button:has-text("検索")',
+                        'img[alt*="検索"]',
+                        'a:has-text("検索")'
+                    ];
+
+                    for (const frame of page.frames()) {
+                        for (const sel of searchSelectors) {
+                            const btn = frame.locator(sel).first();
+                            if (await btn.count() > 0) {
+                                console.log(`[生駒市] 検索ボタン発見: ${sel} (Frame: ${frame.name()})`);
+                                await btn.click({ force: true, timeout: 30000 });
+                                searchExecuted = true;
+                                await page.waitForTimeout(15000);
+                                const items = await extractFromResultsPage(frame, status);
+                                allItems.push(...items);
+                                break;
+                            }
+                        }
+                        if (searchExecuted) break;
+                    }
+
+                    if (!searchExecuted) {
+                        console.warn(`[生駒市] ${btnText}: 検索ボタンが見つかりません。`);
+                    }
 
                 } catch (e: any) {
                     console.warn(`[生駒市] ${btnText} エラー:`, e.message?.split('\n')[0]);
@@ -156,7 +180,7 @@ export class IkomaCityScraper implements Scraper {
             await browser.close();
         }
 
-        console.log(`[生駒市] 合計 ${allItems.length} 件`);
+        console.log(`[生駒市] 合計 ${allItems.length} 件取得`);
         return allItems;
     }
 }

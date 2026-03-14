@@ -11,7 +11,6 @@ export async function GET() {
             headers: { 'Cache-Control': 'public, s-maxage=900, stale-while-revalidate=1800' },
         });
     } catch (error) {
-        console.error('[API/news] エラー:', error);
-        return NextResponse.json([], { status: 500 });
+        return NextResponse.json([], { status: 500, error: error instanceof Error ? error.message : 'Unknown error' });
     }
 }

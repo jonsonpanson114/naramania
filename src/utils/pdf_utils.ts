@@ -50,6 +50,22 @@ export async function downloadAndExtractText(url: string): Promise<PDFData | nul
     }
 }
 
+export async function downloadPDFBuffer(url: string): Promise<Buffer | null> {
+    try {
+        const response = await axios.get(url, {
+            responseType: 'arraybuffer',
+            timeout: 15000,
+            headers: {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+            }
+        });
+        return Buffer.from(response.data);
+    } catch (error: any) {
+        console.error(`Error downloading PDF from ${url}:`, error.message || error);
+        return null;
+    }
+}
+
 // Utility for testing or saving local copies if needed
 export async function saveTempPdf(buffer: Buffer, filename: string): Promise<string> {
     const tempDir = path.join(process.cwd(), 'temp_pdfs');

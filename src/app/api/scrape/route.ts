@@ -20,8 +20,7 @@ export async function POST() {
             scrapedAt: new Date().toISOString(),
         });
     } catch (error) {
-        console.error('Scrape API Error:', error);
-        return NextResponse.json({ error: 'Scraping failed' }, { status: 500 });
+        return NextResponse.json({ error: 'Scraping failed', details: error instanceof Error ? error.message : 'Unknown error' }, { status: 500 });
     }
 }
 
@@ -41,7 +40,6 @@ export async function GET() {
             lastUpdated: fs.statSync(jsonPath).mtime.toISOString(),
         });
     } catch (error) {
-        console.error('Scrape GET Error:', error);
-        return NextResponse.json({ error: 'Failed to load data' }, { status: 500 });
+        return NextResponse.json({ error: 'Failed to load data', details: error instanceof Error ? error.message : 'Unknown error' }, { status: 500 });
     }
 }

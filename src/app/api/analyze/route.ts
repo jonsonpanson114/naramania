@@ -22,7 +22,6 @@ export async function POST(request: NextRequest) {
             return NextResponse.json({ error: 'Analysis failed - check API key' }, { status: 500 });
         }
     } catch (error) {
-        console.error('Analyze API Error:', error);
-        return NextResponse.json({ error: 'Analysis failed' }, { status: 500 });
+        return NextResponse.json({ error: 'Analysis failed', details: error instanceof Error ? error.message : 'Unknown error' }, { status: 500 });
     }
 }

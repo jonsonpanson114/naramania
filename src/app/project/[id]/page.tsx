@@ -24,7 +24,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
             item = allItems.find(i => i.id === id) || null;
         }
     } catch (error) {
-        console.error('Error loading project data:', error);
+        // エラー時はnullを返す
     }
 
     if (!item) {

@@ -7,9 +7,9 @@ const BASE_URL = 'https://www.city.kashihara.nara.jp';
 
 // 入札予報ページ（テーブル形式: 契約番号|案件名|公告書PDF|登録業種|地域区分|設計図書掲載日）
 const YOHO_PAGES = [
-    { url: `${BASE_URL}/jigyosha/nyusatsu_keiyaku/1/7/8273.html`, label: '工事' },
     { url: `${BASE_URL}/jigyosha/nyusatsu_keiyaku/1/7/12117.html`, label: '委託' },
-    { url: `${BASE_URL}/jigyosha/nyusatsu_keiyaku/1/7/12118.html`, label: '発掘調査・植栽管理' },
+    { url: `${BASE_URL}/jigyosha/nyusatsu_keiyaku/1/7/12149.html`, label: '役務・物品' },
+    { url: `${BASE_URL}/jigyosha/nyusatsu_keiyaku/1/7/16438.html`, label: 'クリーンセンター運営委託' },
 ];
 
 // プロポーザルページ（リンク形式: 案件番号+案件名がリンクテキスト、日付はh2見出し）
@@ -17,9 +17,11 @@ const PROPOSAL_URL = `${BASE_URL}/jigyosha/nyusatsu_keiyaku/1/7/8272.html`;
 
 // 令和7年度入札結果ページ（テーブル形式: 契約番号|案件名|公表開札録PDF、業種列なし、日付はh2見出し）
 const KEKKA_PAGES = [
+    { url: `${BASE_URL}/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18369.html`, label: '役務結果' },
     { url: `${BASE_URL}/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html`, label: '工事結果' },
-    { url: `${BASE_URL}/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18375.html`, label: '委託結果' },
     { url: `${BASE_URL}/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18373.html`, label: '発掘調査等結果' },
+    { url: `${BASE_URL}/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18375.html`, label: '委託結果' },
+    { url: `${BASE_URL}/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/19190.html`, label: '随意契約委託結果' },
 ];
 
 // 業種（登録業種）に基づくスキップキーワード（入札予報テーブル用）

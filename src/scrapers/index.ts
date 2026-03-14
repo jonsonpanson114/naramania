@@ -16,7 +16,11 @@ import { KawanishiCityScraper } from './kawanishi_city';
 import { MiyakeCityScraper } from './miyake_city';
 import { YamazomuraScraper, HiragawaScraper } from './yamazohiragawa_city';
 import { AndoCityScraper } from './ando_city';
+import { UdaCityScraper } from './uda_city';
 import { TakatoriTownScraper, IkarugaTownScraper } from './takatori_ikaruga';
+import { SangoTownScraper } from './sango_town';
+import { OjiTownScraper } from './oji_town';
+import { OyodoTownScraper } from './oyodo_town';
 import { BiddingItem } from '../types/bidding';
 import fs from 'fs';
 import path from 'path';
@@ -36,6 +40,7 @@ async function main() {
         new GoseCityScraper(),
         new TenriCityScraper(),
         new SakuraiCityScraper(),
+        new UdaCityScraper(),
         new TawaramotoTownScraper(),
         new KoryoTownScraper(),
         new KashibaCityScraper(),
@@ -46,88 +51,70 @@ async function main() {
         new AndoCityScraper(),
         new TakatoriTownScraper(),
         new IkarugaTownScraper(),
+        new SangoTownScraper(),
+        new OjiTownScraper(),
+        new OyodoTownScraper(),
     ];
 
-    const allItems: BiddingItem[] = [];
+    const outputPath = path.join(process.cwd(), 'scraper_result.json');
+    const seen = new Map<string, BiddingItem>();
+
+    // Load existing data
+    if (fs.existsSync(outputPath)) {
+        try {
+            const content = fs.readFileSync(outputPath, 'utf-8');
+            const existingItems: BiddingItem[] = JSON.parse(content);
+            existingItems.forEach(item => seen.set(item.id, item));
+        } catch (e) {
+            console.warn('既存データの読み込みに失敗しました。');
+        }
+    }
 
     for (const scraper of scrapers) {
         console.log(`\n--- ${scraper.municipality} 開始 ---`);
         try {
             const items = await scraper.scrape();
             console.log(`→ ${scraper.municipality}: ${items.length}件取得`);
-            allItems.push(...items);
+            
+            // Merge immediately
+            items.forEach(item => {
+                const existing = seen.get(item.id);
+                if (!existing) {
+                    seen.set(item.id, item);
+                } else {
+                    if (item.status === '落札' && existing.status === '受付中') existing.status = '落札';
+                    if (item.winningContractor && !existing.winningContractor) existing.winningContractor = item.winningContractor;
+                    if (item.biddingDate && !existing.biddingDate) existing.biddingDate = item.biddingDate;
+                    if (item.announcementDate > existing.announcementDate) existing.announcementDate = item.announcementDate;
+                }
+            });
+
+            // Save after each municipality (incremental save)
+            const currentUnique = Array.from(seen.values());
+            currentUnique.sort((a, b) => {
+                const dateA = a.announcementDate ? new Date(a.announcementDate).getTime() : 0;
+                const dateB = b.announcementDate ? new Date(b.announcementDate).getTime() : 0;
+                return dateB - dateA;
+            });
+            fs.writeFileSync(outputPath, JSON.stringify(currentUnique, null, 2), 'utf-8');
+            console.log(`[${scraper.municipality}] データを保存しました。合計: ${currentUnique.length}件`);
+
         } catch (error) {
             console.error(`✗ ${scraper.municipality} 失敗:`, error);
         }
     }
 
-    const outputPath = path.join(process.cwd(), 'scraper_result.json');
-
-    // 既存データを読み込んで、AI抽出済みや落札者ありのものを保護する
-    let existingItems: BiddingItem[] = [];
-    if (fs.existsSync(outputPath)) {
-        try {
-            const content = fs.readFileSync(outputPath, 'utf-8');
-            existingItems = JSON.parse(content);
-        } catch (e) {
-            console.warn('既存データの読み込みに失敗しました。');
-        }
-    }
-
-    // 重複除外 & マージ
-    const seen = new Map<string, BiddingItem>();
-
-    // 既存データを先にMapに入れる（AI抽出フラグや落札情報を優先するため）
-    existingItems.forEach(item => {
-        seen.set(item.id, item);
-    });
-
-    // 新しくスクレイピングしたデータをマージ
-    allItems.forEach(item => {
-        const existing = seen.get(item.id);
-        if (!existing) {
-            seen.set(item.id, item);
-        } else {
-            // 既存がある場合、情報のマージを試みる
-            // 落札ステータスへの変更
-            if (item.status === '落札' && existing.status === '受付中') {
-                existing.status = '落札';
-            }
-            // 落札業者の追記（既存にない場合のみ）
-            if (item.winningContractor && !existing.winningContractor) {
-                existing.winningContractor = item.winningContractor;
-            }
-            // biddingDateの補完
-            if (item.biddingDate && !existing.biddingDate) {
-                existing.biddingDate = item.biddingDate;
-            }
-        }
-    });
-
-    const unique = Array.from(seen.values());
-
-    // 公告日の降順でソート
-    unique.sort((a, b) => {
-        const dateA = a.announcementDate ? new Date(a.announcementDate).getTime() : 0;
-        const dateB = b.announcementDate ? new Date(b.announcementDate).getTime() : 0;
-        return dateB - dateA;
-    });
-
     console.log('\n=== 集計完了 ===');
-    console.log(`新規取得: ${allItems.length} 件`);
-    console.log(`合計: ${unique.length} 件 (既存含めマージ後)`);
-
-    // 保存
-    fs.writeFileSync(outputPath, JSON.stringify(unique, null, 2), 'utf-8');
-    console.log(`結果を保存: ${outputPath}`);
+    const finalUnique = Array.from(seen.values());
+    console.log(`最終合計: ${finalUnique.length} 件`);
 
     // 内訳表示
     const byMunicipality: Record<string, number> = {};
-    unique.forEach(item => {
+    finalUnique.forEach(item => {
         byMunicipality[item.municipality] = (byMunicipality[item.municipality] || 0) + 1;
     });
     console.log('\n自治体別件数:');
-    Object.entries(byMunicipality).forEach(([m, count]) => {
+    Object.entries(byMunicipality).sort((a, b) => b[1] - a[1]).forEach(([m, count]) => {
         console.log(`  ${m}: ${count}件`);
     });
 }

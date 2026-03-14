@@ -21,7 +21,7 @@ export default async function Home() {
       allItems = JSON.parse(fileContent);
     }
   } catch (error) {
-    console.error('Error loading scraper results:', error);
+    // エラー時は空配列を返す
   }
 
   // Sort by announcement date descending
@@ -62,6 +62,26 @@ export default async function Home() {
           <StatsCard label="本日更新" value={newArrivals} unit="件" subtext="新着案件" delay={0.2} />
           <StatsCard label="AI 抽出" value={aiExtractedCount} unit="件" subtext="インテリジェンス化" delay={0.3} />
           <StatsCard label="AI 除外" value={aiCleanedCount} unit="件" subtext="土木・不要案件" delay={0.4} />
+        </div>
+ 
+        {/* Municipality Distribution */}
+        <div className="mb-12">
+          <h3 className="text-sm font-bold text-secondary mb-4 tracking-[0.2em] font-serif uppercase flex items-center gap-2">
+            <span className="w-4 h-px bg-secondary opacity-30"></span> Coverage Status
+          </h3>
+          <div className="flex flex-wrap gap-2">
+            {Object.entries(allItems.reduce((acc, item) => {
+              acc[item.municipality] = (acc[item.municipality] || 0) + 1;
+              return acc;
+            }, {} as Record<string, number>))
+              .sort((a, b) => b[1] - a[1])
+              .map(([m, count]) => (
+                <div key={m} className="bg-white/50 backdrop-blur-sm border border-border/40 px-3 py-1.5 rounded-xl flex items-center gap-2 shadow-sm hover:shadow-md transition-all group">
+                  <span className="text-[11px] font-serif font-bold text-primary group-hover:text-accent transition-colors">{m}</span>
+                  <span className="text-[9px] bg-secondary/10 text-secondary px-1.5 py-0.5 rounded-md font-sans font-bold">{count}</span>
+                </div>
+              ))}
+          </div>
         </div>
 
         {/* Quick Insights Navigation */}

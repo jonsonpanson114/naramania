@@ -1,0 +1,8 @@
+--- Verify Ikoma Start ---
+1. Page Loaded. Clicking span:工事
+2. Frames: 3
+3. koukai_main found. URL: https://www.epi-cloud.fwd.ne.jp/koukai/do/koukai_main
+4. Clicking "発注情報の検索"
+5. After menu click URL: https://www.epi-cloud.fwd.ne.jp/koukai/do/KK401ShowAction
+6. Clicking Search button
+7. Success! Rows found: 29

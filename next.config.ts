@@ -5,9 +5,6 @@ const nextConfig: NextConfig = {
     // スクレイパー・テストスクリプトはsrc外にあるためビルド時の型チェックをスキップ
     ignoreBuildErrors: true,
   },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
 };
 
 export default nextConfig;

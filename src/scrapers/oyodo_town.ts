@@ -1,0 +1,55 @@
+import axios from 'axios';
+import * as cheerio from 'cheerio';
+import { BiddingItem, Scraper } from '../types/bidding';
+import { shouldKeepItem } from './common/filter';
+
+const OYODO_URLS = [
+    'https://www.town.oyodo.lg.jp/contents_detail.php?frmId=218',  // 公告
+    'https://www.town.oyodo.lg.jp/contents_detail.php?frmId=1718', // 令和7年度結果
+    'https://www.town.oyodo.lg.jp/contents_detail.php?frmId=1608', // 令和6年度結果
+];
+
+export class OyodoTownScraper implements Scraper {
+    municipality: '大淀町' = '大淀町';
+
+    async scrape(): Promise<BiddingItem[]> {
+        const items: BiddingItem[] = [];
+        
+        for (const url of OYODO_URLS) {
+            try {
+                const res = await axios.get(url, {
+                    headers: { 'User-Agent': 'Mozilla/5.0' },
+                    timeout: 15000,
+                });
+                const $ = cheerio.load(res.data);
+
+                $('a').each((i, el) => {
+                    const text = $(el).text().trim();
+                    const href = $(el).attr('href') || '';
+                    
+                    if (text.length > 5 && (text.includes('入札') || text.includes('公告') || text.includes('結果') || href.includes('.pdf'))) {
+                        if (!shouldKeepItem(text)) return;
+
+                        const isResult = text.includes('結果') || url.includes('1718') || url.includes('1608');
+                        const status = isResult ? '落札' : '受付中';
+                        const linkUrl = href.startsWith('http') ? href : 'https://www.town.oyodo.lg.jp/' + href;
+
+                        items.push({
+                            id: `oyodo-town-${i}-${Math.random().toString(36).slice(2, 5)}`,
+                            municipality: '大淀町',
+                            title: text,
+                            type: '建築',
+                            announcementDate: new Date().toISOString().split('T')[0],
+                            link: linkUrl,
+                            status: status,
+                        });
+                    }
+                });
+
+            } catch (e: any) {
+                console.error(`[大淀町] エラー (${url}):`, e.message || e);
+            }
+        }
+        return items;
+    }
+}
