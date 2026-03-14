@@ -62,28 +62,6 @@
     "extractionSource": "gemini_3.1"
   },
   {
-    "id": "nara-pref-29001013050520250347",
-    "municipality": "奈良県",
-    "title": "一般国道１６９号他　現場技術業務委託（防災安全交付金（交安）（重点）他）　第　８－Ｐ４－１３－１－委－１他　号",
-    "type": "コンサル",
-    "announcementDate": "2026-03-05",
-    "biddingDate": "2026-03-19",
-    "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29001013050520250347",
-    "status": "受付中",
-    "winnerType": "設計事務所"
-  },
-  {
-    "id": "nara-pref-29001013051020250244",
-    "municipality": "奈良県",
-    "title": "第２－Ｄ－Ｇ１－委－１号　（都）城廻り線　井戸観測業務（無電柱化推進事業（街路））",
-    "type": "コンサル",
-    "announcementDate": "2026-03-05",
-    "biddingDate": "2026-03-30",
-    "link": "http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=29001013051020250244",
-    "status": "受付中",
-    "winnerType": "設計事務所"
-  },
-  {
     "id": "nara-city-0000002279",
     "municipality": "奈良市",
     "title": "西消防署自家給油取扱所新築工事",
@@ -1233,28 +1211,6 @@
     ]
   },
   {
-    "id": "kashihara-result-5073001097",
-    "municipality": "橿原市",
-    "title": "AI活用サーバ等調達設置業務",
-    "type": "委託",
-    "announcementDate": "2025-11-19",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18369.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073001097k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "奈良ＯＡシステム㈱ 橿原支店",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "10,945,000円 (消費税10%含む)",
-    "constructionPeriod": "契約日の翌日 から 令和 8年 3月31日",
-    "description": "橿原市八木町地内における、ＡＩ活用サーバ等の調達および設置業務。",
-    "tags": [
-      "ＩＴ",
-      "調達",
-      "設置"
-    ]
-  },
-  {
     "id": "tawaramoto-2025121501",
     "municipality": "田原本町",
     "title": "法貴寺ゲート他改修工事",
@@ -2097,91 +2053,6 @@
     "link": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7349/No20-2.pdf",
     "status": "落札",
     "winningContractor": "中村建築事務所"
-  },
-  {
-    "id": "kashihara-result-5073000673",
-    "municipality": "橿原市",
-    "title": "橿原市役所本庁舎等で使用する電力調達業務（グループ1）",
-    "type": "委託",
-    "announcementDate": "2025-07-24",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18369.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000673k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "関西電力株式会社",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "constructionPeriod": "令和7年10月1日から令和8年10月11日まで",
-    "description": "橿原市役所本庁舎等で使用する電力調達業務（グループ①）",
-    "tags": [
-      "電力",
-      "調達",
-      "公共サービス"
-    ]
-  },
-  {
-    "id": "kashihara-result-5073000724",
-    "municipality": "橿原市",
-    "title": "橿原市役所本庁舎等で使用する電力調達業務（グループ2）",
-    "type": "委託",
-    "announcementDate": "2025-07-24",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18369.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000724k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "関西電力㈱",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "constructionPeriod": "令和7年10月1日から令和8年10月9日まで",
-    "description": "橿原市役所本庁舎等で使用する電力調達業務（グループ②）",
-    "tags": [
-      "電力",
-      "調達",
-      "業務"
-    ],
-    "estimatedPrice": "公表していません"
-  },
-  {
-    "id": "kashihara-result-5073000675",
-    "municipality": "橿原市",
-    "title": "橿原市役所本庁舎等で使用する電力調達業務（グループ3）",
-    "type": "委託",
-    "announcementDate": "2025-07-24",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18369.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000675k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "関西電力㈱",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "constructionPeriod": "令和7年10月1日から令和8年9月30日まで",
-    "description": "橿原市役所本庁舎等で使用する電力調達業務（グループ③）",
-    "tags": [
-      "電力",
-      "調達",
-      "サービス"
-    ]
-  },
-  {
-    "id": "kashihara-result-5073000676",
-    "municipality": "橿原市",
-    "title": "橿原市役所本庁舎等で使用する電力調達業務（グループ4）",
-    "type": "委託",
-    "announcementDate": "2025-07-24",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18369.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000676k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "関西電力株式会社",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "constructionPeriod": "令和7年10月1日から令和8年9月30日まで",
-    "description": "橿原市役所本庁舎等で使用する電力調達業務（グループ④）",
-    "tags": [
-      "電力",
-      "調達",
-      "業務"
-    ]
   },
   {
     "id": "kashihara-result-5073000622",
@@ -4439,26 +4310,6 @@
       "解体",
       "住宅",
       "建築"
-    ]
-  },
-  {
-    "id": "katsuragi-4493891c",
-    "municipality": "葛城市",
-    "title": "葛城市立就学前施設Wi-Fi 環境等整備業務委託事業",
-    "type": "委託",
-    "announcementDate": "2024-08-09",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/5-10-2-2024-1.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/5-10-2-2024-1.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "6,057,400円（消費税及び地方消費税を除く）",
-    "constructionPeriod": "契約日から令和7年1月10日まで",
-    "description": "市内すべての公立就学前施設（幼稚園4か所、こども園1か所、保育所2か所）におけるWi-Fi環境の整備、および今後導入予定の園務支援システムで活用するタブレット端末等の調達・設定等を一括して行う業務委託。",
-    "tags": [
-      "ＩＴ",
-      "通信",
-      "機器調達"
     ]
   },
   {
