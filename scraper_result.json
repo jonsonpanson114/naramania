@@ -1,14 +1,5 @@
 [
   {
-    "id": "平群町-Microsoft365整備業務に係る一",
-    "municipality": "平群町",
-    "title": "Microsoft365整備業務に係る一般競争入札（条件付）公告",
-    "type": "建築",
-    "announcementDate": "2026-03-13",
-    "link": "https://www.town.heguri.nara.jp/soshiki/5/17187.html",
-    "status": "受付中"
-  },
-  {
     "id": "平群町-平群南小学校・平群中学校屋内運動場改修工",
     "municipality": "平群町",
     "title": "平群南小学校・平群中学校屋内運動場改修工事に係る開札結果",
@@ -393,15 +384,6 @@
       "設計",
       "空調"
     ]
-  },
-  {
-    "id": "yamato-koriyama-85450c27",
-    "municipality": "大和郡山市",
-    "title": "地域スポーツ会館自動体外式除細動器",
-    "type": "建築",
-    "announcementDate": "2026-02-20",
-    "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsu/R7/17353.html",
-    "status": "受付中"
   },
   {
     "id": "tenri-4ae2e734",
@@ -1001,28 +983,6 @@
       "設計",
       "改修",
       "建築"
-    ]
-  },
-  {
-    "id": "kashihara-result-5073001202",
-    "municipality": "橿原市",
-    "title": "令和8年度生活保護受給者診療報酬明細点検業務及び健康管理支援事業委託業務",
-    "type": "委託",
-    "announcementDate": "2025-12-18",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18369.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073001202k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "㈱ＳＹオフィス",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "798,160円 (消費税10%含む)",
-    "constructionPeriod": "令和8年4月1日から令和9年3月31日まで",
-    "description": "令和8年度における生活保護受給者の診療報酬明細（レセプト）点検業務および健康管理支援事業に関する委託業務。",
-    "tags": [
-      "医療",
-      "業務委託",
-      "健康"
     ]
   },
   {
@@ -1907,16 +1867,6 @@
     "winnerType": "ゼネコン"
   },
   {
-    "id": "yamato-koriyama-812811c5",
-    "municipality": "大和郡山市",
-    "title": "市施設消防用設備等保守点検業務",
-    "type": "委託",
-    "announcementDate": "2025-07-25",
-    "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsunooshirase/r7/16810.html",
-    "status": "落札",
-    "winningContractor": "株式会社 文政"
-  },
-  {
     "id": "nara-city-0000002032",
     "municipality": "奈良市",
     "title": "第１０号（古市）市営住宅及び第１９号（梅園）市営住宅解体工事に伴う建築設計業務委託",
@@ -2028,48 +1978,6 @@
     "winningContractor": "中村建築事務所"
   },
   {
-    "id": "kashihara-result-5073000622",
-    "municipality": "橿原市",
-    "title": "橿原市議会議場等映像配信システム業務",
-    "type": "委託",
-    "announcementDate": "2025-07-23",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18369.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000622k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "神戸綜合速記㈱",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "constructionPeriod": "令和7年9月1日から令和8年8月31日まで",
-    "description": "橿原市議会議場等映像配信システム業務",
-    "tags": [
-      "映像配信",
-      "システム",
-      "業務"
-    ]
-  },
-  {
-    "id": "kashihara-result-5073000699",
-    "municipality": "橿原市",
-    "title": "橿原市制70周年記念事業委託業務",
-    "type": "委託",
-    "announcementDate": "2025-07-23",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18369.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000699k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "㈱日本旅行 奈良支店",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "constructionPeriod": "契約日の翌日から令和8年3月31日まで",
-    "description": "橿原市制70周年記念事業委託業務",
-    "tags": [
-      "委託",
-      "イベント",
-      "記念事業"
-    ]
-  },
-  {
     "id": "kashihara-result-5073000686",
     "municipality": "橿原市",
     "title": "藤原宮跡仮設トイレ設置管理業務",
@@ -2090,28 +1998,6 @@
       "設置"
     ],
     "estimatedPrice": "2,585,000円"
-  },
-  {
-    "id": "kashihara-result-5073000745",
-    "municipality": "橿原市",
-    "title": "ICT支援員業務",
-    "type": "委託",
-    "announcementDate": "2025-07-23",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18369.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000745k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "株式会社ベネッセコーポレーション 小中学校事業本部",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "6,969,270円",
-    "constructionPeriod": "令和7年9月1日から令和8年8月31日まで",
-    "description": "ICT支援員業務",
-    "tags": [
-      "ICT",
-      "支援",
-      "業務"
-    ]
   },
   {
     "id": "katsuragi-361e5093",
@@ -2145,16 +2031,6 @@
     "status": "受付中"
   },
   {
-    "id": "yamato-koriyama-2f9d4382",
-    "municipality": "大和郡山市",
-    "title": "市施設消防用設備等保守点検業務",
-    "type": "委託",
-    "announcementDate": "2025-07-08",
-    "biddingDate": "2025-07-25",
-    "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsu/R7/16761.html",
-    "status": "受付中"
-  },
-  {
     "id": "yamato-koriyama-cde73d85",
     "municipality": "大和郡山市",
     "title": "史跡郡山城跡整備基本計画策定支援業務",
@@ -2162,33 +2038,6 @@
     "announcementDate": "2025-07-04",
     "biddingDate": "2025-07-11",
     "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsu/R7/16652.html",
-    "status": "受付中"
-  },
-  {
-    "id": "yamato-koriyama-08ef6215",
-    "municipality": "大和郡山市",
-    "title": "開札日時",
-    "type": "建築",
-    "announcementDate": "2025-07-03",
-    "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsu/R7/16768.html",
-    "status": "受付中"
-  },
-  {
-    "id": "yamato-koriyama-a69a8d82",
-    "municipality": "大和郡山市",
-    "title": "入札説明書等",
-    "type": "建築",
-    "announcementDate": "2025-07-03",
-    "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsu/R7/16768.html",
-    "status": "受付中"
-  },
-  {
-    "id": "yamato-koriyama-ce0924bb",
-    "municipality": "大和郡山市",
-    "title": "参加申請書等",
-    "type": "建築",
-    "announcementDate": "2025-07-03",
-    "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsu/R7/16768.html",
     "status": "受付中"
   },
   {
@@ -2270,24 +2119,6 @@
     "link": "https://www.city.yamatotakada.nara.jp/soshikikarasagasu/keiyakukanrishitsu/nyusatsu_keiyaku/1/9099.html",
     "status": "落札",
     "winningContractor": "株式会社石田組"
-  },
-  {
-    "id": "kashihara-proposal-5073000716",
-    "municipality": "橿原市",
-    "title": "藤原宮跡ARアプリ作成業務 (圧縮ファイル: 967.1KB)",
-    "type": "委託",
-    "announcementDate": "2025-06-27",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/7/8272.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000716.zip",
-    "status": "受付中",
-    "description": "PDF parse failed or empty.",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "scraper",
-    "tags": [
-      "AR",
-      "アプリ",
-      "ＩＴ"
-    ]
   },
   {
     "id": "kashihara-result-5071000510",
@@ -2401,27 +2232,6 @@
     "estimatedPrice": "663,300円"
   },
   {
-    "id": "kashihara-result-5073000532",
-    "municipality": "橿原市",
-    "title": "庁内電話IP化設備運用委託業務",
-    "type": "委託",
-    "announcementDate": "2025-06-24",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18369.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000532k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "株式会社バルテック",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "constructionPeriod": "契約日の翌日 から 令和12年 3月31日",
-    "description": "庁内電話IP化設備運用委託業務",
-    "tags": [
-      "電話",
-      "IP化",
-      "運用委託"
-    ]
-  },
-  {
     "id": "kashihara-result-5073000534",
     "municipality": "橿原市",
     "title": "市内公園遊具安全点検業務",
@@ -2495,15 +2305,6 @@
     "status": "受付中"
   },
   {
-    "id": "yamato-koriyama-e46fa9f6",
-    "municipality": "大和郡山市",
-    "title": "条件付一般競争入札の結果（マイナンバーカード交付予約およびカード管理システム構築業務）",
-    "type": "委託",
-    "announcementDate": "2025-06-16",
-    "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsunooshirase/r7/16674.html",
-    "status": "落札"
-  },
-  {
     "id": "yamato-koriyama-2f727137",
     "municipality": "大和郡山市",
     "title": "大和郡山市バリアフリー特定事業計画改定業務一般競争入札開札結果について",
@@ -2511,33 +2312,6 @@
     "announcementDate": "2025-06-13",
     "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsunooshirase/r7/16667.html",
     "status": "落札"
-  },
-  {
-    "id": "yamato-koriyama-d0649d5b",
-    "municipality": "大和郡山市",
-    "title": "開札日時",
-    "type": "建築",
-    "announcementDate": "2025-06-12",
-    "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsu/R7/16649.html",
-    "status": "受付中"
-  },
-  {
-    "id": "yamato-koriyama-2e8b72ec",
-    "municipality": "大和郡山市",
-    "title": "入札説明書等",
-    "type": "建築",
-    "announcementDate": "2025-06-12",
-    "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsu/R7/16649.html",
-    "status": "受付中"
-  },
-  {
-    "id": "yamato-koriyama-270f7e0c",
-    "municipality": "大和郡山市",
-    "title": "参加申請書等",
-    "type": "建築",
-    "announcementDate": "2025-06-12",
-    "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsu/R7/16649.html",
-    "status": "受付中"
   },
   {
     "id": "katsuragi-f59ace8b",
@@ -2609,68 +2383,10 @@
     "winningContractor": "株式会社シーテック"
   },
   {
-    "id": "kashihara-proposal-5073000578",
-    "municipality": "橿原市",
-    "title": "橿原市標準準拠システム移行業務 (圧縮ファイル: 6.7MB)",
-    "type": "委託",
-    "announcementDate": "2025-05-30",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/7/8272.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000578.zip",
-    "status": "受付中",
-    "description": "PDF parse failed or empty.",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "scraper",
-    "tags": [
-      "ＩＴ",
-      "システム",
-      "移行"
-    ]
-  },
-  {
     "id": "tawaramoto-2025062301",
     "municipality": "田原本町",
     "title": "平野小学校⑪号棟トイレ改修工事",
     "type": "建築",
-    "announcementDate": "2025-05-29",
-    "biddingDate": "2025-06-23",
-    "link": "https://tawaramoto.efftis.jp/PPI/Public/javaScript:void(0);",
-    "status": "受付中"
-  },
-  {
-    "id": "tawaramoto-2025000038",
-    "municipality": "田原本町",
-    "title": "田原本町立小中学校・幼稚園消防設備保守点検業務",
-    "type": "委託",
-    "announcementDate": "2025-05-29",
-    "biddingDate": "2025-06-23",
-    "link": "https://tawaramoto.efftis.jp/PPI/Public/javaScript:void(0);",
-    "status": "受付中"
-  },
-  {
-    "id": "tawaramoto-2025000039",
-    "municipality": "田原本町",
-    "title": "田原本町立中学校・幼稚園空調設備保守点検業務",
-    "type": "委託",
-    "announcementDate": "2025-05-29",
-    "biddingDate": "2025-06-23",
-    "link": "https://tawaramoto.efftis.jp/PPI/Public/javaScript:void(0);",
-    "status": "受付中"
-  },
-  {
-    "id": "tawaramoto-2025000041",
-    "municipality": "田原本町",
-    "title": "田原本町議会議員選挙公営ポスター掲示場の製作及び取付撤去業務委託",
-    "type": "委託",
-    "announcementDate": "2025-05-29",
-    "biddingDate": "2025-06-23",
-    "link": "https://tawaramoto.efftis.jp/PPI/Public/javaScript:void(0);",
-    "status": "受付中"
-  },
-  {
-    "id": "tawaramoto-2025000042",
-    "municipality": "田原本町",
-    "title": "田原本町中央体育館施設機器・器具保守点検業務委託",
-    "type": "委託",
     "announcementDate": "2025-05-29",
     "biddingDate": "2025-06-23",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/javaScript:void(0);",
@@ -2902,57 +2618,12 @@
     "status": "受付中"
   },
   {
-    "id": "yamato-koriyama-8fd85eb1",
-    "municipality": "大和郡山市",
-    "title": "開札日時",
-    "type": "建築",
-    "announcementDate": "2025-05-14",
-    "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsu/R7/16287.html",
-    "status": "受付中"
-  },
-  {
-    "id": "yamato-koriyama-6079425c",
-    "municipality": "大和郡山市",
-    "title": "入札説明書等",
-    "type": "建築",
-    "announcementDate": "2025-05-14",
-    "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsu/R7/16287.html",
-    "status": "受付中"
-  },
-  {
-    "id": "yamato-koriyama-efd5b837",
-    "municipality": "大和郡山市",
-    "title": "参加申請書等",
-    "type": "建築",
-    "announcementDate": "2025-05-14",
-    "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsu/R7/16287.html",
-    "status": "受付中"
-  },
-  {
-    "id": "yamato-koriyama-da1f406e",
-    "municipality": "大和郡山市",
-    "title": "入札方法",
-    "type": "建築",
-    "announcementDate": "2025-05-13",
-    "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsunooshirase/r7/16401.html",
-    "status": "落札"
-  },
-  {
     "id": "yamato-koriyama-2d674d87",
     "municipality": "大和郡山市",
     "title": "開札結果",
     "type": "建築",
     "announcementDate": "2025-05-13",
     "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsunooshirase/r7/16401.html",
-    "status": "落札"
-  },
-  {
-    "id": "yamato-koriyama-76372f1d",
-    "municipality": "大和郡山市",
-    "title": "入札方法",
-    "type": "建築",
-    "announcementDate": "2025-05-13",
-    "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsunooshirase/r7/16404.html",
     "status": "落札"
   },
   {
@@ -2965,30 +2636,12 @@
     "status": "落札"
   },
   {
-    "id": "yamato-koriyama-824b3524",
-    "municipality": "大和郡山市",
-    "title": "入札方法",
-    "type": "建築",
-    "announcementDate": "2025-05-13",
-    "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsunooshirase/r7/16406.html",
-    "status": "落札"
-  },
-  {
     "id": "yamato-koriyama-09cbe68d",
     "municipality": "大和郡山市",
     "title": "開札結果",
     "type": "建築",
     "announcementDate": "2025-05-13",
     "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsunooshirase/r7/16406.html",
-    "status": "落札"
-  },
-  {
-    "id": "yamato-koriyama-c7d3acee",
-    "municipality": "大和郡山市",
-    "title": "入札方法",
-    "type": "建築",
-    "announcementDate": "2025-05-13",
-    "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsunooshirase/r7/16408.html",
     "status": "落札"
   },
   {
@@ -2999,16 +2652,6 @@
     "announcementDate": "2025-05-13",
     "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsunooshirase/r7/16408.html",
     "status": "落札"
-  },
-  {
-    "id": "yamato-koriyama-7fc2b7c3",
-    "municipality": "大和郡山市",
-    "title": "大和郡山市長及び大和郡山市議会議員補欠選挙並びに参議院議員通常選挙開票所等設営・撤去業務",
-    "type": "委託",
-    "announcementDate": "2025-05-13",
-    "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsunooshirase/r7/16412.html",
-    "status": "落札",
-    "winningContractor": "エイトレント株式会社"
   },
   {
     "id": "koryo-2025-05-13-No3",
@@ -3059,36 +2702,6 @@
     "status": "受付中"
   },
   {
-    "id": "tawaramoto-2025000033",
-    "municipality": "田原本町",
-    "title": "舞台設備保守点検業務",
-    "type": "委託",
-    "announcementDate": "2025-05-01",
-    "biddingDate": "2025-05-26",
-    "link": "https://tawaramoto.efftis.jp/PPI/Public/javaScript:void(0);",
-    "status": "受付中"
-  },
-  {
-    "id": "yamato-koriyama-3eb15c34",
-    "municipality": "大和郡山市",
-    "title": "大和郡山市長選挙及び大和郡山市議会議員補欠選挙並びに参議院議員通常選挙に係る労働者派遣業務",
-    "type": "委託",
-    "announcementDate": "2025-04-25",
-    "biddingDate": "2025-04-25",
-    "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsu/R7/16361.html",
-    "status": "受付中"
-  },
-  {
-    "id": "yamato-koriyama-094f02cf",
-    "municipality": "大和郡山市",
-    "title": "大和郡山市長選挙及び大和郡山市議会議員補欠選挙並びに参議院議員通常選挙に係る労働者派遣業務（単価契約）",
-    "type": "委託",
-    "announcementDate": "2025-04-25",
-    "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsunooshirase/r7/16360.html",
-    "status": "落札",
-    "winningContractor": "テルウェル西日本株式会社"
-  },
-  {
     "id": "tawaramoto-2025051202",
     "municipality": "田原本町",
     "title": "(仮称)飛鳥川西防災公園整備に伴う屋外トイレ他建築工事",
@@ -3122,16 +2735,6 @@
     "id": "tawaramoto-2025051205",
     "municipality": "田原本町",
     "title": "小学校トイレ改修工事に伴う設備等設計・積算業務",
-    "type": "委託",
-    "announcementDate": "2025-04-24",
-    "biddingDate": "2025-05-26",
-    "link": "https://tawaramoto.efftis.jp/PPI/Public/javaScript:void(0);",
-    "status": "受付中"
-  },
-  {
-    "id": "tawaramoto-2025000031",
-    "municipality": "田原本町",
-    "title": "田原本町認知症予防教室事業",
     "type": "委託",
     "announcementDate": "2025-04-24",
     "biddingDate": "2025-05-26",
@@ -3273,30 +2876,12 @@
     "extractionSource": "gemini_3.1"
   },
   {
-    "id": "yamato-koriyama-df1730c3",
-    "municipality": "大和郡山市",
-    "title": "入札方法",
-    "type": "建築",
-    "announcementDate": "2025-04-22",
-    "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsunooshirase/r7/16277.html",
-    "status": "落札"
-  },
-  {
     "id": "yamato-koriyama-a4d83fab",
     "municipality": "大和郡山市",
     "title": "開札結果",
     "type": "建築",
     "announcementDate": "2025-04-22",
     "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsunooshirase/r7/16277.html",
-    "status": "落札"
-  },
-  {
-    "id": "yamato-koriyama-10ed96c6",
-    "municipality": "大和郡山市",
-    "title": "入札方法",
-    "type": "建築",
-    "announcementDate": "2025-04-22",
-    "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsunooshirase/r7/16279.html",
     "status": "落札"
   },
   {
@@ -3327,42 +2912,6 @@
     "status": "落札"
   },
   {
-    "id": "yamato-koriyama-eac1da96",
-    "municipality": "大和郡山市",
-    "title": "開札日時",
-    "type": "建築",
-    "announcementDate": "2025-04-17",
-    "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsu/R7/16236.html",
-    "status": "受付中"
-  },
-  {
-    "id": "yamato-koriyama-cff8d32f",
-    "municipality": "大和郡山市",
-    "title": "入札説明書等",
-    "type": "建築",
-    "announcementDate": "2025-04-17",
-    "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsu/R7/16236.html",
-    "status": "受付中"
-  },
-  {
-    "id": "yamato-koriyama-52bbdc3e",
-    "municipality": "大和郡山市",
-    "title": "参加申請書等",
-    "type": "建築",
-    "announcementDate": "2025-04-17",
-    "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsu/R7/16236.html",
-    "status": "受付中"
-  },
-  {
-    "id": "yamato-koriyama-36dc882c",
-    "municipality": "大和郡山市",
-    "title": "入札方法",
-    "type": "建築",
-    "announcementDate": "2025-04-16",
-    "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsunooshirase/r7/16232.html",
-    "status": "落札"
-  },
-  {
     "id": "yamato-koriyama-d08bc313",
     "municipality": "大和郡山市",
     "title": "開札結果",
@@ -3381,33 +2930,6 @@
     "status": "落札"
   },
   {
-    "id": "yamato-koriyama-349657e7",
-    "municipality": "大和郡山市",
-    "title": "開札日時",
-    "type": "建築",
-    "announcementDate": "2025-04-15",
-    "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsu/R7/16213.html",
-    "status": "受付中"
-  },
-  {
-    "id": "yamato-koriyama-72ae22be",
-    "municipality": "大和郡山市",
-    "title": "入札説明書等",
-    "type": "建築",
-    "announcementDate": "2025-04-15",
-    "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsu/R7/16213.html",
-    "status": "受付中"
-  },
-  {
-    "id": "yamato-koriyama-29dd0f56",
-    "municipality": "大和郡山市",
-    "title": "参加申請書等",
-    "type": "建築",
-    "announcementDate": "2025-04-15",
-    "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsu/R7/16213.html",
-    "status": "受付中"
-  },
-  {
     "id": "yamato-koriyama-fffaf60a",
     "municipality": "大和郡山市",
     "title": "開票所設営撤去業務",
@@ -3416,15 +2938,6 @@
     "biddingDate": "2025-05-13",
     "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsu/R7/16217.html",
     "status": "受付中"
-  },
-  {
-    "id": "yamato-koriyama-860d30e0",
-    "municipality": "大和郡山市",
-    "title": "入札方法",
-    "type": "建築",
-    "announcementDate": "2025-04-15",
-    "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsunooshirase/r7/16231.html",
-    "status": "落札"
   },
   {
     "id": "yamato-koriyama-b386d35f",
@@ -3494,26 +3007,6 @@
     "winningContractor": "近畿ビルサービス株式会社奈良営業所"
   },
   {
-    "id": "katsuragi-0941b206",
-    "municipality": "葛城市",
-    "title": "介護予防普及啓発事業（派遣型体力測定）業務委託",
-    "type": "委託",
-    "announcementDate": "2025-04-11",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/01-06-02-01.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/01-06-02-01.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "1,278,000円（消費税及び地方消費税を除く）",
-    "constructionPeriod": "契約日から令和8年3月31日まで",
-    "description": "市内自主運動教室に専門スタッフを年1回派遣し、体力測定、介護予防に関する講話、及びアクティビティケアを実施する業務委託。",
-    "tags": [
-      "介護",
-      "体力測定",
-      "業務委託"
-    ]
-  },
-  {
     "id": "katsuragi-61b8c2ef",
     "municipality": "葛城市",
     "title": "忍海小学校区学童保育所施設整備に係る設計業務",
@@ -3531,26 +3024,6 @@
       "設計",
       "建築",
       "解体"
-    ]
-  },
-  {
-    "id": "katsuragi-f9f79d4c",
-    "municipality": "葛城市",
-    "title": "生活保護診療報酬明細書点検業務委託",
-    "type": "委託",
-    "announcementDate": "2025-04-10",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/01-05-04-01.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/01-05-04-01.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "616,000円（消費税及び地方消費税を除く）",
-    "constructionPeriod": "契約日 から 令和8年3月31日",
-    "description": "生活保護受給者の審査支払済診療報酬明細書（レセプト）について、専門的知識を有する業者に委託し、内容点検・資格点検・分析・管理等を実施することで、医療扶助費の適正な給付及び生活保護受給者等への効果的な指導・援助を図る業務。",
-    "tags": [
-      "医療",
-      "委託",
-      "事務"
     ]
   },
   {
@@ -3637,16 +3110,6 @@
     "id": "tawaramoto-2025000016",
     "municipality": "田原本町",
     "title": "いきいき百歳体操体力測定サポート支援事業",
-    "type": "委託",
-    "announcementDate": "2025-04-01",
-    "biddingDate": "2025-05-12",
-    "link": "https://tawaramoto.efftis.jp/PPI/Public/javaScript:void(0);",
-    "status": "受付中"
-  },
-  {
-    "id": "tawaramoto-2025000017",
-    "municipality": "田原本町",
-    "title": "田原本町短期集中予防サービス（教室型）事業",
     "type": "委託",
     "announcementDate": "2025-04-01",
     "biddingDate": "2025-05-12",
@@ -3772,16 +3235,6 @@
     "id": "katsuragi-忍海小学校区学童保育所施設整備に係る設計業務-1772234806964",
     "announcementDate": "2025-04-01",
     "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/2025-05-15-kekkakohyou2.pdf"
-  },
-  {
-    "title": "生活保護診療報酬明細書点検業務委託",
-    "winningContractor": "（株）メディブレーン",
-    "estimatedPrice": "440,000 円",
-    "status": "落札",
-    "municipality": "葛城市",
-    "id": "katsuragi-生活保護診療報酬明細書点検業務委託-1772234810586",
-    "announcementDate": "2025-04-01",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/2025-05-14-kekkakouhyou3.pdf"
   },
   {
     "title": "リサイクル施設補修費等精査業務委託",
@@ -3914,16 +3367,6 @@
     "link": "https://www.city.gose.nara.jp/cmsfiles/contents/0000001/1024/R070820.pdf"
   },
   {
-    "title": "名柄小学校屋内運動場予防改修",
-    "winningContractor": "㈱ゴセケン",
-    "estimatedPrice": "113,000,000 円",
-    "status": "落札",
-    "municipality": "御所市",
-    "id": "gose-result-名柄小学校屋内運動場-1772235311282",
-    "announcementDate": "2025-04-01",
-    "link": "https://www.city.gose.nara.jp/cmsfiles/contents/0000001/1024/R070820.pdf"
-  },
-  {
     "title": "小林児童遊園⑦設計業務",
     "winningContractor": "㈱地球号",
     "estimatedPrice": "1,920,000 円",
@@ -4034,52 +3477,12 @@
     "link": "https://www.town.tawaramoto.nara.jp/material/files/group/9/20250630.pdf"
   },
   {
-    "title": "田原本町立中学校・幼稚園空調設備保守点検業務",
-    "winningContractor": "(株)奈良温調",
-    "estimatedPrice": "3,182,300",
-    "status": "落札",
-    "municipality": "田原本町",
-    "id": "tawaramoto-result-田原本町立中学校・幼-1772235676630",
-    "announcementDate": "2025-04-01",
-    "link": "https://www.town.tawaramoto.nara.jp/material/files/group/9/20250630.pdf"
-  },
-  {
-    "title": "田原本町立小中学校・幼稚園消防設備保守点検業務",
-    "winningContractor": "阪神管理サービス(株)",
-    "estimatedPrice": "1,144,000",
-    "status": "落札",
-    "municipality": "田原本町",
-    "id": "tawaramoto-result-田原本町立小中学校・-1772235676630",
-    "announcementDate": "2025-04-01",
-    "link": "https://www.town.tawaramoto.nara.jp/material/files/group/9/20250630.pdf"
-  },
-  {
-    "title": "田原本町中央体育館施設機器・器具保守点検業務委託",
-    "winningContractor": "アスカ美装(株)",
-    "estimatedPrice": "1,100,000",
-    "status": "落札",
-    "municipality": "田原本町",
-    "id": "tawaramoto-result-田原本町中央体育館施-1772235676630",
-    "announcementDate": "2025-04-01",
-    "link": "https://www.town.tawaramoto.nara.jp/material/files/group/9/20250630.pdf"
-  },
-  {
     "title": "田原本中学校校長室空調設備取替業務",
     "winningContractor": "大和電機工業（株）",
     "estimatedPrice": "695,200円",
     "status": "落札",
     "municipality": "田原本町",
     "id": "tawaramoto-result-田原本中学校校長室空-1772235679848",
-    "announcementDate": "2025-04-01",
-    "link": "https://www.town.tawaramoto.nara.jp/material/files/group/9/20250526.pdf"
-  },
-  {
-    "title": "舞台設備保守点検業務",
-    "winningContractor": "三精テクノロジーズ\n（株）",
-    "estimatedPrice": "3,300,000円",
-    "status": "落札",
-    "municipality": "田原本町",
-    "id": "tawaramoto-result-舞台設備保守点検業務-1772235679848",
     "announcementDate": "2025-04-01",
     "link": "https://www.town.tawaramoto.nara.jp/material/files/group/9/20250526.pdf"
   },
@@ -4110,16 +3513,6 @@
     "status": "落札",
     "municipality": "田原本町",
     "id": "tawaramoto-result-南小学校理科室・保健-1772235681748",
-    "announcementDate": "2025-04-01",
-    "link": "https://www.town.tawaramoto.nara.jp/material/files/group/11/20250428.pdf"
-  },
-  {
-    "title": "田原本町立小・中学校ICT教育環境整備業務",
-    "winningContractor": "西日本電信電話（株）\n奈良支店",
-    "estimatedPrice": "19,250,000",
-    "status": "落札",
-    "municipality": "田原本町",
-    "id": "tawaramoto-result-田原本町立小・中学校-1772235681748",
     "announcementDate": "2025-04-01",
     "link": "https://www.town.tawaramoto.nara.jp/material/files/group/11/20250428.pdf"
   },
@@ -4164,16 +3557,6 @@
     "status": "受付中"
   },
   {
-    "id": "tawaramoto-2025000006",
-    "municipality": "田原本町",
-    "title": "マンホールポンプ保守点検管理委託業務",
-    "type": "委託",
-    "announcementDate": "2025-03-28",
-    "biddingDate": "2025-04-14",
-    "link": "https://tawaramoto.efftis.jp/PPI/Public/javaScript:void(0);",
-    "status": "受付中"
-  },
-  {
     "id": "tawaramoto-2025000007",
     "municipality": "田原本町",
     "title": "南小学校理科室・保健室空調設備設置業務",
@@ -4191,16 +3574,6 @@
     "announcementDate": "2025-03-28",
     "biddingDate": "2025-04-28",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/javaScript:void(0);",
-    "status": "受付中"
-  },
-  {
-    "id": "yamato-koriyama-af9b99f7",
-    "municipality": "大和郡山市",
-    "title": "令和7年度生活保護法診療報酬明細書等点検業務委託（単価契約）",
-    "type": "委託",
-    "announcementDate": "2025-03-25",
-    "biddingDate": "2025-04-11",
-    "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsu/R7/16098.html",
     "status": "受付中"
   },
   {
@@ -4242,26 +3615,6 @@
       "空調",
       "改修",
       "設備"
-    ]
-  },
-  {
-    "id": "katsuragi-71dec073",
-    "municipality": "葛城市",
-    "title": "令和7年度葛城市議会会議録作成等業務委託及び会議録検索システム配信事業",
-    "type": "委託",
-    "announcementDate": "2024-12-19",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/9-12-19-2-2024-1.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/9-12-19-2-2024-1.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "3,463,500円（消費税及び地方消費税を除く）",
-    "constructionPeriod": "契約日から令和8年3月31日（火）まで",
-    "description": "令和7年3月1日から令和8年1月31日までの会議録作成、令和8年3月定例会の一般質問の粗原稿作成、会議録検索システムへのデータ登録、及びインターネットを通じて会議録を検索・閲覧するためのシステム提供業務。",
-    "tags": [
-      "ＩＴ",
-      "業務委託",
-      "システム"
     ]
   },
   {
@@ -4364,46 +3717,6 @@
       "検査",
       "委託",
       "保健"
-    ]
-  },
-  {
-    "id": "katsuragi-52d092c1",
-    "municipality": "葛城市",
-    "title": "生活保護診療報酬明細書(レセプト)点検業務委託",
-    "type": "委託",
-    "announcementDate": "2024-04-12",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/1-5-04-2024-1.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/1-5-04-2024-1.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "526,000円（消費税及び地方消費税を除く）",
-    "constructionPeriod": "契約日から令和7年3月31日（月）まで",
-    "description": "生活保護受給者の審査支払済診療報酬明細書（レセプト）が有効な医療券か（同一診療の重複請求・資格外請求等）の確認、重複受診者の抽出、頻回受診者の抽出を行い、医療扶助費支給に適切に活用するための業務委託。",
-    "tags": [
-      "医療",
-      "点検",
-      "事務委託"
-    ]
-  },
-  {
-    "id": "katsuragi-c6392472",
-    "municipality": "葛城市",
-    "title": "令和6年度葛城市議会会議録作成等業務委託及び会議録検索システム配信事業",
-    "type": "委託",
-    "announcementDate": "2023-12-21",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/05122104.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/05122104.pdf",
-    "status": "受付中",
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1",
-    "estimatedPrice": "3,486,000円（税抜き）",
-    "constructionPeriod": "契約日から令和7年3月31日まで",
-    "description": "令和6年度葛城市議会会議録の作成、令和7年3月定例会一般質問の粗原稿作成、会議録検索システムへのデータ登録業務、およびインターネット経由で会議録を閲覧するための検索システムの提供。",
-    "tags": [
-      "ＩＴ",
-      "業務委託",
-      "システム"
     ]
   },
   {
