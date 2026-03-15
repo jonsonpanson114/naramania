@@ -1,11 +1,12 @@
 'use client';
 
-import { LayoutDashboard, Search, Bookmark, Settings, Trophy, Radar } from 'lucide-react';
+import { LayoutDashboard, Search, Bookmark, Settings, Trophy, Radar, Newspaper } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 const navItems = [
     { href: '/', label: 'ダッシュボード', icon: LayoutDashboard },
+    { href: '/#news', label: '奈良ニュース', icon: Newspaper },
     { href: '/search', label: '案件検索', icon: Search },
     { href: '/rankings', label: '実績ランキング', icon: Trophy },
     { href: '/radar', label: '相場レーダー', icon: Radar },

@@ -6,6 +6,7 @@ import { Header } from '@/components/Header';
 import { StatsCard } from '@/components/StatsCard';
 import { BiddingTable } from '@/components/BiddingTable';
 import { NewsSection } from '@/components/NewsSection';
+import { NewsTicker } from '@/components/NewsTicker';
 import { Trophy, Radar, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
@@ -54,6 +55,7 @@ export default async function Home() {
     <div className="flex min-h-screen bg-background text-primary font-serif">
       <Sidebar />
       <main className="flex-1 ml-64 p-16">
+        <NewsTicker />
         <Header />
 
         {/* Stats Cards */}

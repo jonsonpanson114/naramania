@@ -24,10 +24,15 @@ function formatDate(dateStr: string): string {
 }
 
 type SourceFilter = 'all' | string;
+type CategoryFilter = 'all' | 'construction' | 'general';
+
+const CONSTRUCTION_SOURCES = ['constnews', 'kentsu', 'decn'];
+const GENERAL_SOURCES = ['shinpou', 'naranp'];
 
 export function NewsSection() {
     const [news, setNews] = useState<NewsItem[]>([]);
     const [loading, setLoading] = useState(true);
+    const [activeCategory, setActiveCategory] = useState<CategoryFilter>('all');
     const [activeSource, setActiveSource] = useState<SourceFilter>('all');
     const [refreshing, setRefreshing] = useState(false);
 
@@ -51,17 +56,30 @@ export function NewsSection() {
         load();
     };
 
-    // ソースの一覧（取得できたもののみ）
-    const sources = Array.from(new Set(news.map(n => n.source)));
-    const filtered = activeSource === 'all' ? news : news.filter(n => n.source === activeSource);
+    // カテゴリフィルタ
+    const filteredByCategory = activeCategory === 'all' 
+        ? news 
+        : activeCategory === 'construction' 
+            ? news.filter(n => CONSTRUCTION_SOURCES.includes(n.source))
+            : news.filter(n => GENERAL_SOURCES.includes(n.source));
+
+    // ソースの一覧（カテゴリフィルタ後のもの）
+    const sources = Array.from(new Set(filteredByCategory.map(n => n.source)));
+    const filtered = activeSource === 'all' ? filteredByCategory : filteredByCategory.filter(n => n.source === activeSource);
+
+    // カテゴリ変更時にソースフィルタをリセット
+    const handleCategoryChange = (cat: CategoryFilter) => {
+        setActiveCategory(cat);
+        setActiveSource('all');
+    };
 
     return (
-        <section className="mt-24">
+        <section className="mt-24 pt-12" id="news">
             {/* Section Header */}
             <div className="flex items-center gap-6 mb-10">
                 <div className="flex-1 h-px" style={{ background: 'linear-gradient(to right, rgba(197,160,89,0.2), transparent)' }} />
                 <div className="flex items-center gap-4">
-                    <h2 className="text-[10px] tracking-[0.35em] text-secondary uppercase font-serif">建設ニュース</h2>
+                    <h2 className="text-[10px] tracking-[0.35em] text-secondary uppercase font-serif">奈良ニュース</h2>
                     <button
                         onClick={handleRefresh}
                         className="text-gray-300 hover:text-accent transition-colors duration-300"
@@ -73,13 +91,39 @@ export function NewsSection() {
                 <div className="flex-1 h-px" style={{ background: 'linear-gradient(to left, rgba(197,160,89,0.2), transparent)' }} />
             </div>
 
+            {/* Category Filter Tabs */}
+            {!loading && news.length > 0 && (
+                <div className="flex justify-center mb-6">
+                    <div className="flex items-center gap-1 bg-white/40 p-1 rounded-full border border-border/20 shadow-inner">
+                        <button
+                            onClick={() => handleCategoryChange('all')}
+                            className={`px-6 py-2 rounded-full text-[10px] tracking-[0.2em] transition-all ${activeCategory === 'all' ? 'bg-primary text-white shadow-md' : 'text-secondary hover:bg-white/60'}`}
+                        >
+                            すべて
+                        </button>
+                        <button
+                            onClick={() => handleCategoryChange('construction')}
+                            className={`px-6 py-2 rounded-full text-[10px] tracking-[0.2em] transition-all ${activeCategory === 'construction' ? 'bg-primary text-white shadow-md' : 'text-secondary hover:bg-white/60'}`}
+                        >
+                            建設系
+                        </button>
+                        <button
+                            onClick={() => handleCategoryChange('general')}
+                            className={`px-6 py-2 rounded-full text-[10px] tracking-[0.2em] transition-all ${activeCategory === 'general' ? 'bg-primary text-white shadow-md' : 'text-secondary hover:bg-white/60'}`}
+                        >
+                            一般ニュース
+                        </button>
+                    </div>
+                </div>
+            )}
+
             {/* Source Filter Tabs */}
             {!loading && news.length > 0 && (
                 <div className="flex justify-center mb-8">
                     <div className="flex items-center gap-8 pb-5 px-8 border-b border-border/30">
                         {(['all', ...sources] as SourceFilter[]).map(src => {
                             const label = src === 'all' ? 'すべて' : (news.find(n => n.source === src)?.sourceLabel ?? src);
-                            const count = src === 'all' ? news.length : news.filter(n => n.source === src).length;
+                            const count = src === 'all' ? filteredByCategory.length : filteredByCategory.filter(n => n.source === src).length;
                             const isActive = activeSource === src;
                             return (
                                 <button
