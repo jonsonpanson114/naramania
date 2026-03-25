@@ -28,6 +28,12 @@ jobs:
         env:
           NODE_ENV: production
 
+      - name: Run AI Augmentation
+        run: npx tsx scripts/augment_intelligence.ts
+        env:
+          GOOGLE_GENERATIVE_AI_API_KEY: ${{ secrets.GOOGLE_GENERATIVE_AI_API_KEY }}
+          NODE_ENV: production
+
       - name: Commit and Push changes
         run: |
           git config --global user.name "github-actions[bot]"
