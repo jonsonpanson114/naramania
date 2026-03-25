@@ -23,7 +23,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
             allItems = JSON.parse(fs.readFileSync(jsonPath, 'utf-8'));
             item = allItems.find(i => i.id === id) || null;
         }
-    } catch (error) {
+    } catch {
         // エラー時はnullを返す
     }
 

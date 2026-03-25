@@ -1,4 +1,5 @@
 import { chromium } from 'playwright';
+import type { Locator, Page, Frame } from 'playwright';
 import { BiddingItem, Scraper, BiddingType } from '../types/bidding';
 import crypto from 'crypto';
 import { shouldKeepItem } from './common/filter';
@@ -25,20 +26,28 @@ function classifyType(title: string, gyoshu: string): BiddingType {
     return '建築';
 }
 
-async function extractFromResultsPage(page: any, status: '受付中' | '落札'): Promise<BiddingItem[]> {
+async function extractFromResultsPage(context: Page | Frame, status: '受付中' | '落札'): Promise<BiddingItem[]> {
     const items: BiddingItem[] = [];
     try {
-        let links: any[] = [];
-        await page.waitForTimeout(10000);
+        let links: Locator[] = [];
+        await context.waitForTimeout(10000);
 
-        const frames = page.frames();
-        for (const f of frames) {
-            try {
-                const found = await f.locator('table a').all().catch(() => []);
-                if (found.length > links.length) {
-                    links = found;
+        // Try to find links in child frames if context is Page, otherwise search directly
+        const frames = 'frames' in context ? context.frames() : [];
+        if (frames.length > 0) {
+            for (const f of frames) {
+                try {
+                    const found = await f.locator('table a').all().catch(() => []);
+                    if (found.length > links.length) {
+                        links = found;
+                    }
+                } catch {
+                    // Skip frames that can't be accessed
                 }
-            } catch (e) {}
+            }
+        } else {
+            // Search directly in the context (if it's a Frame)
+            links = await context.locator('table a').all().catch(() => []);
         }
 
         console.log(`[宇陀市] 結果フレーム発見: リンク数 ${links.length}`);
@@ -75,14 +84,14 @@ async function extractFromResultsPage(page: any, status: '受付中' | '落札')
                 status,
             });
         }
-    } catch (e: any) {
-        console.warn('[宇陀市] 結果ページ抽出エラー:', e.message?.split('\n')[0]);
+    } catch (e: unknown) {
+        console.warn('[宇陀市] 結果ページ抽出エラー:', e instanceof Error ? e instanceof Error ? e.message : String(e).split('\n')[0] : String(e));
     }
     return items;
 }
 
 export class UdaCityScraper implements Scraper {
-    municipality: '宇陀市' = '宇陀市';
+    municipality: '宇陀市' = '宇陀市' as const;
 
     async scrape(): Promise<BiddingItem[]> {
         const browser = await chromium.launch({ headless: true });
@@ -165,13 +174,13 @@ export class UdaCityScraper implements Scraper {
                         console.warn(`[宇陀市] ${btnText}: 検索ボタンが見つかりません。`);
                     }
 
-                } catch (e: any) {
-                    console.warn(`[宇陀市] ${btnText} カテゴリエラー:`, e.message?.split('\n')[0]);
+                } catch (e: unknown) {
+                    console.warn(`[宇陀市] ${btnText} カテゴリエラー:`, e instanceof Error ? e instanceof Error ? e.message : String(e).split('\n')[0] : String(e));
                 }
             }
 
-        } catch (error: any) {
-            console.error('[宇陀市] スクレイパーエラー:', error.message || error);
+        } catch (error: unknown) {
+            console.error('[宇陀市] スクレイパーエラー:', error instanceof Error ? error.message : String(error));
         } finally {
             await browser.close();
         }

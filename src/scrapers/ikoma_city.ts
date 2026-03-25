@@ -1,4 +1,5 @@
 import { chromium } from 'playwright';
+import type { Page, Frame, Locator } from 'playwright';
 import { BiddingItem, Scraper, BiddingType } from '../types/bidding';
 import crypto from 'crypto';
 import { shouldKeepItem } from './common/filter';
@@ -25,20 +26,29 @@ function classifyType(title: string, gyoshu: string): BiddingType {
     return '建築';
 }
 
-async function extractFromResultsPage(page: any, status: '受付中' | '落札'): Promise<BiddingItem[]> {
+async function extractFromResultsPage(context: Page | Frame, status: '受付中' | '落札'): Promise<BiddingItem[]> {
     const items: BiddingItem[] = [];
     try {
-        let links: any[] = [];
-        await page.waitForTimeout(10000); 
+        let links: Locator[] = [];
+        await context.waitForTimeout(10000);
 
-        const frames = page.frames();
-        for (const f of frames) {
-            try {
-                const found = await f.locator('table a').all().catch(() => []);
-                if (found.length > links.length) {
-                    links = found;
+        // If context is Page, search its frames; if Frame, search directly
+        // If context is Page, search its frames; if Frame, search directly
+        const frames: Frame[] = 'frames' in context ? context.frames() : [];
+        if (frames.length > 0) {
+            for (const f of frames) {
+                try {
+                    const found = await f.locator('table a').all().catch(() => []);
+                    if (found.length > links.length) {
+                        links = found;
+                    }
+                } catch {
+                    // Skip frames that can't be accessed
                 }
-            } catch (e) {}
+            }
+        } else {
+            // Context is a Frame, search directly
+            links = await context.locator('table a').all().catch(() => []);
         }
 
         console.log(`[生駒市] 結果フレーム発見: リンク数 ${links.length}`);
@@ -75,14 +85,14 @@ async function extractFromResultsPage(page: any, status: '受付中' | '落札')
                 status,
             });
         }
-    } catch (e: any) {
-        console.warn('[生駒市] 結果ページ抽出エラー:', e.message?.split('\n')[0]);
+    } catch (e: unknown) {
+        console.warn('[生駒市] 結果ページ抽出エラー:', e instanceof Error ? e.message : String(e)?.split('\n')[0]);
     }
     return items;
 }
 
 export class IkomaCityScraper implements Scraper {
-    municipality: '生駒市' = '生駒市';
+    municipality: '生駒市' = '生駒市' as const;
 
     async scrape(): Promise<BiddingItem[]> {
         const browser = await chromium.launch({ headless: true });
@@ -169,13 +179,13 @@ export class IkomaCityScraper implements Scraper {
                         console.warn(`[生駒市] ${btnText}: 検索ボタンが見つかりません。`);
                     }
 
-                } catch (e: any) {
-                    console.warn(`[生駒市] ${btnText} エラー:`, e.message?.split('\n')[0]);
+                } catch (e: unknown) {
+                    console.warn(`[生駒市] ${btnText} エラー:`, e instanceof Error ? e.message : String(e)?.split('\n')[0]);
                 }
             }
 
-        } catch (e: any) {
-            console.error('[生駒市] スクレイパーエラー:', e.message || e);
+        } catch (e: unknown) {
+            console.error('[生駒市] スクレイパーエラー:', e instanceof Error ? e.message : String(e) || e);
         } finally {
             await browser.close();
         }

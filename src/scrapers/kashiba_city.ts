@@ -7,13 +7,6 @@ const EPI_URL = 'https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1
 // 令和7年度 = 2025年度
 const NENDO = '2025';
 
-// スキップする工種・工事名キーワード（土木系）
-const SKIP_KEYWORDS = [
-    '舗装', '道路', '下水道', '河川', '砂防', '水道', '管工事', '橋梁', '護岸',
-    '側溝', '水路', '排水', 'マンホール', '配水管', '布設替', '管路', '電気通信',
-    '造園', 'カルバート', '樋門', '土木', '舗装維持',
-];
-
 function parseJpDate(str: string): string {
     // "2025/06/15" → "2025-06-15"
     const m = str.trim().match(/(\d{4})\/(\d{2})\/(\d{2})/);
@@ -78,7 +71,6 @@ async function scrapeKashibaCity(): Promise<BiddingItem[]> {
             }
 
             const rows = await dataFrame.locator('table tr').all();
-            let rowCount = 0;
 
             for (const row of rows) {
                 const cells = await row.locator('td').all();
@@ -106,7 +98,6 @@ async function scrapeKashibaCity(): Promise<BiddingItem[]> {
                     winningContractor: winner || undefined,
                     estimatedPrice: amountText ? `${parseInt(amountText).toLocaleString()}円` : undefined,
                 });
-                rowCount++;
             }
 
             // ページネーション: データフレーム内の「次へ」リンクを確認
@@ -119,8 +110,8 @@ async function scrapeKashibaCity(): Promise<BiddingItem[]> {
             await page.waitForTimeout(4000);
         }
 
-    } catch (e: any) {
-        console.error('[香芝市] エラー:', e.message || e);
+    } catch (e: unknown) {
+        console.error('[香芝市] エラー:', e instanceof Error ? e.message : String(e) || e);
     } finally {
         await browser.close();
     }
@@ -130,7 +121,7 @@ async function scrapeKashibaCity(): Promise<BiddingItem[]> {
 }
 
 export class KashibaCityScraper implements Scraper {
-    municipality: '香芝市' = '香芝市';
+    municipality: '香芝市' = '香芝市' as const;
 
     async scrape(): Promise<BiddingItem[]> {
         return scrapeKashibaCity();

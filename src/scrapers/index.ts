@@ -65,7 +65,7 @@ async function main() {
             const content = fs.readFileSync(outputPath, 'utf-8');
             const existingItems: BiddingItem[] = JSON.parse(content);
             existingItems.forEach(item => seen.set(item.id, item));
-        } catch (e) {
+        } catch {
             console.warn('既存データの読み込みに失敗しました。');
         }
     }

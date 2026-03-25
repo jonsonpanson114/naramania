@@ -10,13 +10,6 @@ import { shouldKeepItem } from './common/filter';
 const BASE = 'https://www.city.tenri.nara.jp';
 const ANNOUNCE_URL = `${BASE}/kakuka/soumubu/nyuusatsushinsashitsu/construction_work/kouji_hattyuu_kanren/1395887232147.html`;
 
-const SKIP_KEYWORDS = [
-    '廃棄物', 'ごみ', '物品', '車両', '清掃', '警備', '下水', '管渠',
-    '舗装', '土木', '河川', '造園', '電気通信', '水道施設', 'システム',
-    '農業', '橋梁',
-];
-const SKIP_TYPES = ['土木工事', '管工事', '電気工事', '電気通信工事', '舗装工事'];
-
 function classifyType(title: string, type: string): BiddingType {
     const t = title + type;
     if (t.includes('設計') || t.includes('測量') || t.includes('コンサル')) return 'コンサル';
@@ -40,7 +33,7 @@ function parseJapaneseDate(text: string): string {
 const HEADERS = { 'User-Agent': 'Mozilla/5.0 (compatible; naramania-scraper/1.0)' };
 
 export class TenriCityScraper implements Scraper {
-    municipality: '天理市' = '天理市';
+    municipality: '天理市' = '天理市' as const;
 
     async scrape(): Promise<BiddingItem[]> {
         const allItems: BiddingItem[] = [];
@@ -93,8 +86,8 @@ export class TenriCityScraper implements Scraper {
             });
 
             console.log(`[天理市] 入札公告: ${allItems.length}件`);
-        } catch (e: any) {
-            console.error('[天理市] スクレイパーエラー:', e.message || e);
+        } catch (e: unknown) {
+            console.error('[天理市] スクレイパーエラー:', e instanceof Error ? e.message : String(e) || e);
         }
 
         console.log(`[天理市] 合計 ${allItems.length} 件`);

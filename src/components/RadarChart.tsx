@@ -1,39 +1,48 @@
 'use client';
 
 import { ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, Cell } from 'recharts';
+import type { Municipality, BiddingType } from '@/types/bidding';
 
-export default function RadarChart({ data }: { data: any[] }) {
-    // Determine color based on type
-    const getColor = (type: string) => {
-        if (type === '建築') return '#8b5cf6'; // Violet
-        if (type === '設計' || type === 'コンサル') return '#059669'; // Emerald
-        if (type === '設備') return '#d97706'; // Amber
-        return '#6b7280'; // Gray
-    };
+interface DataPoint {
+    name: string;
+    municipality: Municipality;
+    price: number;
+    priceLabel: string;
+    contractor: string;
+    type: BiddingType;
+}
 
+const getColor = (type: string) => {
+    if (type === '建築') return '#8b5cf6'; // Violet
+    if (type === '設計' || type === 'コンサル') return '#059669'; // Emerald
+    if (type === '設備') return '#d97706'; // Amber
+    return '#6b7280'; // Gray
+};
+
+const CustomTooltip = ({ active, payload }: { active?: boolean; payload?: Array<{ payload: DataPoint }> }) => {
+    if (active && payload && payload.length) {
+        const data = payload[0].payload;
+        return (
+            <div className="bg-white p-4 rounded-2xl shadow-xl border border-gray-100 max-w-sm">
+                <p className="font-bold text-gray-900 mb-1">{data.name}</p>
+                <div className="flex justify-between items-center text-sm text-gray-500 mb-2">
+                    <span>{data.municipality}</span>
+                    <span className="px-2 py-0.5 rounded-md text-xs font-bold" style={{ backgroundColor: getColor(data.type) + '20', color: getColor(data.type) }}>{data.type}</span>
+                </div>
+                <p className="text-xl font-black text-amber-900 mb-1">{new Intl.NumberFormat('ja-JP').format(data.price)}円</p>
+                <p className="text-xs text-gray-400">落札者: <span className="text-gray-600 font-medium">{data.contractor}</span></p>
+            </div>
+        );
+    }
+    return null;
+};
+
+export default function RadarChart({ data }: { data: DataPoint[] }) {
     // Add an index to space them out on the X axis
     const chartData = data.map((d, index) => ({
         ...d,
         xIndex: index + 1
     }));
-
-    const CustomTooltip = ({ active, payload }: any) => {
-        if (active && payload && payload.length) {
-            const data = payload[0].payload;
-            return (
-                <div className="bg-white p-4 rounded-2xl shadow-xl border border-gray-100 max-w-sm">
-                    <p className="font-bold text-gray-900 mb-1">{data.name}</p>
-                    <div className="flex justify-between items-center text-sm text-gray-500 mb-2">
-                        <span>{data.municipality}</span>
-                        <span className="px-2 py-0.5 rounded-md text-xs font-bold" style={{ backgroundColor: getColor(data.type) + '20', color: getColor(data.type) }}>{data.type}</span>
-                    </div>
-                    <p className="text-xl font-black text-amber-900 mb-1">{new Intl.NumberFormat('ja-JP').format(data.price)}円</p>
-                    <p className="text-xs text-gray-400">落札者: <span className="text-gray-600 font-medium">{data.contractor}</span></p>
-                </div>
-            );
-        }
-        return null;
-    };
 
     return (
         <div className="h-96 w-full animate-fade-in" style={{ minHeight: '320px' }}>

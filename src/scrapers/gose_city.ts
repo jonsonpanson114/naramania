@@ -1,7 +1,7 @@
 import axios from 'axios';
 import * as cheerio from 'cheerio';
 import { BiddingItem, Scraper } from '../types/bidding';
-import { isRealBiddingItem, classifyWinner } from './common/filter';
+import { isRealBiddingItem, classifyWinner, shouldKeepItem } from './common/filter';
 
 // 御所市
 const RSS_URL = 'https://www.city.gose.nara.jp/rss/rss.xml';
@@ -35,7 +35,7 @@ async function scrapeGoseCity(): Promise<BiddingItem[]> {
         const $ = cheerio.load(res.data);
 
         // RSS itemの抽出
-        $('item').each((_i: number, el: any) => {
+        $('item').each((_i: number, el) => {
             const title = $(el).find('title').text().trim();
             const link = $(el).find('link').attr('href') || '';
             if (!title) return;
@@ -51,7 +51,6 @@ async function scrapeGoseCity(): Promise<BiddingItem[]> {
             if (NON_BIDDING_PATTERNS.some(p => title.includes(p))) return;
 
             // ③ NGワードフィルター（共通）
-            const { shouldKeepItem } = require('./common/filter');
             if (!shouldKeepItem(title)) return;
 
             const winningContractor = title.includes('落札') ? title.split('：').pop()?.trim() : undefined;
@@ -68,8 +67,8 @@ async function scrapeGoseCity(): Promise<BiddingItem[]> {
             });
         });
 
-    } catch (e: any) {
-        console.error('[御所市] エラー:', e.message || e);
+    } catch (e: unknown) {
+        console.error('[御所市] エラー:', e instanceof Error ? e.message : String(e) || e);
     }
 
     console.log(`[御所市] 合計 ${items.length} 件`);
@@ -77,7 +76,7 @@ async function scrapeGoseCity(): Promise<BiddingItem[]> {
 }
 
 export class GoseCityScraper implements Scraper {
-    municipality: '御所市' = '御所市';
+    municipality: '御所市' = '御所市' as const;
 
     async scrape(): Promise<BiddingItem[]> {
         return scrapeGoseCity();

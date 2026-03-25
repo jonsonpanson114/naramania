@@ -1,7 +1,7 @@
 import axios from 'axios';
 import * as cheerio from 'cheerio';
 import { BiddingItem, Scraper, BiddingType } from '../types/bidding';
-import { shouldKeepItem, classifyWinner } from './common/filter';
+import { shouldKeepItem } from './common/filter';
 
 const BASE_URL = 'https://www.city.kashihara.nara.jp';
 
@@ -51,8 +51,7 @@ async function extractContractorFromPdf(pdfUrl: string): Promise<string | undefi
             headers: AXIOS_HEADERS,
             timeout: 15000,
         });
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        const pdfjsLib: any = await import('pdfjs-dist/legacy/build/pdf.mjs' as never);
+        const pdfjsLib = await import('pdfjs-dist/legacy/build/pdf.mjs');
         const data = new Uint8Array(res.data as ArrayBuffer);
         const doc = await pdfjsLib.getDocument({ data, verbosity: 0, isEvalSupported: false }).promise;
 
@@ -60,7 +59,7 @@ async function extractContractorFromPdf(pdfUrl: string): Promise<string | undefi
         for (let i = 1; i <= doc.numPages; i++) {
             const page = await doc.getPage(i);
             const content = await page.getTextContent();
-            text += content.items.map((item: { str: string }) => item.str).join(' ');
+            text += content.items.map((item) => ('str' in item ? item.str : '')).join(' ');
         }
 
         // パターン1: 「落札者氏名 ○○株式会社 代表取締役...」or 数字ラベルで終端
@@ -118,7 +117,7 @@ function normalizePdfUrl(href: string): string | undefined {
 }
 
 export class KashiharaCityScraper implements Scraper {
-    municipality: '橿原市' = '橿原市';
+    municipality: '橿原市' = '橿原市' as const;
 
     async scrape(): Promise<BiddingItem[]> {
         const items: BiddingItem[] = [];
@@ -173,8 +172,8 @@ export class KashiharaCityScraper implements Scraper {
                 });
 
                 console.log(`[橿原市] ${label}: ${items.length - beforeCount}件取得`);
-            } catch (e: any) {
-                console.error(`[橿原市] ${label} エラー:`, e.message || e);
+            } catch (e: unknown) {
+                console.error(`[橿原市] ${label} エラー:`, e instanceof Error ? e.message : String(e) || e);
             }
         }
 
@@ -234,8 +233,8 @@ export class KashiharaCityScraper implements Scraper {
                 });
 
                 console.log(`[橿原市] プロポーザル: ${items.length - beforeCount}件取得`);
-            } catch (e: any) {
-                console.error(`[橿原市] プロポーザル エラー:`, e.message || e);
+            } catch (e: unknown) {
+                console.error(`[橿原市] プロポーザル エラー:`, e instanceof Error ? e.message : String(e) || e);
             }
         }
 
@@ -286,8 +285,8 @@ export class KashiharaCityScraper implements Scraper {
                 });
 
                 console.log(`[橿原市] ${label}: ${items.length - beforeCount}件取得`);
-            } catch (e: any) {
-                console.error(`[橿原市] ${label} エラー:`, e.message || e);
+            } catch (e: unknown) {
+                console.error(`[橿原市] ${label} エラー:`, e instanceof Error ? e.message : String(e) || e);
             }
         }
 

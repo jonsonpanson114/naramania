@@ -10,16 +10,6 @@ const ANNOUNCE_URL = `${BASE}/soshiki/kanzaika/2/1637.html`;
 
 // テーブル構造: 番号 | 業務名（PDFリンク）| 所管課 | 告示日 | 備考
 
-const INCLUDE_KEYWORDS = [
-    '工事', '設計', '改修', '修繕', '新築', '建設', '解体', '建築',
-    '測量', '点検', '耐震', '監理', '計画', '補修', '整備', '施設',
-];
-const SKIP_KEYWORDS = [
-    '廃棄物', '焼却', 'ごみ', 'リサイクル', '売払', '物品', '車両',
-    '清掃', '警備', '農業', '道路', '橋梁', '下水', '管渠', '舗装',
-    '土木', '河川', '造園', '電気通信', '水道施設', 'システム',
-];
-
 function titleSeemsRelevant(title: string): boolean {
     return shouldKeepItem(title);
 }
@@ -46,7 +36,7 @@ function parseJapaneseDate(text: string): string {
 const HEADERS = { 'User-Agent': 'Mozilla/5.0 (compatible; naramania-scraper/1.0)' };
 
 export class KatsuragiCityScraper implements Scraper {
-    municipality: '葛城市' = '葛城市';
+    municipality: '葛城市' = '葛城市' as const;
 
     async scrape(): Promise<BiddingItem[]> {
         const allItems: BiddingItem[] = [];
@@ -90,8 +80,8 @@ export class KatsuragiCityScraper implements Scraper {
             });
 
             console.log(`[葛城市] 入札公告: ${allItems.length}件`);
-        } catch (e: any) {
-            console.error('[葛城市] スクレイパーエラー:', e.message || e);
+        } catch (e: unknown) {
+            console.error('[葛城市] スクレイパーエラー:', e instanceof Error ? e.message : String(e) || e);
         }
 
         console.log(`[葛城市] 合計 ${allItems.length} 件`);

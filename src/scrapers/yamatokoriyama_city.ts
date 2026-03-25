@@ -9,12 +9,6 @@ const BASE = 'https://www.city.yamatokoriyama.lg.jp';
 const RESULT_JSON   = `${BASE}/shigoto_sangyo/nyusatsu_keiyaku/nyusatsunooshirase/index.tree.json`;
 const ANNOUNCE_JSON = `${BASE}/shigoto_sangyo/nyusatsu_keiyaku/nyusatsu/index.tree.json`;
 
-// タイトルに含まれていれば対象（建築・設計系）
-const INCLUDE_TITLE_KEYWORDS = [
-    '工事', '設計', '改修', '修繕', '新築', '建設', '解体', '建築',
-    '測量', '点検', '耐震', '監理', '計画', '補修', '整備', '施設',
-    '実施設計', '基本設計',
-];
 // タイトルに含まれていればスキップ（土木系・非建築）
 const SKIP_TITLE_KEYWORDS = [
     '車両', '物品', '清掃', '警備', '廃棄', 'システム', '役務', '電力供給',
@@ -124,7 +118,7 @@ async function scrapeDetailPage(url: string): Promise<{
 }
 
 export class YamatokoriyamaCityScraper implements Scraper {
-    municipality: '大和郡山市' = '大和郡山市';
+    municipality: '大和郡山市' = '大和郡山市' as const;
 
     async scrape(): Promise<BiddingItem[]> {
         const allItems: BiddingItem[] = [];
@@ -179,8 +173,8 @@ export class YamatokoriyamaCityScraper implements Scraper {
                     await new Promise(r => setTimeout(r, 200));
                 }
                 console.log(`[大和郡山市] ${label}: ${allItems.length}件（累計）`);
-            } catch (e: any) {
-                console.error(`[大和郡山市] ${label} エラー:`, e.message || e);
+            } catch (e: unknown) {
+                console.error(`[大和郡山市] ${label} エラー:`, e instanceof Error ? e instanceof Error ? e.message : String(e) : String(e));
             }
         }
 

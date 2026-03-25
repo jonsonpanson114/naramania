@@ -8,13 +8,6 @@ import { shouldKeepItem } from './common/filter';
 const BASE_URL = 'https://www.town.miyake.lg.jp';
 const RSS_URL = `${BASE_URL}/soshiki/list8-1.html`; // RSS対応ページ
 
-// スキップキーワード
-const SKIP_KEYWORDS = [
-    '道路', '舗装', '下水道', '河川', '砂防', '水道', '管工事', '橋梁', '護岸',
-    '側溝', '水路', '排水', 'マンホール', '配水管', '布設替', '管路', '電気通信',
-    '造園', 'カルバート', '樋門', '土木', '舗装維持', '除草', 'バッテリー',
-];
-
 function shouldSkip(title: string): boolean {
     return !shouldKeepItem(title);
 }
@@ -36,7 +29,7 @@ async function scrapeMiyakeCity(): Promise<BiddingItem[]> {
         console.log(`[三宅町] 新着: ${newItemText}`);
 
         // 各項目のリンクを取得
-        const links = $('a').map((i, el) => {
+        const links = $('a').map((_i, el) => {
             const text = $(el).text().trim();
             const href = $(el).attr('href') || '';
             return { text, href };
@@ -87,8 +80,8 @@ async function scrapeMiyakeCity(): Promise<BiddingItem[]> {
             }
         }
 
-    } catch (e: any) {
-        console.error('[三宅町] エラー:', e.message || e);
+    } catch (e: unknown) {
+        console.error('[三宅町] エラー:', e instanceof Error ? e instanceof Error ? e.message : String(e) : String(e));
     }
 
     console.log(`[三宅町] 合計 ${items.length} 件`);
@@ -96,7 +89,7 @@ async function scrapeMiyakeCity(): Promise<BiddingItem[]> {
 }
 
 export class MiyakeCityScraper implements Scraper {
-    municipality: '三宅町' = '三宅町';
+    municipality: '三宅町' = '三宅町' as const;
 
     async scrape(): Promise<BiddingItem[]> {
         return scrapeMiyakeCity();

@@ -1,7 +1,16 @@
 import fs from 'fs';
 import path from 'path';
-import { BiddingItem } from '../../types/bidding';
+import { BiddingItem, Municipality, BiddingType } from '../../types/bidding';
 import RadarChart from '@/components/RadarChart';
+
+interface ScatterDataPoint {
+    name: string;
+    municipality: Municipality;
+    price: number;
+    priceLabel: string;
+    contractor: string;
+    type: BiddingType;
+}
 
 // Convert "12,345,000円" to 12345000
 function parsePrice(priceStr?: string): number | null {
@@ -21,7 +30,7 @@ export default async function RadarPage() {
     // Prepare data for the scatter plot
     // We want to show Distribution of prices across municipalities
     // Only items with valid parsed prices
-    const scatterData = items.map(item => {
+    const scatterData: ScatterDataPoint[] = items.map(item => {
         const price = parsePrice(item.estimatedPrice);
         if (!price) return null;
 
@@ -29,11 +38,11 @@ export default async function RadarPage() {
             name: item.title,
             municipality: item.municipality,
             price: price,
-            priceLabel: item.estimatedPrice,
+            priceLabel: item.estimatedPrice ?? '',
             contractor: item.winningContractor || "未定",
             type: item.type
         };
-    }).filter(i => i !== null) as any[];
+    }).filter((i): i is ScatterDataPoint => i !== null);
 
     // Sort by price for the grouped bar chart
     scatterData.sort((a, b) => b.price - a.price);

@@ -29,7 +29,7 @@ export async function downloadAndExtractText(url: string): Promise<PDFData | nul
             const textResult = await parser.getText();
             let fullText = '';
             if (textResult && textResult.pages) {
-                fullText = textResult.pages.map((p: any) => p.text).join('\n\n');
+                fullText = textResult.pages.map((p: { text: string }) => p.text).join('\n\n');
             } else if (textResult && textResult.text) {
                 fullText = textResult.text;
             }
@@ -44,8 +44,8 @@ export async function downloadAndExtractText(url: string): Promise<PDFData | nul
                 numpages: data.numpages
             };
         }
-    } catch (error: any) {
-        console.error(`Error processing PDF from ${url}:`, error.message || error);
+    } catch (error: unknown) {
+        console.error(`Error processing PDF from ${url}:`, error instanceof Error ? error.message : String(error));
         return null;
     }
 }
@@ -60,8 +60,8 @@ export async function downloadPDFBuffer(url: string): Promise<Buffer | null> {
             }
         });
         return Buffer.from(response.data);
-    } catch (error: any) {
-        console.error(`Error downloading PDF from ${url}:`, error.message || error);
+    } catch (error: unknown) {
+        console.error(`Error downloading PDF from ${url}:`, error instanceof Error ? error.message : String(error));
         return null;
     }
 }

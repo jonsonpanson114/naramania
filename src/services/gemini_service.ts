@@ -35,7 +35,7 @@ export async function extractBiddingInfoFromPDF(pdfBuffer: Buffer, mimeType: str
         model: "gemini-3.1-flash",
         generationConfig: {
             responseMimeType: "application/json",
-            responseSchema: BIDDING_INFO_SCHEMA as any,
+            responseSchema: BIDDING_INFO_SCHEMA as never,
         },
     });
 
@@ -58,8 +58,8 @@ export async function extractBiddingInfoFromPDF(pdfBuffer: Buffer, mimeType: str
                 }
             ]);
             return JSON.parse(result.response.text());
-        } catch (error: any) {
-            const status = error.status;
+        } catch (error: unknown) {
+            const status = error && typeof error === 'object' && 'status' in error ? (error.status as number) : 500;
             if ((status === 503 || status === 429 || status === 500) && retries > 1) {
                 const waitTime = status === 429 ? 20000 : 10000;
                 await new Promise(resolve => setTimeout(resolve, waitTime));
@@ -82,7 +82,7 @@ export async function extractBiddingInfoFromText(text: string): Promise<Extracte
         model: "gemini-3.1-flash-lite-preview",
         generationConfig: {
             responseMimeType: "application/json",
-            responseSchema: BIDDING_INFO_SCHEMA as any,
+            responseSchema: BIDDING_INFO_SCHEMA as never,
         },
     });
 
@@ -93,8 +93,8 @@ export async function extractBiddingInfoFromText(text: string): Promise<Extracte
         try {
             const result = await model.generateContent(prompt);
             return JSON.parse(result.response.text());
-        } catch (error: any) {
-            const status = error.status;
+        } catch (error: unknown) {
+            const status = error && typeof error === 'object' && 'status' in error ? (error.status as number) : 500;
             if ((status === 503 || status === 429 || status === 500) && retries > 1) {
                 const waitTime = status === 429 ? 20000 : 10000;
                 await new Promise(resolve => setTimeout(resolve, waitTime));

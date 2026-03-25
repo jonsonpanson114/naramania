@@ -1,7 +1,7 @@
 import axios from 'axios';
 import * as cheerio from 'cheerio';
 import { BiddingItem, Scraper, Municipality } from '../types/bidding';
-import { isRealBiddingItem, classifyWinner } from './common/filter';
+import { isRealBiddingItem, classifyWinner, shouldKeepItem } from './common/filter';
 
 // 高取町（Takatori-cho）
 const TAKATORI_RSS = 'http://www.town.takatori.nara.jp/rss/rss.xml';
@@ -51,7 +51,7 @@ async function scrapeFromRss(rssUrl: string, municipality: Municipality): Promis
         const $ = cheerio.load(res.data, { xmlMode: true });
 
         // RSS itemの抽出
-        $('item').each((i: number, el: any) => {
+        $('item').each((i: number, el) => {
             const title = $(el).find('title').text().trim();
             const link = $(el).find('link').text().trim();
             const pubDate = $(el).find('pubDate').text().trim();
@@ -69,7 +69,6 @@ async function scrapeFromRss(rssUrl: string, municipality: Municipality): Promis
             if (NON_BIDDING_PATTERNS.some(p => title.includes(p))) return;
 
             // ③共通NGワードフィルター
-            const { shouldKeepItem } = require('./common/filter');
             if (!shouldKeepItem(title)) return;
 
             // ステータス判定
@@ -96,8 +95,8 @@ async function scrapeFromRss(rssUrl: string, municipality: Municipality): Promis
             });
         });
 
-    } catch (e: any) {
-        console.error(`[${municipality}] エラー:`, e.message || e);
+    } catch (e: unknown) {
+        console.error(`[${municipality}] エラー:`, e instanceof Error ? e instanceof Error ? e.message : String(e) : String(e));
     }
 
     console.log(`[${municipality}] 合計 ${items.length} 件`);
@@ -113,7 +112,7 @@ async function scrapeIkaruga(): Promise<BiddingItem[]> {
 }
 
 export class TakatoriTownScraper implements Scraper {
-    municipality: '高取町' = '高取町';
+    municipality: '高取町' = '高取町' as const;
 
     async scrape(): Promise<BiddingItem[]> {
         return scrapeTakatori();
@@ -121,7 +120,7 @@ export class TakatoriTownScraper implements Scraper {
 }
 
 export class IkarugaTownScraper implements Scraper {
-    municipality: '斑鳩町' = '斑鳩町';
+    municipality: '斑鳩町' = '斑鳩町' as const;
 
     async scrape(): Promise<BiddingItem[]> {
         return scrapeIkaruga();

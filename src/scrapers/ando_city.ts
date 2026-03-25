@@ -6,13 +6,6 @@ import { shouldKeepItem } from './common/filter';
 // 安堵町
 const RSS_URL = 'https://www.town.ando.nara.jp/rss/rss.xml';
 
-// スキップキーワード
-const SKIP_KEYWORDS = [
-    '道路', '舗装', '下水道', '河川', '砂防', '水道', '管工事', '橋梁', '護岸',
-    '側溝', '水路', '排水', 'マンホール', '配水管', '布設替', '管路', '電気通信',
-    '造園', 'カルバート', '樋門', '土木', '舗装維持', '除草', 'バッテリー',
-];
-
 function shouldSkip(title: string): boolean {
     return !shouldKeepItem(title);
 }
@@ -99,8 +92,8 @@ async function scrapeAndoCity(): Promise<BiddingItem[]> {
             });
         });
 
-    } catch (e: any) {
-        console.error('[安堵町] エラー:', e.message || e);
+    } catch (e: unknown) {
+        console.error('[安堵町] エラー:', e instanceof Error ? e.message : String(e) || e);
     }
 
     console.log(`[安堵町] 合計 ${items.length} 件`);
@@ -108,7 +101,7 @@ async function scrapeAndoCity(): Promise<BiddingItem[]> {
 }
 
 export class AndoCityScraper implements Scraper {
-    municipality: '安堵町' = '安堵町';
+    municipality: '安堵町' = '安堵町' as const;
 
     async scrape(): Promise<BiddingItem[]> {
         return scrapeAndoCity();

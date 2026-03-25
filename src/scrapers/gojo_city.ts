@@ -13,11 +13,6 @@ const INCLUDE_KEYWORDS = [
     '工事', '設計', '改修', '修繕', '新築', '建設', '解体', '建築',
     '測量', '点検', '耐震', '監理', '計画', '補修', '整備', '施設',
 ];
-const SKIP_KEYWORDS = [
-    '車両', '物品', '清掃', '警備', '廃棄', 'システム', '役務', '電力',
-    '下水', '管渠', '舗装', '土木', '河川', '造園', '電気通信', '水道施設',
-    '日用品', '雑貨', '農業', '燃料',
-];
 
 function titleSeemsRelevant(title: string): boolean {
     // INCLUDE_KEYWORDS のいずれかを含む（建築・設計系）+ 土木系でない
@@ -73,7 +68,7 @@ async function scrapeDetailPage(url: string): Promise<{ biddingDate?: string; pd
 }
 
 export class GojoCityScraper implements Scraper {
-    municipality: '五條市' = '五條市';
+    municipality: '五條市' = '五條市' as const;
 
     async scrape(): Promise<BiddingItem[]> {
         const allItems: BiddingItem[] = [];
@@ -105,8 +100,8 @@ export class GojoCityScraper implements Scraper {
                 });
                 await new Promise(r => setTimeout(r, 200));
             }
-        } catch (e: any) {
-            console.error('[五條市] スクレイパーエラー:', e.message || e);
+        } catch (e: unknown) {
+            console.error('[五條市] スクレイパーエラー:', e instanceof Error ? e.message : String(e) || e);
         }
 
         console.log(`[五條市] 合計 ${allItems.length} 件`);

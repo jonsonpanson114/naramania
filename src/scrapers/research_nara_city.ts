@@ -22,7 +22,7 @@ async function main() {
             }
         }
     } catch (e) {
-        console.error('Error:', e);
+        console.error('Error:', e instanceof Error ? e instanceof Error ? e.message : String(e) : String(e));
     }
     await browser.close();
 }

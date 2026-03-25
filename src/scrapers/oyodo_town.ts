@@ -10,7 +10,7 @@ const OYODO_URLS = [
 ];
 
 export class OyodoTownScraper implements Scraper {
-    municipality: '大淀町' = '大淀町';
+    municipality: '大淀町' = '大淀町' as const;
 
     async scrape(): Promise<BiddingItem[]> {
         const items: BiddingItem[] = [];
@@ -46,8 +46,8 @@ export class OyodoTownScraper implements Scraper {
                     }
                 });
 
-            } catch (e: any) {
-                console.error(`[大淀町] エラー (${url}):`, e.message || e);
+            } catch (e: unknown) {
+                console.error(`[大淀町] エラー (${url}):`, e instanceof Error ? e instanceof Error ? e.message : String(e) : String(e));
             }
         }
         return items;

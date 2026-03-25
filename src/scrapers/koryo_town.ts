@@ -3,6 +3,30 @@ import * as cheerio from 'cheerio';
 import { BiddingItem, Scraper, BiddingType } from '../types/bidding';
 import { shouldKeepItem } from './common/filter';
 
+interface PdfJsContentItem {
+    str: string;
+}
+
+interface PdfJsPage {
+    getTextContent(): Promise<{ items: PdfJsContentItem[] }>;
+}
+
+interface PdfJsDocument {
+    numPages: number;
+    getPage(pageNum: number): Promise<PdfJsPage>;
+}
+
+interface PdfJsGetDocumentOptions {
+    data: Uint8Array;
+    useWorkerFetch: boolean;
+    isEvalSupported: boolean;
+    useSystemFonts: boolean;
+}
+
+interface PdfJsPdfjsLib {
+    getDocument(options: PdfJsGetDocumentOptions): { promise: Promise<PdfJsDocument> };
+}
+
 async function extractContractorFromPdf(pdfUrl: string): Promise<string | undefined> {
     try {
         const res = await axios.get(pdfUrl, {
@@ -11,7 +35,7 @@ async function extractContractorFromPdf(pdfUrl: string): Promise<string | undefi
             timeout: 20000,
         });
         // ESM dynamic import（pdfjs-dist はESMのみ）
-        const pdfjsLib = await import('pdfjs-dist/legacy/build/pdf.mjs') as any;
+        const pdfjsLib = await import('pdfjs-dist/legacy/build/pdf.mjs') as PdfJsPdfjsLib;
         const data = new Uint8Array(res.data as ArrayBuffer);
         const doc = await pdfjsLib.getDocument({
             data,
@@ -24,7 +48,7 @@ async function extractContractorFromPdf(pdfUrl: string): Promise<string | undefi
         for (let i = 1; i <= doc.numPages; i++) {
             const page = await doc.getPage(i);
             const content = await page.getTextContent();
-            text += content.items.map((s: any) => s.str).join(' ') + '\n';
+            text += content.items.map((s: PdfJsContentItem) => s.str).join(' ') + '\n';
         }
 
         // スペースを正規化して「商号、名称 [会社名] [数字] 〃」パターンで抽出
@@ -45,17 +69,6 @@ async function extractContractorFromPdf(pdfUrl: string): Promise<string | undefi
 const BASE_URL = 'https://www.town.koryo.nara.jp';
 // 指名競争入札結果カテゴリページ
 const CATEGORY_URL = `${BASE_URL}/category/19-4-2-0-0-0-0-0-0-0.html`;
-
-// スキップする工種キーワード
-const SKIP_KEYWORDS = [
-    '道路', '舗装', '下水道', '河川', '砂防', '水道', '管工事', '電気通信',
-    '造園', '機械', '橋梁', 'カルバート', '高木', '剪定', '植樹', '護岸',
-    '側溝', '水路', '調整池', 'ため池', '排水', '土木', '管渠', '維持工事',
-    '鋼構造', '用水路', '農業用水',
-    // 広陵町固有
-    '歩道橋', '管路', '里道', 'バイパス', '樋門', '古墳', '史跡',
-    '伐倒', '発掘調査', '遊具', '補償調査',
-];
 
 function shouldSkip(title: string): boolean {
     return !shouldKeepItem(title);
@@ -85,7 +98,7 @@ function parseItem(text: string): { no: string; name: string; date: string } | n
 }
 
 export class KoryoTownScraper implements Scraper {
-    municipality: '広陵町' = '広陵町';
+    municipality: '広陵町' = '広陵町' as const;
 
     async scrape(): Promise<BiddingItem[]> {
         const items: BiddingItem[] = [];
@@ -173,8 +186,8 @@ export class KoryoTownScraper implements Scraper {
                 });
             }
 
-        } catch (e: any) {
-            console.error('[広陵町] エラー:', e.message || e);
+        } catch (e: unknown) {
+            console.error('[広陵町] エラー:', e instanceof Error ? e.message : String(e) || e);
         }
 
         console.log(`[広陵町] 合計 ${items.length} 件`);

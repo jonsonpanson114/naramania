@@ -75,7 +75,7 @@ async function fetchConstNews(): Promise<NewsItem[]> {
         });
         console.log(`[News] 建設ニュース: ${items.length}件`);
         return items;
-    } catch (e) {
+    } catch {
         // 404エラー等の場合は詳細なログを出さず、静かに失敗
         return [];
     }
@@ -181,7 +181,7 @@ async function fetchKentsu(): Promise<NewsItem[]> {
         });
         console.log(`[News] 建通新聞: ${items.length}件`);
         return items;
-    } catch (e) {
+    } catch {
         // 404エラー等の場合は詳細なログを出さず、静かに失敗
         return [];
     }

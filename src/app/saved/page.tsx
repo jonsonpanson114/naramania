@@ -16,6 +16,7 @@ export default function SavedPage() {
         if (stored) {
             setSavedItems(JSON.parse(stored));
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const removeItem = (id: string) => {

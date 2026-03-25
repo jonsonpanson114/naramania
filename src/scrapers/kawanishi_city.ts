@@ -7,22 +7,8 @@ import { shouldKeepItem } from './common/filter';
 const BASE_URL = 'https://www.town.nara-kawanishi.lg.jp';
 const RESULT_BASE = `${BASE_URL}/category/22-1-0-0-0-0-0-0-0.html`;
 
-// スキップする工種・工事名キーワード
-const SKIP_KEYWORDS = [
-    '道路', '舗装', '下水道', '河川', '砂防', '水道', '管工事', '橋梁', '護岸',
-    '側溝', '水路', '排水', 'マンホール', '配水管', '布設替', '管路', '電気通信',
-    '造園', 'カルバート', '樋門', '土木', '舗装維持', '除草', 'バッテリー',
-];
-
 function shouldSkip(title: string): boolean {
     return !shouldKeepItem(title);
-}
-
-// "令和7年4月分" → "2025-04"
-function parseMonth(yearText: string, month: string): string {
-    const m = month.match(/(\d+)月/)?.[1];
-    if (!m) return '';
-    return `${yearText}-${String(m).padStart(2, '0')}`;
 }
 
 async function scrapeKawanishiCity(): Promise<BiddingItem[]> {
@@ -99,8 +85,8 @@ async function scrapeKawanishiCity(): Promise<BiddingItem[]> {
             }
         }
 
-    } catch (e: any) {
-        console.error('[川西町] エラー:', e.message || e);
+    } catch (e: unknown) {
+        console.error('[川西町] エラー:', e instanceof Error ? e instanceof Error ? e.message : String(e) : String(e));
     } finally {
         await browser.close();
     }
@@ -110,7 +96,7 @@ async function scrapeKawanishiCity(): Promise<BiddingItem[]> {
 }
 
 export class KawanishiCityScraper implements Scraper {
-    municipality: '川西町' = '川西町';
+    municipality: '川西町' = '川西町' as const;
 
     async scrape(): Promise<BiddingItem[]> {
         return scrapeKawanishiCity();

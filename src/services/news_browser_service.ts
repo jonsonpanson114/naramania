@@ -20,7 +20,7 @@ export async function fetchNewsViaBrowser(): Promise<NewsItem[]> {
         await page.waitForTimeout(3000);
         
         const constNewsItems = await page.evaluate(() => {
-            const list: any[] = [];
+            const list: Array<{ id: string; source: string; sourceLabel: string; title: string; date: string; link: string }> = [];
             document.querySelectorAll('a').forEach((el, i) => {
                 const text = el.textContent?.trim() || '';
                 const href = (el as HTMLAnchorElement).href;
@@ -47,7 +47,7 @@ export async function fetchNewsViaBrowser(): Promise<NewsItem[]> {
         await page.waitForTimeout(5000);
         
         const kentsuItems = await page.evaluate(() => {
-            const list: any[] = [];
+            const list: Array<{ id: string; source: string; sourceLabel: string; title: string; date: string; link: string }> = [];
             // エリアニュースの一覧を捕捉
             document.querySelectorAll('.newslist li, .list_news a, a[href*="/news/"]').forEach((el, i) => {
                 if (list.length >= 10) return;
@@ -77,8 +77,8 @@ export async function fetchNewsViaBrowser(): Promise<NewsItem[]> {
         items.push(...kentsuItems);
         console.log(`[News] 建通新聞 (Browser): ${kentsuItems.length}件`);
 
-    } catch (e) {
-        console.error('[News] Browser Fetch エラー:', e);
+    } catch (e: unknown) {
+        console.error('[News] Browser Fetch エラー:', e instanceof Error ? e.message : String(e));
     } finally {
         await browser.close();
     }

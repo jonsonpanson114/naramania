@@ -5,9 +5,6 @@ import { shouldKeepItem } from './common/filter';
 
 const ANNOUNCE_URL = 'https://www.city.sakurai.lg.jp/sosiki/soumu/kanzaikeiyaku/nyuusatukeiyakukensa/6596.html';
 
-// スキップする業種キーワード
-const SKIP_KEYWORDS = ['土木', '舗装', '管渠', '下水道', '道路', '河川', '砂防', '水道', '管工事', '電気通信', '造園', '機械'];
-
 function shouldSkip(title: string, category: string): boolean {
     return !shouldKeepItem(title, category);
 }
@@ -28,7 +25,7 @@ function parseDateFromHeading(heading: string): string {
 }
 
 export class SakuraiCityScraper implements Scraper {
-    municipality: '桜井市' = '桜井市';
+    municipality: '桜井市' = '桜井市' as const;
 
     async scrape(): Promise<BiddingItem[]> {
         const items: BiddingItem[] = [];
@@ -78,8 +75,8 @@ export class SakuraiCityScraper implements Scraper {
                 });
             });
 
-        } catch (e: any) {
-            console.error('[桜井市] エラー:', e.message || e);
+        } catch (e: unknown) {
+            console.error('[桜井市] エラー:', e instanceof Error ? e instanceof Error ? e.message : String(e) : String(e));
         }
 
         console.log(`[桜井市] 合計 ${items.length} 件`);

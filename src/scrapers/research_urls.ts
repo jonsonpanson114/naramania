@@ -20,7 +20,7 @@ async function research() {
         }
 
     } catch (e) {
-        console.log('Error accessing homepage:', e instanceof Error ? e.message : String(e));
+        console.log('Error accessing homepage:', e instanceof Error ? e instanceof Error ? e.message : String(e) : String(e));
     }
 
     await browser.close();

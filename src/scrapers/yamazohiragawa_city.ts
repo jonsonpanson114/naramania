@@ -3,22 +3,8 @@ import * as cheerio from 'cheerio';
 import { BiddingItem, Scraper, Municipality } from '../types/bidding';
 import { shouldKeepItem } from './common/filter';
 
-// 山添村（yamazoe） - 入札情報ページなし
-const YAMAZO_URL = '';  // 404エラー: オンラインでの入札情報公開なし
-
 // 平群町（heguri）
 const HEGURI_URL = 'https://www.town.heguri.nara.jp/soshiki/list7-1.html';
-
-// スキップキーワード（他の小規模自治体向け）
-const SKIP_KEYWORDS = [
-    '道路', '舗装', '下水道', '河川', '砂防', '水道', '管工事', '橋梁', '護岸',
-    '側溝', '水路', '排水', 'マンホール', '配水管', '布設替', '管路', '電気通信',
-    '造園', 'カルバート', '樋門', '土木', '舗装維持', '除草', 'バッテリー', '橋', '測量', '下水道',
-];
-
-function shouldSkip(title: string): boolean {
-    return !shouldKeepItem(title);
-}
 
 async function scrapeSmallTown(url: string, municipality: string): Promise<BiddingItem[]> {
     const items: BiddingItem[] = [];
@@ -80,8 +66,8 @@ async function scrapeSmallTown(url: string, municipality: string): Promise<Biddi
             });
         }
 
-    } catch (e: any) {
-        console.error(`[${municipality}] エラー:`, e.message || e);
+    } catch (e: unknown) {
+        console.error(`[${municipality}] エラー:`, e instanceof Error ? e instanceof Error ? e.message : String(e) : String(e));
     }
 
     console.log(`[${municipality}] 合計 ${items.length} 件`);
@@ -89,7 +75,7 @@ async function scrapeSmallTown(url: string, municipality: string): Promise<Biddi
 }
 
 export class YamazomuraScraper implements Scraper {
-    municipality: '山添村' = '山添村';
+    municipality: '山添村' = '山添村' as const;
 
     async scrape(): Promise<BiddingItem[]> {
         console.log('[山添村] 入札情報ページなし（オンライン公開なし）');
@@ -98,7 +84,7 @@ export class YamazomuraScraper implements Scraper {
 }
 
 export class HiragawaScraper implements Scraper {
-    municipality: '平群町' = '平群町';
+    municipality: '平群町' = '平群町' as const;
 
     async scrape(): Promise<BiddingItem[]> {
         return scrapeSmallTown(HEGURI_URL, '平群町');

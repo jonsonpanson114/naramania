@@ -41,6 +41,7 @@ export default function SettingsPage() {
             if (settings.municipalities) setMunicipalities(settings.municipalities);
             if (settings.itemsPerPage) setItemsPerPage(settings.itemsPerPage);
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const toggleMunicipality = (id: string) => {

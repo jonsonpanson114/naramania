@@ -21,7 +21,7 @@ export default async function Home() {
       const fileContent = fs.readFileSync(jsonPath, 'utf-8');
       allItems = JSON.parse(fileContent);
     }
-  } catch (error) {
+  } catch {
     // エラー時は空配列を返す
   }
 
@@ -35,7 +35,7 @@ export default async function Home() {
   // Urgent: Deadline within 7 days
   const oneWeekLater = new Date();
   oneWeekLater.setDate(oneWeekLater.getDate() + 7);
-  const urgentCount = allItems.filter(item => {
+  void allItems.filter(item => {
     if (!item.biddingDate) return false;
     const deadline = new Date(item.biddingDate);
     const now = new Date();
@@ -43,9 +43,9 @@ export default async function Home() {
   }).length;
 
   // Intelligence stats
-  const awardedCount = allItems.filter(item => item.status === '落札').length;
-  const gcCount = allItems.filter(item => item.status === '落札' && item.winnerType === 'ゼネコン').length;
-  const designCount = allItems.filter(item => item.status === '落札' && item.winnerType === '設計事務所').length;
+  void allItems.filter(item => item.status === '落札').length;
+  void allItems.filter(item => item.status === '落札' && item.winnerType === 'ゼネコン').length;
+  void allItems.filter(item => item.status === '落札' && item.winnerType === '設計事務所').length;
 
   // AI Work Stats
   const aiExtractedCount = allItems.filter(item => item.isIntelligenceExtracted).length;

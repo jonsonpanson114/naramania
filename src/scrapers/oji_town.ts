@@ -6,7 +6,7 @@ import { shouldKeepItem } from './common/filter';
 const OJI_URL = 'https://www.town.oji.nara.jp/kakuka/somu/somu/gyomuannai/nyuusatu/nyuusatukouhyou/index.html';
 
 export class OjiTownScraper implements Scraper {
-    municipality: '王寺町' = '王寺町';
+    municipality: '王寺町' = '王寺町' as const;
 
     async scrape(): Promise<BiddingItem[]> {
         const items: BiddingItem[] = [];
@@ -42,8 +42,8 @@ export class OjiTownScraper implements Scraper {
                 }
             });
 
-        } catch (e: any) {
-            console.error(`[王寺町] エラー:`, e.message || e);
+        } catch (e: unknown) {
+            console.error(`[王寺町] エラー:`, e instanceof Error ? e instanceof Error ? e.message : String(e) : String(e));
         }
         return items;
     }

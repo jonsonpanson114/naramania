@@ -13,9 +13,6 @@ const SEARCH_TARGETS = [
     { screenId: 'PPUBC00700', chotatsu_kbn: '01', status: '落札' as const, label: '委託業務/入札結果' },
 ];
 
-// スキップする工種
-const SKIP_KOUSHUS = ['土木一式', '舗装', '機械器具設置', '鋼構造物', '河川', '砂防', '造園', '水道施設', '管工事', 'さく井', '電気通信'];
-
 function shouldSkipKoushu(koushu: string): boolean {
     return !shouldKeepItem('', koushu);
 }
@@ -37,7 +34,7 @@ function classifyType(koushu: string, chotatsu: string): BiddingType {
 }
 
 export class TawaramotoTownScraper implements Scraper {
-    municipality: '田原本町' = '田原本町';
+    municipality: '田原本町' = '田原本町' as const;
 
     async scrape(): Promise<BiddingItem[]> {
         const browser = await chromium.launch({ headless: true });
@@ -134,13 +131,13 @@ export class TawaramotoTownScraper implements Scraper {
 
                     console.log(`[田原本町] ${label}: ${allItems.length}件（累計）`);
 
-                } catch (e: any) {
-                    console.warn(`[田原本町] ${label} エラー:`, e.message?.split('\n')[0]);
+                } catch (e: unknown) {
+                    console.warn(`[田原本町] ${label} エラー:`, e instanceof Error ? e.message : String(e)?.split('\n')[0]);
                 }
             }
 
-        } catch (e: any) {
-            console.error('[田原本町] スクレイパーエラー:', e.message || e);
+        } catch (e: unknown) {
+            console.error('[田原本町] スクレイパーエラー:', e instanceof Error ? e.message : String(e) || e);
         } finally {
             await browser.close();
         }

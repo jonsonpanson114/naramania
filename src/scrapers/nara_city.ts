@@ -37,7 +37,7 @@ function classifyType(koushu: string, chotatsu: string): BiddingType {
 }
 
 export class NaraCityScraper implements Scraper {
-    municipality: '奈良市' = '奈良市';
+    municipality: '奈良市' = '奈良市' as const;
 
     async scrape(): Promise<BiddingItem[]> {
         const browser = await chromium.launch({ headless: true });
@@ -162,13 +162,13 @@ export class NaraCityScraper implements Scraper {
 
                     console.log(`[奈良市] ${label}: ${allItems.length}件（累計）`);
 
-                } catch (e: any) {
-                    console.warn(`[奈良市] ${label} エラー:`, e.message?.split('\n')[0]);
+                } catch (e: unknown) {
+                    console.warn(`[奈良市] ${label} エラー:`, e instanceof Error ? e.message : String(e)?.split('\n')[0]);
                 }
             }
 
-        } catch (e: any) {
-            console.error('[奈良市] スクレイパーエラー:', e.message || e);
+        } catch (e: unknown) {
+            console.error('[奈良市] スクレイパーエラー:', e instanceof Error ? e.message : String(e) || e);
         } finally {
             await browser.close();
         }

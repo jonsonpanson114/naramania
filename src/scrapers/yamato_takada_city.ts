@@ -12,9 +12,6 @@ const ANNOUNCEMENT_PAGES = [
 ];
 const RESULT_PAGE = `${BASE}/soshikikarasagasu/keiyakukanrishitsu/nyusatsu_keiyaku/1/9099.html`;
 
-// 土木系をスキップ
-const SKIP_GYOSHU = ['舗装', '土木', '管渠', '下水', '河川', '造園', '電気通信', '水道'];
-
 function classifyType(gyoshu: string, title: string): BiddingType {
     const t = gyoshu + title;
     if (t.includes('コンサル') || t.includes('設計') || t.includes('測量')) return 'コンサル';
@@ -44,7 +41,7 @@ function parseJapaneseDate(text: string): string {
 function findPageUpdateDate($: cheerio.CheerioAPI): string {
     let date = '';
     $('*').contents().filter((_, node) => node.type === 'text').each((_, node) => {
-        const text = (node as any).data || '';
+        const text = ('data' in node && typeof node.data === 'string') ? node.data : '';
         const d = parseJapaneseDate(text);
         if (d) { date = d; return false; }
     });
@@ -58,7 +55,7 @@ function findPageUpdateDate($: cheerio.CheerioAPI): string {
 const HEADERS = { 'User-Agent': 'Mozilla/5.0 (compatible; naramania-scraper/1.0)' };
 
 export class YamatoTakadaCityScraper implements Scraper {
-    municipality: '大和高田市' = '大和高田市';
+    municipality: '大和高田市' = '大和高田市' as const;
 
     async scrape(): Promise<BiddingItem[]> {
         const allItems: BiddingItem[] = [];
@@ -96,8 +93,8 @@ export class YamatoTakadaCityScraper implements Scraper {
                     });
                 });
                 console.log(`[大和高田市] ${label}/入札公告: ${allItems.length}件（累計）`);
-            } catch (e: any) {
-                console.warn(`[大和高田市] ${label}/入札公告 エラー:`, e.message?.split('\n')[0]);
+            } catch (e: unknown) {
+                console.warn(`[大和高田市] ${label}/入札公告 エラー:`, e instanceof Error ? e instanceof Error ? e.message : String(e).split('\n')[0] : String(e));
             }
         }
 
@@ -168,8 +165,8 @@ export class YamatoTakadaCityScraper implements Scraper {
             });
 
             console.log(`[大和高田市] 入札結果: ${allItems.length - beforeCount}件`);
-        } catch (e: any) {
-            console.warn(`[大和高田市] 入札結果 エラー:`, e.message?.split('\n')[0]);
+        } catch (e: unknown) {
+            console.warn(`[大和高田市] 入札結果 エラー:`, e instanceof Error ? e instanceof Error ? e.message : String(e).split('\n')[0] : String(e));
         }
 
         console.log(`[大和高田市] 合計 ${allItems.length} 件`);

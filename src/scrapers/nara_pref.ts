@@ -124,7 +124,7 @@ async function extractContractorFromFrame(fra1: Frame): Promise<string | undefin
 }
 
 export class NaraPrefScraper implements Scraper {
-    municipality: '奈良県' = '奈良県';
+    municipality: '奈良県' = '奈良県' as const;
 
     async scrape(): Promise<BiddingItem[]> {
         const browser = await chromium.launch({ headless: true });
@@ -157,6 +157,7 @@ export class NaraPrefScraper implements Scraper {
 
                     await Promise.all([
                         fra1.waitForNavigation({ waitUntil: 'domcontentloaded', timeout: 20000 }),
+                        // eslint-disable-next-line @typescript-eslint/no-explicit-any
                         menuFrame.evaluate((url: string) => (window as any).pf_VidDsp_btnReferenceClick(url), menuUrl),
                     ]);
                     await page.waitForTimeout(2000);
@@ -171,8 +172,10 @@ export class NaraPrefScraper implements Scraper {
 
                     // 検索実行
                     await fra1.evaluate(() => {
+                        // eslint-disable-next-line @typescript-eslint/no-explicit-any
                         const topW = window.top as any;
                         if (topW?.fra_hidden) topW.fra_hidden.submit_flag = 0;
+                        // eslint-disable-next-line @typescript-eslint/no-explicit-any
                         (window as any).fnc_btnSearch_Clicked();
                     });
                     await fra1.waitForNavigation({ waitUntil: 'domcontentloaded', timeout: 30000 });
@@ -189,6 +192,7 @@ export class NaraPrefScraper implements Scraper {
                     for (let pageNum = 1; pageNum <= limitPages; pageNum++) {
                         if (pageNum > 1) {
                             const moved = await fra1.evaluate((n: number) => {
+                                // eslint-disable-next-line @typescript-eslint/no-explicit-any
                                 const fn = (window as any).pf_VidDsp_btnMovePage;
                                 if (typeof fn === 'function') { fn(n); return true; }
                                 return false;
@@ -223,7 +227,7 @@ export class NaraPrefScraper implements Scraper {
                                 await page.waitForTimeout(800);
                                 winningContractor = await extractContractorFromFrame(fra1);
                                 console.log(`[奈良県] ${row.title.slice(0, 25)} → ${winningContractor || '落札者不明'}`);
-                            } catch (e: any) {
+                            } catch {
                                 console.warn(`[奈良県] 詳細ページ取得失敗: ${row.ankenId}`);
                             }
                         }
@@ -242,13 +246,13 @@ export class NaraPrefScraper implements Scraper {
                         });
                     }
 
-                } catch (e: any) {
-                    console.warn(`[奈良県] ${label} エラー:`, e.message?.split('\n')[0]);
+                } catch (e: unknown) {
+                    console.warn(`[奈良県] ${label} エラー:`, e instanceof Error ? e.message : String(e)?.split('\n')[0]);
                 }
             }
 
-        } catch (e: any) {
-            console.error('[奈良県] スクレイパーエラー:', e.message || e);
+        } catch (e: unknown) {
+            console.error('[奈良県] スクレイパーエラー:', e instanceof Error ? e.message : String(e) || e);
         } finally {
             await browser.close();
         }

@@ -49,6 +49,7 @@ export default function SearchPage() {
         }
 
         setFiltered(result);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [keyword, municipality, status, items]);
 
     return (
