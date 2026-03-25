@@ -2,9 +2,9 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { downloadPDFBuffer } from '../src/utils/pdf_utils.ts';
-import { extractBiddingInfoFromPDF, extractBiddingInfoFromText } from '../src/services/gemini_service.ts';
-import type { BiddingItem } from '../src/types/bidding.ts';
+import { downloadPDFBuffer } from '../src/utils/pdf_utils';
+import { extractBiddingInfoFromPDF, extractBiddingInfoFromText } from '../src/services/gemini_service';
+import type { BiddingItem } from '../src/types/bidding';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
