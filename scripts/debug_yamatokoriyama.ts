@@ -30,8 +30,8 @@ async function debug() {
                 console.log(`  行${i}: ${$(tr).text().trim().substring(0, 80)}`);
             });
         }
-    } catch (e: any) {
-        console.log('→ 入札公告エラー:', e.message?.split('\n')[0]);
+    } catch (e: unknown) {
+        console.log('→ 入札公告エラー:', e instanceof Error ? e.message?.split('\n')[0] : String(e));
     }
 
     // 入札結果
@@ -55,8 +55,8 @@ async function debug() {
                 console.log(`  行${i}: ${$(tr).text().trim().substring(0, 80)}`);
             });
         }
-    } catch (e: any) {
-        console.log('→ 入札結果エラー:', e.message?.split('\n')[0]);
+    } catch (e: unknown) {
+        console.log('→ 入札結果エラー:', e instanceof Error ? e.message?.split('\n')[0] : String(e));
     }
 
     console.log('\n=== コード上のURL ===');

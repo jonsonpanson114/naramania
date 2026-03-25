@@ -9,14 +9,14 @@ import { createRequire } from 'module';
 const require = createRequire(import.meta.url);
 const pdf = require('pdf-parse');
 import { extractBiddingInfoFromText } from './src/services/gemini_service';
-import { BiddingItem, BiddingType } from './src/types/bidding';
+import { BiddingItem } from './src/types/bidding';
 import { shouldKeepItem, classifyWinner } from './src/scrapers/common/filter';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const RESULT_PATH = path.join(__dirname, 'scraper_result.json');
-const BATCH_SIZE = 1; // Process one by one due to Playwright overhead
+const MAX_CONSECUTIVE_ERRORS = 10;
 const MAX_CONSECUTIVE_ERRORS = 10;
 
 const delay = (ms: number) => new Promise(res => setTimeout(res, ms));
@@ -39,12 +39,12 @@ async function extractTextFromZipBuffer(zipBuffer: Buffer): Promise<string> {
                             const parser = new pdf.PDFParse({ data: pdfData });
                             const textResult = await parser.getText();
                             if (textResult && textResult.pages) {
-                                textOut += textResult.pages.map((p: any) => p.text).join('\n') + '\n';
+                                textOut += textResult.pages.map((p: { text: string }) => p.text).join('\n') + '\n';
                             } else if (textResult && textResult.text) {
                                 textOut += textResult.text + '\n';
                             }
                         } else {
-                            const data = await (pdf as any)(pdfData);
+                            const data = await (pdf as (buffer: Buffer) => { text: string })(pdfData);
                             textOut += data.text + '\n';
                         }
                     } catch (e) {
@@ -176,7 +176,7 @@ async function scrapeNaraPrefPdf(page: Page, item: BiddingItem): Promise<string 
         }
     }
 
-    let displayBtn = rows.nth(targetRowIndex).locator('input[value="表示"]');
+    const displayBtn = rows.nth(targetRowIndex).locator('input[value="表示"]');
 
     if (targetRowIndex === -1 || await displayBtn.count() === 0) {
         console.error(`Target row NOT FOUND for: ${item.title}`);
@@ -223,104 +223,6 @@ async function scrapeNaraPrefPdf(page: Page, item: BiddingItem): Promise<string 
     return await extractTextFromZipBuffer(zipBuffer);
 }
 
-async function getNaraPref2025CategoryList(page: Page, menuId: string, koshuCd: string, categoryName: string): Promise<BiddingItem[]> {
-    console.log(`[List] Searching Nara Pref 2025 list for ${categoryName}...`);
-    await page.goto('http://www.ppi06.t-elbs.jp/DENCHO/PpiJGyomuStart.do?kinouid=GP5000_Top', { waitUntil: 'domcontentloaded' });
-    await delay(5000);
-
-    const fraL = page.frames().find(f => f.name() === 'fra_mainL');
-    if (!fraL) {
-        console.error('Initial fra_mainL not found.');
-        return [];
-    }
-
-    const pMenu = fraL.locator(`#${menuId}`);
-    await pMenu.waitFor({ state: 'visible', timeout: 10000 });
-
-    await pMenu.click();
-    await delay(5000);
-
-    // Look for the frame containing the search form
-    console.log('[List] Discovering search form frame...');
-    let searchFrame = page.frames().find(f => f.name() === 'fra_mainR' || f.url().includes('1010'));
-    if (!searchFrame) {
-        await page.waitForTimeout(5000);
-        searchFrame = page.frames().find(f => f.name() === 'fra_mainR' || f.url().includes('1010'));
-    }
-
-    if (!searchFrame) {
-        console.error('Failed to discover search form frame.');
-        return [];
-    }
-
-    console.log(`[List] Filling search criteria in frame: ${searchFrame.name() || 'unnamed'}`);
-    await searchFrame.selectOption('select[name="keisaiNen"]', '2025').catch(() => { });
-    await searchFrame.selectOption('select[name="koshuCd"]', koshuCd).catch(() => { });     // 建築系
-    await searchFrame.selectOption('select[name="pageSize"]', '500').catch(() => { });    // Max 500 per page
-
-    await searchFrame.locator('#btnSearch').click();
-    console.log('[List] Form submitted. Waiting for results table...');
-    await delay(10000); // 10s delay to allow e-BISC to process the search and reload the frame
-
-    // e-BISC reloads fra_mainR into GP5515_1020 for the results list
-    const resultsFrame = page.frames().find(f => f.url().includes('1020') || f.name() === 'fra_mainR') || searchFrame;
-
-    const rows = resultsFrame.locator('table tr');
-    const count = await rows.count();
-    console.log(`[List] Found ${count} rows on the results page.`);
-    const items: BiddingItem[] = [];
-
-    // The first rows are usually headers
-    for (let i = 1; i < count; i++) {
-        const rowText = await rows.nth(i).innerText();
-        const lines = rowText.split('\n').map(l => l.trim()).filter(l => l.length > 0);
-
-        // We expect at least 6 lines for a valid data row
-        if (lines.length < 6) continue;
-
-        // Title is usually the second to last line
-        let title = lines[lines.length - 2];
-
-        // Exclude Cancelled projects
-        if (title.includes('【中止】')) continue;
-
-        // Exclude Civil Engineering
-        if (!shouldKeepItem(title)) continue;
-
-        // Date is the 3rd to last line, e.g. "R07.09.05 10:30"
-        let rawDate = lines[lines.length - 3];
-        let announcementDate = '2025-01-01'; // Fallback
-
-        const rMatch = rawDate.match(/R(\d+)\.(\d+)\.(\d+)/);
-        if (rMatch) {
-            const reiwaYear = parseInt(rMatch[1], 10);
-            const gregorian = 2018 + reiwaYear;
-            const month = rMatch[2].padStart(2, '0');
-            const day = rMatch[3].padStart(2, '0');
-            announcementDate = `${gregorian}-${month}-${day}`;
-        }
-
-        if (title.length > 5 && !items.find(it => it.title === title)) {
-            items.push({
-                id: `nara-pref-2025-${i}`,
-                municipality: '奈良県',
-                title: title,
-                type: categoryName === '建築' ? '建築' : '委託',
-                announcementDate: announcementDate,
-                link: 'e-BISC',
-                status: '落札',
-                isIntelligenceExtracted: false
-            });
-        }
-    }
-    return items;
-}
-
-async function getNaraPref2025List(page: Page): Promise<BiddingItem[]> {
-    const listConstruction = await getNaraPref2025CategoryList(page, 'P5515', '200', '建築');
-    const listConsulting = await getNaraPref2025CategoryList(page, 'P6015', '300000', '設計');
-    return [...listConstruction, ...listConsulting];
-}
 
 async function main() {
     let browser = await chromium.launch({ headless: true });
@@ -389,10 +291,11 @@ async function main() {
                 if (consecutiveErrors >= MAX_CONSECUTIVE_ERRORS) break;
                 await delay(5000);
 
-            } catch (e: any) {
-                console.error(`Error processing ${item.id}:`, e.message || e);
+            } catch (e: unknown) {
+                const error = e instanceof Error ? e : new Error(String(e));
+                console.error(`Error processing ${item.id}:`, error.message);
                 consecutiveErrors++;
-                if (e.message.includes('browser has been closed') || e.message.includes('disconnected')) {
+                if (error.message.includes('browser has been closed') || error.message.includes('disconnected')) {
                     await browser.close().catch(() => { });
                 }
             } finally {

@@ -36,8 +36,8 @@ async function verifyIkomaExtract() {
                 log(`Item ${i}: text=[${text}] gyoshu=[${gyoshu}]`);
             }
         }
-    } catch (e: any) {
-        log(`❌ Error: ${e.message}`);
+    } catch (e: unknown) {
+        log(`❌ Error: ${e instanceof Error ? e.message : String(e)}`);
     } finally {
         await browser.close();
     }

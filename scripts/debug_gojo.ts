@@ -1,12 +1,18 @@
 import axios from 'axios';
 import fs from 'fs';
 
+interface Page {
+    page_name: string;
+    is_category_index?: boolean;
+    child_pages?: Page[];
+}
+
 const RESULT_JSON = 'https://www.city.gojo.lg.jp/soshiki/keiyakukensa/1_1/7/index.tree.json';
 
 async function debug() {
     console.log('=== 五條市 デバッグ ===');
 
-    const res = await axios.get(RESULT_JSON, {
+    const res = await axios.get<Page[]>(RESULT_JSON, {
         headers: { 'User-Agent': 'Mozilla/5.0' },
         timeout: 30000,
     });
@@ -24,7 +30,7 @@ async function debug() {
 
         if (categoryIndex.child_pages) {
             console.log('\n子ページ一覧:');
-            categoryIndex.child_pages.forEach((p: any, i) => {
+            categoryIndex.child_pages.forEach((p, i) => {
                 console.log(`${i}: ${p.page_name}`);
             });
         }
@@ -32,7 +38,7 @@ async function debug() {
 
     // すべてのページ（カテゴリインデックス含む）
     console.log('\nすべてのページ:');
-    pages.forEach((p: any, i) => {
+    pages.forEach((p, i) => {
         const isCat = p.is_category_index ? '[INDEX]' : '';
         console.log(`${i}: ${isCat} ${p.page_name}`);
     });

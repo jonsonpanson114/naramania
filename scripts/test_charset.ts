@@ -12,7 +12,7 @@ async function main() {
                 const headers = response.headers();
                 const body = await response.body();
                 
-                let decoded = iconv.decode(body, 'Shift_JIS');
+                const decoded = iconv.decode(body, 'Shift_JIS');
                 const utf8Body = Buffer.from(decoded, 'utf8');
                 headers['content-type'] = 'text/html; charset=utf-8';
                 
@@ -47,12 +47,12 @@ async function main() {
         const rows = resultsFrame!.locator('table tr');
         const count = await rows.count();
         
-        let extracted = [];
+        const extracted = [];
         for (let i = 1; i < count; i++) {
             const rowText = await rows.nth(i).innerText();
             const lines = rowText.split('\n').map(l => l.trim()).filter(l => l.length > 0);
             if (lines.length < 6) continue;
-            let title = lines[lines.length - 2];
+            const title = lines[lines.length - 2];
             extracted.push(title);
         }
         console.log("Extracted Titles:", extracted.slice(0, 3));

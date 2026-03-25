@@ -1,4 +1,5 @@
 import { chromium } from 'playwright';
+import fs from 'fs';
 
 async function main() {
     const browser = await chromium.launch({ headless: true });
@@ -13,7 +14,7 @@ async function main() {
         const ankenId = '29001013060020250258';
         console.log(`Attempting direct jump to ankenId: ${ankenId}...`);
 
-        // Use fra_main1 or appropriate frame? 
+        // Use fra_main1 or appropriate frame?
         // Detail pages often load in a frame or as a full page reload if JS initiated.
         // Let's try navigating the whole page first.
         await page.goto(`http://www.ppi06.t-elbs.jp/DENCHO/GP5510_1020?ankenId=${ankenId}`, { waitUntil: 'networkidle' });
@@ -23,7 +24,6 @@ async function main() {
         console.log('Frames after jump:', frames.map(f => f.name() + ' : ' + f.url()));
 
         const content = await page.content();
-        const fs = require('fs');
         fs.writeFileSync('direct_jump_result.html', content);
 
         if (content.includes('詳細') || content.includes('民俗博物館')) {

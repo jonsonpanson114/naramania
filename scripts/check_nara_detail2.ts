@@ -1,5 +1,15 @@
 import { chromium } from 'playwright';
 
+interface WindowWithFrame extends Window {
+  fra_hidden?: { submit_flag: number };
+  fnc_btnSearch_Clicked?: () => void;
+  pf_VidDsp_btnReferenceClick?: (url: string) => void;
+}
+
+interface TopWindow extends Window {
+  fra_hidden?: { submit_flag: number };
+}
+
 async function checkDetailPage() {
   const browser = await chromium.launch({ headless: true });
   const page = await browser.newPage();
@@ -22,7 +32,7 @@ async function checkDetailPage() {
     // 入札結果ページに遷移
     await Promise.all([
       fra1.waitForNavigation({ waitUntil: 'domcontentloaded' }),
-      menuFrame.evaluate(() => (window as any).pf_VidDsp_btnReferenceClick('/DENCHO/GP5515_1010?gyoshuKbnCd=00')),
+      menuFrame.evaluate(() => (window as WindowWithFrame).pf_VidDsp_btnReferenceClick?.('/DENCHO/GP5515_1010?gyoshuKbnCd=00')),
     ]);
     await page.waitForTimeout(2000);
 
@@ -30,9 +40,9 @@ async function checkDetailPage() {
     await page.waitForTimeout(300);
 
     await fra1.evaluate(() => {
-      const topW = window.top as any;
+      const topW = window.top as TopWindow | null;
       if (topW?.fra_hidden) topW.fra_hidden.submit_flag = 0;
-      (window as any).fnc_btnSearch_Clicked();
+      (window as WindowWithFrame).fnc_btnSearch_Clicked?.();
     });
     await fra1.waitForNavigation({ waitUntil: 'domcontentloaded' });
     await page.waitForTimeout(2000);
@@ -40,7 +50,7 @@ async function checkDetailPage() {
     console.log('入札結果ページ:', fra1.url());
 
     // 最初の案件のリンクを確認
-    const firstLink = await fra1.evaluate(() => {
+    const firstLink = await fra1.evaluate((): string | null => {
       const table = Array.from(document.querySelectorAll('table')).find(t => t.className === 'border');
       if (!table) return null;
       const rows = Array.from(table.querySelectorAll('tr')).slice(2);
@@ -75,23 +85,23 @@ async function checkDetailPage() {
               // 関数を探す
               const funcs = [];
               for (const key in window) {
-                if (typeof (window as any)[key] === 'function' && key.toLowerCase().includes('detail')) {
+                if (typeof (window as Record<string, unknown>)[key] === 'function' && key.toLowerCase().includes('detail')) {
                   funcs.push(key);
                 }
               }
               console.log('detail関連関数:', funcs);
             }
-          } catch (e: any) {
-            console.error(e.message);
+          } catch (e: unknown) {
+            console.error(e instanceof Error ? e.message : String(e));
           }
         }, firstLink.onclick);
         await page.waitForTimeout(1000);
       }
     }
 
-  } catch (e: any) {
-    console.error('エラー:', e.message);
-    console.error(e.stack?.split('\n')?.slice(0, 5));
+  } catch (e: unknown) {
+    console.error('エラー:', e instanceof Error ? e.message : String(e));
+    if (e instanceof Error && e.stack) console.error(e.stack.split('\n').slice(0, 5));
   } finally {
     await browser.close();
   }

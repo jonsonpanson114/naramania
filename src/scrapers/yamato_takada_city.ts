@@ -79,7 +79,7 @@ export class YamatoTakadaCityScraper implements Scraper {
 
                     // 件名: br以降の「※」注釈を除去
                     const titleRaw = cells.eq(1).clone().find('br ~ *').remove().end()
-                        .text().replace(/※.*/s, '').trim();
+                        .text().replace(/※[\s\S]*/, '').trim();
                     const gyoshu = cells.eq(4).text().trim();
 
                     if (!titleRaw || titleRaw === '件名') return;

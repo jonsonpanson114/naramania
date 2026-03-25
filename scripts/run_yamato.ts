@@ -11,8 +11,8 @@ async function main() {
     console.log('=== 大和郡山市 スクレイピング開始 ===');
 
     // 既存データを読み込む
-    const existing: any[] = JSON.parse(fs.readFileSync(RESULT_PATH, 'utf-8'));
-    const existingIds = new Set(existing.map((x: any) => x.id));
+    const existing = JSON.parse(fs.readFileSync(RESULT_PATH, 'utf-8')) as { id: string }[];
+    const existingIds = new Set(existing.map((x) => x.id));
 
     const scraper = new YamatokoriyamaCityScraper();
     const items = await scraper.scrape();
@@ -21,8 +21,7 @@ async function main() {
 
     // 新規追加または既存の更新
     let added = 0;
-    let updated = 0;
-    const existingMap = new Map(existing.map((x: any) => [x.id, x]));
+    const existingMap = new Map(existing.map((x) => [x.id, x] as const));
 
     for (const item of items) {
         if (!existingMap.has(item.id)) {
@@ -53,7 +52,7 @@ async function main() {
     }
 
     // 公告日降順ソート
-    existing.sort((a: any, b: any) =>
+    existing.sort((a, b) =>
         new Date(b.announcementDate).getTime() - new Date(a.announcementDate).getTime()
     );
 

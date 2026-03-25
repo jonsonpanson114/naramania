@@ -57,7 +57,7 @@ async function fetchHtml(url: string): Promise<string | null> {
         }
 
         // 2. とりあえずUTF-8でデコードしてmetaタグチェック
-        let text = new TextDecoder('utf-8').decode(buffer);
+        const text = new TextDecoder('utf-8').decode(buffer);
         const metaMatch = text.match(/<meta[^>]*charset=["']?((?:shift_jis|sjis|windows-31j))["']?/i);
         if (metaMatch) {
             console.log(`Detected encoding: ${metaMatch[1]} for ${url}`);
@@ -65,9 +65,9 @@ async function fetchHtml(url: string): Promise<string | null> {
         }
 
         return text;
-    } catch (e: any) {
+    } catch (e: unknown) {
         clearTimeout(id);
-        console.error(`Error fetching ${url}:`, e.message);
+        console.error(`Error fetching ${url}:`, e instanceof Error ? e.message : String(e));
         return null;
     }
 }
@@ -292,7 +292,7 @@ async function scrapeSakurai(): Promise<RealItem[]> {
                 id: makeId('sakurai'), municipality: '桜井市', title,
                 link: link.startsWith('http') ? link : `https://www.city.sakurai.lg.jp${link}`,
                 announcementDate: new Date().toISOString().split('T')[0],
-                status: '情報あり' as any, // Mapped to '不明' later if needed
+                status: '受付中',
                 type: getType(title)
             });
         }
@@ -336,7 +336,7 @@ async function main() {
         if (seen.has(key)) return false;
 
         // Status normalization
-        if (item.status === '情報あり' as any) item.status = '受付中'; // Default
+        if (item.status === '情報あり') item.status = '受付中'; // Default
 
         seen.add(key);
         return true;

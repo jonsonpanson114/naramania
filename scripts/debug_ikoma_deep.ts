@@ -58,8 +58,8 @@ async function testIkomaDeep() {
             }
         }
 
-    } catch (e: any) {
-        console.error('❌ 解析失敗:', e.message);
+    } catch (e: unknown) {
+        console.error('❌ 解析失敗:', e instanceof Error ? e.message : String(e));
     } finally {
         await browser.close();
     }

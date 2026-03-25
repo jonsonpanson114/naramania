@@ -38,7 +38,7 @@ async function testIkomaV7() {
                 if (mainFrame) {
                     log(`5. In koukai_main [${mainFrame.url()}]. Checking for buttons...`);
                     const btns = await mainFrame.evaluate(() => {
-                        return Array.from(document.querySelectorAll('input, button')).map(el => ({ val: (el as any).value, tag: el.tagName }));
+                        return Array.from(document.querySelectorAll('input, button')).map(el => ({ val: (el as HTMLInputElement).value, tag: el.tagName }));
                     });
                     log(`   Buttons in main: ${JSON.stringify(btns)}`);
                     
@@ -53,8 +53,8 @@ async function testIkomaV7() {
             }
         }
 
-    } catch (e: any) {
-        log(`❌ Error: ${e.message}`);
+    } catch (e: unknown) {
+        log(`❌ Error: ${e instanceof Error ? e.message : String(e)}`);
     } finally {
         await browser.close();
     }

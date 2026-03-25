@@ -23,8 +23,8 @@ async function seeTable() {
             });
             fs.writeFileSync('table_sample.log', tableText.join('\n'));
         }
-    } catch (e: any) {
-        fs.writeFileSync('table_sample.log', 'Error: ' + e.message);
+    } catch (e: unknown) {
+        fs.writeFileSync('table_sample.log', 'Error: ' + (e instanceof Error ? e.message : String(e)));
     } finally {
         await browser.close();
     }

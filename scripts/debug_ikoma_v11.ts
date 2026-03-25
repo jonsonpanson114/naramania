@@ -40,8 +40,8 @@ async function testIkomaV11() {
             }
         }
 
-    } catch (e: any) {
-        log(`❌ Error: ${e.message}`);
+    } catch (e: unknown) {
+        log(`❌ Error: ${e instanceof Error ? e.message : String(e)}`);
     } finally {
         await browser.close();
     }

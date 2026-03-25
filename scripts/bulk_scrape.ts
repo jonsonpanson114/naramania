@@ -304,7 +304,7 @@ async function main() {
             item.id.startsWith('ai-extracted') || item.winningContractor || item.designFirm
         );
         console.log(`Preserving ${existingItems.length} AI-extracted items.`);
-    } catch (e) {
+    } catch (_e) {
         // No existing file
     }
 

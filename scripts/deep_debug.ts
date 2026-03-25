@@ -21,7 +21,7 @@ async function debugScraper(city: string, url: string) {
         await page.waitForTimeout(10000);
 
         // Find Menu
-        let menuFrame: any = null;
+        let menuFrame: import('playwright').Frame | null = null;
         for (const frame of page.frames()) {
             const entry = frame.locator('td:has-text("発注情報"), a:has-text("発注情報"), span:has-text("発注情報")').first();
             if (await entry.count() > 0) {
@@ -45,12 +45,13 @@ async function debugScraper(city: string, url: string) {
         await page.waitForTimeout(5000);
 
         // Find Search Button
-        let searchBtn: any = null;
+        let searchBtnFrame: import('playwright').Frame | null = null;
         for (const frame of page.frames()) {
-            searchBtn = frame.locator('input[value*="検索"], button:has-text("検索"), img[alt*="検索"]').first();
+            const searchBtn = frame.locator('input[value*="検索"], button:has-text("検索"), img[alt*="検索"]').first();
             if (await searchBtn.count() > 0) {
                 console.log(`[${city}] Search button found in frame "${frame.name()}"`);
                 await searchBtn.click();
+                searchBtnFrame = frame;
                 break;
             }
         }
@@ -67,7 +68,7 @@ async function debugScraper(city: string, url: string) {
                     const text = (await links[i].textContent())?.trim() || '';
                     const row = links[i].locator('xpath=ancestor::tr').first();
                     const cells = await row.locator('td').all();
-                    let gyoshu = (await cells[1]?.innerText() || '').trim();
+                    const gyoshu = (await cells[1]?.innerText() || '').trim();
                     const keep = shouldKeepItem(text, gyoshu);
                     console.log(`    [${i}] "${text}" (業種: ${gyoshu}) -> Keep: ${keep}`);
                     if (!keep) {
@@ -78,8 +79,8 @@ async function debugScraper(city: string, url: string) {
             }
         }
 
-    } catch (e: any) {
-        console.error(`[${city}] Error:`, e.message);
+    } catch (e: unknown) {
+        console.error(`[${city}] Error:`, e instanceof Error ? e.message : String(e));
     } finally {
         await browser.close();
     }

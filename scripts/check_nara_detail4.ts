@@ -1,5 +1,16 @@
 import { chromium } from 'playwright';
 
+interface WindowWithFrame extends Window {
+  fra_hidden?: { submit_flag: number };
+  fnc_btnSearch_Clicked?: () => void;
+  pf_VidDsp_btnReferenceClick?: (url: string) => void;
+  pf_VidDsp_btnDetailClick?: (id: string) => void;
+}
+
+interface TopWindow extends Window {
+  fra_hidden?: { submit_flag: number };
+}
+
 async function checkDetailPage() {
   const browser = await chromium.launch({ headless: true });
   const page = await browser.newPage();
@@ -20,7 +31,7 @@ async function checkDetailPage() {
 
     await Promise.all([
       fra1.waitForNavigation({ waitUntil: 'domcontentloaded' }),
-      menuFrame.evaluate(() => (window as any).pf_VidDsp_btnReferenceClick('/DENCHO/GP5515_1010?gyoshuKbnCd=00')),
+      menuFrame.evaluate(() => (window as WindowWithFrame).pf_VidDsp_btnReferenceClick?.('/DENCHO/GP5515_1010?gyoshuKbnCd=00')),
     ]);
     await page.waitForTimeout(2000);
 
@@ -28,9 +39,9 @@ async function checkDetailPage() {
     await page.waitForTimeout(300);
 
     await fra1.evaluate(() => {
-      const topW = window.top as any;
+      const topW = window.top as TopWindow | null;
       if (topW?.fra_hidden) topW.fra_hidden.submit_flag = 0;
-      (window as any).fnc_btnSearch_Clicked();
+      (window as WindowWithFrame).fnc_btnSearch_Clicked?.();
     });
     await fra1.waitForNavigation({ waitUntil: 'domcontentloaded' });
     await page.waitForTimeout(2000);
@@ -61,7 +72,7 @@ async function checkDetailPage() {
     console.log('ankenId:', firstLink);
 
     // 新しいページまたはフレームを開く
-    await fra1.evaluate((id: string) => (window as any).pf_VidDsp_btnKokokuClick('5515', id), firstLink);
+    await fra1.evaluate((id: string) => (window as WindowWithFrame).pf_VidDsp_btnDetailClick?.(id), firstLink);
 
     // 少し待ってから、新しいフレームまたはページを確認
     await page.waitForTimeout(5000);
@@ -79,22 +90,22 @@ async function checkDetailPage() {
     await page.waitForTimeout(2000);
 
     const detail = await detailFrame.evaluate(() => {
-      const result: any = { tables: [], bodyText: '' };
+      const result: { tables: Array<{ index: number; rows: unknown[][] }>; bodyText: string } = { tables: [], bodyText: '' };
 
       document.querySelectorAll('table').forEach((t, i) => {
         const rows = Array.from(t.querySelectorAll('tr'));
-        const tableData: any[] = [];
-        rows.forEach((r, ri) => {
-          const cells = Array.from(r.querySelectorAll('td, th')).map((td, ci) => ({
+        const tableData: unknown[][] = [];
+        rows.forEach((_r, _ri) => {
+          const cells = Array.from(r.querySelectorAll('td, th')).map(td => ({
             text: td.textContent?.trim(),
             html: td.innerHTML?.substring(0, 100)
           }));
-          if (cells.some(c => c.text)) {
+          if (cells.some(c => c && typeof c === 'object' && 'text' in c && c.text)) {
             tableData.push(cells);
           }
         });
         if (tableData.length > 0) {
-          result.tables.push({ index: i, className: t.className, rows: tableData });
+          result.tables.push({ index: i, rows: tableData });
         }
       });
 
@@ -104,21 +115,22 @@ async function checkDetailPage() {
 
     console.log('\n=== 詳細ページのテーブル ===');
     for (const t of detail.tables.slice(0, 5)) {
-      console.log(`\nテーブル${t.index} (${t.className || 'no class'}):`);
+      console.log(`\nテーブル${t.index}:`);
       for (const r of t.rows.slice(0, 5)) {
-        console.log('  ', r.map(c => c.text).join(' | '));
+        const texts = r.map(c => typeof c === 'object' && c !== null && 'text' in c ? (c as { text: string }).text : String(c));
+        console.log('  ', texts.join(' | '));
       }
     }
 
     console.log('\n=== bodyテキスト（落札者関連）===');
     const keywords = ['落札', '業者', '価格', '円'];
-    const lines = detail.bodyText.split('\n').filter((l: string) =>
+    const lines = detail.bodyText.split('\n').filter(l =>
       keywords.some(k => l.includes(k))
     );
-    lines.forEach((l: string) => console.log('  ', l));
+    lines.forEach(l => console.log('  ', l));
 
-  } catch (e: any) {
-    console.error('エラー:', e.message);
+  } catch (e: unknown) {
+    console.error('エラー:', e instanceof Error ? e.message : String(e));
   } finally {
     await browser.close();
   }

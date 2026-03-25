@@ -1,5 +1,34 @@
 import { chromium } from 'playwright';
 
+interface TableInfo {
+  index: number;
+  className: string;
+  cells: string[];
+}
+
+interface WinnerSection {
+  keyword: string;
+  tableIndex: number;
+}
+
+interface DetailInfo {
+  url: string;
+  tables: TableInfo[];
+  winnerSections: WinnerSection[];
+  bodyText: string;
+}
+
+interface WindowWithFrame extends Window {
+  fra_hidden?: { submit_flag: number };
+  fnc_btnSearch_Clicked?: () => void;
+  pf_VidDsp_btnDetailClick?: (id: string) => void;
+  pf_VidDsp_btnReferenceClick?: (url: string) => void;
+}
+
+interface TopWindow extends Window {
+  fra_hidden?: { submit_flag: number };
+}
+
 async function checkDetailPage(ankenId: string) {
   const browser = await chromium.launch({ headless: true });
   const page = await browser.newPage();
@@ -23,7 +52,7 @@ async function checkDetailPage(ankenId: string) {
     // 入札結果ページに遷移
     await Promise.all([
       fra1.waitForNavigation({ waitUntil: 'domcontentloaded' }),
-      menuFrame.evaluate(() => (window as any).pf_VidDsp_btnReferenceClick('/DENCHO/GP5515_1010?gyoshuKbnCd=00')),
+      menuFrame.evaluate(() => (window as WindowWithFrame).pf_VidDsp_btnReferenceClick?.('/DENCHO/GP5515_1010?gyoshuKbnCd=00')),
     ]);
     await page.waitForTimeout(2000);
 
@@ -33,9 +62,9 @@ async function checkDetailPage(ankenId: string) {
 
     // 検索実行
     await fra1.evaluate(() => {
-      const topW = window.top as any;
+      const topW = window.top as TopWindow | null;
       if (topW?.fra_hidden) topW.fra_hidden.submit_flag = 0;
-      (window as any).fnc_btnSearch_Clicked();
+      (window as WindowWithFrame).fnc_btnSearch_Clicked?.();
     });
     await fra1.waitForNavigation({ waitUntil: 'domcontentloaded' });
     await page.waitForTimeout(2000);
@@ -44,7 +73,7 @@ async function checkDetailPage(ankenId: string) {
 
     // 詳細ページに遷移
     await fra1.evaluate((id: string) => {
-      (window as any).pf_VidDsp_btnDetailClick(id);
+      (window as WindowWithFrame).pf_VidDsp_btnDetailClick?.(id);
     }, ankenId);
     await fra1.waitForNavigation({ waitUntil: 'domcontentloaded' });
     await page.waitForTimeout(2000);
@@ -52,11 +81,12 @@ async function checkDetailPage(ankenId: string) {
     console.log('詳細ページ:', fra1.url());
 
     // 詳細ページの構造を確認
-    const detail = await fra1.evaluate(() => {
-      const result: any = {
+    const detail = await fra1.evaluate((): DetailInfo => {
+      const result: DetailInfo = {
         url: document.location.href,
-        tables: [] as any[],
-        winnerSections: [] as any[]
+        tables: [],
+        winnerSections: [],
+        bodyText: ''
       };
 
       // 全テーブルを取得
@@ -105,8 +135,8 @@ async function checkDetailPage(ankenId: string) {
     console.log('\n=== bodyテキスト ===');
     console.log(detail.bodyText);
 
-  } catch (e: any) {
-    console.error('エラー:', e.message);
+  } catch (e: unknown) {
+    console.error('エラー:', e instanceof Error ? e.message : String(e));
   } finally {
     await browser.close();
   }

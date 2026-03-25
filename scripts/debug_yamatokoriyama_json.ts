@@ -1,6 +1,10 @@
 import axios from 'axios';
 import fs from 'fs';
 
+interface TreeItem {
+    [key: string]: unknown;
+}
+
 const ANNOUNCE_JSON = 'https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsu/index.tree.json';
 const RESULT_JSON = 'https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsunooshirase/index.tree.json';
 
@@ -10,7 +14,7 @@ async function debug() {
     // 入札公告
     console.log('\n1. 入札公告 JSON');
     try {
-        const res = await axios.get(ANNOUNCE_JSON, {
+        const res = await axios.get<TreeItem[]>(ANNOUNCE_JSON, {
             headers: { 'User-Agent': 'Mozilla/5.0' },
             timeout: 30000,
         });
@@ -19,17 +23,17 @@ async function debug() {
         const data = Array.isArray(res.data) ? res.data : [];
         console.log(`→ 配列長: ${data.length}`);
         console.log('→ 最初3件:');
-        data.slice(0, 3).forEach((item: any, i) => {
+        data.slice(0, 3).forEach((item, i) => {
             console.log(`  ${i}: ${JSON.stringify(item).substring(0, 200)}`);
         });
-    } catch (e: any) {
-        console.log('→ 入札公告エラー:', e.message?.split('\n')[0]);
+    } catch (e: unknown) {
+        console.log('→ 入札公告エラー:', e instanceof Error ? e.message?.split('\n')[0] : String(e));
     }
 
     // 入札結果
     console.log('\n2. 入札結果 JSON');
     try {
-        const res = await axios.get(RESULT_JSON, {
+        const res = await axios.get<TreeItem[]>(RESULT_JSON, {
             headers: { 'User-Agent': 'Mozilla/5.0' },
             timeout: 30000,
         });
@@ -38,11 +42,11 @@ async function debug() {
         const data = Array.isArray(res.data) ? res.data : [];
         console.log(`→ 配列長: ${data.length}`);
         console.log('→ 最初3件:');
-        data.slice(0, 3).forEach((item: any, i) => {
+        data.slice(0, 3).forEach((item, i) => {
             console.log(`  ${i}: ${JSON.stringify(item).substring(0, 200)}`);
         });
-    } catch (e: any) {
-        console.log('→ 入札結果エラー:', e.message?.split('\n')[0]);
+    } catch (e: unknown) {
+        console.log('→ 入札結果エラー:', e instanceof Error ? e.message?.split('\n')[0] : String(e));
     }
 }
 

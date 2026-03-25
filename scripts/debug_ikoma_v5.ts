@@ -30,8 +30,8 @@ async function testIkomaV5() {
                     const els = Array.from(document.querySelectorAll('input, button, img, a'));
                     return els.map(el => ({
                         tag: el.tagName,
-                        val: (el as any).value || '',
-                        alt: (el as any).alt || '',
+                        val: (el as HTMLInputElement).value || '',
+                        alt: (el as HTMLImageElement).alt || '',
                         text: el.textContent?.trim() || ''
                     }));
                 });
@@ -49,8 +49,8 @@ async function testIkomaV5() {
             } catch (e) {}
         }
 
-    } catch (e: any) {
-        log(`❌ Error: ${e.message}`);
+    } catch (e: unknown) {
+        log(`❌ Error: ${e instanceof Error ? e.message : String(e)}`);
     } finally {
         await browser.close();
     }

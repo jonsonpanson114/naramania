@@ -1,15 +1,10 @@
 
 import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
 import { downloadPDFBuffer } from '../src/utils/pdf_utils';
 import { extractBiddingInfoFromPDF, extractBiddingInfoFromText } from '../src/services/gemini_service';
 import type { BiddingItem } from '../src/types/bidding';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-const RESULT_PATH = path.join(process.cwd(), 'scraper_result.json');
+const RESULT_PATH = 'scraper_result.json';
 const BATCH_SIZE = 50;
 
 async function delay(ms: number) {
@@ -82,8 +77,8 @@ async function main() {
 
             await delay(2000); // Respect rate limits
 
-        } catch (e: any) {
-            console.error(`❌ Error processing ${item.id}:`, e.message || e);
+        } catch (e: unknown) {
+            console.error(`❌ Error processing ${item.id}:`, e instanceof Error ? e.message : String(e));
         }
     }
 

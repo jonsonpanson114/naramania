@@ -29,8 +29,8 @@ async function testSimple() {
             const model = genAI.getGenerativeModel({ model: m });
             const result = await model.generateContent('Say hello in Japanese');
             log += `${m} SUCCESS: ${result.response.text().substring(0, 50)}\n`;
-        } catch (e: any) {
-            log += `${m} FAILED: ${e.message?.substring(0, 100)}\n`;
+        } catch (e: unknown) {
+            log += `${m} FAILED: ${e instanceof Error ? e.message?.substring(0, 100) : String(e).substring(0, 100)}\n`;
         }
     }
 

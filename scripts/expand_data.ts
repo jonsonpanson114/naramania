@@ -10,7 +10,6 @@ function id(prefix = 'real') {
     return `${prefix}-${crypto.randomUUID().split('-')[0]}`;
 }
 
-const TODAY = '2026-02-19';
 const links: Record<string, string> = {
     '奈良県': 'https://www.pref.nara.jp/10553.htm',
     '奈良市': 'https://www.city.nara.lg.jp/site/nyusatu-keiyaku/',

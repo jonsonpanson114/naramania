@@ -5,6 +5,33 @@
  */
 import fs from 'fs';
 
+interface BiddingItem {
+    id?: string;
+    winningContractor?: string;
+    designFirm?: string;
+    title?: string;
+    type?: string;
+    status?: string;
+    municipality?: string;
+    announcementDate?: string;
+    biddingDate?: string;
+    link?: string;
+    estimatedPrice?: string;
+}
+
+interface SupplementItem extends BiddingItem {
+    municipality: string;
+    title: string;
+    type: string;
+    status: string;
+    announcementDate: string;
+}
+
+interface ItemWithId extends SupplementItem {
+    id: string;
+    link: string;
+}
+
 const NOISE_WORDS = [
     'カレンダー', 'ポータルサイト', '手続き', '様式', 'ダウンロード',
     'マニュアル', '要綱', '規程', '約款', '制度', 'FAQ', '問い合わせ',
@@ -14,10 +41,10 @@ const NOISE_WORDS = [
     '市場カレンダー', 'お知らせ', 'アクセス',
 ];
 
-const data = JSON.parse(fs.readFileSync('scraper_result.json', 'utf-8'));
+const data = JSON.parse(fs.readFileSync('scraper_result.json', 'utf-8')) as BiddingItem[];
 console.log(`Before cleanup: ${data.length} items`);
 
-const cleaned = data.filter((item: any) => {
+const cleaned = data.filter((item: BiddingItem) => {
     // Keep AI-extracted items always
     if (item.id?.startsWith('ai-extracted') || item.winningContractor || item.designFirm) {
         return true;
@@ -67,7 +94,7 @@ const supplements = [
 ];
 
 // Add supplements with IDs and links
-const supplementsWithIds = supplements.map((s, i) => ({
+const supplementsWithIds: ItemWithId[] = supplements.map((s, i) => ({
     ...s,
     id: `real-${String(i + 1).padStart(3, '0')}`,
     link: s.municipality === '奈良県' ? 'https://www.pref.nara.jp/10553.htm' :
@@ -77,26 +104,26 @@ const supplementsWithIds = supplements.map((s, i) => ({
 }));
 
 // Merge: supplements first, then cleaned scraped
-const allItems = [...supplementsWithIds, ...cleaned];
+const allItems: BiddingItem[] = [...supplementsWithIds, ...cleaned];
 
 // Final dedup by title
 const seen = new Set<string>();
-const deduped = allItems.filter(item => {
+const deduped: BiddingItem[] = allItems.filter(item => {
     if (seen.has(item.title)) return false;
     seen.add(item.title);
     return true;
 });
 
 // Sort by date desc
-deduped.sort((a: any, b: any) => (b.announcementDate || '').localeCompare(a.announcementDate || ''));
+deduped.sort((a, b) => (b.announcementDate || '').localeCompare(a.announcementDate || ''));
 
 console.log(`After cleanup: ${deduped.length} items`);
 const byMuni: Record<string, number> = {};
-deduped.forEach((i: any) => { byMuni[i.municipality] = (byMuni[i.municipality] || 0) + 1; });
+deduped.forEach((i: BiddingItem) => { byMuni[i.municipality || ''] = (byMuni[i.municipality || ''] || 0) + 1; });
 Object.entries(byMuni).forEach(([k, v]) => console.log(`  ${k}: ${v}`));
 
 const byStatus: Record<string, number> = {};
-deduped.forEach((i: any) => { byStatus[i.status] = (byStatus[i.status] || 0) + 1; });
+deduped.forEach((i: BiddingItem) => { byStatus[i.status || ''] = (byStatus[i.status || ''] || 0) + 1; });
 Object.entries(byStatus).forEach(([k, v]) => console.log(`  ${k}: ${v}`));
 
 fs.writeFileSync('scraper_result.json', JSON.stringify(deduped, null, 2));

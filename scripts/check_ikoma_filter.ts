@@ -38,8 +38,8 @@ async function checkIkomaFiltering() {
             console.log(`- Item: [${text}] / Gyoshu: [${gyoshu}] -> Keep: ${keep}`);
         }
 
-    } catch (e: any) {
-        console.error('Error:', e.message);
+    } catch (e: unknown) {
+        console.error('Error:', e instanceof Error ? e.message : String(e));
     } finally {
         await browser.close();
     }

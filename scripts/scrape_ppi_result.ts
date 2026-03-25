@@ -72,9 +72,9 @@ async function scrapePpi() {
             fs.writeFileSync('debug_search_results.html', await page.content());
         }
 
-    } catch (e: any) {
-        console.error('Error:', e);
-        if (e.message.includes('target closed')) return;
+    } catch (e: unknown) {
+        console.error('Error:', e instanceof Error ? e : String(e));
+        if (e instanceof Error && e.message?.includes('target closed')) return;
     } finally {
         await browser.close();
     }

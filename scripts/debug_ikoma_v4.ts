@@ -50,8 +50,8 @@ async function testIkomaV4() {
             log('❌ koukai_main frame NOT found');
         }
 
-    } catch (e: any) {
-        log(`❌ Error: ${e.message}`);
+    } catch (e: unknown) {
+        log(`❌ Error: ${e instanceof Error ? e.message : String(e)}`);
     } finally {
         await browser.close();
     }

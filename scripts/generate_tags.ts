@@ -6,7 +6,7 @@ import type { BiddingItem } from '../src/types/bidding.ts';
 
 const RESULT_PATH = path.join(process.cwd(), 'scraper_result.json');
 
-async function getTagsFromAI(title: string, description: string, model: any) {
+async function getTagsFromAI(title: string, description: string, model: ReturnType<GoogleGenerativeAI['getGenerativeModel']>) {
     const prompt = `
 以下の入札案件のタイトルと要約から、ふさわしいタグを最大3つ抽出してJSONで出力してください。
 タグは検索に使いやすい一般的な用語にしてください（例：耐震, 改修, 新築, 解体, 調査, ＩＴ, 建築, 電気, 空調, 測量, 設計, 補修, 土木, 維持管理）。
@@ -20,7 +20,7 @@ async function getTagsFromAI(title: string, description: string, model: any) {
 
     try {
         const result = await model.generateContent(prompt);
-        const response = await result.response;
+        const response = result.response;
         const text = response.text();
         const cleanJson = text.replace(/```json/g, "").replace(/```/g, "").trim();
         return JSON.parse(cleanJson).tags;

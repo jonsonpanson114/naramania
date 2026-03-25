@@ -57,8 +57,8 @@ async function dumpIkomaTable() {
             console.log('First few rows HTML:', JSON.stringify(allElements));
         }
 
-    } catch (e: any) {
-        console.error('❌ Error:', e.message);
+    } catch (e: unknown) {
+        console.error('❌ Error:', e instanceof Error ? e.message : String(e));
     } finally {
         await browser.close();
     }

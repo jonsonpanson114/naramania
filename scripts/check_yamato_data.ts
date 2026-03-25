@@ -1,13 +1,21 @@
 import fs from 'fs';
 import path from 'path';
 
+interface BiddingItem {
+    municipality: string;
+    status: string;
+    winningContractor?: string;
+    id: string;
+    title: string;
+}
+
 const RESULT_PATH = path.join(process.cwd(), 'scraper_result.json');
 
 function main() {
-    const data = JSON.parse(fs.readFileSync(RESULT_PATH, 'utf-8'));
-    const yamato = data.filter((item: any) => item.municipality === '大和郡山市');
-    const won = yamato.filter((item: any) => item.status === '落札');
-    const withWinner = won.filter((item: any) => item.winningContractor);
+    const data = JSON.parse(fs.readFileSync(RESULT_PATH, 'utf-8')) as BiddingItem[];
+    const yamato = data.filter(item => item.municipality === '大和郡山市');
+    const won = yamato.filter(item => item.status === '落札');
+    const withWinner = won.filter(item => item.winningContractor);
 
     console.log(`Summary for Yamatokoriyama:`);
     console.log(`  Total items: ${yamato.length}`);

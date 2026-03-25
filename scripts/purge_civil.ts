@@ -8,10 +8,10 @@ if (!fs.existsSync(RESULT_PATH)) {
     process.exit(1);
 }
 
-const data = JSON.parse(fs.readFileSync(RESULT_PATH, 'utf-8'));
+const data = JSON.parse(fs.readFileSync(RESULT_PATH, 'utf-8')) as { title?: string; type?: string; description?: string }[];
 console.log(`Original count: ${data.length} items`);
 
-const cleaned = data.filter((item: any) => {
+const cleaned = data.filter((item) => {
     const title = item.title || '';
     const gyoshu = item.type || '';
     const description = item.description || '';

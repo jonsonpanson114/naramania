@@ -26,16 +26,16 @@ async function main() {
         // gyoshuKbnCd=00 (工事) 入札結果
         await Promise.all([
             fra1.waitForNavigation({ waitUntil: 'domcontentloaded', timeout: 20000 }),
-            menuFrame.evaluate((url: string) => (window as any).pf_VidDsp_btnReferenceClick(url), '/DENCHO/GP5515_1010?gyoshuKbnCd=00'),
+            menuFrame.evaluate((url: string) => (window as { pf_VidDsp_btnReferenceClick?: (u: string) => void }).pf_VidDsp_btnReferenceClick?.(url), '/DENCHO/GP5515_1010?gyoshuKbnCd=00'),
         ]);
         await page.waitForTimeout(2000);
 
         console.log('[3] Performing Search...');
         await fra1.selectOption('select[name="keisaiNen"]', '2025').catch(() => { });
         await fra1.evaluate(() => {
-            const topW = window.top as any;
+            const topW = window.top as { fra_hidden?: { submit_flag: number } } | null;
             if (topW?.fra_hidden) topW.fra_hidden.submit_flag = 0;
-            (window as any).fnc_btnSearch_Clicked();
+            (window as { fnc_btnSearch_Clicked?: () => void }).fnc_btnSearch_Clicked?.();
         });
         await fra1.waitForNavigation({ waitUntil: 'domcontentloaded', timeout: 30000 });
         await page.waitForTimeout(2000);
@@ -85,7 +85,7 @@ async function main() {
             const parser = new pdf.PDFParse({ data: buffer });
             const textResult = await parser.getText();
             if (textResult && textResult.pages) {
-                fullText = textResult.pages.map((p: any) => p.text).join('\n\n');
+                fullText = textResult.pages.map((p: { text: string }) => p.text).join('\n\n');
             } else if (textResult && textResult.text) {
                 fullText = textResult.text;
             }
@@ -104,8 +104,8 @@ async function main() {
         console.log("============================================\n");
 
 
-    } catch (e: any) {
-        console.error('Error in workflow:', e.message || e);
+    } catch (e: unknown) {
+        console.error('Error in workflow:', e instanceof Error ? e.message : String(e));
     } finally {
         await browser.close();
     }

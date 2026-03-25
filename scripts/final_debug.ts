@@ -14,7 +14,7 @@ async function finalDebug(city: string, url: string, screenshotPath: string) {
         await page.waitForTimeout(8000);
 
         console.log(`[${city}] Searching for menu...`);
-        let menuFrame: any = null;
+        let menuFrame: import('playwright').Frame | null = null;
         for (const frame of page.frames()) {
             const entry = frame.locator('td:has-text("発注情報"), a:has-text("発注情報"), span:has-text("発注情報"), img[alt*="発注情報"]').first();
             if (await entry.count() > 0) {
@@ -34,12 +34,13 @@ async function finalDebug(city: string, url: string, screenshotPath: string) {
         await page.waitForTimeout(5000);
 
         console.log(`[${city}] Searching for search button...`);
-        let searchBtn: any = null;
+        let searchBtnFrame: import('playwright').Frame | null = null;
         for (const frame of page.frames()) {
-            searchBtn = frame.locator('input[value*="検索"], button:has-text("検索"), img[alt*="検索"]').first();
+            const searchBtn = frame.locator('input[value*="検索"], button:has-text("検索"), img[alt*="検索"]').first();
             if (await searchBtn.count() > 0) {
                 console.log(`[${city}] Search button found in frame "${frame.name()}"`);
                 await searchBtn.click();
+                searchBtnFrame = frame;
                 break;
             }
         }
@@ -59,8 +60,8 @@ async function finalDebug(city: string, url: string, screenshotPath: string) {
             }
         }
 
-    } catch (e: any) {
-        console.error(`[${city}] Error:`, e.stack);
+    } catch (e: unknown) {
+        console.error(`[${city}] Error:`, e instanceof Error ? e.stack : String(e));
     } finally {
         await browser.close();
     }

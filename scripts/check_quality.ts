@@ -1,6 +1,16 @@
 import fs from 'fs';
 
-const data: any[] = JSON.parse(fs.readFileSync('scraper_result.json', 'utf8'));
+interface BiddingItem {
+    municipality: string;
+    status: string;
+    announcementDate: string;
+    biddingDate?: string;
+    id: string;
+    title: string;
+    winningContractor?: string;
+}
+
+const data = JSON.parse(fs.readFileSync('scraper_result.json', 'utf8')) as BiddingItem[];
 
 // 自治体別集計
 const byMuni: Record<string, Record<string, number>> = {};

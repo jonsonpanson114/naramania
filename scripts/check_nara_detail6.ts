@@ -1,5 +1,16 @@
 import { chromium } from 'playwright';
 
+interface WindowWithFrame extends Window {
+  fra_hidden?: { submit_flag: number };
+  fnc_btnSearch_Clicked?: () => void;
+  pf_VidDsp_btnReferenceClick?: (url: string) => void;
+  pf_VidDsp_btnDetailClick?: (id: string) => void;
+}
+
+interface TopWindow extends Window {
+  fra_hidden?: { submit_flag: number };
+}
+
 async function checkDetailPage() {
   const browser = await chromium.launch({ headless: true });
   const page = await browser.newPage();
@@ -20,7 +31,7 @@ async function checkDetailPage() {
 
     await Promise.all([
       fra1.waitForNavigation({ waitUntil: 'domcontentloaded' }),
-      menuFrame.evaluate(() => (window as any).pf_VidDsp_btnReferenceClick('/DENCHO/GP5515_1010?gyoshuKbnCd=00')),
+      menuFrame.evaluate(() => (window as WindowWithFrame).pf_VidDsp_btnReferenceClick?.('/DENCHO/GP5515_1010?gyoshuKbnCd=00')),
     ]);
     await page.waitForTimeout(2000);
 
@@ -28,9 +39,9 @@ async function checkDetailPage() {
     await page.waitForTimeout(300);
 
     await fra1.evaluate(() => {
-      const topW = window.top as any;
+      const topW = window.top as TopWindow | null;
       if (topW?.fra_hidden) topW.fra_hidden.submit_flag = 0;
-      (window as any).fnc_btnSearch_Clicked();
+      (window as WindowWithFrame).fnc_btnSearch_Clicked?.();
     });
     await fra1.waitForNavigation({ waitUntil: 'domcontentloaded' });
     await page.waitForTimeout(2000);
@@ -40,7 +51,7 @@ async function checkDetailPage() {
       const table = Array.from(document.querySelectorAll('table')).find(t => t.className === 'border');
       if (!table) return [];
       const rows = Array.from(table.querySelectorAll('tr')).slice(2);
-      const result: any[] = [];
+      const result: Array<{ ankenId: string; title: string }> = [];
       for (const row of rows) {
         const cells = Array.from(row.querySelectorAll('th, td'));
         if (cells.length < 8) continue;
@@ -87,21 +98,21 @@ async function checkDetailPage() {
         await newPage.waitForTimeout(2000);
 
         const detail = await newPage.evaluate(() => {
-          const result: any = { tables: [], bodyText: '' };
+          const result: { tables: Array<{ index: number; rows: unknown[][] }>; bodyText: string } = { tables: [], bodyText: '' };
 
           document.querySelectorAll('table').forEach((t, i) => {
             const rows = Array.from(t.querySelectorAll('tr'));
-            const tableData: any[] = [];
-            rows.forEach((r) => {
-              const cells = Array.from(r.querySelectorAll('td, th')).map((td) => ({
+            const tableData: unknown[][] = [];
+            rows.forEach(() => {
+              const cells = Array.from(t.querySelectorAll('td, th')).map((td) => ({
                 text: td.textContent?.trim()
               }));
-              if (cells.some(c => c.text)) {
+              if (cells.some(c => c && typeof c === 'object' && 'text' in c && c.text)) {
                 tableData.push(cells);
               }
             });
             if (tableData.length > 0) {
-              result.tables.push({ index: i, className: t.className, rows: tableData });
+              result.tables.push({ index: i, rows: tableData });
             }
           });
 
@@ -113,7 +124,8 @@ async function checkDetailPage() {
         for (const t of detail.tables) {
           console.log(`\nテーブル${t.index}:`);
           for (const r of t.rows) {
-            console.log('  ', r.map(c => c.text).join(' | '));
+            const texts = r.map(c => typeof c === 'object' && c !== null && 'text' in c ? (c as { text: string }).text : String(c));
+            console.log('  ', texts.join(' | '));
           }
         }
 
@@ -121,8 +133,8 @@ async function checkDetailPage() {
       }
     }
 
-  } catch (e: any) {
-    console.error('エラー:', e.message);
+  } catch (e: unknown) {
+    console.error('エラー:', e instanceof Error ? e.message : String(e));
   } finally {
     await browser.close();
   }

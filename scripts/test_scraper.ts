@@ -4,6 +4,7 @@ import { NaraCityScraper } from './src/scrapers/nara_city';
 import { KashiharaCityScraper } from './src/scrapers/kashihara_city';
 import { IkomaCityScraper } from './src/scrapers/ikoma_city';
 import fs from 'fs';
+import type { BiddingItem } from './src/types/bidding';
 
 async function main() {
     console.log('### Starting FINAL Global Scraper Test ###');
@@ -15,13 +16,13 @@ async function main() {
         new IkomaCityScraper()
     ];
 
-    let allItems: any[] = [];
+    const allItems: BiddingItem[] = [];
 
     for (const scraper of scrapers) {
         console.log(`Running Scraper for: ${scraper.municipality}...`);
         try {
             const items = await scraper.scrape();
-            allItems = [...allItems, ...items];
+            allItems.push(...items);
             console.log(`- Found ${items.length} items.`);
         } catch (e) {
             console.error(`- Error in ${scraper.municipality}:`, e);

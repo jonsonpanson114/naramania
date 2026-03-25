@@ -27,8 +27,8 @@ async function testIkomaV9() {
             if (body.includes('<input')) log(`   🎯 Frame HAS inputs!`);
         }
 
-    } catch (e: any) {
-        log(`❌ Error: ${e.message}`);
+    } catch (e: unknown) {
+        log(`❌ Error: ${e instanceof Error ? e.message : String(e)}`);
     } finally {
         await browser.close();
     }

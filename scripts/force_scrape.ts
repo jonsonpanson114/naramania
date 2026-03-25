@@ -1,9 +1,9 @@
 
 import { IkomaCityScraper } from '../src/scrapers/ikoma_city';
 import { UdaCityScraper } from '../src/scrapers/uda_city';
-import { BiddingItem } from '../src/types/bidding';
+import { Scraper } from '../src/types/bidding';
 
-async function forceScrape(city: string, scraper: any) {
+async function forceScrape(city: string, scraper: Scraper) {
     console.log(`\n=== Force Scraping ${city} (Ignoring filter) ===`);
     // Note: To ignore filter, we'd need to modify the scraper or the filter.ts temporarily.
     // Instead, I'll just check if the scraper *finds* any links before filtering by looking at logs.

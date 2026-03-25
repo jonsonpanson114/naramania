@@ -14,7 +14,7 @@ async function listFrames() {
         await page.waitForTimeout(10000);
 
         console.log('Frame Hierarchy:');
-        const showFrames = (frame: any, indent = '') => {
+        const showFrames = (frame: import('playwright').Frame, indent = '') => {
             console.log(`${indent}- Name: ${frame.name() || '(none)'}, URL: ${frame.url()}`);
             for (const child of frame.childFrames()) {
                 showFrames(child, indent + '  ');
@@ -31,8 +31,8 @@ async function listFrames() {
             }
         }
 
-    } catch (e: any) {
-        console.error('Error:', e);
+    } catch (e: unknown) {
+        console.error('Error:', e instanceof Error ? e : String(e));
     } finally {
         await browser.close();
         console.log('--- Analysis End ---');

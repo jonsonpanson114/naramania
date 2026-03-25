@@ -16,20 +16,20 @@ async function testIkomaVisual() {
         // Get all visible text that might be a button
         const allText = await page.evaluate(() => {
             return Array.from(document.querySelectorAll('a, button, input, span, div'))
-                .map(el => ({ 
-                    text: el.textContent?.trim(), 
-                    val: (el as any).value,
-                    tagName: el.tagName 
+                .map(el => ({
+                    text: el.textContent?.trim(),
+                    val: (el as HTMLInputElement).value,
+                    tagName: el.tagName
                 }))
                 .filter(o => (o.text && o.text.length > 0) || (o.val && o.val.length > 0))
                 .slice(0, 50); // Just top 50
         });
-        
+
         log('Page Elements Sample:');
         allText.forEach(t => log(`  [${t.tagName}] text='${t.text}' val='${t.val}'`));
 
-    } catch (e: any) {
-        log(`❌ Error: ${e.message}`);
+    } catch (e: unknown) {
+        log(`❌ Error: ${e instanceof Error ? e.message : String(e)}`);
     } finally {
         await browser.close();
     }
