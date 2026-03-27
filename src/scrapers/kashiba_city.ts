@@ -146,7 +146,8 @@ async function scrapeKashibaWebsite(): Promise<BiddingItem[]> {
             const text = $(el).text().trim();
             const href = $(el).attr('href') || '';
             if (!href) return;
-            if (text.includes('入札公告') || text.includes('入札結果')) {
+            // 「公告」という文字があれば対象（例：3月26日公告分）
+            if (text.includes('公告') || text.includes('結果')) {
                 const fullUrl = href.startsWith('http') ? href : 'https://www.city.kashiba.lg.jp' + href;
                 links.push({ title: text, href: fullUrl });
             }
