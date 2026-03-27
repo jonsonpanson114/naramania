@@ -25,9 +25,9 @@ export class OjiTownScraper implements Scraper {
                 timeout: 15000,
             });
             const $ = cheerio.load(res.data);
-
-            // 王寺町の構造: 一覧ページ内のリンクから抽出
-            $('a').each((i, el) => {
+            
+            // 手動抽出: メインコンテンツ (#main) 内のリンクに絞る
+            $('#main a').each((i, el) => {
                 const text = $(el).text().trim();
                 const href = $(el).attr('href') || '';
                 

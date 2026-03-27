@@ -33,7 +33,8 @@ export class OyodoTownScraper implements Scraper {
                 });
                 const $ = cheerio.load(res.data);
 
-                $('a').each((i, el) => {
+                // メインコンテンツエリアに限定して走査
+                $('#content_detail a').each((i, el) => {
                     const text = $(el).text().trim();
                     const href = $(el).attr('href') || '';
                     
@@ -44,11 +45,12 @@ export class OyodoTownScraper implements Scraper {
                         const status = isResult ? '落札' : '受付中';
                         const linkUrl = href.startsWith('http') ? href : 'https://www.town.oyodo.lg.jp/' + href;
                         const date = extractDate(text);
+                        const cleanTitle = text.replace(/（PDF：\d+K?B）/g, '').replace(/\[.*\.pdf\]/g, '').trim();
 
                         items.push({
                             id: `oyodo-town-${i}-${Math.random().toString(36).slice(2, 5)}`,
                             municipality: '大淀町',
-                            title: text,
+                            title: cleanTitle,
                             type: '建築',
                             announcementDate: date,
                             link: linkUrl,

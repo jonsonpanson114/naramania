@@ -1,5 +1,6 @@
 import axios from 'axios';
 import * as cheerio from 'cheerio';
+import crypto from 'crypto';
 import { chromium } from 'playwright';
 import { BiddingItem, Scraper } from '../types/bidding';
 import { shouldKeepItem } from './common/filter';
@@ -154,38 +155,52 @@ async function scrapeKashibaWebsite(): Promise<BiddingItem[]> {
         });
 
         // 重複を除いて上位数ページを深掘り
-        const targetLinks = links.slice(0, 10);
+        const targetLinks = links.slice(0, 5); // 最新の5件分（約1ヶ月分）に絞る
         for (const link of targetLinks) {
             const pageRes = await axios.get(link.href, { headers: { 'User-Agent': 'Mozilla/5.0' }, timeout: 15000 });
             const $p = cheerio.load(pageRes.data);
             
-            // ページ内のPDFリンクや個別案件リンクを抽出
-            $p('a').each((i: number, el: any) => {
+            // ページ内のメインコンテンツ部分（mainタグ内）のみを走査
+            $p('main a').each((i: number, el: any) => {
                 const text = $p(el).text().trim();
                 const href = $p(el).attr('href') || '';
                 if (text.length < 5 || !href) return;
 
                 if (shouldKeepItem(text)) {
-                    const isResult = text.includes('結果') || link.title.includes('結果');
+                    // タイトルのクリーンアップ（[PDFファイル...] などを削除）
+                    const cleanTitle = text.replace(/\[(PDF|Excel)ファイル.*?\]/g, '').trim() || text;
+                    const isResult = cleanTitle.includes('結果') || link.title.includes('結果');
                     const fullUrl = href.startsWith('http') ? href : 'https://www.city.kashiba.lg.jp' + href;
                     
-                    // 日付抽出のヒント（令和X年X月X日公告 分 など）
-                    const m = link.title.match(/(?:令和|R)(\d+)年(\d+)月(\d+)日/);
-                    let date = '2025-03-01';
-                    if (m) {
-                        const year = 2018 + parseInt(m[1]);
-                        date = `${year}-${m[2].padStart(2, '0')}-${m[3].padStart(2, '0')}`;
+                    // 日付抽出の強化
+                    let date = '2025-03-01'; // Default Fallback
+                    const m1 = link.title.match(/(?:令和|R)(\d+)年(\d+)月(\d+)日/);
+                    const m2 = link.title.match(/(\d+)月(\d+)日(?:公告|結果)/);
+
+                    if (m1) {
+                        const year = 2018 + parseInt(m1[1]);
+                        date = `${year}-${m1[2].padStart(2, '0')}-${m1[3].padStart(2, '0')}`;
+                    } else if (m2) {
+                        // 2026年3月のデータなら2026を付与、それ以前（4月以降）なら2025
+                        const month = parseInt(m2[1]);
+                        const day = parseInt(m2[2]);
+                        const year = month <= 3 ? 2026 : 2025;
+                        date = `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
                     }
 
-                    items.push({
-                        id: `kashiba-web-${i}-${Math.random().toString(36).slice(2, 5)}`,
-                        municipality: '香芝市',
-                        title: text,
-                        type: '建築',
-                        announcementDate: date,
-                        link: fullUrl,
-                        status: isResult ? '落札' : '受付中',
-                    });
+                    const id = `kashiba-web-${crypto.createHash('md5').update(cleanTitle + fullUrl).digest('hex').slice(0, 8)}`;
+                    
+                    if (!items.some(i => i.id === id)) {
+                        items.push({
+                            id,
+                            municipality: '香芝市',
+                            title: cleanTitle,
+                            type: '建築',
+                            announcementDate: date,
+                            link: fullUrl,
+                            status: isResult ? '落札' : '受付中',
+                        });
+                    }
                 }
             });
             await new Promise(r => setTimeout(r, 200));

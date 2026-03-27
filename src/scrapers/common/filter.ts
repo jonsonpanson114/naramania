@@ -75,12 +75,23 @@ export function isExclusionTarget(text: string): boolean {
 export function shouldKeepItem(title: string, otherText?: string): boolean {
     const target = `${title} ${otherText || ''}`;
 
-    // 除外キーワードが含まれていれば除外
+    // ① 除外キーワードが含まれていれば即除外
     if (isExclusionTarget(target)) {
         return false;
     }
 
-    // 特定の保守・維持管理（土木的）も除外したい場合
+    // ② ポジティブ・キーワード・フィルタ
+    // 少なくとも以下のいずれかの入札関連ワードを含まなければならない（ナビゲーション等のノイズ排除）
+    const POSITIVE_KEYWORDS = [
+        '公告', '入札', '公示', '結果', '工事', '設計', '委託', '請負', 
+        '修繕', '改修', '新築', '公表', '案件'
+    ];
+    const hasPositive = POSITIVE_KEYWORDS.some(kw => target.includes(kw));
+    if (!hasPositive) {
+        return false;
+    }
+
+    // ③ 特定の保守・維持管理（土木的）も除外したい場合
     if (target.includes('維持修繕') && !target.includes('建築')) {
         return false;
     }
