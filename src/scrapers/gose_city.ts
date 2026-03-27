@@ -53,13 +53,16 @@ async function scrapeGoseCity(): Promise<BiddingItem[]> {
             // ③ NGワードフィルター（共通）
             if (!shouldKeepItem(title)) return;
 
+            const pubDateStr = $(el).find('pubDate').text().trim();
+            const announcementDate = parseRssDate(pubDateStr) || parseRssDate(new Date().toString());
+
             const winningContractor = title.includes('落札') ? title.split('：').pop()?.trim() : undefined;
             items.push({
                 id: `gose-${title.slice(0, 20)}`,
                 municipality: '御所市',
                 title,
                 type: classifyType(title),
-                announcementDate: parseRssDate(new Date().toString()),
+                announcementDate: announcementDate,
                 link: link,
                 status: title.includes('落札') ? '落札' : '受付中',
                 winningContractor: winningContractor,

@@ -9,6 +9,16 @@ const OYODO_URLS = [
     'https://www.town.oyodo.lg.jp/contents_detail.php?frmId=1608', // 令和6年度結果
 ];
 
+function extractDate(text: string): string {
+    const m = text.match(/(?:令和|R)(\d+)年(\d+)月(\d+)日/);
+    if (m) {
+        const year = 2018 + parseInt(m[1]);
+        return `${year}-${m[2].padStart(2, '0')}-${m[3].padStart(2, '0')}`;
+    }
+    // Fallback: 2025-03-01 if no date found but seems recent
+    return '2025-03-01'; 
+}
+
 export class OyodoTownScraper implements Scraper {
     municipality: '大淀町' = '大淀町' as const;
 
@@ -33,13 +43,14 @@ export class OyodoTownScraper implements Scraper {
                         const isResult = text.includes('結果') || url.includes('1718') || url.includes('1608');
                         const status = isResult ? '落札' : '受付中';
                         const linkUrl = href.startsWith('http') ? href : 'https://www.town.oyodo.lg.jp/' + href;
+                        const date = extractDate(text);
 
                         items.push({
                             id: `oyodo-town-${i}-${Math.random().toString(36).slice(2, 5)}`,
                             municipality: '大淀町',
                             title: text,
                             type: '建築',
-                            announcementDate: new Date().toISOString().split('T')[0],
+                            announcementDate: date,
                             link: linkUrl,
                             status: status,
                         });
