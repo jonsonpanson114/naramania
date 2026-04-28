@@ -1,5 +1,289 @@
 [
   {
+    "id": "斑鳩町-https://www.town.ika",
+    "municipality": "斑鳩町",
+    "title": "法隆寺参道沿いの「マルシェ・宿泊施設」の建設工事がすすんでいます！",
+    "type": "建築",
+    "announcementDate": "2026-04-16",
+    "link": "https://www.town.ikaruga.nara.jp/0000003263.html",
+    "status": "受付中"
+  },
+  {
+    "id": "nara-city-0000002334",
+    "municipality": "奈良市",
+    "title": "第５号市営住宅２号棟外壁塗装等改修工事",
+    "type": "建築",
+    "announcementDate": "2026-04-15",
+    "biddingDate": "2026-05-19",
+    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+    "status": "受付中"
+  },
+  {
+    "id": "nara-city-0000002343",
+    "municipality": "奈良市",
+    "title": "鴻ノ池運動公園非常用自家発電設備設置工事に伴う基本・実施設計業務委託",
+    "type": "委託",
+    "announcementDate": "2026-04-15",
+    "biddingDate": "2026-05-27",
+    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+    "status": "受付中"
+  },
+  {
+    "id": "nara-city-0000002344",
+    "municipality": "奈良市",
+    "title": "南消防署外壁等改修その他工事に伴う建築設計業務委託",
+    "type": "委託",
+    "announcementDate": "2026-04-15",
+    "biddingDate": "2026-05-27",
+    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+    "status": "受付中"
+  },
+  {
+    "id": "nara-city-0000002346",
+    "municipality": "奈良市",
+    "title": "庁舎中央棟地下書庫改修その他工事に伴う建築設計業務委託",
+    "type": "委託",
+    "announcementDate": "2026-04-15",
+    "biddingDate": "2026-05-27",
+    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+    "status": "受付中"
+  },
+  {
+    "id": "nara-city-0000002347",
+    "municipality": "奈良市",
+    "title": "西部生涯スポーツセンタートイレ改修に伴う建築設計業務委託",
+    "type": "委託",
+    "announcementDate": "2026-04-15",
+    "biddingDate": "2026-05-27",
+    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+    "status": "受付中"
+  },
+  {
+    "id": "nara-city-0000002348",
+    "municipality": "奈良市",
+    "title": "鴻ノ池コートトイレ改修に伴う建築設計業務委託",
+    "type": "委託",
+    "announcementDate": "2026-04-15",
+    "biddingDate": "2026-05-27",
+    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+    "status": "受付中"
+  },
+  {
+    "id": "nara-city-0000002349",
+    "municipality": "奈良市",
+    "title": "南部生涯スポーツセンタートイレ改修に伴う建築設計業務委託",
+    "type": "委託",
+    "announcementDate": "2026-04-15",
+    "biddingDate": "2026-05-27",
+    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+    "status": "受付中"
+  },
+  {
+    "id": "nara-city-0000002350",
+    "municipality": "奈良市",
+    "title": "中央消防署南部分署公共下水接続その他工事に伴う建築設計業務委託",
+    "type": "委託",
+    "announcementDate": "2026-04-15",
+    "biddingDate": "2026-05-27",
+    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+    "status": "受付中"
+  },
+  {
+    "id": "gose-住宅耐震改修に伴う固定資産税の減額",
+    "municipality": "御所市",
+    "title": "住宅耐震改修に伴う固定資産税の減額",
+    "type": "その他",
+    "announcementDate": "2026-04-15",
+    "link": "",
+    "status": "受付中"
+  },
+  {
+    "id": "gose-バリアフリー改修工事に伴う固定資産税の減",
+    "municipality": "御所市",
+    "title": "バリアフリー改修工事に伴う固定資産税の減額",
+    "type": "建築",
+    "announcementDate": "2026-04-15",
+    "link": "",
+    "status": "受付中"
+  },
+  {
+    "id": "gose-省エネ改修工事に伴う固定資産税の減額",
+    "municipality": "御所市",
+    "title": "省エネ改修工事に伴う固定資産税の減額",
+    "type": "建築",
+    "announcementDate": "2026-04-15",
+    "link": "",
+    "status": "受付中"
+  },
+  {
+    "id": "kashiba-r7-k15-09",
+    "municipality": "香芝市",
+    "title": "令和７年度香芝市スポーツ公園整備事業に係る造成工事（その１）",
+    "type": "建築",
+    "announcementDate": "2026-04-14",
+    "biddingDate": "2026-04-14",
+    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=062006E007200640",
+    "status": "落札",
+    "winningContractor": "株式会社葛井組",
+    "estimatedPrice": "NaN円"
+  },
+  {
+    "id": "kashiba-r7-k15-08",
+    "municipality": "香芝市",
+    "title": "令和７年度尼寺関屋線築造工事",
+    "type": "建築",
+    "announcementDate": "2026-04-14",
+    "biddingDate": "2026-04-14",
+    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=062006E007200640",
+    "status": "落札",
+    "winningContractor": "株式会社丸重建設",
+    "estimatedPrice": "NaN円"
+  },
+  {
+    "id": "katsuragi-7796394c",
+    "municipality": "葛城市",
+    "title": "忍海小学校区学童保育所施設整備工事",
+    "type": "建築",
+    "announcementDate": "2026-04-13",
+    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/9-05-02-2025-1.pdf",
+    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/9-05-02-2025-1.pdf",
+    "status": "受付中"
+  },
+  {
+    "id": "katsuragi-f6425ccc",
+    "municipality": "葛城市",
+    "title": "体力づくりセンター各設備整備修繕",
+    "type": "建築",
+    "announcementDate": "2026-04-10",
+    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/2-03-03-2025-1.pdf",
+    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/2-03-03-2025-1.pdf",
+    "status": "受付中"
+  },
+  {
+    "id": "katsuragi-9f1c7d51",
+    "municipality": "葛城市",
+    "title": "葛城市介護予防普及啓発事業（派遣型体力測定）業務委託",
+    "type": "委託",
+    "announcementDate": "2026-04-10",
+    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/1-5-2-2026-1.pdf",
+    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/1-5-2-2026-1.pdf",
+    "status": "受付中"
+  },
+  {
+    "id": "katsuragi-ce764d2a",
+    "municipality": "葛城市",
+    "title": "特定健康診査受診率向上対策事業業務委託",
+    "type": "委託",
+    "announcementDate": "2026-04-10",
+    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/1-5-1-2026-1.pdf",
+    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/1-5-1-2026-1.pdf",
+    "status": "受付中"
+  },
+  {
+    "id": "gose-御所市新教育大綱策定支援業務　公募型プロ",
+    "municipality": "御所市",
+    "title": "御所市新教育大綱策定支援業務　公募型プロポーザルを実施します（業務委託）",
+    "type": "その他",
+    "announcementDate": "2026-04-10",
+    "link": "",
+    "status": "受付中"
+  },
+  {
+    "id": "katsuragi-08a485dd",
+    "municipality": "葛城市",
+    "title": "新庄小学校長寿命化改修工事に伴う引越し作業業務委託",
+    "type": "委託",
+    "announcementDate": "2026-04-09",
+    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/1-4-7-2026-1.pdf",
+    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/1-4-7-2026-1.pdf",
+    "status": "受付中"
+  },
+  {
+    "id": "kashiba-r7-k15-07",
+    "municipality": "香芝市",
+    "title": "香芝北中学校トイレ改修工事（Ⅱ期）",
+    "type": "建築",
+    "announcementDate": "2026-04-07",
+    "biddingDate": "2026-04-07",
+    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=062006E007200640",
+    "status": "落札",
+    "winningContractor": "株式会社竹澤工業",
+    "estimatedPrice": "NaN円"
+  },
+  {
+    "id": "kashiba-r7-k15-06",
+    "municipality": "香芝市",
+    "title": "旭ケ丘小学校トイレ改修工事（Ⅱ期）",
+    "type": "建築",
+    "announcementDate": "2026-04-07",
+    "biddingDate": "2026-04-07",
+    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=062006E007200640",
+    "status": "落札",
+    "winningContractor": "株式会社豊国",
+    "estimatedPrice": "NaN円"
+  },
+  {
+    "id": "kashiba-r7-k15-05",
+    "municipality": "香芝市",
+    "title": "関屋小学校南館他改修工事",
+    "type": "建築",
+    "announcementDate": "2026-04-07",
+    "biddingDate": "2026-04-07",
+    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=062006E007200640",
+    "status": "落札",
+    "winningContractor": "株式会社上村組",
+    "estimatedPrice": "NaN円"
+  },
+  {
+    "id": "kashiba-r7-k15-04",
+    "municipality": "香芝市",
+    "title": "下田小学校長寿命化改修工事",
+    "type": "建築",
+    "announcementDate": "2026-04-07",
+    "biddingDate": "2026-04-07",
+    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=062006E007200640",
+    "status": "落札",
+    "winningContractor": "-",
+    "estimatedPrice": "NaN円"
+  },
+  {
+    "id": "kashihara-proposal-5082000026",
+    "municipality": "橿原市",
+    "title": "橿原運動公園体育館・屋内プール新築工事に伴う基本設計業務 (圧縮ファイル: 1.7MB)",
+    "type": "コンサル",
+    "announcementDate": "2026-04-03",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/7/8272.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5082000026.zip",
+    "status": "受付中"
+  },
+  {
+    "id": "高取町-2571",
+    "municipality": "高取町",
+    "title": "「高取町健康増進計画及び食育推進計画策定業務委託」公募型プロポーザルの実施について",
+    "type": "その他",
+    "announcementDate": "2026-04-03",
+    "link": "http://www.town.takatori.nara.jp/contents_detail.php?frmId=2571",
+    "status": "受付中"
+  },
+  {
+    "id": "高取町-2585",
+    "municipality": "高取町",
+    "title": "「高取町地域福祉計画・地域福祉活動計画及び高取町第3期障害者基本計画・第8期障害福祉計画・第4期障害児福祉計画策定業務委託」公募型プロポーザルの実施について",
+    "type": "その他",
+    "announcementDate": "2026-04-01",
+    "link": "http://www.town.takatori.nara.jp/contents_detail.php?frmId=2585",
+    "status": "受付中"
+  },
+  {
+    "id": "高取町-1728",
+    "municipality": "高取町",
+    "title": "「高取町第10期介護保険事業計画及び高齢者保険福祉計画策定業務委託」公募型プロポーザルの実施について",
+    "type": "その他",
+    "announcementDate": "2026-04-01",
+    "link": "http://www.town.takatori.nara.jp/contents_detail.php?frmId=1728",
+    "status": "受付中"
+  },
+  {
     "id": "tenri-40b86815",
     "municipality": "天理市",
     "title": "天理市立柳本小学校校舎18棟改修工事",
@@ -238,16 +522,6 @@
     "status": "受付中"
   },
   {
-    "id": "katsuragi-7796394c",
-    "municipality": "葛城市",
-    "title": "忍海小学校区学童保育所施設整備工事",
-    "type": "建築",
-    "announcementDate": "2026-03-10",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/9-05-02-2025-1.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/9-05-02-2025-1.pdf",
-    "status": "受付中"
-  },
-  {
     "id": "nara-city-0000002279",
     "municipality": "奈良市",
     "title": "西消防署自家給油取扱所新築工事",
@@ -257,15 +531,6 @@
     "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
     "status": "落札",
     "winningContractor": "廣岡建設株式会社"
-  },
-  {
-    "id": "斑鳩町-https://www.town.ika",
-    "municipality": "斑鳩町",
-    "title": "法隆寺参道沿いの「マルシェ・宿泊施設」の建設工事がすすんでいます！",
-    "type": "建築",
-    "announcementDate": "2026-03-04",
-    "link": "https://www.town.ikaruga.nara.jp/0000003263.html",
-    "status": "受付中"
   },
   {
     "id": "nara-city-0000002280",
@@ -3692,16 +3957,6 @@
     "status": "受付中"
   },
   {
-    "id": "katsuragi-f6425ccc",
-    "municipality": "葛城市",
-    "title": "体力づくりセンター各設備整備修繕",
-    "type": "建築",
-    "announcementDate": "2025-05-14",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/2-03-03-2025-1.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/2-03-03-2025-1.pdf",
-    "status": "受付中"
-  },
-  {
     "id": "yamato-koriyama-438463c1",
     "municipality": "大和郡山市",
     "title": "昭和浄水場9号井戸更新工事開札結果",
@@ -3994,6 +4249,69 @@
     "status": "落札"
   },
   {
+    "id": "kashiba-web-57506ea2",
+    "municipality": "香芝市",
+    "title": "香芝市立小学校屋内運動場空調設備設置工事（1工区）",
+    "type": "建築",
+    "announcementDate": "2025-04-16",
+    "link": "https://www.city.kashiba.lg.jp/soshiki/7/65649.html",
+    "status": "受付中"
+  },
+  {
+    "id": "kashiba-web-1806e452",
+    "municipality": "香芝市",
+    "title": "香芝市立小学校屋内運動場空調設備設置工事（2工区）",
+    "type": "建築",
+    "announcementDate": "2025-04-16",
+    "link": "https://www.city.kashiba.lg.jp/soshiki/7/65649.html",
+    "status": "受付中"
+  },
+  {
+    "id": "kashiba-web-664795b1",
+    "municipality": "香芝市",
+    "title": "香芝市立小学校屋内運動場空調設備設置工事（3工区）",
+    "type": "建築",
+    "announcementDate": "2025-04-16",
+    "link": "https://www.city.kashiba.lg.jp/soshiki/7/65649.html",
+    "status": "受付中"
+  },
+  {
+    "id": "kashiba-web-deab4dcb",
+    "municipality": "香芝市",
+    "title": "香芝市立小学校照明設備改修工事（1工区）",
+    "type": "建築",
+    "announcementDate": "2025-04-16",
+    "link": "https://www.city.kashiba.lg.jp/soshiki/7/65649.html",
+    "status": "受付中"
+  },
+  {
+    "id": "kashiba-web-1b9301e2",
+    "municipality": "香芝市",
+    "title": "香芝市立小学校照明設備改修工事（2工区）",
+    "type": "建築",
+    "announcementDate": "2025-04-16",
+    "link": "https://www.city.kashiba.lg.jp/soshiki/7/65649.html",
+    "status": "受付中"
+  },
+  {
+    "id": "kashiba-web-e1908c3b",
+    "municipality": "香芝市",
+    "title": "香芝市立中学校照明設備改修工事（1工区）",
+    "type": "建築",
+    "announcementDate": "2025-04-16",
+    "link": "https://www.city.kashiba.lg.jp/soshiki/7/65649.html",
+    "status": "受付中"
+  },
+  {
+    "id": "kashiba-web-09dff6f8",
+    "municipality": "香芝市",
+    "title": "香芝市立中学校照明設備改修工事（2工区）",
+    "type": "建築",
+    "announcementDate": "2025-04-16",
+    "link": "https://www.city.kashiba.lg.jp/soshiki/7/65649.html",
+    "status": "受付中"
+  },
+  {
     "id": "yamato-koriyama-cdabe6d6",
     "municipality": "大和郡山市",
     "title": "【簡易型総合評価一般競争入札】昭和浄水場12号井戸更新工事実施設計業務 開札結果",
@@ -4093,6 +4411,15 @@
     "status": "受付中"
   },
   {
+    "id": "kashiba-web-cc92c628",
+    "municipality": "香芝市",
+    "title": "三和小学校校舎増築工事に伴う設計業務",
+    "type": "建築",
+    "announcementDate": "2025-04-09",
+    "link": "https://www.city.kashiba.lg.jp/soshiki/7/65410.html",
+    "status": "受付中"
+  },
+  {
     "id": "yamato-koriyama-a3710fb1",
     "municipality": "大和郡山市",
     "title": "総務課・西田中町・人権施策推進課市有地草刈業務",
@@ -4153,6 +4480,18 @@
     "status": "受付中"
   },
   {
+    "id": "kashiba-R6-HS-9",
+    "municipality": "香芝市",
+    "title": "狐井10-49号線配水管移設工事",
+    "type": "建築",
+    "announcementDate": "2024-10-10",
+    "biddingDate": "2024-10-10",
+    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=062006E007200640",
+    "status": "落札",
+    "winningContractor": "株式会社千葉工業",
+    "estimatedPrice": "NaN円"
+  },
+  {
     "id": "katsuragi-0c0940df",
     "municipality": "葛城市",
     "title": "第06-301号 公園施設長寿命化対策支援事業に伴う新町公園フェンス更新工事",
@@ -4183,6 +4522,54 @@
     "status": "受付中"
   },
   {
+    "id": "kashiba-R6-HS-8",
+    "municipality": "香芝市",
+    "title": "狐井10-135号線配水管布設工事",
+    "type": "建築",
+    "announcementDate": "2024-09-05",
+    "biddingDate": "2024-09-05",
+    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=062006E007200640",
+    "status": "落札",
+    "winningContractor": "松本水道工業所",
+    "estimatedPrice": "NaN円"
+  },
+  {
+    "id": "kashiba-R6-JG-5",
+    "municipality": "香芝市",
+    "title": "穴虫(五月ヶ丘)配水管布設替工事",
+    "type": "建築",
+    "announcementDate": "2024-08-29",
+    "biddingDate": "2024-08-29",
+    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=062006E007200640",
+    "status": "落札",
+    "winningContractor": "有限会社秀備",
+    "estimatedPrice": "NaN円"
+  },
+  {
+    "id": "kashiba-R6-JG-2",
+    "municipality": "香芝市",
+    "title": "逢坂7-84号線他配水管布設替工事",
+    "type": "建築",
+    "announcementDate": "2024-08-29",
+    "biddingDate": "2024-08-29",
+    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=062006E007200640",
+    "status": "落札",
+    "winningContractor": "藤井住宅設備株式会社",
+    "estimatedPrice": "NaN円"
+  },
+  {
+    "id": "kashiba-R6-HS-7",
+    "municipality": "香芝市",
+    "title": "関屋北5・6丁目配水管布設替工事(2工区)",
+    "type": "建築",
+    "announcementDate": "2024-08-29",
+    "biddingDate": "2024-08-29",
+    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=062006E007200640",
+    "status": "落札",
+    "winningContractor": "白鳳設備",
+    "estimatedPrice": "NaN円"
+  },
+  {
     "id": "katsuragi-4493891c",
     "municipality": "葛城市",
     "title": "葛城市立就学前施設Wi-Fi 環境等整備業務委託事業",
@@ -4201,6 +4588,18 @@
     "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/4-6-05-2024-1.pdf",
     "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/4-6-05-2024-1.pdf",
     "status": "受付中"
+  },
+  {
+    "id": "kashiba-R6-JG-4",
+    "municipality": "香芝市",
+    "title": "良福寺10-134号線他配水管布設替工事",
+    "type": "建築",
+    "announcementDate": "2024-07-04",
+    "biddingDate": "2024-07-04",
+    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=062006E007200640",
+    "status": "落札",
+    "winningContractor": "日之出水道工業所",
+    "estimatedPrice": "NaN円"
   },
   {
     "id": "katsuragi-ad6f5030",

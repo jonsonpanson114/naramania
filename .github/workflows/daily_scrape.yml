@@ -5,6 +5,10 @@ on:
     - cron: '0 0 * * *' # 毎日日本時間午前9時 (UTC 0:00)
   workflow_dispatch: # 手動実行用
 
+permissions:
+  contents: write
+
+
 jobs:
   scrape:
     runs-on: ubuntu-latest
