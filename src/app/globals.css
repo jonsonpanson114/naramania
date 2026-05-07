@@ -11,7 +11,7 @@
   --color-sidebar: #f7f4ef;   /* Beige */
   --color-border: #e6e2d8;
   
-  --font-serif: var(--font-shippori-mincho), serif;
+  --font-serif: "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", "MS PMincho", "Times New Roman", serif;
 }
 
 @theme inline {

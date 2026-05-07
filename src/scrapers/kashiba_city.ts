@@ -1,6 +1,7 @@
 import axios from 'axios';
 import * as cheerio from 'cheerio';
 import crypto from 'crypto';
+import type { Element } from 'domhandler';
 import { chromium } from 'playwright';
 import { BiddingItem, Scraper } from '../types/bidding';
 import { shouldKeepItem } from './common/filter';
@@ -143,7 +144,7 @@ async function scrapeKashibaWebsite(): Promise<BiddingItem[]> {
         const links: { title: string; href: string }[] = [];
 
         // 令和7年度/6年度の入札公告、結果ページへのリンクを探す
-        $('a').each((_: number, el: any) => {
+        $('a').each((_: number, el: Element) => {
             const text = $(el).text().trim();
             const href = $(el).attr('href') || '';
             if (!href) return;
@@ -161,7 +162,7 @@ async function scrapeKashibaWebsite(): Promise<BiddingItem[]> {
             const $p = cheerio.load(pageRes.data);
             
             // ページ内のテーブル（入札案件一覧）を解析
-            $p('#main table tr').each((i: number, el: any) => {
+            $p('#main table tr').each((i: number, el: Element) => {
                 const cells = $p(el).find('td');
                 if (cells.length < 2) return;
 
