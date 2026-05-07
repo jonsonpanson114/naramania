@@ -11,7 +11,6 @@ import { Loader2 } from 'lucide-react';
 
 export default function SearchPage() {
     const [items, setItems] = useState<BiddingItem[]>([]);
-    const [filtered, setFiltered] = useState<BiddingItem[]>([]);
     const [loading, setLoading] = useState(true);
     const [keyword, setKeyword] = useState('');
     const [municipality, setMunicipality] = useState('すべて');
@@ -22,13 +21,12 @@ export default function SearchPage() {
             .then(res => res.json())
             .then(data => {
                 setItems(data.items || []);
-                setFiltered(data.items || []);
                 setLoading(false);
             })
             .catch(() => setLoading(false));
     }, []);
 
-    useEffect(() => {
+    const filtered = (() => {
         let result = [...items];
 
         if (keyword) {
@@ -48,9 +46,8 @@ export default function SearchPage() {
             result = result.filter(item => item.status === status);
         }
 
-        setFiltered(result);
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [keyword, municipality, status, items]);
+        return result;
+    })();
 
     return (
         <div className="flex min-h-screen bg-background text-primary font-serif">

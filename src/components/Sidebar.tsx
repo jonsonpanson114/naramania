@@ -1,6 +1,7 @@
 'use client';
 
 import { LayoutDashboard, Search, Bookmark, Settings, Trophy, Radar, Newspaper } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -56,9 +57,11 @@ export function Sidebar() {
 
             <div className="p-8 text-center">
                 <div className="inline-block relative">
-                    <img
+                    <Image
                         src="https://ui-avatars.com/api/?name=User&background=c5a059&color=fff"
                         alt="User"
+                        width={40}
+                        height={40}
                         className="w-10 h-10 rounded-full mx-auto mb-2 opacity-90 object-cover"
                     />
                     <div className="w-full h-full absolute top-0 left-0 rounded-full border border-accent/20 scale-125"></div>

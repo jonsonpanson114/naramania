@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { BiddingItem } from '@/types/bidding';
 import { Sidebar } from '@/components/Sidebar';
 import { Header } from '@/components/Header';
@@ -9,15 +9,16 @@ import { Bookmark, Trash2, ExternalLink } from 'lucide-react';
 import Link from 'next/link';
 
 export default function SavedPage() {
-    const [savedItems, setSavedItems] = useState<BiddingItem[]>([]);
-
-    useEffect(() => {
+    const [savedItems, setSavedItems] = useState<BiddingItem[]>(() => {
+        if (typeof window === 'undefined') {
+            return [];
+        }
         const stored = localStorage.getItem('naramania_saved');
         if (stored) {
-            setSavedItems(JSON.parse(stored));
+            return JSON.parse(stored);
         }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+        return [];
+    });
 
     const removeItem = (id: string) => {
         const updated = savedItems.filter(item => item.id !== id);

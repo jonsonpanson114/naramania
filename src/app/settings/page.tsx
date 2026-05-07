@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Sidebar } from '@/components/Sidebar';
 import { Header } from '@/components/Header';
 import { motion } from 'framer-motion';
@@ -30,19 +30,29 @@ const availableMunicipalities = [
 ];
 
 export default function SettingsPage() {
-    const [municipalities, setMunicipalities] = useState(availableMunicipalities);
-    const [itemsPerPage, setItemsPerPage] = useState(20);
-    const [saved, setSaved] = useState(false);
-
-    useEffect(() => {
-        const stored = localStorage.getItem('naramania_settings');
-        if (stored) {
-            const settings = JSON.parse(stored);
-            if (settings.municipalities) setMunicipalities(settings.municipalities);
-            if (settings.itemsPerPage) setItemsPerPage(settings.itemsPerPage);
+    const [municipalities, setMunicipalities] = useState(() => {
+        if (typeof window === 'undefined') {
+            return availableMunicipalities;
         }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+        const stored = localStorage.getItem('naramania_settings');
+        if (!stored) {
+            return availableMunicipalities;
+        }
+        const settings = JSON.parse(stored);
+        return settings.municipalities || availableMunicipalities;
+    });
+    const [itemsPerPage, setItemsPerPage] = useState(() => {
+        if (typeof window === 'undefined') {
+            return 20;
+        }
+        const stored = localStorage.getItem('naramania_settings');
+        if (!stored) {
+            return 20;
+        }
+        const settings = JSON.parse(stored);
+        return settings.itemsPerPage || 20;
+    });
+    const [saved, setSaved] = useState(false);
 
     const toggleMunicipality = (id: string) => {
         setMunicipalities(prev =>

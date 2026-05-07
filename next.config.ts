@@ -5,6 +5,14 @@ const nextConfig: NextConfig = {
     // スクレイパー・テストスクリプトはsrc外にあるためビルド時の型チェックをスキップ
     ignoreBuildErrors: true,
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "ui-avatars.com",
+      },
+    ],
+  },
 };
 
 export default nextConfig;

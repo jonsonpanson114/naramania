@@ -57,30 +57,6 @@ async function fetchShinpouNara(): Promise<NewsItem[]> {
     }
 }
 
-// 建設ニュース (constnews.com) — WordPress RSS (奈良県タグ)
-async function fetchConstNews(): Promise<NewsItem[]> {
-    try {
-        // URLを更新: タグパラメータを修正
-        const xml = await fetchUrl('https://www.constnews.com/feed/?tag=nara');
-        const $ = cheerio.load(xml, { xmlMode: true });
-        const items: NewsItem[] = [];
-        $('item').each((i, el) => {
-            if (i >= 10) return false;
-            const title = stripHtml($(el).find('title').text().trim());
-            const link = $(el).find('link').text().trim() || $(el).find('guid').text().trim();
-            const pubDate = $(el).find('pubDate').text().trim();
-            const description = stripHtml($(el).find('description').text()).slice(0, 100);
-            if (!title || !link) return;
-            items.push({ id: `constnews-${i}`, source: 'constnews', sourceLabel: '建設ニュース', title, date: parseRssDate(pubDate), link, excerpt: description || undefined });
-        });
-        console.log(`[News] 建設ニュース: ${items.length}件`);
-        return items;
-    } catch {
-        // 404エラー等の場合は詳細なログを出さず、静かに失敗
-        return [];
-    }
-}
-
 // 日刊建設工業新聞 (decn.co.jp) — 奈良検索HTML
 async function fetchDecn(): Promise<NewsItem[]> {
     try {
@@ -158,31 +134,6 @@ async function fetchNaraNp(): Promise<NewsItem[]> {
         return items;
     } catch (e) {
         console.warn('[News] 奈良新聞 エラー:', (e as Error).message);
-        return [];
-    }
-}
-
-// 建通新聞デジタル (kentsu.co.jp) — RSS試行のみ
-async function fetchKentsu(): Promise<NewsItem[]> {
-    try {
-        // URLを更新: digitalサブドメインを削除
-        const xml = await fetchUrl('https://kentsu.co.jp/feed/');
-        const $ = cheerio.load(xml, { xmlMode: true });
-        const items: NewsItem[] = [];
-        $('item').each((i, el) => {
-            if (i >= 10) return false;
-            const title = stripHtml($(el).find('title').text().trim());
-            const link = $(el).find('link').text().trim() || $(el).find('guid').text().trim();
-            const pubDate = $(el).find('pubDate').text().trim();
-            if (!title || !link) return;
-            // Filter: 奈良関連のみ
-            if (!title.includes('奈良') && !link.includes('nara')) return;
-            items.push({ id: `kentsu-${i}`, source: 'kentsu', sourceLabel: '建通新聞', title, date: parseRssDate(pubDate), link });
-        });
-        console.log(`[News] 建通新聞: ${items.length}件`);
-        return items;
-    } catch {
-        // 404エラー等の場合は詳細なログを出さず、静かに失敗
         return [];
     }
 }
