@@ -8,7 +8,7 @@ interface BiddingTableProps {
     items: BiddingItem[];
 }
 
-type MainFilter = 'すべて' | '建築' | '設計' | '落札';
+type MainFilter = 'すべて' | '新着' | '建築' | '設計' | '落札';
 type SubFilter = 'すべて' | 'ゼネコン' | '設計事務所';
 
 export function BiddingTable({ items }: BiddingTableProps) {
@@ -31,6 +31,15 @@ export function BiddingTable({ items }: BiddingTableProps) {
         .slice(0, 10)
         .map(([tag]) => tag);
 
+    // isNewItem helper for "NEW" badges
+    const isNewItem = (dateStr: string) => {
+        if (!dateStr) return false;
+        const d = new Date(dateStr);
+        if (isNaN(d.getTime())) return false;
+        const diffTime = Math.abs(new Date().getTime() - d.getTime());
+        return Math.ceil(diffTime / (1000 * 60 * 60 * 24)) <= 7;
+    };
+
     // Filter logic
     const filteredItems = items.filter(item => {
         // Municipality filter
@@ -40,6 +49,10 @@ export function BiddingTable({ items }: BiddingTableProps) {
         if (selectedTag && !item.tags?.includes(selectedTag)) return false;
 
         if (mainFilter === 'すべて') return true;
+        
+        if (mainFilter === '新着') {
+            return isNewItem(item.announcementDate) || (item.biddingDate && isNewItem(item.biddingDate));
+        }
 
         // Construction (建築) -> Shows currently open construction items
         if (mainFilter === '建築') {
@@ -67,6 +80,7 @@ export function BiddingTable({ items }: BiddingTableProps) {
     const counts = {
         main: {
             'すべて': items.length,
+            '新着': items.filter(i => isNewItem(i.announcementDate) || (i.biddingDate && isNewItem(i.biddingDate))).length,
             '建築': items.filter(i => (i.type === '建築' || i.type === '工事') && (i.status === '受付中' || i.status === '締切間近')).length,
             '設計': items.filter(i => (i.type === '委託' || i.type === 'コンサル') && (i.status === '受付中' || i.status === '締切間近')).length,
             '落札': items.filter(i => i.status === '落札').length,
@@ -91,7 +105,7 @@ export function BiddingTable({ items }: BiddingTableProps) {
             {/* Main Filters */}
             <div className="flex justify-center">
                 <div className="flex items-center gap-8 border-b border-border/40 pb-4 px-4">
-                    {(['すべて', '建築', '設計', '落札'] as MainFilter[]).map((filter) => (
+                    {(['すべて', '新着', '建築', '設計', '落札'] as MainFilter[]).map((filter) => (
                         <button
                             key={filter}
                             onClick={() => {
@@ -102,7 +116,8 @@ export function BiddingTable({ items }: BiddingTableProps) {
                                 ? filter === '落札' ? 'text-green-600'
                                     : filter === '建築' ? 'text-indigo-600'
                                         : filter === '設計' ? 'text-amber-600'
-                                            : 'text-primary'
+                                            : filter === '新着' ? 'text-red-600'
+                                                : 'text-primary'
                                 : 'text-gray-400 hover:text-primary'
                                 }`}
                         >
@@ -111,7 +126,8 @@ export function BiddingTable({ items }: BiddingTableProps) {
                                 ? filter === '落札' ? 'bg-green-100 text-green-700'
                                     : filter === '建築' ? 'bg-indigo-100 text-indigo-700'
                                         : filter === '設計' ? 'bg-amber-100 text-amber-700'
-                                            : 'bg-primary/10 text-primary'
+                                            : filter === '新着' ? 'bg-red-100 text-red-700'
+                                                : 'bg-primary/10 text-primary'
                                 : 'bg-gray-100 text-gray-400'
                                 }`}>
                                 {counts.main[filter]}
@@ -119,7 +135,7 @@ export function BiddingTable({ items }: BiddingTableProps) {
                             {mainFilter === filter && (
                                 <motion.span
                                     layoutId="mainFilterDot"
-                                    className={`absolute -bottom-[17px] left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full ${filter === '落札' ? 'bg-green-500' : filter === '建築' ? 'bg-indigo-500' : filter === '設計' ? 'bg-amber-500' : 'bg-accent'
+                                    className={`absolute -bottom-[17px] left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full ${filter === '落札' ? 'bg-green-500' : filter === '建築' ? 'bg-indigo-500' : filter === '設計' ? 'bg-amber-500' : filter === '新着' ? 'bg-red-500' : 'bg-accent'
                                         }`}
                                     transition={{ type: "spring", stiffness: 300, damping: 30 }}
                                 ></motion.span>
@@ -252,9 +268,14 @@ export function BiddingTable({ items }: BiddingTableProps) {
                                         <td className="px-8 py-6 text-xs text-secondary font-serif font-bold tracking-wider">{item.municipality}</td>
                                         <td className="px-8 py-6">
                                             <div className="flex flex-col gap-1">
-                                                <a href={`/project/${item.id}`} className="text-[15px] text-primary tracking-wide group-hover:text-accent transition-colors duration-300 font-serif block truncate max-w-xl leading-relaxed">
-                                                    {item.title}
-                                                </a>
+                                                <div className="flex items-center gap-2">
+                                                    <a href={`/project/${item.id}`} className="text-[15px] text-primary tracking-wide group-hover:text-accent transition-colors duration-300 font-serif block truncate max-w-xl leading-relaxed">
+                                                        {item.title}
+                                                    </a>
+                                                    {(isNewItem(item.announcementDate) || (item.biddingDate && isNewItem(item.biddingDate))) && (
+                                                        <span className="shrink-0 px-1.5 py-0.5 rounded text-[8px] font-bold tracking-wider bg-red-500 text-white animate-pulse shadow-sm">NEW</span>
+                                                    )}
+                                                </div>
 
                                                 {/* Price & Period tags */}
                                                 {(item.estimatedPrice || item.constructionPeriod) && (

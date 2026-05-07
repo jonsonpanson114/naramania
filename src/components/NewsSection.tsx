@@ -36,6 +36,14 @@ export function NewsSection() {
     const [activeSource, setActiveSource] = useState<SourceFilter>('all');
     const [refreshing, setRefreshing] = useState(false);
 
+    const isNewItem = (dateStr: string) => {
+        if (!dateStr) return false;
+        const d = new Date(dateStr);
+        if (isNaN(d.getTime())) return false;
+        const diffTime = Math.abs(new Date().getTime() - d.getTime());
+        return Math.ceil(diffTime / (1000 * 60 * 60 * 24)) <= 7;
+    };
+
     const load = async () => {
         try {
             const res = await fetch('/api/news');
@@ -197,12 +205,17 @@ export function NewsSection() {
                                     transition={{ duration: 0.3, delay: index * 0.025 }}
                                 >
                                     <div className="flex items-start justify-between gap-2 mb-3">
-                                        <span
-                                            className="text-[9px] tracking-[0.2em] px-2 py-0.5 rounded-sm font-bold uppercase shrink-0"
-                                            style={{ color: style.color, backgroundColor: style.bg, border: `1px solid ${style.border}` }}
-                                        >
-                                            {item.sourceLabel}
-                                        </span>
+                                        <div className="flex items-center gap-2">
+                                            <span
+                                                className="text-[9px] tracking-[0.2em] px-2 py-0.5 rounded-sm font-bold uppercase shrink-0"
+                                                style={{ color: style.color, backgroundColor: style.bg, border: `1px solid ${style.border}` }}
+                                            >
+                                                {item.sourceLabel}
+                                            </span>
+                                            {isNewItem(item.date) && (
+                                                <span className="shrink-0 px-1.5 py-0.5 rounded text-[8px] font-bold tracking-wider bg-red-500 text-white animate-pulse shadow-sm">NEW</span>
+                                            )}
+                                        </div>
                                         <span className="text-[10px] text-gray-400 tracking-widest shrink-0 font-serif">
                                             {formatDate(item.date)}
                                         </span>
