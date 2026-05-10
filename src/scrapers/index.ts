@@ -24,6 +24,11 @@ import { OyodoTownScraper } from './oyodo_town';
 import { BiddingItem } from '../types/bidding';
 import fs from 'fs';
 import path from 'path';
+import { shouldKeepBiddingItem } from './common/filter';
+
+function dedupeKey(item: BiddingItem): string {
+    return [item.municipality, item.announcementDate, item.title].join('|');
+}
 
 async function main() {
     console.log('=== スクレイピング開始 ===');
@@ -58,13 +63,17 @@ async function main() {
 
     const outputPath = path.join(process.cwd(), 'scraper_result.json');
     const seen = new Map<string, BiddingItem>();
+    const seenContent = new Map<string, string>();
 
     // Load existing data
     if (fs.existsSync(outputPath)) {
         try {
             const content = fs.readFileSync(outputPath, 'utf-8');
             const existingItems: BiddingItem[] = JSON.parse(content);
-            existingItems.forEach(item => seen.set(item.id, item));
+            existingItems.filter(item => shouldKeepBiddingItem(item)).forEach(item => {
+                seen.set(item.id, item);
+                seenContent.set(dedupeKey(item), item.id);
+            });
         } catch {
             console.warn('既存データの読み込みに失敗しました。');
         }
@@ -77,10 +86,12 @@ async function main() {
             console.log(`→ ${scraper.municipality}: ${items.length}件取得`);
             
             // Merge immediately
-            items.forEach(item => {
-                const existing = seen.get(item.id);
+            items.filter(item => shouldKeepBiddingItem(item)).forEach(item => {
+                const existingId = seenContent.get(dedupeKey(item));
+                const existing = seen.get(existingId || item.id);
                 if (!existing) {
                     seen.set(item.id, item);
+                    seenContent.set(dedupeKey(item), item.id);
                 } else {
                     if (item.status === '落札' && existing.status === '受付中') existing.status = '落札';
                     if (item.winningContractor && !existing.winningContractor) existing.winningContractor = item.winningContractor;

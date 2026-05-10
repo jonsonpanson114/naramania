@@ -1,5 +1,7 @@
+import type { BiddingItem } from '../../types/bidding';
+
 /**
- * 土木系案件を除外するための共通フィルタ
+ * 建築・建物系案件だけを残すための共通フィルタ
  */
 
 // RSS全体スクレイピング時に「本当に入札案件か」を確認するポジティブキーワード
@@ -59,6 +61,58 @@ export const EXCLUSION_KEYWORDS = [
     '解体', '技術', 'LED', '変電', '電気設備'
 ];
 
+const ALWAYS_EXCLUDE_KEYWORDS = [
+    'TikTok', 'PR動画', '動画制作', '広報', '印刷', '封入', '封緘', '帳票',
+    '給食', '検便', '診療報酬', '税', 'データパンチ', '賃貸借',
+    '送迎', 'バス運行', '警備', '受付案内', '葬祭', '墓地',
+    '健康増進', '食育', '介護保険', '福祉計画', '障害福祉',
+    '教育大綱', '地域防災計画', '防災マップ', '部活動',
+    '発掘調査', '埋蔵文化財', '地籍調査', '登記', '除草',
+    'システム', 'ソフトウェア', 'ライセンス', 'デジタルサイネージ',
+    '音響設備機材', '固定資産税', '住民税', '国民健康保険',
+    '建設工事がすすんでいます', '利用できなくなります', '引越し作業',
+];
+
+const INFRA_EXCLUDE_KEYWORDS = [
+    '道路', '橋梁', '河川', '砂防', '舗装', '法面', '護岸', '浚渫',
+    '排水路', '側溝', '水路', '堤防', 'トンネル', 'ガードレール',
+    '標識', '区画線', '配水管', '布設', '水道', '下水道',
+    '農道', '林道', '池改修', 'ため池', '交通安全施設',
+    '浄水場', '井戸',
+];
+
+const ARCHITECTURE_CONTEXT_KEYWORDS = [
+    '建築', '建物', '庁舎', '校舎', '学校', '小学校', '中学校',
+    '幼稚園', 'こども園', '保育園', '保育所', '認定こども園',
+    '公民館', '会館', 'センター', '体育館', '図書館', '消防署',
+    '交番', '住宅', '市営住宅', '団地', '施設', 'ホール',
+    'トイレ', '便所', '外壁', '屋根', '内装', '空調', '受水槽',
+    '給水設備', '防火戸', '耐震', 'エレベーター', 'EV', '仮眠室',
+    '書庫', '温水設備', '吸収冷温水機', '非常用自家発電設備',
+];
+
+const ARCHITECTURE_WORK_KEYWORDS = [
+    '工事', '修繕', '改修', '新築', '増築', '設計', '実施設計',
+    '基本設計', '工事監理', '耐震診断', '建築設備設計',
+];
+
+function getPreviousFiscalYearStart(referenceDate = new Date()): Date {
+    const year = referenceDate.getFullYear();
+    const month = referenceDate.getMonth() + 1;
+    const currentFiscalYear = month >= 4 ? year : year - 1;
+    return new Date(`${currentFiscalYear - 1}-04-01T00:00:00+09:00`);
+}
+
+export function isRecentBiddingDate(dateStr: string, referenceDate = new Date()): boolean {
+    const date = new Date(dateStr);
+    if (Number.isNaN(date.getTime())) return false;
+    return date >= getPreviousFiscalYearStart(referenceDate);
+}
+
+function includesAny(text: string, keywords: string[]): boolean {
+    return keywords.some(keyword => text.includes(keyword));
+}
+
 /**
  * 除外キーワードが含まれているか判定する
  * @param text 判定対象のテキスト
@@ -66,7 +120,7 @@ export const EXCLUSION_KEYWORDS = [
  */
 export function isExclusionTarget(text: string): boolean {
     if (!text) return false;
-    return EXCLUSION_KEYWORDS.some(keyword => text.includes(keyword));
+    return includesAny(text, EXCLUSION_KEYWORDS);
 }
 
 /**
@@ -75,28 +129,36 @@ export function isExclusionTarget(text: string): boolean {
 export function shouldKeepItem(title: string, otherText?: string): boolean {
     const target = `${title} ${otherText || ''}`;
 
-    // ① 除外キーワードが含まれていれば即除外
-    if (isExclusionTarget(target)) {
+    // 一般業務・物品・広報系は、入札語を含んでも建築案件ではないため除外する。
+    if (includesAny(target, ALWAYS_EXCLUDE_KEYWORDS)) {
         return false;
     }
 
-    // ② ポジティブ・キーワード・フィルタ
-    // 少なくとも以下のいずれかの入札関連ワードを含まなければならない（ナビゲーション等のノイズ排除）
-    const POSITIVE_KEYWORDS = [
-        '公告', '入札', '公示', '結果', '工事', '設計', '委託', '請負', 
-        '修繕', '改修', '新築', '公表', '案件'
-    ];
-    const hasPositive = POSITIVE_KEYWORDS.some(kw => target.includes(kw));
-    if (!hasPositive) {
+    const hasArchitectureContext = includesAny(target, ARCHITECTURE_CONTEXT_KEYWORDS);
+    const hasArchitectureWork = includesAny(target, ARCHITECTURE_WORK_KEYWORDS);
+
+    if (!hasArchitectureContext || !hasArchitectureWork) {
         return false;
     }
 
-    // ③ 特定の保守・維持管理（土木的）も除外したい場合
-    if (target.includes('維持修繕') && !target.includes('建築')) {
+    // 道路・水道などのインフラ案件は、建物語が偶然混ざる場合だけを除外する。
+    if (includesAny(target, INFRA_EXCLUDE_KEYWORDS) && !target.includes('トイレ') && !target.includes('建築')) {
         return false;
     }
 
     return true;
+}
+
+export function shouldKeepBiddingItem(item: BiddingItem, referenceDate = new Date()): boolean {
+    const textToMatch = [
+        item.title,
+        item.description || '',
+        item.winningContractor || '',
+        item.designFirm || '',
+        ...(item.tags || [])
+    ].join(' ');
+
+    return isRecentBiddingDate(item.announcementDate, referenceDate) && shouldKeepItem(textToMatch);
 }
 
 export type WinnerType = 'ゼネコン' | '設計事務所' | 'その他';

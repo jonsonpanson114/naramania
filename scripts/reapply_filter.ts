@@ -1,9 +1,13 @@
 import fs from 'fs';
 import path from 'path';
-import { shouldKeepItem } from '../src/scrapers/common/filter';
+import { shouldKeepBiddingItem } from '../src/scrapers/common/filter';
 import { BiddingItem } from '../src/types/bidding';
 
 const RESULT_PATH = path.join(process.cwd(), 'scraper_result.json');
+
+function dedupeKey(item: BiddingItem): string {
+    return [item.municipality, item.announcementDate, item.title].join('|');
+}
 
 function main() {
     if (!fs.existsSync(RESULT_PATH)) {
@@ -15,16 +19,13 @@ function main() {
     const items: BiddingItem[] = JSON.parse(rawData);
 
     const originalCount = items.length;
-    const filteredItems = items.filter(item => {
-        const textToMatch = [
-            item.title,
-            item.description || '',
-            item.winningContractor || '',
-            ...(item.tags || [])
-        ].join(' ');
-        
-        return shouldKeepItem(textToMatch);
-    });
+    const filteredItems = Array.from(
+        new Map(
+            items
+                .filter(item => shouldKeepBiddingItem(item))
+                .map(item => [dedupeKey(item), item])
+        ).values()
+    );
 
     const newCount = filteredItems.length;
     const removedCount = originalCount - newCount;
