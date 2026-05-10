@@ -1,4 +1,5 @@
 import type { BiddingItem } from '../../types/bidding';
+import dataFilters from '../../../config/data_filters.json';
 
 /**
  * 建築・建物系案件だけを残すための共通フィルタ
@@ -61,7 +62,7 @@ export const EXCLUSION_KEYWORDS = [
     '解体', '技術', 'LED', '変電', '電気設備'
 ];
 
-const ALWAYS_EXCLUDE_KEYWORDS = [
+const DEFAULT_ALWAYS_EXCLUDE_KEYWORDS = [
     'TikTok', 'PR動画', '動画制作', '広報', '印刷', '封入', '封緘', '帳票',
     '給食', '検便', '診療報酬', '税', 'データパンチ', '賃貸借',
     '送迎', 'バス運行', '警備', '受付案内', '葬祭', '墓地',
@@ -73,7 +74,7 @@ const ALWAYS_EXCLUDE_KEYWORDS = [
     '建設工事がすすんでいます', '利用できなくなります', '引越し作業',
 ];
 
-const INFRA_EXCLUDE_KEYWORDS = [
+const DEFAULT_INFRA_EXCLUDE_KEYWORDS = [
     '道路', '橋梁', '河川', '砂防', '舗装', '法面', '護岸', '浚渫',
     '排水路', '側溝', '水路', '堤防', 'トンネル', 'ガードレール',
     '標識', '区画線', '配水管', '布設', '水道', '下水道',
@@ -81,7 +82,7 @@ const INFRA_EXCLUDE_KEYWORDS = [
     '浄水場', '井戸',
 ];
 
-const ARCHITECTURE_CONTEXT_KEYWORDS = [
+const DEFAULT_ARCHITECTURE_CONTEXT_KEYWORDS = [
     '建築', '建物', '庁舎', '校舎', '学校', '小学校', '中学校',
     '幼稚園', 'こども園', '保育園', '保育所', '認定こども園',
     '公民館', '会館', 'センター', '体育館', '図書館', '消防署',
@@ -91,10 +92,16 @@ const ARCHITECTURE_CONTEXT_KEYWORDS = [
     '書庫', '温水設備', '吸収冷温水機', '非常用自家発電設備',
 ];
 
-const ARCHITECTURE_WORK_KEYWORDS = [
+const DEFAULT_ARCHITECTURE_WORK_KEYWORDS = [
     '工事', '修繕', '改修', '新築', '増築', '設計', '実施設計',
     '基本設計', '工事監理', '耐震診断', '建築設備設計',
 ];
+
+const ALWAYS_EXCLUDE_KEYWORDS = [...new Set([...DEFAULT_ALWAYS_EXCLUDE_KEYWORDS, ...dataFilters.alwaysExcludeKeywords])];
+const INFRA_EXCLUDE_KEYWORDS = [...new Set([...DEFAULT_INFRA_EXCLUDE_KEYWORDS, ...dataFilters.infraExcludeKeywords])];
+const ARCHITECTURE_CONTEXT_KEYWORDS = [...new Set([...DEFAULT_ARCHITECTURE_CONTEXT_KEYWORDS, ...dataFilters.architectureContextKeywords])];
+const ARCHITECTURE_WORK_KEYWORDS = [...new Set([...DEFAULT_ARCHITECTURE_WORK_KEYWORDS, ...dataFilters.architectureWorkKeywords])];
+const INFRA_ALLOWED_KEYWORDS = dataFilters.infraAllowedKeywords;
 
 function getPreviousFiscalYearStart(referenceDate = new Date()): Date {
     const year = referenceDate.getFullYear();
@@ -142,7 +149,7 @@ export function shouldKeepItem(title: string, otherText?: string): boolean {
     }
 
     // 道路・水道などのインフラ案件は、建物語が偶然混ざる場合だけを除外する。
-    if (includesAny(target, INFRA_EXCLUDE_KEYWORDS) && !target.includes('トイレ') && !target.includes('建築')) {
+    if (includesAny(target, INFRA_EXCLUDE_KEYWORDS) && !includesAny(target, INFRA_ALLOWED_KEYWORDS)) {
         return false;
     }
 
