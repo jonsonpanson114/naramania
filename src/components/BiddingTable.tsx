@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { BiddingItem } from '@/types/bidding';
 import { motion, AnimatePresence } from 'framer-motion';
+import { ArrowUpDown, Search, X } from 'lucide-react';
 
 interface BiddingTableProps {
     items: BiddingItem[];
@@ -10,12 +11,15 @@ interface BiddingTableProps {
 
 type MainFilter = 'すべて' | '新着' | '建築' | '設計' | '落札';
 type SubFilter = 'すべて' | 'ゼネコン' | '設計事務所';
+type SortMode = 'newest' | 'oldest' | 'municipality';
 
 export function BiddingTable({ items }: BiddingTableProps) {
     const [mainFilter, setMainFilter] = useState<MainFilter>('すべて');
     const [subFilter, setSubFilter] = useState<SubFilter>('すべて');
     const [selectedTag, setSelectedTag] = useState<string | null>(null);
     const [selectedMunicipality, setSelectedMunicipality] = useState<string | 'すべて'>('すべて');
+    const [keyword, setKeyword] = useState('');
+    const [sortMode, setSortMode] = useState<SortMode>('newest');
 
     // Get unique municipalities
     const municipalities = Array.from(new Set(items.map(i => i.municipality))).sort();
@@ -42,6 +46,21 @@ export function BiddingTable({ items }: BiddingTableProps) {
 
     // Filter logic
     const filteredItems = items.filter(item => {
+        if (keyword.trim()) {
+            const kw = keyword.trim().toLowerCase();
+            const searchable = [
+                item.title,
+                item.municipality,
+                item.type,
+                item.status,
+                item.winningContractor || '',
+                item.designFirm || '',
+                item.description || '',
+                ...(item.tags || []),
+            ].join(' ').toLowerCase();
+            if (!searchable.includes(kw)) return false;
+        }
+
         // Municipality filter
         if (selectedMunicipality !== 'すべて' && item.municipality !== selectedMunicipality) return false;
 
@@ -74,6 +93,15 @@ export function BiddingTable({ items }: BiddingTableProps) {
             return item.winnerType === subFilter;
         }
         return true;
+    }).sort((a, b) => {
+        if (sortMode === 'municipality') {
+            const byMunicipality = a.municipality.localeCompare(b.municipality, 'ja');
+            if (byMunicipality !== 0) return byMunicipality;
+        }
+
+        const dateA = new Date(a.announcementDate).getTime();
+        const dateB = new Date(b.announcementDate).getTime();
+        return sortMode === 'oldest' ? dateA - dateB : dateB - dateA;
     });
 
     // Count per tab
@@ -178,7 +206,41 @@ export function BiddingTable({ items }: BiddingTableProps) {
             </AnimatePresence>
 
             {/* Municipality & Tag Filter Bar */}
-            <div className="flex flex-col md:flex-row items-center justify-center gap-6 py-6 px-8 bg-gray-50/30 rounded-2xl border border-gray-100/50 backdrop-blur-sm mx-auto max-w-6xl">
+            <div className="flex flex-col items-stretch justify-center gap-5 py-6 px-8 bg-gray-50/30 rounded-2xl border border-gray-100/50 backdrop-blur-sm mx-auto max-w-6xl">
+                <div className="grid grid-cols-1 lg:grid-cols-[1fr_220px] gap-4">
+                    <div className="relative">
+                        <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-secondary/40" />
+                        <input
+                            value={keyword}
+                            onChange={(e) => setKeyword(e.target.value)}
+                            placeholder="案件名、業者名、タグで検索"
+                            className="w-full bg-white border border-border/60 rounded-lg pl-11 pr-10 py-3 text-sm font-serif text-primary focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent transition-all shadow-sm"
+                        />
+                        {keyword && (
+                            <button
+                                type="button"
+                                onClick={() => setKeyword('')}
+                                className="absolute right-3 top-1/2 -translate-y-1/2 text-secondary/30 hover:text-accent transition-colors"
+                                aria-label="検索をクリア"
+                            >
+                                <X size={16} />
+                            </button>
+                        )}
+                    </div>
+                    <div className="relative">
+                        <ArrowUpDown className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-secondary/40" />
+                        <select
+                            value={sortMode}
+                            onChange={(e) => setSortMode(e.target.value as SortMode)}
+                            className="w-full bg-white border border-border/60 rounded-lg pl-11 pr-4 py-3 text-sm font-serif font-bold text-primary focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent transition-all cursor-pointer shadow-sm appearance-none"
+                        >
+                            <option value="newest">新しい順</option>
+                            <option value="oldest">古い順</option>
+                            <option value="municipality">自治体順</option>
+                        </select>
+                    </div>
+                </div>
+                <div className="flex flex-col md:flex-row items-center justify-center gap-6">
                 {/* Municipality Select */}
                 <div className="flex items-center gap-3">
                     <span className="text-[10px] font-bold text-gray-400 tracking-widest uppercase">Region</span>
@@ -214,6 +276,10 @@ export function BiddingTable({ items }: BiddingTableProps) {
                         </button>
                     ))}
                 </div>
+                </div>
+                <p className="text-center text-[10px] tracking-[0.25em] text-secondary/40 font-serif uppercase">
+                    Showing <span className="text-accent font-bold">{filteredItems.length}</span> / {items.length} records
+                </p>
             </div>
 
 

@@ -6,6 +6,7 @@ import { Search, MapPin, Filter } from 'lucide-react';
 interface SearchFilterProps {
     keyword: string;
     onKeywordChange: (value: string) => void;
+    municipalities: string[];
     municipality: string;
     onMunicipalityChange: (value: string) => void;
     status: string;
@@ -13,17 +14,12 @@ interface SearchFilterProps {
     resultCount: number;
 }
 
-const municipalities = [
-    'すべて',
-    '奈良県', '奈良市', '橿原市', '大和高田市', '大和郡山市', '天理市',
-    '桜井市', '御所市', '生駒市', '葛城市', '宇陀市', '五條市',
-    '磯城郡川西町', '磯城郡田原本町', '北葛城郡王寺町', '北葛城郡広陵町', '吉野郡大淀町', '吉野町',
-];
 const statuses = ['すべて', '受付中', '締切間近', '落札', '受付終了'];
 
 export function SearchFilter({
     keyword,
     onKeywordChange,
+    municipalities,
     municipality,
     onMunicipalityChange,
     status,
@@ -59,7 +55,7 @@ export function SearchFilter({
                             onChange={(e) => onMunicipalityChange(e.target.value)}
                             className="w-full pl-12 pr-4 py-3 border border-border/30 rounded-md bg-white/50 text-sm tracking-wider font-serif focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/20 transition-all appearance-none cursor-pointer"
                         >
-                            {municipalities.map((m) => (
+                            {['すべて', ...municipalities].map((m) => (
                                 <option key={m} value={m}>{m}</option>
                             ))}
                         </select>

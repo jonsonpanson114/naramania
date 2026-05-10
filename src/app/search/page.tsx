@@ -15,6 +15,7 @@ export default function SearchPage() {
     const [keyword, setKeyword] = useState('');
     const [municipality, setMunicipality] = useState('すべて');
     const [status, setStatus] = useState('すべて');
+    const municipalities = Array.from(new Set(items.map(item => item.municipality))).sort();
 
     useEffect(() => {
         fetch('/api/scrape')
@@ -69,6 +70,7 @@ export default function SearchPage() {
                 <SearchFilter
                     keyword={keyword}
                     onKeywordChange={setKeyword}
+                    municipalities={municipalities}
                     municipality={municipality}
                     onMunicipalityChange={setMunicipality}
                     status={status}
