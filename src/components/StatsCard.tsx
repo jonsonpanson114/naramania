@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 interface StatsCardProps {
     label: string;
-    value: number;
+    value: number | string;
     unit: string;
     subtext: string;
     delay?: number;

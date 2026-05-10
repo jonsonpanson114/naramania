@@ -26,8 +26,30 @@ import fs from 'fs';
 import path from 'path';
 import { shouldKeepBiddingItem } from './common/filter';
 
+const QUALITY_PATH = path.join(process.cwd(), 'scraper_quality.json');
+
 function dedupeKey(item: BiddingItem): string {
     return [item.municipality, item.announcementDate, item.title].join('|');
+}
+
+function writeQualitySummary(items: BiddingItem[], scrapedCount: number, rejectedCount: number) {
+    const dates = items
+        .map(item => item.announcementDate)
+        .filter(Boolean)
+        .sort();
+
+    const summary = {
+        generatedAt: new Date().toISOString(),
+        source: 'daily_scrape',
+        scrapedCount,
+        keptCount: items.length,
+        rejectedCount,
+        oldestAnnouncementDate: dates[0] || null,
+        latestAnnouncementDate: dates[dates.length - 1] || null,
+        municipalityCount: new Set(items.map(item => item.municipality)).size,
+    };
+
+    fs.writeFileSync(QUALITY_PATH, JSON.stringify(summary, null, 2), 'utf-8');
 }
 
 async function main() {
@@ -64,6 +86,8 @@ async function main() {
     const outputPath = path.join(process.cwd(), 'scraper_result.json');
     const seen = new Map<string, BiddingItem>();
     const seenContent = new Map<string, string>();
+    let scrapedCount = 0;
+    let rejectedCount = 0;
 
     // Load existing data
     if (fs.existsSync(outputPath)) {
@@ -84,6 +108,8 @@ async function main() {
         try {
             const items = await scraper.scrape();
             console.log(`→ ${scraper.municipality}: ${items.length}件取得`);
+            scrapedCount += items.length;
+            rejectedCount += items.filter(item => !shouldKeepBiddingItem(item)).length;
             
             // Merge immediately
             items.filter(item => shouldKeepBiddingItem(item)).forEach(item => {
@@ -117,6 +143,7 @@ async function main() {
 
     console.log('\n=== 集計完了 ===');
     const finalUnique = Array.from(seen.values());
+    writeQualitySummary(finalUnique, scrapedCount, rejectedCount);
     console.log(`最終合計: ${finalUnique.length} 件`);
 
     // 内訳表示

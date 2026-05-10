@@ -10,16 +10,39 @@ import { NewsTicker } from '@/components/NewsTicker';
 import { Trophy, Radar, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
+interface QualitySummary {
+  generatedAt?: string;
+  originalCount?: number;
+  keptCount?: number;
+  removedCount?: number;
+  rejectedCount?: number;
+  latestAnnouncementDate?: string | null;
+  municipalityCount?: number;
+}
+
+function formatDateLabel(dateStr?: string | null): string {
+  if (!dateStr) return '-';
+  const date = new Date(dateStr);
+  if (Number.isNaN(date.getTime())) return dateStr;
+  return date.toLocaleDateString('ja-JP', { month: 'numeric', day: 'numeric' });
+}
+
 // Async Server Component
 export default async function Home() {
   // Read pre-scraped data from JSON
   const jsonPath = path.join(process.cwd(), 'scraper_result.json');
+  const qualityPath = path.join(process.cwd(), 'scraper_quality.json');
   let allItems: BiddingItem[] = [];
+  let qualitySummary: QualitySummary | null = null;
 
   try {
     if (fs.existsSync(jsonPath)) {
       const fileContent = fs.readFileSync(jsonPath, 'utf-8');
       allItems = JSON.parse(fileContent);
+    }
+    if (fs.existsSync(qualityPath)) {
+      const qualityContent = fs.readFileSync(qualityPath, 'utf-8');
+      qualitySummary = JSON.parse(qualityContent);
     }
   } catch {
     // エラー時は空配列を返す
@@ -47,9 +70,9 @@ export default async function Home() {
   void allItems.filter(item => item.status === '落札' && item.winnerType === 'ゼネコン').length;
   void allItems.filter(item => item.status === '落札' && item.winnerType === '設計事務所').length;
 
-  // AI Work Stats
-  const aiExtractedCount = allItems.filter(item => item.isIntelligenceExtracted).length;
-  const aiCleanedCount = 30; // Fixed count from our latest "Great Cleanup"
+  const latestAnnouncementDate = qualitySummary?.latestAnnouncementDate || allItems[0]?.announcementDate;
+  const municipalityCount = qualitySummary?.municipalityCount ?? new Set(allItems.map(item => item.municipality)).size;
+  const removedCount = qualitySummary?.removedCount ?? qualitySummary?.rejectedCount ?? 0;
 
   return (
     <div className="flex min-h-screen bg-background text-primary font-serif">
@@ -60,10 +83,10 @@ export default async function Home() {
 
         {/* Stats Cards */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
-          <StatsCard label="全案件数" value={allItems.length} unit="件" subtext="建築・コンサル特化" delay={0.1} />
+          <StatsCard label="全案件数" value={allItems.length} unit="件" subtext="建築・建物系に整理済み" delay={0.1} />
           <StatsCard label="本日更新" value={newArrivals} unit="件" subtext="新着案件" delay={0.2} />
-          <StatsCard label="AI 抽出" value={aiExtractedCount} unit="件" subtext="インテリジェンス化" delay={0.3} />
-          <StatsCard label="AI 除外" value={aiCleanedCount} unit="件" subtext="土木・不要案件" delay={0.4} />
+          <StatsCard label="最新公告" value={formatDateLabel(latestAnnouncementDate)} unit="" subtext="データ内の最新日" delay={0.3} />
+          <StatsCard label="除外済み" value={removedCount} unit="件" subtext={`${municipalityCount}自治体を掲載`} delay={0.4} />
         </div>
  
         {/* Municipality Distribution */}

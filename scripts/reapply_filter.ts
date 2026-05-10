@@ -4,9 +4,30 @@ import { shouldKeepBiddingItem } from '../src/scrapers/common/filter';
 import { BiddingItem } from '../src/types/bidding';
 
 const RESULT_PATH = path.join(process.cwd(), 'scraper_result.json');
+const QUALITY_PATH = path.join(process.cwd(), 'scraper_quality.json');
 
 function dedupeKey(item: BiddingItem): string {
     return [item.municipality, item.announcementDate, item.title].join('|');
+}
+
+function writeQualitySummary(originalCount: number, filteredItems: BiddingItem[]) {
+    const dates = filteredItems
+        .map(item => item.announcementDate)
+        .filter(Boolean)
+        .sort();
+
+    const summary = {
+        generatedAt: new Date().toISOString(),
+        source: 'reapply_filter',
+        originalCount,
+        keptCount: filteredItems.length,
+        removedCount: originalCount - filteredItems.length,
+        oldestAnnouncementDate: dates[0] || null,
+        latestAnnouncementDate: dates[dates.length - 1] || null,
+        municipalityCount: new Set(filteredItems.map(item => item.municipality)).size,
+    };
+
+    fs.writeFileSync(QUALITY_PATH, JSON.stringify(summary, null, 2), 'utf-8');
 }
 
 function main() {
@@ -29,6 +50,7 @@ function main() {
 
     const newCount = filteredItems.length;
     const removedCount = originalCount - newCount;
+    writeQualitySummary(originalCount, filteredItems);
 
     console.log(`Original Count: ${originalCount}`);
     console.log(`New Count: ${newCount}`);
