@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-10T02:35:36.218Z",
+  "generatedAt": "2026-05-10T11:22:51.636Z",
   "source": "manual_audit",
   "originalCount": 128,
   "keptCount": 128,
@@ -9,30 +9,8 @@
   "municipalityCount": 10,
   "dateAudit": {
     "announcementAfterBiddingCount": 0,
-    "awardedWithoutBiddingDateCount": 3,
+    "awardedWithoutBiddingDateCount": 0,
     "openWithWinnerCount": 0,
-    "sampleTitles": [
-      {
-        "municipality": "奈良市",
-        "title": "三笠中学校校舎屋上防水改修工事",
-        "status": "落札",
-        "announcementDate": "2025-12-10",
-        "biddingDate": null
-      },
-      {
-        "municipality": "大和郡山市",
-        "title": "大和郡山市立スポーツ会館体育室床修繕",
-        "status": "落札",
-        "announcementDate": "2025-10-30",
-        "biddingDate": null
-      },
-      {
-        "municipality": "大和郡山市",
-        "title": "総合公園施設市営球場フェンス緩衝材修繕",
-        "status": "落札",
-        "announcementDate": "2025-10-01",
-        "biddingDate": null
-      }
-    ]
+    "sampleTitles": []
   }
 }

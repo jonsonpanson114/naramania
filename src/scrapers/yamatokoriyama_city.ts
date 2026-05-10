@@ -30,7 +30,7 @@ function makeId(title: string, suffix: string = ''): string {
     return `yamato-koriyama-${crypto.createHash('md5').update(title + suffix).digest('hex').slice(0, 8)}`;
 }
 
-function parseDate(text: string): string {
+function parseDate(text: string, yearHint?: string): string {
     const m = text.match(/令和\s*(\d+)\s*年\s*(\d+)\s*月\s*(\d+)\s*日/);
     if (m) {
         const year = 2018 + parseInt(m[1]);
@@ -38,6 +38,8 @@ function parseDate(text: string): string {
     }
     const m2 = text.match(/(\d{4})[-\/](\d{1,2})[-\/](\d{1,2})/);
     if (m2) return `${m2[1]}-${m2[2].padStart(2, '0')}-${m2[3].padStart(2, '0')}`;
+    const m3 = text.match(/(\d{1,2})月(\d{1,2})日/);
+    if (m3 && yearHint) return `${yearHint}-${m3[1].padStart(2, '0')}-${m3[2].padStart(2, '0')}`;
     return '';
 }
 
@@ -67,6 +69,11 @@ async function scrapeDetailPage(url: string): Promise<{
     biddingDate?: string;
     contractor?: string;
     tableItems?: Array<{ title: string; type: string; contractor: string; biddingDate: string }>;
+}>;
+async function scrapeDetailPage(url: string, yearHint?: string): Promise<{
+    biddingDate?: string;
+    contractor?: string;
+    tableItems?: Array<{ title: string; type: string; contractor: string; biddingDate: string }>;
 }> {
     try {
         const res = await axios.get(url, { timeout: 20000, headers: HEADERS });
@@ -75,7 +82,7 @@ async function scrapeDetailPage(url: string): Promise<{
 
         // 開札日
         const bm = bodyText.match(/開札日[：:]\s*([^\n]+)/);
-        const biddingDate = bm ? parseDate(bm[1]) : undefined;
+        const biddingDate = bm ? parseDate(bm[1], yearHint) : undefined;
 
         // テーブルから落札者・複数件名を探す
         const tableItems: Array<{ title: string; type: string; contractor: string; biddingDate: string }> = [];
@@ -101,7 +108,7 @@ async function scrapeDetailPage(url: string): Promise<{
 
                 const type = typeIdx >= 0 ? (cells[typeIdx] || '') : '';
                 const contractor = contractorIdx >= 0 ? (cells[contractorIdx] || '') : '';
-                const bd = biddingDateIdx >= 0 ? parseDate(cells[biddingDateIdx] || '') : '';
+                const bd = biddingDateIdx >= 0 ? parseDate(cells[biddingDateIdx] || '', yearHint) : '';
 
                 tableItems.push({ title, type, contractor, biddingDate: bd });
             }
@@ -137,8 +144,9 @@ export class YamatokoriyamaCityScraper implements Scraper {
                     const annoDate = page.publish_datetime
                         ? page.publish_datetime.split('T')[0]
                         : new Date().toISOString().split('T')[0];
+                    const yearHint = annoDate.slice(0, 4);
 
-                    const detail = await scrapeDetailPage(page.url);
+                    const detail = await scrapeDetailPage(page.url, yearHint);
 
                     // テーブルに複数件がある場合
                     if (detail.tableItems && detail.tableItems.length > 0) {

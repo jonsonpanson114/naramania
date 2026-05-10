@@ -127,13 +127,13 @@ export class NaraCityScraper implements Scraper {
                             biddingDate = bd || undefined;
                         } else {
                             // 2行構造（落札）: i+1 が「電子|入札公告日」
-                            // ※ ソート基準「入札公告又は指名通知日」なので2行目の日付 = 公告日
+                            // 奈良市の結果一覧では、この2行目の日付が結果ページ上の開札日として扱われる。
                             const dateStr = nextCells.length >= 2
                                 ? parseJapaneseDate((await nextCells[1].innerText()).trim())
                                 : '';
                             if (!dateStr) continue; // 「取止め」等、日付なし → スキップ
                             annoDate = dateStr;
-                            biddingDate = undefined; // 開札日は入札結果ページから取得不可
+                            biddingDate = dateStr;
                         }
 
                         // 詳細リンク（件名列のa要素）
