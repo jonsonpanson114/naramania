@@ -12,6 +12,8 @@ permissions:
 jobs:
   scrape:
     runs-on: ubuntu-latest
+    env:
+      GOOGLE_GENERATIVE_AI_API_KEY: ${{ secrets.GOOGLE_GENERATIVE_AI_API_KEY }}
     steps:
       - uses: actions/checkout@v4
 
@@ -33,10 +35,9 @@ jobs:
           NODE_ENV: production
 
       - name: Run AI Augmentation
-        if: ${{ secrets.GOOGLE_GENERATIVE_AI_API_KEY != '' }}
+        if: ${{ env.GOOGLE_GENERATIVE_AI_API_KEY != '' }}
         run: npm run augment:intelligence
         env:
-          GOOGLE_GENERATIVE_AI_API_KEY: ${{ secrets.GOOGLE_GENERATIVE_AI_API_KEY }}
           NODE_ENV: production
 
       - name: Commit and Push changes
