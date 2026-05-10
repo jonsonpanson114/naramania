@@ -43,8 +43,21 @@ const AXIOS_HEADERS = {
     'Accept-Language': 'ja,en-US;q=0.7,en;q=0.3',
 };
 
-// PDF から落札者名を抽出（pdfjs-dist ESM dynamic import）
-async function extractContractorFromPdf(pdfUrl: string): Promise<string | undefined> {
+type PdfResultDetails = {
+    winningContractor?: string;
+    biddingDate?: string;
+};
+
+function extractBiddingDateFromPdfText(text: string): string | undefined {
+    const match = text.match(/令和\s*(\d+)\s*年\s*(\d+)\s*月\s*(\d+)\s*日\s*入札執行/);
+    if (!match) return undefined;
+
+    const year = 2018 + parseInt(match[1]);
+    return `${year}-${match[2].padStart(2, '0')}-${match[3].padStart(2, '0')}`;
+}
+
+// PDF から落札者名・開札日を抽出（pdfjs-dist ESM dynamic import）
+async function extractResultDetailsFromPdf(pdfUrl: string): Promise<PdfResultDetails> {
     try {
         const res = await axios.get<ArrayBuffer>(pdfUrl, {
             responseType: 'arraybuffer',
@@ -62,23 +75,33 @@ async function extractContractorFromPdf(pdfUrl: string): Promise<string | undefi
             text += content.items.map((item) => ('str' in item ? item.str : '')).join(' ');
         }
 
+        const biddingDate = extractBiddingDateFromPdfText(text);
+
         // パターン1: 「落札者氏名 ○○株式会社 代表取締役...」or 数字ラベルで終端
         const m1 = text.match(/落札者氏名\s+(.+?)(?:代表取締役|代表社員|代表者|第\d+回入札|\s{3,}|\d{2}\s)/);
         if (m1?.[1]) {
             const name = m1[1].trim();
             // 数字で始まる・落札者所在地を含む → 無効
             if (name && !/^\d/.test(name) && !name.includes('落札者所在地')) {
-                return name.replace(/\s+第\d+回入札.*$/, '').trim();
+                return {
+                    winningContractor: name.replace(/\s+第\d+回入札.*$/, '').trim(),
+                    biddingDate,
+                };
             }
         }
 
         // パターン2: 「○○株式会社 落札12,000,000」
         const m2 = text.match(/((?:㈱|㈲|株式会社|有限会社|合同会社)[\S]+)\s+落札[\d,]/);
-        if (m2?.[1]) return m2[1].trim();
+        if (m2?.[1]) {
+            return {
+                winningContractor: m2[1].trim(),
+                biddingDate,
+            };
+        }
 
-        return undefined;
+        return { biddingDate };
     } catch {
-        return undefined;
+        return {};
     }
 }
 
@@ -322,10 +345,13 @@ export class KashiharaCityScraper implements Scraper {
         for (let i = 0; i < rakusatsuItems.length; i += CONCURRENCY) {
             const batch = rakusatsuItems.slice(i, i + CONCURRENCY);
             await Promise.all(batch.map(async (item) => {
-                const contractor = await extractContractorFromPdf(item.pdfUrl!);
-                if (contractor) {
-                    item.winningContractor = contractor;
-                    console.log(`[橿原市] 落札者: ${item.title.slice(0, 20)} → ${contractor}`);
+                const details = await extractResultDetailsFromPdf(item.pdfUrl!);
+                if (details.winningContractor) {
+                    item.winningContractor = details.winningContractor;
+                    console.log(`[橿原市] 落札者: ${item.title.slice(0, 20)} → ${details.winningContractor}`);
+                }
+                if (details.biddingDate) {
+                    item.biddingDate = details.biddingDate;
                 }
             }));
         }

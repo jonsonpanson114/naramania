@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-10T02:24:50.015Z",
+  "generatedAt": "2026-05-10T02:35:36.218Z",
   "source": "manual_audit",
   "originalCount": 128,
   "keptCount": 128,
@@ -9,28 +9,28 @@
   "municipalityCount": 10,
   "dateAudit": {
     "announcementAfterBiddingCount": 0,
-    "awardedWithoutBiddingDateCount": 40,
+    "awardedWithoutBiddingDateCount": 3,
     "openWithWinnerCount": 0,
     "sampleTitles": [
       {
-        "municipality": "橿原市",
-        "title": "各幼稚園空調機設置工事",
+        "municipality": "奈良市",
+        "title": "三笠中学校校舎屋上防水改修工事",
         "status": "落札",
-        "announcementDate": "2026-01-29",
+        "announcementDate": "2025-12-10",
         "biddingDate": null
       },
       {
-        "municipality": "橿原市",
-        "title": "市営住宅内装改修工事に伴う設計委託",
+        "municipality": "大和郡山市",
+        "title": "大和郡山市立スポーツ会館体育室床修繕",
         "status": "落札",
-        "announcementDate": "2026-01-29",
+        "announcementDate": "2025-10-30",
         "biddingDate": null
       },
       {
-        "municipality": "橿原市",
-        "title": "耳成地区公民館屋根等改修工事",
+        "municipality": "大和郡山市",
+        "title": "総合公園施設市営球場フェンス緩衝材修繕",
         "status": "落札",
-        "announcementDate": "2025-12-18",
+        "announcementDate": "2025-10-01",
         "biddingDate": null
       }
     ]
