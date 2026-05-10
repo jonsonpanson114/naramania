@@ -67,11 +67,41 @@ function upsertSeenItem(
     seenContent.set(dedupeKey(existing), existing.id);
 }
 
+function buildDateAudit(items: BiddingItem[]) {
+    const announcementAfterBidding = items.filter(item =>
+        item.biddingDate && item.announcementDate && item.announcementDate > item.biddingDate,
+    );
+    const awardedWithoutBiddingDate = items.filter(item =>
+        item.status === '落札' && !item.biddingDate,
+    );
+    const openWithWinner = items.filter(item =>
+        item.status === '受付中' && item.winningContractor,
+    );
+
+    return {
+        announcementAfterBiddingCount: announcementAfterBidding.length,
+        awardedWithoutBiddingDateCount: awardedWithoutBiddingDate.length,
+        openWithWinnerCount: openWithWinner.length,
+        sampleTitles: [
+            ...announcementAfterBidding.slice(0, 3),
+            ...awardedWithoutBiddingDate.slice(0, 3),
+            ...openWithWinner.slice(0, 3),
+        ].map(item => ({
+            municipality: item.municipality,
+            title: item.title,
+            status: item.status,
+            announcementDate: item.announcementDate,
+            biddingDate: item.biddingDate || null,
+        })),
+    };
+}
+
 function writeQualitySummary(items: BiddingItem[], scrapedCount: number, rejectedCount: number) {
     const dates = items
         .map(item => item.announcementDate)
         .filter(Boolean)
         .sort();
+    const dateAudit = buildDateAudit(items);
 
     const summary = {
         generatedAt: new Date().toISOString(),
@@ -82,6 +112,7 @@ function writeQualitySummary(items: BiddingItem[], scrapedCount: number, rejecte
         oldestAnnouncementDate: dates[0] || null,
         latestAnnouncementDate: dates[dates.length - 1] || null,
         municipalityCount: new Set(items.map(item => item.municipality)).size,
+        dateAudit,
     };
 
     fs.writeFileSync(QUALITY_PATH, JSON.stringify(summary, null, 2), 'utf-8');

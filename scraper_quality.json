@@ -1,10 +1,38 @@
 {
-  "generatedAt": "2026-05-10T02:21:07.603Z",
+  "generatedAt": "2026-05-10T02:24:50.015Z",
   "source": "manual_audit",
-  "originalCount": 129,
+  "originalCount": 128,
   "keptCount": 128,
-  "removedCount": 1,
+  "removedCount": 0,
   "oldestAnnouncementDate": "2025-04-09",
   "latestAnnouncementDate": "2026-05-01",
-  "municipalityCount": 10
+  "municipalityCount": 10,
+  "dateAudit": {
+    "announcementAfterBiddingCount": 0,
+    "awardedWithoutBiddingDateCount": 40,
+    "openWithWinnerCount": 0,
+    "sampleTitles": [
+      {
+        "municipality": "橿原市",
+        "title": "各幼稚園空調機設置工事",
+        "status": "落札",
+        "announcementDate": "2026-01-29",
+        "biddingDate": null
+      },
+      {
+        "municipality": "橿原市",
+        "title": "市営住宅内装改修工事に伴う設計委託",
+        "status": "落札",
+        "announcementDate": "2026-01-29",
+        "biddingDate": null
+      },
+      {
+        "municipality": "橿原市",
+        "title": "耳成地区公民館屋根等改修工事",
+        "status": "落札",
+        "announcementDate": "2025-12-18",
+        "biddingDate": null
+      }
+    ]
+  }
 }
