@@ -475,15 +475,6 @@
     "winningContractor": "㈲坪岡建築事務所"
   },
   {
-    "id": "yamato-takada-6cc8e95d",
-    "municipality": "大和高田市",
-    "title": "大和高田市立高田商業高等学校屋内消火栓設備改修工事",
-    "type": "建築",
-    "announcementDate": "2026-01-23",
-    "link": "https://www.city.yamatotakada.nara.jp/soshikikarasagasu/keiyakukanrishitsu/nyusatsu_keiyaku/2/1422.html",
-    "status": "受付中"
-  },
-  {
     "id": "nara-city-0000002259",
     "municipality": "奈良市",
     "title": "東登美ヶ丘小学校他２校屋外トイレ改築工事",
@@ -951,7 +942,8 @@
     "announcementDate": "2025-07-01",
     "link": "https://www.city.yamatotakada.nara.jp/soshikikarasagasu/keiyakukanrishitsu/nyusatsu_keiyaku/1/9099.html",
     "status": "落札",
-    "winningContractor": "株式会社京成設計"
+    "winningContractor": "株式会社京成設計",
+    "biddingDate": "2025-07-18"
   },
   {
     "id": "kashihara-result-5071000510",
@@ -1054,23 +1046,25 @@
     "status": "受付中"
   },
   {
-    "id": "yamato-takada-16a1aa76",
-    "municipality": "大和高田市",
-    "title": "大和高田市立高田商業高等学校屋内消火栓設備改修工事",
-    "type": "建築",
-    "announcementDate": "2025-06-01",
-    "link": "https://www.city.yamatotakada.nara.jp/soshikikarasagasu/keiyakukanrishitsu/nyusatsu_keiyaku/1/9099.html",
-    "status": "落札"
-  },
-  {
     "id": "yamato-takada-cd428f5e",
     "municipality": "大和高田市",
     "title": "大和高田市保健センター受電設備改修工事",
     "type": "建築",
-    "announcementDate": "2025-06-01",
+    "announcementDate": "2025-05-23",
     "link": "https://www.city.yamatotakada.nara.jp/soshikikarasagasu/keiyakukanrishitsu/nyusatsu_keiyaku/1/9099.html",
     "status": "落札",
-    "winningContractor": "鳥谷電気商会"
+    "winningContractor": "鳥谷電気商会",
+    "biddingDate": "2025-06-13"
+  },
+  {
+    "id": "yamato-takada-6cc8e95d",
+    "municipality": "大和高田市",
+    "title": "大和高田市立高田商業高等学校屋内消火栓設備改修工事",
+    "type": "建築",
+    "announcementDate": "2025-05-20",
+    "link": "https://www.city.yamatotakada.nara.jp/soshikikarasagasu/keiyakukanrishitsu/nyusatsu_keiyaku/2/1422.html",
+    "status": "落札",
+    "biddingDate": "2025-06-11"
   },
   {
     "id": "kashihara-result-5071000284",

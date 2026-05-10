@@ -32,6 +32,41 @@ function dedupeKey(item: BiddingItem): string {
     return [item.municipality, item.announcementDate, item.title].join('|');
 }
 
+function keepEarlierDate(currentDate: string, candidateDate: string): string {
+    if (!currentDate) return candidateDate;
+    if (!candidateDate) return currentDate;
+    return candidateDate < currentDate ? candidateDate : currentDate;
+}
+
+function mergeBiddingItem(existing: BiddingItem, candidate: BiddingItem) {
+    if (candidate.status === '落札' && existing.status === '受付中') existing.status = '落札';
+    if (candidate.winningContractor && !existing.winningContractor) existing.winningContractor = candidate.winningContractor;
+    if (candidate.biddingDate && !existing.biddingDate) existing.biddingDate = candidate.biddingDate;
+    if (candidate.pdfUrl && !existing.pdfUrl) existing.pdfUrl = candidate.pdfUrl;
+    if (candidate.link && !existing.link) existing.link = candidate.link;
+    existing.announcementDate = keepEarlierDate(existing.announcementDate, candidate.announcementDate);
+}
+
+function upsertSeenItem(
+    seen: Map<string, BiddingItem>,
+    seenContent: Map<string, string>,
+    item: BiddingItem,
+) {
+    const contentKey = dedupeKey(item);
+    const existingId = seenContent.get(contentKey);
+    const existing = seen.get(existingId || item.id);
+
+    if (!existing) {
+        seen.set(item.id, item);
+        seenContent.set(contentKey, item.id);
+        return;
+    }
+
+    mergeBiddingItem(existing, item);
+    seenContent.set(contentKey, existing.id);
+    seenContent.set(dedupeKey(existing), existing.id);
+}
+
 function writeQualitySummary(items: BiddingItem[], scrapedCount: number, rejectedCount: number) {
     const dates = items
         .map(item => item.announcementDate)
@@ -95,8 +130,7 @@ async function main() {
             const content = fs.readFileSync(outputPath, 'utf-8');
             const existingItems: BiddingItem[] = JSON.parse(content);
             existingItems.filter(item => shouldKeepBiddingItem(item)).forEach(item => {
-                seen.set(item.id, item);
-                seenContent.set(dedupeKey(item), item.id);
+                upsertSeenItem(seen, seenContent, item);
             });
         } catch {
             console.warn('既存データの読み込みに失敗しました。');
@@ -113,17 +147,7 @@ async function main() {
             
             // Merge immediately
             items.filter(item => shouldKeepBiddingItem(item)).forEach(item => {
-                const existingId = seenContent.get(dedupeKey(item));
-                const existing = seen.get(existingId || item.id);
-                if (!existing) {
-                    seen.set(item.id, item);
-                    seenContent.set(dedupeKey(item), item.id);
-                } else {
-                    if (item.status === '落札' && existing.status === '受付中') existing.status = '落札';
-                    if (item.winningContractor && !existing.winningContractor) existing.winningContractor = item.winningContractor;
-                    if (item.biddingDate && !existing.biddingDate) existing.biddingDate = item.biddingDate;
-                    if (item.announcementDate > existing.announcementDate) existing.announcementDate = item.announcementDate;
-                }
+                upsertSeenItem(seen, seenContent, item);
             });
 
             // Save after each municipality (incremental save)

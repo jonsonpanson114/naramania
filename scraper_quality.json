@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-05-10T02:14:18.385Z",
-  "source": "reapply_filter",
+  "generatedAt": "2026-05-10T02:21:07.603Z",
+  "source": "manual_audit",
   "originalCount": 129,
-  "keptCount": 129,
-  "removedCount": 0,
+  "keptCount": 128,
+  "removedCount": 1,
   "oldestAnnouncementDate": "2025-04-09",
   "latestAnnouncementDate": "2026-05-01",
   "municipalityCount": 10
