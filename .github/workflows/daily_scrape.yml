@@ -28,12 +28,13 @@ jobs:
         run: npx playwright install --with-deps chromium
 
       - name: Run Scraper
-        run: npx tsx src/scrapers/index.ts
+        run: npm run scrape
         env:
           NODE_ENV: production
 
       - name: Run AI Augmentation
-        run: npx tsx scripts/augment_intelligence.ts
+        if: ${{ secrets.GOOGLE_GENERATIVE_AI_API_KEY != '' }}
+        run: npm run augment:intelligence
         env:
           GOOGLE_GENERATIVE_AI_API_KEY: ${{ secrets.GOOGLE_GENERATIVE_AI_API_KEY }}
           NODE_ENV: production
