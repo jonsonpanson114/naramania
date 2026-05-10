@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { BiddingItem, Municipality, BiddingType } from '../../types/bidding';
+import { AppShell } from '@/components/AppShell';
 import RadarChart from '@/components/RadarChart';
 
 interface ScatterDataPoint {
@@ -56,6 +57,7 @@ export default async function RadarPage() {
     const maxItem = scatterData[0];
 
     return (
+        <AppShell>
         <div className="space-y-12 animate-fade-in-up">
             <div>
                 <h1 className="text-3xl font-black text-gray-900 mb-2">価格相場レーダー</h1>
@@ -95,5 +97,6 @@ export default async function RadarPage() {
                 )}
             </div>
         </div>
+        </AppShell>
     );
 }

@@ -1,7 +1,7 @@
 import { BiddingItem } from '@/types/bidding';
 import fs from 'fs';
 import path from 'path';
-import { Sidebar } from '@/components/Sidebar';
+import { AppShell } from '@/components/AppShell';
 import { Header } from '@/components/Header';
 import { StatsCard } from '@/components/StatsCard';
 import { BiddingTable } from '@/components/BiddingTable';
@@ -97,9 +97,7 @@ export default async function Home() {
   const rawCount = qualitySummary?.originalCount ?? qualitySummary?.scrapedCount ?? keptCount + removedCount;
 
   return (
-    <div className="flex min-h-screen bg-background text-primary font-serif">
-      <Sidebar />
-      <main className="flex-1 ml-64 p-16">
+    <AppShell>
         <NewsTicker />
         <Header />
 
@@ -209,7 +207,6 @@ export default async function Home() {
         {/* News Section */}
         <NewsSection />
 
-      </main>
-    </div>
+    </AppShell>
   );
 }

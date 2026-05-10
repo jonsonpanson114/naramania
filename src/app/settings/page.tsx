@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Sidebar } from '@/components/Sidebar';
+import { AppShell } from '@/components/AppShell';
 import { Header } from '@/components/Header';
 import { motion } from 'framer-motion';
 import { CheckCircle } from 'lucide-react';
@@ -69,9 +69,7 @@ export default function SettingsPage() {
     };
 
     return (
-        <div className="flex min-h-screen bg-background text-primary font-serif">
-            <Sidebar />
-            <main className="flex-1 ml-64 p-16">
+        <AppShell>
                 <Header />
 
                 <motion.div
@@ -170,7 +168,6 @@ export default function SettingsPage() {
                         </motion.div>
                     )}
                 </div>
-            </main>
-        </div>
+        </AppShell>
     );
 }

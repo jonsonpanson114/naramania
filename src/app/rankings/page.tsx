@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { BiddingItem } from '../../types/bidding';
+import { AppShell } from '@/components/AppShell';
 import RankingChart from '@/components/RankingChart';
 
 export default async function RankingsPage() {
@@ -58,6 +59,7 @@ export default async function RankingsPage() {
         .slice(0, 10);
 
     return (
+        <AppShell>
         <div className="space-y-12 animate-fade-in-up">
             <div>
                 <h1 className="text-3xl font-black text-gray-900 mb-2">落札実績ランキング</h1>
@@ -123,5 +125,6 @@ export default async function RankingsPage() {
                 </div>
             </div>
         </div>
+        </AppShell>
     );
 }

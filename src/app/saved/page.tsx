@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { BiddingItem } from '@/types/bidding';
-import { Sidebar } from '@/components/Sidebar';
+import { AppShell } from '@/components/AppShell';
 import { Header } from '@/components/Header';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Bookmark, Trash2, ExternalLink } from 'lucide-react';
@@ -27,9 +27,7 @@ export default function SavedPage() {
     };
 
     return (
-        <div className="flex min-h-screen bg-background text-primary font-serif">
-            <Sidebar />
-            <main className="flex-1 ml-64 p-16">
+        <AppShell>
                 <Header />
 
                 <motion.div
@@ -107,7 +105,6 @@ export default function SavedPage() {
                         </AnimatePresence>
                     </div>
                 )}
-            </main>
-        </div>
+        </AppShell>
     );
 }
