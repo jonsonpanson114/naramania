@@ -7,15 +7,18 @@ import { StatsCard } from '@/components/StatsCard';
 import { BiddingTable } from '@/components/BiddingTable';
 import { NewsSection } from '@/components/NewsSection';
 import { NewsTicker } from '@/components/NewsTicker';
-import { Trophy, Radar, ArrowRight } from 'lucide-react';
+import { Activity, AlertTriangle, ArrowRight, CheckCircle2, Radar, Trophy } from 'lucide-react';
 import Link from 'next/link';
 
 interface QualitySummary {
   generatedAt?: string;
+  source?: string;
   originalCount?: number;
+  scrapedCount?: number;
   keptCount?: number;
   removedCount?: number;
   rejectedCount?: number;
+  oldestAnnouncementDate?: string | null;
   latestAnnouncementDate?: string | null;
   municipalityCount?: number;
 }
@@ -25,6 +28,18 @@ function formatDateLabel(dateStr?: string | null): string {
   const date = new Date(dateStr);
   if (Number.isNaN(date.getTime())) return dateStr;
   return date.toLocaleDateString('ja-JP', { month: 'numeric', day: 'numeric' });
+}
+
+function formatDateTimeLabel(dateStr?: string | null): string {
+  if (!dateStr) return '-';
+  const date = new Date(dateStr);
+  if (Number.isNaN(date.getTime())) return dateStr;
+  return date.toLocaleString('ja-JP', {
+    month: 'numeric',
+    day: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+  });
 }
 
 // Async Server Component
@@ -73,6 +88,13 @@ export default async function Home() {
   const latestAnnouncementDate = qualitySummary?.latestAnnouncementDate || allItems[0]?.announcementDate;
   const municipalityCount = qualitySummary?.municipalityCount ?? new Set(allItems.map(item => item.municipality)).size;
   const removedCount = qualitySummary?.removedCount ?? qualitySummary?.rejectedCount ?? 0;
+  const generatedAt = qualitySummary?.generatedAt;
+  const generatedDate = generatedAt ? new Date(generatedAt) : null;
+  const hasHealthRecord = Boolean(generatedDate && !Number.isNaN(generatedDate.getTime()));
+  const healthStatusLabel = hasHealthRecord ? '記録あり' : '要確認';
+  const qualitySource = qualitySummary?.source === 'daily_scrape' ? '自動更新' : '手動確認';
+  const keptCount = qualitySummary?.keptCount ?? allItems.length;
+  const rawCount = qualitySummary?.originalCount ?? qualitySummary?.scrapedCount ?? keptCount + removedCount;
 
   return (
     <div className="flex min-h-screen bg-background text-primary font-serif">
@@ -87,6 +109,49 @@ export default async function Home() {
           <StatsCard label="本日更新" value={newArrivals} unit="件" subtext="新着案件" delay={0.2} />
           <StatsCard label="最新公告" value={formatDateLabel(latestAnnouncementDate)} unit="" subtext="データ内の最新日" delay={0.3} />
           <StatsCard label="除外済み" value={removedCount} unit="件" subtext={`${municipalityCount}自治体を掲載`} delay={0.4} />
+        </div>
+
+        {/* Data Health */}
+        <div className="mb-12 rounded-lg border border-border/50 bg-white/70 p-6 shadow-soft">
+          <div className="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
+            <div className="flex items-start gap-4">
+              <div className={`mt-1 flex h-10 w-10 items-center justify-center rounded-md border ${hasHealthRecord ? 'border-green-100 bg-green-50 text-green-600' : 'border-amber-100 bg-amber-50 text-amber-600'}`}>
+                {hasHealthRecord ? <CheckCircle2 size={20} /> : <AlertTriangle size={20} />}
+              </div>
+              <div>
+                <div className="flex flex-wrap items-center gap-3">
+                  <h3 className="text-sm font-bold tracking-[0.2em] text-primary uppercase">Data Health</h3>
+                  <span className={`rounded-sm border px-2 py-0.5 text-[9px] font-bold tracking-[0.2em] ${hasHealthRecord ? 'border-green-200 bg-green-50 text-green-700' : 'border-amber-200 bg-amber-50 text-amber-700'}`}>
+                    {healthStatusLabel}
+                  </span>
+                </div>
+                <p className="mt-2 text-xs tracking-wider text-secondary/60">
+                  最終更新: {formatDateTimeLabel(generatedAt)} / 更新元: {qualitySource}
+                </p>
+              </div>
+            </div>
+            <div className="grid grid-cols-2 gap-4 md:grid-cols-4 lg:min-w-[520px]">
+              <div>
+                <p className="text-[9px] tracking-[0.2em] text-secondary/40 uppercase">取得候補</p>
+                <p className="mt-1 text-lg tabular-nums tracking-wider text-primary">{rawCount}<span className="ml-1 text-[10px] text-accent">件</span></p>
+              </div>
+              <div>
+                <p className="text-[9px] tracking-[0.2em] text-secondary/40 uppercase">掲載</p>
+                <p className="mt-1 text-lg tabular-nums tracking-wider text-primary">{keptCount}<span className="ml-1 text-[10px] text-accent">件</span></p>
+              </div>
+              <div>
+                <p className="text-[9px] tracking-[0.2em] text-secondary/40 uppercase">対象期間</p>
+                <p className="mt-1 text-sm tracking-wider text-primary">{formatDateLabel(qualitySummary?.oldestAnnouncementDate)} - {formatDateLabel(latestAnnouncementDate)}</p>
+              </div>
+              <div>
+                <p className="text-[9px] tracking-[0.2em] text-secondary/40 uppercase">状態</p>
+                <p className="mt-1 flex items-center gap-1.5 text-sm tracking-wider text-primary">
+                  <Activity size={14} className={hasHealthRecord ? 'text-green-600' : 'text-amber-600'} />
+                  {hasHealthRecord ? '品質記録あり' : '未記録'}
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
  
         {/* Municipality Distribution */}
