@@ -91,6 +91,21 @@ function parseJapaneseDate(text: string): string {
     return '';
 }
 
+function parseHeadingDates(text: string): { announcementDate?: string; biddingDate?: string } {
+    const matches = Array.from(text.matchAll(/令和\s*(\d+)\s*年\s*(\d+)\s*月\s*(\d+)\s*日/g));
+    const toIsoDate = (match: RegExpMatchArray) => {
+        const year = 2018 + parseInt(match[1]);
+        return `${year}-${match[2].padStart(2, '0')}-${match[3].padStart(2, '0')}`;
+    };
+
+    if (matches.length === 0) return {};
+
+    return {
+        announcementDate: toIsoDate(matches[0]),
+        biddingDate: matches[1] ? toIsoDate(matches[1]) : undefined,
+    };
+}
+
 // 登録業種列あり（入札予報テーブル）
 function classifyByGyoshu(gyoshu: string): BiddingType | null {
     if (!gyoshu) return '委託';
@@ -129,13 +144,22 @@ export class KashiharaCityScraper implements Scraper {
                 console.log(`[橿原市] Fetching ${label}: ${url}`);
                 const res = await axios.get<string>(url, { headers: AXIOS_HEADERS, timeout: 30000 });
                 const $ = cheerio.load(res.data);
+                let currentAnnouncementDate = '';
+                let currentBiddingDate: string | undefined;
 
-                // ページ冒頭の見出しから公告日を取得
-                const heading = $('h1, h2, h3').first().text();
-                const announcementDate = parseJapaneseDate(heading) || new Date().toISOString().split('T')[0];
+                $('h2, h3, table').each((_, el) => {
+                    if (el.tagName === 'h2' || el.tagName === 'h3') {
+                        const parsed = parseHeadingDates($(el).text());
+                        if (parsed.announcementDate) {
+                            currentAnnouncementDate = parsed.announcementDate;
+                            currentBiddingDate = parsed.biddingDate;
+                        }
+                        return;
+                    }
 
-                $('table').each((_, table) => {
-                    $(table).find('tr').slice(1).each((_, row) => {
+                    if (!currentAnnouncementDate) return;
+
+                    $(el).find('tr').slice(1).each((_, row) => {
                         const cells = $(row).find('td').toArray();
                         if (cells.length < 2) return;
 
@@ -162,7 +186,8 @@ export class KashiharaCityScraper implements Scraper {
                             municipality: '橿原市',
                             title,
                             type: biddingType,
-                            announcementDate,
+                            announcementDate: currentAnnouncementDate,
+                            biddingDate: currentBiddingDate,
                             link: url,
                             pdfUrl: normalizePdfUrl(pdfHref),
                             status: '受付中',

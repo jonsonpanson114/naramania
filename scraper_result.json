@@ -1,71 +1,5 @@
 [
   {
-    "id": "kashihara-5082000350",
-    "municipality": "橿原市",
-    "title": "令和8年 各小学校便所改修工事に伴う設計委託",
-    "type": "建築",
-    "announcementDate": "2026-05-09",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/7/12117.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5082000350.pdf",
-    "status": "受付中",
-    "winnerType": "ゼネコン"
-  },
-  {
-    "id": "kashihara-5082000353",
-    "municipality": "橿原市",
-    "title": "各小中学校防火戸等改修工事に伴う設計委託",
-    "type": "建築",
-    "announcementDate": "2026-05-09",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/7/12117.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5082000353.pdf",
-    "status": "受付中",
-    "winnerType": "ゼネコン"
-  },
-  {
-    "id": "kashihara-5082000289",
-    "municipality": "橿原市",
-    "title": "北妙法寺団地外壁等改修工事に伴う設計委託",
-    "type": "建築",
-    "announcementDate": "2026-05-09",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/7/12117.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5082000289.pdf",
-    "status": "受付中",
-    "winnerType": "ゼネコン"
-  },
-  {
-    "id": "kashihara-5082000288",
-    "municipality": "橿原市",
-    "title": "市営住宅内装等改修工事に伴う設計委託",
-    "type": "建築",
-    "announcementDate": "2026-05-09",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/7/12117.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5082000288.pdf",
-    "status": "受付中",
-    "winnerType": "ゼネコン"
-  },
-  {
-    "id": "kashihara-5082000002",
-    "municipality": "橿原市",
-    "title": "子育て支援センタートイレ等改修工事に伴う設計委託",
-    "type": "建築",
-    "announcementDate": "2026-05-09",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/7/12117.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5082000002.pdf",
-    "status": "受付中",
-    "winnerType": "ゼネコン"
-  },
-  {
-    "id": "kashihara-5082000004",
-    "municipality": "橿原市",
-    "title": "今井まちなみ交流センター耐震診断業務委託",
-    "type": "建築",
-    "announcementDate": "2026-05-09",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/7/12117.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5082000004.pdf",
-    "status": "受付中",
-    "winnerType": "ゼネコン"
-  },
-  {
     "id": "nara-city-0000002437",
     "municipality": "奈良市",
     "title": "庁舎等ＬＥＤ照明器具改修事業に伴う建築設計業務委託",
@@ -152,6 +86,54 @@
     "announcementDate": "2026-04-22",
     "link": "https://www.town.ando.nara.jp/0000003971.html",
     "status": "受付中"
+  },
+  {
+    "id": "kashihara-5082000350",
+    "municipality": "橿原市",
+    "title": "令和8年 各小学校便所改修工事に伴う設計委託",
+    "type": "建築",
+    "announcementDate": "2026-04-17",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/7/12117.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5082000350.pdf",
+    "status": "受付中",
+    "winnerType": "ゼネコン",
+    "biddingDate": "2026-04-22"
+  },
+  {
+    "id": "kashihara-5082000353",
+    "municipality": "橿原市",
+    "title": "各小中学校防火戸等改修工事に伴う設計委託",
+    "type": "建築",
+    "announcementDate": "2026-04-17",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/7/12117.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5082000353.pdf",
+    "status": "受付中",
+    "winnerType": "ゼネコン",
+    "biddingDate": "2026-04-22"
+  },
+  {
+    "id": "kashihara-5082000289",
+    "municipality": "橿原市",
+    "title": "北妙法寺団地外壁等改修工事に伴う設計委託",
+    "type": "建築",
+    "announcementDate": "2026-04-17",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/7/12117.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5082000289.pdf",
+    "status": "受付中",
+    "winnerType": "ゼネコン",
+    "biddingDate": "2026-04-22"
+  },
+  {
+    "id": "kashihara-5082000288",
+    "municipality": "橿原市",
+    "title": "市営住宅内装等改修工事に伴う設計委託",
+    "type": "建築",
+    "announcementDate": "2026-04-17",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/7/12117.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5082000288.pdf",
+    "status": "受付中",
+    "winnerType": "ゼネコン",
+    "biddingDate": "2026-04-22"
   },
   {
     "id": "nara-city-0000002334",
@@ -300,6 +282,30 @@
     "status": "落札",
     "winningContractor": "-",
     "estimatedPrice": "NaN円"
+  },
+  {
+    "id": "kashihara-5082000002",
+    "municipality": "橿原市",
+    "title": "子育て支援センタートイレ等改修工事に伴う設計委託",
+    "type": "建築",
+    "announcementDate": "2026-04-03",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/7/12117.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5082000002.pdf",
+    "status": "受付中",
+    "winnerType": "ゼネコン",
+    "biddingDate": "2026-04-08"
+  },
+  {
+    "id": "kashihara-5082000004",
+    "municipality": "橿原市",
+    "title": "今井まちなみ交流センター耐震診断業務委託",
+    "type": "建築",
+    "announcementDate": "2026-04-03",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/7/12117.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5082000004.pdf",
+    "status": "受付中",
+    "winnerType": "ゼネコン",
+    "biddingDate": "2026-04-08"
   },
   {
     "id": "kashihara-proposal-5082000026",
