@@ -44,5 +44,5 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add scraper_result.json
-          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: daily data update [skip ci]" && git push)
+          git add scraper_result.json scraper_quality.json
+          git diff --cached --quiet || (git commit -m "chore: daily data update [skip ci]" && git push)
