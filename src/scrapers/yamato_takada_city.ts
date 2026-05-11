@@ -23,6 +23,20 @@ function shouldSkip(gyoshu: string, title: string): boolean {
     return !shouldKeepItem(title, gyoshu);
 }
 
+function extractAnnouncementTitle(cell: cheerio.Cheerio<cheerio.Element>): string {
+    const firstLink = cell.find('a').first().text().trim();
+    if (firstLink) {
+        return firstLink.replace(/\(PDFファイル:[^)]+\)/g, '').trim();
+    }
+
+    const firstParagraph = cell.find('p').first().text().trim();
+    if (firstParagraph) {
+        return firstParagraph.replace(/※[\s\S]*/, '').trim();
+    }
+
+    return cell.text().replace(/※[\s\S]*/, '').trim();
+}
+
 function makeId(title: string): string {
     return `yamato-takada-${crypto.createHash('md5').update(title).digest('hex').slice(0, 8)}`;
 }
@@ -74,9 +88,7 @@ export class YamatoTakadaCityScraper implements Scraper {
                     const cells = $(row).find('td');
                     if (cells.length < 5) return;
 
-                    // 件名: br以降の「※」注釈を除去
-                    const titleRaw = cells.eq(1).clone().find('br ~ *').remove().end()
-                        .text().replace(/※[\s\S]*/, '').trim();
+                    const titleRaw = extractAnnouncementTitle(cells.eq(1));
                     const gyoshu = cells.eq(4).text().trim();
 
                     if (!titleRaw || titleRaw === '件名') return;
