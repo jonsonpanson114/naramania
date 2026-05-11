@@ -46,6 +46,7 @@ const AXIOS_HEADERS = {
 type PdfResultDetails = {
     winningContractor?: string;
     biddingDate?: string;
+    isAwarded?: boolean;
 };
 
 function extractBiddingDateFromPdfText(text: string): string | undefined {
@@ -76,6 +77,10 @@ async function extractResultDetailsFromPdf(pdfUrl: string): Promise<PdfResultDet
         }
 
         const biddingDate = extractBiddingDateFromPdfText(text);
+        const hasNoAward = /落札の有無\s+無/.test(text) || /不成立|不落/.test(text);
+        if (hasNoAward) {
+            return { biddingDate, isAwarded: false };
+        }
 
         // パターン1: 「落札者氏名 ○○株式会社 代表取締役...」or 数字ラベルで終端
         const m1 = text.match(/落札者氏名\s+(.+?)(?:代表取締役|代表社員|代表者|第\d+回入札|\s{3,}|\d{2}\s)/);
@@ -86,6 +91,7 @@ async function extractResultDetailsFromPdf(pdfUrl: string): Promise<PdfResultDet
                 return {
                     winningContractor: name.replace(/\s+第\d+回入札.*$/, '').trim(),
                     biddingDate,
+                    isAwarded: true,
                 };
             }
         }
@@ -96,6 +102,7 @@ async function extractResultDetailsFromPdf(pdfUrl: string): Promise<PdfResultDet
             return {
                 winningContractor: m2[1].trim(),
                 biddingDate,
+                isAwarded: true,
             };
         }
 
@@ -352,6 +359,10 @@ export class KashiharaCityScraper implements Scraper {
                 }
                 if (details.biddingDate) {
                     item.biddingDate = details.biddingDate;
+                }
+                if (details.isAwarded === false) {
+                    item.status = '受付終了';
+                    delete item.winningContractor;
                 }
             }));
         }

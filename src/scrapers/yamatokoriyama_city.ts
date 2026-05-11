@@ -86,10 +86,20 @@ async function scrapeDetailPage(url: string, yearHint?: string): Promise<{
 
         // テーブルから落札者・複数件名を探す
         const tableItems: Array<{ title: string; type: string; contractor: string; biddingDate: string }> = [];
+        const keyValuePairs = new Map<string, string>();
 
         $('table').each((_, tbl) => {
             const rows = $(tbl).find('tr').toArray();
             if (rows.length < 2) return;
+
+            if (rows.every(row => $(row).find('td').length === 2)) {
+                rows.forEach(row => {
+                    const cells = $(row).find('td').map((_, c) => $(c).text().trim()).toArray();
+                    const key = cells[0]?.replace(/\s+/g, '');
+                    const value = cells[1]?.trim();
+                    if (key && value) keyValuePairs.set(key, value);
+                });
+            }
 
             const headerCells = $(rows[0]).find('th, td').map((_, c) => $(c).text().trim()).toArray();
             const titleIdx = headerCells.findIndex(h => h.includes('件名') || h.includes('業務名') || h.includes('工事名'));
@@ -115,10 +125,11 @@ async function scrapeDetailPage(url: string, yearHint?: string): Promise<{
         });
 
         // 落札者（テーブルなしの場合）
-        const cm = bodyText.match(/落札(?:者|業者)[：:]\s*([^\n\r]+)/);
-        const contractor = cm ? cm[1].trim() : undefined;
+        const cm = bodyText.match(/落札(?:者|業者)[：:\s]\s*([^\n\r]+)/);
+        const contractor = keyValuePairs.get('落札者') || keyValuePairs.get('落札業者') || (cm ? cm[1].trim() : undefined);
+        const fallbackBiddingDate = keyValuePairs.get('開札日') ? parseDate(keyValuePairs.get('開札日') || '', yearHint) : undefined;
 
-        return { biddingDate, contractor, tableItems };
+        return { biddingDate: biddingDate || fallbackBiddingDate, contractor, tableItems };
     } catch {
         return {};
     }

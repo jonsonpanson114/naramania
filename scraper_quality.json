@@ -9,16 +9,9 @@
   "municipalityCount": 10,
   "dateAudit": {
     "announcementAfterBiddingCount": 0,
-    "awardedWithoutBiddingDateCount": 1,
+    "awardedWithoutBiddingDateCount": 0,
+    "awardedWithoutWinnerCount": 0,
     "openWithWinnerCount": 0,
-    "sampleTitles": [
-      {
-        "municipality": "大和郡山市",
-        "title": "令和7年度矢田山第4配水池電気・機械設備更新工事実施設計業務開札結果",
-        "status": "落札",
-        "announcementDate": "2025-05-13",
-        "biddingDate": null
-      }
-    ]
+    "sampleTitles": []
   }
 }

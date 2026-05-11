@@ -7,10 +7,10 @@ import { shouldKeepItem } from './common/filter';
 // 大和高田市 入札情報
 const BASE = 'https://www.city.yamatotakada.nara.jp';
 const ANNOUNCEMENT_PAGES = [
-    { url: `${BASE}/soshikikarasagasu/keiyakukanrishitsu/nyusatsu_keiyaku/2/1422.html`, label: '建設工事' },
-    { url: `${BASE}/soshikikarasagasu/keiyakukanrishitsu/nyusatsu_keiyaku/2/1427.html`, label: '測量コンサル' },
+    { url: `${BASE}/soshikikarasagasu/somuka/keiyakukanri/nyusatsu_keiyaku/2/1422.html`, label: '建設工事' },
+    { url: `${BASE}/soshikikarasagasu/somuka/keiyakukanri/nyusatsu_keiyaku/2/1427.html`, label: '測量コンサル' },
 ];
-const RESULT_PAGE = `${BASE}/soshikikarasagasu/keiyakukanrishitsu/nyusatsu_keiyaku/1/9099.html`;
+const RESULT_PAGE = `${BASE}/soshikikarasagasu/somuka/keiyakukanri/nyusatsu_keiyaku/1/9099.html`;
 
 function classifyType(gyoshu: string, title: string): BiddingType {
     const t = gyoshu + title;
@@ -105,36 +105,24 @@ export class YamatoTakadaCityScraper implements Scraper {
             const $ = cheerio.load(res.data);
             const beforeCount = allItems.length;
 
-            // 新しい構造: h2(月) → strong(案件タイトル) → table(落札業者/落札金額)
-            const REIWA7_BASE = 2025;
-            let currentMonth = 1;
-
-            // 各 h2 (月) セクションを処理
+            let currentMonth = 0;
             $('h2').each((_, h2El) => {
-                const h2Text = $(h2El).text().trim();
-                const monthMatch = h2Text.match(/(\d+)月/);
+                const monthText = $(h2El).text().replace(/\s+/g, '').trim();
+                const monthMatch = monthText.match(/(\d{1,2})月/);
                 if (!monthMatch) return;
                 currentMonth = parseInt(monthMatch[1]);
 
-                // h2 の後にある strong + table のペアを取得
                 let nextEl = $(h2El).next();
-                while (nextEl.length > 0) {
-                    // 次の h2 か ドキュメントの終わりに達したら終了
-                    if (nextEl[0].tagName === 'H2') break;
-
-                    const strongEl = nextEl.find('strong').first();
-                    const tableEl = nextEl.find('table').first();
-
-                    if (strongEl.length > 0 && tableEl.length > 0) {
-                        const title = strongEl.text().trim();
-
-                        // テーブルから落札業者を取得
+                while (nextEl.length > 0 && nextEl[0]?.tagName !== 'h2') {
+                    if (nextEl.is('div.wysiwyg')) {
+                        const title = nextEl.find('p strong').first().text().replace(/\s+/g, ' ').trim();
                         let contractor = '';
-                        tableEl.find('tr').each((_, tr) => {
+
+                        nextEl.find('table tr').each((_, tr) => {
                             const tds = $(tr).find('td');
                             if (tds.length >= 2) {
-                                const label = tds.eq(0).text().trim();
-                                const value = tds.eq(1).text().trim();
+                                const label = tds.eq(0).text().replace(/\s+/g, '').trim();
+                                const value = tds.eq(1).text().replace(/\s+/g, ' ').trim();
                                 if (label === '落札業者' || label === '落札者') {
                                     contractor = value;
                                 }
@@ -142,20 +130,16 @@ export class YamatoTakadaCityScraper implements Scraper {
                         });
 
                         if (title && !shouldSkip('', title)) {
-                            const month = String(currentMonth).padStart(2, '0');
-                            // 「不成立」や「なし」は除外
-                            if (!contractor || contractor === '不成立' || contractor === 'なし') {
-                                contractor = '';
-                            }
+                            const isAwarded = contractor && contractor !== '不成立' && contractor !== 'なし';
                             allItems.push({
                                 id: makeId(title + '-result'),
                                 municipality: '大和高田市',
                                 title,
                                 type: classifyType('', title),
-                                announcementDate: `${REIWA7_BASE}-${month}-01`,
+                                announcementDate: `2025-${String(currentMonth).padStart(2, '0')}-01`,
                                 link: RESULT_PAGE,
-                                status: '落札',
-                                ...(contractor ? { winningContractor: contractor } : {}),
+                                status: isAwarded ? '落札' : '受付終了',
+                                ...(isAwarded ? { winningContractor: contractor } : {}),
                             });
                         }
                     }

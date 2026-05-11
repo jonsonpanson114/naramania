@@ -39,7 +39,16 @@ function keepEarlierDate(currentDate: string, candidateDate: string): string {
 }
 
 function mergeBiddingItem(existing: BiddingItem, candidate: BiddingItem) {
-    if (candidate.status === '落札' && existing.status === '受付中') existing.status = '落札';
+    if (candidate.status === '落札') {
+        existing.status = '落札';
+    } else if (
+        candidate.status === '受付終了' &&
+        (existing.status === '受付中' || existing.status === '締切間近' || (existing.status === '落札' && !existing.winningContractor))
+    ) {
+        existing.status = '受付終了';
+    } else if (candidate.status === '締切間近' && existing.status === '受付中') {
+        existing.status = '締切間近';
+    }
     if (candidate.winningContractor && !existing.winningContractor) existing.winningContractor = candidate.winningContractor;
     if (candidate.biddingDate && !existing.biddingDate) existing.biddingDate = candidate.biddingDate;
     if (candidate.pdfUrl && !existing.pdfUrl) existing.pdfUrl = candidate.pdfUrl;
@@ -77,14 +86,19 @@ function buildDateAudit(items: BiddingItem[]) {
     const openWithWinner = items.filter(item =>
         item.status === '受付中' && item.winningContractor,
     );
+    const awardedWithoutWinner = items.filter(item =>
+        item.status === '落札' && !item.winningContractor,
+    );
 
     return {
         announcementAfterBiddingCount: announcementAfterBidding.length,
         awardedWithoutBiddingDateCount: awardedWithoutBiddingDate.length,
+        awardedWithoutWinnerCount: awardedWithoutWinner.length,
         openWithWinnerCount: openWithWinner.length,
         sampleTitles: [
             ...announcementAfterBidding.slice(0, 3),
             ...awardedWithoutBiddingDate.slice(0, 3),
+            ...awardedWithoutWinner.slice(0, 3),
             ...openWithWinner.slice(0, 3),
         ].map(item => ({
             municipality: item.municipality,
