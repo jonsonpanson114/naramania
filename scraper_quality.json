@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-05-12T03:42:08.071Z",
+  "generatedAt": "2026-05-13T04:14:44.205Z",
   "source": "daily_scrape",
-  "scrapedCount": 325,
-  "keptCount": 142,
+  "scrapedCount": 316,
+  "keptCount": 145,
   "rejectedCount": 215,
   "oldestAnnouncementDate": "2025-04-09",
   "latestAnnouncementDate": "2026-05-01",
   "municipalityCount": 10,
   "dateAudit": {
     "announcementAfterBiddingCount": 0,
-    "awardedWithoutBiddingDateCount": 1,
-    "awardedWithoutWinnerCount": 0,
+    "awardedWithoutBiddingDateCount": 2,
+    "awardedWithoutWinnerCount": 1,
     "openWithWinnerCount": 0,
     "sampleTitles": [
       {
@@ -18,6 +18,20 @@
         "title": "土庫小学校受変電設備修繕工事",
         "status": "落札",
         "announcementDate": "2025-07-01",
+        "biddingDate": null
+      },
+      {
+        "municipality": "大和郡山市",
+        "title": "総合公園施設市営球場フェンス緩衝材修繕 入札結果",
+        "status": "落札",
+        "announcementDate": "2025-10-01",
+        "biddingDate": null
+      },
+      {
+        "municipality": "大和郡山市",
+        "title": "総合公園施設市営球場フェンス緩衝材修繕 入札結果",
+        "status": "落札",
+        "announcementDate": "2025-10-01",
         "biddingDate": null
       }
     ]
