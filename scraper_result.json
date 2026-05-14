@@ -1,5 +1,59 @@
 [
   {
+    "id": "katsuragi-2125c4aa",
+    "municipality": "葛城市",
+    "title": "磐城小学校図書室他空調設備更新工事",
+    "type": "建築",
+    "announcementDate": "2026-05-14",
+    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/2-4-5-2026-1.pdf",
+    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/2-4-5-2026-1.pdf",
+    "status": "受付中"
+  },
+  {
+    "id": "katsuragi-a427cad6",
+    "municipality": "葛城市",
+    "title": "葛城市立中学校トイレ改修工事設計業務",
+    "type": "コンサル",
+    "announcementDate": "2026-05-14",
+    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/2-4-3-2026-1.pdf",
+    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/2-4-3-2026-1.pdf",
+    "status": "受付中"
+  },
+  {
+    "id": "katsuragi-eb9ab23b",
+    "municipality": "葛城市",
+    "title": "磐城第2保育所照明器具LED化工事",
+    "type": "建築",
+    "announcementDate": "2026-05-14",
+    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/2-4-1-2026-1.pdf",
+    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/2-4-1-2026-1.pdf",
+    "status": "受付中"
+  },
+  {
+    "id": "nara-city-0000002337",
+    "municipality": "奈良市",
+    "title": "中部公民館高圧受変電設備改修工事",
+    "type": "建築",
+    "announcementDate": "2026-05-13",
+    "biddingDate": "2026-05-13",
+    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+    "status": "落札",
+    "winningContractor": "株式会社久保総合設備",
+    "winnerType": "ゼネコン"
+  },
+  {
+    "id": "nara-city-0000002336",
+    "municipality": "奈良市",
+    "title": "都祁体育館高圧受変電設備改修工事",
+    "type": "建築",
+    "announcementDate": "2026-05-12",
+    "biddingDate": "2026-05-12",
+    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+    "status": "落札",
+    "winningContractor": "学園前電気商会",
+    "winnerType": "ゼネコン"
+  },
+  {
     "id": "nara-city-0000002437",
     "municipality": "奈良市",
     "title": "庁舎等ＬＥＤ照明器具改修事業に伴う建築設計業務委託",
