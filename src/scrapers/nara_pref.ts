@@ -18,6 +18,7 @@ const SEARCH_TARGETS = [
         label: '工事',
         gyoushuCodes: ['0000200', '0000800', '0000900', '0001700'],
         windowSizeMonths: 2,
+        historyMonths: 3,
     },
     {
         gyomuType: '02',
@@ -25,6 +26,7 @@ const SEARCH_TARGETS = [
         label: 'コンサル',
         gyoushuCodes: [''],
         windowSizeMonths: 3,
+        historyMonths: 4,
     },
 ];
 
@@ -77,9 +79,9 @@ function endOfMonth(date: Date): Date {
     return new Date(date.getFullYear(), date.getMonth() + 1, 0);
 }
 
-function buildSearchWindows(referenceDate: Date, stepMonths: number): SearchWindow[] {
+function buildSearchWindows(referenceDate: Date, stepMonths: number, historyMonths: number): SearchWindow[] {
     const windows: SearchWindow[] = [];
-    const start = new Date(referenceDate.getFullYear(), referenceDate.getMonth() - 13, 1);
+    const start = new Date(referenceDate.getFullYear(), referenceDate.getMonth() - Math.max(historyMonths - 1, 0), 1);
     for (let cursor = startOfMonth(start); cursor <= referenceDate; cursor = new Date(cursor.getFullYear(), cursor.getMonth() + stepMonths, 1)) {
         const windowEnd = endOfMonth(new Date(cursor.getFullYear(), cursor.getMonth() + stepMonths - 1, 1));
         windows.push({
@@ -94,6 +96,7 @@ function buildSearchWindows(referenceDate: Date, stepMonths: number): SearchWind
 async function openSearchPage(page: Page, gyomuType: string, fiscalYear: string, gyoushuCode: string) {
     await page.goto(PPI_SEARCH_URL, { waitUntil: 'domcontentloaded', timeout: 30000 });
     await page.waitForTimeout(1500);
+    await dismissPopup(page);
 
     await page.click(`#GyomuTypeTab${gyomuType}`);
     await page.waitForTimeout(1000);
@@ -104,6 +107,23 @@ async function openSearchPage(page: Page, gyomuType: string, fiscalYear: string,
     if (gyoushuCode) {
         await page.selectOption('#searchJyokenGyoushuCd1', gyoushuCode).catch(() => { });
         await page.waitForTimeout(300);
+    }
+}
+
+async function dismissPopup(page: Page) {
+    const visible = await page.locator('#bg_pop.display_b').count();
+    if (!visible) return;
+
+    await page.locator('#ok').click().catch(() => { });
+    await page.waitForTimeout(300);
+
+    const stillVisible = await page.locator('#bg_pop.display_b').count();
+    if (stillVisible) {
+        await page.evaluate(() => {
+            const popup = document.getElementById('bg_pop');
+            if (popup) popup.className = popup.className.replace('display_b', 'display_n');
+        }).catch(() => { });
+        await page.waitForTimeout(200);
     }
 }
 
@@ -174,9 +194,8 @@ async function hasNoResultPopup(page: Page): Promise<boolean> {
     if (!visible) return false;
 
     const message = await page.locator('#ShowMessage').textContent().catch(() => '');
+    await dismissPopup(page);
     if (message?.includes('0件')) {
-        await page.locator('#ok').click().catch(() => { });
-        await page.waitForTimeout(300);
         return true;
     }
 
@@ -216,15 +235,24 @@ export class NaraPrefScraper implements Scraper {
         try {
             const todayIso = new Date().toISOString().slice(0, 10);
             const detailCutoff = new Date();
-            detailCutoff.setDate(detailCutoff.getDate() - 120);
+            detailCutoff.setDate(detailCutoff.getDate() - 21);
             const detailCutoffIso = detailCutoff.toISOString().slice(0, 10);
+            let detailFetchCount = 0;
+            const detailFetchLimit = 12;
+            const scrapeDeadline = Date.now() + 180000;
 
             for (const target of SEARCH_TARGETS) {
-                const windows = buildSearchWindows(new Date(), target.windowSizeMonths);
+                const windows = buildSearchWindows(new Date(), target.windowSizeMonths, target.historyMonths);
                 console.log(`[奈良県] ${target.label} 新サイト取得中...`);
+                let deadlineReached = false;
 
                 for (const gyoushuCode of target.gyoushuCodes) {
                     for (const window of windows) {
+                        if (Date.now() > scrapeDeadline) {
+                            console.warn(`[奈良県] 時間上限に達したため ${target.label} の残り検索を打ち切ります`);
+                            deadlineReached = true;
+                            break;
+                        }
                         try {
                             await openSearchPage(searchPage, target.gyomuType, window.fiscalYear, gyoushuCode);
                             await applyDateRange(searchPage, window.start, window.end);
@@ -254,8 +282,14 @@ export class NaraPrefScraper implements Scraper {
                                     skip: false,
                                 };
 
-                                if (biddingDate && biddingDate < todayIso && biddingDate >= detailCutoffIso) {
+                                if (
+                                    biddingDate &&
+                                    biddingDate < todayIso &&
+                                    biddingDate >= detailCutoffIso &&
+                                    detailFetchCount < detailFetchLimit
+                                ) {
                                     detail = await fetchDetailInfo(detailPage, row.kanriNo);
+                                    detailFetchCount += 1;
                                 }
 
                                 if (detail.skip) continue;
@@ -277,7 +311,9 @@ export class NaraPrefScraper implements Scraper {
                             console.warn(`[奈良県] ${target.label} ${gyoushuCode || 'all'} ${window.fiscalYear} ${window.start.toISOString().slice(0, 7)} エラー:`, error instanceof Error ? error.message : String(error));
                         }
                     }
+                    if (deadlineReached) break;
                 }
+                if (deadlineReached) break;
             }
         } catch (error) {
             console.error('[奈良県] スクレイパーエラー:', error instanceof Error ? error.message : String(error));
