@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-05-18T10:11:38.836Z",
-  "source": "daily_scrape",
-  "scrapedCount": 320,
-  "keptCount": 153,
-  "rejectedCount": 214,
+  "generatedAt": "2026-05-18T12:42:25.404Z",
+  "source": "manual_nara_pref_refresh",
+  "scrapedCount": 158,
+  "keptCount": 158,
+  "rejectedCount": 0,
   "oldestAnnouncementDate": "2025-04-09",
   "latestAnnouncementDate": "2026-05-18",
-  "municipalityCount": 10,
+  "municipalityCount": 11,
   "dateAudit": {
     "announcementAfterBiddingCount": 0,
     "awardedWithoutBiddingDateCount": 2,

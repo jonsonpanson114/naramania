@@ -17,24 +17,14 @@ const SEARCH_TARGETS = [
         type: '建築' as BiddingType,
         label: '工事',
         gyoushuCodes: ['0000200', '0000800', '0000900', '0001700'],
-        windowSizeMonths: 2,
-        historyMonths: 3,
     },
     {
         gyomuType: '02',
         type: 'コンサル' as BiddingType,
         label: 'コンサル',
         gyoushuCodes: [''],
-        windowSizeMonths: 3,
-        historyMonths: 4,
     },
 ];
-
-type SearchWindow = {
-    fiscalYear: string;
-    start: Date;
-    end: Date;
-};
 
 type SearchRow = {
     kanriNo: string;
@@ -71,26 +61,9 @@ function fiscalYearForDate(date: Date): string {
     return date.getMonth() >= 3 ? String(date.getFullYear()) : String(date.getFullYear() - 1);
 }
 
-function startOfMonth(date: Date): Date {
-    return new Date(date.getFullYear(), date.getMonth(), 1);
-}
-
-function endOfMonth(date: Date): Date {
-    return new Date(date.getFullYear(), date.getMonth() + 1, 0);
-}
-
-function buildSearchWindows(referenceDate: Date, stepMonths: number, historyMonths: number): SearchWindow[] {
-    const windows: SearchWindow[] = [];
-    const start = new Date(referenceDate.getFullYear(), referenceDate.getMonth() - Math.max(historyMonths - 1, 0), 1);
-    for (let cursor = startOfMonth(start); cursor <= referenceDate; cursor = new Date(cursor.getFullYear(), cursor.getMonth() + stepMonths, 1)) {
-        const windowEnd = endOfMonth(new Date(cursor.getFullYear(), cursor.getMonth() + stepMonths - 1, 1));
-        windows.push({
-            fiscalYear: fiscalYearForDate(cursor),
-            start: startOfMonth(cursor),
-            end: windowEnd > referenceDate ? referenceDate : windowEnd,
-        });
-    }
-    return windows;
+function startOfFiscalYear(referenceDate: Date): Date {
+    const year = referenceDate.getMonth() >= 3 ? referenceDate.getFullYear() : referenceDate.getFullYear() - 1;
+    return new Date(year, 3, 1);
 }
 
 async function openSearchPage(page: Page, gyomuType: string, fiscalYear: string, gyoushuCode: string) {
@@ -233,83 +206,84 @@ export class NaraPrefScraper implements Scraper {
         const items = new Map<string, BiddingItem>();
 
         try {
-            const todayIso = new Date().toISOString().slice(0, 10);
+            const referenceDate = new Date();
+            const todayIso = referenceDate.toISOString().slice(0, 10);
             const detailCutoff = new Date();
             detailCutoff.setDate(detailCutoff.getDate() - 21);
             const detailCutoffIso = detailCutoff.toISOString().slice(0, 10);
             let detailFetchCount = 0;
             const detailFetchLimit = 12;
-            const scrapeDeadline = Date.now() + 180000;
+            const scrapeDeadline = Date.now() + 150000;
+            const fiscalYear = fiscalYearForDate(referenceDate);
+            const searchStart = startOfFiscalYear(referenceDate);
+            const searchEnd = referenceDate;
 
             for (const target of SEARCH_TARGETS) {
-                const windows = buildSearchWindows(new Date(), target.windowSizeMonths, target.historyMonths);
                 console.log(`[奈良県] ${target.label} 新サイト取得中...`);
                 let deadlineReached = false;
 
                 for (const gyoushuCode of target.gyoushuCodes) {
-                    for (const window of windows) {
-                        if (Date.now() > scrapeDeadline) {
-                            console.warn(`[奈良県] 時間上限に達したため ${target.label} の残り検索を打ち切ります`);
-                            deadlineReached = true;
-                            break;
-                        }
-                        try {
-                            await openSearchPage(searchPage, target.gyomuType, window.fiscalYear, gyoushuCode);
-                            await applyDateRange(searchPage, window.start, window.end);
-                            await searchPage.click('#search');
-                            await searchPage.waitForTimeout(3500);
+                    if (Date.now() > scrapeDeadline) {
+                        console.warn(`[奈良県] 時間上限に達したため ${target.label} の残り検索を打ち切ります`);
+                        deadlineReached = true;
+                        break;
+                    }
+                    try {
+                        await openSearchPage(searchPage, target.gyomuType, fiscalYear, gyoushuCode);
+                        await applyDateRange(searchPage, searchStart, searchEnd);
+                        await searchPage.click('#search');
+                        await searchPage.waitForTimeout(3500);
 
-                            if (await hasNoResultPopup(searchPage)) {
-                                console.log(`[奈良県] ${target.label} ${gyoushuCode || 'all'} ${window.start.toISOString().slice(0, 7)}: 0件`);
-                                continue;
+                        if (await hasNoResultPopup(searchPage)) {
+                            console.log(`[奈良県] ${target.label} ${gyoushuCode || 'all'} ${searchStart.toISOString().slice(0, 10)}: 0件`);
+                            continue;
+                        }
+
+                        const rows = await extractRows(searchPage);
+                        console.log(`[奈良県] ${target.label} ${gyoushuCode || 'all'} ${searchStart.toISOString().slice(0, 10)}: ${rows.length}件`);
+
+                        for (const row of rows) {
+                            if (row.title.includes('【中止】')) continue;
+                            if (target.gyomuType === '01' && KOJI_GYOSHU_SKIP.some(keyword => row.gyoshu.includes(keyword))) continue;
+                            if (!shouldKeepItem(row.title, row.gyoshu)) continue;
+
+                            const announcementDate = parseJapaneseDate(row.announcementText);
+                            const biddingDate = parseJapaneseDate(row.biddingText) || undefined;
+                            if (!announcementDate) continue;
+
+                            let detail: DetailInfo = {
+                                status: biddingDate && biddingDate < todayIso ? '落札' : '受付中',
+                                winningContractor: undefined,
+                                skip: false,
+                            };
+
+                            if (
+                                biddingDate &&
+                                biddingDate < todayIso &&
+                                biddingDate >= detailCutoffIso &&
+                                detailFetchCount < detailFetchLimit
+                            ) {
+                                detail = await fetchDetailInfo(detailPage, row.kanriNo);
+                                detailFetchCount += 1;
                             }
 
-                            const rows = await extractRows(searchPage);
-                            console.log(`[奈良県] ${target.label} ${gyoushuCode || 'all'} ${window.start.toISOString().slice(0, 7)}: ${rows.length}件`);
+                            if (detail.skip) continue;
 
-                            for (const row of rows) {
-                                if (row.title.includes('【中止】')) continue;
-                                if (target.gyomuType === '01' && KOJI_GYOSHU_SKIP.some(keyword => row.gyoshu.includes(keyword))) continue;
-                                if (!shouldKeepItem(row.title, row.gyoshu)) continue;
-
-                                const announcementDate = parseJapaneseDate(row.announcementText);
-                                const biddingDate = parseJapaneseDate(row.biddingText) || undefined;
-                                if (!announcementDate) continue;
-
-                                let detail: DetailInfo = {
-                                    status: biddingDate && biddingDate < todayIso ? '落札' : '受付中',
-                                    winningContractor: undefined,
-                                    skip: false,
-                                };
-
-                                if (
-                                    biddingDate &&
-                                    biddingDate < todayIso &&
-                                    biddingDate >= detailCutoffIso &&
-                                    detailFetchCount < detailFetchLimit
-                                ) {
-                                    detail = await fetchDetailInfo(detailPage, row.kanriNo);
-                                    detailFetchCount += 1;
-                                }
-
-                                if (detail.skip) continue;
-
-                                items.set(row.kanriNo, {
-                                    id: `nara-pref-${row.kanriNo}`,
-                                    municipality: '奈良県',
-                                    title: row.title,
-                                    type: target.type,
-                                    announcementDate,
-                                    biddingDate,
-                                    link: `${PPI_DETAIL_BASE}?kanriNo=${row.kanriNo}&gamenMode=0`,
-                                    status: detail.status,
-                                    winningContractor: detail.winningContractor,
-                                    winnerType: target.type === '建築' ? 'ゼネコン' : '設計事務所',
-                                });
-                            }
-                        } catch (error) {
-                            console.warn(`[奈良県] ${target.label} ${gyoushuCode || 'all'} ${window.fiscalYear} ${window.start.toISOString().slice(0, 7)} エラー:`, error instanceof Error ? error.message : String(error));
+                            items.set(row.kanriNo, {
+                                id: `nara-pref-${row.kanriNo}`,
+                                municipality: '奈良県',
+                                title: row.title,
+                                type: target.type,
+                                announcementDate,
+                                biddingDate,
+                                link: `${PPI_DETAIL_BASE}?kanriNo=${row.kanriNo}&gamenMode=0`,
+                                status: detail.status,
+                                winningContractor: detail.winningContractor,
+                                winnerType: target.type === '建築' ? 'ゼネコン' : '設計事務所',
+                            });
                         }
+                    } catch (error) {
+                        console.warn(`[奈良県] ${target.label} ${gyoushuCode || 'all'} ${fiscalYear} エラー:`, error instanceof Error ? error.message : String(error));
                     }
                     if (deadlineReached) break;
                 }
