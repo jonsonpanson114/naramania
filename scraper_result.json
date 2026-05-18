@@ -70,6 +70,15 @@
     "status": "受付中"
   },
   {
+    "id": "kashiba-web-2f12c302",
+    "municipality": "香芝市",
+    "title": "香芝市スポーツ公園整備事業に係るクライミング施設詳細設計業務",
+    "type": "建築",
+    "announcementDate": "2026-05-14",
+    "link": "https://www.city.kashiba.lg.jp/site/nyuusatsu/66808.html",
+    "status": "受付中"
+  },
+  {
     "id": "nara-city-0000002337",
     "municipality": "奈良市",
     "title": "中部公民館高圧受変電設備改修工事",
@@ -281,6 +290,33 @@
     "winnerType": "ゼネコン"
   },
   {
+    "id": "kashiba-web-98aceba6",
+    "municipality": "香芝市",
+    "title": "香芝市立認定こども園及び幼稚園照明設備改修工事",
+    "type": "建築",
+    "announcementDate": "2026-04-23",
+    "link": "https://www.city.kashiba.lg.jp/site/nyuusatsu/65857.html",
+    "status": "受付中"
+  },
+  {
+    "id": "kashiba-web-b1d487b5",
+    "municipality": "香芝市",
+    "title": "下田小学校長寿命化改修工事",
+    "type": "建築",
+    "announcementDate": "2026-04-23",
+    "link": "https://www.city.kashiba.lg.jp/site/nyuusatsu/65857.html",
+    "status": "受付中"
+  },
+  {
+    "id": "kashiba-web-ccd84d76",
+    "municipality": "香芝市",
+    "title": "五位堂小学校改築工事に伴う実施設計業務",
+    "type": "建築",
+    "announcementDate": "2026-04-23",
+    "link": "https://www.city.kashiba.lg.jp/site/nyuusatsu/65961.html",
+    "status": "受付中"
+  },
+  {
     "id": "ando-0000003971-16",
     "municipality": "安堵町",
     "title": "条件付き一般競争入札の実施について（安堵町立安堵小中学校屋内運動場空調設備設置工事）",
@@ -369,6 +405,69 @@
     "status": "受付中",
     "winnerType": "ゼネコン",
     "biddingDate": "2026-04-22"
+  },
+  {
+    "id": "kashiba-web-ac727a15",
+    "municipality": "香芝市",
+    "title": "香芝市立小学校屋内運動場空調設備設置工事（1工区）",
+    "type": "建築",
+    "announcementDate": "2026-04-16",
+    "link": "https://www.city.kashiba.lg.jp/site/nyuusatsu/65649.html",
+    "status": "受付中"
+  },
+  {
+    "id": "kashiba-web-a3209d2a",
+    "municipality": "香芝市",
+    "title": "香芝市立小学校屋内運動場空調設備設置工事（2工区）",
+    "type": "建築",
+    "announcementDate": "2026-04-16",
+    "link": "https://www.city.kashiba.lg.jp/site/nyuusatsu/65649.html",
+    "status": "受付中"
+  },
+  {
+    "id": "kashiba-web-2cb57c22",
+    "municipality": "香芝市",
+    "title": "香芝市立小学校屋内運動場空調設備設置工事（3工区）",
+    "type": "建築",
+    "announcementDate": "2026-04-16",
+    "link": "https://www.city.kashiba.lg.jp/site/nyuusatsu/65649.html",
+    "status": "受付中"
+  },
+  {
+    "id": "kashiba-web-f5d25771",
+    "municipality": "香芝市",
+    "title": "香芝市立小学校照明設備改修工事（1工区）",
+    "type": "建築",
+    "announcementDate": "2026-04-16",
+    "link": "https://www.city.kashiba.lg.jp/site/nyuusatsu/65649.html",
+    "status": "受付中"
+  },
+  {
+    "id": "kashiba-web-49ed0b19",
+    "municipality": "香芝市",
+    "title": "香芝市立小学校照明設備改修工事（2工区）",
+    "type": "建築",
+    "announcementDate": "2026-04-16",
+    "link": "https://www.city.kashiba.lg.jp/site/nyuusatsu/65649.html",
+    "status": "受付中"
+  },
+  {
+    "id": "kashiba-web-b7d8c5f9",
+    "municipality": "香芝市",
+    "title": "香芝市立中学校照明設備改修工事（1工区）",
+    "type": "建築",
+    "announcementDate": "2026-04-16",
+    "link": "https://www.city.kashiba.lg.jp/site/nyuusatsu/65649.html",
+    "status": "受付中"
+  },
+  {
+    "id": "kashiba-web-39cb4346",
+    "municipality": "香芝市",
+    "title": "香芝市立中学校照明設備改修工事（2工区）",
+    "type": "建築",
+    "announcementDate": "2026-04-16",
+    "link": "https://www.city.kashiba.lg.jp/site/nyuusatsu/65649.html",
+    "status": "受付中"
   },
   {
     "id": "nara-city-0000002334",
@@ -503,54 +602,6 @@
     "status": "受付中"
   },
   {
-    "id": "kashiba-r7-k15-07",
-    "municipality": "香芝市",
-    "title": "香芝北中学校トイレ改修工事（Ⅱ期）",
-    "type": "建築",
-    "announcementDate": "2026-04-07",
-    "biddingDate": "2026-04-07",
-    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=062006E007200640",
-    "status": "落札",
-    "winningContractor": "株式会社竹澤工業",
-    "estimatedPrice": "NaN円"
-  },
-  {
-    "id": "kashiba-r7-k15-06",
-    "municipality": "香芝市",
-    "title": "旭ケ丘小学校トイレ改修工事（Ⅱ期）",
-    "type": "建築",
-    "announcementDate": "2026-04-07",
-    "biddingDate": "2026-04-07",
-    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=062006E007200640",
-    "status": "落札",
-    "winningContractor": "株式会社豊国",
-    "estimatedPrice": "NaN円"
-  },
-  {
-    "id": "kashiba-r7-k15-05",
-    "municipality": "香芝市",
-    "title": "関屋小学校南館他改修工事",
-    "type": "建築",
-    "announcementDate": "2026-04-07",
-    "biddingDate": "2026-04-07",
-    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=062006E007200640",
-    "status": "落札",
-    "winningContractor": "株式会社上村組",
-    "estimatedPrice": "NaN円"
-  },
-  {
-    "id": "kashiba-r7-k15-04",
-    "municipality": "香芝市",
-    "title": "下田小学校長寿命化改修工事",
-    "type": "建築",
-    "announcementDate": "2026-04-07",
-    "biddingDate": "2026-04-07",
-    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=062006E007200640",
-    "status": "落札",
-    "winningContractor": "-",
-    "estimatedPrice": "NaN円"
-  },
-  {
     "id": "kashihara-5082000002",
     "municipality": "橿原市",
     "title": "子育て支援センタートイレ等改修工事に伴う設計委託",
@@ -606,6 +657,30 @@
     "status": "受付中"
   },
   {
+    "id": "kashiba-r7-k15-07",
+    "municipality": "香芝市",
+    "title": "香芝北中学校トイレ改修工事（Ⅱ期）",
+    "type": "建築",
+    "announcementDate": "2026-03-19",
+    "biddingDate": "2026-04-07",
+    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=062006E007200640",
+    "status": "落札",
+    "winningContractor": "株式会社竹澤工業",
+    "estimatedPrice": "NaN円"
+  },
+  {
+    "id": "kashiba-r7-k15-06",
+    "municipality": "香芝市",
+    "title": "旭ケ丘小学校トイレ改修工事（Ⅱ期）",
+    "type": "建築",
+    "announcementDate": "2026-03-19",
+    "biddingDate": "2026-04-07",
+    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=062006E007200640",
+    "status": "落札",
+    "winningContractor": "株式会社豊国",
+    "estimatedPrice": "NaN円"
+  },
+  {
     "id": "nara-city-0000002290",
     "municipality": "奈良市",
     "title": "済美南小学校エレベーター新設工事",
@@ -626,24 +701,6 @@
     "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
     "status": "落札",
     "winningContractor": "富士産業株式会社"
-  },
-  {
-    "id": "kashiba-web-60993e8f",
-    "municipality": "香芝市",
-    "title": "旭ケ丘小学校トイレ改修工事（2期）",
-    "type": "建築",
-    "announcementDate": "2026-03-19",
-    "link": "https://www.city.kashiba.lg.jp/soshiki/7/64792.html",
-    "status": "受付中"
-  },
-  {
-    "id": "kashiba-web-3cd056b4",
-    "municipality": "香芝市",
-    "title": "香芝北中学校トイレ改修工事（2期）",
-    "type": "建築",
-    "announcementDate": "2026-03-19",
-    "link": "https://www.city.kashiba.lg.jp/soshiki/7/64792.html",
-    "status": "受付中"
   },
   {
     "id": "nara-city-0000002289",
@@ -668,22 +725,27 @@
     "winningContractor": "株式会社広成"
   },
   {
-    "id": "kashiba-web-3dc56e3d",
-    "municipality": "香芝市",
-    "title": "下田小学校長寿命化改修工事",
-    "type": "建築",
-    "announcementDate": "2026-03-12",
-    "link": "https://www.city.kashiba.lg.jp/soshiki/7/64575.html",
-    "status": "受付中"
-  },
-  {
-    "id": "kashiba-web-237b8b30",
+    "id": "kashiba-r7-k15-05",
     "municipality": "香芝市",
     "title": "関屋小学校南館他改修工事",
     "type": "建築",
     "announcementDate": "2026-03-12",
-    "link": "https://www.city.kashiba.lg.jp/soshiki/7/64575.html",
-    "status": "受付中"
+    "biddingDate": "2026-04-07",
+    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=062006E007200640",
+    "status": "落札",
+    "winningContractor": "株式会社上村組",
+    "estimatedPrice": "NaN円"
+  },
+  {
+    "id": "kashiba-r7-k15-04",
+    "municipality": "香芝市",
+    "title": "下田小学校長寿命化改修工事",
+    "type": "建築",
+    "announcementDate": "2026-03-12",
+    "biddingDate": "2026-04-07",
+    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=062006E007200640",
+    "status": "落札",
+    "estimatedPrice": "NaN円"
   },
   {
     "id": "katsuragi-7796394c",
@@ -930,17 +992,6 @@
     "winningContractor": "有限会社三都設計"
   },
   {
-    "id": "yamato-koriyama-2be46dab",
-    "municipality": "大和郡山市",
-    "title": "大和郡山市立スポーツ会館体育室床修繕",
-    "type": "建築",
-    "announcementDate": "2025-10-30",
-    "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsunooshirase/r7/17105.html",
-    "status": "落札",
-    "winningContractor": "マツダ塗装株式会社",
-    "biddingDate": "2025-10-30"
-  },
-  {
     "id": "kashihara-result-5071000984",
     "municipality": "橿原市",
     "title": "新賀公園施設更新工事",
@@ -1001,14 +1052,15 @@
     "winningContractor": "株式会社昭和設計"
   },
   {
-    "id": "yamato-koriyama-ff0023da",
+    "id": "yamato-koriyama-2be46dab",
     "municipality": "大和郡山市",
     "title": "大和郡山市立スポーツ会館体育室床修繕",
     "type": "建築",
     "announcementDate": "2025-10-15",
-    "biddingDate": "2025-10-30",
-    "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsu/R7/16894.html",
-    "status": "受付中"
+    "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsunooshirase/r7/17105.html",
+    "status": "落札",
+    "winningContractor": "マツダ塗装株式会社",
+    "biddingDate": "2025-10-30"
   },
   {
     "id": "katsuragi-ed88682e",
@@ -1029,17 +1081,6 @@
     "biddingDate": "2025-10-24",
     "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
     "status": "受付中"
-  },
-  {
-    "id": "yamato-koriyama-b1fce4b1",
-    "municipality": "大和郡山市",
-    "title": "総合公園施設市営球場フェンス緩衝材修繕",
-    "type": "建築",
-    "announcementDate": "2025-10-01",
-    "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsunooshirase/r7/17036.html",
-    "status": "落札",
-    "winningContractor": "株式会社スポーツテクノ和広 大阪支店",
-    "biddingDate": "2025-10-01"
   },
   {
     "id": "yamato-koriyama-c316fd9b",
@@ -1074,14 +1115,15 @@
     "status": "受付中"
   },
   {
-    "id": "yamato-koriyama-b98b845c",
+    "id": "yamato-koriyama-b1fce4b1",
     "municipality": "大和郡山市",
     "title": "総合公園施設市営球場フェンス緩衝材修繕",
     "type": "建築",
     "announcementDate": "2025-08-29",
-    "biddingDate": "2025-10-01",
-    "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsu/R7/16892.html",
-    "status": "受付中"
+    "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsunooshirase/r7/17036.html",
+    "status": "落札",
+    "winningContractor": "株式会社スポーツテクノ和広 大阪支店",
+    "biddingDate": "2025-10-01"
   },
   {
     "id": "koryo-2025-08-27-No27",
@@ -1399,15 +1441,6 @@
     "status": "受付中"
   },
   {
-    "id": "yamato-takada-16a1aa76",
-    "municipality": "大和高田市",
-    "title": "大和高田市立高田商業高等学校屋内消火栓設備改修工事",
-    "type": "建築",
-    "announcementDate": "2025-06-01",
-    "link": "https://www.city.yamatotakada.nara.jp/soshikikarasagasu/somuka/keiyakukanri/nyusatsu_keiyaku/1/9099.html",
-    "status": "受付終了"
-  },
-  {
     "id": "koryo-2025-05-29-No8",
     "municipality": "広陵町",
     "title": "中新公民館用地造成設計業務委託",
@@ -1431,12 +1464,12 @@
     "biddingDate": "2025-06-13"
   },
   {
-    "id": "yamato-takada-6cc8e95d",
+    "id": "yamato-takada-16a1aa76",
     "municipality": "大和高田市",
     "title": "大和高田市立高田商業高等学校屋内消火栓設備改修工事",
     "type": "建築",
     "announcementDate": "2025-05-20",
-    "link": "https://www.city.yamatotakada.nara.jp/soshikikarasagasu/keiyakukanrishitsu/nyusatsu_keiyaku/2/1422.html",
+    "link": "https://www.city.yamatotakada.nara.jp/soshikikarasagasu/somuka/keiyakukanri/nyusatsu_keiyaku/1/9099.html",
     "status": "受付終了",
     "biddingDate": "2025-06-11"
   },
@@ -1606,33 +1639,6 @@
     "winningContractor": "株式会社彩都建築設計"
   },
   {
-    "id": "kashiba-web-f27007e5",
-    "municipality": "香芝市",
-    "title": "香芝市立認定こども園及び幼稚園照明設備改修工事",
-    "type": "建築",
-    "announcementDate": "2025-04-23",
-    "link": "https://www.city.kashiba.lg.jp/soshiki/7/65857.html",
-    "status": "受付中"
-  },
-  {
-    "id": "kashiba-web-b9ecfc4c",
-    "municipality": "香芝市",
-    "title": "下田小学校長寿命化改修工事",
-    "type": "建築",
-    "announcementDate": "2025-04-23",
-    "link": "https://www.city.kashiba.lg.jp/soshiki/7/65857.html",
-    "status": "受付中"
-  },
-  {
-    "id": "kashiba-web-b8a10945",
-    "municipality": "香芝市",
-    "title": "五位堂小学校改築工事に伴う実施設計業務",
-    "type": "建築",
-    "announcementDate": "2025-04-23",
-    "link": "https://www.city.kashiba.lg.jp/soshiki/7/65961.html",
-    "status": "受付中"
-  },
-  {
     "id": "kashihara-result-5071000096",
     "municipality": "橿原市",
     "title": "畝傍東幼稚園及び晩成幼稚園トイレ改修工事",
@@ -1748,69 +1754,6 @@
     "winnerType": "設計事務所",
     "winningContractor": "㈱土屋総合設計",
     "biddingDate": "2025-04-22"
-  },
-  {
-    "id": "kashiba-web-57506ea2",
-    "municipality": "香芝市",
-    "title": "香芝市立小学校屋内運動場空調設備設置工事（1工区）",
-    "type": "建築",
-    "announcementDate": "2025-04-16",
-    "link": "https://www.city.kashiba.lg.jp/soshiki/7/65649.html",
-    "status": "受付中"
-  },
-  {
-    "id": "kashiba-web-1806e452",
-    "municipality": "香芝市",
-    "title": "香芝市立小学校屋内運動場空調設備設置工事（2工区）",
-    "type": "建築",
-    "announcementDate": "2025-04-16",
-    "link": "https://www.city.kashiba.lg.jp/soshiki/7/65649.html",
-    "status": "受付中"
-  },
-  {
-    "id": "kashiba-web-664795b1",
-    "municipality": "香芝市",
-    "title": "香芝市立小学校屋内運動場空調設備設置工事（3工区）",
-    "type": "建築",
-    "announcementDate": "2025-04-16",
-    "link": "https://www.city.kashiba.lg.jp/soshiki/7/65649.html",
-    "status": "受付中"
-  },
-  {
-    "id": "kashiba-web-deab4dcb",
-    "municipality": "香芝市",
-    "title": "香芝市立小学校照明設備改修工事（1工区）",
-    "type": "建築",
-    "announcementDate": "2025-04-16",
-    "link": "https://www.city.kashiba.lg.jp/soshiki/7/65649.html",
-    "status": "受付中"
-  },
-  {
-    "id": "kashiba-web-1b9301e2",
-    "municipality": "香芝市",
-    "title": "香芝市立小学校照明設備改修工事（2工区）",
-    "type": "建築",
-    "announcementDate": "2025-04-16",
-    "link": "https://www.city.kashiba.lg.jp/soshiki/7/65649.html",
-    "status": "受付中"
-  },
-  {
-    "id": "kashiba-web-e1908c3b",
-    "municipality": "香芝市",
-    "title": "香芝市立中学校照明設備改修工事（1工区）",
-    "type": "建築",
-    "announcementDate": "2025-04-16",
-    "link": "https://www.city.kashiba.lg.jp/soshiki/7/65649.html",
-    "status": "受付中"
-  },
-  {
-    "id": "kashiba-web-09dff6f8",
-    "municipality": "香芝市",
-    "title": "香芝市立中学校照明設備改修工事（2工区）",
-    "type": "建築",
-    "announcementDate": "2025-04-16",
-    "link": "https://www.city.kashiba.lg.jp/soshiki/7/65649.html",
-    "status": "受付中"
   },
   {
     "id": "katsuragi-61b8c2ef",

@@ -28,8 +28,29 @@ import { shouldKeepBiddingItem } from './common/filter';
 
 const QUALITY_PATH = path.join(process.cwd(), 'scraper_quality.json');
 
+function normalizeComparisonTitle(title: string): string {
+    return title
+        .normalize('NFKC')
+        .replace(/[（(]\s*(?:[0-9]+|[IVX]+)\s*期\s*[)）]/gi, '')
+        .replace(/\s+/g, '')
+        .replace(/[・･]/g, '')
+        .trim();
+}
+
 function dedupeKey(item: BiddingItem): string {
     return [item.municipality, item.announcementDate, item.title].join('|');
+}
+
+function titleKey(item: BiddingItem): string {
+    return [item.municipality, normalizeComparisonTitle(item.title)].join('|');
+}
+
+function daysBetween(dateA?: string, dateB?: string): number {
+    if (!dateA || !dateB) return Number.POSITIVE_INFINITY;
+    const a = new Date(dateA).getTime();
+    const b = new Date(dateB).getTime();
+    if (Number.isNaN(a) || Number.isNaN(b)) return Number.POSITIVE_INFINITY;
+    return Math.abs(a - b) / (1000 * 60 * 60 * 24);
 }
 
 function keepEarlierDate(currentDate: string, candidateDate: string): string {
@@ -63,17 +84,32 @@ function upsertSeenItem(
 ) {
     const contentKey = dedupeKey(item);
     const existingId = seenContent.get(contentKey);
-    const existing = seen.get(existingId || item.id);
+    const titleMatchId = seenContent.get(titleKey(item));
+    const existing = seen.get(existingId || titleMatchId || item.id);
+
+    if (
+        existing &&
+        !existingId &&
+        titleMatchId &&
+        daysBetween(existing.announcementDate, item.announcementDate) > 60
+    ) {
+        seen.set(item.id, item);
+        seenContent.set(contentKey, item.id);
+        seenContent.set(titleKey(item), item.id);
+        return;
+    }
 
     if (!existing) {
         seen.set(item.id, item);
         seenContent.set(contentKey, item.id);
+        seenContent.set(titleKey(item), item.id);
         return;
     }
 
     mergeBiddingItem(existing, item);
     seenContent.set(contentKey, existing.id);
     seenContent.set(dedupeKey(existing), existing.id);
+    seenContent.set(titleKey(existing), existing.id);
 }
 
 function buildDateAudit(items: BiddingItem[]) {

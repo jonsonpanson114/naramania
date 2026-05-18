@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-05-18T14:03:09.374Z",
-  "source": "refresh_nara_pref",
-  "scrapedCount": 14,
-  "keptCount": 167,
+  "generatedAt": "2026-05-18T14:19:55.844Z",
+  "source": "refresh_kashiba_cleanup",
+  "scrapedCount": 161,
+  "keptCount": 161,
   "rejectedCount": 0,
   "oldestAnnouncementDate": "2025-04-09",
   "latestAnnouncementDate": "2026-05-18",
@@ -10,7 +10,7 @@
   "dateAudit": {
     "announcementAfterBiddingCount": 0,
     "awardedWithoutBiddingDateCount": 2,
-    "awardedWithoutWinnerCount": 1,
+    "awardedWithoutWinnerCount": 2,
     "openWithWinnerCount": 0,
     "sampleTitles": [
       {
@@ -26,6 +26,13 @@
         "status": "落札",
         "announcementDate": "2025-07-01",
         "biddingDate": null
+      },
+      {
+        "municipality": "香芝市",
+        "title": "下田小学校長寿命化改修工事",
+        "status": "落札",
+        "announcementDate": "2026-03-12",
+        "biddingDate": "2026-04-07"
       },
       {
         "municipality": "大和郡山市",

@@ -17,6 +17,14 @@ function parseJpDate(str: string): string {
     return `${m[1]}-${m[2]}-${m[3]}`;
 }
 
+function parsePageYear(html: string): number {
+    const updateMatch = html.match(/更新日[:：]\s*(\d{4})年/);
+    if (updateMatch) return parseInt(updateMatch[1], 10);
+
+    const now = new Date();
+    return now.getFullYear();
+}
+
 async function scrapeKashibaCity(): Promise<BiddingItem[]> {
     const itemsMap = new Map<string, BiddingItem>();
 
@@ -87,8 +95,10 @@ async function scrapeKashibaCity(): Promise<BiddingItem[]> {
                     const pubDate = parseJpDate((await cells[1].textContent() || '').trim());
                     const title = (await cells[2].textContent() || '').trim().replace(/\s+/g, ' ');
                     const contractNo = (await cells[3].textContent() || '').trim().replace(/\s+/g, '');
-                    const winner = cells.length >= 6 ? (await cells[5].textContent() || '').trim().replace(/\s+/g, ' ') : '';
+                    const rawWinner = cells.length >= 6 ? (await cells[5].textContent() || '').trim().replace(/\s+/g, ' ') : '';
+                    const winner = rawWinner === '-' ? '' : rawWinner;
                     const amountText = cells.length >= 7 ? (await cells[6].textContent() || '').trim().replace(/[,円\s]/g, '') : '';
+                    const parsedAmount = amountText ? parseInt(amountText, 10) : Number.NaN;
 
                     if (!title || !pubDate) continue;
                     if (!shouldKeepItem(title)) continue;
@@ -104,7 +114,7 @@ async function scrapeKashibaCity(): Promise<BiddingItem[]> {
                         link: EPI_URL,
                         status: '落札',
                         winningContractor: winner || undefined,
-                        estimatedPrice: amountText ? `${parseInt(amountText).toLocaleString()}円` : undefined,
+                        estimatedPrice: Number.isFinite(parsedAmount) ? `${parsedAmount.toLocaleString()}円` : undefined,
                     });
                 }
 
@@ -136,30 +146,36 @@ async function scrapeKashibaCity(): Promise<BiddingItem[]> {
 }
 
 async function scrapeKashibaWebsite(): Promise<BiddingItem[]> {
-    const KASHIBA_PORTAL = 'https://www.city.kashiba.lg.jp/soshiki/7/7472.html';
+    const KASHIBA_PORTALS = [
+        'https://www.city.kashiba.lg.jp/site/nyuusatsu/list288-1032.html',
+        'https://www.city.kashiba.lg.jp/site/nyuusatsu/list288-1034.html',
+        'https://www.city.kashiba.lg.jp/site/nyuusatsu/65646.html',
+    ];
     const items: BiddingItem[] = [];
     try {
-        const res = await axios.get(KASHIBA_PORTAL, { headers: { 'User-Agent': 'Mozilla/5.0' }, timeout: 15000 });
-        const $ = cheerio.load(res.data);
         const links: { title: string; href: string }[] = [];
 
-        // 令和7年度/6年度の入札公告、結果ページへのリンクを探す
-        $('a').each((_: number, el: Element) => {
-            const text = $(el).text().trim();
-            const href = $(el).attr('href') || '';
-            if (!href) return;
-            // 「公告」という文字があれば対象（例：3月26日公告分）
-            if (text.includes('公告') || text.includes('結果')) {
+        for (const portalUrl of KASHIBA_PORTALS) {
+            const res = await axios.get(portalUrl, { headers: { 'User-Agent': 'Mozilla/5.0' }, timeout: 15000 });
+            const $ = cheerio.load(res.data);
+
+            $('a').each((_: number, el: Element) => {
+                const text = $(el).text().trim();
+                const href = $(el).attr('href') || '';
+                if (!href) return;
+                if (!text.includes('一般競争入札') && !text.includes('入札結果')) return;
+
                 const fullUrl = href.startsWith('http') ? href : 'https://www.city.kashiba.lg.jp' + href;
                 links.push({ title: text, href: fullUrl });
-            }
-        });
+            });
+        }
 
         // 重複を除いて上位数ページを深掘り
-        const targetLinks = links.slice(0, 5); // 最新の5件分（約1ヶ月分）に絞る
+        const targetLinks = Array.from(new Map(links.map(link => [link.href, link])).values()).slice(0, 8);
         for (const link of targetLinks) {
             const pageRes = await axios.get(link.href, { headers: { 'User-Agent': 'Mozilla/5.0' }, timeout: 15000 });
             const $p = cheerio.load(pageRes.data);
+            const pageYear = parsePageYear(pageRes.data);
             
             // ページ内のテーブル（入札案件一覧）を解析
             $p('#main table tr').each((i: number, el: Element) => {
@@ -189,7 +205,7 @@ async function scrapeKashibaWebsite(): Promise<BiddingItem[]> {
                     } else if (m2) {
                         const month = parseInt(m2[1]);
                         const day = parseInt(m2[2]);
-                        const year = month <= 3 ? 2026 : 2025;
+                        const year = pageYear;
                         date = `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
                     }
 
