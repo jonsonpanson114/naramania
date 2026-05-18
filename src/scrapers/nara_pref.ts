@@ -13,16 +13,16 @@ const KOJI_GYOSHU_SKIP = [
 
 const SEARCH_TARGETS = [
     {
-        gyomuType: '01',
-        type: '建築' as BiddingType,
-        label: '工事',
-        gyoushuCodes: ['0000200', '0000800', '0000900', '0001700'],
-    },
-    {
         gyomuType: '02',
         type: 'コンサル' as BiddingType,
         label: 'コンサル',
-        gyoushuCodes: [''],
+        gyoushuCodes: ['0300000'],
+    },
+    {
+        gyomuType: '01',
+        type: '建築' as BiddingType,
+        label: '工事',
+        gyoushuCodes: ['0000200', '0001700'],
     },
 ];
 

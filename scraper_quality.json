@@ -1,10 +1,39 @@
 {
-  "generatedAt": "2026-05-18T13:43:43.727Z",
-  "source": "reapply_filter",
-  "originalCount": 158,
-  "keptCount": 155,
-  "removedCount": 3,
+  "generatedAt": "2026-05-18T14:03:09.374Z",
+  "source": "refresh_nara_pref",
+  "scrapedCount": 14,
+  "keptCount": 167,
+  "rejectedCount": 0,
   "oldestAnnouncementDate": "2025-04-09",
   "latestAnnouncementDate": "2026-05-18",
-  "municipalityCount": 11
+  "municipalityCount": 11,
+  "dateAudit": {
+    "announcementAfterBiddingCount": 0,
+    "awardedWithoutBiddingDateCount": 2,
+    "awardedWithoutWinnerCount": 1,
+    "openWithWinnerCount": 0,
+    "sampleTitles": [
+      {
+        "municipality": "大和郡山市",
+        "title": "総合公園施設市営球場フェンス緩衝材修繕 入札結果",
+        "status": "落札",
+        "announcementDate": "2025-10-01",
+        "biddingDate": null
+      },
+      {
+        "municipality": "大和高田市",
+        "title": "土庫小学校受変電設備修繕工事",
+        "status": "落札",
+        "announcementDate": "2025-07-01",
+        "biddingDate": null
+      },
+      {
+        "municipality": "大和郡山市",
+        "title": "総合公園施設市営球場フェンス緩衝材修繕 入札結果",
+        "status": "落札",
+        "announcementDate": "2025-10-01",
+        "biddingDate": null
+      }
+    ]
+  }
 }
