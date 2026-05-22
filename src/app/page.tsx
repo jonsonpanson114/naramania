@@ -244,17 +244,27 @@ export default async function Home() {
 
         {/* Quick Access */}
         <div className="mb-14">
-          <Link href="/chat" className="group bg-white p-8 rounded-3xl border border-emerald-900/10 shadow-sm hover:shadow-md transition-all">
-            <div className="flex justify-between items-start mb-4">
-              <div className="w-12 h-12 bg-emerald-50 rounded-2xl flex items-center justify-center text-emerald-600">
-                <MessageSquareText size={24} />
+          <Link href="/chat" className="group block rounded-[2rem] border border-emerald-900/10 bg-white p-8 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md">
+            <div className="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
+              <div className="flex items-start gap-5">
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-emerald-50 text-emerald-600">
+                  <MessageSquareText size={26} />
+                </div>
+                <div className="max-w-3xl">
+                  <p className="text-[10px] font-bold tracking-[0.24em] text-emerald-600 uppercase">Quick Access</p>
+                  <h3 className="mt-2 text-2xl font-bold text-gray-900">入札チャット</h3>
+                  <p className="mt-3 text-sm leading-7 text-gray-500">
+                    今週の開札、自治体別の新着、特定案件の深掘りまで自然文で質問できます。必要なときは Web 補足も使います。
+                  </p>
+                </div>
               </div>
-              <ArrowRight className="text-gray-300 group-hover:text-emerald-600 group-hover:translate-x-1 transition-all" />
+              <div className="flex items-center gap-3 self-end lg:self-auto">
+                <span className="rounded-full border border-emerald-100 bg-emerald-50 px-3 py-1 text-[10px] font-bold tracking-[0.18em] text-emerald-700 uppercase">
+                  AI Assistant
+                </span>
+                <ArrowRight className="text-gray-300 transition-all group-hover:translate-x-1 group-hover:text-emerald-600" />
+              </div>
             </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-2">入札チャット</h3>
-            <p className="text-sm text-gray-500 leading-relaxed">
-              今週の開札、自治体別の新着、特定案件の深掘りまで自然文で質問できます。必要なときは Web 補足も使います。
-            </p>
           </Link>
         </div>
 
