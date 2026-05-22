@@ -7,7 +7,7 @@ import { StatsCard } from '@/components/StatsCard';
 import { BiddingTable } from '@/components/BiddingTable';
 import { NewsSection } from '@/components/NewsSection';
 import { NewsTicker } from '@/components/NewsTicker';
-import { Activity, AlertTriangle, ArrowRight, CheckCircle2, MessageSquareText, Radar, Trophy } from 'lucide-react';
+import { Activity, AlertTriangle, ArrowRight, CalendarClock, CheckCircle2, MessageSquareText, Radar, Trophy } from 'lucide-react';
 import Link from 'next/link';
 
 interface QualitySummary {
@@ -40,6 +40,20 @@ function formatDateTimeLabel(dateStr?: string | null): string {
     hour: '2-digit',
     minute: '2-digit',
   });
+}
+
+function getDaysUntilLabel(dateStr?: string): string {
+  if (!dateStr) return '日程未定';
+  const today = new Date();
+  const target = new Date(dateStr);
+  today.setHours(0, 0, 0, 0);
+  target.setHours(0, 0, 0, 0);
+  const diff = Math.round((target.getTime() - today.getTime()) / (1000 * 60 * 60 * 24));
+  if (Number.isNaN(diff)) return '日程未定';
+  if (diff < 0) return '終了済み';
+  if (diff === 0) return '本日';
+  if (diff === 1) return '明日';
+  return `${diff}日後`;
 }
 
 // Async Server Component
@@ -95,14 +109,70 @@ export default async function Home() {
   const qualitySource = qualitySummary?.source === 'daily_scrape' ? '自動更新' : '手動確認';
   const keptCount = qualitySummary?.keptCount ?? allItems.length;
   const rawCount = qualitySummary?.originalCount ?? qualitySummary?.scrapedCount ?? keptCount + removedCount;
+  const upcomingBiddings = allItems
+    .filter(item => item.biddingDate && item.status !== '落札' && item.status !== '受付終了')
+    .filter(item => item.biddingDate! >= today)
+    .sort((a, b) => (a.biddingDate || '').localeCompare(b.biddingDate || ''))
+    .slice(0, 4);
 
   return (
     <AppShell>
         <NewsTicker />
         <Header />
 
+        <div className="mb-8 rounded-[2rem] border border-rose-200/70 bg-gradient-to-br from-rose-50 via-white to-amber-50 p-6 shadow-soft lg:p-8">
+          <div className="flex flex-col gap-6 xl:flex-row xl:items-start xl:justify-between">
+            <div className="max-w-2xl">
+              <div className="inline-flex items-center gap-2 rounded-full border border-rose-200 bg-white/80 px-3 py-1 text-[10px] font-bold tracking-[0.24em] text-rose-600 uppercase">
+                <CalendarClock size={14} />
+                直近開札
+              </div>
+              <h3 className="mt-4 text-3xl font-light tracking-[0.08em] text-primary">まず見るべき案件</h3>
+              <p className="mt-3 text-sm leading-7 tracking-[0.05em] text-secondary/75">
+                この画面で最初に見るべきなのは開札が近い案件です。下の一覧までスクロールしなくても、
+                直近の予定をここでまとめて確認できるようにしました。
+              </p>
+            </div>
+            <div className="shrink-0 rounded-2xl border border-white/80 bg-white/70 px-4 py-3 shadow-sm">
+              <p className="text-[10px] tracking-[0.2em] text-secondary/45 uppercase">表示中</p>
+              <p className="mt-1 text-2xl font-light tracking-tight text-primary">{upcomingBiddings.length}<span className="ml-1 text-sm text-accent">件</span></p>
+              <p className="mt-1 text-xs tracking-[0.08em] text-secondary/55">直近の開札予定</p>
+            </div>
+          </div>
+
+          <div className="mt-6 grid gap-4 xl:grid-cols-4 md:grid-cols-2">
+            {upcomingBiddings.map((item) => (
+              <a
+                key={item.id}
+                href={`/project/${item.id}`}
+                className="group rounded-[1.6rem] border border-rose-200/60 bg-white/90 p-5 shadow-sm transition hover:-translate-y-1 hover:border-rose-300 hover:shadow-md"
+              >
+                <div className="flex items-start justify-between gap-3">
+                  <span className="rounded-full bg-rose-100 px-2.5 py-1 text-[10px] font-bold tracking-[0.18em] text-rose-700 uppercase">
+                    {getDaysUntilLabel(item.biddingDate)}
+                  </span>
+                  <span className="text-[10px] tracking-[0.18em] text-secondary/50 uppercase">{item.municipality}</span>
+                </div>
+                <h4 className="mt-4 line-clamp-3 text-[15px] leading-7 tracking-[0.03em] text-primary transition group-hover:text-rose-700">
+                  {item.title}
+                </h4>
+                <div className="mt-5 space-y-2 rounded-2xl bg-sidebar/55 p-3">
+                  <div className="flex items-center justify-between text-[11px] tracking-[0.08em] text-secondary/70">
+                    <span>公告</span>
+                    <span className="font-bold text-primary">{formatDateLabel(item.announcementDate)}</span>
+                  </div>
+                  <div className="flex items-center justify-between text-[11px] tracking-[0.08em] text-secondary/70">
+                    <span>開札</span>
+                    <span className="font-bold text-rose-700">{formatDateLabel(item.biddingDate)}</span>
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+
         {/* Stats Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-10">
           <StatsCard label="全案件数" value={allItems.length} unit="件" subtext="建築・建物系に整理済み" delay={0.1} />
           <StatsCard label="本日更新" value={newArrivals} unit="件" subtext="新着案件" delay={0.2} />
           <StatsCard label="最新公告" value={formatDateLabel(latestAnnouncementDate)} unit="" subtext="データ内の最新日" delay={0.3} />

@@ -7,7 +7,7 @@ export function Header() {
     const today = new Date().toLocaleDateString('ja-JP', { year: 'numeric', month: 'long', day: 'numeric' });
 
     return (
-        <header className="flex justify-between items-end mb-16 px-4">
+        <header className="flex justify-between items-end mb-10 px-4">
             <div>
                 <motion.div
                     initial={{ opacity: 0, x: -20 }}
