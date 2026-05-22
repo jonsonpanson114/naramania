@@ -11,6 +11,11 @@ export interface ChatSource {
     date?: string;
 }
 
+export interface ChatTurn {
+    role: 'user' | 'assistant';
+    content: string;
+}
+
 export interface ChatResponsePayload {
     answer: string;
     sources: ChatSource[];
@@ -18,6 +23,36 @@ export interface ChatResponsePayload {
     followups: string[];
     usedWebSearch: boolean;
     model: string;
+}
+
+interface GeminiRestResponse {
+    candidates?: Array<{
+        content?: {
+            parts?: Array<{ text?: string }>;
+        };
+        groundingMetadata?: {
+            groundingChunks?: Array<{
+                web?: {
+                    uri?: string;
+                    title?: string;
+                };
+            }>;
+        };
+    }>;
+}
+
+interface QueryIntent {
+    municipality: Municipality | null;
+    wantsBidding: boolean;
+    wantsAnnouncement: boolean;
+    wantsAwarded: boolean;
+    wantsOpen: boolean;
+    wantsThisWeek: boolean;
+    wantsThisMonth: boolean;
+    wantsDesign: boolean;
+    wantsConstruction: boolean;
+    explicitWebSearch: boolean;
+    asksSpecificProject: boolean;
 }
 
 const RESULT_PATH = path.join(process.cwd(), 'scraper_result.json');
@@ -65,8 +100,16 @@ function getThisWeekRangeJst() {
     end.setHours(23, 59, 59, 999);
 
     return {
-        start,
-        end,
+        startLabel: formatDate(start),
+        endLabel: formatDate(end),
+    };
+}
+
+function getThisMonthRangeJst() {
+    const now = getNowInJst();
+    const start = new Date(now.getFullYear(), now.getMonth(), 1);
+    const end = new Date(now.getFullYear(), now.getMonth() + 1, 0);
+    return {
         startLabel: formatDate(start),
         endLabel: formatDate(end),
     };
@@ -107,7 +150,30 @@ function inferMunicipality(query: string): Municipality | null {
     return MUNICIPALITIES.find(municipality => query.includes(municipality)) || null;
 }
 
-function scoreItem(item: BiddingItem, query: string, tokens: string[]): number {
+function inferIntent(query: string, history: ChatTurn[]): QueryIntent {
+    const recentUserContext = history
+        .filter(turn => turn.role === 'user')
+        .slice(-2)
+        .map(turn => turn.content)
+        .join(' ');
+    const fullQuery = `${recentUserContext} ${query}`.trim();
+
+    return {
+        municipality: inferMunicipality(fullQuery),
+        wantsBidding: /開札|入札日|締切|いつ/.test(query),
+        wantsAnnouncement: /公告|新着|最近|最新/.test(query),
+        wantsAwarded: /落札|結果/.test(query),
+        wantsOpen: /受付中|募集中/.test(query),
+        wantsThisWeek: /今週/.test(query),
+        wantsThisMonth: /今月/.test(query),
+        wantsDesign: /設計|監理|コンサル|委託/.test(query),
+        wantsConstruction: /工事|改修|新築|解体/.test(query),
+        explicitWebSearch: /ネット|web|検索|調べて|見つからない|サイトにない|他にも/.test(query),
+        asksSpecificProject: query.length >= 10 && !/今週|今月|新着|最新|一覧|まとめ/.test(query),
+    };
+}
+
+function scoreItem(item: BiddingItem, query: string, tokens: string[], intent: QueryIntent): number {
     const haystack = normalizeText([
         item.title,
         item.municipality,
@@ -121,70 +187,78 @@ function scoreItem(item: BiddingItem, query: string, tokens: string[]): number {
 
     let score = 0;
     const normalizedQuery = normalizeText(query);
-    if (normalizedQuery && haystack.includes(normalizedQuery)) score += 18;
-    if (normalizeText(item.title).includes(normalizedQuery)) score += 20;
+    if (normalizedQuery && haystack.includes(normalizedQuery)) score += 20;
+    if (normalizeText(item.title).includes(normalizedQuery)) score += 24;
 
     for (const token of tokens) {
         if (normalizeText(item.title).includes(token)) score += 10;
         else if (haystack.includes(token)) score += 4;
     }
 
-    if (query.includes(item.municipality)) score += 6;
-    if (query.includes('落札') && item.status === '落札') score += 5;
-    if ((query.includes('受付中') || query.includes('募集中')) && item.status === '受付中') score += 5;
-    if ((query.includes('設計') || query.includes('監理')) && item.type === 'コンサル') score += 4;
-    if (query.includes('工事') && (item.type === '建築' || item.type === '工事')) score += 4;
+    if (intent.municipality && item.municipality === intent.municipality) score += 8;
+    if (intent.wantsAwarded && item.status === '落札') score += 5;
+    if (intent.wantsOpen && item.status === '受付中') score += 5;
+    if (intent.wantsDesign && item.type === 'コンサル') score += 4;
+    if (intent.wantsConstruction && (item.type === '建築' || item.type === '工事')) score += 4;
 
     return score;
 }
 
-function findLocalMatches(query: string, items: BiddingItem[]): BiddingItem[] {
+function isWithinRange(dateValue: string | undefined, startLabel: string, endLabel: string): boolean {
+    if (!dateValue) return false;
+    return dateValue >= startLabel && dateValue <= endLabel;
+}
+
+function findLocalMatches(query: string, items: BiddingItem[], history: ChatTurn[]): BiddingItem[] {
     const tokens = tokenizeQuery(query);
-    const municipality = inferMunicipality(query);
-    const weekRange = query.includes('今週') ? getThisWeekRangeJst() : null;
-    const wantsBidding = /開札|入札日|締切/.test(query);
-    const wantsAnnouncement = /公告|新着|最近/.test(query);
-    const wantsAwarded = query.includes('落札');
-    const wantsOpen = query.includes('受付中');
+    const intent = inferIntent(query, history);
+    const weekRange = intent.wantsThisWeek ? getThisWeekRangeJst() : null;
+    const monthRange = intent.wantsThisMonth ? getThisMonthRangeJst() : null;
 
     let candidates = [...items];
-    if (municipality) {
-        candidates = candidates.filter(item => item.municipality === municipality);
+    if (intent.municipality) {
+        candidates = candidates.filter(item => item.municipality === intent.municipality);
     }
-    if (wantsAwarded) {
+    if (intent.wantsAwarded) {
         candidates = candidates.filter(item => item.status === '落札');
     }
-    if (wantsOpen) {
+    if (intent.wantsOpen) {
         candidates = candidates.filter(item => item.status === '受付中');
     }
+    if (intent.wantsDesign && !intent.wantsConstruction) {
+        candidates = candidates.filter(item => item.type === 'コンサル' || /設計|監理/.test(item.title));
+    }
+    if (intent.wantsConstruction && !intent.wantsDesign) {
+        candidates = candidates.filter(item => item.type === '建築' || item.type === '工事');
+    }
     if (weekRange) {
-        const targetKey = wantsBidding ? 'biddingDate' : 'announcementDate';
-        candidates = candidates.filter(item => {
-            const dateValue = item[targetKey];
-            if (!dateValue) return false;
-            return dateValue >= weekRange.startLabel && dateValue <= weekRange.endLabel;
-        });
+        const targetKey = intent.wantsBidding ? 'biddingDate' : 'announcementDate';
+        candidates = candidates.filter(item => isWithinRange(item[targetKey], weekRange.startLabel, weekRange.endLabel));
+    }
+    if (monthRange) {
+        const targetKey = intent.wantsBidding ? 'biddingDate' : 'announcementDate';
+        candidates = candidates.filter(item => isWithinRange(item[targetKey], monthRange.startLabel, monthRange.endLabel));
     }
 
     const scored = candidates
-        .map(item => ({ item, score: scoreItem(item, query, tokens) }))
+        .map(item => ({ item, score: scoreItem(item, query, tokens, intent) }))
         .filter(entry => {
             if (tokens.length === 0) return true;
-            return entry.score > 0 || wantsBidding || wantsAnnouncement || wantsAwarded || wantsOpen;
+            return entry.score > 0 || intent.wantsBidding || intent.wantsAnnouncement || intent.wantsAwarded || intent.wantsOpen;
         })
         .sort((a, b) => b.score - a.score || b.item.announcementDate.localeCompare(a.item.announcementDate));
 
     const ranked = scored.map(entry => entry.item);
 
-    if (wantsBidding && weekRange) {
-        return ranked.sort((a, b) => (a.biddingDate || '').localeCompare(b.biddingDate || '')).slice(0, 12);
+    if (intent.wantsBidding && (weekRange || monthRange)) {
+        return ranked.sort((a, b) => (a.biddingDate || '9999-99-99').localeCompare(b.biddingDate || '9999-99-99')).slice(0, 12);
     }
 
-    if (wantsAnnouncement) {
+    if (intent.wantsAnnouncement) {
         return ranked.sort((a, b) => b.announcementDate.localeCompare(a.announcementDate)).slice(0, 12);
     }
 
-    return ranked.slice(0, 10);
+    return ranked.slice(0, intent.asksSpecificProject ? 5 : 10);
 }
 
 function buildLocalSources(matches: BiddingItem[]): ChatSource[] {
@@ -204,13 +278,96 @@ function buildLocalSources(matches: BiddingItem[]): ChatSource[] {
     }));
 }
 
+function formatItemLine(item: BiddingItem): string {
+    const bits = [
+        `${item.municipality} / ${item.title}`,
+        `公告 ${item.announcementDate}`,
+        item.biddingDate ? `開札 ${item.biddingDate}` : '',
+        item.status,
+        item.winningContractor ? `落札者 ${item.winningContractor}` : '',
+    ].filter(Boolean);
+    return `- ${bits.join(' / ')}`;
+}
+
+function buildFollowups(intent: QueryIntent, matches: BiddingItem[]): string[] {
+    const ideas = new Set<string>();
+    if (matches[0]?.municipality) {
+        ideas.add(`${matches[0].municipality}の受付中案件だけ見せて`);
+    }
+    if (intent.wantsBidding) {
+        ideas.add('今月の公告案件も見せて');
+    } else {
+        ideas.add('今週の開札案件だけ教えて');
+    }
+    if (matches[0]?.title) {
+        ideas.add(`${matches[0].title}を詳しく調べて`);
+    }
+    ideas.add('このサイトにない関連案件も探して');
+    return Array.from(ideas).slice(0, 3);
+}
+
+function buildDeterministicAnswer(query: string, matches: BiddingItem[], history: ChatTurn[]): { answer: string; followups: string[] } | null {
+    const intent = inferIntent(query, history);
+    if (matches.length === 0) return null;
+
+    if (intent.wantsThisWeek && intent.wantsBidding) {
+        const lines = matches.slice(0, 8).map(formatItemLine).join('\n');
+        return {
+            answer: `今週の開札案件は ${matches.length} 件あります。\n${lines}`,
+            followups: buildFollowups(intent, matches),
+        };
+    }
+
+    if (intent.wantsAnnouncement || intent.wantsThisMonth) {
+        const scope = intent.wantsThisMonth ? '今月' : '直近';
+        const lines = matches.slice(0, 8).map(formatItemLine).join('\n');
+        return {
+            answer: `${scope}の公告案件は次の ${Math.min(matches.length, 8)} 件です。\n${lines}`,
+            followups: buildFollowups(intent, matches),
+        };
+    }
+
+    if (intent.asksSpecificProject) {
+        const top = matches[0];
+        const detailLines = [
+            `案件名: ${top.title}`,
+            `自治体: ${top.municipality}`,
+            `種別: ${top.type}`,
+            `公告日: ${top.announcementDate}`,
+            `開札日: ${top.biddingDate || '未取得'}`,
+            `状態: ${top.status}`,
+            top.winningContractor ? `落札者: ${top.winningContractor}` : '',
+            top.designFirm ? `設計事務所: ${top.designFirm}` : '',
+            top.description ? `補足: ${top.description}` : '',
+        ].filter(Boolean);
+
+        if (matches.length > 1) {
+            detailLines.push(`候補は他にも ${matches.length - 1} 件あります。必要なら絞り込みます。`);
+        }
+
+        return {
+            answer: detailLines.join('\n'),
+            followups: buildFollowups(intent, matches),
+        };
+    }
+
+    const lines = matches.slice(0, 8).map(formatItemLine).join('\n');
+    return {
+        answer: `該当しそうな案件は ${matches.length} 件あります。\n${lines}`,
+        followups: buildFollowups(intent, matches),
+    };
+}
+
 function extractTextFromCandidate(response: GeminiRestResponse): string {
     return response.candidates?.[0]?.content?.parts?.map(part => part.text || '').join('').trim() || '';
 }
 
-function buildPrompt(query: string, localMatches: BiddingItem[]): string {
+function buildPrompt(query: string, localMatches: BiddingItem[], history: ChatTurn[]): string {
     const today = getNowInJst().toLocaleDateString('ja-JP');
     const weekRange = getThisWeekRangeJst();
+    const recentHistory = history.slice(-6)
+        .map(turn => `${turn.role === 'user' ? 'user' : 'assistant'}: ${turn.content}`)
+        .join('\n');
     const localSummary = localMatches.length
         ? localMatches.map((item, index) =>
             `${index + 1}. ${item.title} / ${item.municipality} / 公告 ${item.announcementDate}${item.biddingDate ? ` / 開札 ${item.biddingDate}` : ''} / ${item.status}${item.winningContractor ? ` / 落札者 ${item.winningContractor}` : ''} / ${item.link}`,
@@ -221,37 +378,24 @@ function buildPrompt(query: string, localMatches: BiddingItem[]): string {
 あなたは奈良県の建築・設計系入札案件を案内するアシスタントです。
 今日は ${today} です。今週は ${weekRange.startLabel} から ${weekRange.endLabel} です。
 
-以下のルールで日本語回答してください。
-- まずローカル案件データを優先して答える
-- ローカルで足りない場合のみ、Google Search grounding で補足してよい
-- 日付はできるだけ具体的に YYYY-MM-DD で書く
-- 断定できないことは「確認中」「Web上ではこう見える」と分けて書く
-- 回答は実務向けに簡潔に、必要なら箇条書きを使う
-- 最後に次に聞くと役立つ短い followups を 3 件まで返す
+回答ルール:
+- まずローカル案件データを根拠に答える
+- ローカルで足りない場合のみ、Google Search grounding の内容を補足する
+- ローカルデータにあることを無視して別の結論を書かない
+- 日付は具体的に YYYY-MM-DD で書く
+- 不確かな部分は「ローカル未確認」「Web上ではこう見える」と分ける
+- 回答は簡潔にし、最初に結論、その後に箇条書き
+- 最後に次に聞くと良い短い followups を 3 件まで返す
 
-質問:
+直近の会話:
+${recentHistory || 'なし'}
+
+今回の質問:
 ${query}
 
 ローカル案件データ:
 ${localSummary}
 `;
-}
-
-interface GeminiRestResponse {
-    candidates?: Array<{
-        content?: {
-            parts?: Array<{ text?: string }>;
-        };
-        groundingMetadata?: {
-            webSearchQueries?: string[];
-            groundingChunks?: Array<{
-                web?: {
-                    uri?: string;
-                    title?: string;
-                };
-            }>;
-        };
-    }>;
 }
 
 async function callGeminiChat(prompt: string, useGoogleSearch: boolean, modelName: string, apiKey: string) {
@@ -270,7 +414,7 @@ async function callGeminiChat(prompt: string, useGoogleSearch: boolean, modelNam
             generationConfig: {
                 responseMimeType: 'application/json',
                 responseSchema: CHAT_RESPONSE_SCHEMA,
-                temperature: 0.4,
+                temperature: 0.2,
             },
             ...(useGoogleSearch ? { tools: [{ google_search: {} }] } : {}),
         }),
@@ -304,27 +448,52 @@ function extractGroundedSources(response: GeminiRestResponse): ChatSource[] {
     return sources.slice(0, 6);
 }
 
-export async function answerBiddingQuestion(query: string): Promise<ChatResponsePayload> {
+export async function answerBiddingQuestion(query: string, history: ChatTurn[] = []): Promise<ChatResponsePayload> {
+    const items = readBiddingItems();
+    const localMatches = findLocalMatches(query, items, history);
+    const localSources = buildLocalSources(localMatches);
+    const intent = inferIntent(query, history);
+    const deterministic = buildDeterministicAnswer(query, localMatches, history);
     const apiKey = process.env.GOOGLE_GENERATIVE_AI_API_KEY || process.env.GEMINI_API_KEY || '';
+
+    if (deterministic && !intent.explicitWebSearch) {
+        return {
+            answer: deterministic.answer,
+            sources: localSources,
+            localMatches,
+            followups: deterministic.followups,
+            usedWebSearch: false,
+            model: 'local-answer',
+        };
+    }
+
     if (!apiKey) {
+        if (deterministic) {
+            return {
+                answer: deterministic.answer,
+                sources: localSources,
+                localMatches,
+                followups: deterministic.followups,
+                usedWebSearch: false,
+                model: 'local-answer',
+            };
+        }
         throw new Error('GOOGLE_GENERATIVE_AI_API_KEY is not set');
     }
 
-    const items = readBiddingItems();
-    const localMatches = findLocalMatches(query, items);
-    const localSources = buildLocalSources(localMatches);
     const modelName = getChatModelName();
-    const shouldUseWebSearch = localMatches.length < 4 || /ネット|検索|調べて|見つからない|サイトにない/.test(query);
-    const prompt = buildPrompt(query, localMatches);
+    const shouldUseWebSearch = intent.explicitWebSearch || localMatches.length < 3;
+    const prompt = buildPrompt(query, localMatches, history);
     const result = await callGeminiChat(prompt, shouldUseWebSearch, modelName, apiKey);
-    const parsed = JSON.parse(extractTextFromCandidate(result)) as { answer: string; followups?: string[] };
+    const rawText = extractTextFromCandidate(result);
+    const parsed = JSON.parse(rawText) as { answer: string; followups?: string[] };
     const webSources = extractGroundedSources(result);
 
     return {
         answer: parsed.answer,
         sources: [...localSources, ...webSources],
         localMatches,
-        followups: parsed.followups?.slice(0, 3) || [],
+        followups: parsed.followups?.slice(0, 3) || buildFollowups(intent, localMatches),
         usedWebSearch: webSources.length > 0,
         model: modelName,
     };
