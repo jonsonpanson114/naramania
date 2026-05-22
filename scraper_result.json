@@ -607,6 +607,16 @@
     "status": "受付中"
   },
   {
+    "id": "tawaramoto-1008051108",
+    "municipality": "田原本町",
+    "title": "田原本町庁舎高圧変圧器更新業務（８－１）",
+    "type": "委託",
+    "announcementDate": "2026-04-09",
+    "biddingDate": "2026-05-11",
+    "link": "https://tawaramoto.efftis.jp/PPI/Public/javaScript:void(0);",
+    "status": "受付中"
+  },
+  {
     "id": "kashiba-r8-k4-19",
     "municipality": "香芝市",
     "title": "下田小学校長寿命化改修工事",
@@ -670,6 +680,16 @@
     "type": "建築",
     "announcementDate": "2026-03-27",
     "link": "https://www.city.tenri.nara.jp/kakuka/soumubu/nyuusatsushinsashitsu/construction_work/kouji_hattyuu_kanren/1395887232147.html",
+    "status": "受付中"
+  },
+  {
+    "id": "tawaramoto-1008041303",
+    "municipality": "田原本町",
+    "title": "田原本中学校図書室空調設備更新業務",
+    "type": "委託",
+    "announcementDate": "2026-03-26",
+    "biddingDate": "2026-04-13",
+    "link": "https://tawaramoto.efftis.jp/PPI/Public/javaScript:void(0);",
     "status": "受付中"
   },
   {
@@ -739,16 +759,6 @@
     "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
     "status": "落札",
     "winningContractor": "株式会社広成"
-  },
-  {
-    "id": "kashiba-web-b1d487b5",
-    "municipality": "香芝市",
-    "title": "下田小学校長寿命化改修工事",
-    "type": "建築",
-    "announcementDate": "2026-03-12",
-    "link": "https://www.city.kashiba.lg.jp/site/nyuusatsu/65857.html",
-    "status": "落札",
-    "biddingDate": "2026-04-07"
   },
   {
     "id": "kashiba-r7-k15-05",
@@ -1320,16 +1330,6 @@
     "winningContractor": "株式会社礎建築事務所"
   },
   {
-    "id": "katsuragi-8a60726c",
-    "municipality": "葛城市",
-    "title": "（仮称）當麻複合施設整備工事",
-    "type": "建築",
-    "announcementDate": "2025-08-07",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/5-02-08-2025-1-2.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/5-02-08-2025-1-2.pdf",
-    "status": "受付中"
-  },
-  {
     "id": "koryo-2025-07-31-No22",
     "municipality": "広陵町",
     "title": "広陵第1号近隣公園トイレ改修工事",
@@ -1474,6 +1474,19 @@
     "biddingDate": "2025-06-26"
   },
   {
+    "id": "kashihara-result-5072000571",
+    "municipality": "橿原市",
+    "title": "公園施設長寿命化計画更新業務委託",
+    "type": "委託",
+    "announcementDate": "2025-06-26",
+    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18375.html",
+    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5072000571k.pdf",
+    "status": "落札",
+    "winnerType": "設計事務所",
+    "winningContractor": "㈱ニュージェック",
+    "biddingDate": "2025-06-26"
+  },
+  {
     "id": "kashihara-result-5073000536",
     "municipality": "橿原市",
     "title": "曽我川緑地体育館自動火災報知設備修繕",
@@ -1560,19 +1573,6 @@
     "status": "落札",
     "winnerType": "ゼネコン",
     "winningContractor": "㈱広澤建設",
-    "biddingDate": "2025-05-20"
-  },
-  {
-    "id": "kashihara-result-5071000313",
-    "municipality": "橿原市",
-    "title": "真菅北幼稚園解体工事",
-    "type": "建築",
-    "announcementDate": "2025-05-20",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000313k.pdf",
-    "status": "落札",
-    "winnerType": "ゼネコン",
-    "winningContractor": "㈱森本組",
     "biddingDate": "2025-05-20"
   },
   {
