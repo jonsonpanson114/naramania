@@ -206,8 +206,8 @@ export function BiddingTable({ items }: BiddingTableProps) {
             </AnimatePresence>
 
             {/* Municipality & Tag Filter Bar */}
-            <div className="flex flex-col items-stretch justify-center gap-5 py-6 px-8 bg-gray-50/30 rounded-2xl border border-gray-100/50 backdrop-blur-sm mx-auto max-w-6xl">
-                <div className="grid grid-cols-1 lg:grid-cols-[1fr_220px] gap-4">
+            <div className="flex flex-col items-stretch justify-center gap-5 py-6 px-6 bg-gray-50/30 rounded-2xl border border-gray-100/50 backdrop-blur-sm">
+                <div className="grid grid-cols-1 xl:grid-cols-[minmax(0,1fr)_260px] gap-4">
                     <div className="relative">
                         <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-secondary/40" />
                         <input
@@ -240,14 +240,14 @@ export function BiddingTable({ items }: BiddingTableProps) {
                         </select>
                     </div>
                 </div>
-                <div className="flex flex-col md:flex-row items-center justify-center gap-6">
+                <div className="grid grid-cols-1 gap-4 xl:grid-cols-[280px_minmax(0,1fr)] xl:items-center">
                 {/* Municipality Select */}
-                <div className="flex items-center gap-3">
+                <div className="flex flex-col gap-2">
                     <span className="text-[10px] font-bold text-gray-400 tracking-widest uppercase">Region</span>
                     <select
                         value={selectedMunicipality}
                         onChange={(e) => setSelectedMunicipality(e.target.value)}
-                        className="bg-white border border-border/60 rounded-lg px-4 py-2 text-xs font-serif font-bold text-primary focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent transition-all cursor-pointer shadow-sm"
+                        className="w-full bg-white border border-border/60 rounded-lg px-4 py-3 text-xs font-serif font-bold text-primary focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent transition-all cursor-pointer shadow-sm"
                     >
                         <option value="すべて">すべての自治体 ({municipalities.length})</option>
                         {municipalities.map(m => (
@@ -256,25 +256,26 @@ export function BiddingTable({ items }: BiddingTableProps) {
                     </select>
                 </div>
 
-                <div className="hidden md:block w-px h-8 bg-border/40"></div>
-
                 {/* Tag Filter */}
-                <div className="flex flex-wrap justify-center gap-2">
-                    <button
-                        onClick={() => setSelectedTag(null)}
-                        className={`px-3 py-1.5 rounded-full text-[9px] font-bold tracking-wider transition-all border ${!selectedTag ? 'bg-primary text-white border-primary shadow-md' : 'bg-white text-secondary border-border/40 hover:border-primary/40'}`}
-                    >
-                        ALL TAGS
-                    </button>
-                    {popularTags.map(tag => (
+                <div className="flex flex-col gap-2">
+                    <span className="text-[10px] font-bold text-gray-400 tracking-widest uppercase">Tags</span>
+                    <div className="flex flex-wrap gap-2">
                         <button
-                            key={tag}
-                            onClick={() => setSelectedTag(tag === selectedTag ? null : tag)}
-                            className={`px-3 py-1.5 rounded-full text-[9px] font-bold tracking-wider transition-all border ${selectedTag === tag ? 'bg-blue-600 text-white border-blue-600 shadow-md' : 'bg-blue-50/50 text-blue-600/70 border-blue-100 hover:border-blue-400'}`}
+                            onClick={() => setSelectedTag(null)}
+                            className={`px-3 py-2 rounded-full text-[9px] font-bold tracking-wider transition-all border ${!selectedTag ? 'bg-primary text-white border-primary shadow-md' : 'bg-white text-secondary border-border/40 hover:border-primary/40'}`}
                         >
-                            #{tag}
+                            ALL TAGS
                         </button>
-                    ))}
+                        {popularTags.map(tag => (
+                            <button
+                                key={tag}
+                                onClick={() => setSelectedTag(tag === selectedTag ? null : tag)}
+                                className={`px-3 py-2 rounded-full text-[9px] font-bold tracking-wider transition-all border ${selectedTag === tag ? 'bg-blue-600 text-white border-blue-600 shadow-md' : 'bg-blue-50/50 text-blue-600/70 border-blue-100 hover:border-blue-400'}`}
+                            >
+                                #{tag}
+                            </button>
+                        ))}
+                    </div>
                 </div>
                 </div>
                 <p className="text-center text-[10px] tracking-[0.25em] text-secondary/40 font-serif uppercase">
