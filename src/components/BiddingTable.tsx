@@ -298,7 +298,7 @@ export function BiddingTable({ items }: BiddingTableProps) {
                                 <th className="px-8 py-6 font-normal w-32">Region</th>
                                 <th className="px-8 py-6 font-normal">Project / Result Details</th>
                                 <th className="px-8 py-6 font-normal w-32">Type</th>
-                                <th className="px-8 py-6 font-normal w-32">Date</th>
+                                <th className="px-8 py-6 font-normal w-44">Schedule</th>
                             </tr>
                         </thead>
                         <tbody className="divide-y divide-border/10">
@@ -388,7 +388,20 @@ export function BiddingTable({ items }: BiddingTableProps) {
                                             </div>
                                         </td>
                                         <td className="px-8 py-6 text-[10px] text-gray-400 tracking-[0.2em] font-serif uppercase">{item.type}</td>
-                                        <td className="px-8 py-6 text-[11px] text-gray-400 font-serif tabular-nums tracking-widest">{formatDate(item.announcementDate)}</td>
+                                        <td className="px-8 py-6">
+                                            <div className="space-y-2 text-[11px] font-serif tabular-nums tracking-widest text-gray-500">
+                                                <div className="flex items-center justify-between gap-3 rounded-md border border-border/40 bg-sidebar/35 px-3 py-2">
+                                                    <span className="text-[9px] uppercase tracking-[0.2em] text-secondary/55">公告</span>
+                                                    <span className="text-primary">{formatDate(item.announcementDate)}</span>
+                                                </div>
+                                                <div className="flex items-center justify-between gap-3 rounded-md border border-border/30 bg-white px-3 py-2">
+                                                    <span className="text-[9px] uppercase tracking-[0.2em] text-secondary/55">開札</span>
+                                                    <span className={item.biddingDate ? 'text-primary' : 'text-secondary/35'}>
+                                                        {item.biddingDate ? formatDate(item.biddingDate) : '-'}
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </td>
                                     </motion.tr>
                                 ))}
                             </AnimatePresence>

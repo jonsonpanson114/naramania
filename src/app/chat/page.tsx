@@ -100,7 +100,7 @@ export default function ChatPage() {
         <AppShell>
             <Header />
 
-            <div className="mx-auto max-w-6xl">
+            <div className="mx-auto max-w-7xl">
                 <div className="mb-10 flex flex-col gap-5 rounded-[2rem] border border-border/60 bg-white/80 p-8 shadow-soft">
                     <div className="flex flex-wrap items-center gap-3">
                         <span className="inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/5 px-3 py-1 text-[11px] tracking-[0.2em] text-accent uppercase">
@@ -112,7 +112,7 @@ export default function ChatPage() {
                             サイト内優先 + Web補足
                         </span>
                     </div>
-                    <div className="grid gap-8 lg:grid-cols-[1.4fr_0.8fr]">
+                    <div className="grid gap-8 xl:grid-cols-[1.7fr_0.7fr]">
                         <div>
                             <h1 className="text-3xl tracking-[0.12em] text-primary">入札チャット</h1>
                             <p className="mt-4 max-w-3xl text-sm leading-7 tracking-[0.06em] text-secondary/75">
@@ -144,8 +144,38 @@ export default function ChatPage() {
                     ))}
                 </div>
 
-                <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
-                    <section className="rounded-[2rem] border border-border/60 bg-white/85 p-5 shadow-soft">
+                <div className="mb-6 grid gap-4 xl:grid-cols-3">
+                    <section className="rounded-[1.8rem] border border-border/60 bg-white/85 p-5 shadow-soft">
+                        <p className="text-[11px] tracking-[0.2em] text-secondary/50 uppercase">直近の回答状態</p>
+                        <div className="mt-4 rounded-[1.4rem] bg-sidebar/60 p-4">
+                            <p className="text-sm leading-7 text-primary">
+                                {lastAssistant?.usedWebSearch
+                                    ? 'この会話では Web 補足も使いました。案件がサイト内に薄いときは外部ソースも見に行きます。'
+                                    : 'この会話ではサイト内データ中心で回答しています。まず現行の収集データを優先して見ます。'}
+                            </p>
+                        </div>
+                    </section>
+
+                    <section className="rounded-[1.8rem] border border-border/60 bg-white/85 p-5 shadow-soft">
+                        <p className="text-[11px] tracking-[0.2em] text-secondary/50 uppercase">おすすめの聞き方</p>
+                        <div className="mt-4 space-y-3 text-sm leading-7 text-secondary/80">
+                            <p>自治体名を入れると絞りやすくなります。</p>
+                            <p>「今週」「今月」「落札」「設計」などを入れると意図を読みやすいです。</p>
+                            <p>案件名をそのまま貼ると個別調査に向いています。</p>
+                        </div>
+                    </section>
+
+                    <section className="rounded-[1.8rem] border border-border/60 bg-white/85 p-5 shadow-soft">
+                        <p className="text-[11px] tracking-[0.2em] text-secondary/50 uppercase">使い方のコツ</p>
+                        <div className="mt-4 space-y-3 text-sm leading-7 text-secondary/80">
+                            <p>「このサイトにない案件も調べて」と入れると Web 補足を積極的に使います。</p>
+                            <p>「開札」「公告」「受付中」のような状態語を入れると精度が上がります。</p>
+                            <p>気になる回答が出たら、そのまま続けて深掘りできます。</p>
+                        </div>
+                    </section>
+                </div>
+
+                <section className="rounded-[2rem] border border-border/60 bg-white/90 p-5 shadow-soft">
                         <div className="mb-4 flex items-center gap-3 px-3">
                             <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-accent/10 text-accent">
                                 <MessageSquareText size={20} />
@@ -156,14 +186,14 @@ export default function ChatPage() {
                             </div>
                         </div>
 
-                        <div className="max-h-[62vh] space-y-4 overflow-y-auto px-2 py-2">
+                        <div className="max-h-[68vh] space-y-5 overflow-y-auto px-2 py-2 lg:px-4">
                             {messages.map((message, index) => (
                                 <div
                                     key={`${message.role}-${index}`}
                                     className={`rounded-[1.6rem] px-5 py-4 ${
                                         message.role === 'user'
-                                            ? 'ml-10 bg-accent text-white'
-                                            : 'mr-10 border border-border/60 bg-sidebar/55 text-primary'
+                                            ? 'ml-auto max-w-[88%] bg-accent text-white lg:max-w-[78%]'
+                                            : 'mr-auto max-w-[92%] border border-border/60 bg-sidebar/55 text-primary lg:max-w-[82%]'
                                     }`}
                                 >
                                     <div className="mb-2 flex items-center gap-2 text-xs tracking-[0.16em] uppercase">
@@ -226,7 +256,7 @@ export default function ChatPage() {
                             ))}
 
                             {loading ? (
-                                <div className="mr-10 rounded-[1.6rem] border border-border/60 bg-sidebar/55 px-5 py-4 text-primary">
+                                <div className="mr-auto max-w-[92%] rounded-[1.6rem] border border-border/60 bg-sidebar/55 px-5 py-4 text-primary lg:max-w-[82%]">
                                     <div className="flex items-center gap-3 text-sm tracking-[0.08em]">
                                         <Loader2 size={16} className="animate-spin text-accent" />
                                         回答を準備しています...
@@ -236,7 +266,7 @@ export default function ChatPage() {
                         </div>
 
                         <div className="mt-5 border-t border-border/70 px-2 pt-5">
-                            <div className="rounded-[1.8rem] border border-border/70 bg-background px-4 py-4">
+                            <div className="rounded-[1.8rem] border border-border/70 bg-background px-4 py-4 lg:px-5 lg:py-5">
                                 <textarea
                                     value={question}
                                     onChange={(event) => setQuestion(event.target.value)}
@@ -244,7 +274,7 @@ export default function ChatPage() {
                                     rows={4}
                                     className="w-full resize-none bg-transparent text-sm leading-7 tracking-[0.04em] text-primary outline-none placeholder:text-secondary/45"
                                 />
-                                <div className="mt-4 flex items-center justify-between gap-4">
+                                <div className="mt-4 flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
                                     <p className="text-xs tracking-[0.08em] text-secondary/55">
                                         サイト内データを優先し、必要時のみ Web 補足を使います。
                                     </p>
@@ -252,49 +282,26 @@ export default function ChatPage() {
                                         type="button"
                                         onClick={() => void submitQuestion()}
                                         disabled={!canSubmit}
-                                        className="rounded-full bg-accent px-5 py-2.5 text-sm tracking-[0.12em] text-white transition disabled:cursor-not-allowed disabled:opacity-50"
+                                        className="self-end rounded-full bg-accent px-6 py-3 text-sm tracking-[0.12em] text-white transition disabled:cursor-not-allowed disabled:opacity-50"
                                     >
                                         送信
                                     </button>
                                 </div>
                             </div>
                         </div>
+                </section>
+
+                {error ? (
+                    <section className="mt-6 rounded-[2rem] border border-rose-200 bg-rose-50/80 p-6 shadow-soft">
+                        <div className="flex items-start gap-3">
+                            <AlertCircle size={18} className="mt-0.5 text-rose-500" />
+                            <div>
+                                <p className="text-sm text-rose-700">エラー</p>
+                                <p className="mt-2 text-xs leading-6 text-rose-600">{error}</p>
+                            </div>
+                        </div>
                     </section>
-
-                    <aside className="space-y-6">
-                        <section className="rounded-[2rem] border border-border/60 bg-white/85 p-6 shadow-soft">
-                            <p className="text-[11px] tracking-[0.2em] text-secondary/50 uppercase">直近の回答状態</p>
-                            <div className="mt-4 rounded-[1.4rem] bg-sidebar/60 p-4">
-                                <p className="text-sm text-primary">
-                                    {lastAssistant?.usedWebSearch
-                                        ? 'この会話では Web 補足も使いました。'
-                                        : 'この会話ではサイト内データ中心で回答しています。'}
-                                </p>
-                            </div>
-                        </section>
-
-                        <section className="rounded-[2rem] border border-border/60 bg-white/85 p-6 shadow-soft">
-                            <p className="text-[11px] tracking-[0.2em] text-secondary/50 uppercase">おすすめの聞き方</p>
-                            <div className="mt-4 space-y-3 text-sm leading-7 text-secondary/80">
-                                <p>自治体名を入れると絞りやすくなります。</p>
-                                <p>「今週」「今月」「落札」「設計」などを入れると意図を読みやすいです。</p>
-                                <p>案件名をそのまま貼ると個別調査に向いています。</p>
-                            </div>
-                        </section>
-
-                        {error ? (
-                            <section className="rounded-[2rem] border border-rose-200 bg-rose-50/80 p-6 shadow-soft">
-                                <div className="flex items-start gap-3">
-                                    <AlertCircle size={18} className="mt-0.5 text-rose-500" />
-                                    <div>
-                                        <p className="text-sm text-rose-700">エラー</p>
-                                        <p className="mt-2 text-xs leading-6 text-rose-600">{error}</p>
-                                    </div>
-                                </div>
-                            </section>
-                        ) : null}
-                    </aside>
-                </div>
+                ) : null}
             </div>
         </AppShell>
     );
