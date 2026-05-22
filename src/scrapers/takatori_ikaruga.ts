@@ -1,121 +1,157 @@
 import axios from 'axios';
 import * as cheerio from 'cheerio';
-import { BiddingItem, Scraper, Municipality } from '../types/bidding';
-import { isRealBiddingItem, classifyWinner, shouldKeepItem } from './common/filter';
+import { BiddingItem, Scraper, BiddingType, Municipality } from '../types/bidding';
+import { shouldKeepItem, classifyWinner } from './common/filter';
 
-// 高取町（Takatori-cho）
-const TAKATORI_RSS = 'http://www.town.takatori.nara.jp/rss/rss.xml';
+const TAKATORI_RESULT_URL = 'https://www.town.takatori.nara.jp/contents_detail.php?frmId=2205';
+const IKARUGA_INDEX_URL = 'https://www.town.ikaruga.nara.jp/category/1-10-0-0-0-0-0-0-0-0.html';
+const IKARUGA_BASE_URL = 'https://www.town.ikaruga.nara.jp';
 
-// 斑鳩町（Ikaruga-cho）
-const IKARUGA_RSS = 'https://www.town.ikaruga.nara.jp/rss/rss.xml';
-
-function classifyType(title: string): '建築' | 'コンサル' | 'その他' {
-    if (title.includes('設計') || title.includes('測量') || title.includes('コンサル')) {
-        return 'コンサル';
-    }
-    if (title.includes('建築') || title.includes('工事')) {
-        return '建築';
-    }
-    return 'その他';
+function classifyType(title: string): BiddingType {
+    if (title.includes('設計') || title.includes('監理') || title.includes('コンサル')) return 'コンサル';
+    if (title.includes('委託') || title.includes('業務')) return '委託';
+    return '建築';
 }
 
-function parseRssDate(dateStr: string): string {
-    // "Tue, 24 Feb 2026 14:50:52 +0900" → "2026-02-24"
-    const m = dateStr.match(/(\d{1,2})\s+(\w+)\s+(\d{4})/);
-    if (!m) return '';
-
-    const day = parseInt(m[1]);
-    const month = m[2];
-    const year = m[3];
-
-    const monthMap: Record<string, number> = {
-        'Jan': 1, 'Feb': 2, 'Mar': 3, 'Apr': 4, 'May': 5, 'Jun': 6,
-        'Jul': 7, 'Aug': 8, 'Sep': 9, 'Oct': 10, 'Nov': 11, 'Dec': 12
-    };
-
-    const monthNum = monthMap[month];
-    if (!monthNum) return '';
-
-    return `${year}-${String(monthNum).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+function parseJapaneseDate(text: string): string {
+    const reiwa = text.match(/令和\s*(\d+)\s*年\s*(\d+)\s*月\s*(\d+)\s*日/);
+    if (reiwa) {
+        const year = 2018 + Number(reiwa[1]);
+        return `${year}-${String(Number(reiwa[2])).padStart(2, '0')}-${String(Number(reiwa[3])).padStart(2, '0')}`;
+    }
+    const western = text.match(/(20\d{2})\s*年\s*(\d+)\s*月\s*(\d+)\s*日/);
+    if (western) {
+        return `${western[1]}-${String(Number(western[2])).padStart(2, '0')}-${String(Number(western[3])).padStart(2, '0')}`;
+    }
+    return '';
 }
 
-async function scrapeFromRss(rssUrl: string, municipality: Municipality): Promise<BiddingItem[]> {
+function makeAbsoluteUrl(baseUrl: string, href?: string | null): string {
+    if (!href) return baseUrl;
+    if (href.startsWith('http')) return href;
+    if (href.startsWith('/')) return `${IKARUGA_BASE_URL}${href}`;
+    return new URL(href, `${baseUrl.replace(/[^/]+$/, '')}`).toString();
+}
+
+function buildId(municipality: Municipality, date: string, title: string): string {
+    return `${municipality}-${date || 'undated'}-${title}`
+        .normalize('NFKC')
+        .replace(/[^\w\u3040-\u30ff\u3400-\u9fff-]+/g, '-')
+        .replace(/-+/g, '-')
+        .slice(0, 120);
+}
+
+async function scrapeTakatoriResults(): Promise<BiddingItem[]> {
     const items: BiddingItem[] = [];
 
     try {
-        // RSSフィードを取得
-        const res = await axios.get(rssUrl, {
+        const res = await axios.get(TAKATORI_RESULT_URL, {
             headers: { 'User-Agent': 'Mozilla/5.0' },
-            timeout: 15000,
+            timeout: 20000,
         });
-        const $ = cheerio.load(res.data, { xmlMode: true });
+        const $ = cheerio.load(res.data);
+        let sectionDate = '';
 
-        // RSS itemの抽出
-        $('item').each((i: number, el) => {
-            const title = $(el).find('title').text().trim();
-            const link = $(el).find('link').text().trim();
-            const pubDate = $(el).find('pubDate').text().trim();
+        $('h3, h4, tr').each((_, el) => {
+            const tagName = el.tagName?.toLowerCase() || '';
+            const text = $(el).text().replace(/\s+/g, ' ').trim();
 
-            if (!title || !link) return;
-
-            // ①入札・契約・落札・工事に関する項目のみ抽出（ポジティブフィルタ）
-            if (!isRealBiddingItem(title)) return;
-
-            // ②「入札そのもの」ではないページを除外
-            const NON_BIDDING_PATTERNS = [
-                '参加資格審査', '資格申請', '指定工事店', 'パブリックコメント',
-                'ダウンロードについて', '申請・変更', '申請について', 'について（お知らせ）',
-            ];
-            if (NON_BIDDING_PATTERNS.some(p => title.includes(p))) return;
-
-            // ③共通NGワードフィルター
-            if (!shouldKeepItem(title)) return;
-
-            // ステータス判定
-            let status: '受付中' | '締切間近' | '受付終了' | '落札' = '受付中';
-            let winningContractor = undefined;
-
-            if (title.includes('落札') || title.includes('結果')) {
-                status = '落札';
-                winningContractor = title.split('：').pop()?.trim();
+            if ((tagName === 'h3' || tagName === 'h4') && text.includes('令和')) {
+                sectionDate = parseJapaneseDate(text) || sectionDate;
+                return;
             }
 
-            const announcementDate = parseRssDate(pubDate);
+            if (tagName !== 'tr') return;
+            const cells = $(el).find('td');
+            if (cells.length < 4) return;
+
+            const title = $(cells[0]).text().replace(/\s+/g, ' ').trim();
+            const winner = $(cells[2]).text().replace(/\s+/g, ' ').trim();
+            const amount = $(cells[3]).text().replace(/\s+/g, ' ').trim();
+            if (!title || title === '業務名' || !shouldKeepItem(title)) return;
+
+            const status = amount.includes('不調') || amount.includes('不成立') ? '受付終了' : '落札';
+            const winningContractor = status === '落札' && winner && winner !== '-' ? winner : undefined;
 
             items.push({
-                id: `${municipality}-${link.split('=').pop()?.substring(0, 20) || i}`,
-                municipality,
+                id: buildId('高取町', sectionDate, title),
+                municipality: '高取町',
                 title,
                 type: classifyType(title),
-                announcementDate,
-                link,
+                announcementDate: sectionDate,
+                biddingDate: sectionDate || undefined,
+                link: TAKATORI_RESULT_URL,
                 status,
                 winningContractor,
-                winnerType: classifyWinner(winningContractor || '')
+                winnerType: classifyWinner(winningContractor || ''),
             });
         });
-
     } catch (e: unknown) {
-        console.error(`[${municipality}] エラー:`, e instanceof Error ? e instanceof Error ? e.message : String(e) : String(e));
+        console.warn('[高取町] 結果取得エラー:', e instanceof Error ? e.message : String(e));
     }
 
-    console.log(`[${municipality}] 合計 ${items.length} 件`);
     return items;
 }
 
-async function scrapeTakatori(): Promise<BiddingItem[]> {
-    return scrapeFromRss(TAKATORI_RSS, '高取町');
-}
+async function scrapeIkarugaAnnouncements(): Promise<BiddingItem[]> {
+    const items: BiddingItem[] = [];
 
-async function scrapeIkaruga(): Promise<BiddingItem[]> {
-    return scrapeFromRss(IKARUGA_RSS, '斑鳩町');
+    try {
+        const res = await axios.get(IKARUGA_INDEX_URL, {
+            headers: { 'User-Agent': 'Mozilla/5.0' },
+            timeout: 20000,
+        });
+        const $ = cheerio.load(res.data);
+        const detailLinks = new Set<string>();
+
+        $('a').each((_, el) => {
+            const title = $(el).text().replace(/\s+/g, ' ').trim();
+            if (!title) return;
+            if (!title.includes('入札') && !title.includes('閲覧図書')) return;
+            const href = $(el).attr('href');
+            if (!href) return;
+            detailLinks.add(makeAbsoluteUrl(IKARUGA_INDEX_URL, href));
+        });
+
+        for (const detailUrl of detailLinks) {
+            const detailRes = await axios.get(detailUrl, {
+                headers: { 'User-Agent': 'Mozilla/5.0' },
+                timeout: 20000,
+            });
+            const $$ = cheerio.load(detailRes.data);
+            const pageDate = parseJapaneseDate($$.text());
+
+            $$('tr').each((_, tr) => {
+                const cells = $$(tr).find('td');
+                if (cells.length < 2) return;
+                const title = $$(cells[1]).text().replace(/\s+/g, ' ').trim() || $$(cells[0]).text().replace(/\s+/g, ' ').trim();
+                if (!title || title === '工事名' || title === '業務名' || !shouldKeepItem(title)) return;
+
+                items.push({
+                    id: buildId('斑鳩町', pageDate, title),
+                    municipality: '斑鳩町',
+                    title,
+                    type: classifyType(title),
+                    announcementDate: pageDate,
+                    link: detailUrl,
+                    status: '受付中',
+                });
+            });
+        }
+    } catch (e: unknown) {
+        console.warn('[斑鳩町] 公告取得エラー:', e instanceof Error ? e.message : String(e));
+    }
+
+    return items;
 }
 
 export class TakatoriTownScraper implements Scraper {
     municipality: '高取町' = '高取町' as const;
 
     async scrape(): Promise<BiddingItem[]> {
-        return scrapeTakatori();
+        const items = await scrapeTakatoriResults();
+        console.log(`[高取町] 合計 ${items.length} 件`);
+        return items;
     }
 }
 
@@ -123,6 +159,8 @@ export class IkarugaTownScraper implements Scraper {
     municipality: '斑鳩町' = '斑鳩町' as const;
 
     async scrape(): Promise<BiddingItem[]> {
-        return scrapeIkaruga();
+        const items = await scrapeIkarugaAnnouncements();
+        console.log(`[斑鳩町] 合計 ${items.length} 件`);
+        return items;
     }
 }

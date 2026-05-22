@@ -1,68 +1,104 @@
 import axios from 'axios';
 import * as cheerio from 'cheerio';
-import { BiddingItem, Scraper } from '../types/bidding';
+import { BiddingItem, Scraper, BiddingType } from '../types/bidding';
 import { shouldKeepItem } from './common/filter';
 
 const OYODO_URLS = [
-    'https://www.town.oyodo.lg.jp/contents_detail.php?frmId=218',  // 公告
-    'https://www.town.oyodo.lg.jp/contents_detail.php?frmId=1718', // 令和7年度結果
-    'https://www.town.oyodo.lg.jp/contents_detail.php?frmId=1608', // 令和6年度結果
+    { url: 'https://www.town.oyodo.lg.jp/contents_detail.php?frmId=218', status: '受付中' as const },
+    { url: 'https://www.town.oyodo.lg.jp/0000001945.html', status: '落札' as const },
+    { url: 'https://www.town.oyodo.lg.jp/contents_detail.php?frmId=1718', status: '落札' as const },
 ];
 
-function extractDate(text: string): string {
-    const m = text.match(/(?:令和|R)(\d+)年(\d+)月(\d+)日/);
-    if (m) {
-        const year = 2018 + parseInt(m[1]);
-        return `${year}-${m[2].padStart(2, '0')}-${m[3].padStart(2, '0')}`;
+const BASE_URL = 'https://www.town.oyodo.lg.jp';
+const HEADERS = { 'User-Agent': 'Mozilla/5.0' };
+
+function makeAbsoluteUrl(href: string): string {
+    if (!href) return BASE_URL;
+    if (href.startsWith('http')) return href;
+    return `${BASE_URL}/${href.replace(/^\//, '')}`;
+}
+
+function parseJapaneseDate(text: string): string {
+    const reiwa = text.match(/令和\s*(\d+)年\s*(\d+)月\s*(\d+)日/);
+    if (reiwa) {
+        const year = 2018 + parseInt(reiwa[1], 10);
+        return `${year}-${reiwa[2].padStart(2, '0')}-${reiwa[3].padStart(2, '0')}`;
     }
-    // Fallback: 2025-03-01 if no date found but seems recent
-    return '2025-03-01'; 
+
+    const western = text.match(/(\d{4})年(\d{1,2})月(\d{1,2})日/);
+    if (western) {
+        return `${western[1]}-${western[2].padStart(2, '0')}-${western[3].padStart(2, '0')}`;
+    }
+
+    return '';
+}
+
+function parseUpdatedDate(html: string): string {
+    const match = html.match(/\[(\d{4})年(\d{1,2})月(\d{1,2})日\]/);
+    if (!match) return '';
+    return `${match[1]}-${match[2].padStart(2, '0')}-${match[3].padStart(2, '0')}`;
+}
+
+function cleanTitle(text: string): string {
+    return text
+        .replace(/〖令和.*?公告〗/g, '')
+        .replace(/〖令和.*?執行.*?〗/g, '')
+        .replace(/（ファイル名：.*$/g, '')
+        .replace(/\[PDF.*$/g, '')
+        .replace(/\s+/g, ' ')
+        .trim();
+}
+
+function classifyType(title: string): BiddingType {
+    if (title.includes('設計') || title.includes('コンサル') || title.includes('アドバイザリー')) return 'コンサル';
+    if (title.includes('委託') || title.includes('業務')) return '委託';
+    return '建築';
 }
 
 export class OyodoTownScraper implements Scraper {
     municipality: '大淀町' = '大淀町' as const;
 
     async scrape(): Promise<BiddingItem[]> {
-        const items: BiddingItem[] = [];
-        
-        for (const url of OYODO_URLS) {
+        const items = new Map<string, BiddingItem>();
+
+        for (const source of OYODO_URLS) {
             try {
-                const res = await axios.get(url, {
-                    headers: { 'User-Agent': 'Mozilla/5.0' },
+                const res = await axios.get(source.url, {
+                    headers: HEADERS,
                     timeout: 15000,
                 });
                 const $ = cheerio.load(res.data);
+                const pageDate = parseUpdatedDate(res.data) || parseJapaneseDate($.text());
 
-                // メインコンテンツエリアに限定して走査
-                $('#content_detail a').each((i, el) => {
-                    const text = $(el).text().trim();
+                $('a').each((_, el) => {
+                    const rawText = $(el).text().trim();
                     const href = $(el).attr('href') || '';
-                    
-                    if (text.length > 5 && (text.includes('入札') || text.includes('公告') || text.includes('結果') || href.includes('.pdf'))) {
-                        if (!shouldKeepItem(text)) return;
+                    if (!rawText || !href) return;
 
-                        const isResult = text.includes('結果') || url.includes('1718') || url.includes('1608');
-                        const status = isResult ? '落札' : '受付中';
-                        const linkUrl = href.startsWith('http') ? href : 'https://www.town.oyodo.lg.jp/' + href;
-                        const date = extractDate(text);
-                        const cleanTitle = text.replace(/（PDF：\d+K?B）/g, '').replace(/\[.*\.pdf\]/g, '').trim();
+                    const title = cleanTitle(rawText);
+                    if (!title || !shouldKeepItem(title)) return;
 
-                        items.push({
-                            id: `oyodo-town-${i}-${Math.random().toString(36).slice(2, 5)}`,
-                            municipality: '大淀町',
-                            title: cleanTitle,
-                            type: '建築',
-                            announcementDate: date,
-                            link: linkUrl,
-                            status: status,
-                        });
-                    }
+                    const date = parseJapaneseDate(rawText) || pageDate;
+                    const fullUrl = makeAbsoluteUrl(href);
+                    const id = `oyodo-${Buffer.from(fullUrl).toString('base64').slice(0, 12)}`;
+
+                    items.set(id, {
+                        id,
+                        municipality: '大淀町',
+                        title,
+                        type: classifyType(title),
+                        announcementDate: date,
+                        link: fullUrl,
+                        status: source.status,
+                    });
                 });
-
-            } catch (e: unknown) {
-                console.error(`[大淀町] エラー (${url}):`, e instanceof Error ? e instanceof Error ? e.message : String(e) : String(e));
+            } catch (error: unknown) {
+                console.error(`[大淀町] エラー (${source.url}):`, error instanceof Error ? error.message : String(error));
             }
         }
-        return items;
+
+        const result = Array.from(items.values()).sort((a, b) => b.announcementDate.localeCompare(a.announcementDate));
+        console.log(`[大淀町] 合計 ${result.length} 件`);
+        return result;
     }
 }

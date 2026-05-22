@@ -94,7 +94,7 @@ const DEFAULT_ARCHITECTURE_CONTEXT_KEYWORDS = [
 
 const DEFAULT_ARCHITECTURE_WORK_KEYWORDS = [
     '工事', '修繕', '改修', '新築', '増築', '設計', '実施設計',
-    '基本設計', '工事監理', '耐震診断', '建築設備設計',
+    '基本設計', '工事監理', '耐震診断', '建築設備設計', '更新',
 ];
 
 const ALWAYS_EXCLUDE_KEYWORDS = [...new Set([...DEFAULT_ALWAYS_EXCLUDE_KEYWORDS, ...dataFilters.alwaysExcludeKeywords])];
@@ -138,6 +138,10 @@ export function shouldKeepItem(title: string, otherText?: string): boolean {
 
     // 一般業務・物品・広報系は、入札語を含んでも建築案件ではないため除外する。
     if (includesAny(target, ALWAYS_EXCLUDE_KEYWORDS)) {
+        return false;
+    }
+
+    if (includesAny(target, EXCLUSION_KEYWORDS)) {
         return false;
     }
 

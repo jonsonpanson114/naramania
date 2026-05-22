@@ -9,6 +9,7 @@ naramaniaは、奈良県内22自治体の入札公告・落札結果を自動収
 - **入札情報収集**: 22自治体の入札公告・落札結果を自動スクレイピング
 - **AIインテリジェンス抽出**: Google AIで案件内容を解析・分類
 - **ダッシュボード**: 全案件数、新着更新、AI抽出/除外状況の可視化
+- **入札チャット**: 案件名や「今週の開札物件は？」のような自然文質問に回答
 - **落札実績ランキング**: 業者別受注ランキング
 - **レーダーチャート**: 業者別得意分野分析
 
@@ -18,6 +19,7 @@ naramaniaは、奈良県内22自治体の入札公告・落札結果を自動収
 - **Styling**: Tailwind CSS + Framer Motion
 - **Scraping**: Playwright + axios + cheerio
 - **AI**: Google Generative AI (Gemini)
+- **AI Chat**: Gemini API + Google Search grounding
 - **Visualization**: Recharts
 - **Fonts**: Shippori Mincho (Google Fonts)
 
@@ -70,8 +72,11 @@ naramania/
 
 ```bash
 GOOGLE_GENERATIVE_AI_API_KEY=your_api_key_here
+GOOGLE_GENERATIVE_AI_CHAT_MODEL=gemini-3.1-flash-lite
 NODE_OPTIONS=--no-deprecation
 ```
+
+Vercel では Project Settings > Environment Variables に同じ値を設定してください。
 
 ### 依存パッケージのインストール
 
@@ -150,6 +155,9 @@ npx tsx scripts/reapply_filter.ts
 
 ### POST /api/analyze
 AIによる案件解析を実行します。
+
+### POST /api/chat
+入札チャットに質問を送ります。サイト内データを優先し、必要な場合は Gemini の Google Search grounding を使って Web 補足を返します。
 
 ## ビルド
 

@@ -1,17 +1,28 @@
 import axios from 'axios';
 import * as cheerio from 'cheerio';
-import { BiddingItem, Scraper } from '../types/bidding';
+import { BiddingItem, Scraper, BiddingType } from '../types/bidding';
 import { shouldKeepItem } from './common/filter';
 
-const OJI_URL = 'https://www.town.oji.nara.jp/kakuka/somu/somu/gyomuannai/nyuusatu/nyuusatukouhyou/index.html';
+const OJI_INDEX = 'https://www.town.oji.nara.jp/kakuka/somu/somu/gyomuannai/nyuusatu/nyuusatukouhyou/index.html';
+const BASE_URL = 'https://www.town.oji.nara.jp';
+const HEADERS = { 'User-Agent': 'Mozilla/5.0' };
 
-function extractDate(text: string): string {
-    const m = text.match(/(?:令和|R)(\d+)年(\d+)月(\d+)日/);
-    if (m) {
-        const year = 2018 + parseInt(m[1]);
-        return `${year}-${m[2].padStart(2, '0')}-${m[3].padStart(2, '0')}`;
-    }
-    return '2025-03-01'; // Default recent fallback
+function makeAbsoluteUrl(href: string): string {
+    if (!href) return OJI_INDEX;
+    if (href.startsWith('http')) return href;
+    return `${BASE_URL}${href}`;
+}
+
+function parseUpdatedDate(html: string): string {
+    const match = html.match(/更新日[:：]\s*(\d{4})年(\d{1,2})月(\d{1,2})日/);
+    if (!match) return '';
+    return `${match[1]}-${match[2].padStart(2, '0')}-${match[3].padStart(2, '0')}`;
+}
+
+function classifyType(title: string): BiddingType {
+    if (title.includes('設計') || title.includes('監理')) return 'コンサル';
+    if (title.includes('委託') || title.includes('業務')) return '委託';
+    return '建築';
 }
 
 export class OjiTownScraper implements Scraper {
@@ -19,46 +30,49 @@ export class OjiTownScraper implements Scraper {
 
     async scrape(): Promise<BiddingItem[]> {
         const items: BiddingItem[] = [];
+
         try {
-            const res = await axios.get(OJI_URL, {
-                headers: { 'User-Agent': 'Mozilla/5.0' },
+            const indexRes = await axios.get(OJI_INDEX, {
+                headers: HEADERS,
                 timeout: 15000,
             });
-            const $ = cheerio.load(res.data);
-            
-            // 手動抽出: メインコンテンツ (#main) 内のリンクに絞る
-            $('#main a').each((i, el) => {
-                const text = $(el).text().trim();
-                const href = $(el).attr('href') || '';
-                
-                // キーワードの緩和: 公告や結果だけでなく、工事・設計・業務なども含める
-                if (text.length > 5 && (
-                    text.includes('公告') || text.includes('結果') || text.includes('入札') ||
-                    text.includes('公表') || text.includes('工事') || text.includes('設計') ||
-                    text.includes('業務') || text.includes('委託')
-                )) {
-                    if (!shouldKeepItem(text)) return;
+            const $ = cheerio.load(indexRes.data);
 
-                    const isResult = text.includes('結果') || text.includes('公表');
-                    const status = isResult ? '落札' : '受付中';
-                    const linkUrl = href.startsWith('http') ? href : 'https://www.town.oji.nara.jp' + href;
-                    const date = extractDate(text);
+            const links = $('a').toArray()
+                .map(el => ({
+                    title: $(el).text().trim(),
+                    href: $(el).attr('href') || '',
+                }))
+                .filter(link => link.title && link.href);
 
-                    items.push({
-                        id: `oji-town-${i}-${Math.random().toString(36).slice(2, 5)}`,
-                        municipality: '王寺町',
-                        title: text,
-                        type: '建築',
-                        announcementDate: date,
-                        link: linkUrl,
-                        status: status,
-                    });
-                }
-            });
+            for (const link of links) {
+                const normalizedTitle = link.title.replace(/\s+/g, ' ').trim();
+                if (!shouldKeepItem(normalizedTitle)) continue;
 
-        } catch (e: unknown) {
-            console.error(`[王寺町] エラー:`, e instanceof Error ? e instanceof Error ? e.message : String(e) : String(e));
+                const fullUrl = makeAbsoluteUrl(link.href);
+                const detailRes = await axios.get(fullUrl, { headers: HEADERS, timeout: 15000 });
+                const detailHtml = detailRes.data as string;
+                const detailDate = parseUpdatedDate(detailHtml);
+                const isResult = detailHtml.includes('入札についての事後公表') || normalizedTitle.includes('事後公表');
+                const titleMatch = detailHtml.match(/<h1[^>]*>([^<]+)<\/h1>/);
+                const title = titleMatch?.[1]?.trim() || normalizedTitle;
+
+                items.push({
+                    id: `oji-${Buffer.from(fullUrl).toString('base64').slice(0, 12)}`,
+                    municipality: '王寺町',
+                    title,
+                    type: classifyType(title),
+                    announcementDate: detailDate || parseUpdatedDate(indexRes.data),
+                    link: fullUrl,
+                    status: isResult ? '落札' : '受付中',
+                });
+            }
+
+        } catch (error: unknown) {
+            console.error('[王寺町] エラー:', error instanceof Error ? error.message : String(error));
         }
+
+        console.log(`[王寺町] 合計 ${items.length} 件`);
         return items;
     }
 }

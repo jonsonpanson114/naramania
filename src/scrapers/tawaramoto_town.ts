@@ -13,10 +13,6 @@ const SEARCH_TARGETS = [
     { screenId: 'PPUBC00700', chotatsu_kbn: '01', status: '落札' as const, label: '委託業務/入札結果' },
 ];
 
-function shouldSkipKoushu(koushu: string): boolean {
-    return !shouldKeepItem('', koushu);
-}
-
 function parseJapaneseDate(text: string): string {
     const m = text.match(/令和\s*(\d+)\s*年\s*(\d+)\s*月\s*(\d+)\s*日/);
     if (m) {
@@ -91,7 +87,6 @@ export class TawaramotoTownScraper implements Scraper {
                         // cells[5] は状況（「入札参加申請終了」等）で落札者ではない
 
                         if (!title || !contractNo || contractNo.includes('契約番号')) continue;
-                        if (shouldSkipKoushu(koushu)) continue;
                         if (!shouldKeepItem(title, koushu)) continue;
 
                         // 田原本町の行構造（常に3行）:

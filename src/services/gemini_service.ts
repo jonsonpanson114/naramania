@@ -27,7 +27,7 @@ const BIDDING_INFO_SCHEMA = {
 };
 
 export async function extractBiddingInfoFromPDF(pdfBuffer: Buffer, mimeType: string = "application/pdf"): Promise<ExtractedBiddingInfo | null> {
-    const apiKey = process.env.GOOGLE_GENERATIVE_AI_API_KEY || "";
+    const apiKey = process.env.GOOGLE_GENERATIVE_AI_API_KEY || process.env.GEMINI_API_KEY || "";
     if (!apiKey) return null;
 
     const genAI = new GoogleGenerativeAI(apiKey);
@@ -74,7 +74,7 @@ export async function extractBiddingInfoFromPDF(pdfBuffer: Buffer, mimeType: str
 }
 
 export async function extractBiddingInfoFromText(text: string): Promise<ExtractedBiddingInfo | null> {
-    const apiKey = process.env.GOOGLE_GENERATIVE_AI_API_KEY || "";
+    const apiKey = process.env.GOOGLE_GENERATIVE_AI_API_KEY || process.env.GEMINI_API_KEY || "";
     if (!apiKey) return null;
 
     const genAI = new GoogleGenerativeAI(apiKey);

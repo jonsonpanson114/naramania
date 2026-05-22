@@ -6,6 +6,27 @@ import { shouldKeepItem } from './common/filter';
 // 平群町（heguri）
 const HEGURI_URL = 'https://www.town.heguri.nara.jp/soshiki/list7-1.html';
 
+function parseJapaneseDate(text: string): string {
+    const reiwa = text.match(/令和\s*(\d+)\s*年\s*(\d+)\s*月\s*(\d+)\s*日/);
+    if (reiwa) {
+        const year = 2018 + Number(reiwa[1]);
+        return `${year}-${String(Number(reiwa[2])).padStart(2, '0')}-${String(Number(reiwa[3])).padStart(2, '0')}`;
+    }
+    const western = text.match(/(20\d{2})年(\d{1,2})月(\d{1,2})日/);
+    if (western) {
+        return `${western[1]}-${western[2].padStart(2, '0')}-${western[3].padStart(2, '0')}`;
+    }
+    return '';
+}
+
+function parseUpdatedDate(text: string): string {
+    const updatedMatch = text.match(/更新日[:：]\s*(20\d{2})年(\d{1,2})月(\d{1,2})日/);
+    if (updatedMatch) {
+        return `${updatedMatch[1]}-${updatedMatch[2].padStart(2, '0')}-${updatedMatch[3].padStart(2, '0')}`;
+    }
+    return parseJapaneseDate(text);
+}
+
 async function scrapeSmallTown(url: string, municipality: string): Promise<BiddingItem[]> {
     const items: BiddingItem[] = [];
 
@@ -53,13 +74,25 @@ async function scrapeSmallTown(url: string, municipality: string): Promise<Biddi
 
             const itemId = municipality + '-' + title.slice(0, 20);
             const linkUrl = hrefVal.startsWith('http') ? hrefVal : 'https://www.town.heguri.nara.jp' + hrefVal;
+            let announcementDate = '';
+
+            try {
+                const detailRes = await axios.get(linkUrl, {
+                    headers: { 'User-Agent': 'Mozilla/5.0' },
+                    timeout: 15000,
+                });
+                const $$ = cheerio.load(detailRes.data);
+                announcementDate = parseUpdatedDate($$('body').text());
+            } catch {
+                // Keep empty and fall back below.
+            }
 
             items.push({
                 id: itemId,
                 municipality: municipality as Municipality,
                 title: title,
                 type: '建築',
-                announcementDate: new Date().toISOString().split('T')[0],
+                announcementDate: announcementDate || new Date().toISOString().split('T')[0],
                 link: linkUrl,
                 status: status,
                 winnerType: isResult ? 'ゼネコン' : undefined,

@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { AppShell } from '@/components/AppShell';
 import { Header } from '@/components/Header';
 import { motion } from 'framer-motion';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, MessageSquareText } from 'lucide-react';
 
 const availableMunicipalities = [
     // 市
@@ -141,12 +141,25 @@ export default function SettingsPage() {
                     <h3 className="text-[10px] tracking-[0.3em] text-secondary/50 uppercase font-bold mb-6">AI解析エンジン</h3>
                     <div className="flex items-center gap-4">
                         <div className="w-3 h-3 rounded-full bg-green-400 animate-pulse"></div>
-                        <span className="text-sm tracking-wider">Gemini 2.5 Flash</span>
+                        <span className="text-sm tracking-wider">Gemini 3.1 Flash-Lite</span>
                         <span className="text-[9px] tracking-[0.2em] text-green-600 border border-green-200 bg-green-50 px-2 py-0.5 rounded-sm uppercase font-bold">Active</span>
                     </div>
                     <p className="text-secondary/40 text-xs tracking-wider mt-3">
                         入札結果PDFから落札業者・設計事務所・金額を自動抽出します。
                     </p>
+                    <div className="mt-6 rounded-md border border-border/40 bg-sidebar/50 p-4">
+                        <div className="flex items-center gap-2 text-sm tracking-wider text-primary">
+                            <MessageSquareText size={16} className="text-accent" />
+                            <span>入札チャットもこの API キーを利用します</span>
+                        </div>
+                        <p className="mt-3 text-xs leading-6 tracking-wider text-secondary/55">
+                            Vercel の Project Settings {'>'} Environment Variables に
+                            <span className="mx-1 font-semibold text-primary">GOOGLE_GENERATIVE_AI_API_KEY</span>
+                            と
+                            <span className="mx-1 font-semibold text-primary">GOOGLE_GENERATIVE_AI_CHAT_MODEL=gemini-3.1-flash-lite</span>
+                            を設定すると、サイト内案件の検索と Web 補足付きチャットが動きます。
+                        </p>
+                    </div>
                 </motion.div>
 
                 {/* Save Button */}

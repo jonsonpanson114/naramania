@@ -1,0 +1,207 @@
+{
+  "generatedAt": "2026-05-22T04:54:33.502Z",
+  "municipalitiesWithData": 20,
+  "municipalitiesWithoutData": 5,
+  "rows": [
+    {
+      "municipality": "奈良県",
+      "count": 10,
+      "latestAnnouncementDate": "2026-05-18",
+      "scraperFile": "src/scrapers/nara_pref.ts",
+      "riskFlags": []
+    },
+    {
+      "municipality": "奈良市",
+      "count": 38,
+      "latestAnnouncementDate": "2026-05-15",
+      "scraperFile": "src/scrapers/nara_city.ts",
+      "riskFlags": []
+    },
+    {
+      "municipality": "橿原市",
+      "count": 37,
+      "latestAnnouncementDate": "2026-04-17",
+      "scraperFile": "src/scrapers/kashihara_city.ts",
+      "riskFlags": [
+        "today_fallback"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "count": 2,
+      "latestAnnouncementDate": "2026-05-15",
+      "scraperFile": "src/scrapers/ikoma_city.ts",
+      "riskFlags": []
+    },
+    {
+      "municipality": "大和高田市",
+      "count": 2,
+      "latestAnnouncementDate": "2025-07-01",
+      "scraperFile": "src/scrapers/yamato_takada_city.ts",
+      "riskFlags": [
+        "today_fallback",
+        "hardcoded_year_logic"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "count": 3,
+      "latestAnnouncementDate": "2025-10-15",
+      "scraperFile": "src/scrapers/yamatokoriyama_city.ts",
+      "riskFlags": [
+        "today_fallback"
+      ]
+    },
+    {
+      "municipality": "葛城市",
+      "count": 13,
+      "latestAnnouncementDate": "2026-05-14",
+      "scraperFile": "src/scrapers/katsuragi_city.ts",
+      "riskFlags": [
+        "today_fallback"
+      ]
+    },
+    {
+      "municipality": "五條市",
+      "count": 0,
+      "latestAnnouncementDate": null,
+      "scraperFile": "src/scrapers/gojo_city.ts",
+      "riskFlags": []
+    },
+    {
+      "municipality": "御所市",
+      "count": 1,
+      "latestAnnouncementDate": "2026-05-01",
+      "scraperFile": "src/scrapers/gose_city.ts",
+      "riskFlags": [
+        "hardcoded_year_logic",
+        "rss_only"
+      ]
+    },
+    {
+      "municipality": "天理市",
+      "count": 1,
+      "latestAnnouncementDate": "2026-03-27",
+      "scraperFile": "src/scrapers/tenri_city.ts",
+      "riskFlags": [
+        "today_fallback"
+      ]
+    },
+    {
+      "municipality": "桜井市",
+      "count": 0,
+      "latestAnnouncementDate": null,
+      "scraperFile": "src/scrapers/sakurai_city.ts",
+      "riskFlags": []
+    },
+    {
+      "municipality": "宇陀市",
+      "count": 4,
+      "latestAnnouncementDate": "2026-04-23",
+      "scraperFile": "src/scrapers/uda_city.ts",
+      "riskFlags": []
+    },
+    {
+      "municipality": "田原本町",
+      "count": 2,
+      "latestAnnouncementDate": "2026-05-14",
+      "scraperFile": "src/scrapers/tawaramoto_town.ts",
+      "riskFlags": []
+    },
+    {
+      "municipality": "広陵町",
+      "count": 11,
+      "latestAnnouncementDate": "2025-12-25",
+      "scraperFile": "src/scrapers/koryo_town.ts",
+      "riskFlags": [
+        "hardcoded_year_logic"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "count": 15,
+      "latestAnnouncementDate": "2026-05-14",
+      "scraperFile": "src/scrapers/kashiba_city.ts",
+      "riskFlags": [
+        "hardcoded_year_logic"
+      ]
+    },
+    {
+      "municipality": "川西町",
+      "count": 0,
+      "latestAnnouncementDate": null,
+      "scraperFile": "src/scrapers/kawanishi_city.ts",
+      "riskFlags": []
+    },
+    {
+      "municipality": "三宅町",
+      "count": 1,
+      "latestAnnouncementDate": "2025-11-04",
+      "scraperFile": "src/scrapers/miyake_city.ts",
+      "riskFlags": []
+    },
+    {
+      "municipality": "山添村",
+      "count": 0,
+      "latestAnnouncementDate": null,
+      "scraperFile": "src/scrapers/yamazohiragawa_city.ts",
+      "riskFlags": [
+        "today_fallback"
+      ]
+    },
+    {
+      "municipality": "平群町",
+      "count": 1,
+      "latestAnnouncementDate": "2026-05-18",
+      "scraperFile": "src/scrapers/yamazohiragawa_city.ts",
+      "riskFlags": [
+        "today_fallback"
+      ]
+    },
+    {
+      "municipality": "安堵町",
+      "count": 2,
+      "latestAnnouncementDate": "2026-05-18",
+      "scraperFile": "src/scrapers/ando_city.ts",
+      "riskFlags": [
+        "hardcoded_year_logic",
+        "rss_only"
+      ]
+    },
+    {
+      "municipality": "高取町",
+      "count": 13,
+      "latestAnnouncementDate": "2026-05-18",
+      "scraperFile": "src/scrapers/takatori_ikaruga.ts",
+      "riskFlags": []
+    },
+    {
+      "municipality": "斑鳩町",
+      "count": 3,
+      "latestAnnouncementDate": "2026-05-15",
+      "scraperFile": "src/scrapers/takatori_ikaruga.ts",
+      "riskFlags": []
+    },
+    {
+      "municipality": "三郷町",
+      "count": 0,
+      "latestAnnouncementDate": null,
+      "scraperFile": "src/scrapers/sango_town.ts",
+      "riskFlags": []
+    },
+    {
+      "municipality": "王寺町",
+      "count": 1,
+      "latestAnnouncementDate": "2026-05-13",
+      "scraperFile": "src/scrapers/oji_town.ts",
+      "riskFlags": []
+    },
+    {
+      "municipality": "大淀町",
+      "count": 1,
+      "latestAnnouncementDate": "2025-07-22",
+      "scraperFile": "src/scrapers/oyodo_town.ts",
+      "riskFlags": []
+    }
+  ]
+}
