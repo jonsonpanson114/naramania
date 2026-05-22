@@ -7,7 +7,7 @@ import { StatsCard } from '@/components/StatsCard';
 import { BiddingTable } from '@/components/BiddingTable';
 import { NewsSection } from '@/components/NewsSection';
 import { NewsTicker } from '@/components/NewsTicker';
-import { Activity, AlertTriangle, ArrowRight, CalendarClock, CheckCircle2, MessageSquareText, Radar, Trophy } from 'lucide-react';
+import { Activity, AlertTriangle, ArrowRight, CalendarClock, CheckCircle2, MessageSquareText } from 'lucide-react';
 import Link from 'next/link';
 
 interface QualitySummary {
@@ -242,8 +242,8 @@ export default async function Home() {
           </div>
         </div>
 
-        {/* Quick Insights Navigation */}
-        <div className="grid grid-cols-1 gap-8 mb-20 md:grid-cols-2 xl:grid-cols-3">
+        {/* Quick Access */}
+        <div className="mb-14">
           <Link href="/chat" className="group bg-white p-8 rounded-3xl border border-emerald-900/10 shadow-sm hover:shadow-md transition-all">
             <div className="flex justify-between items-start mb-4">
               <div className="w-12 h-12 bg-emerald-50 rounded-2xl flex items-center justify-center text-emerald-600">
@@ -254,32 +254,6 @@ export default async function Home() {
             <h3 className="text-xl font-bold text-gray-900 mb-2">入札チャット</h3>
             <p className="text-sm text-gray-500 leading-relaxed">
               今週の開札、自治体別の新着、特定案件の深掘りまで自然文で質問できます。必要なときは Web 補足も使います。
-            </p>
-          </Link>
-
-          <Link href="/rankings" className="group bg-white p-8 rounded-3xl border border-amber-900/10 shadow-sm hover:shadow-md transition-all">
-            <div className="flex justify-between items-start mb-4">
-              <div className="w-12 h-12 bg-amber-50 rounded-2xl flex items-center justify-center text-amber-600">
-                <Trophy size={24} />
-              </div>
-              <ArrowRight className="text-gray-300 group-hover:text-amber-600 group-hover:translate-x-1 transition-all" />
-            </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-2">落札実績ランキング</h3>
-            <p className="text-sm text-gray-500 leading-relaxed">
-              どの業者が最も多く受注しているか、設計事務所はどこか。AIが解析したデータを集計し、上位10社をランキング形式で表示します。
-            </p>
-          </Link>
-
-          <Link href="/radar" className="group bg-white p-8 rounded-3xl border border-indigo-900/10 shadow-sm hover:shadow-md transition-all">
-            <div className="flex justify-between items-start mb-4">
-              <div className="w-12 h-12 bg-indigo-50 rounded-2xl flex items-center justify-center text-indigo-600">
-                <Radar size={24} />
-              </div>
-              <ArrowRight className="text-gray-300 group-hover:text-indigo-600 group-hover:translate-x-1 transition-all" />
-            </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-2">価格相場レーダー</h3>
-            <p className="text-sm text-gray-500 leading-relaxed">
-              案件ごとの設計金額・落札価格の分布を可視化。自治体ごとの相場感や、工事規模による傾向を視覚的に把握できます。
             </p>
           </Link>
         </div>

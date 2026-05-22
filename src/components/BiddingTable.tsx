@@ -389,16 +389,30 @@ export function BiddingTable({ items }: BiddingTableProps) {
                                         </td>
                                         <td className="px-8 py-6 text-[10px] text-gray-400 tracking-[0.2em] font-serif uppercase">{item.type}</td>
                                         <td className="px-8 py-6">
-                                            <div className="space-y-2 text-[11px] font-serif tabular-nums tracking-widest text-gray-500">
-                                                <div className="flex items-center justify-between gap-3 rounded-md border border-border/40 bg-sidebar/35 px-3 py-2">
-                                                    <span className="text-[9px] uppercase tracking-[0.2em] text-secondary/55">公告</span>
-                                                    <span className="text-primary">{formatDate(item.announcementDate)}</span>
+                                            <div className="space-y-2.5">
+                                                <div className="rounded-xl border border-stone-200 bg-stone-50 px-3 py-2.5 shadow-[inset_0_1px_0_rgba(255,255,255,0.8)]">
+                                                    <div className="flex items-center justify-between gap-3">
+                                                        <span className="text-[9px] font-bold uppercase tracking-[0.22em] text-stone-500">公告日</span>
+                                                        <span className="text-base font-light tabular-nums tracking-[0.08em] text-primary">{formatDate(item.announcementDate)}</span>
+                                                    </div>
                                                 </div>
-                                                <div className="flex items-center justify-between gap-3 rounded-md border border-border/30 bg-white px-3 py-2">
-                                                    <span className="text-[9px] uppercase tracking-[0.2em] text-secondary/55">開札</span>
-                                                    <span className={item.biddingDate ? 'text-primary' : 'text-secondary/35'}>
-                                                        {item.biddingDate ? formatDate(item.biddingDate) : '-'}
-                                                    </span>
+                                                <div className={`rounded-xl border px-3 py-2.5 shadow-[inset_0_1px_0_rgba(255,255,255,0.85)] ${
+                                                    item.biddingDate
+                                                        ? 'border-rose-200 bg-rose-50/80'
+                                                        : 'border-border/30 bg-white'
+                                                }`}>
+                                                    <div className="flex items-center justify-between gap-3">
+                                                        <span className={`text-[9px] font-bold uppercase tracking-[0.22em] ${
+                                                            item.biddingDate ? 'text-rose-600' : 'text-secondary/55'
+                                                        }`}>
+                                                            開札日
+                                                        </span>
+                                                        <span className={`text-base font-light tabular-nums tracking-[0.08em] ${
+                                                            item.biddingDate ? 'text-rose-700' : 'text-secondary/35'
+                                                        }`}>
+                                                            {item.biddingDate ? formatDate(item.biddingDate) : '-'}
+                                                        </span>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </td>
