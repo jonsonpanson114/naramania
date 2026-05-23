@@ -12,7 +12,7 @@ interface BiddingTableProps {
 
 type MainFilter = 'すべて' | '新着' | '建築' | '設計' | '落札';
 type SubFilter = 'すべて' | 'ゼネコン' | '設計事務所';
-type SortMode = 'newest' | 'oldest' | 'municipality';
+type SortMode = 'newest' | 'oldest' | 'biddingSoonest' | 'biddingLatest' | 'municipality';
 
 export function BiddingTable({ items }: BiddingTableProps) {
     const [mainFilter, setMainFilter] = useState<MainFilter>('すべて');
@@ -95,14 +95,29 @@ export function BiddingTable({ items }: BiddingTableProps) {
         }
         return true;
     }).sort((a, b) => {
+        const announcementA = new Date(a.announcementDate).getTime();
+        const announcementB = new Date(b.announcementDate).getTime();
+        const biddingA = a.biddingDate ? new Date(a.biddingDate).getTime() : Number.POSITIVE_INFINITY;
+        const biddingB = b.biddingDate ? new Date(b.biddingDate).getTime() : Number.POSITIVE_INFINITY;
+
+        if (sortMode === 'biddingSoonest') {
+            if (biddingA !== biddingB) return biddingA - biddingB;
+            return announcementB - announcementA;
+        }
+
+        if (sortMode === 'biddingLatest') {
+            const normalizedA = Number.isFinite(biddingA) ? biddingA : Number.NEGATIVE_INFINITY;
+            const normalizedB = Number.isFinite(biddingB) ? biddingB : Number.NEGATIVE_INFINITY;
+            if (normalizedA !== normalizedB) return normalizedB - normalizedA;
+            return announcementB - announcementA;
+        }
+
         if (sortMode === 'municipality') {
             const byMunicipality = a.municipality.localeCompare(b.municipality, 'ja');
             if (byMunicipality !== 0) return byMunicipality;
         }
 
-        const dateA = new Date(a.announcementDate).getTime();
-        const dateB = new Date(b.announcementDate).getTime();
-        return sortMode === 'oldest' ? dateA - dateB : dateB - dateA;
+        return sortMode === 'oldest' ? announcementA - announcementB : announcementB - announcementA;
     });
 
     // Count per tab
@@ -237,6 +252,8 @@ export function BiddingTable({ items }: BiddingTableProps) {
                         >
                             <option value="newest">新しい順</option>
                             <option value="oldest">古い順</option>
+                            <option value="biddingSoonest">開札日が近い順</option>
+                            <option value="biddingLatest">開札日が遠い順</option>
                             <option value="municipality">自治体順</option>
                         </select>
                     </div>

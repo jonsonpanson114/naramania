@@ -1,14 +1,10 @@
 {
-  "generatedAt": "2026-05-23T01:19:41.647Z",
-  "source": "update_selected_municipalities",
-  "keptCount": 163,
+  "generatedAt": "2026-05-23T02:03:10.797Z",
+  "source": "reapply_filter",
+  "originalCount": 163,
+  "keptCount": 138,
+  "removedCount": 25,
   "oldestAnnouncementDate": "2025-04-11",
   "latestAnnouncementDate": "2026-05-18",
-  "municipalityCount": 20,
-  "dateAudit": {
-    "announcementAfterBiddingCount": 0,
-    "awardedWithoutBiddingDateCount": 0,
-    "awardedWithoutWinnerCount": 2,
-    "openWithWinnerCount": 0
-  }
+  "municipalityCount": 19
 }
