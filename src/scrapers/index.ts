@@ -25,8 +25,7 @@ import { BiddingItem } from '../types/bidding';
 import fs from 'fs';
 import path from 'path';
 import { shouldKeepBiddingItem } from './common/filter';
-
-const QUALITY_PATH = path.join(process.cwd(), 'scraper_quality.json');
+import { QUALITY_PATH, buildIntelligenceSummary } from '../lib/quality_summary';
 
 function normalizeComparisonTitle(title: string): string {
     return title
@@ -165,6 +164,7 @@ function writeQualitySummary(items: BiddingItem[], scrapedCount: number, rejecte
         latestAnnouncementDate: dates[dates.length - 1] || null,
         municipalityCount: new Set(items.map(item => item.municipality)).size,
         dateAudit,
+        intelligence: buildIntelligenceSummary(items),
     };
 
     fs.writeFileSync(QUALITY_PATH, JSON.stringify(summary, null, 2), 'utf-8');
