@@ -89,6 +89,8 @@ export default async function Home() {
   const hasHealthRecord = Boolean(qualitySummary?.generatedAt);
   const keptCount = qualitySummary?.keptCount ?? allItems.length;
   const rawCount = qualitySummary?.originalCount ?? qualitySummary?.scrapedCount ?? keptCount + removedCount;
+  const municipalityCount = qualitySummary?.municipalityCount ?? new Set(allItems.map((item) => item.municipality)).size;
+  const latestQualityDate = qualitySummary?.generatedAt ? new Date(qualitySummary.generatedAt).toLocaleDateString('ja-JP') : null;
   
   const upcomingBiddings = allItems
     .filter(item => item.biddingDate && item.status !== '落札' && item.status !== '受付終了')
@@ -167,7 +169,7 @@ export default async function Home() {
               </div>
               <div>
                 <h4 className="text-sm font-bold text-gray-900 tracking-wide">データ収集エンジン稼働中</h4>
-                <p className="mt-1 text-xs text-gray-500 tracking-wider">奈良県内22自治体を網羅したデータヘルス状況</p>
+                <p className="mt-1 text-xs text-gray-500 tracking-wider">奈良県内の掲載案件を横断した収集状況を表示しています</p>
               </div>
             </div>
             <div className="grid grid-cols-2 gap-4 md:grid-cols-4 lg:min-w-[520px]">
@@ -180,14 +182,14 @@ export default async function Home() {
                 <p className="mt-1 text-lg tabular-nums tracking-wider text-primary">{keptCount}<span className="ml-1 text-[10px] text-accent">件</span></p>
               </div>
               <div>
-                <p className="text-[9px] tracking-[0.2em] text-secondary/40 uppercase">対象期間</p>
-                <p className="mt-1 text-sm tracking-wider text-primary">{formatDateLabel(qualitySummary?.oldestAnnouncementDate)} - {formatDateLabel(latestAnnouncementDate)}</p>
+                <p className="text-[9px] tracking-[0.2em] text-secondary/40 uppercase">最新公告日</p>
+                <p className="mt-1 text-sm tracking-wider text-primary">{formatDateLabel(latestAnnouncementDate)}</p>
               </div>
               <div>
-                <p className="text-[9px] tracking-[0.2em] text-secondary/40 uppercase">状態</p>
+                <p className="text-[9px] tracking-[0.2em] text-secondary/40 uppercase">更新記録</p>
                 <p className="mt-1 flex items-center gap-1.5 text-sm tracking-wider text-primary">
                   <Activity size={14} className={hasHealthRecord ? 'text-green-600' : 'text-amber-600'} />
-                  {hasHealthRecord ? '品質記録あり' : '未記録'}
+                  {hasHealthRecord ? (latestQualityDate || '記録あり') : '未記録'}
                 </p>
               </div>
             </div>
@@ -197,8 +199,11 @@ export default async function Home() {
         {/* Municipality Distribution */}
         <div className="mb-12">
           <h3 className="text-sm font-bold text-secondary mb-4 tracking-[0.2em] font-serif uppercase flex items-center gap-2">
-            <span className="w-4 h-px bg-secondary opacity-30"></span> Coverage Status
+            <span className="w-4 h-px bg-secondary opacity-30"></span> 掲載自治体
           </h3>
+          <p className="mb-4 text-xs tracking-[0.08em] text-secondary/60">
+            現在掲載中の {municipalityCount} 自治体を件数順に表示しています。
+          </p>
           <div className="flex flex-wrap gap-2">
             {Object.entries(allItems.reduce((acc, item) => {
               acc[item.municipality] = (acc[item.municipality] || 0) + 1;
