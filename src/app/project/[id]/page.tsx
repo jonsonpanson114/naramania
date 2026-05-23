@@ -5,6 +5,7 @@ import fs from 'fs';
 import path from 'path';
 import Link from 'next/link';
 import { ArrowLeft, ExternalLink, Trophy, Ruler, Calendar, Banknote, FileText, Building2, Clock, Tag } from 'lucide-react';
+import { getBiddingLabel } from '@/lib/bidding_schedule';
 
 interface PageProps {
     params: Promise<{ id: string }>;
@@ -128,7 +129,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
                         <div className="flex items-start gap-3">
                             <Clock className="w-5 h-5 text-accent mt-0.5" />
                             <div>
-                                <p className="text-[9px] tracking-[0.2em] text-secondary/40 uppercase mb-1">入札日</p>
+                                <p className="text-[9px] tracking-[0.2em] text-secondary/40 uppercase mb-1">{getBiddingLabel(item)}</p>
                                 <p className="text-sm tracking-wider">{formatDate(item.biddingDate)}</p>
                             </div>
                         </div>
@@ -215,7 +216,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
                             <p className="text-sm tracking-wider">{formatDate(item.announcementDate)}</p>
                         </div>
                         <div>
-                            <p className="text-[9px] tracking-[0.2em] text-secondary/40 uppercase mb-1">入札日</p>
+                            <p className="text-[9px] tracking-[0.2em] text-secondary/40 uppercase mb-1">{getBiddingLabel(item)}</p>
                             <p className="text-sm tracking-wider">{formatDate(item.biddingDate)}</p>
                         </div>
                     </div>

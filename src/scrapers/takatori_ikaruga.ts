@@ -26,6 +26,13 @@ function parseJapaneseDate(text: string): string {
     return '';
 }
 
+function parseIkarugaBiddingDate(title: string, pageDate: string): string {
+    const match = title.match(/【(\d{1,2})月(\d{1,2})日入札分】/);
+    if (!match || !pageDate) return '';
+    const year = pageDate.slice(0, 4);
+    return `${year}-${match[1].padStart(2, '0')}-${match[2].padStart(2, '0')}`;
+}
+
 function makeAbsoluteUrl(baseUrl: string, href?: string | null): string {
     if (!href) return baseUrl;
     if (href.startsWith('http')) return href;
@@ -126,6 +133,8 @@ async function scrapeIkarugaAnnouncements(): Promise<BiddingItem[]> {
                 if (cells.length < 2) return;
                 const title = $$(cells[1]).text().replace(/\s+/g, ' ').trim() || $$(cells[0]).text().replace(/\s+/g, ' ').trim();
                 if (!title || title === '工事名' || title === '業務名' || !shouldKeepItem(title)) return;
+                const pageTitle = $$('.pageTitle, h1').first().text().replace(/\s+/g, ' ').trim() || $$('body').text();
+                const biddingDate = parseIkarugaBiddingDate(pageTitle, pageDate);
 
                 items.push({
                     id: buildId('斑鳩町', pageDate, title),
@@ -133,6 +142,7 @@ async function scrapeIkarugaAnnouncements(): Promise<BiddingItem[]> {
                     title,
                     type: classifyType(title),
                     announcementDate: pageDate,
+                    biddingDate: biddingDate || undefined,
                     link: detailUrl,
                     status: '受付中',
                 });

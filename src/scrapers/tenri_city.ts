@@ -9,6 +9,10 @@ import { shouldKeepItem } from './common/filter';
 // 入札結果: PDFのみ → スキップ
 const BASE = 'https://www.city.tenri.nara.jp';
 const ANNOUNCE_URL = `${BASE}/kakuka/soumubu/nyuusatsushinsashitsu/construction_work/kouji_hattyuu_kanren/1395887232147.html`;
+const TENRI_KNOWN_BIDDING_DATES: Record<string, string> = {
+    // 公告文 別紙1（入札日程）より
+    '天理市立柳本小学校校舎18棟改修工事': '2026-05-18',
+};
 
 function classifyType(title: string, type: string): BiddingType {
     const t = title + type;
@@ -79,6 +83,7 @@ export class TenriCityScraper implements Scraper {
                     title,
                     type: classifyType(title, type),
                     announcementDate: annoDate,
+                    biddingDate: TENRI_KNOWN_BIDDING_DATES[title],
                     link: ANNOUNCE_URL,
                     pdfUrl,
                     status: '受付中',

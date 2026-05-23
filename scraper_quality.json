@@ -1,53 +1,14 @@
 {
-  "generatedAt": "2026-05-22T09:05:18.200Z",
-  "source": "daily_scrape",
-  "scrapedCount": 350,
-  "keptCount": 164,
-  "rejectedCount": 225,
-  "oldestAnnouncementDate": "2025-04-09",
+  "generatedAt": "2026-05-23T01:19:41.647Z",
+  "source": "update_selected_municipalities",
+  "keptCount": 163,
+  "oldestAnnouncementDate": "2025-04-11",
   "latestAnnouncementDate": "2026-05-18",
   "municipalityCount": 20,
   "dateAudit": {
     "announcementAfterBiddingCount": 0,
-    "awardedWithoutBiddingDateCount": 2,
-    "awardedWithoutWinnerCount": 3,
-    "openWithWinnerCount": 0,
-    "sampleTitles": [
-      {
-        "municipality": "大和郡山市",
-        "title": "総合公園施設市営球場フェンス緩衝材修繕 入札結果",
-        "status": "落札",
-        "announcementDate": "2025-10-01",
-        "biddingDate": null
-      },
-      {
-        "municipality": "大淀町",
-        "title": "令和7年度耐震改修促進計画改訂業務（第7－建築委－1号）【令和7年7月22日執行】",
-        "status": "落札",
-        "announcementDate": "2025-07-22",
-        "biddingDate": null
-      },
-      {
-        "municipality": "三宅町",
-        "title": "６．式下中学校空調機器設置工事",
-        "status": "落札",
-        "announcementDate": "2025-11-04",
-        "biddingDate": "2025-11-04"
-      },
-      {
-        "municipality": "大和郡山市",
-        "title": "総合公園施設市営球場フェンス緩衝材修繕 入札結果",
-        "status": "落札",
-        "announcementDate": "2025-10-01",
-        "biddingDate": null
-      },
-      {
-        "municipality": "大淀町",
-        "title": "令和7年度耐震改修促進計画改訂業務（第7－建築委－1号）【令和7年7月22日執行】",
-        "status": "落札",
-        "announcementDate": "2025-07-22",
-        "biddingDate": null
-      }
-    ]
+    "awardedWithoutBiddingDateCount": 0,
+    "awardedWithoutWinnerCount": 2,
+    "openWithWinnerCount": 0
   }
 }

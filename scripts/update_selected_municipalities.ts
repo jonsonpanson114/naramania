@@ -3,6 +3,17 @@ import path from 'path';
 import { GojoCityScraper } from '../src/scrapers/gojo_city';
 import { IkomaCityScraper } from '../src/scrapers/ikoma_city';
 import { UdaCityScraper } from '../src/scrapers/uda_city';
+import { KatsuragiCityScraper } from '../src/scrapers/katsuragi_city';
+import { KashiharaCityScraper } from '../src/scrapers/kashihara_city';
+import { KashibaCityScraper } from '../src/scrapers/kashiba_city';
+import { IkarugaTownScraper } from '../src/scrapers/takatori_ikaruga';
+import { OjiTownScraper } from '../src/scrapers/oji_town';
+import { HiragawaScraper } from '../src/scrapers/yamazohiragawa_city';
+import { OyodoTownScraper } from '../src/scrapers/oyodo_town';
+import { YamatokoriyamaCityScraper } from '../src/scrapers/yamatokoriyama_city';
+import { TenriCityScraper } from '../src/scrapers/tenri_city';
+import { GoseCityScraper } from '../src/scrapers/gose_city';
+import { AndoCityScraper } from '../src/scrapers/ando_city';
 import { shouldKeepBiddingItem } from '../src/scrapers/common/filter';
 import { BiddingItem, Scraper } from '../src/types/bidding';
 
@@ -13,12 +24,25 @@ const SCRAPER_MAP: Record<string, Scraper> = {
     gojo: new GojoCityScraper(),
     ikoma: new IkomaCityScraper(),
     uda: new UdaCityScraper(),
+    katsuragi: new KatsuragiCityScraper(),
+    kashihara: new KashiharaCityScraper(),
+    kashiba: new KashibaCityScraper(),
+    ikaruga: new IkarugaTownScraper(),
+    oji: new OjiTownScraper(),
+    heguri: new HiragawaScraper(),
+    oyodo: new OyodoTownScraper(),
+    koriyama: new YamatokoriyamaCityScraper(),
+    tenri: new TenriCityScraper(),
+    gose: new GoseCityScraper(),
+    ando: new AndoCityScraper(),
 };
 
 function normalizeComparisonTitle(title: string): string {
     return title
         .normalize('NFKC')
+        .replace(/\s*(?:入札|開札)?結果$/u, '')
         .replace(/[（(]\s*(?:[0-9]+|[IVX]+)\s*期\s*[)）]/gi, '')
+        .replace(/\s*\(圧縮ファイル:[^)]+\)$/u, '')
         .replace(/\s+/g, '')
         .replace(/[・･]/g, '')
         .trim();

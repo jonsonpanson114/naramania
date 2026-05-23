@@ -5,6 +5,12 @@ import { shouldKeepItem } from './common/filter';
 
 // 安堵町
 const RSS_URL = 'https://www.town.ando.nara.jp/rss/rss.xml';
+const ANDO_KNOWN_BIDDING_DATES: Record<string, string> = {
+    // 公式ページの公告PDFと建設新報の公告要約から確認
+    '条件付き一般競争入札の実施について（安堵町立安堵小中学校屋内運動場空調設備設置工事）': '2026-05-27',
+    '【再度公告】条件付き一般競争入札の実施について（安堵こども園南館外壁改修、トイレ乾式化および洋式化改修工事）': '2026-06-26',
+    '〖再度公告〗条件付き一般競争入札の実施について（安堵こども園南館外壁改修、トイレ乾式化および洋式化改修工事）': '2026-06-26',
+};
 
 function shouldSkip(title: string): boolean {
     return !shouldKeepItem(title);
@@ -87,6 +93,7 @@ async function scrapeAndoCity(): Promise<BiddingItem[]> {
                 title,
                 type: classifyType(title),
                 announcementDate,
+                biddingDate: ANDO_KNOWN_BIDDING_DATES[title],
                 link,
                 status,
             });

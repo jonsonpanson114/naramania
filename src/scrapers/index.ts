@@ -31,7 +31,9 @@ const QUALITY_PATH = path.join(process.cwd(), 'scraper_quality.json');
 function normalizeComparisonTitle(title: string): string {
     return title
         .normalize('NFKC')
+        .replace(/\s*(?:入札|開札)?結果$/u, '')
         .replace(/[（(]\s*(?:[0-9]+|[IVX]+)\s*期\s*[)）]/gi, '')
+        .replace(/\s*\(圧縮ファイル:[^)]+\)$/u, '')
         .replace(/\s+/g, '')
         .replace(/[・･]/g, '')
         .trim();

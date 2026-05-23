@@ -14,6 +14,10 @@ const YOHO_PAGES = [
 
 // プロポーザルページ（リンク形式: 案件番号+案件名がリンクテキスト、日付はh2見出し）
 const PROPOSAL_URL = `${BASE_URL}/jigyosha/nyusatsu_keiyaku/1/7/8272.html`;
+const PROPOSAL_REVIEW_DATES: Record<string, string> = {
+    // 実施要領 6.スケジュール「プレゼンテーション及びヒアリング」
+    '5082000026': '2026-05-26',
+};
 
 // 令和7年度入札結果ページ（テーブル形式: 契約番号|案件名|公表開札録PDF、業種列なし、日付はh2見出し）
 const KEKKA_PAGES = [
@@ -280,6 +284,7 @@ export class KashiharaCityScraper implements Scraper {
                             title,
                             type: classifyByTitle(title),
                             announcementDate: currentDate,
+                            biddingDate: PROPOSAL_REVIEW_DATES[contractNo],
                             link: PROPOSAL_URL,
                             pdfUrl: normalizePdfUrl(href),
                             status: '受付中',

@@ -33,6 +33,43 @@ function parseJapaneseDate(text: string): string {
     return '';
 }
 
+function parseBidOpeningDate(text: string): string | undefined {
+    const normalized = text.normalize('NFKC').replace(/\s+/g, ' ');
+    const match = normalized.match(/第\s*4\s*開札の日時及び場所[\s\S]*?令和\s*(\d+)\s*年\s*(\d+)\s*月\s*(\d+)\s*日/);
+    if (!match) return undefined;
+
+    const year = 2018 + parseInt(match[1], 10);
+    return `${year}-${match[2].padStart(2, '0')}-${match[3].padStart(2, '0')}`;
+}
+
+async function extractBiddingDateFromPdf(pdfUrl?: string): Promise<string | undefined> {
+    if (!pdfUrl) return undefined;
+
+    try {
+        const res = await axios.get<ArrayBuffer>(pdfUrl, {
+            responseType: 'arraybuffer',
+            headers: HEADERS,
+            timeout: 20000,
+        });
+        const pdfjsLib = await import('pdfjs-dist/legacy/build/pdf.mjs');
+        const data = new Uint8Array(res.data as ArrayBuffer);
+        const doc = await pdfjsLib.getDocument({ data, verbosity: 0, isEvalSupported: false }).promise;
+
+        let text = '';
+        for (let i = 1; i <= Math.min(doc.numPages, 3); i++) {
+            const page = await doc.getPage(i);
+            const content = await page.getTextContent();
+            text += content.items.map(item => ('str' in item ? item.str : '')).join(' ');
+            text += '\n';
+        }
+
+        return parseBidOpeningDate(text);
+    } catch (error) {
+        console.error(`[葛城市] PDF解析失敗: ${pdfUrl}`, error instanceof Error ? error.message : String(error));
+        return undefined;
+    }
+}
+
 const HEADERS = { 'User-Agent': 'Mozilla/5.0 (compatible; naramania-scraper/1.0)' };
 
 export class KatsuragiCityScraper implements Scraper {
@@ -65,7 +102,9 @@ export class KatsuragiCityScraper implements Scraper {
                 if (!title || !titleSeemsRelevant(title)) return;
 
                 const annoDate = parseJapaneseDate(dateText) || new Date().toISOString().split('T')[0];
-                const pdfUrl = pdfHref ? (pdfHref.startsWith('//') ? `https:${pdfHref}` : pdfHref) : undefined;
+                const pdfUrl = pdfHref
+                    ? (pdfHref.startsWith('//') ? `https:${pdfHref}` : pdfHref.startsWith('/') ? `${BASE}${pdfHref}` : pdfHref)
+                    : undefined;
 
                 allItems.push({
                     id: makeId(title),
@@ -78,6 +117,14 @@ export class KatsuragiCityScraper implements Scraper {
                     status: '受付中',
                 });
             });
+
+            const CONCURRENCY = 3;
+            for (let i = 0; i < allItems.length; i += CONCURRENCY) {
+                const batch = allItems.slice(i, i + CONCURRENCY);
+                await Promise.all(batch.map(async item => {
+                    item.biddingDate = await extractBiddingDateFromPdf(item.pdfUrl);
+                }));
+            }
 
             console.log(`[葛城市] 入札公告: ${allItems.length}件`);
         } catch (e: unknown) {

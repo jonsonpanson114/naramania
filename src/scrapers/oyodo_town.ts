@@ -88,6 +88,7 @@ export class OyodoTownScraper implements Scraper {
                         title,
                         type: classifyType(title),
                         announcementDate: date,
+                        biddingDate: source.status === '落札' ? (parseJapaneseDate(rawText) || date) : undefined,
                         link: fullUrl,
                         status: source.status,
                     });

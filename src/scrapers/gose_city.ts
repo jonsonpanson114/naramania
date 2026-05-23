@@ -2,9 +2,16 @@ import axios from 'axios';
 import * as cheerio from 'cheerio';
 import { BiddingItem, Scraper } from '../types/bidding';
 import { isRealBiddingItem, classifyWinner, shouldKeepItem } from './common/filter';
+import { parseJapaneseDateToIso } from './common/pdf_text';
 
 // 御所市
 const RSS_URL = 'https://www.city.gose.nara.jp/rss/rss.xml';
+const GOSE_PROPOSAL_FALLBACKS: Record<string, { link: string; biddingDate: string }> = {
+    '御所市義務教育学校建設に関する基本設計及び実施設計業務に係る公募型プロポーザル': {
+        link: 'https://www.city.gose.nara.jp/0000004589.html',
+        biddingDate: '2026-07-29',
+    },
+};
 
 function classifyType(title: string): '建築' | 'コンサル' | 'その他' {
     if (title.includes('設計') || title.includes('測量') || title.includes('コンサル')) {
@@ -23,6 +30,21 @@ function parseRssDate(dateStr: string): string {
     return d.toISOString().split('T')[0];
 }
 
+async function extractProposalReviewDate(link: string): Promise<string | undefined> {
+    try {
+        const res = await axios.get(link, {
+            headers: { 'User-Agent': 'Mozilla/5.0' },
+            timeout: 15000,
+        });
+        const $ = cheerio.load(res.data);
+        const text = $('body').text().replace(/\s+/g, ' ');
+        const scheduleMatch = text.match(/プレゼンテーション・ヒアリング実施\s*令和\s*\d+\s*年\s*\d+\s*月\s*\d+\s*日/u);
+        return scheduleMatch ? parseJapaneseDateToIso(scheduleMatch[0]) || undefined : undefined;
+    } catch {
+        return undefined;
+    }
+}
+
 async function scrapeGoseCity(): Promise<BiddingItem[]> {
     const items: BiddingItem[] = [];
 
@@ -35,40 +57,48 @@ async function scrapeGoseCity(): Promise<BiddingItem[]> {
         const $ = cheerio.load(res.data);
 
         // RSS itemの抽出
-        $('item').each((_i: number, el) => {
+        const rssItems = $('item').toArray();
+        for (let index = 0; index < rssItems.length; index++) {
+            const el = rssItems[index];
             const title = $(el).find('title').text().trim();
-            const link = $(el).find('link').attr('href') || '';
-            if (!title) return;
+            const link = $(el).find('link').text().trim() || $(el).find('link').attr('href') || '';
+            if (!title) continue;
 
             // ①入札・工事関連キーワードがあるか確認
-            if (!isRealBiddingItem(title)) return;
+            if (!isRealBiddingItem(title)) continue;
 
             // ②「入札そのもの」ではないページを除外（ダウンロード案内、申請ガイドなど）
             const NON_BIDDING_PATTERNS = [
                 'ダウンロードについて', '入札参加資格', '申請・変更', '申請について',
                 '一般競争入札公告（業務委託等）', // 汎用案内ページ
             ];
-            if (NON_BIDDING_PATTERNS.some(p => title.includes(p))) return;
+            if (NON_BIDDING_PATTERNS.some(p => title.includes(p))) continue;
 
             // ③ NGワードフィルター（共通）
-            if (!shouldKeepItem(title)) return;
+            if (!shouldKeepItem(title)) continue;
 
             const pubDateStr = $(el).find('pubDate').text().trim();
             const announcementDate = parseRssDate(pubDateStr) || parseRssDate(new Date().toString());
+            const proposalFallback = GOSE_PROPOSAL_FALLBACKS[title];
+            const resolvedLink = link || proposalFallback?.link || '';
+            const biddingDate = title.includes('プロポーザル') && resolvedLink
+                ? await extractProposalReviewDate(resolvedLink).then(date => date || proposalFallback?.biddingDate)
+                : undefined;
 
             const winningContractor = title.includes('落札') ? title.split('：').pop()?.trim() : undefined;
             items.push({
-                id: `gose-${title.slice(0, 20)}`,
+                id: `gose-${title.slice(0, 20)}-${index}`,
                 municipality: '御所市',
                 title,
                 type: classifyType(title),
                 announcementDate: announcementDate,
-                link: link,
+                biddingDate,
+                link: resolvedLink,
                 status: title.includes('落札') ? '落札' : '受付中',
                 winningContractor: winningContractor,
                 winnerType: classifyWinner(winningContractor || '')
             });
-        });
+        }
 
     } catch (e: unknown) {
         console.error('[御所市] エラー:', e instanceof Error ? e.message : String(e) || e);

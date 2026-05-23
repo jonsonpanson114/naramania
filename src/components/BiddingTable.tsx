@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { BiddingItem } from '@/types/bidding';
+import { getBiddingLabel } from '@/lib/bidding_schedule';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowUpDown, Search, X } from 'lucide-react';
 
@@ -345,7 +346,7 @@ export function BiddingTable({ items }: BiddingTableProps) {
                                                             <span className={`text-[9px] font-bold uppercase tracking-[0.22em] ${
                                                                 item.biddingDate ? 'text-rose-600' : 'text-secondary/55'
                                                             }`}>
-                                                                開札日
+                                                                {getBiddingLabel(item)}
                                                             </span>
                                                             <span className={`text-sm font-light tabular-nums tracking-[0.08em] ${
                                                                 item.biddingDate ? 'text-rose-700' : 'text-secondary/35'

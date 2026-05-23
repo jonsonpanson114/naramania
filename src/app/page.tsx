@@ -7,6 +7,7 @@ import { StatsCard } from '@/components/StatsCard';
 import { BiddingTable } from '@/components/BiddingTable';
 import { NewsSection } from '@/components/NewsSection';
 import { NewsTicker } from '@/components/NewsTicker';
+import { getShortBiddingLabel } from '@/lib/bidding_schedule';
 import { Activity, AlertTriangle, ArrowRight, CalendarClock, CheckCircle2, MessageSquareText } from 'lucide-react';
 import Link from 'next/link';
 
@@ -162,7 +163,7 @@ export default async function Home() {
                     <span className="font-bold text-primary">{formatDateLabel(item.announcementDate)}</span>
                   </div>
                   <div className="flex items-center justify-between text-[11px] tracking-[0.08em] text-secondary/70">
-                    <span>開札</span>
+                    <span>{getShortBiddingLabel(item)}</span>
                     <span className="font-bold text-rose-700">{formatDateLabel(item.biddingDate)}</span>
                   </div>
                 </div>

@@ -2,6 +2,7 @@ import axios from 'axios';
 import * as cheerio from 'cheerio';
 import { BiddingItem, Scraper, BiddingType } from '../types/bidding';
 import { shouldKeepItem } from './common/filter';
+import { extractPdfText } from './common/pdf_text';
 
 const OJI_INDEX = 'https://www.town.oji.nara.jp/kakuka/somu/somu/gyomuannai/nyuusatu/nyuusatukouhyou/index.html';
 const BASE_URL = 'https://www.town.oji.nara.jp';
@@ -56,6 +57,27 @@ export class OjiTownScraper implements Scraper {
                 const isResult = detailHtml.includes('入札についての事後公表') || normalizedTitle.includes('事後公表');
                 const titleMatch = detailHtml.match(/<h1[^>]*>([^<]+)<\/h1>/);
                 const title = titleMatch?.[1]?.trim() || normalizedTitle;
+                let biddingDate = '';
+
+                if (!isResult) {
+                    const $detail = cheerio.load(detailHtml);
+                    const pdfHref = $detail('a').toArray()
+                        .map(el => $detail(el).attr('href') || '')
+                        .find(href => /nyusatukoukoku/i.test(href) || /公告/i.test(href));
+                    if (pdfHref) {
+                        const pdfUrl = pdfHref.startsWith('http') ? pdfHref : `https:${pdfHref}`;
+                        try {
+                            const pdfText = await extractPdfText(pdfUrl, 6);
+                            const match = pdfText.match(/(?:第\s*6\s*入札日時等[\s\S]*?)?入札日時\s*令和\s*(\d+)\s*年\s*(\d+)\s*月\s*(\d+)\s*日/);
+                            if (match) {
+                                const year = 2018 + parseInt(match[1], 10);
+                                biddingDate = `${year}-${match[2].padStart(2, '0')}-${match[3].padStart(2, '0')}`;
+                            }
+                        } catch {
+                            biddingDate = '';
+                        }
+                    }
+                }
 
                 items.push({
                     id: `oji-${Buffer.from(fullUrl).toString('base64').slice(0, 12)}`,
@@ -63,6 +85,7 @@ export class OjiTownScraper implements Scraper {
                     title,
                     type: classifyType(title),
                     announcementDate: detailDate || parseUpdatedDate(indexRes.data),
+                    biddingDate: biddingDate || undefined,
                     link: fullUrl,
                     status: isResult ? '落札' : '受付中',
                 });
