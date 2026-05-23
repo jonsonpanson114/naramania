@@ -3,15 +3,18 @@ import { answerBiddingQuestion, ChatTurn } from '@/services/chat_service';
 
 export async function POST(request: NextRequest) {
     try {
-        const body = await request.json();
+        const body = await request.json() as { question?: unknown; history?: unknown };
         const question = typeof body.question === 'string' ? body.question.trim() : '';
         const history = Array.isArray(body.history)
             ? body.history
-                .filter((turn): turn is ChatTurn =>
-                    turn &&
-                    (turn.role === 'user' || turn.role === 'assistant') &&
-                    typeof turn.content === 'string',
-                )
+                .filter((turn: unknown): turn is ChatTurn => {
+                    if (!turn || typeof turn !== 'object') return false;
+                    const candidate = turn as Partial<ChatTurn>;
+                    return (
+                        (candidate.role === 'user' || candidate.role === 'assistant') &&
+                        typeof candidate.content === 'string'
+                    );
+                })
                 .slice(-8)
             : [];
 

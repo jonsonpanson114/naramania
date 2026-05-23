@@ -1,6 +1,7 @@
 import axios from 'axios';
 import * as cheerio from 'cheerio';
 import crypto from 'crypto';
+import type { Element } from 'domhandler';
 import { BiddingItem, Scraper, BiddingType } from '../types/bidding';
 import { shouldKeepItem } from './common/filter';
 
@@ -23,7 +24,7 @@ function shouldSkip(gyoshu: string, title: string): boolean {
     return !shouldKeepItem(title, gyoshu);
 }
 
-function extractAnnouncementTitle(cell: cheerio.Cheerio<cheerio.Element>): string {
+function extractAnnouncementTitle(cell: cheerio.Cheerio<Element>): string {
     const firstLink = cell.find('a').first().text().trim();
     if (firstLink) {
         return firstLink.replace(/\(PDFファイル:[^)]+\)/g, '').trim();

@@ -1,9 +1,9 @@
 ﻿'use client';
 
-import { useState, useEffect } from 'react';
+import { useMemo, useState } from 'react';
 import { BiddingItem } from '@/types/bidding';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Bell, ArrowRight, X, Sparkles, AlertCircle, FileText } from 'lucide-react';
+import { Bell, ArrowRight, X, FileText } from 'lucide-react';
 import Link from 'next/link';
 
 interface AlertNotificationPanelProps {
@@ -11,31 +11,23 @@ interface AlertNotificationPanelProps {
 }
 
 export function AlertNotificationPanel({ items }: AlertNotificationPanelProps) {
-    const [keywords, setKeywords] = useState<string[]>([]);
-    const [matchingItems, setMatchingItems] = useState<BiddingItem[]>([]);
+    const [keywords] = useState<string[]>(() => {
+        if (typeof window === 'undefined') return [];
+        const stored = localStorage.getItem('naramania_alert_keywords');
+        if (!stored) return ['サッシ', 'エレベーター'];
+        return stored.split(',').map(k => k.trim().toLowerCase()).filter(Boolean);
+    });
     const [dismissed, setDismissed] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
 
-    useEffect(() => {
-        if (typeof window === 'undefined') return;
-        const stored = localStorage.getItem('naramania_alert_keywords');
-        if (stored) {
-            const parsed = stored.split(',').map(k => k.trim().toLowerCase()).filter(Boolean);
-            setKeywords(parsed);
-        } else {
-            // Default keywords
-            setKeywords(['サッシ', '空調', 'エレベーター']);
-        }
-    }, []);
-
-    useEffect(() => {
-        if (keywords.length === 0) return;
+    const matchingItems = useMemo(() => {
+        if (keywords.length === 0) return [];
 
         // Filter items from the last 7 days
         const oneWeekAgo = new Date();
         oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
 
-        const filtered = items.filter(item => {
+        return items.filter(item => {
             const announceDate = new Date(item.announcementDate);
             if (announceDate < oneWeekAgo) return false;
 
@@ -47,8 +39,6 @@ export function AlertNotificationPanel({ items }: AlertNotificationPanelProps) {
 
             return keywords.some(kw => searchableText.includes(kw));
         });
-
-        setMatchingItems(filtered);
     }, [keywords, items]);
 
     if (dismissed || matchingItems.length === 0) return null;

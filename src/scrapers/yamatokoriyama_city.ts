@@ -70,6 +70,11 @@ async function scrapeDetailPage(url: string): Promise<{
     contractor?: string;
     tableItems?: Array<{ title: string; type: string; contractor: string; biddingDate: string }>;
 }>;
+async function scrapeDetailPage(url: string, yearHint: string): Promise<{
+    biddingDate?: string;
+    contractor?: string;
+    tableItems?: Array<{ title: string; type: string; contractor: string; biddingDate: string }>;
+}>;
 async function scrapeDetailPage(url: string, yearHint?: string): Promise<{
     biddingDate?: string;
     contractor?: string;

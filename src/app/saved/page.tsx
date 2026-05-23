@@ -5,7 +5,7 @@ import { BiddingItem } from '@/types/bidding';
 import { AppShell } from '@/components/AppShell';
 import { Header } from '@/components/Header';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Bookmark, Trash2, ExternalLink, Briefcase, Award, AlertTriangle, Layers, Send, TrendingUp } from 'lucide-react';
+import { Bookmark, Trash2, ExternalLink, Briefcase, Award, AlertTriangle, Layers, Send, TrendingUp, type LucideIcon } from 'lucide-react';
 import Link from 'next/link';
 
 type SalesStatus = 'pending' | 'active' | 'negotiating' | 'won' | 'lost';
@@ -14,7 +14,7 @@ interface SavedBiddingItem extends BiddingItem {
     salesStatus?: SalesStatus;
 }
 
-const statusConfig: Record<SalesStatus, { label: string; color: string; bg: string; border: string; icon: any }> = {
+const statusConfig: Record<SalesStatus, { label: string; color: string; bg: string; border: string; icon: LucideIcon }> = {
     pending: { label: 'アプローチ前', color: 'text-slate-600', bg: 'bg-slate-50', border: 'border-slate-200', icon: Layers },
     active: { label: '元請け営業中', color: 'text-blue-600', bg: 'bg-blue-50', border: 'border-blue-200', icon: Send },
     negotiating: { label: '見積提示中', color: 'text-amber-600', bg: 'bg-amber-50', border: 'border-amber-200', icon: TrendingUp },
@@ -154,7 +154,7 @@ export default function SavedPage() {
                             </div>
                         ) : (
                             <AnimatePresence mode="popLayout">
-                                {filteredItems.map((item, index) => {
+                                {filteredItems.map((item) => {
                                     const currentStatus = item.salesStatus || 'pending';
                                     const config = statusConfig[currentStatus];
                                     return (

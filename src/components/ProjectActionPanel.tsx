@@ -1,13 +1,13 @@
 ﻿'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { BiddingItem } from '@/types/bidding';
-import { motion } from 'framer-motion';
-import { Bookmark, BookmarkCheck, Briefcase, Trash2, Award, AlertTriangle, Layers, Send, TrendingUp } from 'lucide-react';
+import { Bookmark, Briefcase, Trash2, Award, AlertTriangle, Layers, Send, TrendingUp, type LucideIcon } from 'lucide-react';
 
 type SalesStatus = 'pending' | 'active' | 'negotiating' | 'won' | 'lost';
+type SavedBiddingItem = BiddingItem & { salesStatus?: SalesStatus };
 
-const statusConfig: Record<SalesStatus, { label: string; color: string; bg: string; border: string; icon: any }> = {
+const statusConfig: Record<SalesStatus, { label: string; color: string; bg: string; border: string; icon: LucideIcon }> = {
     pending: { label: 'アプローチ前', color: 'text-slate-600', bg: 'bg-slate-50', border: 'border-slate-200', icon: Layers },
     active: { label: '元請け営業中', color: 'text-blue-600', bg: 'bg-blue-50', border: 'border-blue-200', icon: Send },
     negotiating: { label: '見積提示中', color: 'text-amber-600', bg: 'bg-amber-50', border: 'border-amber-200', icon: TrendingUp },
@@ -19,30 +19,27 @@ interface ProjectActionPanelProps {
     item: BiddingItem;
 }
 
-export function ProjectActionPanel({ item }: ProjectActionPanelProps) {
-    const [isSaved, setIsSaved] = useState(false);
-    const [salesStatus, setSalesStatus] = useState<SalesStatus>('pending');
+function readSavedItem(itemId: string): SavedBiddingItem | undefined {
+    if (typeof window === 'undefined') return undefined;
+    const stored = localStorage.getItem('naramania_saved');
+    if (!stored) return undefined;
+    try {
+        const savedItems = JSON.parse(stored) as SavedBiddingItem[];
+        return savedItems.find(i => i.id === itemId);
+    } catch (error) {
+        console.error(error);
+        return undefined;
+    }
+}
 
-    useEffect(() => {
-        if (typeof window === 'undefined') return;
-        const stored = localStorage.getItem('naramania_saved');
-        if (stored) {
-            try {
-                const savedItems = JSON.parse(stored) as any[];
-                const found = savedItems.find(i => i.id === item.id);
-                if (found) {
-                    setIsSaved(true);
-                    setSalesStatus(found.salesStatus || 'pending');
-                }
-            } catch (e) {
-                console.error(e);
-            }
-        }
-    }, [item.id]);
+export function ProjectActionPanel({ item }: ProjectActionPanelProps) {
+    const initialSavedItem = readSavedItem(item.id);
+    const [isSaved, setIsSaved] = useState(Boolean(initialSavedItem));
+    const [salesStatus, setSalesStatus] = useState<SalesStatus>(initialSavedItem?.salesStatus || 'pending');
 
     const handleSave = () => {
         const stored = localStorage.getItem('naramania_saved');
-        let savedItems: any[] = [];
+        let savedItems: SavedBiddingItem[] = [];
         if (stored) {
             try {
                 savedItems = JSON.parse(stored);
@@ -68,7 +65,7 @@ export function ProjectActionPanel({ item }: ProjectActionPanelProps) {
         const stored = localStorage.getItem('naramania_saved');
         if (stored) {
             try {
-                const savedItems = JSON.parse(stored) as any[];
+                const savedItems = JSON.parse(stored) as SavedBiddingItem[];
                 const updated = savedItems.filter(i => i.id !== item.id);
                 localStorage.setItem('naramania_saved', JSON.stringify(updated));
                 setIsSaved(false);
@@ -82,7 +79,7 @@ export function ProjectActionPanel({ item }: ProjectActionPanelProps) {
         const stored = localStorage.getItem('naramania_saved');
         if (stored) {
             try {
-                const savedItems = JSON.parse(stored) as any[];
+                const savedItems = JSON.parse(stored) as SavedBiddingItem[];
                 const updated = savedItems.map(i =>
                     i.id === item.id ? { ...i, salesStatus: newStatus } : i
                 );

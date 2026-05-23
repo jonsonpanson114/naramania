@@ -1,6 +1,6 @@
 ﻿'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { AppShell } from '@/components/AppShell';
 import { Header } from '@/components/Header';
 import { motion } from 'framer-motion';
@@ -28,6 +28,11 @@ const availableMunicipalities = [
     { id: 'oyodo', label: '吉野郡大淀町', enabled: true },
     { id: 'yoshino', label: '吉野町', enabled: true },
 ];
+type MunicipalitySetting = typeof availableMunicipalities[number];
+type StoredSettings = {
+    municipalities?: MunicipalitySetting[];
+    itemsPerPage?: number;
+};
 
 export default function SettingsPage() {
     const [municipalities, setMunicipalities] = useState(() => {
@@ -39,7 +44,7 @@ export default function SettingsPage() {
             return availableMunicipalities;
         }
         try {
-            const settings = JSON.parse(stored);
+            const settings = JSON.parse(stored) as StoredSettings;
             return settings.municipalities || availableMunicipalities;
         } catch {
             return availableMunicipalities;
@@ -55,7 +60,7 @@ export default function SettingsPage() {
             return 20;
         }
         try {
-            const settings = JSON.parse(stored);
+            const settings = JSON.parse(stored) as StoredSettings;
             return settings.itemsPerPage || 20;
         } catch {
             return 20;
@@ -64,16 +69,16 @@ export default function SettingsPage() {
 
     const [alertKeywords, setAlertKeywords] = useState(() => {
         if (typeof window === 'undefined') {
-            return 'サッシ, 空調, エレベーター';
+            return 'サッシ, エレベーター';
         }
         const stored = localStorage.getItem('naramania_alert_keywords');
-        return stored || 'サッシ, 空調, エレベーター';
+        return stored || 'サッシ, エレベーター';
     });
 
     const [saved, setSaved] = useState(false);
 
     const toggleMunicipality = (id: string) => {
-        setMunicipalities((prev: any[]) =>
+        setMunicipalities((prev) =>
             prev.map(m => m.id === id ? { ...m, enabled: !m.enabled } : m)
         );
         setSaved(false);
@@ -111,7 +116,7 @@ export default function SettingsPage() {
             >
                 <h3 className="text-[10px] tracking-[0.3em] text-secondary/50 uppercase font-bold mb-6">対象自治体</h3>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    {municipalities.map((m: any) => (
+                    {municipalities.map((m) => (
                         <button
                             key={m.id}
                             onClick={() => toggleMunicipality(m.id)}
@@ -149,7 +154,7 @@ export default function SettingsPage() {
                             type="text"
                             value={alertKeywords}
                             onChange={(e) => { setAlertKeywords(e.target.value); setSaved(false); }}
-                            placeholder="サッシ, 空調, 照明, エレベーター, 塗料"
+                            placeholder="サッシ, 照明, エレベーター, 塗料"
                             className="w-full px-4 py-3 border border-border/30 rounded-md bg-white/50 text-sm tracking-wider focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/20 transition-all font-sans"
                         />
                     </div>

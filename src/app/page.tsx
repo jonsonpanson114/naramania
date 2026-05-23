@@ -9,7 +9,7 @@ import { AlertNotificationPanel } from '@/components/AlertNotificationPanel';
 import { NewsSection } from '@/components/NewsSection';
 import { NewsTicker } from '@/components/NewsTicker';
 import { getShortBiddingLabel } from '@/lib/bidding_schedule';
-import { Activity, AlertTriangle, ArrowRight, CalendarClock, CheckCircle2, MessageSquareText } from 'lucide-react';
+import { Activity, ArrowRight, CalendarClock, CheckCircle2, MessageSquareText } from 'lucide-react';
 import Link from 'next/link';
 
 interface QualitySummary {

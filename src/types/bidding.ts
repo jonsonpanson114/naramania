@@ -1,8 +1,8 @@
-﻿export type Municipality = '奈良県' | '奈良市' | '橿原市' | '生駒市' | '大和高田市' | '大和郡山市' | '葛城市' | '五條市' | '御所市' | '天理市' | '桜井市' | '宇陀市' | '田原本町' | '広陵町' | '香芝市' | '川西町' | '三宅町' | '山添村' | '平群町' | '安堵町' | '高取町' | '斑鳩町' | '王寺町' | '大淀町';
+export type Municipality = '奈良県' | '奈良市' | '橿原市' | '生駒市' | '大和高田市' | '大和郡山市' | '葛城市' | '五條市' | '御所市' | '天理市' | '桜井市' | '宇陀市' | '田原本町' | '広陵町' | '香芝市' | '川西町' | '三宅町' | '山添村' | '平群町' | '安堵町' | '高取町' | '斑鳩町' | '三郷町' | '王寺町' | '大淀町';
 
 export type BiddingType = '工事' | '委託' | 'コンサル' | '建築' | 'その他';
 
-export type BiddingStatus = '受付中' | '締切' | '受付終了' | '落札' | '不調';
+export type BiddingStatus = '受付中' | '締切' | '締切間近' | '締切切迫' | '受付終了' | '落札' | '不調' | '不明';
 
 export interface BiddingItem {
   id: string; // Unique ID (hash of URL or composite key)
@@ -30,3 +30,4 @@ export interface Scraper {
   municipality: Municipality;
   scrape(): Promise<BiddingItem[]>;
 }
+

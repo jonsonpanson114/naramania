@@ -5,7 +5,7 @@ import { ProjectActionPanel } from '@/components/ProjectActionPanel';
 import fs from 'fs';
 import path from 'path';
 import Link from 'next/link';
-import { ArrowLeft, ExternalLink, Trophy, Ruler, Calendar, Banknote, FileText, Building2, Clock, Tag, HelpCircle, HardHat, Sparkles } from 'lucide-react';
+import { ArrowLeft, ExternalLink, Trophy, Ruler, Calendar, Banknote, FileText, Building2, Clock, Tag, Sparkles } from 'lucide-react';
 import { getBiddingLabel } from '@/lib/bidding_schedule';
 
 interface PageProps {
@@ -149,11 +149,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
 
             {/* AI Materials Detection (For Subcontractors) */}
             {detectedMaterials.length > 0 && (
-                <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="bg-gradient-to-r from-blue-50/50 to-indigo-50/20 backdrop-blur-xl border border-blue-100 p-8 rounded-2xl shadow-premium mb-12"
-                >
+                <div className="bg-gradient-to-r from-blue-50/50 to-indigo-50/20 backdrop-blur-xl border border-blue-100 p-8 rounded-2xl shadow-premium mb-12">
                     <div className="flex items-center gap-3 mb-4 text-blue-700">
                         <Sparkles className="w-5 h-5" />
                         <h3 className="text-xs tracking-[0.25em] font-bold uppercase font-serif">AI 検知資材・部材（下請け向け営業チャンス）</h3>
@@ -175,7 +171,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
                             </div>
                         ))}
                     </div>
-                </motion.div>
+                </div>
             )}
 
             {/* Summary Panel */}

@@ -168,8 +168,8 @@ export function BiddingTable({ items }: BiddingTableProps) {
                 <span className="text-[9px] font-bold text-accent mr-2 border border-accent/20 bg-accent/5 px-1.5 py-0.5 rounded-sm uppercase tracking-wider shrink-0 inline-block align-middle">仕様書・AI要約ヒット:</span>
                 <span className="align-middle">
                     {start > 0 && '...'}
-                    {parts.map((part, i) => 
-                        regex.test(part) 
+                    {parts.map((part, i) =>
+                        part.toLowerCase() === kw.toLowerCase()
                             ? <strong key={i} className="text-accent bg-accent/10 px-1 py-0.5 rounded font-bold">{part}</strong>
                             : part
                     )}
@@ -189,7 +189,7 @@ export function BiddingTable({ items }: BiddingTableProps) {
                             key={filter}
                             onClick={() => {
                                 setMainFilter(filter);
-                                if (filter !== '落札') setSubFilter('transparent' as any);
+                                if (filter !== '落札') setSubFilter('すべて');
                             }}
                             className={`text-[10px] tracking-[0.25em] relative font-bold font-serif transition-all duration-300 uppercase flex items-center gap-2 ${mainFilter === filter
                                 ? filter === '落札' ? 'text-green-600'
@@ -292,6 +292,20 @@ export function BiddingTable({ items }: BiddingTableProps) {
                             <option value="municipality">自治体順 (50音)</option>
                         </select>
                     </div>
+                </div>
+
+                <div className="flex flex-col gap-2 border-t border-border/20 pt-3">
+                    <span className="text-[9px] tracking-[0.2em] font-bold text-secondary/40 uppercase">自治体</span>
+                    <select
+                        value={selectedMunicipality}
+                        onChange={(e) => setSelectedMunicipality(e.target.value)}
+                        className="w-full max-w-sm bg-white border border-border/60 rounded-lg px-4 py-3 text-xs tracking-wider font-semibold text-secondary/70 focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent transition-all appearance-none cursor-pointer shadow-sm"
+                    >
+                        <option value="すべて">すべての自治体 ({municipalities.length})</option>
+                        {municipalities.map(municipality => (
+                            <option key={municipality} value={municipality}>{municipality}</option>
+                        ))}
+                    </select>
                 </div>
 
                 {/* Detailed Search Toggle */}
