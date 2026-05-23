@@ -4,13 +4,13 @@ import { useState } from 'react';
 import { BiddingItem } from '@/types/bidding';
 import { getBiddingLabel } from '@/lib/bidding_schedule';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowUpDown, Search, X, CheckSquare } from 'lucide-react';
+import { ArrowUpDown, Search, X } from 'lucide-react';
 
 interface BiddingTableProps {
     items: BiddingItem[];
 }
 
-type MainFilter = 'すべて' | '新着' | '建篁E | '設訁E | '落札';
+type MainFilter = 'すべて' | '新着' | '建築' | '設計' | '落札';
 type SubFilter = 'すべて' | 'ゼネコン' | '設計事務所';
 type SortMode = 'newest' | 'oldest' | 'biddingSoonest' | 'biddingLatest' | 'municipality';
 
@@ -78,17 +78,17 @@ export function BiddingTable({ items }: BiddingTableProps) {
             return isNewItem(item.announcementDate) || (item.biddingDate && isNewItem(item.biddingDate));
         }
 
-        // Construction (建篁E -> Shows currently open construction items
-        if (mainFilter === '建篁E) {
-            const isConstructionType = item.type === '建篁E || item.type === '工亁E;
-            const isActiveStatus = item.status === '受付中' || item.status === '締刁E迁E;
+        // Construction
+        if (mainFilter === '建築') {
+            const isConstructionType = item.type === '建築' || item.type === '工事';
+            const isActiveStatus = item.status === '受付中' || item.status === '締切';
             return isConstructionType && isActiveStatus;
         }
 
-        // Design (設訁E -> Shows currently open consulting/design items
-        if (mainFilter === '設訁E) {
-            const isDesignType = item.type === '委訁E || item.type === 'コンサル';
-            const isActiveStatus = item.status === '受付中' || item.status === '締刁E迁E;
+        // Design
+        if (mainFilter === '設計') {
+            const isDesignType = item.type === '委託' || item.type === 'コンサル';
+            const isActiveStatus = item.status === '受付中' || item.status === '締切';
             return isDesignType && isActiveStatus;
         }
 
@@ -129,8 +129,8 @@ export function BiddingTable({ items }: BiddingTableProps) {
         main: {
             'すべて': items.length,
             '新着': items.filter(i => isNewItem(i.announcementDate) || (i.biddingDate && isNewItem(i.biddingDate))).length,
-            '建篁E: items.filter(i => (i.type === '建篁E || i.type === '工亁E) && (i.status === '受付中' || i.status === '締刁E迁E)).length,
-            '設訁E: items.filter(i => (i.type === '委訁E || i.type === 'コンサル') && (i.status === '受付中' || i.status === '締刁E迁E)).length,
+            '建築': items.filter(i => (i.type === '建築' || i.type === '工事') && (i.status === '受付中' || i.status === '締切')).length,
+            '設計': items.filter(i => (i.type === '委託' || i.type === 'コンサル') && (i.status === '受付中' || i.status === '締切')).length,
             '落札': items.filter(i => i.status === '落札').length,
         },
         sub: {
@@ -184,17 +184,17 @@ export function BiddingTable({ items }: BiddingTableProps) {
             {/* Main Filters */}
             <div className="flex justify-center">
                 <div className="flex items-center gap-8 border-b border-border/40 pb-4 px-4">
-                    {(['すべて', '新着', '建篁E, '設訁E, '落札'] as MainFilter[]).map((filter) => (
+                    {(['すべて', '新着', '建築', '設計', '落札'] as MainFilter[]).map((filter) => (
                         <button
                             key={filter}
                             onClick={() => {
                                 setMainFilter(filter);
-                                if (filter !== '落札') setSubFilter('transparent');
+                                if (filter !== '落札') setSubFilter('transparent' as any);
                             }}
                             className={`text-[10px] tracking-[0.25em] relative font-bold font-serif transition-all duration-300 uppercase flex items-center gap-2 ${mainFilter === filter
                                 ? filter === '落札' ? 'text-green-600'
-                                    : filter === '建篁E ? 'text-indigo-600'
-                                        : filter === '設訁E ? 'text-amber-600'
+                                    : filter === '建築' ? 'text-indigo-600'
+                                        : filter === '設計' ? 'text-amber-600'
                                             : filter === '新着' ? 'text-red-600'
                                                 : 'text-primary'
                                 : 'text-gray-400 hover:text-primary'
@@ -203,8 +203,8 @@ export function BiddingTable({ items }: BiddingTableProps) {
                             {filter}
                             <span className={`text-[8px] px-1.5 py-0.5 rounded-full font-sans ${mainFilter === filter
                                 ? filter === '落札' ? 'bg-green-100 text-green-700'
-                                    : filter === '建篁E ? 'bg-indigo-100 text-indigo-700'
-                                        : filter === '設訁E ? 'bg-amber-100 text-amber-700'
+                                    : filter === '建築' ? 'bg-indigo-100 text-indigo-700'
+                                        : filter === '設計' ? 'bg-amber-100 text-amber-700'
                                             : filter === '新着' ? 'bg-red-100 text-red-700'
                                                 : 'bg-primary/10 text-primary'
                                 : 'bg-gray-100 text-gray-400'
@@ -214,7 +214,7 @@ export function BiddingTable({ items }: BiddingTableProps) {
                             {mainFilter === filter && (
                                 <motion.span
                                     layoutId="mainFilterDot"
-                                    className={`absolute -bottom-[17px] left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full ${filter === '落札' ? 'bg-green-500' : filter === '建篁E ? 'bg-indigo-500' : filter === '設訁E ? 'bg-amber-500' : filter === '新着' ? 'bg-red-500' : 'bg-accent'
+                                    className={`absolute -bottom-[17px] left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full ${filter === '落札' ? 'bg-green-500' : filter === '建築' ? 'bg-indigo-500' : filter === '設計' ? 'bg-amber-500' : filter === '新着' ? 'bg-red-500' : 'bg-accent'
                                         }`}
                                     transition={{ type: "spring", stiffness: 300, damping: 30 }}
                                 ></motion.span>
