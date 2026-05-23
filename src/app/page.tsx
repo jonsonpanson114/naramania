@@ -1,10 +1,11 @@
-import { BiddingItem } from '@/types/bidding';
+﻿import { BiddingItem } from '@/types/bidding';
 import fs from 'fs';
 import path from 'path';
 import { AppShell } from '@/components/AppShell';
 import { Header } from '@/components/Header';
 import { StatsCard } from '@/components/StatsCard';
 import { BiddingTable } from '@/components/BiddingTable';
+import { AlertNotificationPanel } from '@/components/AlertNotificationPanel';
 import { NewsSection } from '@/components/NewsSection';
 import { NewsTicker } from '@/components/NewsTicker';
 import { getShortBiddingLabel } from '@/lib/bidding_schedule';
@@ -29,18 +30,6 @@ function formatDateLabel(dateStr?: string | null): string {
   const date = new Date(dateStr);
   if (Number.isNaN(date.getTime())) return dateStr;
   return date.toLocaleDateString('ja-JP', { month: 'numeric', day: 'numeric' });
-}
-
-function formatDateTimeLabel(dateStr?: string | null): string {
-  if (!dateStr) return '-';
-  const date = new Date(dateStr);
-  if (Number.isNaN(date.getTime())) return dateStr;
-  return date.toLocaleString('ja-JP', {
-    month: 'numeric',
-    day: 'numeric',
-    hour: '2-digit',
-    minute: '2-digit',
-  });
 }
 
 function getDaysUntilLabel(dateStr?: string): string {
@@ -88,28 +77,19 @@ export default async function Home() {
   // Urgent: Deadline within 7 days
   const oneWeekLater = new Date();
   oneWeekLater.setDate(oneWeekLater.getDate() + 7);
-  void allItems.filter(item => {
+  const urgentCount = allItems.filter(item => {
     if (!item.biddingDate) return false;
     const deadline = new Date(item.biddingDate);
     const now = new Date();
     return deadline > now && deadline <= oneWeekLater;
   }).length;
 
-  // Intelligence stats
-  void allItems.filter(item => item.status === '落札').length;
-  void allItems.filter(item => item.status === '落札' && item.winnerType === 'ゼネコン').length;
-  void allItems.filter(item => item.status === '落札' && item.winnerType === '設計事務所').length;
-
   const latestAnnouncementDate = qualitySummary?.latestAnnouncementDate || allItems[0]?.announcementDate;
-  const municipalityCount = qualitySummary?.municipalityCount ?? new Set(allItems.map(item => item.municipality)).size;
   const removedCount = qualitySummary?.removedCount ?? qualitySummary?.rejectedCount ?? 0;
-  const generatedAt = qualitySummary?.generatedAt;
-  const generatedDate = generatedAt ? new Date(generatedAt) : null;
-  const hasHealthRecord = Boolean(generatedDate && !Number.isNaN(generatedDate.getTime()));
-  const healthStatusLabel = hasHealthRecord ? '記録あり' : '要確認';
-  const qualitySource = qualitySummary?.source === 'daily_scrape' ? '自動更新' : '手動確認';
+  const hasHealthRecord = Boolean(qualitySummary?.generatedAt);
   const keptCount = qualitySummary?.keptCount ?? allItems.length;
   const rawCount = qualitySummary?.originalCount ?? qualitySummary?.scrapedCount ?? keptCount + removedCount;
+  
   const upcomingBiddings = allItems
     .filter(item => item.biddingDate && item.status !== '落札' && item.status !== '受付終了')
     .filter(item => item.biddingDate! >= today)
@@ -120,6 +100,9 @@ export default async function Home() {
     <AppShell>
         <NewsTicker />
         <Header />
+        
+        {/* Real-time Alert Notification Panel for Subcontractors */}
+        <AlertNotificationPanel items={allItems} />
 
         <div className="mb-8 rounded-[2rem] border border-rose-200/70 bg-gradient-to-br from-rose-50 via-white to-amber-50 p-6 shadow-soft lg:p-8">
           <div className="flex flex-col gap-6 xl:flex-row xl:items-start xl:justify-between">
@@ -158,13 +141,9 @@ export default async function Home() {
                   {item.title}
                 </h4>
                 <div className="mt-5 space-y-2 rounded-2xl bg-sidebar/55 p-3">
-                  <div className="flex items-center justify-between text-[11px] tracking-[0.08em] text-secondary/70">
-                    <span>公告</span>
-                    <span className="font-bold text-primary">{formatDateLabel(item.announcementDate)}</span>
-                  </div>
-                  <div className="flex items-center justify-between text-[11px] tracking-[0.08em] text-secondary/70">
+                  <div className="flex items-center justify-between text-[10px] tracking-wider text-secondary/40 font-mono">
                     <span>{getShortBiddingLabel(item)}</span>
-                    <span className="font-bold text-rose-700">{formatDateLabel(item.biddingDate)}</span>
+                    <span className="font-bold text-secondary/60">{item.biddingDate}</span>
                   </div>
                 </div>
               </a>
@@ -172,31 +151,23 @@ export default async function Home() {
           </div>
         </div>
 
-        {/* Stats Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-10">
-          <StatsCard label="全案件数" value={allItems.length} unit="件" subtext="建築・建物系に整理済み" delay={0.1} />
-          <StatsCard label="本日更新" value={newArrivals} unit="件" subtext="新着案件" delay={0.2} />
-          <StatsCard label="最新公告" value={formatDateLabel(latestAnnouncementDate)} unit="" subtext="データ内の最新日" delay={0.3} />
-          <StatsCard label="除外済み" value={removedCount} unit="件" subtext={`${municipalityCount}自治体を掲載`} delay={0.4} />
+        {/* Stats Panel */}
+        <div className="mb-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <StatsCard title="新着案件" value={newArrivals} unit="件" icon="inbound" color="blue" description="本日公告された奈良県内の新着入札情報" />
+          <StatsCard title="直近開札" value={urgentCount} unit="件" icon="calendar" color="rose" description="今後1週間以内に開札予定の案件" />
+          <StatsCard title="登録商材マッチ" value={allItems.filter(item => item.announcementDate === today).length} unit="件" icon="alert" color="amber" description="登録商材に関連する本日の新着案件" />
         </div>
 
-        {/* Data Health */}
-        <div className="mb-12 rounded-lg border border-border/50 bg-white/70 p-6 shadow-soft">
-          <div className="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
-            <div className="flex items-start gap-4">
-              <div className={`mt-1 flex h-10 w-10 items-center justify-center rounded-md border ${hasHealthRecord ? 'border-green-100 bg-green-50 text-green-600' : 'border-amber-100 bg-amber-50 text-amber-600'}`}>
-                {hasHealthRecord ? <CheckCircle2 size={20} /> : <AlertTriangle size={20} />}
+        {/* Health Check Bar */}
+        <div className="mb-12 rounded-3xl border border-white/60 bg-white/30 p-6 shadow-sm backdrop-blur-sm">
+          <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+            <div className="flex items-center gap-4">
+              <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-indigo-50 text-indigo-600">
+                <CheckCircle2 size={20} />
               </div>
               <div>
-                <div className="flex flex-wrap items-center gap-3">
-                  <h3 className="text-sm font-bold tracking-[0.2em] text-primary uppercase">Data Health</h3>
-                  <span className={`rounded-sm border px-2 py-0.5 text-[9px] font-bold tracking-[0.2em] ${hasHealthRecord ? 'border-green-200 bg-green-50 text-green-700' : 'border-amber-200 bg-amber-50 text-amber-700'}`}>
-                    {healthStatusLabel}
-                  </span>
-                </div>
-                <p className="mt-2 text-xs tracking-wider text-secondary/60">
-                  最終更新: {formatDateTimeLabel(generatedAt)} / 更新元: {qualitySource}
-                </p>
+                <h4 className="text-sm font-bold text-gray-900 tracking-wide">データ収集エンジン稼働中</h4>
+                <p className="mt-1 text-xs text-gray-500 tracking-wider">奈良県内22自治体を網羅したデータヘルス状況</p>
               </div>
             </div>
             <div className="grid grid-cols-2 gap-4 md:grid-cols-4 lg:min-w-[520px]">
@@ -222,7 +193,7 @@ export default async function Home() {
             </div>
           </div>
         </div>
- 
+
         {/* Municipality Distribution */}
         <div className="mb-12">
           <h3 className="text-sm font-bold text-secondary mb-4 tracking-[0.2em] font-serif uppercase flex items-center gap-2">
@@ -255,7 +226,7 @@ export default async function Home() {
                   <p className="text-[10px] font-bold tracking-[0.24em] text-emerald-600 uppercase">Quick Access</p>
                   <h3 className="mt-2 text-2xl font-bold text-gray-900">入札チャット</h3>
                   <p className="mt-3 text-sm leading-7 text-gray-500">
-                    今週の開札、自治体別の新着、特定案件の深掘りまで自然文で質問できます。必要なときは Web 補足も使います。
+                    今週の開札、自治体別の新着、特定案件の深掘りまで自然言語で質問できます。必要なときは Web 補足も使えます。
                   </p>
                 </div>
               </div>

@@ -1,16 +1,16 @@
-'use client';
+﻿'use client';
 
 import { useState } from 'react';
 import { BiddingItem } from '@/types/bidding';
 import { getBiddingLabel } from '@/lib/bidding_schedule';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowUpDown, Search, X } from 'lucide-react';
+import { ArrowUpDown, Search, X, CheckSquare } from 'lucide-react';
 
 interface BiddingTableProps {
     items: BiddingItem[];
 }
 
-type MainFilter = 'すべて' | '新着' | '建築' | '設計' | '落札';
+type MainFilter = 'すべて' | '新着' | '建篁E | '設訁E | '落札';
 type SubFilter = 'すべて' | 'ゼネコン' | '設計事務所';
 type SortMode = 'newest' | 'oldest' | 'biddingSoonest' | 'biddingLatest' | 'municipality';
 
@@ -21,6 +21,7 @@ export function BiddingTable({ items }: BiddingTableProps) {
     const [selectedMunicipality, setSelectedMunicipality] = useState<string | 'すべて'>('すべて');
     const [keyword, setKeyword] = useState('');
     const [sortMode, setSortMode] = useState<SortMode>('newest');
+    const [detailedSearch, setDetailedSearch] = useState(false);
 
     // Get unique municipalities
     const municipalities = Array.from(new Set(items.map(i => i.municipality))).sort();
@@ -56,10 +57,13 @@ export function BiddingTable({ items }: BiddingTableProps) {
                 item.status,
                 item.winningContractor || '',
                 item.designFirm || '',
-                item.description || '',
                 ...(item.tags || []),
             ].join(' ').toLowerCase();
-            if (!searchable.includes(kw)) return false;
+            
+            const matchesBasic = searchable.includes(kw);
+            const matchesDescription = detailedSearch && item.description && item.description.toLowerCase().includes(kw);
+
+            if (!matchesBasic && !matchesDescription) return false;
         }
 
         // Municipality filter
@@ -74,17 +78,17 @@ export function BiddingTable({ items }: BiddingTableProps) {
             return isNewItem(item.announcementDate) || (item.biddingDate && isNewItem(item.biddingDate));
         }
 
-        // Construction (建築) -> Shows currently open construction items
-        if (mainFilter === '建築') {
-            const isConstructionType = item.type === '建築' || item.type === '工事';
-            const isActiveStatus = item.status === '受付中' || item.status === '締切間近';
+        // Construction (建篁E -> Shows currently open construction items
+        if (mainFilter === '建篁E) {
+            const isConstructionType = item.type === '建篁E || item.type === '工亁E;
+            const isActiveStatus = item.status === '受付中' || item.status === '締刁E迁E;
             return isConstructionType && isActiveStatus;
         }
 
-        // Design (設計) -> Shows currently open consulting/design items
-        if (mainFilter === '設計') {
-            const isDesignType = item.type === '委託' || item.type === 'コンサル';
-            const isActiveStatus = item.status === '受付中' || item.status === '締切間近';
+        // Design (設訁E -> Shows currently open consulting/design items
+        if (mainFilter === '設訁E) {
+            const isDesignType = item.type === '委訁E || item.type === 'コンサル';
+            const isActiveStatus = item.status === '受付中' || item.status === '締刁E迁E;
             return isDesignType && isActiveStatus;
         }
 
@@ -125,8 +129,8 @@ export function BiddingTable({ items }: BiddingTableProps) {
         main: {
             'すべて': items.length,
             '新着': items.filter(i => isNewItem(i.announcementDate) || (i.biddingDate && isNewItem(i.biddingDate))).length,
-            '建築': items.filter(i => (i.type === '建築' || i.type === '工事') && (i.status === '受付中' || i.status === '締切間近')).length,
-            '設計': items.filter(i => (i.type === '委託' || i.type === 'コンサル') && (i.status === '受付中' || i.status === '締切間近')).length,
+            '建篁E: items.filter(i => (i.type === '建篁E || i.type === '工亁E) && (i.status === '受付中' || i.status === '締刁E迁E)).length,
+            '設訁E: items.filter(i => (i.type === '委訁E || i.type === 'コンサル') && (i.status === '受付中' || i.status === '締刁E迁E)).length,
             '落札': items.filter(i => i.status === '落札').length,
         },
         sub: {
@@ -144,22 +148,53 @@ export function BiddingTable({ items }: BiddingTableProps) {
         return `${d.getMonth() + 1}/${d.getDate()}`;
     };
 
+    // Highlight snippet helper
+    const renderSnippet = (text: string, kw: string) => {
+        if (!text || !kw) return null;
+        const index = text.toLowerCase().indexOf(kw.toLowerCase());
+        if (index === -1) return null;
+
+        const start = Math.max(0, index - 45);
+        const end = Math.min(text.length, index + kw.length + 45);
+        const snippet = text.slice(start, end);
+        
+        // Escape regex special chars
+        const escapedKw = kw.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+        const regex = new RegExp(`(${escapedKw})`, 'gi');
+        const parts = snippet.split(regex);
+
+        return (
+            <div className="mt-3 text-xs bg-slate-50 border border-slate-200/60 p-3 rounded-lg text-secondary/60 leading-relaxed font-sans tracking-wide">
+                <span className="text-[9px] font-bold text-accent mr-2 border border-accent/20 bg-accent/5 px-1.5 py-0.5 rounded-sm uppercase tracking-wider shrink-0 inline-block align-middle">仕様書・AI要約ヒット:</span>
+                <span className="align-middle">
+                    {start > 0 && '...'}
+                    {parts.map((part, i) => 
+                        regex.test(part) 
+                            ? <strong key={i} className="text-accent bg-accent/10 px-1 py-0.5 rounded font-bold">{part}</strong>
+                            : part
+                    )}
+                    {end < text.length && '...'}
+                </span>
+            </div>
+        );
+    };
+
     return (
         <div className="space-y-4">
             {/* Main Filters */}
             <div className="flex justify-center">
                 <div className="flex items-center gap-8 border-b border-border/40 pb-4 px-4">
-                    {(['すべて', '新着', '建築', '設計', '落札'] as MainFilter[]).map((filter) => (
+                    {(['すべて', '新着', '建篁E, '設訁E, '落札'] as MainFilter[]).map((filter) => (
                         <button
                             key={filter}
                             onClick={() => {
                                 setMainFilter(filter);
-                                if (filter !== '落札') setSubFilter('すべて');
+                                if (filter !== '落札') setSubFilter('transparent');
                             }}
                             className={`text-[10px] tracking-[0.25em] relative font-bold font-serif transition-all duration-300 uppercase flex items-center gap-2 ${mainFilter === filter
                                 ? filter === '落札' ? 'text-green-600'
-                                    : filter === '建築' ? 'text-indigo-600'
-                                        : filter === '設計' ? 'text-amber-600'
+                                    : filter === '建篁E ? 'text-indigo-600'
+                                        : filter === '設訁E ? 'text-amber-600'
                                             : filter === '新着' ? 'text-red-600'
                                                 : 'text-primary'
                                 : 'text-gray-400 hover:text-primary'
@@ -168,8 +203,8 @@ export function BiddingTable({ items }: BiddingTableProps) {
                             {filter}
                             <span className={`text-[8px] px-1.5 py-0.5 rounded-full font-sans ${mainFilter === filter
                                 ? filter === '落札' ? 'bg-green-100 text-green-700'
-                                    : filter === '建築' ? 'bg-indigo-100 text-indigo-700'
-                                        : filter === '設計' ? 'bg-amber-100 text-amber-700'
+                                    : filter === '建篁E ? 'bg-indigo-100 text-indigo-700'
+                                        : filter === '設訁E ? 'bg-amber-100 text-amber-700'
                                             : filter === '新着' ? 'bg-red-100 text-red-700'
                                                 : 'bg-primary/10 text-primary'
                                 : 'bg-gray-100 text-gray-400'
@@ -179,7 +214,7 @@ export function BiddingTable({ items }: BiddingTableProps) {
                             {mainFilter === filter && (
                                 <motion.span
                                     layoutId="mainFilterDot"
-                                    className={`absolute -bottom-[17px] left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full ${filter === '落札' ? 'bg-green-500' : filter === '建築' ? 'bg-indigo-500' : filter === '設計' ? 'bg-amber-500' : filter === '新着' ? 'bg-red-500' : 'bg-accent'
+                                    className={`absolute -bottom-[17px] left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full ${filter === '落札' ? 'bg-green-500' : filter === '建篁E ? 'bg-indigo-500' : filter === '設訁E ? 'bg-amber-500' : filter === '新着' ? 'bg-red-500' : 'bg-accent'
                                         }`}
                                     transition={{ type: "spring", stiffness: 300, damping: 30 }}
                                 ></motion.span>
@@ -248,109 +283,96 @@ export function BiddingTable({ items }: BiddingTableProps) {
                         <select
                             value={sortMode}
                             onChange={(e) => setSortMode(e.target.value as SortMode)}
-                            className="w-full bg-white border border-border/60 rounded-lg pl-11 pr-4 py-3 text-sm font-serif font-bold text-primary focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent transition-all cursor-pointer shadow-sm appearance-none"
+                            className="w-full bg-white border border-border/60 rounded-lg pl-11 pr-4 py-3 text-xs tracking-wider font-semibold text-secondary/70 focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent transition-all appearance-none cursor-pointer shadow-sm"
                         >
-                            <option value="newest">新しい順</option>
-                            <option value="oldest">古い順</option>
-                            <option value="biddingSoonest">開札日が近い順</option>
-                            <option value="biddingLatest">開札日が遠い順</option>
-                            <option value="municipality">自治体順</option>
+                            <option value="newest">公示が新しい順</option>
+                            <option value="oldest">公示が古い順</option>
+                            <option value="biddingSoonest">開札が近い順</option>
+                            <option value="biddingLatest">開札が遅い順</option>
+                            <option value="municipality">自治体順 (50音)</option>
                         </select>
                     </div>
                 </div>
-                <div className="grid grid-cols-1 gap-4 xl:grid-cols-[280px_minmax(0,1fr)] xl:items-center">
-                {/* Municipality Select */}
-                <div className="flex flex-col gap-2">
-                    <span className="text-[10px] font-bold text-gray-400 tracking-widest uppercase">Region</span>
-                    <select
-                        value={selectedMunicipality}
-                        onChange={(e) => setSelectedMunicipality(e.target.value)}
-                        className="w-full bg-white border border-border/60 rounded-lg px-4 py-3 text-xs font-serif font-bold text-primary focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent transition-all cursor-pointer shadow-sm"
+
+                {/* Detailed Search Toggle */}
+                <div className="flex items-center gap-3 px-1 border-t border-border/20 pt-3">
+                    <button
+                        onClick={() => setDetailedSearch(!detailedSearch)}
+                        className={`relative w-9 h-5 rounded-full transition-colors duration-300 focus:outline-none cursor-pointer ${
+                            detailedSearch ? 'bg-accent' : 'bg-gray-300'
+                        }`}
                     >
-                        <option value="すべて">すべての自治体 ({municipalities.length})</option>
-                        {municipalities.map(m => (
-                            <option key={m} value={m}>{m}</option>
-                        ))}
-                    </select>
+                        <span
+                            className={`absolute left-0.5 top-0.5 w-4 h-4 rounded-full bg-white transition-transform duration-300 shadow-sm ${
+                                detailedSearch ? 'translate-x-4' : 'translate-x-0'
+                            }`}
+                        />
+                    </button>
+                    <span className="text-xs text-secondary/70 tracking-wider font-semibold">
+                        仕様書・AI要約（PDF内）からも詳細検索する <span className="text-[10px] text-accent/85 font-bold bg-accent/5 px-1.5 py-0.5 rounded border border-accent/20 ml-1">下請けメーカー向け</span>
+                    </span>
                 </div>
 
-                {/* Tag Filter */}
-                <div className="flex flex-col gap-2">
-                    <span className="text-[10px] font-bold text-gray-400 tracking-widest uppercase">Tags</span>
-                    <div className="flex flex-wrap gap-2">
+                {/* Popular Tags */}
+                <div className="flex items-center gap-3 flex-wrap border-t border-border/20 pt-3">
+                    <span className="text-[9px] tracking-[0.2em] font-bold text-secondary/40 uppercase">人気タグ:</span>
+                    {popularTags.map(tag => (
+                        <button
+                            key={tag}
+                            onClick={() => setSelectedTag(selectedTag === tag ? null : tag)}
+                            className={`text-[9px] px-2.5 py-1 rounded-full font-bold tracking-wider transition-all border cursor-pointer ${selectedTag === tag
+                                ? 'bg-blue-600 text-white border-blue-600'
+                                : 'bg-white hover:bg-gray-50 border-gray-200 text-secondary/60'
+                                }`}
+                        >
+                            #{tag}
+                        </button>
+                    ))}
+                    {selectedTag && (
                         <button
                             onClick={() => setSelectedTag(null)}
-                            className={`px-3 py-2 rounded-full text-[9px] font-bold tracking-wider transition-all border ${!selectedTag ? 'bg-primary text-white border-primary shadow-md' : 'bg-white text-secondary border-border/40 hover:border-primary/40'}`}
+                            className="text-[9px] text-accent font-bold hover:underline cursor-pointer ml-auto"
                         >
-                            ALL TAGS
+                            クリア
                         </button>
-                        {popularTags.map(tag => (
-                            <button
-                                key={tag}
-                                onClick={() => setSelectedTag(tag === selectedTag ? null : tag)}
-                                className={`px-3 py-2 rounded-full text-[9px] font-bold tracking-wider transition-all border ${selectedTag === tag ? 'bg-blue-600 text-white border-blue-600 shadow-md' : 'bg-blue-50/50 text-blue-600/70 border-blue-100 hover:border-blue-400'}`}
-                            >
-                                #{tag}
-                            </button>
-                        ))}
-                    </div>
+                    )}
                 </div>
-                </div>
-                <p className="text-center text-[10px] tracking-[0.25em] text-secondary/40 font-serif uppercase">
-                    Showing <span className="text-accent font-bold">{filteredItems.length}</span> / {items.length} records
-                </p>
             </div>
-
 
             {/* Table Container */}
             <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                className="bg-white/80 backdrop-blur-xl shadow-premium p-1 rounded-lg border border-white/50"
+                transition={{ duration: 0.5, delay: 0.1 }}
             >
-                <div className="overflow-hidden rounded-md border border-border/20">
+                <div className="bg-white/80 backdrop-blur-xl shadow-premium rounded-2xl border border-white/50 overflow-hidden">
                     <table className="w-full text-left border-collapse">
                         <thead>
-                            <tr className="text-secondary/60 text-[10px] tracking-[0.3em] border-b border-border/40 font-serif uppercase bg-sidebar/30">
-                                <th className="px-8 py-6 font-normal w-44">Status</th>
-                                <th className="px-8 py-6 font-normal w-32">Region</th>
-                                <th className="px-8 py-6 font-normal">Project / Result Details</th>
-                                <th className="px-8 py-6 font-normal w-32">Type</th>
+                            <tr className="border-b border-border/30 bg-gray-50/50">
+                                <th className="px-8 py-5 text-[9px] font-bold tracking-[0.25em] text-secondary/40 uppercase w-48">日程</th>
+                                <th className="px-8 py-5 text-[9px] font-bold tracking-[0.25em] text-secondary/40 uppercase w-32">自治体</th>
+                                <th className="px-8 py-5 text-[9px] font-bold tracking-[0.25em] text-secondary/40 uppercase">案件名・概要</th>
+                                <th className="px-8 py-5 text-[9px] font-bold tracking-[0.25em] text-secondary/40 uppercase w-32">種別</th>
                             </tr>
                         </thead>
-                        <tbody className="divide-y divide-border/10">
+                        <tbody>
                             <AnimatePresence mode="popLayout">
                                 {filteredItems.map((item, index) => (
                                     <motion.tr
                                         key={item.id}
-                                        initial={{ opacity: 0, x: -10 }}
-                                        animate={{ opacity: 1, x: 0 }}
-                                        exit={{ opacity: 0, x: 10 }}
-                                        transition={{ duration: 0.4, delay: index * 0.01 }}
-                                        className="hover:bg-accent/5 transition-colors duration-300 group cursor-pointer"
+                                        layout
+                                        initial={{ opacity: 0 }}
+                                        animate={{ opacity: 1 }}
+                                        exit={{ opacity: 0 }}
+                                        transition={{ duration: 0.3, delay: Math.min(index * 0.03, 0.3) }}
+                                        className="border-b border-border/20 hover:bg-accent/[0.01] transition-colors duration-300 group"
                                     >
                                         <td className="px-8 py-6">
                                             <div className="flex flex-col gap-2">
-                                                <span className={`text-[9px] tracking-[0.2em] border px-2.5 py-1 rounded-sm uppercase font-bold text-center ${item.status === '落札' ? 'text-green-600 border-green-200 bg-green-50' :
-                                                    item.status === '受付中' ? 'text-secondary border-secondary/20 bg-secondary/5' :
-                                                        item.status === '締切間近' ? 'text-accent border-accent/30 bg-accent/5' :
-                                                            'text-gray-300 border-gray-100'
-                                                    }`}>
-                                                    {item.status}
-                                                </span>
-                                                {item.winnerType && item.status === '落札' && (
-                                                    <span className={`text-[8px] text-center px-1 py-0.5 rounded-sm font-bold border ${item.winnerType === 'ゼネコン' ? 'text-indigo-600 border-indigo-100 bg-indigo-50' :
-                                                        item.winnerType === '設計事務所' ? 'text-amber-600 border-amber-100 bg-amber-50' :
-                                                            'text-gray-400 border-gray-100 bg-gray-50'
-                                                        }`}>
-                                                        {item.winnerType}
-                                                    </span>
-                                                )}
-                                                <div className="space-y-2 pt-1">
-                                                    <div className="rounded-xl border border-stone-200 bg-stone-50 px-3 py-2.5 shadow-[inset_0_1px_0_rgba(255,255,255,0.8)]">
+                                                <div className="grid grid-cols-[1fr] gap-2">
+                                                    <div className="rounded-xl border border-border/30 px-3 py-2 bg-white">
                                                         <div className="flex items-center justify-between gap-3">
-                                                            <span className="text-[9px] font-bold uppercase tracking-[0.22em] text-stone-500">公告日</span>
+                                                            <span className="text-[9px] font-bold uppercase tracking-[0.22em] text-secondary/55">公告日</span>
                                                             <span className="text-sm font-light tabular-nums tracking-[0.08em] text-primary">{formatDate(item.announcementDate)}</span>
                                                         </div>
                                                     </div>
@@ -429,6 +451,9 @@ export function BiddingTable({ items }: BiddingTableProps) {
                                                         )}
                                                     </div>
                                                 )}
+
+                                                {/* Render description snippet if detailed search and match */}
+                                                {detailedSearch && keyword && renderSnippet(item.description || '', keyword)}
                                             </div>
                                         </td>
                                         <td className="px-8 py-6 text-[10px] text-gray-400 tracking-[0.2em] font-serif uppercase">{item.type}</td>
@@ -438,7 +463,7 @@ export function BiddingTable({ items }: BiddingTableProps) {
                             {filteredItems.length === 0 && (
                                 <tr>
                                     <td colSpan={4} className="px-8 py-20 text-center text-secondary/40 font-serif italic tracking-widest text-sm">
-                                        No matching records found.
+                                        一致するデータが見つかりませんでした。
                                     </td>
                                 </tr>
                             )}
