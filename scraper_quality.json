@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-05-25T05:30:47.863Z",
+  "generatedAt": "2026-05-25T08:26:24.629Z",
   "source": "daily_scrape",
   "keptCount": 138,
   "municipalityCount": 19,
   "oldestAnnouncementDate": "2025-04-11",
   "latestAnnouncementDate": "2026-05-18",
-  "scrapedCount": 337,
+  "scrapedCount": 336,
   "rejectedCount": 229,
   "dateAudit": {
     "announcementAfterBiddingCount": 0,
@@ -28,6 +28,6 @@
     "intelligenceExtractedCount": 48,
     "geminiExtractedCount": 48,
     "taggedCount": 48,
-    "lastAugmentedAt": "2026-05-25T05:30:48.693Z"
+    "lastAugmentedAt": "2026-05-25T08:26:25.519Z"
   }
 }
