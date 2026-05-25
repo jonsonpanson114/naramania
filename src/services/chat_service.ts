@@ -48,9 +48,11 @@ interface QueryIntent {
     wantsAwarded: boolean;
     wantsOpen: boolean;
     wantsThisWeek: boolean;
+    wantsLastWeek: boolean;
     wantsThisMonth: boolean;
     wantsDesign: boolean;
     wantsConstruction: boolean;
+    wantsWinner: boolean;
     explicitWebSearch: boolean;
     asksSpecificProject: boolean;
 }
@@ -93,11 +95,16 @@ function formatDate(date: Date): string {
 }
 
 function getThisWeekRangeJst() {
+    return getRelativeWeekRangeJst(0);
+}
+
+function getRelativeWeekRangeJst(weekOffset: number) {
     const now = getNowInJst();
     const start = new Date(now);
     const day = start.getDay();
     const diff = (day + 6) % 7;
     start.setDate(start.getDate() - diff);
+    start.setDate(start.getDate() + weekOffset * 7);
     start.setHours(0, 0, 0, 0);
 
     const end = new Date(start);
@@ -189,9 +196,11 @@ function inferIntent(query: string, history: ChatTurn[]): QueryIntent {
         wantsAwarded: /落札|結果/.test(fullQuery),
         wantsOpen: /受付中|募集中/.test(fullQuery),
         wantsThisWeek: /今週/.test(fullQuery),
+        wantsLastWeek: /先週/.test(fullQuery),
         wantsThisMonth: /今月/.test(fullQuery),
         wantsDesign: /設計|監理|コンサル|委託/.test(fullQuery),
         wantsConstruction: /工事|改修|新築|解体/.test(fullQuery),
+        wantsWinner: /ゼネコン|元請け|施工会社|落札者|業者/.test(fullQuery),
         explicitWebSearch: /ネット|web|検索|調べて|見つからない|サイトにない|他にも/.test(fullQuery),
         asksSpecificProject: looksLikeSpecificProject(fullQuery),
     };
@@ -236,7 +245,11 @@ function isWithinRange(dateValue: string | undefined, startLabel: string, endLab
 function findLocalMatches(query: string, items: BiddingItem[], history: ChatTurn[]): BiddingItem[] {
     const tokens = tokenizeQuery(query);
     const intent = inferIntent(query, history);
-    const weekRange = intent.wantsThisWeek ? getThisWeekRangeJst() : null;
+    const weekRange = intent.wantsThisWeek
+        ? getRelativeWeekRangeJst(0)
+        : intent.wantsLastWeek
+            ? getRelativeWeekRangeJst(-1)
+            : null;
     const monthRange = intent.wantsThisMonth ? getThisMonthRangeJst() : null;
 
     let candidates = [...items];
@@ -303,12 +316,16 @@ function buildLocalSources(matches: BiddingItem[]): ChatSource[] {
 }
 
 function formatItemLine(item: BiddingItem): string {
+    return formatItemLineWithOptions(item, false);
+}
+
+function formatItemLineWithOptions(item: BiddingItem, includeWinnerFallback: boolean): string {
     const bits = [
         `${item.municipality} / ${item.title}`,
         `公告 ${item.announcementDate}`,
         item.biddingDate ? `開札 ${item.biddingDate}` : '',
         item.status,
-        item.winningContractor ? `落札者 ${item.winningContractor}` : '',
+        item.winningContractor ? `落札者 ${item.winningContractor}` : includeWinnerFallback ? '落札者 未取得' : '',
     ].filter(Boolean);
     return `- ${bits.join(' / ')}`;
 }
@@ -334,10 +351,15 @@ function buildDeterministicAnswer(query: string, matches: BiddingItem[], history
     const intent = inferIntent(query, history);
     if (matches.length === 0) return null;
 
-    if (intent.wantsThisWeek && intent.wantsBidding) {
-        const lines = matches.slice(0, 8).map(formatItemLine).join('\n');
+    if ((intent.wantsThisWeek || intent.wantsLastWeek) && intent.wantsBidding) {
+        const scope = intent.wantsLastWeek ? '先週' : '今週';
+        const lines = matches
+            .slice(0, 8)
+            .sort((a, b) => (a.biddingDate || '9999-99-99').localeCompare(b.biddingDate || '9999-99-99'))
+            .map((item) => formatItemLineWithOptions(item, intent.wantsWinner))
+            .join('\n');
         return {
-            answer: `今週の開札案件は ${matches.length} 件あります。\n${lines}`,
+            answer: `${scope}の開札案件は ${matches.length} 件あります。\n${lines}`,
             followups: buildFollowups(intent, matches),
         };
     }
@@ -346,7 +368,7 @@ function buildDeterministicAnswer(query: string, matches: BiddingItem[], history
         const lines = matches
             .slice(0, 8)
             .sort((a, b) => (a.biddingDate || '9999-99-99').localeCompare(b.biddingDate || '9999-99-99'))
-            .map(formatItemLine)
+            .map((item) => formatItemLineWithOptions(item, intent.wantsWinner))
             .join('\n');
         return {
             answer: `開札関連で確認できる案件は ${matches.length} 件あります。\n${lines}`,
@@ -435,6 +457,7 @@ function extractTextFromCandidate(response: GeminiRestResponse): string {
 function buildPrompt(query: string, localMatches: BiddingItem[], history: ChatTurn[]): string {
     const today = getNowInJst().toLocaleDateString('ja-JP');
     const weekRange = getThisWeekRangeJst();
+    const lastWeekRange = getRelativeWeekRangeJst(-1);
     const recentHistory = history.slice(-6)
         .map(turn => `${turn.role === 'user' ? 'user' : 'assistant'}: ${turn.content}`)
         .join('\n');
@@ -447,12 +470,14 @@ function buildPrompt(query: string, localMatches: BiddingItem[], history: ChatTu
     return `
 あなたは奈良県の建築・設計系入札案件を案内するアシスタントです。
 今日は ${today} です。今週は ${weekRange.startLabel} から ${weekRange.endLabel} です。
+先週は ${lastWeekRange.startLabel} から ${lastWeekRange.endLabel} です。
 
 回答ルール:
 - まずローカル案件データを根拠に答える
 - ローカルで足りない場合のみ、Google Search grounding の内容を補足する
 - ローカルデータにあることを無視して別の結論を書かない
 - 日付は具体的に YYYY-MM-DD で書く
+- 落札者やゼネコンを聞かれたら、各案件ごとに分けて明記する
 - 不確かな部分は「ローカル未確認」「Web上ではこう見える」と分ける
 - 回答は簡潔にし、最初に結論、その後に箇条書き
 - 最後に次に聞くと良い短い followups を 3 件まで返す
