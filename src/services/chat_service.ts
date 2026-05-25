@@ -77,6 +77,23 @@ interface QueryIntent {
     wantsCarryOver: boolean;
 }
 
+interface QueryIntentPayload {
+    municipality?: string | null;
+    wantsBidding?: boolean;
+    wantsAnnouncement?: boolean;
+    wantsAwarded?: boolean;
+    wantsOpen?: boolean;
+    wantsThisWeek?: boolean;
+    wantsLastWeek?: boolean;
+    wantsThisMonth?: boolean;
+    wantsDesign?: boolean;
+    wantsConstruction?: boolean;
+    wantsWinner?: boolean;
+    explicitWebSearch?: boolean;
+    asksSpecificProject?: boolean;
+    wantsCarryOver?: boolean;
+}
+
 const MUNICIPALITY_ALIASES: Array<{ canonical: Municipality; aliases: string[] }> = [
     { canonical: '五條市', aliases: ['五条市'] },
     { canonical: '田原本町', aliases: ['たわらもと町'] },
@@ -93,6 +110,40 @@ const CHAT_RESPONSE_SCHEMA = {
         },
     },
     required: ['answer'],
+};
+const QUERY_INTENT_SCHEMA = {
+    type: 'object',
+    properties: {
+        municipality: { type: 'string', nullable: true },
+        wantsBidding: { type: 'boolean' },
+        wantsAnnouncement: { type: 'boolean' },
+        wantsAwarded: { type: 'boolean' },
+        wantsOpen: { type: 'boolean' },
+        wantsThisWeek: { type: 'boolean' },
+        wantsLastWeek: { type: 'boolean' },
+        wantsThisMonth: { type: 'boolean' },
+        wantsDesign: { type: 'boolean' },
+        wantsConstruction: { type: 'boolean' },
+        wantsWinner: { type: 'boolean' },
+        explicitWebSearch: { type: 'boolean' },
+        asksSpecificProject: { type: 'boolean' },
+        wantsCarryOver: { type: 'boolean' },
+    },
+    required: [
+        'wantsBidding',
+        'wantsAnnouncement',
+        'wantsAwarded',
+        'wantsOpen',
+        'wantsThisWeek',
+        'wantsLastWeek',
+        'wantsThisMonth',
+        'wantsDesign',
+        'wantsConstruction',
+        'wantsWinner',
+        'explicitWebSearch',
+        'asksSpecificProject',
+        'wantsCarryOver',
+    ],
 };
 
 const MUNICIPALITIES: Municipality[] = [
@@ -193,6 +244,11 @@ function inferMunicipality(query: string): Municipality | null {
     return MUNICIPALITIES.find(municipality => normalizedQuery.includes(municipality)) || null;
 }
 
+function coerceMunicipality(value: string | null | undefined): Municipality | null {
+    if (!value) return null;
+    return inferMunicipality(value);
+}
+
 function looksLikeSpecificProject(query: string): boolean {
     if (query.length < 12) return false;
     if (/今週|今月|新着|最新|一覧|まとめ|教えて|ありますか|ある\?|ある？|何件|どれ|どんな|見せて/.test(query)) {
@@ -270,6 +326,111 @@ function mergeIntentWithContext(intent: QueryIntent, context?: ChatContext): Que
     };
 }
 
+function buildIntentInterpreterPrompt(query: string, history: ChatTurn[], context?: ChatContext): string {
+    const recentHistory = history.slice(-6)
+        .map((turn) => `${turn.role === 'user' ? 'user' : 'assistant'}: ${turn.content}`)
+        .join('\n');
+    const previousContext = context?.lastIntent
+        ? JSON.stringify({
+            lastIntent: context.lastIntent,
+            lastQuestion: context.lastQuestion || null,
+            lastResultCount: context.lastResultIds?.length || 0,
+        }, null, 2)
+        : 'null';
+
+    return `
+あなたは奈良県の入札チャット向けの質問分類器です。
+ユーザーの質問を、検索条件JSONに変換してください。
+
+解釈ルール:
+- 「それぞれ」「その中で」「前のやつ」「続けて」は wantsCarryOver=true
+- 「ゼネコン」「元請け」「落札者」は wantsWinner=true
+- 「今週」「先週」「今月」は期間条件として解釈
+- 「開札」「締切」は wantsBidding=true
+- 「公告」「新着」「最新」は wantsAnnouncement=true
+- 自治体名は奈良県内の自治体に限る
+- 不明なら municipality は null
+- 個別案件の深掘りは asksSpecificProject=true
+
+直近の会話:
+${recentHistory || 'なし'}
+
+前回コンテキスト:
+${previousContext}
+
+今回の質問:
+${query}
+`;
+}
+
+async function callGeminiJson<T>(prompt: string, schema: object, modelName: string, apiKey: string): Promise<T> {
+    const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${modelName}:generateContent`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'x-goog-api-key': apiKey,
+        },
+        body: JSON.stringify({
+            contents: [
+                {
+                    parts: [{ text: prompt }],
+                },
+            ],
+            generationConfig: {
+                responseMimeType: 'application/json',
+                responseSchema: schema,
+                temperature: 0.1,
+            },
+        }),
+        cache: 'no-store',
+    });
+
+    if (!response.ok) {
+        const errorText = await response.text();
+        throw new Error(`Gemini API error: ${response.status} ${errorText}`);
+    }
+
+    const result = await response.json() as GeminiRestResponse;
+    return JSON.parse(extractTextFromCandidate(result)) as T;
+}
+
+function normalizeIntentPayload(payload: QueryIntentPayload, fallback: QueryIntent): QueryIntent {
+    const municipality = coerceMunicipality(payload.municipality) ?? fallback.municipality;
+    return mergeIntentWithContext({
+        municipality,
+        wantsBidding: payload.wantsBidding ?? fallback.wantsBidding,
+        wantsAnnouncement: payload.wantsAnnouncement ?? fallback.wantsAnnouncement,
+        wantsAwarded: payload.wantsAwarded ?? fallback.wantsAwarded,
+        wantsOpen: payload.wantsOpen ?? fallback.wantsOpen,
+        wantsThisWeek: payload.wantsThisWeek ?? fallback.wantsThisWeek,
+        wantsLastWeek: payload.wantsLastWeek ?? fallback.wantsLastWeek,
+        wantsThisMonth: payload.wantsThisMonth ?? fallback.wantsThisMonth,
+        wantsDesign: payload.wantsDesign ?? fallback.wantsDesign,
+        wantsConstruction: payload.wantsConstruction ?? fallback.wantsConstruction,
+        wantsWinner: payload.wantsWinner ?? fallback.wantsWinner,
+        explicitWebSearch: payload.explicitWebSearch ?? fallback.explicitWebSearch,
+        asksSpecificProject: payload.asksSpecificProject ?? fallback.asksSpecificProject,
+        wantsCarryOver: payload.wantsCarryOver ?? fallback.wantsCarryOver,
+    });
+}
+
+async function interpretIntent(query: string, history: ChatTurn[], context?: ChatContext, apiKey?: string): Promise<QueryIntent> {
+    const heuristicIntent = mergeIntentWithContext(inferIntent(query, history), context);
+    if (!apiKey) return heuristicIntent;
+
+    try {
+        const payload = await callGeminiJson<QueryIntentPayload>(
+            buildIntentInterpreterPrompt(query, history, context),
+            QUERY_INTENT_SCHEMA,
+            getChatModelName(),
+            apiKey,
+        );
+        return normalizeIntentPayload(payload, heuristicIntent);
+    } catch {
+        return heuristicIntent;
+    }
+}
+
 function scoreItem(item: BiddingItem, query: string, tokens: string[], intent: QueryIntent): number {
     const haystack = normalizeText([
         item.title,
@@ -306,9 +467,8 @@ function isWithinRange(dateValue: string | undefined, startLabel: string, endLab
     return dateValue >= startLabel && dateValue <= endLabel;
 }
 
-function findLocalMatches(query: string, items: BiddingItem[], history: ChatTurn[], context?: ChatContext): BiddingItem[] {
+function findLocalMatches(query: string, items: BiddingItem[], intent: QueryIntent, context?: ChatContext): BiddingItem[] {
     const tokens = tokenizeQuery(query);
-    const intent = mergeIntentWithContext(inferIntent(query, history), context);
     const weekRange = intent.wantsThisWeek
         ? getRelativeWeekRangeJst(0)
         : intent.wantsLastWeek
@@ -425,8 +585,7 @@ function buildWinnerAnswer(matches: BiddingItem[]): string {
     return `各案件のゼネコン・落札者は次のとおりです。\n${lines}`;
 }
 
-function buildDeterministicAnswer(query: string, matches: BiddingItem[], history: ChatTurn[], context?: ChatContext): { answer: string; followups: string[] } | null {
-    const intent = mergeIntentWithContext(inferIntent(query, history), context);
+function buildDeterministicAnswer(intent: QueryIntent, matches: BiddingItem[]): { answer: string; followups: string[] } | null {
     if (matches.length === 0) return null;
 
     if (intent.wantsWinner && intent.wantsCarryOver) {
@@ -511,8 +670,7 @@ function buildDeterministicAnswer(query: string, matches: BiddingItem[], history
     };
 }
 
-function buildNoMatchAnswer(query: string, items: BiddingItem[], history: ChatTurn[], context?: ChatContext): { answer: string; followups: string[] } | null {
-    const intent = mergeIntentWithContext(inferIntent(query, history), context);
+function buildNoMatchAnswer(intent: QueryIntent, items: BiddingItem[]): { answer: string; followups: string[] } | null {
     if (!intent.municipality) return null;
 
     const municipalityItems = items.filter((item) => item.municipality === intent.municipality);
@@ -632,8 +790,9 @@ function extractGroundedSources(response: GeminiRestResponse): ChatSource[] {
 
 export async function answerBiddingQuestion(query: string, history: ChatTurn[] = []): Promise<ChatResponsePayload> {
     const items = readBiddingItems();
-    const localMatches = findLocalMatches(query, items, history);
-    const intent = mergeIntentWithContext(inferIntent(query, history));
+    const apiKey = process.env.GOOGLE_GENERATIVE_AI_API_KEY || process.env.GEMINI_API_KEY || '';
+    const intent = await interpretIntent(query, history, undefined, apiKey);
+    const localMatches = findLocalMatches(query, items, intent);
     const nextContext: ChatContext = {
         lastIntent: {
             municipality: intent.municipality,
@@ -652,9 +811,8 @@ export async function answerBiddingQuestion(query: string, history: ChatTurn[] =
         lastQuestion: query,
     };
     const localSources = buildLocalSources(localMatches);
-    const deterministic = buildDeterministicAnswer(query, localMatches, history);
-    const noMatchAnswer = buildNoMatchAnswer(query, items, history);
-    const apiKey = process.env.GOOGLE_GENERATIVE_AI_API_KEY || process.env.GEMINI_API_KEY || '';
+    const deterministic = buildDeterministicAnswer(intent, localMatches);
+    const noMatchAnswer = buildNoMatchAnswer(intent, items);
     return finalizeAnswer({
         query,
         history,
@@ -766,12 +924,12 @@ export async function answerBiddingQuestionWithContext(
     context?: ChatContext,
 ): Promise<ChatResponsePayload> {
     const items = readBiddingItems();
-    const intent = mergeIntentWithContext(inferIntent(query, history), context);
-    const localMatches = findLocalMatches(query, items, history, context);
-    const localSources = buildLocalSources(localMatches);
-    const deterministic = buildDeterministicAnswer(query, localMatches, history, context);
-    const noMatchAnswer = buildNoMatchAnswer(query, items, history, context);
     const apiKey = process.env.GOOGLE_GENERATIVE_AI_API_KEY || process.env.GEMINI_API_KEY || '';
+    const intent = await interpretIntent(query, history, context, apiKey);
+    const localMatches = findLocalMatches(query, items, intent, context);
+    const localSources = buildLocalSources(localMatches);
+    const deterministic = buildDeterministicAnswer(intent, localMatches);
+    const noMatchAnswer = buildNoMatchAnswer(intent, items);
     const nextContext: ChatContext = {
         lastIntent: {
             municipality: intent.municipality,
