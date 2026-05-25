@@ -1,12 +1,18 @@
+import axios from 'axios';
+import * as cheerio from 'cheerio';
 import { chromium } from 'playwright';
 import type { Frame, Page } from 'playwright';
 import crypto from 'crypto';
 import { BiddingItem, BiddingType, Scraper } from '../types/bidding';
-import { shouldKeepItem } from './common/filter';
+import { classifyWinner, shouldKeepItem } from './common/filter';
+import { parseJapaneseDateToIso } from './common/pdf_text';
 
 const EPI_CLOUD_FORM = 'https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680';
 const EPI_BASE = 'https://www.epi-cloud.fwd.ne.jp';
 const TARGET_NENDOS = ['2026', '2025'];
+const IKOMA_SUPPLEMENTAL_PAGES = [
+    'https://www.city.ikoma.lg.jp/0000038734.html',
+];
 
 function parseJapaneseDate(text: string): string {
     const reiwa = text.match(/令和\s*(\d+)\s*年\s*(\d+)\s*月\s*(\d+)\s*日/);
@@ -162,6 +168,72 @@ async function scrapeCategory(page: Page, categoryLabel: string): Promise<Biddin
     return results;
 }
 
+function parseIkomaPageDate(text: string): string {
+    const match = text.match(/(?:更新日|公開日)[：:\s]*((?:20\d{2}|令和\s*\d+)\s*年\s*\d+\s*月\s*\d+\s*日)/u);
+    return match ? parseJapaneseDateToIso(match[1]) || '' : '';
+}
+
+function parseIkomaSupplementalBiddingDate(text: string): string | undefined {
+    const patterns = [
+        /(?:プレゼンテーション・ヒアリング|審査会|選定委員会)[^\n\r]*?((?:20\d{2}|令和\s*\d+)\s*年\s*\d+\s*月\s*\d+\s*日)/u,
+        /(?:開札日|入札日)[：:\s]*((?:20\d{2}|令和\s*\d+)\s*年\s*\d+\s*月\s*\d+\s*日)/u,
+    ];
+    for (const pattern of patterns) {
+        const match = text.match(pattern);
+        const iso = match ? parseJapaneseDateToIso(match[1]) : '';
+        if (iso) return iso;
+    }
+    return undefined;
+}
+
+function parseIkomaSupplementalWinner(text: string): string | undefined {
+    const patterns = [
+        /受託候補者[：:\s]*([^\n\r]+?)(?:\s{2,}|$)/u,
+        /優先交渉権者[：:\s]*([^\n\r]+?)(?:\s{2,}|$)/u,
+    ];
+    for (const pattern of patterns) {
+        const match = text.match(pattern);
+        const winner = match?.[1]?.replace(/\s+/g, ' ').trim();
+        if (winner) return winner;
+    }
+    return undefined;
+}
+
+async function scrapeSupplementalPages(): Promise<BiddingItem[]> {
+    const items: BiddingItem[] = [];
+
+    for (const url of IKOMA_SUPPLEMENTAL_PAGES) {
+        try {
+            const res = await axios.get(url, {
+                headers: { 'User-Agent': 'Mozilla/5.0' },
+                timeout: 20000,
+            });
+            const $ = cheerio.load(res.data);
+            const title = $('h1').first().text().replace(/\s+/g, ' ').trim();
+            const bodyText = $('body').text().replace(/\s+/g, ' ').trim();
+            if (!title || !shouldKeepItem(title, bodyText)) continue;
+
+            const winningContractor = parseIkomaSupplementalWinner(bodyText);
+            items.push({
+                id: `ikoma-supplemental-${crypto.createHash('md5').update(url).digest('hex').slice(0, 10)}`,
+                municipality: '生駒市',
+                title,
+                type: classifyType(title, bodyText),
+                announcementDate: parseIkomaPageDate(bodyText) || new Date().toISOString().split('T')[0],
+                biddingDate: parseIkomaSupplementalBiddingDate(bodyText),
+                link: url,
+                status: winningContractor ? '落札' : '受付中',
+                winningContractor,
+                winnerType: classifyWinner(winningContractor || ''),
+            });
+        } catch (error) {
+            console.warn('[生駒市] 補助ページ取得エラー:', error instanceof Error ? error.message : String(error));
+        }
+    }
+
+    return items;
+}
+
 export class IkomaCityScraper implements Scraper {
     municipality: '生駒市' = '生駒市' as const;
 
@@ -191,6 +263,11 @@ export class IkomaCityScraper implements Scraper {
             console.error('[生駒市] スクレイパーエラー:', error instanceof Error ? error.message : String(error));
         } finally {
             await browser.close();
+        }
+
+        const supplementalItems = await scrapeSupplementalPages();
+        for (const item of supplementalItems) {
+            itemsById.set(item.id, item);
         }
 
         const items = Array.from(itemsById.values());

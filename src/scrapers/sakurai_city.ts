@@ -2,8 +2,13 @@ import axios from 'axios';
 import * as cheerio from 'cheerio';
 import { BiddingItem, Scraper, BiddingType } from '../types/bidding';
 import { shouldKeepItem } from './common/filter';
+import { parseJapaneseDateToIso } from './common/pdf_text';
 
 const ANNOUNCE_URL = 'https://www.city.sakurai.lg.jp/sosiki/soumu/kanzaikeiyaku/nyuusatukeiyakukensa/notice/6596.html';
+const SUPPLEMENTAL_URLS = [
+    'https://www.city.sakurai.lg.jp/sosiki/kodomokateibu/kodomoseisakuka/kodomoen/8700.html',
+    'https://www.city.sakurai.lg.jp/sosiki/kyouikuiinkaijimukyoku/soumuka/teianbosyuukoubo/9608.html',
+];
 
 function shouldSkip(title: string, category: string): boolean {
     return !shouldKeepItem(title, category);
@@ -32,6 +37,57 @@ function parseDate(text: string): string {
         return `${year}-${String(month).padStart(2, '0')}-${String(Number(md[2])).padStart(2, '0')}`;
     }
     return '';
+}
+
+function parseSupplementalBiddingDate(text: string): string | undefined {
+    const patterns = [
+        /(?:プレゼンテーション・ヒアリング実施|開札日|入札日|選定委員会開催日)[：:\s]*((?:20\d{2}|令和\s*\d+)\s*年\s*\d+\s*月\s*\d+\s*日)/u,
+        /(?:プレゼンテーション・ヒアリング実施|開札日|入札日|選定委員会開催日)[^\n\r]*?((?:20\d{2}|令和\s*\d+)\s*年\s*\d+\s*月\s*\d+\s*日)/u,
+    ];
+
+    for (const pattern of patterns) {
+        const match = text.match(pattern);
+        const iso = match ? parseJapaneseDateToIso(match[1]) : '';
+        if (iso) return iso;
+    }
+
+    return undefined;
+}
+
+async function scrapeSupplementalPages(): Promise<BiddingItem[]> {
+    const items: BiddingItem[] = [];
+
+    for (const url of SUPPLEMENTAL_URLS) {
+        try {
+            const res = await axios.get(url, {
+                headers: { 'User-Agent': 'Mozilla/5.0' },
+                timeout: 20000,
+            });
+            const $ = cheerio.load(res.data);
+            const title = $('h1').first().text().replace(/\s+/g, ' ').trim();
+            const bodyText = $('body').text().replace(/\s+/g, ' ').trim();
+            if (!title || !shouldKeepItem(title, bodyText)) continue;
+
+            const announcementDate = parseDate(bodyText) || new Date().toISOString().split('T')[0];
+            const biddingDate = parseSupplementalBiddingDate(bodyText);
+            const status = /受託候補者|選定結果|契約候補者/u.test(bodyText) ? '落札' : '受付中';
+
+            items.push({
+                id: `sakurai-supplemental-${title}`.normalize('NFKC').replace(/[^\w\u3040-\u30ff\u3400-\u9fff-]+/g, '-').slice(0, 120),
+                municipality: '桜井市',
+                title,
+                type: classifyType(bodyText),
+                announcementDate,
+                biddingDate,
+                link: url,
+                status,
+            });
+        } catch (error) {
+            console.warn('[桜井市] 補助ページ取得エラー:', error instanceof Error ? error.message : String(error));
+        }
+    }
+
+    return items;
 }
 
 export class SakuraiCityScraper implements Scraper {
@@ -77,6 +133,13 @@ export class SakuraiCityScraper implements Scraper {
             });
         } catch (e: unknown) {
             console.error('[桜井市] エラー:', e instanceof Error ? e.message : String(e));
+        }
+
+        const supplementalItems = await scrapeSupplementalPages();
+        for (const item of supplementalItems) {
+            if (!items.some(existing => existing.title === item.title)) {
+                items.push(item);
+            }
         }
 
         console.log(`[桜井市] 合計 ${items.length} 件`);
