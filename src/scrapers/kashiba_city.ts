@@ -3,6 +3,7 @@ import * as cheerio from 'cheerio';
 import crypto from 'crypto';
 import type { Element } from 'domhandler';
 import { chromium } from 'playwright';
+import type { Frame, Page } from 'playwright';
 import { BiddingItem, Scraper } from '../types/bidding';
 import { shouldKeepItem } from './common/filter';
 
@@ -96,21 +97,55 @@ function parsePageYear(html: string): number {
     return now.getFullYear();
 }
 
+async function getRightFrame(page: Page): Promise<Frame | null> {
+    for (let i = 0; i < 20; i += 1) {
+        const frame = page.frames().find(candidate => candidate.name() === 'frmRIGHT');
+        if (frame) return frame;
+        await page.waitForTimeout(500);
+    }
+    return null;
+}
+
+async function openKashibaIssuePage(page: Page): Promise<Frame | null> {
+    for (let attempt = 0; attempt < 3; attempt += 1) {
+        await page.goto(EPI_URL, { waitUntil: 'load', timeout: 30000 });
+        await page.waitForTimeout(1500);
+
+        const serviceText = ((await page.locator('body').textContent().catch(() => '')) || '').replace(/\s+/g, ' ');
+        if (serviceText.includes('サービス停止中') && serviceText.includes('情報公開')) {
+            console.warn('[香芝市] EPI 情報公開サービス停止中のため取得をスキップします。');
+            return null;
+        }
+
+        const category = page.locator('span.ATYPE').filter({ hasText: '工事' }).first();
+        if (await category.count() === 0) {
+            await page.waitForTimeout(1000);
+            continue;
+        }
+
+        await category.click({ force: true, timeout: 30000 }).catch(() => undefined);
+        await page.waitForTimeout(2500);
+
+        const rightFrame = await getRightFrame(page);
+        if (rightFrame) return rightFrame;
+    }
+
+    return null;
+}
+
 async function scrapeKashibaCity(): Promise<BiddingItem[]> {
     const itemsMap = new Map<string, BiddingItem>();
 
     const browser = await chromium.launch({ headless: true });
     const context = await browser.newContext();
     const page = await context.newPage();
+    page.setDefaultTimeout(120000);
 
     try {
-        // 1) 初期フォームへアクセス
-        await page.goto(EPI_URL, { waitUntil: 'domcontentloaded', timeout: 30000 });
-        await page.waitForTimeout(1500);
-
-        // 2) 「工事」をクリック
-        await page.locator('span.ATYPE:has-text("工事")').first().click();
-        await page.waitForTimeout(4000);
+        const initialRightFrame = await openKashibaIssuePage(page);
+        if (!initialRightFrame) {
+            return [];
+        }
 
         // 3) 部局 = 「香芝市」全体（1792ZZZZZZ）を選択（もしあれば）
         // 以前の 179205ZZZZ より広い可能性がある
@@ -123,16 +158,17 @@ async function scrapeKashibaCity(): Promise<BiddingItem[]> {
         for (const nendo of NENDOS) {
             console.log(`[香芝市] 年度 ${nendo} 検索中...`);
             // 4) frmRIGHT: 入札・契約結果情報の検索
-            let rightFrame = page.frames().find(f => f.name() === 'frmRIGHT');
+            let rightFrame = await getRightFrame(page);
             if (!rightFrame) {
                 console.warn('[香芝市] frmRIGHT が見つかりません');
-                continue;
+                rightFrame = await openKashibaIssuePage(page);
+                if (!rightFrame) continue;
             }
             await rightFrame.locator('span.ATYPE:has-text("入札・契約結果情報")').first().click();
             await page.waitForTimeout(4000);
 
             // Re-find rightFrame as navigation might have changed it
-            rightFrame = page.frames().find(f => f.name() === 'frmRIGHT');
+            rightFrame = await getRightFrame(page);
             if (!rightFrame) continue;
 
             // 年度選択
@@ -200,10 +236,7 @@ async function scrapeKashibaCity(): Promise<BiddingItem[]> {
             }
 
             // 検索画面に戻るために一旦初期画面へ
-            await page.goto(EPI_URL, { waitUntil: 'domcontentloaded' });
-            await page.waitForTimeout(1000);
-            await page.locator('span.ATYPE:has-text("工事")').first().click();
-            await page.waitForTimeout(2000);
+            await openKashibaIssuePage(page);
         }
 
     } catch (e: unknown) {
@@ -386,7 +419,7 @@ export class KashibaCityScraper implements Scraper {
             epiItems = await Promise.race([
                 scrapeKashibaCity(),
                 new Promise<BiddingItem[]>((_, reject) => {
-                    setTimeout(() => reject(new Error('EPI timeout')), 45000);
+                    setTimeout(() => reject(new Error('EPI timeout')), 90000);
                 }),
             ]);
         } catch (error) {
