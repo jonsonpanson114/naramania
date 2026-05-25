@@ -16,6 +16,24 @@ export interface ChatTurn {
     content: string;
 }
 
+export interface ChatContext {
+    lastIntent?: {
+        municipality: Municipality | null;
+        wantsBidding: boolean;
+        wantsAnnouncement: boolean;
+        wantsAwarded: boolean;
+        wantsOpen: boolean;
+        wantsThisWeek: boolean;
+        wantsLastWeek: boolean;
+        wantsThisMonth: boolean;
+        wantsDesign: boolean;
+        wantsConstruction: boolean;
+        wantsWinner: boolean;
+    };
+    lastResultIds?: string[];
+    lastQuestion?: string;
+}
+
 export interface ChatResponsePayload {
     answer: string;
     sources: ChatSource[];
@@ -23,6 +41,7 @@ export interface ChatResponsePayload {
     followups: string[];
     usedWebSearch: boolean;
     model: string;
+    context: ChatContext;
 }
 
 interface GeminiRestResponse {
@@ -55,6 +74,7 @@ interface QueryIntent {
     wantsWinner: boolean;
     explicitWebSearch: boolean;
     asksSpecificProject: boolean;
+    wantsCarryOver: boolean;
 }
 
 const MUNICIPALITY_ALIASES: Array<{ canonical: Municipality; aliases: string[] }> = [
@@ -181,6 +201,10 @@ function looksLikeSpecificProject(query: string): boolean {
     return /学校|小学校|中学校|こども園|庁舎|公民館|体育館|改修|工事|設計|監理|業務委託|委託/.test(query);
 }
 
+function isContinuationQuery(query: string): boolean {
+    return /それぞれ|その中|その案件|その結果|この中|前の|さっき|続けて|じゃあ|では|それで|その一覧/.test(query);
+}
+
 function inferIntent(query: string, history: ChatTurn[]): QueryIntent {
     const recentUserContext = history
         .filter(turn => turn.role === 'user')
@@ -203,6 +227,46 @@ function inferIntent(query: string, history: ChatTurn[]): QueryIntent {
         wantsWinner: /ゼネコン|元請け|施工会社|落札者|業者/.test(fullQuery),
         explicitWebSearch: /ネット|web|検索|調べて|見つからない|サイトにない|他にも/.test(fullQuery),
         asksSpecificProject: looksLikeSpecificProject(fullQuery),
+        wantsCarryOver: isContinuationQuery(query),
+    };
+}
+
+function hasExplicitScope(intent: QueryIntent): boolean {
+    return Boolean(
+        intent.municipality ||
+        intent.wantsBidding ||
+        intent.wantsAnnouncement ||
+        intent.wantsAwarded ||
+        intent.wantsOpen ||
+        intent.wantsThisWeek ||
+        intent.wantsLastWeek ||
+        intent.wantsThisMonth ||
+        intent.wantsDesign ||
+        intent.wantsConstruction ||
+        intent.asksSpecificProject
+    );
+}
+
+function mergeIntentWithContext(intent: QueryIntent, context?: ChatContext): QueryIntent {
+    const previous = context?.lastIntent;
+    if (!previous) return intent;
+
+    const shouldCarryOver = intent.wantsCarryOver || (intent.wantsWinner && !hasExplicitScope(intent));
+    if (!shouldCarryOver) return intent;
+
+    return {
+        ...intent,
+        municipality: intent.municipality || previous.municipality || null,
+        wantsBidding: intent.wantsBidding || previous.wantsBidding,
+        wantsAnnouncement: intent.wantsAnnouncement || previous.wantsAnnouncement,
+        wantsAwarded: intent.wantsAwarded || previous.wantsAwarded,
+        wantsOpen: intent.wantsOpen || previous.wantsOpen,
+        wantsThisWeek: intent.wantsThisWeek || (!intent.wantsLastWeek && previous.wantsThisWeek),
+        wantsLastWeek: intent.wantsLastWeek || (!intent.wantsThisWeek && previous.wantsLastWeek),
+        wantsThisMonth: intent.wantsThisMonth || previous.wantsThisMonth,
+        wantsDesign: intent.wantsDesign || previous.wantsDesign,
+        wantsConstruction: intent.wantsConstruction || previous.wantsConstruction,
+        wantsWinner: intent.wantsWinner || previous.wantsWinner,
     };
 }
 
@@ -242,9 +306,9 @@ function isWithinRange(dateValue: string | undefined, startLabel: string, endLab
     return dateValue >= startLabel && dateValue <= endLabel;
 }
 
-function findLocalMatches(query: string, items: BiddingItem[], history: ChatTurn[]): BiddingItem[] {
+function findLocalMatches(query: string, items: BiddingItem[], history: ChatTurn[], context?: ChatContext): BiddingItem[] {
     const tokens = tokenizeQuery(query);
-    const intent = inferIntent(query, history);
+    const intent = mergeIntentWithContext(inferIntent(query, history), context);
     const weekRange = intent.wantsThisWeek
         ? getRelativeWeekRangeJst(0)
         : intent.wantsLastWeek
@@ -252,7 +316,10 @@ function findLocalMatches(query: string, items: BiddingItem[], history: ChatTurn
             : null;
     const monthRange = intent.wantsThisMonth ? getThisMonthRangeJst() : null;
 
-    let candidates = [...items];
+    const previousResultIds = new Set(context?.lastResultIds || []);
+    let candidates = previousResultIds.size > 0 && intent.wantsCarryOver
+        ? items.filter((item) => previousResultIds.has(item.id))
+        : [...items];
     if (intent.municipality) {
         candidates = candidates.filter(item => item.municipality === intent.municipality);
     }
@@ -347,31 +414,51 @@ function buildFollowups(intent: QueryIntent, matches: BiddingItem[]): string[] {
     return Array.from(ideas).slice(0, 3);
 }
 
-function buildDeterministicAnswer(query: string, matches: BiddingItem[], history: ChatTurn[]): { answer: string; followups: string[] } | null {
-    const intent = inferIntent(query, history);
+function buildWinnerAnswer(matches: BiddingItem[]): string {
+    const lines = matches
+        .slice(0, 8)
+        .map((item) => {
+            const winner = item.winningContractor || '未取得';
+            return `- ${item.title} / ${item.municipality} / ${item.biddingDate || item.announcementDate} / ゼネコン・落札者 ${winner}`;
+        })
+        .join('\n');
+    return `各案件のゼネコン・落札者は次のとおりです。\n${lines}`;
+}
+
+function buildDeterministicAnswer(query: string, matches: BiddingItem[], history: ChatTurn[], context?: ChatContext): { answer: string; followups: string[] } | null {
+    const intent = mergeIntentWithContext(inferIntent(query, history), context);
     if (matches.length === 0) return null;
+
+    if (intent.wantsWinner && intent.wantsCarryOver) {
+        return {
+            answer: buildWinnerAnswer(matches),
+            followups: buildFollowups(intent, matches),
+        };
+    }
 
     if ((intent.wantsThisWeek || intent.wantsLastWeek) && intent.wantsBidding) {
         const scope = intent.wantsLastWeek ? '先週' : '今週';
+        const header = intent.wantsWinner ? `${scope}の開札案件は ${matches.length} 件あります。ゼネコン・落札者も併記します。` : `${scope}の開札案件は ${matches.length} 件あります。`;
         const lines = matches
             .slice(0, 8)
             .sort((a, b) => (a.biddingDate || '9999-99-99').localeCompare(b.biddingDate || '9999-99-99'))
             .map((item) => formatItemLineWithOptions(item, intent.wantsWinner))
             .join('\n');
         return {
-            answer: `${scope}の開札案件は ${matches.length} 件あります。\n${lines}`,
+            answer: `${header}\n${lines}`,
             followups: buildFollowups(intent, matches),
         };
     }
 
     if (intent.wantsBidding) {
+        const header = intent.wantsWinner ? `開札関連で確認できる案件は ${matches.length} 件あります。ゼネコン・落札者も併記します。` : `開札関連で確認できる案件は ${matches.length} 件あります。`;
         const lines = matches
             .slice(0, 8)
             .sort((a, b) => (a.biddingDate || '9999-99-99').localeCompare(b.biddingDate || '9999-99-99'))
             .map((item) => formatItemLineWithOptions(item, intent.wantsWinner))
             .join('\n');
         return {
-            answer: `開札関連で確認できる案件は ${matches.length} 件あります。\n${lines}`,
+            answer: `${header}\n${lines}`,
             followups: buildFollowups(intent, matches),
         };
     }
@@ -424,8 +511,8 @@ function buildDeterministicAnswer(query: string, matches: BiddingItem[], history
     };
 }
 
-function buildNoMatchAnswer(query: string, items: BiddingItem[], history: ChatTurn[]): { answer: string; followups: string[] } | null {
-    const intent = inferIntent(query, history);
+function buildNoMatchAnswer(query: string, items: BiddingItem[], history: ChatTurn[], context?: ChatContext): { answer: string; followups: string[] } | null {
+    const intent = mergeIntentWithContext(inferIntent(query, history), context);
     if (!intent.municipality) return null;
 
     const municipalityItems = items.filter((item) => item.municipality === intent.municipality);
@@ -546,12 +633,63 @@ function extractGroundedSources(response: GeminiRestResponse): ChatSource[] {
 export async function answerBiddingQuestion(query: string, history: ChatTurn[] = []): Promise<ChatResponsePayload> {
     const items = readBiddingItems();
     const localMatches = findLocalMatches(query, items, history);
+    const intent = mergeIntentWithContext(inferIntent(query, history));
+    const nextContext: ChatContext = {
+        lastIntent: {
+            municipality: intent.municipality,
+            wantsBidding: intent.wantsBidding,
+            wantsAnnouncement: intent.wantsAnnouncement,
+            wantsAwarded: intent.wantsAwarded,
+            wantsOpen: intent.wantsOpen,
+            wantsThisWeek: intent.wantsThisWeek,
+            wantsLastWeek: intent.wantsLastWeek,
+            wantsThisMonth: intent.wantsThisMonth,
+            wantsDesign: intent.wantsDesign,
+            wantsConstruction: intent.wantsConstruction,
+            wantsWinner: intent.wantsWinner,
+        },
+        lastResultIds: localMatches.map((item) => item.id),
+        lastQuestion: query,
+    };
     const localSources = buildLocalSources(localMatches);
-    const intent = inferIntent(query, history);
     const deterministic = buildDeterministicAnswer(query, localMatches, history);
     const noMatchAnswer = buildNoMatchAnswer(query, items, history);
     const apiKey = process.env.GOOGLE_GENERATIVE_AI_API_KEY || process.env.GEMINI_API_KEY || '';
+    return finalizeAnswer({
+        query,
+        history,
+        localMatches,
+        localSources,
+        deterministic,
+        noMatchAnswer,
+        apiKey,
+        context: undefined,
+        nextContext,
+    });
+}
 
+function finalizeAnswer({
+    query,
+    history,
+    localMatches,
+    localSources,
+    deterministic,
+    noMatchAnswer,
+    apiKey,
+    context,
+    nextContext,
+}: {
+    query: string;
+    history: ChatTurn[];
+    localMatches: BiddingItem[];
+    localSources: ChatSource[];
+    deterministic: { answer: string; followups: string[] } | null;
+    noMatchAnswer: { answer: string; followups: string[] } | null;
+    apiKey: string;
+    context?: ChatContext;
+    nextContext: ChatContext;
+}): Promise<ChatResponsePayload> | ChatResponsePayload {
+    const intent = mergeIntentWithContext(inferIntent(query, history), context);
     if (deterministic && !intent.explicitWebSearch) {
         return {
             answer: deterministic.answer,
@@ -560,6 +698,7 @@ export async function answerBiddingQuestion(query: string, history: ChatTurn[] =
             followups: deterministic.followups,
             usedWebSearch: false,
             model: 'local-answer',
+            context: nextContext,
         };
     }
 
@@ -571,6 +710,7 @@ export async function answerBiddingQuestion(query: string, history: ChatTurn[] =
             followups: noMatchAnswer.followups,
             usedWebSearch: false,
             model: 'local-answer',
+            context: nextContext,
         };
     }
 
@@ -583,6 +723,7 @@ export async function answerBiddingQuestion(query: string, history: ChatTurn[] =
                 followups: deterministic.followups,
                 usedWebSearch: false,
                 model: 'local-answer',
+                context: nextContext,
             };
         }
         if (noMatchAnswer) {
@@ -593,6 +734,7 @@ export async function answerBiddingQuestion(query: string, history: ChatTurn[] =
                 followups: noMatchAnswer.followups,
                 usedWebSearch: false,
                 model: 'local-answer',
+                context: nextContext,
             };
         }
         throw new Error('GOOGLE_GENERATIVE_AI_API_KEY is not set');
@@ -601,17 +743,64 @@ export async function answerBiddingQuestion(query: string, history: ChatTurn[] =
     const modelName = getChatModelName();
     const shouldUseWebSearch = intent.explicitWebSearch || localMatches.length < 3;
     const prompt = buildPrompt(query, localMatches, history);
-    const result = await callGeminiChat(prompt, shouldUseWebSearch, modelName, apiKey);
-    const rawText = extractTextFromCandidate(result);
-    const parsed = JSON.parse(rawText) as { answer: string; followups?: string[] };
-    const webSources = extractGroundedSources(result);
+    return callGeminiChat(prompt, shouldUseWebSearch, modelName, apiKey).then((result) => {
+        const rawText = extractTextFromCandidate(result);
+        const parsed = JSON.parse(rawText) as { answer: string; followups?: string[] };
+        const webSources = extractGroundedSources(result);
 
-    return {
-        answer: parsed.answer,
-        sources: [...localSources, ...webSources],
-        localMatches,
-        followups: parsed.followups?.slice(0, 3) || buildFollowups(intent, localMatches),
-        usedWebSearch: webSources.length > 0,
-        model: modelName,
+        return {
+            answer: parsed.answer,
+            sources: [...localSources, ...webSources],
+            localMatches,
+            followups: parsed.followups?.slice(0, 3) || buildFollowups(intent, localMatches),
+            usedWebSearch: webSources.length > 0,
+            model: modelName,
+            context: nextContext,
+        };
+    });
+}
+
+export async function answerBiddingQuestionWithContext(
+    query: string,
+    history: ChatTurn[] = [],
+    context?: ChatContext,
+): Promise<ChatResponsePayload> {
+    const items = readBiddingItems();
+    const intent = mergeIntentWithContext(inferIntent(query, history), context);
+    const localMatches = findLocalMatches(query, items, history, context);
+    const localSources = buildLocalSources(localMatches);
+    const deterministic = buildDeterministicAnswer(query, localMatches, history, context);
+    const noMatchAnswer = buildNoMatchAnswer(query, items, history, context);
+    const apiKey = process.env.GOOGLE_GENERATIVE_AI_API_KEY || process.env.GEMINI_API_KEY || '';
+    const nextContext: ChatContext = {
+        lastIntent: {
+            municipality: intent.municipality,
+            wantsBidding: intent.wantsBidding,
+            wantsAnnouncement: intent.wantsAnnouncement,
+            wantsAwarded: intent.wantsAwarded,
+            wantsOpen: intent.wantsOpen,
+            wantsThisWeek: intent.wantsThisWeek,
+            wantsLastWeek: intent.wantsLastWeek,
+            wantsThisMonth: intent.wantsThisMonth,
+            wantsDesign: intent.wantsDesign,
+            wantsConstruction: intent.wantsConstruction,
+            wantsWinner: intent.wantsWinner,
+        },
+        lastResultIds: localMatches.map((item) => item.id),
+        lastQuestion: query,
     };
+
+    const result = finalizeAnswer({
+        query,
+        history,
+        localMatches,
+        localSources,
+        deterministic,
+        noMatchAnswer,
+        apiKey,
+        context,
+        nextContext,
+    });
+
+    return await result;
 }

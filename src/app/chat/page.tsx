@@ -4,6 +4,7 @@ import { useMemo, useState } from 'react';
 import { AppShell } from '@/components/AppShell';
 import { Header } from '@/components/Header';
 import { AlertCircle, ArrowUpRight, Bot, Loader2, MessageSquareText, Search, Sparkles } from 'lucide-react';
+import type { ChatContext } from '@/services/chat_service';
 
 type ChatSource = {
     type: 'local' | 'web';
@@ -34,6 +35,7 @@ export default function ChatPage() {
     const [question, setQuestion] = useState('');
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
+    const [context, setContext] = useState<ChatContext | undefined>(undefined);
     const [messages, setMessages] = useState<ChatMessage[]>([
         {
             role: 'assistant',
@@ -68,6 +70,7 @@ export default function ChatPage() {
                         role: message.role,
                         content: message.content,
                     })),
+                    context,
                 }),
             });
 
@@ -87,6 +90,7 @@ export default function ChatPage() {
                     model: data.model,
                 },
             ]);
+            setContext(data.context);
         } catch (submitError) {
             const message = submitError instanceof Error ? submitError.message : 'チャット応答に失敗しました';
             setError(message);
