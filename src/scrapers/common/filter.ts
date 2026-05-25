@@ -102,6 +102,13 @@ const INFRA_EXCLUDE_KEYWORDS = [...new Set([...DEFAULT_INFRA_EXCLUDE_KEYWORDS, .
 const ARCHITECTURE_CONTEXT_KEYWORDS = [...new Set([...DEFAULT_ARCHITECTURE_CONTEXT_KEYWORDS, ...dataFilters.architectureContextKeywords])];
 const ARCHITECTURE_WORK_KEYWORDS = [...new Set([...DEFAULT_ARCHITECTURE_WORK_KEYWORDS, ...dataFilters.architectureWorkKeywords])];
 const INFRA_ALLOWED_KEYWORDS = dataFilters.infraAllowedKeywords;
+const PRIORITY_ARCHITECTURE_PATTERNS = [
+    '特定建築物定期調査',
+    '建築設備定期検査',
+    '防火設備定期検査',
+    '防火対象物定期点検',
+    '消防用設備等法定点検',
+];
 
 function getPreviousFiscalYearStart(referenceDate = new Date()): Date {
     const year = referenceDate.getFullYear();
@@ -135,6 +142,11 @@ export function isExclusionTarget(text: string): boolean {
  */
 export function shouldKeepItem(title: string, otherText?: string): boolean {
     const target = `${title} ${otherText || ''}`;
+    const hasPriorityArchitecturePattern = includesAny(target, PRIORITY_ARCHITECTURE_PATTERNS);
+
+    if (hasPriorityArchitecturePattern) {
+        return true;
+    }
 
     // 一般業務・物品・広報系は、入札語を含んでも建築案件ではないため除外する。
     if (includesAny(target, ALWAYS_EXCLUDE_KEYWORDS)) {

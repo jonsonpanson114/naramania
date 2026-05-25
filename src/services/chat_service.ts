@@ -55,6 +55,11 @@ interface QueryIntent {
     asksSpecificProject: boolean;
 }
 
+const MUNICIPALITY_ALIASES: Array<{ canonical: Municipality; aliases: string[] }> = [
+    { canonical: '五條市', aliases: ['五条市'] },
+    { canonical: '田原本町', aliases: ['たわらもと町'] },
+];
+
 const RESULT_PATH = path.join(process.cwd(), 'scraper_result.json');
 const CHAT_RESPONSE_SCHEMA = {
     type: 'object',
@@ -119,6 +124,16 @@ function normalizeText(value: string): string {
     return value.normalize('NFKC').toLowerCase().replace(/\s+/g, ' ').trim();
 }
 
+function normalizeQueryForIntent(value: string): string {
+    let normalized = value.normalize('NFKC');
+    for (const alias of MUNICIPALITY_ALIASES) {
+        for (const alt of alias.aliases) {
+            normalized = normalized.replaceAll(alt, alias.canonical);
+        }
+    }
+    return normalized;
+}
+
 function tokenizeQuery(query: string): string[] {
     const normalized = normalizeText(query)
         .replace(/[「」『』【】()（）!?！？:：,，.。]/g, ' ')
@@ -147,7 +162,16 @@ function readBiddingItems(): BiddingItem[] {
 }
 
 function inferMunicipality(query: string): Municipality | null {
-    return MUNICIPALITIES.find(municipality => query.includes(municipality)) || null;
+    const normalizedQuery = normalizeQueryForIntent(query);
+    return MUNICIPALITIES.find(municipality => normalizedQuery.includes(municipality)) || null;
+}
+
+function looksLikeSpecificProject(query: string): boolean {
+    if (query.length < 12) return false;
+    if (/今週|今月|新着|最新|一覧|まとめ|教えて|ありますか|ある\?|ある？|何件|どれ|どんな|見せて/.test(query)) {
+        return false;
+    }
+    return /学校|小学校|中学校|こども園|庁舎|公民館|体育館|改修|工事|設計|監理|業務委託|委託/.test(query);
 }
 
 function inferIntent(query: string, history: ChatTurn[]): QueryIntent {
@@ -156,20 +180,20 @@ function inferIntent(query: string, history: ChatTurn[]): QueryIntent {
         .slice(-2)
         .map(turn => turn.content)
         .join(' ');
-    const fullQuery = `${recentUserContext} ${query}`.trim();
+    const fullQuery = normalizeQueryForIntent(`${recentUserContext} ${query}`.trim());
 
     return {
         municipality: inferMunicipality(fullQuery),
-        wantsBidding: /開札|入札日|締切|いつ/.test(query),
-        wantsAnnouncement: /公告|新着|最近|最新/.test(query),
-        wantsAwarded: /落札|結果/.test(query),
-        wantsOpen: /受付中|募集中/.test(query),
-        wantsThisWeek: /今週/.test(query),
-        wantsThisMonth: /今月/.test(query),
-        wantsDesign: /設計|監理|コンサル|委託/.test(query),
-        wantsConstruction: /工事|改修|新築|解体/.test(query),
-        explicitWebSearch: /ネット|web|検索|調べて|見つからない|サイトにない|他にも/.test(query),
-        asksSpecificProject: query.length >= 10 && !/今週|今月|新着|最新|一覧|まとめ/.test(query),
+        wantsBidding: /開札|入札日|締切|いつ/.test(fullQuery),
+        wantsAnnouncement: /公告|新着|最近|最新/.test(fullQuery),
+        wantsAwarded: /落札|結果/.test(fullQuery),
+        wantsOpen: /受付中|募集中/.test(fullQuery),
+        wantsThisWeek: /今週/.test(fullQuery),
+        wantsThisMonth: /今月/.test(fullQuery),
+        wantsDesign: /設計|監理|コンサル|委託/.test(fullQuery),
+        wantsConstruction: /工事|改修|新築|解体/.test(fullQuery),
+        explicitWebSearch: /ネット|web|検索|調べて|見つからない|サイトにない|他にも/.test(fullQuery),
+        asksSpecificProject: looksLikeSpecificProject(fullQuery),
     };
 }
 
@@ -318,11 +342,31 @@ function buildDeterministicAnswer(query: string, matches: BiddingItem[], history
         };
     }
 
+    if (intent.wantsBidding) {
+        const lines = matches
+            .slice(0, 8)
+            .sort((a, b) => (a.biddingDate || '9999-99-99').localeCompare(b.biddingDate || '9999-99-99'))
+            .map(formatItemLine)
+            .join('\n');
+        return {
+            answer: `開札関連で確認できる案件は ${matches.length} 件あります。\n${lines}`,
+            followups: buildFollowups(intent, matches),
+        };
+    }
+
     if (intent.wantsAnnouncement || intent.wantsThisMonth) {
         const scope = intent.wantsThisMonth ? '今月' : '直近';
         const lines = matches.slice(0, 8).map(formatItemLine).join('\n');
         return {
             answer: `${scope}の公告案件は次の ${Math.min(matches.length, 8)} 件です。\n${lines}`,
+            followups: buildFollowups(intent, matches),
+        };
+    }
+
+    if (intent.municipality && !intent.asksSpecificProject) {
+        const lines = matches.slice(0, 8).map(formatItemLine).join('\n');
+        return {
+            answer: `${intent.municipality}で掲載中または掲載履歴のある案件は ${matches.length} 件あります。\n${lines}`,
             followups: buildFollowups(intent, matches),
         };
     }
@@ -355,6 +399,32 @@ function buildDeterministicAnswer(query: string, matches: BiddingItem[], history
     return {
         answer: `該当しそうな案件は ${matches.length} 件あります。\n${lines}`,
         followups: buildFollowups(intent, matches),
+    };
+}
+
+function buildNoMatchAnswer(query: string, items: BiddingItem[], history: ChatTurn[]): { answer: string; followups: string[] } | null {
+    const intent = inferIntent(query, history);
+    if (!intent.municipality) return null;
+
+    const municipalityItems = items.filter((item) => item.municipality === intent.municipality);
+    if (municipalityItems.length === 0) {
+        return {
+            answer: `${intent.municipality}の掲載案件は、現在のサイト内データでは 0 件です。収集漏れか、まだ掲載対象に入っていない可能性があります。`,
+            followups: [
+                `${intent.municipality}の案件をWebでも探して`,
+                `${intent.municipality}の開札案件だけ確認して`,
+                '他の自治体の新着案件を教えて',
+            ],
+        };
+    }
+
+    return {
+        answer: `${intent.municipality}で条件に合う案件は、現在のサイト内データでは見つかりませんでした。掲載中の ${municipalityItems.length} 件から別条件で探すことはできます。`,
+        followups: [
+            `${intent.municipality}の最新案件を教えて`,
+            `${intent.municipality}の開札案件だけ教えて`,
+            `${intent.municipality}の設計案件だけ見せて`,
+        ],
     };
 }
 
@@ -454,6 +524,7 @@ export async function answerBiddingQuestion(query: string, history: ChatTurn[] =
     const localSources = buildLocalSources(localMatches);
     const intent = inferIntent(query, history);
     const deterministic = buildDeterministicAnswer(query, localMatches, history);
+    const noMatchAnswer = buildNoMatchAnswer(query, items, history);
     const apiKey = process.env.GOOGLE_GENERATIVE_AI_API_KEY || process.env.GEMINI_API_KEY || '';
 
     if (deterministic && !intent.explicitWebSearch) {
@@ -467,6 +538,17 @@ export async function answerBiddingQuestion(query: string, history: ChatTurn[] =
         };
     }
 
+    if (noMatchAnswer && !intent.explicitWebSearch) {
+        return {
+            answer: noMatchAnswer.answer,
+            sources: [],
+            localMatches,
+            followups: noMatchAnswer.followups,
+            usedWebSearch: false,
+            model: 'local-answer',
+        };
+    }
+
     if (!apiKey) {
         if (deterministic) {
             return {
@@ -474,6 +556,16 @@ export async function answerBiddingQuestion(query: string, history: ChatTurn[] =
                 sources: localSources,
                 localMatches,
                 followups: deterministic.followups,
+                usedWebSearch: false,
+                model: 'local-answer',
+            };
+        }
+        if (noMatchAnswer) {
+            return {
+                answer: noMatchAnswer.answer,
+                sources: [],
+                localMatches,
+                followups: noMatchAnswer.followups,
                 usedWebSearch: false,
                 model: 'local-answer',
             };
