@@ -67,20 +67,38 @@ function startOfFiscalYear(referenceDate: Date): Date {
 }
 
 async function openSearchPage(page: Page, gyomuType: string, fiscalYear: string, gyoushuCode: string) {
-    await page.goto(PPI_SEARCH_URL, { waitUntil: 'domcontentloaded', timeout: 30000 });
-    await page.waitForTimeout(1500);
-    await dismissPopup(page);
+    let lastError: unknown;
 
-    await page.click(`#GyomuTypeTab${gyomuType}`);
-    await page.waitForTimeout(1000);
+    for (let attempt = 1; attempt <= 3; attempt += 1) {
+        try {
+            await page.goto(PPI_SEARCH_URL, { waitUntil: 'domcontentloaded', timeout: 45000 });
+            await page.waitForSelector('#searchJyokenNendo', { timeout: 15000 });
+            await page.waitForSelector(`#GyomuTypeTab${gyomuType}`, { timeout: 15000 });
+            await page.waitForTimeout(1500);
+            await dismissPopup(page);
 
-    await page.selectOption('#searchJyokenNendo', fiscalYear);
-    await page.waitForTimeout(300);
+            const tab = page.locator(`#GyomuTypeTab${gyomuType}`);
+            await tab.scrollIntoViewIfNeeded().catch(() => { });
+            await tab.click({ timeout: 10000 });
+            await page.waitForTimeout(800);
 
-    if (gyoushuCode) {
-        await page.selectOption('#searchJyokenGyoushuCd1', gyoushuCode).catch(() => { });
-        await page.waitForTimeout(300);
+            await page.selectOption('#searchJyokenNendo', fiscalYear);
+            await page.waitForTimeout(300);
+
+            if (gyoushuCode) {
+                await page.selectOption('#searchJyokenGyoushuCd1', gyoushuCode).catch(() => { });
+                await page.waitForTimeout(300);
+            }
+
+            return;
+        } catch (error) {
+            lastError = error;
+            console.warn(`[奈良県] openSearchPage retry ${attempt}/3 failed:`, error instanceof Error ? error.message : String(error));
+            await page.waitForTimeout(1500 * attempt);
+        }
     }
+
+    throw lastError instanceof Error ? lastError : new Error(String(lastError));
 }
 
 async function dismissPopup(page: Page) {

@@ -55,6 +55,45 @@ function classifyType(title: string): BiddingType {
     return '建築';
 }
 
+function parseOyodoAnnouncementTables($: cheerio.CheerioAPI): BiddingItem[] {
+    const items: BiddingItem[] = [];
+
+    $('table caption').each((_, captionEl) => {
+        const caption = $(captionEl).text().trim();
+        const title = cleanTitle(caption.replace(/^【令和.*?】/, '').trim());
+        if (!title || !shouldKeepItem(title)) return;
+
+        const table = $(captionEl).closest('table');
+        const row = table.find('tbody tr').eq(1);
+        const cells = row.find('td');
+        if (cells.length < 5) return;
+
+        const announcementDate = parseJapaneseDate(cells.eq(0).text()) || parseJapaneseDate(caption);
+        const gyoshu = cells.eq(1).text().trim();
+        const bodyTitle = cleanTitle(cells.eq(2).text().trim()) || title;
+        const place = cells.eq(4).text().trim();
+        const finalTitle = bodyTitle || title;
+        if (!shouldKeepItem(finalTitle, `${gyoshu} ${place}`)) return;
+
+        const pdfHref = table.parent().nextAll('div').find('a[href$=\".pdf\"]').first().attr('href') || '';
+        const pdfUrl = pdfHref ? makeAbsoluteUrl(pdfHref) : undefined;
+        const id = `oyodo-${Buffer.from(`${finalTitle}|${announcementDate}`).toString('base64').slice(0, 12)}`;
+
+        items.push({
+            id,
+            municipality: '大淀町',
+            title: finalTitle,
+            type: classifyType(`${finalTitle} ${gyoshu}`),
+            announcementDate,
+            link: pdfUrl || 'https://www.town.oyodo.lg.jp/0000000218.html',
+            pdfUrl,
+            status: '受付中',
+        });
+    });
+
+    return items;
+}
+
 export class OyodoTownScraper implements Scraper {
     municipality: '大淀町' = '大淀町' as const;
 
@@ -69,6 +108,13 @@ export class OyodoTownScraper implements Scraper {
                 });
                 const $ = cheerio.load(res.data);
                 const pageDate = parseUpdatedDate(res.data) || parseJapaneseDate($.text());
+
+                if (source.status === '受付中') {
+                    for (const item of parseOyodoAnnouncementTables($)) {
+                        items.set(item.id, item);
+                    }
+                    continue;
+                }
 
                 $('a').each((_, el) => {
                     const rawText = $(el).text().trim();

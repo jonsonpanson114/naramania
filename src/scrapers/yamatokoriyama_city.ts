@@ -8,6 +8,7 @@ import { shouldKeepItem } from './common/filter';
 const BASE = 'https://www.city.yamatokoriyama.lg.jp';
 const RESULT_JSON   = `${BASE}/shigoto_sangyo/nyusatsu_keiyaku/nyusatsunooshirase/index.tree.json`;
 const ANNOUNCE_JSON = `${BASE}/shigoto_sangyo/nyusatsu_keiyaku/nyusatsu/index.tree.json`;
+const CURRENT_ANNOUNCE_PAGE = `${BASE}/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/9328.html`;
 
 // タイトルに含まれていればスキップ（土木系・非建築）
 const SKIP_TITLE_KEYWORDS = [
@@ -140,11 +141,60 @@ async function scrapeDetailPage(url: string, yearHint?: string): Promise<{
     }
 }
 
+async function scrapeCurrentAnnouncementPage(): Promise<BiddingItem[]> {
+    try {
+        const res = await axios.get(CURRENT_ANNOUNCE_PAGE, { timeout: 20000, headers: HEADERS });
+        const $ = cheerio.load(res.data);
+        const items: BiddingItem[] = [];
+        const pageYear = String(new Date().getFullYear());
+
+        $('table tr').each((_, row) => {
+            const cells = $(row).find('td');
+            if (cells.length < 6) return;
+
+            const announcementText = $(cells[0]).text().trim();
+            const biddingText = $(cells[1]).text().trim();
+            const titleCell = $(cells[2]);
+            const title = titleCell.text().replace(/\(PDFファイル:[^)]+\)/g, '').replace(/\s+/g, ' ').trim();
+            const typeText = $(cells[5]).text().trim();
+
+            if (!title || title === '該当なし' || !titleSeemsRelevant(`${title} ${typeText}`)) return;
+
+            const pdfHref = titleCell.find('a').first().attr('href') || '';
+            const pdfUrl = pdfHref
+                ? (pdfHref.startsWith('http') ? pdfHref : new URL(pdfHref, CURRENT_ANNOUNCE_PAGE).toString())
+                : undefined;
+
+            const announcementDate = parseDate(announcementText, pageYear);
+            const biddingDate = parseDate(biddingText, pageYear) || undefined;
+            if (!announcementDate) return;
+
+            items.push({
+                id: makeId(title, pdfUrl || CURRENT_ANNOUNCE_PAGE),
+                municipality: '大和郡山市',
+                title,
+                type: classifyType(`${title} ${typeText}`),
+                announcementDate,
+                biddingDate,
+                link: CURRENT_ANNOUNCE_PAGE,
+                pdfUrl,
+                status: '受付中',
+            });
+        });
+
+        console.log(`[大和郡山市] 現行一覧ページ: ${items.length}件`);
+        return items;
+    } catch (e: unknown) {
+        console.error('[大和郡山市] 現行一覧ページ取得エラー:', e instanceof Error ? e.message : String(e));
+        return [];
+    }
+}
+
 export class YamatokoriyamaCityScraper implements Scraper {
     municipality: '大和郡山市' = '大和郡山市' as const;
 
     async scrape(): Promise<BiddingItem[]> {
-        const allItems: BiddingItem[] = [];
+        const allItems = new Map<string, BiddingItem>();
 
         for (const { jsonUrl, status, label } of [
             { jsonUrl: ANNOUNCE_JSON, status: '受付中' as const, label: '入札公告' },
@@ -168,7 +218,7 @@ export class YamatokoriyamaCityScraper implements Scraper {
                     if (detail.tableItems && detail.tableItems.length > 0) {
                         for (const row of detail.tableItems) {
                             if (SKIP_TITLE_KEYWORDS.some(kw => row.title.includes(kw))) continue;
-                            allItems.push({
+                            const item: BiddingItem = {
                                 id: makeId(row.title, page.url),
                                 municipality: '大和郡山市',
                                 title: row.title,
@@ -178,11 +228,12 @@ export class YamatokoriyamaCityScraper implements Scraper {
                                 link: page.url,
                                 status,
                                 ...(row.contractor && status === '落札' ? { winningContractor: row.contractor } : {}),
-                            });
+                            };
+                            allItems.set(item.id, item);
                         }
                     } else {
                         // テーブルなし → ページタイトルで1件
-                        allItems.push({
+                        const item: BiddingItem = {
                             id: makeId(page.page_name, page.url),
                             municipality: '大和郡山市',
                             title: page.page_name,
@@ -192,17 +243,23 @@ export class YamatokoriyamaCityScraper implements Scraper {
                             link: page.url,
                             status,
                             ...(detail.contractor && status === '落札' ? { winningContractor: detail.contractor } : {}),
-                        });
+                        };
+                        allItems.set(item.id, item);
                     }
                     await new Promise(r => setTimeout(r, 200));
                 }
-                console.log(`[大和郡山市] ${label}: ${allItems.length}件（累計）`);
+                console.log(`[大和郡山市] ${label}: ${allItems.size}件（累計）`);
             } catch (e: unknown) {
                 console.error(`[大和郡山市] ${label} エラー:`, e instanceof Error ? e instanceof Error ? e.message : String(e) : String(e));
             }
         }
 
-        console.log(`[大和郡山市] 合計 ${allItems.length} 件`);
-        return allItems;
+        for (const item of await scrapeCurrentAnnouncementPage()) {
+            allItems.set(item.id, item);
+        }
+
+        const unique = Array.from(allItems.values()).sort((a, b) => b.announcementDate.localeCompare(a.announcementDate));
+        console.log(`[大和郡山市] 合計 ${unique.length} 件`);
+        return unique;
     }
 }

@@ -113,6 +113,17 @@ function upsertSeenItem(
     seenContent.set(titleKey(existing), existing.id);
 }
 
+function replaceMunicipalityItems(
+    seen: Map<string, BiddingItem>,
+    seenContent: Map<string, string>,
+    municipality: BiddingItem['municipality'],
+) {
+    const remainingItems = Array.from(seen.values()).filter(item => item.municipality !== municipality);
+    seen.clear();
+    seenContent.clear();
+    remainingItems.forEach(item => upsertSeenItem(seen, seenContent, item));
+}
+
 function buildDateAudit(items: BiddingItem[]) {
     const announcementAfterBidding = items.filter(item =>
         item.biddingDate && item.announcementDate && item.announcementDate > item.biddingDate,
@@ -227,6 +238,8 @@ async function main() {
             console.log(`→ ${scraper.municipality}: ${items.length}件取得`);
             scrapedCount += items.length;
             rejectedCount += items.filter(item => !shouldKeepBiddingItem(item)).length;
+
+            replaceMunicipalityItems(seen, seenContent, scraper.municipality);
             
             // Merge immediately
             items.filter(item => shouldKeepBiddingItem(item)).forEach(item => {

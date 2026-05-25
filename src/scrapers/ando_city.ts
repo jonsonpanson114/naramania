@@ -5,6 +5,7 @@ import { shouldKeepItem } from './common/filter';
 
 // 安堵町
 const RSS_URL = 'https://www.town.ando.nara.jp/rss/rss.xml';
+const CATEGORY_URL = 'https://www.town.ando.nara.jp/category/4-1-0-0-0-0-0-0-0-0.html';
 const ANDO_KNOWN_BIDDING_DATES: Record<string, string> = {
     // 公式ページの公告PDFと建設新報の公告要約から確認
     '条件付き一般競争入札の実施について（安堵町立安堵小中学校屋内運動場空調設備設置工事）': '2026-05-27',
@@ -46,10 +47,53 @@ function parseRssDate(dateStr: string): string {
     return `${year}-${String(monthNum).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
 }
 
+function normalizeAndoLink(href: string): string {
+    if (!href) return '';
+    if (href.startsWith('http')) return href;
+    return `https://www.town.ando.nara.jp${href}`;
+}
+
+function parseUpdatedDate(text: string): string {
+    const western = text.match(/更新日[:：]\s*(20\d{2})年(\d{1,2})月(\d{1,2})日/);
+    if (western) {
+        return `${western[1]}-${western[2].padStart(2, '0')}-${western[3].padStart(2, '0')}`;
+    }
+    return '';
+}
+
 async function scrapeAndoCity(): Promise<BiddingItem[]> {
-    const items: BiddingItem[] = [];
+    const items = new Map<string, BiddingItem>();
 
     try {
+        const categoryRes = await axios.get(CATEGORY_URL, {
+            headers: { 'User-Agent': 'Mozilla/5.0' },
+            timeout: 15000,
+        });
+        const $category = cheerio.load(categoryRes.data);
+
+        $category('a').each((i, el) => {
+            const title = $category(el).text().trim().replace(/\s+/g, ' ');
+            const href = $category(el).attr('href') || '';
+            if (!title || !href) return;
+            if (!title.includes('条件付き一般競争入札')) return;
+            if (shouldSkip(title)) return;
+
+            const link = normalizeAndoLink(href);
+            const surroundingText = $category(el).parent().text().replace(/\s+/g, ' ');
+            const announcementDate = parseUpdatedDate(surroundingText) || parseUpdatedDate(categoryRes.data) || parseRssDate(new Date().toUTCString());
+            const item: BiddingItem = {
+                id: `ando-category-${i}`,
+                municipality: '安堵町',
+                title,
+                type: classifyType(title),
+                announcementDate,
+                biddingDate: ANDO_KNOWN_BIDDING_DATES[title],
+                link,
+                status: title.includes('結果') ? '落札' : '受付中',
+            };
+            items.set(item.title, item);
+        });
+
         // RSSフィードを取得
         const res = await axios.get(RSS_URL, {
             headers: { 'User-Agent': 'Mozilla/5.0' },
@@ -87,7 +131,7 @@ async function scrapeAndoCity(): Promise<BiddingItem[]> {
 
             const announcementDate = parseRssDate(pubDate);
 
-            items.push({
+            const item: BiddingItem = {
                 id: `ando-${link.split('/').pop()?.replace('.html', '')}-${i}`,
                 municipality: '安堵町',
                 title,
@@ -96,15 +140,17 @@ async function scrapeAndoCity(): Promise<BiddingItem[]> {
                 biddingDate: ANDO_KNOWN_BIDDING_DATES[title],
                 link,
                 status,
-            });
+            };
+            if (!items.has(title)) items.set(title, item);
         });
 
     } catch (e: unknown) {
         console.error('[安堵町] エラー:', e instanceof Error ? e.message : String(e) || e);
     }
 
-    console.log(`[安堵町] 合計 ${items.length} 件`);
-    return items;
+    const result = Array.from(items.values());
+    console.log(`[安堵町] 合計 ${result.length} 件`);
+    return result;
 }
 
 export class AndoCityScraper implements Scraper {

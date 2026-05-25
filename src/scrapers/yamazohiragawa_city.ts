@@ -53,7 +53,7 @@ async function scrapeSmallTown(url: string, municipality: string): Promise<Biddi
             '入札参加資格', '申請', '入札について',
         ];
 
-        const articleItems = $('a').toArray();
+        const articleItems = $('main a, #main a, article a, .article a, ul li a').toArray();
         for (const element of articleItems) {
             const linkEl = $(element);
             const title = linkEl.text().trim().replace(/\s+/g, ' ');
@@ -68,6 +68,8 @@ async function scrapeSmallTown(url: string, municipality: string): Promise<Biddi
 
             const hrefVal = linkEl.attr('href') || '';
             if (!hrefVal) continue;
+            const updatedText = linkEl.parent().text().replace(/\s+/g, ' ');
+            if (!/20\d{2}年\d{1,2}月\d{1,2}日更新/.test(updatedText)) continue;
 
             // 入札結果と入札公告を分類
             const isResult = title.includes('開札結果') || title.includes('落札');

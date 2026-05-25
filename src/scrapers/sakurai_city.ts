@@ -47,37 +47,32 @@ export class SakuraiCityScraper implements Scraper {
             });
             const $ = cheerio.load(res.data);
             const pageDate = parseDate($.text());
+            const currentSectionHeading = $('h3').first().text().trim();
+            const annoDate = parseDate(currentSectionHeading) || pageDate;
+            const actualTable = $('table').first();
 
-            $('h3').each((_, h3El) => {
-                const h3Text = $(h3El).text().trim();
-                const annoDate = parseDate(h3Text) || pageDate;
-                const table = $(h3El).nextAll('table, div.wysiwyg').first();
-                const actualTable = table.is('table') ? table : table.find('table').first();
-                if (!actualTable.length) return;
+            actualTable.find('tr').each((_, tr) => {
+                const tds = $(tr).find('td');
+                if (tds.length < 2) return;
 
-                actualTable.find('tbody tr, tr').each((_, tr) => {
-                    const tds = $(tr).find('td');
-                    if (tds.length < 2) return;
+                const category = $(tds[0]).text().trim();
+                const title = $(tds[1]).text().replace(/\s+/g, ' ').trim();
+                const location = tds.length > 2 ? $(tds[2]).text().trim() : '';
+                const koushu = tds.length > 3 ? $(tds[3]).text().trim() : '';
 
-                    const category = $(tds[0]).text().trim();
-                    const title = $(tds[1]).text().replace(/\s+/g, ' ').trim();
-                    const location = tds.length > 2 ? $(tds[2]).text().trim() : '';
-                    const koushu = tds.length > 3 ? $(tds[3]).text().trim() : '';
+                if (!title || category === '区分' || title === '工事（委託）名') return;
+                if (shouldSkip(title, `${category} ${koushu}`)) return;
 
-                    if (!title || category === '区分' || title === '工事（委託）名') return;
-                    if (shouldSkip(title, `${category} ${koushu}`)) return;
-
-                    const id = `sakurai-${annoDate}-${title}`.normalize('NFKC').replace(/[^\w\u3040-\u30ff\u3400-\u9fff-]+/g, '-').slice(0, 120);
-                    items.push({
-                        id,
-                        municipality: '桜井市',
-                        title,
-                        type: classifyType(`${category} ${koushu}`),
-                        announcementDate: annoDate,
-                        link: ANNOUNCE_URL,
-                        status: '受付中',
-                        ...(location ? { description: location } : {}),
-                    });
+                const id = `sakurai-${annoDate}-${title}`.normalize('NFKC').replace(/[^\w\u3040-\u30ff\u3400-\u9fff-]+/g, '-').slice(0, 120);
+                items.push({
+                    id,
+                    municipality: '桜井市',
+                    title,
+                    type: classifyType(`${category} ${koushu}`),
+                    announcementDate: annoDate,
+                    link: ANNOUNCE_URL,
+                    status: '受付中',
+                    ...(location ? { description: location } : {}),
                 });
             });
         } catch (e: unknown) {
