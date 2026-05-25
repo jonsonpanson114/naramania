@@ -1399,27 +1399,6 @@
     "winningContractor": "株式会社礎建築事務所"
   },
   {
-    "id": "katsuragi-8a60726c",
-    "municipality": "葛城市",
-    "title": "（仮称）當麻複合施設整備工事",
-    "type": "建築",
-    "announcementDate": "2025-08-07",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/5-02-08-2025-1-2.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/5-02-08-2025-1-2.pdf",
-    "status": "受付中",
-    "biddingDate": "2025-09-08",
-    "estimatedPrice": "2,445,000,000円",
-    "constructionPeriod": "契約日から令和9年1月29日まで",
-    "description": "(仮称)當麻複合施設整備工事",
-    "tags": [
-      "一般競争入札",
-      "事後審査型",
-      "建設工事"
-    ],
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1"
-  },
-  {
     "id": "koryo-2025-07-31-No22",
     "municipality": "広陵町",
     "title": "広陵第1号近隣公園トイレ改修工事",
@@ -1785,6 +1764,28 @@
     "extractionSource": "gemini_3.1"
   },
   {
+    "id": "katsuragi-8a60726c",
+    "municipality": "葛城市",
+    "title": "（仮称）當麻複合施設整備工事",
+    "type": "建築",
+    "announcementDate": "2025-05-15",
+    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/2-05-01-2025-1-2.pdf",
+    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/2-05-01-2025-1-2.pdf",
+    "status": "受付中",
+    "biddingDate": "2025-06-30",
+    "estimatedPrice": "2,445,000,000円",
+    "constructionPeriod": "契約日から令和8年10月30日(金)まで",
+    "description": "(仮称)當麻複合施設整備工事",
+    "tags": [
+      "一般競争入札",
+      "事後審査型",
+      "葛城市",
+      "建築一式工事"
+    ],
+    "isIntelligenceExtracted": true,
+    "extractionSource": "gemini_3.1"
+  },
+  {
     "id": "kashihara-result-5073000267",
     "municipality": "橿原市",
     "title": "香久山小学校 自動火災報知設備修繕業務",
@@ -1840,7 +1841,7 @@
     "status": "受付中",
     "biddingDate": "2026-06-19",
     "estimatedPrice": "54,400,000円",
-    "constructionPeriod": "契約日 から 令和9年3月5日まで",
+    "constructionPeriod": "契約日 から 令和9年3月5日",
     "description": "体力づくりセンター各設備整備修繕（ろ布全数交換、ジャグジープール及び循環配管薬品洗浄、各水中ポンプ更新、薬液タンク更新、GHP更新工事、男女脱衣所洗面台更新、東面ガラスシート更新）",
     "tags": [
       "葛城市",
@@ -1985,6 +1986,29 @@
     "extractionSource": "gemini_3.1"
   },
   {
+    "id": "katsuragi-c87d2aba",
+    "municipality": "葛城市",
+    "title": "第1号 葛城市立新庄小学校管理棟及び屋内運動場長寿命化改修工事",
+    "type": "委託",
+    "announcementDate": "2025-04-11",
+    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/1-06-07-01-3.pdf",
+    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/1-06-07-01-3.pdf",
+    "status": "受付中",
+    "biddingDate": "2025-05-15",
+    "estimatedPrice": "917,770,000円",
+    "designFirm": "株式会社 中和設計",
+    "constructionPeriod": "契約日から令和9年3月26日まで",
+    "description": "葛城市立新庄小学校管理棟及び屋内運動場長寿命化改修工事(債務負担行為)",
+    "tags": [
+      "一般競争入札",
+      "事後審査型",
+      "長寿命化改修工事",
+      "葛城市"
+    ],
+    "isIntelligenceExtracted": true,
+    "extractionSource": "gemini_3.1"
+  },
+  {
     "id": "katsuragi-61b8c2ef",
     "municipality": "葛城市",
     "title": "忍海小学校区学童保育所施設整備に係る設計業務",
@@ -1994,27 +2018,16 @@
     "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/1-06-05-01.pdf",
     "status": "受付中",
     "biddingDate": "2025-05-15",
-    "estimatedPrice": "11,022,000円",
+    "estimatedPrice": "11,022,000円（消費税及び地方消費税を除く）",
     "constructionPeriod": "契約日から令和7年12月22日まで",
     "description": "忍海小学校区学童保育所施設整備に係る設計業務（既存施設の解体及び新施設の建築に係る設計業務及びその他協議・申請業務）",
     "tags": [
       "設計業務",
-      "学童保育所",
       "葛城市",
+      "学童保育所",
       "一般競争入札"
     ],
     "isIntelligenceExtracted": true,
     "extractionSource": "gemini_3.1"
-  },
-  {
-    "id": "katsuragi-c87d2aba",
-    "municipality": "葛城市",
-    "title": "第1号 葛城市立新庄小学校管理棟及び屋内運動場長寿命化改修工事",
-    "type": "委託",
-    "announcementDate": "2025-04-11",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/1-06-07-01-3.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/1-06-07-01-3.pdf",
-    "status": "受付中",
-    "biddingDate": "2025-05-15"
   }
 ]
