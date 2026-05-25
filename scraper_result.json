@@ -1399,29 +1399,6 @@
     "winningContractor": "株式会社礎建築事務所"
   },
   {
-    "id": "katsuragi-8a60726c",
-    "municipality": "葛城市",
-    "title": "（仮称）當麻複合施設整備工事",
-    "type": "建築",
-    "announcementDate": "2025-08-07",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/5-02-08-2025-1-2.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/5-02-08-2025-1-2.pdf",
-    "status": "受付中",
-    "biddingDate": "2025-09-08",
-    "estimatedPrice": "2,445,000,000円",
-    "designFirm": "株式会社 青木茂建築工房, 株式会社 福本設計",
-    "constructionPeriod": "契約日から令和9年1月29日(金)まで",
-    "description": "(仮称)當麻複合施設整備工事",
-    "tags": [
-      "一般競争入札",
-      "事後審査型",
-      "電子入札",
-      "葛城市"
-    ],
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini_3.1"
-  },
-  {
     "id": "koryo-2025-07-31-No22",
     "municipality": "広陵町",
     "title": "広陵第1号近隣公園トイレ改修工事",
@@ -1787,6 +1764,28 @@
     "extractionSource": "gemini_3.1"
   },
   {
+    "id": "katsuragi-8a60726c",
+    "municipality": "葛城市",
+    "title": "（仮称）當麻複合施設整備工事",
+    "type": "建築",
+    "announcementDate": "2025-05-15",
+    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/2-05-01-2025-1-2.pdf",
+    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/2-05-01-2025-1-2.pdf",
+    "status": "受付中",
+    "biddingDate": "2025-06-30",
+    "estimatedPrice": "2,445,000,000円",
+    "constructionPeriod": "契約日から令和8年10月30日(金)まで",
+    "description": "(仮称)當麻複合施設整備工事",
+    "tags": [
+      "一般競争入札",
+      "事後審査型",
+      "建築一式工事",
+      "葛城市"
+    ],
+    "isIntelligenceExtracted": true,
+    "extractionSource": "gemini_3.1"
+  },
+  {
     "id": "kashihara-result-5073000267",
     "municipality": "橿原市",
     "title": "香久山小学校 自動火災報知設備修繕業務",
@@ -1848,6 +1847,7 @@
       "葛城市",
       "管工事",
       "一般競争入札",
+      "事後審査型",
       "設備修繕"
     ],
     "isIntelligenceExtracted": true,
