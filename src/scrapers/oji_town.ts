@@ -5,8 +5,15 @@ import { shouldKeepItem } from './common/filter';
 import { extractPdfText } from './common/pdf_text';
 
 const OJI_INDEX = 'https://www.town.oji.nara.jp/kakuka/somu/somu/gyomuannai/nyuusatu/nyuusatukouhyou/index.html';
+const OJI_INDEX_JSON = 'https://www.town.oji.nara.jp/kakuka/somu/somu/gyomuannai/nyuusatu/nyuusatukouhyou/index.tree.json';
 const BASE_URL = 'https://www.town.oji.nara.jp';
 const HEADERS = { 'User-Agent': 'Mozilla/5.0' };
+
+type OjiPage = {
+    page_name: string;
+    url: string;
+    publish_datetime?: string;
+};
 
 function makeAbsoluteUrl(href: string): string {
     if (!href) return OJI_INDEX;
@@ -37,12 +44,15 @@ export class OjiTownScraper implements Scraper {
                 headers: HEADERS,
                 timeout: 15000,
             });
-            const $ = cheerio.load(indexRes.data);
-
-            const links = $('a').toArray()
-                .map(el => ({
-                    title: $(el).text().trim(),
-                    href: $(el).attr('href') || '',
+            const jsonRes = await axios.get<OjiPage[]>(OJI_INDEX_JSON, {
+                headers: HEADERS,
+                timeout: 15000,
+            });
+            const links = jsonRes.data
+                .map(link => ({
+                    title: link.page_name.replace(/\s+/g, ' ').trim(),
+                    href: link.url || '',
+                    announcementDate: link.publish_datetime?.slice(0, 10) || '',
                 }))
                 .filter(link => link.title && link.href);
 
@@ -84,7 +94,7 @@ export class OjiTownScraper implements Scraper {
                     municipality: '王寺町',
                     title,
                     type: classifyType(title),
-                    announcementDate: detailDate || parseUpdatedDate(indexRes.data),
+                    announcementDate: detailDate || link.announcementDate || parseUpdatedDate(indexRes.data),
                     biddingDate: biddingDate || undefined,
                     link: fullUrl,
                     status: isResult ? '落札' : '受付中',

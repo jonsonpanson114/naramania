@@ -45,7 +45,7 @@ function buildId(date: string, title: string): string {
 
 function cleanTitle(title: string): string {
     return title
-        .replace(/^[0-9０-９]+\.\s*/, '')
+        .replace(/^[0-9０-９]+[\.．]\s*/, '')
         .replace(/\s*\[PDFファイル／[^\]]+\]\s*/g, '')
         .replace(/\s+/g, ' ')
         .trim();
@@ -58,26 +58,24 @@ async function scrapeAnnouncements(): Promise<BiddingItem[]> {
         const res = await axios.get(ANNOUNCE_URL, { headers: HEADERS, timeout: 20000 });
         const $ = cheerio.load(res.data);
         const pageDate = parseJapaneseDate($('body').text());
+        $('a').each((_, el) => {
+            const title = cleanTitle($(el).text());
+            const href = makeAbsoluteUrl($(el).attr('href'));
+            if (!title || !href) return;
+            if (!shouldKeepItem(title)) return;
+            if (!/(工事|設計|委託|業務)/.test(title)) return;
 
-        $('body')
-            .text()
-            .split(/\n+/)
-            .map(line => line.replace(/\s+/g, ' ').trim())
-            .forEach(line => {
-                if (!line || line.length < 6) return;
-                if (!shouldKeepItem(line)) return;
-                if (!/(工事|設計|委託|業務)/.test(line)) return;
-
-                items.push({
-                    id: buildId(pageDate, line),
-                    municipality: '三宅町',
-                    title: line,
-                    type: classifyType(line),
-                    announcementDate: pageDate,
-                    link: ANNOUNCE_URL,
-                    status: '受付中',
-                });
+            items.push({
+                id: buildId(pageDate, title),
+                municipality: '三宅町',
+                title,
+                type: classifyType(title),
+                announcementDate: pageDate,
+                link: href,
+                pdfUrl: href.toLowerCase().endsWith('.pdf') ? href : undefined,
+                status: '受付中',
             });
+        });
     } catch (e: unknown) {
         console.error('[三宅町] 公告取得エラー:', e instanceof Error ? e.message : String(e));
     }
