@@ -6,6 +6,11 @@ import { extractPdfText } from './common/pdf_text';
 
 // 平群町（heguri）
 const HEGURI_URL = 'https://www.town.heguri.nara.jp/soshiki/list7-1.html';
+const HEGURI_SUPPLEMENTAL_URLS = [
+    'https://www.town.heguri.nara.jp/soshiki/5/16618.html',
+    'https://www.town.heguri.nara.jp/life/2/14/44/',
+    'https://www.town.heguri.nara.jp/soshiki/14/16450.html',
+];
 
 function parseJapaneseDate(text: string): string {
     const reiwa = text.match(/令和\s*(\d+)\s*年\s*(\d+)\s*月\s*(\d+)\s*日/);
@@ -125,6 +130,56 @@ async function scrapeSmallTown(url: string, municipality: string): Promise<Biddi
     return items;
 }
 
+async function scrapeHeguriSupplementalPages(): Promise<BiddingItem[]> {
+    const items: BiddingItem[] = [];
+
+    for (const url of HEGURI_SUPPLEMENTAL_URLS) {
+        try {
+            const res = await axios.get(url, {
+                headers: { 'User-Agent': 'Mozilla/5.0' },
+                timeout: 15000,
+            });
+            const $ = cheerio.load(res.data);
+
+            const titleCandidates = [
+                $('h1').first().text(),
+                $('title').first().text(),
+            ].map(text => text.replace(/\s+/g, ' ').trim()).filter(Boolean);
+
+            const pageText = $('body').text().replace(/\s+/g, ' ').trim();
+            const announcementDate = parseUpdatedDate(pageText) || new Date().toISOString().split('T')[0];
+
+            const candidateTitles = new Set<string>(titleCandidates);
+            $('a').each((_, element) => {
+                const text = $(element).text().replace(/\s+/g, ' ').trim();
+                if (text.length >= 6 && shouldKeepItem(text)) {
+                    candidateTitles.add(text);
+                }
+            });
+
+            for (const title of candidateTitles) {
+                if (!shouldKeepItem(title, pageText)) continue;
+
+                const isResult = /開札結果|落札/u.test(title) || /開札結果|落札/u.test(pageText);
+                items.push({
+                    id: `平群町-${title}`.normalize('NFKC').replace(/[^\w\u3040-\u30ff\u3400-\u9fff-]+/g, '-').slice(0, 120),
+                    municipality: '平群町' as Municipality,
+                    title,
+                    type: title.includes('設計') ? 'コンサル' : '建築',
+                    announcementDate,
+                    link: url,
+                    status: isResult ? '落札' : '受付中',
+                    winnerType: isResult ? 'ゼネコン' : undefined,
+                });
+            }
+        } catch (error) {
+            console.warn('[平群町] 補助ページ取得エラー:', error instanceof Error ? error.message : String(error));
+        }
+    }
+
+    return items;
+}
+
 export class YamazomuraScraper implements Scraper {
     municipality: '山添村' = '山添村' as const;
 
@@ -138,6 +193,14 @@ export class HiragawaScraper implements Scraper {
     municipality: '平群町' = '平群町' as const;
 
     async scrape(): Promise<BiddingItem[]> {
-        return scrapeSmallTown(HEGURI_URL, '平群町');
+        const baseItems = await scrapeSmallTown(HEGURI_URL, '平群町');
+        const merged = new Map(baseItems.map(item => [item.title, item]));
+        const supplementalItems = await scrapeHeguriSupplementalPages();
+        for (const item of supplementalItems) {
+            merged.set(item.title, item);
+        }
+        const items = Array.from(merged.values());
+        console.log(`[平群町] 補助込み合計 ${items.length} 件`);
+        return items;
     }
 }
