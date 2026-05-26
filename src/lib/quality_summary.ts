@@ -31,6 +31,7 @@ export interface QualitySummary {
         missingMunicipalities: string[];
         zeroCountMunicipalities: string[];
         breakdown: MunicipalityBreakdownEntry[];
+        retainedFromPrevious?: string[];
     };
     dateAudit?: {
         announcementAfterBiddingCount: number;

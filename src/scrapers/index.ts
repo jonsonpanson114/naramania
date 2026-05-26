@@ -124,6 +124,13 @@ function replaceMunicipalityItems(
     remainingItems.forEach(item => upsertSeenItem(seen, seenContent, item));
 }
 
+function getMunicipalityItems(
+    seen: Map<string, BiddingItem>,
+    municipality: BiddingItem['municipality'],
+): BiddingItem[] {
+    return Array.from(seen.values()).filter(item => item.municipality === municipality);
+}
+
 function buildDateAudit(items: BiddingItem[]) {
     const announcementAfterBidding = items.filter(item =>
         item.biddingDate && item.announcementDate && item.announcementDate > item.biddingDate,
@@ -158,7 +165,12 @@ function buildDateAudit(items: BiddingItem[]) {
     };
 }
 
-function writeQualitySummary(items: BiddingItem[], scrapedCount: number, rejectedCount: number) {
+function writeQualitySummary(
+    items: BiddingItem[],
+    scrapedCount: number,
+    rejectedCount: number,
+    retainedMunicipalities: string[] = [],
+) {
     const previousSummary = readQualitySummary();
     const dates = items
         .map(item => item.announcementDate)
@@ -198,6 +210,7 @@ function writeQualitySummary(items: BiddingItem[], scrapedCount: number, rejecte
             missingMunicipalities,
             zeroCountMunicipalities: missingMunicipalities,
             breakdown,
+            retainedFromPrevious: retainedMunicipalities,
         },
         dateAudit,
         intelligence: buildIntelligenceSummary(items),
@@ -242,6 +255,7 @@ async function main() {
     const seenContent = new Map<string, string>();
     let scrapedCount = 0;
     let rejectedCount = 0;
+    const retainedMunicipalities = new Set<string>();
 
     // Load existing data
     if (fs.existsSync(outputPath)) {
@@ -263,11 +277,19 @@ async function main() {
             console.log(`→ ${scraper.municipality}: ${items.length}件取得`);
             scrapedCount += items.length;
             rejectedCount += items.filter(item => !shouldKeepBiddingItem(item)).length;
+            const previousMunicipalityItems = getMunicipalityItems(seen, scraper.municipality);
+            const keptItems = items.filter(item => shouldKeepBiddingItem(item));
+
+            if (scraper.municipality === '奈良県' && keptItems.length === 0 && previousMunicipalityItems.length > 0) {
+                retainedMunicipalities.add(scraper.municipality);
+                console.warn(`[${scraper.municipality}] 0件取得のため前回データ ${previousMunicipalityItems.length}件を保持します`);
+                continue;
+            }
 
             replaceMunicipalityItems(seen, seenContent, scraper.municipality);
             
             // Merge immediately
-            items.filter(item => shouldKeepBiddingItem(item)).forEach(item => {
+            keptItems.forEach(item => {
                 upsertSeenItem(seen, seenContent, item);
             });
 
@@ -288,7 +310,7 @@ async function main() {
 
     console.log('\n=== 集計完了 ===');
     const finalUnique = Array.from(seen.values());
-    writeQualitySummary(finalUnique, scrapedCount, rejectedCount);
+    writeQualitySummary(finalUnique, scrapedCount, rejectedCount, Array.from(retainedMunicipalities));
     console.log(`最終合計: ${finalUnique.length} 件`);
 
     // 内訳表示

@@ -79,6 +79,7 @@ async function openSearchPage(page: Page, gyomuType: string, fiscalYear: string,
     for (const searchUrl of PPI_SEARCH_URLS) {
         for (let attempt = 1; attempt <= 3; attempt += 1) {
             try {
+                console.log(`[奈良県] openSearchPage url=${searchUrl} gyomuType=${gyomuType} fiscalYear=${fiscalYear} gyoushu=${gyoushuCode || 'all'}`);
                 await page.goto(searchUrl, { waitUntil: 'domcontentloaded', timeout: 45000 });
                 await page.waitForSelector('#searchJyokenNendo', { timeout: 15000 });
                 await page.waitForSelector(`#GyomuTypeTab${gyomuType}`, { timeout: 15000 });
@@ -197,6 +198,7 @@ async function hasNoResultPopup(page: Page): Promise<boolean> {
     if (!visible) return false;
 
     const message = await page.locator('#ShowMessage').textContent().catch(() => '');
+    console.log(`[奈良県] popup message: ${message || '(empty)'}`);
     await dismissPopup(page);
     if (message?.includes('0件')) {
         return true;
@@ -289,6 +291,7 @@ export class NaraPrefScraper implements Scraper {
                         await applyDateRange(searchPage, searchStart, searchEnd);
                         await searchPage.click('#search');
                         await searchPage.waitForTimeout(3500);
+                        console.log(`[奈良県] search submitted gyomu=${target.gyomuType} gyoushu=${gyoushuCode || 'all'} range=${searchStart.toISOString().slice(0, 10)}..${searchEnd.toISOString().slice(0, 10)}`);
 
                         if (await hasNoResultPopup(searchPage)) {
                             console.log(`[奈良県] ${target.label} ${gyoushuCode || 'all'} ${searchStart.toISOString().slice(0, 10)}: 0件`);
@@ -296,7 +299,7 @@ export class NaraPrefScraper implements Scraper {
                         }
 
                         const rows = await extractRows(searchPage);
-                        console.log(`[奈良県] ${target.label} ${gyoushuCode || 'all'} ${searchStart.toISOString().slice(0, 10)}: ${rows.length}件`);
+                        console.log(`[奈良県] ${target.label} ${gyoushuCode || 'all'} ${searchStart.toISOString().slice(0, 10)}: ${rows.length}件 raw rows`);
 
                         for (const row of rows) {
                             if (row.title.includes('【中止】')) continue;

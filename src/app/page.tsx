@@ -28,6 +28,7 @@ interface QualitySummary {
     coveredMunicipalityCount?: number;
     missingMunicipalities?: string[];
     zeroCountMunicipalities?: string[];
+    retainedFromPrevious?: string[];
     breakdown?: Array<{
       municipality: string;
       count: number;
