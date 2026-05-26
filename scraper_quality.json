@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-26T09:57:07.199Z",
+  "generatedAt": "2026-05-26T14:32:56.475Z",
   "source": "daily_scrape",
   "keptCount": 143,
   "municipalityCount": 20,
@@ -64,5 +64,105 @@
     "geminiExtractedCount": 0,
     "taggedCount": 0,
     "lastAugmentedAt": "2026-05-26T09:57:08.084Z"
+  },
+  "municipalityAudit": {
+    "expectedMunicipalityCount": 25,
+    "coveredMunicipalityCount": 20,
+    "missingMunicipalities": [
+      "奈良県",
+      "桜井市",
+      "川西町",
+      "山添村",
+      "平群町"
+    ],
+    "zeroCountMunicipalities": [
+      "奈良県",
+      "桜井市",
+      "川西町",
+      "山添村",
+      "平群町"
+    ],
+    "breakdown": [
+      {
+        "municipality": "橿原市",
+        "count": 39
+      },
+      {
+        "municipality": "奈良市",
+        "count": 21
+      },
+      {
+        "municipality": "高取町",
+        "count": 17
+      },
+      {
+        "municipality": "香芝市",
+        "count": 15
+      },
+      {
+        "municipality": "葛城市",
+        "count": 10
+      },
+      {
+        "municipality": "宇陀市",
+        "count": 5
+      },
+      {
+        "municipality": "大和郡山市",
+        "count": 5
+      },
+      {
+        "municipality": "五條市",
+        "count": 4
+      },
+      {
+        "municipality": "大淀町",
+        "count": 4
+      },
+      {
+        "municipality": "三郷町",
+        "count": 3
+      },
+      {
+        "municipality": "大和高田市",
+        "count": 3
+      },
+      {
+        "municipality": "天理市",
+        "count": 3
+      },
+      {
+        "municipality": "田原本町",
+        "count": 3
+      },
+      {
+        "municipality": "御所市",
+        "count": 2
+      },
+      {
+        "municipality": "広陵町",
+        "count": 2
+      },
+      {
+        "municipality": "生駒市",
+        "count": 2
+      },
+      {
+        "municipality": "斑鳩町",
+        "count": 2
+      },
+      {
+        "municipality": "安堵町",
+        "count": 1
+      },
+      {
+        "municipality": "王寺町",
+        "count": 1
+      },
+      {
+        "municipality": "三宅町",
+        "count": 1
+      }
+    ]
   }
 }

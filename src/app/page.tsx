@@ -23,7 +23,24 @@ interface QualitySummary {
   oldestAnnouncementDate?: string | null;
   latestAnnouncementDate?: string | null;
   municipalityCount?: number;
+  municipalityAudit?: {
+    expectedMunicipalityCount?: number;
+    coveredMunicipalityCount?: number;
+    missingMunicipalities?: string[];
+    zeroCountMunicipalities?: string[];
+    breakdown?: Array<{
+      municipality: string;
+      count: number;
+      changeFromPrevious?: number;
+    }>;
+  };
 }
+
+type MunicipalityBreakdownItem = {
+  municipality: string;
+  count: number;
+  changeFromPrevious?: number;
+};
 
 function formatDateLabel(dateStr?: string | null): string {
   if (!dateStr) return '-';
@@ -91,6 +108,11 @@ export default async function Home() {
   const rawCount = qualitySummary?.originalCount ?? qualitySummary?.scrapedCount ?? keptCount + removedCount;
   const municipalityCount = qualitySummary?.municipalityCount ?? new Set(allItems.map((item) => item.municipality)).size;
   const latestQualityDate = qualitySummary?.generatedAt ? new Date(qualitySummary.generatedAt).toLocaleDateString('ja-JP') : null;
+  const municipalityBreakdown: MunicipalityBreakdownItem[] = qualitySummary?.municipalityAudit?.breakdown ?? Object.entries(allItems.reduce((acc, item) => {
+    acc[item.municipality] = (acc[item.municipality] || 0) + 1;
+    return acc;
+  }, {} as Record<string, number>)).map(([municipality, count]) => ({ municipality, count }));
+  const missingMunicipalities = qualitySummary?.municipalityAudit?.missingMunicipalities ?? [];
   
   const upcomingBiddings = allItems
     .filter(item => item.biddingDate && item.status !== '落札' && item.status !== '受付終了')
@@ -204,16 +226,23 @@ export default async function Home() {
           <p className="mb-4 text-xs tracking-[0.08em] text-secondary/60">
             現在掲載中の {municipalityCount} 自治体を件数順に表示しています。
           </p>
+          {missingMunicipalities.length > 0 ? (
+            <div className="mb-4 rounded-2xl border border-amber-200/70 bg-amber-50/80 px-4 py-3 text-xs tracking-[0.06em] text-amber-900">
+              未掲載自治体: {missingMunicipalities.join(' / ')}
+            </div>
+          ) : null}
           <div className="flex flex-wrap gap-2">
-            {Object.entries(allItems.reduce((acc, item) => {
-              acc[item.municipality] = (acc[item.municipality] || 0) + 1;
-              return acc;
-            }, {} as Record<string, number>))
-              .sort((a, b) => b[1] - a[1])
-              .map(([m, count]) => (
-                <div key={m} className="bg-white/50 backdrop-blur-sm border border-border/40 px-3 py-1.5 rounded-xl flex items-center gap-2 shadow-sm hover:shadow-md transition-all group">
-                  <span className="text-[11px] font-serif font-bold text-primary group-hover:text-accent transition-colors">{m}</span>
+            {municipalityBreakdown
+              .sort((a, b) => b.count - a.count)
+              .map(({ municipality, count, changeFromPrevious }) => (
+                <div key={municipality} className="bg-white/50 backdrop-blur-sm border border-border/40 px-3 py-1.5 rounded-xl flex items-center gap-2 shadow-sm hover:shadow-md transition-all group">
+                  <span className="text-[11px] font-serif font-bold text-primary group-hover:text-accent transition-colors">{municipality}</span>
                   <span className="text-[9px] bg-secondary/10 text-secondary px-1.5 py-0.5 rounded-md font-sans font-bold">{count}</span>
+                  {typeof changeFromPrevious === 'number' && changeFromPrevious !== 0 ? (
+                    <span className={`text-[9px] px-1.5 py-0.5 rounded-md font-sans font-bold ${changeFromPrevious > 0 ? 'bg-emerald-100 text-emerald-700' : 'bg-rose-100 text-rose-700'}`}>
+                      {changeFromPrevious > 0 ? `+${changeFromPrevious}` : changeFromPrevious}
+                    </span>
+                  ) : null}
                 </div>
               ))}
           </div>

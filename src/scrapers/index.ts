@@ -25,7 +25,7 @@ import { BiddingItem } from '../types/bidding';
 import fs from 'fs';
 import path from 'path';
 import { shouldKeepBiddingItem } from './common/filter';
-import { QUALITY_PATH, buildIntelligenceSummary } from '../lib/quality_summary';
+import { EXPECTED_MUNICIPALITIES, QUALITY_PATH, buildIntelligenceSummary, readQualitySummary } from '../lib/quality_summary';
 
 function normalizeComparisonTitle(title: string): string {
     return title
@@ -159,11 +159,29 @@ function buildDateAudit(items: BiddingItem[]) {
 }
 
 function writeQualitySummary(items: BiddingItem[], scrapedCount: number, rejectedCount: number) {
+    const previousSummary = readQualitySummary();
     const dates = items
         .map(item => item.announcementDate)
         .filter(Boolean)
         .sort();
     const dateAudit = buildDateAudit(items);
+    const counts = items.reduce<Record<string, number>>((acc, item) => {
+        acc[item.municipality] = (acc[item.municipality] || 0) + 1;
+        return acc;
+    }, {});
+    const previousCounts = Object.fromEntries(
+        (previousSummary?.municipalityAudit?.breakdown || []).map(entry => [entry.municipality, entry.count]),
+    );
+    const breakdown = Object.entries(counts)
+        .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'ja'))
+        .map(([municipality, count]) => ({
+            municipality,
+            count,
+            ...(Number.isFinite(previousCounts[municipality])
+                ? { changeFromPrevious: count - previousCounts[municipality] }
+                : {}),
+        }));
+    const missingMunicipalities = EXPECTED_MUNICIPALITIES.filter(municipality => !(municipality in counts));
 
     const summary = {
         generatedAt: new Date().toISOString(),
@@ -174,6 +192,13 @@ function writeQualitySummary(items: BiddingItem[], scrapedCount: number, rejecte
         oldestAnnouncementDate: dates[0] || null,
         latestAnnouncementDate: dates[dates.length - 1] || null,
         municipalityCount: new Set(items.map(item => item.municipality)).size,
+        municipalityAudit: {
+            expectedMunicipalityCount: EXPECTED_MUNICIPALITIES.length,
+            coveredMunicipalityCount: Object.keys(counts).length,
+            missingMunicipalities,
+            zeroCountMunicipalities: missingMunicipalities,
+            breakdown,
+        },
         dateAudit,
         intelligence: buildIntelligenceSummary(items),
     };

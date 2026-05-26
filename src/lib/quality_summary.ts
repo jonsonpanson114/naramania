@@ -2,6 +2,18 @@ import fs from 'fs';
 import path from 'path';
 import type { BiddingItem } from '@/types/bidding';
 
+export const EXPECTED_MUNICIPALITIES = [
+    '奈良県', '奈良市', '橿原市', '生駒市', '大和高田市', '大和郡山市', '葛城市', '五條市',
+    '御所市', '天理市', '桜井市', '宇陀市', '田原本町', '広陵町', '香芝市', '川西町',
+    '三宅町', '山添村', '平群町', '安堵町', '高取町', '斑鳩町', '三郷町', '王寺町', '大淀町',
+] as const;
+
+export interface MunicipalityBreakdownEntry {
+    municipality: string;
+    count: number;
+    changeFromPrevious?: number;
+}
+
 export interface QualitySummary {
     generatedAt: string;
     source: string;
@@ -13,6 +25,13 @@ export interface QualitySummary {
     oldestAnnouncementDate: string | null;
     latestAnnouncementDate: string | null;
     municipalityCount: number;
+    municipalityAudit?: {
+        expectedMunicipalityCount: number;
+        coveredMunicipalityCount: number;
+        missingMunicipalities: string[];
+        zeroCountMunicipalities: string[];
+        breakdown: MunicipalityBreakdownEntry[];
+    };
     dateAudit?: {
         announcementAfterBiddingCount: number;
         awardedWithoutBiddingDateCount: number;
