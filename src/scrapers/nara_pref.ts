@@ -2,8 +2,14 @@ import { chromium, Page } from 'playwright';
 import { BiddingItem, Scraper, BiddingType } from '../types/bidding';
 import { shouldKeepItem } from './common/filter';
 
-const PPI_SEARCH_URL = 'https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPJ0050_0010/';
-const PPI_DETAIL_BASE = 'https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/';
+const PPI_SEARCH_URLS = [
+    'https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPJ0020_0010/',
+    'https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPJ0050_0010/',
+];
+const PPI_DETAIL_BASES = [
+    'https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0020_0020/',
+    'https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/',
+];
 
 const KOJI_GYOSHU_SKIP = [
     '土木一式', '舗装', '鋼橋', 'PC橋', '造園', '法面処理', '道路等維持修繕',
@@ -39,6 +45,7 @@ type DetailInfo = {
     status: '受付中' | '落札';
     winningContractor?: string;
     skip: boolean;
+    detailUrl?: string;
 };
 
 function parseJapaneseDate(text: string): string {
@@ -69,32 +76,37 @@ function startOfFiscalYear(referenceDate: Date): Date {
 async function openSearchPage(page: Page, gyomuType: string, fiscalYear: string, gyoushuCode: string) {
     let lastError: unknown;
 
-    for (let attempt = 1; attempt <= 3; attempt += 1) {
-        try {
-            await page.goto(PPI_SEARCH_URL, { waitUntil: 'domcontentloaded', timeout: 45000 });
-            await page.waitForSelector('#searchJyokenNendo', { timeout: 15000 });
-            await page.waitForSelector(`#GyomuTypeTab${gyomuType}`, { timeout: 15000 });
-            await page.waitForTimeout(1500);
-            await dismissPopup(page);
+    for (const searchUrl of PPI_SEARCH_URLS) {
+        for (let attempt = 1; attempt <= 3; attempt += 1) {
+            try {
+                await page.goto(searchUrl, { waitUntil: 'domcontentloaded', timeout: 45000 });
+                await page.waitForSelector('#searchJyokenNendo', { timeout: 15000 });
+                await page.waitForSelector(`#GyomuTypeTab${gyomuType}`, { timeout: 15000 });
+                await page.waitForTimeout(1500);
+                await dismissPopup(page);
 
-            const tab = page.locator(`#GyomuTypeTab${gyomuType}`);
-            await tab.scrollIntoViewIfNeeded().catch(() => { });
-            await tab.click({ timeout: 10000 });
-            await page.waitForTimeout(800);
+                const tab = page.locator(`#GyomuTypeTab${gyomuType}`);
+                await tab.scrollIntoViewIfNeeded().catch(() => { });
+                await tab.click({ timeout: 10000 });
+                await page.waitForTimeout(800);
 
-            await page.selectOption('#searchJyokenNendo', fiscalYear);
-            await page.waitForTimeout(300);
-
-            if (gyoushuCode) {
-                await page.selectOption('#searchJyokenGyoushuCd1', gyoushuCode).catch(() => { });
+                await page.selectOption('#searchJyokenNendo', fiscalYear);
                 await page.waitForTimeout(300);
-            }
 
-            return;
-        } catch (error) {
-            lastError = error;
-            console.warn(`[奈良県] openSearchPage retry ${attempt}/3 failed:`, error instanceof Error ? error.message : String(error));
-            await page.waitForTimeout(1500 * attempt);
+                if (gyoushuCode) {
+                    await page.selectOption('#searchJyokenGyoushuCd1', gyoushuCode).catch(() => { });
+                    await page.waitForTimeout(300);
+                }
+
+                return;
+            } catch (error) {
+                lastError = error;
+                console.warn(
+                    `[奈良県] openSearchPage ${searchUrl} retry ${attempt}/3 failed:`,
+                    error instanceof Error ? error.message : String(error),
+                );
+                await page.waitForTimeout(1500 * attempt);
+            }
         }
     }
 
@@ -194,24 +206,50 @@ async function hasNoResultPopup(page: Page): Promise<boolean> {
 }
 
 async function fetchDetailInfo(page: Page, kanriNo: string): Promise<DetailInfo> {
-    const detailUrl = `${PPI_DETAIL_BASE}?kanriNo=${kanriNo}&gamenMode=0`;
-    await page.goto(detailUrl, { waitUntil: 'domcontentloaded', timeout: 30000 });
-    await page.waitForTimeout(800);
+    for (const detailBase of PPI_DETAIL_BASES) {
+        const detailUrl = `${detailBase}?kanriNo=${kanriNo}&gamenMode=0`;
+        try {
+            await page.goto(detailUrl, { waitUntil: 'domcontentloaded', timeout: 30000 });
+            await page.waitForTimeout(800);
 
-    return await page.evaluate(() => {
-        const text = (document.body.innerText || '').replace(/\s+/g, ' ').trim();
-        const isCanceled = text.includes('【中止】') || text.includes('中止となりました');
+            const info = await page.evaluate(() => {
+                const text = (document.body.innerText || '').replace(/\s+/g, ' ').trim();
+                const isCanceled = text.includes('【中止】') || text.includes('中止となりました');
 
-        const winnerMatch = text.match(/落札者\s+([^\n\r\t ](?:.*?))(?:\s+落札金額（税抜）|\s+予定価格（税抜）|\s+最低制限／調査基準価格（税抜）|$)/);
-        const winningContractor = winnerMatch?.[1]?.trim() || undefined;
-        const hasResult = text.includes('落札結果') && text.includes('落札');
+                const winnerMatch = text.match(/落札者\s+([^\n\r\t ](?:.*?))(?:\s+落札金額（税抜）|\s+予定価格（税抜）|\s+最低制限／調査基準価格（税抜）|$)/);
+                const winningContractor = winnerMatch?.[1]?.trim() || undefined;
+                const hasResult = text.includes('落札結果') && text.includes('落札');
+                const hasExpectedStructure = text.includes('公告日') || text.includes('開札予定日') || text.includes('落札結果');
 
-        return {
-            status: hasResult ? '落札' : '受付中',
-            winningContractor,
-            skip: isCanceled,
-        };
-    });
+                return {
+                    status: (hasResult ? '落札' : '受付中') as '受付中' | '落札',
+                    winningContractor,
+                    skip: isCanceled,
+                    hasExpectedStructure,
+                };
+            }) as DetailInfo & { hasExpectedStructure: boolean };
+
+            if (!info.hasExpectedStructure) {
+                throw new Error('unexpected detail page structure');
+            }
+
+            return {
+                status: info.status,
+                winningContractor: info.winningContractor,
+                skip: info.skip,
+                detailUrl,
+            };
+        } catch (error) {
+            console.warn(`[奈良県] detail fetch failed for ${detailBase}:`, error instanceof Error ? error.message : String(error));
+        }
+    }
+
+    return {
+        status: '受付中' as const,
+        winningContractor: undefined,
+        skip: false,
+        detailUrl: `${PPI_DETAIL_BASES[0]}?kanriNo=${kanriNo}&gamenMode=0`,
+    };
 }
 
 export class NaraPrefScraper implements Scraper {
@@ -294,7 +332,7 @@ export class NaraPrefScraper implements Scraper {
                                 type: target.type,
                                 announcementDate,
                                 biddingDate,
-                                link: `${PPI_DETAIL_BASE}?kanriNo=${row.kanriNo}&gamenMode=0`,
+                                link: detail.detailUrl || `${PPI_DETAIL_BASES[0]}?kanriNo=${row.kanriNo}&gamenMode=0`,
                                 status: detail.status,
                                 winningContractor: detail.winningContractor,
                                 winnerType: target.type === '建築' ? 'ゼネコン' : '設計事務所',
