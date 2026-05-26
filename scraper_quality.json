@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-05-25T22:25:55.525Z",
+  "generatedAt": "2026-05-26T05:14:26.891Z",
   "source": "daily_scrape",
-  "scrapedCount": 382,
-  "keptCount": 154,
-  "rejectedCount": 213,
+  "keptCount": 144,
+  "municipalityCount": 20,
   "oldestAnnouncementDate": "2025-04-11",
-  "latestAnnouncementDate": "2026-05-25",
-  "municipalityCount": 21,
+  "latestAnnouncementDate": "2026-05-26",
+  "scrapedCount": 370,
+  "rejectedCount": 211,
   "dateAudit": {
     "announcementAfterBiddingCount": 0,
-    "awardedWithoutBiddingDateCount": 3,
-    "awardedWithoutWinnerCount": 6,
+    "awardedWithoutBiddingDateCount": 4,
+    "awardedWithoutWinnerCount": 7,
     "openWithWinnerCount": 0,
     "sampleTitles": [
       {
@@ -28,10 +28,17 @@
         "biddingDate": null
       },
       {
-        "municipality": "五條市",
-        "title": "五條市立公民館等消防用設備等法定点検業務委託",
+        "municipality": "大和郡山市",
+        "title": "令和7年度矢田山第4配水池電気・機械設備更新工事実施設計業務開札結果",
         "status": "落札",
-        "announcementDate": "2026-04-15",
+        "announcementDate": "2025-05-13",
+        "biddingDate": null
+      },
+      {
+        "municipality": "大和郡山市",
+        "title": "令和7年度矢田山第4配水池電気・機械設備更新工事実施設計業務開札結果",
+        "status": "落札",
+        "announcementDate": "2025-05-13",
         "biddingDate": null
       },
       {
@@ -47,21 +54,15 @@
         "status": "落札",
         "announcementDate": "2026-04-15",
         "biddingDate": null
-      },
-      {
-        "municipality": "五條市",
-        "title": "五條市立公民館特定建築物定期調査及び五條市立公民館防火設備定期検査業務委託",
-        "status": "落札",
-        "announcementDate": "2026-04-07",
-        "biddingDate": "2026-04-07"
       }
     ]
   },
   "intelligence": {
-    "itemsWithPdf": 61,
+    "itemsWithPdf": 62,
     "itemsWithDescription": 0,
     "intelligenceExtractedCount": 0,
     "geminiExtractedCount": 0,
-    "taggedCount": 0
+    "taggedCount": 0,
+    "lastAugmentedAt": "2026-05-26T05:14:27.675Z"
   }
 }
