@@ -118,13 +118,19 @@ async function openSearchPage(page: Page, gyomuType: string, fiscalYear: string,
 }
 
 async function ensureSearchForm(page: Page) {
-    await page.waitForFunction(() => {
-        return Boolean(
-            document.querySelector('#PPJ0050_0010 #searchJyokenNendo') ||
-            document.querySelector('form#PPJ0050_0010') ||
-            document.querySelector('form#PPJ0020_0010'),
-        );
-    }, undefined, { timeout: 15000 });
+    const deadline = Date.now() + 15000;
+
+    while (Date.now() < deadline) {
+        const hasSearchField = await page.locator('#PPJ0050_0010 #searchJyokenNendo').count();
+        const hasSearchForm = await page.locator('form#PPJ0050_0010').count();
+        const hasHomeForm = await page.locator('form#PPJ0020_0010').count();
+
+        if (hasSearchField || hasSearchForm || hasHomeForm) {
+            break;
+        }
+
+        await page.waitForTimeout(500);
+    }
 
     const onSearchForm = await page.locator('form#PPJ0050_0010').count();
     if (onSearchForm) return;
