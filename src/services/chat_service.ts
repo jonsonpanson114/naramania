@@ -154,7 +154,7 @@ const MUNICIPALITIES: Municipality[] = [
 ];
 
 function getChatModelName(): string {
-    return process.env.GOOGLE_GENERATIVE_AI_CHAT_MODEL || 'gemini-3.1-flash-lite';
+    return process.env.GOOGLE_GENERATIVE_AI_CHAT_MODEL || 'gemini-2.5-flash';
 }
 
 function getNowInJst(): Date {

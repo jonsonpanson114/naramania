@@ -2,9 +2,11 @@ import { chromium, Page } from 'playwright';
 import { BiddingItem, Scraper, BiddingType } from '../types/bidding';
 import { shouldKeepItem } from './common/filter';
 
+const PPI_HOME_URL = 'https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPJ0020_0010/';
+const PPI_SEARCH_FORM_URL = 'https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPJ0050_0010/';
 const PPI_SEARCH_URLS = [
-    'https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPJ0020_0010/',
-    'https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPJ0050_0010/',
+    PPI_SEARCH_FORM_URL,
+    PPI_HOME_URL,
 ];
 const PPI_DETAIL_BASES = [
     'https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0020_0020/',
@@ -81,21 +83,22 @@ async function openSearchPage(page: Page, gyomuType: string, fiscalYear: string,
             try {
                 console.log(`[奈良県] openSearchPage url=${searchUrl} gyomuType=${gyomuType} fiscalYear=${fiscalYear} gyoushu=${gyoushuCode || 'all'}`);
                 await page.goto(searchUrl, { waitUntil: 'domcontentloaded', timeout: 45000 });
-                await page.waitForSelector('#searchJyokenNendo', { timeout: 15000 });
-                await page.waitForSelector(`#GyomuTypeTab${gyomuType}`, { timeout: 15000 });
+                await ensureSearchForm(page);
+                await page.waitForSelector('#PPJ0050_0010 #searchJyokenNendo', { state: 'attached', timeout: 15000 });
+                await page.waitForSelector(`#PPJ0050_0010 #GyomuTypeTab${gyomuType}`, { state: 'attached', timeout: 15000 });
                 await page.waitForTimeout(1500);
                 await dismissPopup(page);
 
-                const tab = page.locator(`#GyomuTypeTab${gyomuType}`);
+                const tab = page.locator(`#PPJ0050_0010 #GyomuTypeTab${gyomuType}`);
                 await tab.scrollIntoViewIfNeeded().catch(() => { });
-                await tab.click({ timeout: 10000 });
+                await tab.click({ timeout: 10000, force: true });
                 await page.waitForTimeout(800);
 
-                await page.selectOption('#searchJyokenNendo', fiscalYear);
+                await page.selectOption('#PPJ0050_0010 #searchJyokenNendo', fiscalYear);
                 await page.waitForTimeout(300);
 
                 if (gyoushuCode) {
-                    await page.selectOption('#searchJyokenGyoushuCd1', gyoushuCode).catch(() => { });
+                    await page.selectOption('#PPJ0050_0010 #searchJyokenGyoushuCd1', gyoushuCode).catch(() => { });
                     await page.waitForTimeout(300);
                 }
 
@@ -112,6 +115,33 @@ async function openSearchPage(page: Page, gyomuType: string, fiscalYear: string,
     }
 
     throw lastError instanceof Error ? lastError : new Error(String(lastError));
+}
+
+async function ensureSearchForm(page: Page) {
+    await page.waitForFunction(() => {
+        return Boolean(
+            document.querySelector('#PPJ0050_0010 #searchJyokenNendo') ||
+            document.querySelector('form#PPJ0050_0010') ||
+            document.querySelector('form#PPJ0020_0010'),
+        );
+    }, { timeout: 15000 });
+
+    const onSearchForm = await page.locator('form#PPJ0050_0010').count();
+    if (onSearchForm) return;
+
+    const onHomePage = await page.locator('form#PPJ0020_0010').count();
+    if (!onHomePage) {
+        const debugInfo = await page.evaluate(() => ({
+            forms: Array.from(document.querySelectorAll('form')).map((form) => form.id || '(no-id)'),
+            bodyClass: document.body.className || '',
+            textSample: (document.body.innerText || '').replace(/\s+/g, ' ').slice(0, 200),
+        })).catch(() => null);
+        throw new Error(`unexpected search page structure: ${JSON.stringify(debugInfo)}`);
+    }
+
+    console.log('[奈良県] detected PPJ0020 home page, navigating to PPJ0050 search form');
+    await page.goto(PPI_SEARCH_FORM_URL, { waitUntil: 'domcontentloaded', timeout: 45000 });
+    await page.waitForSelector('form#PPJ0050_0010', { state: 'attached', timeout: 15000 });
 }
 
 async function dismissPopup(page: Page) {

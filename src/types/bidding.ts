@@ -22,7 +22,7 @@ export interface BiddingItem {
   winnerType?: 'ゼネコン' | '設計事務所' | 'その他'; // 落札種別
   pdfUrl?: string; // Link to the actual PDF document
   isIntelligenceExtracted?: boolean; // True if Gemini has processed the PDF
-  extractionSource?: 'scraper' | 'gemini_3.1'; // Where the data came from
+  extractionSource?: 'scraper' | 'gemini' | 'gemini_3.1'; // Where the data came from
   tags?: string[]; // AI generated tags for filtering
 }
 

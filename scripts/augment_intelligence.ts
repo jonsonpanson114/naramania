@@ -21,7 +21,7 @@ function hasSummary(item: BiddingItem): boolean {
 }
 
 async function main() {
-    console.log('--- 🚀 Gemini 3.1 State-of-the-Art Processor ---');
+    console.log('--- 🚀 Gemini Intelligence Processor ---');
     console.log('[Native PDF + JSON Schema Enforcement]');
 
     const apiKey = process.env.GOOGLE_GENERATIVE_AI_API_KEY || process.env.GEMINI_API_KEY;
@@ -88,7 +88,7 @@ async function main() {
                         item.tags = info.tags || item.tags;
                         if (info.description?.trim()) {
                             item.isIntelligenceExtracted = true;
-                            item.extractionSource = 'gemini_3.1';
+                            item.extractionSource = 'gemini';
                             augmentedCount++;
                         }
                         if (info.tags?.length) taggedCount++;

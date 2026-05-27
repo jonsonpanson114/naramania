@@ -202,7 +202,7 @@ export default function SettingsPage() {
                 <h3 className="text-[10px] tracking-[0.3em] text-secondary/50 uppercase font-bold mb-6">AI解析エンジン</h3>
                 <div className="flex items-center gap-4">
                     <div className="w-3 h-3 rounded-full bg-green-400 animate-pulse"></div>
-                    <span className="text-sm tracking-wider">Gemini 3.1 Flash-Lite</span>
+                    <span className="text-sm tracking-wider">Gemini 2.5 Flash / 2.0 Flash-Lite</span>
                     <span className="text-[9px] tracking-[0.2em] text-green-600 border border-green-200 bg-green-50 px-2 py-0.5 rounded-sm uppercase font-bold">Active</span>
                 </div>
                 <p className="text-secondary/40 text-xs tracking-wider mt-3">

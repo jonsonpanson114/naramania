@@ -40,7 +40,7 @@ async function main() {
     }
 
     const genAI = new GoogleGenerativeAI(apiKey);
-    const model = genAI.getGenerativeModel({ model: "gemini-3.1-flash-lite-preview" });
+    const model = genAI.getGenerativeModel({ model: process.env.GOOGLE_GENERATIVE_AI_TEXT_MODEL || "gemini-2.0-flash-lite" });
 
     const rawData = fs.readFileSync(RESULT_PATH, 'utf-8');
     const items: BiddingItem[] = JSON.parse(rawData);

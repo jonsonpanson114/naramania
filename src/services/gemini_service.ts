@@ -26,13 +26,16 @@ const BIDDING_INFO_SCHEMA = {
     required: ["description"]
 };
 
+const PDF_EXTRACTION_MODEL = process.env.GOOGLE_GENERATIVE_AI_PDF_MODEL || "gemini-2.5-flash";
+const TEXT_EXTRACTION_MODEL = process.env.GOOGLE_GENERATIVE_AI_TEXT_MODEL || "gemini-2.0-flash-lite";
+
 export async function extractBiddingInfoFromPDF(pdfBuffer: Buffer, mimeType: string = "application/pdf"): Promise<ExtractedBiddingInfo | null> {
     const apiKey = process.env.GOOGLE_GENERATIVE_AI_API_KEY || process.env.GEMINI_API_KEY || "";
     if (!apiKey) return null;
 
     const genAI = new GoogleGenerativeAI(apiKey);
     const model = genAI.getGenerativeModel({
-        model: "gemini-3.1-flash",
+        model: PDF_EXTRACTION_MODEL,
         generationConfig: {
             responseMimeType: "application/json",
             responseSchema: BIDDING_INFO_SCHEMA as never,
@@ -79,7 +82,7 @@ export async function extractBiddingInfoFromText(text: string): Promise<Extracte
 
     const genAI = new GoogleGenerativeAI(apiKey);
     const model = genAI.getGenerativeModel({
-        model: "gemini-3.1-flash-lite-preview",
+        model: TEXT_EXTRACTION_MODEL,
         generationConfig: {
             responseMimeType: "application/json",
             responseSchema: BIDDING_INFO_SCHEMA as never,

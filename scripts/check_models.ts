@@ -5,9 +5,9 @@ async function listModels() {
     if (!apiKey) return;
     const genAI = new GoogleGenerativeAI(apiKey);
     const modelsToTry = [
-        "gemini-3.1-pro",
-        "gemini-3.1-flash-lite-001",
-        "gemini-3.1-flash-lite-preview",
+        "gemini-2.5-flash",
+        "gemini-2.0-flash",
+        "gemini-2.0-flash-lite",
         "gemini-2.0-flash",
         "gemini-2.0-pro-exp-02-05"
     ];

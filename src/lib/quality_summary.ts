@@ -62,7 +62,7 @@ export function buildIntelligenceSummary(items: BiddingItem[], lastAugmentedAt?:
     const itemsWithPdf = items.filter((item) => Boolean(item.pdfUrl)).length;
     const itemsWithDescription = items.filter((item) => Boolean(item.description?.trim())).length;
     const intelligenceExtractedCount = items.filter((item) => item.isIntelligenceExtracted === true).length;
-    const geminiExtractedCount = items.filter((item) => item.extractionSource === 'gemini_3.1').length;
+    const geminiExtractedCount = items.filter((item) => item.extractionSource === 'gemini' || item.extractionSource === 'gemini_3.1').length;
     const taggedCount = items.filter((item) => Array.isArray(item.tags) && item.tags.length > 0).length;
 
     return {
