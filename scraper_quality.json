@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-27T09:51:17.825Z",
+  "generatedAt": "2026-05-27T13:07:59.857Z",
   "source": "daily_scrape",
   "keptCount": 141,
   "municipalityCount": 20,
@@ -59,10 +59,10 @@
   },
   "intelligence": {
     "itemsWithPdf": 62,
-    "itemsWithDescription": 0,
-    "intelligenceExtractedCount": 0,
-    "geminiExtractedCount": 0,
-    "taggedCount": 0,
-    "lastAugmentedAt": "2026-05-27T09:51:18.697Z"
+    "itemsWithDescription": 50,
+    "intelligenceExtractedCount": 50,
+    "geminiExtractedCount": 50,
+    "taggedCount": 50,
+    "lastAugmentedAt": "2026-05-27T13:08:00.751Z"
   }
 }
