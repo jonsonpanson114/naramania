@@ -292,8 +292,29 @@ async function fetchDetailInfo(page: Page, kanriNo: string): Promise<DetailInfo>
 
 export class NaraPrefScraper implements Scraper {
     municipality: '奈良県' = '奈良県' as const;
+    private warnings: string[] = [];
+    private errors: string[] = [];
+
+    private recordWarning(message: string) {
+        this.warnings.push(message);
+        console.warn(message);
+    }
+
+    private recordError(message: string) {
+        this.errors.push(message);
+        console.error(message);
+    }
+
+    getDiagnostics() {
+        return {
+            warnings: [...this.warnings],
+            errors: [...this.errors],
+        };
+    }
 
     async scrape(): Promise<BiddingItem[]> {
+        this.warnings = [];
+        this.errors = [];
         const browser = await chromium.launch({ headless: true });
         const searchPage = await browser.newPage();
         const detailPage = await browser.newPage();
@@ -318,7 +339,7 @@ export class NaraPrefScraper implements Scraper {
 
                 for (const gyoushuCode of target.gyoushuCodes) {
                     if (Date.now() > scrapeDeadline) {
-                        console.warn(`[奈良県] 時間上限に達したため ${target.label} の残り検索を打ち切ります`);
+                        this.recordWarning(`[奈良県] 時間上限に達したため ${target.label} の残り検索を打ち切ります`);
                         deadlineReached = true;
                         break;
                     }
@@ -378,14 +399,15 @@ export class NaraPrefScraper implements Scraper {
                             });
                         }
                     } catch (error) {
-                        console.warn(`[奈良県] ${target.label} ${gyoushuCode || 'all'} ${fiscalYear} エラー:`, error instanceof Error ? error.message : String(error));
+                        const detail = error instanceof Error ? error.message : String(error);
+                        this.recordWarning(`[奈良県] ${target.label} ${gyoushuCode || 'all'} ${fiscalYear} エラー: ${detail}`);
                     }
                     if (deadlineReached) break;
                 }
                 if (deadlineReached) break;
             }
         } catch (error) {
-            console.error('[奈良県] スクレイパーエラー:', error instanceof Error ? error.message : String(error));
+            this.recordError(`[奈良県] スクレイパーエラー: ${error instanceof Error ? error.message : String(error)}`);
         } finally {
             await browser.close();
         }

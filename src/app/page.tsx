@@ -29,6 +29,11 @@ interface QualitySummary {
     missingMunicipalities?: string[];
     zeroCountMunicipalities?: string[];
     retainedFromPrevious?: string[];
+    issues?: Array<{
+      municipality: string;
+      level: 'warning' | 'error';
+      message: string;
+    }>;
     breakdown?: Array<{
       municipality: string;
       count: number;
@@ -114,6 +119,8 @@ export default async function Home() {
     return acc;
   }, {} as Record<string, number>)).map(([municipality, count]) => ({ municipality, count }));
   const missingMunicipalities = qualitySummary?.municipalityAudit?.missingMunicipalities ?? [];
+  const municipalityIssues = qualitySummary?.municipalityAudit?.issues ?? [];
+  const highlightedIssues = municipalityIssues.slice(0, 3);
   
   const upcomingBiddings = allItems
     .filter(item => item.biddingDate && item.status !== '落札' && item.status !== '受付終了')
@@ -218,6 +225,22 @@ export default async function Home() {
             </div>
           </div>
         </div>
+
+        {highlightedIssues.length > 0 ? (
+          <div className="mb-10 rounded-[1.6rem] border border-amber-200 bg-amber-50/90 p-5 shadow-sm">
+            <div className="flex items-center gap-3">
+              <Activity size={18} className="text-amber-700" />
+              <h4 className="text-sm font-bold tracking-[0.08em] text-amber-900">収集上の注意</h4>
+            </div>
+            <div className="mt-3 space-y-2 text-sm leading-7 tracking-[0.03em] text-amber-900/90">
+              {highlightedIssues.map((issue, index) => (
+                <p key={`${issue.municipality}-${index}`}>
+                  {issue.municipality}: {issue.message.replace(/^\[[^\]]+\]\s*/, '')}
+                </p>
+              ))}
+            </div>
+          </div>
+        ) : null}
 
         {/* Municipality Distribution */}
         <div className="mb-12">

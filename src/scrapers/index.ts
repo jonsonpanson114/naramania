@@ -21,11 +21,12 @@ import { TakatoriTownScraper, IkarugaTownScraper } from './takatori_ikaruga';
 import { SangoTownScraper } from './sango_town';
 import { OjiTownScraper } from './oji_town';
 import { OyodoTownScraper } from './oyodo_town';
-import { BiddingItem } from '../types/bidding';
+import { BiddingItem, Scraper } from '../types/bidding';
 import fs from 'fs';
 import path from 'path';
 import { shouldKeepBiddingItem } from './common/filter';
 import { EXPECTED_MUNICIPALITIES, QUALITY_PATH, buildIntelligenceSummary, readQualitySummary } from '../lib/quality_summary';
+import type { MunicipalityIssueEntry } from '../lib/quality_summary';
 
 function normalizeComparisonTitle(title: string): string {
     return title
@@ -170,6 +171,7 @@ function writeQualitySummary(
     scrapedCount: number,
     rejectedCount: number,
     retainedMunicipalities: string[] = [],
+    issues: MunicipalityIssueEntry[] = [],
 ) {
     const previousSummary = readQualitySummary();
     const dates = items
@@ -211,6 +213,7 @@ function writeQualitySummary(
             zeroCountMunicipalities: missingMunicipalities,
             breakdown,
             retainedFromPrevious: retainedMunicipalities,
+            issues,
         },
         dateAudit,
         intelligence: buildIntelligenceSummary(items),
@@ -222,7 +225,7 @@ function writeQualitySummary(
 async function main() {
     console.log('=== スクレイピング開始 ===');
 
-    const scrapers = [
+    const scrapers: Scraper[] = [
         new NaraPrefScraper(),
         new NaraCityScraper(),
         new KashiharaCityScraper(),
@@ -256,6 +259,7 @@ async function main() {
     let scrapedCount = 0;
     let rejectedCount = 0;
     const retainedMunicipalities = new Set<string>();
+    const municipalityIssues = new Map<string, MunicipalityIssueEntry[]>();
 
     // Load existing data
     if (fs.existsSync(outputPath)) {
@@ -274,6 +278,22 @@ async function main() {
         console.log(`\n--- ${scraper.municipality} 開始 ---`);
         try {
             const items = await scraper.scrape();
+            const diagnostics = scraper.getDiagnostics?.();
+            const issueEntries: MunicipalityIssueEntry[] = [
+                ...(diagnostics?.warnings || []).map((message: string) => ({
+                    municipality: scraper.municipality,
+                    level: 'warning' as const,
+                    message,
+                })),
+                ...(diagnostics?.errors || []).map((message: string) => ({
+                    municipality: scraper.municipality,
+                    level: 'error' as const,
+                    message,
+                })),
+            ];
+            if (issueEntries.length > 0) {
+                municipalityIssues.set(scraper.municipality, issueEntries);
+            }
             console.log(`→ ${scraper.municipality}: ${items.length}件取得`);
             scrapedCount += items.length;
             rejectedCount += items.filter(item => !shouldKeepBiddingItem(item)).length;
@@ -283,6 +303,14 @@ async function main() {
             if (scraper.municipality === '奈良県' && keptItems.length === 0 && previousMunicipalityItems.length > 0) {
                 retainedMunicipalities.add(scraper.municipality);
                 console.warn(`[${scraper.municipality}] 0件取得のため前回データ ${previousMunicipalityItems.length}件を保持します`);
+                municipalityIssues.set(scraper.municipality, [
+                    ...(municipalityIssues.get(scraper.municipality) || []),
+                    {
+                        municipality: scraper.municipality,
+                        level: 'warning',
+                        message: `[${scraper.municipality}] 0件取得のため前回データ ${previousMunicipalityItems.length}件を保持しています`,
+                    },
+                ]);
                 continue;
             }
 
@@ -305,12 +333,26 @@ async function main() {
 
         } catch (error) {
             console.error(`✗ ${scraper.municipality} 失敗:`, error);
+            municipalityIssues.set(scraper.municipality, [
+                ...(municipalityIssues.get(scraper.municipality) || []),
+                {
+                    municipality: scraper.municipality,
+                    level: 'error',
+                    message: `✗ ${scraper.municipality} 失敗: ${error instanceof Error ? error.message : String(error)}`,
+                },
+            ]);
         }
     }
 
     console.log('\n=== 集計完了 ===');
     const finalUnique = Array.from(seen.values());
-    writeQualitySummary(finalUnique, scrapedCount, rejectedCount, Array.from(retainedMunicipalities));
+    writeQualitySummary(
+        finalUnique,
+        scrapedCount,
+        rejectedCount,
+        Array.from(retainedMunicipalities),
+        Array.from(municipalityIssues.values()).flat(),
+    );
     console.log(`最終合計: ${finalUnique.length} 件`);
 
     // 内訳表示

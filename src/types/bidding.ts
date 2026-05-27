@@ -29,5 +29,9 @@ export interface BiddingItem {
 export interface Scraper {
   municipality: Municipality;
   scrape(): Promise<BiddingItem[]>;
+  getDiagnostics?(): {
+    warnings?: string[];
+    errors?: string[];
+  };
 }
 

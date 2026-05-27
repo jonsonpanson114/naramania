@@ -14,6 +14,12 @@ export interface MunicipalityBreakdownEntry {
     changeFromPrevious?: number;
 }
 
+export interface MunicipalityIssueEntry {
+    municipality: string;
+    level: 'warning' | 'error';
+    message: string;
+}
+
 export interface QualitySummary {
     generatedAt: string;
     source: string;
@@ -32,6 +38,7 @@ export interface QualitySummary {
         zeroCountMunicipalities: string[];
         breakdown: MunicipalityBreakdownEntry[];
         retainedFromPrevious?: string[];
+        issues?: MunicipalityIssueEntry[];
     };
     dateAudit?: {
         announcementAfterBiddingCount: number;
