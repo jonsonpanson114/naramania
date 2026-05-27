@@ -11,16 +11,6 @@
     "status": "受付中"
   },
   {
-    "id": "ando-category-63",
-    "municipality": "安堵町",
-    "title": "条件付き一般競争入札の実施について（安堵町立安堵小中学校屋内運動場空調設備設置工事）",
-    "type": "建築",
-    "announcementDate": "2026-05-26",
-    "biddingDate": "2026-05-27",
-    "link": "https://www.town.ando.nara.jp/0000003971.html",
-    "status": "受付中"
-  },
-  {
     "id": "ikoma-c020d0513e",
     "municipality": "生駒市",
     "title": "RAKU-RAKUはうす改修工事",
@@ -61,6 +51,16 @@
     "biddingDate": "2026-06-03",
     "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/9328.html",
     "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk260603_42k.pdf",
+    "status": "受付中"
+  },
+  {
+    "id": "ando-supplemental-0000003967",
+    "municipality": "安堵町",
+    "title": "〖再度公告〗条件付き一般競争入札の実施について（安堵こども園南館外壁改修、トイレ乾式化および洋式化改修工事）",
+    "type": "建築",
+    "announcementDate": "2026-05-19",
+    "biddingDate": "2026-06-26",
+    "link": "https://www.town.ando.nara.jp/0000003967.html",
     "status": "受付中"
   },
   {
@@ -1003,9 +1003,9 @@
     "biddingDate": "2025-11-19"
   },
   {
-    "id": "miyake-2025-11-04-8-三宅町つながり総合センター解体工事",
+    "id": "miyake-2025-11-04-三宅町つながり総合センター解体工事",
     "municipality": "三宅町",
-    "title": "８．三宅町つながり総合センター解体工事",
+    "title": "三宅町つながり総合センター解体工事",
     "type": "建築",
     "announcementDate": "2025-11-04",
     "biddingDate": "2025-11-04",
