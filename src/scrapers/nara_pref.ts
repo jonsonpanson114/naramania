@@ -315,9 +315,26 @@ export class NaraPrefScraper implements Scraper {
     async scrape(): Promise<BiddingItem[]> {
         this.warnings = [];
         this.errors = [];
-        const browser = await chromium.launch({ headless: true });
-        const searchPage = await browser.newPage();
-        const detailPage = await browser.newPage();
+        const browser = await chromium.launch({
+            headless: true,
+            args: ['--disable-blink-features=AutomationControlled'],
+        });
+        const context = await browser.newContext({
+            userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36',
+            locale: 'ja-JP',
+            timezoneId: 'Asia/Tokyo',
+            viewport: { width: 1366, height: 768 },
+            extraHTTPHeaders: {
+                'Accept-Language': 'ja-JP,ja;q=0.9,en-US;q=0.8,en;q=0.7',
+            },
+        });
+        await context.addInitScript(() => {
+            Object.defineProperty(navigator, 'webdriver', {
+                get: () => undefined,
+            });
+        });
+        const searchPage = await context.newPage();
+        const detailPage = await context.newPage();
         const items = new Map<string, BiddingItem>();
 
         try {
@@ -409,6 +426,7 @@ export class NaraPrefScraper implements Scraper {
         } catch (error) {
             this.recordError(`[奈良県] スクレイパーエラー: ${error instanceof Error ? error.message : String(error)}`);
         } finally {
+            await context.close();
             await browser.close();
         }
 
