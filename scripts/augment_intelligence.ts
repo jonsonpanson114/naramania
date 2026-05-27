@@ -136,6 +136,7 @@ async function main() {
         ...(existingQuality?.rejectedCount !== undefined ? { rejectedCount: existingQuality.rejectedCount } : {}),
         ...(existingQuality?.originalCount !== undefined ? { originalCount: existingQuality.originalCount } : {}),
         ...(existingQuality?.removedCount !== undefined ? { removedCount: existingQuality.removedCount } : {}),
+        ...(existingQuality?.municipalityAudit ? { municipalityAudit: existingQuality.municipalityAudit } : {}),
         ...(existingQuality?.dateAudit ? { dateAudit: existingQuality.dateAudit } : {}),
         intelligence: buildIntelligenceSummary(items, augmentedAt),
     });
