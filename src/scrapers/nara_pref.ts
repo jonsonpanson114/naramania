@@ -124,7 +124,7 @@ async function ensureSearchForm(page: Page) {
             document.querySelector('form#PPJ0050_0010') ||
             document.querySelector('form#PPJ0020_0010'),
         );
-    }, { timeout: 15000 });
+    }, undefined, { timeout: 15000 });
 
     const onSearchForm = await page.locator('form#PPJ0050_0010').count();
     if (onSearchForm) return;
