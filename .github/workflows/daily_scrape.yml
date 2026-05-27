@@ -42,6 +42,11 @@ jobs:
         env:
           NODE_ENV: production
 
+      - name: Validate Quality
+        run: npm run validate:quality
+        env:
+          NODE_ENV: production
+
       - name: Commit and Push changes
         run: |
           git config --global user.name "github-actions[bot]"

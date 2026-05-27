@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "scrape": "tsx src/scrapers/index.ts",
-    "augment:intelligence": "tsx scripts/augment_intelligence.ts"
+    "augment:intelligence": "tsx scripts/augment_intelligence.ts",
+    "validate:quality": "tsx scripts/validate_quality.ts"
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
