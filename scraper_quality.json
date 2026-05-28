@@ -1,24 +1,137 @@
 {
-  "generatedAt": "2026-05-27T14:11:50.559Z",
-  "source": "daily_scrape",
-  "keptCount": 127,
-  "municipalityCount": 17,
+  "generatedAt": "2026-05-28T13:06:07.379Z",
+  "source": "manual_restore",
+  "scrapedCount": 352,
+  "keptCount": 136,
+  "rejectedCount": 211,
   "oldestAnnouncementDate": "2025-04-11",
   "latestAnnouncementDate": "2026-05-27",
-  "scrapedCount": 352,
-  "rejectedCount": 211,
+  "municipalityCount": 18,
+  "municipalityAudit": {
+    "expectedMunicipalityCount": 25,
+    "coveredMunicipalityCount": 18,
+    "missingMunicipalities": [
+      "生駒市",
+      "桜井市",
+      "宇陀市",
+      "川西町",
+      "山添村",
+      "平群町",
+      "三郷町"
+    ],
+    "zeroCountMunicipalities": [
+      "生駒市",
+      "桜井市",
+      "宇陀市",
+      "川西町",
+      "山添村",
+      "平群町",
+      "三郷町"
+    ],
+    "breakdown": [
+      {
+        "municipality": "橿原市",
+        "count": 39
+      },
+      {
+        "municipality": "奈良市",
+        "count": 21
+      },
+      {
+        "municipality": "高取町",
+        "count": 17
+      },
+      {
+        "municipality": "香芝市",
+        "count": 11
+      },
+      {
+        "municipality": "葛城市",
+        "count": 10
+      },
+      {
+        "municipality": "奈良県",
+        "count": 9
+      },
+      {
+        "municipality": "大和郡山市",
+        "count": 5
+      },
+      {
+        "municipality": "五條市",
+        "count": 4
+      },
+      {
+        "municipality": "大淀町",
+        "count": 4
+      },
+      {
+        "municipality": "大和高田市",
+        "count": 3
+      },
+      {
+        "municipality": "田原本町",
+        "count": 3
+      },
+      {
+        "municipality": "御所市",
+        "count": 2
+      },
+      {
+        "municipality": "広陵町",
+        "count": 2
+      },
+      {
+        "municipality": "斑鳩町",
+        "count": 2
+      },
+      {
+        "municipality": "安堵町",
+        "count": 1
+      },
+      {
+        "municipality": "王寺町",
+        "count": 1
+      },
+      {
+        "municipality": "三宅町",
+        "count": 1
+      },
+      {
+        "municipality": "天理市",
+        "count": 1
+      }
+    ],
+    "retainedFromPrevious": [
+      "奈良県"
+    ],
+    "issues": [
+      {
+        "municipality": "奈良県",
+        "level": "warning",
+        "message": "[奈良県] 2026-05-25 時点の最後の正常取得データ 9件を復旧して表示しています"
+      }
+    ]
+  },
   "dateAudit": {
     "announcementAfterBiddingCount": 0,
     "awardedWithoutBiddingDateCount": 3,
-    "awardedWithoutWinnerCount": 6,
+    "awardedWithoutWinnerCount": 1,
     "openWithWinnerCount": 0,
     "sampleTitles": [
       {
-        "municipality": "大和高田市",
-        "title": "大和高田市保健センター受電設備改修工事",
+        "municipality": "五條市",
+        "title": "五條市立公民館等消防用設備等法定点検業務委託",
         "status": "落札",
-        "announcementDate": "2025-06-01",
+        "announcementDate": "2026-04-15",
         "biddingDate": null
+      },
+      {
+        "municipality": "大淀町",
+        "title": "令和7年度耐震改修促進計画改訂業務（第7－建築委－1号）【令和7年7月22日執行】",
+        "status": "落札",
+        "announcementDate": "2025-07-22",
+        "biddingDate": "2025-07-22"
       },
       {
         "municipality": "大和高田市",
@@ -28,32 +141,11 @@
         "biddingDate": null
       },
       {
-        "municipality": "五條市",
-        "title": "五條市立公民館等消防用設備等法定点検業務委託",
+        "municipality": "大和高田市",
+        "title": "大和高田市保健センター受電設備改修工事",
         "status": "落札",
-        "announcementDate": "2026-04-15",
+        "announcementDate": "2025-06-01",
         "biddingDate": null
-      },
-      {
-        "municipality": "五條市",
-        "title": "五條市立公民館等防火対象物定期点検業務委託",
-        "status": "落札",
-        "announcementDate": "2026-05-08",
-        "biddingDate": "2026-05-08"
-      },
-      {
-        "municipality": "五條市",
-        "title": "五條市立公民館等消防用設備等法定点検業務委託",
-        "status": "落札",
-        "announcementDate": "2026-04-15",
-        "biddingDate": null
-      },
-      {
-        "municipality": "五條市",
-        "title": "五條市立公民館特定建築物定期調査及び五條市立公民館防火設備定期検査業務委託",
-        "status": "落札",
-        "announcementDate": "2026-04-07",
-        "biddingDate": "2026-04-07"
       }
     ]
   },

@@ -132,6 +132,13 @@ function getMunicipalityItems(
     return Array.from(seen.values()).filter(item => item.municipality === municipality);
 }
 
+function hasScrapeFailureIssue(issueEntries: MunicipalityIssueEntry[] = []) {
+    return issueEntries.some((issue) =>
+        issue.level === 'error'
+        || /エラー|失敗|forbidden|403|unexpected search page structure/i.test(issue.message),
+    );
+}
+
 function buildDateAudit(items: BiddingItem[]) {
     const announcementAfterBidding = items.filter(item =>
         item.biddingDate && item.announcementDate && item.announcementDate > item.biddingDate,
@@ -299,12 +306,17 @@ async function main() {
             rejectedCount += items.filter(item => !shouldKeepBiddingItem(item)).length;
             const previousMunicipalityItems = getMunicipalityItems(seen, scraper.municipality);
             const keptItems = items.filter(item => shouldKeepBiddingItem(item));
+            const currentIssues = municipalityIssues.get(scraper.municipality) || [];
 
-            if (scraper.municipality === '奈良県' && keptItems.length === 0 && previousMunicipalityItems.length > 0) {
+            if (
+                keptItems.length === 0 &&
+                previousMunicipalityItems.length > 0 &&
+                hasScrapeFailureIssue(currentIssues)
+            ) {
                 retainedMunicipalities.add(scraper.municipality);
                 console.warn(`[${scraper.municipality}] 0件取得のため前回データ ${previousMunicipalityItems.length}件を保持します`);
                 municipalityIssues.set(scraper.municipality, [
-                    ...(municipalityIssues.get(scraper.municipality) || []),
+                    ...currentIssues,
                     {
                         municipality: scraper.municipality,
                         level: 'warning',
