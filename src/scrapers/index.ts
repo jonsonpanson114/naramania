@@ -28,6 +28,9 @@ import { shouldKeepBiddingItem } from './common/filter';
 import { EXPECTED_MUNICIPALITIES, QUALITY_PATH, buildIntelligenceSummary, readQualitySummary } from '../lib/quality_summary';
 import type { MunicipalityIssueEntry } from '../lib/quality_summary';
 
+const SNAPSHOT_PATH = path.join(process.cwd(), 'municipality_snapshots.json');
+type MunicipalitySnapshots = Partial<Record<BiddingItem['municipality'], BiddingItem[]>>;
+
 function normalizeComparisonTitle(title: string): string {
     return title
         .normalize('NFKC')
@@ -137,6 +140,20 @@ function hasScrapeFailureIssue(issueEntries: MunicipalityIssueEntry[] = []) {
         issue.level === 'error'
         || /エラー|失敗|forbidden|403|unexpected search page structure/i.test(issue.message),
     );
+}
+
+function readMunicipalitySnapshots(): MunicipalitySnapshots {
+    if (!fs.existsSync(SNAPSHOT_PATH)) return {};
+
+    try {
+        return JSON.parse(fs.readFileSync(SNAPSHOT_PATH, 'utf-8')) as MunicipalitySnapshots;
+    } catch {
+        return {};
+    }
+}
+
+function writeMunicipalitySnapshots(snapshots: MunicipalitySnapshots) {
+    fs.writeFileSync(SNAPSHOT_PATH, JSON.stringify(snapshots, null, 2), 'utf-8');
 }
 
 function buildDateAudit(items: BiddingItem[]) {
@@ -263,6 +280,7 @@ async function main() {
     const outputPath = path.join(process.cwd(), 'scraper_result.json');
     const seen = new Map<string, BiddingItem>();
     const seenContent = new Map<string, string>();
+    const snapshots = readMunicipalitySnapshots();
     let scrapedCount = 0;
     let rejectedCount = 0;
     const retainedMunicipalities = new Set<string>();
@@ -276,6 +294,17 @@ async function main() {
             existingItems.filter(item => shouldKeepBiddingItem(item)).forEach(item => {
                 upsertSeenItem(seen, seenContent, item);
             });
+
+            if (Object.keys(snapshots).length === 0) {
+                for (const municipality of EXPECTED_MUNICIPALITIES) {
+                    const municipalityItems = existingItems
+                        .filter(item => item.municipality === municipality && shouldKeepBiddingItem(item));
+                    if (municipalityItems.length > 0) {
+                        snapshots[municipality] = municipalityItems;
+                    }
+                }
+                writeMunicipalitySnapshots(snapshots);
+            }
         } catch {
             console.warn('既存データの読み込みに失敗しました。');
         }
@@ -305,22 +334,30 @@ async function main() {
             scrapedCount += items.length;
             rejectedCount += items.filter(item => !shouldKeepBiddingItem(item)).length;
             const previousMunicipalityItems = getMunicipalityItems(seen, scraper.municipality);
+            const snapshotMunicipalityItems = snapshots[scraper.municipality] || [];
             const keptItems = items.filter(item => shouldKeepBiddingItem(item));
             const currentIssues = municipalityIssues.get(scraper.municipality) || [];
 
             if (
                 keptItems.length === 0 &&
-                previousMunicipalityItems.length > 0 &&
+                (previousMunicipalityItems.length > 0 || snapshotMunicipalityItems.length > 0) &&
                 hasScrapeFailureIssue(currentIssues)
             ) {
+                const fallbackItems = previousMunicipalityItems.length > 0
+                    ? previousMunicipalityItems
+                    : snapshotMunicipalityItems;
                 retainedMunicipalities.add(scraper.municipality);
-                console.warn(`[${scraper.municipality}] 0件取得のため前回データ ${previousMunicipalityItems.length}件を保持します`);
+                if (previousMunicipalityItems.length === 0 && snapshotMunicipalityItems.length > 0) {
+                    replaceMunicipalityItems(seen, seenContent, scraper.municipality);
+                    snapshotMunicipalityItems.forEach(item => upsertSeenItem(seen, seenContent, item));
+                }
+                console.warn(`[${scraper.municipality}] 0件取得のため保持データ ${fallbackItems.length}件を利用します`);
                 municipalityIssues.set(scraper.municipality, [
                     ...currentIssues,
                     {
                         municipality: scraper.municipality,
                         level: 'warning',
-                        message: `[${scraper.municipality}] 0件取得のため前回データ ${previousMunicipalityItems.length}件を保持しています`,
+                        message: `[${scraper.municipality}] 0件取得のため保持データ ${fallbackItems.length}件を維持しています`,
                     },
                 ]);
                 continue;
@@ -340,6 +377,12 @@ async function main() {
                 const dateB = b.announcementDate ? new Date(b.announcementDate).getTime() : 0;
                 return dateB - dateA;
             });
+            const municipalityItemsAfterMerge = getMunicipalityItems(seen, scraper.municipality)
+                .sort((a, b) => b.announcementDate.localeCompare(a.announcementDate));
+            if (municipalityItemsAfterMerge.length > 0) {
+                snapshots[scraper.municipality] = municipalityItemsAfterMerge;
+                writeMunicipalitySnapshots(snapshots);
+            }
             fs.writeFileSync(outputPath, JSON.stringify(currentUnique, null, 2), 'utf-8');
             console.log(`[${scraper.municipality}] データを保存しました。合計: ${currentUnique.length}件`);
 
@@ -358,6 +401,7 @@ async function main() {
 
     console.log('\n=== 集計完了 ===');
     const finalUnique = Array.from(seen.values());
+    writeMunicipalitySnapshots(snapshots);
     writeQualitySummary(
         finalUnique,
         scrapedCount,
