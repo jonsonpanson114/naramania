@@ -1,4 +1,4 @@
-import { chromium, Page } from 'playwright';
+import { chromium, Frame, Page } from 'playwright';
 import { BiddingItem, Scraper, BiddingType } from '../types/bidding';
 import { shouldKeepItem } from './common/filter';
 
@@ -41,6 +41,8 @@ type DetailInfo = {
     skip: boolean;
 };
 
+type SearchSurface = Page | Frame;
+
 function parseJapaneseDate(text: string): string {
     const match = text.match(/令和\s*(\d+)\s*年\s*(\d+)\s*月\s*(\d+)\s*日/);
     if (!match) return '';
@@ -66,7 +68,114 @@ function startOfFiscalYear(referenceDate: Date): Date {
     return new Date(year, 3, 1);
 }
 
-async function openSearchPage(page: Page, gyomuType: string, fiscalYear: string, gyoushuCode: string) {
+function getSearchSurfaces(page: Page): SearchSurface[] {
+    return [page, ...page.frames().filter((frame) => frame !== page.mainFrame())];
+}
+
+async function collectSearchDebugInfo(page: Page, gyomuType: string) {
+    const frameInfos = page.frames().map((frame, index) => ({
+        index,
+        name: frame.name() || '(no-name)',
+        url: frame.url(),
+    }));
+    const candidateInfos = await Promise.all(getSearchSurfaces(page).map(async (surface, index) => {
+        const candidates = await surface.evaluate((type) => {
+            const tabNodes = Array.from(document.querySelectorAll('[id*="GyomuTypeTab"], a, button, input[type="button"], li'));
+            return tabNodes
+                .map((node) => {
+                    const element = node as HTMLElement;
+                    const text = (element.innerText || element.textContent || '').replace(/\s+/g, ' ').trim();
+                    const id = element.id || '';
+                    const cls = element.className || '';
+                    return { id, cls, text };
+                })
+                .filter((entry) =>
+                    entry.id.includes('GyomuTypeTab')
+                    || entry.text.includes('工事')
+                    || entry.text.includes('コンサル')
+                    || entry.text.includes('測量')
+                    || entry.text.includes(type),
+                )
+                .slice(0, 12);
+        }, gyomuType).catch(() => []);
+
+        return {
+            surface: index,
+            url: 'url' in surface ? surface.url() : '',
+            candidates,
+        };
+    }));
+
+    return {
+        frames: frameInfos,
+        candidates: candidateInfos,
+    };
+}
+
+async function clickGyomuTab(page: Page, gyomuType: string, label: string): Promise<SearchSurface> {
+    const idSelectors = [
+        `#GyomuTypeTab${gyomuType}`,
+        `[id="GyomuTypeTab${gyomuType}"]`,
+        `[id*="GyomuTypeTab${gyomuType}"]`,
+    ];
+    const textKeywords = gyomuType === '01'
+        ? ['工事']
+        : ['コンサル', '測量'];
+
+    for (const surface of getSearchSurfaces(page)) {
+        for (const selector of idSelectors) {
+            const locator = surface.locator(selector).first();
+            if (await locator.count()) {
+                await locator.scrollIntoViewIfNeeded().catch(() => { });
+                await locator.click({ timeout: 10000, force: true });
+                return surface;
+            }
+        }
+
+        for (const keyword of [label, ...textKeywords]) {
+            const locator = surface.getByText(keyword, { exact: false }).first();
+            if (await locator.count()) {
+                await locator.scrollIntoViewIfNeeded().catch(() => { });
+                await locator.click({ timeout: 10000, force: true });
+                return surface;
+            }
+        }
+    }
+
+    const debugInfo = await collectSearchDebugInfo(page, gyomuType);
+    throw new Error(`gyomu tab not found: ${JSON.stringify(debugInfo)}`);
+}
+
+async function selectOptionFromSurface(surface: SearchSurface, selectors: string[], value: string) {
+    let lastError: unknown;
+
+    for (const selector of selectors) {
+        const locator = surface.locator(selector).first();
+        if (!(await locator.count())) continue;
+        try {
+            await surface.selectOption(selector, value);
+            return;
+        } catch (error) {
+            lastError = error;
+        }
+    }
+
+    throw lastError instanceof Error ? lastError : new Error(`select option failed for selectors: ${selectors.join(', ')}`);
+}
+
+async function clickSearchButton(surface: SearchSurface) {
+    const selectors = ['#search', 'input#search', 'button#search'];
+    for (const selector of selectors) {
+        const locator = surface.locator(selector).first();
+        if (!(await locator.count())) continue;
+        await locator.click({ timeout: 10000, force: true });
+        return;
+    }
+
+    throw new Error('search button not found');
+}
+
+async function openSearchPage(page: Page, gyomuType: string, fiscalYear: string, gyoushuCode: string, label: string): Promise<SearchSurface> {
     let lastError: unknown;
 
     for (let attempt = 1; attempt <= 3; attempt += 1) {
@@ -76,18 +185,18 @@ async function openSearchPage(page: Page, gyomuType: string, fiscalYear: string,
             await page.waitForTimeout(1500);
             await dismissPopup(page);
 
-            await page.click(`#GyomuTypeTab${gyomuType}`);
+            const searchSurface = await clickGyomuTab(page, gyomuType, label);
             await page.waitForTimeout(1000);
 
-            await page.selectOption('#searchJyokenNendo', fiscalYear);
+            await selectOptionFromSurface(searchSurface, ['#searchJyokenNendo', '#PPJ0050_0010 #searchJyokenNendo'], fiscalYear);
             await page.waitForTimeout(300);
 
             if (gyoushuCode) {
-                await page.selectOption('#searchJyokenGyoushuCd1', gyoushuCode).catch(() => { });
+                await selectOptionFromSurface(searchSurface, ['#searchJyokenGyoushuCd1', '#PPJ0050_0010 #searchJyokenGyoushuCd1'], gyoushuCode).catch(() => { });
                 await page.waitForTimeout(300);
             }
 
-            return;
+            return searchSurface;
         } catch (error) {
             lastError = error;
             console.warn(
@@ -118,8 +227,8 @@ async function dismissPopup(page: Page) {
     }
 }
 
-async function applyDateRange(page: Page, start: Date, end: Date) {
-    await page.evaluate(({ startEra, startHidden, endEra, endHidden }) => {
+async function applyDateRange(surface: SearchSurface, start: Date, end: Date) {
+    await surface.evaluate(({ startEra, startHidden, endEra, endHidden }) => {
         const startVisible = document.getElementById('searchJyokenKoukokuShimeiTsuchiDatetimeStart') as HTMLInputElement | null;
         const startValue = document.getElementById('hidSearchJyokenKoukokuShimeiTsuchiDatetimeStart') as HTMLInputElement | null;
         const endVisible = document.getElementById('searchJyokenKoukokuShimeiTsuchiDatetimeEnd') as HTMLInputElement | null;
@@ -137,8 +246,8 @@ async function applyDateRange(page: Page, start: Date, end: Date) {
     });
 }
 
-async function extractRows(page: Page): Promise<SearchRow[]> {
-    return await page.evaluate(() => {
+async function extractRows(surface: SearchSurface): Promise<SearchRow[]> {
+    return await surface.evaluate(() => {
         const rows = Array.from(document.querySelectorAll('input[id^="kanriNo_"]'));
         const results: SearchRow[] = [];
 
@@ -269,9 +378,9 @@ export class NaraPrefScraper implements Scraper {
                         break;
                     }
                     try {
-                        await openSearchPage(searchPage, target.gyomuType, fiscalYear, gyoushuCode);
-                        await applyDateRange(searchPage, searchStart, searchEnd);
-                        await searchPage.click('#search');
+                        const searchSurface = await openSearchPage(searchPage, target.gyomuType, fiscalYear, gyoushuCode, target.label);
+                        await applyDateRange(searchSurface, searchStart, searchEnd);
+                        await clickSearchButton(searchSurface);
                         await searchPage.waitForTimeout(3500);
                         console.log(`[奈良県] search submitted gyomu=${target.gyomuType} gyoushu=${gyoushuCode || 'all'} range=${searchStart.toISOString().slice(0, 10)}..${searchEnd.toISOString().slice(0, 10)}`);
 
@@ -280,7 +389,7 @@ export class NaraPrefScraper implements Scraper {
                             continue;
                         }
 
-                        const rows = await extractRows(searchPage);
+                        const rows = await extractRows(searchSurface);
                         console.log(`[奈良県] ${target.label} ${gyoushuCode || 'all'} ${searchStart.toISOString().slice(0, 10)}: ${rows.length}件 raw rows`);
 
                         for (const row of rows) {
