@@ -205,6 +205,21 @@ function buildDateAudit(items: BiddingItem[]) {
     };
 }
 
+function reconcileStatusByDates(item: BiddingItem, todayIso: string): BiddingItem {
+    if (
+        item.status === '受付中'
+        && item.biddingDate
+        && item.biddingDate < todayIso
+    ) {
+        return {
+            ...item,
+            status: '受付終了',
+        };
+    }
+
+    return item;
+}
+
 function writeQualitySummary(
     items: BiddingItem[],
     scrapedCount: number,
@@ -263,6 +278,7 @@ function writeQualitySummary(
 
 async function main() {
     console.log('=== スクレイピング開始 ===');
+    const todayIso = new Date().toISOString().slice(0, 10);
 
     const allScrapers: Scraper[] = [
         new NaraPrefScraper(),
@@ -410,19 +426,21 @@ async function main() {
 
             // Save after each municipality (incremental save)
             const currentUnique = Array.from(seen.values());
+            const reconciledCurrentUnique = currentUnique.map(item => reconcileStatusByDates(item, todayIso));
             currentUnique.sort((a, b) => {
                 const dateA = a.announcementDate ? new Date(a.announcementDate).getTime() : 0;
                 const dateB = b.announcementDate ? new Date(b.announcementDate).getTime() : 0;
                 return dateB - dateA;
             });
-            const municipalityItemsAfterMerge = getMunicipalityItems(seen, scraper.municipality)
+            const municipalityItemsAfterMerge = reconciledCurrentUnique
+                .filter(item => item.municipality === scraper.municipality)
                 .sort((a, b) => b.announcementDate.localeCompare(a.announcementDate));
             if (municipalityItemsAfterMerge.length > 0) {
                 snapshots[scraper.municipality] = municipalityItemsAfterMerge;
                 writeMunicipalitySnapshots(snapshots);
             }
-            fs.writeFileSync(outputPath, JSON.stringify(currentUnique, null, 2), 'utf-8');
-            console.log(`[${scraper.municipality}] データを保存しました。合計: ${currentUnique.length}件`);
+            fs.writeFileSync(outputPath, JSON.stringify(reconciledCurrentUnique, null, 2), 'utf-8');
+            console.log(`[${scraper.municipality}] データを保存しました。合計: ${reconciledCurrentUnique.length}件`);
 
         } catch (error) {
             console.error(`✗ ${scraper.municipality} 失敗:`, error);
@@ -438,7 +456,7 @@ async function main() {
     }
 
     console.log('\n=== 集計完了 ===');
-    const finalUnique = Array.from(seen.values());
+    const finalUnique = Array.from(seen.values()).map(item => reconcileStatusByDates(item, todayIso));
     writeMunicipalitySnapshots(snapshots);
     writeQualitySummary(
         finalUnique,
