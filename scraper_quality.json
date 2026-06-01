@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-01T11:53:59.678Z",
+  "generatedAt": "2026-06-01T12:17:41.495Z",
   "source": "daily_scrape",
   "scrapedCount": 42,
   "keptCount": 213,
@@ -31,7 +31,7 @@
       {
         "municipality": "橿原市",
         "count": 33,
-        "changeFromPrevious": -4
+        "changeFromPrevious": 0
       },
       {
         "municipality": "奈良県",
@@ -56,7 +56,7 @@
       {
         "municipality": "葛城市",
         "count": 9,
-        "changeFromPrevious": -1
+        "changeFromPrevious": 0
       },
       {
         "municipality": "宇陀市",
@@ -106,7 +106,7 @@
       {
         "municipality": "大淀町",
         "count": 2,
-        "changeFromPrevious": -1
+        "changeFromPrevious": 0
       },
       {
         "municipality": "天理市",
@@ -135,7 +135,7 @@
   "dateAudit": {
     "announcementAfterBiddingCount": 0,
     "awardedWithoutBiddingDateCount": 5,
-    "awardedWithoutWinnerCount": 10,
+    "awardedWithoutWinnerCount": 9,
     "openWithWinnerCount": 1,
     "sampleTitles": [
       {

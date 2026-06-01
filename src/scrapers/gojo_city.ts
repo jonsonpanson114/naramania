@@ -3,7 +3,7 @@ import * as cheerio from 'cheerio';
 import crypto from 'crypto';
 import { chromium } from 'playwright';
 import type { Frame, Page } from 'playwright';
-import { BiddingItem, BiddingType, Scraper } from '../types/bidding';
+import { BiddingItem, BiddingStatus, BiddingType, Scraper } from '../types/bidding';
 import { shouldKeepItem } from './common/filter';
 
 const BASE_URL = 'https://www.city.gojo.lg.jp';
@@ -140,9 +140,48 @@ async function openGojoEpiResults(page: Page): Promise<Frame | null> {
     return getRightFrame(page);
 }
 
+function parseGojoEpiAmount(text: string, label: string): string | undefined {
+    const pattern = new RegExp(`${label}[\\s\\S]*?(\\d{1,3}(?:,\\d{3})*)円`);
+    const match = text.match(pattern);
+    return match ? `${match[1]}円` : undefined;
+}
+
+function deriveGojoEpiStatus(detailText: string, fallback: BiddingStatus): BiddingStatus {
+    if (/落札候補者の事後審査中/.test(detailText)) {
+        return '受付終了';
+    }
+    return fallback;
+}
+
+async function scrapeGojoEpiDetail(page: Page, detailUrl: string): Promise<{
+    status?: BiddingStatus;
+    estimatedPrice?: string;
+}> {
+    const detailPage = await page.context().newPage();
+
+    try {
+        await detailPage.goto(detailUrl, { waitUntil: 'load', timeout: 30000 });
+        await detailPage.waitForTimeout(1500);
+
+        const bodyText = ((await detailPage.locator('body').textContent().catch(() => '')) || '')
+            .replace(/\s+/g, ' ')
+            .trim();
+
+        return {
+            status: deriveGojoEpiStatus(bodyText, '落札'),
+            estimatedPrice: parseGojoEpiAmount(bodyText, '予定価格'),
+        };
+    } catch {
+        return {};
+    } finally {
+        await detailPage.close().catch(() => undefined);
+    }
+}
+
 async function scrapeGojoEpiResults(): Promise<BiddingItem[]> {
     const browser = await chromium.launch({ headless: true });
-    const page = await browser.newPage();
+    const context = await browser.newContext();
+    const page = await context.newPage();
     const items = new Map<string, BiddingItem>();
 
     try {
@@ -182,6 +221,9 @@ async function scrapeGojoEpiResults(): Promise<BiddingItem[]> {
                     const detailUrl = controlNo
                         ? `https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=${controlNo}`
                         : GOJO_EPI_URL;
+                    const detail = (!winner || !amount)
+                        ? await scrapeGojoEpiDetail(page, detailUrl)
+                        : {};
 
                     const item: BiddingItem = {
                         id: contractNo ? `gojo-epi-${contractNo}` : makeId(normalizedTitle, detailUrl),
@@ -191,9 +233,9 @@ async function scrapeGojoEpiResults(): Promise<BiddingItem[]> {
                         announcementDate: biddingDate || '2026-01-01',
                         biddingDate,
                         link: detailUrl,
-                        status: '落札',
+                        status: detail.status || '落札',
                         winningContractor: winner,
-                        estimatedPrice: amount,
+                        estimatedPrice: amount || detail.estimatedPrice,
                     };
                     const key = gojoItemKey(normalizedTitle, biddingDate, contractNo || detailUrl);
                     items.set(key, mergeGojoItem(items.get(key), item));
@@ -208,6 +250,7 @@ async function scrapeGojoEpiResults(): Promise<BiddingItem[]> {
     } catch (e: unknown) {
         console.error('[五條市] EPI取得エラー:', e instanceof Error ? e.message : String(e));
     } finally {
+        await context.close().catch(() => undefined);
         await browser.close();
     }
 
