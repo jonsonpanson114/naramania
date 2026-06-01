@@ -5,6 +5,11 @@
 対象 workflow:
 - [.github/workflows/nara_prefecture_scrape.yml](C:\Users\jonso\.gemini\antigravity\playground\azimuthal-pioneer\naramania\.github\workflows\nara_prefecture_scrape.yml)
 
+実行時刻:
+- hosted daily の 10:00 / 13:00 / 15:00 JST とは分離
+- 奈良県専用は 10:25 / 13:25 / 15:25 JST
+- 理由は `scraper_result.json` と `scraper_quality.json` の commit 競合回避
+
 前提:
 - Windows x64 マシン
 - `gh auth login` 済み
