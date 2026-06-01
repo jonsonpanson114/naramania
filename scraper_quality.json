@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-06-01T11:34:04.333Z",
+  "generatedAt": "2026-06-01T11:53:59.678Z",
   "source": "daily_scrape",
-  "keptCount": 204,
-  "municipalityCount": 21,
+  "scrapedCount": 42,
+  "keptCount": 213,
+  "rejectedCount": 22,
   "oldestAnnouncementDate": "2025-04-11",
   "latestAnnouncementDate": "2026-06-01",
-  "scrapedCount": 399,
-  "rejectedCount": 212,
+  "municipalityCount": 21,
   "municipalityAudit": {
     "expectedMunicipalityCount": 25,
     "coveredMunicipalityCount": 21,
@@ -26,12 +26,12 @@
       {
         "municipality": "奈良市",
         "count": 46,
-        "changeFromPrevious": 1
+        "changeFromPrevious": 0
       },
       {
         "municipality": "橿原市",
-        "count": 37,
-        "changeFromPrevious": 3
+        "count": 33,
+        "changeFromPrevious": -4
       },
       {
         "municipality": "奈良県",
@@ -41,25 +41,25 @@
       {
         "municipality": "高取町",
         "count": 22,
-        "changeFromPrevious": 5
-      },
-      {
-        "municipality": "香芝市",
-        "count": 15,
-        "changeFromPrevious": 1
-      },
-      {
-        "municipality": "葛城市",
-        "count": 10,
-        "changeFromPrevious": 1
-      },
-      {
-        "municipality": "宇陀市",
-        "count": 5,
         "changeFromPrevious": 0
       },
       {
         "municipality": "五條市",
+        "count": 20,
+        "changeFromPrevious": 15
+      },
+      {
+        "municipality": "香芝市",
+        "count": 15,
+        "changeFromPrevious": 0
+      },
+      {
+        "municipality": "葛城市",
+        "count": 9,
+        "changeFromPrevious": -1
+      },
+      {
+        "municipality": "宇陀市",
         "count": 5,
         "changeFromPrevious": 0
       },
@@ -76,7 +76,7 @@
       {
         "municipality": "御所市",
         "count": 4,
-        "changeFromPrevious": 1
+        "changeFromPrevious": 0
       },
       {
         "municipality": "三郷町",
@@ -87,11 +87,6 @@
         "municipality": "生駒市",
         "count": 3,
         "changeFromPrevious": 0
-      },
-      {
-        "municipality": "大淀町",
-        "count": 3,
-        "changeFromPrevious": 2
       },
       {
         "municipality": "大和高田市",
@@ -107,6 +102,11 @@
         "municipality": "広陵町",
         "count": 2,
         "changeFromPrevious": 0
+      },
+      {
+        "municipality": "大淀町",
+        "count": 2,
+        "changeFromPrevious": -1
       },
       {
         "municipality": "天理市",
@@ -135,14 +135,14 @@
   "dateAudit": {
     "announcementAfterBiddingCount": 0,
     "awardedWithoutBiddingDateCount": 5,
-    "awardedWithoutWinnerCount": 9,
-    "openWithWinnerCount": 0,
+    "awardedWithoutWinnerCount": 10,
+    "openWithWinnerCount": 1,
     "sampleTitles": [
       {
-        "municipality": "大和高田市",
-        "title": "大和高田市保健センター受電設備改修工事",
+        "municipality": "安堵町",
+        "title": "【条件付き一般競争入札の結果】安堵町立安堵小中学校屋内運動場空調設備設置工事",
         "status": "落札",
-        "announcementDate": "2025-06-01",
+        "announcementDate": "2026-06-01",
         "biddingDate": null
       },
       {
@@ -153,41 +153,47 @@
         "biddingDate": null
       },
       {
-        "municipality": "五條市",
-        "title": "五條市立公民館等防火対象物定期点検業務委託",
+        "municipality": "大和高田市",
+        "title": "大和高田市保健センター受電設備改修工事",
         "status": "落札",
-        "announcementDate": "2026-04-15",
+        "announcementDate": "2025-06-01",
         "biddingDate": null
       },
       {
-        "municipality": "五條市",
-        "title": "五條市立公民館等防火対象物定期点検業務委託",
+        "municipality": "安堵町",
+        "title": "【条件付き一般競争入札の結果】安堵町立安堵小中学校屋内運動場空調設備設置工事",
         "status": "落札",
-        "announcementDate": "2026-05-08",
-        "biddingDate": "2026-05-08"
-      },
-      {
-        "municipality": "五條市",
-        "title": "五條市立公民館等防火対象物定期点検業務委託",
-        "status": "落札",
-        "announcementDate": "2026-04-15",
+        "announcementDate": "2026-06-01",
         "biddingDate": null
       },
       {
-        "municipality": "五條市",
-        "title": "五條市立公民館等消防用設備等法定点検業務委託",
+        "municipality": "香芝市",
+        "title": "下田小学校長寿命化改修工事",
         "status": "落札",
-        "announcementDate": "2026-04-15",
-        "biddingDate": null
+        "announcementDate": "2026-04-07",
+        "biddingDate": "2026-04-07"
+      },
+      {
+        "municipality": "大淀町",
+        "title": "令和7年度耐震改修促進計画改訂業務（第7－建築委－1号）【令和7年7月22日執行】",
+        "status": "落札",
+        "announcementDate": "2025-07-22",
+        "biddingDate": "2025-07-22"
+      },
+      {
+        "municipality": "橿原市",
+        "title": "藤原京跡トイレ設置工事に伴う設計委託",
+        "status": "受付中",
+        "announcementDate": "2026-05-29",
+        "biddingDate": "2026-06-03"
       }
     ]
   },
   "intelligence": {
-    "itemsWithPdf": 60,
-    "itemsWithDescription": 50,
-    "intelligenceExtractedCount": 50,
-    "geminiExtractedCount": 50,
-    "taggedCount": 50,
-    "lastAugmentedAt": "2026-06-01T11:34:05.710Z"
+    "itemsWithPdf": 54,
+    "itemsWithDescription": 39,
+    "intelligenceExtractedCount": 39,
+    "geminiExtractedCount": 39,
+    "taggedCount": 39
   }
 }

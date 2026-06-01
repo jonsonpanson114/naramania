@@ -1,15 +1,19 @@
 import axios from 'axios';
 import * as cheerio from 'cheerio';
 import crypto from 'crypto';
+import { chromium } from 'playwright';
+import type { Frame, Page } from 'playwright';
 import { BiddingItem, BiddingType, Scraper } from '../types/bidding';
 import { shouldKeepItem } from './common/filter';
 
 const BASE_URL = 'https://www.city.gojo.lg.jp';
+const GOJO_EPI_URL = 'https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=06200640072006C0';
 const RESULT_JSON_URLS = [
     `${BASE_URL}/jigyousha/nyuusatsu/8/R8/index.tree.json`,
     `${BASE_URL}/jigyousha/nyuusatsu/8/R7/index.tree.json`,
 ];
 const EDUCATION_LIST_URL = `${BASE_URL}/soshiki/kyouiku/1_2/index.html`;
+const GOJO_EPI_NENDOS = ['2026', '2025', '2024'];
 const HEADERS = { 'User-Agent': 'Mozilla/5.0 (compatible; naramania-scraper/1.0)' };
 
 const ARCHITECTURE_CONTEXT = [
@@ -68,6 +72,12 @@ function parseJapaneseDate(text: string): string {
     return '';
 }
 
+function parseSlashDate(text: string): string {
+    const match = text.trim().match(/(\d{4})\/(\d{2})\/(\d{2})/);
+    if (!match) return '';
+    return `${match[1]}-${match[2]}-${match[3]}`;
+}
+
 function gojoItemKey(title: string, biddingDate?: string, link?: string): string {
     if (biddingDate) {
         return `${title}::${biddingDate}`;
@@ -90,6 +100,118 @@ async function scrapeDetailPage(url: string): Promise<{ biddingDate?: string; pd
     } catch {
         return {};
     }
+}
+
+async function getRightFrame(page: Page): Promise<Frame | null> {
+    for (let i = 0; i < 20; i += 1) {
+        const frame = page.frames().find(candidate => candidate.name() === 'frmRIGHT');
+        if (frame) return frame;
+        await page.waitForTimeout(500);
+    }
+    return null;
+}
+
+async function getDataFrame(page: Page): Promise<Frame | null> {
+    for (let i = 0; i < 20; i += 1) {
+        const frame = page.frames().find(candidate => candidate.name() === 'right' || candidate.url().includes('KFK401FrameShow'));
+        if (frame) return frame;
+        await page.waitForTimeout(500);
+    }
+    return null;
+}
+
+async function openGojoEpiResults(page: Page): Promise<Frame | null> {
+    await page.goto(GOJO_EPI_URL, { waitUntil: 'load', timeout: 30000 });
+    await page.waitForTimeout(1500);
+
+    const category = page.locator('span.ATYPE').filter({ hasText: '工事' }).first();
+    if (await category.count() === 0) return null;
+    await category.click({ force: true, timeout: 30000 });
+    await page.waitForTimeout(2500);
+
+    const rightFrame = await getRightFrame(page);
+    if (!rightFrame) return null;
+
+    const resultMenu = rightFrame.locator('span.ATYPE').filter({ hasText: '入札・契約結果情報' }).first();
+    if (await resultMenu.count() === 0) return null;
+    await resultMenu.click({ force: true, timeout: 30000 });
+    await page.waitForTimeout(2500);
+
+    return getRightFrame(page);
+}
+
+async function scrapeGojoEpiResults(): Promise<BiddingItem[]> {
+    const browser = await chromium.launch({ headless: true });
+    const page = await browser.newPage();
+    const items = new Map<string, BiddingItem>();
+
+    try {
+        for (const nendo of GOJO_EPI_NENDOS) {
+            let rightFrame = await openGojoEpiResults(page);
+            if (!rightFrame) continue;
+
+            await rightFrame.selectOption('select[name="nendo"]', nendo).catch(() => undefined);
+            await rightFrame.selectOption('select[name="A300"]', '100').catch(() => undefined);
+            await rightFrame.locator('input[type=button][value="検索"]').first().click({ timeout: 30000 });
+            await page.waitForTimeout(4000);
+
+            while (true) {
+                rightFrame = await getRightFrame(page);
+                const dataFrame = await getDataFrame(page);
+                if (!rightFrame || !dataFrame) break;
+
+                const rows = await dataFrame.locator('table tr').all();
+                for (const row of rows) {
+                    const cells = await row.locator('td').all();
+                    if (cells.length < 8) continue;
+
+                    const rawTitle = (await cells[2].textContent() || '').replace(/\s+/g, ' ').trim();
+                    if (!rawTitle || !shouldKeepGojoTitle(rawTitle)) continue;
+
+                    const normalizedTitle = normalizeGojoTitle(rawTitle);
+                    const biddingDate = parseSlashDate((await cells[1].textContent() || '').trim()) || undefined;
+                    const contractNo = (await cells[3].textContent() || '').replace(/\s+/g, '').trim();
+                    const rawWinner = (await cells[5].textContent() || '').replace(/\s+/g, ' ').trim();
+                    const winner = rawWinner && rawWinner !== '-' ? rawWinner : undefined;
+                    const amountText = (await cells[6].textContent() || '').replace(/\s+/g, ' ').trim();
+                    const amountMatch = amountText.match(/([\d,]+)円/);
+                    const amount = amountMatch ? `${amountMatch[1]}円` : undefined;
+                    const titleLink = row.locator('a').first();
+                    const href = await titleLink.getAttribute('href').catch(() => null);
+                    const controlNo = href?.match(/doEdit030\('([^']+)'\)/)?.[1];
+                    const detailUrl = controlNo
+                        ? `https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=${controlNo}`
+                        : GOJO_EPI_URL;
+
+                    const item: BiddingItem = {
+                        id: contractNo ? `gojo-epi-${contractNo}` : makeId(normalizedTitle, detailUrl),
+                        municipality: '五條市',
+                        title: normalizedTitle,
+                        type: classifyType(normalizedTitle),
+                        announcementDate: biddingDate || '2026-01-01',
+                        biddingDate,
+                        link: detailUrl,
+                        status: '落札',
+                        winningContractor: winner,
+                        estimatedPrice: amount,
+                    };
+                    const key = gojoItemKey(normalizedTitle, biddingDate, contractNo || detailUrl);
+                    items.set(key, mergeGojoItem(items.get(key), item));
+                }
+
+                const nextLink = rightFrame.locator('a').filter({ hasText: '次へ>>' }).first();
+                if (await nextLink.count() === 0) break;
+                await nextLink.click({ timeout: 30000 });
+                await page.waitForTimeout(3000);
+            }
+        }
+    } catch (e: unknown) {
+        console.error('[五條市] EPI取得エラー:', e instanceof Error ? e.message : String(e));
+    } finally {
+        await browser.close();
+    }
+
+    return Array.from(items.values());
 }
 
 async function scrapeEducationPages(): Promise<BiddingItem[]> {
@@ -152,6 +274,11 @@ export class GojoCityScraper implements Scraper {
 
     async scrape(): Promise<BiddingItem[]> {
         const items = new Map<string, BiddingItem>();
+
+        for (const item of await scrapeGojoEpiResults()) {
+            const key = gojoItemKey(item.title, item.biddingDate, item.link);
+            items.set(key, mergeGojoItem(items.get(key), item));
+        }
 
         for (const feedUrl of RESULT_JSON_URLS) {
             try {
