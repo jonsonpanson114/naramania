@@ -48,6 +48,10 @@ function classifyType(title: string): BiddingType {
     return '建築';
 }
 
+function normalizeSangoTitle(title: string): string {
+    return title.normalize('NFKC').replace(/\s+/g, '').trim();
+}
+
 function toAbsoluteEpiUrl(href: string): string {
     if (!href) return SANGO_EPI_FORM;
     if (href.startsWith('javascript:')) return SANGO_EPI_FORM;
@@ -140,6 +144,53 @@ async function extractIssueResults(frame: Frame): Promise<BiddingItem[]> {
     return items;
 }
 
+async function submitResultSearch(frame: Frame, nendo: string) {
+    await frame.waitForSelector('form[name="KK401DynaActionForm"]', { timeout: 30000 });
+    await frame.selectOption('select[name="nendo"]', nendo);
+    const perPage = frame.locator('select[name="A300"], select[name="perPage"]');
+    if (await perPage.count() > 0) {
+        await perPage.first().selectOption('100').catch(() => undefined);
+    }
+    await frame.locator('input[type="button"][value="検索"]').first().click({ force: true, timeout: 30000 });
+}
+
+async function extractResultResults(frame: Frame): Promise<BiddingItem[]> {
+    const items: BiddingItem[] = [];
+    const rows = await frame.locator('table tr').all().catch(() => []);
+
+    for (const row of rows) {
+        const cells = await row.locator('td').all();
+        if (cells.length < 7) continue;
+
+        const titleCell = cells[2];
+        const title = ((await titleCell.innerText().catch(() => '')) || '').replace(/\s+/g, ' ').trim();
+        if (!title) continue;
+        if (!shouldKeepItem(title)) continue;
+
+        const biddingDate = parseDate(((await cells[1].innerText().catch(() => '')) || '').trim()) || undefined;
+        const winnerRaw = ((await cells[5].innerText().catch(() => '')) || '').replace(/\s+/g, ' ').trim();
+        const winner = winnerRaw && winnerRaw !== '-' ? winnerRaw : undefined;
+        const amountText = ((await cells[6].innerText().catch(() => '')) || '').replace(/\s+/g, ' ').trim();
+        const isFailed = /取止め|不調/.test(amountText);
+        const titleLink = row.locator('a').first();
+        const href = await titleLink.getAttribute('href').catch(() => null);
+
+        items.push({
+            id: `sango-epi-result-${Buffer.from(`${title}|${href || ''}|${biddingDate || ''}`).toString('base64').slice(0, 12)}`,
+            municipality: '三郷町',
+            title,
+            type: classifyType(title),
+            announcementDate: biddingDate || '',
+            biddingDate,
+            link: toAbsoluteEpiUrl(href || ''),
+            status: isFailed ? '不調' : '落札',
+            winningContractor: isFailed ? undefined : winner,
+        });
+    }
+
+    return items;
+}
+
 async function scrapeEpiCategory(page: Page, categoryLabel: string): Promise<BiddingItem[]> {
     await page.goto(SANGO_EPI_FORM, { waitUntil: 'load' });
     await page.waitForTimeout(2000);
@@ -178,6 +229,25 @@ export class SangoTownScraper implements Scraper {
 
     async scrape(): Promise<BiddingItem[]> {
         const items = new Map<string, BiddingItem>();
+        const itemsByTitle = new Map<string, BiddingItem>();
+
+        const upsert = (item: BiddingItem) => {
+            const key = normalizeSangoTitle(item.title);
+            const existing = itemsByTitle.get(key);
+            if (!existing) {
+                itemsByTitle.set(key, item);
+                items.set(item.id, item);
+                return;
+            }
+
+            if (item.announcementDate && (!existing.announcementDate || item.announcementDate < existing.announcementDate)) {
+                existing.announcementDate = item.announcementDate;
+            }
+            if (item.biddingDate && !existing.biddingDate) existing.biddingDate = item.biddingDate;
+            if (item.link && (!existing.link || existing.link === SANGO_EPI_FORM)) existing.link = item.link;
+            if (item.winningContractor && !existing.winningContractor) existing.winningContractor = item.winningContractor;
+            if (item.status === '落札' || item.status === '不調') existing.status = item.status;
+        };
 
         try {
             const [indexRes, contractRes] = await Promise.all([
@@ -200,7 +270,7 @@ export class SangoTownScraper implements Scraper {
                 const date = parseDate(title) || parseUpdatedDate(indexRes.data);
                 const id = `sango-open-${Buffer.from(link).toString('base64').slice(0, 12)}`;
 
-                items.set(id, {
+                upsert({
                     id,
                     municipality: '三郷町',
                     title,
@@ -223,7 +293,7 @@ export class SangoTownScraper implements Scraper {
                 const sectionText = $contract(el).closest('section, div, article, li, tr').text();
                 const date = parseDate(sectionText) || parseUpdatedDate(contractRes.data);
 
-                items.set(id, {
+                upsert({
                     id,
                     municipality: '三郷町',
                     title,
@@ -245,7 +315,35 @@ export class SangoTownScraper implements Scraper {
                 if (!serviceText.includes('サービス停止中')) {
                     for (const categoryLabel of ['工事', 'コンサル']) {
                         const epiItems = await scrapeEpiCategory(page, categoryLabel);
-                        epiItems.forEach(item => items.set(item.id, item));
+                        epiItems.forEach(item => upsert(item));
+                    }
+
+                    for (const categoryLabel of ['工事', 'コンサル']) {
+                        await page.goto(SANGO_EPI_FORM, { waitUntil: 'load' });
+                        await page.waitForTimeout(2000);
+                        await page.locator('span.ATYPE').filter({ hasText: categoryLabel }).first().click({ force: true, timeout: 30000 });
+                        await page.waitForTimeout(3000);
+                        const resultFrame = await clickRightMenu(page, '入札・契約結果情報');
+                        if (!resultFrame) continue;
+
+                        for (const nendo of TARGET_NENDOS) {
+                            const optionCount = await resultFrame.locator(`select[name="nendo"] option[value="${nendo}"]`).count();
+                            if (optionCount === 0) continue;
+
+                            await submitResultSearch(resultFrame, nendo);
+                            await page.waitForTimeout(2500);
+                            let dataFrame = await getDataFrame(page);
+                            while (dataFrame) {
+                                const resultItems = await extractResultResults(dataFrame);
+                                resultItems.forEach(item => upsert(item));
+
+                                const nextLink = dataFrame.locator('a').filter({ hasText: '次へ' }).first();
+                                if (await nextLink.count() === 0) break;
+                                await nextLink.click({ force: true, timeout: 10000 }).catch(() => undefined);
+                                await page.waitForTimeout(1500);
+                                dataFrame = await getDataFrame(page);
+                            }
+                        }
                     }
                 }
             } finally {
@@ -256,7 +354,7 @@ export class SangoTownScraper implements Scraper {
             console.error('[三郷町] エラー:', error instanceof Error ? error.message : String(error));
         }
 
-        const result = Array.from(items.values()).sort((a, b) => b.announcementDate.localeCompare(a.announcementDate));
+        const result = Array.from(itemsByTitle.values()).sort((a, b) => b.announcementDate.localeCompare(a.announcementDate));
         console.log(`[三郷町] 合計 ${result.length} 件`);
         return result;
     }

@@ -36,6 +36,10 @@ function classifyType(title: string, gyoshu: string): BiddingType {
     return '建築';
 }
 
+function normalizeIkomaTitle(title: string): string {
+    return title.normalize('NFKC').replace(/\s+/g, '').trim();
+}
+
 function toAbsoluteUrl(href: string): string {
     if (!href) return EPI_CLOUD_FORM;
     if (href.startsWith('javascript:')) return EPI_CLOUD_FORM;
@@ -234,12 +238,83 @@ async function scrapeSupplementalPages(): Promise<BiddingItem[]> {
     return items;
 }
 
+async function submitResultSearch(frame: Frame, nendo: string) {
+    await frame.waitForSelector('form[name="KK401DynaActionForm"]', { timeout: 30000 });
+    await frame.selectOption('select[name="nendo"]', nendo);
+    const perPage = frame.locator('select[name="A300"], select[name="perPage"]');
+    if (await perPage.count() > 0) {
+        await perPage.first().selectOption('100').catch(() => undefined);
+    }
+    await frame.locator('input[type="button"][value="検索"]').first().click({ force: true, timeout: 30000 });
+}
+
+async function extractResultResults(frame: Frame): Promise<BiddingItem[]> {
+    const items: BiddingItem[] = [];
+    const rows = await frame.locator('table tr').all().catch(() => []);
+
+    for (const row of rows) {
+        const cells = await row.locator('td').all();
+        if (cells.length < 7) continue;
+
+        const title = ((await cells[2].innerText().catch(() => '')) || '').replace(/\s+/g, ' ').trim();
+        if (!title || !shouldKeepItem(title)) continue;
+
+        const biddingDate = parseJapaneseDate(((await cells[1].innerText().catch(() => '')) || '').trim()) || undefined;
+        const contractNo = ((await cells[3].innerText().catch(() => '')) || '').replace(/\s+/g, '').trim();
+        const winnerRaw = ((await cells[5].innerText().catch(() => '')) || '').replace(/\s+/g, ' ').trim();
+        const winner = winnerRaw && winnerRaw !== '-' ? winnerRaw : undefined;
+        const amountText = ((await cells[6].innerText().catch(() => '')) || '').replace(/\s+/g, ' ').trim();
+        const isFailed = /取止め|不調/.test(amountText);
+        const titleLink = row.locator('a').first();
+        const href = await titleLink.getAttribute('href').catch(() => null);
+
+        items.push({
+            id: contractNo
+                ? `ikoma-result-${contractNo}`
+                : `ikoma-result-${crypto.createHash('md5').update(`${title}|${href || ''}|${biddingDate || ''}`).digest('hex').slice(0, 10)}`,
+            municipality: '生駒市',
+            title,
+            type: classifyType(title, ''),
+            announcementDate: biddingDate || '',
+            biddingDate,
+            link: toAbsoluteUrl(href || ''),
+            status: isFailed ? '不調' : '落札',
+            winningContractor: isFailed ? undefined : winner,
+            winnerType: classifyWinner(winner || ''),
+        });
+    }
+
+    return items;
+}
+
 export class IkomaCityScraper implements Scraper {
     municipality: '生駒市' = '生駒市' as const;
 
     async scrape(): Promise<BiddingItem[]> {
         const browser = await chromium.launch({ headless: true });
         const itemsById = new Map<string, BiddingItem>();
+        const itemsByTitle = new Map<string, BiddingItem>();
+
+        const upsert = (item: BiddingItem) => {
+            const key = normalizeIkomaTitle(item.title);
+            const existing = itemsByTitle.get(key);
+            if (!existing) {
+                itemsByTitle.set(key, item);
+                itemsById.set(item.id, item);
+                return;
+            }
+
+            if (item.announcementDate && (!existing.announcementDate || item.announcementDate < existing.announcementDate)) {
+                existing.announcementDate = item.announcementDate;
+            }
+            if (item.biddingDate && !existing.biddingDate) existing.biddingDate = item.biddingDate;
+            if (item.link && (!existing.link || existing.link === EPI_CLOUD_FORM)) existing.link = item.link;
+            if (item.winningContractor && !existing.winningContractor) {
+                existing.winningContractor = item.winningContractor;
+                existing.winnerType = item.winnerType;
+            }
+            if (item.status === '落札' || item.status === '不調') existing.status = item.status;
+        };
 
         try {
             const page = await browser.newPage();
@@ -256,7 +331,39 @@ export class IkomaCityScraper implements Scraper {
             for (const categoryLabel of ['工事', 'コンサル']) {
                 const items = await scrapeCategory(page, categoryLabel);
                 for (const item of items) {
-                    itemsById.set(item.id, item);
+                    upsert(item);
+                }
+            }
+
+            for (const categoryLabel of ['工事', 'コンサル']) {
+                await page.goto(EPI_CLOUD_FORM, { waitUntil: 'load' });
+                await page.waitForTimeout(2000);
+                await page.locator('span.ATYPE').filter({ hasText: categoryLabel }).first().click({ force: true, timeout: 30000 });
+                await page.waitForTimeout(3000);
+
+                const resultFrame = await clickRightMenu(page, '入札・契約結果情報');
+                if (!resultFrame) continue;
+
+                for (const nendo of TARGET_NENDOS) {
+                    const optionCount = await resultFrame.locator(`select[name="nendo"] option[value="${nendo}"]`).count();
+                    if (optionCount === 0) continue;
+
+                    await submitResultSearch(resultFrame, nendo);
+                    await page.waitForTimeout(2500);
+                    let dataFrame = await getDataFrame(page);
+                    while (dataFrame) {
+                        const items = await extractResultResults(dataFrame);
+                        for (const item of items) {
+                            upsert(item);
+                        }
+
+                        const nextLink = dataFrame.locator('a').filter({ hasText: '次へ' }).first();
+                        if (await nextLink.count() === 0) break;
+
+                        await nextLink.click({ force: true, timeout: 10000 }).catch(() => undefined);
+                        await page.waitForTimeout(1500);
+                        dataFrame = await getDataFrame(page);
+                    }
                 }
             }
         } catch (error) {
@@ -267,10 +374,10 @@ export class IkomaCityScraper implements Scraper {
 
         const supplementalItems = await scrapeSupplementalPages();
         for (const item of supplementalItems) {
-            itemsById.set(item.id, item);
+            upsert(item);
         }
 
-        const items = Array.from(itemsById.values());
+        const items = Array.from(itemsByTitle.values());
         console.log(`[生駒市] 合計 ${items.length} 件取得`);
         return items;
     }

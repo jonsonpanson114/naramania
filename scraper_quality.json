@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-06-01T13:37:18.941Z",
+  "generatedAt": "2026-06-01T21:50:06.912Z",
   "source": "daily_scrape",
-  "scrapedCount": 14,
-  "keptCount": 210,
+  "scrapedCount": 0,
+  "keptCount": 224,
   "rejectedCount": 0,
   "oldestAnnouncementDate": "2025-04-11",
   "latestAnnouncementDate": "2026-06-01",
@@ -44,6 +44,11 @@
         "changeFromPrevious": 0
       },
       {
+        "municipality": "宇陀市",
+        "count": 19,
+        "changeFromPrevious": 0
+      },
+      {
         "municipality": "五條市",
         "count": 18,
         "changeFromPrevious": 0
@@ -56,11 +61,6 @@
       {
         "municipality": "葛城市",
         "count": 9,
-        "changeFromPrevious": 0
-      },
-      {
-        "municipality": "宇陀市",
-        "count": 5,
         "changeFromPrevious": 0
       },
       {
@@ -130,7 +130,13 @@
       }
     ],
     "retainedFromPrevious": [],
-    "issues": []
+    "issues": [
+      {
+        "municipality": "生駒市",
+        "level": "error",
+        "message": "✗ 生駒市 失敗: browserType.launch: spawn EPERM\nCall log:\n\u001b[2m  - <launching> C:\\Users\\jonso\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument,OptimizationHints --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --user-data-dir=C:\\Users\\jonso\\AppData\\Local\\Temp\\playwright_chromiumdev_profile-89CDvq --remote-debugging-pipe --no-startup-window\u001b[22m\n"
+      }
+    ]
   },
   "dateAudit": {
     "announcementAfterBiddingCount": 0,

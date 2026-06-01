@@ -1108,7 +1108,8 @@
     "announcementDate": "2026-04-30",
     "biddingDate": "2026-05-22",
     "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0660064007200640",
-    "status": "受付中"
+    "status": "落札",
+    "winningContractor": "大川建築設計事務所"
   },
   {
     "id": "oyodo-5pen5aSn5reA",
@@ -1131,26 +1132,6 @@
     "extractionSource": "gemini"
   },
   {
-    "id": "uda-2367f5c2e4",
-    "municipality": "宇陀市",
-    "title": "【第08-A001号】保養センター美榛苑屋上防水改修工事",
-    "type": "建築",
-    "announcementDate": "2026-04-23",
-    "biddingDate": "2026-05-14",
-    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200700",
-    "status": "受付中"
-  },
-  {
-    "id": "uda-2d65243f23",
-    "municipality": "宇陀市",
-    "title": "【第08-C002号】あかね台コミュニティセンター解体事業 あかね台コミュニティセンター解体工事設計業務",
-    "type": "コンサル",
-    "announcementDate": "2026-04-23",
-    "biddingDate": "2026-05-14",
-    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200700",
-    "status": "受付中"
-  },
-  {
     "id": "kashiba-web-98aceba6",
     "municipality": "香芝市",
     "title": "香芝市立認定こども園及び幼稚園照明設備改修工事",
@@ -1170,6 +1151,28 @@
     "link": "https://www.city.kashiba.lg.jp/site/nyuusatsu/65857.html",
     "status": "落札",
     "winningContractor": "株式会社上村組"
+  },
+  {
+    "id": "uda-2367f5c2e4",
+    "municipality": "宇陀市",
+    "title": "【第08-A001号】保養センター美榛苑屋上防水改修工事",
+    "type": "建築",
+    "announcementDate": "2026-04-23",
+    "biddingDate": "2026-05-14",
+    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200700",
+    "status": "落札",
+    "winningContractor": "（株）北脇組"
+  },
+  {
+    "id": "uda-2d65243f23",
+    "municipality": "宇陀市",
+    "title": "【第08-C002号】あかね台コミュニティセンター解体事業 あかね台コミュニティセンター解体工事設計業務",
+    "type": "コンサル",
+    "announcementDate": "2026-04-23",
+    "biddingDate": "2026-05-14",
+    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200700",
+    "status": "落札",
+    "winningContractor": "（有）坪岡建築事務所"
   },
   {
     "id": "gojo-epi-2501076",
@@ -1346,16 +1349,6 @@
     "status": "受付中"
   },
   {
-    "id": "sango-epi-5Luk5ZKM77yY",
-    "municipality": "三郷町",
-    "title": "令和８年度 三郷北小学校ＬＥＤ化に伴う設計委託",
-    "type": "コンサル",
-    "announcementDate": "2026-04-15",
-    "biddingDate": "2026-05-01",
-    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0660064007200640",
-    "status": "受付中"
-  },
-  {
     "id": "gojo-34438dbd",
     "municipality": "五條市",
     "title": "五條市立公民館等防火対象物定期点検業務委託",
@@ -1415,6 +1408,17 @@
     "biddingDate": "2026-04-28",
     "link": "https://www.city.kashiba.lg.jp/soshiki/7/65410.html",
     "status": "受付中"
+  },
+  {
+    "id": "sango-epi-5Luk5ZKM77yY",
+    "municipality": "三郷町",
+    "title": "令和８年度 学校施設特定建築物定期調査及び非構造部材の耐震点検業務",
+    "type": "委託",
+    "announcementDate": "2026-04-08",
+    "biddingDate": "2026-05-01",
+    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0660064007200640",
+    "status": "落札",
+    "winningContractor": "株式会社福本設計"
   },
   {
     "id": "gojo-5fb0bb1b",
@@ -1708,6 +1712,83 @@
     "status": "受付終了"
   },
   {
+    "id": "uda-result-2595010037",
+    "municipality": "宇陀市",
+    "title": "【第712-4号】農地・農業用施設災害復旧事業 農地災害復旧工事",
+    "type": "建築",
+    "announcementDate": "2025-11-20",
+    "biddingDate": "2025-11-20",
+    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200700",
+    "status": "落札",
+    "winningContractor": "大和鋳鉄鋼業"
+  },
+  {
+    "id": "uda-result-2595010036",
+    "municipality": "宇陀市",
+    "title": "【第712-6号】農地・農業用施設災害復旧事業 農地災害復旧工事",
+    "type": "建築",
+    "announcementDate": "2025-11-20",
+    "biddingDate": "2025-11-20",
+    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200700",
+    "status": "落札",
+    "winningContractor": "貴俊建設"
+  },
+  {
+    "id": "uda-result-2595010035",
+    "municipality": "宇陀市",
+    "title": "【第712-2号】農地・農業用施設災害復旧事業 農地災害復旧工事",
+    "type": "建築",
+    "announcementDate": "2025-11-20",
+    "biddingDate": "2025-11-20",
+    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200700",
+    "status": "落札",
+    "winningContractor": "（株）横谷工務店"
+  },
+  {
+    "id": "uda-result-2595010034",
+    "municipality": "宇陀市",
+    "title": "【第712-1号 第712-501号 合併】農地・農業用施設災害復旧事業 農地・農業用施設災害復旧工事",
+    "type": "建築",
+    "announcementDate": "2025-11-20",
+    "biddingDate": "2025-11-20",
+    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200700",
+    "status": "落札",
+    "winningContractor": "谷村建設"
+  },
+  {
+    "id": "uda-result-2595010033",
+    "municipality": "宇陀市",
+    "title": "【第712-3号】農地・農業用施設災害復旧事業 農地災害復旧工事",
+    "type": "建築",
+    "announcementDate": "2025-11-20",
+    "biddingDate": "2025-11-20",
+    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200700",
+    "status": "落札",
+    "winningContractor": "大東組"
+  },
+  {
+    "id": "uda-result-2595010032",
+    "municipality": "宇陀市",
+    "title": "【第07-B006号】公園施設長寿命化対策支援事業 公園施設整備工事",
+    "type": "建築",
+    "announcementDate": "2025-11-20",
+    "biddingDate": "2025-11-20",
+    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200700",
+    "status": "落札",
+    "winningContractor": "（株）出山建設業"
+  },
+  {
+    "id": "uda-result-2595010028",
+    "municipality": "宇陀市",
+    "title": "【第07-A024号】市単独事業 旧田口集会所施設等解体工事",
+    "type": "建築",
+    "announcementDate": "2025-11-20",
+    "biddingDate": "2025-11-20",
+    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200700",
+    "status": "落札",
+    "winningContractor": "（株）的場工務店"
+  },
+  {
     "id": "kashihara-result-5073001087",
     "municipality": "橿原市",
     "title": "畝傍南小学校 高圧機器修繕",
@@ -1807,6 +1888,17 @@
     "status": "落札",
     "winningContractor": "グローバル工業（株）",
     "estimatedPrice": "4,085,000円"
+  },
+  {
+    "id": "uda-result-2595010027",
+    "municipality": "宇陀市",
+    "title": "【第07-A022号】旧多田小学校解体工事",
+    "type": "建築",
+    "announcementDate": "2025-11-12",
+    "biddingDate": "2025-11-12",
+    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200700",
+    "status": "落札",
+    "winningContractor": "（株）ハクリュウ"
   },
   {
     "id": "miyake-2025-11-04-三宅町つながり総合センター解体工事",
@@ -1939,7 +2031,8 @@
     "announcementDate": "2025-10-09",
     "biddingDate": "2025-10-23",
     "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200700",
-    "status": "受付中"
+    "status": "落札",
+    "winningContractor": "（株）伸構造事務所"
   },
   {
     "id": "gojo-epi-2501039",
@@ -2021,6 +2114,17 @@
     "status": "落札",
     "winningContractor": "（株）ＹＣ工業",
     "estimatedPrice": "19,325,000円"
+  },
+  {
+    "id": "uda-result-2595010020",
+    "municipality": "宇陀市",
+    "title": "【第07-B004号】社会資本整備総合交付金事業（防災・安全） 市営住宅川向団地屋根外壁改善工事",
+    "type": "建築",
+    "announcementDate": "2025-09-18",
+    "biddingDate": "2025-09-18",
+    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200700",
+    "status": "落札",
+    "winningContractor": "（株）的場工務店"
   },
   {
     "id": "yamato-koriyama-b1fce4b1",
@@ -2146,6 +2250,17 @@
     "biddingDate": "2025-07-22",
     "link": "https://www.town.oyodo.lg.jp/./cmsfiles/contents/0000001/1718/so070722.pdf",
     "status": "落札"
+  },
+  {
+    "id": "uda-result-2595010008",
+    "municipality": "宇陀市",
+    "title": "【第07-A003号】消防防災施設整備事業 耐震性貯水槽設置工事",
+    "type": "建築",
+    "announcementDate": "2025-07-17",
+    "biddingDate": "2025-07-17",
+    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200700",
+    "status": "落札",
+    "winningContractor": "（有）久保田建材工業"
   },
   {
     "id": "katsuragi-5bc8ab65",
@@ -2312,6 +2427,39 @@
     "extractionSource": "gemini"
   },
   {
+    "id": "uda-result-2595100007",
+    "municipality": "宇陀市",
+    "title": "【第07-C014号】旧伊那佐文化センター集会所整備工事設計事業 旧伊那佐文化センター集会所整備工事設計業務",
+    "type": "コンサル",
+    "announcementDate": "2025-06-19",
+    "biddingDate": "2025-06-19",
+    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200700",
+    "status": "落札",
+    "winningContractor": "（株）礎建築事務所"
+  },
+  {
+    "id": "uda-result-2595100004",
+    "municipality": "宇陀市",
+    "title": "【第07-C019号】社会資本整備総合交付金事業 宇陀川処理区管路実施設計作成業務",
+    "type": "コンサル",
+    "announcementDate": "2025-06-19",
+    "biddingDate": "2025-06-19",
+    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200700",
+    "status": "落札",
+    "winningContractor": "（株）日本インシーク 奈良支社"
+  },
+  {
+    "id": "uda-result-2595100003",
+    "municipality": "宇陀市",
+    "title": "【第07-C002号】旧田口集会所施設等解体工事設計業務",
+    "type": "コンサル",
+    "announcementDate": "2025-06-19",
+    "biddingDate": "2025-06-19",
+    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200700",
+    "status": "落札",
+    "winningContractor": "（株）中和設計"
+  },
+  {
     "id": "gojo-epi-2501007",
     "municipality": "五條市",
     "title": "平沼田老人憩の家屋根修繕工事",
@@ -2366,12 +2514,13 @@
   {
     "id": "sango-epi-5Luk5ZKMN+W5",
     "municipality": "三郷町",
-    "title": "令和7年度 三郷町耐震改修促進計画改定業務",
+    "title": "令和7年度 三郷町建築物耐震改修促進計画改定業務",
     "type": "委託",
     "announcementDate": "2025-05-28",
-    "biddingDate": "2025-06-12",
+    "biddingDate": "2025-07-17",
     "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0660064007200640",
-    "status": "受付中"
+    "status": "落札",
+    "winningContractor": "株式会社かんこう 奈良支店"
   },
   {
     "id": "gojo-epi-2501001",
@@ -2384,6 +2533,17 @@
     "status": "落札",
     "winningContractor": "（株）近井工務店",
     "estimatedPrice": "7,698,000円"
+  },
+  {
+    "id": "uda-result-2595100001",
+    "municipality": "宇陀市",
+    "title": "【第07-C004号】旧多田小学校解体工事設計業務",
+    "type": "コンサル",
+    "announcementDate": "2025-05-22",
+    "biddingDate": "2025-05-22",
+    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200700",
+    "status": "落札",
+    "winningContractor": "（株）礎建築事務所"
   },
   {
     "id": "kashihara-result-5071000284",
