@@ -31,6 +31,17 @@ import type { MunicipalityIssueEntry } from '../lib/quality_summary';
 const SNAPSHOT_PATH = path.join(process.cwd(), 'municipality_snapshots.json');
 type MunicipalitySnapshots = Partial<Record<BiddingItem['municipality'], BiddingItem[]>>;
 
+function parseMunicipalityEnvList(value?: string): Set<string> {
+    if (!value) return new Set();
+
+    return new Set(
+        value
+            .split(/[,\n]/)
+            .map((entry) => entry.trim())
+            .filter(Boolean),
+    );
+}
+
 function normalizeComparisonTitle(title: string): string {
     return title
         .normalize('NFKC')
@@ -249,7 +260,7 @@ function writeQualitySummary(
 async function main() {
     console.log('=== スクレイピング開始 ===');
 
-    const scrapers: Scraper[] = [
+    const allScrapers: Scraper[] = [
         new NaraPrefScraper(),
         new NaraCityScraper(),
         new KashiharaCityScraper(),
@@ -276,6 +287,29 @@ async function main() {
         new OjiTownScraper(),
         new OyodoTownScraper(),
     ];
+    const onlyMunicipalities = parseMunicipalityEnvList(process.env.SCRAPE_ONLY_MUNICIPALITIES);
+    const exceptMunicipalities = parseMunicipalityEnvList(process.env.SCRAPE_EXCEPT_MUNICIPALITIES);
+    const scrapers = allScrapers.filter((scraper) => {
+        if (onlyMunicipalities.size > 0 && !onlyMunicipalities.has(scraper.municipality)) {
+            return false;
+        }
+
+        if (exceptMunicipalities.has(scraper.municipality)) {
+            return false;
+        }
+
+        return true;
+    });
+
+    if (onlyMunicipalities.size > 0) {
+        console.log(`[scrape] 対象自治体限定: ${Array.from(onlyMunicipalities).join(', ')}`);
+    }
+    if (exceptMunicipalities.size > 0) {
+        console.log(`[scrape] 除外自治体: ${Array.from(exceptMunicipalities).join(', ')}`);
+    }
+    if (scrapers.length === 0) {
+        throw new Error('実行対象の scraper がありません');
+    }
 
     const outputPath = path.join(process.cwd(), 'scraper_result.json');
     const seen = new Map<string, BiddingItem>();
