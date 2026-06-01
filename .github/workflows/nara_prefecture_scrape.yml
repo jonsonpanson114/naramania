@@ -12,7 +12,7 @@ permissions:
 
 jobs:
   scrape-nara-prefecture:
-    runs-on: self-hosted
+    runs-on: [self-hosted, windows, x64]
     env:
       SCRAPE_ONLY_MUNICIPALITIES: 奈良県
       QUALITY_GUARDED_MUNICIPALITIES: 奈良県
