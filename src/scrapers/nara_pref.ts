@@ -72,7 +72,23 @@ function getSearchSurfaces(page: Page): SearchSurface[] {
     return [page, ...page.frames().filter((frame) => frame !== page.mainFrame())];
 }
 
+async function waitForSearchDom(page: Page) {
+    await page.waitForFunction(() => {
+        return Boolean(
+            document.querySelector('#PPJ0050_0010')
+            && document.querySelector('#searchJyokenNendo')
+            && (
+                document.querySelector('#GyomuTypeTab01')
+                || document.querySelector('#GyomuTypeTab02')
+            ),
+        );
+    }, { timeout: 20000 });
+}
+
 async function collectSearchDebugInfo(page: Page, gyomuType: string) {
+    const bodySample = await page.evaluate(() =>
+        (document.body?.innerText || '').replace(/\s+/g, ' ').trim().slice(0, 300),
+    ).catch(() => '');
     const frameInfos = page.frames().map((frame, index) => ({
         index,
         name: frame.name() || '(no-name)',
@@ -107,6 +123,7 @@ async function collectSearchDebugInfo(page: Page, gyomuType: string) {
     }));
 
     return {
+        bodySample,
         frames: frameInfos,
         candidates: candidateInfos,
     };
@@ -183,6 +200,7 @@ async function openSearchPage(page: Page, gyomuType: string, fiscalYear: string,
             console.log(`[奈良県] openSearchPage url=${PPI_SEARCH_URL} gyomuType=${gyomuType} fiscalYear=${fiscalYear} gyoushu=${gyoushuCode || 'all'}`);
             await page.goto(PPI_SEARCH_URL, { waitUntil: 'domcontentloaded', timeout: 30000 });
             await page.waitForTimeout(1500);
+            await waitForSearchDom(page);
             await dismissPopup(page);
 
             const searchSurface = await clickGyomuTab(page, gyomuType, label);
