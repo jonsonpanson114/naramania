@@ -73,16 +73,26 @@ function getSearchSurfaces(page: Page): SearchSurface[] {
 }
 
 async function waitForSearchDom(page: Page) {
-    await page.waitForFunction(() => {
-        return Boolean(
-            document.querySelector('#PPJ0050_0010')
-            && document.querySelector('#searchJyokenNendo')
-            && (
-                document.querySelector('#GyomuTypeTab01')
-                || document.querySelector('#GyomuTypeTab02')
-            ),
-        );
-    }, { timeout: 20000 });
+    const timeoutMs = 20000;
+    const startedAt = Date.now();
+
+    while (Date.now() - startedAt < timeoutMs) {
+        const [hasForm, hasNendo, hasTab01, hasTab02] = await Promise.all([
+            page.locator('#PPJ0050_0010').count(),
+            page.locator('#searchJyokenNendo').count(),
+            page.locator('#GyomuTypeTab01').count(),
+            page.locator('#GyomuTypeTab02').count(),
+        ]);
+
+        if (hasForm && hasNendo && (hasTab01 || hasTab02)) {
+            return;
+        }
+
+        await page.waitForTimeout(1000);
+    }
+
+    const debugInfo = await collectSearchDebugInfo(page, '');
+    throw new Error(`search DOM not ready: ${JSON.stringify(debugInfo)}`);
 }
 
 async function collectSearchDebugInfo(page: Page, gyomuType: string) {
