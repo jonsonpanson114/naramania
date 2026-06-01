@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-06-01T06:11:16.439Z",
+  "generatedAt": "2026-06-01T09:36:01.928Z",
   "source": "daily_scrape",
-  "keptCount": 194,
-  "municipalityCount": 21,
+  "scrapedCount": 32,
+  "keptCount": 189,
+  "rejectedCount": 3,
   "oldestAnnouncementDate": "2025-04-11",
   "latestAnnouncementDate": "2026-06-01",
-  "scrapedCount": 395,
-  "rejectedCount": 212,
+  "municipalityCount": 21,
   "municipalityAudit": {
     "expectedMunicipalityCount": 25,
     "coveredMunicipalityCount": 21,
@@ -30,8 +30,8 @@
       },
       {
         "municipality": "橿原市",
-        "count": 37,
-        "changeFromPrevious": 5
+        "count": 34,
+        "changeFromPrevious": -3
       },
       {
         "municipality": "奈良県",
@@ -50,8 +50,8 @@
       },
       {
         "municipality": "葛城市",
-        "count": 10,
-        "changeFromPrevious": 2
+        "count": 9,
+        "changeFromPrevious": -1
       },
       {
         "municipality": "宇陀市",
@@ -104,11 +104,6 @@
         "changeFromPrevious": 0
       },
       {
-        "municipality": "大淀町",
-        "count": 2,
-        "changeFromPrevious": 1
-      },
-      {
         "municipality": "天理市",
         "count": 2,
         "changeFromPrevious": 0
@@ -124,6 +119,11 @@
         "changeFromPrevious": 0
       },
       {
+        "municipality": "大淀町",
+        "count": 1,
+        "changeFromPrevious": -1
+      },
+      {
         "municipality": "斑鳩町",
         "count": 1,
         "changeFromPrevious": 0
@@ -135,14 +135,21 @@
   "dateAudit": {
     "announcementAfterBiddingCount": 0,
     "awardedWithoutBiddingDateCount": 4,
-    "awardedWithoutWinnerCount": 7,
+    "awardedWithoutWinnerCount": 2,
     "openWithWinnerCount": 0,
     "sampleTitles": [
       {
-        "municipality": "大和高田市",
-        "title": "大和高田市保健センター受電設備改修工事",
+        "municipality": "安堵町",
+        "title": "【条件付き一般競争入札の結果】安堵町立安堵小中学校屋内運動場空調設備設置工事",
         "status": "落札",
-        "announcementDate": "2025-06-01",
+        "announcementDate": "2026-06-01",
+        "biddingDate": null
+      },
+      {
+        "municipality": "五條市",
+        "title": "五條市立公民館等消防用設備等法定点検業務委託",
+        "status": "落札",
+        "announcementDate": "2026-04-15",
         "biddingDate": null
       },
       {
@@ -153,41 +160,26 @@
         "biddingDate": null
       },
       {
-        "municipality": "五條市",
-        "title": "五條市立公民館等消防用設備等法定点検業務委託",
+        "municipality": "安堵町",
+        "title": "【条件付き一般競争入札の結果】安堵町立安堵小中学校屋内運動場空調設備設置工事",
         "status": "落札",
-        "announcementDate": "2026-04-15",
+        "announcementDate": "2026-06-01",
         "biddingDate": null
       },
       {
-        "municipality": "五條市",
-        "title": "五條市立公民館等防火対象物定期点検業務委託",
+        "municipality": "大淀町",
+        "title": "令和7年度耐震改修促進計画改訂業務（第7－建築委－1号）【令和7年7月22日執行】",
         "status": "落札",
-        "announcementDate": "2026-05-08",
-        "biddingDate": "2026-05-08"
-      },
-      {
-        "municipality": "五條市",
-        "title": "五條市立公民館等消防用設備等法定点検業務委託",
-        "status": "落札",
-        "announcementDate": "2026-04-15",
-        "biddingDate": null
-      },
-      {
-        "municipality": "五條市",
-        "title": "五條市立公民館特定建築物定期調査及び五條市立公民館防火設備定期検査業務委託",
-        "status": "落札",
-        "announcementDate": "2026-04-07",
-        "biddingDate": "2026-04-07"
+        "announcementDate": "2025-07-22",
+        "biddingDate": "2025-07-22"
       }
     ]
   },
   "intelligence": {
-    "itemsWithPdf": 58,
-    "itemsWithDescription": 50,
-    "intelligenceExtractedCount": 50,
-    "geminiExtractedCount": 50,
-    "taggedCount": 50,
-    "lastAugmentedAt": "2026-06-01T06:11:17.725Z"
+    "itemsWithPdf": 53,
+    "itemsWithDescription": 45,
+    "intelligenceExtractedCount": 45,
+    "geminiExtractedCount": 45,
+    "taggedCount": 45
   }
 }
