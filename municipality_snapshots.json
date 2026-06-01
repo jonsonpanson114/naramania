@@ -1,6 +1,15 @@
 {
   "天理市": [
     {
+      "id": "tenri-d992a9bd",
+      "municipality": "天理市",
+      "title": "天理市環境クリーンセンター解体工事",
+      "type": "建築",
+      "announcementDate": "2026-05-29",
+      "link": "https://www.city.tenri.nara.jp/kakuka/soumubu/nyuusatsushinsashitsu/construction_work/kouji_hattyuu_kanren/1395887232147.html",
+      "status": "受付中"
+    },
+    {
       "id": "tenri-4d4dd96a",
       "municipality": "天理市",
       "title": "天理市立丹波市・前栽・櫟本小学校屋内運動場断熱化工事",
@@ -20,17 +29,7 @@
       "biddingDate": "2026-06-17",
       "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/9328.html",
       "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk260617_06k.pdf",
-      "status": "受付中",
-      "estimatedPrice": "¥85,998,000円",
-      "designFirm": "(株)中和設計",
-      "constructionPeriod": "着工の日から 令和9年1月22日まで",
-      "description": "市立郡山南小学校廊下改修工事(2期)",
-      "tags": [
-        "改修",
-        "建築"
-      ],
-      "isIntelligenceExtracted": true,
-      "extractionSource": "gemini"
+      "status": "受付中"
     },
     {
       "id": "yamato-koriyama-20c13887",
@@ -41,16 +40,7 @@
       "biddingDate": "2026-06-03",
       "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/9328.html",
       "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk260603_42k.pdf",
-      "status": "受付中",
-      "estimatedPrice": "¥3,498,000",
-      "description": "市立片桐幼稚園園舎改修工事設計業務",
-      "tags": [
-        "設計",
-        "改修",
-        "建築"
-      ],
-      "isIntelligenceExtracted": true,
-      "extractionSource": "gemini"
+      "status": "受付中"
     },
     {
       "id": "yamato-koriyama-a082fbb3",
@@ -61,18 +51,7 @@
       "biddingDate": "2026-06-03",
       "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/9328.html",
       "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk260603_01k.pdf",
-      "status": "受付中",
-      "estimatedPrice": "¥104,434,000円",
-      "designFirm": "YARD吉村建築設計",
-      "constructionPeriod": "着工の日から令和8年12月7日まで",
-      "description": "九条公園プール施設更新工事",
-      "tags": [
-        "建築",
-        "改修",
-        "プール"
-      ],
-      "isIntelligenceExtracted": true,
-      "extractionSource": "gemini"
+      "status": "受付中"
     },
     {
       "id": "yamato-koriyama-2be46dab",
@@ -99,14 +78,24 @@
   ],
   "御所市": [
     {
-      "id": "gose-2026-05-25-御所市義務教育学校建設に関する基本設計及び実施設-fallback",
+      "id": "gose-2026-05-29-御所市義務教育学校建設に関する基本設計及び実施設-fallback",
       "municipality": "御所市",
       "title": "御所市義務教育学校建設に関する基本設計及び実施設計業務に係る公募型プロポーザル",
       "type": "コンサル",
-      "announcementDate": "2026-05-25",
+      "announcementDate": "2026-05-29",
       "link": "https://www.city.gose.nara.jp/0000004589.html",
       "status": "受付中",
       "biddingDate": "2026-07-29"
+    },
+    {
+      "id": "gose-2026-05-20-大正小学校給水設備他改修(第2期)-1",
+      "municipality": "御所市",
+      "title": "大正小学校給水設備他改修(第2期)",
+      "type": "その他",
+      "announcementDate": "2026-05-20",
+      "biddingDate": "2026-05-20",
+      "link": "https://www.city.gose.nara.jp/0000001024.html",
+      "status": "受付終了"
     },
     {
       "id": "gose-2026-04-20-市営住宅サン柏原外壁等改修工事設計業務-0",
@@ -121,6 +110,268 @@
   ],
   "奈良市": [
     {
+      "id": "nara-city-0000002484",
+      "municipality": "奈良市",
+      "title": "春日中学校エレベーター新設工事",
+      "type": "建築",
+      "announcementDate": "2026-06-01",
+      "biddingDate": "2026-06-30",
+      "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+      "status": "受付中"
+    },
+    {
+      "id": "nara-city-0000002485",
+      "municipality": "奈良市",
+      "title": "伏見小学校エレベーター新設工事",
+      "type": "建築",
+      "announcementDate": "2026-06-01",
+      "biddingDate": "2026-07-01",
+      "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+      "status": "受付中"
+    },
+    {
+      "id": "nara-city-0000002500",
+      "municipality": "奈良市",
+      "title": "環境清美センター破砕棟高圧受変電設備改修工事",
+      "type": "建築",
+      "announcementDate": "2026-06-01",
+      "biddingDate": "2026-06-22",
+      "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+      "status": "受付中"
+    },
+    {
+      "id": "nara-city-0000002501",
+      "municipality": "奈良市",
+      "title": "中央体育館高圧受変電設備改修工事",
+      "type": "建築",
+      "announcementDate": "2026-06-01",
+      "biddingDate": "2026-06-23",
+      "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+      "status": "受付中"
+    },
+    {
+      "id": "nara-city-0000002506",
+      "municipality": "奈良市",
+      "title": "若草中学校他１校屋内運動場空調設備設置工事",
+      "type": "建築",
+      "announcementDate": "2026-06-01",
+      "biddingDate": "2026-07-03",
+      "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+      "status": "受付中"
+    },
+    {
+      "id": "nara-city-0000002507",
+      "municipality": "奈良市",
+      "title": "田原中学校他１校屋内運動場空調設備設置工事",
+      "type": "建築",
+      "announcementDate": "2026-06-01",
+      "biddingDate": "2026-07-03",
+      "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+      "status": "受付中"
+    },
+    {
+      "id": "nara-city-0000002508",
+      "municipality": "奈良市",
+      "title": "富雄中学校他１校屋内運動場空調設備設置工事",
+      "type": "建築",
+      "announcementDate": "2026-06-01",
+      "biddingDate": "2026-07-03",
+      "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+      "status": "受付中"
+    },
+    {
+      "id": "nara-city-0000002509",
+      "municipality": "奈良市",
+      "title": "月ヶ瀬体育館空調設備設置工事",
+      "type": "建築",
+      "announcementDate": "2026-06-01",
+      "biddingDate": "2026-07-03",
+      "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+      "status": "受付中"
+    },
+    {
+      "id": "nara-city-0000002510",
+      "municipality": "奈良市",
+      "title": "三笠中学校屋内運動場空調設備設置工事",
+      "type": "建築",
+      "announcementDate": "2026-06-01",
+      "biddingDate": "2026-07-03",
+      "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+      "status": "受付中"
+    },
+    {
+      "id": "nara-city-0000002511",
+      "municipality": "奈良市",
+      "title": "伏見中学校屋内運動場空調設備設置工事",
+      "type": "建築",
+      "announcementDate": "2026-06-01",
+      "biddingDate": "2026-07-03",
+      "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+      "status": "受付中"
+    },
+    {
+      "id": "nara-city-0000002512",
+      "municipality": "奈良市",
+      "title": "富雄南中学校屋内運動場空調設備設置工事",
+      "type": "建築",
+      "announcementDate": "2026-06-01",
+      "biddingDate": "2026-07-06",
+      "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+      "status": "受付中"
+    },
+    {
+      "id": "nara-city-0000002513",
+      "municipality": "奈良市",
+      "title": "都祁中学校屋内運動場空調設備設置工事",
+      "type": "建築",
+      "announcementDate": "2026-06-01",
+      "biddingDate": "2026-07-06",
+      "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+      "status": "受付中"
+    },
+    {
+      "id": "nara-city-0000002514",
+      "municipality": "奈良市",
+      "title": "平城東中学校屋内運動場空調設備設置工事",
+      "type": "建築",
+      "announcementDate": "2026-06-01",
+      "biddingDate": "2026-07-06",
+      "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+      "status": "受付中"
+    },
+    {
+      "id": "nara-city-0000002515",
+      "municipality": "奈良市",
+      "title": "登美ヶ丘中学校屋内運動場空調設備設置工事",
+      "type": "建築",
+      "announcementDate": "2026-06-01",
+      "biddingDate": "2026-07-06",
+      "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+      "status": "受付中"
+    },
+    {
+      "id": "nara-city-0000002516",
+      "municipality": "奈良市",
+      "title": "興東館柳生中学校屋内運動場空調設備設置工事",
+      "type": "建築",
+      "announcementDate": "2026-06-01",
+      "biddingDate": "2026-07-06",
+      "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+      "status": "受付中"
+    },
+    {
+      "id": "nara-city-0000002517",
+      "municipality": "奈良市",
+      "title": "都南中学校屋内運動場空調設備設置工事",
+      "type": "建築",
+      "announcementDate": "2026-06-01",
+      "biddingDate": "2026-07-06",
+      "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+      "status": "受付中"
+    },
+    {
+      "id": "nara-city-0000002518",
+      "municipality": "奈良市",
+      "title": "京西中学校屋内運動場空調設備設置工事",
+      "type": "建築",
+      "announcementDate": "2026-06-01",
+      "biddingDate": "2026-07-07",
+      "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+      "status": "受付中"
+    },
+    {
+      "id": "nara-city-0000002519",
+      "municipality": "奈良市",
+      "title": "登美ヶ丘北中学校屋内運動場空調設備設置工事",
+      "type": "建築",
+      "announcementDate": "2026-06-01",
+      "biddingDate": "2026-07-07",
+      "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+      "status": "受付中"
+    },
+    {
+      "id": "nara-city-0000002520",
+      "municipality": "奈良市",
+      "title": "一条中高一貫校屋内運動場空調設備設置工事",
+      "type": "建築",
+      "announcementDate": "2026-06-01",
+      "biddingDate": "2026-07-07",
+      "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+      "status": "受付中"
+    },
+    {
+      "id": "nara-city-0000002521",
+      "municipality": "奈良市",
+      "title": "二名中学校屋内運動場空調設備設置工事",
+      "type": "建築",
+      "announcementDate": "2026-06-01",
+      "biddingDate": "2026-07-07",
+      "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+      "status": "受付中"
+    },
+    {
+      "id": "nara-city-0000002522",
+      "municipality": "奈良市",
+      "title": "飛鳥中学校屋内運動場空調設備設置工事",
+      "type": "建築",
+      "announcementDate": "2026-06-01",
+      "biddingDate": "2026-07-07",
+      "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+      "status": "受付中"
+    },
+    {
+      "id": "nara-city-0000002523",
+      "municipality": "奈良市",
+      "title": "春日中学校屋内運動場空調設備設置工事",
+      "type": "建築",
+      "announcementDate": "2026-06-01",
+      "biddingDate": "2026-07-07",
+      "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+      "status": "受付中"
+    },
+    {
+      "id": "nara-city-0000002524",
+      "municipality": "奈良市",
+      "title": "ならやま中学校屋内運動場空調設備設置工事",
+      "type": "建築",
+      "announcementDate": "2026-06-01",
+      "biddingDate": "2026-07-08",
+      "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+      "status": "受付中"
+    },
+    {
+      "id": "nara-city-0000002525",
+      "municipality": "奈良市",
+      "title": "奈良市総合福祉センター体育館空調設備設置工事",
+      "type": "建築",
+      "announcementDate": "2026-06-01",
+      "biddingDate": "2026-07-08",
+      "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+      "status": "受付中"
+    },
+    {
+      "id": "nara-city-0000002531",
+      "municipality": "奈良市",
+      "title": "梅の郷月ヶ瀬温泉ボイラー設備改修その他工事に伴う建築設計業務委託",
+      "type": "委託",
+      "announcementDate": "2026-06-01",
+      "biddingDate": "2026-07-03",
+      "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+      "status": "受付中"
+    },
+    {
+      "id": "nara-city-0000002430",
+      "municipality": "奈良市",
+      "title": "奈良市営住宅照明器具改修工事",
+      "type": "建築",
+      "announcementDate": "2026-05-28",
+      "biddingDate": "2026-05-28",
+      "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+      "status": "落札",
+      "winningContractor": "前川電気",
+      "winnerType": "ゼネコン"
+    },
+    {
       "id": "nara-city-0000002334",
       "municipality": "奈良市",
       "title": "第５号市営住宅２号棟外壁塗装等改修工事",
@@ -131,26 +382,6 @@
       "status": "落札",
       "winningContractor": "株式会社福島工務店",
       "winnerType": "ゼネコン"
-    },
-    {
-      "id": "nara-city-0000002463",
-      "municipality": "奈良市",
-      "title": "鴻ノ池球場高圧受変電設備改修工事",
-      "type": "建築",
-      "announcementDate": "2026-05-15",
-      "biddingDate": "2026-06-08",
-      "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
-      "status": "受付中"
-    },
-    {
-      "id": "nara-city-0000002464",
-      "municipality": "奈良市",
-      "title": "高の原第三自転車駐車場高圧受変電設備改修工事",
-      "type": "建築",
-      "announcementDate": "2026-05-15",
-      "biddingDate": "2026-06-09",
-      "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
-      "status": "受付中"
     },
     {
       "id": "nara-city-0000002474",
@@ -264,7 +495,8 @@
       "announcementDate": "2026-04-15",
       "biddingDate": "2026-05-27",
       "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
-      "status": "受付中"
+      "status": "落札",
+      "winningContractor": "株式会社ワールド設計"
     },
     {
       "id": "nara-city-0000002344",
@@ -284,7 +516,8 @@
       "announcementDate": "2026-04-15",
       "biddingDate": "2026-05-27",
       "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
-      "status": "受付中"
+      "status": "落札",
+      "winningContractor": "株式会社ＵＬＴＲＡ　Ｃ"
     },
     {
       "id": "nara-city-0000002346",
@@ -304,7 +537,8 @@
       "announcementDate": "2026-04-15",
       "biddingDate": "2026-05-27",
       "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
-      "status": "受付中"
+      "status": "落札",
+      "winningContractor": "岡田建築設計事務所"
     },
     {
       "id": "nara-city-0000002348",
@@ -338,6 +572,15 @@
     }
   ],
   "安堵町": [
+    {
+      "id": "ando-category-62",
+      "municipality": "安堵町",
+      "title": "【条件付き一般競争入札の結果】安堵町立安堵小中学校屋内運動場空調設備設置工事",
+      "type": "建築",
+      "announcementDate": "2026-06-01",
+      "link": "https://www.town.ando.nara.jp/0000003986.html",
+      "status": "落札"
+    },
     {
       "id": "ando-supplemental-0000003967",
       "municipality": "安堵町",
@@ -560,58 +803,7 @@
       "announcementDate": "2026-05-18",
       "link": "https://www.town.oyodo.lg.jp/./cmsfiles/contents/0000000/218/nyusatsu_setsumei_080518.pdf",
       "pdfUrl": "https://www.town.oyodo.lg.jp/./cmsfiles/contents/0000000/218/nyusatsu_setsumei_080518.pdf",
-      "status": "受付中",
-      "estimatedPrice": "3,432,000円",
-      "constructionPeriod": "契約締結日の翌日から令和9年3月31日まで",
-      "description": "令和8年度大淀町文化会館改修工事に伴う監理業務。文化会館長寿命化計画に基づき、建設後約30年近く経過し、設備の更新時期を大幅に経過している受変電設備(主に変圧器、コンデンサ他)改修工事及びホール舞台吊物機構改修工事(第2期)に伴う工事の監理業務。",
-      "tags": [
-        "改修",
-        "電気",
-        "設備"
-      ],
-      "isIntelligenceExtracted": true,
-      "extractionSource": "gemini"
-    },
-    {
-      "id": "oyodo-5pen5aSn5reA",
-      "municipality": "大淀町",
-      "title": "旧大淀町立第一保育所解体工事に伴う設計業務",
-      "type": "コンサル",
-      "announcementDate": "2026-04-27",
-      "link": "https://www.town.oyodo.lg.jp/./cmsfiles/contents/0000000/218/nyusatsu_setsumei_08042702.pdf",
-      "pdfUrl": "https://www.town.oyodo.lg.jp/./cmsfiles/contents/0000000/218/nyusatsu_setsumei_08042702.pdf",
-      "status": "受付中",
-      "estimatedPrice": "5,093,000円",
-      "constructionPeriod": "契約締結日から令和 9年3月31日まで",
-      "description": "旧大淀町立第一保育所解体工事に伴う設計業務",
-      "tags": [
-        "解体",
-        "設計",
-        "建築"
-      ],
-      "isIntelligenceExtracted": true,
-      "extractionSource": "gemini"
-    },
-    {
-      "id": "oyodo-5aSn5reA55S6",
-      "municipality": "大淀町",
-      "title": "大淀町文化会館受変電設備改修工事",
-      "type": "建築",
-      "announcementDate": "2026-04-13",
-      "link": "https://www.town.oyodo.lg.jp/./cmsfiles/contents/0000000/218/nyusatsu_setsumei_080413.pdf",
-      "pdfUrl": "https://www.town.oyodo.lg.jp/./cmsfiles/contents/0000000/218/nyusatsu_setsumei_080413.pdf",
-      "status": "受付中",
-      "estimatedPrice": "84,244,600円",
-      "designFirm": "日本工営都市空間株式会社",
-      "constructionPeriod": "契約締結日の翌日から 令和9年3月23日(火)まで",
-      "description": "大淀町文化会館の受変電設備（主に変圧器、コンデンサ他）改修工事。文化会館地下第1電気室およびあらかしホール第2電気室の設備改修を含む。",
-      "tags": [
-        "電気",
-        "改修",
-        "設備"
-      ],
-      "isIntelligenceExtracted": true,
-      "extractionSource": "gemini"
+      "status": "受付中"
     },
     {
       "id": "oyodo-aHR0cHM6Ly93",
@@ -735,16 +927,6 @@
       "biddingDate": "2026-05-29",
       "link": "https://www.town.ikaruga.nara.jp/0000001956.html",
       "status": "受付中"
-    },
-    {
-      "id": "斑鳩町-2026-04-21-斑鳩町文化振興センター高圧受電設備更新工事",
-      "municipality": "斑鳩町",
-      "title": "斑鳩町文化振興センター高圧受電設備更新工事",
-      "type": "建築",
-      "announcementDate": "2026-04-21",
-      "biddingDate": "2026-05-14",
-      "link": "https://www.town.ikaruga.nara.jp/0000002502.html",
-      "status": "受付中"
     }
   ],
   "葛城市": [
@@ -757,17 +939,7 @@
       "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/2-4-3-2026-1.pdf",
       "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/2-4-3-2026-1.pdf",
       "status": "受付中",
-      "biddingDate": "2026-06-12",
-      "estimatedPrice": "13,320,000円",
-      "constructionPeriod": "契約日から令和9年2月26日(金)まで",
-      "description": "葛城市立中学校トイレ改修工事設計業務。新庄中学校の南棟1F~3Fトイレ及び屋外トイレ、白鳳中学校の北棟1F~3Fトイレ及び屋内運動場内トイレの改修設計、並びにIF~4F防火戸の改修設計（詳細は特記仕様書による）",
-      "tags": [
-        "改修",
-        "設計",
-        "建築"
-      ],
-      "isIntelligenceExtracted": true,
-      "extractionSource": "gemini"
+      "biddingDate": "2026-06-12"
     },
     {
       "id": "katsuragi-7796394c",
@@ -778,18 +950,7 @@
       "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/1-6-1-2026-1.pdf",
       "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/1-6-1-2026-1.pdf",
       "status": "受付中",
-      "biddingDate": "2026-05-12",
-      "estimatedPrice": "169,400,000円",
-      "designFirm": "(株)中和設計",
-      "constructionPeriod": "契約日から令和9年2月19日(金)まで",
-      "description": "忍海小学校区学童保育所施設整備工事",
-      "tags": [
-        "建築",
-        "電気",
-        "機械設備"
-      ],
-      "isIntelligenceExtracted": true,
-      "extractionSource": "gemini"
+      "biddingDate": "2026-05-12"
     },
     {
       "id": "katsuragi-8a60726c",
@@ -800,17 +961,7 @@
       "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/5-02-08-2025-1-2.pdf",
       "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/5-02-08-2025-1-2.pdf",
       "status": "受付中",
-      "biddingDate": "2025-09-08",
-      "estimatedPrice": "2,445,000,000 円",
-      "constructionPeriod": "契約日から令和9年1月29日(金)まで",
-      "description": "(仮称)當麻複合施設整備工事。既存の當麻文化会館を全面改修するとともに、周辺施設である當麻庁舎及び當麻図書館を複合し、新たに市民活動センター機能・図書館機能を併せ持った(仮称)當麻複合施設の整備工事",
-      "tags": [
-        "建築",
-        "改修",
-        "公共施設"
-      ],
-      "isIntelligenceExtracted": true,
-      "extractionSource": "gemini"
+      "biddingDate": "2025-09-08"
     },
     {
       "id": "katsuragi-5bc8ab65",
@@ -821,18 +972,7 @@
       "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/4-03-01-2025-1-2.pdf",
       "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/4-03-01-2025-1-2.pdf",
       "status": "受付中",
-      "biddingDate": "2025-08-05",
-      "estimatedPrice": "48,640,000 円",
-      "designFirm": "株式会社KEISIN葛城事務所",
-      "constructionPeriod": "契約日から令和8年1月30日(金)まで",
-      "description": "當麻スポーツセンタートイレ改修工事 (1階、2階トイレおよび多目的トイレの乾式化・洋式化)",
-      "tags": [
-        "改修",
-        "建築",
-        "衛生設備"
-      ],
-      "isIntelligenceExtracted": true,
-      "extractionSource": "gemini"
+      "biddingDate": "2025-08-05"
     },
     {
       "id": "katsuragi-1da6f952",
@@ -843,18 +983,7 @@
       "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/4-03-02-2025-1.pdf",
       "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/4-03-02-2025-1.pdf",
       "status": "受付中",
-      "biddingDate": "2025-08-05",
-      "estimatedPrice": "57,510,000 円",
-      "designFirm": "細谷設計事務所",
-      "constructionPeriod": "契約日から令和8年1月30日(金)まで",
-      "description": "白鳳中学校武道場改修工事（トイレ改修、剣道場・柔道場の空気調和設備設置）",
-      "tags": [
-        "改修",
-        "建築",
-        "空調"
-      ],
-      "isIntelligenceExtracted": true,
-      "extractionSource": "gemini"
+      "biddingDate": "2025-08-05"
     },
     {
       "id": "katsuragi-361e5093",
@@ -865,18 +994,7 @@
       "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/4-03-03-2025-1.pdf",
       "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/4-03-03-2025-1.pdf",
       "status": "受付中",
-      "biddingDate": "2025-08-05",
-      "estimatedPrice": "52,424,000円",
-      "designFirm": "(株)オオバ 奈良営業所",
-      "constructionPeriod": "契約日より令和8年2月27日(金)まで",
-      "description": "公園施設長寿命化対策支援事業に伴う屋敷山公園噴水広場更新工事。噴水施設N=1基、パーゴラN=1基の更新および園路・広場の更新工事(A=454㎡)を含む。",
-      "tags": [
-        "改修",
-        "造園",
-        "公園"
-      ],
-      "isIntelligenceExtracted": true,
-      "extractionSource": "gemini"
+      "biddingDate": "2025-08-05"
     },
     {
       "id": "katsuragi-f59ace8b",
@@ -887,18 +1005,7 @@
       "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/3-03-03-2025-1-2.pdf",
       "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/3-03-03-2025-1-2.pdf",
       "status": "受付中",
-      "biddingDate": "2025-07-02",
-      "estimatedPrice": "19,740,000円",
-      "designFirm": "和光建設(株)",
-      "constructionPeriod": "契約日から令和9年3月26日(金)まで",
-      "description": "葛城市立新庄小学校管理棟及び屋内運動場長寿命化改修工事監理業務委託",
-      "tags": [
-        "建築",
-        "改修",
-        "監理"
-      ],
-      "isIntelligenceExtracted": true,
-      "extractionSource": "gemini"
+      "biddingDate": "2025-07-02"
     },
     {
       "id": "katsuragi-f6425ccc",
@@ -909,17 +1016,7 @@
       "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/2-03-03-2025-1.pdf",
       "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/2-03-03-2025-1.pdf",
       "status": "受付中",
-      "biddingDate": "2025-06-12",
-      "estimatedPrice": "40,920,000円",
-      "constructionPeriod": "契約日から令和8年3月10日(火)まで",
-      "description": "体力づくりセンター各設備整備修繕。浴槽用ろ過装置ろ材取替(男子・女子)各一式、鉄製ドア取替、ジャグジー槽薬品循環洗浄、加圧給水ポンプ分解整備、GHP更新工事。",
-      "tags": [
-        "改修",
-        "設備",
-        "建築"
-      ],
-      "isIntelligenceExtracted": true,
-      "extractionSource": "gemini"
+      "biddingDate": "2025-06-12"
     },
     {
       "id": "katsuragi-61b8c2ef",
@@ -945,6 +1042,26 @@
     }
   ],
   "田原本町": [
+    {
+      "id": "tawaramoto-2026062902",
+      "municipality": "田原本町",
+      "title": "阪手新池雨水貯留施設樋門設置等工事",
+      "type": "建築",
+      "announcementDate": "2026-05-28",
+      "biddingDate": "2026-06-29",
+      "link": "https://tawaramoto.efftis.jp/PPI/Public/javaScript:void(0);",
+      "status": "受付中"
+    },
+    {
+      "id": "tawaramoto-1008062207",
+      "municipality": "田原本町",
+      "title": "平野幼稚園配膳室出入口改修等業務",
+      "type": "委託",
+      "announcementDate": "2026-05-28",
+      "biddingDate": "2026-06-22",
+      "link": "https://tawaramoto.efftis.jp/PPI/Public/javaScript:void(0);",
+      "status": "受付中"
+    },
     {
       "id": "tawaramoto-2026062201",
       "municipality": "田原本町",
@@ -985,16 +1102,6 @@
       "announcementDate": "2026-05-14",
       "biddingDate": "2026-06-02",
       "link": "https://www.city.kashiba.lg.jp/site/nyuusatsu/66808.html",
-      "status": "受付中"
-    },
-    {
-      "id": "kashiba-web-ccd84d76",
-      "municipality": "香芝市",
-      "title": "五位堂小学校改築工事に伴う実施設計業務",
-      "type": "建築",
-      "announcementDate": "2026-04-23",
-      "biddingDate": "2026-05-26",
-      "link": "https://www.city.kashiba.lg.jp/site/nyuusatsu/65961.html",
       "status": "受付中"
     },
     {
@@ -1086,6 +1193,50 @@
       "biddingDate": "2026-04-28",
       "link": "https://www.city.kashiba.lg.jp/soshiki/7/65410.html",
       "status": "受付中"
+    },
+    {
+      "id": "kashiba-r8-k4-19",
+      "municipality": "香芝市",
+      "title": "下田小学校長寿命化改修工事",
+      "type": "建築",
+      "announcementDate": "2026-04-07",
+      "biddingDate": "2026-05-21",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=062006E007200640",
+      "status": "落札",
+      "winningContractor": "株式会社上村組"
+    },
+    {
+      "id": "kashiba-r7-k15-07",
+      "municipality": "香芝市",
+      "title": "香芝北中学校トイレ改修工事（Ⅱ期）",
+      "type": "建築",
+      "announcementDate": "2026-04-07",
+      "biddingDate": "2026-04-07",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=062006E007200640",
+      "status": "落札",
+      "winningContractor": "株式会社竹澤工業"
+    },
+    {
+      "id": "kashiba-r7-k15-06",
+      "municipality": "香芝市",
+      "title": "旭ケ丘小学校トイレ改修工事（Ⅱ期）",
+      "type": "建築",
+      "announcementDate": "2026-04-07",
+      "biddingDate": "2026-04-07",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=062006E007200640",
+      "status": "落札",
+      "winningContractor": "株式会社豊国"
+    },
+    {
+      "id": "kashiba-r7-k15-05",
+      "municipality": "香芝市",
+      "title": "関屋小学校南館他改修工事",
+      "type": "建築",
+      "announcementDate": "2026-04-07",
+      "biddingDate": "2026-04-07",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=062006E007200640",
+      "status": "落札",
+      "winningContractor": "株式会社上村組"
     }
   ],
   "王寺町": [
@@ -1110,17 +1261,7 @@
       "biddingDate": "2026-05-08",
       "link": "https://www.city.gojo.lg.jp/jigyousha/nyuusatsu/8/R8/19370.html",
       "pdfUrl": "https://www.city.gojo.lg.jp/material/files/group/40/kkr8bt.pdf",
-      "status": "落札",
-      "estimatedPrice": "158,400円",
-      "winningContractor": "近畿電気保安株式会社",
-      "description": "五條市立公民館等防火対象物定期点検業務委託",
-      "tags": [
-        "点検",
-        "防災",
-        "設備"
-      ],
-      "isIntelligenceExtracted": true,
-      "extractionSource": "gemini"
+      "status": "落札"
     },
     {
       "id": "gojo-85f3cc47",
@@ -1130,17 +1271,7 @@
       "announcementDate": "2026-04-15",
       "link": "https://www.city.gojo.lg.jp/jigyousha/nyuusatsu/8/R8/19327.html",
       "pdfUrl": "https://www.city.gojo.lg.jp/material/files/group/40/kkr8hotetenken.pdf",
-      "status": "落札",
-      "estimatedPrice": "946,000 円",
-      "winningContractor": "株式会社カシバ消防設備",
-      "description": "五條市立公民館等消防用設備等法定点検業務委託",
-      "tags": [
-        "点検",
-        "設備",
-        "消防"
-      ],
-      "isIntelligenceExtracted": true,
-      "extractionSource": "gemini"
+      "status": "落札"
     },
     {
       "id": "gojo-5fb0bb1b",
@@ -1151,17 +1282,7 @@
       "biddingDate": "2026-04-07",
       "link": "https://www.city.gojo.lg.jp/jigyousha/nyuusatsu/8/R8/16085.html",
       "pdfUrl": "https://www.city.gojo.lg.jp/material/files/group/40/kkR8ktakb.pdf",
-      "status": "落札",
-      "estimatedPrice": "935,000 円",
-      "winningContractor": "岡本設計",
-      "description": "五條市立公民館特定建築物定期調査及び五條市立公民館防火設備定期検査業務委託",
-      "tags": [
-        "建築",
-        "調査",
-        "検査"
-      ],
-      "isIntelligenceExtracted": true,
-      "extractionSource": "gemini"
+      "status": "落札"
     },
     {
       "id": "gojo-3ede97ba",
@@ -1172,128 +1293,45 @@
       "biddingDate": "2026-04-07",
       "link": "https://www.city.gojo.lg.jp/jigyousha/nyuusatsu/8/R8/16087.html",
       "pdfUrl": "https://www.city.gojo.lg.jp/material/files/group/40/kkR8kk.pdf",
-      "status": "落札",
-      "estimatedPrice": "682,000 円",
-      "winningContractor": "(株)たかの建築事務所",
-      "description": "五條市立公民館建築設備定期検査業務委託",
-      "tags": [
-        "建築",
-        "設備",
-        "検査"
-      ],
-      "isIntelligenceExtracted": true,
-      "extractionSource": "gemini"
+      "status": "落札"
     }
   ],
   "橿原市": [
     {
-      "id": "kashihara-5082000350",
+      "id": "kashihara-5082000530",
       "municipality": "橿原市",
-      "title": "令和8年 各小学校便所改修工事に伴う設計委託",
+      "title": "藤原京跡トイレ設置工事に伴う設計委託",
       "type": "建築",
-      "announcementDate": "2026-04-17",
-      "biddingDate": "2026-04-22",
+      "announcementDate": "2026-05-29",
+      "biddingDate": "2026-06-03",
       "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/7/12117.html",
-      "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5082000350.pdf",
+      "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5082000530.pdf",
       "status": "受付中",
-      "winnerType": "ゼネコン",
-      "estimatedPrice": "15,598,000円(消費税10%含む)",
-      "constructionPeriod": "契約日の翌日から 令和 9年1月29日 まで",
-      "description": "令和8年 各小学校便所改修工事に伴う設計委託。各小学校便所洋式化に伴う設計業務委託一式（実施設計、建築工事設計一式、電気設備工事設計一式、機械設備工事設計一式他）",
-      "tags": [
-        "改修",
-        "設計",
-        "建築"
-      ],
-      "isIntelligenceExtracted": true,
-      "extractionSource": "gemini"
+      "winnerType": "ゼネコン"
     },
     {
-      "id": "kashihara-5082000353",
+      "id": "kashihara-5082000524",
       "municipality": "橿原市",
-      "title": "各小中学校防火戸等改修工事に伴う設計委託",
+      "title": "金橋小学校受変電設備改修工事に伴う設計委託",
       "type": "建築",
-      "announcementDate": "2026-04-17",
-      "biddingDate": "2026-04-22",
+      "announcementDate": "2026-05-29",
+      "biddingDate": "2026-06-03",
       "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/7/12117.html",
-      "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5082000353.pdf",
+      "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5082000524.pdf",
       "status": "受付中",
-      "winnerType": "ゼネコン",
-      "estimatedPrice": "8,316,000円(消費税10%含む)",
-      "constructionPeriod": "契約日の翌日から令和8年11月30日まで",
-      "description": "各小中学校防火戸等改修工事に伴う設計委託一式・実施設計",
-      "tags": [
-        "改修",
-        "設計",
-        "建築"
-      ],
-      "isIntelligenceExtracted": true,
-      "extractionSource": "gemini"
+      "winnerType": "ゼネコン"
     },
     {
-      "id": "kashihara-5082000289",
+      "id": "kashihara-5083000653",
       "municipality": "橿原市",
-      "title": "北妙法寺団地外壁等改修工事に伴う設計委託",
-      "type": "建築",
-      "announcementDate": "2026-04-17",
-      "biddingDate": "2026-04-22",
-      "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/7/12117.html",
-      "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5082000289.pdf",
-      "status": "受付中",
-      "winnerType": "ゼネコン",
-      "estimatedPrice": "4,807,000円(消費税10%含む)",
-      "constructionPeriod": "契約日の翌日から令和8年11月30日まで",
-      "description": "北妙法寺団地外壁等改修工事に係る設計委託（実施設計）。対象はRC3階建て共同住宅2棟（1号棟 延べ面積約950㎡、2号棟 延べ面積約1,040㎡）。",
-      "tags": [
-        "改修",
-        "建築",
-        "設計"
-      ],
-      "isIntelligenceExtracted": true,
-      "extractionSource": "gemini"
-    },
-    {
-      "id": "kashihara-5082000288",
-      "municipality": "橿原市",
-      "title": "市営住宅内装等改修工事に伴う設計委託",
-      "type": "建築",
-      "announcementDate": "2026-04-17",
-      "biddingDate": "2026-04-22",
-      "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/7/12117.html",
-      "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5082000288.pdf",
-      "status": "受付中",
-      "winnerType": "ゼネコン",
-      "estimatedPrice": "3,190,000円(消費税10%含む)",
-      "constructionPeriod": "契約日の翌日から令和8年9月30日まで",
-      "description": "市営住宅内装等改修工事に伴う設計委託（実施設計、設計住戸5戸）",
-      "tags": [
-        "改修",
-        "設計",
-        "建築"
-      ],
-      "isIntelligenceExtracted": true,
-      "extractionSource": "gemini"
-    },
-    {
-      "id": "kashihara-5083000192",
-      "municipality": "橿原市",
-      "title": "藤原宮跡仮設トイレ設置管理業務",
+      "title": "藤原宮跡仮設バイオトイレ設置管理業務",
       "type": "委託",
-      "announcementDate": "2026-04-17",
-      "biddingDate": "2026-04-22",
+      "announcementDate": "2026-05-29",
+      "biddingDate": "2026-06-03",
       "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/7/12149.html",
-      "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5083000192.pdf",
+      "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5083000653.pdf",
       "status": "受付中",
-      "winnerType": "設計事務所",
-      "constructionPeriod": "契約日の翌日から 令和9年5月31日まで",
-      "description": "藤原宮跡仮設トイレ設置管理業務",
-      "tags": [
-        "設備",
-        "管理",
-        "設置"
-      ],
-      "isIntelligenceExtracted": true,
-      "extractionSource": "gemini"
+      "winnerType": "設計事務所"
     },
     {
       "id": "kashihara-proposal-5082000026",
@@ -1316,19 +1354,8 @@
       "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5072001239k.pdf",
       "status": "落札",
       "winnerType": "設計事務所",
-      "winningContractor": "(有)坪岡建築事務所",
-      "biddingDate": "2026-01-29",
-      "estimatedPrice": "2,189,000円",
-      "designFirm": "(有)坪岡建築事務所",
-      "constructionPeriod": "契約日の翌日から令和8年3月19日まで",
-      "description": "市営住宅内装改修工事に伴う設計委託",
-      "tags": [
-        "改修",
-        "建築",
-        "設計"
-      ],
-      "isIntelligenceExtracted": true,
-      "extractionSource": "gemini"
+      "winningContractor": "㈲坪岡建築事務所",
+      "biddingDate": "2026-01-29"
     },
     {
       "id": "kashihara-result-5071001189",
@@ -1340,18 +1367,8 @@
       "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071001189k.pdf",
       "status": "落札",
       "winnerType": "ゼネコン",
-      "winningContractor": "(株)タカギ工業",
-      "biddingDate": "2025-12-18",
-      "estimatedPrice": "29,502,000円(消費税%含む)",
-      "constructionPeriod": "契約日の翌日 から 令和8年3月31日",
-      "description": "耳成地区公民館屋根等改修工事",
-      "tags": [
-        "改修",
-        "建築",
-        "屋根"
-      ],
-      "isIntelligenceExtracted": true,
-      "extractionSource": "gemini"
+      "winningContractor": "㈱タカギ工業",
+      "biddingDate": "2025-12-18"
     },
     {
       "id": "kashihara-result-5071001197",
@@ -1363,18 +1380,8 @@
       "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071001197k.pdf",
       "status": "落札",
       "winnerType": "ゼネコン",
-      "winningContractor": "(株)イシダ工業",
-      "biddingDate": "2025-12-18",
-      "estimatedPrice": "7,131,300円",
-      "constructionPeriod": "契約日の翌日から令和8年3月31日",
-      "description": "醍醐地下歩道屋根修繕工事7-1",
-      "tags": [
-        "修繕",
-        "屋根",
-        "土木"
-      ],
-      "isIntelligenceExtracted": true,
-      "extractionSource": "gemini"
+      "winningContractor": "㈱イシダ工業",
+      "biddingDate": "2025-12-18"
     },
     {
       "id": "kashihara-result-5072001184",
@@ -1386,19 +1393,8 @@
       "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5072001184k.pdf",
       "status": "落札",
       "winnerType": "設計事務所",
-      "winningContractor": "(有)坪岡建築事務所",
-      "biddingDate": "2025-12-18",
-      "estimatedPrice": "3,597,000円(消費税含む)",
-      "designFirm": "(有)坪岡建築事務所",
-      "constructionPeriod": "契約日の翌日から令和8年3月31日まで",
-      "description": "耳成西小学校受水槽改修工事に伴う設計委託",
-      "tags": [
-        "改修",
-        "設計",
-        "建築"
-      ],
-      "isIntelligenceExtracted": true,
-      "extractionSource": "gemini"
+      "winningContractor": "㈲坪岡建築事務所",
+      "biddingDate": "2025-12-18"
     },
     {
       "id": "kashihara-result-5073001087",
@@ -1410,17 +1406,8 @@
       "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073001087k.pdf",
       "status": "落札",
       "winnerType": "設計事務所",
-      "winningContractor": "(有)フレックス",
-      "biddingDate": "2025-11-19",
-      "constructionPeriod": "契約日の翌日から令和8年3月31日まで",
-      "description": "畝傍南小学校 高圧機器修繕",
-      "tags": [
-        "電気",
-        "修繕",
-        "設備"
-      ],
-      "isIntelligenceExtracted": true,
-      "extractionSource": "gemini"
+      "winningContractor": "㈲フレックス",
+      "biddingDate": "2025-11-19"
     },
     {
       "id": "kashihara-result-5071001098",
@@ -1432,18 +1419,8 @@
       "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071001098k.pdf",
       "status": "落札",
       "winnerType": "ゼネコン",
-      "winningContractor": "(株)丸高組",
-      "biddingDate": "2025-11-19",
-      "estimatedPrice": "10,056,200円",
-      "constructionPeriod": "契約日の翌日 から 令和8年3月18日",
-      "description": "今井都市緑地公園施設更新工事",
-      "tags": [
-        "公園",
-        "施設",
-        "改修"
-      ],
-      "isIntelligenceExtracted": true,
-      "extractionSource": "gemini"
+      "winningContractor": "㈱丸高組",
+      "biddingDate": "2025-11-19"
     },
     {
       "id": "kashihara-result-5072001078",
@@ -1455,16 +1432,7 @@
       "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5072001078k.pdf",
       "status": "受付終了",
       "winnerType": "設計事務所",
-      "biddingDate": "2025-11-19",
-      "estimatedPrice": "1,920,000円",
-      "constructionPeriod": "契約日の翌日から令和8年3月31日まで",
-      "description": "昆虫館受変電設備改修工事に伴う設計委託",
-      "tags": [
-        "改修",
-        "電気"
-      ],
-      "isIntelligenceExtracted": true,
-      "extractionSource": "gemini"
+      "biddingDate": "2025-11-19"
     },
     {
       "id": "kashihara-result-5072001074",
@@ -1476,17 +1444,7 @@
       "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5072001074k.pdf",
       "status": "受付終了",
       "winnerType": "設計事務所",
-      "biddingDate": "2025-11-19",
-      "estimatedPrice": "1,925,000円",
-      "constructionPeriod": "契約日の翌日から令和8年2月27日",
-      "description": "市営住宅内装等改修工事に伴う設計委託",
-      "tags": [
-        "内装",
-        "改修",
-        "設計"
-      ],
-      "isIntelligenceExtracted": true,
-      "extractionSource": "gemini"
+      "biddingDate": "2025-11-19"
     },
     {
       "id": "kashihara-result-5071000984",
@@ -1498,18 +1456,8 @@
       "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000984k.pdf",
       "status": "落札",
       "winnerType": "ゼネコン",
-      "winningContractor": "輝登建設(株)",
-      "biddingDate": "2025-10-23",
-      "estimatedPrice": "28,972,900円(消費税%含む)",
-      "constructionPeriod": "契約日の翌日から令和 8年3月6日",
-      "description": "新賀公園施設更新工事",
-      "tags": [
-        "建築",
-        "改修",
-        "土木"
-      ],
-      "isIntelligenceExtracted": true,
-      "extractionSource": "gemini"
+      "winningContractor": "輝登建設㈱",
+      "biddingDate": "2025-10-23"
     },
     {
       "id": "kashihara-result-5071001006",
@@ -1521,18 +1469,8 @@
       "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071001006k.pdf",
       "status": "落札",
       "winnerType": "ゼネコン",
-      "winningContractor": "(株)大谷建設",
-      "biddingDate": "2025-10-23",
-      "estimatedPrice": "4,621,100円",
-      "constructionPeriod": "契約日の翌日～令和8年2月27日",
-      "description": "八木グリーンタウン公園他施設更新工事",
-      "tags": [
-        "公園",
-        "施設",
-        "改修"
-      ],
-      "isIntelligenceExtracted": true,
-      "extractionSource": "gemini"
+      "winningContractor": "㈱大谷建設",
+      "biddingDate": "2025-10-23"
     },
     {
       "id": "kashihara-result-5071001005",
@@ -1544,17 +1482,7 @@
       "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071001005k.pdf",
       "status": "受付終了",
       "winnerType": "ゼネコン",
-      "biddingDate": "2025-10-23",
-      "estimatedPrice": "29,238,000円",
-      "constructionPeriod": "契約日の翌日から令和8年2月27日",
-      "description": "耳成地区公民館屋根改修工事",
-      "tags": [
-        "改修",
-        "建築",
-        "屋根"
-      ],
-      "isIntelligenceExtracted": true,
-      "extractionSource": "gemini"
+      "biddingDate": "2025-10-23"
     },
     {
       "id": "kashihara-result-5072000944",
@@ -1566,19 +1494,8 @@
       "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5072000944k.pdf",
       "status": "落札",
       "winnerType": "ゼネコン",
-      "winningContractor": "(株)内藤建築事務所 奈良事務所",
-      "biddingDate": "2025-09-30",
-      "estimatedPrice": "4,532,000円(消費税10%含む)",
-      "designFirm": "(株)内藤建築事務所 奈良事務所",
-      "constructionPeriod": "契約日の翌日から令和 8年 3月31日まで",
-      "description": "畝傍中学校EV棟増築工事に伴う工事監理業務委託",
-      "tags": [
-        "建築",
-        "増築",
-        "監理"
-      ],
-      "isIntelligenceExtracted": true,
-      "extractionSource": "gemini"
+      "winningContractor": "㈱内藤建築事務所",
+      "biddingDate": "2025-09-30"
     },
     {
       "id": "kashihara-result-5071000837",
@@ -1590,18 +1507,8 @@
       "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000837k.pdf",
       "status": "落札",
       "winnerType": "ゼネコン",
-      "winningContractor": "観音寺辻本建設(株)",
-      "biddingDate": "2025-08-21",
-      "estimatedPrice": "11,539,000円",
-      "constructionPeriod": "契約日の翌日から令和7年12月12日",
-      "description": "真菅小学校プールサイド改修工事",
-      "tags": [
-        "改修",
-        "建築",
-        "土木"
-      ],
-      "isIntelligenceExtracted": true,
-      "extractionSource": "gemini"
+      "winningContractor": "観音寺辻本建設㈱",
+      "biddingDate": "2025-08-21"
     },
     {
       "id": "kashihara-result-5072000836",
@@ -1613,18 +1520,8 @@
       "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5072000836k.pdf",
       "status": "落札",
       "winnerType": "ゼネコン",
-      "winningContractor": "(株)内藤建築事務所 奈良事務所",
-      "biddingDate": "2025-08-21",
-      "estimatedPrice": "1,738,000円",
-      "constructionPeriod": "契約日の翌日から令和8年2月27日まで",
-      "description": "旧中央公民館・分館解体跡増築工事に伴う工事監理業務委託",
-      "tags": [
-        "解体",
-        "増築",
-        "工事監理"
-      ],
-      "isIntelligenceExtracted": true,
-      "extractionSource": "gemini"
+      "winningContractor": "㈱内藤建築事務所",
+      "biddingDate": "2025-08-21"
     },
     {
       "id": "kashihara-result-5071000659",
@@ -1636,18 +1533,8 @@
       "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000659k.pdf",
       "status": "落札",
       "winnerType": "ゼネコン",
-      "winningContractor": "(株)松吉組",
-      "biddingDate": "2025-07-24",
-      "estimatedPrice": "103,620,000円(消費税%含む)",
-      "constructionPeriod": "契約日の翌日 から 令和8年2月20日",
-      "description": "四条団地7・8号棟外壁等改修工事",
-      "tags": [
-        "改修",
-        "建築",
-        "外壁"
-      ],
-      "isIntelligenceExtracted": true,
-      "extractionSource": "gemini"
+      "winningContractor": "㈱松吉組",
+      "biddingDate": "2025-07-24"
     },
     {
       "id": "kashihara-result-5073000686",
@@ -1659,17 +1546,8 @@
       "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000686k.pdf",
       "status": "落札",
       "winnerType": "設計事務所",
-      "winningContractor": "アクアソリューション(株)",
-      "biddingDate": "2025-07-23",
-      "constructionPeriod": "令和7年9月1日から令和8年4月17日",
-      "description": "藤原宮跡仮設トイレ設置管理業務",
-      "tags": [
-        "建築",
-        "設備",
-        "管理"
-      ],
-      "isIntelligenceExtracted": true,
-      "extractionSource": "gemini"
+      "winningContractor": "アクアソリューション㈱",
+      "biddingDate": "2025-07-23"
     },
     {
       "id": "kashihara-result-5071000510",
@@ -1681,18 +1559,8 @@
       "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000510k.pdf",
       "status": "落札",
       "winnerType": "ゼネコン",
-      "winningContractor": "(株)ゆうび建設",
-      "biddingDate": "2025-06-26",
-      "estimatedPrice": "7,755,000円",
-      "constructionPeriod": "契約日の翌日～令和7年10月17日",
-      "description": "市営住宅内装等改修工事",
-      "tags": [
-        "改修",
-        "建築",
-        "内装"
-      ],
-      "isIntelligenceExtracted": true,
-      "extractionSource": "gemini"
+      "winningContractor": "㈱ゆうび建設",
+      "biddingDate": "2025-06-26"
     },
     {
       "id": "kashihara-result-5072000523",
@@ -1704,19 +1572,8 @@
       "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5072000523k.pdf",
       "status": "落札",
       "winnerType": "設計事務所",
-      "winningContractor": "(有)坪岡建築事務所",
-      "biddingDate": "2025-06-26",
-      "estimatedPrice": "15,312,000円(消費税含む)",
-      "designFirm": "(有)坪岡建築事務所",
-      "constructionPeriod": "契約日の翌日から令和8年1月30日",
-      "description": "各小学校便所改修工事に伴う設計委託",
-      "tags": [
-        "設計",
-        "建築",
-        "改修"
-      ],
-      "isIntelligenceExtracted": true,
-      "extractionSource": "gemini"
+      "winningContractor": "㈲坪岡建築事務所",
+      "biddingDate": "2025-06-26"
     },
     {
       "id": "kashihara-result-5072000571",
@@ -1728,18 +1585,8 @@
       "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5072000571k.pdf",
       "status": "落札",
       "winnerType": "設計事務所",
-      "winningContractor": "(株)ニュージェック 奈良事務所",
-      "biddingDate": "2025-06-26",
-      "estimatedPrice": "38,840,000円",
-      "constructionPeriod": "契約日の翌日から令和8年3月6日まで",
-      "description": "公園施設長寿命化計画更新業務委託",
-      "tags": [
-        "計画",
-        "施設",
-        "更新"
-      ],
-      "isIntelligenceExtracted": true,
-      "extractionSource": "gemini"
+      "winningContractor": "㈱ニュージェック",
+      "biddingDate": "2025-06-26"
     },
     {
       "id": "kashihara-result-5073000536",
@@ -1751,17 +1598,8 @@
       "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000536k.pdf",
       "status": "落札",
       "winnerType": "設計事務所",
-      "winningContractor": "阪神管理サービス(株)",
-      "biddingDate": "2025-06-24",
-      "constructionPeriod": "契約日の翌日から令和7年11月28日まで",
-      "description": "曽我川緑地体育館自動火災報知設備修繕",
-      "tags": [
-        "電気設備",
-        "改修",
-        "設備"
-      ],
-      "isIntelligenceExtracted": true,
-      "extractionSource": "gemini"
+      "winningContractor": "阪神管理サービス㈱",
+      "biddingDate": "2025-06-24"
     },
     {
       "id": "kashihara-result-5071000284",
@@ -1773,18 +1611,8 @@
       "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000284k.pdf",
       "status": "落札",
       "winnerType": "ゼネコン",
-      "winningContractor": "(株)平成建設",
-      "biddingDate": "2025-05-20",
-      "estimatedPrice": "190,256,000円",
-      "constructionPeriod": "議会議決日の翌日 から 令和8年3月31日",
-      "description": "畝傍中学校EV棟増築及び屋内運動場空調設備改修工事",
-      "tags": [
-        "建築",
-        "改修",
-        "空調"
-      ],
-      "isIntelligenceExtracted": true,
-      "extractionSource": "gemini"
+      "winningContractor": "㈱平成建設",
+      "biddingDate": "2025-05-20"
     },
     {
       "id": "kashihara-result-5071000279",
@@ -1796,17 +1624,8 @@
       "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000279k.pdf",
       "status": "落札",
       "winnerType": "ゼネコン",
-      "winningContractor": "(株)広澤建設",
-      "biddingDate": "2025-05-20",
-      "estimatedPrice": "12,177,000円",
-      "constructionPeriod": "令和7年9月30日まで",
-      "description": "晩成小学校屋外便所改修工事",
-      "tags": [
-        "改修",
-        "建築"
-      ],
-      "isIntelligenceExtracted": true,
-      "extractionSource": "gemini"
+      "winningContractor": "㈱広澤建設",
+      "biddingDate": "2025-05-20"
     },
     {
       "id": "kashihara-result-5071000313",
@@ -1818,18 +1637,8 @@
       "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000313k.pdf",
       "status": "落札",
       "winnerType": "ゼネコン",
-      "winningContractor": "(株)森本組",
-      "biddingDate": "2025-05-20",
-      "estimatedPrice": "127,127,000円(消費税%含む)",
-      "constructionPeriod": "契約日の翌日より令和8年1月16日まで",
-      "description": "真菅北幼稚園解体工事",
-      "tags": [
-        "解体",
-        "建築",
-        "工事"
-      ],
-      "isIntelligenceExtracted": true,
-      "extractionSource": "gemini"
+      "winningContractor": "㈱森本組",
+      "biddingDate": "2025-05-20"
     },
     {
       "id": "kashihara-result-5073000267",
@@ -1841,17 +1650,8 @@
       "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000267k.pdf",
       "status": "落札",
       "winnerType": "設計事務所",
-      "winningContractor": "阪神管理サービス(株)",
-      "biddingDate": "2025-05-15",
-      "constructionPeriod": "契約日の翌日 から 令和7年12月26日 まで",
-      "description": "香久山小学校 自動火災報知設備修繕業務",
-      "tags": [
-        "設備",
-        "修繕",
-        "防災"
-      ],
-      "isIntelligenceExtracted": true,
-      "extractionSource": "gemini"
+      "winningContractor": "阪神管理サービス㈱",
+      "biddingDate": "2025-05-15"
     },
     {
       "id": "kashihara-result-5072000223",
@@ -1863,19 +1663,8 @@
       "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5072000223k.pdf",
       "status": "落札",
       "winnerType": "ゼネコン",
-      "winningContractor": "国際航業(株) 奈良営業所",
-      "biddingDate": "2025-05-15",
-      "estimatedPrice": "13,948,000円",
-      "designFirm": "国際航業(株) 奈良営業所",
-      "constructionPeriod": "契約日の翌日から令和8年2月27日まで",
-      "description": "令和7年度橿原市耐震改修促進計画改定業務委託",
-      "tags": [
-        "耐震",
-        "計画",
-        "調査"
-      ],
-      "isIntelligenceExtracted": true,
-      "extractionSource": "gemini"
+      "winningContractor": "国際航業㈱",
+      "biddingDate": "2025-05-15"
     },
     {
       "id": "kashihara-result-5071000096",
@@ -1992,16 +1781,7 @@
       "biddingDate": "2025-11-04",
       "link": "https://www.town.miyake.lg.jp/soshiki/1/7653.html",
       "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/4577.pdf",
-      "status": "落札",
-      "estimatedPrice": "97,666,800円",
-      "winningContractor": "株式会社 前田産業 大阪支店",
-      "description": "三宅町つながり総合センター解体工事",
-      "tags": [
-        "解体",
-        "建築"
-      ],
-      "isIntelligenceExtracted": true,
-      "extractionSource": "gemini"
+      "status": "落札"
     }
   ],
   "大和高田市": [
@@ -2046,17 +1826,7 @@
       "link": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7919/NO1-2.pdf",
       "pdfUrl": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7919/NO1-2.pdf",
       "status": "落札",
-      "winningContractor": "有限会社ササイ弘建設",
-      "estimatedPrice": "32,630,000円",
-      "constructionPeriod": "令和8年10月30日まで",
-      "description": "馬見南3丁目集会所兼旧エコセンター外壁改修工事（外壁改修工事一式）",
-      "tags": [
-        "改修",
-        "建築",
-        "外壁"
-      ],
-      "isIntelligenceExtracted": true,
-      "extractionSource": "gemini"
+      "winningContractor": "有限会社ササイ弘建設"
     },
     {
       "id": "koryo-2025-04-28-No2",
@@ -2069,6 +1839,122 @@
       "pdfUrl": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7919/NO2-2.pdf",
       "status": "落札",
       "winningContractor": "株式会社彩都建築設計"
+    }
+  ],
+  "生駒市": [
+    {
+      "id": "ikoma-c020d0513e",
+      "municipality": "生駒市",
+      "title": "RAKU-RAKUはうす改修工事",
+      "type": "建築",
+      "announcementDate": "2026-05-25",
+      "biddingDate": "2026-06-08",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+      "status": "受付中"
+    },
+    {
+      "id": "ikoma-899043f14b",
+      "municipality": "生駒市",
+      "title": "生駒市立病院施設整備工事",
+      "type": "建築",
+      "announcementDate": "2026-05-15",
+      "biddingDate": "2026-06-26",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+      "status": "受付中"
+    },
+    {
+      "id": "ikoma-70a4cbc26a",
+      "municipality": "生駒市",
+      "title": "狭戸配水場配水池詳細耐震診断業務",
+      "type": "コンサル",
+      "announcementDate": "2026-05-15",
+      "biddingDate": "2026-06-05",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+      "status": "受付中"
+    }
+  ],
+  "宇陀市": [
+    {
+      "id": "uda-2367f5c2e4",
+      "municipality": "宇陀市",
+      "title": "【第08-A001号】保養センター美榛苑屋上防水改修工事",
+      "type": "建築",
+      "announcementDate": "2026-04-23",
+      "biddingDate": "2026-05-14",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200700",
+      "status": "受付中"
+    },
+    {
+      "id": "uda-2d65243f23",
+      "municipality": "宇陀市",
+      "title": "【第08-C002号】あかね台コミュニティセンター解体事業 あかね台コミュニティセンター解体工事設計業務",
+      "type": "コンサル",
+      "announcementDate": "2026-04-23",
+      "biddingDate": "2026-05-14",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200700",
+      "status": "受付中"
+    },
+    {
+      "id": "uda-4cf3e6cb6c",
+      "municipality": "宇陀市",
+      "title": "【第07-C009号】保養センター美榛苑屋上防水改修工事設計業務",
+      "type": "コンサル",
+      "announcementDate": "2025-10-09",
+      "biddingDate": "2025-10-23",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200700",
+      "status": "受付中"
+    },
+    {
+      "id": "uda-274af5c19a",
+      "municipality": "宇陀市",
+      "title": "【第07-C023号】公園施設長寿命化対策支援事業 管理施設設備更新工事設計業務",
+      "type": "コンサル",
+      "announcementDate": "2025-07-03",
+      "biddingDate": "2025-07-17",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200700",
+      "status": "受付中"
+    },
+    {
+      "id": "uda-1467b94fb1",
+      "municipality": "宇陀市",
+      "title": "【第07-C034号】宇陀市文化会館施設改修計画策定事業 宇陀市文化会館施設改修計画策定支援業務",
+      "type": "コンサル",
+      "announcementDate": "2025-07-03",
+      "biddingDate": "2025-07-17",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200700",
+      "status": "受付中"
+    }
+  ],
+  "三郷町": [
+    {
+      "id": "sango-epi-5Luk5ZKMOOW5",
+      "municipality": "三郷町",
+      "title": "令和8年度 町営住宅空部屋修繕設計業務",
+      "type": "コンサル",
+      "announcementDate": "2026-04-30",
+      "biddingDate": "2026-05-22",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0660064007200640",
+      "status": "受付中"
+    },
+    {
+      "id": "sango-epi-5Luk5ZKM77yY",
+      "municipality": "三郷町",
+      "title": "令和８年度 三郷北小学校ＬＥＤ化に伴う設計委託",
+      "type": "コンサル",
+      "announcementDate": "2026-04-15",
+      "biddingDate": "2026-05-01",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0660064007200640",
+      "status": "受付中"
+    },
+    {
+      "id": "sango-epi-5Luk5ZKMN+W5",
+      "municipality": "三郷町",
+      "title": "令和7年度 三郷町耐震改修促進計画改定業務",
+      "type": "委託",
+      "announcementDate": "2025-05-28",
+      "biddingDate": "2025-06-12",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0660064007200640",
+      "status": "受付中"
     }
   ]
 }
