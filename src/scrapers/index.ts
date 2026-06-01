@@ -57,8 +57,12 @@ function dedupeKey(item: BiddingItem): string {
     return [item.municipality, item.announcementDate, item.title].join('|');
 }
 
+function comparisonDate(item: BiddingItem): string {
+    return item.biddingDate || item.announcementDate;
+}
+
 function titleKey(item: BiddingItem): string {
-    return [item.municipality, normalizeComparisonTitle(item.title)].join('|');
+    return [item.municipality, normalizeComparisonTitle(item.title), comparisonDate(item)].join('|');
 }
 
 function daysBetween(dateA?: string, dateB?: string): number {

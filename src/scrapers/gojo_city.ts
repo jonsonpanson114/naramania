@@ -68,6 +68,14 @@ function parseJapaneseDate(text: string): string {
     return '';
 }
 
+function gojoItemKey(title: string, biddingDate?: string, link?: string): string {
+    if (biddingDate) {
+        return `${title}::${biddingDate}`;
+    }
+
+    return `${title}::${link || ''}`;
+}
+
 async function scrapeDetailPage(url: string): Promise<{ biddingDate?: string; pdfUrl?: string }> {
     try {
         const res = await axios.get(url, { timeout: 15000, headers: HEADERS });
@@ -165,7 +173,8 @@ export class GojoCityScraper implements Scraper {
                         pdfUrl: detail.pdfUrl,
                         status: '落札',
                     };
-                    items.set(normalizedTitle, mergeGojoItem(items.get(normalizedTitle), item));
+                    const key = gojoItemKey(normalizedTitle, detail.biddingDate, page.url);
+                    items.set(key, mergeGojoItem(items.get(key), item));
                 }
             } catch (e: unknown) {
                 console.error('[五條市] フィード取得エラー:', e instanceof Error ? e.message : String(e));
@@ -173,7 +182,8 @@ export class GojoCityScraper implements Scraper {
         }
 
         for (const item of await scrapeEducationPages()) {
-            items.set(item.title, mergeGojoItem(items.get(item.title), item));
+            const key = gojoItemKey(item.title, item.biddingDate, item.link);
+            items.set(key, mergeGojoItem(items.get(key), item));
         }
 
         const unique = Array.from(items.values()).sort((a, b) => b.announcementDate.localeCompare(a.announcementDate));

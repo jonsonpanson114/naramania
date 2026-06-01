@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-06-01T09:36:01.928Z",
+  "generatedAt": "2026-06-01T11:06:43.521Z",
   "source": "daily_scrape",
-  "scrapedCount": 32,
-  "keptCount": 189,
-  "rejectedCount": 3,
+  "scrapedCount": 6,
+  "keptCount": 190,
+  "rejectedCount": 1,
   "oldestAnnouncementDate": "2025-04-11",
   "latestAnnouncementDate": "2026-06-01",
   "municipalityCount": 21,
@@ -31,7 +31,7 @@
       {
         "municipality": "橿原市",
         "count": 34,
-        "changeFromPrevious": -3
+        "changeFromPrevious": 0
       },
       {
         "municipality": "奈良県",
@@ -51,12 +51,17 @@
       {
         "municipality": "葛城市",
         "count": 9,
-        "changeFromPrevious": -1
+        "changeFromPrevious": 0
       },
       {
         "municipality": "宇陀市",
         "count": 5,
         "changeFromPrevious": 0
+      },
+      {
+        "municipality": "五條市",
+        "count": 5,
+        "changeFromPrevious": 1
       },
       {
         "municipality": "大和郡山市",
@@ -66,11 +71,6 @@
       {
         "municipality": "田原本町",
         "count": 5,
-        "changeFromPrevious": 0
-      },
-      {
-        "municipality": "五條市",
-        "count": 4,
         "changeFromPrevious": 0
       },
       {
@@ -121,7 +121,7 @@
       {
         "municipality": "大淀町",
         "count": 1,
-        "changeFromPrevious": -1
+        "changeFromPrevious": 0
       },
       {
         "municipality": "斑鳩町",
@@ -134,8 +134,8 @@
   },
   "dateAudit": {
     "announcementAfterBiddingCount": 0,
-    "awardedWithoutBiddingDateCount": 4,
-    "awardedWithoutWinnerCount": 2,
+    "awardedWithoutBiddingDateCount": 5,
+    "awardedWithoutWinnerCount": 7,
     "openWithWinnerCount": 0,
     "sampleTitles": [
       {
@@ -146,17 +146,17 @@
         "biddingDate": null
       },
       {
-        "municipality": "五條市",
-        "title": "五條市立公民館等消防用設備等法定点検業務委託",
-        "status": "落札",
-        "announcementDate": "2026-04-15",
-        "biddingDate": null
-      },
-      {
         "municipality": "大和高田市",
         "title": "市営住宅礒野団地4号棟外壁等改修工事設計業務委託",
         "status": "落札",
         "announcementDate": "2025-07-01",
+        "biddingDate": null
+      },
+      {
+        "municipality": "大和高田市",
+        "title": "大和高田市保健センター受電設備改修工事",
+        "status": "落札",
+        "announcementDate": "2025-06-01",
         "biddingDate": null
       },
       {
@@ -172,14 +172,21 @@
         "status": "落札",
         "announcementDate": "2025-07-22",
         "biddingDate": "2025-07-22"
+      },
+      {
+        "municipality": "五條市",
+        "title": "五條市立公民館等防火対象物定期点検業務委託",
+        "status": "落札",
+        "announcementDate": "2026-05-08",
+        "biddingDate": "2026-05-08"
       }
     ]
   },
   "intelligence": {
-    "itemsWithPdf": 53,
-    "itemsWithDescription": 45,
-    "intelligenceExtractedCount": 45,
-    "geminiExtractedCount": 45,
-    "taggedCount": 45
+    "itemsWithPdf": 54,
+    "itemsWithDescription": 41,
+    "intelligenceExtractedCount": 41,
+    "geminiExtractedCount": 41,
+    "taggedCount": 41
   }
 }
