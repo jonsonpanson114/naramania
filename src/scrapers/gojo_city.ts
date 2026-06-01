@@ -140,10 +140,70 @@ async function openGojoEpiResults(page: Page): Promise<Frame | null> {
     return getRightFrame(page);
 }
 
+async function openGojoEpiIssueInfo(page: Page): Promise<Frame | null> {
+    await page.goto(GOJO_EPI_URL, { waitUntil: 'load', timeout: 30000 });
+    await page.waitForTimeout(1500);
+
+    const category = page.locator('span.ATYPE').filter({ hasText: '工事' }).first();
+    if (await category.count() === 0) return null;
+    await category.click({ force: true, timeout: 30000 });
+    await page.waitForTimeout(2500);
+
+    const rightFrame = await getRightFrame(page);
+    if (!rightFrame) return null;
+
+    const issueMenu = rightFrame.locator('span.ATYPE').filter({ hasText: '発注情報' }).first();
+    if (await issueMenu.count() === 0) return null;
+    await issueMenu.click({ force: true, timeout: 30000 });
+    await page.waitForTimeout(2500);
+
+    return getRightFrame(page);
+}
+
 function parseGojoEpiAmount(text: string, label: string): string | undefined {
     const pattern = new RegExp(`${label}[\\s\\S]*?(\\d{1,3}(?:,\\d{3})*)円`);
     const match = text.match(pattern);
     return match ? `${match[1]}円` : undefined;
+}
+
+async function scrapeGojoEpiIssueDates(page: Page): Promise<Map<string, { announcementDate?: string; biddingDate?: string }>> {
+    const issueDates = new Map<string, { announcementDate?: string; biddingDate?: string }>();
+
+    for (const nendo of GOJO_EPI_NENDOS) {
+        let rightFrame = await openGojoEpiIssueInfo(page);
+        if (!rightFrame) continue;
+
+        await rightFrame.selectOption('select[name="nendo"]', nendo).catch(() => undefined);
+        await rightFrame.selectOption('select[name="A300"]', '100').catch(() => undefined);
+        await rightFrame.locator('input[type=button][value="検索"]').first().click({ timeout: 30000 });
+        await page.waitForTimeout(4000);
+
+        while (true) {
+            rightFrame = await getRightFrame(page);
+            const dataFrame = page.frames().find(candidate => candidate.name() === 'right' || candidate.url().includes('KFK301FrameShow'));
+            if (!rightFrame || !dataFrame) break;
+
+            const rows = await dataFrame.locator('table tr').all();
+            for (const row of rows) {
+                const cells = await row.locator('td').all();
+                if (cells.length < 7) continue;
+
+                const contractNo = (await cells[2].textContent() || '').replace(/\s+/g, '').trim();
+                if (!contractNo) continue;
+
+                const announcementDate = parseSlashDate((await cells[0].textContent() || '').trim()) || undefined;
+                const biddingDate = parseSlashDate((await cells[6].textContent() || '').trim()) || undefined;
+                issueDates.set(contractNo, { announcementDate, biddingDate });
+            }
+
+            const nextLink = rightFrame.locator('a').filter({ hasText: '次へ>>' }).first();
+            if (await nextLink.count() === 0) break;
+            await nextLink.click({ timeout: 30000 });
+            await page.waitForTimeout(3000);
+        }
+    }
+
+    return issueDates;
 }
 
 function deriveGojoEpiStatus(detailText: string, fallback: BiddingStatus): BiddingStatus {
@@ -185,6 +245,8 @@ async function scrapeGojoEpiResults(): Promise<BiddingItem[]> {
     const items = new Map<string, BiddingItem>();
 
     try {
+        const issueDates = await scrapeGojoEpiIssueDates(page);
+
         for (const nendo of GOJO_EPI_NENDOS) {
             let rightFrame = await openGojoEpiResults(page);
             if (!rightFrame) continue;
@@ -224,14 +286,15 @@ async function scrapeGojoEpiResults(): Promise<BiddingItem[]> {
                     const detail = (!winner || !amount)
                         ? await scrapeGojoEpiDetail(page, detailUrl)
                         : {};
+                    const issueMeta = contractNo ? issueDates.get(contractNo) : undefined;
 
                     const item: BiddingItem = {
                         id: contractNo ? `gojo-epi-${contractNo}` : makeId(normalizedTitle, detailUrl),
                         municipality: '五條市',
                         title: normalizedTitle,
                         type: classifyType(normalizedTitle),
-                        announcementDate: biddingDate || '2026-01-01',
-                        biddingDate,
+                        announcementDate: issueMeta?.announcementDate || biddingDate || '2026-01-01',
+                        biddingDate: issueMeta?.biddingDate || biddingDate,
                         link: detailUrl,
                         status: detail.status || '落札',
                         winningContractor: winner,

@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-06-01T12:17:41.495Z",
+  "generatedAt": "2026-06-01T12:24:26.522Z",
   "source": "daily_scrape",
   "scrapedCount": 42,
-  "keptCount": 213,
-  "rejectedCount": 22,
+  "keptCount": 211,
+  "rejectedCount": 24,
   "oldestAnnouncementDate": "2025-04-11",
   "latestAnnouncementDate": "2026-06-01",
   "municipalityCount": 21,
@@ -45,8 +45,8 @@
       },
       {
         "municipality": "五條市",
-        "count": 20,
-        "changeFromPrevious": 15
+        "count": 18,
+        "changeFromPrevious": -2
       },
       {
         "municipality": "香芝市",
