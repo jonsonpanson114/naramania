@@ -693,17 +693,6 @@
     "winnerType": "ゼネコン"
   },
   {
-    "id": "kashiba-r8-k4-19",
-    "municipality": "香芝市",
-    "title": "下田小学校長寿命化改修工事",
-    "type": "建築",
-    "announcementDate": "2026-05-21",
-    "biddingDate": "2026-05-21",
-    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=062006E007200640",
-    "status": "落札",
-    "winningContractor": "株式会社上村組"
-  },
-  {
     "id": "gose-2026-05-20-大正小学校給水設備他改修(第2期)-1",
     "municipality": "御所市",
     "title": "大正小学校給水設備他改修(第2期)",
@@ -1172,6 +1161,17 @@
     "status": "受付中"
   },
   {
+    "id": "kashiba-web-b1d487b5",
+    "municipality": "香芝市",
+    "title": "下田小学校長寿命化改修工事",
+    "type": "建築",
+    "announcementDate": "2026-04-23",
+    "biddingDate": "2026-05-21",
+    "link": "https://www.city.kashiba.lg.jp/site/nyuusatsu/65857.html",
+    "status": "落札",
+    "winningContractor": "株式会社上村組"
+  },
+  {
     "id": "gojo-epi-2501076",
     "municipality": "五條市",
     "title": "五條市立小学校トイレ改修工事",
@@ -1417,49 +1417,6 @@
     "status": "受付中"
   },
   {
-    "id": "kashiba-r7-k15-07",
-    "municipality": "香芝市",
-    "title": "香芝北中学校トイレ改修工事（Ⅱ期）",
-    "type": "建築",
-    "announcementDate": "2026-04-07",
-    "biddingDate": "2026-04-07",
-    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=062006E007200640",
-    "status": "落札",
-    "winningContractor": "株式会社竹澤工業"
-  },
-  {
-    "id": "kashiba-r7-k15-06",
-    "municipality": "香芝市",
-    "title": "旭ケ丘小学校トイレ改修工事（Ⅱ期）",
-    "type": "建築",
-    "announcementDate": "2026-04-07",
-    "biddingDate": "2026-04-07",
-    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=062006E007200640",
-    "status": "落札",
-    "winningContractor": "株式会社豊国"
-  },
-  {
-    "id": "kashiba-r7-k15-05",
-    "municipality": "香芝市",
-    "title": "関屋小学校南館他改修工事",
-    "type": "建築",
-    "announcementDate": "2026-04-07",
-    "biddingDate": "2026-04-07",
-    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=062006E007200640",
-    "status": "落札",
-    "winningContractor": "株式会社上村組"
-  },
-  {
-    "id": "kashiba-r7-k15-04",
-    "municipality": "香芝市",
-    "title": "下田小学校長寿命化改修工事",
-    "type": "建築",
-    "announcementDate": "2026-04-07",
-    "biddingDate": "2026-04-07",
-    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=062006E007200640",
-    "status": "落札"
-  },
-  {
     "id": "gojo-5fb0bb1b",
     "municipality": "五條市",
     "title": "五條市立公民館特定建築物定期調査及び五條市立公民館防火設備定期検査業務委託",
@@ -1491,6 +1448,39 @@
     "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/7/8272.html",
     "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5082000026.zip",
     "status": "受付中"
+  },
+  {
+    "id": "kashiba-web-a1acb745",
+    "municipality": "香芝市",
+    "title": "香芝北中学校トイレ改修工事（Ⅱ期）",
+    "type": "建築",
+    "announcementDate": "2026-03-19",
+    "biddingDate": "2026-04-07",
+    "link": "https://www.city.kashiba.lg.jp/uploaded/attachment/31283.pdf",
+    "status": "落札",
+    "winningContractor": "株式会社竹澤工業"
+  },
+  {
+    "id": "kashiba-web-f8098bfc",
+    "municipality": "香芝市",
+    "title": "旭ケ丘小学校トイレ改修工事（Ⅱ期）",
+    "type": "建築",
+    "announcementDate": "2026-03-19",
+    "biddingDate": "2026-04-07",
+    "link": "https://www.city.kashiba.lg.jp/uploaded/attachment/31280.pdf",
+    "status": "落札",
+    "winningContractor": "株式会社豊国"
+  },
+  {
+    "id": "kashiba-web-8cef0080",
+    "municipality": "香芝市",
+    "title": "関屋小学校南館他改修工事",
+    "type": "建築",
+    "announcementDate": "2026-03-12",
+    "biddingDate": "2026-04-07",
+    "link": "https://www.city.kashiba.lg.jp/uploaded/attachment/31282.pdf",
+    "status": "落札",
+    "winningContractor": "株式会社上村組"
   },
   {
     "id": "katsuragi-7796394c",

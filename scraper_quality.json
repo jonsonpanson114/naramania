@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-06-01T12:24:26.522Z",
+  "generatedAt": "2026-06-01T13:37:18.941Z",
   "source": "daily_scrape",
-  "scrapedCount": 42,
-  "keptCount": 211,
-  "rejectedCount": 24,
+  "scrapedCount": 14,
+  "keptCount": 210,
+  "rejectedCount": 0,
   "oldestAnnouncementDate": "2025-04-11",
   "latestAnnouncementDate": "2026-06-01",
   "municipalityCount": 21,
@@ -46,11 +46,11 @@
       {
         "municipality": "五條市",
         "count": 18,
-        "changeFromPrevious": -2
+        "changeFromPrevious": 0
       },
       {
         "municipality": "香芝市",
-        "count": 15,
+        "count": 14,
         "changeFromPrevious": 0
       },
       {
@@ -135,7 +135,7 @@
   "dateAudit": {
     "announcementAfterBiddingCount": 0,
     "awardedWithoutBiddingDateCount": 5,
-    "awardedWithoutWinnerCount": 9,
+    "awardedWithoutWinnerCount": 8,
     "openWithWinnerCount": 1,
     "sampleTitles": [
       {
@@ -146,17 +146,17 @@
         "biddingDate": null
       },
       {
-        "municipality": "大和高田市",
-        "title": "市営住宅礒野団地4号棟外壁等改修工事設計業務委託",
+        "municipality": "五條市",
+        "title": "五條市立公民館等防火対象物定期点検業務委託",
         "status": "落札",
-        "announcementDate": "2025-07-01",
+        "announcementDate": "2026-04-15",
         "biddingDate": null
       },
       {
-        "municipality": "大和高田市",
-        "title": "大和高田市保健センター受電設備改修工事",
+        "municipality": "五條市",
+        "title": "五條市立公民館等消防用設備等法定点検業務委託",
         "status": "落札",
-        "announcementDate": "2025-06-01",
+        "announcementDate": "2026-04-15",
         "biddingDate": null
       },
       {
@@ -167,18 +167,18 @@
         "biddingDate": null
       },
       {
-        "municipality": "香芝市",
-        "title": "下田小学校長寿命化改修工事",
+        "municipality": "五條市",
+        "title": "五條市立公民館等防火対象物定期点検業務委託",
         "status": "落札",
-        "announcementDate": "2026-04-07",
-        "biddingDate": "2026-04-07"
+        "announcementDate": "2026-05-08",
+        "biddingDate": "2026-05-08"
       },
       {
-        "municipality": "大淀町",
-        "title": "令和7年度耐震改修促進計画改訂業務（第7－建築委－1号）【令和7年7月22日執行】",
+        "municipality": "五條市",
+        "title": "宗桧公民館改修工事",
         "status": "落札",
-        "announcementDate": "2025-07-22",
-        "biddingDate": "2025-07-22"
+        "announcementDate": "2026-05-01",
+        "biddingDate": "2026-05-27"
       },
       {
         "municipality": "橿原市",

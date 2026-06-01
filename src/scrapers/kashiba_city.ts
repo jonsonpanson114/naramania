@@ -11,11 +11,45 @@ const EPI_URL = 'https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1
 
 // 令和6年度(2024), 令和7年度(2025), 令和8年度(2026予測) を対象にする
 const NENDOS = ['2026', '2025', '2024'];
-const KASHIBA_KNOWN_SCHEDULES: Record<string, { announcementDate?: string; biddingDate: string; link?: string }> = {
+const KASHIBA_KNOWN_SCHEDULES: Record<string, {
+    announcementDate?: string;
+    biddingDate: string;
+    link?: string;
+    status?: '受付中' | '落札';
+    winningContractor?: string;
+}> = {
     '香芝市立認定こども園及び幼稚園照明設備改修工事': {
         announcementDate: '2026-04-23',
         biddingDate: '2026-05-19',
         link: 'https://www.city.kashiba.lg.jp/site/nyuusatsu/65857.html',
+    },
+    '下田小学校長寿命化改修工事': {
+        announcementDate: '2026-04-23',
+        biddingDate: '2026-05-21',
+        link: 'https://www.city.kashiba.lg.jp/site/nyuusatsu/65857.html',
+        status: '落札',
+        winningContractor: '株式会社上村組',
+    },
+    '香芝北中学校トイレ改修工事（Ⅱ期）': {
+        announcementDate: '2026-03-19',
+        biddingDate: '2026-04-07',
+        link: 'https://www.city.kashiba.lg.jp/uploaded/attachment/31283.pdf',
+        status: '落札',
+        winningContractor: '株式会社竹澤工業',
+    },
+    '旭ケ丘小学校トイレ改修工事（Ⅱ期）': {
+        announcementDate: '2026-03-19',
+        biddingDate: '2026-04-07',
+        link: 'https://www.city.kashiba.lg.jp/uploaded/attachment/31280.pdf',
+        status: '落札',
+        winningContractor: '株式会社豊国',
+    },
+    '関屋小学校南館他改修工事': {
+        announcementDate: '2026-03-12',
+        biddingDate: '2026-04-07',
+        link: 'https://www.city.kashiba.lg.jp/uploaded/attachment/31282.pdf',
+        status: '落札',
+        winningContractor: '株式会社上村組',
     },
     '香芝市立小学校屋内運動場空調設備設置工事（1工区）': {
         announcementDate: '2026-04-16',
@@ -72,7 +106,8 @@ function buildKnownKashibaItems(): BiddingItem[] {
         announcementDate: schedule.announcementDate || '2026-01-01',
         biddingDate: schedule.biddingDate,
         link: schedule.link || '',
-        status: '受付中',
+        status: schedule.status || '受付中',
+        winningContractor: schedule.winningContractor,
     }));
 }
 
@@ -106,6 +141,15 @@ async function getRightFrame(page: Page): Promise<Frame | null> {
     return null;
 }
 
+async function getKashibaDataFrame(page: Page, pattern: RegExp): Promise<Frame | null> {
+    for (let i = 0; i < 20; i += 1) {
+        const frame = page.frames().find(candidate => pattern.test(candidate.url()) || candidate.name() === 'right');
+        if (frame) return frame;
+        await page.waitForTimeout(500);
+    }
+    return null;
+}
+
 async function openKashibaIssuePage(page: Page): Promise<Frame | null> {
     for (let attempt = 0; attempt < 3; attempt += 1) {
         await page.goto(EPI_URL, { waitUntil: 'load', timeout: 30000 });
@@ -133,6 +177,18 @@ async function openKashibaIssuePage(page: Page): Promise<Frame | null> {
     return null;
 }
 
+async function openKashibaMenu(page: Page, menuText: string): Promise<Frame | null> {
+    const rightFrame = await openKashibaIssuePage(page);
+    if (!rightFrame) return null;
+
+    const menu = rightFrame.locator(`span.ATYPE:has-text("${menuText}")`).first();
+    if (await menu.count() === 0) return null;
+    await menu.click({ force: true, timeout: 30000 });
+    await page.waitForTimeout(4000);
+
+    return getRightFrame(page);
+}
+
 async function scrapeKashibaCity(): Promise<BiddingItem[]> {
     const itemsMap = new Map<string, BiddingItem>();
 
@@ -157,18 +213,7 @@ async function scrapeKashibaCity(): Promise<BiddingItem[]> {
 
         for (const nendo of NENDOS) {
             console.log(`[香芝市] 年度 ${nendo} 検索中...`);
-            // 4) frmRIGHT: 入札・契約結果情報の検索
-            let rightFrame = await getRightFrame(page);
-            if (!rightFrame) {
-                console.warn('[香芝市] frmRIGHT が見つかりません');
-                rightFrame = await openKashibaIssuePage(page);
-                if (!rightFrame) continue;
-            }
-            await rightFrame.locator('span.ATYPE:has-text("入札・契約結果情報")').first().click();
-            await page.waitForTimeout(4000);
-
-            // Re-find rightFrame as navigation might have changed it
-            rightFrame = await getRightFrame(page);
+            const rightFrame = await openKashibaMenu(page, '入札・契約結果情報');
             if (!rightFrame) continue;
 
             // 年度選択
@@ -184,9 +229,7 @@ async function scrapeKashibaCity(): Promise<BiddingItem[]> {
             // 6) データiframe (KFK401FrameShow or name='right') からデータ取得
             let page_num = 1;
             while (true) {
-                const dataFrame = page.frames().find(f =>
-                    f.url().includes('KFK4') || f.name() === 'right'
-                );
+                const dataFrame = await getKashibaDataFrame(page, /KFK4|KK401SearchAction/);
                 if (!dataFrame) {
                     console.warn('[香芝市] データフレームが見つかりません');
                     break;
@@ -206,6 +249,13 @@ async function scrapeKashibaCity(): Promise<BiddingItem[]> {
                     const winner = rawWinner === '-' ? '' : rawWinner;
                     const amountText = cells.length >= 7 ? (await cells[6].textContent() || '').trim().replace(/[,円\s]/g, '') : '';
                     const parsedAmount = amountText ? parseInt(amountText, 10) : Number.NaN;
+                    const knownSchedule = KASHIBA_KNOWN_SCHEDULES[title];
+                    const titleLink = row.locator('a').first();
+                    const href = await titleLink.getAttribute('href').catch(() => null);
+                    const controlNo = href?.match(/doEdit030\('([^']+)'\)/)?.[1];
+                    const detailUrl = controlNo
+                        ? `https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=${controlNo}`
+                        : knownSchedule?.link || EPI_URL;
 
                     if (!title || !pubDate) continue;
                     if (!shouldKeepItem(title)) continue;
@@ -216,11 +266,11 @@ async function scrapeKashibaCity(): Promise<BiddingItem[]> {
                         municipality: '香芝市',
                         title,
                         type: '建築',
-                        announcementDate: pubDate,
-                        biddingDate: pubDate,
-                        link: EPI_URL,
-                        status: '落札',
-                        winningContractor: winner || undefined,
+                        announcementDate: knownSchedule?.announcementDate || pubDate,
+                        biddingDate: knownSchedule?.biddingDate || pubDate,
+                        link: detailUrl,
+                        status: knownSchedule?.status || '落札',
+                        winningContractor: winner || knownSchedule?.winningContractor,
                         estimatedPrice: Number.isFinite(parsedAmount) ? `${parsedAmount.toLocaleString()}円` : undefined,
                     });
                 }
