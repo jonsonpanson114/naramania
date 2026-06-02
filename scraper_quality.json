@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-02T15:08:39.945Z",
+  "generatedAt": "2026-06-02T15:25:50.754Z",
   "source": "daily_scrape",
-  "scrapedCount": 0,
+  "scrapedCount": 14,
   "keptCount": 246,
   "rejectedCount": 0,
   "oldestAnnouncementDate": "2025-04-08",
@@ -33,7 +33,7 @@
       {
         "municipality": "橿原市",
         "count": 34,
-        "changeFromPrevious": -3
+        "changeFromPrevious": 0
       },
       {
         "municipality": "生駒市",
@@ -48,7 +48,7 @@
       {
         "municipality": "葛城市",
         "count": 24,
-        "changeFromPrevious": -5
+        "changeFromPrevious": 0
       },
       {
         "municipality": "宇陀市",
@@ -126,21 +126,8 @@
         "changeFromPrevious": 0
       }
     ],
-    "retainedFromPrevious": [
-      "生駒市"
-    ],
-    "issues": [
-      {
-        "municipality": "生駒市",
-        "level": "warning",
-        "message": "[生駒市] EPI 情報公開サービス停止中のため取得をスキップします。"
-      },
-      {
-        "municipality": "生駒市",
-        "level": "warning",
-        "message": "[生駒市] 0件取得のため保持データ 31件を維持しています"
-      }
-    ]
+    "retainedFromPrevious": [],
+    "issues": []
   },
   "dateAudit": {
     "announcementAfterBiddingCount": 0,

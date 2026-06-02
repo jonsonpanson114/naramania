@@ -220,6 +220,15 @@ function reconcileStatusByDates(item: BiddingItem, todayIso: string): BiddingIte
     return item;
 }
 
+function getTodayIsoInTokyo(): string {
+    return new Intl.DateTimeFormat('en-CA', {
+        timeZone: 'Asia/Tokyo',
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+    }).format(new Date());
+}
+
 function writeQualitySummary(
     items: BiddingItem[],
     scrapedCount: number,
@@ -278,7 +287,7 @@ function writeQualitySummary(
 
 async function main() {
     console.log('=== スクレイピング開始 ===');
-    const todayIso = new Date().toISOString().slice(0, 10);
+    const todayIso = getTodayIsoInTokyo();
 
     const allScrapers: Scraper[] = [
         new NaraPrefScraper(),
