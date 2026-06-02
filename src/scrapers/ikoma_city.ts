@@ -289,8 +289,29 @@ async function extractResultResults(frame: Frame): Promise<BiddingItem[]> {
 
 export class IkomaCityScraper implements Scraper {
     municipality: '生駒市' = '生駒市' as const;
+    private warnings: string[] = [];
+    private errors: string[] = [];
+
+    private addWarning(message: string) {
+        this.warnings.push(message);
+        console.warn(message);
+    }
+
+    private addError(message: string) {
+        this.errors.push(message);
+        console.error(message);
+    }
+
+    getDiagnostics() {
+        return {
+            warnings: [...this.warnings],
+            errors: [...this.errors],
+        };
+    }
 
     async scrape(): Promise<BiddingItem[]> {
+        this.warnings = [];
+        this.errors = [];
         const browser = await chromium.launch({ headless: true });
         const itemsById = new Map<string, BiddingItem>();
         const itemsByTitle = new Map<string, BiddingItem>();
@@ -324,7 +345,7 @@ export class IkomaCityScraper implements Scraper {
 
             const serviceText = (await page.locator('body').innerText().catch(() => '')).replace(/\s+/g, ' ');
             if (serviceText.includes('サービス停止中') && serviceText.includes('情報公開')) {
-                console.warn('[生駒市] EPI 情報公開サービス停止中のため取得をスキップします。');
+                this.addWarning('[生駒市] EPI 情報公開サービス停止中のため取得をスキップします。');
                 return [];
             }
 
@@ -367,7 +388,7 @@ export class IkomaCityScraper implements Scraper {
                 }
             }
         } catch (error) {
-            console.error('[生駒市] スクレイパーエラー:', error instanceof Error ? error.message : String(error));
+            this.addError(`[生駒市] スクレイパーエラー: ${error instanceof Error ? error.message : String(error)}`);
         } finally {
             await browser.close();
         }

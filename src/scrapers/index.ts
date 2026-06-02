@@ -153,7 +153,7 @@ function getMunicipalityItems(
 function hasScrapeFailureIssue(issueEntries: MunicipalityIssueEntry[] = []) {
     return issueEntries.some((issue) =>
         issue.level === 'error'
-        || /エラー|失敗|forbidden|403|unexpected search page structure/i.test(issue.message),
+        || /エラー|失敗|forbidden|403|unexpected search page structure|サービス停止中|取得をスキップ/i.test(issue.message),
     );
 }
 
@@ -457,6 +457,12 @@ async function main() {
 
     console.log('\n=== 集計完了 ===');
     const finalUnique = Array.from(seen.values()).map(item => reconcileStatusByDates(item, todayIso));
+    finalUnique.sort((a, b) => {
+        const dateA = a.announcementDate ? new Date(a.announcementDate).getTime() : 0;
+        const dateB = b.announcementDate ? new Date(b.announcementDate).getTime() : 0;
+        return dateB - dateA;
+    });
+    fs.writeFileSync(outputPath, JSON.stringify(finalUnique, null, 2), 'utf-8');
     writeMunicipalitySnapshots(snapshots);
     writeQualitySummary(
         finalUnique,
