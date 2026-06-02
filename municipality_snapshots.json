@@ -438,18 +438,6 @@
       "winnerType": "ゼネコン"
     },
     {
-      "id": "nara-city-0000002336",
-      "municipality": "奈良市",
-      "title": "都祁体育館高圧受変電設備改修工事",
-      "type": "建築",
-      "announcementDate": "2026-05-12",
-      "biddingDate": "2026-05-12",
-      "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
-      "status": "落札",
-      "winningContractor": "学園前電気商会",
-      "winnerType": "ゼネコン"
-    },
-    {
       "id": "nara-city-0000002437",
       "municipality": "奈良市",
       "title": "庁舎等ＬＥＤ照明器具改修事業に伴う建築設計業務委託",
@@ -528,7 +516,8 @@
       "announcementDate": "2026-04-15",
       "biddingDate": "2026-05-27",
       "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
-      "status": "受付終了"
+      "status": "落札",
+      "winningContractor": "株式会社建綜研"
     },
     {
       "id": "nara-city-0000002345",
@@ -570,7 +559,8 @@
       "announcementDate": "2026-04-15",
       "biddingDate": "2026-05-27",
       "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
-      "status": "受付終了"
+      "status": "落札",
+      "winningContractor": "株式会社建綜研"
     },
     {
       "id": "nara-city-0000002349",
@@ -590,7 +580,8 @@
       "announcementDate": "2026-04-15",
       "biddingDate": "2026-05-27",
       "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
-      "status": "受付終了"
+      "status": "落札",
+      "winningContractor": "株式会社建綜研"
     }
   ],
   "安堵町": [

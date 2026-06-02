@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-06-02T06:01:12.737Z",
+  "generatedAt": "2026-06-02T10:29:07.919Z",
   "source": "daily_scrape",
-  "keptCount": 255,
+  "keptCount": 254,
   "municipalityCount": 20,
   "oldestAnnouncementDate": "2025-04-08",
   "latestAnnouncementDate": "2026-06-02",
-  "scrapedCount": 488,
+  "scrapedCount": 490,
   "rejectedCount": 247,
   "municipalityAudit": {
     "expectedMunicipalityCount": 25,
@@ -27,18 +27,18 @@
     "breakdown": [
       {
         "municipality": "奈良市",
-        "count": 46,
-        "changeFromPrevious": 0
+        "count": 45,
+        "changeFromPrevious": -1
       },
       {
         "municipality": "橿原市",
         "count": 37,
-        "changeFromPrevious": 4
+        "changeFromPrevious": 0
       },
       {
         "municipality": "生駒市",
         "count": 31,
-        "changeFromPrevious": 28
+        "changeFromPrevious": 0
       },
       {
         "municipality": "葛城市",
@@ -88,7 +88,7 @@
       {
         "municipality": "大淀町",
         "count": 3,
-        "changeFromPrevious": 1
+        "changeFromPrevious": 0
       },
       {
         "municipality": "大和高田市",
@@ -185,6 +185,6 @@
     "intelligenceExtractedCount": 50,
     "geminiExtractedCount": 50,
     "taggedCount": 50,
-    "lastAugmentedAt": "2026-06-02T08:32:41.656Z"
+    "lastAugmentedAt": "2026-06-02T13:00:27.733Z"
   }
 }
