@@ -599,7 +599,7 @@
       "municipality": "安堵町",
       "title": "【条件付き一般競争入札の結果】安堵町立安堵小中学校屋内運動場空調設備設置工事",
       "type": "建築",
-      "announcementDate": "2026-06-01",
+      "announcementDate": "2026-06-02",
       "link": "https://www.town.ando.nara.jp/0000003986.html",
       "status": "落札"
     },
@@ -1780,8 +1780,9 @@
       "announcementDate": "2026-04-21",
       "biddingDate": "2026-05-29",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002501076",
-      "status": "受付終了",
-      "estimatedPrice": "26,570,000円"
+      "status": "落札",
+      "winningContractor": "有希建設（株）",
+      "estimatedPrice": "23,970,000円"
     },
     {
       "id": "gojo-34438dbd",
@@ -2505,6 +2506,16 @@
   ],
   "生駒市": [
     {
+      "id": "ikoma-result-2601010008",
+      "municipality": "生駒市",
+      "title": "壱分小学校線支線３号歩行者空間整備工事",
+      "type": "建築",
+      "announcementDate": "2026-05-28",
+      "biddingDate": "2026-05-28",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+      "status": "落札"
+    },
+    {
       "id": "ikoma-c020d0513e",
       "municipality": "生駒市",
       "title": "RAKU-RAKUはうす改修工事",
@@ -2513,6 +2524,18 @@
       "biddingDate": "2026-06-08",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
       "status": "受付中"
+    },
+    {
+      "id": "ikoma-result-2601100003",
+      "municipality": "生駒市",
+      "title": "緑ヶ丘中学校外３校屋上防水改修設計業務",
+      "type": "コンサル",
+      "announcementDate": "2026-05-21",
+      "biddingDate": "2026-05-21",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+      "status": "落札",
+      "winningContractor": "有限会社優建築工房",
+      "winnerType": "ゼネコン"
     },
     {
       "id": "ikoma-899043f14b",
@@ -2533,6 +2556,312 @@
       "biddingDate": "2026-06-05",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
       "status": "受付中"
+    },
+    {
+      "id": "ikoma-result-2501010110",
+      "municipality": "生駒市",
+      "title": "上中学校校舎長寿命化改修工事",
+      "type": "建築",
+      "announcementDate": "2026-03-05",
+      "biddingDate": "2026-03-05",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+      "status": "不調"
+    },
+    {
+      "id": "ikoma-result-2501010107",
+      "municipality": "生駒市",
+      "title": "生駒東小学校及び鹿ノ台小学校音楽室エアコン取替工事",
+      "type": "建築",
+      "announcementDate": "2026-01-29",
+      "biddingDate": "2026-01-29",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+      "status": "落札",
+      "winningContractor": "株式会社森岡興産 生駒営業所",
+      "winnerType": "ゼネコン"
+    },
+    {
+      "id": "ikoma-result-2501010105",
+      "municipality": "生駒市",
+      "title": "大瀬中学校４教室ＬＥＤ化工事",
+      "type": "建築",
+      "announcementDate": "2026-01-06",
+      "biddingDate": "2026-01-06",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+      "status": "落札",
+      "winningContractor": "株式会社武部商会",
+      "winnerType": "ゼネコン"
+    },
+    {
+      "id": "ikoma-result-2501010106",
+      "municipality": "生駒市",
+      "title": "むかいやま公園体育施設トイレ改修工事",
+      "type": "建築",
+      "announcementDate": "2025-12-09",
+      "biddingDate": "2026-01-16",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+      "status": "不調"
+    },
+    {
+      "id": "ikoma-result-2501100022",
+      "municipality": "生駒市",
+      "title": "学びの多様化学校整備工事実施設計業務",
+      "type": "コンサル",
+      "announcementDate": "2025-11-19",
+      "biddingDate": "2025-11-19",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+      "status": "落札",
+      "winningContractor": "空間設計",
+      "winnerType": "設計事務所"
+    },
+    {
+      "id": "ikoma-result-2501010092",
+      "municipality": "生駒市",
+      "title": "井出山体育施設テニスコート（ハードコート）修繕工事",
+      "type": "建築",
+      "announcementDate": "2025-11-13",
+      "biddingDate": "2025-11-13",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+      "status": "落札",
+      "winningContractor": "青野スポーツ施設株式会社",
+      "winnerType": "ゼネコン"
+    },
+    {
+      "id": "ikoma-result-2501100021",
+      "municipality": "生駒市",
+      "title": "RAKU-RAKUはうす改修工事実施設計業務",
+      "type": "コンサル",
+      "announcementDate": "2025-11-13",
+      "biddingDate": "2025-11-13",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+      "status": "落札",
+      "winningContractor": "空間設計",
+      "winnerType": "設計事務所"
+    },
+    {
+      "id": "ikoma-result-2501010082",
+      "municipality": "生駒市",
+      "title": "生駒中学校屋内運動場屋根防水改修工事",
+      "type": "建築",
+      "announcementDate": "2025-10-21",
+      "biddingDate": "2025-10-21",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+      "status": "落札",
+      "winningContractor": "グローバル工業株式会社",
+      "winnerType": "ゼネコン"
+    },
+    {
+      "id": "ikoma-result-2501010077",
+      "municipality": "生駒市",
+      "title": "図書会館１・２階照明器具ＬＥＤ化工事",
+      "type": "建築",
+      "announcementDate": "2025-10-01",
+      "biddingDate": "2025-10-01",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+      "status": "落札",
+      "winningContractor": "大東電気工業株式会社 奈良営業所",
+      "winnerType": "ゼネコン"
+    },
+    {
+      "id": "ikoma-result-2501010074",
+      "municipality": "生駒市",
+      "title": "むかいやま公園体育施設照明器具ＬＥＤ化及び非構造部材改修工事",
+      "type": "建築",
+      "announcementDate": "2025-10-01",
+      "biddingDate": "2025-10-01",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+      "status": "落札",
+      "winningContractor": "松岡電気株式会社",
+      "winnerType": "ゼネコン"
+    },
+    {
+      "id": "ikoma-result-2501010073",
+      "municipality": "生駒市",
+      "title": "市営小平尾桜ヶ丘住宅換気設備機能強化及び24号室空家改修工事",
+      "type": "建築",
+      "announcementDate": "2025-10-01",
+      "biddingDate": "2025-10-01",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+      "status": "落札",
+      "winningContractor": "株式会社森岡興産 生駒営業所",
+      "winnerType": "ゼネコン"
+    },
+    {
+      "id": "ikoma-result-2501010071",
+      "municipality": "生駒市",
+      "title": "生駒市図書館リニューアル工事",
+      "type": "建築",
+      "announcementDate": "2025-09-30",
+      "biddingDate": "2025-09-30",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+      "status": "落札",
+      "winningContractor": "株式会社下西工務店",
+      "winnerType": "ゼネコン"
+    },
+    {
+      "id": "ikoma-result-2501010067",
+      "municipality": "生駒市",
+      "title": "生駒市コミュニティセンターダイバーシティ推進プラザ移設工事",
+      "type": "建築",
+      "announcementDate": "2025-09-22",
+      "biddingDate": "2025-09-22",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+      "status": "落札",
+      "winningContractor": "株式会社イシハラ工務店",
+      "winnerType": "ゼネコン"
+    },
+    {
+      "id": "ikoma-result-2501010058",
+      "municipality": "生駒市",
+      "title": "介護老人保健施設やすらぎの杜優楽非常用発電設備更新工事",
+      "type": "建築",
+      "announcementDate": "2025-08-29",
+      "biddingDate": "2025-08-29",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+      "status": "落札",
+      "winningContractor": "小南電気工業株式会社",
+      "winnerType": "ゼネコン"
+    },
+    {
+      "id": "ikoma-result-2501010052",
+      "municipality": "生駒市",
+      "title": "生駒小学校及び生駒台小学校屋上防水改修工事",
+      "type": "建築",
+      "announcementDate": "2025-08-22",
+      "biddingDate": "2025-08-22",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+      "status": "落札",
+      "winningContractor": "吉野塗装株式会社",
+      "winnerType": "ゼネコン"
+    },
+    {
+      "id": "ikoma-result-2501010051",
+      "municipality": "生駒市",
+      "title": "介護老人保健施設やすらぎの杜優楽バルコニー防水改修工事",
+      "type": "建築",
+      "announcementDate": "2025-08-08",
+      "biddingDate": "2025-08-08",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+      "status": "落札",
+      "winningContractor": "グローバル工業株式会社",
+      "winnerType": "ゼネコン"
+    },
+    {
+      "id": "ikoma-result-2501100012",
+      "municipality": "生駒市",
+      "title": "門前配水場配水池詳細耐震診断業務",
+      "type": "委託",
+      "announcementDate": "2025-08-08",
+      "biddingDate": "2025-08-08",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+      "status": "落札",
+      "winningContractor": "株式会社レック 奈良営業所",
+      "winnerType": "ゼネコン"
+    },
+    {
+      "id": "ikoma-result-2501010040",
+      "municipality": "生駒市",
+      "title": "小平尾保育園エアコン入替工事",
+      "type": "建築",
+      "announcementDate": "2025-07-09",
+      "biddingDate": "2025-07-09",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+      "status": "落札",
+      "winningContractor": "株式会社エイチツーオー 生駒支店",
+      "winnerType": "ゼネコン"
+    },
+    {
+      "id": "ikoma-result-2501010036",
+      "municipality": "生駒市",
+      "title": "市民活動推進センターららポート高圧受電設備更新工事",
+      "type": "建築",
+      "announcementDate": "2025-06-30",
+      "biddingDate": "2025-06-30",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+      "status": "落札",
+      "winningContractor": "株式会社阪奈電設",
+      "winnerType": "ゼネコン"
+    },
+    {
+      "id": "ikoma-result-2501010035",
+      "municipality": "生駒市",
+      "title": "真弓小学校高圧受電設備改修工事",
+      "type": "建築",
+      "announcementDate": "2025-06-30",
+      "biddingDate": "2025-06-30",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+      "status": "落札",
+      "winningContractor": "株式会社阪奈電設",
+      "winnerType": "ゼネコン"
+    },
+    {
+      "id": "ikoma-result-2501100006",
+      "municipality": "生駒市",
+      "title": "生駒市小学校屋内運動場空調設備整備工事監理業務",
+      "type": "コンサル",
+      "announcementDate": "2025-06-30",
+      "biddingDate": "2025-06-30",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+      "status": "落札",
+      "winningContractor": "株式会社施設工学研究所",
+      "winnerType": "ゼネコン"
+    },
+    {
+      "id": "ikoma-result-2501100007",
+      "municipality": "生駒市",
+      "title": "中学校照明器具ＬＥＤ化工事設計業務",
+      "type": "コンサル",
+      "announcementDate": "2025-06-30",
+      "biddingDate": "2025-06-30",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+      "status": "不調"
+    },
+    {
+      "id": "ikoma-result-2501010027",
+      "municipality": "生駒市",
+      "title": "藤尾町地内耐震性貯水槽設置工事",
+      "type": "建築",
+      "announcementDate": "2025-06-19",
+      "biddingDate": "2025-06-19",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+      "status": "落札",
+      "winningContractor": "株式会社生駒住建",
+      "winnerType": "ゼネコン"
+    },
+    {
+      "id": "ikoma-result-2501100004",
+      "municipality": "生駒市",
+      "title": "生駒北スポーツセンター及びむかいやま公園体育施設トイレ改修設計委託",
+      "type": "コンサル",
+      "announcementDate": "2025-06-09",
+      "biddingDate": "2025-06-09",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+      "status": "落札",
+      "winningContractor": "有限会社三都設計",
+      "winnerType": "設計事務所"
+    },
+    {
+      "id": "ikoma-result-2501010021",
+      "municipality": "生駒市",
+      "title": "生駒市小学校屋内運動場空調設備整備工事（その２）",
+      "type": "建築",
+      "announcementDate": "2025-05-28",
+      "biddingDate": "2025-05-28",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+      "status": "落札",
+      "winningContractor": "柳生設備株式会社",
+      "winnerType": "ゼネコン"
+    },
+    {
+      "id": "ikoma-result-2501010020",
+      "municipality": "生駒市",
+      "title": "生駒市小学校屋内運動場空調設備整備工事（その１）",
+      "type": "建築",
+      "announcementDate": "2025-05-28",
+      "biddingDate": "2025-05-28",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+      "status": "落札",
+      "winningContractor": "柳生設備株式会社",
+      "winnerType": "ゼネコン"
     }
   ],
   "宇陀市": [
@@ -2748,10 +3077,10 @@
     {
       "id": "sango-epi-5Luk5ZKMOOW5",
       "municipality": "三郷町",
-      "title": "令和8年度 町営住宅空部屋修繕設計業務",
-      "type": "コンサル",
+      "title": "令和8年度 東信貴ケ丘マンホールポンプ場2号ポンプ取替工事",
+      "type": "建築",
       "announcementDate": "2026-04-30",
-      "biddingDate": "2026-05-22",
+      "biddingDate": "2026-06-04",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0660064007200640",
       "status": "落札",
       "winningContractor": "大川建築設計事務所"
@@ -2770,13 +3099,13 @@
     {
       "id": "sango-epi-5Luk5ZKMN+W5",
       "municipality": "三郷町",
-      "title": "令和7年度 三郷町建築物耐震改修促進計画改定業務",
-      "type": "委託",
+      "title": "令和7年度 町営住宅11・12号棟駐車場ネットフェンス設置工事",
+      "type": "建築",
       "announcementDate": "2025-05-28",
-      "biddingDate": "2025-07-17",
+      "biddingDate": "2025-12-18",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0660064007200640",
       "status": "落札",
-      "winningContractor": "株式会社かんこう 奈良支店"
+      "winningContractor": "フジヨシ工業"
     }
   ]
 }
