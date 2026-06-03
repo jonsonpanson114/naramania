@@ -12,6 +12,10 @@ const ANNOUNCEMENT_PAGES = [
     { url: `${BASE}/soshikikarasagasu/somuka/keiyakukanri/nyusatsu_keiyaku/2/1427.html`, label: '測量コンサル' },
 ];
 const RESULT_PAGE = `${BASE}/soshikikarasagasu/somuka/keiyakukanri/nyusatsu_keiyaku/1/9099.html`;
+const RESULT_BIDDING_DATES: Record<string, string> = {
+    // 検索結果スニペット（NJSS）の発注情報抜粋で確認
+    '大和高田市保健センター受電設備改修工事': '2025-06-13',
+};
 
 function classifyType(gyoshu: string, title: string): BiddingType {
     const t = gyoshu + title;
@@ -150,6 +154,7 @@ export class YamatoTakadaCityScraper implements Scraper {
                                 title,
                                 type: classifyType('', title),
                                 announcementDate: `2025-${String(currentMonth).padStart(2, '0')}-01`,
+                                biddingDate: RESULT_BIDDING_DATES[title],
                                 link: RESULT_PAGE,
                                 status: isAwarded ? '落札' : '受付終了',
                                 ...(isAwarded ? { winningContractor: contractor } : {}),

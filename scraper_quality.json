@@ -134,17 +134,10 @@
   },
   "dateAudit": {
     "announcementAfterBiddingCount": 0,
-    "awardedWithoutBiddingDateCount": 3,
+    "awardedWithoutBiddingDateCount": 1,
     "awardedWithoutWinnerCount": 0,
     "openWithWinnerCount": 0,
     "sampleTitles": [
-      {
-        "municipality": "五條市",
-        "title": "五條市立公民館等消防用設備等法定点検業務委託",
-        "status": "落札",
-        "announcementDate": "2026-04-15",
-        "biddingDate": null
-      },
       {
         "municipality": "大和高田市",
         "title": "市営住宅礒野団地4号棟外壁等改修工事設計業務委託",

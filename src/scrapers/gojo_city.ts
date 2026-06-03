@@ -20,6 +20,9 @@ const GOJO_RESULT_OVERRIDES: Record<string, Partial<Pick<BiddingItem, 'biddingDa
         biddingDate: '2026-04-15',
         status: '不調',
     },
+    'https://www.city.gojo.lg.jp/material/files/group/40/kkr8hotetenken.pdf': {
+        biddingDate: '2026-04-15',
+    },
 };
 
 const ARCHITECTURE_CONTEXT = [
