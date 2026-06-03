@@ -9,6 +9,7 @@ import { parseJapaneseDateToIso } from './common/pdf_text';
 
 const BASE = 'https://www.city.katsuragi.nara.jp';
 const ANNOUNCE_URL = `${BASE}/soshiki/kanzaika/2/1637.html`;
+const RESULT_URL = `${BASE}/soshiki/kanzaika/2/1657.html`;
 const EPI_CLOUD_FORM = 'https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200720';
 const EPI_BASE = 'https://www.epi-cloud.fwd.ne.jp';
 const TARGET_NENDOS = ['2026', '2025'];
@@ -109,6 +110,130 @@ async function extractBiddingDateFromPdf(pdfUrl?: string): Promise<string | unde
         console.error(`[葛城市] PDF解析失敗: ${pdfUrl}`, error instanceof Error ? error.message : String(error));
         return undefined;
     }
+}
+
+type KatsuragiResultInfo = {
+    title: string;
+    biddingDate?: string;
+    status: BiddingItem['status'];
+    winningContractor?: string;
+};
+
+type ResultBidAndWinner = {
+    biddingDate?: string;
+    winningContractor?: string;
+};
+
+function extractResultBlocks(text: string): string[] {
+    const blocks = text.match(/様式第[13１３]号[\s\S]*?(?=様式第[13１３]号|$)/g);
+    return blocks || [];
+}
+
+function cleanResultValue(value?: string): string | undefined {
+    if (!value) return undefined;
+    const cleaned = value.replace(/\s+/g, ' ').trim();
+    return cleaned || undefined;
+}
+
+function extractResultTitle(block: string): string | undefined {
+    const match = block.match(/(?:一般|指名)競争入札結果公表書\s+(.+?)\s+[^\s]+(?:課|室|所|館|校|園|センター|委員会)/u);
+    return cleanResultValue(match?.[1]);
+}
+
+function extractResultBidAndWinner(block: string): ResultBidAndWinner {
+    const normalized = block.normalize('NFKC').replace(/\s+/g, ' ');
+    const beforeAmount = normalized.split(/6\.\s*落札金額/u)[0] || normalized;
+    const dateRegex = /令和\s*\d+\s*年\s*\d+\s*月\s*\d+\s*日(?:\s*[（(][^)）]+[)）])?/gu;
+    const matches = Array.from(beforeAmount.matchAll(dateRegex));
+    const lastDateMatch = matches.at(-1);
+
+    if (!lastDateMatch || lastDateMatch.index === undefined) {
+        return {};
+    }
+
+    const biddingDate = parseJapaneseDate(lastDateMatch[0]) || undefined;
+    const winnerRaw = beforeAmount.slice(lastDateMatch.index + lastDateMatch[0].length);
+    const winningContractor = cleanResultValue(
+        winnerRaw
+            .replace(/^[-:：、。\s]+/u, '')
+            .replace(/\(住所\).*$/u, '')
+            .replace(/^\d+\.\s*/u, ''),
+    );
+
+    return {
+        biddingDate,
+        winningContractor: winningContractor || undefined,
+    };
+}
+
+function extractResultStatus(block: string): BiddingItem['status'] {
+    if (/不調|取止め|中止/u.test(block)) return '不調';
+    return '落札';
+}
+
+async function extractResultInfosFromPdf(pdfUrl: string): Promise<KatsuragiResultInfo[]> {
+    try {
+        const res = await axios.get<ArrayBuffer>(pdfUrl, {
+            responseType: 'arraybuffer',
+            headers: HEADERS,
+            timeout: 20000,
+        });
+        const pdfjsLib = await import('pdfjs-dist/legacy/build/pdf.mjs');
+        const data = new Uint8Array(res.data as ArrayBuffer);
+        const doc = await pdfjsLib.getDocument({ data, verbosity: 0, isEvalSupported: false }).promise;
+
+        let text = '';
+        for (let i = 1; i <= Math.min(doc.numPages, 8); i++) {
+            const page = await doc.getPage(i);
+            const content = await page.getTextContent();
+            text += content.items.map(item => ('str' in item ? item.str : '')).join(' ');
+            text += '\n';
+        }
+
+        return extractResultBlocks(text)
+            .map((block): KatsuragiResultInfo | null => {
+                const title = extractResultTitle(block);
+                if (!title || !titleSeemsRelevant(title)) return null;
+                const { biddingDate, winningContractor } = extractResultBidAndWinner(block);
+                return {
+                    title,
+                    biddingDate,
+                    status: extractResultStatus(block),
+                    winningContractor,
+                };
+            })
+            .filter((item): item is KatsuragiResultInfo => Boolean(item));
+    } catch (error) {
+        console.error(`[葛城市] 結果PDF解析失敗: ${pdfUrl}`, error instanceof Error ? error.message : String(error));
+        return [];
+    }
+}
+
+async function scrapeWebsiteResults(): Promise<Map<string, KatsuragiResultInfo>> {
+    const resultMap = new Map<string, KatsuragiResultInfo>();
+    const res = await axios.get(RESULT_URL, { timeout: 20000, headers: HEADERS });
+    const $ = cheerio.load(res.data);
+
+    const pdfLinks = $('a')
+        .toArray()
+        .map(anchor => ({
+            href: toAbsoluteUrl($(anchor).attr('href') || ''),
+            text: $(anchor).text().replace(/\s+/g, ' ').trim(),
+        }))
+        .filter(link =>
+            /\.pdf(?:\?|$)/i.test(link.href)
+            && /入札分/.test(link.text)
+            && /令和[78]年|R[78]/.test(link.text),
+        );
+
+    for (const link of pdfLinks) {
+        const infos = await extractResultInfosFromPdf(link.href);
+        infos.forEach((info) => {
+            resultMap.set(`${normalizeTitle(info.title)}|${info.biddingDate || ''}`, info);
+        });
+    }
+
+    return resultMap;
 }
 
 async function getRightFrame(page: Page): Promise<Frame | null> {
@@ -383,14 +508,29 @@ export class KatsuragiCityScraper implements Scraper {
             }
         };
 
+        const applyWebsiteResultInfo = (item: BiddingItem, websiteResults: Map<string, KatsuragiResultInfo>) => {
+            const resultInfo = websiteResults.get(`${normalizeTitle(item.title)}|${item.biddingDate || ''}`);
+            if (!resultInfo) return;
+
+            item.status = resultInfo.status;
+            if (resultInfo.winningContractor) item.winningContractor = resultInfo.winningContractor;
+        };
+
         try {
             const webItems = await scrapeWebsiteAnnouncements();
-            webItems.forEach(upsert);
+            const websiteResults = await scrapeWebsiteResults();
+            webItems.forEach((item) => {
+                applyWebsiteResultInfo(item, websiteResults);
+                upsert(item);
+            });
 
             const page = await browser.newPage();
             page.setDefaultTimeout(120000);
             const epiItems = await scrapeEpi(page);
-            epiItems.forEach(upsert);
+            epiItems.forEach((item) => {
+                applyWebsiteResultInfo(item, websiteResults);
+                upsert(item);
+            });
         } catch (error) {
             console.error('[葛城市] スクレイパーエラー:', error instanceof Error ? error.message : String(error));
         } finally {
