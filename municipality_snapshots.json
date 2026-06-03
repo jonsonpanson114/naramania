@@ -394,18 +394,6 @@
       "winnerType": "ゼネコン"
     },
     {
-      "id": "nara-city-0000002334",
-      "municipality": "奈良市",
-      "title": "第５号市営住宅２号棟外壁塗装等改修工事",
-      "type": "建築",
-      "announcementDate": "2026-05-19",
-      "biddingDate": "2026-05-19",
-      "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
-      "status": "落札",
-      "winningContractor": "株式会社福島工務店",
-      "winnerType": "ゼネコン"
-    },
-    {
       "id": "nara-city-0000002474",
       "municipality": "奈良市",
       "title": "平城中学校他３校給水設備等改修に伴う設計業務委託",
@@ -424,18 +412,6 @@
       "biddingDate": "2026-06-19",
       "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
       "status": "受付中"
-    },
-    {
-      "id": "nara-city-0000002337",
-      "municipality": "奈良市",
-      "title": "中部公民館高圧受変電設備改修工事",
-      "type": "建築",
-      "announcementDate": "2026-05-13",
-      "biddingDate": "2026-05-13",
-      "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
-      "status": "落札",
-      "winningContractor": "株式会社久保総合設備",
-      "winnerType": "ゼネコン"
     },
     {
       "id": "nara-city-0000002437",
@@ -590,7 +566,7 @@
       "municipality": "安堵町",
       "title": "【条件付き一般競争入札の結果】安堵町立安堵小中学校屋内運動場空調設備設置工事",
       "type": "建築",
-      "announcementDate": "2026-06-02",
+      "announcementDate": "2026-06-03",
       "link": "https://www.town.ando.nara.jp/0000003986.html",
       "status": "落札"
     },
@@ -858,16 +834,6 @@
     }
   ],
   "大淀町": [
-    {
-      "id": "oyodo-5Luk5ZKMOOW5",
-      "municipality": "大淀町",
-      "title": "令和8年度大淀町文化会館改修工事に伴う監理業務",
-      "type": "コンサル",
-      "announcementDate": "2026-05-18",
-      "link": "https://www.town.oyodo.lg.jp/./cmsfiles/contents/0000000/218/nyusatsu_setsumei_080518.pdf",
-      "pdfUrl": "https://www.town.oyodo.lg.jp/./cmsfiles/contents/0000000/218/nyusatsu_setsumei_080518.pdf",
-      "status": "受付中"
-    },
     {
       "id": "oyodo-5pen5aSn5reA",
       "municipality": "大淀町",
@@ -1223,6 +1189,16 @@
     }
   ],
   "葛城市": [
+    {
+      "id": "katsuragi-epi-cc0d9ac5",
+      "municipality": "葛城市",
+      "title": "第8-105号屋根付きベンチ設置工事",
+      "type": "建築",
+      "announcementDate": "2026-06-03",
+      "biddingDate": "2026-06-24",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200720",
+      "status": "受付中"
+    },
     {
       "id": "katsuragi-web-cffaa70d",
       "municipality": "葛城市",
@@ -1583,16 +1559,6 @@
     }
   ],
   "香芝市": [
-    {
-      "id": "kashiba-web-2f12c302",
-      "municipality": "香芝市",
-      "title": "香芝市スポーツ公園整備事業に係るクライミング施設詳細設計業務",
-      "type": "建築",
-      "announcementDate": "2026-05-14",
-      "biddingDate": "2026-06-02",
-      "link": "https://www.city.kashiba.lg.jp/site/nyuusatsu/66808.html",
-      "status": "受付終了"
-    },
     {
       "id": "kashiba-web-98aceba6",
       "municipality": "香芝市",
@@ -2504,7 +2470,9 @@
       "announcementDate": "2026-05-28",
       "biddingDate": "2026-05-28",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-      "status": "落札"
+      "status": "落札",
+      "winningContractor": "株式会社生駒住建",
+      "winnerType": "ゼネコン"
     },
     {
       "id": "ikoma-c020d0513e",
@@ -3068,10 +3036,10 @@
     {
       "id": "sango-epi-5Luk5ZKMOOW5",
       "municipality": "三郷町",
-      "title": "令和8年度 東信貴ケ丘マンホールポンプ場2号ポンプ取替工事",
-      "type": "建築",
+      "title": "令和8年度 町営住宅20号棟外壁改修工事設計業務（社会資本整備総合交付金）",
+      "type": "コンサル",
       "announcementDate": "2026-04-30",
-      "biddingDate": "2026-06-04",
+      "biddingDate": "2026-06-30",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0660064007200640",
       "status": "落札",
       "winningContractor": "大川建築設計事務所"

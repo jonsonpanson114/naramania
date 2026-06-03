@@ -1,39 +1,37 @@
 {
-  "generatedAt": "2026-06-02T15:25:50.754Z",
+  "generatedAt": "2026-06-03T06:17:49.959Z",
   "source": "daily_scrape",
-  "scrapedCount": 14,
-  "keptCount": 246,
-  "rejectedCount": 0,
+  "keptCount": 273,
+  "municipalityCount": 21,
   "oldestAnnouncementDate": "2025-04-08",
-  "latestAnnouncementDate": "2026-06-02",
-  "municipalityCount": 20,
+  "latestAnnouncementDate": "2026-06-03",
+  "scrapedCount": 510,
+  "rejectedCount": 247,
   "municipalityAudit": {
     "expectedMunicipalityCount": 25,
-    "coveredMunicipalityCount": 20,
+    "coveredMunicipalityCount": 21,
     "missingMunicipalities": [
       "桜井市",
       "川西町",
       "山添村",
-      "平群町",
-      "高取町"
+      "平群町"
     ],
     "zeroCountMunicipalities": [
       "桜井市",
       "川西町",
       "山添村",
-      "平群町",
-      "高取町"
+      "平群町"
     ],
     "breakdown": [
       {
         "municipality": "奈良市",
-        "count": 45,
-        "changeFromPrevious": 0
+        "count": 43,
+        "changeFromPrevious": -2
       },
       {
         "municipality": "橿原市",
-        "count": 34,
-        "changeFromPrevious": 0
+        "count": 37,
+        "changeFromPrevious": 3
       },
       {
         "municipality": "生駒市",
@@ -41,14 +39,18 @@
         "changeFromPrevious": 0
       },
       {
+        "municipality": "葛城市",
+        "count": 30,
+        "changeFromPrevious": 6
+      },
+      {
         "municipality": "奈良県",
         "count": 29,
         "changeFromPrevious": 0
       },
       {
-        "municipality": "葛城市",
-        "count": 24,
-        "changeFromPrevious": 0
+        "municipality": "高取町",
+        "count": 22
       },
       {
         "municipality": "宇陀市",
@@ -62,8 +64,8 @@
       },
       {
         "municipality": "香芝市",
-        "count": 14,
-        "changeFromPrevious": 0
+        "count": 13,
+        "changeFromPrevious": -1
       },
       {
         "municipality": "大和郡山市",
@@ -86,11 +88,6 @@
         "changeFromPrevious": 0
       },
       {
-        "municipality": "大淀町",
-        "count": 3,
-        "changeFromPrevious": 0
-      },
-      {
         "municipality": "大和高田市",
         "count": 3,
         "changeFromPrevious": 0
@@ -104,6 +101,11 @@
         "municipality": "広陵町",
         "count": 2,
         "changeFromPrevious": 0
+      },
+      {
+        "municipality": "大淀町",
+        "count": 2,
+        "changeFromPrevious": -1
       },
       {
         "municipality": "天理市",
@@ -132,14 +134,14 @@
   "dateAudit": {
     "announcementAfterBiddingCount": 0,
     "awardedWithoutBiddingDateCount": 5,
-    "awardedWithoutWinnerCount": 10,
+    "awardedWithoutWinnerCount": 9,
     "openWithWinnerCount": 0,
     "sampleTitles": [
       {
         "municipality": "安堵町",
         "title": "【条件付き一般競争入札の結果】安堵町立安堵小中学校屋内運動場空調設備設置工事",
         "status": "落札",
-        "announcementDate": "2026-06-02",
+        "announcementDate": "2026-06-03",
         "biddingDate": null
       },
       {
@@ -160,15 +162,8 @@
         "municipality": "安堵町",
         "title": "【条件付き一般競争入札の結果】安堵町立安堵小中学校屋内運動場空調設備設置工事",
         "status": "落札",
-        "announcementDate": "2026-06-02",
+        "announcementDate": "2026-06-03",
         "biddingDate": null
-      },
-      {
-        "municipality": "生駒市",
-        "title": "壱分小学校線支線３号歩行者空間整備工事",
-        "status": "落札",
-        "announcementDate": "2026-05-28",
-        "biddingDate": "2026-05-28"
       },
       {
         "municipality": "五條市",
@@ -176,14 +171,22 @@
         "status": "落札",
         "announcementDate": "2026-05-08",
         "biddingDate": "2026-05-08"
+      },
+      {
+        "municipality": "五條市",
+        "title": "宗桧公民館改修工事",
+        "status": "落札",
+        "announcementDate": "2026-05-01",
+        "biddingDate": "2026-05-27"
       }
     ]
   },
   "intelligence": {
-    "itemsWithPdf": 58,
-    "itemsWithDescription": 42,
-    "intelligenceExtractedCount": 42,
-    "geminiExtractedCount": 42,
-    "taggedCount": 42
+    "itemsWithPdf": 65,
+    "itemsWithDescription": 50,
+    "intelligenceExtractedCount": 50,
+    "geminiExtractedCount": 50,
+    "taggedCount": 50,
+    "lastAugmentedAt": "2026-06-03T08:49:10.930Z"
   }
 }
