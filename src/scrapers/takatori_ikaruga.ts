@@ -77,7 +77,7 @@ async function scrapeTakatoriResults(): Promise<BiddingItem[]> {
             const amount = $(cells[3]).text().replace(/\s+/g, ' ').trim();
             if (!title || title === '業務名' || !shouldKeepItem(title)) return;
 
-            const status = amount.includes('不調') || amount.includes('不成立') ? '受付終了' : '落札';
+            const status = amount.includes('不調') || amount.includes('不成立') ? '不調' : '落札';
             const winningContractor = status === '落札' && winner && winner !== '-' ? winner : undefined;
 
             items.push({

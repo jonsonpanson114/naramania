@@ -830,6 +830,17 @@
     "status": "受付中"
   },
   {
+    "id": "nara-pref-29004060025020260025",
+    "municipality": "奈良県",
+    "title": "桜井警察署宇陀警察庁舎屋上防水等改修工事 設計委託",
+    "type": "コンサル",
+    "announcementDate": "2026-05-18",
+    "biddingDate": "2026-06-04",
+    "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29004060025020260025&gamenMode=0",
+    "status": "受付中",
+    "winnerType": "設計事務所"
+  },
+  {
     "id": "高取町-2026-05-18-高取町立高取中学校体育館空調設備設置工事",
     "municipality": "高取町",
     "title": "高取町立高取中学校体育館空調設備設置工事",
@@ -852,17 +863,6 @@
     "status": "落札",
     "winningContractor": "吉田機電(株)",
     "winnerType": "ゼネコン"
-  },
-  {
-    "id": "nara-pref-29004060025020260025",
-    "municipality": "奈良県",
-    "title": "桜井警察署宇陀警察庁舎屋上防水等改修工事 設計委託",
-    "type": "コンサル",
-    "announcementDate": "2026-05-18",
-    "biddingDate": "2026-06-04",
-    "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29004060025020260025&gamenMode=0",
-    "status": "受付中",
-    "winnerType": "設計事務所"
   },
   {
     "id": "nara-city-0000002474",
@@ -1633,7 +1633,7 @@
     "announcementDate": "2026-01-30",
     "biddingDate": "2026-01-30",
     "link": "https://www.town.takatori.nara.jp/contents_detail.php?frmId=2205",
-    "status": "受付終了"
+    "status": "不調"
   },
   {
     "id": "高取町-2026-01-30-町営住宅空家修繕工事",
@@ -1643,7 +1643,7 @@
     "announcementDate": "2026-01-30",
     "biddingDate": "2026-01-30",
     "link": "https://www.town.takatori.nara.jp/contents_detail.php?frmId=2205",
-    "status": "受付終了"
+    "status": "不調"
   },
   {
     "id": "高取町-2026-01-30-公営住宅丹生谷第1団地屋根葺替等改修工事監理業務",
@@ -1749,7 +1749,7 @@
     "announcementDate": "2025-12-25",
     "biddingDate": "2025-12-25",
     "link": "https://www.town.takatori.nara.jp/contents_detail.php?frmId=2205",
-    "status": "受付終了"
+    "status": "不調"
   },
   {
     "id": "高取町-2025-12-25-公営住宅丹生谷第1団地屋根葺替等改修工事",
@@ -1759,7 +1759,7 @@
     "announcementDate": "2025-12-25",
     "biddingDate": "2025-12-25",
     "link": "https://www.town.takatori.nara.jp/contents_detail.php?frmId=2205",
-    "status": "受付終了"
+    "status": "不調"
   },
   {
     "id": "高取町-2025-12-25-旧高取町立高取幼稚園除去工事設計業務委託",
@@ -1850,7 +1850,7 @@
     "announcementDate": "2025-11-27",
     "biddingDate": "2025-11-27",
     "link": "https://www.town.takatori.nara.jp/contents_detail.php?frmId=2205",
-    "status": "受付終了"
+    "status": "不調"
   },
   {
     "id": "高取町-2025-11-27-公営住宅丹生谷第1団地屋根葺替等改修工事",
@@ -1860,7 +1860,7 @@
     "announcementDate": "2025-11-27",
     "biddingDate": "2025-11-27",
     "link": "https://www.town.takatori.nara.jp/contents_detail.php?frmId=2205",
-    "status": "受付終了"
+    "status": "不調"
   },
   {
     "id": "uda-result-2595010037",
@@ -2349,7 +2349,7 @@
     "announcementDate": "2025-09-29",
     "biddingDate": "2025-09-29",
     "link": "https://www.town.takatori.nara.jp/contents_detail.php?frmId=2205",
-    "status": "受付終了"
+    "status": "不調"
   },
   {
     "id": "ikoma-result-2501010067",
@@ -2420,18 +2420,6 @@
     "winningContractor": "株式会社スポーツテクノ和広 大阪支店"
   },
   {
-    "id": "高取町-2025-08-27-町営住宅空家修繕工事設計業務",
-    "municipality": "高取町",
-    "title": "町営住宅空家修繕工事設計業務",
-    "type": "コンサル",
-    "announcementDate": "2025-08-27",
-    "biddingDate": "2025-08-27",
-    "link": "https://www.town.takatori.nara.jp/contents_detail.php?frmId=2205",
-    "status": "落札",
-    "winningContractor": "(株)福井建築設計事務所",
-    "winnerType": "設計事務所"
-  },
-  {
     "id": "katsuragi-epi-9f4cd0c2",
     "municipality": "葛城市",
     "title": "當麻スポーツセンタートイレ改修工事監理業務",
@@ -2452,6 +2440,18 @@
     "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200720",
     "status": "落札",
     "winningContractor": "細谷設計事務所"
+  },
+  {
+    "id": "高取町-2025-08-27-町営住宅空家修繕工事設計業務",
+    "municipality": "高取町",
+    "title": "町営住宅空家修繕工事設計業務",
+    "type": "コンサル",
+    "announcementDate": "2025-08-27",
+    "biddingDate": "2025-08-27",
+    "link": "https://www.town.takatori.nara.jp/contents_detail.php?frmId=2205",
+    "status": "落札",
+    "winningContractor": "(株)福井建築設計事務所",
+    "winnerType": "設計事務所"
   },
   {
     "id": "ikoma-result-2501010052",
