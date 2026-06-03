@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-06-03T11:16:17.787Z",
+  "generatedAt": "2026-06-03T11:27:03.395Z",
   "source": "daily_scrape",
-  "scrapedCount": 44,
+  "scrapedCount": 33,
   "keptCount": 270,
-  "rejectedCount": 14,
+  "rejectedCount": 3,
   "oldestAnnouncementDate": "2025-04-08",
   "latestAnnouncementDate": "2026-06-03",
   "municipalityCount": 21,
@@ -41,7 +41,7 @@
       {
         "municipality": "葛城市",
         "count": 30,
-        "changeFromPrevious": 3
+        "changeFromPrevious": 0
       },
       {
         "municipality": "奈良県",
