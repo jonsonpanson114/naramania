@@ -21,7 +21,7 @@ const KASHIBA_KNOWN_SCHEDULES: Record<string, {
     '香芝市立認定こども園及び幼稚園照明設備改修工事': {
         announcementDate: '2026-04-23',
         biddingDate: '2026-05-19',
-        link: 'https://www.city.kashiba.lg.jp/site/nyuusatsu/65857.html',
+        link: 'https://www.city.kashiba.lg.jp/uploaded/attachment/32017.pdf',
     },
     '下田小学校長寿命化改修工事': {
         announcementDate: '2026-04-23',
@@ -54,42 +54,42 @@ const KASHIBA_KNOWN_SCHEDULES: Record<string, {
     '香芝市立小学校屋内運動場空調設備設置工事（1工区）': {
         announcementDate: '2026-04-16',
         biddingDate: '2026-05-19',
-        link: 'https://www.city.kashiba.lg.jp/site/nyuusatsu/65649.html',
+        link: 'https://www.city.kashiba.lg.jp/uploaded/attachment/32017.pdf',
     },
     '香芝市立小学校屋内運動場空調設備設置工事（2工区）': {
         announcementDate: '2026-04-16',
         biddingDate: '2026-05-19',
-        link: 'https://www.city.kashiba.lg.jp/site/nyuusatsu/65649.html',
+        link: 'https://www.city.kashiba.lg.jp/uploaded/attachment/32017.pdf',
     },
     '香芝市立小学校屋内運動場空調設備設置工事（3工区）': {
         announcementDate: '2026-04-16',
         biddingDate: '2026-05-19',
-        link: 'https://www.city.kashiba.lg.jp/site/nyuusatsu/65649.html',
+        link: 'https://www.city.kashiba.lg.jp/uploaded/attachment/32017.pdf',
     },
     '香芝市立小学校照明設備改修工事（1工区）': {
         announcementDate: '2026-04-16',
         biddingDate: '2026-05-19',
-        link: 'https://www.city.kashiba.lg.jp/site/nyuusatsu/65649.html',
+        link: 'https://www.city.kashiba.lg.jp/uploaded/attachment/32017.pdf',
     },
     '香芝市立小学校照明設備改修工事（2工区）': {
         announcementDate: '2026-04-16',
         biddingDate: '2026-05-19',
-        link: 'https://www.city.kashiba.lg.jp/site/nyuusatsu/65649.html',
+        link: 'https://www.city.kashiba.lg.jp/uploaded/attachment/32017.pdf',
     },
     '香芝市立中学校照明設備改修工事（1工区）': {
         announcementDate: '2026-04-16',
         biddingDate: '2026-05-19',
-        link: 'https://www.city.kashiba.lg.jp/site/nyuusatsu/65649.html',
+        link: 'https://www.city.kashiba.lg.jp/uploaded/attachment/32017.pdf',
     },
     '香芝市立中学校照明設備改修工事（2工区）': {
         announcementDate: '2026-04-16',
         biddingDate: '2026-05-19',
-        link: 'https://www.city.kashiba.lg.jp/site/nyuusatsu/65649.html',
+        link: 'https://www.city.kashiba.lg.jp/uploaded/attachment/32017.pdf',
     },
     '三和小学校校舎増築工事に伴う設計業務': {
         announcementDate: '2026-04-09',
         biddingDate: '2026-04-28',
-        link: 'https://www.city.kashiba.lg.jp/soshiki/7/65410.html',
+        link: 'https://www.city.kashiba.lg.jp/uploaded/attachment/31836.pdf',
     },
 };
 
