@@ -366,7 +366,7 @@ export class KashiharaCityScraper implements Scraper {
                     item.biddingDate = details.biddingDate;
                 }
                 if (details.isAwarded === false) {
-                    item.status = '受付終了';
+                    item.status = '不調';
                     delete item.winningContractor;
                 }
             }));

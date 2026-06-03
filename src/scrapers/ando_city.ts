@@ -18,6 +18,7 @@ const ANDO_SUPPLEMENTAL_ITEMS = [
 const ANDO_KNOWN_BIDDING_DATES: Record<string, string> = {
     // 公式ページの公告PDFと建設新報の公告要約から確認
     '条件付き一般競争入札の実施について（安堵町立安堵小中学校屋内運動場空調設備設置工事）': '2026-05-27',
+    '【条件付き一般競争入札の結果】安堵町立安堵小中学校屋内運動場空調設備設置工事': '2026-05-27',
     '【再度公告】条件付き一般競争入札の実施について（安堵こども園南館外壁改修、トイレ乾式化および洋式化改修工事）': '2026-06-26',
     '〖再度公告〗条件付き一般競争入札の実施について（安堵こども園南館外壁改修、トイレ乾式化および洋式化改修工事）': '2026-06-26',
 };
@@ -62,12 +63,77 @@ function normalizeAndoLink(href: string): string {
     return `https://www.town.ando.nara.jp${href}`;
 }
 
+function normalizeAndoWinner(raw: string): string {
+    return raw
+        .replace(/\s+/g, ' ')
+        .replace(/\s+\d+\.\s*$/, '')
+        .replace(/\s+(代表取締役|代表社員|代表|所長|支店長|営業所長).*$/, '')
+        .trim();
+}
+
 function parseUpdatedDate(text: string): string {
     const western = text.match(/更新日[:：]\s*(20\d{2})年(\d{1,2})月(\d{1,2})日/);
     if (western) {
         return `${western[1]}-${western[2].padStart(2, '0')}-${western[3].padStart(2, '0')}`;
     }
     return '';
+}
+
+async function extractAndoResultDetails(resultPageUrl: string): Promise<{
+    pdfUrl?: string;
+    biddingDate?: string;
+    winningContractor?: string;
+    status?: BiddingItem['status'];
+}> {
+    try {
+        const res = await axios.get(resultPageUrl, {
+            headers: { 'User-Agent': 'Mozilla/5.0' },
+            timeout: 15000,
+        });
+        const $ = cheerio.load(res.data);
+        const pdfHref = $('a[href$=".pdf"], a[href*=".pdf"]').first().attr('href') || '';
+        const pdfUrl = pdfHref ? normalizeAndoLink(pdfHref) : undefined;
+        if (!pdfUrl) return {};
+
+        const pdfRes = await axios.get<ArrayBuffer>(pdfUrl, {
+            responseType: 'arraybuffer',
+            headers: { 'User-Agent': 'Mozilla/5.0' },
+            timeout: 15000,
+        });
+        const pdfjsLib = await import('pdfjs-dist/legacy/build/pdf.mjs');
+        const doc = await pdfjsLib.getDocument({
+            data: new Uint8Array(pdfRes.data as ArrayBuffer),
+            verbosity: 0,
+            isEvalSupported: false,
+        }).promise;
+
+        let text = '';
+        for (let i = 1; i <= doc.numPages; i += 1) {
+            const page = await doc.getPage(i);
+            const content = await page.getTextContent();
+            text += content.items.map(item => ('str' in item ? item.str : '')).join(' ');
+        }
+
+        const normalized = text.replace(/\s+/g, ' ');
+        const dateMatch = normalized.match(/令和\s*(\d+)\s*年\s*(\d+)\s*月\s*(\d+)\s*日/);
+        const biddingDate = dateMatch ? `${2018 + Number(dateMatch[1])}-${String(Number(dateMatch[2])).padStart(2, '0')}-${String(Number(dateMatch[3])).padStart(2, '0')}` : undefined;
+        if (/落\s*札\s*の\s*有\s*無[\s\S]{0,20}無|不調|不成立|取止め/.test(normalized)) {
+            return { pdfUrl, biddingDate, status: '不調' };
+        }
+
+        const winnerMatch =
+            normalized.match(/落\s*札\s*(?:者(?:名)?|業者)\s+(.+?)(?:\s+[0-9０-９][0-9０-９,，]*\s*円|\s+落札金額|\s+契約金額)/) ||
+            normalized.match(/契\s*約\s*の\s*相\s*手\s*方\s+(.+?)(?:\s+\d{1,3}(?:,\d{3})+\s*円|\s+契約金額)/);
+
+        return {
+            pdfUrl,
+            biddingDate,
+            winningContractor: winnerMatch?.[1] ? normalizeAndoWinner(winnerMatch[1]) : undefined,
+            status: '落札',
+        };
+    } catch {
+        return {};
+    }
 }
 
 async function scrapeAndoCity(): Promise<BiddingItem[]> {
@@ -158,6 +224,15 @@ async function scrapeAndoCity(): Promise<BiddingItem[]> {
     }
 
     const result = Array.from(items.values());
+
+    for (const item of result) {
+        if (item.status !== '落札') continue;
+        const details = await extractAndoResultDetails(item.link);
+        if (details.pdfUrl) item.pdfUrl = details.pdfUrl;
+        if (details.biddingDate) item.biddingDate = details.biddingDate;
+        if (details.status) item.status = details.status;
+        if (details.winningContractor) item.winningContractor = details.winningContractor;
+    }
 
     for (const supplemental of ANDO_SUPPLEMENTAL_ITEMS) {
         if (!items.has(supplemental.title) && !shouldSkip(supplemental.title)) {

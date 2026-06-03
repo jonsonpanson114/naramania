@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-06-03T12:30:25.874Z",
+  "generatedAt": "2026-06-03T22:06:17.065Z",
   "source": "daily_scrape",
-  "scrapedCount": 22,
-  "keptCount": 270,
+  "scrapedCount": 2,
+  "keptCount": 274,
   "rejectedCount": 0,
   "oldestAnnouncementDate": "2025-04-08",
   "latestAnnouncementDate": "2026-06-03",
@@ -30,7 +30,7 @@
       },
       {
         "municipality": "橿原市",
-        "count": 33,
+        "count": 37,
         "changeFromPrevious": 0
       },
       {
@@ -134,24 +134,10 @@
   },
   "dateAudit": {
     "announcementAfterBiddingCount": 0,
-    "awardedWithoutBiddingDateCount": 5,
-    "awardedWithoutWinnerCount": 4,
+    "awardedWithoutBiddingDateCount": 3,
+    "awardedWithoutWinnerCount": 0,
     "openWithWinnerCount": 0,
     "sampleTitles": [
-      {
-        "municipality": "安堵町",
-        "title": "【条件付き一般競争入札の結果】安堵町立安堵小中学校屋内運動場空調設備設置工事",
-        "status": "落札",
-        "announcementDate": "2026-06-03",
-        "biddingDate": null
-      },
-      {
-        "municipality": "五條市",
-        "title": "五條市立公民館等防火対象物定期点検業務委託",
-        "status": "落札",
-        "announcementDate": "2026-04-15",
-        "biddingDate": null
-      },
       {
         "municipality": "五條市",
         "title": "五條市立公民館等消防用設備等法定点検業務委託",
@@ -160,33 +146,19 @@
         "biddingDate": null
       },
       {
-        "municipality": "安堵町",
-        "title": "【条件付き一般競争入札の結果】安堵町立安堵小中学校屋内運動場空調設備設置工事",
+        "municipality": "大和高田市",
+        "title": "市営住宅礒野団地4号棟外壁等改修工事設計業務委託",
         "status": "落札",
-        "announcementDate": "2026-06-03",
-        "biddingDate": null
-      },
-      {
-        "municipality": "五條市",
-        "title": "宗桧公民館改修工事",
-        "status": "落札",
-        "announcementDate": "2026-05-01",
-        "biddingDate": "2026-05-27"
-      },
-      {
-        "municipality": "五條市",
-        "title": "五條市立公民館等防火対象物定期点検業務委託",
-        "status": "落札",
-        "announcementDate": "2026-04-15",
+        "announcementDate": "2025-07-01",
         "biddingDate": null
       }
     ]
   },
   "intelligence": {
-    "itemsWithPdf": 61,
-    "itemsWithDescription": 34,
-    "intelligenceExtractedCount": 34,
-    "geminiExtractedCount": 34,
-    "taggedCount": 34
+    "itemsWithPdf": 66,
+    "itemsWithDescription": 5,
+    "intelligenceExtractedCount": 5,
+    "geminiExtractedCount": 5,
+    "taggedCount": 5
   }
 }

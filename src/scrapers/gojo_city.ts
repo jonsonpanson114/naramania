@@ -15,6 +15,12 @@ const RESULT_JSON_URLS = [
 const EDUCATION_LIST_URL = `${BASE_URL}/soshiki/kyouiku/1_2/index.html`;
 const GOJO_EPI_NENDOS = ['2026', '2025', '2024'];
 const HEADERS = { 'User-Agent': 'Mozilla/5.0 (compatible; naramania-scraper/1.0)' };
+const GOJO_RESULT_OVERRIDES: Record<string, Partial<Pick<BiddingItem, 'biddingDate' | 'status' | 'winningContractor'>>> = {
+    'https://www.city.gojo.lg.jp/material/files/group/40/kkr8boukataisyobutu.pdf': {
+        biddingDate: '2026-04-15',
+        status: '不調',
+    },
+};
 
 const ARCHITECTURE_CONTEXT = [
     '建築', '建築設備', '公民館', '施設', '庁舎', '学校', '校舎', '住宅',
@@ -76,6 +82,13 @@ function parseSlashDate(text: string): string {
     const match = text.trim().match(/(\d{4})\/(\d{2})\/(\d{2})/);
     if (!match) return '';
     return `${match[1]}-${match[2]}-${match[3]}`;
+}
+
+function normalizeGojoWinner(raw: string): string {
+    return raw
+        .replace(/\s+/g, ' ')
+        .replace(/\s+(代表取締役|代表社員|代表|所長|支店長|営業所長).*$/, '')
+        .trim();
 }
 
 function gojoItemKey(title: string, biddingDate?: string, link?: string): string {
@@ -207,6 +220,9 @@ async function scrapeGojoEpiIssueDates(page: Page): Promise<Map<string, { announ
 }
 
 function deriveGojoEpiStatus(detailText: string, fallback: BiddingStatus): BiddingStatus {
+    if (/取止め・不調|入札者がいないため、中止します|入札者がいないため中止します|不調|不成立|中止します/.test(detailText)) {
+        return '不調';
+    }
     if (/落札候補者の事後審査中/.test(detailText)) {
         return '受付終了';
     }
@@ -235,6 +251,50 @@ async function scrapeGojoEpiDetail(page: Page, detailUrl: string): Promise<{
         return {};
     } finally {
         await detailPage.close().catch(() => undefined);
+    }
+}
+
+async function extractGojoPdfResultDetails(pdfUrl: string): Promise<{
+    biddingDate?: string;
+    winningContractor?: string;
+    status?: BiddingStatus;
+}> {
+    try {
+        const res = await axios.get<ArrayBuffer>(pdfUrl, {
+            responseType: 'arraybuffer',
+            headers: HEADERS,
+            timeout: 15000,
+        });
+        const pdfjsLib = await import('pdfjs-dist/legacy/build/pdf.mjs');
+        const doc = await pdfjsLib.getDocument({
+            data: new Uint8Array(res.data as ArrayBuffer),
+            verbosity: 0,
+            isEvalSupported: false,
+        }).promise;
+
+        let text = '';
+        for (let i = 1; i <= doc.numPages; i += 1) {
+            const page = await doc.getPage(i);
+            const content = await page.getTextContent();
+            text += content.items.map(item => ('str' in item ? item.str : '')).join(' ');
+        }
+
+        const biddingDate = parseJapaneseDate(text) || undefined;
+        const isFailed = /落\s*札\s*の\s*有\s*無[\s\S]{0,20}無|不調|不成立|取止め/.test(text);
+        if (isFailed) {
+            return { biddingDate, status: '不調' };
+        }
+
+        const winnerField = text.match(/7\s+8\s+(.+?)\s+9\s+/)?.[1];
+        const winner = winnerField ? normalizeGojoWinner(winnerField) : undefined;
+
+        return {
+            biddingDate,
+            winningContractor: winner || undefined,
+            status: '落札',
+        };
+    } catch {
+        return {};
     }
 }
 
@@ -420,6 +480,18 @@ export class GojoCityScraper implements Scraper {
         }
 
         const unique = Array.from(items.values()).sort((a, b) => b.announcementDate.localeCompare(a.announcementDate));
+        for (const item of unique) {
+            if (item.status !== '落札' || !item.pdfUrl) continue;
+            const details = await extractGojoPdfResultDetails(item.pdfUrl);
+            if (details.biddingDate) item.biddingDate = details.biddingDate;
+            if (details.status) item.status = details.status;
+            if (details.winningContractor) item.winningContractor = details.winningContractor;
+
+            const override = GOJO_RESULT_OVERRIDES[item.pdfUrl];
+            if (override?.biddingDate) item.biddingDate = override.biddingDate;
+            if (override?.status) item.status = override.status;
+            if (override?.winningContractor) item.winningContractor = override.winningContractor;
+        }
         console.log(`[五條市] 合計 ${unique.length} 件`);
         return unique;
     }

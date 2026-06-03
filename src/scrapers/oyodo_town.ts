@@ -55,6 +55,56 @@ function classifyType(title: string): BiddingType {
     return '建築';
 }
 
+function normalizeOyodoWinner(raw: string): string {
+    return raw
+        .replace(/\s+/g, ' ')
+        .replace(/\s+(関西支店|奈良営業所|奈良事務所|支店|営業所)\s*$/, (m) => m.trim())
+        .trim();
+}
+
+async function extractOyodoResultDetails(pdfUrl: string): Promise<{
+    biddingDate?: string;
+    winningContractor?: string;
+    status?: BiddingItem['status'];
+}> {
+    try {
+        const res = await axios.get<ArrayBuffer>(pdfUrl, {
+            responseType: 'arraybuffer',
+            headers: HEADERS,
+            timeout: 15000,
+        });
+        const pdfjsLib = await import('pdfjs-dist/legacy/build/pdf.mjs');
+        const doc = await pdfjsLib.getDocument({
+            data: new Uint8Array(res.data as ArrayBuffer),
+            verbosity: 0,
+            isEvalSupported: false,
+        }).promise;
+
+        let text = '';
+        for (let i = 1; i <= doc.numPages; i += 1) {
+            const page = await doc.getPage(i);
+            const content = await page.getTextContent();
+            text += content.items.map(item => ('str' in item ? item.str : '')).join(' ');
+        }
+
+        const biddingDate = parseJapaneseDate(text) || undefined;
+        if (/落\s*札\s*の\s*有\s*無\s*無|不調|不成立|取止め/.test(text.replace(/\s+/g, ' '))) {
+            return { biddingDate, status: '不調' };
+        }
+
+        const winnerMatch = text.match(/落\s*札\s*者\s*名\s+(.+?)(?:\s+\d{1,3}(?:,\d{3})+\s*$|\s+入\s*札\s*価\s*格|\s+落\s*札\s*価\s*格)/);
+        const winningContractor = winnerMatch?.[1] ? normalizeOyodoWinner(winnerMatch[1]) : undefined;
+
+        return {
+            biddingDate,
+            winningContractor,
+            status: '落札',
+        };
+    } catch {
+        return {};
+    }
+}
+
 function parseOyodoAnnouncementTables($: cheerio.CheerioAPI): BiddingItem[] {
     const items: BiddingItem[] = [];
 
@@ -145,6 +195,13 @@ export class OyodoTownScraper implements Scraper {
         }
 
         const result = Array.from(items.values()).sort((a, b) => b.announcementDate.localeCompare(a.announcementDate));
+        for (const item of result) {
+            if (item.status !== '落札' || !item.link.endsWith('.pdf')) continue;
+            const details = await extractOyodoResultDetails(item.link);
+            if (details.biddingDate) item.biddingDate = details.biddingDate;
+            if (details.status) item.status = details.status;
+            if (details.winningContractor) item.winningContractor = details.winningContractor;
+        }
         console.log(`[大淀町] 合計 ${result.length} 件`);
         return result;
     }

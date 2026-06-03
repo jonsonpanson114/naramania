@@ -568,7 +568,10 @@
       "type": "建築",
       "announcementDate": "2026-06-03",
       "link": "https://www.town.ando.nara.jp/0000003986.html",
-      "status": "落札"
+      "status": "落札",
+      "pdfUrl": "https://www.town.ando.nara.jp./cmsfiles/contents/0000003/3986/kaisatsu.pdf",
+      "winningContractor": "𠮷 村建設株式会社",
+      "biddingDate": "2026-05-27"
     },
     {
       "id": "ando-supplemental-0000003967",
@@ -852,7 +855,8 @@
       "announcementDate": "2025-07-22",
       "biddingDate": "2025-07-22",
       "link": "https://www.town.oyodo.lg.jp/./cmsfiles/contents/0000001/1718/so070722.pdf",
-      "status": "落札"
+      "status": "落札",
+      "winningContractor": "㈱シティ・プランニング 関西支店"
     }
   ],
   "奈良県": [
@@ -1742,7 +1746,8 @@
       "biddingDate": "2026-05-08",
       "link": "https://www.city.gojo.lg.jp/jigyousha/nyuusatsu/8/R8/19370.html",
       "pdfUrl": "https://www.city.gojo.lg.jp/material/files/group/40/kkr8bt.pdf",
-      "status": "落札"
+      "status": "落札",
+      "winningContractor": "近畿電気保安株式会社 奈良支店"
     },
     {
       "id": "gojo-epi-2601002",
@@ -1752,7 +1757,7 @@
       "announcementDate": "2026-05-01",
       "biddingDate": "2026-05-27",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002601002",
-      "status": "落札",
+      "status": "不調",
       "estimatedPrice": "44,460,000円"
     },
     {
@@ -1775,7 +1780,8 @@
       "announcementDate": "2026-04-15",
       "link": "https://www.city.gojo.lg.jp/jigyousha/nyuusatsu/8/R8/19326.html",
       "pdfUrl": "https://www.city.gojo.lg.jp/material/files/group/40/kkr8boukataisyobutu.pdf",
-      "status": "落札"
+      "status": "不調",
+      "biddingDate": "2026-04-15"
     },
     {
       "id": "gojo-85f3cc47",
@@ -1785,7 +1791,8 @@
       "announcementDate": "2026-04-15",
       "link": "https://www.city.gojo.lg.jp/jigyousha/nyuusatsu/8/R8/19327.html",
       "pdfUrl": "https://www.city.gojo.lg.jp/material/files/group/40/kkr8hotetenken.pdf",
-      "status": "落札"
+      "status": "落札",
+      "winningContractor": "株式会社カシバ消防設備"
     },
     {
       "id": "gojo-5fb0bb1b",
@@ -1796,7 +1803,8 @@
       "biddingDate": "2026-04-07",
       "link": "https://www.city.gojo.lg.jp/jigyousha/nyuusatsu/8/R8/16085.html",
       "pdfUrl": "https://www.city.gojo.lg.jp/material/files/group/40/kkR8ktakb.pdf",
-      "status": "落札"
+      "status": "落札",
+      "winningContractor": "岡本設計 岡本光弘"
     },
     {
       "id": "gojo-3ede97ba",
@@ -1807,7 +1815,8 @@
       "biddingDate": "2026-04-07",
       "link": "https://www.city.gojo.lg.jp/jigyousha/nyuusatsu/8/R8/16087.html",
       "pdfUrl": "https://www.city.gojo.lg.jp/material/files/group/40/kkR8kk.pdf",
-      "status": "落札"
+      "status": "落札",
+      "winningContractor": "（株）たかの建築事務所"
     },
     {
       "id": "gojo-epi-2501063",
@@ -2076,7 +2085,7 @@
       "announcementDate": "2025-11-19",
       "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18375.html",
       "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5072001078k.pdf",
-      "status": "受付終了",
+      "status": "不調",
       "winnerType": "設計事務所",
       "biddingDate": "2025-11-19"
     },
@@ -2088,7 +2097,7 @@
       "announcementDate": "2025-11-19",
       "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18375.html",
       "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5072001074k.pdf",
-      "status": "受付終了",
+      "status": "不調",
       "winnerType": "設計事務所",
       "biddingDate": "2025-11-19"
     },
@@ -2126,7 +2135,7 @@
       "announcementDate": "2025-10-23",
       "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
       "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071001005k.pdf",
-      "status": "受付終了",
+      "status": "不調",
       "winnerType": "ゼネコン",
       "biddingDate": "2025-10-23"
     },
