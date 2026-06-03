@@ -10,6 +10,13 @@ export interface ExtractedBiddingInfo {
     tags?: string[];
 }
 
+export interface TargetedPdfResultInfo {
+    title: string;
+    found: boolean;
+    status?: string;
+    winningContractor?: string;
+}
+
 const BIDDING_INFO_SCHEMA = {
     type: "object",
     properties: {
@@ -108,5 +115,76 @@ export async function extractBiddingInfoFromText(text: string): Promise<Extracte
             return null;
         }
     }
+    return null;
+}
+
+export async function extractTargetedResultsFromPDF(
+    pdfBuffer: Buffer,
+    titles: string[],
+    mimeType: string = "application/pdf",
+): Promise<TargetedPdfResultInfo[] | null> {
+    const apiKey = process.env.GOOGLE_GENERATIVE_AI_API_KEY || process.env.GEMINI_API_KEY || "";
+    if (!apiKey || titles.length === 0) return null;
+
+    const genAI = new GoogleGenerativeAI(apiKey);
+    const model = genAI.getGenerativeModel({
+        model: PDF_EXTRACTION_MODEL,
+        generationConfig: {
+            responseMimeType: "application/json",
+            responseSchema: {
+                type: "object",
+                properties: {
+                    results: {
+                        type: "array",
+                        items: {
+                            type: "object",
+                            properties: {
+                                title: { type: "string" },
+                                found: { type: "boolean" },
+                                status: { type: "string", nullable: true },
+                                winningContractor: { type: "string", nullable: true },
+                            },
+                            required: ["title", "found"],
+                        },
+                    },
+                },
+                required: ["results"],
+            } as never,
+        },
+    });
+
+    const prompt = `
+このPDFは入札結果資料です。次の案件名ごとに、PDF内に存在するかどうかを判定し、見つかった場合は結果ステータス（落札・不調・取止め等）と落札者名を抽出してください。
+表記ゆれがあっても同じ案件なら一致として扱ってください。
+案件名:
+${titles.map((title, index) => `${index + 1}. ${title}`).join("\n")}
+`;
+
+    let retries = 3;
+    while (retries > 0) {
+        try {
+            const result = await model.generateContent([
+                prompt,
+                {
+                    inlineData: {
+                        data: pdfBuffer.toString("base64"),
+                        mimeType,
+                    },
+                },
+            ]);
+            const parsed = JSON.parse(result.response.text()) as { results?: TargetedPdfResultInfo[] };
+            return parsed.results || [];
+        } catch (error: unknown) {
+            const status = error && typeof error === 'object' && 'status' in error ? (error.status as number) : 500;
+            if ((status === 503 || status === 429 || status === 500) && retries > 1) {
+                await new Promise(resolve => setTimeout(resolve, status === 429 ? 20000 : 10000));
+                retries--;
+                continue;
+            }
+            console.error("Gemini Targeted PDF API Error:", error);
+            return null;
+        }
+    }
+
     return null;
 }

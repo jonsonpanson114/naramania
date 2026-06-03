@@ -5,6 +5,8 @@ import type { Element } from 'domhandler';
 import { chromium } from 'playwright';
 import type { Frame, Page } from 'playwright';
 import { BiddingItem, Scraper } from '../types/bidding';
+import { extractTargetedResultsFromPDF } from '../services/gemini_service';
+import { downloadPDFBuffer } from '../utils/pdf_utils';
 import { shouldKeepItem } from './common/filter';
 
 const EPI_URL = 'https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=062006E007200640';
@@ -109,6 +111,42 @@ function buildKnownKashibaItems(): BiddingItem[] {
         status: schedule.status || '受付中',
         winningContractor: schedule.winningContractor,
     }));
+}
+
+async function enrichKnownKashibaResults(items: BiddingItem[]): Promise<void> {
+    const unresolved = items.filter(item =>
+        item.municipality === '香芝市'
+        && /\.pdf(?:$|\?)/i.test(item.link)
+        && KASHIBA_KNOWN_SCHEDULES[item.title]
+        && (!item.winningContractor || item.status === '受付終了'),
+    );
+    if (unresolved.length === 0) return;
+
+    const grouped = new Map<string, BiddingItem[]>();
+    unresolved.forEach((item) => {
+        const bucket = grouped.get(item.link) || [];
+        bucket.push(item);
+        grouped.set(item.link, bucket);
+    });
+
+    for (const [pdfUrl, pdfItems] of grouped.entries()) {
+        const pdfBuffer = await downloadPDFBuffer(pdfUrl);
+        if (!pdfBuffer) continue;
+
+        const results = await extractTargetedResultsFromPDF(pdfBuffer, pdfItems.map(item => item.title));
+        if (!results) continue;
+
+        const resultMap = new Map(results.map(result => [result.title, result]));
+        pdfItems.forEach((item) => {
+            const resolved = resultMap.get(item.title);
+            if (!resolved?.found) return;
+
+            if (resolved.winningContractor) item.winningContractor = resolved.winningContractor;
+            if (resolved.status === '落札' || resolved.status === '不調') {
+                item.status = resolved.status;
+            }
+        });
+    }
 }
 
 function parseJpDate(str: string): string {
@@ -475,6 +513,10 @@ export class KashibaCityScraper implements Scraper {
         } catch (error) {
             console.warn('[香芝市] EPI取得をスキップ:', error instanceof Error ? error.message : String(error));
         }
+
+        await enrichKnownKashibaResults(webItems);
+        await enrichKnownKashibaResults(epiItems);
+
         console.log(`[香芝市] 合計: ${epiItems.length + webItems.length} 件 (EPI:${epiItems.length}, Web:${webItems.length})`);
         return [...epiItems, ...webItems];
     }
