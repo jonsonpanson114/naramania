@@ -32,28 +32,6 @@
       "status": "受付中"
     },
     {
-      "id": "yamato-koriyama-20c13887",
-      "municipality": "大和郡山市",
-      "title": "市立片桐幼稚園園舎改修工事設計業務",
-      "type": "コンサル",
-      "announcementDate": "2026-05-19",
-      "biddingDate": "2026-06-03",
-      "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/9328.html",
-      "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk260603_42k.pdf",
-      "status": "受付中"
-    },
-    {
-      "id": "yamato-koriyama-a082fbb3",
-      "municipality": "大和郡山市",
-      "title": "九条公園プール施設更新工事",
-      "type": "建築",
-      "announcementDate": "2026-05-12",
-      "biddingDate": "2026-06-03",
-      "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/9328.html",
-      "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk260603_01k.pdf",
-      "status": "受付中"
-    },
-    {
       "id": "yamato-koriyama-2be46dab",
       "municipality": "大和郡山市",
       "title": "大和郡山市立スポーツ会館体育室床修繕",
@@ -382,18 +360,6 @@
       "winnerType": "ゼネコン"
     },
     {
-      "id": "nara-city-0000002430",
-      "municipality": "奈良市",
-      "title": "奈良市営住宅照明器具改修工事",
-      "type": "建築",
-      "announcementDate": "2026-05-28",
-      "biddingDate": "2026-05-28",
-      "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
-      "status": "落札",
-      "winningContractor": "前川電気",
-      "winnerType": "ゼネコン"
-    },
-    {
       "id": "nara-city-0000002474",
       "municipality": "奈良市",
       "title": "平城中学校他３校給水設備等改修に伴う設計業務委託",
@@ -566,12 +532,12 @@
       "municipality": "安堵町",
       "title": "【条件付き一般競争入札の結果】安堵町立安堵小中学校屋内運動場空調設備設置工事",
       "type": "建築",
-      "announcementDate": "2026-06-03",
+      "announcementDate": "2026-06-04",
+      "biddingDate": "2026-05-27",
       "link": "https://www.town.ando.nara.jp/0000003986.html",
       "status": "落札",
       "pdfUrl": "https://www.town.ando.nara.jp./cmsfiles/contents/0000003/3986/kaisatsu.pdf",
-      "winningContractor": "𠮷 村建設株式会社",
-      "biddingDate": "2026-05-27"
+      "winningContractor": "𠮷 村建設株式会社"
     },
     {
       "id": "ando-supplemental-0000003967",
@@ -856,7 +822,7 @@
       "biddingDate": "2025-07-22",
       "link": "https://www.town.oyodo.lg.jp/./cmsfiles/contents/0000001/1718/so070722.pdf",
       "status": "落札",
-      "winningContractor": "㈱シティ・プランニング 関西支店"
+      "winningContractor": "㈱シティ・プランニング 関西支店 1１． 業 務 種 別 建設コンサルタント（「都市計画及び地方計画部門」） ㈱シティ・プランニング 関西支店 3,200,000 3,900,000"
     }
   ],
   "奈良県": [
@@ -1204,6 +1170,16 @@
     }
   ],
   "葛城市": [
+    {
+      "id": "katsuragi-epi-17394e86",
+      "municipality": "葛城市",
+      "title": "葛城市立小学校及び中学校特定建築物定期調査業務委託",
+      "type": "コンサル",
+      "announcementDate": "2026-06-04",
+      "biddingDate": "2026-06-25",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200720",
+      "status": "受付中"
+    },
     {
       "id": "katsuragi-epi-cc0d9ac5",
       "municipality": "葛城市",
@@ -1778,10 +1754,10 @@
       "title": "五條市立公民館等防火対象物定期点検業務委託",
       "type": "委託",
       "announcementDate": "2026-04-15",
+      "biddingDate": "2026-04-15",
       "link": "https://www.city.gojo.lg.jp/jigyousha/nyuusatsu/8/R8/19326.html",
       "pdfUrl": "https://www.city.gojo.lg.jp/material/files/group/40/kkr8boukataisyobutu.pdf",
-      "status": "不調",
-      "biddingDate": "2026-04-15"
+      "status": "不調"
     },
     {
       "id": "gojo-85f3cc47",
@@ -1789,11 +1765,11 @@
       "title": "五條市立公民館等消防用設備等法定点検業務委託",
       "type": "委託",
       "announcementDate": "2026-04-15",
+      "biddingDate": "2026-04-15",
       "link": "https://www.city.gojo.lg.jp/jigyousha/nyuusatsu/8/R8/19327.html",
       "pdfUrl": "https://www.city.gojo.lg.jp/material/files/group/40/kkr8hotetenken.pdf",
       "status": "落札",
-      "winningContractor": "株式会社カシバ消防設備",
-      "biddingDate": "2026-04-15"
+      "winningContractor": "株式会社カシバ消防設備"
     },
     {
       "id": "gojo-5fb0bb1b",
@@ -1962,7 +1938,7 @@
       "biddingDate": "2026-06-03",
       "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/7/12117.html",
       "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5082000530.pdf",
-      "status": "受付中",
+      "status": "受付終了",
       "winnerType": "ゼネコン"
     },
     {
@@ -1974,7 +1950,7 @@
       "biddingDate": "2026-06-03",
       "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/7/12117.html",
       "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5082000524.pdf",
-      "status": "受付中",
+      "status": "受付終了",
       "winnerType": "ゼネコン"
     },
     {
@@ -1986,7 +1962,7 @@
       "biddingDate": "2026-06-03",
       "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/7/12149.html",
       "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5083000653.pdf",
-      "status": "受付中",
+      "status": "受付終了",
       "winnerType": "設計事務所"
     },
     {
@@ -2466,10 +2442,10 @@
       "title": "大和高田市保健センター受電設備改修工事",
       "type": "建築",
       "announcementDate": "2025-06-01",
+      "biddingDate": "2025-06-13",
       "link": "https://www.city.yamatotakada.nara.jp/soshikikarasagasu/somuka/keiyakukanri/nyusatsu_keiyaku/1/9099.html",
       "status": "落札",
-      "winningContractor": "鳥谷電気商会",
-      "biddingDate": "2025-06-13"
+      "winningContractor": "鳥谷電気商会"
     }
   ],
   "広陵町": [
@@ -2862,11 +2838,41 @@
   ],
   "宇陀市": [
     {
-      "id": "uda-2367f5c2e4",
+      "id": "uda-7ede7a02c3",
+      "municipality": "宇陀市",
+      "title": "【第08-A003号】旧伊那佐文化センター集会所整備事業 旧伊那佐文化センター集会所整備工事",
+      "type": "建築",
+      "announcementDate": "2026-06-04",
+      "biddingDate": "2026-06-18",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200700",
+      "status": "受付中"
+    },
+    {
+      "id": "uda-9d45cc3d35",
+      "municipality": "宇陀市",
+      "title": "【第08-B002号】宇陀市公園施設長寿命化対策支援事業 管理施設設備更新工事",
+      "type": "建築",
+      "announcementDate": "2026-06-04",
+      "biddingDate": "2026-06-18",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200700",
+      "status": "受付中"
+    },
+    {
+      "id": "uda-14d83225dc",
+      "municipality": "宇陀市",
+      "title": "【第08-C019号】市単独事業 室生地域事務所庁舎耐震診断業務",
+      "type": "コンサル",
+      "announcementDate": "2026-06-04",
+      "biddingDate": "2026-06-18",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200700",
+      "status": "受付中"
+    },
+    {
+      "id": "uda-result-2695010002",
       "municipality": "宇陀市",
       "title": "【第08-A001号】保養センター美榛苑屋上防水改修工事",
       "type": "建築",
-      "announcementDate": "2026-04-23",
+      "announcementDate": "2026-05-14",
       "biddingDate": "2026-05-14",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200700",
       "status": "落札",
