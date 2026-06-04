@@ -119,6 +119,10 @@ const PRIORITY_ARCHITECTURE_PATTERNS = [
     '安堵町総合センターひびき施設管理業務委託',
     '天理市立施設LED照明機器賃貸借（リース）業務',
     '下水道施設耐震診断・実施設計業務委託（その１）',
+    '平和地区公民館庭園・築山・多目的グラウンド等維持管理業務',
+    'かんざん園高圧機器更新業務',
+    '公共下水道昭和工業団地地区改築実施設計業務委託',
+    '郡山城跡周辺維持管理業務委託薬剤散布',
 ];
 
 function getPreviousFiscalYearStart(referenceDate = new Date()): Date {

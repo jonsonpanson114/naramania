@@ -651,6 +651,17 @@
     "status": "受付中"
   },
   {
+    "id": "yamato-koriyama-result-1",
+    "municipality": "大和郡山市",
+    "title": "公共下水道昭和工業団地地区改築実施設計業務委託（第1工区）その1、その2",
+    "type": "コンサル",
+    "announcementDate": "2026-05-27",
+    "biddingDate": "2026-05-27",
+    "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/1892.html",
+    "status": "落札",
+    "winningContractor": "日本工営都市空間 株式会社 奈良事務所"
+  },
+  {
     "id": "nara-pref-29001013060020260026",
     "municipality": "奈良県",
     "title": "県営住宅姫寺団地４号棟（５０１号室他）及び県営住宅纒向団地６号棟（２０６号室他）住戸改修工事監理業務 委（監）第８－５号",
@@ -1314,6 +1325,17 @@
     "extractionSource": "gemini"
   },
   {
+    "id": "yamato-koriyama-result-2",
+    "municipality": "大和郡山市",
+    "title": "郡山城跡周辺維持管理業務委託薬剤散布（クビアカツヤカミキリ対策含む）",
+    "type": "委託",
+    "announcementDate": "2026-04-22",
+    "biddingDate": "2026-04-22",
+    "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/1892.html",
+    "status": "落札",
+    "winningContractor": "大倉造園土木"
+  },
+  {
     "id": "gojo-epi-2501076",
     "municipality": "五條市",
     "title": "五條市立小学校トイレ改修工事",
@@ -1333,6 +1355,17 @@
     "announcementDate": "2026-04-20",
     "biddingDate": "2026-04-20",
     "link": "https://www.city.gose.nara.jp/0000001024.html",
+    "status": "受付終了"
+  },
+  {
+    "id": "yamato-koriyama-current-8",
+    "municipality": "大和郡山市",
+    "title": "平和地区公民館庭園・築山・多目的グラウンド等維持管理業務",
+    "type": "委託",
+    "announcementDate": "2026-04-17",
+    "biddingDate": "2026-05-12",
+    "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsu/R7/14909.html",
+    "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/51/R804nyusatusetumeisho.pdf",
     "status": "受付終了"
   },
   {
@@ -1700,6 +1733,15 @@
     "announcementDate": "2026-04-02",
     "biddingDate": "2026-04-28",
     "link": "https://www.town.nara-kawanishi.lg.jp/0000008784.html",
+    "status": "受付終了"
+  },
+  {
+    "id": "yamato-koriyama-current-7",
+    "municipality": "大和郡山市",
+    "title": "かんざん園高圧機器更新業務",
+    "type": "委託",
+    "announcementDate": "2026-03-30",
+    "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsu/R8/17491.html",
     "status": "受付終了"
   },
   {

@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-04T22:03:39.766Z",
+  "generatedAt": "2026-06-04T22:07:57.285Z",
   "source": "daily_scrape",
-  "keptCount": 293,
+  "keptCount": 297,
   "municipalityCount": 25,
   "oldestAnnouncementDate": "2025-04-08",
   "latestAnnouncementDate": "2026-06-04",
@@ -60,8 +60,8 @@
       },
       {
         "municipality": "大和郡山市",
-        "count": 8,
-        "changeFromPrevious": -2
+        "count": 12,
+        "changeFromPrevious": 4
       },
       {
         "municipality": "田原本町",

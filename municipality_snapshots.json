@@ -49,7 +49,18 @@
       "biddingDate": "2026-06-17",
       "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/9328.html",
       "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk260617_06k.pdf",
-      "status": "受付中"
+      "status": "受付中",
+      "estimatedPrice": "¥85,998,000円",
+      "designFirm": "中和設計",
+      "constructionPeriod": "着工の日から 令和9年1月22日まで",
+      "description": "市立郡山南小学校廊下改修工事(2期)",
+      "tags": [
+        "改修",
+        "建築",
+        "工事"
+      ],
+      "isIntelligenceExtracted": true,
+      "extractionSource": "gemini"
     },
     {
       "id": "yamato-koriyama-current-1",
@@ -127,6 +138,48 @@
       "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsunooshirase/r7/17036.html",
       "status": "落札",
       "winningContractor": "株式会社スポーツテクノ和広 大阪支店"
+    },
+    {
+      "id": "yamato-koriyama-current-7",
+      "municipality": "大和郡山市",
+      "title": "かんざん園高圧機器更新業務",
+      "type": "委託",
+      "announcementDate": "2026-03-30",
+      "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsu/R8/17491.html",
+      "status": "受付終了"
+    },
+    {
+      "id": "yamato-koriyama-current-8",
+      "municipality": "大和郡山市",
+      "title": "平和地区公民館庭園・築山・多目的グラウンド等維持管理業務",
+      "type": "委託",
+      "announcementDate": "2026-04-17",
+      "biddingDate": "2026-05-12",
+      "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsu/R7/14909.html",
+      "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/51/R804nyusatusetumeisho.pdf",
+      "status": "受付終了"
+    },
+    {
+      "id": "yamato-koriyama-result-1",
+      "municipality": "大和郡山市",
+      "title": "公共下水道昭和工業団地地区改築実施設計業務委託（第1工区）その1、その2",
+      "type": "コンサル",
+      "announcementDate": "2026-05-27",
+      "biddingDate": "2026-05-27",
+      "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/1892.html",
+      "status": "落札",
+      "winningContractor": "日本工営都市空間 株式会社 奈良事務所"
+    },
+    {
+      "id": "yamato-koriyama-result-2",
+      "municipality": "大和郡山市",
+      "title": "郡山城跡周辺維持管理業務委託薬剤散布（クビアカツヤカミキリ対策含む）",
+      "type": "委託",
+      "announcementDate": "2026-04-22",
+      "biddingDate": "2026-04-22",
+      "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/1892.html",
+      "status": "落札",
+      "winningContractor": "大倉造園土木"
     }
   ],
   "御所市": [
