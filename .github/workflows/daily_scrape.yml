@@ -7,6 +7,10 @@ on:
     - cron: '0 6 * * 1-5' # 平日日本時間15:00 (UTC 6:00)
   workflow_dispatch: # 手動実行用
 
+concurrency:
+  group: naramania-data-publish
+  cancel-in-progress: false
+
 permissions:
   contents: write
 
