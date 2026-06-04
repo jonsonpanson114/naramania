@@ -16,6 +16,14 @@ const ANDO_SUPPLEMENTAL_ITEMS: Array<{
     pdfUrl?: string;
 }> = [
     {
+        title: '安堵こども園南館外壁改修、トイレ乾式化及び洋式化工事に伴う設計業務委託',
+        link: 'https://www.town.ando.nara.jp/cmsfiles/contents/0000003/3837/R7mitoosikekka-9.pdf',
+        announcementDate: '2025-08-28',
+        biddingDate: '2025-08-28',
+        status: '落札' as const,
+        winningContractor: '株式会社 岩崎建築設計事務所',
+    },
+    {
         title: '〖再度公告〗条件付き一般競争入札の実施について（安堵こども園南館外壁改修、トイレ乾式化および洋式化改修工事）',
         link: 'https://www.town.ando.nara.jp/0000003967.html',
         announcementDate: '2026-05-19',
