@@ -30,9 +30,9 @@ function parseJapaneseDate(text: string): string {
 }
 
 function classifyType(koushu: string, chotatsu: string): BiddingType {
+    if (koushu.includes('設計') || koushu.includes('測量') || koushu.includes('コンサル')) return 'コンサル';
     if (chotatsu === '01') return '委託'; // 業務委託カテゴリ
     if (koushu.includes('建築')) return '建築';
-    if (koushu.includes('設計') || koushu.includes('測量') || koushu.includes('コンサル')) return 'コンサル';
     return '建築';
 }
 
