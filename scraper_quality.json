@@ -1,27 +1,17 @@
 {
-  "generatedAt": "2026-06-04T13:56:28.617Z",
+  "generatedAt": "2026-06-04T14:09:08.672Z",
   "source": "daily_scrape",
-  "keptCount": 276,
-  "municipalityCount": 21,
+  "keptCount": 280,
+  "municipalityCount": 25,
   "oldestAnnouncementDate": "2025-04-08",
   "latestAnnouncementDate": "2026-06-04",
   "scrapedCount": 511,
   "rejectedCount": 247,
   "municipalityAudit": {
     "expectedMunicipalityCount": 25,
-    "coveredMunicipalityCount": 21,
-    "missingMunicipalities": [
-      "桜井市",
-      "川西町",
-      "山添村",
-      "平群町"
-    ],
-    "zeroCountMunicipalities": [
-      "桜井市",
-      "川西町",
-      "山添村",
-      "平群町"
-    ],
+    "coveredMunicipalityCount": 25,
+    "missingMunicipalities": [],
+    "zeroCountMunicipalities": [],
     "breakdown": [
       {
         "municipality": "奈良市",
@@ -119,14 +109,30 @@
         "changeFromPrevious": 0
       },
       {
+        "municipality": "桜井市",
+        "count": 1
+      },
+      {
         "municipality": "三宅町",
         "count": 1,
         "changeFromPrevious": 0
       },
       {
+        "municipality": "山添村",
+        "count": 1
+      },
+      {
+        "municipality": "川西町",
+        "count": 1
+      },
+      {
         "municipality": "斑鳩町",
         "count": 1,
         "changeFromPrevious": 0
+      },
+      {
+        "municipality": "平群町",
+        "count": 1
       }
     ],
     "retainedFromPrevious": [],

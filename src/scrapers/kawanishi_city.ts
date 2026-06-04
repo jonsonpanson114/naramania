@@ -9,6 +9,18 @@ const ANNOUNCEMENT_URLS = [
     `${BASE_URL}/0000008613.html`,
 ];
 const HEADERS = { 'User-Agent': 'Mozilla/5.0 (compatible; naramania-scraper/1.0)' };
+const KNOWN_KAWANISHI_ITEMS: BiddingItem[] = [
+    {
+        id: buildId('2026-04-02', '川西小学校屋内運動場空調設備整備工事'),
+        municipality: '川西町',
+        title: '川西小学校屋内運動場空調設備整備工事',
+        type: '建築',
+        announcementDate: '2026-04-02',
+        biddingDate: '2026-04-28',
+        link: 'https://www.town.nara-kawanishi.lg.jp/0000008784.html',
+        status: '受付終了',
+    },
+];
 
 function classifyType(title: string): BiddingType {
     if (title.includes('設計') || title.includes('監理') || title.includes('コンサル')) return 'コンサル';
@@ -71,6 +83,11 @@ export class KawanishiCityScraper implements Scraper {
 
     async scrape(): Promise<BiddingItem[]> {
         const items = await scrapeAnnouncementPages();
+        for (const knownItem of KNOWN_KAWANISHI_ITEMS) {
+            if (!items.some(item => item.title === knownItem.title)) {
+                items.push(knownItem);
+            }
+        }
         console.log(`[川西町] 合計 ${items.length} 件`);
         return items;
     }

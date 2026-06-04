@@ -11,6 +11,35 @@ const HEGURI_SUPPLEMENTAL_URLS = [
     'https://www.town.heguri.nara.jp/life/2/14/44/',
     'https://www.town.heguri.nara.jp/soshiki/14/16450.html',
 ];
+const YAMAZOE_NEWS_URLS = [
+    'https://www.vill.yamazoe.nara.jp/life/news/28346',
+    'https://www.vill.yamazoe.nara.jp/life/news/25298',
+];
+const KNOWN_YAMAZOE_ITEMS: BiddingItem[] = [
+    {
+        id: '山添村-山添村立山添小中学校-屋内運動場空調等工事',
+        municipality: '山添村',
+        title: '山添村立山添小中学校 屋内運動場空調等工事',
+        type: '建築',
+        announcementDate: '2026-04-13',
+        biddingDate: '2026-05-14',
+        link: 'https://www.vill.yamazoe.nara.jp/life/news/28346',
+        status: '落札',
+        winningContractor: '藤本建設株式会社',
+        winnerType: 'ゼネコン',
+    },
+];
+const KNOWN_HEGURI_ITEMS: BiddingItem[] = [
+    {
+        id: '平群町-平群町若井集会所建築工事設計業務',
+        municipality: '平群町',
+        title: '平群町若井集会所建築工事設計業務',
+        type: 'コンサル',
+        announcementDate: '2025-12-10',
+        link: 'https://www.town.heguri.nara.jp/soshiki/5/16618.html',
+        status: '受付終了',
+    },
+];
 
 function parseJapaneseDate(text: string): string {
     const reiwa = text.match(/令和\s*(\d+)\s*年\s*(\d+)\s*月\s*(\d+)\s*日/);
@@ -31,6 +60,25 @@ function parseUpdatedDate(text: string): string {
         return `${updatedMatch[1]}-${updatedMatch[2].padStart(2, '0')}-${updatedMatch[3].padStart(2, '0')}`;
     }
     return parseJapaneseDate(text);
+}
+
+function classifyTownType(title: string, bodyText = ''): '建築' | 'コンサル' | '委託' {
+    const text = `${title} ${bodyText}`;
+    if (text.includes('設計') || text.includes('監理') || text.includes('コンサル')) return 'コンサル';
+    if (text.includes('委託') || text.includes('業務')) return '委託';
+    return '建築';
+}
+
+function parseYamazoeWinningContractor(text: string): string | undefined {
+    const normalized = text.replace(/\s+/g, ' ');
+    const match = normalized.match(/落札者\s*([^　 ](?:.*?))(?:\s+奈良県|\s+落札金額|\s+履行期限)/u);
+    return match?.[1]?.trim() || undefined;
+}
+
+function parseYamazoeBiddingDate(text: string): string | undefined {
+    const normalized = text.replace(/\s+/g, ' ');
+    const match = normalized.match(/令和\s*\d+\s*年\s*\d+\s*月\s*\d+\s*日(?=に、条件付一般競争入札を執行)/u);
+    return match ? parseJapaneseDate(match[0]) : undefined;
 }
 
 async function scrapeSmallTown(url: string, municipality: string): Promise<BiddingItem[]> {
@@ -180,12 +228,56 @@ async function scrapeHeguriSupplementalPages(): Promise<BiddingItem[]> {
     return items;
 }
 
+async function scrapeYamazoeVillage(): Promise<BiddingItem[]> {
+    const items: BiddingItem[] = [];
+
+    for (const url of YAMAZOE_NEWS_URLS) {
+        try {
+            const res = await axios.get(url, {
+                headers: { 'User-Agent': 'Mozilla/5.0' },
+                timeout: 15000,
+            });
+            const $ = cheerio.load(res.data);
+            const title = $('h1').first().text().replace(/\s+/g, ' ').trim();
+            const bodyText = $('body').text().replace(/\s+/g, ' ').trim();
+            if (!title || !shouldKeepItem(title, bodyText)) continue;
+
+            const announcementDate = parseUpdatedDate(bodyText) || new Date().toISOString().split('T')[0];
+            const biddingDate = parseYamazoeBiddingDate(bodyText);
+            const isResult = /落札結果|落札者|結果について/u.test(bodyText) || /結果について/u.test(title);
+
+            items.push({
+                id: `山添村-${title}`.normalize('NFKC').replace(/[^\w\u3040-\u30ff\u3400-\u9fff-]+/g, '-').slice(0, 120),
+                municipality: '山添村',
+                title: title.replace(/における一般競争入札の結果について/u, '').replace(/の一般競争入札について/u, '').trim(),
+                type: classifyTownType(title, bodyText),
+                announcementDate,
+                biddingDate,
+                link: url,
+                status: isResult ? '落札' : '受付中',
+                winningContractor: isResult ? parseYamazoeWinningContractor(bodyText) : undefined,
+                winnerType: isResult ? 'ゼネコン' : undefined,
+            });
+        } catch (error) {
+            console.warn('[山添村] ページ取得エラー:', error instanceof Error ? error.message : String(error));
+        }
+    }
+
+    return items;
+}
+
 export class YamazomuraScraper implements Scraper {
     municipality: '山添村' = '山添村' as const;
 
     async scrape(): Promise<BiddingItem[]> {
-        console.log('[山添村] 入札情報ページなし（オンライン公開なし）');
-        return [];
+        const items = await scrapeYamazoeVillage();
+        for (const knownItem of KNOWN_YAMAZOE_ITEMS) {
+            if (!items.some(item => item.title === knownItem.title)) {
+                items.push(knownItem);
+            }
+        }
+        console.log(`[山添村] 合計 ${items.length} 件`);
+        return items;
     }
 }
 
@@ -198,6 +290,11 @@ export class HiragawaScraper implements Scraper {
         const supplementalItems = await scrapeHeguriSupplementalPages();
         for (const item of supplementalItems) {
             merged.set(item.title, item);
+        }
+        for (const knownItem of KNOWN_HEGURI_ITEMS) {
+            if (!merged.has(knownItem.title)) {
+                merged.set(knownItem.title, knownItem);
+            }
         }
         const items = Array.from(merged.values());
         console.log(`[平群町] 補助込み合計 ${items.length} 件`);

@@ -398,6 +398,15 @@
     "status": "受付中"
   },
   {
+    "id": "sakurai-2026-06-01-芝運動公園運動場等再整備基本設計業務委託",
+    "municipality": "桜井市",
+    "title": "芝運動公園運動場等再整備基本設計業務委託",
+    "type": "コンサル",
+    "announcementDate": "2026-06-01",
+    "link": "https://www.city.sakurai.lg.jp/sosiki/soumu/kanzaikeiyaku/nyuusatukeiyakukensa/notice/6596.html",
+    "status": "受付中"
+  },
+  {
     "id": "nara-pref-29005007060120260011",
     "municipality": "奈良県",
     "title": "御所浄水場電気棟改修工事（建築工事）",
@@ -1482,6 +1491,18 @@
     "extractionSource": "gemini"
   },
   {
+    "id": "山添村-山添村立山添小中学校-屋内運動場空調等工事",
+    "municipality": "山添村",
+    "title": "山添村立山添小中学校 屋内運動場空調等工事",
+    "type": "建築",
+    "announcementDate": "2026-04-13",
+    "biddingDate": "2026-05-14",
+    "link": "https://www.vill.yamazoe.nara.jp/life/news/28346",
+    "status": "落札",
+    "winningContractor": "藤本建設株式会社",
+    "winnerType": "ゼネコン"
+  },
+  {
     "id": "katsuragi-web-c9fcd298",
     "municipality": "葛城市",
     "title": "体力づくりセンター各設備整備修繕",
@@ -1595,6 +1616,16 @@
     "biddingDate": "2026-05-26",
     "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/7/8272.html",
     "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5082000026.zip",
+    "status": "受付終了"
+  },
+  {
+    "id": "kawanishi-2026-04-02-川西小学校屋内運動場空調設備整備工事",
+    "municipality": "川西町",
+    "title": "川西小学校屋内運動場空調設備整備工事",
+    "type": "建築",
+    "announcementDate": "2026-04-02",
+    "biddingDate": "2026-04-28",
+    "link": "https://www.town.nara-kawanishi.lg.jp/0000008784.html",
     "status": "受付終了"
   },
   {
@@ -1915,6 +1946,15 @@
     "status": "落札",
     "winningContractor": "逢坂建設",
     "estimatedPrice": "3,188,000円"
+  },
+  {
+    "id": "平群町-平群町若井集会所建築工事設計業務",
+    "municipality": "平群町",
+    "title": "平群町若井集会所建築工事設計業務",
+    "type": "コンサル",
+    "announcementDate": "2025-12-10",
+    "link": "https://www.town.heguri.nara.jp/soshiki/5/16618.html",
+    "status": "受付終了"
   },
   {
     "id": "ikoma-result-2501010106",
