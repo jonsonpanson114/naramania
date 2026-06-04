@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-04T14:30:52.071Z",
+  "generatedAt": "2026-06-04T14:40:07.527Z",
   "source": "daily_scrape",
-  "keptCount": 287,
+  "keptCount": 288,
   "municipalityCount": 25,
   "oldestAnnouncementDate": "2025-04-08",
   "latestAnnouncementDate": "2026-06-04",
@@ -85,8 +85,8 @@
       },
       {
         "municipality": "安堵町",
-        "count": 2,
-        "changeFromPrevious": 0
+        "count": 3,
+        "changeFromPrevious": 1
       },
       {
         "municipality": "広陵町",

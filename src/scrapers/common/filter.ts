@@ -116,6 +116,7 @@ const PRIORITY_ARCHITECTURE_PATTERNS = [
     '屋内運動場空調等工事',
     '芝運動公園運動場等再整備基本設計業務',
     '立地適正化計画改定業務',
+    '安堵町総合センターひびき施設管理業務委託',
 ];
 
 function getPreviousFiscalYearStart(referenceDate = new Date()): Date {

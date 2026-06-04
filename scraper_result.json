@@ -1303,7 +1303,7 @@
     "link": "https://www.town.ando.nara.jp/0000003986.html",
     "status": "落札",
     "pdfUrl": "https://www.town.ando.nara.jp./cmsfiles/contents/0000003/3986/kaisatsu.pdf",
-    "winningContractor": "吉村建設株式会社",
+    "winningContractor": "𠮷 村建設株式会社",
     "description": "安堵町立安堵小中学校屋内運動場空調設備設置工事",
     "tags": [
       "空調",
@@ -1780,6 +1780,15 @@
     "status": "落札",
     "winningContractor": "(株)松吉組",
     "winnerType": "ゼネコン"
+  },
+  {
+    "id": "ando-supplemental-0000003776",
+    "municipality": "安堵町",
+    "title": "安堵町総合センターひびき施設管理業務委託",
+    "type": "委託",
+    "announcementDate": "2026-02-24",
+    "link": "https://www.town.ando.nara.jp/0000003776.html",
+    "status": "受付終了"
   },
   {
     "id": "高取町-2026-01-30-町営住宅空家修繕工事監理業務",

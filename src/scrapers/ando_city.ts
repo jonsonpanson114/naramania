@@ -8,6 +8,21 @@ const RSS_URL = 'https://www.town.ando.nara.jp/rss/rss.xml';
 const CATEGORY_URL = 'https://www.town.ando.nara.jp/category/4-1-0-0-0-0-0-0-0-0.html';
 const ANDO_SUPPLEMENTAL_ITEMS = [
     {
+        title: '安堵町立安堵小中学校屋内運動場空調設備設置工事',
+        link: 'https://www.town.ando.nara.jp/0000003986.html',
+        announcementDate: '2026-04-22',
+        biddingDate: '2026-05-27',
+        status: '落札' as const,
+        winningContractor: '吉村建設株式会社',
+        pdfUrl: 'https://www.town.ando.nara.jp./cmsfiles/contents/0000003/3986/kaisatsu.pdf',
+    },
+    {
+        title: '安堵町総合センターひびき施設管理業務委託',
+        link: 'https://www.town.ando.nara.jp/0000003776.html',
+        announcementDate: '2026-02-24',
+        status: '受付終了' as const,
+    },
+    {
         title: '〖再度公告〗条件付き一般競争入札の実施について（安堵こども園南館外壁改修、トイレ乾式化および洋式化改修工事）',
         link: 'https://www.town.ando.nara.jp/0000003967.html',
         announcementDate: '2026-05-19',
@@ -41,7 +56,7 @@ function classifyType(title: string): BiddingType {
         return 'コンサル';
     }
     if (title.includes('業務委託') || title.includes('委託')) {
-        return 'その他';
+        return '委託';
     }
     return '建築';
 }
@@ -263,6 +278,8 @@ async function scrapeAndoCity(): Promise<BiddingItem[]> {
                 biddingDate: supplemental.biddingDate,
                 link: supplemental.link,
                 status: supplemental.status,
+                winningContractor: supplemental.winningContractor,
+                pdfUrl: supplemental.pdfUrl,
             });
         }
     }
