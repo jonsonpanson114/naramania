@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-06-04T22:51:39.947Z",
-  "source": "daily_scrape",
-  "scrapedCount": 2,
-  "keptCount": 208,
+  "generatedAt": "2026-06-04T23:00:15.385Z",
+  "source": "manual_update",
+  "scrapedCount": 209,
+  "keptCount": 209,
   "rejectedCount": 0,
   "oldestAnnouncementDate": "2025-04-08",
   "latestAnnouncementDate": "2026-06-04",
@@ -21,12 +21,12 @@
       {
         "municipality": "葛城市",
         "count": 26,
-        "changeFromPrevious": -5
+        "changeFromPrevious": 0
       },
       {
         "municipality": "橿原市",
         "count": 24,
-        "changeFromPrevious": -4
+        "changeFromPrevious": 0
       },
       {
         "municipality": "宇陀市",
@@ -45,8 +45,8 @@
       },
       {
         "municipality": "五條市",
-        "count": 13,
-        "changeFromPrevious": -2
+        "count": 14,
+        "changeFromPrevious": 1
       },
       {
         "municipality": "奈良市",
@@ -66,7 +66,7 @@
       {
         "municipality": "大和郡山市",
         "count": 4,
-        "changeFromPrevious": -2
+        "changeFromPrevious": 0
       },
       {
         "municipality": "田原本町",
@@ -86,7 +86,7 @@
       {
         "municipality": "安堵町",
         "count": 2,
-        "changeFromPrevious": 1
+        "changeFromPrevious": 0
       },
       {
         "municipality": "広陵町",
@@ -121,12 +121,12 @@
       {
         "municipality": "三郷町",
         "count": 1,
-        "changeFromPrevious": -1
+        "changeFromPrevious": 0
       },
       {
         "municipality": "三宅町",
         "count": 1,
-        "changeFromPrevious": -1
+        "changeFromPrevious": 0
       },
       {
         "municipality": "山添村",
@@ -150,7 +150,7 @@
     "sampleTitles": []
   },
   "intelligence": {
-    "itemsWithPdf": 41,
+    "itemsWithPdf": 42,
     "itemsWithDescription": 30,
     "intelligenceExtractedCount": 30,
     "geminiExtractedCount": 30,

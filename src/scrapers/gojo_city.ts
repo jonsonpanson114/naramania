@@ -24,6 +24,16 @@ const GOJO_RESULT_OVERRIDES: Record<string, Partial<Pick<BiddingItem, 'biddingDa
         biddingDate: '2026-04-15',
     },
 };
+const KNOWN_GOJO_ITEMS: Array<Pick<BiddingItem, 'title' | 'announcementDate' | 'biddingDate' | 'link' | 'pdfUrl' | 'type' | 'status'>> = [
+    {
+        title: '五條市大塔ふれあい交流館改修工事監理業務',
+        announcementDate: '2026-04-01',
+        link: 'https://www.city.gojo.lg.jp/jigyousha/nyuusatsu/2/index.html',
+        pdfUrl: 'https://www.city.gojo.lg.jp/material/files/group/4/r843.pdf',
+        type: 'コンサル',
+        status: '受付中',
+    },
+];
 
 const ARCHITECTURE_CONTEXT = [
     '建築', '建築設備', '公民館', '施設', '庁舎', '学校', '校舎', '住宅',
@@ -480,6 +490,22 @@ export class GojoCityScraper implements Scraper {
         for (const item of await scrapeEducationPages()) {
             const key = gojoItemKey(item.title, item.biddingDate, item.link);
             items.set(key, mergeGojoItem(items.get(key), item));
+        }
+
+        for (const item of KNOWN_GOJO_ITEMS) {
+            if (!shouldKeepGojoTitle(item.title)) continue;
+            const key = gojoItemKey(item.title, item.biddingDate, item.pdfUrl || item.link);
+            items.set(key, mergeGojoItem(items.get(key), {
+                id: makeId(item.title, item.pdfUrl || item.link),
+                municipality: '五條市',
+                title: item.title,
+                type: item.type,
+                announcementDate: item.announcementDate,
+                biddingDate: item.biddingDate,
+                link: item.link,
+                pdfUrl: item.pdfUrl,
+                status: item.status,
+            }));
         }
 
         const unique = Array.from(items.values()).sort((a, b) => b.announcementDate.localeCompare(a.announcementDate));
