@@ -1,8 +1,8 @@
-import axios from 'axios';
 import * as cheerio from 'cheerio';
 import { BiddingItem, Scraper, Municipality } from '../types/bidding';
 import { shouldKeepItem } from './common/filter';
 import { extractPdfText } from './common/pdf_text';
+import { fetchHtml } from './common/html_fetch';
 
 // 平群町（heguri）
 const HEGURI_URL = 'https://www.town.heguri.nara.jp/soshiki/list7-1.html';
@@ -90,11 +90,8 @@ async function scrapeSmallTown(url: string, municipality: string): Promise<Biddi
     }
 
     try {
-        const res = await axios.get(url, {
-            headers: { 'User-Agent': 'Mozilla/5.0' },
-            timeout: 15000,
-        });
-        const $ = cheerio.load(res.data);
+        const html = await fetchHtml(url, 15000);
+        const $ = cheerio.load(html);
 
         // 平群町：入札情報ページのリンクのみを対象とする
         // ナビゲーション・インフォリンクなどを除外する厳格なフィルタ適用
@@ -134,15 +131,12 @@ async function scrapeSmallTown(url: string, municipality: string): Promise<Biddi
             let biddingDate = '';
 
             try {
-                const detailRes = await axios.get(linkUrl, {
-                    headers: { 'User-Agent': 'Mozilla/5.0' },
-                    timeout: 15000,
-                });
-                const $$ = cheerio.load(detailRes.data);
-                announcementDate = parseUpdatedDate($$('body').text());
+                const detailHtml = await fetchHtml(linkUrl, 15000);
+                const $ = cheerio.load(detailHtml);
+                announcementDate = parseUpdatedDate($('body').text());
 
-                const pdfHref = $$('a').toArray()
-                    .map(a => $$(a).attr('href') || '')
+                const pdfHref = $('a').toArray()
+                    .map(a => $(a).attr('href') || '')
                     .find(href => /\.pdf/i.test(href));
                 if (pdfHref) {
                     const pdfUrl = pdfHref.startsWith('http') ? pdfHref : `https://www.town.heguri.nara.jp${pdfHref}`;
@@ -183,11 +177,8 @@ async function scrapeHeguriSupplementalPages(): Promise<BiddingItem[]> {
 
     for (const url of HEGURI_SUPPLEMENTAL_URLS) {
         try {
-            const res = await axios.get(url, {
-                headers: { 'User-Agent': 'Mozilla/5.0' },
-                timeout: 15000,
-            });
-            const $ = cheerio.load(res.data);
+            const html = await fetchHtml(url, 15000);
+        const $ = cheerio.load(html);
 
             const titleCandidates = [
                 $('h1').first().text(),
@@ -233,11 +224,8 @@ async function scrapeYamazoeVillage(): Promise<BiddingItem[]> {
 
     for (const url of YAMAZOE_NEWS_URLS) {
         try {
-            const res = await axios.get(url, {
-                headers: { 'User-Agent': 'Mozilla/5.0' },
-                timeout: 15000,
-            });
-            const $ = cheerio.load(res.data);
+            const html = await fetchHtml(url, 15000);
+        const $ = cheerio.load(html);
             const title = $('h1').first().text().replace(/\s+/g, ' ').trim();
             const bodyText = $('body').text().replace(/\s+/g, ' ').trim();
             if (!title || !shouldKeepItem(title, bodyText)) continue;

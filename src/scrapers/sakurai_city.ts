@@ -1,8 +1,8 @@
-import axios from 'axios';
 import * as cheerio from 'cheerio';
 import { BiddingItem, Scraper, BiddingType } from '../types/bidding';
 import { shouldKeepItem } from './common/filter';
 import { parseJapaneseDateToIso } from './common/pdf_text';
+import { fetchHtml } from './common/html_fetch';
 
 const ANNOUNCE_URL = 'https://www.city.sakurai.lg.jp/sosiki/soumu/kanzaikeiyaku/nyuusatukeiyakukensa/notice/6596.html';
 const SUPPLEMENTAL_URLS = [
@@ -70,11 +70,8 @@ async function scrapeSupplementalPages(): Promise<BiddingItem[]> {
 
     for (const url of SUPPLEMENTAL_URLS) {
         try {
-            const res = await axios.get(url, {
-                headers: { 'User-Agent': 'Mozilla/5.0' },
-                timeout: 20000,
-            });
-            const $ = cheerio.load(res.data);
+            const html = await fetchHtml(url, 20000);
+            const $ = cheerio.load(html);
             const title = $('h1').first().text().replace(/\s+/g, ' ').trim();
             const bodyText = $('body').text().replace(/\s+/g, ' ').trim();
             if (!title || !shouldKeepItem(title, bodyText)) continue;
@@ -108,11 +105,8 @@ export class SakuraiCityScraper implements Scraper {
         const items: BiddingItem[] = [];
 
         try {
-            const res = await axios.get(ANNOUNCE_URL, {
-                headers: { 'User-Agent': 'Mozilla/5.0' },
-                timeout: 20000,
-            });
-            const $ = cheerio.load(res.data);
+            const html = await fetchHtml(ANNOUNCE_URL, 20000);
+            const $ = cheerio.load(html);
             const pageDate = parseDate($.text());
             const currentSectionHeading = $('h3').first().text().trim();
             const annoDate = parseDate(currentSectionHeading) || pageDate;
