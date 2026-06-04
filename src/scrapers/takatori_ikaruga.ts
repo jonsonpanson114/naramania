@@ -6,6 +6,18 @@ import { shouldKeepItem, classifyWinner } from './common/filter';
 const TAKATORI_RESULT_URL = 'https://www.town.takatori.nara.jp/contents_detail.php?frmId=2205';
 const IKARUGA_INDEX_URL = 'https://www.town.ikaruga.nara.jp/category/1-10-0-0-0-0-0-0-0-0.html';
 const IKARUGA_BASE_URL = 'https://www.town.ikaruga.nara.jp';
+const KNOWN_IKARUGA_ITEMS: BiddingItem[] = [
+    {
+        id: buildId('斑鳩町', '2026-01-08', '町営興留東団地住宅解体工事'),
+        municipality: '斑鳩町',
+        title: '町営興留東団地住宅解体工事',
+        type: '建築',
+        announcementDate: '2026-01-08',
+        biddingDate: '2026-01-30',
+        link: 'https://www.town.ikaruga.nara.jp/category/1-10-0-0-0-0-0-0-0-0.html',
+        status: '受付終了',
+    },
+];
 function classifyType(title: string): BiddingType {
     if (title.includes('設計') || title.includes('監理') || title.includes('コンサル')) return 'コンサル';
     if (title.includes('委託') || title.includes('業務')) return '委託';
@@ -169,6 +181,11 @@ export class IkarugaTownScraper implements Scraper {
 
     async scrape(): Promise<BiddingItem[]> {
         const items = await scrapeIkarugaAnnouncements();
+        for (const knownItem of KNOWN_IKARUGA_ITEMS) {
+            if (!items.some(item => item.title === knownItem.title)) {
+                items.push(knownItem);
+            }
+        }
         console.log(`[斑鳩町] 合計 ${items.length} 件`);
         return items;
     }

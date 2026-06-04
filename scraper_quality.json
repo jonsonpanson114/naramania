@@ -1,21 +1,15 @@
 {
-  "generatedAt": "2026-06-04T22:25:14.175Z",
+  "generatedAt": "2026-06-04T22:33:14.984Z",
   "source": "manual_scope_reconcile",
-  "keptCount": 222,
-  "municipalityCount": 23,
+  "keptCount": 228,
+  "municipalityCount": 25,
   "oldestAnnouncementDate": "2025-04-08",
   "latestAnnouncementDate": "2026-06-04",
   "municipalityAudit": {
     "expectedMunicipalityCount": 25,
-    "coveredMunicipalityCount": 23,
-    "missingMunicipalities": [
-      "川西町",
-      "斑鳩町"
-    ],
-    "zeroCountMunicipalities": [
-      "川西町",
-      "斑鳩町"
-    ],
+    "coveredMunicipalityCount": 25,
+    "missingMunicipalities": [],
+    "zeroCountMunicipalities": [],
     "breakdown": [
       {
         "municipality": "葛城市",
@@ -56,6 +50,10 @@
       {
         "municipality": "香芝市",
         "count": 6
+      },
+      {
+        "municipality": "川西町",
+        "count": 5
       },
       {
         "municipality": "田原本町",
@@ -107,6 +105,10 @@
       },
       {
         "municipality": "山添村",
+        "count": 1
+      },
+      {
+        "municipality": "斑鳩町",
         "count": 1
       }
     ]

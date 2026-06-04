@@ -861,7 +861,18 @@
       "winnerType": "設計事務所"
     }
   ],
-  "斑鳩町": [],
+  "斑鳩町": [
+    {
+      "id": "斑鳩町-2026-01-08-町営興留東団地住宅解体工事",
+      "municipality": "斑鳩町",
+      "title": "町営興留東団地住宅解体工事",
+      "type": "建築",
+      "announcementDate": "2026-01-08",
+      "biddingDate": "2026-01-30",
+      "link": "https://www.town.ikaruga.nara.jp/category/1-10-0-0-0-0-0-0-0-0.html",
+      "status": "受付終了"
+    }
+  ],
   "葛城市": [
     {
       "id": "katsuragi-epi-17394e86",
@@ -2508,7 +2519,55 @@
       "status": "受付中"
     }
   ],
-  "川西町": [],
+  "川西町": [
+    {
+      "id": "kawanishi-2026-04-01-ふれあいセンター改修工事",
+      "municipality": "川西町",
+      "title": "ふれあいセンター改修工事",
+      "type": "建築",
+      "announcementDate": "2026-04-01",
+      "link": "https://www.town.nara-kawanishi.lg.jp/0000008785.html",
+      "status": "受付終了"
+    },
+    {
+      "id": "kawanishi-2026-04-01-式下中学校体育館屋根-外壁その他改修工事設計業務",
+      "municipality": "川西町",
+      "title": "式下中学校体育館屋根・外壁その他改修工事設計業務",
+      "type": "コンサル",
+      "announcementDate": "2026-04-01",
+      "biddingDate": "2026-06-26",
+      "link": "https://www.town.nara-kawanishi.lg.jp/cmsfiles/contents/0000008/8733/2406.pdf",
+      "status": "落札",
+      "winningContractor": "株式会社岩崎建築設計事務所"
+    },
+    {
+      "id": "kawanishi-2026-04-01-川西文化会館トイレ改修工事",
+      "municipality": "川西町",
+      "title": "川西文化会館トイレ改修工事",
+      "type": "建築",
+      "announcementDate": "2026-04-01",
+      "link": "https://www.town.nara-kawanishi.lg.jp/0000008785.html",
+      "status": "受付終了"
+    },
+    {
+      "id": "kawanishi-2026-04-01-中央体育館修繕改修工事",
+      "municipality": "川西町",
+      "title": "中央体育館修繕改修工事",
+      "type": "建築",
+      "announcementDate": "2026-04-01",
+      "link": "https://www.town.nara-kawanishi.lg.jp/0000008785.html",
+      "status": "受付終了"
+    },
+    {
+      "id": "kawanishi-2026-04-01-梅戸体育館屋根改修工事",
+      "municipality": "川西町",
+      "title": "梅戸体育館屋根改修工事",
+      "type": "建築",
+      "announcementDate": "2026-04-01",
+      "link": "https://www.town.nara-kawanishi.lg.jp/0000008785.html",
+      "status": "受付終了"
+    }
+  ],
   "山添村": [
     {
       "id": "山添村-山添村立山添小中学校-屋内運動場空調等工事",
