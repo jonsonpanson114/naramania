@@ -31,6 +31,15 @@ const KNOWN_YAMAZOE_ITEMS: BiddingItem[] = [
 ];
 const KNOWN_HEGURI_ITEMS: BiddingItem[] = [
     {
+        id: '平群町-平群南小学校-平群中学校屋内運動場改修工事',
+        municipality: '平群町',
+        title: '平群南小学校・平群中学校屋内運動場改修工事',
+        type: '建築',
+        announcementDate: '2025-12-22',
+        link: 'https://www.town.heguri.nara.jp/life/2/14/44/',
+        status: '受付終了',
+    },
+    {
         id: '平群町-平群町若井集会所建築工事設計業務',
         municipality: '平群町',
         title: '平群町若井集会所建築工事設計業務',
