@@ -717,7 +717,7 @@
     "winnerType": "ゼネコン"
   },
   {
-    "id": "yamato-koriyama-ee85746d",
+    "id": "yamato-koriyama-current-6",
     "municipality": "大和郡山市",
     "title": "市立郡山南小学校廊下改修工事（2期）",
     "type": "建築",
@@ -737,6 +737,61 @@
     ],
     "isIntelligenceExtracted": true,
     "extractionSource": "gemini"
+  },
+  {
+    "id": "yamato-koriyama-current-1",
+    "municipality": "大和郡山市",
+    "title": "【事前申請】市立片桐中学校屋内運動場等空調設置工事",
+    "type": "建築",
+    "announcementDate": "2026-05-26",
+    "biddingDate": "2026-06-17",
+    "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/9328.html",
+    "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk260617_01k.pdf",
+    "status": "受付中"
+  },
+  {
+    "id": "yamato-koriyama-current-2",
+    "municipality": "大和郡山市",
+    "title": "【事前申請】市立郡山中学校屋内運動場等空調設置工事",
+    "type": "建築",
+    "announcementDate": "2026-05-26",
+    "biddingDate": "2026-06-17",
+    "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/9328.html",
+    "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk260617_02k.pdf",
+    "status": "受付中"
+  },
+  {
+    "id": "yamato-koriyama-current-3",
+    "municipality": "大和郡山市",
+    "title": "【事前申請】市立郡山東中学校屋内運動場等空調設置工事",
+    "type": "建築",
+    "announcementDate": "2026-05-26",
+    "biddingDate": "2026-06-17",
+    "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/9328.html",
+    "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk260617_03k.pdf",
+    "status": "受付中"
+  },
+  {
+    "id": "yamato-koriyama-current-4",
+    "municipality": "大和郡山市",
+    "title": "【事前申請】市立郡山西中学校屋内運動場等空調設置工事",
+    "type": "建築",
+    "announcementDate": "2026-05-26",
+    "biddingDate": "2026-06-17",
+    "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/9328.html",
+    "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk260617_04k.pdf",
+    "status": "受付中"
+  },
+  {
+    "id": "yamato-koriyama-current-5",
+    "municipality": "大和郡山市",
+    "title": "【事前申請】市立郡山南中学校屋内運動場等空調設置工事",
+    "type": "建築",
+    "announcementDate": "2026-05-26",
+    "biddingDate": "2026-06-17",
+    "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/9328.html",
+    "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk260617_05k.pdf",
+    "status": "受付中"
   },
   {
     "id": "nara-pref-29001013060020260025",

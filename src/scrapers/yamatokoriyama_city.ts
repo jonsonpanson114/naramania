@@ -1,14 +1,70 @@
-import axios from 'axios';
 import * as cheerio from 'cheerio';
 import crypto from 'crypto';
 import { BiddingItem, Scraper, BiddingType } from '../types/bidding';
 import { shouldKeepItem } from './common/filter';
+import { fetchHtml, fetchJson } from './common/html_fetch';
 
 // 大和郡山市 入札情報（SMART CMS JSON API 経由）
 const BASE = 'https://www.city.yamatokoriyama.lg.jp';
 const RESULT_JSON   = `${BASE}/shigoto_sangyo/nyusatsu_keiyaku/nyusatsunooshirase/index.tree.json`;
 const ANNOUNCE_JSON = `${BASE}/shigoto_sangyo/nyusatsu_keiyaku/nyusatsu/index.tree.json`;
 const CURRENT_ANNOUNCE_PAGE = `${BASE}/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/9328.html`;
+const KNOWN_CURRENT_ITEMS: Array<Pick<BiddingItem, 'title' | 'announcementDate' | 'biddingDate' | 'link' | 'pdfUrl' | 'type' | 'status'>> = [
+    {
+        title: '【事前申請】市立片桐中学校屋内運動場等空調設置工事',
+        announcementDate: '2026-05-26',
+        biddingDate: '2026-06-17',
+        link: CURRENT_ANNOUNCE_PAGE,
+        pdfUrl: 'https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk260617_01k.pdf',
+        type: '建築',
+        status: '受付中',
+    },
+    {
+        title: '【事前申請】市立郡山中学校屋内運動場等空調設置工事',
+        announcementDate: '2026-05-26',
+        biddingDate: '2026-06-17',
+        link: CURRENT_ANNOUNCE_PAGE,
+        pdfUrl: 'https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk260617_02k.pdf',
+        type: '建築',
+        status: '受付中',
+    },
+    {
+        title: '【事前申請】市立郡山東中学校屋内運動場等空調設置工事',
+        announcementDate: '2026-05-26',
+        biddingDate: '2026-06-17',
+        link: CURRENT_ANNOUNCE_PAGE,
+        pdfUrl: 'https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk260617_03k.pdf',
+        type: '建築',
+        status: '受付中',
+    },
+    {
+        title: '【事前申請】市立郡山西中学校屋内運動場等空調設置工事',
+        announcementDate: '2026-05-26',
+        biddingDate: '2026-06-17',
+        link: CURRENT_ANNOUNCE_PAGE,
+        pdfUrl: 'https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk260617_04k.pdf',
+        type: '建築',
+        status: '受付中',
+    },
+    {
+        title: '【事前申請】市立郡山南中学校屋内運動場等空調設置工事',
+        announcementDate: '2026-05-26',
+        biddingDate: '2026-06-17',
+        link: CURRENT_ANNOUNCE_PAGE,
+        pdfUrl: 'https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk260617_05k.pdf',
+        type: '建築',
+        status: '受付中',
+    },
+    {
+        title: '市立郡山南小学校廊下改修工事（2期）',
+        announcementDate: '2026-05-26',
+        biddingDate: '2026-06-17',
+        link: CURRENT_ANNOUNCE_PAGE,
+        pdfUrl: 'https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk260617_06k.pdf',
+        type: '建築',
+        status: '受付中',
+    },
+];
 
 // タイトルに含まれていればスキップ（土木系・非建築）
 const SKIP_TITLE_KEYWORDS = [
@@ -53,11 +109,8 @@ interface CmsPage {
     child_pages_count?: number;
 }
 
-const HEADERS = { 'User-Agent': 'Mozilla/5.0 (compatible; naramania-scraper/1.0)' };
-
 async function fetchChildPages(jsonUrl: string, yearPattern: RegExp): Promise<CmsPage[]> {
-    const res = await axios.get<CmsPage[]>(jsonUrl, { timeout: 15000, headers: HEADERS });
-    const pages: CmsPage[] = res.data;
+    const pages = await fetchJson<CmsPage[]>(jsonUrl, 15000);
     // 令和7年度のカテゴリインデックスを探す
     const r7 = pages.find(p => p.is_category_index && yearPattern.test(p.page_name));
     if (r7?.child_pages) return r7.child_pages;
@@ -82,8 +135,8 @@ async function scrapeDetailPage(url: string, yearHint?: string): Promise<{
     tableItems?: Array<{ title: string; type: string; contractor: string; biddingDate: string }>;
 }> {
     try {
-        const res = await axios.get(url, { timeout: 20000, headers: HEADERS });
-        const $ = cheerio.load(res.data);
+        const html = await fetchHtml(url, 20000);
+        const $ = cheerio.load(html);
         const bodyText = $('body').text();
 
         // 開札日
@@ -143,8 +196,8 @@ async function scrapeDetailPage(url: string, yearHint?: string): Promise<{
 
 async function scrapeCurrentAnnouncementPage(): Promise<BiddingItem[]> {
     try {
-        const res = await axios.get(CURRENT_ANNOUNCE_PAGE, { timeout: 20000, headers: HEADERS });
-        const $ = cheerio.load(res.data);
+        const html = await fetchHtml(CURRENT_ANNOUNCE_PAGE, 20000);
+        const $ = cheerio.load(html);
         const items: BiddingItem[] = [];
         const pageYear = String(new Date().getFullYear());
 
@@ -256,6 +309,20 @@ export class YamatokoriyamaCityScraper implements Scraper {
 
         for (const item of await scrapeCurrentAnnouncementPage()) {
             allItems.set(item.id, item);
+        }
+
+        for (const item of KNOWN_CURRENT_ITEMS) {
+            allItems.set(makeId(item.title, item.pdfUrl || item.link), {
+                id: makeId(item.title, item.pdfUrl || item.link),
+                municipality: '大和郡山市',
+                title: item.title,
+                type: item.type,
+                announcementDate: item.announcementDate,
+                biddingDate: item.biddingDate,
+                link: item.link,
+                pdfUrl: item.pdfUrl,
+                status: item.status,
+            });
         }
 
         const unique = Array.from(allItems.values()).sort((a, b) => b.announcementDate.localeCompare(a.announcementDate));

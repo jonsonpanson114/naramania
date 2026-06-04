@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-04T14:18:55.223Z",
+  "generatedAt": "2026-06-04T14:25:26.666Z",
   "source": "daily_scrape",
-  "keptCount": 281,
+  "keptCount": 286,
   "municipalityCount": 25,
   "oldestAnnouncementDate": "2025-04-08",
   "latestAnnouncementDate": "2026-06-04",
@@ -59,6 +59,11 @@
         "changeFromPrevious": 0
       },
       {
+        "municipality": "大和郡山市",
+        "count": 8,
+        "changeFromPrevious": -2
+      },
+      {
         "municipality": "田原本町",
         "count": 5,
         "changeFromPrevious": 0
@@ -72,11 +77,6 @@
         "municipality": "三郷町",
         "count": 3,
         "changeFromPrevious": 0
-      },
-      {
-        "municipality": "大和郡山市",
-        "count": 3,
-        "changeFromPrevious": -2
       },
       {
         "municipality": "大和高田市",

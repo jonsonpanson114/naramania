@@ -33,3 +33,8 @@ export async function fetchHtml(url: string, timeoutMs = 20000): Promise<string>
         }
     }
 }
+
+export async function fetchJson<T>(url: string, timeoutMs = 20000): Promise<T> {
+    const html = await fetchHtml(url, timeoutMs);
+    return JSON.parse(html) as T;
+}
