@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-04T14:40:07.527Z",
+  "generatedAt": "2026-06-04T14:47:38.872Z",
   "source": "daily_scrape",
-  "keptCount": 288,
+  "keptCount": 291,
   "municipalityCount": 25,
   "oldestAnnouncementDate": "2025-04-08",
   "latestAnnouncementDate": "2026-06-04",
@@ -113,8 +113,8 @@
       },
       {
         "municipality": "王寺町",
-        "count": 1,
-        "changeFromPrevious": 0
+        "count": 4,
+        "changeFromPrevious": 3
       },
       {
         "municipality": "三宅町",

@@ -1784,7 +1784,43 @@
   ],
   "王寺町": [
     {
-      "id": "oji-aHR0cHM6Ly93",
+      "id": "oji-supplemental-aHR0cHM6Ly93",
+      "municipality": "王寺町",
+      "title": "事後公表（（仮称）葛下テニスコート整備工事）",
+      "type": "建築",
+      "announcementDate": "2025-06-13",
+      "biddingDate": "2025-05-28",
+      "link": "https://www.town.oji.nara.jp/kakuka/somu/somu/gyomuannai/nyuusatu/nyuusatukouhyou/10767.html",
+      "pdfUrl": "https://www.town.oji.nara.jp/material/files/group/4/jigokouhyou.pdf",
+      "status": "落札",
+      "winningContractor": "㈱木村組"
+    },
+    {
+      "id": "oji-supplemental-aHR0cHM6Ly91",
+      "municipality": "王寺町",
+      "title": "久度中央広場整備工事（R7－2期工事）",
+      "type": "建築",
+      "announcementDate": "2025-09-26",
+      "biddingDate": "2025-09-16",
+      "link": "https://www.town.oji.nara.jp/kakuka/somu/somu/gyomuannai/nyuusatu/nyuusatukouhyou/10998.html",
+      "pdfUrl": "https://www.town.oji.nara.jp/material/files/group/4/jigokouhyou_20250926.pdf",
+      "status": "落札",
+      "winningContractor": "㈱春山組"
+    },
+    {
+      "id": "oji-supplemental-aHR0cHM6Ly9x",
+      "municipality": "王寺町",
+      "title": "泉の広場防災公園整備工事（第2期）",
+      "type": "建築",
+      "announcementDate": "2025-12-10",
+      "biddingDate": "2025-11-20",
+      "link": "https://www.town.oji.nara.jp/kakuka/somu/somu/gyomuannai/nyuusatu/nyuusatukouhyou/11118.html",
+      "pdfUrl": "https://www.town.oji.nara.jp/material/files/group/4/jigokyouhyou_20251209.pdf",
+      "status": "落札",
+      "winningContractor": "㈱ネクサス"
+    },
+    {
+      "id": "oji-supplemental-aHR0cHM6Ly9y",
       "municipality": "王寺町",
       "title": "事後審査型条件付一般競争入札の公表について（やわらぎ会館改修工事）",
       "type": "建築",

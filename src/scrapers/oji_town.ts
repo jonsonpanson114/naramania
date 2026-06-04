@@ -8,6 +8,42 @@ const OJI_INDEX = 'https://www.town.oji.nara.jp/kakuka/somu/somu/gyomuannai/nyuu
 const OJI_INDEX_JSON = 'https://www.town.oji.nara.jp/kakuka/somu/somu/gyomuannai/nyuusatu/nyuusatukouhyou/index.tree.json';
 const BASE_URL = 'https://www.town.oji.nara.jp';
 const HEADERS = { 'User-Agent': 'Mozilla/5.0' };
+const OJI_SUPPLEMENTAL_ITEMS = [
+    {
+        title: '事後公表（（仮称）葛下テニスコート整備工事）',
+        link: 'https://www.town.oji.nara.jp/kakuka/somu/somu/gyomuannai/nyuusatu/nyuusatukouhyou/10767.html',
+        pdfUrl: 'https://www.town.oji.nara.jp/material/files/group/4/jigokouhyou.pdf',
+        announcementDate: '2025-06-13',
+        biddingDate: '2025-05-28',
+        status: '落札' as const,
+        winningContractor: '㈱木村組',
+    },
+    {
+        title: '久度中央広場整備工事（R7－2期工事）',
+        link: 'https://www.town.oji.nara.jp/kakuka/somu/somu/gyomuannai/nyuusatu/nyuusatukouhyou/10998.html',
+        pdfUrl: 'https://www.town.oji.nara.jp/material/files/group/4/jigokouhyou_20250926.pdf',
+        announcementDate: '2025-09-26',
+        biddingDate: '2025-09-16',
+        status: '落札' as const,
+        winningContractor: '㈱春山組',
+    },
+    {
+        title: '泉の広場防災公園整備工事（第2期）',
+        link: 'https://www.town.oji.nara.jp/kakuka/somu/somu/gyomuannai/nyuusatu/nyuusatukouhyou/11118.html',
+        pdfUrl: 'https://www.town.oji.nara.jp/material/files/group/4/jigokyouhyou_20251209.pdf',
+        announcementDate: '2025-12-10',
+        biddingDate: '2025-11-20',
+        status: '落札' as const,
+        winningContractor: '㈱ネクサス',
+    },
+    {
+        title: '事後審査型条件付一般競争入札の公表について（やわらぎ会館改修工事）',
+        link: 'https://www.town.oji.nara.jp/kakuka/somu/somu/gyomuannai/nyuusatu/nyuusatukouhyou/11512.html',
+        announcementDate: '2026-05-13',
+        biddingDate: '2026-05-18',
+        status: '受付終了' as const,
+    },
+];
 
 type OjiPage = {
     page_name: string;
@@ -103,6 +139,22 @@ export class OjiTownScraper implements Scraper {
 
         } catch (error: unknown) {
             console.error('[王寺町] エラー:', error instanceof Error ? error.message : String(error));
+        }
+
+        for (const supplemental of OJI_SUPPLEMENTAL_ITEMS) {
+            if (items.some(item => item.title === supplemental.title) || !shouldKeepItem(supplemental.title)) continue;
+            items.push({
+                id: `oji-supplemental-${Buffer.from(supplemental.link).toString('base64').slice(0, 12)}`,
+                municipality: '王寺町',
+                title: supplemental.title,
+                type: classifyType(supplemental.title),
+                announcementDate: supplemental.announcementDate,
+                biddingDate: supplemental.biddingDate,
+                link: supplemental.link,
+                pdfUrl: supplemental.pdfUrl,
+                status: supplemental.status,
+                winningContractor: supplemental.winningContractor,
+            });
         }
 
         console.log(`[王寺町] 合計 ${items.length} 件`);
