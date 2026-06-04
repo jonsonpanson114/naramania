@@ -133,33 +133,11 @@
     "issues": []
   },
   "dateAudit": {
-    "announcementAfterBiddingCount": 1,
-    "awardedWithoutBiddingDateCount": 1,
-    "awardedWithoutWinnerCount": 1,
+    "announcementAfterBiddingCount": 0,
+    "awardedWithoutBiddingDateCount": 0,
+    "awardedWithoutWinnerCount": 0,
     "openWithWinnerCount": 0,
-    "sampleTitles": [
-      {
-        "municipality": "安堵町",
-        "title": "【条件付き一般競争入札の結果】安堵町立安堵小中学校屋内運動場空調設備設置工事",
-        "status": "落札",
-        "announcementDate": "2026-06-04",
-        "biddingDate": "2026-05-27"
-      },
-      {
-        "municipality": "大和高田市",
-        "title": "市営住宅礒野団地4号棟外壁等改修工事設計業務委託",
-        "status": "落札",
-        "announcementDate": "2025-07-01",
-        "biddingDate": null
-      },
-      {
-        "municipality": "三宅町",
-        "title": "三宅町つながり総合センター解体工事",
-        "status": "落札",
-        "announcementDate": "2025-11-04",
-        "biddingDate": "2025-11-04"
-      }
-    ]
+    "sampleTitles": []
   },
   "intelligence": {
     "itemsWithPdf": 64,

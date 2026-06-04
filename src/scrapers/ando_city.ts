@@ -23,6 +23,15 @@ const ANDO_KNOWN_BIDDING_DATES: Record<string, string> = {
     '〖再度公告〗条件付き一般競争入札の実施について（安堵こども園南館外壁改修、トイレ乾式化および洋式化改修工事）': '2026-06-26',
 };
 
+const ANDO_TITLE_NORMALIZATIONS: Record<string, string> = {
+    '【条件付き一般競争入札の結果】安堵町立安堵小中学校屋内運動場空調設備設置工事': '安堵町立安堵小中学校屋内運動場空調設備設置工事',
+};
+
+const ANDO_KNOWN_ANNOUNCEMENT_DATES: Record<string, string> = {
+    // 条件付き一般競争入札の実施について（安堵町立安堵小中学校屋内運動場空調設備設置工事） | 安堵町役場
+    '安堵町立安堵小中学校屋内運動場空調設備設置工事': '2026-04-22',
+};
+
 function shouldSkip(title: string): boolean {
     return !shouldKeepItem(title);
 }
@@ -69,6 +78,10 @@ function normalizeAndoWinner(raw: string): string {
         .replace(/\s+\d+\.\s*$/, '')
         .replace(/\s+(代表取締役|代表社員|代表|所長|支店長|営業所長).*$/, '')
         .trim();
+}
+
+function normalizeAndoTitle(title: string): string {
+    return ANDO_TITLE_NORMALIZATIONS[title] || title;
 }
 
 function parseUpdatedDate(text: string): string {
@@ -155,14 +168,18 @@ async function scrapeAndoCity(): Promise<BiddingItem[]> {
 
             const link = normalizeAndoLink(href);
             const surroundingText = $category(el).parent().text().replace(/\s+/g, ' ');
-            const announcementDate = parseUpdatedDate(surroundingText) || parseUpdatedDate(categoryRes.data) || parseRssDate(new Date().toUTCString());
+            const normalizedTitle = normalizeAndoTitle(title);
+            const announcementDate = ANDO_KNOWN_ANNOUNCEMENT_DATES[normalizedTitle]
+                || parseUpdatedDate(surroundingText)
+                || parseUpdatedDate(categoryRes.data)
+                || parseRssDate(new Date().toUTCString());
             const item: BiddingItem = {
                 id: `ando-category-${i}`,
                 municipality: '安堵町',
-                title,
+                title: normalizedTitle,
                 type: classifyType(title),
                 announcementDate,
-                biddingDate: ANDO_KNOWN_BIDDING_DATES[title],
+                biddingDate: ANDO_KNOWN_BIDDING_DATES[title] || ANDO_KNOWN_BIDDING_DATES[normalizedTitle],
                 link,
                 status: title.includes('結果') ? '落札' : '受付中',
             };
@@ -204,19 +221,20 @@ async function scrapeAndoCity(): Promise<BiddingItem[]> {
                 status = '受付終了';
             }
 
-            const announcementDate = parseRssDate(pubDate);
+            const normalizedTitle = normalizeAndoTitle(title);
+            const announcementDate = ANDO_KNOWN_ANNOUNCEMENT_DATES[normalizedTitle] || parseRssDate(pubDate);
 
             const item: BiddingItem = {
                 id: `ando-${link.split('/').pop()?.replace('.html', '')}-${i}`,
                 municipality: '安堵町',
-                title,
+                title: normalizedTitle,
                 type: classifyType(title),
                 announcementDate,
-                biddingDate: ANDO_KNOWN_BIDDING_DATES[title],
+                biddingDate: ANDO_KNOWN_BIDDING_DATES[title] || ANDO_KNOWN_BIDDING_DATES[normalizedTitle],
                 link,
                 status,
             };
-            if (!items.has(title)) items.set(title, item);
+            if (!items.has(normalizedTitle)) items.set(normalizedTitle, item);
         });
 
     } catch (e: unknown) {

@@ -82,6 +82,40 @@ export function buildIntelligenceSummary(items: BiddingItem[], lastAugmentedAt?:
     };
 }
 
+export function buildDateAuditSummary(items: BiddingItem[]) {
+    const announcementAfterBidding = items.filter(item =>
+        item.biddingDate && item.announcementDate && item.announcementDate > item.biddingDate,
+    );
+    const awardedWithoutBiddingDate = items.filter(item =>
+        item.status === '落札' && !item.biddingDate,
+    );
+    const openWithWinner = items.filter(item =>
+        item.status === '受付中' && item.winningContractor,
+    );
+    const awardedWithoutWinner = items.filter(item =>
+        item.status === '落札' && !item.winningContractor,
+    );
+
+    return {
+        announcementAfterBiddingCount: announcementAfterBidding.length,
+        awardedWithoutBiddingDateCount: awardedWithoutBiddingDate.length,
+        awardedWithoutWinnerCount: awardedWithoutWinner.length,
+        openWithWinnerCount: openWithWinner.length,
+        sampleTitles: [
+            ...announcementAfterBidding.slice(0, 3),
+            ...awardedWithoutBiddingDate.slice(0, 3),
+            ...awardedWithoutWinner.slice(0, 3),
+            ...openWithWinner.slice(0, 3),
+        ].map(item => ({
+            municipality: item.municipality,
+            title: item.title,
+            status: item.status,
+            announcementDate: item.announcementDate,
+            biddingDate: item.biddingDate || null,
+        })),
+    };
+}
+
 export function readQualitySummary(): QualitySummary | null {
     if (!fs.existsSync(QUALITY_PATH)) return null;
 

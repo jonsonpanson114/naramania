@@ -2,7 +2,7 @@ import fs from 'fs';
 import { downloadPDFBuffer } from '../src/utils/pdf_utils';
 import { extractBiddingInfoFromPDF, extractBiddingInfoFromText } from '../src/services/gemini_service';
 import { extractPdfText } from '../src/scrapers/common/pdf_text';
-import { buildIntelligenceSummary, readQualitySummary, writeQualitySummary } from '../src/lib/quality_summary';
+import { buildDateAuditSummary, buildIntelligenceSummary, readQualitySummary, writeQualitySummary } from '../src/lib/quality_summary';
 import type { BiddingItem } from '../src/types/bidding';
 
 const RESULT_PATH = 'scraper_result.json';
@@ -137,7 +137,7 @@ async function main() {
         ...(existingQuality?.originalCount !== undefined ? { originalCount: existingQuality.originalCount } : {}),
         ...(existingQuality?.removedCount !== undefined ? { removedCount: existingQuality.removedCount } : {}),
         ...(existingQuality?.municipalityAudit ? { municipalityAudit: existingQuality.municipalityAudit } : {}),
-        ...(existingQuality?.dateAudit ? { dateAudit: existingQuality.dateAudit } : {}),
+        dateAudit: buildDateAuditSummary(items),
         intelligence: buildIntelligenceSummary(items, augmentedAt),
     });
 

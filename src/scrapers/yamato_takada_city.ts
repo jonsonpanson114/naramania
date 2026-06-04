@@ -13,6 +13,8 @@ const ANNOUNCEMENT_PAGES = [
 ];
 const RESULT_PAGE = `${BASE}/soshikikarasagasu/somuka/keiyakukanri/nyusatsu_keiyaku/1/9099.html`;
 const RESULT_BIDDING_DATES: Record<string, string> = {
+    // 大和高田市公報 第439号（2025-08-08）で確認
+    '市営住宅礒野団地4号棟外壁等改修工事設計業務委託': '2025-07-18',
     // 検索結果スニペット（NJSS）の発注情報抜粋で確認
     '大和高田市保健センター受電設備改修工事': '2025-06-13',
 };

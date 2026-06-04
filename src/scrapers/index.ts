@@ -25,7 +25,7 @@ import { BiddingItem, Scraper } from '../types/bidding';
 import fs from 'fs';
 import path from 'path';
 import { shouldKeepBiddingItem } from './common/filter';
-import { EXPECTED_MUNICIPALITIES, QUALITY_PATH, buildIntelligenceSummary, readQualitySummary } from '../lib/quality_summary';
+import { EXPECTED_MUNICIPALITIES, QUALITY_PATH, buildDateAuditSummary, buildIntelligenceSummary, readQualitySummary } from '../lib/quality_summary';
 import type { MunicipalityIssueEntry } from '../lib/quality_summary';
 
 const SNAPSHOT_PATH = path.join(process.cwd(), 'municipality_snapshots.json');
@@ -171,40 +171,6 @@ function writeMunicipalitySnapshots(snapshots: MunicipalitySnapshots) {
     fs.writeFileSync(SNAPSHOT_PATH, JSON.stringify(snapshots, null, 2), 'utf-8');
 }
 
-function buildDateAudit(items: BiddingItem[]) {
-    const announcementAfterBidding = items.filter(item =>
-        item.biddingDate && item.announcementDate && item.announcementDate > item.biddingDate,
-    );
-    const awardedWithoutBiddingDate = items.filter(item =>
-        item.status === '落札' && !item.biddingDate,
-    );
-    const openWithWinner = items.filter(item =>
-        item.status === '受付中' && item.winningContractor,
-    );
-    const awardedWithoutWinner = items.filter(item =>
-        item.status === '落札' && !item.winningContractor,
-    );
-
-    return {
-        announcementAfterBiddingCount: announcementAfterBidding.length,
-        awardedWithoutBiddingDateCount: awardedWithoutBiddingDate.length,
-        awardedWithoutWinnerCount: awardedWithoutWinner.length,
-        openWithWinnerCount: openWithWinner.length,
-        sampleTitles: [
-            ...announcementAfterBidding.slice(0, 3),
-            ...awardedWithoutBiddingDate.slice(0, 3),
-            ...awardedWithoutWinner.slice(0, 3),
-            ...openWithWinner.slice(0, 3),
-        ].map(item => ({
-            municipality: item.municipality,
-            title: item.title,
-            status: item.status,
-            announcementDate: item.announcementDate,
-            biddingDate: item.biddingDate || null,
-        })),
-    };
-}
-
 function reconcileStatusByDates(item: BiddingItem, todayIso: string): BiddingItem {
     if (
         item.status === '受付中'
@@ -241,7 +207,7 @@ function writeQualitySummary(
         .map(item => item.announcementDate)
         .filter(Boolean)
         .sort();
-    const dateAudit = buildDateAudit(items);
+    const dateAudit = buildDateAuditSummary(items);
     const counts = items.reduce<Record<string, number>>((acc, item) => {
         acc[item.municipality] = (acc[item.municipality] || 0) + 1;
         return acc;
