@@ -72,6 +72,10 @@ const DEFAULT_ALWAYS_EXCLUDE_KEYWORDS = [
     'システム', 'ソフトウェア', 'ライセンス', 'デジタルサイネージ',
     '音響設備機材', '固定資産税', '住民税', '国民健康保険',
     '建設工事がすすんでいます', '利用できなくなります', '引越し作業',
+    '指定管理', '指定管理者', '施設管理', '駐車場',
+    'LED', '照明設備', '空調設備', '受変電設備', '高圧受電設備',
+    '高圧機器', '消防用設備', '防火設備', '建築設備', '給水設備',
+    '温水設備', '換気設備', '発電設備', '自動火災報知設備',
 ];
 
 const DEFAULT_INFRA_EXCLUDE_KEYWORDS = [
@@ -89,9 +93,8 @@ const DEFAULT_ARCHITECTURE_CONTEXT_KEYWORDS = [
     '公民館', '会館', 'センター', '体育館', '図書館', '消防署',
     '交番', '住宅', '市営住宅', '団地', '施設', 'ホール',
     'ハウス', 'はうす',
-    'トイレ', '便所', '外壁', '屋根', '内装', '空調', '受水槽',
-    '給水設備', '受変電設備', '防火戸', '耐震', 'エレベーター', 'EV', '仮眠室',
-    '書庫', '温水設備', '吸収冷温水機', '非常用自家発電設備',
+    'トイレ', '便所', '外壁', '屋根', '内装', '防火戸', '耐震', '仮眠室',
+    '書庫',
 ];
 
 const DEFAULT_ARCHITECTURE_WORK_KEYWORDS = [
@@ -105,25 +108,8 @@ const ARCHITECTURE_CONTEXT_KEYWORDS = [...new Set([...DEFAULT_ARCHITECTURE_CONTE
 const ARCHITECTURE_WORK_KEYWORDS = [...new Set([...DEFAULT_ARCHITECTURE_WORK_KEYWORDS, ...dataFilters.architectureWorkKeywords])];
 const INFRA_ALLOWED_KEYWORDS = dataFilters.infraAllowedKeywords;
 const PRIORITY_ARCHITECTURE_PATTERNS = [
-    '特定建築物定期調査',
-    '建築設備定期検査',
-    '防火設備定期検査',
-    '防火対象物定期点検',
-    '消防用設備等法定点検',
-    '受変電設備改修',
-    '屋内運動場空調設備',
-    '空調設備設置工事',
-    '屋内運動場空調等工事',
     '芝運動公園運動場等再整備基本設計業務',
     '立地適正化計画改定業務',
-    '安堵町総合センターひびき施設管理業務委託',
-    '天理市立施設LED照明機器賃貸借（リース）業務',
-    '下水道施設耐震診断・実施設計業務委託（その１）',
-    '平和地区公民館庭園・築山・多目的グラウンド等維持管理業務',
-    'かんざん園高圧機器更新業務',
-    '公共下水道昭和工業団地地区改築実施設計業務委託',
-    '郡山城跡周辺維持管理業務委託薬剤散布',
-    '土木工事等技術支援業務',
 ];
 
 function getPreviousFiscalYearStart(referenceDate = new Date()): Date {

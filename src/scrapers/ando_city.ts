@@ -6,22 +6,15 @@ import { shouldKeepItem } from './common/filter';
 // 安堵町
 const RSS_URL = 'https://www.town.ando.nara.jp/rss/rss.xml';
 const CATEGORY_URL = 'https://www.town.ando.nara.jp/category/4-1-0-0-0-0-0-0-0-0.html';
-const ANDO_SUPPLEMENTAL_ITEMS = [
-    {
-        title: '安堵町立安堵小中学校屋内運動場空調設備設置工事',
-        link: 'https://www.town.ando.nara.jp/0000003986.html',
-        announcementDate: '2026-04-22',
-        biddingDate: '2026-05-27',
-        status: '落札' as const,
-        winningContractor: '吉村建設株式会社',
-        pdfUrl: 'https://www.town.ando.nara.jp./cmsfiles/contents/0000003/3986/kaisatsu.pdf',
-    },
-    {
-        title: '安堵町総合センターひびき施設管理業務委託',
-        link: 'https://www.town.ando.nara.jp/0000003776.html',
-        announcementDate: '2026-02-24',
-        status: '受付終了' as const,
-    },
+const ANDO_SUPPLEMENTAL_ITEMS: Array<{
+    title: string;
+    link: string;
+    announcementDate: string;
+    biddingDate?: string;
+    status: '受付中' | '受付終了' | '落札' | '不調';
+    winningContractor?: string;
+    pdfUrl?: string;
+}> = [
     {
         title: '〖再度公告〗条件付き一般競争入札の実施について（安堵こども園南館外壁改修、トイレ乾式化および洋式化改修工事）',
         link: 'https://www.town.ando.nara.jp/0000003967.html',
@@ -32,19 +25,13 @@ const ANDO_SUPPLEMENTAL_ITEMS = [
 ];
 const ANDO_KNOWN_BIDDING_DATES: Record<string, string> = {
     // 公式ページの公告PDFと建設新報の公告要約から確認
-    '条件付き一般競争入札の実施について（安堵町立安堵小中学校屋内運動場空調設備設置工事）': '2026-05-27',
-    '【条件付き一般競争入札の結果】安堵町立安堵小中学校屋内運動場空調設備設置工事': '2026-05-27',
     '【再度公告】条件付き一般競争入札の実施について（安堵こども園南館外壁改修、トイレ乾式化および洋式化改修工事）': '2026-06-26',
     '〖再度公告〗条件付き一般競争入札の実施について（安堵こども園南館外壁改修、トイレ乾式化および洋式化改修工事）': '2026-06-26',
 };
 
-const ANDO_TITLE_NORMALIZATIONS: Record<string, string> = {
-    '【条件付き一般競争入札の結果】安堵町立安堵小中学校屋内運動場空調設備設置工事': '安堵町立安堵小中学校屋内運動場空調設備設置工事',
-};
+const ANDO_TITLE_NORMALIZATIONS: Record<string, string> = {};
 
 const ANDO_KNOWN_ANNOUNCEMENT_DATES: Record<string, string> = {
-    // 条件付き一般競争入札の実施について（安堵町立安堵小中学校屋内運動場空調設備設置工事） | 安堵町役場
-    '安堵町立安堵小中学校屋内運動場空調設備設置工事': '2026-04-22',
 };
 
 function shouldSkip(title: string): boolean {

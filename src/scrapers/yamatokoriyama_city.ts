@@ -9,55 +9,7 @@ const BASE = 'https://www.city.yamatokoriyama.lg.jp';
 const RESULT_JSON   = `${BASE}/shigoto_sangyo/nyusatsu_keiyaku/nyusatsunooshirase/index.tree.json`;
 const ANNOUNCE_JSON = `${BASE}/shigoto_sangyo/nyusatsu_keiyaku/nyusatsu/index.tree.json`;
 const CURRENT_ANNOUNCE_PAGE = `${BASE}/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/9328.html`;
-const CURRENT_MISC_NOTICE_PAGE = `${BASE}/shigoto_sangyo/nyusatsu_keiyaku/nyusatsu/R8/17491.html`;
-const CURRENT_MAINT_NOTICE_PAGE = `${BASE}/shigoto_sangyo/nyusatsu_keiyaku/nyusatsu/R7/14909.html`;
-const RESULT_PAGE = `${BASE}/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/1892.html`;
 const KNOWN_CURRENT_ITEMS: Array<Pick<BiddingItem, 'title' | 'announcementDate' | 'biddingDate' | 'link' | 'pdfUrl' | 'type' | 'status'>> = [
-    {
-        title: '【事前申請】市立片桐中学校屋内運動場等空調設置工事',
-        announcementDate: '2026-05-26',
-        biddingDate: '2026-06-17',
-        link: CURRENT_ANNOUNCE_PAGE,
-        pdfUrl: 'https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk260617_01k.pdf',
-        type: '建築',
-        status: '受付中',
-    },
-    {
-        title: '【事前申請】市立郡山中学校屋内運動場等空調設置工事',
-        announcementDate: '2026-05-26',
-        biddingDate: '2026-06-17',
-        link: CURRENT_ANNOUNCE_PAGE,
-        pdfUrl: 'https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk260617_02k.pdf',
-        type: '建築',
-        status: '受付中',
-    },
-    {
-        title: '【事前申請】市立郡山東中学校屋内運動場等空調設置工事',
-        announcementDate: '2026-05-26',
-        biddingDate: '2026-06-17',
-        link: CURRENT_ANNOUNCE_PAGE,
-        pdfUrl: 'https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk260617_03k.pdf',
-        type: '建築',
-        status: '受付中',
-    },
-    {
-        title: '【事前申請】市立郡山西中学校屋内運動場等空調設置工事',
-        announcementDate: '2026-05-26',
-        biddingDate: '2026-06-17',
-        link: CURRENT_ANNOUNCE_PAGE,
-        pdfUrl: 'https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk260617_04k.pdf',
-        type: '建築',
-        status: '受付中',
-    },
-    {
-        title: '【事前申請】市立郡山南中学校屋内運動場等空調設置工事',
-        announcementDate: '2026-05-26',
-        biddingDate: '2026-06-17',
-        link: CURRENT_ANNOUNCE_PAGE,
-        pdfUrl: 'https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk260617_05k.pdf',
-        type: '建築',
-        status: '受付中',
-    },
     {
         title: '市立郡山南小学校廊下改修工事（2期）',
         announcementDate: '2026-05-26',
@@ -67,42 +19,8 @@ const KNOWN_CURRENT_ITEMS: Array<Pick<BiddingItem, 'title' | 'announcementDate' 
         type: '建築',
         status: '受付中',
     },
-    {
-        title: 'かんざん園高圧機器更新業務',
-        announcementDate: '2026-03-30',
-        link: CURRENT_MISC_NOTICE_PAGE,
-        type: '委託',
-        status: '受付終了',
-    },
-    {
-        title: '平和地区公民館庭園・築山・多目的グラウンド等維持管理業務',
-        announcementDate: '2026-04-17',
-        biddingDate: '2026-05-12',
-        link: CURRENT_MAINT_NOTICE_PAGE,
-        pdfUrl: 'https://www.city.yamatokoriyama.lg.jp/material/files/group/51/R804nyusatusetumeisho.pdf',
-        type: '委託',
-        status: '受付終了',
-    },
 ];
 const KNOWN_RESULT_ITEMS: Array<Pick<BiddingItem, 'title' | 'announcementDate' | 'biddingDate' | 'link' | 'type' | 'status' | 'winningContractor'>> = [
-    {
-        title: '公共下水道昭和工業団地地区改築実施設計業務委託（第1工区）その1、その2',
-        announcementDate: '2026-05-27',
-        biddingDate: '2026-05-27',
-        link: RESULT_PAGE,
-        type: 'コンサル',
-        status: '落札',
-        winningContractor: '日本工営都市空間 株式会社 奈良事務所',
-    },
-    {
-        title: '郡山城跡周辺維持管理業務委託薬剤散布（クビアカツヤカミキリ対策含む）',
-        announcementDate: '2026-04-22',
-        biddingDate: '2026-04-22',
-        link: RESULT_PAGE,
-        type: '委託',
-        status: '落札',
-        winningContractor: '大倉造園土木',
-    },
 ];
 
 // タイトルに含まれていればスキップ（土木系・非建築）

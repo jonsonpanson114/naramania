@@ -8,7 +8,6 @@ const ANNOUNCE_URL = `${BASE_URL}/soshiki/1/9178.html`;
 const RESULT_WORK_URL = `${BASE_URL}/soshiki/1/7653.html`;
 const RESULT_CONSULT_URL = `${BASE_URL}/soshiki/1/7919.html`;
 const HEADERS = { 'User-Agent': 'Mozilla/5.0 (compatible; naramania-scraper/1.0)' };
-
 function classifyType(title: string): BiddingType {
     if (title.includes('設計') || title.includes('監理') || title.includes('コンサル')) return 'コンサル';
     if (title.includes('委託') || title.includes('業務')) return '委託';
@@ -126,6 +125,7 @@ export class MiyakeCityScraper implements Scraper {
             ...(await scrapeResultPage(RESULT_WORK_URL)),
             ...(await scrapeResultPage(RESULT_CONSULT_URL)),
         ];
+
         console.log(`[三宅町] 合計 ${items.length} 件`);
         return items;
     }

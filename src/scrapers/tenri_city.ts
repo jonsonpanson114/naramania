@@ -9,32 +9,23 @@ import { shouldKeepItem } from './common/filter';
 // 入札結果: PDFのみ → スキップ
 const BASE = 'https://www.city.tenri.nara.jp';
 const ANNOUNCE_URL = `${BASE}/kakuka/soumubu/nyuusatsushinsashitsu/construction_work/kouji_hattyuu_kanren/1395887232147.html`;
-const TENRI_SUPPLEMENTAL_ITEMS = [
-    {
-        title: '天理市立施設LED照明機器賃貸借（リース）業務',
-        link: `${BASE}/kakuka/kenkoukodomokateikyoku/youhokodomoennka/nyuusatu/15520.html`,
-        announcementDate: '2026-04-08',
-        biddingDate: '2026-05-13',
-        status: '受付終了' as const,
-    },
-    {
-        title: '下水道施設耐震診断・実施設計業務委託（その１）',
-        link: 'https://www.city.tenri.nara.jp/material/files/group/12/koukoku.pdf',
-        pdfUrl: 'https://www.city.tenri.nara.jp/material/files/group/12/koukoku.pdf',
-        announcementDate: '2025-09-30',
-        status: '受付終了' as const,
-    },
-];
+const TENRI_SUPPLEMENTAL_ITEMS: Array<{
+    title: string;
+    link: string;
+    announcementDate: string;
+    biddingDate?: string;
+    status: '受付中' | '受付終了' | '落札' | '不調';
+    pdfUrl?: string;
+}> = [];
 const TENRI_KNOWN_BIDDING_DATES: Record<string, string> = {
     // 公告文 別紙1（入札日程）より
     '天理市立柳本小学校校舎18棟改修工事': '2026-05-18',
-    '天理市立施設LED照明機器賃貸借（リース）業務': '2026-05-13',
 };
 
 function classifyType(title: string, type: string): BiddingType {
     const t = title + type;
     if (t.includes('設計') || t.includes('測量') || t.includes('コンサル')) return 'コンサル';
-    if (t.includes('委託') || t.includes('業務') || t.includes('賃貸借') || t.includes('リース')) return '委託';
+    if (t.includes('委託') || t.includes('業務')) return '委託';
     return '建築';
 }
 

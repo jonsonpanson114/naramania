@@ -1,142 +1,115 @@
 {
-  "generatedAt": "2026-06-04T22:11:11.689Z",
-  "source": "daily_scrape",
-  "keptCount": 298,
-  "municipalityCount": 25,
+  "generatedAt": "2026-06-04T22:25:14.175Z",
+  "source": "manual_scope_reconcile",
+  "keptCount": 222,
+  "municipalityCount": 23,
   "oldestAnnouncementDate": "2025-04-08",
   "latestAnnouncementDate": "2026-06-04",
-  "scrapedCount": 511,
-  "rejectedCount": 247,
   "municipalityAudit": {
     "expectedMunicipalityCount": 25,
-    "coveredMunicipalityCount": 25,
-    "missingMunicipalities": [],
-    "zeroCountMunicipalities": [],
+    "coveredMunicipalityCount": 23,
+    "missingMunicipalities": [
+      "川西町",
+      "斑鳩町"
+    ],
+    "zeroCountMunicipalities": [
+      "川西町",
+      "斑鳩町"
+    ],
     "breakdown": [
       {
-        "municipality": "奈良市",
-        "count": 42,
-        "changeFromPrevious": -1
-      },
-      {
-        "municipality": "橿原市",
-        "count": 37,
-        "changeFromPrevious": 0
-      },
-      {
         "municipality": "葛城市",
-        "count": 31,
-        "changeFromPrevious": 1
-      },
-      {
-        "municipality": "生駒市",
-        "count": 31,
-        "changeFromPrevious": 0
+        "count": 31
       },
       {
         "municipality": "奈良県",
-        "count": 30,
-        "changeFromPrevious": 0
+        "count": 29
+      },
+      {
+        "municipality": "橿原市",
+        "count": 28
+      },
+      {
+        "municipality": "生駒市",
+        "count": 24
       },
       {
         "municipality": "宇陀市",
-        "count": 22,
-        "changeFromPrevious": 3
+        "count": 22
       },
       {
         "municipality": "高取町",
-        "count": 22,
-        "changeFromPrevious": 0
+        "count": 19
       },
       {
         "municipality": "五條市",
-        "count": 18,
-        "changeFromPrevious": 0
+        "count": 15
       },
       {
-        "municipality": "香芝市",
-        "count": 14,
-        "changeFromPrevious": 0
+        "municipality": "奈良市",
+        "count": 13
       },
       {
         "municipality": "大和郡山市",
-        "count": 12,
-        "changeFromPrevious": 4
+        "count": 8
+      },
+      {
+        "municipality": "香芝市",
+        "count": 6
       },
       {
         "municipality": "田原本町",
-        "count": 5,
-        "changeFromPrevious": 0
+        "count": 5
       },
       {
         "municipality": "御所市",
-        "count": 4,
-        "changeFromPrevious": 0
-      },
-      {
-        "municipality": "三郷町",
-        "count": 3,
-        "changeFromPrevious": 0
+        "count": 3
       },
       {
         "municipality": "大和高田市",
-        "count": 3,
-        "changeFromPrevious": 0
-      },
-      {
-        "municipality": "安堵町",
-        "count": 3,
-        "changeFromPrevious": 1
+        "count": 3
       },
       {
         "municipality": "広陵町",
-        "count": 2,
-        "changeFromPrevious": 0
+        "count": 2
       },
       {
         "municipality": "桜井市",
         "count": 2
       },
       {
+        "municipality": "三郷町",
+        "count": 2
+      },
+      {
         "municipality": "大淀町",
-        "count": 2,
-        "changeFromPrevious": 0
+        "count": 2
       },
       {
         "municipality": "天理市",
-        "count": 4,
-        "changeFromPrevious": 2
+        "count": 2
       },
       {
         "municipality": "平群町",
         "count": 2
       },
       {
+        "municipality": "安堵町",
+        "count": 1
+      },
+      {
         "municipality": "王寺町",
-        "count": 4,
-        "changeFromPrevious": 3
+        "count": 1
       },
       {
         "municipality": "三宅町",
-        "count": 1,
-        "changeFromPrevious": 0
+        "count": 1
       },
       {
         "municipality": "山添村",
         "count": 1
-      },
-      {
-        "municipality": "川西町",
-        "count": 1
-      },
-      {
-        "municipality": "斑鳩町",
-        "count": 2,
-        "changeFromPrevious": 1
       }
-    ],
-    "retainedFromPrevious": [],
-    "issues": []
+    ]
   },
   "dateAudit": {
     "announcementAfterBiddingCount": 0,
@@ -146,11 +119,10 @@
     "sampleTitles": []
   },
   "intelligence": {
-    "itemsWithPdf": 64,
-    "itemsWithDescription": 50,
-    "intelligenceExtractedCount": 50,
-    "geminiExtractedCount": 50,
-    "taggedCount": 50,
-    "lastAugmentedAt": "2026-06-04T12:35:33.856Z"
+    "itemsWithPdf": 56,
+    "itemsWithDescription": 40,
+    "intelligenceExtractedCount": 40,
+    "geminiExtractedCount": 40,
+    "taggedCount": 40
   }
 }
