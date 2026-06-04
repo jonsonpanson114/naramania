@@ -40,26 +40,6 @@
     "status": "受付中"
   },
   {
-    "id": "ando-category-62",
-    "municipality": "安堵町",
-    "title": "安堵町立安堵小中学校屋内運動場空調設備設置工事",
-    "type": "建築",
-    "announcementDate": "2026-04-22",
-    "biddingDate": "2026-05-27",
-    "link": "https://www.town.ando.nara.jp/0000003986.html",
-    "status": "落札",
-    "pdfUrl": "https://www.town.ando.nara.jp./cmsfiles/contents/0000003/3986/kaisatsu.pdf",
-    "winningContractor": "吉村建設株式会社",
-    "description": "安堵町立安堵小中学校屋内運動場空調設備設置工事",
-    "tags": [
-      "空調",
-      "設備",
-      "工事"
-    ],
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini"
-  },
-  {
     "id": "katsuragi-epi-cc0d9ac5",
     "municipality": "葛城市",
     "title": "第8-105号屋根付きベンチ設置工事",
@@ -1229,6 +1209,36 @@
     "link": "https://www.city.kashiba.lg.jp/site/nyuusatsu/65857.html",
     "status": "落札",
     "winningContractor": "株式会社上村組"
+  },
+  {
+    "id": "kashiba-web-1bf7b65a",
+    "municipality": "香芝市",
+    "title": "五位堂小学校改築工事に伴う実施設計業務",
+    "type": "コンサル",
+    "announcementDate": "2026-04-23",
+    "biddingDate": "2026-05-26",
+    "link": "https://www.city.kashiba.lg.jp/site/nyuusatsu/list288-1034.html",
+    "status": "受付終了"
+  },
+  {
+    "id": "ando-category-62",
+    "municipality": "安堵町",
+    "title": "安堵町立安堵小中学校屋内運動場空調設備設置工事",
+    "type": "建築",
+    "announcementDate": "2026-04-22",
+    "biddingDate": "2026-05-27",
+    "link": "https://www.town.ando.nara.jp/0000003986.html",
+    "status": "落札",
+    "pdfUrl": "https://www.town.ando.nara.jp./cmsfiles/contents/0000003/3986/kaisatsu.pdf",
+    "winningContractor": "吉村建設株式会社",
+    "description": "安堵町立安堵小中学校屋内運動場空調設備設置工事",
+    "tags": [
+      "空調",
+      "設備",
+      "工事"
+    ],
+    "isIntelligenceExtracted": true,
+    "extractionSource": "gemini"
   },
   {
     "id": "gojo-epi-2501076",

@@ -20,6 +20,11 @@ const KASHIBA_KNOWN_SCHEDULES: Record<string, {
     status?: '受付中' | '落札';
     winningContractor?: string;
 }> = {
+    '五位堂小学校改築工事に伴う実施設計業務': {
+        announcementDate: '2026-04-23',
+        biddingDate: '2026-05-26',
+        link: 'https://www.city.kashiba.lg.jp/site/nyuusatsu/list288-1034.html',
+    },
     '香芝市立認定こども園及び幼稚園照明設備改修工事': {
         announcementDate: '2026-04-23',
         biddingDate: '2026-05-19',
@@ -303,7 +308,7 @@ async function scrapeKashibaCity(): Promise<BiddingItem[]> {
                         id,
                         municipality: '香芝市',
                         title,
-                        type: '建築',
+                        type: inferKashibaType(title),
                         announcementDate: knownSchedule?.announcementDate || pubDate,
                         biddingDate: knownSchedule?.biddingDate || pubDate,
                         link: detailUrl,
@@ -406,7 +411,7 @@ async function scrapeKashibaWebsite(): Promise<BiddingItem[]> {
                                 id,
                                 municipality: '香芝市',
                                 title: cleanTitle,
-                                type: '建築',
+                                type: inferKashibaType(cleanTitle),
                                 announcementDate: detailAnnouncementDate || '2026-01-01',
                                 biddingDate: biddingDate || undefined,
                                 link: link.href,
@@ -460,7 +465,7 @@ async function scrapeKashibaWebsite(): Promise<BiddingItem[]> {
                                 id,
                                 municipality: '香芝市',
                                 title: cleanTitle,
-                                type: '建築',
+                                type: inferKashibaType(cleanTitle),
                                 announcementDate: detailAnnouncementDate || date,
                                 biddingDate: undefined,
                                 link: fullUrl,
