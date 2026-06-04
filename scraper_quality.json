@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-04T14:09:08.672Z",
+  "generatedAt": "2026-06-04T14:18:55.223Z",
   "source": "daily_scrape",
-  "keptCount": 280,
+  "keptCount": 281,
   "municipalityCount": 25,
   "oldestAnnouncementDate": "2025-04-08",
   "latestAnnouncementDate": "2026-06-04",
@@ -94,6 +94,10 @@
         "changeFromPrevious": 0
       },
       {
+        "municipality": "桜井市",
+        "count": 2
+      },
+      {
         "municipality": "大淀町",
         "count": 2,
         "changeFromPrevious": 0
@@ -107,10 +111,6 @@
         "municipality": "王寺町",
         "count": 1,
         "changeFromPrevious": 0
-      },
-      {
-        "municipality": "桜井市",
-        "count": 1
       },
       {
         "municipality": "三宅町",

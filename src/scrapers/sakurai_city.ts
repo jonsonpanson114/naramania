@@ -19,6 +19,15 @@ const KNOWN_SAKURAI_ITEMS: BiddingItem[] = [
         link: ANNOUNCE_URL,
         status: '受付中',
     },
+    {
+        id: 'sakurai-2026-06-01-桜井市立地適正化計画改定業務委託',
+        municipality: '桜井市',
+        title: '桜井市立地適正化計画改定業務委託',
+        type: 'コンサル',
+        announcementDate: '2026-06-01',
+        link: ANNOUNCE_URL,
+        status: '受付中',
+    },
 ];
 
 function shouldSkip(title: string, category: string): boolean {

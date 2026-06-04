@@ -115,6 +115,7 @@ const PRIORITY_ARCHITECTURE_PATTERNS = [
     '空調設備設置工事',
     '屋内運動場空調等工事',
     '芝運動公園運動場等再整備基本設計業務',
+    '立地適正化計画改定業務',
 ];
 
 function getPreviousFiscalYearStart(referenceDate = new Date()): Date {
