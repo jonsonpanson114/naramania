@@ -12,18 +12,18 @@ const HEGURI_SUPPLEMENTAL_URLS = [
     'https://www.town.heguri.nara.jp/soshiki/14/16450.html',
 ];
 const YAMAZOE_NEWS_URLS = [
-    'https://www.vill.yamazoe.nara.jp/life/news/28346',
     'https://www.vill.yamazoe.nara.jp/life/news/25298',
+    'https://www.vill.yamazoe.nara.jp/life/news/25817',
 ];
 const KNOWN_YAMAZOE_ITEMS: BiddingItem[] = [
     {
-        id: '山添村-山添村立山添小中学校-屋内運動場空調等工事',
+        id: '山添村-山添村立小中学校建設工事',
         municipality: '山添村',
-        title: '山添村立山添小中学校 屋内運動場空調等工事',
+        title: '山添村立小中学校建設工事',
         type: '建築',
-        announcementDate: '2026-04-13',
-        biddingDate: '2026-05-14',
-        link: 'https://www.vill.yamazoe.nara.jp/life/news/28346',
+        announcementDate: '2025-07-01',
+        biddingDate: '2025-08-08',
+        link: 'https://www.vill.yamazoe.nara.jp/life/news/25817',
         status: '落札',
         winningContractor: '藤本建設株式会社',
         winnerType: 'ゼネコン',

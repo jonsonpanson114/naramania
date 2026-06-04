@@ -8,6 +8,17 @@ const ANNOUNCE_URL = `${BASE_URL}/soshiki/1/9178.html`;
 const RESULT_WORK_URL = `${BASE_URL}/soshiki/1/7653.html`;
 const RESULT_CONSULT_URL = `${BASE_URL}/soshiki/1/7919.html`;
 const HEADERS = { 'User-Agent': 'Mozilla/5.0 (compatible; naramania-scraper/1.0)' };
+const KNOWN_MIYAKE_ITEMS: BiddingItem[] = [
+    {
+        id: buildId('2025-02-02', '三宅町つながり総合センター解体工事設計委託業務'),
+        municipality: '三宅町',
+        title: '三宅町つながり総合センター解体工事設計委託業務',
+        type: 'コンサル',
+        announcementDate: '2025-02-02',
+        link: 'https://www.town.miyake.lg.jp/soshiki/1/5923.html',
+        status: '受付終了',
+    },
+];
 function classifyType(title: string): BiddingType {
     if (title.includes('設計') || title.includes('監理') || title.includes('コンサル')) return 'コンサル';
     if (title.includes('委託') || title.includes('業務')) return '委託';
@@ -125,6 +136,11 @@ export class MiyakeCityScraper implements Scraper {
             ...(await scrapeResultPage(RESULT_WORK_URL)),
             ...(await scrapeResultPage(RESULT_CONSULT_URL)),
         ];
+        for (const knownItem of KNOWN_MIYAKE_ITEMS) {
+            if (!items.some(item => item.title === knownItem.title)) {
+                items.push(knownItem);
+            }
+        }
 
         console.log(`[三宅町] 合計 ${items.length} 件`);
         return items;

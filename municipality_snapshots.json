@@ -43,61 +43,6 @@
       "extractionSource": "gemini"
     },
     {
-      "id": "yamato-koriyama-current-1",
-      "municipality": "大和郡山市",
-      "title": "【事前申請】市立片桐中学校屋内運動場等空調設置工事",
-      "type": "建築",
-      "announcementDate": "2026-05-26",
-      "biddingDate": "2026-06-17",
-      "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/9328.html",
-      "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk260617_01k.pdf",
-      "status": "受付中"
-    },
-    {
-      "id": "yamato-koriyama-current-2",
-      "municipality": "大和郡山市",
-      "title": "【事前申請】市立郡山中学校屋内運動場等空調設置工事",
-      "type": "建築",
-      "announcementDate": "2026-05-26",
-      "biddingDate": "2026-06-17",
-      "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/9328.html",
-      "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk260617_02k.pdf",
-      "status": "受付中"
-    },
-    {
-      "id": "yamato-koriyama-current-3",
-      "municipality": "大和郡山市",
-      "title": "【事前申請】市立郡山東中学校屋内運動場等空調設置工事",
-      "type": "建築",
-      "announcementDate": "2026-05-26",
-      "biddingDate": "2026-06-17",
-      "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/9328.html",
-      "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk260617_03k.pdf",
-      "status": "受付中"
-    },
-    {
-      "id": "yamato-koriyama-current-4",
-      "municipality": "大和郡山市",
-      "title": "【事前申請】市立郡山西中学校屋内運動場等空調設置工事",
-      "type": "建築",
-      "announcementDate": "2026-05-26",
-      "biddingDate": "2026-06-17",
-      "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/9328.html",
-      "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk260617_04k.pdf",
-      "status": "受付中"
-    },
-    {
-      "id": "yamato-koriyama-current-5",
-      "municipality": "大和郡山市",
-      "title": "【事前申請】市立郡山南中学校屋内運動場等空調設置工事",
-      "type": "建築",
-      "announcementDate": "2026-05-26",
-      "biddingDate": "2026-06-17",
-      "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/9328.html",
-      "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk260617_05k.pdf",
-      "status": "受付中"
-    },
-    {
       "id": "yamato-koriyama-2be46dab",
       "municipality": "大和郡山市",
       "title": "大和郡山市立スポーツ会館体育室床修繕",
@@ -170,16 +115,6 @@
       "type": "委託",
       "announcementDate": "2026-05-15",
       "biddingDate": "2026-06-19",
-      "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
-      "status": "受付中"
-    },
-    {
-      "id": "nara-city-0000002437",
-      "municipality": "奈良市",
-      "title": "庁舎等ＬＥＤ照明器具改修事業に伴う建築設計業務委託",
-      "type": "委託",
-      "announcementDate": "2026-05-01",
-      "biddingDate": "2026-06-04",
       "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
       "status": "受付中"
     },
@@ -1256,16 +1191,6 @@
       "biddingDate": "2026-05-18",
       "link": "https://tawaramoto.efftis.jp/PPI/Public/javaScript:void(0);",
       "status": "受付終了"
-    },
-    {
-      "id": "tawaramoto-1008051108",
-      "municipality": "田原本町",
-      "title": "田原本町庁舎高圧変圧器更新業務（８－１）",
-      "type": "委託",
-      "announcementDate": "2026-04-09",
-      "biddingDate": "2026-05-11",
-      "link": "https://tawaramoto.efftis.jp/PPI/Public/javaScript:void(0);",
-      "status": "受付終了"
     }
   ],
   "香芝市": [
@@ -1897,6 +1822,15 @@
       "link": "https://www.town.miyake.lg.jp/soshiki/1/7653.html",
       "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/4577.pdf",
       "status": "落札"
+    },
+    {
+      "id": "miyake-2025-02-02-三宅町つながり総合センター解体工事設計委託業務",
+      "municipality": "三宅町",
+      "title": "三宅町つながり総合センター解体工事設計委託業務",
+      "type": "コンサル",
+      "announcementDate": "2025-02-02",
+      "link": "https://www.town.miyake.lg.jp/soshiki/1/5923.html",
+      "status": "受付終了"
     }
   ],
   "大和高田市": [
@@ -2106,30 +2040,6 @@
       "winnerType": "ゼネコン"
     },
     {
-      "id": "ikoma-result-2501010077",
-      "municipality": "生駒市",
-      "title": "図書会館１・２階照明器具ＬＥＤ化工事",
-      "type": "建築",
-      "announcementDate": "2025-10-01",
-      "biddingDate": "2025-10-01",
-      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-      "status": "落札",
-      "winningContractor": "大東電気工業株式会社 奈良営業所",
-      "winnerType": "ゼネコン"
-    },
-    {
-      "id": "ikoma-result-2501010074",
-      "municipality": "生駒市",
-      "title": "むかいやま公園体育施設照明器具ＬＥＤ化及び非構造部材改修工事",
-      "type": "建築",
-      "announcementDate": "2025-10-01",
-      "biddingDate": "2025-10-01",
-      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-      "status": "落札",
-      "winningContractor": "松岡電気株式会社",
-      "winnerType": "ゼネコン"
-    },
-    {
       "id": "ikoma-result-2501010071",
       "municipality": "生駒市",
       "title": "生駒市図書館リニューアル工事",
@@ -2200,16 +2110,6 @@
       "status": "落札",
       "winningContractor": "株式会社エイチツーオー 生駒支店",
       "winnerType": "ゼネコン"
-    },
-    {
-      "id": "ikoma-result-2501100007",
-      "municipality": "生駒市",
-      "title": "中学校照明器具ＬＥＤ化工事設計業務",
-      "type": "コンサル",
-      "announcementDate": "2025-06-30",
-      "biddingDate": "2025-06-30",
-      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-      "status": "不調"
     },
     {
       "id": "ikoma-result-2501010027",
@@ -2570,13 +2470,13 @@
   ],
   "山添村": [
     {
-      "id": "山添村-山添村立山添小中学校-屋内運動場空調等工事",
+      "id": "山添村-山添村立小中学校建設工事",
       "municipality": "山添村",
-      "title": "山添村立山添小中学校 屋内運動場空調等工事",
+      "title": "山添村立小中学校建設工事",
       "type": "建築",
-      "announcementDate": "2026-04-13",
-      "biddingDate": "2026-05-14",
-      "link": "https://www.vill.yamazoe.nara.jp/life/news/28346",
+      "announcementDate": "2025-07-01",
+      "biddingDate": "2025-08-08",
+      "link": "https://www.vill.yamazoe.nara.jp/life/news/25817",
       "status": "落札",
       "winningContractor": "藤本建設株式会社",
       "winnerType": "ゼネコン"

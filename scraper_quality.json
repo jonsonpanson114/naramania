@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-06-04T22:33:14.984Z",
+  "generatedAt": "2026-06-04T22:40:10.263Z",
   "source": "manual_scope_reconcile",
-  "keptCount": 228,
+  "keptCount": 219,
   "municipalityCount": 25,
-  "oldestAnnouncementDate": "2025-04-08",
+  "oldestAnnouncementDate": "2025-02-02",
   "latestAnnouncementDate": "2026-06-04",
   "municipalityAudit": {
     "expectedMunicipalityCount": 25,
@@ -24,12 +24,12 @@
         "count": 28
       },
       {
-        "municipality": "生駒市",
-        "count": 24
-      },
-      {
         "municipality": "宇陀市",
         "count": 22
+      },
+      {
+        "municipality": "生駒市",
+        "count": 21
       },
       {
         "municipality": "高取町",
@@ -41,11 +41,7 @@
       },
       {
         "municipality": "奈良市",
-        "count": 13
-      },
-      {
-        "municipality": "大和郡山市",
-        "count": 8
+        "count": 12
       },
       {
         "municipality": "香芝市",
@@ -57,10 +53,14 @@
       },
       {
         "municipality": "田原本町",
-        "count": 5
+        "count": 4
       },
       {
         "municipality": "御所市",
+        "count": 3
+      },
+      {
+        "municipality": "大和郡山市",
         "count": 3
       },
       {
@@ -77,6 +77,10 @@
       },
       {
         "municipality": "三郷町",
+        "count": 2
+      },
+      {
+        "municipality": "三宅町",
         "count": 2
       },
       {
@@ -100,10 +104,6 @@
         "count": 1
       },
       {
-        "municipality": "三宅町",
-        "count": 1
-      },
-      {
         "municipality": "山添村",
         "count": 1
       },
@@ -121,7 +121,7 @@
     "sampleTitles": []
   },
   "intelligence": {
-    "itemsWithPdf": 56,
+    "itemsWithPdf": 51,
     "itemsWithDescription": 40,
     "intelligenceExtractedCount": 40,
     "geminiExtractedCount": 40,
