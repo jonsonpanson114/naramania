@@ -6,6 +6,15 @@ import { shouldKeepItem, classifyWinner } from './common/filter';
 const TAKATORI_RESULT_URL = 'https://www.town.takatori.nara.jp/contents_detail.php?frmId=2205';
 const IKARUGA_INDEX_URL = 'https://www.town.ikaruga.nara.jp/category/1-10-0-0-0-0-0-0-0-0.html';
 const IKARUGA_BASE_URL = 'https://www.town.ikaruga.nara.jp';
+const IKARUGA_SUPPLEMENTAL_ITEMS = [
+    {
+        title: '土木工事等技術支援業務',
+        link: 'https://www.town.ikaruga.nara.jp/0000003285.html',
+        announcementDate: '2026-04-24',
+        status: '落札' as const,
+        winningContractor: 'サンコーコンサルタント株式会社 奈良営業所',
+    },
+];
 
 function classifyType(title: string): BiddingType {
     if (title.includes('設計') || title.includes('監理') || title.includes('コンサル')) return 'コンサル';
@@ -150,6 +159,21 @@ async function scrapeIkarugaAnnouncements(): Promise<BiddingItem[]> {
         }
     } catch (e: unknown) {
         console.warn('[斑鳩町] 公告取得エラー:', e instanceof Error ? e.message : String(e));
+    }
+
+    for (const supplemental of IKARUGA_SUPPLEMENTAL_ITEMS) {
+        if (items.some(item => item.title === supplemental.title) || !shouldKeepItem(supplemental.title)) continue;
+        items.push({
+            id: buildId('斑鳩町', supplemental.announcementDate, supplemental.title),
+            municipality: '斑鳩町',
+            title: supplemental.title,
+            type: classifyType(supplemental.title),
+            announcementDate: supplemental.announcementDate,
+            link: supplemental.link,
+            status: supplemental.status,
+            winningContractor: supplemental.winningContractor,
+            winnerType: classifyWinner(supplemental.winningContractor),
+        });
     }
 
     return items;

@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-04T22:07:57.285Z",
+  "generatedAt": "2026-06-04T22:11:11.689Z",
   "source": "daily_scrape",
-  "keptCount": 297,
+  "keptCount": 298,
   "municipalityCount": 25,
   "oldestAnnouncementDate": "2025-04-08",
   "latestAnnouncementDate": "2026-06-04",
@@ -131,8 +131,8 @@
       },
       {
         "municipality": "斑鳩町",
-        "count": 1,
-        "changeFromPrevious": 0
+        "count": 2,
+        "changeFromPrevious": 1
       }
     ],
     "retainedFromPrevious": [],

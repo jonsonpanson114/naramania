@@ -123,6 +123,7 @@ const PRIORITY_ARCHITECTURE_PATTERNS = [
     'かんざん園高圧機器更新業務',
     '公共下水道昭和工業団地地区改築実施設計業務委託',
     '郡山城跡周辺維持管理業務委託薬剤散布',
+    '土木工事等技術支援業務',
 ];
 
 function getPreviousFiscalYearStart(referenceDate = new Date()): Date {
