@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-04T14:47:38.872Z",
+  "generatedAt": "2026-06-04T22:03:39.766Z",
   "source": "daily_scrape",
-  "keptCount": 291,
+  "keptCount": 293,
   "municipalityCount": 25,
   "oldestAnnouncementDate": "2025-04-08",
   "latestAnnouncementDate": "2026-06-04",
@@ -104,8 +104,8 @@
       },
       {
         "municipality": "天理市",
-        "count": 2,
-        "changeFromPrevious": 0
+        "count": 4,
+        "changeFromPrevious": 2
       },
       {
         "municipality": "平群町",

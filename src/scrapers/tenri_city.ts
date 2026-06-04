@@ -9,15 +9,32 @@ import { shouldKeepItem } from './common/filter';
 // 入札結果: PDFのみ → スキップ
 const BASE = 'https://www.city.tenri.nara.jp';
 const ANNOUNCE_URL = `${BASE}/kakuka/soumubu/nyuusatsushinsashitsu/construction_work/kouji_hattyuu_kanren/1395887232147.html`;
+const TENRI_SUPPLEMENTAL_ITEMS = [
+    {
+        title: '天理市立施設LED照明機器賃貸借（リース）業務',
+        link: `${BASE}/kakuka/kenkoukodomokateikyoku/youhokodomoennka/nyuusatu/15520.html`,
+        announcementDate: '2026-04-08',
+        biddingDate: '2026-05-13',
+        status: '受付終了' as const,
+    },
+    {
+        title: '下水道施設耐震診断・実施設計業務委託（その１）',
+        link: 'https://www.city.tenri.nara.jp/material/files/group/12/koukoku.pdf',
+        pdfUrl: 'https://www.city.tenri.nara.jp/material/files/group/12/koukoku.pdf',
+        announcementDate: '2025-09-30',
+        status: '受付終了' as const,
+    },
+];
 const TENRI_KNOWN_BIDDING_DATES: Record<string, string> = {
     // 公告文 別紙1（入札日程）より
     '天理市立柳本小学校校舎18棟改修工事': '2026-05-18',
+    '天理市立施設LED照明機器賃貸借（リース）業務': '2026-05-13',
 };
 
 function classifyType(title: string, type: string): BiddingType {
     const t = title + type;
     if (t.includes('設計') || t.includes('測量') || t.includes('コンサル')) return 'コンサル';
-    if (t.includes('委託') || t.includes('業務')) return '委託';
+    if (t.includes('委託') || t.includes('業務') || t.includes('賃貸借') || t.includes('リース')) return '委託';
     return '建築';
 }
 
@@ -93,6 +110,21 @@ export class TenriCityScraper implements Scraper {
             console.log(`[天理市] 入札公告: ${allItems.length}件`);
         } catch (e: unknown) {
             console.error('[天理市] スクレイパーエラー:', e instanceof Error ? e.message : String(e) || e);
+        }
+
+        for (const supplemental of TENRI_SUPPLEMENTAL_ITEMS) {
+            if (allItems.some(item => item.title === supplemental.title) || !shouldKeepItem(supplemental.title)) continue;
+            allItems.push({
+                id: makeId(supplemental.title),
+                municipality: '天理市',
+                title: supplemental.title,
+                type: classifyType(supplemental.title, ''),
+                announcementDate: supplemental.announcementDate,
+                biddingDate: supplemental.biddingDate,
+                link: supplemental.link,
+                pdfUrl: supplemental.pdfUrl,
+                status: supplemental.status,
+            });
         }
 
         console.log(`[天理市] 合計 ${allItems.length} 件`);

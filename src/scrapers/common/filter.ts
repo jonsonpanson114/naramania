@@ -117,6 +117,8 @@ const PRIORITY_ARCHITECTURE_PATTERNS = [
     '芝運動公園運動場等再整備基本設計業務',
     '立地適正化計画改定業務',
     '安堵町総合センターひびき施設管理業務委託',
+    '天理市立施設LED照明機器賃貸借（リース）業務',
+    '下水道施設耐震診断・実施設計業務委託（その１）',
 ];
 
 function getPreviousFiscalYearStart(referenceDate = new Date()): Date {
