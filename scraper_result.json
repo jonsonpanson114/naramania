@@ -401,17 +401,6 @@
     "status": "受付中"
   },
   {
-    "id": "nara-pref-29005007060120260011",
-    "municipality": "奈良県",
-    "title": "御所浄水場電気棟改修工事（建築工事）",
-    "type": "建築",
-    "announcementDate": "2026-05-29",
-    "biddingDate": "2026-06-29",
-    "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29005007060120260011&gamenMode=0",
-    "status": "受付中",
-    "winnerType": "ゼネコン"
-  },
-  {
     "id": "kashihara-5082000530",
     "municipality": "橿原市",
     "title": "藤原京跡トイレ設置工事に伴う設計委託",
@@ -446,6 +435,17 @@
     "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5083000653.pdf",
     "status": "受付終了",
     "winnerType": "設計事務所"
+  },
+  {
+    "id": "nara-pref-29005007060120260011",
+    "municipality": "奈良県",
+    "title": "御所浄水場電気棟改修工事（建築工事）",
+    "type": "建築",
+    "announcementDate": "2026-05-29",
+    "biddingDate": "2026-06-29",
+    "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29005007060120260011&gamenMode=0",
+    "status": "受付中",
+    "winnerType": "ゼネコン"
   },
   {
     "id": "nara-city-0000002430",
@@ -805,17 +805,6 @@
     "status": "受付中"
   },
   {
-    "id": "nara-pref-29004060025020260025",
-    "municipality": "奈良県",
-    "title": "桜井警察署宇陀警察庁舎屋上防水等改修工事 設計委託",
-    "type": "コンサル",
-    "announcementDate": "2026-05-18",
-    "biddingDate": "2026-06-04",
-    "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29004060025020260025&gamenMode=0",
-    "status": "受付中",
-    "winnerType": "設計事務所"
-  },
-  {
     "id": "高取町-2026-05-18-高取町立高取中学校体育館空調設備設置工事",
     "municipality": "高取町",
     "title": "高取町立高取中学校体育館空調設備設置工事",
@@ -838,6 +827,17 @@
     "status": "落札",
     "winningContractor": "吉田機電(株)",
     "winnerType": "ゼネコン"
+  },
+  {
+    "id": "nara-pref-29004060025020260025",
+    "municipality": "奈良県",
+    "title": "桜井警察署宇陀警察庁舎屋上防水等改修工事 設計委託",
+    "type": "コンサル",
+    "announcementDate": "2026-05-18",
+    "biddingDate": "2026-06-04",
+    "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29004060025020260025&gamenMode=0",
+    "status": "受付中",
+    "winnerType": "設計事務所"
   },
   {
     "id": "nara-city-0000002474",

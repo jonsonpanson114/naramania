@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-06-03T22:06:17.065Z",
+  "generatedAt": "2026-06-04T08:22:36.160Z",
   "source": "daily_scrape",
-  "scrapedCount": 2,
+  "scrapedCount": 33,
   "keptCount": 274,
-  "rejectedCount": 0,
+  "rejectedCount": 3,
   "oldestAnnouncementDate": "2025-04-08",
   "latestAnnouncementDate": "2026-06-03",
   "municipalityCount": 21,
@@ -133,11 +133,18 @@
     "issues": []
   },
   "dateAudit": {
-    "announcementAfterBiddingCount": 0,
+    "announcementAfterBiddingCount": 1,
     "awardedWithoutBiddingDateCount": 1,
     "awardedWithoutWinnerCount": 0,
     "openWithWinnerCount": 0,
     "sampleTitles": [
+      {
+        "municipality": "安堵町",
+        "title": "【条件付き一般競争入札の結果】安堵町立安堵小中学校屋内運動場空調設備設置工事",
+        "status": "落札",
+        "announcementDate": "2026-06-03",
+        "biddingDate": "2026-05-27"
+      },
       {
         "municipality": "大和高田市",
         "title": "市営住宅礒野団地4号棟外壁等改修工事設計業務委託",
