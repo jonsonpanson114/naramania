@@ -21,6 +21,32 @@ const KNOWN_CURRENT_ITEMS: Array<Pick<BiddingItem, 'title' | 'announcementDate' 
     },
 ];
 const KNOWN_RESULT_ITEMS: Array<Pick<BiddingItem, 'title' | 'announcementDate' | 'biddingDate' | 'link' | 'type' | 'status' | 'winningContractor'>> = [
+    {
+        title: '旧平和保育園解体整備事業実施設計業務委託',
+        announcementDate: '2024-06-26',
+        biddingDate: '2024-06-26',
+        link: 'https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/kensetsu/6247.html',
+        type: 'コンサル',
+        status: '落札',
+        winningContractor: '有限会社 創和建築事務所',
+    },
+    {
+        title: '西田中町共同浴場解体工事設計委託業務',
+        announcementDate: '2024-07-31',
+        biddingDate: '2024-07-31',
+        link: 'https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/kensetsu/6247.html',
+        type: 'コンサル',
+        status: '不調',
+    },
+    {
+        title: '大和郡山市消防団第三分団庫建設工事に伴う監理業務委託',
+        announcementDate: '2025-06-04',
+        biddingDate: '2025-06-04',
+        link: 'https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/1893.html',
+        type: 'コンサル',
+        status: '落札',
+        winningContractor: 'YARD吉村建築設計',
+    },
 ];
 
 // タイトルに含まれていればスキップ（土木系・非建築）
