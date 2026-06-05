@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-06-04T23:00:15.385Z",
-  "source": "manual_update",
-  "scrapedCount": 209,
-  "keptCount": 209,
-  "rejectedCount": 0,
-  "oldestAnnouncementDate": "2025-04-08",
-  "latestAnnouncementDate": "2026-06-04",
+  "generatedAt": "2026-06-05T05:30:59.056Z",
+  "source": "daily_scrape",
+  "keptCount": 224,
   "municipalityCount": 25,
+  "oldestAnnouncementDate": "2025-04-08",
+  "latestAnnouncementDate": "2026-06-05",
+  "scrapedCount": 475,
+  "rejectedCount": 265,
   "municipalityAudit": {
     "expectedMunicipalityCount": 25,
     "coveredMunicipalityCount": 25,
@@ -14,19 +14,19 @@
     "zeroCountMunicipalities": [],
     "breakdown": [
       {
+        "municipality": "葛城市",
+        "count": 30,
+        "changeFromPrevious": 4
+      },
+      {
         "municipality": "奈良県",
         "count": 29,
         "changeFromPrevious": 0
       },
       {
-        "municipality": "葛城市",
-        "count": 26,
-        "changeFromPrevious": 0
-      },
-      {
         "municipality": "橿原市",
-        "count": 24,
-        "changeFromPrevious": 0
+        "count": 28,
+        "changeFromPrevious": 4
       },
       {
         "municipality": "宇陀市",
@@ -35,8 +35,8 @@
       },
       {
         "municipality": "生駒市",
-        "count": 21,
-        "changeFromPrevious": 0
+        "count": 22,
+        "changeFromPrevious": 1
       },
       {
         "municipality": "高取町",
@@ -46,12 +46,12 @@
       {
         "municipality": "五條市",
         "count": 14,
-        "changeFromPrevious": 1
+        "changeFromPrevious": 0
       },
       {
         "municipality": "奈良市",
-        "count": 12,
-        "changeFromPrevious": 0
+        "count": 14,
+        "changeFromPrevious": 2
       },
       {
         "municipality": "香芝市",
@@ -64,12 +64,12 @@
         "changeFromPrevious": 0
       },
       {
-        "municipality": "大和郡山市",
-        "count": 4,
-        "changeFromPrevious": 0
+        "municipality": "田原本町",
+        "count": 5,
+        "changeFromPrevious": 1
       },
       {
-        "municipality": "田原本町",
+        "municipality": "大和郡山市",
         "count": 4,
         "changeFromPrevious": 0
       },
@@ -77,6 +77,11 @@
         "municipality": "御所市",
         "count": 3,
         "changeFromPrevious": 0
+      },
+      {
+        "municipality": "三郷町",
+        "count": 3,
+        "changeFromPrevious": 2
       },
       {
         "municipality": "大和高田市",
@@ -109,17 +114,17 @@
         "changeFromPrevious": 0
       },
       {
+        "municipality": "斑鳩町",
+        "count": 2,
+        "changeFromPrevious": 1
+      },
+      {
         "municipality": "平群町",
         "count": 2,
         "changeFromPrevious": 0
       },
       {
         "municipality": "王寺町",
-        "count": 1,
-        "changeFromPrevious": 0
-      },
-      {
-        "municipality": "三郷町",
         "count": 1,
         "changeFromPrevious": 0
       },
@@ -132,11 +137,6 @@
         "municipality": "山添村",
         "count": 1,
         "changeFromPrevious": 0
-      },
-      {
-        "municipality": "斑鳩町",
-        "count": 1,
-        "changeFromPrevious": 0
       }
     ],
     "retainedFromPrevious": [],
@@ -145,15 +145,31 @@
   "dateAudit": {
     "announcementAfterBiddingCount": 0,
     "awardedWithoutBiddingDateCount": 0,
-    "awardedWithoutWinnerCount": 0,
+    "awardedWithoutWinnerCount": 2,
     "openWithWinnerCount": 0,
-    "sampleTitles": []
+    "sampleTitles": [
+      {
+        "municipality": "生駒市",
+        "title": "生駒南小学校・生駒南中学校整備事業に伴う生駒南小学校改修工事",
+        "status": "落札",
+        "announcementDate": "2026-06-05",
+        "biddingDate": "2026-06-05"
+      },
+      {
+        "municipality": "生駒市",
+        "title": "狭戸配水場配水池詳細耐震診断業務",
+        "status": "落札",
+        "announcementDate": "2026-05-15",
+        "biddingDate": "2026-06-05"
+      }
+    ]
   },
   "intelligence": {
-    "itemsWithPdf": 42,
-    "itemsWithDescription": 30,
-    "intelligenceExtractedCount": 30,
-    "geminiExtractedCount": 30,
-    "taggedCount": 30
+    "itemsWithPdf": 50,
+    "itemsWithDescription": 50,
+    "intelligenceExtractedCount": 48,
+    "geminiExtractedCount": 48,
+    "taggedCount": 48,
+    "lastAugmentedAt": "2026-06-05T08:02:12.923Z"
   }
 }
