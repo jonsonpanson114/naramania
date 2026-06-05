@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-06-05T05:30:59.056Z",
+  "generatedAt": "2026-06-05T11:04:20.532Z",
   "source": "daily_scrape",
-  "keptCount": 224,
-  "municipalityCount": 25,
+  "scrapedCount": 30,
+  "keptCount": 210,
+  "rejectedCount": 2,
   "oldestAnnouncementDate": "2025-04-08",
   "latestAnnouncementDate": "2026-06-05",
-  "scrapedCount": 475,
-  "rejectedCount": 265,
+  "municipalityCount": 25,
   "municipalityAudit": {
     "expectedMunicipalityCount": 25,
     "coveredMunicipalityCount": 25,
@@ -14,19 +14,14 @@
     "zeroCountMunicipalities": [],
     "breakdown": [
       {
-        "municipality": "葛城市",
-        "count": 30,
-        "changeFromPrevious": 4
-      },
-      {
         "municipality": "奈良県",
-        "count": 29,
-        "changeFromPrevious": 0
+        "count": 28,
+        "changeFromPrevious": -1
       },
       {
-        "municipality": "橿原市",
-        "count": 28,
-        "changeFromPrevious": 4
+        "municipality": "葛城市",
+        "count": 25,
+        "changeFromPrevious": -5
       },
       {
         "municipality": "宇陀市",
@@ -36,7 +31,12 @@
       {
         "municipality": "生駒市",
         "count": 22,
-        "changeFromPrevious": 1
+        "changeFromPrevious": 0
+      },
+      {
+        "municipality": "橿原市",
+        "count": 21,
+        "changeFromPrevious": -7
       },
       {
         "municipality": "高取町",
@@ -44,14 +44,14 @@
         "changeFromPrevious": 0
       },
       {
-        "municipality": "五條市",
+        "municipality": "奈良市",
         "count": 14,
         "changeFromPrevious": 0
       },
       {
-        "municipality": "奈良市",
-        "count": 14,
-        "changeFromPrevious": 2
+        "municipality": "五條市",
+        "count": 13,
+        "changeFromPrevious": -1
       },
       {
         "municipality": "香芝市",
@@ -66,7 +66,7 @@
       {
         "municipality": "田原本町",
         "count": 5,
-        "changeFromPrevious": 1
+        "changeFromPrevious": 0
       },
       {
         "municipality": "大和郡山市",
@@ -81,7 +81,7 @@
       {
         "municipality": "三郷町",
         "count": 3,
-        "changeFromPrevious": 2
+        "changeFromPrevious": 0
       },
       {
         "municipality": "大和高田市",
@@ -116,7 +116,7 @@
       {
         "municipality": "斑鳩町",
         "count": 2,
-        "changeFromPrevious": 1
+        "changeFromPrevious": 0
       },
       {
         "municipality": "平群町",
@@ -165,11 +165,10 @@
     ]
   },
   "intelligence": {
-    "itemsWithPdf": 50,
-    "itemsWithDescription": 50,
-    "intelligenceExtractedCount": 48,
-    "geminiExtractedCount": 48,
-    "taggedCount": 48,
-    "lastAugmentedAt": "2026-06-05T08:02:12.923Z"
+    "itemsWithPdf": 37,
+    "itemsWithDescription": 37,
+    "intelligenceExtractedCount": 35,
+    "geminiExtractedCount": 35,
+    "taggedCount": 35
   }
 }
