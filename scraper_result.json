@@ -1,15 +1,5 @@
 [
   {
-    "id": "ikoma-result-2601010025",
-    "municipality": "生駒市",
-    "title": "生駒南小学校・生駒南中学校整備事業に伴う生駒南小学校改修工事",
-    "type": "建築",
-    "announcementDate": "2026-06-05",
-    "biddingDate": "2026-06-05",
-    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-    "status": "受付終了"
-  },
-  {
     "id": "katsuragi-epi-757bf6dc",
     "municipality": "葛城市",
     "title": "第08-302号 公園施設長寿命化対策支援事業に伴う屋敷山公園遊具更新工事",
@@ -18,6 +8,16 @@
     "biddingDate": "2026-07-08",
     "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200720",
     "status": "受付中"
+  },
+  {
+    "id": "ikoma-result-2601010025",
+    "municipality": "生駒市",
+    "title": "生駒南小学校・生駒南中学校整備事業に伴う生駒南小学校改修工事",
+    "type": "建築",
+    "announcementDate": "2026-06-05",
+    "biddingDate": "2026-06-05",
+    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+    "status": "受付終了"
   },
   {
     "id": "uda-7ede7a02c3",
@@ -273,6 +273,24 @@
     "winnerType": "ゼネコン"
   },
   {
+    "id": "tenri-4d4dd96a",
+    "municipality": "天理市",
+    "title": "天理市立丹波市・前栽・櫟本小学校屋内運動場断熱化工事",
+    "type": "建築",
+    "announcementDate": "2026-05-27",
+    "link": "https://www.city.tenri.nara.jp/kakuka/soumubu/nyuusatsushinsashitsu/construction_work/kouji_hattyuu_kanren/1395887232147.html",
+    "status": "受付中"
+  },
+  {
+    "id": "tenri-8ce3ca4f",
+    "municipality": "天理市",
+    "title": "山の辺小学校建替え整備事業に伴う丹波市小学校給食室改修工事",
+    "type": "建築",
+    "announcementDate": "2026-05-27",
+    "link": "https://www.city.tenri.nara.jp/kakuka/soumubu/nyuusatsushinsashitsu/construction_work/kouji_hattyuu_kanren/1395887232147.html",
+    "status": "受付中"
+  },
+  {
     "id": "nara-pref-29001013060020260050",
     "municipality": "奈良県",
     "title": "消防学校本館内装等改修工事設計業務 委（設）第８－８号",
@@ -293,24 +311,6 @@
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260054&gamenMode=0",
     "status": "受付中",
     "winnerType": "設計事務所"
-  },
-  {
-    "id": "tenri-4d4dd96a",
-    "municipality": "天理市",
-    "title": "天理市立丹波市・前栽・櫟本小学校屋内運動場断熱化工事",
-    "type": "建築",
-    "announcementDate": "2026-05-27",
-    "link": "https://www.city.tenri.nara.jp/kakuka/soumubu/nyuusatsushinsashitsu/construction_work/kouji_hattyuu_kanren/1395887232147.html",
-    "status": "受付中"
-  },
-  {
-    "id": "tenri-8ce3ca4f",
-    "municipality": "天理市",
-    "title": "山の辺小学校建替え整備事業に伴う丹波市小学校給食室改修工事",
-    "type": "建築",
-    "announcementDate": "2026-05-27",
-    "link": "https://www.city.tenri.nara.jp/kakuka/soumubu/nyuusatsushinsashitsu/construction_work/kouji_hattyuu_kanren/1395887232147.html",
-    "status": "受付中"
   },
   {
     "id": "yamato-koriyama-ee85746d",
@@ -488,16 +488,6 @@
     "status": "受付中"
   },
   {
-    "id": "nara-city-0000002475",
-    "municipality": "奈良市",
-    "title": "中央体育館汚水配管改修工事に伴う建築設計業務委託",
-    "type": "コンサル",
-    "announcementDate": "2026-05-15",
-    "biddingDate": "2026-06-19",
-    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
-    "status": "受付中"
-  },
-  {
     "id": "ikoma-899043f14b",
     "municipality": "生駒市",
     "title": "生駒市立病院施設整備工事",
@@ -620,14 +610,15 @@
     "winningContractor": "(株)岩岸設計"
   },
   {
-    "id": "nara-city-0000002439",
-    "municipality": "奈良市",
-    "title": "飛鳥小学校他３校受水槽等改修に伴う設計業務委託",
-    "type": "コンサル",
+    "id": "gojo-epi-2601002",
+    "municipality": "五條市",
+    "title": "宗桧公民館改修工事",
+    "type": "建築",
     "announcementDate": "2026-05-01",
-    "biddingDate": "2026-06-04",
-    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
-    "status": "受付終了"
+    "biddingDate": "2026-05-27",
+    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002601002",
+    "status": "不調",
+    "estimatedPrice": "44,460,000円"
   },
   {
     "id": "nara-city-0000002440",
@@ -638,17 +629,6 @@
     "biddingDate": "2026-06-04",
     "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
     "status": "受付終了"
-  },
-  {
-    "id": "gojo-epi-2601002",
-    "municipality": "五條市",
-    "title": "宗桧公民館改修工事",
-    "type": "建築",
-    "announcementDate": "2026-05-01",
-    "biddingDate": "2026-05-27",
-    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002601002",
-    "status": "不調",
-    "estimatedPrice": "44,460,000円"
   },
   {
     "id": "sango-epi-5Luk5ZKMOOW5",
@@ -800,15 +780,14 @@
     "status": "受付終了"
   },
   {
-    "id": "nara-city-0000002350",
-    "municipality": "奈良市",
-    "title": "中央消防署南部分署公共下水接続その他工事に伴う建築設計業務委託",
+    "id": "kashiba-web-f9a78168",
+    "municipality": "香芝市",
+    "title": "三和小学校校舎増築工事に伴う設計業務",
     "type": "コンサル",
-    "announcementDate": "2026-04-15",
-    "biddingDate": "2026-05-27",
-    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
-    "status": "落札",
-    "winningContractor": "株式会社建綜研"
+    "announcementDate": "2026-04-09",
+    "biddingDate": "2026-04-28",
+    "link": "https://www.city.kashiba.lg.jp/uploaded/attachment/31836.pdf",
+    "status": "受付終了"
   },
   {
     "id": "tawaramoto-2026051803",
@@ -818,16 +797,6 @@
     "announcementDate": "2026-04-09",
     "biddingDate": "2026-05-18",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/javaScript:void(0);",
-    "status": "受付終了"
-  },
-  {
-    "id": "kashiba-web-f9a78168",
-    "municipality": "香芝市",
-    "title": "三和小学校校舎増築工事に伴う設計業務",
-    "type": "コンサル",
-    "announcementDate": "2026-04-09",
-    "biddingDate": "2026-04-28",
-    "link": "https://www.city.kashiba.lg.jp/uploaded/attachment/31836.pdf",
     "status": "受付終了"
   },
   {
@@ -1116,30 +1085,6 @@
       "改修",
       "建築",
       "屋根"
-    ],
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini"
-  },
-  {
-    "id": "kashihara-result-5072001184",
-    "municipality": "橿原市",
-    "title": "耳成西小学校受水槽改修工事に伴う設計委託",
-    "type": "コンサル",
-    "announcementDate": "2025-12-18",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18375.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5072001184k.pdf",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "winningContractor": "(有)坪岡建築事務所",
-    "biddingDate": "2025-12-18",
-    "estimatedPrice": "3,597,000円(消費税含む)",
-    "designFirm": "(有)坪岡建築事務所",
-    "constructionPeriod": "令和8年3月31日まで",
-    "description": "耳成西小学校受水槽改修工事に伴う設計委託",
-    "tags": [
-      "改修",
-      "設計",
-      "建築"
     ],
     "isIntelligenceExtracted": true,
     "extractionSource": "gemini"
@@ -1535,18 +1480,6 @@
     "extractionSource": "gemini"
   },
   {
-    "id": "ikoma-result-2501010071",
-    "municipality": "生駒市",
-    "title": "生駒市図書館リニューアル工事",
-    "type": "建築",
-    "announcementDate": "2025-09-30",
-    "biddingDate": "2025-09-30",
-    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-    "status": "落札",
-    "winningContractor": "株式会社下西工務店",
-    "winnerType": "ゼネコン"
-  },
-  {
     "id": "gojo-epi-2501036",
     "municipality": "五條市",
     "title": "須恵児童公園トイレ撤去工事",
@@ -1557,6 +1490,18 @@
     "status": "落札",
     "winningContractor": "たけや興業（株）",
     "estimatedPrice": "929,000円"
+  },
+  {
+    "id": "ikoma-result-2501010071",
+    "municipality": "生駒市",
+    "title": "生駒市図書館リニューアル工事",
+    "type": "建築",
+    "announcementDate": "2025-09-30",
+    "biddingDate": "2025-09-30",
+    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+    "status": "落札",
+    "winningContractor": "株式会社下西工務店",
+    "winnerType": "ゼネコン"
   },
   {
     "id": "高取町-2025-09-29-高取町耐震改修促進計画改訂業務",
@@ -1875,17 +1820,6 @@
     "status": "受付終了"
   },
   {
-    "id": "yamato-takada-4da9a36b",
-    "municipality": "大和高田市",
-    "title": "市営住宅礒野団地4号棟外壁等改修工事設計業務委託",
-    "type": "コンサル",
-    "announcementDate": "2025-07-01",
-    "biddingDate": "2025-07-18",
-    "link": "https://www.city.yamatotakada.nara.jp/soshikikarasagasu/somuka/keiyakukanri/nyusatsu_keiyaku/1/9099.html",
-    "status": "落札",
-    "winningContractor": "株式会社京成設計"
-  },
-  {
     "id": "gojo-epi-2501009",
     "municipality": "五條市",
     "title": "五條市立田園公民館男子トイレ洋式化工事",
@@ -1898,6 +1832,28 @@
     "estimatedPrice": "886,000円"
   },
   {
+    "id": "gojo-known-housing-design-2025-07-01",
+    "municipality": "五條市",
+    "title": "市営住宅外壁等改修工事設計業務委託",
+    "type": "コンサル",
+    "announcementDate": "2025-07-01",
+    "link": "https://www.city.gojo.lg.jp/material/files/group/4/7itaku2.pdf",
+    "pdfUrl": "https://www.city.gojo.lg.jp/material/files/group/4/7itaku2.pdf",
+    "status": "受付終了",
+    "description": "五條市公共工事等発注見通しの公表書（令和7年度7月）"
+  },
+  {
+    "id": "gojo-known-sogi-design-2025-07-01",
+    "municipality": "五條市",
+    "title": "宗桧公民館改修工事設計業務",
+    "type": "コンサル",
+    "announcementDate": "2025-07-01",
+    "link": "https://www.city.gojo.lg.jp/material/files/group/4/7itaku2.pdf",
+    "pdfUrl": "https://www.city.gojo.lg.jp/material/files/group/4/7itaku2.pdf",
+    "status": "受付終了",
+    "description": "五條市公共工事等発注見通しの公表書（令和7年度7月）"
+  },
+  {
     "id": "山添村-山添村立小中学校建設工事",
     "municipality": "山添村",
     "title": "山添村立小中学校建設工事",
@@ -1908,6 +1864,17 @@
     "status": "落札",
     "winningContractor": "藤本建設株式会社",
     "winnerType": "ゼネコン"
+  },
+  {
+    "id": "yamato-takada-4da9a36b",
+    "municipality": "大和高田市",
+    "title": "市営住宅礒野団地4号棟外壁等改修工事設計業務委託",
+    "type": "コンサル",
+    "announcementDate": "2025-07-01",
+    "biddingDate": "2025-07-18",
+    "link": "https://www.city.yamatotakada.nara.jp/soshikikarasagasu/somuka/keiyakukanri/nyusatsu_keiyaku/1/9099.html",
+    "status": "落札",
+    "winningContractor": "株式会社京成設計"
   },
   {
     "id": "kashihara-result-5071000510",
@@ -1957,18 +1924,6 @@
     "extractionSource": "gemini"
   },
   {
-    "id": "ikoma-result-2501010027",
-    "municipality": "生駒市",
-    "title": "藤尾町地内耐震性貯水槽設置工事",
-    "type": "建築",
-    "announcementDate": "2025-06-19",
-    "biddingDate": "2025-06-19",
-    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-    "status": "落札",
-    "winningContractor": "株式会社生駒住建",
-    "winnerType": "ゼネコン"
-  },
-  {
     "id": "uda-result-2595100007",
     "municipality": "宇陀市",
     "title": "【第07-C014号】旧伊那佐文化センター集会所整備工事設計事業 旧伊那佐文化センター集会所整備工事設計業務",
@@ -2000,6 +1955,18 @@
     "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200700",
     "status": "落札",
     "winningContractor": "（株）中和設計"
+  },
+  {
+    "id": "ikoma-result-2501010027",
+    "municipality": "生駒市",
+    "title": "藤尾町地内耐震性貯水槽設置工事",
+    "type": "建築",
+    "announcementDate": "2025-06-19",
+    "biddingDate": "2025-06-19",
+    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+    "status": "落札",
+    "winningContractor": "株式会社生駒住建",
+    "winnerType": "ゼネコン"
   },
   {
     "id": "gojo-epi-2501007",
@@ -2058,17 +2025,6 @@
     "winningContractor": "(株)村井設計"
   },
   {
-    "id": "yamato-koriyama-2f97036e",
-    "municipality": "大和郡山市",
-    "title": "大和郡山市消防団第三分団庫建設工事に伴う監理業務委託",
-    "type": "コンサル",
-    "announcementDate": "2025-06-04",
-    "biddingDate": "2025-06-04",
-    "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/1893.html",
-    "status": "落札",
-    "winningContractor": "YARD吉村建築設計"
-  },
-  {
     "id": "katsuragi-epi-2e2f83fc",
     "municipality": "葛城市",
     "title": "新庄中学校北館昇降口防水改修工事",
@@ -2078,6 +2034,17 @@
     "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200720",
     "status": "落札",
     "winningContractor": "(株)生野建設"
+  },
+  {
+    "id": "yamato-koriyama-2f97036e",
+    "municipality": "大和郡山市",
+    "title": "大和郡山市消防団第三分団庫建設工事に伴う監理業務委託",
+    "type": "コンサル",
+    "announcementDate": "2025-06-04",
+    "biddingDate": "2025-06-04",
+    "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/1893.html",
+    "status": "落札",
+    "winningContractor": "YARD吉村建築設計"
   },
   {
     "id": "sango-epi-5Luk5ZKMN+W5",

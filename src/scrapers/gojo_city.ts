@@ -33,6 +33,22 @@ const KNOWN_GOJO_ITEMS: Array<Pick<BiddingItem, 'title' | 'announcementDate' | '
         type: 'コンサル',
         status: '受付中',
     },
+    {
+        title: '市営住宅外壁等改修工事設計業務委託',
+        announcementDate: '2025-07-01',
+        link: 'https://www.city.gojo.lg.jp/material/files/group/4/7itaku2.pdf',
+        pdfUrl: 'https://www.city.gojo.lg.jp/material/files/group/4/7itaku2.pdf',
+        type: 'コンサル',
+        status: '受付終了',
+    },
+    {
+        title: '宗桧公民館改修工事設計業務',
+        announcementDate: '2025-07-01',
+        link: 'https://www.city.gojo.lg.jp/material/files/group/4/7itaku2.pdf',
+        pdfUrl: 'https://www.city.gojo.lg.jp/material/files/group/4/7itaku2.pdf',
+        type: 'コンサル',
+        status: '受付終了',
+    },
 ];
 
 const ARCHITECTURE_CONTEXT = [

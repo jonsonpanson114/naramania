@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-06-07T12:43:30.667Z",
+  "generatedAt": "2026-06-07T12:49:18.570Z",
   "source": "manual_filter_refresh",
   "scrapedCount": 192,
-  "keptCount": 188,
+  "keptCount": 186,
   "rejectedCount": 0,
   "oldestAnnouncementDate": "2025-04-08",
   "latestAnnouncementDate": "2026-06-05",
@@ -16,7 +16,7 @@
       {
         "municipality": "奈良県",
         "count": 26,
-        "changeFromPrevious": -1
+        "changeFromPrevious": 0
       },
       {
         "municipality": "葛城市",
@@ -30,8 +30,8 @@
       },
       {
         "municipality": "橿原市",
-        "count": 20,
-        "changeFromPrevious": 0
+        "count": 19,
+        "changeFromPrevious": -1
       },
       {
         "municipality": "高取町",
@@ -45,13 +45,13 @@
       },
       {
         "municipality": "五條市",
-        "count": 11,
-        "changeFromPrevious": 0
+        "count": 13,
+        "changeFromPrevious": 2
       },
       {
         "municipality": "奈良市",
-        "count": 10,
-        "changeFromPrevious": -2
+        "count": 7,
+        "changeFromPrevious": -3
       },
       {
         "municipality": "香芝市",
@@ -136,7 +136,7 @@
       {
         "municipality": "斑鳩町",
         "count": 1,
-        "changeFromPrevious": -1
+        "changeFromPrevious": 0
       }
     ],
     "retainedFromPrevious": [],
@@ -150,10 +150,10 @@
     "sampleTitles": []
   },
   "intelligence": {
-    "itemsWithPdf": 32,
-    "itemsWithDescription": 32,
-    "intelligenceExtractedCount": 30,
-    "geminiExtractedCount": 30,
-    "taggedCount": 30
+    "itemsWithPdf": 33,
+    "itemsWithDescription": 33,
+    "intelligenceExtractedCount": 29,
+    "geminiExtractedCount": 29,
+    "taggedCount": 29
   }
 }

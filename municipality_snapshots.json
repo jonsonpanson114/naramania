@@ -289,26 +289,6 @@
   ],
   "奈良市": [
     {
-      "id": "nara-city-0000002475",
-      "municipality": "奈良市",
-      "title": "中央体育館汚水配管改修工事に伴う建築設計業務委託",
-      "type": "コンサル",
-      "announcementDate": "2026-05-15",
-      "biddingDate": "2026-06-19",
-      "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
-      "status": "受付中"
-    },
-    {
-      "id": "nara-city-0000002439",
-      "municipality": "奈良市",
-      "title": "飛鳥小学校他３校受水槽等改修に伴う設計業務委託",
-      "type": "コンサル",
-      "announcementDate": "2026-05-01",
-      "biddingDate": "2026-06-04",
-      "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
-      "status": "受付終了"
-    },
-    {
       "id": "nara-city-0000002440",
       "municipality": "奈良市",
       "title": "佐保バンビーホーム新築に伴う建築設計業務委託",
@@ -381,17 +361,6 @@
       "biddingDate": "2026-05-27",
       "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
       "status": "受付終了"
-    },
-    {
-      "id": "nara-city-0000002350",
-      "municipality": "奈良市",
-      "title": "中央消防署南部分署公共下水接続その他工事に伴う建築設計業務委託",
-      "type": "コンサル",
-      "announcementDate": "2026-04-15",
-      "biddingDate": "2026-05-27",
-      "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
-      "status": "落札",
-      "winningContractor": "株式会社建綜研"
     }
   ],
   "橿原市": [
@@ -470,30 +439,6 @@
         "改修",
         "建築",
         "屋根"
-      ],
-      "isIntelligenceExtracted": true,
-      "extractionSource": "gemini"
-    },
-    {
-      "id": "kashihara-result-5072001184",
-      "municipality": "橿原市",
-      "title": "耳成西小学校受水槽改修工事に伴う設計委託",
-      "type": "コンサル",
-      "announcementDate": "2025-12-18",
-      "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18375.html",
-      "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5072001184k.pdf",
-      "status": "落札",
-      "winnerType": "設計事務所",
-      "winningContractor": "(有)坪岡建築事務所",
-      "biddingDate": "2025-12-18",
-      "estimatedPrice": "3,597,000円(消費税含む)",
-      "designFirm": "(有)坪岡建築事務所",
-      "constructionPeriod": "令和8年3月31日まで",
-      "description": "耳成西小学校受水槽改修工事に伴う設計委託",
-      "tags": [
-        "改修",
-        "設計",
-        "建築"
       ],
       "isIntelligenceExtracted": true,
       "extractionSource": "gemini"
@@ -1548,6 +1493,28 @@
       "status": "落札",
       "winningContractor": "（株）近井工務店",
       "estimatedPrice": "7,698,000円"
+    },
+    {
+      "id": "gojo-known-housing-design-2025-07-01",
+      "municipality": "五條市",
+      "title": "市営住宅外壁等改修工事設計業務委託",
+      "type": "コンサル",
+      "announcementDate": "2025-07-01",
+      "link": "https://www.city.gojo.lg.jp/material/files/group/4/7itaku2.pdf",
+      "pdfUrl": "https://www.city.gojo.lg.jp/material/files/group/4/7itaku2.pdf",
+      "status": "受付終了",
+      "description": "五條市公共工事等発注見通しの公表書（令和7年度7月）"
+    },
+    {
+      "id": "gojo-known-sogi-design-2025-07-01",
+      "municipality": "五條市",
+      "title": "宗桧公民館改修工事設計業務",
+      "type": "コンサル",
+      "announcementDate": "2025-07-01",
+      "link": "https://www.city.gojo.lg.jp/material/files/group/4/7itaku2.pdf",
+      "pdfUrl": "https://www.city.gojo.lg.jp/material/files/group/4/7itaku2.pdf",
+      "status": "受付終了",
+      "description": "五條市公共工事等発注見通しの公表書（令和7年度7月）"
     }
   ],
   "御所市": [

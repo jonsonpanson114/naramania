@@ -79,6 +79,7 @@ const DEFAULT_ALWAYS_EXCLUDE_KEYWORDS = [
     '温水設備', '換気設備', '発電設備', '自動火災報知設備',
     'ボイラー', '冷温水機', '消火栓設備', 'ポンプ更新',
     'エレベーター', '昇降機', '電気棟',
+    '受水槽', '下水接続', '汚水配管', '配管改修', '給排水',
 ];
 
 const DEFAULT_INFRA_EXCLUDE_KEYWORDS = [
