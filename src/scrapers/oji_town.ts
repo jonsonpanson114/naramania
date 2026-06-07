@@ -50,6 +50,14 @@ function classifyType(title: string): BiddingType {
     return '建築';
 }
 
+function normalizeOjiTitle(title: string): string {
+    const wrapped = title.match(/(?:事後審査型条件付一般競争入札の公表について|事後公表)[（(](.+)[)）]/);
+    if (wrapped?.[1]) {
+        return wrapped[1].trim();
+    }
+    return title.trim();
+}
+
 export class OjiTownScraper implements Scraper {
     municipality: '王寺町' = '王寺町' as const;
 
@@ -83,7 +91,7 @@ export class OjiTownScraper implements Scraper {
                 const detailDate = parseUpdatedDate(detailHtml);
                 const isResult = detailHtml.includes('入札についての事後公表') || normalizedTitle.includes('事後公表');
                 const titleMatch = detailHtml.match(/<h1[^>]*>([^<]+)<\/h1>/);
-                const title = titleMatch?.[1]?.trim() || normalizedTitle;
+                const title = normalizeOjiTitle(titleMatch?.[1]?.trim() || normalizedTitle);
                 let biddingDate = '';
 
                 if (!isResult) {
@@ -127,8 +135,8 @@ export class OjiTownScraper implements Scraper {
             items.push({
                 id: `oji-supplemental-${Buffer.from(supplemental.link).toString('base64').slice(0, 12)}`,
                 municipality: '王寺町',
-                title: supplemental.title,
-                type: classifyType(supplemental.title),
+                title: normalizeOjiTitle(supplemental.title),
+                type: classifyType(normalizeOjiTitle(supplemental.title)),
                 announcementDate: supplemental.announcementDate,
                 biddingDate: supplemental.biddingDate,
                 link: supplemental.link,
