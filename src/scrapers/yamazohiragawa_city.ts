@@ -28,6 +28,15 @@ const KNOWN_YAMAZOE_ITEMS: BiddingItem[] = [
         winningContractor: '藤本建設株式会社',
         winnerType: 'ゼネコン',
     },
+    {
+        id: '山添村-山添村義務教育学校建設基本計画業務',
+        municipality: '山添村',
+        title: '山添村義務教育学校建設基本計画業務',
+        type: 'コンサル',
+        announcementDate: '2025-02-27',
+        link: 'https://www.vill.yamazoe.nara.jp/life/kurashi_guide/kosodate/gakkou/gimukyouikugakkou-setti',
+        status: '受付終了',
+    },
 ];
 const KNOWN_HEGURI_ITEMS: BiddingItem[] = [
     {

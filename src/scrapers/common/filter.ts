@@ -115,6 +115,7 @@ const PRIORITY_ARCHITECTURE_PATTERNS = [
     '芝運動公園運動場等再整備基本設計業務',
     '立地適正化計画改定業務',
     '給食室改修工事',
+    '山添村義務教育学校建設基本計画業務',
 ];
 
 function getPreviousFiscalYearStart(referenceDate = new Date()): Date {

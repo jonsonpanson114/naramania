@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-06-07T13:10:47.296Z",
+  "generatedAt": "2026-06-07T13:14:50.394Z",
   "source": "manual_filter_refresh",
   "scrapedCount": 192,
-  "keptCount": 190,
+  "keptCount": 191,
   "rejectedCount": 0,
   "oldestAnnouncementDate": "2025-02-02",
   "latestAnnouncementDate": "2026-06-05",
@@ -71,7 +71,7 @@
       {
         "municipality": "天理市",
         "count": 4,
-        "changeFromPrevious": 1
+        "changeFromPrevious": 0
       },
       {
         "municipality": "田原本町",
@@ -109,6 +109,11 @@
         "changeFromPrevious": 0
       },
       {
+        "municipality": "山添村",
+        "count": 2,
+        "changeFromPrevious": 1
+      },
+      {
         "municipality": "大淀町",
         "count": 2,
         "changeFromPrevious": 0
@@ -120,11 +125,6 @@
       },
       {
         "municipality": "王寺町",
-        "count": 1,
-        "changeFromPrevious": 0
-      },
-      {
-        "municipality": "山添村",
         "count": 1,
         "changeFromPrevious": 0
       },
