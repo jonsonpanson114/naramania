@@ -67,17 +67,6 @@
       "winnerType": "設計事務所"
     },
     {
-      "id": "nara-pref-29005007060120260011",
-      "municipality": "奈良県",
-      "title": "御所浄水場電気棟改修工事（建築工事）",
-      "type": "建築",
-      "announcementDate": "2026-05-29",
-      "biddingDate": "2026-06-29",
-      "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29005007060120260011&gamenMode=0",
-      "status": "受付中",
-      "winnerType": "ゼネコン"
-    },
-    {
       "id": "nara-pref-29001013060020260029",
       "municipality": "奈良県",
       "title": "県営住宅売間団地（１，２号棟）屋上防水・外壁等改修工事監理業務（県営住宅環境改善事業（防災・安全）） 委（監）第８－９号",
@@ -299,26 +288,6 @@
     }
   ],
   "奈良市": [
-    {
-      "id": "nara-city-0000002484",
-      "municipality": "奈良市",
-      "title": "春日中学校エレベーター新設工事",
-      "type": "建築",
-      "announcementDate": "2026-06-01",
-      "biddingDate": "2026-06-30",
-      "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
-      "status": "受付中"
-    },
-    {
-      "id": "nara-city-0000002485",
-      "municipality": "奈良市",
-      "title": "伏見小学校エレベーター新設工事",
-      "type": "建築",
-      "announcementDate": "2026-06-01",
-      "biddingDate": "2026-07-01",
-      "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
-      "status": "受付中"
-    },
     {
       "id": "nara-city-0000002475",
       "municipality": "奈良市",
@@ -2382,16 +2351,6 @@
     }
   ],
   "斑鳩町": [
-    {
-      "id": "斑鳩町-2026-05-15-斑鳩西小学校エレベーター新設工事",
-      "municipality": "斑鳩町",
-      "title": "斑鳩西小学校エレベーター新設工事",
-      "type": "建築",
-      "announcementDate": "2026-05-15",
-      "biddingDate": "2026-05-29",
-      "link": "https://www.town.ikaruga.nara.jp/0000001956.html",
-      "status": "受付終了"
-    },
     {
       "id": "斑鳩町-2026-01-08-町営興留東団地住宅解体工事",
       "municipality": "斑鳩町",

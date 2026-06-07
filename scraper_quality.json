@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-06-07T11:11:42.619Z",
+  "generatedAt": "2026-06-07T12:43:30.667Z",
   "source": "manual_filter_refresh",
   "scrapedCount": 192,
-  "keptCount": 192,
+  "keptCount": 188,
   "rejectedCount": 0,
   "oldestAnnouncementDate": "2025-04-08",
   "latestAnnouncementDate": "2026-06-05",
@@ -15,8 +15,8 @@
     "breakdown": [
       {
         "municipality": "奈良県",
-        "count": 27,
-        "changeFromPrevious": 0
+        "count": 26,
+        "changeFromPrevious": -1
       },
       {
         "municipality": "葛城市",
@@ -41,17 +41,17 @@
       {
         "municipality": "生駒市",
         "count": 18,
-        "changeFromPrevious": -1
-      },
-      {
-        "municipality": "奈良市",
-        "count": 12,
         "changeFromPrevious": 0
       },
       {
         "municipality": "五條市",
         "count": 11,
         "changeFromPrevious": 0
+      },
+      {
+        "municipality": "奈良市",
+        "count": 10,
+        "changeFromPrevious": -2
       },
       {
         "municipality": "香芝市",
@@ -109,11 +109,6 @@
         "changeFromPrevious": 0
       },
       {
-        "municipality": "斑鳩町",
-        "count": 2,
-        "changeFromPrevious": 0
-      },
-      {
         "municipality": "平群町",
         "count": 2,
         "changeFromPrevious": 0
@@ -137,6 +132,11 @@
         "municipality": "大和高田市",
         "count": 1,
         "changeFromPrevious": 0
+      },
+      {
+        "municipality": "斑鳩町",
+        "count": 1,
+        "changeFromPrevious": -1
       }
     ],
     "retainedFromPrevious": [],
