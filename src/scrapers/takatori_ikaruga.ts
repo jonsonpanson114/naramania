@@ -17,6 +17,15 @@ const KNOWN_IKARUGA_ITEMS: BiddingItem[] = [
         link: 'https://www.town.ikaruga.nara.jp/category/1-10-0-0-0-0-0-0-0-0.html',
         status: '受付終了',
     },
+    {
+        id: buildId('斑鳩町', '2026-05-01', '斑鳩小学校の長寿命化工事に向けた基本計画'),
+        municipality: '斑鳩町',
+        title: '斑鳩小学校の長寿命化工事に向けた基本計画',
+        type: 'コンサル',
+        announcementDate: '2026-05-01',
+        link: 'https://www.town.ikaruga.nara.jp/cmsfiles/contents/0000000/234/R8-5-1.pdf',
+        status: '受付終了',
+    },
 ];
 function classifyType(title: string): BiddingType {
     if (title.includes('設計') || title.includes('監理') || title.includes('コンサル')) return 'コンサル';

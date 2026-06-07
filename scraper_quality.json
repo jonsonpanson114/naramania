@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-06-07T13:14:50.394Z",
-  "source": "manual_filter_refresh",
-  "scrapedCount": 192,
-  "keptCount": 191,
+  "generatedAt": "2026-06-07T13:22:28.503Z",
+  "source": "daily_scrape",
+  "scrapedCount": 2,
+  "keptCount": 190,
   "rejectedCount": 0,
   "oldestAnnouncementDate": "2025-02-02",
   "latestAnnouncementDate": "2026-06-05",
@@ -69,11 +69,6 @@
         "changeFromPrevious": 0
       },
       {
-        "municipality": "天理市",
-        "count": 4,
-        "changeFromPrevious": 0
-      },
-      {
         "municipality": "田原本町",
         "count": 4,
         "changeFromPrevious": 0
@@ -87,6 +82,11 @@
         "municipality": "三郷町",
         "count": 3,
         "changeFromPrevious": 0
+      },
+      {
+        "municipality": "天理市",
+        "count": 3,
+        "changeFromPrevious": -1
       },
       {
         "municipality": "安堵町",
@@ -109,14 +109,14 @@
         "changeFromPrevious": 0
       },
       {
-        "municipality": "山添村",
-        "count": 2,
-        "changeFromPrevious": 1
-      },
-      {
         "municipality": "大淀町",
         "count": 2,
         "changeFromPrevious": 0
+      },
+      {
+        "municipality": "斑鳩町",
+        "count": 2,
+        "changeFromPrevious": 1
       },
       {
         "municipality": "平群町",
@@ -129,12 +129,12 @@
         "changeFromPrevious": 0
       },
       {
-        "municipality": "大和高田市",
+        "municipality": "山添村",
         "count": 1,
-        "changeFromPrevious": 0
+        "changeFromPrevious": -1
       },
       {
-        "municipality": "斑鳩町",
+        "municipality": "大和高田市",
         "count": 1,
         "changeFromPrevious": 0
       }

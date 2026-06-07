@@ -116,6 +116,7 @@ const PRIORITY_ARCHITECTURE_PATTERNS = [
     '立地適正化計画改定業務',
     '給食室改修工事',
     '山添村義務教育学校建設基本計画業務',
+    '斑鳩小学校の長寿命化工事に向けた基本計画',
 ];
 
 function getPreviousFiscalYearStart(referenceDate = new Date()): Date {
