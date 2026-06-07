@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-06-07T12:54:54.934Z",
+  "generatedAt": "2026-06-07T13:01:29.740Z",
   "source": "manual_filter_refresh",
   "scrapedCount": 192,
-  "keptCount": 187,
+  "keptCount": 189,
   "rejectedCount": 0,
   "oldestAnnouncementDate": "2025-02-02",
   "latestAnnouncementDate": "2026-06-05",
@@ -49,13 +49,13 @@
         "changeFromPrevious": 0
       },
       {
-        "municipality": "奈良市",
-        "count": 7,
-        "changeFromPrevious": 0
+        "municipality": "香芝市",
+        "count": 8,
+        "changeFromPrevious": 2
       },
       {
-        "municipality": "香芝市",
-        "count": 6,
+        "municipality": "奈良市",
+        "count": 7,
         "changeFromPrevious": 0
       },
       {
@@ -106,7 +106,7 @@
       {
         "municipality": "三宅町",
         "count": 2,
-        "changeFromPrevious": 1
+        "changeFromPrevious": 0
       },
       {
         "municipality": "大淀町",

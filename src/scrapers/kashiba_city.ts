@@ -58,6 +58,16 @@ const KASHIBA_KNOWN_SCHEDULES: Record<string, {
         biddingDate: '2026-04-28',
         link: 'https://www.city.kashiba.lg.jp/uploaded/attachment/31836.pdf',
     },
+    '志都美小学校建替工事に伴う基本設計業務': {
+        announcementDate: '2025-10-09',
+        biddingDate: '2025-10-28',
+        link: 'https://www.city.kashiba.lg.jp/soshiki/7/60631.html',
+    },
+    '五位堂小学校建替工事に伴う基本設計業務': {
+        announcementDate: '2025-10-09',
+        biddingDate: '2025-11-05',
+        link: 'https://www.city.kashiba.lg.jp/soshiki/7/60631.html',
+    },
 };
 
 function inferKashibaType(title: string): '建築' | 'コンサル' {

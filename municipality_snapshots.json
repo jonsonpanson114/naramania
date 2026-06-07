@@ -1907,72 +1907,6 @@
       "extractionSource": "gemini"
     }
   ],
-  "香芝市": [
-    {
-      "id": "kashiba-web-1bf7b65a",
-      "municipality": "香芝市",
-      "title": "五位堂小学校改築工事に伴う実施設計業務",
-      "type": "コンサル",
-      "announcementDate": "2026-04-23",
-      "biddingDate": "2026-05-26",
-      "link": "https://www.city.kashiba.lg.jp/site/nyuusatsu/list288-1034.html",
-      "status": "受付終了"
-    },
-    {
-      "id": "kashiba-web-b1d487b5",
-      "municipality": "香芝市",
-      "title": "下田小学校長寿命化改修工事",
-      "type": "建築",
-      "announcementDate": "2026-04-23",
-      "biddingDate": "2026-05-21",
-      "link": "https://www.city.kashiba.lg.jp/site/nyuusatsu/65857.html",
-      "status": "落札",
-      "winningContractor": "株式会社上村組"
-    },
-    {
-      "id": "kashiba-web-f9a78168",
-      "municipality": "香芝市",
-      "title": "三和小学校校舎増築工事に伴う設計業務",
-      "type": "コンサル",
-      "announcementDate": "2026-04-09",
-      "biddingDate": "2026-04-28",
-      "link": "https://www.city.kashiba.lg.jp/uploaded/attachment/31836.pdf",
-      "status": "受付終了"
-    },
-    {
-      "id": "kashiba-web-a1acb745",
-      "municipality": "香芝市",
-      "title": "香芝北中学校トイレ改修工事（Ⅱ期）",
-      "type": "建築",
-      "announcementDate": "2026-03-19",
-      "biddingDate": "2026-04-07",
-      "link": "https://www.city.kashiba.lg.jp/uploaded/attachment/31283.pdf",
-      "status": "落札",
-      "winningContractor": "株式会社竹澤工業"
-    },
-    {
-      "id": "kashiba-web-f8098bfc",
-      "municipality": "香芝市",
-      "title": "旭ケ丘小学校トイレ改修工事（Ⅱ期）",
-      "type": "建築",
-      "announcementDate": "2026-03-19",
-      "biddingDate": "2026-04-07",
-      "link": "https://www.city.kashiba.lg.jp/uploaded/attachment/31280.pdf",
-      "status": "落札",
-      "winningContractor": "株式会社豊国"
-    },
-    {
-      "id": "kashiba-web-8cef0080",
-      "municipality": "香芝市",
-      "title": "関屋小学校南館他改修工事",
-      "type": "建築",
-      "announcementDate": "2026-03-12",
-      "biddingDate": "2026-04-07",
-      "link": "https://www.city.kashiba.lg.jp/uploaded/attachment/31282.pdf",
-      "status": "落札",
-      "winningContractor": "株式会社上村組"
-    }
-  ],
   "川西町": [
     {
       "id": "kawanishi-2026-04-01-川西文化会館トイレ改修工事",
@@ -2417,6 +2351,92 @@
       "link": "https://www.town.oyodo.lg.jp/./cmsfiles/contents/0000001/1718/so070722.pdf",
       "status": "落札",
       "winningContractor": "㈱シティ・プランニング 関西支店 1１． 業 務 種 別 建設コンサルタント（「都市計画及び地方計画部門」） ㈱シティ・プランニング 関西支店 3,200,000 3,900,000"
+    }
+  ],
+  "香芝市": [
+    {
+      "id": "kashiba-web-1bf7b65a",
+      "municipality": "香芝市",
+      "title": "五位堂小学校改築工事に伴う実施設計業務",
+      "type": "コンサル",
+      "announcementDate": "2026-04-23",
+      "biddingDate": "2026-05-26",
+      "link": "https://www.city.kashiba.lg.jp/site/nyuusatsu/list288-1034.html",
+      "status": "受付終了"
+    },
+    {
+      "id": "kashiba-web-b1d487b5",
+      "municipality": "香芝市",
+      "title": "下田小学校長寿命化改修工事",
+      "type": "建築",
+      "announcementDate": "2026-04-23",
+      "biddingDate": "2026-05-21",
+      "link": "https://www.city.kashiba.lg.jp/site/nyuusatsu/65857.html",
+      "status": "落札",
+      "winningContractor": "株式会社上村組"
+    },
+    {
+      "id": "kashiba-web-f9a78168",
+      "municipality": "香芝市",
+      "title": "三和小学校校舎増築工事に伴う設計業務",
+      "type": "コンサル",
+      "announcementDate": "2026-04-09",
+      "biddingDate": "2026-04-28",
+      "link": "https://www.city.kashiba.lg.jp/uploaded/attachment/31836.pdf",
+      "status": "受付終了"
+    },
+    {
+      "id": "kashiba-web-a1acb745",
+      "municipality": "香芝市",
+      "title": "香芝北中学校トイレ改修工事（Ⅱ期）",
+      "type": "建築",
+      "announcementDate": "2026-03-19",
+      "biddingDate": "2026-04-07",
+      "link": "https://www.city.kashiba.lg.jp/uploaded/attachment/31283.pdf",
+      "status": "落札",
+      "winningContractor": "株式会社竹澤工業"
+    },
+    {
+      "id": "kashiba-web-f8098bfc",
+      "municipality": "香芝市",
+      "title": "旭ケ丘小学校トイレ改修工事（Ⅱ期）",
+      "type": "建築",
+      "announcementDate": "2026-03-19",
+      "biddingDate": "2026-04-07",
+      "link": "https://www.city.kashiba.lg.jp/uploaded/attachment/31280.pdf",
+      "status": "落札",
+      "winningContractor": "株式会社豊国"
+    },
+    {
+      "id": "kashiba-web-8cef0080",
+      "municipality": "香芝市",
+      "title": "関屋小学校南館他改修工事",
+      "type": "建築",
+      "announcementDate": "2026-03-12",
+      "biddingDate": "2026-04-07",
+      "link": "https://www.city.kashiba.lg.jp/uploaded/attachment/31282.pdf",
+      "status": "落札",
+      "winningContractor": "株式会社上村組"
+    },
+    {
+      "id": "kashiba-web-886968df",
+      "municipality": "香芝市",
+      "title": "志都美小学校建替工事に伴う基本設計業務",
+      "type": "コンサル",
+      "announcementDate": "2025-10-09",
+      "biddingDate": "2025-10-28",
+      "link": "https://www.city.kashiba.lg.jp/soshiki/7/60631.html",
+      "status": "受付終了"
+    },
+    {
+      "id": "kashiba-web-38161edb",
+      "municipality": "香芝市",
+      "title": "五位堂小学校建替工事に伴う基本設計業務",
+      "type": "コンサル",
+      "announcementDate": "2025-10-09",
+      "biddingDate": "2025-11-05",
+      "link": "https://www.city.kashiba.lg.jp/soshiki/7/60631.html",
+      "status": "受付終了"
     }
   ]
 }
