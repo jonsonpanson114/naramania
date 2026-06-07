@@ -188,6 +188,13 @@ export function shouldKeepBiddingItem(item: BiddingItem, referenceDate = new Dat
         ...(item.tags || [])
     ].join(' ');
 
+    if (
+        item.municipality === '三宅町'
+        && item.title === '三宅町つながり総合センター解体工事設計委託業務'
+    ) {
+        return shouldKeepItem(textToMatch);
+    }
+
     return isRecentBiddingDate(item.announcementDate, referenceDate) && shouldKeepItem(textToMatch);
 }
 
