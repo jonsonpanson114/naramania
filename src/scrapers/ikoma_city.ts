@@ -278,7 +278,7 @@ async function extractResultResults(frame: Frame): Promise<BiddingItem[]> {
             announcementDate: biddingDate || '',
             biddingDate,
             link: toAbsoluteUrl(href || ''),
-            status: isFailed ? '不調' : '落札',
+            status: isFailed ? '不調' : (winner ? '落札' : '受付終了'),
             winningContractor: isFailed ? undefined : winner,
             winnerType: classifyWinner(winner || ''),
         });

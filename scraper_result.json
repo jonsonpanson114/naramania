@@ -7,7 +7,7 @@
     "announcementDate": "2026-06-05",
     "biddingDate": "2026-06-05",
     "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-    "status": "落札"
+    "status": "受付終了"
   },
   {
     "id": "katsuragi-epi-757bf6dc",
@@ -23,16 +23,6 @@
     "id": "uda-7ede7a02c3",
     "municipality": "宇陀市",
     "title": "【第08-A003号】旧伊那佐文化センター集会所整備事業 旧伊那佐文化センター集会所整備工事",
-    "type": "建築",
-    "announcementDate": "2026-06-04",
-    "biddingDate": "2026-06-18",
-    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200700",
-    "status": "受付中"
-  },
-  {
-    "id": "uda-9d45cc3d35",
-    "municipality": "宇陀市",
-    "title": "【第08-B002号】宇陀市公園施設長寿命化対策支援事業 管理施設設備更新工事",
     "type": "建築",
     "announcementDate": "2026-06-04",
     "biddingDate": "2026-06-18",
@@ -83,17 +73,6 @@
     "winnerType": "設計事務所"
   },
   {
-    "id": "nara-pref-29004060025020260029",
-    "municipality": "奈良県",
-    "title": "旧生駒警察署留置部分解体撤去工事 監理委託",
-    "type": "コンサル",
-    "announcementDate": "2026-06-02",
-    "biddingDate": "2026-06-19",
-    "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29004060025020260029&gamenMode=0",
-    "status": "受付中",
-    "winnerType": "設計事務所"
-  },
-  {
     "id": "nara-city-0000002484",
     "municipality": "奈良市",
     "title": "春日中学校エレベーター新設工事",
@@ -110,16 +89,6 @@
     "type": "建築",
     "announcementDate": "2026-06-01",
     "biddingDate": "2026-07-01",
-    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
-    "status": "受付中"
-  },
-  {
-    "id": "nara-city-0000002531",
-    "municipality": "奈良市",
-    "title": "梅の郷月ヶ瀬温泉ボイラー設備改修その他工事に伴う建築設計業務委託",
-    "type": "コンサル",
-    "announcementDate": "2026-06-01",
-    "biddingDate": "2026-07-03",
     "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
     "status": "受付中"
   },
@@ -217,15 +186,6 @@
     "status": "受付中"
   },
   {
-    "id": "tenri-d992a9bd",
-    "municipality": "天理市",
-    "title": "天理市環境クリーンセンター解体工事",
-    "type": "建築",
-    "announcementDate": "2026-05-29",
-    "link": "https://www.city.tenri.nara.jp/kakuka/soumubu/nyuusatsushinsashitsu/construction_work/kouji_hattyuu_kanren/1395887232147.html",
-    "status": "受付中"
-  },
-  {
     "id": "nara-pref-29005007060120260011",
     "municipality": "奈良県",
     "title": "御所浄水場電気棟改修工事（建築工事）",
@@ -235,6 +195,15 @@
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29005007060120260011&gamenMode=0",
     "status": "受付中",
     "winnerType": "ゼネコン"
+  },
+  {
+    "id": "tenri-d992a9bd",
+    "municipality": "天理市",
+    "title": "天理市環境クリーンセンター解体工事",
+    "type": "建築",
+    "announcementDate": "2026-05-29",
+    "link": "https://www.city.tenri.nara.jp/kakuka/soumubu/nyuusatsushinsashitsu/construction_work/kouji_hattyuu_kanren/1395887232147.html",
+    "status": "受付中"
   },
   {
     "id": "ikoma-result-2601010008",
@@ -335,15 +304,6 @@
     "winnerType": "ゼネコン"
   },
   {
-    "id": "tenri-4d4dd96a",
-    "municipality": "天理市",
-    "title": "天理市立丹波市・前栽・櫟本小学校屋内運動場断熱化工事",
-    "type": "建築",
-    "announcementDate": "2026-05-27",
-    "link": "https://www.city.tenri.nara.jp/kakuka/soumubu/nyuusatsushinsashitsu/construction_work/kouji_hattyuu_kanren/1395887232147.html",
-    "status": "受付中"
-  },
-  {
     "id": "nara-pref-29001013060020260050",
     "municipality": "奈良県",
     "title": "消防学校本館内装等改修工事設計業務 委（設）第８－８号",
@@ -364,6 +324,24 @@
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260054&gamenMode=0",
     "status": "受付中",
     "winnerType": "設計事務所"
+  },
+  {
+    "id": "tenri-4d4dd96a",
+    "municipality": "天理市",
+    "title": "天理市立丹波市・前栽・櫟本小学校屋内運動場断熱化工事",
+    "type": "建築",
+    "announcementDate": "2026-05-27",
+    "link": "https://www.city.tenri.nara.jp/kakuka/soumubu/nyuusatsushinsashitsu/construction_work/kouji_hattyuu_kanren/1395887232147.html",
+    "status": "受付中"
+  },
+  {
+    "id": "tenri-8ce3ca4f",
+    "municipality": "天理市",
+    "title": "山の辺小学校建替え整備事業に伴う丹波市小学校給食室改修工事",
+    "type": "建築",
+    "announcementDate": "2026-05-27",
+    "link": "https://www.city.tenri.nara.jp/kakuka/soumubu/nyuusatsushinsashitsu/construction_work/kouji_hattyuu_kanren/1395887232147.html",
+    "status": "受付中"
   },
   {
     "id": "yamato-koriyama-ee85746d",
@@ -561,16 +539,6 @@
     "status": "受付中"
   },
   {
-    "id": "ikoma-70a4cbc26a",
-    "municipality": "生駒市",
-    "title": "狭戸配水場配水池詳細耐震診断業務",
-    "type": "コンサル",
-    "announcementDate": "2026-05-15",
-    "biddingDate": "2026-06-05",
-    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-    "status": "落札"
-  },
-  {
     "id": "斑鳩町-2026-05-15-斑鳩西小学校エレベーター新設工事",
     "municipality": "斑鳩町",
     "title": "斑鳩西小学校エレベーター新設工事",
@@ -706,16 +674,6 @@
     "id": "nara-city-0000002440",
     "municipality": "奈良市",
     "title": "佐保バンビーホーム新築に伴う建築設計業務委託",
-    "type": "コンサル",
-    "announcementDate": "2026-05-01",
-    "biddingDate": "2026-06-04",
-    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
-    "status": "受付終了"
-  },
-  {
-    "id": "nara-city-0000002442",
-    "municipality": "奈良市",
-    "title": "生涯学習センター吸収冷温水機改修に伴う設計業務委託",
     "type": "コンサル",
     "announcementDate": "2026-05-01",
     "biddingDate": "2026-06-04",
@@ -894,43 +852,12 @@
     "winningContractor": "株式会社建綜研"
   },
   {
-    "id": "katsuragi-web-c9fcd298",
-    "municipality": "葛城市",
-    "title": "体力づくりセンター各設備整備修繕",
-    "type": "建築",
-    "announcementDate": "2026-04-10",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/1-5-6-2026-1.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/1-5-6-2026-1.pdf",
-    "status": "不調",
-    "biddingDate": "2026-05-14",
-    "estimatedPrice": "54,400,000円 (消費税及び地方消費税を除く。)",
-    "constructionPeriod": "契約日より令和9年3月5日(金)まで",
-    "description": "体力づくりセンター各設備整備修繕",
-    "tags": [
-      "設備",
-      "修繕",
-      "管工事"
-    ],
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini"
-  },
-  {
     "id": "tawaramoto-2026051803",
     "municipality": "田原本町",
     "title": "田原本町立まほろば小学校新築工事",
     "type": "建築",
     "announcementDate": "2026-04-09",
     "biddingDate": "2026-05-18",
-    "link": "https://tawaramoto.efftis.jp/PPI/Public/javaScript:void(0);",
-    "status": "受付終了"
-  },
-  {
-    "id": "tawaramoto-1008051108",
-    "municipality": "田原本町",
-    "title": "田原本町庁舎高圧変圧器更新業務（８－１）",
-    "type": "委託",
-    "announcementDate": "2026-04-09",
-    "biddingDate": "2026-05-11",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/javaScript:void(0);",
     "status": "受付終了"
   },
@@ -1047,28 +974,6 @@
     "winningContractor": "株式会社上村組"
   },
   {
-    "id": "katsuragi-web-874379b9",
-    "municipality": "葛城市",
-    "title": "忍海小学校区学童保育所施設整備工事",
-    "type": "建築",
-    "announcementDate": "2026-03-10",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/9-05-02-2025-1.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/9-05-02-2025-1.pdf",
-    "status": "不調",
-    "biddingDate": "2026-04-15",
-    "estimatedPrice": "169,400,000円 (消費税及び地方消費税を除く)",
-    "designFirm": "(株)中和設計",
-    "constructionPeriod": "契約日から令和9年1月29日",
-    "description": "忍海小学校区学童保育所施設整備工事。忍海小学校区学童保育所の建替工事。新築工事（鉄骨造2階建、延べ面積 359.22 ㎡）、除却工事（鉄骨造平屋建、延べ面積 105.63 ㎡）を含む建築、電気設備、機械設備、外構、除却工事一式。",
-    "tags": [
-      "建築",
-      "建替",
-      "電気設備"
-    ],
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini"
-  },
-  {
     "id": "ikoma-result-2501010110",
     "municipality": "生駒市",
     "title": "上中学校校舎長寿命化改修工事",
@@ -1169,30 +1074,6 @@
     ],
     "isIntelligenceExtracted": true,
     "extractionSource": "gemini"
-  },
-  {
-    "id": "ikoma-result-2501010107",
-    "municipality": "生駒市",
-    "title": "生駒東小学校及び鹿ノ台小学校音楽室エアコン取替工事",
-    "type": "建築",
-    "announcementDate": "2026-01-29",
-    "biddingDate": "2026-01-29",
-    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-    "status": "落札",
-    "winningContractor": "株式会社森岡興産 生駒営業所",
-    "winnerType": "ゼネコン"
-  },
-  {
-    "id": "gojo-epi-2501063",
-    "municipality": "五條市",
-    "title": "五條市保健福祉センター設備改修工事",
-    "type": "建築",
-    "announcementDate": "2026-01-13",
-    "biddingDate": "2026-03-06",
-    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002501063",
-    "status": "落札",
-    "winningContractor": "（株）田原建設",
-    "estimatedPrice": "91,000,000円"
   },
   {
     "id": "斑鳩町-2026-01-08-町営興留東団地住宅解体工事",
@@ -1753,18 +1634,6 @@
     "winnerType": "ゼネコン"
   },
   {
-    "id": "gojo-epi-2501034",
-    "municipality": "五條市",
-    "title": "五條中学校エアコン設置工事",
-    "type": "建築",
-    "announcementDate": "2025-09-22",
-    "biddingDate": "2025-10-03",
-    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002501034",
-    "status": "落札",
-    "winningContractor": "（株）ＹＣ工業",
-    "estimatedPrice": "19,325,000円"
-  },
-  {
     "id": "uda-result-2595010020",
     "municipality": "宇陀市",
     "title": "【第07-B004号】社会資本整備総合交付金事業（防災・安全） 市営住宅川向団地屋根外壁改善工事",
@@ -1890,18 +1759,6 @@
     "winnerType": "ゼネコン"
   },
   {
-    "id": "ikoma-result-2501100012",
-    "municipality": "生駒市",
-    "title": "門前配水場配水池詳細耐震診断業務",
-    "type": "委託",
-    "announcementDate": "2025-08-08",
-    "biddingDate": "2025-08-08",
-    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-    "status": "落札",
-    "winningContractor": "株式会社レック 奈良営業所",
-    "winnerType": "ゼネコン"
-  },
-  {
     "id": "katsuragi-web-fe90b52b",
     "municipality": "葛城市",
     "title": "當麻スポーツセンタートイレ改修工事",
@@ -2004,28 +1861,6 @@
     "winningContractor": "（有）久保田建材工業"
   },
   {
-    "id": "katsuragi-web-a9d471b5",
-    "municipality": "葛城市",
-    "title": "當麻スポーツセンタートイレ改修工事",
-    "type": "建築",
-    "announcementDate": "2025-07-10",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/4-03-01-2025-1-2.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/4-03-01-2025-1-2.pdf",
-    "status": "不調",
-    "biddingDate": "2025-08-05",
-    "estimatedPrice": "48,640,000円",
-    "designFirm": "(株)KEISIN 葛城事務所",
-    "constructionPeriod": "契約日より令和8年1月30日(金)まで",
-    "description": "當麻スポーツセンタートイレ改修工事。1、2階トイレおよび多目的トイレの乾式化・洋式化。",
-    "tags": [
-      "改修",
-      "建築",
-      "設備"
-    ],
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini"
-  },
-  {
     "id": "katsuragi-web-8a40b3d0",
     "municipality": "葛城市",
     "title": "第07-303号 公園施設長寿命化対策支援事業に伴う屋敷山公園噴水広場更新工事",
@@ -2046,18 +1881,6 @@
     ],
     "isIntelligenceExtracted": true,
     "extractionSource": "gemini"
-  },
-  {
-    "id": "ikoma-result-2501010040",
-    "municipality": "生駒市",
-    "title": "小平尾保育園エアコン入替工事",
-    "type": "建築",
-    "announcementDate": "2025-07-09",
-    "biddingDate": "2025-07-09",
-    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-    "status": "落札",
-    "winningContractor": "株式会社エイチツーオー 生駒支店",
-    "winnerType": "ゼネコン"
   },
   {
     "id": "katsuragi-epi-e099d2ca",
@@ -2081,16 +1904,6 @@
     "status": "落札",
     "winningContractor": "（株）福嶋組",
     "estimatedPrice": "2,992,000円"
-  },
-  {
-    "id": "uda-274af5c19a",
-    "municipality": "宇陀市",
-    "title": "【第07-C023号】公園施設長寿命化対策支援事業 管理施設設備更新工事設計業務",
-    "type": "コンサル",
-    "announcementDate": "2025-07-03",
-    "biddingDate": "2025-07-17",
-    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200700",
-    "status": "受付終了"
   },
   {
     "id": "uda-1467b94fb1",
@@ -2308,26 +2121,6 @@
     "winningContractor": "(株)生野建設"
   },
   {
-    "id": "yamato-takada-16a1aa76",
-    "municipality": "大和高田市",
-    "title": "大和高田市立高田商業高等学校屋内消火栓設備改修工事",
-    "type": "建築",
-    "announcementDate": "2025-06-01",
-    "link": "https://www.city.yamatotakada.nara.jp/soshikikarasagasu/somuka/keiyakukanri/nyusatsu_keiyaku/1/9099.html",
-    "status": "受付終了"
-  },
-  {
-    "id": "yamato-takada-cd428f5e",
-    "municipality": "大和高田市",
-    "title": "大和高田市保健センター受電設備改修工事",
-    "type": "建築",
-    "announcementDate": "2025-06-01",
-    "biddingDate": "2025-06-13",
-    "link": "https://www.city.yamatotakada.nara.jp/soshikikarasagasu/somuka/keiyakukanri/nyusatsu_keiyaku/1/9099.html",
-    "status": "落札",
-    "winningContractor": "鳥谷電気商会"
-  },
-  {
     "id": "sango-epi-5Luk5ZKMN+W5",
     "municipality": "三郷町",
     "title": "令和7年度 西部保育園築山人工芝化工事",
@@ -2431,28 +2224,6 @@
     "extractionSource": "gemini"
   },
   {
-    "id": "katsuragi-web-86c2154f",
-    "municipality": "葛城市",
-    "title": "体力づくりセンター各設備整備修繕",
-    "type": "建築",
-    "announcementDate": "2025-05-14",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/2-03-03-2025-1.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/2-03-03-2025-1.pdf",
-    "status": "落札",
-    "biddingDate": "2025-06-12",
-    "winningContractor": "近鉄ファシリティーズ(株) 奈良支店",
-    "estimatedPrice": "40,920,000 円",
-    "constructionPeriod": "契約日から令和8年3月10日",
-    "description": "体力づくりセンターの各設備にかかる経年整備及び不具合箇所の修繕内容:浴槽用ろ過装置ろ材取替(男子・女子)各一式、鉄製ドア取替、ジャグジー槽薬品循環洗浄、加圧給水ポンプ分解整備、GHP更新工事",
-    "tags": [
-      "改修",
-      "設備",
-      "管工事"
-    ],
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini"
-  },
-  {
     "id": "katsuragi-epi-92f71a52",
     "municipality": "葛城市",
     "title": "第7-508号 市営住宅堂の久保団地空家解体設計委託業務",
@@ -2550,29 +2321,6 @@
       "改修",
       "防水",
       "建築"
-    ],
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini"
-  },
-  {
-    "id": "kashihara-result-5071000031",
-    "municipality": "橿原市",
-    "title": "耳成小学校等下水接続工事",
-    "type": "建築",
-    "announcementDate": "2025-04-22",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000031k.pdf",
-    "status": "落札",
-    "winnerType": "ゼネコン",
-    "winningContractor": "(株)岡本設備",
-    "biddingDate": "2025-04-22",
-    "estimatedPrice": "69,707,000円(消費税%含む)",
-    "constructionPeriod": "契約日の翌日〜令和8年3月18日",
-    "description": "耳成小学校等下水接続工事",
-    "tags": [
-      "下水",
-      "設備",
-      "工事"
     ],
     "isIntelligenceExtracted": true,
     "extractionSource": "gemini"

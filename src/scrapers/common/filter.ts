@@ -73,16 +73,18 @@ const DEFAULT_ALWAYS_EXCLUDE_KEYWORDS = [
     '音響設備機材', '固定資産税', '住民税', '国民健康保険',
     '建設工事がすすんでいます', '利用できなくなります', '引越し作業',
     '指定管理', '指定管理者', '施設管理', '駐車場',
-    'LED', '照明', '空調', '受変電設備', '高圧受電設備',
-    '高圧機器', '消防用設備', '防火設備', '建築設備', '給水設備',
+    'LED', '照明', '空調', 'エアコン', '設備', '設備更新',
+    '受変電設備', '受電設備', '高圧受電設備', '高圧機器',
+    '消防用設備', '防火設備', '建築設備', '給水設備',
     '温水設備', '換気設備', '発電設備', '自動火災報知設備',
+    'ボイラー', '冷温水機', '消火栓設備', 'ポンプ更新',
 ];
 
 const DEFAULT_INFRA_EXCLUDE_KEYWORDS = [
     '道路', '橋梁', '河川', '砂防', '舗装', '法面', '護岸', '浚渫',
     '排水路', '側溝', '水路', '堤防', 'トンネル', 'ガードレール',
     '標識', '区画線', '配水管', '布設', '水道', '下水道',
-    '農道', '林道', '池改修', 'ため池', '交通安全施設',
+    '農道', '林道', '池改修', 'ため池', '配水場', '配水池', '交通安全施設',
     '浄水場', '井戸',
 ];
 
@@ -99,7 +101,7 @@ const DEFAULT_ARCHITECTURE_CONTEXT_KEYWORDS = [
 
 const DEFAULT_ARCHITECTURE_WORK_KEYWORDS = [
     '工事', '修繕', '改修', '新築', '増築', '設計', '実施設計',
-    '基本設計', '工事監理', '耐震診断', '建築設備設計', '更新', '設置',
+    '基本設計', '工事監理', '耐震診断',
 ];
 
 const ALWAYS_EXCLUDE_KEYWORDS = [...new Set([...DEFAULT_ALWAYS_EXCLUDE_KEYWORDS, ...dataFilters.alwaysExcludeKeywords])];
@@ -110,6 +112,7 @@ const INFRA_ALLOWED_KEYWORDS = dataFilters.infraAllowedKeywords;
 const PRIORITY_ARCHITECTURE_PATTERNS = [
     '芝運動公園運動場等再整備基本設計業務',
     '立地適正化計画改定業務',
+    '給食室改修工事',
 ];
 
 function getPreviousFiscalYearStart(referenceDate = new Date()): Date {

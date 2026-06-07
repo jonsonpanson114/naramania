@@ -16,7 +16,26 @@ const TENRI_SUPPLEMENTAL_ITEMS: Array<{
     biddingDate?: string;
     status: '受付中' | '受付終了' | '落札' | '不調';
     pdfUrl?: string;
-}> = [];
+}> = [
+    {
+        title: '天理市環境クリーンセンター解体工事',
+        link: ANNOUNCE_URL,
+        announcementDate: '2026-05-29',
+        status: '受付中',
+    },
+    {
+        title: '天理市立丹波市・前栽・櫟本小学校屋内運動場断熱化工事',
+        link: ANNOUNCE_URL,
+        announcementDate: '2026-05-27',
+        status: '受付中',
+    },
+    {
+        title: '山の辺小学校建替え整備事業に伴う丹波市小学校給食室改修工事',
+        link: ANNOUNCE_URL,
+        announcementDate: '2026-05-27',
+        status: '受付中',
+    },
+];
 const TENRI_KNOWN_BIDDING_DATES: Record<string, string> = {
     // 公告文 別紙1（入札日程）より
     '天理市立柳本小学校校舎18棟改修工事': '2026-05-18',
