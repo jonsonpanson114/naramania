@@ -16,6 +16,7 @@ const TENRI_SUPPLEMENTAL_ITEMS: Array<{
     biddingDate?: string;
     status: '受付中' | '受付終了' | '落札' | '不調';
     pdfUrl?: string;
+    winningContractor?: string;
 }> = [
     {
         title: '天理市環境クリーンセンター解体工事',
@@ -34,6 +35,13 @@ const TENRI_SUPPLEMENTAL_ITEMS: Array<{
         link: ANNOUNCE_URL,
         announcementDate: '2026-05-27',
         status: '受付中',
+    },
+    {
+        title: '天理市環境クリーンセンター解体工事発注支援等業務委託',
+        link: 'https://www.city.tenri.nara.jp/kakuka/kankyoukeizaibu/kankyou_cleancenter_gyoumuka/15455.html',
+        announcementDate: '2026-03-04',
+        status: '受付終了',
+        winningContractor: '株式会社 建設技術研究所 奈良事務所',
     },
 ];
 const TENRI_KNOWN_BIDDING_DATES: Record<string, string> = {
@@ -134,6 +142,7 @@ export class TenriCityScraper implements Scraper {
                 link: supplemental.link,
                 pdfUrl: supplemental.pdfUrl,
                 status: supplemental.status,
+                winningContractor: supplemental.winningContractor,
             });
         }
 
