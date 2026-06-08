@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-06-07T13:22:28.503Z",
+  "generatedAt": "2026-06-08T06:05:11.190Z",
   "source": "daily_scrape",
-  "scrapedCount": 2,
-  "keptCount": 190,
-  "rejectedCount": 0,
-  "oldestAnnouncementDate": "2025-02-02",
-  "latestAnnouncementDate": "2026-06-05",
+  "keptCount": 205,
   "municipalityCount": 25,
+  "oldestAnnouncementDate": "2025-02-02",
+  "latestAnnouncementDate": "2026-06-08",
+  "scrapedCount": 462,
+  "rejectedCount": 267,
   "municipalityAudit": {
     "expectedMunicipalityCount": 25,
     "coveredMunicipalityCount": 25,
@@ -14,23 +14,23 @@
     "zeroCountMunicipalities": [],
     "breakdown": [
       {
+        "municipality": "葛城市",
+        "count": 31,
+        "changeFromPrevious": 10
+      },
+      {
         "municipality": "奈良県",
         "count": 26,
         "changeFromPrevious": 0
       },
       {
-        "municipality": "葛城市",
-        "count": 21,
-        "changeFromPrevious": 0
+        "municipality": "橿原市",
+        "count": 23,
+        "changeFromPrevious": 4
       },
       {
         "municipality": "宇陀市",
         "count": 20,
-        "changeFromPrevious": 0
-      },
-      {
-        "municipality": "橿原市",
-        "count": 19,
         "changeFromPrevious": 0
       },
       {
@@ -45,8 +45,8 @@
       },
       {
         "municipality": "五條市",
-        "count": 13,
-        "changeFromPrevious": 0
+        "count": 14,
+        "changeFromPrevious": 1
       },
       {
         "municipality": "香芝市",
@@ -86,7 +86,7 @@
       {
         "municipality": "天理市",
         "count": 3,
-        "changeFromPrevious": -1
+        "changeFromPrevious": 0
       },
       {
         "municipality": "安堵町",
@@ -116,7 +116,7 @@
       {
         "municipality": "斑鳩町",
         "count": 2,
-        "changeFromPrevious": 1
+        "changeFromPrevious": 0
       },
       {
         "municipality": "平群町",
@@ -131,7 +131,7 @@
       {
         "municipality": "山添村",
         "count": 1,
-        "changeFromPrevious": -1
+        "changeFromPrevious": 0
       },
       {
         "municipality": "大和高田市",
@@ -150,10 +150,11 @@
     "sampleTitles": []
   },
   "intelligence": {
-    "itemsWithPdf": 33,
-    "itemsWithDescription": 34,
-    "intelligenceExtractedCount": 29,
-    "geminiExtractedCount": 29,
-    "taggedCount": 29
+    "itemsWithPdf": 48,
+    "itemsWithDescription": 47,
+    "intelligenceExtractedCount": 45,
+    "geminiExtractedCount": 45,
+    "taggedCount": 45,
+    "lastAugmentedAt": "2026-06-08T08:36:20.990Z"
   }
 }
