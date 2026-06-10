@@ -10,6 +10,16 @@ const RESULT_CONSULT_URL = `${BASE_URL}/soshiki/1/7919.html`;
 const HEADERS = { 'User-Agent': 'Mozilla/5.0 (compatible; naramania-scraper/1.0)' };
 const KNOWN_MIYAKE_ITEMS: BiddingItem[] = [
     {
+        id: buildId('2025-11-04', '三宅町つながり総合センター解体工事'),
+        municipality: '三宅町',
+        title: '三宅町つながり総合センター解体工事',
+        type: '建築',
+        announcementDate: '2025-11-04',
+        biddingDate: '2025-11-04',
+        link: 'https://www.town.miyake.lg.jp/soshiki/1/7653.html',
+        status: '受付終了',
+    },
+    {
         id: buildId('2025-02-02', '三宅町つながり総合センター解体工事設計委託業務'),
         municipality: '三宅町',
         title: '三宅町つながり総合センター解体工事設計委託業務',

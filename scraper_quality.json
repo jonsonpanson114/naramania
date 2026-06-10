@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-06-11T08:58:08.309Z",
+  "generatedAt": "2026-06-11T12:14:58.565Z",
   "source": "daily_scrape",
-  "keptCount": 206,
-  "municipalityCount": 25,
+  "scrapedCount": 8,
+  "keptCount": 200,
+  "rejectedCount": 0,
   "oldestAnnouncementDate": "2025-02-02",
   "latestAnnouncementDate": "2026-06-08",
-  "scrapedCount": 464,
-  "rejectedCount": 268,
+  "municipalityCount": 25,
   "municipalityAudit": {
     "expectedMunicipalityCount": 25,
     "coveredMunicipalityCount": 25,
@@ -14,14 +14,14 @@
     "zeroCountMunicipalities": [],
     "breakdown": [
       {
-        "municipality": "葛城市",
-        "count": 31,
-        "changeFromPrevious": 0
-      },
-      {
         "municipality": "奈良県",
         "count": 26,
         "changeFromPrevious": 0
+      },
+      {
+        "municipality": "葛城市",
+        "count": 24,
+        "changeFromPrevious": -7
       },
       {
         "municipality": "橿原市",
@@ -45,8 +45,8 @@
       },
       {
         "municipality": "五條市",
-        "count": 14,
-        "changeFromPrevious": 0
+        "count": 13,
+        "changeFromPrevious": -1
       },
       {
         "municipality": "香芝市",
@@ -69,6 +69,11 @@
         "changeFromPrevious": 0
       },
       {
+        "municipality": "天理市",
+        "count": 4,
+        "changeFromPrevious": 1
+      },
+      {
         "municipality": "田原本町",
         "count": 4,
         "changeFromPrevious": 0
@@ -81,15 +86,10 @@
       {
         "municipality": "広陵町",
         "count": 3,
-        "changeFromPrevious": 1
-      },
-      {
-        "municipality": "三郷町",
-        "count": 3,
         "changeFromPrevious": 0
       },
       {
-        "municipality": "天理市",
+        "municipality": "三郷町",
         "count": 3,
         "changeFromPrevious": 0
       },
@@ -107,6 +107,11 @@
         "municipality": "三宅町",
         "count": 2,
         "changeFromPrevious": 0
+      },
+      {
+        "municipality": "山添村",
+        "count": 2,
+        "changeFromPrevious": 1
       },
       {
         "municipality": "大淀町",
@@ -129,11 +134,6 @@
         "changeFromPrevious": 0
       },
       {
-        "municipality": "山添村",
-        "count": 1,
-        "changeFromPrevious": 0
-      },
-      {
         "municipality": "大和高田市",
         "count": 1,
         "changeFromPrevious": 0
@@ -150,11 +150,10 @@
     "sampleTitles": []
   },
   "intelligence": {
-    "itemsWithPdf": 49,
-    "itemsWithDescription": 48,
-    "intelligenceExtractedCount": 46,
-    "geminiExtractedCount": 46,
-    "taggedCount": 46,
-    "lastAugmentedAt": "2026-06-11T11:37:12.014Z"
+    "itemsWithPdf": 40,
+    "itemsWithDescription": 39,
+    "intelligenceExtractedCount": 37,
+    "geminiExtractedCount": 37,
+    "taggedCount": 37
   }
 }

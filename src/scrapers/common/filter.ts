@@ -103,7 +103,7 @@ const DEFAULT_ARCHITECTURE_CONTEXT_KEYWORDS = [
 
 const DEFAULT_ARCHITECTURE_WORK_KEYWORDS = [
     '工事', '修繕', '改修', '新築', '増築', '設計', '実施設計',
-    '基本設計', '工事監理', '耐震診断',
+    '基本設計', '基本計画', '工事監理', '耐震診断', '発注支援',
 ];
 
 const ALWAYS_EXCLUDE_KEYWORDS = [...new Set([...DEFAULT_ALWAYS_EXCLUDE_KEYWORDS, ...dataFilters.alwaysExcludeKeywords])];
@@ -117,6 +117,11 @@ const PRIORITY_ARCHITECTURE_PATTERNS = [
     '給食室改修工事',
     '山添村義務教育学校建設基本計画業務',
     '斑鳩小学校の長寿命化工事に向けた基本計画',
+    '大和郡山市消防団第三分団庫建設工事に伴う監理業務委託',
+];
+const DATE_FILTER_EXEMPT_TITLES = [
+    '三宅町つながり総合センター解体工事設計委託業務',
+    '山添村義務教育学校建設基本計画業務',
 ];
 
 function getPreviousFiscalYearStart(referenceDate = new Date()): Date {
@@ -185,15 +190,9 @@ export function shouldKeepBiddingItem(item: BiddingItem, referenceDate = new Dat
     const textToMatch = [
         item.title,
         item.description || '',
-        item.winningContractor || '',
-        item.designFirm || '',
-        ...(item.tags || [])
     ].join(' ');
 
-    if (
-        item.municipality === '三宅町'
-        && item.title === '三宅町つながり総合センター解体工事設計委託業務'
-    ) {
+    if (DATE_FILTER_EXEMPT_TITLES.includes(item.title)) {
         return shouldKeepItem(textToMatch);
     }
 

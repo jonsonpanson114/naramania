@@ -31,27 +31,6 @@
     "extractionSource": "gemini"
   },
   {
-    "id": "katsuragi-web-2ed37b07",
-    "municipality": "葛城市",
-    "title": "葛城市内学校施設電話主装置等更新工事",
-    "type": "建築",
-    "announcementDate": "2026-06-08",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/3-4-2-2026-1.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/3-4-2-2026-1.pdf",
-    "status": "受付中",
-    "biddingDate": "2026-07-13",
-    "estimatedPrice": "5,235,000円",
-    "constructionPeriod": "契約日から令和8年10月30日",
-    "description": "葛城市内学校施設電話主装置等更新工事。市内4小学校(忍海、新庄、磐城、當麻)、2中学校(新庄、白鳳)の計6校の老朽化した電話交換機設備等について更新を行う。",
-    "tags": [
-      "電話設備",
-      "更新",
-      "学校施設"
-    ],
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini"
-  },
-  {
     "id": "katsuragi-web-54c2ed1f",
     "municipality": "葛城市",
     "title": "磐城第1保育所除却工事",
@@ -94,27 +73,6 @@
     "status": "落札",
     "winningContractor": "松岡電気株式会社",
     "winnerType": "ゼネコン"
-  },
-  {
-    "id": "katsuragi-web-eeef8871",
-    "municipality": "葛城市",
-    "title": "第08-302号 公園施設長寿命化対策支援事業に伴う屋敷山公園遊具更新工事",
-    "type": "建築",
-    "announcementDate": "2026-06-05",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/3-3-7-2026-1-2.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/3-3-7-2026-1-2.pdf",
-    "status": "受付中",
-    "biddingDate": "2026-07-08",
-    "estimatedPrice": "71,210,000 円",
-    "constructionPeriod": "契約日から令和9年1月29日(金)まで",
-    "description": "公園施設長寿命化対策支援事業に伴う屋敷山公園遊具更新工事。屋敷山公園遊具の更新及び周辺施設整備工事、公園内の既存遊具の更新及び新設遊具の設置、それに伴う周辺設備、園路、広場の整備工事、敷地内造成及び樹木の伐採工事、基盤整備工、施設整備工。",
-    "tags": [
-      "公園",
-      "遊具",
-      "改修"
-    ],
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini"
   },
   {
     "id": "katsuragi-epi-9b1941e9",
@@ -898,28 +856,6 @@
     "status": "受付終了"
   },
   {
-    "id": "katsuragi-web-35f8c757",
-    "municipality": "葛城市",
-    "title": "忍海小学校区学童保育所施設整備工事",
-    "type": "建築",
-    "announcementDate": "2026-04-13",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/1-6-1-2026-1.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/1-6-1-2026-1.pdf",
-    "status": "受付終了",
-    "biddingDate": "2026-05-12",
-    "estimatedPrice": "169,400,000 円",
-    "designFirm": "(株)中和設計",
-    "constructionPeriod": "契約日から令和9年2月19日(金)まで",
-    "description": "忍海小学校区学童保育所施設整備工事。学童保育所の建替工事（新築工事：鉄骨造2階建、延べ面積 359.22 ㎡；除却工事：鉄骨造平屋建、延べ面積 105.63 ㎡）。建築工事一式、電気設備工事一式、機械設備工事一式、外構工事一式、除却工事一式を含む。",
-    "tags": [
-      "建築",
-      "電気",
-      "機械設備"
-    ],
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini"
-  },
-  {
     "id": "tawaramoto-2026051803",
     "municipality": "田原本町",
     "title": "田原本町立まほろば小学校新築工事",
@@ -960,26 +896,6 @@
     "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/7/8272.html",
     "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5082000026.zip",
     "status": "受付終了"
-  },
-  {
-    "id": "gojo-f4a01d93",
-    "municipality": "五條市",
-    "title": "五條市大塔ふれあい交流館改修工事監理業務",
-    "type": "コンサル",
-    "announcementDate": "2026-04-01",
-    "link": "https://www.city.gojo.lg.jp/jigyousha/nyuusatsu/2/index.html",
-    "pdfUrl": "https://www.city.gojo.lg.jp/material/files/group/4/r843.pdf",
-    "status": "受付中",
-    "designFirm": "建築関係建設コンサルタント",
-    "constructionPeriod": "3ヶ月",
-    "description": "保健福祉センター空調設備更新工事設計業務委託",
-    "tags": [
-      "空調",
-      "設計",
-      "建築"
-    ],
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini"
   },
   {
     "id": "kawanishi-2026-04-01-川西文化会館トイレ改修工事",
@@ -1062,28 +978,6 @@
     "winningContractor": "株式会社上村組"
   },
   {
-    "id": "katsuragi-web-874379b9",
-    "municipality": "葛城市",
-    "title": "忍海小学校区学童保育所施設整備工事",
-    "type": "建築",
-    "announcementDate": "2026-03-10",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/9-05-02-2025-1.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/9-05-02-2025-1.pdf",
-    "status": "不調",
-    "biddingDate": "2026-04-15",
-    "estimatedPrice": "169,400,000円",
-    "designFirm": "中和設計",
-    "constructionPeriod": "契約日から令和9年1月29日",
-    "description": "忍海小学校区学童保育所施設整備工事（建替、新築、除却、建築、電気、機械設備、外構工事）",
-    "tags": [
-      "建築",
-      "電気",
-      "機械設備"
-    ],
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini"
-  },
-  {
     "id": "ikoma-result-2501010110",
     "municipality": "生駒市",
     "title": "上中学校校舎長寿命化改修工事",
@@ -1092,6 +986,16 @@
     "biddingDate": "2026-03-05",
     "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
     "status": "不調"
+  },
+  {
+    "id": "tenri-10be6819",
+    "municipality": "天理市",
+    "title": "天理市環境クリーンセンター解体工事発注支援等業務委託",
+    "type": "委託",
+    "announcementDate": "2026-03-04",
+    "link": "https://www.city.tenri.nara.jp/kakuka/kankyoukeizaibu/kankyou_cleancenter_gyoumuka/15455.html",
+    "status": "受付終了",
+    "winningContractor": "株式会社 建設技術研究所 奈良事務所"
   },
   {
     "id": "高取町-2026-02-27-町営住宅空家修繕工事監理業務",
@@ -1546,17 +1450,7 @@
     "announcementDate": "2025-11-04",
     "biddingDate": "2025-11-04",
     "link": "https://www.town.miyake.lg.jp/soshiki/1/7653.html",
-    "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/4577.pdf",
-    "status": "落札",
-    "estimatedPrice": "97,666,800円",
-    "winningContractor": "株式会社 前田産業 大阪支店",
-    "description": "三宅町つながり総合センター解体工事",
-    "tags": [
-      "解体",
-      "建築"
-    ],
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini"
+    "status": "受付終了"
   },
   {
     "id": "高取町-2025-10-28-高取町文化センター解体工事設計業務",
@@ -1956,29 +1850,6 @@
     "extractionSource": "gemini"
   },
   {
-    "id": "katsuragi-web-55d14639",
-    "municipality": "葛城市",
-    "title": "白鳳中学校武道場改修工事",
-    "type": "建築",
-    "announcementDate": "2025-08-07",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/5-02-07-2025-1.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/5-02-07-2025-1.pdf",
-    "status": "落札",
-    "biddingDate": "2025-09-09",
-    "winningContractor": "(株)生野建設",
-    "estimatedPrice": "57,510,000円",
-    "designFirm": "細谷設計事務所",
-    "constructionPeriod": "契約日から令和8年2月27日(金)まで",
-    "description": "白鳳中学校武道場改修工事（トイレ改修工事及び剣道場・柔道場への空気調和設備(EHP)8台設置）",
-    "tags": [
-      "改修",
-      "空調",
-      "建築"
-    ],
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini"
-  },
-  {
     "id": "katsuragi-web-1d54ab75",
     "municipality": "葛城市",
     "title": "（仮称）當麻複合施設整備工事",
@@ -2074,28 +1945,6 @@
       "改修",
       "建築",
       "設備"
-    ],
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini"
-  },
-  {
-    "id": "katsuragi-web-7d37438d",
-    "municipality": "葛城市",
-    "title": "白鳳中学校武道場改修工事",
-    "type": "建築",
-    "announcementDate": "2025-07-10",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/4-03-02-2025-1.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/4-03-02-2025-1.pdf",
-    "status": "不調",
-    "biddingDate": "2025-08-05",
-    "estimatedPrice": "57,510,000 円 (消費税及び地方消費税を除く。)",
-    "designFirm": "細谷設計事務所",
-    "constructionPeriod": "契約日より令和8年1月30日(金)まで",
-    "description": "白鳳中学校武道場のトイレ改修工事及び剣道場・柔道場に空気調和設備(EHP)8台の設置工事を含む改修工事",
-    "tags": [
-      "改修",
-      "空調",
-      "建築"
     ],
     "isIntelligenceExtracted": true,
     "extractionSource": "gemini"
@@ -2695,28 +2544,6 @@
     "extractionSource": "gemini"
   },
   {
-    "id": "katsuragi-web-89be2c69",
-    "municipality": "葛城市",
-    "title": "第1号 葛城市立新庄小学校管理棟及び屋内運動場長寿命化改修工事",
-    "type": "委託",
-    "announcementDate": "2025-04-11",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/1-06-07-01-3.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/1-06-07-01-3.pdf",
-    "status": "受付終了",
-    "biddingDate": "2025-05-15",
-    "estimatedPrice": "917,770,000円 (消費税及び地方消費税を除く)",
-    "designFirm": "株式会社 中和設計",
-    "constructionPeriod": "契約日から令和9年3月26日(金)まで",
-    "description": "葛城市立新庄小学校管理棟及び屋内運動場長寿命化改修工事(債務負担行為) 管理棟及び屋内運動場の長寿命化改修工事(①管理棟:鉄筋コンクリート造、3階建、1,311 ㎡ ②屋内運動場:鉄筋コンクリート造、1階建、1,177 ㎡)、仮設校舎及び仮設渡り廊下の設置・撤去工事(③仮設校舎:鉄骨造、2階建、941 ㎡ ④仮設渡り廊下:鉄骨造、1階建、98㎡)、改修工事に伴う電気設備工事・機械設備工事",
-    "tags": [
-      "改修",
-      "建築",
-      "設備"
-    ],
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini"
-  },
-  {
     "id": "katsuragi-epi-aef9d1f0",
     "municipality": "葛城市",
     "title": "新庄スポーツセンタープール床改修工事",
@@ -2744,6 +2571,15 @@
     "announcementDate": "2025-04-08",
     "biddingDate": "2025-04-28",
     "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200720",
+    "status": "受付終了"
+  },
+  {
+    "id": "山添村-山添村義務教育学校建設基本計画業務",
+    "municipality": "山添村",
+    "title": "山添村義務教育学校建設基本計画業務",
+    "type": "コンサル",
+    "announcementDate": "2025-02-27",
+    "link": "https://www.vill.yamazoe.nara.jp/life/kurashi_guide/kosodate/gakkou/gimukyouikugakkou-setti",
     "status": "受付終了"
   },
   {
