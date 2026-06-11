@@ -6,6 +6,7 @@ import { extractPdfText } from './common/pdf_text';
 
 const OJI_INDEX = 'https://www.town.oji.nara.jp/kakuka/somu/somu/gyomuannai/nyuusatu/nyuusatukouhyou/index.html';
 const OJI_INDEX_JSON = 'https://www.town.oji.nara.jp/kakuka/somu/somu/gyomuannai/nyuusatu/nyuusatukouhyou/index.tree.json';
+const OJI_PROCUREMENT_SITEMAP = 'https://www.town.oji.nara.jp/kakuka/somu/somu/gyomuannai/nyuusatu/sitemap.dir.xml';
 const BASE_URL = 'https://www.town.oji.nara.jp';
 const HEADERS = { 'User-Agent': 'Mozilla/5.0' };
 const OJI_SUPPLEMENTAL_ITEMS: Array<{
@@ -32,6 +33,11 @@ type OjiPage = {
     publish_datetime?: string;
 };
 
+type OjiSitemapEntry = {
+    url: string;
+    lastmod?: string;
+};
+
 function makeAbsoluteUrl(href: string): string {
     if (!href) return OJI_INDEX;
     if (href.startsWith('http')) return href;
@@ -56,6 +62,69 @@ function normalizeOjiTitle(title: string): string {
         return wrapped[1].trim();
     }
     return title.trim();
+}
+
+async function fetchOjiProcurementSitemapEntries(): Promise<OjiSitemapEntry[]> {
+    const res = await axios.get(OJI_PROCUREMENT_SITEMAP, {
+        headers: HEADERS,
+        timeout: 15000,
+    });
+    const $ = cheerio.load(res.data, { xmlMode: true });
+    const entries: OjiSitemapEntry[] = [];
+
+    $('url').each((_, element) => {
+        const url = $(element).find('loc').text().trim();
+        const lastmod = $(element).find('lastmod').text().trim();
+        if (!url) return;
+        entries.push({ url, lastmod });
+    });
+
+    return entries;
+}
+
+async function scrapeOjiProcurementSitemapPages(): Promise<BiddingItem[]> {
+    const items: BiddingItem[] = [];
+
+    try {
+        const entries = await fetchOjiProcurementSitemapEntries();
+        const candidateEntries = entries.filter(entry =>
+            !entry.url.includes('/nyuusatukouhyou/')
+            && !entry.url.endsWith('/index.html')
+            && !entry.url.includes('/nyuusatusannkashikaku/'),
+        );
+
+        for (const entry of candidateEntries) {
+            const detailRes = await axios.get(entry.url, {
+                headers: HEADERS,
+                timeout: 15000,
+            });
+            const detailHtml = detailRes.data as string;
+            const $detail = cheerio.load(detailHtml);
+            const rawTitle = $detail('h1').first().text().replace(/\s+/g, ' ').trim()
+                || $detail('title').first().text().replace(/／王寺町$/, '').trim();
+            const title = normalizeOjiTitle(rawTitle);
+            const bodyText = $detail('body').text().replace(/\s+/g, ' ').trim();
+
+            if (!title || !shouldKeepItem(title, bodyText)) continue;
+
+            const announcementDate = parseUpdatedDate(detailHtml) || entry.lastmod?.slice(0, 10) || '';
+            const isResult = /事後公表|落札|結果/u.test(rawTitle) || /落札|結果/u.test(bodyText);
+
+            items.push({
+                id: `oji-procurement-${Buffer.from(entry.url).toString('base64').slice(0, 12)}`,
+                municipality: '王寺町',
+                title,
+                type: classifyType(title),
+                announcementDate,
+                link: entry.url,
+                status: isResult ? '受付終了' : '受付中',
+            });
+        }
+    } catch (error: unknown) {
+        console.error('[王寺町] procurement sitemap 取得エラー:', error instanceof Error ? error.message : String(error));
+    }
+
+    return items;
 }
 
 export class OjiTownScraper implements Scraper {
@@ -128,6 +197,12 @@ export class OjiTownScraper implements Scraper {
 
         } catch (error: unknown) {
             console.error('[王寺町] エラー:', error instanceof Error ? error.message : String(error));
+        }
+
+        for (const item of await scrapeOjiProcurementSitemapPages()) {
+            if (!items.some(existing => existing.title === item.title)) {
+                items.push(item);
+            }
         }
 
         for (const supplemental of OJI_SUPPLEMENTAL_ITEMS) {
