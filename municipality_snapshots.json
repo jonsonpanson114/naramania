@@ -661,6 +661,16 @@
   ],
   "生駒市": [
     {
+      "id": "ikoma-result-2601010029",
+      "municipality": "生駒市",
+      "title": "RAKU-RAKUはうす改修工事",
+      "type": "建築",
+      "announcementDate": "2026-06-08",
+      "biddingDate": "2026-06-08",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+      "status": "受付終了"
+    },
+    {
       "id": "ikoma-result-2601010025",
       "municipality": "生駒市",
       "title": "生駒南小学校・生駒南中学校整備事業に伴う生駒南小学校改修工事",
@@ -668,7 +678,9 @@
       "announcementDate": "2026-06-05",
       "biddingDate": "2026-06-05",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-      "status": "受付終了"
+      "status": "落札",
+      "winningContractor": "松岡電気株式会社",
+      "winnerType": "ゼネコン"
     },
     {
       "id": "ikoma-result-2601010008",
@@ -681,16 +693,6 @@
       "status": "落札",
       "winningContractor": "株式会社生駒住建",
       "winnerType": "ゼネコン"
-    },
-    {
-      "id": "ikoma-c020d0513e",
-      "municipality": "生駒市",
-      "title": "RAKU-RAKUはうす改修工事",
-      "type": "建築",
-      "announcementDate": "2026-05-25",
-      "biddingDate": "2026-06-08",
-      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-      "status": "受付中"
     },
     {
       "id": "ikoma-result-2601100003",
@@ -1777,6 +1779,18 @@
     }
   ],
   "広陵町": [
+    {
+      "id": "koryo-2025-05-29-No6",
+      "municipality": "広陵町",
+      "title": "広陵西小学校ベランダ手摺改修工事",
+      "type": "建築",
+      "announcementDate": "2025-05-29",
+      "biddingDate": "2025-05-29",
+      "link": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7919/NO6-2.pdf",
+      "pdfUrl": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7919/NO6-2.pdf",
+      "status": "落札",
+      "winningContractor": "株式会社hinata"
+    },
     {
       "id": "koryo-2025-04-28-No1",
       "municipality": "広陵町",

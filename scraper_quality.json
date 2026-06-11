@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-06-08T06:05:11.190Z",
+  "generatedAt": "2026-06-11T08:58:08.309Z",
   "source": "daily_scrape",
-  "keptCount": 205,
+  "keptCount": 206,
   "municipalityCount": 25,
   "oldestAnnouncementDate": "2025-02-02",
   "latestAnnouncementDate": "2026-06-08",
-  "scrapedCount": 462,
-  "rejectedCount": 267,
+  "scrapedCount": 464,
+  "rejectedCount": 268,
   "municipalityAudit": {
     "expectedMunicipalityCount": 25,
     "coveredMunicipalityCount": 25,
@@ -16,7 +16,7 @@
       {
         "municipality": "葛城市",
         "count": 31,
-        "changeFromPrevious": 10
+        "changeFromPrevious": 0
       },
       {
         "municipality": "奈良県",
@@ -26,7 +26,7 @@
       {
         "municipality": "橿原市",
         "count": 23,
-        "changeFromPrevious": 4
+        "changeFromPrevious": 0
       },
       {
         "municipality": "宇陀市",
@@ -46,7 +46,7 @@
       {
         "municipality": "五條市",
         "count": 14,
-        "changeFromPrevious": 1
+        "changeFromPrevious": 0
       },
       {
         "municipality": "香芝市",
@@ -79,6 +79,11 @@
         "changeFromPrevious": 0
       },
       {
+        "municipality": "広陵町",
+        "count": 3,
+        "changeFromPrevious": 1
+      },
+      {
         "municipality": "三郷町",
         "count": 3,
         "changeFromPrevious": 0
@@ -90,11 +95,6 @@
       },
       {
         "municipality": "安堵町",
-        "count": 2,
-        "changeFromPrevious": 0
-      },
-      {
-        "municipality": "広陵町",
         "count": 2,
         "changeFromPrevious": 0
       },
@@ -150,11 +150,11 @@
     "sampleTitles": []
   },
   "intelligence": {
-    "itemsWithPdf": 48,
-    "itemsWithDescription": 47,
-    "intelligenceExtractedCount": 45,
-    "geminiExtractedCount": 45,
-    "taggedCount": 45,
-    "lastAugmentedAt": "2026-06-08T08:36:20.990Z"
+    "itemsWithPdf": 49,
+    "itemsWithDescription": 48,
+    "intelligenceExtractedCount": 46,
+    "geminiExtractedCount": 46,
+    "taggedCount": 46,
+    "lastAugmentedAt": "2026-06-11T11:37:12.014Z"
   }
 }
