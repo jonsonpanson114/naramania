@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-06-11T12:14:58.565Z",
+  "generatedAt": "2026-06-15T06:39:06.067Z",
   "source": "daily_scrape",
-  "scrapedCount": 8,
-  "keptCount": 200,
-  "rejectedCount": 0,
-  "oldestAnnouncementDate": "2025-02-02",
-  "latestAnnouncementDate": "2026-06-08",
+  "keptCount": 213,
   "municipalityCount": 25,
+  "oldestAnnouncementDate": "2025-02-02",
+  "latestAnnouncementDate": "2026-06-15",
+  "scrapedCount": 468,
+  "rejectedCount": 263,
   "municipalityAudit": {
     "expectedMunicipalityCount": 25,
     "coveredMunicipalityCount": 25,
@@ -14,19 +14,19 @@
     "zeroCountMunicipalities": [],
     "breakdown": [
       {
+        "municipality": "葛城市",
+        "count": 31,
+        "changeFromPrevious": 7
+      },
+      {
         "municipality": "奈良県",
         "count": 26,
         "changeFromPrevious": 0
       },
       {
-        "municipality": "葛城市",
-        "count": 24,
-        "changeFromPrevious": -7
-      },
-      {
         "municipality": "橿原市",
-        "count": 23,
-        "changeFromPrevious": 0
+        "count": 24,
+        "changeFromPrevious": 1
       },
       {
         "municipality": "宇陀市",
@@ -34,28 +34,28 @@
         "changeFromPrevious": 0
       },
       {
+        "municipality": "生駒市",
+        "count": 20,
+        "changeFromPrevious": 2
+      },
+      {
         "municipality": "高取町",
         "count": 19,
         "changeFromPrevious": 0
       },
       {
-        "municipality": "生駒市",
-        "count": 18,
-        "changeFromPrevious": 0
+        "municipality": "五條市",
+        "count": 14,
+        "changeFromPrevious": 1
       },
       {
-        "municipality": "五條市",
-        "count": 13,
-        "changeFromPrevious": -1
+        "municipality": "奈良市",
+        "count": 9,
+        "changeFromPrevious": 2
       },
       {
         "municipality": "香芝市",
         "count": 8,
-        "changeFromPrevious": 0
-      },
-      {
-        "municipality": "奈良市",
-        "count": 7,
         "changeFromPrevious": 0
       },
       {
@@ -71,7 +71,7 @@
       {
         "municipality": "天理市",
         "count": 4,
-        "changeFromPrevious": 1
+        "changeFromPrevious": 0
       },
       {
         "municipality": "田原本町",
@@ -111,12 +111,12 @@
       {
         "municipality": "山添村",
         "count": 2,
-        "changeFromPrevious": 1
+        "changeFromPrevious": 0
       },
       {
-        "municipality": "大淀町",
+        "municipality": "大和高田市",
         "count": 2,
-        "changeFromPrevious": 0
+        "changeFromPrevious": 1
       },
       {
         "municipality": "斑鳩町",
@@ -134,9 +134,9 @@
         "changeFromPrevious": 0
       },
       {
-        "municipality": "大和高田市",
+        "municipality": "大淀町",
         "count": 1,
-        "changeFromPrevious": 0
+        "changeFromPrevious": -1
       }
     ],
     "retainedFromPrevious": [],
@@ -144,16 +144,25 @@
   },
   "dateAudit": {
     "announcementAfterBiddingCount": 0,
-    "awardedWithoutBiddingDateCount": 0,
+    "awardedWithoutBiddingDateCount": 1,
     "awardedWithoutWinnerCount": 0,
     "openWithWinnerCount": 0,
-    "sampleTitles": []
+    "sampleTitles": [
+      {
+        "municipality": "大和高田市",
+        "title": "マテリアルリサイクル推進施設発注支援業務",
+        "status": "落札",
+        "announcementDate": "2025-06-01",
+        "biddingDate": null
+      }
+    ]
   },
   "intelligence": {
-    "itemsWithPdf": 40,
-    "itemsWithDescription": 39,
-    "intelligenceExtractedCount": 37,
-    "geminiExtractedCount": 37,
-    "taggedCount": 37
+    "itemsWithPdf": 49,
+    "itemsWithDescription": 48,
+    "intelligenceExtractedCount": 46,
+    "geminiExtractedCount": 46,
+    "taggedCount": 46,
+    "lastAugmentedAt": "2026-06-15T09:18:16.609Z"
   }
 }

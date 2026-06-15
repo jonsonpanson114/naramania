@@ -289,6 +289,26 @@
   ],
   "奈良市": [
     {
+      "id": "nara-city-0000002549",
+      "municipality": "奈良市",
+      "title": "富雄中学校校舎屋上防水改修工事",
+      "type": "建築",
+      "announcementDate": "2026-06-15",
+      "biddingDate": "2026-07-07",
+      "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+      "status": "受付中"
+    },
+    {
+      "id": "nara-city-0000002550",
+      "municipality": "奈良市",
+      "title": "あやめ池小学校校舎屋上防水改修工事",
+      "type": "建築",
+      "announcementDate": "2026-06-15",
+      "biddingDate": "2026-07-08",
+      "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+      "status": "受付中"
+    },
+    {
       "id": "nara-city-0000002440",
       "municipality": "奈良市",
       "title": "佐保バンビーホーム新築に伴う建築設計業務委託",
@@ -296,7 +316,8 @@
       "announcementDate": "2026-05-01",
       "biddingDate": "2026-06-04",
       "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
-      "status": "受付終了"
+      "status": "落札",
+      "winningContractor": "株式会社システムクリエイト"
     },
     {
       "id": "nara-city-0000002344",
@@ -360,7 +381,8 @@
       "announcementDate": "2026-04-15",
       "biddingDate": "2026-05-27",
       "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
-      "status": "受付終了"
+      "status": "落札",
+      "winningContractor": "株式会社システムクリエイト"
     }
   ],
   "橿原市": [
@@ -542,6 +564,19 @@
       "biddingDate": "2025-07-24"
     },
     {
+      "id": "kashihara-result-5071000280",
+      "municipality": "橿原市",
+      "title": "八木中学校長寿命化改良工事（第1期）",
+      "type": "建築",
+      "announcementDate": "2025-07-01",
+      "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
+      "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000280k.pdf",
+      "status": "落札",
+      "winnerType": "ゼネコン",
+      "winningContractor": "大日本土木・崎山組特定建設工事共同企業体",
+      "biddingDate": "2025-07-01"
+    },
+    {
       "id": "kashihara-result-5071000510",
       "municipality": "橿原市",
       "title": "市営住宅内装等改修工事",
@@ -661,6 +696,26 @@
   ],
   "生駒市": [
     {
+      "id": "ikoma-4981795e0b",
+      "municipality": "生駒市",
+      "title": "中保育園本館保育室床改修工事",
+      "type": "建築",
+      "announcementDate": "2026-06-15",
+      "biddingDate": "2026-06-29",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+      "status": "受付中"
+    },
+    {
+      "id": "ikoma-78b46b597e",
+      "municipality": "生駒市",
+      "title": "消防本部高架水槽取替工事実施設計業務",
+      "type": "コンサル",
+      "announcementDate": "2026-06-15",
+      "biddingDate": "2026-06-29",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+      "status": "受付中"
+    },
+    {
       "id": "ikoma-result-2601010029",
       "municipality": "生駒市",
       "title": "RAKU-RAKUはうす改修工事",
@@ -668,7 +723,9 @@
       "announcementDate": "2026-06-08",
       "biddingDate": "2026-06-08",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-      "status": "受付終了"
+      "status": "落札",
+      "winningContractor": "株式会社モリ",
+      "winnerType": "ゼネコン"
     },
     {
       "id": "ikoma-result-2601010025",
@@ -880,6 +937,16 @@
       "link": "https://www.city.yamatotakada.nara.jp/soshikikarasagasu/somuka/keiyakukanri/nyusatsu_keiyaku/1/9099.html",
       "status": "落札",
       "winningContractor": "株式会社京成設計"
+    },
+    {
+      "id": "yamato-takada-6279b854",
+      "municipality": "大和高田市",
+      "title": "マテリアルリサイクル推進施設発注支援業務",
+      "type": "委託",
+      "announcementDate": "2025-06-01",
+      "link": "https://www.city.yamatotakada.nara.jp/soshikikarasagasu/somuka/keiyakukanri/nyusatsu_keiyaku/1/9099.html",
+      "status": "落札",
+      "winningContractor": "株式会社日産技術コンサルタント 奈良事務所"
     }
   ],
   "大和郡山市": [
@@ -991,7 +1058,7 @@
       "announcementDate": "2026-05-14",
       "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/2-4-3-2026-1.pdf",
       "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/2-4-3-2026-1.pdf",
-      "status": "受付中",
+      "status": "受付終了",
       "biddingDate": "2026-06-12"
     },
     {
@@ -1884,7 +1951,8 @@
       "announcementDate": "2025-11-04",
       "biddingDate": "2025-11-04",
       "link": "https://www.town.miyake.lg.jp/soshiki/1/7653.html",
-      "status": "受付終了"
+      "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/4577.pdf",
+      "status": "落札"
     },
     {
       "id": "miyake-2025-02-02-三宅町つながり総合センター解体工事設計委託業務",
@@ -2247,16 +2315,6 @@
     }
   ],
   "大淀町": [
-    {
-      "id": "oyodo-5pen5aSn5reA",
-      "municipality": "大淀町",
-      "title": "旧大淀町立第一保育所解体工事に伴う設計業務",
-      "type": "コンサル",
-      "announcementDate": "2026-04-27",
-      "link": "https://www.town.oyodo.lg.jp/./cmsfiles/contents/0000000/218/nyusatsu_setsumei_08060102.pdf",
-      "pdfUrl": "https://www.town.oyodo.lg.jp/./cmsfiles/contents/0000000/218/nyusatsu_setsumei_08060102.pdf",
-      "status": "受付中"
-    },
     {
       "id": "oyodo-aHR0cHM6Ly93",
       "municipality": "大淀町",
