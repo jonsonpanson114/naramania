@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-06-15T06:39:06.067Z",
+  "generatedAt": "2026-06-16T09:40:09.423Z",
   "source": "daily_scrape",
-  "keptCount": 213,
+  "keptCount": 214,
   "municipalityCount": 25,
   "oldestAnnouncementDate": "2025-02-02",
-  "latestAnnouncementDate": "2026-06-15",
-  "scrapedCount": 468,
+  "latestAnnouncementDate": "2026-06-16",
+  "scrapedCount": 469,
   "rejectedCount": 263,
   "municipalityAudit": {
     "expectedMunicipalityCount": 25,
@@ -16,7 +16,7 @@
       {
         "municipality": "葛城市",
         "count": 31,
-        "changeFromPrevious": 7
+        "changeFromPrevious": 0
       },
       {
         "municipality": "奈良県",
@@ -26,7 +26,7 @@
       {
         "municipality": "橿原市",
         "count": 24,
-        "changeFromPrevious": 1
+        "changeFromPrevious": 0
       },
       {
         "municipality": "宇陀市",
@@ -36,7 +36,7 @@
       {
         "municipality": "生駒市",
         "count": 20,
-        "changeFromPrevious": 2
+        "changeFromPrevious": 0
       },
       {
         "municipality": "高取町",
@@ -46,12 +46,12 @@
       {
         "municipality": "五條市",
         "count": 14,
-        "changeFromPrevious": 1
+        "changeFromPrevious": 0
       },
       {
         "municipality": "奈良市",
         "count": 9,
-        "changeFromPrevious": 2
+        "changeFromPrevious": 0
       },
       {
         "municipality": "香芝市",
@@ -65,8 +65,8 @@
       },
       {
         "municipality": "大和郡山市",
-        "count": 4,
-        "changeFromPrevious": 0
+        "count": 5,
+        "changeFromPrevious": 1
       },
       {
         "municipality": "天理市",
@@ -116,7 +116,7 @@
       {
         "municipality": "大和高田市",
         "count": 2,
-        "changeFromPrevious": 1
+        "changeFromPrevious": 0
       },
       {
         "municipality": "斑鳩町",
@@ -136,7 +136,7 @@
       {
         "municipality": "大淀町",
         "count": 1,
-        "changeFromPrevious": -1
+        "changeFromPrevious": 0
       }
     ],
     "retainedFromPrevious": [],
@@ -158,11 +158,11 @@
     ]
   },
   "intelligence": {
-    "itemsWithPdf": 49,
+    "itemsWithPdf": 50,
     "itemsWithDescription": 48,
     "intelligenceExtractedCount": 46,
     "geminiExtractedCount": 46,
     "taggedCount": 46,
-    "lastAugmentedAt": "2026-06-15T09:18:16.609Z"
+    "lastAugmentedAt": "2026-06-16T12:19:27.884Z"
   }
 }

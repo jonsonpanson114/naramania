@@ -1,5 +1,25 @@
 [
   {
+    "id": "yamato-koriyama-90e6a790",
+    "municipality": "大和郡山市",
+    "title": "郡山城跡公園（蓮池）実施設計業務委託",
+    "type": "コンサル",
+    "announcementDate": "2026-06-16",
+    "biddingDate": "2026-07-01",
+    "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/9328.html",
+    "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk260701_42k.pdf",
+    "status": "受付中",
+    "estimatedPrice": "¥11,477,400",
+    "description": "郡山城跡公園(蓮池)実施設計業務委託",
+    "tags": [
+      "設計",
+      "公園",
+      "都市計画"
+    ],
+    "isIntelligenceExtracted": true,
+    "extractionSource": "gemini"
+  },
+  {
     "id": "nara-city-0000002549",
     "municipality": "奈良市",
     "title": "富雄中学校校舎屋上防水改修工事",
@@ -61,13 +81,13 @@
     "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/3-4-5-2026-1.pdf",
     "status": "受付中",
     "biddingDate": "2026-07-13",
-    "estimatedPrice": "2,720,000円",
-    "constructionPeriod": "契約日から令和8年10月30日",
-    "description": "磐城小学校南館昇降口トイレ部分改修工事。1・2階の男子児童用および職員用和式便所を温水洗浄便座付き洋式便所に改修する。",
+    "estimatedPrice": "2,720,000円(消費税及び地方消費税を除く。)",
+    "constructionPeriod": "契約日から令和8年10月30日(金)まで",
+    "description": "磐城小学校南館昇降ロトイレ部分改修工事。磐城小学校南館昇降口1・2階の男子児童用の和式便所(2箇所)及び職員用の和式便所(1箇所)について、温水洗浄便座付き洋式便所に改修する。",
     "tags": [
       "改修",
-      "設備",
-      "建築"
+      "建築",
+      "トイレ"
     ],
     "isIntelligenceExtracted": true,
     "extractionSource": "gemini"
@@ -83,12 +103,12 @@
     "status": "受付中",
     "biddingDate": "2026-07-13",
     "estimatedPrice": "5,235,000円",
-    "constructionPeriod": "契約日より令和8年10月30日(金)",
-    "description": "葛城市内の4小学校（忍海、新庄、磐城、當麻）と2中学校（新庄、白鳳）計6校の老朽化した電話交換機設備等について更新を行う、葛城市内学校施設電話主装置等更新工事。",
+    "constructionPeriod": "契約日より令和8年10月30日(金)まで",
+    "description": "葛城市内学校施設電話主装置等更新工事",
     "tags": [
       "電気通信",
-      "設備更新",
-      "学校施設"
+      "設備",
+      "改修"
     ],
     "isIntelligenceExtracted": true,
     "extractionSource": "gemini"
@@ -106,7 +126,7 @@
     "estimatedPrice": "48,980,000円",
     "designFirm": "株式会社 アルト舎",
     "constructionPeriod": "契約日から令和9年1月29日(金)まで",
-    "description": "磐城第1保育所除却工事 (令和6年3月31日をもって閉所した磐城第1保育所の除却工事、詳細は特記仕様書による)",
+    "description": "磐城第1保育所の除却工事",
     "tags": [
       "解体",
       "建築"
@@ -146,14 +166,14 @@
     "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/3-3-7-2026-1-2.pdf",
     "status": "受付中",
     "biddingDate": "2026-07-08",
-    "estimatedPrice": "71,210,000 円",
+    "estimatedPrice": "71,210,000円 (消費税及び地方消費税を除く)",
     "designFirm": "株式会社オオバ",
-    "constructionPeriod": "契約日から令和9年1月29日",
-    "description": "公園施設長寿命化対策支援事業に伴う屋敷山公園遊具更新工事。屋敷山公園遊具の更新及び周辺施設整備工事。公園内の既存遊具の更新及び新設遊具の設置、それに伴う周辺設備、園路、広場の整備工事、敷地内造成及び樹木の伐採工事。",
+    "constructionPeriod": "契約日から令和9年1月29日(金)まで",
+    "description": "公園施設長寿命化対策支援事業に伴う屋敷山公園遊具更新工事。屋敷山公園遊具の更新及び周辺施設整備工事（公園内の既存遊具の更新及び新設遊具の設置、それに伴う周辺設備、園路、広場の整備工事、敷地内造成及び樹木の伐採工事、基盤整備工・施設整備工を含む）",
     "tags": [
-      "公園",
-      "遊具",
-      "整備"
+      "土木",
+      "造園",
+      "改修"
     ],
     "isIntelligenceExtracted": true,
     "extractionSource": "gemini"
@@ -295,12 +315,12 @@
     "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5082000530.pdf",
     "status": "受付終了",
     "winnerType": "ゼネコン",
-    "estimatedPrice": "2,596,000円(消費税10%含む)",
-    "constructionPeriod": "契約日の翌日から令和8年12月18日まで",
-    "description": "藤原京跡トイレ設置工事に伴う設計委託（実施設計）。新設建築物概要：用途 屋外便所、構造 プレハブ、規模 平屋建て。",
+    "estimatedPrice": "2,596,000円",
+    "description": "藤原京跡トイレ設置工事に伴う設計委託（実施設計、新設建築物概要：用途 屋外便所、構造 プレハブ、規模 平屋建て）",
     "tags": [
       "建築",
-      "調査"
+      "設計",
+      "新築"
     ],
     "isIntelligenceExtracted": true,
     "extractionSource": "gemini"
@@ -528,13 +548,14 @@
     "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/9328.html",
     "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk260617_06k.pdf",
     "status": "受付中",
-    "estimatedPrice": "¥85,998,000円",
+    "estimatedPrice": "85,998,000円",
     "designFirm": "(株)中和設計",
-    "constructionPeriod": "着工の日から令和9年1月22日まで",
+    "constructionPeriod": "着工の日から 令和9年1月22日まで",
     "description": "市立郡山南小学校廊下改修工事(2期)",
     "tags": [
+      "改修",
       "建築",
-      "改修"
+      "学校"
     ],
     "isIntelligenceExtracted": true,
     "extractionSource": "gemini"
@@ -638,7 +659,7 @@
     "biddingDate": "2026-06-12",
     "estimatedPrice": "13,320,000円",
     "constructionPeriod": "契約日から令和9年2月26日(金)まで",
-    "description": "葛城市立中学校トイレ改修工事設計業務（新庄中学校南棟1F~3Fトイレ・屋外トイレ、白鳳中学校北棟1F~3Fトイレ・屋内運動場内トイレ、IF~4F防火戸の改修設計）",
+    "description": "葛城市立中学校トイレ改修工事設計業務（新庄中学校南棟1F~3Fトイレ及び屋外トイレ改修設計、白鳳中学校北棟1F~3Fトイレ及び屋内運動場内トイレ改修設計、IF~4F防火戸改修設計）",
     "tags": [
       "改修",
       "設計",
@@ -930,14 +951,14 @@
     "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/1-6-1-2026-1.pdf",
     "status": "受付終了",
     "biddingDate": "2026-05-12",
-    "estimatedPrice": "169,400,000円",
+    "estimatedPrice": "169,400,000 円",
     "designFirm": "(株)中和設計",
-    "constructionPeriod": "契約締結日～令和9年2月19日",
-    "description": "忍海小学校区学童保育所施設整備工事は、建替工事（新築工事：鉄骨造2階建、延べ面積359.22㎡、除却工事：鉄骨造平屋建、延べ面積105.63㎡）を含み、建築工事一式、電気設備工事一式、機械設備工事一式、外構工事一式、除却工事一式が行われます。",
+    "constructionPeriod": "契約日から令和9年2月19日(金)まで",
+    "description": "忍海小学校区学童保育所施設整備工事（建替工事）。鉄骨造2階建（新築）、鉄骨造平屋建（除却）。建築工事、電気設備工事、機械設備工事、外構工事、除却工事一式。",
     "tags": [
       "建築",
       "電気",
-      "空調"
+      "機械"
     ],
     "isIntelligenceExtracted": true,
     "extractionSource": "gemini"
@@ -993,7 +1014,7 @@
     "link": "https://www.city.gojo.lg.jp/jigyousha/nyuusatsu/2/index.html",
     "pdfUrl": "https://www.city.gojo.lg.jp/material/files/group/4/r843.pdf",
     "status": "受付中",
-    "constructionPeriod": "3ヶ月",
+    "constructionPeriod": "3",
     "description": "保健福祉センター空調設備更新工事設計業務委託",
     "tags": [
       "空調",
@@ -1093,13 +1114,13 @@
     "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/9-05-02-2025-1.pdf",
     "status": "不調",
     "biddingDate": "2026-04-15",
-    "estimatedPrice": "169,400,000円",
+    "estimatedPrice": "169,400,000 円",
     "designFirm": "(株)中和設計",
     "constructionPeriod": "契約日から令和9年1月29日(金)まで",
-    "description": "忍海小学校区学童保育所施設整備工事（建替工事）。鉄骨造2階建・延べ面積359.22㎡の新築工事、鉄骨造平屋建・延べ面積105.63㎡の除却工事を含む、建築、電気設備、機械設備、外構、除却工事の一式。",
+    "description": "忍海小学校区学童保育所施設整備工事。学童保育所の建替工事で、新築工事（鉄骨造2階建、延べ面積359.22㎡）、除却工事（鉄骨造平屋建、延べ面積105.63㎡）を含みます。工事内容は建築、電気設備、機械設備、外構、除却工事一式です。",
     "tags": [
-      "建築",
       "建替",
+      "建築",
       "設備"
     ],
     "isIntelligenceExtracted": true,
@@ -1210,8 +1231,8 @@
     "constructionPeriod": "契約日の翌日から令和8年3月19日",
     "description": "市営住宅内装改修工事に伴う設計委託",
     "tags": [
-      "設計",
       "改修",
+      "設計",
       "建築"
     ],
     "isIntelligenceExtracted": true,
@@ -1292,13 +1313,12 @@
     "winnerType": "ゼネコン",
     "winningContractor": "(株)タカギ工業",
     "biddingDate": "2025-12-18",
-    "estimatedPrice": "29,502,000円",
-    "constructionPeriod": "契約日の翌日～令和8年3月31日",
+    "estimatedPrice": "29,502,000円(税込)",
+    "constructionPeriod": "契約日の翌日から令和8年3月31日",
     "description": "耳成地区公民館屋根等改修工事",
     "tags": [
       "改修",
-      "建築",
-      "屋根"
+      "建築"
     ],
     "isIntelligenceExtracted": true,
     "extractionSource": "gemini"
@@ -1315,13 +1335,13 @@
     "winnerType": "ゼネコン",
     "winningContractor": "(株)イシダ工業",
     "biddingDate": "2025-12-18",
-    "estimatedPrice": "7,131,300円",
-    "constructionPeriod": "契約日の翌日～令和8年3月31日",
+    "estimatedPrice": "7,131,300円(消費税%含む)",
+    "constructionPeriod": "契約日の翌日 ~ 令和8年3月31日",
     "description": "醍醐地下歩道屋根修繕工事7-1",
     "tags": [
       "修繕",
       "土木",
-      "改修"
+      "屋根"
     ],
     "isIntelligenceExtracted": true,
     "extractionSource": "gemini"
@@ -1467,12 +1487,12 @@
     "winningContractor": "(株)丸高組",
     "biddingDate": "2025-11-19",
     "estimatedPrice": "10,056,200円",
-    "constructionPeriod": "契約日の翌日から令和8年3月18日まで",
+    "constructionPeriod": "契約日の翌日から令和8年3月18日",
     "description": "今井都市緑地公園施設更新工事",
     "tags": [
       "公園",
       "施設",
-      "更新"
+      "改修"
     ],
     "isIntelligenceExtracted": true,
     "extractionSource": "gemini"
@@ -1488,12 +1508,12 @@
     "status": "不調",
     "winnerType": "設計事務所",
     "biddingDate": "2025-11-19",
-    "estimatedPrice": "1,925,000円(消費税%含む)",
-    "constructionPeriod": "契約日の翌日から令和 8年 2月27日まで",
+    "estimatedPrice": "1,925,000円",
+    "constructionPeriod": "契約日の翌日から令和8年2月27日まで",
     "description": "市営住宅内装等改修工事に伴う設計委託",
     "tags": [
-      "建築",
       "改修",
+      "内装",
       "設計"
     ],
     "isIntelligenceExtracted": true,
@@ -1584,7 +1604,8 @@
     "winningContractor": "株式会社 前田産業 大阪支店",
     "description": "三宅町つながり総合センター解体工事",
     "tags": [
-      "解体"
+      "解体",
+      "建築"
     ],
     "isIntelligenceExtracted": true,
     "extractionSource": "gemini"
@@ -1613,8 +1634,8 @@
     "winnerType": "ゼネコン",
     "winningContractor": "輝登建設(株)",
     "biddingDate": "2025-10-23",
-    "estimatedPrice": "26,339,000円",
-    "constructionPeriod": "契約日の翌日から令和 8年3月6日",
+    "estimatedPrice": "28,972,900円",
+    "constructionPeriod": "契約日の翌日から令和8年3月6日",
     "description": "新賀公園施設更新工事",
     "tags": [
       "改修",
@@ -1635,13 +1656,13 @@
     "winnerType": "ゼネコン",
     "winningContractor": "(株)大谷建設",
     "biddingDate": "2025-10-23",
-    "estimatedPrice": "4,621,100円",
-    "constructionPeriod": "契約日の翌日 - 令和8年2月27日",
+    "estimatedPrice": "4,621,100円(消費税含む)",
+    "constructionPeriod": "契約日の翌日から令和8年2月27日まで",
     "description": "八木グリーンタウン公園他施設更新工事",
     "tags": [
       "改修",
       "建築",
-      "土木"
+      "公園"
     ],
     "isIntelligenceExtracted": true,
     "extractionSource": "gemini"
@@ -1658,11 +1679,12 @@
     "winnerType": "ゼネコン",
     "biddingDate": "2025-10-23",
     "estimatedPrice": "29,238,000円",
-    "constructionPeriod": "契約日の翌日から令和8年2月27日まで",
+    "constructionPeriod": "契約日の翌日から令和 8年2月27日まで",
     "description": "耳成地区公民館屋根改修工事",
     "tags": [
       "改修",
-      "建築"
+      "建築",
+      "屋根"
     ],
     "isIntelligenceExtracted": true,
     "extractionSource": "gemini"
@@ -1745,14 +1767,13 @@
     "winnerType": "ゼネコン",
     "winningContractor": "(株)内藤建築事務所 奈良事務所",
     "biddingDate": "2025-09-30",
-    "estimatedPrice": "4,532,000円",
-    "designFirm": "(株)内藤建築事務所 奈良事務所",
-    "constructionPeriod": "契約日の翌日から 令和 8年 3月31日 まで",
+    "estimatedPrice": "4,120,000円",
+    "constructionPeriod": "2025年10月1日 から 2026年3月31日",
     "description": "畝傍中学校EV棟増築工事に伴う工事監理業務委託",
     "tags": [
       "建築",
       "増築",
-      "監理"
+      "工事監理"
     ],
     "isIntelligenceExtracted": true,
     "extractionSource": "gemini"
@@ -1916,13 +1937,13 @@
     "winnerType": "ゼネコン",
     "winningContractor": "観音寺辻本建設(株)",
     "biddingDate": "2025-08-21",
-    "estimatedPrice": "10,490,000円 (税抜)",
-    "constructionPeriod": "契約日の翌日から令和7年12月12日",
+    "estimatedPrice": "11,539,000円",
+    "constructionPeriod": "契約日の翌日 から 令和7年12月12日",
     "description": "真菅小学校プールサイド改修工事",
     "tags": [
       "改修",
       "建築",
-      "土木"
+      "プール"
     ],
     "isIntelligenceExtracted": true,
     "extractionSource": "gemini"
@@ -1941,12 +1962,12 @@
     "biddingDate": "2025-08-21",
     "estimatedPrice": "1,738,000円",
     "designFirm": "(株)内藤建築事務所 奈良事務所",
-    "constructionPeriod": "契約日の翌日から 令和 8年 2月27日まで",
+    "constructionPeriod": "契約日の翌日から令和8年2月27日まで",
     "description": "旧中央公民館・分館解体跡増築工事に伴う工事監理業務委託",
     "tags": [
-      "工事監理",
       "解体",
-      "増築"
+      "増築",
+      "工事監理"
     ],
     "isIntelligenceExtracted": true,
     "extractionSource": "gemini"
@@ -1974,14 +1995,13 @@
     "status": "落札",
     "biddingDate": "2025-09-09",
     "winningContractor": "新和建設(株)",
-    "estimatedPrice": "48,640,000円",
-    "designFirm": "株式会社KEISIN葛城事務所",
+    "estimatedPrice": "48,640,000 円 (消費税及び地方消費税を除く。)",
+    "designFirm": "(株)KEISIN 葛城事務所",
     "constructionPeriod": "契約日から令和8年2月27日(金)まで",
-    "description": "當麻スポーツセンタートイレ改修工事。當麻スポーツセンター1、2階トイレおよび多目的トイレの乾式化・洋式化",
+    "description": "當麻スポーツセンタートイレ改修工事。1、2階トイレおよび多目的トイレの乾式化・洋式化。",
     "tags": [
       "改修",
-      "建築",
-      "トイレ"
+      "建築"
     ],
     "isIntelligenceExtracted": true,
     "extractionSource": "gemini"
@@ -2000,7 +2020,7 @@
     "estimatedPrice": "57,510,000 円",
     "designFirm": "細谷設計事務所",
     "constructionPeriod": "契約日から令和8年2月27日(金)まで",
-    "description": "白鳳中学校武道場のトイレ改修工事及び剣道場・柔道場に空気調和設備(EHP)8台の設置工事",
+    "description": "白鳳中学校武道場改修工事。白鳳中学校武道場のトイレ改修工事及び剣道場・柔道場に空気調和設備(EHP)8台の設置工事。",
     "tags": [
       "改修",
       "建築",
@@ -2021,12 +2041,12 @@
     "biddingDate": "2025-09-08",
     "winningContractor": "(株)森組 奈良営業所",
     "estimatedPrice": "2,445,000,000 円",
-    "designFirm": "株式会社青木茂建築工房、株式会社 福本設計",
+    "designFirm": "株式会社青木茂建築工房, 株式会社福本設計",
     "constructionPeriod": "契約日から令和9年1月29日(金)まで",
-    "description": "(仮称)當麻複合施設整備工事。既存の當麻文化会館を全面改修し、周辺の當麻庁舎及び當麻図書館と複合して、市民活動センター、図書館、庁舎の機能を持たせた(仮称)當麻複合施設の整備を行う工事。",
+    "description": "(仮称)當麻複合施設整備工事。既存の當麻文化会館を全面改修するとともに、周辺施設である當麻庁舎及び當麻図書館を複合し、新たに市民活動センター機能・図書館機能・庁舎機能を併せ持った(仮称)當麻複合施設の整備工事。",
     "tags": [
-      "建築",
       "改修",
+      "建築",
       "複合施設"
     ],
     "isIntelligenceExtracted": true,
@@ -2055,13 +2075,13 @@
     "winnerType": "ゼネコン",
     "winningContractor": "(株)松吉組",
     "biddingDate": "2025-07-24",
-    "estimatedPrice": "94,200,000円",
-    "constructionPeriod": "契約日の翌日から令和8年2月20日",
+    "estimatedPrice": "103,620,000円",
+    "constructionPeriod": "契約日の翌日 から 令和 8年 2月20日",
     "description": "四条団地7・8号棟外壁等改修工事",
     "tags": [
       "改修",
-      "建築",
-      "外壁"
+      "外壁",
+      "建築"
     ],
     "isIntelligenceExtracted": true,
     "extractionSource": "gemini"
@@ -2100,10 +2120,11 @@
     "biddingDate": "2025-08-05",
     "estimatedPrice": "48,640,000円",
     "constructionPeriod": "契約日から令和8年1月30日(金)まで",
-    "description": "當麻スポーツセンタートイレ改修工事。當麻スポーツセンター1、2階トイレおよび多目的トイレの乾式化・洋式化。",
+    "description": "當麻スポーツセンタートイレ改修工事。1階、2階トイレおよび多目的トイレの乾式化・洋式化。",
     "tags": [
       "改修",
-      "建築"
+      "建築",
+      "設備"
     ],
     "isIntelligenceExtracted": true,
     "extractionSource": "gemini"
@@ -2118,10 +2139,10 @@
     "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/4-03-02-2025-1.pdf",
     "status": "不調",
     "biddingDate": "2025-08-05",
-    "estimatedPrice": "57,510,000円",
+    "estimatedPrice": "57,510,000 円",
     "designFirm": "細谷設計事務所",
     "constructionPeriod": "契約日から令和8年1月30日(金)まで",
-    "description": "白鳳中学校武道場改修工事。白鳳中学校武道場のトイレ改修工事及び剣道場・柔道場に空気調和設備(EHP) 8台の設置工事。",
+    "description": "白鳳中学校武道場改修工事（トイレ改修、剣道場・柔道場への空気調和設備(EHP)8台設置）",
     "tags": [
       "改修",
       "建築",
@@ -2140,14 +2161,14 @@
     "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/4-03-03-2025-1.pdf",
     "status": "受付終了",
     "biddingDate": "2025-08-05",
-    "estimatedPrice": "52,424,000 円",
+    "estimatedPrice": "52,424,000円",
     "designFirm": "(株)オオバ 奈良営業所",
-    "constructionPeriod": "契約日から 令和8年2月27日(金)まで",
+    "constructionPeriod": "契約日より令和8年2月27日(金)まで",
     "description": "公園施設長寿命化対策支援事業に伴う屋敷山公園噴水広場更新工事",
     "tags": [
-      "造園",
       "改修",
-      "長寿命化"
+      "造園",
+      "公園"
     ],
     "isIntelligenceExtracted": true,
     "extractionSource": "gemini"
@@ -2197,13 +2218,13 @@
     "winnerType": "ゼネコン",
     "winningContractor": "大日本土木・崎山組特定建設工事共同企業体",
     "biddingDate": "2025-07-01",
-    "estimatedPrice": "1,834,283,000円",
-    "constructionPeriod": "議会議決日の翌日 から令和 9年 3月18日",
+    "estimatedPrice": "1,834,283,000円(消費税10%含む)",
+    "constructionPeriod": "議会議決日の翌日 から 令和9年3月18日",
     "description": "八木中学校長寿命化改良工事(第1期)",
     "tags": [
-      "改修",
       "建築",
-      "学校"
+      "改修",
+      "耐震"
     ],
     "isIntelligenceExtracted": true,
     "extractionSource": "gemini"
@@ -2276,7 +2297,7 @@
     "winningContractor": "(株)ゆうび建設",
     "biddingDate": "2025-06-26",
     "estimatedPrice": "7,755,000円(消費税含む)",
-    "constructionPeriod": "契約日の翌日から令和7年10月17日",
+    "constructionPeriod": "契約日の翌日 から 令和7年10月17日 まで",
     "description": "市営住宅内装等改修工事",
     "tags": [
       "改修",
@@ -2300,11 +2321,11 @@
     "biddingDate": "2025-06-26",
     "estimatedPrice": "15,312,000円",
     "designFirm": "(有)坪岡建築事務所",
-    "constructionPeriod": "契約日の翌日から令和8年1月30日まで",
+    "constructionPeriod": "契約日の翌日 から 令和8年1月30日 まで",
     "description": "各小学校便所改修工事に伴う設計委託",
     "tags": [
-      "改修",
       "設計",
+      "改修",
       "建築"
     ],
     "isIntelligenceExtracted": true,
@@ -2389,13 +2410,13 @@
     "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/3-03-03-2025-1-2.pdf",
     "status": "受付終了",
     "biddingDate": "2025-07-02",
-    "estimatedPrice": "19,740,000円 (消費税及び地方消費税を除く。)",
+    "estimatedPrice": "19,740,000円",
     "constructionPeriod": "契約日から令和9年3月26日(金)まで",
-    "description": "葛城市立新庄小学校管理棟及び屋内運動場長寿命化改修工事監理業務委託（実施設計図書に基づく工事監理）",
+    "description": "葛城市立新庄小学校管理棟及び屋内運動場長寿命化改修工事監理業務委託",
     "tags": [
-      "建築",
       "改修",
-      "監理"
+      "建築",
+      "工事監理"
     ],
     "isIntelligenceExtracted": true,
     "extractionSource": "gemini"
@@ -2456,7 +2477,7 @@
     "winningContractor": "株式会社hinata",
     "estimatedPrice": "42,460,000円",
     "constructionPeriod": "令和9年1月29日",
-    "description": "広陵西小学校ベランダ手摺改修工事 外壁改修工事一式",
+    "description": "広陵西小学校ベランダ手摺改修工事 (外壁改修工事一式)",
     "tags": [
       "改修",
       "建築",
@@ -2517,7 +2538,7 @@
     "tags": [
       "改修",
       "建築",
-      "工事"
+      "設備"
     ],
     "isIntelligenceExtracted": true,
     "extractionSource": "gemini"
@@ -2534,8 +2555,8 @@
     "winnerType": "ゼネコン",
     "winningContractor": "(株)森本組",
     "biddingDate": "2025-05-20",
-    "estimatedPrice": "127,127,000円",
-    "constructionPeriod": "契約日の翌日から令和8年1月16日まで",
+    "estimatedPrice": "127,127,000円(消費税%含む)",
+    "constructionPeriod": "契約日の翌日から令和 8年1月16日まで",
     "description": "真菅北幼稚園解体工事",
     "tags": [
       "解体",
@@ -2556,13 +2577,13 @@
     "winnerType": "ゼネコン",
     "winningContractor": "国際航業(株) 奈良営業所",
     "biddingDate": "2025-05-15",
-    "estimatedPrice": "13,948,000円",
+    "estimatedPrice": "13,948,000円(消費税%含む)",
     "constructionPeriod": "契約日の翌日から令和8年2月27日まで",
     "description": "令和7年度橿原市耐震改修促進計画改定業務委託",
     "tags": [
       "耐震",
-      "改修",
-      "計画"
+      "計画",
+      "調査"
     ],
     "isIntelligenceExtracted": true,
     "extractionSource": "gemini"
@@ -2578,10 +2599,10 @@
     "status": "不調",
     "biddingDate": "2025-06-30",
     "winningContractor": "‐",
-    "estimatedPrice": "2,445,000,000 円",
-    "designFirm": "株式会社 青木茂建築工房 & 株式会社 福本設計",
+    "estimatedPrice": "2,445,000,000円",
+    "designFirm": "株式会社 青木茂建築工房, 株式会社 福本設計",
     "constructionPeriod": "契約日から令和8年10月30日(金)まで",
-    "description": "(仮称)當麻複合施設整備工事。既存の當麻文化会館を全面改修し、周辺施設である當麻庁舎及び當麻図書館を複合して、市民活動センター機能・図書館機能・庁舎機能を併せ持った(仮称)當麻複合施設を整備する工事。",
+    "description": "(仮称)當麻複合施設整備工事: 既存の當麻文化会館を全面改修し、當麻庁舎及び當麻図書館と複合して市民活動センター、図書館、庁舎機能を併せ持つ複合施設を整備する工事。",
     "tags": [
       "建築",
       "改修",
@@ -2613,11 +2634,12 @@
     "status": "落札",
     "winningContractor": "有限会社ササイ弘建設",
     "estimatedPrice": "32,630,000円",
-    "constructionPeriod": "契約日～令和8年10月30日",
-    "description": "馬見南3丁目集会所兼旧エコセンター外壁改修工事 外壁改修工事一式",
+    "constructionPeriod": "令和8年10月30日",
+    "description": "馬見南3丁目集会所兼旧エコセンター外壁改修工事",
     "tags": [
       "改修",
-      "建築"
+      "建築",
+      "外壁"
     ],
     "isIntelligenceExtracted": true,
     "extractionSource": "gemini"
@@ -2635,12 +2657,11 @@
     "winningContractor": "株式会社彩都建築設計",
     "estimatedPrice": "2,710,000円",
     "designFirm": "株式会社彩都建築設計",
-    "constructionPeriod": "令和 8年11月30日",
-    "description": "広陵運動公園トイレ改築工事実施設計業務委託 実施設計業務一式",
+    "description": "広陵運動公園トイレ改築工事実施設計業務委託",
     "tags": [
       "建築",
       "設計",
-      "改築"
+      "改修"
     ],
     "isIntelligenceExtracted": true,
     "extractionSource": "gemini"
@@ -2657,13 +2678,12 @@
     "winnerType": "ゼネコン",
     "winningContractor": "(株)AZ",
     "biddingDate": "2025-04-22",
-    "estimatedPrice": "129,404,000円",
-    "constructionPeriod": "契約日の翌日 から 2026年3月18日",
+    "estimatedPrice": "129,404,000円(消費税%含む)",
+    "constructionPeriod": "契約日の翌日から令和 8年 3月18日",
     "description": "畝傍東幼稚園及び晩成幼稚園トイレ改修工事",
     "tags": [
       "改修",
-      "建築",
-      "設備"
+      "建築"
     ],
     "isIntelligenceExtracted": true,
     "extractionSource": "gemini"
@@ -2681,7 +2701,7 @@
     "winningContractor": "(株)奥井建設",
     "biddingDate": "2025-04-22",
     "estimatedPrice": "104,456,000円(消費税10%含む)",
-    "constructionPeriod": "契約日の翌日 から 令和8年3月18日 まで",
+    "constructionPeriod": "契約日の翌日 から 令和8年3月18日",
     "description": "鴨公幼稚園トイレ及び屋上防水改修工事",
     "tags": [
       "改修",
@@ -2703,12 +2723,12 @@
     "winnerType": "ゼネコン",
     "winningContractor": "(株)崎山組",
     "biddingDate": "2025-04-22",
-    "estimatedPrice": "92,796,000円",
-    "constructionPeriod": "契約日の翌日 から 令和7年12月19日 まで",
+    "estimatedPrice": "92,796,000円(消費税%含む)",
+    "constructionPeriod": "契約日の翌日から令和7年12月19日まで",
     "description": "四条団地(ペア)解体工事(3工区)",
     "tags": [
       "解体",
-      "工事",
+      "土木",
       "建築"
     ],
     "isIntelligenceExtracted": true,
@@ -2727,11 +2747,10 @@
     "winningContractor": "(株)南村組",
     "biddingDate": "2025-04-22",
     "estimatedPrice": "92,235,000円",
-    "constructionPeriod": "契約日の翌日 から 令和 8年1月16日 まで",
+    "constructionPeriod": "契約日の翌日 から令和 8年1月16日 まで",
     "description": "四条団地(ペア)解体工事(2工区)",
     "tags": [
-      "解体",
-      "建設"
+      "解体"
     ],
     "isIntelligenceExtracted": true,
     "extractionSource": "gemini"
@@ -2747,9 +2766,9 @@
     "status": "落札",
     "biddingDate": "2025-05-15",
     "winningContractor": "(株)中和設計",
-    "estimatedPrice": "11,022,000 円 (消費税及び地方消費税を除く。)",
-    "constructionPeriod": "契約日から令和7年12月22日(月)まで (設計業務の履行期間)",
-    "description": "忍海小学校区学童保育所施設整備に係る設計業務。既存施設の解体及び新施設の建築に係る設計業務及びその他協議・申請業務を適切に行うべく専門知識を有する業者に委託するもの。",
+    "estimatedPrice": "11,022,000円",
+    "constructionPeriod": "契約日から令和7年12月22日まで",
+    "description": "忍海小学校区学童保育所施設整備に係る設計業務 (既存施設の解体及び新施設の建築)",
     "tags": [
       "設計",
       "建築",
@@ -2767,18 +2786,7 @@
     "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/1-06-07-01-3.pdf",
     "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/1-06-07-01-3.pdf",
     "status": "受付終了",
-    "biddingDate": "2025-05-15",
-    "estimatedPrice": "917,770,000円",
-    "designFirm": "株式会社 中和設計",
-    "constructionPeriod": "契約日より令和9年3月26日まで",
-    "description": "葛城市立新庄小学校管理棟及び屋内運動場長寿命化改修工事（管理棟・屋内運動場の改修、仮設校舎・仮設渡り廊下の設置・撤去、電気設備工事・機械設備工事を含む）",
-    "tags": [
-      "改修",
-      "建築",
-      "電気"
-    ],
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini"
+    "biddingDate": "2025-05-15"
   },
   {
     "id": "katsuragi-epi-aef9d1f0",
