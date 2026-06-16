@@ -40,6 +40,7 @@ export interface ChatResponsePayload {
     localMatches: BiddingItem[];
     followups: string[];
     usedWebSearch: boolean;
+    webSearchStatus: 'not-requested' | 'used' | 'unavailable' | 'failed';
     model: string;
     context: ChatContext;
 }
@@ -202,6 +203,14 @@ function normalizeText(value: string): string {
     return value.normalize('NFKC').toLowerCase().replace(/\s+/g, ' ').trim();
 }
 
+function stripQueryNoise(value: string): string {
+    return value
+        .replace(/を?(調べて|教えて|見せて|探して|確認して|詳しく|ください|お願い|お願いします)/g, ' ')
+        .replace(/[?？]/g, ' ')
+        .replace(/\s+/g, ' ')
+        .trim();
+}
+
 function normalizeQueryForIntent(value: string): string {
     let normalized = value.normalize('NFKC');
     for (const alias of MUNICIPALITY_ALIASES) {
@@ -213,7 +222,7 @@ function normalizeQueryForIntent(value: string): string {
 }
 
 function tokenizeQuery(query: string): string[] {
-    const normalized = normalizeText(query)
+    const normalized = normalizeText(stripQueryNoise(query))
         .replace(/[「」『』【】()（）!?！？:：,，.。]/g, ' ')
         .trim();
 
@@ -281,7 +290,7 @@ function inferIntent(query: string, history: ChatTurn[]): QueryIntent {
         wantsDesign: /設計|監理|コンサル|委託/.test(fullQuery),
         wantsConstruction: /工事|改修|新築|解体/.test(fullQuery),
         wantsWinner: /ゼネコン|元請け|施工会社|落札者|業者/.test(fullQuery),
-        explicitWebSearch: /ネット|web|検索|調べて|見つからない|サイトにない|他にも/.test(fullQuery),
+        explicitWebSearch: /ネット|web|検索|見つからない|サイトにない|他にも|webでも|外でも/.test(fullQuery),
         asksSpecificProject: looksLikeSpecificProject(fullQuery),
         wantsCarryOver: isContinuationQuery(query),
     };
@@ -444,18 +453,30 @@ function scoreItem(item: BiddingItem, query: string, tokens: string[], intent: Q
     ].filter(Boolean).join(' '));
 
     let score = 0;
-    const normalizedQuery = normalizeText(query);
+    const normalizedQuery = normalizeText(stripQueryNoise(query));
+    const normalizedTitle = normalizeText(item.title);
     if (normalizedQuery && haystack.includes(normalizedQuery)) score += 20;
-    if (normalizeText(item.title).includes(normalizedQuery)) score += 24;
+    if (normalizedQuery && normalizedTitle.includes(normalizedQuery)) score += 24;
+    if (normalizedQuery && normalizedQuery.includes(normalizedTitle)) score += 32;
 
     for (const token of tokens) {
-        if (normalizeText(item.title).includes(token)) score += 10;
+        if (normalizedTitle.includes(token)) score += 10;
         else if (haystack.includes(token)) score += 4;
     }
 
+    if (intent.asksSpecificProject) {
+        const longTokens = tokens.filter((token) => token.length >= 6);
+        const matchedLongTokens = longTokens.filter((token) => normalizedTitle.includes(token)).length;
+        score += matchedLongTokens * 8;
+    }
+
     if (intent.municipality && item.municipality === intent.municipality) score += 8;
+    if (intent.wantsBidding && item.biddingDate) score += 6;
     if (intent.wantsAwarded && item.status === '落札') score += 5;
     if (intent.wantsOpen && item.status === '受付中') score += 5;
+    if ((intent.wantsAwarded || intent.wantsWinner) && item.status === '落札') score += 14;
+    if ((intent.wantsAwarded || intent.wantsWinner) && item.winningContractor) score += 16;
+    if ((intent.wantsAwarded || intent.wantsWinner) && item.status === '不調') score += 8;
     if (intent.wantsDesign && item.type === 'コンサル') score += 4;
     if (intent.wantsConstruction && (item.type === '建築' || item.type === '工事')) score += 4;
 
@@ -695,6 +716,40 @@ function buildNoMatchAnswer(intent: QueryIntent, items: BiddingItem[]): { answer
     };
 }
 
+function buildGenericLocalFallback(query: string, items: BiddingItem[]): { answer: string; followups: string[] } {
+    const latestItems = items.slice(0, 5);
+    const lines = latestItems.length > 0
+        ? latestItems.map(formatItemLine).join('\n')
+        : '- ローカル案件データがまだありません。';
+
+    return {
+        answer: [
+            `外部AIなしでローカル案件データから回答します。質問「${query}」に対して完全一致は出せませんでしたが、直近案件は次のとおりです。`,
+            lines,
+            '自治体名、案件名、または「今週の開札」「五條市の学校改修」のように条件を足すと絞り込みやすくなります。',
+        ].join('\n'),
+        followups: [
+            '今週の開札案件だけ教えて',
+            '五條市の案件だけ見せて',
+            '奈良県の最新案件を教えて',
+        ],
+    };
+}
+
+function prependWebSearchNotice(
+    answer: string,
+    status: 'unavailable' | 'failed',
+    intent: QueryIntent,
+): string {
+    if (!intent.explicitWebSearch) return answer;
+
+    const notice = status === 'unavailable'
+        ? 'Web補足も求められましたが、この実行では外部AI/APIキーが使えないため、サイト内データだけで回答します。'
+        : 'Web補足も試みましたが、この実行では外部応答が不安定だったため、サイト内データだけで回答します。';
+
+    return `${notice}\n${answer}`;
+}
+
 function extractTextFromCandidate(response: GeminiRestResponse): string {
     return response.candidates?.[0]?.content?.parts?.map(part => part.text || '').join('').trim() || '';
 }
@@ -816,6 +871,7 @@ export async function answerBiddingQuestion(query: string, history: ChatTurn[] =
     return finalizeAnswer({
         query,
         history,
+        items,
         localMatches,
         localSources,
         deterministic,
@@ -829,6 +885,7 @@ export async function answerBiddingQuestion(query: string, history: ChatTurn[] =
 function finalizeAnswer({
     query,
     history,
+    items,
     localMatches,
     localSources,
     deterministic,
@@ -839,6 +896,7 @@ function finalizeAnswer({
 }: {
     query: string;
     history: ChatTurn[];
+    items: BiddingItem[];
     localMatches: BiddingItem[];
     localSources: ChatSource[];
     deterministic: { answer: string; followups: string[] } | null;
@@ -855,6 +913,7 @@ function finalizeAnswer({
             localMatches,
             followups: deterministic.followups,
             usedWebSearch: false,
+            webSearchStatus: 'not-requested',
             model: 'local-answer',
             context: nextContext,
         };
@@ -867,6 +926,7 @@ function finalizeAnswer({
             localMatches,
             followups: noMatchAnswer.followups,
             usedWebSearch: false,
+            webSearchStatus: 'not-requested',
             model: 'local-answer',
             context: nextContext,
         };
@@ -875,47 +935,85 @@ function finalizeAnswer({
     if (!apiKey) {
         if (deterministic) {
             return {
-                answer: deterministic.answer,
+                answer: prependWebSearchNotice(deterministic.answer, 'unavailable', intent),
                 sources: localSources,
                 localMatches,
                 followups: deterministic.followups,
                 usedWebSearch: false,
+                webSearchStatus: intent.explicitWebSearch ? 'unavailable' : 'not-requested',
                 model: 'local-answer',
                 context: nextContext,
             };
         }
         if (noMatchAnswer) {
             return {
-                answer: noMatchAnswer.answer,
+                answer: prependWebSearchNotice(noMatchAnswer.answer, 'unavailable', intent),
                 sources: [],
                 localMatches,
                 followups: noMatchAnswer.followups,
                 usedWebSearch: false,
+                webSearchStatus: intent.explicitWebSearch ? 'unavailable' : 'not-requested',
                 model: 'local-answer',
                 context: nextContext,
             };
         }
-        throw new Error('GOOGLE_GENERATIVE_AI_API_KEY is not set');
+        const fallback = buildGenericLocalFallback(query, items);
+        return {
+            answer: prependWebSearchNotice(fallback.answer, 'unavailable', intent),
+            sources: localSources,
+            localMatches,
+            followups: fallback.followups,
+            usedWebSearch: false,
+            webSearchStatus: intent.explicitWebSearch ? 'unavailable' : 'not-requested',
+            model: 'local-fallback',
+            context: nextContext,
+        };
     }
 
     const modelName = getChatModelName();
     const shouldUseWebSearch = intent.explicitWebSearch || localMatches.length < 3;
     const prompt = buildPrompt(query, localMatches, history);
-    return callGeminiChat(prompt, shouldUseWebSearch, modelName, apiKey).then((result) => {
-        const rawText = extractTextFromCandidate(result);
-        const parsed = JSON.parse(rawText) as { answer: string; followups?: string[] };
-        const webSources = extractGroundedSources(result);
+    return callGeminiChat(prompt, shouldUseWebSearch, modelName, apiKey)
+        .then((result) => {
+            const rawText = extractTextFromCandidate(result);
+            if (!rawText) {
+                throw new Error('Gemini returned an empty response');
+            }
 
-        return {
-            answer: parsed.answer,
-            sources: [...localSources, ...webSources],
-            localMatches,
-            followups: parsed.followups?.slice(0, 3) || buildFollowups(intent, localMatches),
-            usedWebSearch: webSources.length > 0,
-            model: modelName,
-            context: nextContext,
-        };
-    });
+            const parsed = JSON.parse(rawText) as { answer?: string; followups?: string[] };
+            if (!parsed.answer?.trim()) {
+                throw new Error('Gemini response did not include an answer');
+            }
+
+            const webSources = extractGroundedSources(result);
+
+            return {
+                answer: parsed.answer,
+                sources: [...localSources, ...webSources],
+                localMatches,
+                followups: parsed.followups?.slice(0, 3) || buildFollowups(intent, localMatches),
+                usedWebSearch: webSources.length > 0,
+                webSearchStatus: webSources.length > 0 ? 'used' : 'not-requested',
+                model: modelName,
+                context: nextContext,
+            };
+        })
+        .catch(() => {
+            const fallback = deterministic
+                || noMatchAnswer
+                || buildGenericLocalFallback(query, items);
+
+            return {
+                answer: prependWebSearchNotice(fallback.answer, 'failed', intent),
+                sources: localSources,
+                localMatches,
+                followups: fallback.followups,
+                usedWebSearch: false,
+                webSearchStatus: intent.explicitWebSearch || shouldUseWebSearch ? 'failed' : 'not-requested',
+                model: 'local-fallback',
+                context: nextContext,
+            };
+        });
 }
 
 export async function answerBiddingQuestionWithContext(
@@ -951,6 +1049,7 @@ export async function answerBiddingQuestionWithContext(
     const result = finalizeAnswer({
         query,
         history,
+        items,
         localMatches,
         localSources,
         deterministic,

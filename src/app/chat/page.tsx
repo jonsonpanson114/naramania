@@ -21,6 +21,7 @@ type ChatMessage = {
     sources?: ChatSource[];
     followups?: string[];
     usedWebSearch?: boolean;
+    webSearchStatus?: 'not-requested' | 'used' | 'unavailable' | 'failed';
     model?: string;
 };
 
@@ -87,6 +88,7 @@ export default function ChatPage() {
                     sources: data.sources,
                     followups: data.followups,
                     usedWebSearch: data.usedWebSearch,
+                    webSearchStatus: data.webSearchStatus,
                     model: data.model,
                 },
             ]);
@@ -98,7 +100,7 @@ export default function ChatPage() {
                 ...prev,
                 {
                     role: 'assistant',
-                    content: '回答の生成に失敗しました。APIキー設定またはモデル名を確認してください。',
+                    content: '回答の生成に失敗しました。少し時間を置いて再度お試しください。',
                 },
             ]);
         } finally {
@@ -161,6 +163,10 @@ export default function ChatPage() {
                             <p className="text-sm leading-7 text-primary">
                                 {lastAssistant?.usedWebSearch
                                     ? 'この会話では Web 補足も使いました。案件がサイト内に薄いときは外部ソースも見に行きます。'
+                                    : lastAssistant?.webSearchStatus === 'unavailable'
+                                        ? 'Web補足を求めた質問でしたが、この実行では外部AI/APIキーが使えず、サイト内データだけで回答しています。'
+                                        : lastAssistant?.webSearchStatus === 'failed'
+                                            ? 'Web補足を試しましたが外部応答が不安定だったため、今回はサイト内データ中心で回答しています。'
                                     : 'この会話ではサイト内データ中心で回答しています。まず現行の収集データを優先して見ます。'}
                             </p>
                         </div>
@@ -259,7 +265,10 @@ export default function ChatPage() {
 
                                     {message.role === 'assistant' && message.model ? (
                                         <p className="mt-4 text-[10px] tracking-[0.16em] text-secondary/45 uppercase">
-                                            model: {message.model}{message.usedWebSearch ? ' / google search grounding used' : ''}
+                                            model: {message.model}
+                                            {message.usedWebSearch ? ' / google search grounding used' : ''}
+                                            {message.webSearchStatus === 'unavailable' ? ' / web supplement unavailable' : ''}
+                                            {message.webSearchStatus === 'failed' ? ' / web supplement fallback' : ''}
                                         </p>
                                     ) : null}
                                 </div>
