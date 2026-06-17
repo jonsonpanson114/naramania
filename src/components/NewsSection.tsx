@@ -14,6 +14,7 @@ const SOURCE_STYLES: Record<string, { color: string; bg: string; border: string 
 };
 
 function formatDate(dateStr: string): string {
+    if (!dateStr) return '日付未取得';
     try {
         const d = new Date(dateStr);
         if (isNaN(d.getTime())) return dateStr;
@@ -40,17 +41,18 @@ export function NewsSection() {
         if (!dateStr) return false;
         const d = new Date(dateStr);
         if (isNaN(d.getTime())) return false;
-        const diffTime = Math.abs(new Date().getTime() - d.getTime());
+        const diffTime = new Date().getTime() - d.getTime();
+        if (diffTime < 0) return false;
         return Math.ceil(diffTime / (1000 * 60 * 60 * 24)) <= 7;
     };
 
     const load = async () => {
         try {
             const res = await fetch('/api/news');
-            const data: NewsItem[] = await res.json();
-            setNews(data);
+            const data: unknown = await res.json();
+            setNews(res.ok && Array.isArray(data) ? data : []);
         } catch {
-            // silent fail
+            setNews([]);
         } finally {
             setLoading(false);
             setRefreshing(false);

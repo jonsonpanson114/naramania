@@ -14,9 +14,11 @@ export function NewsTicker() {
         const load = async () => {
             try {
                 const res = await fetch('/api/news');
-                const data: NewsItem[] = await res.json();
-                setNews(data.slice(0, 5)); // Top 5 recent news
-            } catch { }
+                const data: unknown = await res.json();
+                setNews(res.ok && Array.isArray(data) ? data.slice(0, 5) : []);
+            } catch {
+                setNews([]);
+            }
         };
         load();
     }, []);

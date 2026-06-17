@@ -1,5 +1,6 @@
 import axios from 'axios';
 import * as cheerio from 'cheerio';
+import { fetchNewsViaBrowser } from './news_browser_service';
 
 export interface NewsItem {
     id: string;
@@ -22,16 +23,60 @@ async function fetchUrl(url: string): Promise<string> {
     return res.data;
 }
 
+async function withTimeout<T>(promise: Promise<T>, timeoutMs: number, fallback: T): Promise<T> {
+    let timer: ReturnType<typeof setTimeout> | undefined;
+    try {
+        return await Promise.race([
+            promise,
+            new Promise<T>((resolve) => {
+                timer = setTimeout(() => resolve(fallback), timeoutMs);
+            }),
+        ]);
+    } finally {
+        if (timer) clearTimeout(timer);
+    }
+}
+
 function parseRssDate(dateStr: string): string {
     try {
         const d = new Date(dateStr);
         if (!isNaN(d.getTime())) return d.toISOString().split('T')[0];
     } catch { }
-    return new Date().toISOString().split('T')[0];
+    return '';
 }
 
 function stripHtml(html: string): string {
-    return html.replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&nbsp;/g, ' ').trim();
+    return html
+        .replace(/<[^>]+>/g, '')
+        .replace(/&amp;/g, '&')
+        .replace(/&lt;/g, '<')
+        .replace(/&gt;/g, '>')
+        .replace(/&quot;/g, '"')
+        .replace(/&#039;/g, "'")
+        .replace(/&nbsp;/g, ' ')
+        .replace(/\s+/g, ' ')
+        .trim();
+}
+
+function normalizeLink(href: string, baseUrl: string): string {
+    if (!href || href.startsWith('#') || href.startsWith('javascript:')) return '';
+    try {
+        return new URL(href, baseUrl).toString();
+    } catch {
+        return '';
+    }
+}
+
+function isNoiseTitle(title: string): boolean {
+    if (title.length < 6 || title.length > 140) return true;
+    return /^(ホーム|トップ|一覧|検索|ログイン|購読|広告|お問い合わせ|会社案内|サイトマップ|プライバシー)/.test(title);
+}
+
+function cleanTitle(title: string): string {
+    return stripHtml(title)
+        .replace(/\s*\|\s*.*$/, '')
+        .replace(/\s+-\s+.*$/, '')
+        .trim();
 }
 
 // 新報奈良 (shinpou-nara.com) — WordPress RSS
@@ -43,10 +88,10 @@ async function fetchShinpouNara(): Promise<NewsItem[]> {
         $('item').each((i, el) => {
             if (i >= 10) return false;
             const title = stripHtml($(el).find('title').text().trim());
-            const link = $(el).find('link').text().trim() || $(el).find('guid').text().trim();
+            const link = normalizeLink($(el).find('link').text().trim() || $(el).find('guid').text().trim(), 'https://shinpou-nara.com/');
             const pubDate = $(el).find('pubDate').text().trim();
             const description = stripHtml($(el).find('description').text()).slice(0, 100);
-            if (!title || !link) return;
+            if (isNoiseTitle(title) || !link) return;
             items.push({ id: `shinpou-${i}`, source: 'shinpou', sourceLabel: '新報奈良', title, date: parseRssDate(pubDate), link, excerpt: description || undefined });
         });
         console.log(`[News] 新報奈良: ${items.length}件`);
@@ -66,9 +111,9 @@ async function fetchDecn(): Promise<NewsItem[]> {
 
         $('a[href*="?p="]').each((i, el) => {
             if (items.length >= 10) return false;
-            const title = $(el).text().trim();
-            const href = $(el).attr('href') || '';
-            if (!title || title.length < 5) return;
+            const title = cleanTitle($(el).text().trim());
+            const href = normalizeLink($(el).attr('href') || '', 'https://www.decn.co.jp/');
+            if (isNoiseTitle(title) || !href) return;
 
             // Date is usually nearby in the parent container
             const container = $(el).closest('div, li, article');
@@ -76,7 +121,7 @@ async function fetchDecn(): Promise<NewsItem[]> {
             const dateMatch = containerText.match(/(\d{4})年(\d{1,2})月(\d{1,2})日/);
             const date = dateMatch
                 ? `${dateMatch[1]}-${dateMatch[2].padStart(2, '0')}-${dateMatch[3].padStart(2, '0')}`
-                : new Date().toISOString().split('T')[0];
+                : '';
 
             items.push({ id: `decn-${items.length}`, source: 'decn', sourceLabel: '建設工業新聞', title, date, link: href });
         });
@@ -98,10 +143,10 @@ async function fetchNaraNp(): Promise<NewsItem[]> {
         $('item').each((i, el) => {
             if (i >= 15) return false;
             const title = stripHtml($(el).find('title').text().trim());
-            const link = $(el).find('link').text().trim() || $(el).find('guid').text().trim();
+            const link = normalizeLink($(el).find('link').text().trim() || $(el).find('guid').text().trim(), 'https://www.nara-np.co.jp/');
             const pubDate = $(el).find('pubDate').text().trim();
             const description = stripHtml($(el).find('description').text()).slice(0, 100);
-            if (!title || !link) return;
+            if (isNoiseTitle(title) || !link) return;
             items.push({ id: `naranp-${i}`, source: 'naranp', sourceLabel: '奈良新聞', title, date: parseRssDate(pubDate), link, excerpt: description || undefined });
         });
         if (items.length > 0) {
@@ -120,14 +165,15 @@ async function fetchNaraNp(): Promise<NewsItem[]> {
             const href = $(el).attr('href') || '';
             if (!href.match(/\/(news|article|topics)\//i) && !href.match(/\/\d{5,}/)) return;
 
-            const title = $(el).find('h3, h4, .title').text().trim() || $(el).text().trim();
-            if (!title || title.length < 5) return;
+            const title = cleanTitle($(el).find('h3, h4, .title').text().trim() || $(el).text().trim());
+            if (isNoiseTitle(title)) return;
 
             const dateText = $(el).find('[class*="date"], time').text().trim();
             const dateMatch = dateText.match(/(\d{4})[.\-/](\d{2})[.\-/](\d{2})/);
-            const date = dateMatch ? `${dateMatch[1]}-${dateMatch[2]}-${dateMatch[3]}` : new Date().toISOString().split('T')[0];
+            const date = dateMatch ? `${dateMatch[1]}-${dateMatch[2]}-${dateMatch[3]}` : '';
 
-            const fullHref = href.startsWith('http') ? href : `https://www.nara-np.co.jp${href}`;
+            const fullHref = normalizeLink(href, 'https://www.nara-np.co.jp/');
+            if (!fullHref) return;
             items.push({ id: `naranp-${items.length}`, source: 'naranp', sourceLabel: '奈良新聞', title, date, link: fullHref });
         });
         console.log(`[News] 奈良新聞(HTML): ${items.length}件`);
@@ -138,14 +184,12 @@ async function fetchNaraNp(): Promise<NewsItem[]> {
     }
 }
 
-import { fetchNewsViaBrowser } from './news_browser_service';
-
 export async function fetchAllNews(): Promise<NewsItem[]> {
     const results = await Promise.allSettled([
         fetchShinpouNara(),
         fetchDecn(),
         fetchNaraNp(),
-        fetchNewsViaBrowser(), // 建設ニュースと建通新聞はブラウザ経由
+        withTimeout(fetchNewsViaBrowser(), 22000, []), // 建設ニュースと建通新聞はブラウザ経由
     ]);
 
     const allItems: NewsItem[] = [];
@@ -158,13 +202,17 @@ export async function fetchAllNews(): Promise<NewsItem[]> {
     // 重複削除 (URLベース)
     const unique = new Map<string, NewsItem>();
     allItems.forEach(item => {
-        if (!unique.has(item.link)) {
-            unique.set(item.link, item);
+        const title = cleanTitle(item.title);
+        const link = normalizeLink(item.link, item.link);
+        if (isNoiseTitle(title) || !link) return;
+        const key = link || `${item.source}:${title}`;
+        if (!unique.has(key)) {
+            unique.set(key, { ...item, title, link });
         }
     });
 
     const finalItems = Array.from(unique.values());
     // 日付降順
-    finalItems.sort((a, b) => b.date.localeCompare(a.date));
+    finalItems.sort((a, b) => (b.date || '0000-00-00').localeCompare(a.date || '0000-00-00'));
     return finalItems;
 }
