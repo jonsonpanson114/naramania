@@ -27,8 +27,9 @@ function formatDate(dateStr: string): string {
 type SourceFilter = 'all' | string;
 type CategoryFilter = 'all' | 'construction' | 'general';
 
-const CONSTRUCTION_SOURCES = ['constnews', 'kentsu', 'decn'];
-const GENERAL_SOURCES = ['shinpou', 'naranp'];
+function isConstructionNews(item: NewsItem): boolean {
+    return item.category === 'construction' || ['constnews', 'kentsu', 'decn'].includes(item.source);
+}
 
 export function NewsSection() {
     const [news, setNews] = useState<NewsItem[]>([]);
@@ -69,9 +70,9 @@ export function NewsSection() {
     // カテゴリフィルタ
     const filteredByCategory = activeCategory === 'all' 
         ? news 
-        : activeCategory === 'construction' 
-            ? news.filter(n => CONSTRUCTION_SOURCES.includes(n.source))
-            : news.filter(n => GENERAL_SOURCES.includes(n.source));
+        : activeCategory === 'construction'
+            ? news.filter(isConstructionNews)
+            : news.filter(n => !isConstructionNews(n));
 
     // ソースの一覧（カテゴリフィルタ後のもの）
     const sources = Array.from(new Set(filteredByCategory.map(n => n.source)));
@@ -214,6 +215,11 @@ export function NewsSection() {
                                             >
                                                 {item.sourceLabel}
                                             </span>
+                                            {item.category === 'construction' && (
+                                                <span className="shrink-0 rounded-sm border border-emerald-100 bg-emerald-50 px-1.5 py-0.5 text-[8px] font-bold tracking-wider text-emerald-700">
+                                                    入札・建設
+                                                </span>
+                                            )}
                                             {isNewItem(item.date) && (
                                                 <span className="shrink-0 px-1.5 py-0.5 rounded text-[8px] font-bold tracking-wider bg-red-500 text-white animate-pulse shadow-sm">NEW</span>
                                             )}

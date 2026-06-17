@@ -3,7 +3,7 @@
 import { useMemo, useState } from 'react';
 import { AppShell } from '@/components/AppShell';
 import { Header } from '@/components/Header';
-import { AlertCircle, ArrowUpRight, Bot, Loader2, MessageSquareText, Search, Sparkles } from 'lucide-react';
+import { AlertCircle, ArrowUpRight, Bot, CalendarDays, ExternalLink, Loader2, MessageSquareText, Search, Sparkles, Trophy } from 'lucide-react';
 import type { ChatContext } from '@/services/chat_service';
 
 type ChatSource = {
@@ -15,10 +15,24 @@ type ChatSource = {
     date?: string;
 };
 
+type ChatMatch = {
+    id: string;
+    municipality: string;
+    title: string;
+    type: string;
+    announcementDate: string;
+    biddingDate?: string;
+    link: string;
+    status: string;
+    winningContractor?: string;
+    designFirm?: string;
+};
+
 type ChatMessage = {
     role: 'user' | 'assistant';
     content: string;
     sources?: ChatSource[];
+    localMatches?: ChatMatch[];
     followups?: string[];
     usedWebSearch?: boolean;
     webSearchStatus?: 'not-requested' | 'used' | 'unavailable' | 'failed';
@@ -86,6 +100,7 @@ export default function ChatPage() {
                     role: 'assistant',
                     content: data.answer,
                     sources: data.sources,
+                    localMatches: data.localMatches,
                     followups: data.followups,
                     usedWebSearch: data.usedWebSearch,
                     webSearchStatus: data.webSearchStatus,
@@ -217,6 +232,83 @@ export default function ChatPage() {
                                         <span>{message.role === 'assistant' ? 'Assistant' : 'You'}</span>
                                     </div>
                                     <p className="whitespace-pre-wrap text-sm leading-7 tracking-[0.04em]">{message.content}</p>
+
+                                    {message.role === 'assistant' && message.localMatches && message.localMatches.length > 0 ? (
+                                        <div className="mt-5 overflow-hidden rounded-2xl border border-border/60 bg-white/85">
+                                            <div className="flex items-center justify-between border-b border-border/50 px-4 py-3">
+                                                <p className="text-[11px] font-bold tracking-[0.18em] text-secondary/50 uppercase">Matched Projects</p>
+                                                <span className="rounded-full bg-accent/10 px-2 py-0.5 text-[10px] font-bold tracking-[0.12em] text-accent">
+                                                    {message.localMatches.length}件
+                                                </span>
+                                            </div>
+                                            <div className="divide-y divide-border/40">
+                                                {message.localMatches.slice(0, 8).map(match => (
+                                                    <div key={match.id} className="grid gap-3 px-4 py-3 lg:grid-cols-[1fr_170px] lg:items-center">
+                                                        <div>
+                                                            <div className="flex flex-wrap items-center gap-2">
+                                                                <span className="rounded-full border border-border bg-sidebar/70 px-2 py-0.5 text-[10px] font-bold tracking-[0.12em] text-secondary">
+                                                                    {match.municipality}
+                                                                </span>
+                                                                <span className={`rounded-full px-2 py-0.5 text-[10px] font-bold tracking-[0.12em] ${
+                                                                    match.status === '落札'
+                                                                        ? 'bg-emerald-50 text-emerald-700 border border-emerald-100'
+                                                                        : match.status === '受付中'
+                                                                            ? 'bg-blue-50 text-blue-700 border border-blue-100'
+                                                                            : 'bg-slate-50 text-slate-600 border border-slate-100'
+                                                                }`}>
+                                                                    {match.status}
+                                                                </span>
+                                                                <span className="text-[10px] tracking-[0.12em] text-secondary/45">{match.type}</span>
+                                                            </div>
+                                                            <a
+                                                                href={`/project/${match.id}`}
+                                                                className="mt-2 block text-sm font-semibold leading-6 text-primary transition hover:text-accent"
+                                                            >
+                                                                {match.title}
+                                                            </a>
+                                                            {(match.winningContractor || match.designFirm) ? (
+                                                                <div className="mt-2 flex flex-wrap gap-2 text-[11px] leading-5">
+                                                                    {match.winningContractor ? (
+                                                                        <span className="inline-flex items-center gap-1 rounded-full bg-emerald-50 px-2 py-0.5 text-emerald-700">
+                                                                            <Trophy size={11} />
+                                                                            {match.winningContractor}
+                                                                        </span>
+                                                                    ) : null}
+                                                                    {match.designFirm ? (
+                                                                        <span className="rounded-full bg-blue-50 px-2 py-0.5 text-blue-700">
+                                                                            設計 {match.designFirm}
+                                                                        </span>
+                                                                    ) : null}
+                                                                </div>
+                                                            ) : null}
+                                                        </div>
+                                                        <div className="rounded-xl bg-sidebar/60 p-3 text-xs leading-6 text-secondary/70">
+                                                            <div className="flex items-center justify-between gap-2">
+                                                                <span className="inline-flex items-center gap-1 text-secondary/45">
+                                                                    <CalendarDays size={12} />
+                                                                    公告
+                                                                </span>
+                                                                <span className="font-mono text-primary">{match.announcementDate || '-'}</span>
+                                                            </div>
+                                                            <div className="flex items-center justify-between gap-2">
+                                                                <span className="text-secondary/45">開札</span>
+                                                                <span className="font-mono text-primary">{match.biddingDate || '-'}</span>
+                                                            </div>
+                                                            <a
+                                                                href={match.link}
+                                                                target="_blank"
+                                                                rel="noreferrer"
+                                                                className="mt-2 inline-flex items-center gap-1 text-[10px] font-bold tracking-[0.12em] text-accent"
+                                                            >
+                                                                元ページ
+                                                                <ExternalLink size={11} />
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    ) : null}
 
                                     {message.role === 'assistant' && message.sources && message.sources.length > 0 ? (
                                         <div className="mt-5 space-y-2">

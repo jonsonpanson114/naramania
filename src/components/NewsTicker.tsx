@@ -8,6 +8,10 @@ import Link from 'next/link';
 
 const CONSTRUCTION_SOURCES = ['constnews', 'kentsu', 'decn'];
 
+function isConstructionNews(item: NewsItem): boolean {
+    return item.category === 'construction' || CONSTRUCTION_SOURCES.includes(item.source);
+}
+
 export function NewsTicker() {
     const [news, setNews] = useState<NewsItem[]>([]);
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -22,7 +26,7 @@ export function NewsTicker() {
                     return;
                 }
 
-                const constructionNews = data.filter((item: NewsItem) => CONSTRUCTION_SOURCES.includes(item.source));
+                const constructionNews = data.filter((item: NewsItem) => isConstructionNews(item));
                 setNews((constructionNews.length > 0 ? constructionNews : data).slice(0, 5));
             } catch {
                 setNews([]);

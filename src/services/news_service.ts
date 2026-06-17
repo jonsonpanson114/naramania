@@ -10,6 +10,8 @@ export interface NewsItem {
     date: string;
     link: string;
     excerpt?: string;
+    category?: 'construction' | 'general';
+    relevanceScore?: number;
 }
 
 const HEADERS = {
@@ -17,6 +19,17 @@ const HEADERS = {
     'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
     'Accept-Language': 'ja,en-US;q=0.9,en;q=0.8',
 };
+
+const CONSTRUCTION_NEWS_SOURCES = new Set(['constnews', 'kentsu', 'decn']);
+const CONSTRUCTION_NEWS_KEYWORDS = [
+    '入札', '公告', '落札', '契約', '発注', '工事', '設計', '建設', '建築', '改修',
+    '新築', '解体', '耐震', '庁舎', '校舎', '学校', '体育館', '公共施設', '再整備',
+    'PFI', 'DB', '基本計画', '基本設計', '実施設計', '施工', '業務委託',
+];
+const GENERAL_NEWS_NOISE_KEYWORDS = [
+    '人事', '選挙', '事件', '事故', '観光', 'スポーツ', '文化財', '博物館',
+    'グルメ', 'イベント', '祭り', '訃報',
+];
 
 async function fetchUrl(url: string): Promise<string> {
     const res = await axios.get<ArrayBuffer>(url, {
@@ -129,6 +142,34 @@ function cleanTitle(title: string): string {
         .replace(/\s*\|\s*.*$/, '')
         .replace(/\s+-\s+.*$/, '')
         .trim();
+}
+
+function scoreConstructionNews(item: Pick<NewsItem, 'source' | 'title' | 'excerpt'>): number {
+    const text = `${item.title} ${item.excerpt || ''}`;
+    let score = CONSTRUCTION_NEWS_SOURCES.has(item.source) ? 6 : 0;
+    for (const keyword of CONSTRUCTION_NEWS_KEYWORDS) {
+        if (text.includes(keyword)) score += 2;
+    }
+    for (const keyword of GENERAL_NEWS_NOISE_KEYWORDS) {
+        if (text.includes(keyword)) score -= 2;
+    }
+    return score;
+}
+
+function enrichNewsItem(item: NewsItem): NewsItem | null {
+    const title = cleanTitle(item.title);
+    const link = normalizeLink(item.link, item.link);
+    if (isNoiseTitle(title) || !link) return null;
+
+    const relevanceScore = scoreConstructionNews({ ...item, title });
+    const category = relevanceScore >= 4 ? 'construction' : 'general';
+    return {
+        ...item,
+        title,
+        link,
+        category,
+        relevanceScore,
+    };
 }
 
 // 新報奈良 (shinpou-nara.com) — WordPress RSS
@@ -254,17 +295,21 @@ export async function fetchAllNews(): Promise<NewsItem[]> {
     // 重複削除 (URLベース)
     const unique = new Map<string, NewsItem>();
     allItems.forEach(item => {
-        const title = cleanTitle(item.title);
-        const link = normalizeLink(item.link, item.link);
-        if (isNoiseTitle(title) || !link) return;
-        const key = link || `${item.source}:${title}`;
+        const enriched = enrichNewsItem(item);
+        if (!enriched) return;
+        const key = enriched.link || `${enriched.source}:${enriched.title}`;
         if (!unique.has(key)) {
-            unique.set(key, { ...item, title, link });
+            unique.set(key, enriched);
         }
     });
 
     const finalItems = Array.from(unique.values());
-    // 日付降順
-    finalItems.sort((a, b) => (b.date || '0000-00-00').localeCompare(a.date || '0000-00-00'));
+    finalItems.sort((a, b) => {
+        const categoryRank = (b.category === 'construction' ? 1 : 0) - (a.category === 'construction' ? 1 : 0);
+        if (categoryRank !== 0) return categoryRank;
+        const scoreRank = (b.relevanceScore || 0) - (a.relevanceScore || 0);
+        if (scoreRank !== 0) return scoreRank;
+        return (b.date || '0000-00-00').localeCompare(a.date || '0000-00-00');
+    });
     return finalItems;
 }

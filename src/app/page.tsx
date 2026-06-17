@@ -26,6 +26,23 @@ interface QualitySummary {
   oldestAnnouncementDate?: string | null;
   latestAnnouncementDate?: string | null;
   municipalityCount?: number;
+  sourceCoverage?: {
+    activeCount: number;
+    okCount: number;
+    missingErrorCount: number;
+    missingWarningCount: number;
+    results: Array<{
+      expectation: {
+        municipality: string;
+        requiredLinkIncludes: string[];
+      };
+      status: 'ok' | 'missing';
+      totalCount: number;
+      missingLinkIncludes: string[];
+      sourceCounts: Record<string, number>;
+      message: string;
+    }>;
+  };
   municipalityAudit?: {
     expectedMunicipalityCount?: number;
     coveredMunicipalityCount?: number;

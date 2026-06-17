@@ -15,6 +15,23 @@ type MunicipalityBreakdownItem = {
 
 type QualitySummary = {
   generatedAt?: string;
+  sourceCoverage?: {
+    activeCount: number;
+    okCount: number;
+    missingErrorCount: number;
+    missingWarningCount: number;
+    results: Array<{
+      expectation: {
+        municipality: string;
+        requiredLinkIncludes: string[];
+      };
+      status: 'ok' | 'missing';
+      totalCount: number;
+      missingLinkIncludes: string[];
+      sourceCounts: Record<string, number>;
+      message: string;
+    }>;
+  };
   municipalityAudit?: {
     expectedMunicipalityCount?: number;
     coveredMunicipalityCount?: number;
@@ -36,6 +53,12 @@ type CoverageRow = {
   openCount: number;
   awardedCount: number;
   sourceLabels: string[];
+  sourceHealth?: {
+    status: 'ok' | 'missing';
+    required: string[];
+    missing: string[];
+    counts: Record<string, number>;
+  };
   issue?: MunicipalityIssue;
   retained: boolean;
   status: CoverageStatus;
@@ -92,6 +115,14 @@ function sourceLabelsFor(items: BiddingItem[]): string[] {
   return Array.from(labels).slice(0, 4);
 }
 
+function readableSourceLabel(source: string): string {
+  if (/epi-cloud/i.test(source)) return '情報公開';
+  if (/efftis/i.test(source)) return 'PPI';
+  if (/ppi\.ebid-kouji-gyoumu/i.test(source)) return '県PPI';
+  if (/city\.|town\.|vill\.|pref\./i.test(source)) return '自治体HP';
+  return source.replace(/^www\./, '').replace(/\/.*$/, '');
+}
+
 function buildRows(items: BiddingItem[], quality: QualitySummary | null): CoverageRow[] {
   const audit = quality?.municipalityAudit;
   const issues = audit?.issues || [];
@@ -104,6 +135,9 @@ function buildRows(items: BiddingItem[], quality: QualitySummary | null): Covera
 
   const retained = new Set(audit?.retainedFromPrevious || []);
   const missing = new Set([...(audit?.missingMunicipalities || []), ...(audit?.zeroCountMunicipalities || [])]);
+  const sourceCoverageByMunicipality = new Map(
+    (quality?.sourceCoverage?.results || []).map((result) => [result.expectation.municipality, result]),
+  );
   const itemMap = new Map<string, BiddingItem[]>();
   for (const item of items) {
     const list = itemMap.get(item.municipality) || [];
@@ -138,7 +172,9 @@ function buildRows(items: BiddingItem[], quality: QualitySummary | null): Covera
     const hasWarning = municipalityIssues.some((issue) => issue.level === 'warning');
     const isMissing = missing.has(entry.municipality) || entry.count === 0;
     const isThin = entry.count <= 2;
-    const status: CoverageStatus = isMissing || hasError ? 'risk' : retained.has(entry.municipality) || hasWarning || isThin ? 'watch' : 'ok';
+    const sourceCoverage = sourceCoverageByMunicipality.get(entry.municipality);
+    const hasSourceGap = sourceCoverage?.status === 'missing';
+    const status: CoverageStatus = isMissing || hasError || hasSourceGap ? 'risk' : retained.has(entry.municipality) || hasWarning || isThin ? 'watch' : 'ok';
 
     return {
       municipality: entry.municipality,
@@ -148,6 +184,14 @@ function buildRows(items: BiddingItem[], quality: QualitySummary | null): Covera
       openCount: municipalityItems.filter((item) => item.status === '受付中').length,
       awardedCount: municipalityItems.filter((item) => item.status === '落札').length,
       sourceLabels: sourceLabelsFor(municipalityItems),
+      sourceHealth: sourceCoverage
+        ? {
+            status: sourceCoverage.status,
+            required: sourceCoverage.expectation.requiredLinkIncludes,
+            missing: sourceCoverage.missingLinkIncludes,
+            counts: sourceCoverage.sourceCounts,
+          }
+        : undefined,
       issue: primaryIssue,
       retained: retained.has(entry.municipality),
       status,
@@ -171,6 +215,7 @@ export function MunicipalityCoverageDashboard({
   const riskCount = rows.filter((row) => row.status === 'risk').length;
   const expected = quality?.municipalityAudit?.expectedMunicipalityCount || rows.length;
   const covered = quality?.municipalityAudit?.coveredMunicipalityCount || rows.filter((row) => row.count > 0).length;
+  const sourceCoverage = quality?.sourceCoverage;
 
   return (
     <section className="mb-12 overflow-hidden rounded-[2rem] border border-slate-200/70 bg-white shadow-sm">
@@ -207,9 +252,17 @@ export function MunicipalityCoverageDashboard({
         </div>
       </div>
 
-      <div className="grid border-b border-slate-100 bg-slate-50 px-6 py-4 text-xs tracking-[0.08em] text-slate-500 lg:grid-cols-[1fr_auto] lg:px-8">
+      <div className="grid gap-3 border-b border-slate-100 bg-slate-50 px-6 py-4 text-xs tracking-[0.08em] text-slate-500 lg:grid-cols-[1fr_auto] lg:px-8">
         <p>最終品質記録: {formatGeneratedAt(quality?.generatedAt)}</p>
-        <p className="mt-1 lg:mt-0">赤: 収集エラーまたは未取得 / 黄: 薄い取得または保持データ / 緑: 通常取得</p>
+        <p>赤: 収集エラー・未取得・必須ソース欠落 / 黄: 薄い取得または保持データ / 緑: 通常取得</p>
+        {sourceCoverage ? (
+          <p className="lg:col-span-2">
+            必須ソース監視: {sourceCoverage.okCount}/{sourceCoverage.activeCount} OK
+            {sourceCoverage.missingErrorCount > 0 || sourceCoverage.missingWarningCount > 0
+              ? ` / 不足 ${sourceCoverage.missingErrorCount + sourceCoverage.missingWarningCount}`
+              : ' / 不足なし'}
+          </p>
+        ) : null}
       </div>
 
       <div className="divide-y divide-slate-100">
@@ -257,15 +310,39 @@ export function MunicipalityCoverageDashboard({
               <div className="rounded-lg border border-slate-100 bg-slate-50 px-3 py-2 text-xs leading-6 text-slate-600">
                 <div className="flex items-start gap-2">
                   <FileSearch size={14} className="mt-1 shrink-0 text-slate-400" />
-                  <p>
-                    {row.issue
-                      ? cleanIssueMessage(row.issue.message)
-                      : row.retained
-                        ? '前回保持データを含みます。最新取得と差分確認が必要です。'
-                        : row.count <= 2
-                          ? '取得件数が薄いため、対象ページの確認を推奨します。'
-                          : '通常取得できています。'}
-                  </p>
+                  <div>
+                    <p>
+                      {row.issue
+                        ? cleanIssueMessage(row.issue.message)
+                        : row.sourceHealth?.status === 'missing'
+                          ? `必須ソース不足: ${row.sourceHealth.missing.map(readableSourceLabel).join(' / ')}`
+                          : row.retained
+                            ? '前回保持データを含みます。最新取得と差分確認が必要です。'
+                            : row.count <= 2
+                              ? '取得件数が薄いため、対象ページの確認を推奨します。'
+                              : '通常取得できています。'}
+                    </p>
+                    {row.sourceHealth ? (
+                      <div className="mt-2 flex flex-wrap gap-1.5">
+                        {row.sourceHealth.required.map((source) => {
+                          const count = row.sourceHealth?.counts[source] || 0;
+                          const missingSource = count < 1;
+                          return (
+                            <span
+                              key={source}
+                              className={`rounded-full border px-2 py-0.5 text-[9px] font-bold tracking-[0.1em] ${
+                                missingSource
+                                  ? 'border-rose-200 bg-rose-50 text-rose-700'
+                                  : 'border-emerald-100 bg-emerald-50 text-emerald-700'
+                              }`}
+                            >
+                              {readableSourceLabel(source)} {count}
+                            </span>
+                          );
+                        })}
+                      </div>
+                    ) : null}
+                  </div>
                 </div>
               </div>
             </div>
