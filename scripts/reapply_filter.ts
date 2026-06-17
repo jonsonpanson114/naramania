@@ -2,6 +2,8 @@ import fs from 'fs';
 import path from 'path';
 import { shouldKeepBiddingItem } from '../src/scrapers/common/filter';
 import { BiddingItem } from '../src/types/bidding';
+import { buildDateAuditSummary, buildIntelligenceSummary, EXPECTED_MUNICIPALITIES, readQualitySummary } from '../src/lib/quality_summary';
+import { evaluateSourceCoverage } from '../src/lib/source_coverage';
 
 const RESULT_PATH = path.join(process.cwd(), 'scraper_result.json');
 const QUALITY_PATH = path.join(process.cwd(), 'scraper_quality.json');
@@ -11,10 +13,28 @@ function dedupeKey(item: BiddingItem): string {
 }
 
 function writeQualitySummary(originalCount: number, filteredItems: BiddingItem[]) {
+    const previousSummary = readQualitySummary();
     const dates = filteredItems
         .map(item => item.announcementDate)
         .filter(Boolean)
         .sort();
+    const counts = filteredItems.reduce<Record<string, number>>((acc, item) => {
+        acc[item.municipality] = (acc[item.municipality] || 0) + 1;
+        return acc;
+    }, {});
+    const previousCounts = Object.fromEntries(
+        (previousSummary?.municipalityAudit?.breakdown || []).map(entry => [entry.municipality, entry.count]),
+    );
+    const breakdown = Object.entries(counts)
+        .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'ja'))
+        .map(([municipality, count]) => ({
+            municipality,
+            count,
+            ...(Number.isFinite(previousCounts[municipality])
+                ? { changeFromPrevious: count - previousCounts[municipality] }
+                : {}),
+        }));
+    const missingMunicipalities = EXPECTED_MUNICIPALITIES.filter(municipality => !(municipality in counts));
 
     const summary = {
         generatedAt: new Date().toISOString(),
@@ -25,6 +45,18 @@ function writeQualitySummary(originalCount: number, filteredItems: BiddingItem[]
         oldestAnnouncementDate: dates[0] || null,
         latestAnnouncementDate: dates[dates.length - 1] || null,
         municipalityCount: new Set(filteredItems.map(item => item.municipality)).size,
+        municipalityAudit: {
+            expectedMunicipalityCount: EXPECTED_MUNICIPALITIES.length,
+            coveredMunicipalityCount: Object.keys(counts).length,
+            missingMunicipalities,
+            zeroCountMunicipalities: missingMunicipalities,
+            breakdown,
+            retainedFromPrevious: previousSummary?.municipalityAudit?.retainedFromPrevious || [],
+            issues: previousSummary?.municipalityAudit?.issues || [],
+        },
+        dateAudit: buildDateAuditSummary(filteredItems),
+        sourceCoverage: evaluateSourceCoverage(filteredItems),
+        intelligence: buildIntelligenceSummary(filteredItems, previousSummary?.intelligence?.lastAugmentedAt),
     };
 
     fs.writeFileSync(QUALITY_PATH, JSON.stringify(summary, null, 2), 'utf-8');

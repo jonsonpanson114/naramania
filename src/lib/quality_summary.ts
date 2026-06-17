@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import type { BiddingItem } from '@/types/bidding';
+import type { SourceCoverageSummary } from './source_coverage';
 
 export const EXPECTED_MUNICIPALITIES = [
     '奈良県', '奈良市', '橿原市', '生駒市', '大和高田市', '大和郡山市', '葛城市', '五條市',
@@ -53,6 +54,7 @@ export interface QualitySummary {
             biddingDate: string | null;
         }>;
     };
+    sourceCoverage?: SourceCoverageSummary;
     intelligence?: {
         itemsWithPdf: number;
         itemsWithDescription: number;

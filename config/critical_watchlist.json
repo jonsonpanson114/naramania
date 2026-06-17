@@ -5,9 +5,12 @@
       "label": "五條市立小学校トイレ改修工事",
       "municipality": "五條市",
       "titleIncludes": ["五條市立小学校", "トイレ改修工事"],
+      "requiredStatus": "落札",
+      "requiresBiddingDate": true,
+      "requiresWinner": true,
       "activeUntil": "2026-12-31",
       "severity": "error",
-      "note": "ユーザー指摘済みの重要案件。公告・開札後も一覧から消えたら品質チェックで止める。"
+      "note": "ユーザー指摘済みの重要案件。公告・開札後も一覧から消えたら品質チェックで止める。落札状態、開札日、落札者まで必須。"
     }
   ],
   "sources": [

@@ -10,6 +10,9 @@ export type CriticalProjectWatch = {
   municipality?: Municipality;
   titleIncludes: string[];
   linkIncludes?: string[];
+  requiredStatus?: BiddingItem['status'];
+  requiresBiddingDate?: boolean;
+  requiresWinner?: boolean;
   activeUntil?: string;
   severity?: WatchSeverity;
   note?: string;
@@ -37,6 +40,7 @@ export type ProjectWatchResult = {
   status: WatchStatus;
   severity: WatchSeverity;
   matches: BiddingItem[];
+  fieldIssues: string[];
   message: string;
 };
 
@@ -94,6 +98,20 @@ function matchesProject(item: BiddingItem, watch: CriticalProjectWatch): boolean
   return true;
 }
 
+function getProjectFieldIssues(item: BiddingItem, watch: CriticalProjectWatch): string[] {
+  const issues: string[] = [];
+  if (watch.requiredStatus && item.status !== watch.requiredStatus) {
+    issues.push(`status=${item.status}, expected=${watch.requiredStatus}`);
+  }
+  if (watch.requiresBiddingDate && !item.biddingDate) {
+    issues.push('biddingDate missing');
+  }
+  if (watch.requiresWinner && !item.winningContractor) {
+    issues.push('winningContractor missing');
+  }
+  return issues;
+}
+
 function matchesSource(item: BiddingItem, watch: CriticalSourceWatch): boolean {
   if (watch.municipality && item.municipality !== watch.municipality) return false;
   return includesAll(itemLinkText(item), watch.linkIncludes);
@@ -112,7 +130,10 @@ export function evaluateCriticalWatch(
     const severity = severityOf(watch.severity);
     const active = isActive(watch.activeUntil, referenceDate);
     const matches = active ? items.filter((item) => matchesProject(item, watch)) : [];
-    const status: WatchStatus = active ? (matches.length > 0 ? 'ok' : 'missing') : 'expired';
+    const fieldIssuesByMatch = matches.map((item) => getProjectFieldIssues(item, watch));
+    const satisfiedMatches = matches.filter((_, index) => fieldIssuesByMatch[index].length === 0);
+    const fieldIssues = Array.from(new Set(fieldIssuesByMatch.flat()));
+    const status: WatchStatus = active ? (satisfiedMatches.length > 0 ? 'ok' : 'missing') : 'expired';
 
     return {
       type: 'project',
@@ -120,11 +141,14 @@ export function evaluateCriticalWatch(
       status,
       severity,
       matches,
+      fieldIssues,
       message: status === 'ok'
-        ? `${watch.label}: ${matches.length}件確認`
+        ? `${watch.label}: ${satisfiedMatches.length}件確認`
         : status === 'expired'
           ? `${watch.label}: 監視期限切れ`
-          : `${watch.label}: 重要案件が見つかりません`,
+          : matches.length > 0
+            ? `${watch.label}: 重要案件はありますが必須情報が不足 (${fieldIssues.join(', ')})`
+            : `${watch.label}: 重要案件が見つかりません`,
     };
   });
 

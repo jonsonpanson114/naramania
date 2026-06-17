@@ -685,16 +685,6 @@
     "pdfUrl": "https://www.city.gojo.lg.jp/material/files/group/4/r842.pdf"
   },
   {
-    "id": "gojo-332b0d13",
-    "municipality": "五條市",
-    "title": "五條市立学校給食センター調理室等床改修工事（３期工事）",
-    "type": "建築",
-    "announcementDate": "2026-04-17",
-    "link": "https://www.city.gojo.lg.jp/jigyousha/nyuusatsu/2/12102.html",
-    "pdfUrl": "https://www.city.gojo.lg.jp/material/files/group/4/r842.pdf",
-    "status": "受付中"
-  },
-  {
     "id": "gojo-c2302cb5",
     "municipality": "五條市",
     "title": "向加名生団地屋根改修工事",
@@ -811,17 +801,6 @@
     "biddingDate": "2026-04-28",
     "link": "https://www.city.kashiba.lg.jp/uploaded/attachment/31836.pdf",
     "status": "受付終了"
-  },
-  {
-    "id": "sango-known-school-inspection",
-    "municipality": "三郷町",
-    "title": "令和８年度 学校施設特定建築物定期調査及び非構造部材の耐震点検業務",
-    "type": "委託",
-    "announcementDate": "2026-04-08",
-    "biddingDate": "2026-05-01",
-    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0660064007200640",
-    "status": "落札",
-    "winningContractor": "株式会社福本設計"
   },
   {
     "id": "kashihara-proposal-5082000026",
@@ -1719,16 +1698,6 @@
     "status": "落札"
   },
   {
-    "id": "yamato-takada-6279b854",
-    "municipality": "大和高田市",
-    "title": "マテリアルリサイクル推進施設発注支援業務",
-    "type": "委託",
-    "announcementDate": "2025-06-01",
-    "link": "https://www.city.yamatotakada.nara.jp/soshikikarasagasu/keiyakukanrishitsu/nyusatsu_keiyaku/1/9099.html",
-    "status": "落札",
-    "winningContractor": "株式会社日産技術コンサルタント 奈良事務所"
-  },
-  {
     "id": "koryo-known-2025-05-29-no1",
     "municipality": "広陵町",
     "title": "広陵西小学校ベランダ手摺改修工事",
@@ -1835,17 +1804,6 @@
     "status": "落札"
   },
   {
-    "id": "sakurai-2025-04-25-旧学校給食センター等敷地認定こども園設計業務委託",
-    "municipality": "桜井市",
-    "title": "（仮称）旧学校給食センター等敷地認定こども園設計業務委託",
-    "type": "コンサル",
-    "announcementDate": "2025-04-25",
-    "biddingDate": "2025-07-07",
-    "link": "https://www.city.sakurai.lg.jp/sosiki/kodomokateibu/kodomoseisakuka/kodomoen/8700.html",
-    "status": "落札",
-    "winningContractor": "株式会社桝谷設計"
-  },
-  {
     "id": "kashihara-result-known-20250422-unebi-higashi",
     "title": "畝傍東幼稚園及び晩成幼稚園トイレ改修工事",
     "type": "建築",
@@ -1946,26 +1904,5 @@
     "announcementDate": "2025-02-02",
     "link": "https://www.town.miyake.lg.jp/soshiki/1/5923.html",
     "status": "受付終了"
-  },
-  {
-    "id": "yamato-koriyama-4eb81bad",
-    "municipality": "大和郡山市",
-    "title": "西田中町共同浴場解体工事設計委託業務",
-    "type": "コンサル",
-    "announcementDate": "2024-07-31",
-    "biddingDate": "2024-07-31",
-    "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/kensetsu/6247.html",
-    "status": "不調"
-  },
-  {
-    "id": "yamato-koriyama-a17bafd4",
-    "municipality": "大和郡山市",
-    "title": "旧平和保育園解体整備事業実施設計業務委託",
-    "type": "コンサル",
-    "announcementDate": "2024-06-26",
-    "biddingDate": "2024-06-26",
-    "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/kensetsu/6247.html",
-    "status": "落札",
-    "winningContractor": "有限会社 創和建築事務所"
   }
 ]

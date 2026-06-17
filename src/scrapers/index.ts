@@ -27,6 +27,7 @@ import path from 'path';
 import { shouldKeepBiddingItem } from './common/filter';
 import { EXPECTED_MUNICIPALITIES, QUALITY_PATH, buildDateAuditSummary, buildIntelligenceSummary, readQualitySummary } from '../lib/quality_summary';
 import type { MunicipalityIssueEntry } from '../lib/quality_summary';
+import { evaluateSourceCoverage } from '../lib/source_coverage';
 
 const SNAPSHOT_PATH = path.join(process.cwd(), 'municipality_snapshots.json');
 type MunicipalitySnapshots = Partial<Record<BiddingItem['municipality'], BiddingItem[]>>;
@@ -245,6 +246,7 @@ function writeQualitySummary(
             issues,
         },
         dateAudit,
+        sourceCoverage: evaluateSourceCoverage(items),
         intelligence: buildIntelligenceSummary(items),
     };
 

@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import type { QualitySummary } from '../src/lib/quality_summary';
 import { evaluateCriticalWatch } from '../src/lib/critical_watch';
+import { evaluateSourceCoverage } from '../src/lib/source_coverage';
 import type { BiddingItem } from '../src/types/bidding';
 
 const QUALITY_PATH = path.join(process.cwd(), 'scraper_quality.json');
@@ -81,6 +82,20 @@ function main() {
 
     if (failedWatchResults.length > 0) {
         fail(`重要案件ウォッチで不足があります: ${failedWatchResults.map((result) => result.message).join(' | ')}`);
+    }
+
+    const sourceCoverage = evaluateSourceCoverage(items);
+    const failedSourceCoverage = sourceCoverage.results
+        .filter((result) => result.status === 'missing' && result.severity === 'error');
+    const warningSourceCoverage = sourceCoverage.results
+        .filter((result) => result.status === 'missing' && result.severity === 'warning');
+
+    warningSourceCoverage.forEach((result) => {
+        console.warn(`[quality] source coverage warning: ${result.message}`);
+    });
+
+    if (failedSourceCoverage.length > 0) {
+        fail(`自治体ソース監視で不足があります: ${failedSourceCoverage.map((result) => result.message).join(' | ')}`);
     }
 
     console.log('[quality] validation passed');
