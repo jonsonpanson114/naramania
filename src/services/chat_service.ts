@@ -154,6 +154,14 @@ const MUNICIPALITIES: Municipality[] = [
     '高取町', '斑鳩町', '三郷町', '王寺町', '大淀町',
 ];
 
+const SEARCH_KEYWORDS = [
+    '小学校', '中学校', '学校', 'こども園', '保育所', '幼稚園',
+    'トイレ', '屋上防水', '外壁', '昇降口', '校舎', '体育館', '庁舎',
+    '住宅', '団地', '公民館', '文化センター', '給食センター',
+    '改修', '修繕', '新築', '解体', '除却', '耐震', '空調',
+    '設計', '監理', '調査', '委託', '工事', '業務',
+];
+
 function getChatModelName(): string {
     return process.env.GOOGLE_GENERATIVE_AI_CHAT_MODEL || 'gemini-2.5-flash';
 }
@@ -235,7 +243,11 @@ function tokenizeQuery(query: string): string[] {
         tokens.unshift(normalized);
     }
 
-    return Array.from(new Set(tokens));
+    const keywordTokens = SEARCH_KEYWORDS
+        .filter(keyword => query.includes(keyword) || normalized.includes(normalizeText(keyword)))
+        .map(normalizeText);
+
+    return Array.from(new Set([...tokens, ...keywordTokens]));
 }
 
 function readBiddingItems(): BiddingItem[] {
@@ -260,7 +272,7 @@ function coerceMunicipality(value: string | null | undefined): Municipality | nu
 
 function looksLikeSpecificProject(query: string): boolean {
     if (query.length < 12) return false;
-    if (/今週|今月|新着|最新|一覧|まとめ|教えて|ありますか|ある\?|ある？|何件|どれ|どんな|見せて/.test(query)) {
+    if (/今週|今月|新着|最新|一覧|まとめ|案件|物件|だけ|全部|すべて|教えて|ありますか|ある\?|ある？|何件|どれ|どんな|見せて/.test(query)) {
         return false;
     }
     return /学校|小学校|中学校|こども園|庁舎|公民館|体育館|改修|工事|設計|監理|業務委託|委託/.test(query);
@@ -488,6 +500,15 @@ function isWithinRange(dateValue: string | undefined, startLabel: string, endLab
     return dateValue >= startLabel && dateValue <= endLabel;
 }
 
+function sortBiddingMatches(matches: BiddingItem[], intent: QueryIntent): BiddingItem[] {
+    const direction = (intent.wantsThisWeek || intent.wantsLastWeek || intent.wantsThisMonth) ? 1 : -1;
+    return [...matches].sort((a, b) => {
+        const aDate = a.biddingDate || '0000-00-00';
+        const bDate = b.biddingDate || '0000-00-00';
+        return direction * aDate.localeCompare(bDate);
+    });
+}
+
 function findLocalMatches(query: string, items: BiddingItem[], intent: QueryIntent, context?: ChatContext): BiddingItem[] {
     const tokens = tokenizeQuery(query);
     const weekRange = intent.wantsThisWeek
@@ -504,10 +525,10 @@ function findLocalMatches(query: string, items: BiddingItem[], intent: QueryInte
     if (intent.municipality) {
         candidates = candidates.filter(item => item.municipality === intent.municipality);
     }
-    if (intent.wantsAwarded) {
+    if (intent.wantsAwarded && !intent.asksSpecificProject) {
         candidates = candidates.filter(item => item.status === '落札');
     }
-    if (intent.wantsOpen) {
+    if (intent.wantsOpen && !intent.asksSpecificProject) {
         candidates = candidates.filter(item => item.status === '受付中');
     }
     if (intent.wantsDesign && !intent.wantsConstruction) {
@@ -535,8 +556,8 @@ function findLocalMatches(query: string, items: BiddingItem[], intent: QueryInte
 
     const ranked = scored.map(entry => entry.item);
 
-    if (intent.wantsBidding && (weekRange || monthRange)) {
-        return ranked.sort((a, b) => (a.biddingDate || '9999-99-99').localeCompare(b.biddingDate || '9999-99-99')).slice(0, 12);
+    if (intent.wantsBidding && !intent.asksSpecificProject) {
+        return sortBiddingMatches(ranked, intent).slice(0, 12);
     }
 
     if (intent.wantsAnnouncement) {
@@ -606,8 +627,58 @@ function buildWinnerAnswer(matches: BiddingItem[]): string {
     return `各案件のゼネコン・落札者は次のとおりです。\n${lines}`;
 }
 
+function buildSpecificProjectAnswer(intent: QueryIntent, top: BiddingItem, totalMatches: number): { answer: string; followups: string[] } {
+    const detailLines = [
+        `案件名: ${top.title}`,
+        `自治体: ${top.municipality}`,
+        `種別: ${top.type}`,
+        `公告日: ${top.announcementDate}`,
+        `開札日: ${top.biddingDate || '未取得'}`,
+        `状態: ${top.status}`,
+    ];
+
+    if (intent.wantsWinner) {
+        detailLines.push(`落札者: ${top.winningContractor || '未取得'}`);
+    } else if (top.winningContractor) {
+        detailLines.push(`落札者: ${top.winningContractor}`);
+    }
+
+    if (intent.wantsBidding) {
+        if (top.status === '落札' || top.status === '不調' || top.status === '受付終了') {
+            detailLines.push('判定: この案件は開札済みとして扱える状態です。');
+        } else if (top.biddingDate) {
+            detailLines.push(`判定: まだ開札結果は未確認です。開札予定日は ${top.biddingDate} です。`);
+        } else {
+            const today = formatDate(getNowInJst());
+            const staleHint = top.announcementDate && top.announcementDate < today
+                ? '公告日から時間が経っているため、収集データが古い可能性があります。'
+                : '';
+            detailLines.push(`判定: 開札日・開札結果はローカルデータで未取得です。${staleHint}`);
+        }
+    }
+
+    if (top.designFirm) {
+        detailLines.push(`設計事務所: ${top.designFirm}`);
+    }
+    if (top.description) {
+        detailLines.push(`補足: ${top.description}`);
+    }
+    if (totalMatches > 1) {
+        detailLines.push(`候補は他にも ${totalMatches - 1} 件あります。必要なら絞り込みます。`);
+    }
+
+    return {
+        answer: detailLines.join('\n'),
+        followups: buildFollowups(intent, [top]),
+    };
+}
+
 function buildDeterministicAnswer(intent: QueryIntent, matches: BiddingItem[]): { answer: string; followups: string[] } | null {
     if (matches.length === 0) return null;
+
+    if (intent.asksSpecificProject) {
+        return buildSpecificProjectAnswer(intent, matches[0], matches.length);
+    }
 
     if (intent.wantsWinner && intent.wantsCarryOver) {
         return {
@@ -619,9 +690,8 @@ function buildDeterministicAnswer(intent: QueryIntent, matches: BiddingItem[]): 
     if ((intent.wantsThisWeek || intent.wantsLastWeek) && intent.wantsBidding) {
         const scope = intent.wantsLastWeek ? '先週' : '今週';
         const header = intent.wantsWinner ? `${scope}の開札案件は ${matches.length} 件あります。ゼネコン・落札者も併記します。` : `${scope}の開札案件は ${matches.length} 件あります。`;
-        const lines = matches
+        const lines = sortBiddingMatches(matches, intent)
             .slice(0, 8)
-            .sort((a, b) => (a.biddingDate || '9999-99-99').localeCompare(b.biddingDate || '9999-99-99'))
             .map((item) => formatItemLineWithOptions(item, intent.wantsWinner))
             .join('\n');
         return {
@@ -632,9 +702,8 @@ function buildDeterministicAnswer(intent: QueryIntent, matches: BiddingItem[]): 
 
     if (intent.wantsBidding) {
         const header = intent.wantsWinner ? `開札関連で確認できる案件は ${matches.length} 件あります。ゼネコン・落札者も併記します。` : `開札関連で確認できる案件は ${matches.length} 件あります。`;
-        const lines = matches
+        const lines = sortBiddingMatches(matches, intent)
             .slice(0, 8)
-            .sort((a, b) => (a.biddingDate || '9999-99-99').localeCompare(b.biddingDate || '9999-99-99'))
             .map((item) => formatItemLineWithOptions(item, intent.wantsWinner))
             .join('\n');
         return {
@@ -656,30 +725,6 @@ function buildDeterministicAnswer(intent: QueryIntent, matches: BiddingItem[]): 
         const lines = matches.slice(0, 8).map(formatItemLine).join('\n');
         return {
             answer: `${intent.municipality}で掲載中または掲載履歴のある案件は ${matches.length} 件あります。\n${lines}`,
-            followups: buildFollowups(intent, matches),
-        };
-    }
-
-    if (intent.asksSpecificProject) {
-        const top = matches[0];
-        const detailLines = [
-            `案件名: ${top.title}`,
-            `自治体: ${top.municipality}`,
-            `種別: ${top.type}`,
-            `公告日: ${top.announcementDate}`,
-            `開札日: ${top.biddingDate || '未取得'}`,
-            `状態: ${top.status}`,
-            top.winningContractor ? `落札者: ${top.winningContractor}` : '',
-            top.designFirm ? `設計事務所: ${top.designFirm}` : '',
-            top.description ? `補足: ${top.description}` : '',
-        ].filter(Boolean);
-
-        if (matches.length > 1) {
-            detailLines.push(`候補は他にも ${matches.length - 1} 件あります。必要なら絞り込みます。`);
-        }
-
-        return {
-            answer: detailLines.join('\n'),
             followups: buildFollowups(intent, matches),
         };
     }
