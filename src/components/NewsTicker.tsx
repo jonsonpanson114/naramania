@@ -6,6 +6,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronRight, Newspaper } from 'lucide-react';
 import Link from 'next/link';
 
+const CONSTRUCTION_SOURCES = ['constnews', 'kentsu', 'decn'];
+
 export function NewsTicker() {
     const [news, setNews] = useState<NewsItem[]>([]);
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -15,7 +17,13 @@ export function NewsTicker() {
             try {
                 const res = await fetch('/api/news');
                 const data: unknown = await res.json();
-                setNews(res.ok && Array.isArray(data) ? data.slice(0, 5) : []);
+                if (!res.ok || !Array.isArray(data)) {
+                    setNews([]);
+                    return;
+                }
+
+                const constructionNews = data.filter((item: NewsItem) => CONSTRUCTION_SOURCES.includes(item.source));
+                setNews((constructionNews.length > 0 ? constructionNews : data).slice(0, 5));
             } catch {
                 setNews([]);
             }

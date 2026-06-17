@@ -33,7 +33,7 @@ const GENERAL_SOURCES = ['shinpou', 'naranp'];
 export function NewsSection() {
     const [news, setNews] = useState<NewsItem[]>([]);
     const [loading, setLoading] = useState(true);
-    const [activeCategory, setActiveCategory] = useState<CategoryFilter>('all');
+    const [activeCategory, setActiveCategory] = useState<CategoryFilter>('construction');
     const [activeSource, setActiveSource] = useState<SourceFilter>('all');
     const [refreshing, setRefreshing] = useState(false);
 

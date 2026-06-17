@@ -19,8 +19,15 @@ const HEADERS = {
 };
 
 async function fetchUrl(url: string): Promise<string> {
-    const res = await axios.get(url, { headers: HEADERS, timeout: 10000, maxRedirects: 3 });
-    return res.data;
+    const res = await axios.get<ArrayBuffer>(url, {
+        headers: HEADERS,
+        timeout: 10000,
+        maxRedirects: 3,
+        responseType: 'arraybuffer',
+    });
+    const buffer = Buffer.from(res.data);
+    const contentType = typeof res.headers['content-type'] === 'string' ? res.headers['content-type'] : '';
+    return decodeHtml(buffer, contentType);
 }
 
 async function withTimeout<T>(promise: Promise<T>, timeoutMs: number, fallback: T): Promise<T> {
@@ -58,6 +65,49 @@ function stripHtml(html: string): string {
         .trim();
 }
 
+function normalizeCharset(value: string): string {
+    const charset = value.trim().toLowerCase().replace(/["']/g, '');
+    if (['shift-jis', 'shift_jis', 'sjis', 'windows-31j', 'cp932'].includes(charset)) return 'shift_jis';
+    if (['euc-jp', 'euc_jp'].includes(charset)) return 'euc-jp';
+    if (['utf8', 'utf-8'].includes(charset)) return 'utf-8';
+    if (['iso-2022-jp', 'jis'].includes(charset)) return 'iso-2022-jp';
+    return charset || 'utf-8';
+}
+
+function detectCharset(buffer: Buffer, contentType: string): string {
+    const headerMatch = contentType.match(/charset=([^;\s]+)/i);
+    if (headerMatch) return normalizeCharset(headerMatch[1]);
+
+    const head = buffer.subarray(0, 4096).toString('latin1');
+    const metaMatch = head.match(/charset=["']?\s*([^"'\s/>]+)/i) || head.match(/encoding=["']?\s*([^"'\s?>]+)/i);
+    if (metaMatch) return normalizeCharset(metaMatch[1]);
+
+    return 'utf-8';
+}
+
+function decodeHtml(buffer: Buffer, contentType: string): string {
+    const charset = detectCharset(buffer, contentType);
+    const candidates = Array.from(new Set([charset, 'utf-8', 'shift_jis', 'euc-jp']));
+
+    let best = '';
+    let bestScore = Number.POSITIVE_INFINITY;
+    for (const candidate of candidates) {
+        try {
+            const decoded = new TextDecoder(candidate).decode(buffer);
+            const score = (decoded.match(/\uFFFD/g) || []).length
+                + (decoded.match(/[縺繧譁蟒螂蜊莉]/g) || []).length * 0.4;
+            if (score < bestScore) {
+                best = decoded;
+                bestScore = score;
+            }
+        } catch {
+            // Unsupported labels are ignored; TextDecoder supports the Japanese encodings we use above.
+        }
+    }
+
+    return best || new TextDecoder('utf-8').decode(buffer);
+}
+
 function normalizeLink(href: string, baseUrl: string): string {
     if (!href || href.startsWith('#') || href.startsWith('javascript:')) return '';
     try {
@@ -69,7 +119,9 @@ function normalizeLink(href: string, baseUrl: string): string {
 
 function isNoiseTitle(title: string): boolean {
     if (title.length < 6 || title.length > 140) return true;
-    return /^(ホーム|トップ|一覧|検索|ログイン|購読|広告|お問い合わせ|会社案内|サイトマップ|プライバシー)/.test(title);
+    if (/[�]/.test(title)) return true;
+    if ((title.match(/[縺繧譁蟒螂]/g) || []).length >= 3) return true;
+    return /^(ホーム|トップ|一覧|検索|ログイン|購読|広告|お問い合わせ|会社案内|サイトマップ|プライバシー|会員|有料記事)/.test(title);
 }
 
 function cleanTitle(title: string): string {

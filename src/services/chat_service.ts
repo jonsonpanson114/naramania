@@ -211,6 +211,12 @@ function normalizeText(value: string): string {
     return value.normalize('NFKC').toLowerCase().replace(/\s+/g, ' ').trim();
 }
 
+function normalizeProjectText(value: string): string {
+    return normalizeText(stripQueryNoise(value))
+        .replace(/[「」『』【】()（）!?！？:：,，.。・]/g, '')
+        .replace(/\s+/g, '');
+}
+
 function stripQueryNoise(value: string): string {
     return value
         .replace(/を?(調べて|教えて|見せて|探して|確認して|詳しく|ください|お願い|お願いします)/g, ' ')
@@ -509,6 +515,28 @@ function sortBiddingMatches(matches: BiddingItem[], intent: QueryIntent): Biddin
     });
 }
 
+function findStrongProjectMatches(query: string, candidates: BiddingItem[]): BiddingItem[] {
+    const normalizedQuery = normalizeProjectText(query);
+    if (normalizedQuery.length < 8) return [];
+
+    const exactOrContained = candidates.filter((item) => {
+        const normalizedTitle = normalizeProjectText(item.title);
+        if (normalizedTitle.length < 8) return false;
+        return normalizedQuery.includes(normalizedTitle) || normalizedTitle.includes(normalizedQuery);
+    });
+
+    if (exactOrContained.length > 0) {
+        return exactOrContained.sort((a, b) => {
+            const byLength = Math.abs(normalizeProjectText(a.title).length - normalizedQuery.length)
+                - Math.abs(normalizeProjectText(b.title).length - normalizedQuery.length);
+            if (byLength !== 0) return byLength;
+            return b.announcementDate.localeCompare(a.announcementDate);
+        });
+    }
+
+    return [];
+}
+
 function findLocalMatches(query: string, items: BiddingItem[], intent: QueryIntent, context?: ChatContext): BiddingItem[] {
     const tokens = tokenizeQuery(query);
     const weekRange = intent.wantsThisWeek
@@ -546,6 +574,13 @@ function findLocalMatches(query: string, items: BiddingItem[], intent: QueryInte
         candidates = candidates.filter(item => isWithinRange(item[targetKey], monthRange.startLabel, monthRange.endLabel));
     }
 
+    if (intent.asksSpecificProject) {
+        const strongMatches = findStrongProjectMatches(query, candidates);
+        if (strongMatches.length > 0) {
+            return strongMatches.slice(0, 3);
+        }
+    }
+
     const scored = candidates
         .map(item => ({ item, score: scoreItem(item, query, tokens, intent) }))
         .filter(entry => {
@@ -564,7 +599,7 @@ function findLocalMatches(query: string, items: BiddingItem[], intent: QueryInte
         return ranked.sort((a, b) => b.announcementDate.localeCompare(a.announcementDate)).slice(0, 12);
     }
 
-    return ranked.slice(0, intent.asksSpecificProject ? 5 : 10);
+    return ranked.slice(0, intent.asksSpecificProject ? 3 : 10);
 }
 
 function buildLocalSources(matches: BiddingItem[]): ChatSource[] {
@@ -921,8 +956,8 @@ export async function answerBiddingQuestion(query: string, history: ChatTurn[] =
         localSources,
         deterministic,
         noMatchAnswer,
+        intent,
         apiKey,
-        context: undefined,
         nextContext,
     });
 }
@@ -935,8 +970,8 @@ function finalizeAnswer({
     localSources,
     deterministic,
     noMatchAnswer,
+    intent,
     apiKey,
-    context,
     nextContext,
 }: {
     query: string;
@@ -946,11 +981,10 @@ function finalizeAnswer({
     localSources: ChatSource[];
     deterministic: { answer: string; followups: string[] } | null;
     noMatchAnswer: { answer: string; followups: string[] } | null;
+    intent: QueryIntent;
     apiKey: string;
-    context?: ChatContext;
     nextContext: ChatContext;
 }): Promise<ChatResponsePayload> | ChatResponsePayload {
-    const intent = mergeIntentWithContext(inferIntent(query, history), context);
     if (deterministic && !intent.explicitWebSearch) {
         return {
             answer: deterministic.answer,
@@ -1099,8 +1133,8 @@ export async function answerBiddingQuestionWithContext(
         localSources,
         deterministic,
         noMatchAnswer,
+        intent,
         apiKey,
-        context,
         nextContext,
     });
 
