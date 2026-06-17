@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-06-16T09:40:09.423Z",
+  "generatedAt": "2026-06-17T21:56:49.817Z",
   "source": "daily_scrape",
-  "keptCount": 214,
+  "scrapedCount": 62,
+  "keptCount": 187,
+  "rejectedCount": 34,
+  "oldestAnnouncementDate": "2024-06-26",
+  "latestAnnouncementDate": "2026-06-08",
   "municipalityCount": 25,
-  "oldestAnnouncementDate": "2025-02-02",
-  "latestAnnouncementDate": "2026-06-16",
-  "scrapedCount": 469,
-  "rejectedCount": 263,
   "municipalityAudit": {
     "expectedMunicipalityCount": 25,
     "coveredMunicipalityCount": 25,
@@ -14,28 +14,13 @@
     "zeroCountMunicipalities": [],
     "breakdown": [
       {
-        "municipality": "葛城市",
-        "count": 31,
-        "changeFromPrevious": 0
-      },
-      {
         "municipality": "奈良県",
         "count": 26,
         "changeFromPrevious": 0
       },
       {
         "municipality": "橿原市",
-        "count": 24,
-        "changeFromPrevious": 0
-      },
-      {
-        "municipality": "宇陀市",
-        "count": 20,
-        "changeFromPrevious": 0
-      },
-      {
-        "municipality": "生駒市",
-        "count": 20,
+        "count": 23,
         "changeFromPrevious": 0
       },
       {
@@ -44,18 +29,33 @@
         "changeFromPrevious": 0
       },
       {
-        "municipality": "五條市",
-        "count": 14,
+        "municipality": "葛城市",
+        "count": 18,
         "changeFromPrevious": 0
       },
       {
-        "municipality": "奈良市",
-        "count": 9,
+        "municipality": "五條市",
+        "count": 17,
+        "changeFromPrevious": 1
+      },
+      {
+        "municipality": "生駒市",
+        "count": 16,
+        "changeFromPrevious": 0
+      },
+      {
+        "municipality": "宇陀市",
+        "count": 12,
         "changeFromPrevious": 0
       },
       {
         "municipality": "香芝市",
         "count": 8,
+        "changeFromPrevious": 0
+      },
+      {
+        "municipality": "奈良市",
+        "count": 7,
         "changeFromPrevious": 0
       },
       {
@@ -65,22 +65,12 @@
       },
       {
         "municipality": "大和郡山市",
-        "count": 5,
-        "changeFromPrevious": 1
+        "count": 4,
+        "changeFromPrevious": 0
       },
       {
         "municipality": "天理市",
         "count": 4,
-        "changeFromPrevious": 0
-      },
-      {
-        "municipality": "田原本町",
-        "count": 4,
-        "changeFromPrevious": 0
-      },
-      {
-        "municipality": "御所市",
-        "count": 3,
         "changeFromPrevious": 0
       },
       {
@@ -89,7 +79,12 @@
         "changeFromPrevious": 0
       },
       {
-        "municipality": "三郷町",
+        "municipality": "桜井市",
+        "count": 3,
+        "changeFromPrevious": 0
+      },
+      {
+        "municipality": "田原本町",
         "count": 3,
         "changeFromPrevious": 0
       },
@@ -99,7 +94,12 @@
         "changeFromPrevious": 0
       },
       {
-        "municipality": "桜井市",
+        "municipality": "御所市",
+        "count": 2,
+        "changeFromPrevious": 0
+      },
+      {
+        "municipality": "三郷町",
         "count": 2,
         "changeFromPrevious": 0
       },
@@ -110,6 +110,11 @@
       },
       {
         "municipality": "山添村",
+        "count": 2,
+        "changeFromPrevious": 0
+      },
+      {
+        "municipality": "大淀町",
         "count": 2,
         "changeFromPrevious": 0
       },
@@ -132,11 +137,6 @@
         "municipality": "王寺町",
         "count": 1,
         "changeFromPrevious": 0
-      },
-      {
-        "municipality": "大淀町",
-        "count": 1,
-        "changeFromPrevious": 0
       }
     ],
     "retainedFromPrevious": [],
@@ -145,7 +145,7 @@
   "dateAudit": {
     "announcementAfterBiddingCount": 0,
     "awardedWithoutBiddingDateCount": 1,
-    "awardedWithoutWinnerCount": 0,
+    "awardedWithoutWinnerCount": 53,
     "openWithWinnerCount": 0,
     "sampleTitles": [
       {
@@ -154,15 +154,35 @@
         "status": "落札",
         "announcementDate": "2025-06-01",
         "biddingDate": null
+      },
+      {
+        "municipality": "生駒市",
+        "title": "壱分小学校線支線３号歩行者空間整備工事",
+        "status": "落札",
+        "announcementDate": "2026-05-28",
+        "biddingDate": "2026-05-28"
+      },
+      {
+        "municipality": "生駒市",
+        "title": "緑ヶ丘中学校外３校屋上防水改修設計業務",
+        "status": "落札",
+        "announcementDate": "2026-05-21",
+        "biddingDate": "2026-05-21"
+      },
+      {
+        "municipality": "高取町",
+        "title": "高取町文化センター解体工事",
+        "status": "落札",
+        "announcementDate": "2026-05-11",
+        "biddingDate": "2026-05-11"
       }
     ]
   },
   "intelligence": {
-    "itemsWithPdf": 50,
-    "itemsWithDescription": 48,
-    "intelligenceExtractedCount": 46,
-    "geminiExtractedCount": 46,
-    "taggedCount": 46,
-    "lastAugmentedAt": "2026-06-16T12:19:27.884Z"
+    "itemsWithPdf": 18,
+    "itemsWithDescription": 0,
+    "intelligenceExtractedCount": 0,
+    "geminiExtractedCount": 0,
+    "taggedCount": 0
   }
 }

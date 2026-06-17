@@ -25,11 +25,11 @@
       "id": "gojo-epi-cloud-source",
       "label": "五條市 情報公開サイト",
       "municipality": "五條市",
-      "linkIncludes": ["06200640072006C0"],
+      "linkIncludes": ["epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction"],
       "minItems": 1,
       "activeUntil": "2026-12-31",
-      "severity": "warning",
-      "note": "五條市HP経由の重要案件は確保済み。情報公開サイト側の取得は警告として監視する。"
+      "severity": "error",
+      "note": "五條市HP経由だけでなく、EPI詳細URLの取得も必須として監視する。"
     }
   ]
 }
