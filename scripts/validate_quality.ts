@@ -1,8 +1,11 @@
 import fs from 'fs';
 import path from 'path';
 import type { QualitySummary } from '../src/lib/quality_summary';
+import { evaluateCriticalWatch } from '../src/lib/critical_watch';
+import type { BiddingItem } from '../src/types/bidding';
 
 const QUALITY_PATH = path.join(process.cwd(), 'scraper_quality.json');
+const RESULT_PATH = path.join(process.cwd(), 'scraper_result.json');
 
 function parseMunicipalityEnvList(value?: string): Set<string> {
     if (value === undefined) {
@@ -30,9 +33,18 @@ function loadSummary(): QualitySummary {
     return JSON.parse(fs.readFileSync(QUALITY_PATH, 'utf-8')) as QualitySummary;
 }
 
+function loadItems(): BiddingItem[] {
+    if (!fs.existsSync(RESULT_PATH)) {
+        fail('scraper_result.json が見つかりません');
+    }
+
+    return JSON.parse(fs.readFileSync(RESULT_PATH, 'utf-8')) as BiddingItem[];
+}
+
 function main() {
     const guardedMunicipalities = parseMunicipalityEnvList(process.env.QUALITY_GUARDED_MUNICIPALITIES);
     const summary = loadSummary();
+    const items = loadItems();
     const audit = summary.municipalityAudit;
 
     if (!audit) {
@@ -55,6 +67,20 @@ function main() {
     if (criticalIssues.length > 0) {
         const messages = criticalIssues.map((issue) => `${issue.municipality}: ${issue.message}`);
         fail(`重要自治体に収集エラーがあります: ${messages.join(' | ')}`);
+    }
+
+    const watch = evaluateCriticalWatch(items);
+    const failedWatchResults = [...watch.projectResults, ...watch.sourceResults]
+        .filter((result) => result.status === 'missing' && result.severity === 'error');
+    const warningWatchResults = [...watch.projectResults, ...watch.sourceResults]
+        .filter((result) => result.status === 'missing' && result.severity === 'warning');
+
+    warningWatchResults.forEach((result) => {
+        console.warn(`[quality] watch warning: ${result.message}`);
+    });
+
+    if (failedWatchResults.length > 0) {
+        fail(`重要案件ウォッチで不足があります: ${failedWatchResults.map((result) => result.message).join(' | ')}`);
     }
 
     console.log('[quality] validation passed');

@@ -1,0 +1,35 @@
+{
+  "projects": [
+    {
+      "id": "gojo-school-toilet-renovation-2026",
+      "label": "五條市立小学校トイレ改修工事",
+      "municipality": "五條市",
+      "titleIncludes": ["五條市立小学校", "トイレ改修工事"],
+      "activeUntil": "2026-12-31",
+      "severity": "error",
+      "note": "ユーザー指摘済みの重要案件。公告・開札後も一覧から消えたら品質チェックで止める。"
+    }
+  ],
+  "sources": [
+    {
+      "id": "katsuragi-epi-cloud-source",
+      "label": "葛城市 情報公開サイト",
+      "municipality": "葛城市",
+      "linkIncludes": ["0620064007200720"],
+      "minItems": 1,
+      "activeUntil": "2026-12-31",
+      "severity": "error",
+      "note": "葛城市の情報公開サイト経由データが消えたら止める。"
+    },
+    {
+      "id": "gojo-epi-cloud-source",
+      "label": "五條市 情報公開サイト",
+      "municipality": "五條市",
+      "linkIncludes": ["06200640072006C0"],
+      "minItems": 1,
+      "activeUntil": "2026-12-31",
+      "severity": "warning",
+      "note": "五條市HP経由の重要案件は確保済み。情報公開サイト側の取得は警告として監視する。"
+    }
+  ]
+}
