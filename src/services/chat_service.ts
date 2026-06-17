@@ -1038,7 +1038,7 @@ function finalizeAnswer({
                 localMatches,
                 followups: parsed.followups?.slice(0, 3) || buildFollowups(intent, localMatches),
                 usedWebSearch: webSources.length > 0,
-                webSearchStatus: webSources.length > 0 ? 'used' : 'not-requested',
+                webSearchStatus: (webSources.length > 0 ? 'used' : 'not-requested') as ChatResponsePayload['webSearchStatus'],
                 model: modelName,
                 context: nextContext,
             };

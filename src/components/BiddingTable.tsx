@@ -1,10 +1,11 @@
 ﻿'use client';
 
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import { BiddingItem } from '@/types/bidding';
 import { getBiddingLabel } from '@/lib/bidding_schedule';
+import { assessBiddingScope, summarizeBiddingScope } from '@/lib/relevance_guard';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowUpDown, Search, X } from 'lucide-react';
+import { AlertTriangle, ArrowUpDown, Eye, EyeOff, Search, ShieldCheck, X } from 'lucide-react';
 
 interface BiddingTableProps {
     items: BiddingItem[];
@@ -22,12 +23,23 @@ export function BiddingTable({ items }: BiddingTableProps) {
     const [keyword, setKeyword] = useState('');
     const [sortMode, setSortMode] = useState<SortMode>('newest');
     const [detailedSearch, setDetailedSearch] = useState(false);
+    const [hideOutOfScope, setHideOutOfScope] = useState(true);
+
+    const scopeById = useMemo(() => {
+        return new Map(items.map(item => [item.id, assessBiddingScope(item)]));
+    }, [items]);
+
+    const scopeSummary = useMemo(() => summarizeBiddingScope(items), [items]);
+    const visibleItems = useMemo(() => {
+        if (!hideOutOfScope) return items;
+        return items.filter(item => scopeById.get(item.id)?.status !== 'noise');
+    }, [hideOutOfScope, items, scopeById]);
 
     // Get unique municipalities
-    const municipalities = Array.from(new Set(items.map(i => i.municipality))).sort();
+    const municipalities = Array.from(new Set(visibleItems.map(i => i.municipality))).sort();
 
     // Get popular tags from all items
-    const allTags = items.flatMap(i => i.tags || []);
+    const allTags = visibleItems.flatMap(i => i.tags || []);
     const tagCounts = allTags.reduce((acc, tag) => {
         acc[tag] = (acc[tag] || 0) + 1;
         return acc;
@@ -47,7 +59,7 @@ export function BiddingTable({ items }: BiddingTableProps) {
     };
 
     // Filter logic
-    const filteredItems = items.filter(item => {
+    const filteredItems = visibleItems.filter(item => {
         if (keyword.trim()) {
             const kw = keyword.trim().toLowerCase();
             const searchable = [
@@ -127,16 +139,16 @@ export function BiddingTable({ items }: BiddingTableProps) {
     // Count per tab
     const counts = {
         main: {
-            'すべて': items.length,
-            '新着': items.filter(i => isNewItem(i.announcementDate) || (i.biddingDate && isNewItem(i.biddingDate))).length,
-            '建築': items.filter(i => (i.type === '建築' || i.type === '工事') && (i.status === '受付中' || i.status === '締切')).length,
-            '設計': items.filter(i => (i.type === '委託' || i.type === 'コンサル') && (i.status === '受付中' || i.status === '締切')).length,
-            '落札': items.filter(i => i.status === '落札').length,
+            'すべて': visibleItems.length,
+            '新着': visibleItems.filter(i => isNewItem(i.announcementDate) || (i.biddingDate && isNewItem(i.biddingDate))).length,
+            '建築': visibleItems.filter(i => (i.type === '建築' || i.type === '工事') && (i.status === '受付中' || i.status === '締切')).length,
+            '設計': visibleItems.filter(i => (i.type === '委託' || i.type === 'コンサル') && (i.status === '受付中' || i.status === '締切')).length,
+            '落札': visibleItems.filter(i => i.status === '落札').length,
         },
         sub: {
-            'すべて': items.filter(i => i.status === '落札').length,
-            'ゼネコン': items.filter(i => i.status === '落札' && i.winnerType === 'ゼネコン').length,
-            '設計事務所': items.filter(i => i.status === '落札' && i.winnerType === '設計事務所').length,
+            'すべて': visibleItems.filter(i => i.status === '落札').length,
+            'ゼネコン': visibleItems.filter(i => i.status === '落札' && i.winnerType === 'ゼネコン').length,
+            '設計事務所': visibleItems.filter(i => i.status === '落札' && i.winnerType === '設計事務所').length,
         }
     };
 
@@ -256,6 +268,42 @@ export function BiddingTable({ items }: BiddingTableProps) {
                 )}
             </AnimatePresence>
 
+            <div className="rounded-2xl border border-emerald-900/10 bg-white/85 p-4 shadow-sm backdrop-blur-sm">
+                <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+                    <div className="flex items-start gap-3">
+                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-emerald-50 text-emerald-700">
+                            <ShieldCheck size={18} />
+                        </div>
+                        <div>
+                            <p className="text-sm font-bold tracking-[0.08em] text-primary">対象範囲ガード: 建築本体・設計監理を優先表示</p>
+                            <p className="mt-1 text-xs leading-6 tracking-[0.04em] text-secondary/60">
+                                土木、道路、舗装、水道、設備、空調、照明、エレベーター系は対象外候補として初期非表示にします。
+                            </p>
+                        </div>
+                    </div>
+                    <div className="flex flex-wrap items-center gap-2">
+                        <span className="rounded-full border border-emerald-100 bg-emerald-50 px-3 py-1 text-[10px] font-bold tracking-[0.14em] text-emerald-700">
+                            対象 {scopeSummary.targetCount}
+                        </span>
+                        <span className="rounded-full border border-amber-100 bg-amber-50 px-3 py-1 text-[10px] font-bold tracking-[0.14em] text-amber-700">
+                            要確認 {scopeSummary.watchCount}
+                        </span>
+                        <button
+                            type="button"
+                            onClick={() => setHideOutOfScope(!hideOutOfScope)}
+                            className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-[10px] font-bold tracking-[0.14em] transition ${
+                                hideOutOfScope
+                                    ? 'border-rose-100 bg-rose-50 text-rose-700 hover:bg-rose-100'
+                                    : 'border-slate-200 bg-slate-900 text-white hover:bg-slate-700'
+                            }`}
+                        >
+                            {hideOutOfScope ? <EyeOff size={13} /> : <Eye size={13} />}
+                            {hideOutOfScope ? '対象外候補を非表示' : '対象外候補も表示'} {scopeSummary.noiseCount}
+                        </button>
+                    </div>
+                </div>
+            </div>
+
             {/* Municipality & Tag Filter Bar */}
             <div className="flex flex-col items-stretch justify-center gap-5 py-6 px-6 bg-gray-50/30 rounded-2xl border border-gray-100/50 backdrop-blur-sm">
                 <div className="grid grid-cols-1 xl:grid-cols-[minmax(0,1fr)_260px] gap-4">
@@ -371,7 +419,9 @@ export function BiddingTable({ items }: BiddingTableProps) {
                         </thead>
                         <tbody>
                             <AnimatePresence mode="popLayout">
-                                {filteredItems.map((item, index) => (
+                                {filteredItems.map((item, index) => {
+                                    const scope = scopeById.get(item.id) || assessBiddingScope(item);
+                                    return (
                                     <motion.tr
                                         key={item.id}
                                         layout
@@ -420,6 +470,16 @@ export function BiddingTable({ items }: BiddingTableProps) {
                                                     </a>
                                                     {(isNewItem(item.announcementDate) || (item.biddingDate && isNewItem(item.biddingDate))) && (
                                                         <span className="shrink-0 px-1.5 py-0.5 rounded text-[8px] font-bold tracking-wider bg-red-500 text-white animate-pulse shadow-sm">NEW</span>
+                                                    )}
+                                                    {scope.status !== 'target' && (
+                                                        <span className={`inline-flex shrink-0 items-center gap-1 rounded px-1.5 py-0.5 text-[8px] font-bold tracking-wider ${
+                                                            scope.status === 'noise'
+                                                                ? 'bg-rose-50 text-rose-700 border border-rose-100'
+                                                                : 'bg-amber-50 text-amber-700 border border-amber-100'
+                                                        }`}>
+                                                            {scope.status === 'noise' ? <EyeOff size={10} /> : <AlertTriangle size={10} />}
+                                                            {scope.label}: {scope.reasons[0]}
+                                                        </span>
                                                     )}
                                                 </div>
 
@@ -472,7 +532,8 @@ export function BiddingTable({ items }: BiddingTableProps) {
                                         </td>
                                         <td className="px-8 py-6 text-[10px] text-gray-400 tracking-[0.2em] font-serif uppercase">{item.type}</td>
                                     </motion.tr>
-                                ))}
+                                    );
+                                })}
                             </AnimatePresence>
                             {filteredItems.length === 0 && (
                                 <tr>

@@ -7,6 +7,7 @@ import { StatsCard } from '@/components/StatsCard';
 import { BiddingTable } from '@/components/BiddingTable';
 import { AlertNotificationPanel } from '@/components/AlertNotificationPanel';
 import { MunicipalityCoverageDashboard } from '@/components/MunicipalityCoverageDashboard';
+import { TargetScopePanel } from '@/components/TargetScopePanel';
 import { NewsSection } from '@/components/NewsSection';
 import { NewsTicker } from '@/components/NewsTicker';
 import { getShortBiddingLabel } from '@/lib/bidding_schedule';
@@ -212,6 +213,8 @@ export default async function Home() {
             </div>
           </div>
         </div>
+
+        <TargetScopePanel items={allItems} />
 
         <MunicipalityCoverageDashboard items={allItems} quality={qualitySummary} />
 
