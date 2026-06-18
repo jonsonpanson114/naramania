@@ -10,7 +10,8 @@
     "scrape": "tsx src/scrapers/index.ts",
     "augment:intelligence": "tsx scripts/augment_intelligence.ts",
     "validate:quality": "tsx scripts/validate_quality.ts",
-    "validate:filters": "tsx scripts/validate_filters.ts"
+    "validate:filters": "tsx scripts/validate_filters.ts",
+    "validate:snapshots": "tsx scripts/validate_snapshot_coverage.ts"
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
