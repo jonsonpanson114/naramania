@@ -24,7 +24,17 @@ const GOJO_RESULT_OVERRIDES: Record<string, Partial<Pick<BiddingItem, 'biddingDa
         biddingDate: '2026-04-15',
     },
 };
-const KNOWN_GOJO_ITEMS: Array<Pick<BiddingItem, 'title' | 'announcementDate' | 'biddingDate' | 'link' | 'pdfUrl' | 'type' | 'status'>> = [
+const KNOWN_GOJO_ITEMS: Array<Pick<BiddingItem, 'title' | 'announcementDate' | 'biddingDate' | 'link' | 'pdfUrl' | 'type' | 'status' | 'winningContractor' | 'estimatedPrice'>> = [
+    {
+        title: '五條市立小学校トイレ改修工事',
+        announcementDate: '2026-04-21',
+        biddingDate: '2026-05-29',
+        link: 'https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002501076',
+        type: '建築',
+        status: '落札',
+        winningContractor: '有希建設（株）',
+        estimatedPrice: '23,970,000円',
+    },
     {
         title: '五條市立小学校トイレ改修工事',
         announcementDate: '2026-04-17',
@@ -719,6 +729,20 @@ async function scrapeEducationPages(diagnostics?: GojoDiagnostics): Promise<Bidd
     }
 }
 
+
+function collapseSupersededGojoItems(items: BiddingItem[]): BiddingItem[] {
+    const resolvedTitles = new Set(
+        items
+            .filter(item => Boolean(item.biddingDate) && (item.status === '落札' || item.status === '不調' || item.status === '受付終了'))
+            .map(item => normalizeGojoTitle(item.title)),
+    );
+
+    return items.filter(item => {
+        if (item.status !== '受付中') return true;
+        if (item.biddingDate) return true;
+        return !resolvedTitles.has(normalizeGojoTitle(item.title));
+    });
+}
 function mergeGojoItem(existing: BiddingItem | undefined, incoming: BiddingItem): BiddingItem {
     if (!existing) return incoming;
 
@@ -821,10 +845,13 @@ export class GojoCityScraper implements Scraper {
                 link: item.link,
                 pdfUrl: item.pdfUrl,
                 status: item.status,
+                winningContractor: item.winningContractor,
+                estimatedPrice: item.estimatedPrice,
             }));
         }
 
-        const unique = Array.from(items.values()).sort((a, b) => b.announcementDate.localeCompare(a.announcementDate));
+        const unique = collapseSupersededGojoItems(Array.from(items.values()))
+            .sort((a, b) => b.announcementDate.localeCompare(a.announcementDate));
         for (const item of unique) {
             if (item.status !== '落札' || !item.pdfUrl) continue;
             const details = await extractGojoPdfResultDetails(item.pdfUrl);

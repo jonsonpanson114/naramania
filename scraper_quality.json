@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-06-17T22:23:59.253Z",
-  "source": "reapply_filter",
-  "originalCount": 187,
-  "keptCount": 181,
-  "removedCount": 6,
+  "generatedAt": "2026-06-18T14:04:00.420Z",
+  "source": "daily_scrape",
+  "scrapedCount": 25,
+  "keptCount": 188,
+  "rejectedCount": 9,
   "oldestAnnouncementDate": "2025-02-02",
   "latestAnnouncementDate": "2026-06-08",
   "municipalityCount": 25,
@@ -14,13 +14,18 @@
     "zeroCountMunicipalities": [],
     "breakdown": [
       {
+        "municipality": "葛城市",
+        "count": 28,
+        "changeFromPrevious": 0
+      },
+      {
         "municipality": "奈良県",
         "count": 26,
         "changeFromPrevious": 0
       },
       {
         "municipality": "橿原市",
-        "count": 23,
+        "count": 21,
         "changeFromPrevious": 0
       },
       {
@@ -29,18 +34,13 @@
         "changeFromPrevious": 0
       },
       {
-        "municipality": "葛城市",
-        "count": 18,
+        "municipality": "生駒市",
+        "count": 16,
         "changeFromPrevious": 0
       },
       {
         "municipality": "五條市",
-        "count": 16,
-        "changeFromPrevious": -1
-      },
-      {
-        "municipality": "生駒市",
-        "count": 16,
+        "count": 15,
         "changeFromPrevious": 0
       },
       {
@@ -91,7 +91,7 @@
       {
         "municipality": "桜井市",
         "count": 2,
-        "changeFromPrevious": -1
+        "changeFromPrevious": 0
       },
       {
         "municipality": "三宅町",
@@ -111,7 +111,7 @@
       {
         "municipality": "大和郡山市",
         "count": 2,
-        "changeFromPrevious": -2
+        "changeFromPrevious": 0
       },
       {
         "municipality": "斑鳩町",
@@ -131,12 +131,12 @@
       {
         "municipality": "三郷町",
         "count": 1,
-        "changeFromPrevious": -1
+        "changeFromPrevious": 0
       },
       {
         "municipality": "大和高田市",
         "count": 1,
-        "changeFromPrevious": -1
+        "changeFromPrevious": 0
       }
     ],
     "retainedFromPrevious": [],
@@ -145,7 +145,7 @@
   "dateAudit": {
     "announcementAfterBiddingCount": 0,
     "awardedWithoutBiddingDateCount": 0,
-    "awardedWithoutWinnerCount": 53,
+    "awardedWithoutWinnerCount": 50,
     "openWithWinnerCount": 0,
     "sampleTitles": [
       {
@@ -224,12 +224,12 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 23,
+        "totalCount": 21,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.kashihara.nara.jp": 23
+          "city.kashihara.nara.jp": 21
         },
-        "message": "橿原市: 23件 / sources OK"
+        "message": "橿原市: 21件 / sources OK"
       },
       {
         "expectation": {
@@ -297,13 +297,13 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 18,
+        "totalCount": 28,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.katsuragi.nara.jp": 4,
+          "city.katsuragi.nara.jp": 14,
           "epi-cloud.fwd.ne.jp": 14
         },
-        "message": "葛城市: 18件 / sources OK"
+        "message": "葛城市: 28件 / sources OK"
       },
       {
         "expectation": {
@@ -317,13 +317,13 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 16,
+        "totalCount": 15,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.gojo.lg.jp": 6,
-          "epi-cloud.fwd.ne.jp": 11
+          "city.gojo.lg.jp": 14,
+          "epi-cloud.fwd.ne.jp": 1
         },
-        "message": "五條市: 16件 / sources OK"
+        "message": "五條市: 15件 / sources OK"
       },
       {
         "expectation": {
@@ -634,7 +634,7 @@
     ]
   },
   "intelligence": {
-    "itemsWithPdf": 17,
+    "itemsWithPdf": 26,
     "itemsWithDescription": 0,
     "intelligenceExtractedCount": 0,
     "geminiExtractedCount": 0,

@@ -1,10 +1,19 @@
 {
-  "generatedAt": "2026-06-18T13:46:08.729Z",
+  "generatedAt": "2026-06-18T14:07:32.155Z",
   "checkedMunicipalityCount": 25,
-  "expectedItemCount": 183,
-  "matchedItemCount": 183,
+  "expectedItemCount": 188,
+  "matchedItemCount": 188,
   "missingItemCount": 0,
   "results": [
+    {
+      "municipality": "葛城市",
+      "snapshotCount": 28,
+      "expectedCount": 28,
+      "matchedCount": 28,
+      "missingCount": 0,
+      "missingItems": [],
+      "status": "ok"
+    },
     {
       "municipality": "奈良県",
       "snapshotCount": 26,
@@ -17,17 +26,8 @@
     {
       "municipality": "橿原市",
       "snapshotCount": 23,
-      "expectedCount": 23,
-      "matchedCount": 23,
-      "missingCount": 0,
-      "missingItems": [],
-      "status": "ok"
-    },
-    {
-      "municipality": "葛城市",
-      "snapshotCount": 20,
-      "expectedCount": 20,
-      "matchedCount": 20,
+      "expectedCount": 21,
+      "matchedCount": 21,
       "missingCount": 0,
       "missingItems": [],
       "status": "ok"
@@ -42,8 +42,8 @@
       "status": "ok"
     },
     {
-      "municipality": "五條市",
-      "snapshotCount": 17,
+      "municipality": "生駒市",
+      "snapshotCount": 16,
       "expectedCount": 16,
       "matchedCount": 16,
       "missingCount": 0,
@@ -51,10 +51,10 @@
       "status": "ok"
     },
     {
-      "municipality": "生駒市",
-      "snapshotCount": 16,
-      "expectedCount": 16,
-      "matchedCount": 16,
+      "municipality": "五條市",
+      "snapshotCount": 15,
+      "expectedCount": 15,
+      "matchedCount": 15,
       "missingCount": 0,
       "missingItems": [],
       "status": "ok"

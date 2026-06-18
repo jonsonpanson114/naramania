@@ -370,6 +370,23 @@ async function main() {
             const currentIssues = municipalityIssues.get(scraper.municipality) || [];
 
             if (
+                hasScrapeFailureIssue(currentIssues) &&
+                previousMunicipalityItems.length > 0 &&
+                keptItems.length < previousMunicipalityItems.length
+            ) {
+                retainedMunicipalities.add(scraper.municipality);
+                console.warn(`[${scraper.municipality}] 部分取得エラーのため既存データ ${previousMunicipalityItems.length}件を維持します (new kept=${keptItems.length})`);
+                municipalityIssues.set(scraper.municipality, [
+                    ...currentIssues,
+                    {
+                        municipality: scraper.municipality,
+                        level: 'warning',
+                        message: `[${scraper.municipality}] 部分取得エラーのため既存データ ${previousMunicipalityItems.length}件を維持しています (new kept=${keptItems.length})`,
+                    },
+                ]);
+                continue;
+            }
+            if (
                 keptItems.length === 0 &&
                 (previousMunicipalityItems.length > 0 || snapshotMunicipalityItems.length > 0) &&
                 hasScrapeFailureIssue(currentIssues)

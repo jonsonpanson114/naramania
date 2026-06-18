@@ -1,0 +1,53 @@
+{
+  "generatedAt": "2026-06-18T14:05:56.221Z",
+  "currentItemCount": 188,
+  "checkedMunicipalities": [
+    "葛城市",
+    "五條市"
+  ],
+  "scraperErrorCount": 0,
+  "scraperResults": [
+    {
+      "municipality": "葛城市",
+      "rawCount": 23,
+      "keptCount": 14,
+      "rejectedCount": 9,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "municipality": "五條市",
+      "rawCount": 25,
+      "keptCount": 16,
+      "rejectedCount": 9,
+      "warnings": [],
+      "errors": []
+    }
+  ],
+  "coverage": {
+    "checkedMunicipalityCount": 2,
+    "expectedItemCount": 30,
+    "matchedItemCount": 30,
+    "missingItemCount": 0,
+    "results": [
+      {
+        "municipality": "五條市",
+        "snapshotCount": 25,
+        "expectedCount": 16,
+        "matchedCount": 16,
+        "missingCount": 0,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
+        "municipality": "葛城市",
+        "snapshotCount": 23,
+        "expectedCount": 14,
+        "matchedCount": 14,
+        "missingCount": 0,
+        "missingItems": [],
+        "status": "ok"
+      }
+    ]
+  }
+}

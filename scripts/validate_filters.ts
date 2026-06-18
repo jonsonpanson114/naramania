@@ -69,6 +69,20 @@ const REJECT_CASES: FilterCase[] = [
     reason: '給水設備単体は対象外',
   },
   {
+    title: '葛城市内学校施設電話主装置等更新工事',
+    expected: false,
+    reason: '学校施設名があっても電話設備単体は対象外',
+  },
+  {
+    title: '第08-302号 公園施設長寿命化対策支援事業に伴う屋敷山公園遊具更新工事',
+    expected: false,
+    reason: '公園遊具更新は建築本体ではない',
+  },
+  {
+    title: '第07-303号 公園施設長寿命化対策支援事業に伴う屋敷山公園噴水広場更新工事',
+    expected: false,
+    reason: '公園噴水広場更新は建築本体ではない',
+  },  {
     title: 'マテリアルリサイクル推進施設発注支援業務',
     expected: false,
     reason: '清掃・リサイクル施設系の発注支援は対象外',
