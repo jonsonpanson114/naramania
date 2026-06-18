@@ -47,8 +47,18 @@ jobs:
         env:
           NODE_ENV: production
 
+      - name: Validate Practical Filters
+        run: npm run validate:filters
+        env:
+          NODE_ENV: production
+
       - name: Validate Snapshot Coverage
         run: npm run validate:snapshots
+        env:
+          NODE_ENV: production
+
+      - name: Validate Chat Answers
+        run: npm run validate:chat
         env:
           NODE_ENV: production
 

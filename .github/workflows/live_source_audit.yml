@@ -8,9 +8,9 @@ on:
   workflow_dispatch:
     inputs:
       municipalities:
-        description: '監査する自治体。カンマ区切り。例: 五條市,葛城市'
+        description: '監査する自治体。空欄なら全自治体。カンマ区切り例: 五條市,葛城市'
         required: false
-        default: '五條市,葛城市'
+        default: ''
       allow_scraper_errors:
         description: 'スクレイパーエラーがあっても差分レポートだけ残す'
         required: false
@@ -31,7 +31,7 @@ jobs:
   audit-live-sources:
     runs-on: ubuntu-latest
     env:
-      LIVE_AUDIT_ONLY_MUNICIPALITIES: ${{ github.event.inputs.municipalities || '五條市,葛城市' }}
+      LIVE_AUDIT_ONLY_MUNICIPALITIES: ${{ github.event.inputs.municipalities || '' }}
       LIVE_AUDIT_ALLOW_SCRAPER_ERRORS: ${{ github.event.inputs.allow_scraper_errors == 'true' && '1' || '0' }}
     steps:
       - uses: actions/checkout@v6
@@ -52,6 +52,16 @@ jobs:
         id: audit
         continue-on-error: true
         run: npm run audit:live-sources
+        env:
+          NODE_ENV: production
+
+      - name: Validate Practical Filters
+        run: npm run validate:filters
+        env:
+          NODE_ENV: production
+
+      - name: Validate Chat Answers
+        run: npm run validate:chat
         env:
           NODE_ENV: production
 
