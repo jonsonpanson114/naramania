@@ -278,7 +278,7 @@ function coerceMunicipality(value: string | null | undefined): Municipality | nu
 
 function looksLikeSpecificProject(query: string): boolean {
     if (query.length < 12) return false;
-    if (/今週|今月|新着|最新|一覧|まとめ|案件|物件|だけ|全部|すべて|教えて|ありますか|ある\?|ある？|何件|どれ|どんな|見せて/.test(query)) {
+    if (/今週|今月|新着|最新|一覧|まとめ|だけ|全部|すべて|何件|どれ|どんな|見せて/.test(query)) {
         return false;
     }
     return /学校|小学校|中学校|こども園|庁舎|公民館|体育館|改修|工事|設計|監理|業務委託|委託/.test(query);
