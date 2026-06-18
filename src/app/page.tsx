@@ -1,4 +1,4 @@
-﻿import { BiddingItem } from '@/types/bidding';
+import { BiddingItem } from '@/types/bidding';
 import fs from 'fs';
 import path from 'path';
 import { AppShell } from '@/components/AppShell';
@@ -9,6 +9,7 @@ import { AlertNotificationPanel } from '@/components/AlertNotificationPanel';
 import { MunicipalityCoverageDashboard } from '@/components/MunicipalityCoverageDashboard';
 import { TargetScopePanel } from '@/components/TargetScopePanel';
 import { CriticalWatchPanel } from '@/components/CriticalWatchPanel';
+import { PracticalWorkQueue } from '@/components/PracticalWorkQueue';
 import { NewsSection } from '@/components/NewsSection';
 import { NewsTicker } from '@/components/NewsTicker';
 import { getShortBiddingLabel } from '@/lib/bidding_schedule';
@@ -235,6 +236,8 @@ export default async function Home() {
         <TargetScopePanel items={allItems} />
 
         <CriticalWatchPanel items={allItems} />
+
+        <PracticalWorkQueue items={allItems} />
 
         <MunicipalityCoverageDashboard items={allItems} quality={qualitySummary} />
 
