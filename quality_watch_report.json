@@ -1,0 +1,648 @@
+{
+  "generatedAt": "2026-06-18T13:40:34.631Z",
+  "qualityGeneratedAt": "2026-06-17T22:23:59.253Z",
+  "itemCount": 181,
+  "criticalWatch": {
+    "activeCount": 3,
+    "okCount": 3,
+    "missingErrorCount": 0,
+    "missingWarningCount": 0,
+    "projects": [
+      {
+        "id": "gojo-school-toilet-renovation-2026",
+        "label": "五條市立小学校トイレ改修工事",
+        "municipality": "五條市",
+        "status": "ok",
+        "severity": "error",
+        "matchCount": 1,
+        "fieldIssues": [],
+        "message": "五條市立小学校トイレ改修工事: 1件確認",
+        "matches": [
+          {
+            "id": "gojo-epi-2501076",
+            "municipality": "五條市",
+            "title": "五條市立小学校トイレ改修工事",
+            "status": "落札",
+            "announcementDate": "2026-04-17",
+            "biddingDate": "2026-05-29",
+            "winningContractor": "有希建設（株）",
+            "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002501076",
+            "pdfUrl": "https://www.city.gojo.lg.jp/material/files/group/4/r842.pdf"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "id": "katsuragi-epi-cloud-source",
+        "label": "葛城市 情報公開サイト",
+        "municipality": "葛城市",
+        "status": "ok",
+        "severity": "error",
+        "count": 14,
+        "requiredLinkIncludes": [
+          "0620064007200720"
+        ],
+        "message": "葛城市 情報公開サイト: 14件確認",
+        "matches": [
+          {
+            "id": "katsuragi-known-0d376d71",
+            "municipality": "葛城市",
+            "title": "磐城第２保育所保育室内装改修工事",
+            "status": "落札",
+            "announcementDate": "2026-05-08",
+            "biddingDate": "2026-05-29",
+            "winningContractor": "清輝",
+            "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200720",
+            "pdfUrl": null
+          },
+          {
+            "id": "katsuragi-known-95e21237",
+            "municipality": "葛城市",
+            "title": "歴史博物館外壁・防水等改修工事設計業務",
+            "status": "落札",
+            "announcementDate": "2026-05-07",
+            "biddingDate": "2026-05-28",
+            "winningContractor": "(株)岩岸設計",
+            "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200720",
+            "pdfUrl": null
+          },
+          {
+            "id": "katsuragi-known-05479ca9",
+            "municipality": "葛城市",
+            "title": "當麻スポーツセンタートイレ改修工事監理業務",
+            "status": "落札",
+            "announcementDate": "2025-08-27",
+            "biddingDate": "2025-08-27",
+            "winningContractor": null,
+            "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200720",
+            "pdfUrl": null
+          },
+          {
+            "id": "katsuragi-known-adeb06fb",
+            "municipality": "葛城市",
+            "title": "白鳳中学校武道場改修工事監理業務委託",
+            "status": "落札",
+            "announcementDate": "2025-08-27",
+            "biddingDate": "2025-08-27",
+            "winningContractor": null,
+            "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200720",
+            "pdfUrl": null
+          },
+          {
+            "id": "katsuragi-known-a2dc0152",
+            "municipality": "葛城市",
+            "title": "當麻スポーツセンタートイレ改修工事",
+            "status": "落札",
+            "announcementDate": "2025-07-10",
+            "biddingDate": "2025-08-07",
+            "winningContractor": null,
+            "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200720",
+            "pdfUrl": null
+          },
+          {
+            "id": "katsuragi-known-6b7889d4",
+            "municipality": "葛城市",
+            "title": "葛城市立学校施設各所改修工事",
+            "status": "落札",
+            "announcementDate": "2025-07-09",
+            "biddingDate": "2025-07-09",
+            "winningContractor": null,
+            "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200720",
+            "pdfUrl": null
+          },
+          {
+            "id": "katsuragi-known-d372a70b",
+            "municipality": "葛城市",
+            "title": "新庄小学校管理棟及び屋内運動場長寿命化改修工事監理業務委託",
+            "status": "落札",
+            "announcementDate": "2025-06-06",
+            "biddingDate": "2025-06-06",
+            "winningContractor": null,
+            "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200720",
+            "pdfUrl": null
+          },
+          {
+            "id": "katsuragi-known-315113cf",
+            "municipality": "葛城市",
+            "title": "新庄中学校北館昇降口防水改修工事",
+            "status": "落札",
+            "announcementDate": "2025-06-04",
+            "biddingDate": "2025-06-04",
+            "winningContractor": null,
+            "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200720",
+            "pdfUrl": null
+          },
+          {
+            "id": "katsuragi-known-b801efbc",
+            "municipality": "葛城市",
+            "title": "（仮称）當麻複合施設整備工事",
+            "status": "落札",
+            "announcementDate": "2025-05-15",
+            "biddingDate": "2025-08-07",
+            "winningContractor": null,
+            "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200720",
+            "pdfUrl": null
+          },
+          {
+            "id": "katsuragi-known-827fc8ec",
+            "municipality": "葛城市",
+            "title": "第7-508号 市営住宅堂の久保団地空家解体設計委託業務",
+            "status": "落札",
+            "announcementDate": "2025-05-07",
+            "biddingDate": "2025-05-07",
+            "winningContractor": null,
+            "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200720",
+            "pdfUrl": null
+          }
+        ]
+      },
+      {
+        "id": "gojo-epi-cloud-source",
+        "label": "五條市 情報公開サイト",
+        "municipality": "五條市",
+        "status": "ok",
+        "severity": "error",
+        "count": 11,
+        "requiredLinkIncludes": [
+          "epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction"
+        ],
+        "message": "五條市 情報公開サイト: 11件確認",
+        "matches": [
+          {
+            "id": "gojo-epi-2601002",
+            "municipality": "五條市",
+            "title": "宗桧公民館改修工事",
+            "status": "不調",
+            "announcementDate": "2026-05-01",
+            "biddingDate": "2026-05-27",
+            "winningContractor": null,
+            "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002601002",
+            "pdfUrl": null
+          },
+          {
+            "id": "gojo-epi-2501076",
+            "municipality": "五條市",
+            "title": "五條市立小学校トイレ改修工事",
+            "status": "落札",
+            "announcementDate": "2026-04-17",
+            "biddingDate": "2026-05-29",
+            "winningContractor": "有希建設（株）",
+            "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002501076",
+            "pdfUrl": "https://www.city.gojo.lg.jp/material/files/group/4/r842.pdf"
+          },
+          {
+            "id": "gojo-epi-2501056",
+            "municipality": "五條市",
+            "title": "川端住宅２２・２３号解体工事",
+            "status": "落札",
+            "announcementDate": "2025-12-16",
+            "biddingDate": "2026-01-09",
+            "winningContractor": "逢坂建設",
+            "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002501056",
+            "pdfUrl": null
+          },
+          {
+            "id": "gojo-epi-2501048",
+            "municipality": "五條市",
+            "title": "向加名生団地Ａ棟屋根改修工事",
+            "status": "落札",
+            "announcementDate": "2025-11-18",
+            "biddingDate": "2025-12-02",
+            "winningContractor": "グローバル工業（株）",
+            "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002501048",
+            "pdfUrl": null
+          },
+          {
+            "id": "gojo-epi-2501040",
+            "municipality": "五條市",
+            "title": "ベストラインスタジアム（上野公園野球場）施設改修工事",
+            "status": "落札",
+            "announcementDate": "2025-11-04",
+            "biddingDate": "2025-12-19",
+            "winningContractor": "（株）森岡組",
+            "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002501040",
+            "pdfUrl": null
+          },
+          {
+            "id": "gojo-epi-2501039",
+            "municipality": "五條市",
+            "title": "市営住宅空家修繕工事",
+            "status": "落札",
+            "announcementDate": "2025-10-07",
+            "biddingDate": "2025-10-20",
+            "winningContractor": "前根建設",
+            "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002501039",
+            "pdfUrl": null
+          },
+          {
+            "id": "gojo-epi-2501036",
+            "municipality": "五條市",
+            "title": "須恵児童公園トイレ撤去工事",
+            "status": "落札",
+            "announcementDate": "2025-09-30",
+            "biddingDate": "2025-10-10",
+            "winningContractor": "たけや興業（株）",
+            "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002501036",
+            "pdfUrl": null
+          },
+          {
+            "id": "gojo-epi-2501011",
+            "municipality": "五條市",
+            "title": "阿田峯公園トイレ洋式化工事",
+            "status": "落札",
+            "announcementDate": "2025-07-08",
+            "biddingDate": "2025-07-18",
+            "winningContractor": "（株）福嶋組",
+            "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002501011",
+            "pdfUrl": null
+          },
+          {
+            "id": "gojo-epi-2501009",
+            "municipality": "五條市",
+            "title": "五條市立田園公民館男子トイレ洋式化工事",
+            "status": "落札",
+            "announcementDate": "2025-07-01",
+            "biddingDate": "2025-07-11",
+            "winningContractor": "（株）福嶋組",
+            "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002501009",
+            "pdfUrl": null
+          },
+          {
+            "id": "gojo-epi-2501007",
+            "municipality": "五條市",
+            "title": "平沼田老人憩の家屋根修繕工事",
+            "status": "落札",
+            "announcementDate": "2025-06-17",
+            "biddingDate": "2025-06-27",
+            "winningContractor": "逢坂建設",
+            "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002501007",
+            "pdfUrl": null
+          }
+        ]
+      }
+    ]
+  },
+  "sourceCoverage": {
+    "activeCount": 25,
+    "okCount": 25,
+    "missingErrorCount": 0,
+    "missingWarningCount": 0,
+    "results": [
+      {
+        "municipality": "奈良県",
+        "status": "ok",
+        "severity": "error",
+        "totalCount": 26,
+        "requiredLinkIncludes": [
+          "ppi.ebid-kouji-gyoumu.pref.nara.jp"
+        ],
+        "missingLinkIncludes": [],
+        "sourceCounts": {
+          "ppi.ebid-kouji-gyoumu.pref.nara.jp": 26
+        },
+        "message": "奈良県: 26件 / sources OK"
+      },
+      {
+        "municipality": "奈良市",
+        "status": "ok",
+        "severity": "error",
+        "totalCount": 7,
+        "requiredLinkIncludes": [
+          "nara.efftis.jp"
+        ],
+        "missingLinkIncludes": [],
+        "sourceCounts": {
+          "nara.efftis.jp": 7
+        },
+        "message": "奈良市: 7件 / sources OK"
+      },
+      {
+        "municipality": "橿原市",
+        "status": "ok",
+        "severity": "error",
+        "totalCount": 23,
+        "requiredLinkIncludes": [
+          "city.kashihara.nara.jp"
+        ],
+        "missingLinkIncludes": [],
+        "sourceCounts": {
+          "city.kashihara.nara.jp": 23
+        },
+        "message": "橿原市: 23件 / sources OK"
+      },
+      {
+        "municipality": "生駒市",
+        "status": "ok",
+        "severity": "error",
+        "totalCount": 16,
+        "requiredLinkIncludes": [
+          "epi-cloud.fwd.ne.jp"
+        ],
+        "missingLinkIncludes": [],
+        "sourceCounts": {
+          "epi-cloud.fwd.ne.jp": 16
+        },
+        "message": "生駒市: 16件 / sources OK"
+      },
+      {
+        "municipality": "大和高田市",
+        "status": "ok",
+        "severity": "error",
+        "totalCount": 1,
+        "requiredLinkIncludes": [
+          "city.yamatotakada.nara.jp"
+        ],
+        "missingLinkIncludes": [],
+        "sourceCounts": {
+          "city.yamatotakada.nara.jp": 1
+        },
+        "message": "大和高田市: 1件 / sources OK"
+      },
+      {
+        "municipality": "大和郡山市",
+        "status": "ok",
+        "severity": "error",
+        "totalCount": 2,
+        "requiredLinkIncludes": [
+          "city.yamatokoriyama.lg.jp"
+        ],
+        "missingLinkIncludes": [],
+        "sourceCounts": {
+          "city.yamatokoriyama.lg.jp": 2
+        },
+        "message": "大和郡山市: 2件 / sources OK"
+      },
+      {
+        "municipality": "葛城市",
+        "status": "ok",
+        "severity": "error",
+        "totalCount": 18,
+        "requiredLinkIncludes": [
+          "city.katsuragi.nara.jp",
+          "epi-cloud.fwd.ne.jp"
+        ],
+        "missingLinkIncludes": [],
+        "sourceCounts": {
+          "city.katsuragi.nara.jp": 4,
+          "epi-cloud.fwd.ne.jp": 14
+        },
+        "message": "葛城市: 18件 / sources OK"
+      },
+      {
+        "municipality": "五條市",
+        "status": "ok",
+        "severity": "error",
+        "totalCount": 16,
+        "requiredLinkIncludes": [
+          "city.gojo.lg.jp",
+          "epi-cloud.fwd.ne.jp"
+        ],
+        "missingLinkIncludes": [],
+        "sourceCounts": {
+          "city.gojo.lg.jp": 6,
+          "epi-cloud.fwd.ne.jp": 11
+        },
+        "message": "五條市: 16件 / sources OK"
+      },
+      {
+        "municipality": "御所市",
+        "status": "ok",
+        "severity": "error",
+        "totalCount": 2,
+        "requiredLinkIncludes": [
+          "city.gose.nara.jp"
+        ],
+        "missingLinkIncludes": [],
+        "sourceCounts": {
+          "city.gose.nara.jp": 2
+        },
+        "message": "御所市: 2件 / sources OK"
+      },
+      {
+        "municipality": "天理市",
+        "status": "ok",
+        "severity": "error",
+        "totalCount": 4,
+        "requiredLinkIncludes": [
+          "city.tenri.nara.jp"
+        ],
+        "missingLinkIncludes": [],
+        "sourceCounts": {
+          "city.tenri.nara.jp": 4
+        },
+        "message": "天理市: 4件 / sources OK"
+      },
+      {
+        "municipality": "桜井市",
+        "status": "ok",
+        "severity": "error",
+        "totalCount": 2,
+        "requiredLinkIncludes": [
+          "city.sakurai.lg.jp"
+        ],
+        "missingLinkIncludes": [],
+        "sourceCounts": {
+          "city.sakurai.lg.jp": 2
+        },
+        "message": "桜井市: 2件 / sources OK"
+      },
+      {
+        "municipality": "宇陀市",
+        "status": "ok",
+        "severity": "error",
+        "totalCount": 12,
+        "requiredLinkIncludes": [
+          "epi-cloud.fwd.ne.jp"
+        ],
+        "missingLinkIncludes": [],
+        "sourceCounts": {
+          "epi-cloud.fwd.ne.jp": 12
+        },
+        "message": "宇陀市: 12件 / sources OK"
+      },
+      {
+        "municipality": "田原本町",
+        "status": "ok",
+        "severity": "error",
+        "totalCount": 3,
+        "requiredLinkIncludes": [
+          "tawaramoto.efftis.jp"
+        ],
+        "missingLinkIncludes": [],
+        "sourceCounts": {
+          "tawaramoto.efftis.jp": 3
+        },
+        "message": "田原本町: 3件 / sources OK"
+      },
+      {
+        "municipality": "広陵町",
+        "status": "ok",
+        "severity": "error",
+        "totalCount": 3,
+        "requiredLinkIncludes": [
+          "town.koryo.nara.jp"
+        ],
+        "missingLinkIncludes": [],
+        "sourceCounts": {
+          "town.koryo.nara.jp": 3
+        },
+        "message": "広陵町: 3件 / sources OK"
+      },
+      {
+        "municipality": "香芝市",
+        "status": "ok",
+        "severity": "error",
+        "totalCount": 8,
+        "requiredLinkIncludes": [
+          "city.kashiba.lg.jp"
+        ],
+        "missingLinkIncludes": [],
+        "sourceCounts": {
+          "city.kashiba.lg.jp": 8
+        },
+        "message": "香芝市: 8件 / sources OK"
+      },
+      {
+        "municipality": "川西町",
+        "status": "ok",
+        "severity": "error",
+        "totalCount": 5,
+        "requiredLinkIncludes": [
+          "town.nara-kawanishi.lg.jp"
+        ],
+        "missingLinkIncludes": [],
+        "sourceCounts": {
+          "town.nara-kawanishi.lg.jp": 5
+        },
+        "message": "川西町: 5件 / sources OK"
+      },
+      {
+        "municipality": "三宅町",
+        "status": "ok",
+        "severity": "error",
+        "totalCount": 2,
+        "requiredLinkIncludes": [
+          "town.miyake.lg.jp"
+        ],
+        "missingLinkIncludes": [],
+        "sourceCounts": {
+          "town.miyake.lg.jp": 2
+        },
+        "message": "三宅町: 2件 / sources OK"
+      },
+      {
+        "municipality": "山添村",
+        "status": "ok",
+        "severity": "error",
+        "totalCount": 2,
+        "requiredLinkIncludes": [
+          "vill.yamazoe.nara.jp"
+        ],
+        "missingLinkIncludes": [],
+        "sourceCounts": {
+          "vill.yamazoe.nara.jp": 2
+        },
+        "message": "山添村: 2件 / sources OK"
+      },
+      {
+        "municipality": "平群町",
+        "status": "ok",
+        "severity": "error",
+        "totalCount": 2,
+        "requiredLinkIncludes": [
+          "town.heguri.nara.jp"
+        ],
+        "missingLinkIncludes": [],
+        "sourceCounts": {
+          "town.heguri.nara.jp": 2
+        },
+        "message": "平群町: 2件 / sources OK"
+      },
+      {
+        "municipality": "安堵町",
+        "status": "ok",
+        "severity": "error",
+        "totalCount": 2,
+        "requiredLinkIncludes": [
+          "town.ando.nara.jp"
+        ],
+        "missingLinkIncludes": [],
+        "sourceCounts": {
+          "town.ando.nara.jp": 2
+        },
+        "message": "安堵町: 2件 / sources OK"
+      },
+      {
+        "municipality": "高取町",
+        "status": "ok",
+        "severity": "error",
+        "totalCount": 19,
+        "requiredLinkIncludes": [
+          "town.takatori.nara.jp"
+        ],
+        "missingLinkIncludes": [],
+        "sourceCounts": {
+          "town.takatori.nara.jp": 19
+        },
+        "message": "高取町: 19件 / sources OK"
+      },
+      {
+        "municipality": "斑鳩町",
+        "status": "ok",
+        "severity": "error",
+        "totalCount": 2,
+        "requiredLinkIncludes": [
+          "town.ikaruga.nara.jp"
+        ],
+        "missingLinkIncludes": [],
+        "sourceCounts": {
+          "town.ikaruga.nara.jp": 2
+        },
+        "message": "斑鳩町: 2件 / sources OK"
+      },
+      {
+        "municipality": "三郷町",
+        "status": "ok",
+        "severity": "error",
+        "totalCount": 1,
+        "requiredLinkIncludes": [
+          "epi-cloud.fwd.ne.jp"
+        ],
+        "missingLinkIncludes": [],
+        "sourceCounts": {
+          "epi-cloud.fwd.ne.jp": 1
+        },
+        "message": "三郷町: 1件 / sources OK"
+      },
+      {
+        "municipality": "王寺町",
+        "status": "ok",
+        "severity": "error",
+        "totalCount": 1,
+        "requiredLinkIncludes": [
+          "town.oji.nara.jp"
+        ],
+        "missingLinkIncludes": [],
+        "sourceCounts": {
+          "town.oji.nara.jp": 1
+        },
+        "message": "王寺町: 1件 / sources OK"
+      },
+      {
+        "municipality": "大淀町",
+        "status": "ok",
+        "severity": "error",
+        "totalCount": 2,
+        "requiredLinkIncludes": [
+          "town.oyodo.lg.jp"
+        ],
+        "missingLinkIncludes": [],
+        "sourceCounts": {
+          "town.oyodo.lg.jp": 2
+        },
+        "message": "大淀町: 2件 / sources OK"
+      }
+    ]
+  }
+}

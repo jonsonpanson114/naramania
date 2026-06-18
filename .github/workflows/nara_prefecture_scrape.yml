@@ -49,7 +49,7 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add scraper_result.json scraper_quality.json municipality_snapshots.json
+          git add scraper_result.json scraper_quality.json municipality_snapshots.json quality_watch_report.json
           git diff --cached --quiet
           if ($LASTEXITCODE -ne 0) {
             git commit -m "chore: nara prefecture data update [skip ci]"
