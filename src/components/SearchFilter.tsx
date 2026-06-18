@@ -1,7 +1,8 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Search, MapPin, Filter } from 'lucide-react';
+import { Search, MapPin, Filter, SlidersHorizontal } from 'lucide-react';
+import { PRACTICAL_FILTERS, PracticalFilter } from '@/lib/practical_filters';
 
 interface SearchFilterProps {
     keyword: string;
@@ -11,6 +12,9 @@ interface SearchFilterProps {
     onMunicipalityChange: (value: string) => void;
     status: string;
     onStatusChange: (value: string) => void;
+    quickFilter: PracticalFilter;
+    onQuickFilterChange: (value: PracticalFilter) => void;
+    quickCounts: Record<PracticalFilter, number>;
     resultCount: number;
 }
 
@@ -24,6 +28,9 @@ export function SearchFilter({
     onMunicipalityChange,
     status,
     onStatusChange,
+    quickFilter,
+    onQuickFilterChange,
+    quickCounts,
     resultCount,
 }: SearchFilterProps) {
     return (
@@ -76,6 +83,43 @@ export function SearchFilter({
                     </div>
                 </div>
 
+                <div className="mt-6 rounded-xl border border-slate-200/70 bg-slate-950 p-4 text-white">
+                    <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+                        <div className="flex items-start gap-3">
+                            <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-white/10 text-amber-200">
+                                <SlidersHorizontal size={16} />
+                            </div>
+                            <div>
+                                <p className="text-xs font-bold tracking-[0.16em]">実務クイックフィルター</p>
+                                <p className="mt-1 text-[11px] leading-5 text-slate-300">開札後確認・学校トイレ改修・受付中だけを素早く切り替えます。</p>
+                            </div>
+                        </div>
+                        <div className="flex flex-wrap gap-2">
+                            {PRACTICAL_FILTERS.map(filter => {
+                                const active = quickFilter === filter.id;
+                                return (
+                                    <button
+                                        key={filter.id}
+                                        type="button"
+                                        title={filter.description}
+                                        onClick={() => onQuickFilterChange(filter.id)}
+                                        className={`rounded-full border px-3 py-1.5 text-[10px] font-bold tracking-[0.12em] transition ${
+                                            active
+                                                ? 'border-amber-200 bg-amber-200 text-slate-950'
+                                                : 'border-white/15 bg-white/5 text-slate-300 hover:border-white/30 hover:bg-white/10'
+                                        }`}
+                                    >
+                                        {filter.shortLabel}
+                                        <span className={`ml-1.5 rounded-full px-1.5 py-0.5 ${active ? 'bg-slate-950/10' : 'bg-white/10'}`}>
+                                            {quickCounts[filter.id] || 0}
+                                        </span>
+                                    </button>
+                                );
+                            })}
+                        </div>
+                    </div>
+                </div>
+
                 {/* Result Count */}
                 <div className="mt-6 flex items-center justify-between">
                     <p className="text-[10px] tracking-[0.3em] text-secondary/50 uppercase font-serif">
@@ -86,6 +130,7 @@ export function SearchFilter({
                             onKeywordChange('');
                             onMunicipalityChange('すべて');
                             onStatusChange('すべて');
+                            onQuickFilterChange('all');
                         }}
                         className="text-[10px] tracking-[0.2em] text-secondary/40 hover:text-accent transition-colors uppercase cursor-pointer"
                     >

@@ -8,6 +8,7 @@ import { BiddingTable } from '@/components/BiddingTable';
 import { SearchFilter } from '@/components/SearchFilter';
 import { motion } from 'framer-motion';
 import { Loader2 } from 'lucide-react';
+import { PRACTICAL_FILTERS, PracticalFilter, countPracticalFilter, matchesPracticalFilter } from '@/lib/practical_filters';
 
 export default function SearchPage() {
     const [items, setItems] = useState<BiddingItem[]>([]);
@@ -15,9 +16,20 @@ export default function SearchPage() {
     const [keyword, setKeyword] = useState('');
     const [municipality, setMunicipality] = useState('すべて');
     const [status, setStatus] = useState('すべて');
+    const [quickFilter, setQuickFilter] = useState<PracticalFilter>('all');
     const municipalities = Array.from(new Set(items.map(item => item.municipality))).sort();
 
     useEffect(() => {
+        const params = new URLSearchParams(window.location.search);
+        const quick = params.get('quick') as PracticalFilter | null;
+        const statusParam = params.get('status');
+        const municipalityParam = params.get('municipality');
+        const keywordParam = params.get('q');
+        if (quick && PRACTICAL_FILTERS.some(filter => filter.id === quick)) setQuickFilter(quick);
+        if (statusParam) setStatus(statusParam);
+        if (municipalityParam) setMunicipality(municipalityParam);
+        if (keywordParam) setKeyword(keywordParam);
+
         fetch('/api/scrape')
             .then(res => res.json())
             .then(data => {
@@ -47,8 +59,14 @@ export default function SearchPage() {
             result = result.filter(item => item.status === status);
         }
 
+        result = result.filter(item => matchesPracticalFilter(item, quickFilter));
+
         return result;
     })();
+
+    const quickCounts = Object.fromEntries(
+        PRACTICAL_FILTERS.map(filter => [filter.id, countPracticalFilter(items, filter.id)]),
+    ) as Record<PracticalFilter, number>;
 
     return (
         <AppShell>
@@ -73,6 +91,9 @@ export default function SearchPage() {
                     onMunicipalityChange={setMunicipality}
                     status={status}
                     onStatusChange={setStatus}
+                    quickFilter={quickFilter}
+                    onQuickFilterChange={setQuickFilter}
+                    quickCounts={quickCounts}
                     resultCount={filtered.length}
                 />
 

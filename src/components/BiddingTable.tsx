@@ -4,8 +4,9 @@ import { useMemo, useState } from 'react';
 import { BiddingItem } from '@/types/bidding';
 import { getBiddingLabel } from '@/lib/bidding_schedule';
 import { assessBiddingScope, summarizeBiddingScope } from '@/lib/relevance_guard';
+import { PRACTICAL_FILTERS, PracticalFilter, countPracticalFilter, matchesPracticalFilter } from '@/lib/practical_filters';
 import { motion, AnimatePresence } from 'framer-motion';
-import { AlertTriangle, ArrowUpDown, Eye, EyeOff, Search, ShieldCheck, X } from 'lucide-react';
+import { AlertTriangle, ArrowUpDown, Eye, EyeOff, Search, ShieldCheck, SlidersHorizontal, X } from 'lucide-react';
 
 interface BiddingTableProps {
     items: BiddingItem[];
@@ -24,6 +25,7 @@ export function BiddingTable({ items }: BiddingTableProps) {
     const [sortMode, setSortMode] = useState<SortMode>('newest');
     const [detailedSearch, setDetailedSearch] = useState(false);
     const [hideOutOfScope, setHideOutOfScope] = useState(true);
+    const [practicalFilter, setPracticalFilter] = useState<PracticalFilter>('all');
 
     const scopeById = useMemo(() => {
         return new Map(items.map(item => [item.id, assessBiddingScope(item)]));
@@ -83,6 +85,8 @@ export function BiddingTable({ items }: BiddingTableProps) {
 
         // Tag filter takes priority if active
         if (selectedTag && !item.tags?.includes(selectedTag)) return false;
+
+        if (!matchesPracticalFilter(item, practicalFilter)) return false;
 
         if (mainFilter === 'すべて') return true;
         
@@ -267,6 +271,46 @@ export function BiddingTable({ items }: BiddingTableProps) {
                     </motion.div>
                 )}
             </AnimatePresence>
+
+            <div className="rounded-2xl border border-slate-200/70 bg-slate-950 p-4 text-white shadow-sm">
+                <div className="flex flex-col gap-4 xl:flex-row xl:items-center xl:justify-between">
+                    <div className="flex items-start gap-3">
+                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-white/10 text-amber-200">
+                            <SlidersHorizontal size={18} />
+                        </div>
+                        <div>
+                            <p className="text-sm font-bold tracking-[0.08em]">実務クイックフィルター</p>
+                            <p className="mt-1 text-xs leading-6 tracking-[0.04em] text-slate-300">
+                                落札者未取得、開札済み、学校トイレ改修など、確認作業でよく使う条件を一発で絞ります。
+                            </p>
+                        </div>
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                        {PRACTICAL_FILTERS.map(filter => {
+                            const active = practicalFilter === filter.id;
+                            const count = countPracticalFilter(visibleItems, filter.id);
+                            return (
+                                <button
+                                    key={filter.id}
+                                    type="button"
+                                    title={filter.description}
+                                    onClick={() => setPracticalFilter(filter.id)}
+                                    className={`rounded-full border px-3 py-1.5 text-[10px] font-bold tracking-[0.12em] transition ${
+                                        active
+                                            ? 'border-amber-200 bg-amber-200 text-slate-950'
+                                            : 'border-white/15 bg-white/5 text-slate-300 hover:border-white/30 hover:bg-white/10'
+                                    }`}
+                                >
+                                    {filter.shortLabel}
+                                    <span className={`ml-1.5 rounded-full px-1.5 py-0.5 ${active ? 'bg-slate-950/10' : 'bg-white/10'}`}>
+                                        {count}
+                                    </span>
+                                </button>
+                            );
+                        })}
+                    </div>
+                </div>
+            </div>
 
             <div className="rounded-2xl border border-emerald-900/10 bg-white/85 p-4 shadow-sm backdrop-blur-sm">
                 <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">

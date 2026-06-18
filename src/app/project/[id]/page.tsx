@@ -5,8 +5,9 @@ import { ProjectActionPanel } from '@/components/ProjectActionPanel';
 import fs from 'fs';
 import path from 'path';
 import Link from 'next/link';
-import { ArrowLeft, ExternalLink, Trophy, Ruler, Calendar, Banknote, FileText, Building2, Clock, Tag, Sparkles } from 'lucide-react';
+import { ArrowLeft, ExternalLink, Trophy, Ruler, Calendar, Banknote, FileText, Building2, Clock, Tag, Sparkles, CheckCircle2, AlertTriangle, Search } from 'lucide-react';
 import { getBiddingLabel } from '@/lib/bidding_schedule';
+import { isOpenedItem, isSchoolToiletItem } from '@/lib/practical_filters';
 
 interface PageProps {
     params: Promise<{ id: string }>;
@@ -50,6 +51,43 @@ const detectMaterials = (description?: string): { name: string; icon: string; ma
     return detected;
 };
 
+function getResultAudit(item: BiddingItem) {
+    const opened = isOpenedItem(item);
+    if (item.status === '落札' && item.winningContractor) {
+        return {
+            tone: 'ok' as const,
+            title: '開札・落札情報は確認済み',
+            message: '落札状態、開札日、落札者がそろっています。元請けへの営業確認に使える状態です。',
+        };
+    }
+    if (item.status === '落札' && !item.winningContractor) {
+        return {
+            tone: 'warn' as const,
+            title: '落札者が未取得です',
+            message: '落札済みですが落札者が空です。結果PDFまたは公式ページの再確認対象です。',
+        };
+    }
+    if (opened) {
+        return {
+            tone: 'warn' as const,
+            title: '開札済みの可能性があります',
+            message: '開札日を過ぎています。落札者・不調・受付終了の結果確認を優先してください。',
+        };
+    }
+    if (item.status === '受付中') {
+        return {
+            tone: 'active' as const,
+            title: '受付中の案件です',
+            message: 'まだ開札前です。公告資料、締切、参加条件を確認する段階です。',
+        };
+    }
+    return {
+        tone: 'neutral' as const,
+        title: '結果確認が必要です',
+        message: '開札日または結果情報が不足しています。公式ページで更新状況を確認してください。',
+    };
+}
+
 export default async function ProjectDetailPage({ params }: PageProps) {
     const { id } = await params;
 
@@ -88,6 +126,8 @@ export default async function ProjectDetailPage({ params }: PageProps) {
         .slice(0, 3);
 
     const detectedMaterials = detectMaterials(item.description);
+    const resultAudit = getResultAudit(item);
+    const isSchoolToilet = isSchoolToiletItem(item);
 
     return (
         <AppShell>
@@ -145,6 +185,71 @@ export default async function ProjectDetailPage({ params }: PageProps) {
                     </div>
                 </div>
                 <p className="text-secondary/50 text-xs tracking-wider ml-16">{item.municipality}</p>
+            </div>
+
+            <div className={`mb-12 rounded-[2rem] border p-6 shadow-sm lg:p-8 ${
+                resultAudit.tone === 'ok'
+                    ? 'border-emerald-200 bg-emerald-50/70'
+                    : resultAudit.tone === 'warn'
+                        ? 'border-amber-200 bg-amber-50/80'
+                        : resultAudit.tone === 'active'
+                            ? 'border-blue-200 bg-blue-50/70'
+                            : 'border-slate-200 bg-white/80'
+            }`}>
+                <div className="flex flex-col gap-6 xl:flex-row xl:items-start xl:justify-between">
+                    <div className="flex items-start gap-4">
+                        <div className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl ${
+                            resultAudit.tone === 'ok'
+                                ? 'bg-emerald-100 text-emerald-700'
+                                : resultAudit.tone === 'warn'
+                                    ? 'bg-amber-100 text-amber-800'
+                                    : resultAudit.tone === 'active'
+                                        ? 'bg-blue-100 text-blue-700'
+                                        : 'bg-slate-100 text-slate-600'
+                        }`}>
+                            {resultAudit.tone === 'ok' ? <CheckCircle2 size={22} /> : <AlertTriangle size={22} />}
+                        </div>
+                        <div>
+                            <p className="text-[10px] font-bold tracking-[0.24em] text-secondary/50 uppercase">Result Audit</p>
+                            <h3 className="mt-2 text-xl font-bold tracking-[0.04em] text-primary">{resultAudit.title}</h3>
+                            <p className="mt-2 max-w-3xl text-sm leading-7 tracking-[0.04em] text-secondary/70">{resultAudit.message}</p>
+                        </div>
+                    </div>
+                    <div className="grid min-w-full gap-3 sm:grid-cols-2 xl:min-w-[420px]">
+                        <div className="rounded-2xl bg-white/75 p-4">
+                            <p className="text-[9px] tracking-[0.18em] text-secondary/45 uppercase">開札日</p>
+                            <p className="mt-1 text-sm font-bold tracking-[0.06em] text-primary">{formatDate(item.biddingDate)}</p>
+                        </div>
+                        <div className="rounded-2xl bg-white/75 p-4">
+                            <p className="text-[9px] tracking-[0.18em] text-secondary/45 uppercase">落札者</p>
+                            <p className="mt-1 line-clamp-2 text-sm font-bold tracking-[0.04em] text-primary">{item.winningContractor || '未取得'}</p>
+                        </div>
+                        <Link
+                            href="/search?quick=missingWinner"
+                            className="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/80 bg-white/85 px-4 py-3 text-[10px] font-bold tracking-[0.16em] text-secondary transition hover:border-accent/30 hover:text-accent"
+                        >
+                            <Search size={13} />
+                            落札者未取得を見る
+                        </Link>
+                        {isSchoolToilet ? (
+                            <Link
+                                href="/search?quick=schoolToilet"
+                                className="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/80 bg-white/85 px-4 py-3 text-[10px] font-bold tracking-[0.16em] text-secondary transition hover:border-accent/30 hover:text-accent"
+                            >
+                                <Search size={13} />
+                                学校トイレ案件を見る
+                            </Link>
+                        ) : (
+                            <Link
+                                href="/search?quick=opened"
+                                className="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/80 bg-white/85 px-4 py-3 text-[10px] font-bold tracking-[0.16em] text-secondary transition hover:border-accent/30 hover:text-accent"
+                            >
+                                <Search size={13} />
+                                開札済みを見る
+                            </Link>
+                        )}
+                    </div>
+                </div>
             </div>
 
             {/* AI Materials Detection (For Subcontractors) */}

@@ -1,5 +1,6 @@
 import type { BiddingItem } from '../src/types/bidding';
 import { shouldKeepBiddingItem, shouldKeepItem } from '../src/scrapers/common/filter';
+import { isOpenedItem, isSchoolToiletItem, matchesPracticalFilter } from '../src/lib/practical_filters';
 
 type FilterCase = {
   title: string;
@@ -100,6 +101,33 @@ function main() {
   const failures = [...KEEP_CASES, ...REJECT_CASES]
     .map(runCase)
     .filter((message): message is string => Boolean(message));
+  const gojoToilet = makeItem('五條市立小学校トイレ改修工事');
+  const awardedWithWinner = {
+    ...gojoToilet,
+    status: '落札' as const,
+    biddingDate: '2026-05-29',
+    winningContractor: '有希建設（株）',
+  };
+  const awardedWithoutWinner = {
+    ...gojoToilet,
+    id: 'filter-test-missing-winner',
+    status: '落札' as const,
+    biddingDate: '2026-05-29',
+    winningContractor: undefined,
+  };
+
+  if (!isSchoolToiletItem(gojoToilet) || !matchesPracticalFilter(gojoToilet, 'schoolToilet')) {
+    failures.push('Practical filter expected schoolToilet: 五條市立小学校トイレ改修工事');
+  }
+  if (!isOpenedItem(awardedWithWinner) || !matchesPracticalFilter(awardedWithWinner, 'opened')) {
+    failures.push('Practical filter expected opened: 落札済み案件');
+  }
+  if (!matchesPracticalFilter(awardedWithoutWinner, 'missingWinner')) {
+    failures.push('Practical filter expected missingWinner: 落札者未取得案件');
+  }
+  if (matchesPracticalFilter(awardedWithWinner, 'missingWinner')) {
+    failures.push('Practical filter must not mark winner-filled awarded item as missingWinner');
+  }
 
   if (failures.length > 0) {
     console.error('[filters] validation failed');
@@ -107,7 +135,7 @@ function main() {
     process.exit(1);
   }
 
-  console.log(`[filters] validation passed (${KEEP_CASES.length} keep / ${REJECT_CASES.length} reject)`);
+  console.log(`[filters] validation passed (${KEEP_CASES.length} keep / ${REJECT_CASES.length} reject / practical filters)`);
 }
 
 main();
