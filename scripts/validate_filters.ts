@@ -82,7 +82,23 @@ const REJECT_CASES: FilterCase[] = [
     title: '第07-303号 公園施設長寿命化対策支援事業に伴う屋敷山公園噴水広場更新工事',
     expected: false,
     reason: '公園噴水広場更新は建築本体ではない',
-  },  {
+  },
+  {
+    title: '第8-105号屋根付きベンチ設置工事',
+    expected: false,
+    reason: '屋根という文字があってもベンチ設置は建築本体ではない',
+  },
+  {
+    title: '第7-102号 ストックマネジメント修繕改築計画に基づくマンホール蓋更新工事',
+    expected: false,
+    reason: 'マンホール蓋更新は土木・下水系で対象外',
+  },
+  {
+    title: '第7-603号 白光田池貯留施設設置工事',
+    expected: false,
+    reason: '貯留施設設置は建築本体ではない',
+  },
+  {
     title: 'マテリアルリサイクル推進施設発注支援業務',
     expected: false,
     reason: '清掃・リサイクル施設系の発注支援は対象外',

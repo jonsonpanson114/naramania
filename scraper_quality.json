@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-06-18T14:04:00.420Z",
-  "source": "daily_scrape",
-  "scrapedCount": 25,
-  "keptCount": 188,
-  "rejectedCount": 9,
+  "generatedAt": "2026-06-18T22:12:02.286Z",
+  "source": "reapply_filter",
+  "originalCount": 188,
+  "keptCount": 185,
+  "removedCount": 3,
   "oldestAnnouncementDate": "2025-02-02",
   "latestAnnouncementDate": "2026-06-08",
   "municipalityCount": 25,
@@ -14,14 +14,14 @@
     "zeroCountMunicipalities": [],
     "breakdown": [
       {
-        "municipality": "葛城市",
-        "count": 28,
-        "changeFromPrevious": 0
-      },
-      {
         "municipality": "奈良県",
         "count": 26,
         "changeFromPrevious": 0
+      },
+      {
+        "municipality": "葛城市",
+        "count": 25,
+        "changeFromPrevious": -3
       },
       {
         "municipality": "橿原市",
@@ -297,13 +297,13 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 28,
+        "totalCount": 25,
         "missingLinkIncludes": [],
         "sourceCounts": {
           "city.katsuragi.nara.jp": 14,
-          "epi-cloud.fwd.ne.jp": 14
+          "epi-cloud.fwd.ne.jp": 11
         },
-        "message": "葛城市: 28件 / sources OK"
+        "message": "葛城市: 25件 / sources OK"
       },
       {
         "expectation": {

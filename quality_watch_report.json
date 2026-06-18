@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-18T14:07:30.262Z",
-  "qualityGeneratedAt": "2026-06-18T14:04:00.420Z",
-  "itemCount": 188,
+  "generatedAt": "2026-06-18T22:13:55.562Z",
+  "qualityGeneratedAt": "2026-06-18T22:12:02.286Z",
+  "itemCount": 185,
   "criticalWatch": {
     "activeCount": 3,
     "okCount": 3,
@@ -39,23 +39,12 @@
         "municipality": "葛城市",
         "status": "ok",
         "severity": "error",
-        "count": 14,
+        "count": 11,
         "requiredLinkIncludes": [
           "0620064007200720"
         ],
-        "message": "葛城市 情報公開サイト: 14件確認",
+        "message": "葛城市 情報公開サイト: 11件確認",
         "matches": [
-          {
-            "id": "katsuragi-epi-9b1941e9",
-            "municipality": "葛城市",
-            "title": "第8-105号屋根付きベンチ設置工事",
-            "status": "受付中",
-            "announcementDate": "2026-06-05",
-            "biddingDate": "2026-06-24",
-            "winningContractor": null,
-            "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200720",
-            "pdfUrl": null
-          },
           {
             "id": "katsuragi-epi-f06e211f",
             "municipality": "葛城市",
@@ -79,17 +68,6 @@
             "pdfUrl": null
           },
           {
-            "id": "katsuragi-epi-3b10511d",
-            "municipality": "葛城市",
-            "title": "第7-102号 ストックマネジメント修繕改築計画に基づくマンホール蓋更新工事",
-            "status": "受付終了",
-            "announcementDate": "2025-09-03",
-            "biddingDate": "2025-09-25",
-            "winningContractor": null,
-            "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200720",
-            "pdfUrl": null
-          },
-          {
             "id": "katsuragi-epi-9f4cd0c2",
             "municipality": "葛城市",
             "title": "當麻スポーツセンタートイレ改修工事監理業務",
@@ -108,17 +86,6 @@
             "announcementDate": "2025-08-27",
             "biddingDate": "2025-09-18",
             "winningContractor": "細谷設計事務所",
-            "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200720",
-            "pdfUrl": null
-          },
-          {
-            "id": "katsuragi-epi-65bfda3d",
-            "municipality": "葛城市",
-            "title": "第7-603号 白光田池貯留施設設置工事",
-            "status": "落札",
-            "announcementDate": "2025-08-06",
-            "biddingDate": "2025-08-28",
-            "winningContractor": "(株)西亮建設",
             "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200720",
             "pdfUrl": null
           },
@@ -154,6 +121,39 @@
             "winningContractor": "(株)生野建設",
             "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200720",
             "pdfUrl": null
+          },
+          {
+            "id": "katsuragi-epi-92f71a52",
+            "municipality": "葛城市",
+            "title": "第7-508号 市営住宅堂の久保団地空家解体設計委託業務",
+            "status": "落札",
+            "announcementDate": "2025-05-07",
+            "biddingDate": "2025-05-28",
+            "winningContractor": "細谷設計事務所",
+            "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200720",
+            "pdfUrl": null
+          },
+          {
+            "id": "katsuragi-epi-aef9d1f0",
+            "municipality": "葛城市",
+            "title": "新庄スポーツセンタープール床改修工事",
+            "status": "受付終了",
+            "announcementDate": "2025-04-08",
+            "biddingDate": "2025-04-28",
+            "winningContractor": null,
+            "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200720",
+            "pdfUrl": null
+          },
+          {
+            "id": "katsuragi-epi-9f6cdfe9",
+            "municipality": "葛城市",
+            "title": "葛城市火葬場待合棟等トイレ改修工事",
+            "status": "受付終了",
+            "announcementDate": "2025-04-08",
+            "biddingDate": "2025-04-28",
+            "winningContractor": null,
+            "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200720",
+            "pdfUrl": null
           }
         ]
       },
@@ -181,6 +181,35 @@
             "pdfUrl": null
           }
         ]
+      }
+    ]
+  },
+  "dateIntegrity": {
+    "announcementAfterBiddingCount": 0,
+    "awardedWithoutBiddingDateCount": 0,
+    "awardedWithoutWinnerCount": 50,
+    "openWithWinnerCount": 0,
+    "sampleTitles": [
+      {
+        "municipality": "生駒市",
+        "title": "壱分小学校線支線３号歩行者空間整備工事",
+        "status": "落札",
+        "announcementDate": "2026-05-28",
+        "biddingDate": "2026-05-28"
+      },
+      {
+        "municipality": "生駒市",
+        "title": "緑ヶ丘中学校外３校屋上防水改修設計業務",
+        "status": "落札",
+        "announcementDate": "2026-05-21",
+        "biddingDate": "2026-05-21"
+      },
+      {
+        "municipality": "高取町",
+        "title": "高取町文化センター解体工事",
+        "status": "落札",
+        "announcementDate": "2026-05-11",
+        "biddingDate": "2026-05-11"
       }
     ]
   },
@@ -278,7 +307,7 @@
         "municipality": "葛城市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 28,
+        "totalCount": 25,
         "requiredLinkIncludes": [
           "city.katsuragi.nara.jp",
           "epi-cloud.fwd.ne.jp"
@@ -286,9 +315,9 @@
         "missingLinkIncludes": [],
         "sourceCounts": {
           "city.katsuragi.nara.jp": 14,
-          "epi-cloud.fwd.ne.jp": 14
+          "epi-cloud.fwd.ne.jp": 11
         },
-        "message": "葛城市: 28件 / sources OK"
+        "message": "葛城市: 25件 / sources OK"
       },
       {
         "municipality": "五條市",

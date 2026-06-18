@@ -1,9 +1,10 @@
 import fs from 'fs';
 import path from 'path';
-import type { QualitySummary } from '../src/lib/quality_summary';
+import { buildDateAuditSummary, type QualitySummary } from '../src/lib/quality_summary';
 import { evaluateCriticalWatch, type CriticalWatchResult } from '../src/lib/critical_watch';
 import { evaluateSourceCoverage, type SourceCoverageSummary } from '../src/lib/source_coverage';
 import type { BiddingItem } from '../src/types/bidding';
+import { shouldKeepBiddingItem } from '../src/scrapers/common/filter';
 
 const QUALITY_PATH = path.join(process.cwd(), 'scraper_quality.json');
 const RESULT_PATH = path.join(process.cwd(), 'scraper_result.json');
@@ -57,11 +58,52 @@ function compactItem(item: BiddingItem) {
     };
 }
 
+function assertDatasetMatchesPracticalScope(items: BiddingItem[]) {
+    const outOfScopeItems = items.filter((item) => !shouldKeepBiddingItem(item));
+    if (outOfScopeItems.length === 0) return;
+
+    const samples = outOfScopeItems
+        .slice(0, 10)
+        .map((item) => `${item.municipality}: ${item.title}`)
+        .join(' | ');
+    fail(`対象外案件が scraper_result.json に残っています: ${samples}`);
+}
+
+function assertDateIntegrity(items: BiddingItem[]) {
+    const dateAudit = buildDateAuditSummary(items);
+    const blockingIssues = [
+        dateAudit.announcementAfterBiddingCount > 0
+            ? `公告日が開札日より後の案件 ${dateAudit.announcementAfterBiddingCount}件`
+            : null,
+        dateAudit.awardedWithoutBiddingDateCount > 0
+            ? `落札なのに開札日がない案件 ${dateAudit.awardedWithoutBiddingDateCount}件`
+            : null,
+        dateAudit.openWithWinnerCount > 0
+            ? `受付中なのに落札者が入っている案件 ${dateAudit.openWithWinnerCount}件`
+            : null,
+    ].filter((issue): issue is string => Boolean(issue));
+
+    if (blockingIssues.length > 0) {
+        const samples = dateAudit.sampleTitles
+            .slice(0, 10)
+            .map((item) => `${item.municipality}: ${item.title}`)
+            .join(' | ');
+        fail(`開札・落札日の整合性エラー: ${blockingIssues.join(' / ')} / ${samples}`);
+    }
+
+    if (dateAudit.awardedWithoutWinnerCount > 0) {
+        console.warn(`[quality] 落札者未取得: ${dateAudit.awardedWithoutWinnerCount}件`);
+    }
+
+    return dateAudit;
+}
+
 function writeWatchReport(
     summary: QualitySummary,
     items: BiddingItem[],
     watch: CriticalWatchResult,
     sourceCoverage: SourceCoverageSummary,
+    dateAudit: ReturnType<typeof buildDateAuditSummary>,
 ) {
     const report = {
         generatedAt: new Date().toISOString(),
@@ -95,6 +137,7 @@ function writeWatchReport(
                 matches: result.matches.slice(0, 10).map(compactItem),
             })),
         },
+        dateIntegrity: dateAudit,
         sourceCoverage: {
             activeCount: sourceCoverage.activeCount,
             okCount: sourceCoverage.okCount,
@@ -122,6 +165,9 @@ function main() {
     const items = loadItems();
     const audit = summary.municipalityAudit;
 
+    assertDatasetMatchesPracticalScope(items);
+    const dateAudit = assertDateIntegrity(items);
+
     if (!audit) {
         fail('municipalityAudit がありません');
     }
@@ -146,7 +192,7 @@ function main() {
 
     const watch = evaluateCriticalWatch(items);
     const sourceCoverage = evaluateSourceCoverage(items);
-    writeWatchReport(summary, items, watch, sourceCoverage);
+    writeWatchReport(summary, items, watch, sourceCoverage, dateAudit);
 
     const failedWatchResults = [...watch.projectResults, ...watch.sourceResults]
         .filter((result) => result.status === 'missing' && result.severity === 'error');
