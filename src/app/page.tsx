@@ -10,6 +10,7 @@ import { MunicipalityCoverageDashboard } from '@/components/MunicipalityCoverage
 import { TargetScopePanel } from '@/components/TargetScopePanel';
 import { CriticalWatchPanel } from '@/components/CriticalWatchPanel';
 import { PracticalWorkQueue } from '@/components/PracticalWorkQueue';
+import { LiveSourceAuditPanel, type LiveSourceAuditReport } from '@/components/LiveSourceAuditPanel';
 import { NewsSection } from '@/components/NewsSection';
 import { NewsTicker } from '@/components/NewsTicker';
 import { getShortBiddingLabel } from '@/lib/bidding_schedule';
@@ -89,8 +90,10 @@ export default async function Home() {
   // Read pre-scraped data from JSON
   const jsonPath = path.join(process.cwd(), 'scraper_result.json');
   const qualityPath = path.join(process.cwd(), 'scraper_quality.json');
+  const liveAuditPath = path.join(process.cwd(), 'live_source_audit_report.json');
   let allItems: BiddingItem[] = [];
   let qualitySummary: QualitySummary | null = null;
+  let liveAuditReport: LiveSourceAuditReport | null = null;
 
   try {
     if (fs.existsSync(jsonPath)) {
@@ -100,6 +103,10 @@ export default async function Home() {
     if (fs.existsSync(qualityPath)) {
       const qualityContent = fs.readFileSync(qualityPath, 'utf-8');
       qualitySummary = JSON.parse(qualityContent);
+    }
+    if (fs.existsSync(liveAuditPath)) {
+      const liveAuditContent = fs.readFileSync(liveAuditPath, 'utf-8');
+      liveAuditReport = JSON.parse(liveAuditContent);
     }
   } catch {
     // エラー時は空配列を返す
@@ -236,6 +243,8 @@ export default async function Home() {
         <TargetScopePanel items={allItems} />
 
         <CriticalWatchPanel items={allItems} />
+
+        <LiveSourceAuditPanel report={liveAuditReport} />
 
         <PracticalWorkQueue items={allItems} />
 
