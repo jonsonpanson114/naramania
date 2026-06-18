@@ -1,9 +1,11 @@
 {
-  "generatedAt": "2026-06-18T22:25:10.289Z",
+  "generatedAt": "2026-06-18T22:29:09.052Z",
   "checkedMunicipalityCount": 25,
   "expectedItemCount": 181,
   "matchedItemCount": 181,
   "missingItemCount": 0,
+  "duplicateTitleGroupCount": 9,
+  "duplicateTitleItemCount": 19,
   "results": [
     {
       "municipality": "奈良県",
@@ -11,6 +13,8 @@
       "expectedCount": 26,
       "matchedCount": 26,
       "missingCount": 0,
+      "duplicateTitleGroupCount": 0,
+      "duplicateTitleItemCount": 0,
       "missingItems": [],
       "status": "ok"
     },
@@ -20,6 +24,8 @@
       "expectedCount": 25,
       "matchedCount": 25,
       "missingCount": 0,
+      "duplicateTitleGroupCount": 4,
+      "duplicateTitleItemCount": 8,
       "missingItems": [],
       "status": "ok"
     },
@@ -29,6 +35,8 @@
       "expectedCount": 19,
       "matchedCount": 19,
       "missingCount": 0,
+      "duplicateTitleGroupCount": 0,
+      "duplicateTitleItemCount": 0,
       "missingItems": [],
       "status": "ok"
     },
@@ -38,6 +46,8 @@
       "expectedCount": 19,
       "matchedCount": 19,
       "missingCount": 0,
+      "duplicateTitleGroupCount": 5,
+      "duplicateTitleItemCount": 11,
       "missingItems": [],
       "status": "ok"
     },
@@ -47,6 +57,8 @@
       "expectedCount": 15,
       "matchedCount": 15,
       "missingCount": 0,
+      "duplicateTitleGroupCount": 0,
+      "duplicateTitleItemCount": 0,
       "missingItems": [],
       "status": "ok"
     },
@@ -56,6 +68,8 @@
       "expectedCount": 14,
       "matchedCount": 14,
       "missingCount": 0,
+      "duplicateTitleGroupCount": 0,
+      "duplicateTitleItemCount": 0,
       "missingItems": [],
       "status": "ok"
     },
@@ -65,6 +79,8 @@
       "expectedCount": 12,
       "matchedCount": 12,
       "missingCount": 0,
+      "duplicateTitleGroupCount": 0,
+      "duplicateTitleItemCount": 0,
       "missingItems": [],
       "status": "ok"
     },
@@ -74,6 +90,8 @@
       "expectedCount": 8,
       "matchedCount": 8,
       "missingCount": 0,
+      "duplicateTitleGroupCount": 0,
+      "duplicateTitleItemCount": 0,
       "missingItems": [],
       "status": "ok"
     },
@@ -83,6 +101,8 @@
       "expectedCount": 7,
       "matchedCount": 7,
       "missingCount": 0,
+      "duplicateTitleGroupCount": 0,
+      "duplicateTitleItemCount": 0,
       "missingItems": [],
       "status": "ok"
     },
@@ -92,6 +112,8 @@
       "expectedCount": 5,
       "matchedCount": 5,
       "missingCount": 0,
+      "duplicateTitleGroupCount": 0,
+      "duplicateTitleItemCount": 0,
       "missingItems": [],
       "status": "ok"
     },
@@ -101,6 +123,8 @@
       "expectedCount": 4,
       "matchedCount": 4,
       "missingCount": 0,
+      "duplicateTitleGroupCount": 0,
+      "duplicateTitleItemCount": 0,
       "missingItems": [],
       "status": "ok"
     },
@@ -110,6 +134,8 @@
       "expectedCount": 3,
       "matchedCount": 3,
       "missingCount": 0,
+      "duplicateTitleGroupCount": 0,
+      "duplicateTitleItemCount": 0,
       "missingItems": [],
       "status": "ok"
     },
@@ -119,6 +145,8 @@
       "expectedCount": 3,
       "matchedCount": 3,
       "missingCount": 0,
+      "duplicateTitleGroupCount": 0,
+      "duplicateTitleItemCount": 0,
       "missingItems": [],
       "status": "ok"
     },
@@ -128,6 +156,8 @@
       "expectedCount": 2,
       "matchedCount": 2,
       "missingCount": 0,
+      "duplicateTitleGroupCount": 0,
+      "duplicateTitleItemCount": 0,
       "missingItems": [],
       "status": "ok"
     },
@@ -137,6 +167,8 @@
       "expectedCount": 2,
       "matchedCount": 2,
       "missingCount": 0,
+      "duplicateTitleGroupCount": 0,
+      "duplicateTitleItemCount": 0,
       "missingItems": [],
       "status": "ok"
     },
@@ -146,6 +178,8 @@
       "expectedCount": 2,
       "matchedCount": 2,
       "missingCount": 0,
+      "duplicateTitleGroupCount": 0,
+      "duplicateTitleItemCount": 0,
       "missingItems": [],
       "status": "ok"
     },
@@ -155,6 +189,8 @@
       "expectedCount": 2,
       "matchedCount": 2,
       "missingCount": 0,
+      "duplicateTitleGroupCount": 0,
+      "duplicateTitleItemCount": 0,
       "missingItems": [],
       "status": "ok"
     },
@@ -164,6 +200,8 @@
       "expectedCount": 2,
       "matchedCount": 2,
       "missingCount": 0,
+      "duplicateTitleGroupCount": 0,
+      "duplicateTitleItemCount": 0,
       "missingItems": [],
       "status": "ok"
     },
@@ -173,6 +211,8 @@
       "expectedCount": 2,
       "matchedCount": 2,
       "missingCount": 0,
+      "duplicateTitleGroupCount": 0,
+      "duplicateTitleItemCount": 0,
       "missingItems": [],
       "status": "ok"
     },
@@ -182,6 +222,8 @@
       "expectedCount": 2,
       "matchedCount": 2,
       "missingCount": 0,
+      "duplicateTitleGroupCount": 0,
+      "duplicateTitleItemCount": 0,
       "missingItems": [],
       "status": "ok"
     },
@@ -191,6 +233,8 @@
       "expectedCount": 2,
       "matchedCount": 2,
       "missingCount": 0,
+      "duplicateTitleGroupCount": 0,
+      "duplicateTitleItemCount": 0,
       "missingItems": [],
       "status": "ok"
     },
@@ -200,6 +244,8 @@
       "expectedCount": 2,
       "matchedCount": 2,
       "missingCount": 0,
+      "duplicateTitleGroupCount": 0,
+      "duplicateTitleItemCount": 0,
       "missingItems": [],
       "status": "ok"
     },
@@ -209,6 +255,8 @@
       "expectedCount": 1,
       "matchedCount": 1,
       "missingCount": 0,
+      "duplicateTitleGroupCount": 0,
+      "duplicateTitleItemCount": 0,
       "missingItems": [],
       "status": "ok"
     },
@@ -218,6 +266,8 @@
       "expectedCount": 1,
       "matchedCount": 1,
       "missingCount": 0,
+      "duplicateTitleGroupCount": 0,
+      "duplicateTitleItemCount": 0,
       "missingItems": [],
       "status": "ok"
     },
@@ -227,6 +277,8 @@
       "expectedCount": 1,
       "matchedCount": 1,
       "missingCount": 0,
+      "duplicateTitleGroupCount": 0,
+      "duplicateTitleItemCount": 0,
       "missingItems": [],
       "status": "ok"
     }

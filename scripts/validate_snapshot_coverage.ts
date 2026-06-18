@@ -43,6 +43,7 @@ function main() {
   }
 
   console.log(`[snapshot-coverage] validation passed (${summary.matchedItemCount}/${summary.expectedItemCount} expected snapshot items)`);
+  console.log(`[snapshot-coverage] duplicate title strict checks: ${summary.duplicateTitleItemCount} items / ${summary.duplicateTitleGroupCount} groups`);
   console.log(`[snapshot-coverage] report written: ${path.basename(REPORT_PATH)}`);
 }
 

@@ -20,6 +20,8 @@ export type SnapshotCoverageMunicipalityResult = {
   expectedCount: number;
   matchedCount: number;
   missingCount: number;
+  duplicateTitleGroupCount: number;
+  duplicateTitleItemCount: number;
   missingItems: SnapshotMissingItem[];
   status: SnapshotCoverageStatus;
 };
@@ -29,6 +31,8 @@ export type SnapshotCoverageSummary = {
   expectedItemCount: number;
   matchedItemCount: number;
   missingItemCount: number;
+  duplicateTitleGroupCount: number;
+  duplicateTitleItemCount: number;
   results: SnapshotCoverageMunicipalityResult[];
 };
 
@@ -55,7 +59,7 @@ function linkNeedle(item: BiddingItem): string | null {
 
   try {
     const url = new URL(value);
-    const importantParams = ['kanriNo', 'name1', 'kikanno'];
+    const importantParams = ['kanriNo', 'control_no', 'name1', 'kikanno'];
     const param = importantParams
       .map((name) => url.searchParams.get(name))
       .find(Boolean);
@@ -82,7 +86,20 @@ function buildResultKeys(items: BiddingItem[]): Set<string> {
   return keys;
 }
 
-function hasResultMatch(item: BiddingItem, resultKeys: Set<string>): boolean {
+function normalizedTitleKey(item: BiddingItem): string {
+  return `${item.municipality}:${normalizeTitle(item.title)}`;
+}
+
+function countTitleGroups(items: BiddingItem[]): Map<string, number> {
+  const counts = new Map<string, number>();
+  for (const item of items) {
+    const key = normalizedTitleKey(item);
+    counts.set(key, (counts.get(key) || 0) + 1);
+  }
+  return counts;
+}
+
+function hasResultMatch(item: BiddingItem, resultKeys: Set<string>, allowTitleFallback: boolean): boolean {
   const title = normalizeTitle(item.title);
   const dates = itemDateKeys(item);
   const link = linkNeedle(item);
@@ -90,7 +107,7 @@ function hasResultMatch(item: BiddingItem, resultKeys: Set<string>): boolean {
   if (resultKeys.has(`id:${item.id}`)) return true;
   if (link && resultKeys.has(`link:${item.municipality}:${link}`)) return true;
   if (dates.some((date) => resultKeys.has(`dated-title:${item.municipality}:${title}:${date}`))) return true;
-  return resultKeys.has(`title:${item.municipality}:${title}`);
+  return allowTitleFallback && resultKeys.has(`title:${item.municipality}:${title}`);
 }
 
 function compactMissingItem(item: BiddingItem, reason: string): SnapshotMissingItem {
@@ -114,9 +131,20 @@ export function evaluateSnapshotCoverage(
   const resultKeys = buildResultKeys(items);
   const results = Object.entries(snapshots).map<SnapshotCoverageMunicipalityResult>(([municipality, snapshotItems = []]) => {
     const expectedItems = snapshotItems.filter((item) => shouldKeepBiddingItem(item, referenceDate));
+    const titleCounts = countTitleGroups(expectedItems);
+    const duplicateTitleKeys = new Set(
+      Array.from(titleCounts.entries())
+        .filter(([, count]) => count > 1)
+        .map(([key]) => key),
+    );
     const missingItems = expectedItems
-      .filter((item) => !hasResultMatch(item, resultKeys))
-      .map((item) => compactMissingItem(item, 'snapshot item should be present in scraper_result'));
+      .filter((item) => !hasResultMatch(item, resultKeys, !duplicateTitleKeys.has(normalizedTitleKey(item))))
+      .map((item) => compactMissingItem(
+        item,
+        duplicateTitleKeys.has(normalizedTitleKey(item))
+          ? 'duplicate title snapshot item requires id, link, or date match in scraper_result'
+          : 'snapshot item should be present in scraper_result',
+      ));
 
     return {
       municipality: municipality as BiddingItem['municipality'],
@@ -124,6 +152,8 @@ export function evaluateSnapshotCoverage(
       expectedCount: expectedItems.length,
       matchedCount: expectedItems.length - missingItems.length,
       missingCount: missingItems.length,
+      duplicateTitleGroupCount: duplicateTitleKeys.size,
+      duplicateTitleItemCount: expectedItems.filter((item) => duplicateTitleKeys.has(normalizedTitleKey(item))).length,
       missingItems,
       status: missingItems.length > 0 ? 'missing' : 'ok',
     };
@@ -134,6 +164,8 @@ export function evaluateSnapshotCoverage(
     expectedItemCount: results.reduce((sum, result) => sum + result.expectedCount, 0),
     matchedItemCount: results.reduce((sum, result) => sum + result.matchedCount, 0),
     missingItemCount: results.reduce((sum, result) => sum + result.missingCount, 0),
+    duplicateTitleGroupCount: results.reduce((sum, result) => sum + result.duplicateTitleGroupCount, 0),
+    duplicateTitleItemCount: results.reduce((sum, result) => sum + result.duplicateTitleItemCount, 0),
     results,
   };
 }
