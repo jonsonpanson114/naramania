@@ -99,6 +99,26 @@ const REJECT_CASES: FilterCase[] = [
     reason: '貯留施設設置は建築本体ではない',
   },
   {
+    title: '壱分小学校線支線３号歩行者空間整備工事',
+    expected: false,
+    reason: '小学校という文字があっても歩行者空間整備は土木・道路系',
+  },
+  {
+    title: '醍醐地下歩道屋根修繕工事7-1',
+    expected: false,
+    reason: '地下歩道は建物本体ではなく土木・通路系',
+  },
+  {
+    title: '井出山体育施設テニスコート（ハードコート）修繕工事',
+    expected: false,
+    reason: 'テニスコート修繕は建築本体ではない',
+  },
+  {
+    title: '真菅小学校プールサイド改修工事',
+    expected: false,
+    reason: '学校名があってもプールサイド単体改修は対象外',
+  },
+  {
     title: 'マテリアルリサイクル推進施設発注支援業務',
     expected: false,
     reason: '清掃・リサイクル施設系の発注支援は対象外',

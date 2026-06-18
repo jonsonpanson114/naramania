@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-06-18T22:12:02.286Z",
+  "generatedAt": "2026-06-18T22:24:51.666Z",
   "source": "reapply_filter",
-  "originalCount": 188,
-  "keptCount": 185,
-  "removedCount": 3,
+  "originalCount": 186,
+  "keptCount": 186,
+  "removedCount": 0,
   "oldestAnnouncementDate": "2025-02-02",
-  "latestAnnouncementDate": "2026-06-08",
+  "latestAnnouncementDate": "2026-06-15",
   "municipalityCount": 25,
   "municipalityAudit": {
     "expectedMunicipalityCount": 25,
@@ -20,32 +20,32 @@
       },
       {
         "municipality": "葛城市",
-        "count": 25,
-        "changeFromPrevious": -3
-      },
-      {
-        "municipality": "橿原市",
-        "count": 21,
+        "count": 22,
         "changeFromPrevious": 0
       },
       {
-        "municipality": "高取町",
+        "municipality": "橿原市",
+        "count": 20,
+        "changeFromPrevious": 0
+      },
+      {
+        "municipality": "宇陀市",
         "count": 19,
         "changeFromPrevious": 0
       },
       {
         "municipality": "生駒市",
-        "count": 16,
+        "count": 18,
         "changeFromPrevious": 0
       },
       {
         "municipality": "五條市",
-        "count": 15,
+        "count": 16,
         "changeFromPrevious": 0
       },
       {
-        "municipality": "宇陀市",
-        "count": 12,
+        "municipality": "高取町",
+        "count": 14,
         "changeFromPrevious": 0
       },
       {
@@ -145,31 +145,9 @@
   "dateAudit": {
     "announcementAfterBiddingCount": 0,
     "awardedWithoutBiddingDateCount": 0,
-    "awardedWithoutWinnerCount": 50,
+    "awardedWithoutWinnerCount": 0,
     "openWithWinnerCount": 0,
-    "sampleTitles": [
-      {
-        "municipality": "生駒市",
-        "title": "壱分小学校線支線３号歩行者空間整備工事",
-        "status": "落札",
-        "announcementDate": "2026-05-28",
-        "biddingDate": "2026-05-28"
-      },
-      {
-        "municipality": "生駒市",
-        "title": "緑ヶ丘中学校外３校屋上防水改修設計業務",
-        "status": "落札",
-        "announcementDate": "2026-05-21",
-        "biddingDate": "2026-05-21"
-      },
-      {
-        "municipality": "高取町",
-        "title": "高取町文化センター解体工事",
-        "status": "落札",
-        "announcementDate": "2026-05-11",
-        "biddingDate": "2026-05-11"
-      }
-    ]
+    "sampleTitles": []
   },
   "sourceCoverage": {
     "activeCount": 25,
@@ -224,12 +202,12 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 21,
+        "totalCount": 20,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.kashihara.nara.jp": 21
+          "city.kashihara.nara.jp": 20
         },
-        "message": "橿原市: 21件 / sources OK"
+        "message": "橿原市: 20件 / sources OK"
       },
       {
         "expectation": {
@@ -242,12 +220,12 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 16,
+        "totalCount": 18,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "epi-cloud.fwd.ne.jp": 16
+          "epi-cloud.fwd.ne.jp": 18
         },
-        "message": "生駒市: 16件 / sources OK"
+        "message": "生駒市: 18件 / sources OK"
       },
       {
         "expectation": {
@@ -297,13 +275,13 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 25,
+        "totalCount": 22,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.katsuragi.nara.jp": 14,
+          "city.katsuragi.nara.jp": 11,
           "epi-cloud.fwd.ne.jp": 11
         },
-        "message": "葛城市: 25件 / sources OK"
+        "message": "葛城市: 22件 / sources OK"
       },
       {
         "expectation": {
@@ -317,13 +295,13 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 15,
+        "totalCount": 16,
         "missingLinkIncludes": [],
         "sourceCounts": {
           "city.gojo.lg.jp": 14,
-          "epi-cloud.fwd.ne.jp": 1
+          "epi-cloud.fwd.ne.jp": 2
         },
-        "message": "五條市: 15件 / sources OK"
+        "message": "五條市: 16件 / sources OK"
       },
       {
         "expectation": {
@@ -390,12 +368,12 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 12,
+        "totalCount": 19,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "epi-cloud.fwd.ne.jp": 12
+          "epi-cloud.fwd.ne.jp": 19
         },
-        "message": "宇陀市: 12件 / sources OK"
+        "message": "宇陀市: 19件 / sources OK"
       },
       {
         "expectation": {
@@ -552,12 +530,12 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 19,
+        "totalCount": 14,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "town.takatori.nara.jp": 19
+          "town.takatori.nara.jp": 14
         },
-        "message": "高取町: 19件 / sources OK"
+        "message": "高取町: 14件 / sources OK"
       },
       {
         "expectation": {
@@ -634,7 +612,7 @@
     ]
   },
   "intelligence": {
-    "itemsWithPdf": 26,
+    "itemsWithPdf": 41,
     "itemsWithDescription": 0,
     "intelligenceExtractedCount": 0,
     "geminiExtractedCount": 0,

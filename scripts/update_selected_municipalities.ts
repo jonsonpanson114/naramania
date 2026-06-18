@@ -6,7 +6,8 @@ import { UdaCityScraper } from '../src/scrapers/uda_city';
 import { KatsuragiCityScraper } from '../src/scrapers/katsuragi_city';
 import { KashiharaCityScraper } from '../src/scrapers/kashihara_city';
 import { KashibaCityScraper } from '../src/scrapers/kashiba_city';
-import { IkarugaTownScraper } from '../src/scrapers/takatori_ikaruga';
+import { IkarugaTownScraper, TakatoriTownScraper } from '../src/scrapers/takatori_ikaruga';
+import { KoryoTownScraper } from '../src/scrapers/koryo_town';
 import { OjiTownScraper } from '../src/scrapers/oji_town';
 import { HiragawaScraper } from '../src/scrapers/yamazohiragawa_city';
 import { OyodoTownScraper } from '../src/scrapers/oyodo_town';
@@ -16,6 +17,8 @@ import { GoseCityScraper } from '../src/scrapers/gose_city';
 import { AndoCityScraper } from '../src/scrapers/ando_city';
 import { shouldKeepBiddingItem } from '../src/scrapers/common/filter';
 import { BiddingItem, Scraper } from '../src/types/bidding';
+import { buildDateAuditSummary, buildIntelligenceSummary, EXPECTED_MUNICIPALITIES, readQualitySummary } from '../src/lib/quality_summary';
+import { evaluateSourceCoverage } from '../src/lib/source_coverage';
 
 const RESULT_PATH = path.join(process.cwd(), 'scraper_result.json');
 const QUALITY_PATH = path.join(process.cwd(), 'scraper_quality.json');
@@ -27,6 +30,8 @@ const SCRAPER_MAP: Record<string, Scraper> = {
     katsuragi: new KatsuragiCityScraper(),
     kashihara: new KashiharaCityScraper(),
     kashiba: new KashibaCityScraper(),
+    koryo: new KoryoTownScraper(),
+    takatori: new TakatoriTownScraper(),
     ikaruga: new IkarugaTownScraper(),
     oji: new OjiTownScraper(),
     heguri: new HiragawaScraper(),
@@ -124,24 +129,27 @@ function upsertSeenItem(
     seenContent.set(titleKey(existing), existing.id);
 }
 
-function buildDateAudit(items: BiddingItem[]) {
-    const announcementAfterBidding = items.filter(item =>
-        item.biddingDate && item.announcementDate && item.announcementDate > item.biddingDate,
-    );
-    const awardedWithoutBiddingDate = items.filter(item => item.status === '落札' && !item.biddingDate);
-    const openWithWinner = items.filter(item => item.status === '受付中' && item.winningContractor);
-    const awardedWithoutWinner = items.filter(item => item.status === '落札' && !item.winningContractor);
-
-    return {
-        announcementAfterBiddingCount: announcementAfterBidding.length,
-        awardedWithoutBiddingDateCount: awardedWithoutBiddingDate.length,
-        awardedWithoutWinnerCount: awardedWithoutWinner.length,
-        openWithWinnerCount: openWithWinner.length,
-    };
-}
-
 function writeQualitySummary(items: BiddingItem[]) {
+    const previousSummary = readQualitySummary();
     const dates = items.map(item => item.announcementDate).filter(Boolean).sort();
+    const counts = items.reduce<Record<string, number>>((acc, item) => {
+        acc[item.municipality] = (acc[item.municipality] || 0) + 1;
+        return acc;
+    }, {});
+    const previousCounts = Object.fromEntries(
+        (previousSummary?.municipalityAudit?.breakdown || []).map(entry => [entry.municipality, entry.count]),
+    );
+    const breakdown = Object.entries(counts)
+        .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'ja'))
+        .map(([municipality, count]) => ({
+            municipality,
+            count,
+            ...(Number.isFinite(previousCounts[municipality])
+                ? { changeFromPrevious: count - previousCounts[municipality] }
+                : {}),
+        }));
+    const missingMunicipalities = EXPECTED_MUNICIPALITIES.filter(municipality => !(municipality in counts));
+
     const summary = {
         generatedAt: new Date().toISOString(),
         source: 'update_selected_municipalities',
@@ -149,7 +157,18 @@ function writeQualitySummary(items: BiddingItem[]) {
         oldestAnnouncementDate: dates[0] || null,
         latestAnnouncementDate: dates[dates.length - 1] || null,
         municipalityCount: new Set(items.map(item => item.municipality)).size,
-        dateAudit: buildDateAudit(items),
+        municipalityAudit: {
+            expectedMunicipalityCount: EXPECTED_MUNICIPALITIES.length,
+            coveredMunicipalityCount: Object.keys(counts).length,
+            missingMunicipalities,
+            zeroCountMunicipalities: missingMunicipalities,
+            breakdown,
+            retainedFromPrevious: previousSummary?.municipalityAudit?.retainedFromPrevious || [],
+            issues: previousSummary?.municipalityAudit?.issues || [],
+        },
+        dateAudit: buildDateAuditSummary(items),
+        sourceCoverage: evaluateSourceCoverage(items),
+        intelligence: buildIntelligenceSummary(items, previousSummary?.intelligence?.lastAugmentedAt),
     };
 
     fs.writeFileSync(QUALITY_PATH, JSON.stringify(summary, null, 2), 'utf-8');

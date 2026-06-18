@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-06-18T22:12:41.215Z",
+  "generatedAt": "2026-06-18T22:25:10.289Z",
   "checkedMunicipalityCount": 25,
-  "expectedItemCount": 185,
-  "matchedItemCount": 185,
+  "expectedItemCount": 181,
+  "matchedItemCount": 181,
   "missingItemCount": 0,
   "results": [
     {
@@ -26,8 +26,8 @@
     {
       "municipality": "橿原市",
       "snapshotCount": 23,
-      "expectedCount": 21,
-      "matchedCount": 21,
+      "expectedCount": 19,
+      "matchedCount": 19,
       "missingCount": 0,
       "missingItems": [],
       "status": "ok"
@@ -42,19 +42,19 @@
       "status": "ok"
     },
     {
-      "municipality": "生駒市",
-      "snapshotCount": 16,
-      "expectedCount": 16,
-      "matchedCount": 16,
+      "municipality": "五條市",
+      "snapshotCount": 15,
+      "expectedCount": 15,
+      "matchedCount": 15,
       "missingCount": 0,
       "missingItems": [],
       "status": "ok"
     },
     {
-      "municipality": "五條市",
-      "snapshotCount": 15,
-      "expectedCount": 15,
-      "matchedCount": 15,
+      "municipality": "生駒市",
+      "snapshotCount": 16,
+      "expectedCount": 14,
+      "matchedCount": 14,
       "missingCount": 0,
       "missingItems": [],
       "status": "ok"
