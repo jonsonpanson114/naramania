@@ -16,7 +16,7 @@ dotenv.config({ path: path.join(__dirname, '.env.local') });
 
 const apiKey = process.env.GOOGLE_GENERATIVE_AI_API_KEY;
 const genAI = new GoogleGenerativeAI(apiKey);
-const model = genAI.getGenerativeModel({ model: 'gemini-2.0-flash' });
+const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' });
 
 const ANDO_LINKS = [
     'https://www.town.ando.nara.jp/cmsfiles/contents/0000003/3715/kiroku.pdf',
@@ -81,3 +81,4 @@ async function run() {
 }
 
 run();
+

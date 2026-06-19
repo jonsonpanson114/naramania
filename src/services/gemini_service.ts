@@ -34,7 +34,15 @@ const BIDDING_INFO_SCHEMA = {
 };
 
 const PDF_EXTRACTION_MODEL = process.env.GOOGLE_GENERATIVE_AI_PDF_MODEL || "gemini-2.5-flash";
-const TEXT_EXTRACTION_MODEL = process.env.GOOGLE_GENERATIVE_AI_TEXT_MODEL || "gemini-2.0-flash-lite";
+const TEXT_EXTRACTION_MODEL = process.env.GOOGLE_GENERATIVE_AI_TEXT_MODEL || "gemini-2.5-flash-lite";
+
+function isRetryableStatus(status: number): boolean {
+    return status === 429 || status === 500 || status === 503;
+}
+
+function getErrorStatus(error: unknown): number {
+    return error && typeof error === 'object' && 'status' in error ? (error.status as number) : 500;
+}
 
 export async function extractBiddingInfoFromPDF(pdfBuffer: Buffer, mimeType: string = "application/pdf"): Promise<ExtractedBiddingInfo | null> {
     const apiKey = process.env.GOOGLE_GENERATIVE_AI_API_KEY || process.env.GEMINI_API_KEY || "";
@@ -69,8 +77,8 @@ export async function extractBiddingInfoFromPDF(pdfBuffer: Buffer, mimeType: str
             ]);
             return JSON.parse(result.response.text());
         } catch (error: unknown) {
-            const status = error && typeof error === 'object' && 'status' in error ? (error.status as number) : 500;
-            if ((status === 503 || status === 429 || status === 500) && retries > 1) {
+            const status = getErrorStatus(error);
+            if (isRetryableStatus(status) && retries > 1) {
                 const waitTime = status === 429 ? 20000 : 10000;
                 await new Promise(resolve => setTimeout(resolve, waitTime));
                 retries--;
@@ -104,8 +112,8 @@ export async function extractBiddingInfoFromText(text: string): Promise<Extracte
             const result = await model.generateContent(prompt);
             return JSON.parse(result.response.text());
         } catch (error: unknown) {
-            const status = error && typeof error === 'object' && 'status' in error ? (error.status as number) : 500;
-            if ((status === 503 || status === 429 || status === 500) && retries > 1) {
+            const status = getErrorStatus(error);
+            if (isRetryableStatus(status) && retries > 1) {
                 const waitTime = status === 429 ? 20000 : 10000;
                 await new Promise(resolve => setTimeout(resolve, waitTime));
                 retries--;
@@ -175,8 +183,8 @@ ${titles.map((title, index) => `${index + 1}. ${title}`).join("\n")}
             const parsed = JSON.parse(result.response.text()) as { results?: TargetedPdfResultInfo[] };
             return parsed.results || [];
         } catch (error: unknown) {
-            const status = error && typeof error === 'object' && 'status' in error ? (error.status as number) : 500;
-            if ((status === 503 || status === 429 || status === 500) && retries > 1) {
+            const status = getErrorStatus(error);
+            if (isRetryableStatus(status) && retries > 1) {
                 await new Promise(resolve => setTimeout(resolve, status === 429 ? 20000 : 10000));
                 retries--;
                 continue;

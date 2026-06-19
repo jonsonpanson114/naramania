@@ -6,10 +6,8 @@ async function listModels() {
     const genAI = new GoogleGenerativeAI(apiKey);
     const modelsToTry = [
         "gemini-2.5-flash",
-        "gemini-2.0-flash",
-        "gemini-2.0-flash-lite",
-        "gemini-2.0-flash",
-        "gemini-2.0-pro-exp-02-05"
+        "gemini-2.5-flash-lite",
+        "gemini-3.1-flash-lite",
     ];
     for (const m of modelsToTry) {
         try {
@@ -18,8 +16,10 @@ async function listModels() {
             await model.generateContent("test");
             console.log(`SUCCESS with ${m}!`);
             return;
-        } catch (e) {
-            console.error(`Error with ${m}:`, e.status, e.statusText);
+        } catch (e: unknown) {
+            const status = e && typeof e === 'object' && 'status' in e ? e.status : undefined;
+            const statusText = e && typeof e === 'object' && 'statusText' in e ? e.statusText : undefined;
+            console.error(`Error with ${m}:`, status, statusText);
         }
     }
 }
