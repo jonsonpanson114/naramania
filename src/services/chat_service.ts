@@ -212,9 +212,15 @@ function normalizeText(value: string): string {
 }
 
 function normalizeProjectText(value: string): string {
-    return normalizeText(stripQueryNoise(value))
+    let normalized = normalizeText(stripQueryNoise(value))
         .replace(/[「」『』【】()（）!?！？:：,，.。・]/g, '')
         .replace(/\s+/g, '');
+    let previous = '';
+    while (previous !== normalized) {
+        previous = normalized;
+        normalized = normalized.replace(/(?:ありますか|あります|あるか|ある|ですか|です|について|に関して|は|って|の)$/u, '');
+    }
+    return normalized;
 }
 
 function stripQueryNoise(value: string): string {
@@ -559,10 +565,10 @@ function findLocalMatches(query: string, items: BiddingItem[], intent: QueryInte
     if (intent.wantsOpen && !intent.asksSpecificProject) {
         candidates = candidates.filter(item => item.status === '受付中');
     }
-    if (intent.wantsDesign && !intent.wantsConstruction) {
+    if (intent.wantsDesign && !intent.wantsConstruction && !intent.asksSpecificProject) {
         candidates = candidates.filter(item => item.type === 'コンサル' || /設計|監理/.test(item.title));
     }
-    if (intent.wantsConstruction && !intent.wantsDesign) {
+    if (intent.wantsConstruction && !intent.wantsDesign && !intent.asksSpecificProject) {
         candidates = candidates.filter(item => item.type === '建築' || item.type === '工事');
     }
     if (weekRange) {

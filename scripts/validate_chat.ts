@@ -46,6 +46,37 @@ async function main() {
     fail('今週の開札質問の回答が空です');
   }
 
+  const katsuragi = await answerBiddingQuestionWithContext('葛城市立中学校トイレ改修工事は？');
+  assertIncludes(katsuragi.answer, '葛城市立中学校トイレ改修工事設計業務', '葛城市トイレ案件回答');
+  assertIncludes(katsuragi.answer, '葛城市', '葛城市トイレ案件回答');
+  assertIncludes(katsuragi.answer, '2026-06-12', '葛城市トイレ案件回答');
+  if (katsuragi.model !== 'local-answer') {
+    fail(`葛城市トイレ案件はローカル確定回答で返すべきです: model=${katsuragi.model}`);
+  }
+
+  const koriyamaWinner = await answerBiddingQuestionWithContext('大和郡山市立スポーツ会館体育室床修繕の落札者は？');
+  assertIncludes(koriyamaWinner.answer, '大和郡山市立スポーツ会館体育室床修繕', '大和郡山市落札者回答');
+  assertIncludes(koriyamaWinner.answer, 'マツダ塗装株式会社', '大和郡山市落札者回答');
+  if (koriyamaWinner.model !== 'local-answer') {
+    fail(`大和郡山市落札者はローカル確定回答で返すべきです: model=${koriyamaWinner.model}`);
+  }
+
+  const naraRoof = await answerBiddingQuestionWithContext('富雄中学校校舎屋上防水改修工事はある？');
+  assertIncludes(naraRoof.answer, '富雄中学校校舎屋上防水改修工事', '奈良市屋上防水案件回答');
+  assertIncludes(naraRoof.answer, '奈良市', '奈良市屋上防水案件回答');
+  assertIncludes(naraRoof.answer, '2026-07-07', '奈良市屋上防水案件回答');
+  if (naraRoof.model !== 'local-answer') {
+    fail(`奈良市屋上防水案件はローカル確定回答で返すべきです: model=${naraRoof.model}`);
+  }
+
+  const kashibaDesign = await answerBiddingQuestionWithContext('志都美小学校改築工事に伴う実施設計業務はある？');
+  assertIncludes(kashibaDesign.answer, '志都美小学校改築工事に伴う実施設計業務', '香芝市設計案件回答');
+  assertIncludes(kashibaDesign.answer, '香芝市', '香芝市設計案件回答');
+  assertIncludes(kashibaDesign.answer, '2026-07-10', '香芝市設計案件回答');
+  if (kashibaDesign.model !== 'local-answer') {
+    fail(`香芝市設計案件はローカル確定回答で返すべきです: model=${kashibaDesign.model}`);
+  }
+
   console.log('[chat] validation passed');
 }
 
