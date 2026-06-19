@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-06-18T22:24:51.666Z",
+  "generatedAt": "2026-06-19T11:24:11.147Z",
   "source": "reapply_filter",
-  "originalCount": 186,
-  "keptCount": 186,
+  "originalCount": 192,
+  "keptCount": 192,
   "removedCount": 0,
   "oldestAnnouncementDate": "2025-02-02",
-  "latestAnnouncementDate": "2026-06-15",
+  "latestAnnouncementDate": "2026-06-18",
   "municipalityCount": 25,
   "municipalityAudit": {
     "expectedMunicipalityCount": 25,
@@ -50,12 +50,12 @@
       },
       {
         "municipality": "香芝市",
-        "count": 8,
+        "count": 9,
         "changeFromPrevious": 0
       },
       {
         "municipality": "奈良市",
-        "count": 7,
+        "count": 9,
         "changeFromPrevious": 0
       },
       {
@@ -64,8 +64,18 @@
         "changeFromPrevious": 0
       },
       {
+        "municipality": "大和郡山市",
+        "count": 4,
+        "changeFromPrevious": 0
+      },
+      {
         "municipality": "天理市",
         "count": 4,
+        "changeFromPrevious": 0
+      },
+      {
+        "municipality": "御所市",
+        "count": 3,
         "changeFromPrevious": 0
       },
       {
@@ -80,11 +90,6 @@
       },
       {
         "municipality": "安堵町",
-        "count": 2,
-        "changeFromPrevious": 0
-      },
-      {
-        "municipality": "御所市",
         "count": 2,
         "changeFromPrevious": 0
       },
@@ -105,11 +110,6 @@
       },
       {
         "municipality": "大淀町",
-        "count": 2,
-        "changeFromPrevious": 0
-      },
-      {
-        "municipality": "大和郡山市",
         "count": 2,
         "changeFromPrevious": 0
       },
@@ -184,12 +184,12 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 7,
+        "totalCount": 9,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "nara.efftis.jp": 7
+          "nara.efftis.jp": 9
         },
-        "message": "奈良市: 7件 / sources OK"
+        "message": "奈良市: 9件 / sources OK"
       },
       {
         "expectation": {
@@ -256,12 +256,12 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 2,
+        "totalCount": 4,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.yamatokoriyama.lg.jp": 2
+          "city.yamatokoriyama.lg.jp": 4
         },
-        "message": "大和郡山市: 2件 / sources OK"
+        "message": "大和郡山市: 4件 / sources OK"
       },
       {
         "expectation": {
@@ -314,12 +314,12 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 2,
+        "totalCount": 3,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.gose.nara.jp": 2
+          "city.gose.nara.jp": 3
         },
-        "message": "御所市: 2件 / sources OK"
+        "message": "御所市: 3件 / sources OK"
       },
       {
         "expectation": {
@@ -422,12 +422,12 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 8,
+        "totalCount": 9,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.kashiba.lg.jp": 8
+          "city.kashiba.lg.jp": 9
         },
-        "message": "香芝市: 8件 / sources OK"
+        "message": "香芝市: 9件 / sources OK"
       },
       {
         "expectation": {
@@ -612,7 +612,7 @@
     ]
   },
   "intelligence": {
-    "itemsWithPdf": 41,
+    "itemsWithPdf": 42,
     "itemsWithDescription": 0,
     "intelligenceExtractedCount": 0,
     "geminiExtractedCount": 0,

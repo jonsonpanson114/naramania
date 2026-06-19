@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import { NaraCityScraper } from '../src/scrapers/nara_city';
 import { GojoCityScraper } from '../src/scrapers/gojo_city';
 import { IkomaCityScraper } from '../src/scrapers/ikoma_city';
 import { UdaCityScraper } from '../src/scrapers/uda_city';
@@ -24,6 +25,8 @@ const RESULT_PATH = path.join(process.cwd(), 'scraper_result.json');
 const QUALITY_PATH = path.join(process.cwd(), 'scraper_quality.json');
 
 const SCRAPER_MAP: Record<string, Scraper> = {
+    nara: new NaraCityScraper(),
+    nara_city: new NaraCityScraper(),
     gojo: new GojoCityScraper(),
     ikoma: new IkomaCityScraper(),
     uda: new UdaCityScraper(),

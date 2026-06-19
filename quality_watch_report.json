@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-18T22:25:12.219Z",
-  "qualityGeneratedAt": "2026-06-18T22:24:51.666Z",
-  "itemCount": 186,
+  "generatedAt": "2026-06-19T11:30:08.918Z",
+  "qualityGeneratedAt": "2026-06-19T11:24:11.147Z",
+  "itemCount": 192,
   "criticalWatch": {
     "activeCount": 3,
     "okCount": 3,
@@ -226,15 +226,15 @@
         "municipality": "奈良市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 7,
+        "totalCount": 9,
         "requiredLinkIncludes": [
           "nara.efftis.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "nara.efftis.jp": 7
+          "nara.efftis.jp": 9
         },
-        "message": "奈良市: 7件 / sources OK"
+        "message": "奈良市: 9件 / sources OK"
       },
       {
         "municipality": "橿原市",
@@ -282,15 +282,15 @@
         "municipality": "大和郡山市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 2,
+        "totalCount": 4,
         "requiredLinkIncludes": [
           "city.yamatokoriyama.lg.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.yamatokoriyama.lg.jp": 2
+          "city.yamatokoriyama.lg.jp": 4
         },
-        "message": "大和郡山市: 2件 / sources OK"
+        "message": "大和郡山市: 4件 / sources OK"
       },
       {
         "municipality": "葛城市",
@@ -328,15 +328,15 @@
         "municipality": "御所市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 2,
+        "totalCount": 3,
         "requiredLinkIncludes": [
           "city.gose.nara.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.gose.nara.jp": 2
+          "city.gose.nara.jp": 3
         },
-        "message": "御所市: 2件 / sources OK"
+        "message": "御所市: 3件 / sources OK"
       },
       {
         "municipality": "天理市",
@@ -412,15 +412,15 @@
         "municipality": "香芝市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 8,
+        "totalCount": 9,
         "requiredLinkIncludes": [
           "city.kashiba.lg.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.kashiba.lg.jp": 8
+          "city.kashiba.lg.jp": 9
         },
-        "message": "香芝市: 8件 / sources OK"
+        "message": "香芝市: 9件 / sources OK"
       },
       {
         "municipality": "川西町",
