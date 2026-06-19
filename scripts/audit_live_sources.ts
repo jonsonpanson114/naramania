@@ -39,6 +39,12 @@ type ScraperAuditResult = {
   warnings: string[];
 };
 
+type FilteredScrapers = {
+  selected: Scraper[];
+  onlyMunicipalities: string[];
+  excludedMunicipalities: string[];
+};
+
 function parseMunicipalityEnvList(value?: string): Set<string> {
   if (!value) return new Set();
   return new Set(value.split(/[,\n]/).map((entry) => entry.trim()).filter(Boolean));
@@ -81,24 +87,39 @@ function loadCurrentItems(): BiddingItem[] {
   return JSON.parse(fs.readFileSync(RESULT_PATH, 'utf-8')) as BiddingItem[];
 }
 
-function filterScrapers(scrapers: Scraper[]): Scraper[] {
+function filterScrapers(scrapers: Scraper[]): FilteredScrapers {
   const only = parseMunicipalityEnvList(process.env.LIVE_AUDIT_ONLY_MUNICIPALITIES || process.env.SCRAPE_ONLY_MUNICIPALITIES);
   const except = parseMunicipalityEnvList(process.env.LIVE_AUDIT_EXCEPT_MUNICIPALITIES || process.env.SCRAPE_EXCEPT_MUNICIPALITIES);
-  return scrapers.filter((scraper) => {
+  const selected = scrapers.filter((scraper) => {
     if (only.size > 0 && !only.has(scraper.municipality)) return false;
     if (except.has(scraper.municipality)) return false;
     return true;
   });
+
+  const selectedMunicipalities = new Set(selected.map((scraper) => scraper.municipality));
+  const excludedMunicipalities = scrapers
+    .map((scraper) => scraper.municipality)
+    .filter((municipality) => !selectedMunicipalities.has(municipality));
+
+  return {
+    selected,
+    onlyMunicipalities: Array.from(only),
+    excludedMunicipalities,
+  };
 }
 
 async function main() {
   const currentItems = loadCurrentItems();
-  const scrapers = filterScrapers(createScrapers());
+  const scraperFilter = filterScrapers(createScrapers());
+  const scrapers = scraperFilter.selected;
   if (scrapers.length === 0) {
     throw new Error('監査対象の scraper がありません');
   }
 
   console.log(`[live-audit] 対象自治体: ${scrapers.map((scraper) => scraper.municipality).join(', ')}`);
+  if (scraperFilter.excludedMunicipalities.length > 0) {
+    console.log(`[live-audit] 除外自治体: ${scraperFilter.excludedMunicipalities.join(', ')}`);
+  }
 
   const liveSnapshots: MunicipalitySnapshots = {};
   const scraperResults: ScraperAuditResult[] = [];
@@ -140,6 +161,8 @@ async function main() {
     generatedAt: new Date().toISOString(),
     currentItemCount: currentItems.length,
     checkedMunicipalities: scrapers.map((scraper) => scraper.municipality),
+    onlyMunicipalities: scraperFilter.onlyMunicipalities,
+    excludedMunicipalities: scraperFilter.excludedMunicipalities,
     scraperErrorCount,
     scraperResults,
     coverage,

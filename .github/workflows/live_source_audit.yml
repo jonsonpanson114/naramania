@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
     inputs:
       municipalities:
-        description: '監査する自治体。空欄なら全自治体。カンマ区切り例: 五條市,葛城市'
+        description: '監査する自治体。空欄なら奈良県を除く全自治体。カンマ区切り例: 五條市,葛城市'
         required: false
         default: ''
       allow_scraper_errors:
@@ -32,6 +32,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       LIVE_AUDIT_ONLY_MUNICIPALITIES: ${{ github.event.inputs.municipalities || '' }}
+      LIVE_AUDIT_EXCEPT_MUNICIPALITIES: ${{ github.event.inputs.municipalities && '' || '奈良県' }}
       LIVE_AUDIT_ALLOW_SCRAPER_ERRORS: ${{ github.event.inputs.allow_scraper_errors == 'true' && '1' || '0' }}
     steps:
       - uses: actions/checkout@v6
