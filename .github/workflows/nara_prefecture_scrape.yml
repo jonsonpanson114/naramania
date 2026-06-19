@@ -8,8 +8,8 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: naramania-data-publish
-  cancel-in-progress: false
+  group: naramania-nara-prefecture-scrape
+  cancel-in-progress: true
 
 permissions:
   contents: write
@@ -17,6 +17,7 @@ permissions:
 jobs:
   scrape-nara-prefecture:
     runs-on: [self-hosted, windows, x64]
+    timeout-minutes: 120
     env:
       SCRAPE_ONLY_MUNICIPALITIES: 奈良県
       QUALITY_GUARDED_MUNICIPALITIES: 奈良県
