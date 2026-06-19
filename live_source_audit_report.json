@@ -1,28 +1,30 @@
 {
-  "generatedAt": "2026-06-19T11:26:45.584Z",
-  "currentItemCount": 192,
+  "generatedAt": "2026-06-19T11:42:13.010Z",
+  "currentItemCount": 189,
   "checkedMunicipalities": [
     "奈良市",
+    "生駒市",
     "大和郡山市",
     "御所市",
+    "宇陀市",
     "香芝市"
   ],
   "onlyMunicipalities": [
-    "大和郡山市",
     "奈良市",
+    "大和郡山市",
+    "御所市",
     "香芝市",
-    "御所市"
+    "宇陀市",
+    "生駒市"
   ],
   "excludedMunicipalities": [
     "奈良県",
     "橿原市",
-    "生駒市",
     "大和高田市",
     "葛城市",
     "五條市",
     "天理市",
     "桜井市",
-    "宇陀市",
     "田原本町",
     "広陵町",
     "川西町",
@@ -47,6 +49,14 @@
       "errors": []
     },
     {
+      "municipality": "生駒市",
+      "rawCount": 17,
+      "keptCount": 17,
+      "rejectedCount": 0,
+      "warnings": [],
+      "errors": []
+    },
+    {
       "municipality": "大和郡山市",
       "rawCount": 7,
       "keptCount": 5,
@@ -56,9 +66,17 @@
     },
     {
       "municipality": "御所市",
-      "rawCount": 4,
-      "keptCount": 4,
+      "rawCount": 3,
+      "keptCount": 3,
       "rejectedCount": 0,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "municipality": "宇陀市",
+      "rawCount": 19,
+      "keptCount": 18,
+      "rejectedCount": 1,
       "warnings": [],
       "errors": []
     },
@@ -72,13 +90,35 @@
     }
   ],
   "coverage": {
-    "checkedMunicipalityCount": 4,
-    "expectedItemCount": 33,
-    "matchedItemCount": 33,
+    "checkedMunicipalityCount": 6,
+    "expectedItemCount": 67,
+    "matchedItemCount": 67,
     "missingItemCount": 0,
     "duplicateTitleGroupCount": 8,
     "duplicateTitleItemCount": 16,
     "results": [
+      {
+        "municipality": "宇陀市",
+        "snapshotCount": 19,
+        "expectedCount": 18,
+        "matchedCount": 18,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 0,
+        "duplicateTitleItemCount": 0,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
+        "municipality": "生駒市",
+        "snapshotCount": 17,
+        "expectedCount": 17,
+        "matchedCount": 17,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 0,
+        "duplicateTitleItemCount": 0,
+        "missingItems": [],
+        "status": "ok"
+      },
       {
         "municipality": "奈良市",
         "snapshotCount": 15,
@@ -114,9 +154,9 @@
       },
       {
         "municipality": "御所市",
-        "snapshotCount": 4,
-        "expectedCount": 4,
-        "matchedCount": 4,
+        "snapshotCount": 3,
+        "expectedCount": 3,
+        "matchedCount": 3,
         "missingCount": 0,
         "duplicateTitleGroupCount": 1,
         "duplicateTitleItemCount": 2,

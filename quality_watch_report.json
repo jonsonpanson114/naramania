@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-19T11:30:08.918Z",
-  "qualityGeneratedAt": "2026-06-19T11:24:11.147Z",
-  "itemCount": 192,
+  "generatedAt": "2026-06-19T11:37:08.798Z",
+  "qualityGeneratedAt": "2026-06-19T11:36:29.400Z",
+  "itemCount": 189,
   "criticalWatch": {
     "activeCount": 3,
     "okCount": 3,
@@ -254,15 +254,15 @@
         "municipality": "生駒市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 18,
+        "totalCount": 17,
         "requiredLinkIncludes": [
           "epi-cloud.fwd.ne.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "epi-cloud.fwd.ne.jp": 18
+          "epi-cloud.fwd.ne.jp": 17
         },
-        "message": "生駒市: 18件 / sources OK"
+        "message": "生駒市: 17件 / sources OK"
       },
       {
         "municipality": "大和高田市",
@@ -328,15 +328,15 @@
         "municipality": "御所市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 3,
+        "totalCount": 2,
         "requiredLinkIncludes": [
           "city.gose.nara.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.gose.nara.jp": 3
+          "city.gose.nara.jp": 2
         },
-        "message": "御所市: 3件 / sources OK"
+        "message": "御所市: 2件 / sources OK"
       },
       {
         "municipality": "天理市",
@@ -370,15 +370,15 @@
         "municipality": "宇陀市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 19,
+        "totalCount": 18,
         "requiredLinkIncludes": [
           "epi-cloud.fwd.ne.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "epi-cloud.fwd.ne.jp": 19
+          "epi-cloud.fwd.ne.jp": 18
         },
-        "message": "宇陀市: 19件 / sources OK"
+        "message": "宇陀市: 18件 / sources OK"
       },
       {
         "municipality": "田原本町",

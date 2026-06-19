@@ -54,6 +54,16 @@ const REJECT_CASES: FilterCase[] = [
     reason: '空調・設備更新は対象外',
   },
   {
+    title: 'アザレアホール屋上排煙ファン更新工事',
+    expected: false,
+    reason: 'ホール名や屋上があっても排煙ファン単体更新は対象外',
+  },
+  {
+    title: '消防防災施設整備事業 耐震性貯水槽設置工事',
+    expected: false,
+    reason: '貯水槽設置は建築本体ではなく設備・インフラ寄り',
+  },
+  {
     title: '道路舗装修繕工事',
     expected: false,
     reason: '道路・舗装は土木系で対象外',

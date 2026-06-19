@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-06-19T11:24:11.147Z",
+  "generatedAt": "2026-06-19T11:36:29.400Z",
   "source": "reapply_filter",
   "originalCount": 192,
-  "keptCount": 192,
-  "removedCount": 0,
+  "keptCount": 189,
+  "removedCount": 3,
   "oldestAnnouncementDate": "2025-02-02",
   "latestAnnouncementDate": "2026-06-18",
   "municipalityCount": 25,
@@ -30,13 +30,13 @@
       },
       {
         "municipality": "宇陀市",
-        "count": 19,
-        "changeFromPrevious": 0
+        "count": 18,
+        "changeFromPrevious": -1
       },
       {
         "municipality": "生駒市",
-        "count": 18,
-        "changeFromPrevious": 0
+        "count": 17,
+        "changeFromPrevious": -1
       },
       {
         "municipality": "五條市",
@@ -74,11 +74,6 @@
         "changeFromPrevious": 0
       },
       {
-        "municipality": "御所市",
-        "count": 3,
-        "changeFromPrevious": 0
-      },
-      {
         "municipality": "広陵町",
         "count": 3,
         "changeFromPrevious": 0
@@ -92,6 +87,11 @@
         "municipality": "安堵町",
         "count": 2,
         "changeFromPrevious": 0
+      },
+      {
+        "municipality": "御所市",
+        "count": 2,
+        "changeFromPrevious": -1
       },
       {
         "municipality": "桜井市",
@@ -220,12 +220,12 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 18,
+        "totalCount": 17,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "epi-cloud.fwd.ne.jp": 18
+          "epi-cloud.fwd.ne.jp": 17
         },
-        "message": "生駒市: 18件 / sources OK"
+        "message": "生駒市: 17件 / sources OK"
       },
       {
         "expectation": {
@@ -314,12 +314,12 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 3,
+        "totalCount": 2,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.gose.nara.jp": 3
+          "city.gose.nara.jp": 2
         },
-        "message": "御所市: 3件 / sources OK"
+        "message": "御所市: 2件 / sources OK"
       },
       {
         "expectation": {
@@ -368,12 +368,12 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 19,
+        "totalCount": 18,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "epi-cloud.fwd.ne.jp": 19
+          "epi-cloud.fwd.ne.jp": 18
         },
-        "message": "宇陀市: 19件 / sources OK"
+        "message": "宇陀市: 18件 / sources OK"
       },
       {
         "expectation": {
