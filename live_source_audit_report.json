@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-23T11:45:30.409Z",
+  "generatedAt": "2026-06-24T06:00:13.986Z",
   "currentItemCount": 189,
   "checkedMunicipalities": [
     "奈良市",
@@ -91,8 +91,8 @@
     },
     {
       "municipality": "御所市",
-      "rawCount": 3,
-      "keptCount": 3,
+      "rawCount": 2,
+      "keptCount": 2,
       "rejectedCount": 0,
       "warnings": [],
       "errors": []
@@ -195,8 +195,8 @@
     },
     {
       "municipality": "斑鳩町",
-      "rawCount": 2,
-      "keptCount": 2,
+      "rawCount": 3,
+      "keptCount": 3,
       "rejectedCount": 0,
       "warnings": [],
       "errors": []
@@ -204,8 +204,8 @@
     {
       "municipality": "三郷町",
       "rawCount": 21,
-      "keptCount": 11,
-      "rejectedCount": 10,
+      "keptCount": 10,
+      "rejectedCount": 11,
       "warnings": [],
       "errors": []
     },
@@ -228,12 +228,34 @@
   ],
   "coverage": {
     "checkedMunicipalityCount": 24,
-    "expectedItemCount": 199,
-    "matchedItemCount": 199,
-    "missingItemCount": 0,
-    "duplicateTitleGroupCount": 27,
-    "duplicateTitleItemCount": 57,
+    "expectedItemCount": 198,
+    "matchedItemCount": 197,
+    "missingItemCount": 1,
+    "duplicateTitleGroupCount": 26,
+    "duplicateTitleItemCount": 55,
     "results": [
+      {
+        "municipality": "斑鳩町",
+        "snapshotCount": 3,
+        "expectedCount": 3,
+        "matchedCount": 2,
+        "missingCount": 1,
+        "duplicateTitleGroupCount": 0,
+        "duplicateTitleItemCount": 0,
+        "missingItems": [
+          {
+            "id": "斑鳩町-2026-06-24-安田家住宅維持補修工事",
+            "municipality": "斑鳩町",
+            "title": "安田家住宅維持補修工事",
+            "status": "受付中",
+            "announcementDate": "2026-06-24",
+            "biddingDate": "2026-07-15",
+            "link": "https://www.town.ikaruga.nara.jp/0000002502.html",
+            "reason": "snapshot item should be present in scraper_result"
+          }
+        ],
+        "status": "missing"
+      },
       {
         "municipality": "五條市",
         "snapshotCount": 62,
@@ -314,8 +336,8 @@
       {
         "municipality": "三郷町",
         "snapshotCount": 21,
-        "expectedCount": 11,
-        "matchedCount": 11,
+        "expectedCount": 10,
+        "matchedCount": 10,
         "missingCount": 0,
         "duplicateTitleGroupCount": 0,
         "duplicateTitleItemCount": 0,
@@ -367,17 +389,6 @@
         "status": "ok"
       },
       {
-        "municipality": "御所市",
-        "snapshotCount": 3,
-        "expectedCount": 3,
-        "matchedCount": 3,
-        "missingCount": 0,
-        "duplicateTitleGroupCount": 1,
-        "duplicateTitleItemCount": 2,
-        "missingItems": [],
-        "status": "ok"
-      },
-      {
         "municipality": "広陵町",
         "snapshotCount": 3,
         "expectedCount": 3,
@@ -422,6 +433,17 @@
         "status": "ok"
       },
       {
+        "municipality": "御所市",
+        "snapshotCount": 2,
+        "expectedCount": 2,
+        "matchedCount": 2,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 0,
+        "duplicateTitleItemCount": 0,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
         "municipality": "桜井市",
         "snapshotCount": 2,
         "expectedCount": 2,
@@ -445,17 +467,6 @@
       },
       {
         "municipality": "山添村",
-        "snapshotCount": 2,
-        "expectedCount": 2,
-        "matchedCount": 2,
-        "missingCount": 0,
-        "duplicateTitleGroupCount": 0,
-        "duplicateTitleItemCount": 0,
-        "missingItems": [],
-        "status": "ok"
-      },
-      {
-        "municipality": "斑鳩町",
         "snapshotCount": 2,
         "expectedCount": 2,
         "matchedCount": 2,
