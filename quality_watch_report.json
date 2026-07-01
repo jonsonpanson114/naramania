@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-19T11:37:08.798Z",
-  "qualityGeneratedAt": "2026-06-19T11:36:29.400Z",
-  "itemCount": 189,
+  "generatedAt": "2026-07-01T11:58:22.650Z",
+  "qualityGeneratedAt": "2026-07-01T11:57:28.718Z",
+  "itemCount": 191,
   "criticalWatch": {
     "activeCount": 3,
     "okCount": 3,
@@ -510,15 +510,15 @@
         "municipality": "斑鳩町",
         "status": "ok",
         "severity": "error",
-        "totalCount": 2,
+        "totalCount": 3,
         "requiredLinkIncludes": [
           "town.ikaruga.nara.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "town.ikaruga.nara.jp": 2
+          "town.ikaruga.nara.jp": 3
         },
-        "message": "斑鳩町: 2件 / sources OK"
+        "message": "斑鳩町: 3件 / sources OK"
       },
       {
         "municipality": "三郷町",
@@ -538,15 +538,15 @@
         "municipality": "王寺町",
         "status": "ok",
         "severity": "error",
-        "totalCount": 1,
+        "totalCount": 2,
         "requiredLinkIncludes": [
           "town.oji.nara.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "town.oji.nara.jp": 1
+          "town.oji.nara.jp": 2
         },
-        "message": "王寺町: 1件 / sources OK"
+        "message": "王寺町: 2件 / sources OK"
       },
       {
         "municipality": "大淀町",

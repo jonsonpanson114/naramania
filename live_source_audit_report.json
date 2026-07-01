@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-01T10:43:46.596Z",
-  "currentItemCount": 189,
+  "generatedAt": "2026-07-01T12:08:53.227Z",
+  "currentItemCount": 191,
   "checkedMunicipalities": [
     "奈良市",
     "橿原市",
@@ -229,55 +229,11 @@
   "coverage": {
     "checkedMunicipalityCount": 24,
     "expectedItemCount": 203,
-    "matchedItemCount": 201,
-    "missingItemCount": 2,
+    "matchedItemCount": 203,
+    "missingItemCount": 0,
     "duplicateTitleGroupCount": 26,
     "duplicateTitleItemCount": 55,
     "results": [
-      {
-        "municipality": "王寺町",
-        "snapshotCount": 3,
-        "expectedCount": 3,
-        "matchedCount": 2,
-        "missingCount": 1,
-        "duplicateTitleGroupCount": 1,
-        "duplicateTitleItemCount": 2,
-        "missingItems": [
-          {
-            "id": "oji-aHR0cHM6Ly93",
-            "municipality": "王寺町",
-            "title": "やわらぎ会館改修工事（7月）",
-            "status": "受付中",
-            "announcementDate": "2026-06-30",
-            "biddingDate": "2026-07-22",
-            "link": "https://www.town.oji.nara.jp/kakuka/somu/somu/gyomuannai/nyuusatu/nyuusatukouhyou/11747.html",
-            "reason": "snapshot item should be present in scraper_result"
-          }
-        ],
-        "status": "missing"
-      },
-      {
-        "municipality": "斑鳩町",
-        "snapshotCount": 3,
-        "expectedCount": 3,
-        "matchedCount": 2,
-        "missingCount": 1,
-        "duplicateTitleGroupCount": 0,
-        "duplicateTitleItemCount": 0,
-        "missingItems": [
-          {
-            "id": "斑鳩町-2026-06-24-安田家住宅維持補修工事",
-            "municipality": "斑鳩町",
-            "title": "安田家住宅維持補修工事",
-            "status": "受付中",
-            "announcementDate": "2026-06-24",
-            "biddingDate": "2026-07-15",
-            "link": "https://www.town.ikaruga.nara.jp/0000002502.html",
-            "reason": "snapshot item should be present in scraper_result"
-          }
-        ],
-        "status": "missing"
-      },
       {
         "municipality": "葛城市",
         "snapshotCount": 35,
@@ -422,6 +378,17 @@
         "status": "ok"
       },
       {
+        "municipality": "王寺町",
+        "snapshotCount": 3,
+        "expectedCount": 3,
+        "matchedCount": 3,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 1,
+        "duplicateTitleItemCount": 2,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
         "municipality": "広陵町",
         "snapshotCount": 3,
         "expectedCount": 3,
@@ -434,6 +401,17 @@
       },
       {
         "municipality": "田原本町",
+        "snapshotCount": 3,
+        "expectedCount": 3,
+        "matchedCount": 3,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 0,
+        "duplicateTitleItemCount": 0,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
+        "municipality": "斑鳩町",
         "snapshotCount": 3,
         "expectedCount": 3,
         "matchedCount": 3,

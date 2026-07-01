@@ -1,11 +1,9 @@
 {
-  "generatedAt": "2026-06-19T11:36:29.400Z",
-  "source": "reapply_filter",
-  "originalCount": 192,
-  "keptCount": 189,
-  "removedCount": 3,
+  "generatedAt": "2026-07-01T11:57:28.718Z",
+  "source": "update_selected_municipalities",
+  "keptCount": 191,
   "oldestAnnouncementDate": "2025-02-02",
-  "latestAnnouncementDate": "2026-06-18",
+  "latestAnnouncementDate": "2026-06-30",
   "municipalityCount": 25,
   "municipalityAudit": {
     "expectedMunicipalityCount": 25,
@@ -31,12 +29,12 @@
       {
         "municipality": "宇陀市",
         "count": 18,
-        "changeFromPrevious": -1
+        "changeFromPrevious": 0
       },
       {
         "municipality": "生駒市",
         "count": 17,
-        "changeFromPrevious": -1
+        "changeFromPrevious": 0
       },
       {
         "municipality": "五條市",
@@ -84,14 +82,24 @@
         "changeFromPrevious": 0
       },
       {
+        "municipality": "斑鳩町",
+        "count": 3,
+        "changeFromPrevious": 1
+      },
+      {
         "municipality": "安堵町",
         "count": 2,
         "changeFromPrevious": 0
       },
       {
+        "municipality": "王寺町",
+        "count": 2,
+        "changeFromPrevious": 1
+      },
+      {
         "municipality": "御所市",
         "count": 2,
-        "changeFromPrevious": -1
+        "changeFromPrevious": 0
       },
       {
         "municipality": "桜井市",
@@ -114,18 +122,8 @@
         "changeFromPrevious": 0
       },
       {
-        "municipality": "斑鳩町",
-        "count": 2,
-        "changeFromPrevious": 0
-      },
-      {
         "municipality": "平群町",
         "count": 2,
-        "changeFromPrevious": 0
-      },
-      {
-        "municipality": "王寺町",
-        "count": 1,
         "changeFromPrevious": 0
       },
       {
@@ -548,12 +546,12 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 2,
+        "totalCount": 3,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "town.ikaruga.nara.jp": 2
+          "town.ikaruga.nara.jp": 3
         },
-        "message": "斑鳩町: 2件 / sources OK"
+        "message": "斑鳩町: 3件 / sources OK"
       },
       {
         "expectation": {
@@ -584,12 +582,12 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 1,
+        "totalCount": 2,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "town.oji.nara.jp": 1
+          "town.oji.nara.jp": 2
         },
-        "message": "王寺町: 1件 / sources OK"
+        "message": "王寺町: 2件 / sources OK"
       },
       {
         "expectation": {
