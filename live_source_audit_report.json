@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-30T10:22:22.958Z",
+  "generatedAt": "2026-07-01T06:21:36.689Z",
   "currentItemCount": 189,
   "checkedMunicipalities": [
     "奈良市",
@@ -35,9 +35,9 @@
   "scraperResults": [
     {
       "municipality": "奈良市",
-      "rawCount": 16,
-      "keptCount": 15,
-      "rejectedCount": 1,
+      "rawCount": 18,
+      "keptCount": 16,
+      "rejectedCount": 2,
       "warnings": [],
       "errors": []
     },
@@ -107,8 +107,8 @@
     },
     {
       "municipality": "桜井市",
-      "rawCount": 2,
-      "keptCount": 2,
+      "rawCount": 4,
+      "keptCount": 4,
       "rejectedCount": 0,
       "warnings": [],
       "errors": []
@@ -228,8 +228,8 @@
   ],
   "coverage": {
     "checkedMunicipalityCount": 24,
-    "expectedItemCount": 200,
-    "matchedItemCount": 198,
+    "expectedItemCount": 203,
+    "matchedItemCount": 201,
     "missingItemCount": 2,
     "duplicateTitleGroupCount": 26,
     "duplicateTitleItemCount": 55,
@@ -346,9 +346,9 @@
       },
       {
         "municipality": "奈良市",
-        "snapshotCount": 16,
-        "expectedCount": 15,
-        "matchedCount": 15,
+        "snapshotCount": 18,
+        "expectedCount": 16,
+        "matchedCount": 16,
         "missingCount": 0,
         "duplicateTitleGroupCount": 6,
         "duplicateTitleItemCount": 12,
@@ -400,6 +400,17 @@
         "status": "ok"
       },
       {
+        "municipality": "桜井市",
+        "snapshotCount": 4,
+        "expectedCount": 4,
+        "matchedCount": 4,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 0,
+        "duplicateTitleItemCount": 0,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
         "municipality": "天理市",
         "snapshotCount": 4,
         "expectedCount": 4,
@@ -445,17 +456,6 @@
       },
       {
         "municipality": "御所市",
-        "snapshotCount": 2,
-        "expectedCount": 2,
-        "matchedCount": 2,
-        "missingCount": 0,
-        "duplicateTitleGroupCount": 0,
-        "duplicateTitleItemCount": 0,
-        "missingItems": [],
-        "status": "ok"
-      },
-      {
-        "municipality": "桜井市",
         "snapshotCount": 2,
         "expectedCount": 2,
         "matchedCount": 2,
