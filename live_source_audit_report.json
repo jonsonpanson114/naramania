@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-01T12:08:53.227Z",
+  "generatedAt": "2026-07-02T05:52:51.124Z",
   "currentItemCount": 191,
   "checkedMunicipalities": [
     "奈良市",
@@ -115,8 +115,8 @@
     },
     {
       "municipality": "宇陀市",
-      "rawCount": 19,
-      "keptCount": 18,
+      "rawCount": 21,
+      "keptCount": 20,
       "rejectedCount": 1,
       "warnings": [],
       "errors": []
@@ -179,8 +179,8 @@
     },
     {
       "municipality": "安堵町",
-      "rawCount": 2,
-      "keptCount": 2,
+      "rawCount": 3,
+      "keptCount": 3,
       "rejectedCount": 0,
       "warnings": [],
       "errors": []
@@ -228,12 +228,33 @@
   ],
   "coverage": {
     "checkedMunicipalityCount": 24,
-    "expectedItemCount": 203,
-    "matchedItemCount": 203,
-    "missingItemCount": 0,
+    "expectedItemCount": 206,
+    "matchedItemCount": 205,
+    "missingItemCount": 1,
     "duplicateTitleGroupCount": 26,
     "duplicateTitleItemCount": 55,
     "results": [
+      {
+        "municipality": "安堵町",
+        "snapshotCount": 3,
+        "expectedCount": 3,
+        "matchedCount": 2,
+        "missingCount": 1,
+        "duplicateTitleGroupCount": 0,
+        "duplicateTitleItemCount": 0,
+        "missingItems": [
+          {
+            "id": "ando-category-62",
+            "municipality": "安堵町",
+            "title": "【条件付き一般競争入札の結果】安堵こども園南館外壁改修、トイレ乾式化および洋式化改修工事",
+            "status": "落札",
+            "announcementDate": "2026-07-02",
+            "link": "https://www.town.ando.nara.jp/0000004012.html",
+            "reason": "snapshot item should be present in scraper_result"
+          }
+        ],
+        "status": "missing"
+      },
       {
         "municipality": "葛城市",
         "snapshotCount": 35,
@@ -257,6 +278,17 @@
         "status": "ok"
       },
       {
+        "municipality": "宇陀市",
+        "snapshotCount": 21,
+        "expectedCount": 20,
+        "matchedCount": 20,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 0,
+        "duplicateTitleItemCount": 0,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
         "municipality": "橿原市",
         "snapshotCount": 228,
         "expectedCount": 19,
@@ -275,17 +307,6 @@
         "missingCount": 0,
         "duplicateTitleGroupCount": 5,
         "duplicateTitleItemCount": 11,
-        "missingItems": [],
-        "status": "ok"
-      },
-      {
-        "municipality": "宇陀市",
-        "snapshotCount": 19,
-        "expectedCount": 18,
-        "matchedCount": 18,
-        "missingCount": 0,
-        "duplicateTitleGroupCount": 0,
-        "duplicateTitleItemCount": 0,
         "missingItems": [],
         "status": "ok"
       },
@@ -415,17 +436,6 @@
         "snapshotCount": 3,
         "expectedCount": 3,
         "matchedCount": 3,
-        "missingCount": 0,
-        "duplicateTitleGroupCount": 0,
-        "duplicateTitleItemCount": 0,
-        "missingItems": [],
-        "status": "ok"
-      },
-      {
-        "municipality": "安堵町",
-        "snapshotCount": 2,
-        "expectedCount": 2,
-        "matchedCount": 2,
         "missingCount": 0,
         "duplicateTitleGroupCount": 0,
         "duplicateTitleItemCount": 0,
