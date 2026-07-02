@@ -10,6 +10,34 @@ import { motion } from 'framer-motion';
 import { Loader2 } from 'lucide-react';
 import { PRACTICAL_FILTERS, PracticalFilter, countPracticalFilter, matchesPracticalFilter } from '@/lib/practical_filters';
 
+type SearchInitialState = {
+    keyword: string;
+    municipality: string;
+    status: string;
+    quickFilter: PracticalFilter;
+};
+
+function readInitialSearchState(): SearchInitialState {
+    if (typeof window === 'undefined') {
+        return {
+            keyword: '',
+            municipality: 'すべて',
+            status: 'すべて',
+            quickFilter: 'all',
+        };
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    const quick = params.get('quick') as PracticalFilter | null;
+
+    return {
+        keyword: params.get('q') || '',
+        municipality: params.get('municipality') || 'すべて',
+        status: params.get('status') || 'すべて',
+        quickFilter: quick && PRACTICAL_FILTERS.some(filter => filter.id === quick) ? quick : 'all',
+    };
+}
+
 export default function SearchPage() {
     const [items, setItems] = useState<BiddingItem[]>([]);
     const [loading, setLoading] = useState(true);
@@ -20,15 +48,13 @@ export default function SearchPage() {
     const municipalities = Array.from(new Set(items.map(item => item.municipality))).sort();
 
     useEffect(() => {
-        const params = new URLSearchParams(window.location.search);
-        const quick = params.get('quick') as PracticalFilter | null;
-        const statusParam = params.get('status');
-        const municipalityParam = params.get('municipality');
-        const keywordParam = params.get('q');
-        if (quick && PRACTICAL_FILTERS.some(filter => filter.id === quick)) setQuickFilter(quick);
-        if (statusParam) setStatus(statusParam);
-        if (municipalityParam) setMunicipality(municipalityParam);
-        if (keywordParam) setKeyword(keywordParam);
+        const timer = window.setTimeout(() => {
+            const initialSearchState = readInitialSearchState();
+            setKeyword(initialSearchState.keyword);
+            setMunicipality(initialSearchState.municipality);
+            setStatus(initialSearchState.status);
+            setQuickFilter(initialSearchState.quickFilter);
+        }, 0);
 
         fetch('/api/scrape')
             .then(res => res.json())
@@ -37,6 +63,8 @@ export default function SearchPage() {
                 setLoading(false);
             })
             .catch(() => setLoading(false));
+
+        return () => window.clearTimeout(timer);
     }, []);
 
     const filtered = (() => {
