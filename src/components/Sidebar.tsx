@@ -20,23 +20,23 @@ export function Sidebar() {
 
     return (
         <>
-        <aside className="hidden w-64 bg-sidebar h-screen lg:flex flex-col fixed left-0 top-0 z-20 border-r border-border font-serif">
-            <div className="p-10 flex flex-col items-center gap-4 mb-2">
+        <aside className="hidden w-56 bg-sidebar h-screen lg:flex flex-col fixed left-0 top-0 z-20 border-r border-border font-serif">
+            <div className="px-8 py-9 flex flex-col items-center gap-4 mb-1">
                 <Link href="/" className="flex flex-col items-center gap-4 hover:opacity-80 transition-opacity">
-                    <div className="w-14 h-14 flex items-center justify-center border border-accent/30 rotate-45">
-                        <div className="w-12 h-12 border border-accent/30 flex items-center justify-center -rotate-45">
-                            <span className="text-2xl text-accent font-serif">N</span>
+                    <div className="w-12 h-12 flex items-center justify-center border border-accent/30 rotate-45">
+                        <div className="w-10 h-10 border border-accent/30 flex items-center justify-center -rotate-45">
+                            <span className="text-xl text-accent font-serif">N</span>
                         </div>
                     </div>
                     <div className="text-center">
-                        <h1 className="text-lg tracking-widest text-primary font-serif">奈良入札情報</h1>
+                        <h1 className="text-base tracking-widest text-primary font-serif">奈良入札情報</h1>
                     </div>
                 </Link>
             </div>
 
-            <div className="w-1/2 mx-auto mb-8 h-px bg-gradient-to-r from-transparent via-accent to-transparent opacity-30"></div>
+            <div className="w-1/2 mx-auto mb-6 h-px bg-gradient-to-r from-transparent via-accent to-transparent opacity-30"></div>
 
-            <nav className="flex-1 px-8 space-y-2 text-center">
+            <nav className="flex-1 px-5 space-y-1.5 text-center">
                 {navItems.map((item) => {
                     const isActive = pathname === item.href;
                     const Icon = item.icon;
@@ -44,7 +44,7 @@ export function Sidebar() {
                         <Link
                             key={item.href}
                             href={item.href}
-                            className={`block text-sm tracking-widest cursor-pointer py-3 px-4 rounded-md flex items-center justify-center gap-3 transition-all duration-300 ${isActive
+                            className={`block text-[13px] tracking-widest cursor-pointer py-3 px-3 rounded-xl flex items-center justify-start gap-3 transition-all duration-300 ${isActive
                                 ? 'text-accent font-semibold bg-accent/5 border-b-2 border-accent'
                                 : 'text-secondary hover:text-accent hover:bg-accent/5'
                                 }`}
@@ -56,7 +56,7 @@ export function Sidebar() {
                 })}
             </nav>
 
-            <div className="p-8 text-center">
+            <div className="p-6 text-center">
                 <div className="inline-block relative">
                     <Image
                         src="https://ui-avatars.com/api/?name=User&background=c5a059&color=fff"

@@ -218,7 +218,7 @@ export function BiddingTable({ items }: BiddingTableProps) {
     };
 
     return (
-        <section id="project-board" className="space-y-5 scroll-mt-24" aria-label="案件一覧">
+        <section id="project-board" className="space-y-5 scroll-mt-24 [font-family:'BIZ_UDPGothic','Yu_Gothic','Hiragino_Kaku_Gothic_ProN',sans-serif]" aria-label="案件一覧">
             <div className="overflow-hidden rounded-[2rem] border border-stone-200/80 bg-white/80 shadow-sm backdrop-blur-xl">
                 <div className="border-b border-stone-200/70 bg-gradient-to-br from-stone-950 via-zinc-900 to-amber-950 px-5 py-6 text-white lg:px-7">
                     <div className="flex flex-col gap-5 xl:flex-row xl:items-end xl:justify-between">
@@ -436,7 +436,7 @@ export function BiddingTable({ items }: BiddingTableProps) {
                 initial={{ opacity: 0, y: 14 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.45 }}
-                className="grid gap-4"
+                className="grid gap-3"
             >
                 <AnimatePresence mode="popLayout">
                     {filteredItems.map((item, index) => {
@@ -452,40 +452,40 @@ export function BiddingTable({ items }: BiddingTableProps) {
                                 animate={{ opacity: 1, y: 0 }}
                                 exit={{ opacity: 0, y: -8 }}
                                 transition={{ duration: 0.25, delay: Math.min(index * 0.015, 0.18) }}
-                                className="group overflow-hidden rounded-[1.4rem] border border-stone-200/80 bg-white shadow-sm transition hover:-translate-y-0.5 hover:border-amber-300/70 hover:shadow-md"
+                                className="group overflow-hidden rounded-[1.25rem] border border-stone-200/90 bg-white shadow-sm transition hover:-translate-y-0.5 hover:border-amber-300/80 hover:shadow-md"
                             >
-                                <div className="grid gap-0 lg:grid-cols-[150px_minmax(0,1fr)_170px]">
-                                    <div className="border-b border-stone-100 bg-stone-50/80 p-4 lg:border-b-0 lg:border-r">
-                                        <StatusPill status={item.status} />
-                                        <div className="mt-3 grid grid-cols-2 gap-2 lg:grid-cols-1">
-                                            <div className="rounded-xl border border-stone-200 bg-white p-2.5">
-                                                <p className="flex items-center gap-1.5 text-[9px] font-bold uppercase tracking-[0.18em] text-stone-400">
-                                                    <CalendarClock size={12} /> 公告
-                                                </p>
-                                                <p className="mt-1 text-base tabular-nums tracking-[0.04em] text-stone-900">{formatDate(item.announcementDate)}</p>
-                                            </div>
-                                            <div className={`rounded-xl border p-2.5 ${distance.urgent
-                                                ? 'border-rose-200 bg-rose-50'
-                                                : distance.done
-                                                    ? 'border-stone-200 bg-stone-100/70'
-                                                    : 'border-amber-200 bg-amber-50/70'
-                                            }`}
-                                            >
-                                                <p className="flex items-center gap-1.5 text-[9px] font-bold uppercase tracking-[0.18em] text-stone-500">
-                                                    <CalendarClock size={12} /> {getBiddingLabel(item)}
-                                                </p>
-                                                <p className={`mt-1 text-base tabular-nums tracking-[0.04em] ${distance.urgent ? 'text-rose-700' : 'text-stone-900'}`}>
-                                                    {formatDate(item.biddingDate)}
-                                                </p>
-                                                <p className={`mt-0.5 text-[10px] font-bold tracking-[0.08em] ${distance.urgent ? 'text-rose-600' : 'text-stone-500'}`}>
-                                                    {distance.label}
-                                                </p>
-                                            </div>
+                                <div className="grid gap-0 lg:grid-cols-[128px_minmax(0,1fr)_238px]">
+                                    <div className={`border-b p-4 lg:border-b-0 lg:border-r ${distance.urgent
+                                        ? 'border-rose-100 bg-rose-50/80'
+                                        : distance.done
+                                            ? 'border-stone-100 bg-stone-50'
+                                            : 'border-amber-100 bg-amber-50/70'
+                                    }`}
+                                    >
+                                        <p className={`inline-flex rounded-full px-2.5 py-1 text-[10px] font-bold tracking-[0.14em] ${distance.urgent
+                                            ? 'bg-rose-600 text-white'
+                                            : distance.done
+                                                ? 'bg-stone-300 text-stone-700'
+                                                : 'bg-amber-300 text-stone-950'
+                                        }`}
+                                        >
+                                            {distance.label}
+                                        </p>
+                                        <p className="mt-3 flex items-center gap-1.5 text-[9px] font-bold uppercase tracking-[0.18em] text-stone-500">
+                                            <CalendarClock size={12} /> {getBiddingLabel(item)}
+                                        </p>
+                                        <p className={`mt-1 text-2xl font-bold tabular-nums tracking-tight ${distance.urgent ? 'text-rose-700' : 'text-stone-950'}`}>
+                                            {formatDate(item.biddingDate)}
+                                        </p>
+                                        <div className="mt-3 rounded-xl border border-white/80 bg-white/70 px-3 py-2">
+                                            <p className="text-[9px] font-bold uppercase tracking-[0.18em] text-stone-400">公告</p>
+                                            <p className="mt-0.5 text-sm tabular-nums text-stone-700">{formatDate(item.announcementDate)}</p>
                                         </div>
                                     </div>
 
                                     <div className="p-4 lg:p-5">
-                                        <div className="flex flex-wrap items-center gap-2">
+                                        <div className="flex flex-wrap items-center gap-2.5">
+                                            <StatusPill status={item.status} />
                                             <span className="inline-flex items-center gap-1.5 rounded-full border border-stone-200 bg-stone-50 px-2.5 py-1 text-[10px] font-bold tracking-[0.12em] text-stone-600">
                                                 <MapPin size={12} />
                                                 {item.municipality}
@@ -513,7 +513,7 @@ export function BiddingTable({ items }: BiddingTableProps) {
 
                                         <a
                                             href={`/project/${item.id}`}
-                                            className="mt-3 block text-lg leading-8 tracking-[0.03em] text-stone-950 transition group-hover:text-amber-700 lg:text-xl"
+                                            className="mt-3 block text-[18px] font-bold leading-8 tracking-[0.02em] text-stone-950 transition group-hover:text-amber-700 lg:text-[20px]"
                                         >
                                             {item.title}
                                         </a>
@@ -530,7 +530,7 @@ export function BiddingTable({ items }: BiddingTableProps) {
                                                         工期 {item.constructionPeriod}
                                                     </span>
                                                 )}
-                                                {item.tags?.slice(0, 5).map(tag => (
+                                                {item.tags?.slice(0, 3).map(tag => (
                                                     <span key={tag} className="rounded-full border border-sky-100 bg-sky-50 px-2.5 py-1 text-[10px] font-bold tracking-[0.08em] text-sky-700">
                                                         #{tag}
                                                     </span>
@@ -541,27 +541,27 @@ export function BiddingTable({ items }: BiddingTableProps) {
                                         {detailedSearch && keyword && renderSnippet(item.description || '', keyword)}
                                     </div>
 
-                                    <div className="border-t border-stone-100 bg-gradient-to-br from-white to-stone-50 p-4 lg:border-l lg:border-t-0">
-                                        <div className="space-y-2.5">
-                                            <div className="rounded-xl border border-stone-200 bg-white p-2.5">
+                                    <div className="border-t border-stone-100 bg-gradient-to-br from-stone-50 to-white p-3 lg:border-l lg:border-t-0">
+                                        <div className="rounded-xl border border-stone-200 bg-white p-3">
+                                            <div className="border-b border-stone-100 pb-2">
                                                 <p className="flex items-center gap-1.5 text-[9px] font-bold uppercase tracking-[0.18em] text-stone-400">
                                                     <Trophy size={12} /> 落札者
                                                 </p>
-                                                <p className={`mt-1.5 line-clamp-2 text-xs leading-5 tracking-[0.03em] ${item.winningContractor ? 'text-emerald-800' : 'text-stone-400'}`}>
+                                                <p className={`mt-1 line-clamp-1 text-sm font-bold leading-5 tracking-[0.02em] ${item.winningContractor ? 'text-emerald-800' : 'text-stone-400'}`}>
                                                     {item.winningContractor || '未取得'}
                                                 </p>
                                             </div>
-                                            <div className="rounded-xl border border-stone-200 bg-white p-2.5">
+                                            <div className="pt-2">
                                                 <p className="flex items-center gap-1.5 text-[9px] font-bold uppercase tracking-[0.18em] text-stone-400">
                                                     <FileText size={12} /> 設計者
                                                 </p>
-                                                <p className={`mt-1.5 line-clamp-2 text-xs leading-5 tracking-[0.03em] ${item.designFirm ? 'text-sky-800' : 'text-stone-400'}`}>
+                                                <p className={`mt-1 line-clamp-1 text-sm font-bold leading-5 tracking-[0.02em] ${item.designFirm ? 'text-sky-800' : 'text-stone-400'}`}>
                                                     {item.designFirm || '未取得'}
                                                 </p>
                                             </div>
                                             <a
                                                 href={`/project/${item.id}`}
-                                                className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-stone-950 px-4 py-2.5 text-[10px] font-bold uppercase tracking-[0.16em] text-white transition hover:bg-amber-700"
+                                                className="mt-3 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-stone-950 px-4 py-2.5 text-[11px] font-bold uppercase tracking-[0.16em] text-white transition hover:bg-amber-700"
                                             >
                                                 詳細を見る
                                                 <CheckCircle2 size={14} />
