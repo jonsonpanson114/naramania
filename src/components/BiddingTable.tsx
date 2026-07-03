@@ -170,20 +170,25 @@ export function BiddingTable({ items }: BiddingTableProps) {
         });
     }, [detailedSearch, keyword, mainFilter, practicalFilter, selectedMunicipality, selectedTag, sortMode, subFilter, visibleItems]);
 
+    const practicalScopedItems = useMemo(
+        () => visibleItems.filter(item => matchesPracticalFilter(item, practicalFilter)),
+        [practicalFilter, visibleItems],
+    );
+
     const counts = useMemo(() => ({
         main: {
-            'すべて': visibleItems.length,
-            '新着': visibleItems.filter(item => isNewItem(item.announcementDate) || Boolean(item.biddingDate && isNewItem(item.biddingDate))).length,
-            '建築': visibleItems.filter(item => (item.type === '建築' || item.type === '工事') && ['受付中', '締切間近', '締切切迫'].includes(item.status)).length,
-            '設計': visibleItems.filter(item => (item.type === '委託' || item.type === 'コンサル') && ['受付中', '締切間近', '締切切迫'].includes(item.status)).length,
-            '落札': visibleItems.filter(item => item.status === '落札').length,
+            'すべて': practicalScopedItems.length,
+            '新着': practicalScopedItems.filter(item => isNewItem(item.announcementDate) || Boolean(item.biddingDate && isNewItem(item.biddingDate))).length,
+            '建築': practicalScopedItems.filter(item => (item.type === '建築' || item.type === '工事') && ['受付中', '締切間近', '締切切迫'].includes(item.status)).length,
+            '設計': practicalScopedItems.filter(item => (item.type === '委託' || item.type === 'コンサル') && ['受付中', '締切間近', '締切切迫'].includes(item.status)).length,
+            '落札': practicalScopedItems.filter(item => item.status === '落札').length,
         },
         sub: {
-            'すべて': visibleItems.filter(item => item.status === '落札').length,
-            'ゼネコン': visibleItems.filter(item => item.status === '落札' && item.winnerType === 'ゼネコン').length,
-            '設計事務所': visibleItems.filter(item => item.status === '落札' && item.winnerType === '設計事務所').length,
+            'すべて': practicalScopedItems.filter(item => item.status === '落札').length,
+            'ゼネコン': practicalScopedItems.filter(item => item.status === '落札' && item.winnerType === 'ゼネコン').length,
+            '設計事務所': practicalScopedItems.filter(item => item.status === '落札' && item.winnerType === '設計事務所').length,
         },
-    }), [visibleItems]);
+    }), [practicalScopedItems]);
 
     const renderSnippet = (text: string, kw: string) => {
         if (!text || !kw) return null;
@@ -251,6 +256,7 @@ export function BiddingTable({ items }: BiddingTableProps) {
                                     type="button"
                                     onClick={() => {
                                         setMainFilter(filter);
+                                        if (filter !== 'すべて') setPracticalFilter('all');
                                         if (filter !== '落札') setSubFilter('すべて');
                                     }}
                                     className={`rounded-full border px-4 py-2 text-xs font-bold tracking-[0.12em] transition ${active

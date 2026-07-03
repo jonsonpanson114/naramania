@@ -1,13 +1,12 @@
 'use client';
 
-import { Search } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export function Header() {
     const today = new Date().toLocaleDateString('ja-JP', { year: 'numeric', month: 'long', day: 'numeric' });
 
     return (
-        <header className="flex justify-between items-end mb-10 px-4">
+        <header className="mb-8 px-1 md:px-4">
             <div>
                 <motion.div
                     initial={{ opacity: 0, x: -20 }}
@@ -27,26 +26,19 @@ export function Header() {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.1 }}
-                    className="text-4xl font-light text-primary tracking-[0.1em] font-serif"
+                    className="text-3xl font-light text-primary tracking-[0.08em] font-serif md:text-4xl"
                 >
-                    案件情報一覧
+                    奈良入札ダッシュボード
                 </motion.h2>
+                <motion.p
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.18 }}
+                    className="mt-3 max-w-2xl text-sm leading-7 tracking-[0.05em] text-secondary/65"
+                >
+                    まず受付中と直近開札を確認し、必要なら市町村別の状況や監査情報へ進めます。
+                </motion.p>
             </div>
-            <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.3 }}
-                className="flex items-center gap-8"
-            >
-                <div className="relative group">
-                    <input
-                        type="text"
-                        placeholder="案件を検索..."
-                        className="bg-transparent border-b border-border py-2 pl-0 pr-10 focus:outline-none focus:border-accent w-64 text-sm transition text-primary placeholder-gray-400 font-serif tracking-wider"
-                    />
-                    <Search className="absolute right-0 top-3 text-gray-400 group-hover:text-accent transition-colors duration-300" size={16} />
-                </div>
-            </motion.div>
         </header>
     );
 }

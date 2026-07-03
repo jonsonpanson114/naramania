@@ -3,7 +3,6 @@ import fs from 'fs';
 import path from 'path';
 import { AppShell } from '@/components/AppShell';
 import { Header } from '@/components/Header';
-import { StatsCard } from '@/components/StatsCard';
 import { BiddingTable } from '@/components/BiddingTable';
 import { AlertNotificationPanel } from '@/components/AlertNotificationPanel';
 import { MunicipalityCoverageDashboard } from '@/components/MunicipalityCoverageDashboard';
@@ -15,7 +14,8 @@ import { LiveSourceAuditPanel, type LiveSourceAuditReport } from '@/components/L
 import { NewsSection } from '@/components/NewsSection';
 import { NewsTicker } from '@/components/NewsTicker';
 import { getShortBiddingLabel } from '@/lib/bidding_schedule';
-import { Activity, ArrowRight, CalendarClock, CheckCircle2, MessageSquareText } from 'lucide-react';
+import { countPracticalFilter } from '@/lib/practical_filters';
+import { Activity, CalendarClock } from 'lucide-react';
 import Link from 'next/link';
 
 interface QualitySummary {
@@ -116,11 +116,8 @@ export default async function Home() {
   // Sort by announcement date descending
   allItems.sort((a, b) => new Date(b.announcementDate).getTime() - new Date(a.announcementDate).getTime());
 
-  // Calculate Metrics from real data
   const today = new Date().toISOString().split('T')[0];
-  const newArrivals = allItems.filter(item => item.announcementDate === today).length;
 
-  // Urgent: Deadline within 7 days
   const oneWeekLater = new Date();
   oneWeekLater.setDate(oneWeekLater.getDate() + 7);
   const urgentCount = allItems.filter(item => {
@@ -131,11 +128,11 @@ export default async function Home() {
   }).length;
 
   const latestAnnouncementDate = qualitySummary?.latestAnnouncementDate || allItems[0]?.announcementDate;
-  const removedCount = qualitySummary?.removedCount ?? qualitySummary?.rejectedCount ?? 0;
   const hasHealthRecord = Boolean(qualitySummary?.generatedAt);
   const keptCount = qualitySummary?.keptCount ?? allItems.length;
-  const rawCount = qualitySummary?.originalCount ?? qualitySummary?.scrapedCount ?? keptCount + removedCount;
   const latestQualityDate = qualitySummary?.generatedAt ? new Date(qualitySummary.generatedAt).toLocaleDateString('ja-JP') : null;
+  const activeCount = countPracticalFilter(allItems, 'active');
+  const missingWinnerCount = countPracticalFilter(allItems, 'missingWinner');
   
   const upcomingBiddings = allItems
     .filter(item => item.biddingDate && item.status !== '落札' && item.status !== '受付終了')
@@ -148,49 +145,54 @@ export default async function Home() {
         <NewsTicker />
         <Header />
         
-        {/* Real-time Alert Notification Panel for Subcontractors */}
-        <AlertNotificationPanel items={allItems} />
-
-        <div className="mb-8 rounded-[2rem] border border-rose-200/70 bg-gradient-to-br from-rose-50 via-white to-amber-50 p-6 shadow-soft lg:p-8">
+        <div className="mb-6 rounded-[2rem] border border-amber-200/70 bg-gradient-to-br from-stone-950 via-stone-900 to-amber-950 p-5 text-white shadow-soft lg:p-7">
           <div className="flex flex-col gap-6 xl:flex-row xl:items-start xl:justify-between">
             <div className="max-w-2xl">
-              <div className="inline-flex items-center gap-2 rounded-full border border-rose-200 bg-white/80 px-3 py-1 text-[10px] font-bold tracking-[0.24em] text-rose-600 uppercase">
+              <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-[10px] font-bold tracking-[0.24em] text-amber-100 uppercase">
                 <CalendarClock size={14} />
-                直近開札
+                Today Focus
               </div>
-              <h3 className="mt-4 text-3xl font-light tracking-[0.08em] text-primary">まず見るべき案件</h3>
-              <p className="mt-3 text-sm leading-7 tracking-[0.05em] text-secondary/75">
-                この画面で最初に見るべきなのは開札が近い案件です。下の一覧までスクロールしなくても、
-                直近の予定をここでまとめて確認できるようにしました。
+              <h3 className="mt-4 text-3xl font-light tracking-[0.08em]">今日見るところ</h3>
+              <p className="mt-3 text-sm leading-7 tracking-[0.05em] text-stone-200/75">
+                まず受付中、次に直近開札、最後に落札者未取得を確認します。市町村別や監査情報は下部に分けました。
               </p>
             </div>
-            <div className="shrink-0 rounded-2xl border border-white/80 bg-white/70 px-4 py-3 shadow-sm">
-              <p className="text-[10px] tracking-[0.2em] text-secondary/45 uppercase">表示中</p>
-              <p className="mt-1 text-2xl font-light tracking-tight text-primary">{upcomingBiddings.length}<span className="ml-1 text-sm text-accent">件</span></p>
-              <p className="mt-1 text-xs tracking-[0.08em] text-secondary/55">直近の開札予定</p>
+            <div className="grid w-full max-w-xl grid-cols-3 gap-2 rounded-3xl border border-white/10 bg-white/10 p-2 text-center backdrop-blur">
+              <Link href="/search?quick=active" className="rounded-2xl bg-white/10 px-3 py-3 transition hover:bg-white/15">
+                <p className="text-[9px] tracking-[0.2em] text-stone-300 uppercase">受付中</p>
+                <p className="mt-1 text-2xl font-light tabular-nums text-emerald-200">{activeCount}</p>
+              </Link>
+              <a href="#project-board" className="rounded-2xl bg-white/10 px-3 py-3 transition hover:bg-white/15">
+                <p className="text-[9px] tracking-[0.2em] text-stone-300 uppercase">直近開札</p>
+                <p className="mt-1 text-2xl font-light tabular-nums text-amber-200">{urgentCount}</p>
+              </a>
+              <Link href="/search?quick=missingWinner" className="rounded-2xl bg-white/10 px-3 py-3 transition hover:bg-white/15">
+                <p className="text-[9px] tracking-[0.2em] text-stone-300 uppercase">未取得</p>
+                <p className="mt-1 text-2xl font-light tabular-nums text-rose-200">{missingWinnerCount}</p>
+              </Link>
             </div>
           </div>
 
-          <div className="mt-6 grid gap-4 xl:grid-cols-4 md:grid-cols-2">
+          <div className="mt-6 grid gap-3 xl:grid-cols-4 md:grid-cols-2">
             {upcomingBiddings.map((item) => (
               <a
                 key={item.id}
                 href={`/project/${item.id}`}
-                className="group rounded-[1.6rem] border border-rose-200/60 bg-white/90 p-5 shadow-sm transition hover:-translate-y-1 hover:border-rose-300 hover:shadow-md"
+                className="group rounded-[1.3rem] border border-white/10 bg-white/[0.08] p-4 shadow-sm transition hover:-translate-y-1 hover:border-amber-200/50 hover:bg-white/[0.12]"
               >
                 <div className="flex items-start justify-between gap-3">
-                  <span className="rounded-full bg-rose-100 px-2.5 py-1 text-[10px] font-bold tracking-[0.18em] text-rose-700 uppercase">
+                  <span className="rounded-full bg-amber-200 px-2.5 py-1 text-[10px] font-bold tracking-[0.18em] text-stone-950 uppercase">
                     {getDaysUntilLabel(item.biddingDate)}
                   </span>
-                  <span className="text-[10px] tracking-[0.18em] text-secondary/50 uppercase">{item.municipality}</span>
+                  <span className="text-[10px] tracking-[0.18em] text-stone-300 uppercase">{item.municipality}</span>
                 </div>
-                <h4 className="mt-4 line-clamp-3 text-[15px] leading-7 tracking-[0.03em] text-primary transition group-hover:text-rose-700">
+                <h4 className="mt-4 line-clamp-3 text-[14px] leading-7 tracking-[0.03em] text-white transition group-hover:text-amber-100">
                   {item.title}
                 </h4>
-                <div className="mt-5 space-y-2 rounded-2xl bg-sidebar/55 p-3">
-                  <div className="flex items-center justify-between text-[10px] tracking-wider text-secondary/40 font-mono">
+                <div className="mt-4 rounded-2xl bg-black/15 p-3">
+                  <div className="flex items-center justify-between text-[10px] tracking-wider text-stone-300/70 font-mono">
                     <span>{getShortBiddingLabel(item)}</span>
-                    <span className="font-bold text-secondary/60">{item.biddingDate}</span>
+                    <span className="font-bold text-stone-100">{item.biddingDate}</span>
                   </div>
                 </div>
               </a>
@@ -198,7 +200,7 @@ export default async function Home() {
           </div>
         </div>
 
-        <div className="mb-8 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+        <div className="mb-8 grid gap-2 md:grid-cols-4">
           <a href="#project-board" className="group rounded-2xl border border-stone-200 bg-white/80 p-4 shadow-sm transition hover:-translate-y-0.5 hover:border-amber-300 hover:shadow-md">
             <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-amber-700">Main</p>
             <p className="mt-2 text-base font-semibold tracking-[0.05em] text-primary">案件一覧を見る</p>
@@ -221,90 +223,43 @@ export default async function Home() {
           </Link>
         </div>
 
-        {/* Stats Panel */}
-        <div className="mb-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          <StatsCard title="新着案件" value={newArrivals} unit="件" icon="inbound" color="blue" description="本日公告された奈良県内の新着入札情報" />
-          <StatsCard title="直近開札" value={urgentCount} unit="件" icon="calendar" color="rose" description="今後1週間以内に開札予定の案件" />
-          <StatsCard title="登録商材マッチ" value={allItems.filter(item => item.announcementDate === today).length} unit="件" icon="alert" color="amber" description="登録商材に関連する本日の新着案件" />
-        </div>
-
-        {/* Health Check Bar */}
-        <div className="mb-12 rounded-3xl border border-white/60 bg-white/30 p-6 shadow-sm backdrop-blur-sm">
-          <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
-            <div className="flex items-center gap-4">
-              <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-indigo-50 text-indigo-600">
-                <CheckCircle2 size={20} />
-              </div>
-              <div>
-                <h4 className="text-sm font-bold text-gray-900 tracking-wide">データ収集エンジン稼働中</h4>
-                <p className="mt-1 text-xs text-gray-500 tracking-wider">奈良県内の掲載案件を横断した収集状況を表示しています</p>
-              </div>
-            </div>
-            <div className="grid grid-cols-2 gap-4 md:grid-cols-4 lg:min-w-[520px]">
-              <div>
-                <p className="text-[9px] tracking-[0.2em] text-secondary/40 uppercase">取得候補</p>
-                <p className="mt-1 text-lg tabular-nums tracking-wider text-primary">{rawCount}<span className="ml-1 text-[10px] text-accent">件</span></p>
-              </div>
-              <div>
-                <p className="text-[9px] tracking-[0.2em] text-secondary/40 uppercase">掲載</p>
-                <p className="mt-1 text-lg tabular-nums tracking-wider text-primary">{keptCount}<span className="ml-1 text-[10px] text-accent">件</span></p>
-              </div>
-              <div>
-                <p className="text-[9px] tracking-[0.2em] text-secondary/40 uppercase">最新公告日</p>
-                <p className="mt-1 text-sm tracking-wider text-primary">{formatDateLabel(latestAnnouncementDate)}</p>
-              </div>
-              <div>
-                <p className="text-[9px] tracking-[0.2em] text-secondary/40 uppercase">更新記録</p>
-                <p className="mt-1 flex items-center gap-1.5 text-sm tracking-wider text-primary">
-                  <Activity size={14} className={hasHealthRecord ? 'text-green-600' : 'text-amber-600'} />
-                  {hasHealthRecord ? (latestQualityDate || '記録あり') : '未記録'}
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Main Project Board */}
         <BiddingTable items={allItems} />
-
-        {/* Quick Access */}
-        <div className="mb-14">
-          <Link href="/chat" className="group block rounded-[2rem] border border-emerald-900/10 bg-white p-8 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md">
-            <div className="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
-              <div className="flex items-start gap-5">
-                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-emerald-50 text-emerald-600">
-                  <MessageSquareText size={26} />
-                </div>
-                <div className="max-w-3xl">
-                  <p className="text-[10px] font-bold tracking-[0.24em] text-emerald-600 uppercase">Quick Access</p>
-                  <h3 className="mt-2 text-2xl font-bold text-gray-900">入札チャット</h3>
-                  <p className="mt-3 text-sm leading-7 text-gray-500">
-                    今週の開札、自治体別の新着、特定案件の深掘りまで自然言語で質問できます。必要なときは Web 補足も使えます。
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-center gap-3 self-end lg:self-auto">
-                <span className="rounded-full border border-emerald-100 bg-emerald-50 px-3 py-1 text-[10px] font-bold tracking-[0.18em] text-emerald-700 uppercase">
-                  AI Assistant
-                </span>
-                <ArrowRight className="text-gray-300 transition-all group-hover:translate-x-1 group-hover:text-emerald-600" />
-              </div>
-            </div>
-            </Link>
-        </div>
 
         {/* News Section */}
         <NewsSection />
 
         <section className="mt-16 space-y-8" aria-label="運用状況">
           <div className="rounded-[2rem] border border-stone-200/80 bg-white/70 p-6 shadow-sm backdrop-blur">
-            <p className="text-[10px] font-bold uppercase tracking-[0.28em] text-secondary/45">Operations</p>
-            <h3 className="mt-3 text-2xl font-light tracking-[0.08em] text-primary">収集状況・自治体カバレッジ</h3>
-            <p className="mt-3 max-w-3xl text-sm leading-7 tracking-[0.04em] text-secondary/65">
-              どの自治体が見られているか、公開サイト監査が通っているかはここにまとめました。
-              案件判断の邪魔にならないよう、ページ下部で確認できます。
-            </p>
+            <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+              <div>
+                <p className="text-[10px] font-bold uppercase tracking-[0.28em] text-secondary/45">Operations</p>
+                <h3 className="mt-3 text-2xl font-light tracking-[0.08em] text-primary">収集状況・市町村カバレッジ</h3>
+                <p className="mt-3 max-w-3xl text-sm leading-7 tracking-[0.04em] text-secondary/65">
+                  どの自治体が見られているか、公開サイト監査が通っているかはここにまとめました。
+                </p>
+              </div>
+              <div className="grid grid-cols-3 gap-2 rounded-2xl border border-stone-200 bg-stone-50 p-2 text-center">
+                <div className="rounded-xl bg-white px-3 py-2">
+                  <p className="text-[9px] tracking-[0.18em] text-secondary/40 uppercase">掲載</p>
+                  <p className="mt-1 text-lg tabular-nums text-primary">{keptCount}</p>
+                </div>
+                <div className="rounded-xl bg-white px-3 py-2">
+                  <p className="text-[9px] tracking-[0.18em] text-secondary/40 uppercase">最新公告</p>
+                  <p className="mt-1 text-sm text-primary">{formatDateLabel(latestAnnouncementDate)}</p>
+                </div>
+                <div className="rounded-xl bg-white px-3 py-2">
+                  <p className="text-[9px] tracking-[0.18em] text-secondary/40 uppercase">更新</p>
+                  <p className="mt-1 flex items-center justify-center gap-1 text-sm text-primary">
+                    <Activity size={13} className={hasHealthRecord ? 'text-green-600' : 'text-amber-600'} />
+                    {latestQualityDate || '-'}
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
+
+          <AlertNotificationPanel items={allItems} />
 
           <MunicipalityStatusOverview items={allItems} quality={qualitySummary} />
 
