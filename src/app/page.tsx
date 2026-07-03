@@ -11,10 +11,12 @@ import { TargetScopePanel } from '@/components/TargetScopePanel';
 import { CriticalWatchPanel } from '@/components/CriticalWatchPanel';
 import { PracticalWorkQueue } from '@/components/PracticalWorkQueue';
 import { LiveSourceAuditPanel, type LiveSourceAuditReport } from '@/components/LiveSourceAuditPanel';
+import { OpeningResultDigest } from '@/components/OpeningResultDigest';
 import { NewsSection } from '@/components/NewsSection';
 import { NewsTicker } from '@/components/NewsTicker';
 import { getShortBiddingLabel } from '@/lib/bidding_schedule';
 import { countPracticalFilter } from '@/lib/practical_filters';
+import { OPENING_RESULT_UPDATES_PATH, type OpeningResultUpdateReport } from '@/lib/opening_result_updates';
 import { Activity, CalendarClock } from 'lucide-react';
 import Link from 'next/link';
 
@@ -92,9 +94,11 @@ export default async function Home() {
   const jsonPath = path.join(process.cwd(), 'scraper_result.json');
   const qualityPath = path.join(process.cwd(), 'scraper_quality.json');
   const liveAuditPath = path.join(process.cwd(), 'live_source_audit_report.json');
+  const openingResultUpdatesPath = path.join(process.cwd(), OPENING_RESULT_UPDATES_PATH);
   let allItems: BiddingItem[] = [];
   let qualitySummary: QualitySummary | null = null;
   let liveAuditReport: LiveSourceAuditReport | null = null;
+  let openingResultReport: OpeningResultUpdateReport | null = null;
 
   try {
     if (fs.existsSync(jsonPath)) {
@@ -108,6 +112,10 @@ export default async function Home() {
     if (fs.existsSync(liveAuditPath)) {
       const liveAuditContent = fs.readFileSync(liveAuditPath, 'utf-8');
       liveAuditReport = JSON.parse(liveAuditContent);
+    }
+    if (fs.existsSync(openingResultUpdatesPath)) {
+      const openingResultContent = fs.readFileSync(openingResultUpdatesPath, 'utf-8');
+      openingResultReport = JSON.parse(openingResultContent);
     }
   } catch {
     // エラー時は空配列を返す
@@ -222,6 +230,8 @@ export default async function Home() {
             <p className="mt-1 text-xs leading-5 text-secondary/55">市町村名や案件名で質問</p>
           </Link>
         </div>
+
+        <OpeningResultDigest items={allItems} report={openingResultReport} />
 
         {/* Main Project Board */}
         <BiddingTable items={allItems} />

@@ -28,6 +28,7 @@ import { shouldKeepBiddingItem } from './common/filter';
 import { EXPECTED_MUNICIPALITIES, QUALITY_PATH, buildDateAuditSummary, buildIntelligenceSummary, readQualitySummary } from '../lib/quality_summary';
 import type { MunicipalityIssueEntry } from '../lib/quality_summary';
 import { evaluateSourceCoverage } from '../lib/source_coverage';
+import { OPENING_RESULT_UPDATES_PATH, buildOpeningResultUpdateReport } from '../lib/opening_result_updates';
 
 const SNAPSHOT_PATH = path.join(process.cwd(), 'municipality_snapshots.json');
 type MunicipalitySnapshots = Partial<Record<BiddingItem['municipality'], BiddingItem[]>>;
@@ -371,6 +372,7 @@ async function main() {
     const snapshots = readMunicipalitySnapshots();
     let scrapedCount = 0;
     let rejectedCount = 0;
+    let previousAllItems: BiddingItem[] = [];
     const retainedMunicipalities = new Set<string>();
     const municipalityIssues = new Map<string, MunicipalityIssueEntry[]>();
 
@@ -379,6 +381,7 @@ async function main() {
         try {
             const content = fs.readFileSync(outputPath, 'utf-8');
             const existingItems: BiddingItem[] = JSON.parse(content);
+            previousAllItems = existingItems.filter(item => shouldKeepBiddingItem(item));
             existingItems.filter(item => shouldKeepBiddingItem(item)).forEach(item => {
                 upsertSeenItem(seen, seenContent, item);
             });
@@ -527,6 +530,12 @@ async function main() {
         return dateB - dateA;
     });
     fs.writeFileSync(outputPath, JSON.stringify(finalUnique, null, 2), 'utf-8');
+    const openingResultReport = buildOpeningResultUpdateReport(previousAllItems, finalUnique);
+    fs.writeFileSync(
+        path.join(process.cwd(), OPENING_RESULT_UPDATES_PATH),
+        JSON.stringify(openingResultReport, null, 2),
+        'utf-8',
+    );
     writeMunicipalitySnapshots(snapshots);
     writeQualitySummary(
         finalUnique,
