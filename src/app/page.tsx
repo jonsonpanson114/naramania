@@ -7,6 +7,7 @@ import { StatsCard } from '@/components/StatsCard';
 import { BiddingTable } from '@/components/BiddingTable';
 import { AlertNotificationPanel } from '@/components/AlertNotificationPanel';
 import { MunicipalityCoverageDashboard } from '@/components/MunicipalityCoverageDashboard';
+import { MunicipalityStatusOverview } from '@/components/MunicipalityStatusOverview';
 import { TargetScopePanel } from '@/components/TargetScopePanel';
 import { CriticalWatchPanel } from '@/components/CriticalWatchPanel';
 import { PracticalWorkQueue } from '@/components/PracticalWorkQueue';
@@ -197,6 +198,29 @@ export default async function Home() {
           </div>
         </div>
 
+        <div className="mb-8 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+          <a href="#project-board" className="group rounded-2xl border border-stone-200 bg-white/80 p-4 shadow-sm transition hover:-translate-y-0.5 hover:border-amber-300 hover:shadow-md">
+            <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-amber-700">Main</p>
+            <p className="mt-2 text-base font-semibold tracking-[0.05em] text-primary">案件一覧を見る</p>
+            <p className="mt-1 text-xs leading-5 text-secondary/55">受付中の必要案件から確認</p>
+          </a>
+          <a href="#municipality-status" className="group rounded-2xl border border-stone-200 bg-white/80 p-4 shadow-sm transition hover:-translate-y-0.5 hover:border-emerald-300 hover:shadow-md">
+            <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-emerald-700">Area</p>
+            <p className="mt-2 text-base font-semibold tracking-[0.05em] text-primary">市町村別に見る</p>
+            <p className="mt-1 text-xs leading-5 text-secondary/55">件数と状態だけを一覧</p>
+          </a>
+          <Link href="/search?quick=active" className="group rounded-2xl border border-stone-200 bg-white/80 p-4 shadow-sm transition hover:-translate-y-0.5 hover:border-sky-300 hover:shadow-md">
+            <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-sky-700">Search</p>
+            <p className="mt-2 text-base font-semibold tracking-[0.05em] text-primary">受付中だけ検索</p>
+            <p className="mt-1 text-xs leading-5 text-secondary/55">今日追える案件に絞る</p>
+          </Link>
+          <Link href="/chat" className="group rounded-2xl border border-stone-200 bg-white/80 p-4 shadow-sm transition hover:-translate-y-0.5 hover:border-rose-300 hover:shadow-md">
+            <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-rose-700">Chat</p>
+            <p className="mt-2 text-base font-semibold tracking-[0.05em] text-primary">質問して探す</p>
+            <p className="mt-1 text-xs leading-5 text-secondary/55">市町村名や案件名で質問</p>
+          </Link>
+        </div>
+
         {/* Stats Panel */}
         <div className="mb-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           <StatsCard title="新着案件" value={newArrivals} unit="件" icon="inbound" color="blue" description="本日公告された奈良県内の新着入札情報" />
@@ -240,10 +264,6 @@ export default async function Home() {
           </div>
         </div>
 
-        <CriticalWatchPanel items={allItems} />
-
-        <PracticalWorkQueue items={allItems} />
-
         {/* Main Project Board */}
         <BiddingTable items={allItems} />
 
@@ -285,6 +305,12 @@ export default async function Home() {
               案件判断の邪魔にならないよう、ページ下部で確認できます。
             </p>
           </div>
+
+          <MunicipalityStatusOverview items={allItems} quality={qualitySummary} />
+
+          <PracticalWorkQueue items={allItems} />
+
+          <CriticalWatchPanel items={allItems} />
 
           <TargetScopePanel items={allItems} />
 

@@ -213,7 +213,7 @@ export function BiddingTable({ items }: BiddingTableProps) {
     };
 
     return (
-        <section className="space-y-5" aria-label="案件一覧">
+        <section id="project-board" className="space-y-5 scroll-mt-24" aria-label="案件一覧">
             <div className="overflow-hidden rounded-[2rem] border border-stone-200/80 bg-white/80 shadow-sm backdrop-blur-xl">
                 <div className="border-b border-stone-200/70 bg-gradient-to-br from-stone-950 via-zinc-900 to-amber-950 px-5 py-6 text-white lg:px-7">
                     <div className="flex flex-col gap-5 xl:flex-row xl:items-end xl:justify-between">
