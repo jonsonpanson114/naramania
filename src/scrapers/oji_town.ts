@@ -158,12 +158,12 @@ export class OjiTownScraper implements Scraper {
                 const detailRes = await axios.get(fullUrl, { headers: HEADERS, timeout: 15000 });
                 const detailHtml = detailRes.data as string;
                 const detailDate = parseUpdatedDate(detailHtml);
-                const isResult = detailHtml.includes('入札についての事後公表') || normalizedTitle.includes('事後公表');
+                const isAwardResult = /落札|入札結果|開札結果/u.test(detailHtml) || /落札|入札結果|開札結果/u.test(normalizedTitle);
                 const titleMatch = detailHtml.match(/<h1[^>]*>([^<]+)<\/h1>/);
                 const title = normalizeOjiTitle(titleMatch?.[1]?.trim() || normalizedTitle);
                 let biddingDate = '';
 
-                if (!isResult) {
+                if (!isAwardResult) {
                     const $detail = cheerio.load(detailHtml);
                     const pdfHref = $detail('a').toArray()
                         .map(el => $detail(el).attr('href') || '')
@@ -191,7 +191,7 @@ export class OjiTownScraper implements Scraper {
                     announcementDate: detailDate || link.announcementDate || parseUpdatedDate(indexRes.data),
                     biddingDate: biddingDate || undefined,
                     link: fullUrl,
-                    status: isResult ? '落札' : '受付中',
+                    status: isAwardResult ? '落札' : '受付中',
                 });
             }
 

@@ -265,6 +265,7 @@ export default function SavedPage() {
                                         const StatusIcon = config.icon;
                                         const distance = biddingDistance(item.biddingDate);
                                         const tone = itemTone(distance);
+                                        const winnerLabel = item.winningContractor || (item.status === '落札' ? '未取得' : '開札前');
                                         return (
                                             <motion.article
                                                 key={item.id}
@@ -364,7 +365,7 @@ export default function SavedPage() {
                                                                         <Trophy size={12} /> 落札者
                                                                     </p>
                                                                     <p className={`mt-1 line-clamp-1 text-xs font-bold ${item.winningContractor ? 'text-emerald-800' : 'text-stone-400'}`}>
-                                                                        {item.winningContractor || '未取得'}
+                                                                        {winnerLabel}
                                                                     </p>
                                                                 </div>
                                                                 <div>

@@ -98,6 +98,43 @@ function mergeBiddingItem(existing: BiddingItem, candidate: BiddingItem) {
     existing.announcementDate = keepEarlierDate(existing.announcementDate, candidate.announcementDate);
 }
 
+function carryForwardEnrichment(candidate: BiddingItem, previous?: BiddingItem): BiddingItem {
+    if (!previous) return candidate;
+
+    return {
+        ...candidate,
+        estimatedPrice: candidate.estimatedPrice || previous.estimatedPrice,
+        winningContractor: candidate.winningContractor || previous.winningContractor,
+        designFirm: candidate.designFirm || previous.designFirm,
+        constructionPeriod: candidate.constructionPeriod || previous.constructionPeriod,
+        description: candidate.description || previous.description,
+        tags: candidate.tags?.length ? candidate.tags : previous.tags,
+        isIntelligenceExtracted: candidate.isIntelligenceExtracted ?? previous.isIntelligenceExtracted,
+        extractionSource: candidate.extractionSource || previous.extractionSource,
+    };
+}
+
+function buildPreviousLookup(items: BiddingItem[]): Map<string, BiddingItem> {
+    const lookup = new Map<string, BiddingItem>();
+    for (const item of items) {
+        lookup.set(item.id, item);
+        lookup.set(dedupeKey(item), item);
+        lookup.set(titleKey(item), item);
+    }
+    return lookup;
+}
+
+function carryForwardMunicipalityEnrichment(candidates: BiddingItem[], previousItems: BiddingItem[]): BiddingItem[] {
+    const previousLookup = buildPreviousLookup(previousItems);
+
+    return candidates.map(candidate => carryForwardEnrichment(
+        candidate,
+        previousLookup.get(candidate.id)
+            || previousLookup.get(dedupeKey(candidate))
+            || previousLookup.get(titleKey(candidate)),
+    ));
+}
+
 function upsertSeenItem(
     seen: Map<string, BiddingItem>,
     seenContent: Map<string, string>,
@@ -173,6 +210,18 @@ function writeMunicipalitySnapshots(snapshots: MunicipalitySnapshots) {
 }
 
 function reconcileStatusByDates(item: BiddingItem, todayIso: string): BiddingItem {
+    if (
+        item.status === '落札'
+        && !item.winningContractor
+        && item.biddingDate
+        && item.biddingDate >= todayIso
+    ) {
+        return {
+            ...item,
+            status: '受付中',
+        };
+    }
+
     if (
         item.status === '受付中'
         && item.biddingDate
@@ -366,7 +415,10 @@ async function main() {
             rejectedCount += items.filter(item => !shouldKeepBiddingItem(item)).length;
             const previousMunicipalityItems = getMunicipalityItems(seen, scraper.municipality);
             const snapshotMunicipalityItems = snapshots[scraper.municipality] || [];
-            const keptItems = items.filter(item => shouldKeepBiddingItem(item));
+            const keptItems = carryForwardMunicipalityEnrichment(
+                items.filter(item => shouldKeepBiddingItem(item)),
+                [...previousMunicipalityItems, ...snapshotMunicipalityItems],
+            );
             const currentIssues = municipalityIssues.get(scraper.municipality) || [];
 
             if (

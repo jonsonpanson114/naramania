@@ -188,16 +188,17 @@ export function shouldKeepItem(title: string, otherText?: string): boolean {
 }
 
 export function shouldKeepBiddingItem(item: BiddingItem, referenceDate = new Date()): boolean {
+    const titleMatches = shouldKeepItem(item.title);
     const textToMatch = [
         item.title,
         item.description || '',
     ].join(' ');
 
     if (DATE_FILTER_EXEMPT_TITLES.includes(item.title)) {
-        return shouldKeepItem(textToMatch);
+        return titleMatches || shouldKeepItem(textToMatch);
     }
 
-    return isRecentBiddingDate(item.announcementDate, referenceDate) && shouldKeepItem(textToMatch);
+    return isRecentBiddingDate(item.announcementDate, referenceDate) && (titleMatches || shouldKeepItem(textToMatch));
 }
 
 export type WinnerType = 'ゼネコン' | '設計事務所' | 'その他';

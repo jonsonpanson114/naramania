@@ -334,7 +334,8 @@
     "type": "コンサル",
     "announcementDate": "2026-06-01",
     "link": "https://www.city.sakurai.lg.jp/sosiki/soumu/kanzaikeiyaku/nyuusatukeiyakukensa/notice/6596.html",
-    "status": "受付中"
+    "status": "受付中",
+    "description": "芝地内"
   },
   {
     "id": "sakurai-2026-06-01-桜井市立地適正化計画改定業務委託",
@@ -343,7 +344,8 @@
     "type": "コンサル",
     "announcementDate": "2026-06-01",
     "link": "https://www.city.sakurai.lg.jp/sosiki/soumu/kanzaikeiyaku/nyuusatukeiyakukensa/notice/6596.html",
-    "status": "受付中"
+    "status": "受付中",
+    "description": "市内一円"
   },
   {
     "id": "tenri-d992a9bd",
@@ -545,7 +547,18 @@
     "biddingDate": "2026-06-17",
     "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/9328.html",
     "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk260617_06k.pdf",
-    "status": "受付終了"
+    "status": "受付終了",
+    "estimatedPrice": "85,998,000円",
+    "designFirm": "(株)中和設計",
+    "constructionPeriod": "着工の日から 令和9年1月22日まで",
+    "description": "市立郡山南小学校廊下改修工事(2期)",
+    "extractionSource": "gemini",
+    "tags": [
+      "改修",
+      "建築",
+      "学校"
+    ],
+    "isIntelligenceExtracted": true
   },
   {
     "id": "nara-pref-29001013060020260025",
@@ -622,7 +635,7 @@
     "announcementDate": "2026-05-20",
     "biddingDate": "2026-07-22",
     "link": "https://www.town.oji.nara.jp/kakuka/somu/somu/gyomuannai/nyuusatu/nyuusatukouhyou/11512.html",
-    "status": "落札"
+    "status": "受付中"
   },
   {
     "id": "ando-category-62",
@@ -1061,16 +1074,7 @@
     "announcementDate": "2026-04-01",
     "link": "https://www.city.gojo.lg.jp/jigyousha/nyuusatsu/2/index.html",
     "pdfUrl": "https://www.city.gojo.lg.jp/material/files/group/4/r843.pdf",
-    "status": "受付中",
-    "constructionPeriod": "3",
-    "description": "保健福祉センター空調設備更新工事設計業務委託",
-    "tags": [
-      "空調",
-      "設計",
-      "建築"
-    ],
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini"
+    "status": "受付中"
   },
   {
     "id": "kawanishi-2026-04-01-川西文化会館トイレ改修工事",
@@ -1882,7 +1886,8 @@
       "増築"
     ],
     "isIntelligenceExtracted": true,
-    "extractionSource": "gemini"
+    "extractionSource": "gemini",
+    "designFirm": "(株)内藤建築事務所 奈良事務所"
   },
   {
     "id": "ikoma-result-2501010051",

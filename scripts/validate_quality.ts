@@ -98,6 +98,64 @@ function assertDateIntegrity(items: BiddingItem[]) {
     return dateAudit;
 }
 
+function parseMinimumCount(name: string, fallback: number): number {
+    const raw = process.env[name];
+    if (!raw) return fallback;
+
+    const parsed = Number.parseInt(raw, 10);
+    return Number.isFinite(parsed) ? parsed : fallback;
+}
+
+function assertIntelligenceIntegrity(items: BiddingItem[], summary: QualitySummary) {
+    const intelligence = summary.intelligence;
+    const itemsWithPdf = items.filter((item) => Boolean(item.pdfUrl)).length;
+    const itemsWithDescription = items.filter((item) => Boolean(item.description?.trim())).length;
+    const intelligenceExtractedCount = items.filter((item) => item.isIntelligenceExtracted === true).length;
+    const estimatedPriceCount = items.filter((item) => Boolean(item.estimatedPrice)).length;
+    const designFirmCount = items.filter((item) => Boolean(item.designFirm)).length;
+
+    const minimums = {
+        description: parseMinimumCount('QUALITY_MIN_DESCRIPTION_COUNT', 20),
+        intelligence: parseMinimumCount('QUALITY_MIN_INTELLIGENCE_COUNT', 20),
+        estimatedPrice: parseMinimumCount('QUALITY_MIN_ESTIMATED_PRICE_COUNT', 20),
+        designFirm: parseMinimumCount('QUALITY_MIN_DESIGN_FIRM_COUNT', 5),
+    };
+
+    if (itemsWithPdf >= 20 && itemsWithDescription < minimums.description) {
+        fail(`AI要約が少なすぎます: ${itemsWithDescription}件 / PDFあり ${itemsWithPdf}件 / 最低 ${minimums.description}件`);
+    }
+
+    if (itemsWithPdf >= 20 && intelligenceExtractedCount < minimums.intelligence) {
+        fail(`AI抽出済み件数が少なすぎます: ${intelligenceExtractedCount}件 / PDFあり ${itemsWithPdf}件 / 最低 ${minimums.intelligence}件`);
+    }
+
+    if (estimatedPriceCount < minimums.estimatedPrice) {
+        fail(`予定価格の取得件数が少なすぎます: ${estimatedPriceCount}件 / 最低 ${minimums.estimatedPrice}件`);
+    }
+
+    if (designFirmCount < minimums.designFirm) {
+        fail(`設計者の取得件数が少なすぎます: ${designFirmCount}件 / 最低 ${minimums.designFirm}件`);
+    }
+
+    if (intelligence) {
+        const mismatches = [
+            intelligence.itemsWithPdf !== itemsWithPdf
+                ? `PDF件数 summary=${intelligence.itemsWithPdf} actual=${itemsWithPdf}`
+                : null,
+            intelligence.itemsWithDescription !== itemsWithDescription
+                ? `AI要約件数 summary=${intelligence.itemsWithDescription} actual=${itemsWithDescription}`
+                : null,
+            intelligence.intelligenceExtractedCount !== intelligenceExtractedCount
+                ? `AI抽出済み件数 summary=${intelligence.intelligenceExtractedCount} actual=${intelligenceExtractedCount}`
+                : null,
+        ].filter((message): message is string => Boolean(message));
+
+        if (mismatches.length > 0) {
+            fail(`scraper_quality.json のAI集計が実データと一致しません: ${mismatches.join(' / ')}`);
+        }
+    }
+}
+
 function writeWatchReport(
     summary: QualitySummary,
     items: BiddingItem[],
@@ -167,6 +225,7 @@ function main() {
 
     assertDatasetMatchesPracticalScope(items);
     const dateAudit = assertDateIntegrity(items);
+    assertIntelligenceIntegrity(items, summary);
 
     if (!audit) {
         fail('municipalityAudit がありません');

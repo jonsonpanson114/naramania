@@ -443,6 +443,7 @@ export function BiddingTable({ items }: BiddingTableProps) {
                         const scope = scopeById.get(item.id) || assessBiddingScope(item);
                         const distance = biddingDistance(item.biddingDate);
                         const isNew = isNewItem(item.announcementDate) || Boolean(item.biddingDate && isNewItem(item.biddingDate));
+                        const winnerLabel = item.winningContractor || (item.status === '落札' ? '未取得' : '開札前');
 
                         return (
                             <motion.article
@@ -553,7 +554,7 @@ export function BiddingTable({ items }: BiddingTableProps) {
                                                     <Trophy size={12} /> 落札者
                                                 </p>
                                                 <p className={`mt-1 line-clamp-1 text-sm font-bold leading-5 tracking-[0.02em] ${item.winningContractor ? 'text-emerald-800' : 'text-stone-400'}`}>
-                                                    {item.winningContractor || '未取得'}
+                                                    {winnerLabel}
                                                 </p>
                                             </div>
                                             <div className="pt-2">

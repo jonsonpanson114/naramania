@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-03T07:42:03.681Z",
+  "generatedAt": "2026-07-03T11:02:18.388Z",
   "qualityGeneratedAt": "2026-07-03T04:54:48.843Z",
   "itemCount": 207,
   "criticalWatch": {
@@ -286,24 +286,9 @@
   "dateIntegrity": {
     "announcementAfterBiddingCount": 0,
     "awardedWithoutBiddingDateCount": 0,
-    "awardedWithoutWinnerCount": 2,
+    "awardedWithoutWinnerCount": 0,
     "openWithWinnerCount": 0,
-    "sampleTitles": [
-      {
-        "municipality": "王寺町",
-        "title": "やわらぎ会館改修工事",
-        "status": "落札",
-        "announcementDate": "2026-05-20",
-        "biddingDate": "2026-07-22"
-      },
-      {
-        "municipality": "三宅町",
-        "title": "三宅町つながり総合センター解体工事",
-        "status": "落札",
-        "announcementDate": "2025-11-04",
-        "biddingDate": "2025-11-04"
-      }
-    ]
+    "sampleTitles": []
   },
   "sourceCoverage": {
     "activeCount": 25,

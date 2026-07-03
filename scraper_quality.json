@@ -145,24 +145,16 @@
   "dateAudit": {
     "announcementAfterBiddingCount": 0,
     "awardedWithoutBiddingDateCount": 0,
-    "awardedWithoutWinnerCount": 1,
+    "awardedWithoutWinnerCount": 0,
     "openWithWinnerCount": 0,
-    "sampleTitles": [
-      {
-        "municipality": "王寺町",
-        "title": "やわらぎ会館改修工事",
-        "status": "落札",
-        "announcementDate": "2026-05-20",
-        "biddingDate": "2026-07-22"
-      }
-    ]
+    "sampleTitles": []
   },
   "intelligence": {
     "itemsWithPdf": 45,
-    "itemsWithDescription": 43,
+    "itemsWithDescription": 45,
     "intelligenceExtractedCount": 41,
     "geminiExtractedCount": 41,
     "taggedCount": 41,
-    "lastAugmentedAt": "2026-07-03T07:42:22.342Z"
+    "lastAugmentedAt": "2026-06-16T12:19:27.884Z"
   }
 }

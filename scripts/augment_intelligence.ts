@@ -144,6 +144,13 @@ async function main() {
     console.log(`\nAI summaries added: ${augmentedCount}`);
     console.log(`Tags added: ${taggedCount}`);
     console.log(`Failures: ${failedCount}`);
+
+    if (batch.length > 0 && augmentedCount === 0 && taggedCount === 0 && failedCount >= batch.length) {
+        throw new Error(
+            `AI augmentation failed for all ${batch.length} targeted items. Refusing to treat this run as successful.`,
+        );
+    }
+
     console.log('\n--- Batch Complete! ---');
 }
 
