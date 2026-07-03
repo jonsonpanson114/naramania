@@ -518,18 +518,23 @@ export function BiddingTable({ items }: BiddingTableProps) {
                                             {item.title}
                                         </a>
 
+                                        <div className="mt-4 grid gap-2 sm:grid-cols-3">
+                                            <div className="rounded-xl border border-stone-200 bg-stone-50 px-3 py-2">
+                                                <p className="text-[9px] font-bold uppercase tracking-[0.18em] text-stone-400">予定価格</p>
+                                                <p className="mt-1 line-clamp-1 text-xs font-bold tracking-[0.04em] text-stone-700">{item.estimatedPrice || '未取得'}</p>
+                                            </div>
+                                            <div className="rounded-xl border border-stone-200 bg-stone-50 px-3 py-2">
+                                                <p className="text-[9px] font-bold uppercase tracking-[0.18em] text-stone-400">工期</p>
+                                                <p className="mt-1 line-clamp-1 text-xs font-bold tracking-[0.04em] text-stone-700">{item.constructionPeriod || '未取得'}</p>
+                                            </div>
+                                            <div className="rounded-xl border border-stone-200 bg-stone-50 px-3 py-2">
+                                                <p className="text-[9px] font-bold uppercase tracking-[0.18em] text-stone-400">資料</p>
+                                                <p className="mt-1 line-clamp-1 text-xs font-bold tracking-[0.04em] text-stone-700">{item.pdfUrl ? 'PDFあり' : '公式ページ'}</p>
+                                            </div>
+                                        </div>
+
                                         {(item.estimatedPrice || item.constructionPeriod || item.tags?.length) && (
                                             <div className="mt-3 flex flex-wrap gap-2">
-                                                {item.estimatedPrice && (
-                                                    <span className="rounded-full border border-stone-200 bg-stone-50 px-3 py-1 text-[10px] font-bold tracking-[0.1em] text-stone-700">
-                                                        予定価格 {item.estimatedPrice}
-                                                    </span>
-                                                )}
-                                                {item.constructionPeriod && (
-                                                    <span className="rounded-full border border-stone-200 bg-stone-50 px-3 py-1 text-[10px] font-bold tracking-[0.1em] text-stone-700">
-                                                        工期 {item.constructionPeriod}
-                                                    </span>
-                                                )}
                                                 {item.tags?.slice(0, 3).map(tag => (
                                                     <span key={tag} className="rounded-full border border-sky-100 bg-sky-50 px-2.5 py-1 text-[10px] font-bold tracking-[0.08em] text-sky-700">
                                                         #{tag}
