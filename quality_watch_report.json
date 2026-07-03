@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-07-01T11:58:22.650Z",
-  "qualityGeneratedAt": "2026-07-01T11:57:28.718Z",
-  "itemCount": 191,
+  "generatedAt": "2026-07-03T04:01:32.908Z",
+  "qualityGeneratedAt": "2026-07-02T22:10:37.551Z",
+  "itemCount": 192,
   "criticalWatch": {
     "activeCount": 3,
     "okCount": 3,
@@ -482,15 +482,15 @@
         "municipality": "安堵町",
         "status": "ok",
         "severity": "error",
-        "totalCount": 2,
+        "totalCount": 3,
         "requiredLinkIncludes": [
           "town.ando.nara.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "town.ando.nara.jp": 2
+          "town.ando.nara.jp": 3
         },
-        "message": "安堵町: 2件 / sources OK"
+        "message": "安堵町: 3件 / sources OK"
       },
       {
         "municipality": "高取町",

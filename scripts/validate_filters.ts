@@ -188,6 +188,12 @@ function main() {
   if (matchesPracticalFilter(awardedWithWinner, 'missingWinner')) {
     failures.push('Practical filter must not mark winner-filled awarded item as missingWinner');
   }
+  if (!matchesPracticalFilter(gojoToilet, 'active')) {
+    failures.push('Practical filter expected active: future or undated 受付中案件');
+  }
+  if (matchesPracticalFilter({ ...gojoToilet, biddingDate: '2026-05-29' }, 'active')) {
+    failures.push('Practical filter must not mark opened 受付中 item as active');
+  }
 
   if (failures.length > 0) {
     console.error('[filters] validation failed');

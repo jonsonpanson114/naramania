@@ -30,16 +30,26 @@ const ANDO_SUPPLEMENTAL_ITEMS: Array<{
         biddingDate: '2026-06-26',
         status: '受付中' as const,
     },
+    {
+        title: '【条件付き一般競争入札の結果】安堵こども園南館外壁改修、トイレ乾式化および洋式化改修工事',
+        link: 'https://www.town.ando.nara.jp/0000004012.html',
+        announcementDate: '2026-05-19',
+        biddingDate: '2026-06-26',
+        status: '落札' as const,
+        pdfUrl: 'https://www.town.ando.nara.jp/cmsfiles/contents/0000004/4012/nyuusatukekka.pdf',
+    },
 ];
 const ANDO_KNOWN_BIDDING_DATES: Record<string, string> = {
     // 公式ページの公告PDFと建設新報の公告要約から確認
     '【再度公告】条件付き一般競争入札の実施について（安堵こども園南館外壁改修、トイレ乾式化および洋式化改修工事）': '2026-06-26',
     '〖再度公告〗条件付き一般競争入札の実施について（安堵こども園南館外壁改修、トイレ乾式化および洋式化改修工事）': '2026-06-26',
+    '【条件付き一般競争入札の結果】安堵こども園南館外壁改修、トイレ乾式化および洋式化改修工事': '2026-06-26',
 };
 
 const ANDO_TITLE_NORMALIZATIONS: Record<string, string> = {};
 
 const ANDO_KNOWN_ANNOUNCEMENT_DATES: Record<string, string> = {
+    '【条件付き一般競争入札の結果】安堵こども園南館外壁改修、トイレ乾式化および洋式化改修工事': '2026-05-19',
 };
 
 function shouldSkip(title: string): boolean {
@@ -79,6 +89,8 @@ function parseRssDate(dateStr: string): string {
 function normalizeAndoLink(href: string): string {
     if (!href) return '';
     if (href.startsWith('http')) return href;
+    if (href.startsWith('./')) return `https://www.town.ando.nara.jp/${href.slice(2)}`;
+    if (!href.startsWith('/')) return `https://www.town.ando.nara.jp/${href}`;
     return `https://www.town.ando.nara.jp${href}`;
 }
 

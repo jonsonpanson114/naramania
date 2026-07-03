@@ -92,7 +92,7 @@ function mergeBiddingItem(existing: BiddingItem, candidate: BiddingItem) {
 
     if (candidate.winningContractor && !existing.winningContractor) existing.winningContractor = candidate.winningContractor;
     if (candidate.biddingDate && !existing.biddingDate) existing.biddingDate = candidate.biddingDate;
-    if (candidate.pdfUrl && !existing.pdfUrl) existing.pdfUrl = candidate.pdfUrl;
+    if (candidate.pdfUrl && (!existing.pdfUrl || existing.pdfUrl.includes('nara.jp.'))) existing.pdfUrl = candidate.pdfUrl;
     if (candidate.link && !existing.link) existing.link = candidate.link;
     existing.announcementDate = keepEarlierDate(existing.announcementDate, candidate.announcementDate);
 }

@@ -240,15 +240,12 @@ export default async function Home() {
           </div>
         </div>
 
-        <TargetScopePanel items={allItems} />
-
         <CriticalWatchPanel items={allItems} />
-
-        <LiveSourceAuditPanel report={liveAuditReport} />
 
         <PracticalWorkQueue items={allItems} />
 
-        <MunicipalityCoverageDashboard items={allItems} quality={qualitySummary} />
+        {/* Main Project Board */}
+        <BiddingTable items={allItems} />
 
         {/* Quick Access */}
         <div className="mb-14">
@@ -273,14 +270,28 @@ export default async function Home() {
                 <ArrowRight className="text-gray-300 transition-all group-hover:translate-x-1 group-hover:text-emerald-600" />
               </div>
             </div>
-          </Link>
+            </Link>
         </div>
-
-        {/* Main Table */}
-        <BiddingTable items={allItems} />
 
         {/* News Section */}
         <NewsSection />
+
+        <section className="mt-16 space-y-8" aria-label="運用状況">
+          <div className="rounded-[2rem] border border-stone-200/80 bg-white/70 p-6 shadow-sm backdrop-blur">
+            <p className="text-[10px] font-bold uppercase tracking-[0.28em] text-secondary/45">Operations</p>
+            <h3 className="mt-3 text-2xl font-light tracking-[0.08em] text-primary">収集状況・自治体カバレッジ</h3>
+            <p className="mt-3 max-w-3xl text-sm leading-7 tracking-[0.04em] text-secondary/65">
+              どの自治体が見られているか、公開サイト監査が通っているかはここにまとめました。
+              案件判断の邪魔にならないよう、ページ下部で確認できます。
+            </p>
+          </div>
+
+          <TargetScopePanel items={allItems} />
+
+          <LiveSourceAuditPanel report={liveAuditReport} />
+
+          <MunicipalityCoverageDashboard items={allItems} quality={qualitySummary} />
+        </section>
 
     </AppShell>
   );

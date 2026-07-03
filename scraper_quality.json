@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-07-01T11:57:28.718Z",
+  "generatedAt": "2026-07-02T22:10:37.551Z",
   "source": "update_selected_municipalities",
-  "keptCount": 191,
+  "keptCount": 192,
   "oldestAnnouncementDate": "2025-02-02",
   "latestAnnouncementDate": "2026-06-30",
   "municipalityCount": 25,
@@ -72,6 +72,11 @@
         "changeFromPrevious": 0
       },
       {
+        "municipality": "安堵町",
+        "count": 3,
+        "changeFromPrevious": 0
+      },
+      {
         "municipality": "広陵町",
         "count": 3,
         "changeFromPrevious": 0
@@ -84,17 +89,12 @@
       {
         "municipality": "斑鳩町",
         "count": 3,
-        "changeFromPrevious": 1
-      },
-      {
-        "municipality": "安堵町",
-        "count": 2,
         "changeFromPrevious": 0
       },
       {
         "municipality": "王寺町",
         "count": 2,
-        "changeFromPrevious": 1
+        "changeFromPrevious": 0
       },
       {
         "municipality": "御所市",
@@ -510,12 +510,12 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 2,
+        "totalCount": 3,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "town.ando.nara.jp": 2
+          "town.ando.nara.jp": 3
         },
-        "message": "安堵町: 2件 / sources OK"
+        "message": "安堵町: 3件 / sources OK"
       },
       {
         "expectation": {
@@ -610,7 +610,7 @@
     ]
   },
   "intelligence": {
-    "itemsWithPdf": 42,
+    "itemsWithPdf": 43,
     "itemsWithDescription": 0,
     "intelligenceExtractedCount": 0,
     "geminiExtractedCount": 0,

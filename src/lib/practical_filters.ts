@@ -69,7 +69,7 @@ export function matchesPracticalFilter(item: BiddingItem, filter: PracticalFilte
   if (filter === 'missingWinner') return item.status === '落札' && !item.winningContractor;
   if (filter === 'opened') return isOpenedItem(item);
   if (filter === 'schoolToilet') return isSchoolToiletItem(item);
-  if (filter === 'active') return item.status === '受付中';
+  if (filter === 'active') return item.status === '受付中' && !isOpenedItem(item);
   return true;
 }
 
