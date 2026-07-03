@@ -156,6 +156,30 @@ function assertIntelligenceIntegrity(items: BiddingItem[], summary: QualitySumma
     }
 }
 
+function assertNaraPrefResultFollowUp(items: BiddingItem[]) {
+    if (process.env.QUALITY_REQUIRE_NARA_PREF_WINNERS !== '1') return;
+
+    const todayIso = new Date().toISOString().slice(0, 10);
+    const naraPrefItems = items.filter((item) => item.municipality === '奈良県');
+    if (naraPrefItems.length === 0) {
+        fail('奈良県専用検証で奈良県の案件が0件です');
+    }
+
+    const pastOpeningItems = naraPrefItems.filter((item) => item.biddingDate && item.biddingDate < todayIso);
+    const awardedWithWinner = pastOpeningItems.filter((item) => item.status === '落札' && Boolean(item.winningContractor));
+    const unresolvedPastOpenings = pastOpeningItems.filter(
+        (item) => item.status === '受付終了' || (item.status === '落札' && !item.winningContractor),
+    );
+
+    if (pastOpeningItems.length >= 5 && awardedWithWinner.length === 0) {
+        const samples = unresolvedPastOpenings
+            .slice(0, 5)
+            .map((item) => `${item.title} (${item.biddingDate || '日付なし'})`)
+            .join(' | ');
+        fail(`奈良県の開札結果後追いが機能していません: 過去開札 ${pastOpeningItems.length}件 / 落札者付き 0件 / 未解決例 ${samples}`);
+    }
+}
+
 function writeWatchReport(
     summary: QualitySummary,
     items: BiddingItem[],
@@ -226,6 +250,7 @@ function main() {
     assertDatasetMatchesPracticalScope(items);
     const dateAudit = assertDateIntegrity(items);
     assertIntelligenceIntegrity(items, summary);
+    assertNaraPrefResultFollowUp(items);
 
     if (!audit) {
         fail('municipalityAudit がありません');

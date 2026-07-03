@@ -188,6 +188,14 @@ function getMunicipalityItems(
     return Array.from(seen.values()).filter(item => item.municipality === municipality);
 }
 
+function isSameLogicalItem(left: BiddingItem, right: BiddingItem): boolean {
+    return left.id === right.id || dedupeKey(left) === dedupeKey(right) || titleKey(left) === titleKey(right);
+}
+
+function shouldRetainNaraPrefHistoricalItem(item: BiddingItem): boolean {
+    return item.municipality === '奈良県';
+}
+
 function hasScrapeFailureIssue(issueEntries: MunicipalityIssueEntry[] = []) {
     return issueEntries.some((issue) =>
         issue.level === 'error'
@@ -419,6 +427,16 @@ async function main() {
                 items.filter(item => shouldKeepBiddingItem(item)),
                 [...previousMunicipalityItems, ...snapshotMunicipalityItems],
             );
+            const retainedHistory = scraper.municipality === '奈良県'
+                ? [...previousMunicipalityItems, ...snapshotMunicipalityItems].filter((previousItem) =>
+                    shouldRetainNaraPrefHistoricalItem(previousItem)
+                    && !keptItems.some(item => isSameLogicalItem(item, previousItem)),
+                )
+                : [];
+            if (retainedHistory.length > 0) {
+                retainedHistory.forEach(item => keptItems.push(item));
+                console.log(`[${scraper.municipality}] 履歴・結果付き案件 ${retainedHistory.length}件を保持します`);
+            }
             const currentIssues = municipalityIssues.get(scraper.municipality) || [];
 
             if (

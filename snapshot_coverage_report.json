@@ -1,12 +1,23 @@
 {
-  "generatedAt": "2026-07-03T11:02:18.499Z",
+  "generatedAt": "2026-07-03T11:33:30.794Z",
   "checkedMunicipalityCount": 25,
-  "expectedItemCount": 207,
-  "matchedItemCount": 207,
+  "expectedItemCount": 218,
+  "matchedItemCount": 218,
   "missingItemCount": 0,
   "duplicateTitleGroupCount": 11,
   "duplicateTitleItemCount": 23,
   "results": [
+    {
+      "municipality": "奈良県",
+      "snapshotCount": 37,
+      "expectedCount": 37,
+      "matchedCount": 37,
+      "missingCount": 0,
+      "duplicateTitleGroupCount": 0,
+      "duplicateTitleItemCount": 0,
+      "missingItems": [],
+      "status": "ok"
+    },
     {
       "municipality": "葛城市",
       "snapshotCount": 26,
@@ -15,17 +26,6 @@
       "missingCount": 0,
       "duplicateTitleGroupCount": 4,
       "duplicateTitleItemCount": 8,
-      "missingItems": [],
-      "status": "ok"
-    },
-    {
-      "municipality": "奈良県",
-      "snapshotCount": 26,
-      "expectedCount": 26,
-      "matchedCount": 26,
-      "missingCount": 0,
-      "duplicateTitleGroupCount": 0,
-      "duplicateTitleItemCount": 0,
       "missingItems": [],
       "status": "ok"
     },

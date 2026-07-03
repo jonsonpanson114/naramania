@@ -20,6 +20,9 @@ jobs:
     env:
       SCRAPE_ONLY_MUNICIPALITIES: 奈良県
       QUALITY_GUARDED_MUNICIPALITIES: 奈良県
+      QUALITY_REQUIRE_NARA_PREF_WINNERS: "1"
+      NARA_PREF_RESULT_LOOKBACK_DAYS: "370"
+      NARA_PREF_DETAIL_FETCH_LIMIT: "150"
     steps:
       - uses: actions/checkout@v6
 

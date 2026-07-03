@@ -1,9 +1,12 @@
+import fs from 'fs';
+import path from 'path';
 import { chromium, Frame, Page } from 'playwright';
-import { BiddingItem, Scraper, BiddingType } from '../types/bidding';
+import { BiddingItem, Scraper, BiddingStatus, BiddingType } from '../types/bidding';
 import { shouldKeepItem } from './common/filter';
 
 const PPI_SEARCH_URL = 'https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPJ0050_0010/';
 const PPI_DETAIL_BASE = 'https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/';
+const RESULT_PATH = path.join(process.cwd(), 'scraper_result.json');
 
 const KOJI_GYOSHU_SKIP = [
     '土木一式', '舗装', '鋼橋', 'PC橋', '造園', '法面処理', '道路等維持修繕',
@@ -36,7 +39,7 @@ type SearchRow = {
 };
 
 type DetailInfo = {
-    status: '受付中' | '落札';
+    status: BiddingStatus;
     winningContractor?: string;
     skip: boolean;
 };
@@ -66,6 +69,44 @@ function fiscalYearForDate(date: Date): string {
 function startOfFiscalYear(referenceDate: Date): Date {
     const year = referenceDate.getMonth() >= 3 ? referenceDate.getFullYear() : referenceDate.getFullYear() - 1;
     return new Date(year, 3, 1);
+}
+
+function parsePositiveIntegerEnv(name: string, fallback: number): number {
+    const raw = process.env[name];
+    if (!raw) return fallback;
+
+    const parsed = Number.parseInt(raw, 10);
+    return Number.isFinite(parsed) && parsed > 0 ? parsed : fallback;
+}
+
+function isoDateDaysBefore(referenceDate: Date, days: number): string {
+    const date = new Date(referenceDate);
+    date.setDate(date.getDate() - days);
+    return date.toISOString().slice(0, 10);
+}
+
+function extractKanriNoFromItem(item: BiddingItem): string | undefined {
+    if (item.id.startsWith('nara-pref-')) {
+        return item.id.replace(/^nara-pref-/, '');
+    }
+
+    try {
+        const url = new URL(item.link);
+        return url.searchParams.get('kanriNo') || undefined;
+    } catch {
+        return undefined;
+    }
+}
+
+function loadExistingNaraPrefItems(): BiddingItem[] {
+    if (!fs.existsSync(RESULT_PATH)) return [];
+
+    try {
+        const items = JSON.parse(fs.readFileSync(RESULT_PATH, 'utf-8')) as BiddingItem[];
+        return items.filter((item) => item.municipality === '奈良県');
+    } catch {
+        return [];
+    }
 }
 
 function getSearchSurfaces(page: Page): SearchSurface[] {
@@ -331,25 +372,49 @@ async function hasNoResultPopup(page: Page): Promise<boolean> {
     return false;
 }
 
-async function fetchDetailInfo(page: Page, kanriNo: string): Promise<DetailInfo> {
+async function fetchDetailInfo(page: Page, kanriNo: string, fallbackStatus: BiddingStatus): Promise<DetailInfo> {
     const detailUrl = `${PPI_DETAIL_BASE}?kanriNo=${kanriNo}&gamenMode=0`;
     await page.goto(detailUrl, { waitUntil: 'domcontentloaded', timeout: 30000 });
     await page.waitForTimeout(800);
 
-    return await page.evaluate(() => {
+    return await page.evaluate((fallback) => {
         const text = (document.body.innerText || '').replace(/\s+/g, ' ').trim();
-        const isCanceled = text.includes('【中止】') || text.includes('中止となりました');
+        const hasResult = /入札結果|落札結果|開札結果/.test(text)
+            || (document.getElementById('nyusatsuKekkaFlg') as HTMLInputElement | null)?.value === '1'
+            || (document.getElementById('keiyakuNaiyoFlg') as HTMLInputElement | null)?.value === '1';
+        const isCanceled = /【中止】|中止となりました|取止め|取り止め|入札中止/.test(text);
+        const isUnsuccessful = /不調|不落|取止め|取り止め|入札参加者なし|中止しました/.test(text);
 
-        const winnerMatch = text.match(/落札者\s+([^\n\r\t ](?:.*?))(?:\s+落札金額（税抜）|\s+予定価格（税抜）|\s+最低制限／調査基準価格（税抜）|$)/);
-        const winningContractor = winnerMatch?.[1]?.trim() || undefined;
-        const hasResult = text.includes('落札結果') && text.includes('落札');
+        const winnerPatterns = [
+            /落札者\s*[:：]?\s+(.+?)(?=\s+(?:落札金額|落札額|契約金額|予定価格|最低制限|調査基準価格|入札金額|$))/,
+            /落札業者\s*[:：]?\s+(.+?)(?=\s+(?:落札金額|落札額|契約金額|予定価格|最低制限|調査基準価格|入札金額|$))/,
+            /落札候補者\s*[:：]?\s+(.+?)(?=\s+(?:落札金額|落札額|契約金額|予定価格|最低制限|調査基準価格|入札金額|$))/,
+        ];
+        let winningContractor: string | undefined;
+        for (const pattern of winnerPatterns) {
+            const match = text.match(pattern);
+            if (!match?.[1]) continue;
+
+            const cleaned = match[1]
+                .replace(/^(商号又は名称|名称|業者名)\s*[:：]?\s*/, '')
+                .replace(/\s+/g, ' ')
+                .trim();
+            if (
+                cleaned.length > 0
+                && !/^￥/.test(cleaned)
+                && !/落札金額|落札額|契約金額|予定価格|最低制限|調査基準価格|入札金額/.test(cleaned)
+            ) {
+                winningContractor = cleaned;
+                break;
+            }
+        }
 
         return {
-            status: hasResult ? '落札' : '受付中',
+            status: winningContractor ? '落札' : hasResult && isUnsuccessful ? '不調' : fallback,
             winningContractor,
-            skip: isCanceled,
+            skip: isCanceled && !hasResult,
         };
-    });
+    }, fallbackStatus);
 }
 
 export class NaraPrefScraper implements Scraper {
@@ -385,11 +450,10 @@ export class NaraPrefScraper implements Scraper {
         try {
             const referenceDate = new Date();
             const todayIso = referenceDate.toISOString().slice(0, 10);
-            const detailCutoff = new Date();
-            detailCutoff.setDate(detailCutoff.getDate() - 21);
-            const detailCutoffIso = detailCutoff.toISOString().slice(0, 10);
+            const resultLookbackDays = parsePositiveIntegerEnv('NARA_PREF_RESULT_LOOKBACK_DAYS', 370);
+            const resultLookbackIso = isoDateDaysBefore(referenceDate, resultLookbackDays);
             let detailFetchCount = 0;
-            const detailFetchLimit = 12;
+            const detailFetchLimit = parsePositiveIntegerEnv('NARA_PREF_DETAIL_FETCH_LIMIT', 80);
             const scrapeDeadline = Date.now() + 150000;
             const fiscalYear = fiscalYearForDate(referenceDate);
             const searchStart = startOfFiscalYear(referenceDate);
@@ -430,7 +494,7 @@ export class NaraPrefScraper implements Scraper {
                             if (!announcementDate) continue;
 
                             let detail: DetailInfo = {
-                                status: biddingDate && biddingDate < todayIso ? '落札' : '受付中',
+                                status: biddingDate && biddingDate < todayIso ? '受付終了' : '受付中',
                                 winningContractor: undefined,
                                 skip: false,
                             };
@@ -438,10 +502,10 @@ export class NaraPrefScraper implements Scraper {
                             if (
                                 biddingDate &&
                                 biddingDate < todayIso &&
-                                biddingDate >= detailCutoffIso &&
+                                biddingDate >= resultLookbackIso &&
                                 detailFetchCount < detailFetchLimit
                             ) {
-                                detail = await fetchDetailInfo(detailPage, row.kanriNo);
+                                detail = await fetchDetailInfo(detailPage, row.kanriNo, detail.status);
                                 detailFetchCount += 1;
                             }
 
@@ -467,6 +531,40 @@ export class NaraPrefScraper implements Scraper {
                     if (deadlineReached) break;
                 }
                 if (deadlineReached) break;
+            }
+
+            const existingNaraItems = loadExistingNaraPrefItems();
+            for (const existingItem of existingNaraItems) {
+                const kanriNo = extractKanriNoFromItem(existingItem);
+                if (!kanriNo || items.has(kanriNo)) continue;
+                if (!shouldKeepItem(existingItem.title, existingItem.type)) continue;
+
+                let retainedItem: BiddingItem = { ...existingItem };
+                if (
+                    existingItem.biddingDate &&
+                    existingItem.biddingDate < todayIso &&
+                    existingItem.biddingDate >= resultLookbackIso &&
+                    detailFetchCount < detailFetchLimit
+                ) {
+                    const fallbackStatus: BiddingStatus =
+                        existingItem.status === '落札' && !existingItem.winningContractor
+                            ? '受付終了'
+                            : existingItem.status;
+                    const detail = await fetchDetailInfo(detailPage, kanriNo, fallbackStatus);
+                    detailFetchCount += 1;
+                    if (!detail.skip) {
+                        retainedItem = {
+                            ...retainedItem,
+                            status: detail.status,
+                            winningContractor: detail.winningContractor || retainedItem.winningContractor,
+                        };
+                    }
+                }
+
+                items.set(kanriNo, retainedItem);
+            }
+            if (detailFetchCount >= detailFetchLimit) {
+                this.recordWarning(`[奈良県] 結果詳細確認が上限 ${detailFetchLimit} 件に到達しました。必要なら NARA_PREF_DETAIL_FETCH_LIMIT を増やしてください。`);
             }
         } catch (error) {
             this.recordError(`[奈良県] スクレイパーエラー: ${error instanceof Error ? error.message : String(error)}`);
