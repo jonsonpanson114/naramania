@@ -372,11 +372,7 @@ async function hasNoResultPopup(page: Page): Promise<boolean> {
     return false;
 }
 
-async function fetchDetailInfo(page: Page, kanriNo: string, fallbackStatus: BiddingStatus): Promise<DetailInfo> {
-    const detailUrl = `${PPI_DETAIL_BASE}?kanriNo=${kanriNo}&gamenMode=0`;
-    await page.goto(detailUrl, { waitUntil: 'domcontentloaded', timeout: 30000 });
-    await page.waitForTimeout(800);
-
+async function readVisibleDetailInfo(page: Page, fallbackStatus: BiddingStatus): Promise<DetailInfo> {
     return await page.evaluate((fallback) => {
         const text = (document.body.innerText || '').replace(/\s+/g, ' ').trim();
         const hasResult = /入札結果|落札結果|開札結果/.test(text)
@@ -389,6 +385,7 @@ async function fetchDetailInfo(page: Page, kanriNo: string, fallbackStatus: Bidd
             /落札者\s*[:：]?\s+(.+?)(?=\s+(?:落札金額|落札額|契約金額|予定価格|最低制限|調査基準価格|入札金額|$))/,
             /落札業者\s*[:：]?\s+(.+?)(?=\s+(?:落札金額|落札額|契約金額|予定価格|最低制限|調査基準価格|入札金額|$))/,
             /落札候補者\s*[:：]?\s+(.+?)(?=\s+(?:落札金額|落札額|契約金額|予定価格|最低制限|調査基準価格|入札金額|$))/,
+            /契約業者名\s*[:：]?\s+(.+?)(?=\s+(?:代表者氏名|契約業者住所|契約金額|請負契約額|契約日|$))/,
         ];
         let winningContractor: string | undefined;
         for (const pattern of winnerPatterns) {
@@ -415,6 +412,37 @@ async function fetchDetailInfo(page: Page, kanriNo: string, fallbackStatus: Bidd
             skip: isCanceled && !hasResult,
         };
     }, fallbackStatus);
+}
+
+async function clickDetailTabIfPresent(page: Page, selector: string): Promise<boolean> {
+    const tab = page.locator(selector);
+    if (await tab.count() === 0) return false;
+
+    await tab.first().click();
+    await page.waitForTimeout(1200);
+    return true;
+}
+
+async function fetchDetailInfo(page: Page, kanriNo: string, fallbackStatus: BiddingStatus): Promise<DetailInfo> {
+    const detailUrl = `${PPI_DETAIL_BASE}?kanriNo=${kanriNo}&gamenMode=0`;
+    await page.goto(detailUrl, { waitUntil: 'domcontentloaded', timeout: 30000 });
+    await page.waitForTimeout(800);
+
+    let detail = await readVisibleDetailInfo(page, fallbackStatus);
+    if (detail.winningContractor) return detail;
+
+    const hasResultFlag = await page.locator('#nyusatsuKekkaFlg').inputValue().catch(() => '') === '1';
+    if (hasResultFlag && await clickDetailTabIfPresent(page, '#tabNyusatsuKekka')) {
+        detail = await readVisibleDetailInfo(page, fallbackStatus);
+        if (detail.winningContractor || detail.status === '不調') return detail;
+    }
+
+    const hasContractFlag = await page.locator('#keiyakuNaiyoFlg').inputValue().catch(() => '') === '1';
+    if (hasContractFlag && await clickDetailTabIfPresent(page, '#tabKeiyakuNaiyo')) {
+        detail = await readVisibleDetailInfo(page, fallbackStatus);
+    }
+
+    return detail;
 }
 
 export class NaraPrefScraper implements Scraper {
