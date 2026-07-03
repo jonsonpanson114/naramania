@@ -30,14 +30,20 @@ const KEEP_CASES: FilterCase[] = [
     expected: true,
     reason: '住宅修繕工事は対象',
   },
-  {
-    title: '公民館外壁改修工事',
-    expected: true,
-    reason: '公共建物の外壁改修は対象',
-  },
 ];
 
 const REJECT_CASES: FilterCase[] = [
+  {
+    title: '公民館外壁改修工事',
+    expected: false,
+    reason: '外壁改修は対象外',
+  },
+  {
+    title: '広陵西小学校ベランダ手摺改修工事',
+    description: '広陵西小学校ベランダ手摺改修工事 外壁改修工事一式',
+    expected: false,
+    reason: 'タイトルだけで建築寄りでも説明に外壁があれば対象外',
+  },
   {
     title: '香久山小学校 自動火災報知設備修繕業務',
     expected: false,

@@ -73,6 +73,7 @@ const DEFAULT_ALWAYS_EXCLUDE_KEYWORDS = [
     '音響設備機材', '固定資産税', '住民税', '国民健康保険',
     '建設工事がすすんでいます', '利用できなくなります', '引越し作業',
     '指定管理', '指定管理者', '施設管理', '駐車場',
+    '外壁', '外壁改修', '外壁等', '外装',
     'LED', '照明', '空調', 'エアコン', '設備', '設備更新',
     '受変電設備', '受電設備', '高圧受電設備', '高圧機器',
     '消防用設備', '防火設備', '建築設備', '給水設備',
@@ -98,7 +99,7 @@ const DEFAULT_ARCHITECTURE_CONTEXT_KEYWORDS = [
     '公民館', '会館', '交流館', 'センター', '体育館', '図書館', '消防署',
     '交番', '住宅', '市営住宅', '団地', '施設', 'ホール',
     'ハウス', 'はうす',
-    'トイレ', '便所', '外壁', '屋根', '内装', '防火戸', '耐震', '仮眠室',
+    'トイレ', '便所', '屋根', '内装', '防火戸', '耐震', '仮眠室',
     '書庫',
 ];
 
@@ -188,11 +189,17 @@ export function shouldKeepItem(title: string, otherText?: string): boolean {
 }
 
 export function shouldKeepBiddingItem(item: BiddingItem, referenceDate = new Date()): boolean {
-    const titleMatches = shouldKeepItem(item.title);
     const textToMatch = [
         item.title,
         item.description || '',
+        ...(item.tags || []),
     ].join(' ');
+
+    if (includesAny(textToMatch, ALWAYS_EXCLUDE_KEYWORDS)) {
+        return false;
+    }
+
+    const titleMatches = shouldKeepItem(item.title);
 
     if (DATE_FILTER_EXEMPT_TITLES.includes(item.title)) {
         return titleMatches || shouldKeepItem(textToMatch);

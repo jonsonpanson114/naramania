@@ -73,7 +73,8 @@ export function evaluateSourceCoverage(
     const missingLinkIncludes = expectation.requiredLinkIncludes
       .filter((sourceNeedle) => sourceCounts[sourceNeedle] < 1);
     const hasEnoughItems = municipalityItems.length >= minItems;
-    const status: CoverageStatus = hasEnoughItems && missingLinkIncludes.length === 0 ? 'ok' : 'missing';
+    const allowsEmptyAfterFiltering = minItems === 0 && municipalityItems.length === 0;
+    const status: CoverageStatus = allowsEmptyAfterFiltering || (hasEnoughItems && missingLinkIncludes.length === 0) ? 'ok' : 'missing';
     const severity = severityOf(expectation.severity);
 
     return {
@@ -83,7 +84,9 @@ export function evaluateSourceCoverage(
       totalCount: municipalityItems.length,
       missingLinkIncludes,
       sourceCounts,
-      message: status === 'ok'
+      message: allowsEmptyAfterFiltering
+        ? `${expectation.municipality}: 対象案件なし / filtered scope OK`
+        : status === 'ok'
         ? `${expectation.municipality}: ${municipalityItems.length}件 / sources OK`
         : `${expectation.municipality}: ${municipalityItems.length}件、missing sources: ${missingLinkIncludes.join(', ') || 'none'}`,
     };

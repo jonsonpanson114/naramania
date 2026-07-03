@@ -433,6 +433,7 @@ async function main() {
             const retainedHistory = scraper.municipality === '奈良県'
                 ? [...previousMunicipalityItems, ...snapshotMunicipalityItems].filter((previousItem) =>
                     shouldRetainNaraPrefHistoricalItem(previousItem)
+                    && shouldKeepBiddingItem(previousItem)
                     && !keptItems.some(item => isSameLogicalItem(item, previousItem)),
                 )
                 : [];

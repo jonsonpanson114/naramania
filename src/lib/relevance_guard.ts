@@ -62,6 +62,10 @@ const NOISE_KEYWORDS = [
   '発電設備',
   'ボイラー',
   'ポンプ',
+  '外壁',
+  '外壁改修',
+  '外壁等',
+  '外装',
 ];
 
 const TARGET_CONTEXT_KEYWORDS = [
@@ -87,7 +91,6 @@ const TARGET_CONTEXT_KEYWORDS = [
   'センター',
   'トイレ',
   '便所',
-  '外壁',
   '屋上',
   '屋根',
   '内装',
@@ -128,6 +131,10 @@ const NOISE_LABELS: Record<string, string> = {
   照明: '設備系',
   エレベーター: 'EV系',
   昇降機: 'EV系',
+  外壁: '外壁系',
+  外壁改修: '外壁系',
+  外壁等: '外壁系',
+  外装: '外壁系',
 };
 
 function normalize(value: string): string {

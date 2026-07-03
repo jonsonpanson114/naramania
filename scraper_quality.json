@@ -1,35 +1,38 @@
 {
-  "generatedAt": "2026-07-03T11:44:12.924Z",
-  "source": "daily_scrape",
+  "generatedAt": "2026-07-03T22:06:52.930Z",
+  "source": "outer_wall_filter_cleanup",
+  "originalCount": 218,
+  "removedCount": 29,
   "scrapedCount": 38,
-  "keptCount": 218,
-  "rejectedCount": 1,
+  "keptCount": 181,
+  "rejectedCount": 30,
   "oldestAnnouncementDate": "2025-02-02",
   "latestAnnouncementDate": "2026-07-03",
-  "municipalityCount": 25,
+  "municipalityCount": 23,
   "municipalityAudit": {
     "expectedMunicipalityCount": 25,
-    "coveredMunicipalityCount": 25,
-    "missingMunicipalities": [],
-    "zeroCountMunicipalities": [],
+    "coveredMunicipalityCount": 23,
+    "missingMunicipalities": [
+      "大和高田市",
+      "安堵町"
+    ],
+    "zeroCountMunicipalities": [
+      "大和高田市",
+      "安堵町"
+    ],
     "breakdown": [
       {
         "municipality": "奈良県",
-        "count": 37,
+        "count": 23,
         "changeFromPrevious": 0
       },
       {
         "municipality": "葛城市",
-        "count": 26,
-        "changeFromPrevious": 0
-      },
-      {
-        "municipality": "宇陀市",
         "count": 20,
         "changeFromPrevious": 0
       },
       {
-        "municipality": "橿原市",
+        "municipality": "宇陀市",
         "count": 19,
         "changeFromPrevious": 0
       },
@@ -44,13 +47,13 @@
         "changeFromPrevious": 0
       },
       {
-        "municipality": "五條市",
-        "count": 16,
+        "municipality": "橿原市",
+        "count": 17,
         "changeFromPrevious": 0
       },
       {
-        "municipality": "奈良市",
-        "count": 10,
+        "municipality": "五條市",
+        "count": 14,
         "changeFromPrevious": 0
       },
       {
@@ -59,12 +62,12 @@
         "changeFromPrevious": 0
       },
       {
-        "municipality": "川西町",
-        "count": 5,
+        "municipality": "奈良市",
+        "count": 9,
         "changeFromPrevious": 0
       },
       {
-        "municipality": "桜井市",
+        "municipality": "川西町",
         "count": 4,
         "changeFromPrevious": 0
       },
@@ -74,22 +77,12 @@
         "changeFromPrevious": 0
       },
       {
+        "municipality": "桜井市",
+        "count": 3,
+        "changeFromPrevious": 0
+      },
+      {
         "municipality": "天理市",
-        "count": 4,
-        "changeFromPrevious": 0
-      },
-      {
-        "municipality": "安堵町",
-        "count": 3,
-        "changeFromPrevious": 0
-      },
-      {
-        "municipality": "広陵町",
-        "count": 3,
-        "changeFromPrevious": 0
-      },
-      {
-        "municipality": "三郷町",
         "count": 3,
         "changeFromPrevious": 0
       },
@@ -109,7 +102,7 @@
         "changeFromPrevious": 0
       },
       {
-        "municipality": "御所市",
+        "municipality": "三郷町",
         "count": 2,
         "changeFromPrevious": 0
       },
@@ -129,12 +122,17 @@
         "changeFromPrevious": 0
       },
       {
-        "municipality": "大淀町",
+        "municipality": "御所市",
         "count": 1,
         "changeFromPrevious": 0
       },
       {
-        "municipality": "大和高田市",
+        "municipality": "広陵町",
+        "count": 1,
+        "changeFromPrevious": 0
+      },
+      {
+        "municipality": "大淀町",
         "count": 1,
         "changeFromPrevious": 0
       }
@@ -166,12 +164,12 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 37,
+        "totalCount": 23,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "ppi.ebid-kouji-gyoumu.pref.nara.jp": 37
+          "ppi.ebid-kouji-gyoumu.pref.nara.jp": 23
         },
-        "message": "奈良県: 37件 / sources OK"
+        "message": "奈良県: 23件 / sources OK"
       },
       {
         "expectation": {
@@ -184,12 +182,12 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 10,
+        "totalCount": 9,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "nara.efftis.jp": 10
+          "nara.efftis.jp": 9
         },
-        "message": "奈良市: 10件 / sources OK"
+        "message": "奈良市: 9件 / sources OK"
       },
       {
         "expectation": {
@@ -202,12 +200,12 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 19,
+        "totalCount": 17,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.kashihara.nara.jp": 19
+          "city.kashihara.nara.jp": 17
         },
-        "message": "橿原市: 19件 / sources OK"
+        "message": "橿原市: 17件 / sources OK"
       },
       {
         "expectation": {
@@ -230,7 +228,7 @@
       {
         "expectation": {
           "municipality": "大和高田市",
-          "minItems": 1,
+          "minItems": 0,
           "requiredLinkIncludes": [
             "city.yamatotakada.nara.jp"
           ],
@@ -238,12 +236,14 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 1,
-        "missingLinkIncludes": [],
+        "totalCount": 0,
+        "missingLinkIncludes": [
+          "city.yamatotakada.nara.jp"
+        ],
         "sourceCounts": {
-          "city.yamatotakada.nara.jp": 1
+          "city.yamatotakada.nara.jp": 0
         },
-        "message": "大和高田市: 1件 / sources OK"
+        "message": "大和高田市: 対象案件なし / filtered scope OK"
       },
       {
         "expectation": {
@@ -275,13 +275,13 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 26,
+        "totalCount": 20,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.katsuragi.nara.jp": 14,
-          "epi-cloud.fwd.ne.jp": 12
+          "city.katsuragi.nara.jp": 9,
+          "epi-cloud.fwd.ne.jp": 11
         },
-        "message": "葛城市: 26件 / sources OK"
+        "message": "葛城市: 20件 / sources OK"
       },
       {
         "expectation": {
@@ -295,13 +295,13 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 16,
+        "totalCount": 14,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.gojo.lg.jp": 5,
+          "city.gojo.lg.jp": 3,
           "epi-cloud.fwd.ne.jp": 11
         },
-        "message": "五條市: 16件 / sources OK"
+        "message": "五條市: 14件 / sources OK"
       },
       {
         "expectation": {
@@ -314,12 +314,12 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 2,
+        "totalCount": 1,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.gose.nara.jp": 2
+          "city.gose.nara.jp": 1
         },
-        "message": "御所市: 2件 / sources OK"
+        "message": "御所市: 1件 / sources OK"
       },
       {
         "expectation": {
@@ -332,12 +332,12 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 4,
+        "totalCount": 3,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.tenri.nara.jp": 4
+          "city.tenri.nara.jp": 3
         },
-        "message": "天理市: 4件 / sources OK"
+        "message": "天理市: 3件 / sources OK"
       },
       {
         "expectation": {
@@ -350,12 +350,12 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 4,
+        "totalCount": 3,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.sakurai.lg.jp": 4
+          "city.sakurai.lg.jp": 3
         },
-        "message": "桜井市: 4件 / sources OK"
+        "message": "桜井市: 3件 / sources OK"
       },
       {
         "expectation": {
@@ -368,12 +368,12 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 20,
+        "totalCount": 19,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "epi-cloud.fwd.ne.jp": 20
+          "epi-cloud.fwd.ne.jp": 19
         },
-        "message": "宇陀市: 20件 / sources OK"
+        "message": "宇陀市: 19件 / sources OK"
       },
       {
         "expectation": {
@@ -404,12 +404,12 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 3,
+        "totalCount": 1,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "town.koryo.nara.jp": 3
+          "town.koryo.nara.jp": 1
         },
-        "message": "広陵町: 3件 / sources OK"
+        "message": "広陵町: 1件 / sources OK"
       },
       {
         "expectation": {
@@ -440,12 +440,12 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 5,
+        "totalCount": 4,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "town.nara-kawanishi.lg.jp": 5
+          "town.nara-kawanishi.lg.jp": 4
         },
-        "message": "川西町: 5件 / sources OK"
+        "message": "川西町: 4件 / sources OK"
       },
       {
         "expectation": {
@@ -504,7 +504,7 @@
       {
         "expectation": {
           "municipality": "安堵町",
-          "minItems": 1,
+          "minItems": 0,
           "requiredLinkIncludes": [
             "town.ando.nara.jp"
           ],
@@ -512,12 +512,14 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 3,
-        "missingLinkIncludes": [],
+        "totalCount": 0,
+        "missingLinkIncludes": [
+          "town.ando.nara.jp"
+        ],
         "sourceCounts": {
-          "town.ando.nara.jp": 3
+          "town.ando.nara.jp": 0
         },
-        "message": "安堵町: 3件 / sources OK"
+        "message": "安堵町: 対象案件なし / filtered scope OK"
       },
       {
         "expectation": {
@@ -566,12 +568,12 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 3,
+        "totalCount": 2,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "epi-cloud.fwd.ne.jp": 3
+          "epi-cloud.fwd.ne.jp": 2
         },
-        "message": "三郷町: 3件 / sources OK"
+        "message": "三郷町: 2件 / sources OK"
       },
       {
         "expectation": {
@@ -612,10 +614,10 @@
     ]
   },
   "intelligence": {
-    "itemsWithPdf": 45,
-    "itemsWithDescription": 45,
-    "intelligenceExtractedCount": 41,
-    "geminiExtractedCount": 41,
-    "taggedCount": 41
+    "itemsWithPdf": 33,
+    "itemsWithDescription": 33,
+    "intelligenceExtractedCount": 30,
+    "geminiExtractedCount": 30,
+    "taggedCount": 30
   }
 }

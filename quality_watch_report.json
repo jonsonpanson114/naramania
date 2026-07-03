@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-07-03T11:44:32.198Z",
-  "qualityGeneratedAt": "2026-07-03T11:44:12.924Z",
-  "itemCount": 218,
+  "generatedAt": "2026-07-03T22:07:03.913Z",
+  "qualityGeneratedAt": "2026-07-03T22:06:52.930Z",
+  "itemCount": 181,
   "criticalWatch": {
     "activeCount": 3,
     "okCount": 3,
@@ -39,11 +39,11 @@
         "municipality": "葛城市",
         "status": "ok",
         "severity": "error",
-        "count": 12,
+        "count": 11,
         "requiredLinkIncludes": [
           "0620064007200720"
         ],
-        "message": "葛城市 情報公開サイト: 12件確認",
+        "message": "葛城市 情報公開サイト: 11件確認",
         "matches": [
           {
             "id": "katsuragi-epi-d289edf8",
@@ -64,17 +64,6 @@
             "announcementDate": "2026-05-08",
             "biddingDate": "2026-05-29",
             "winningContractor": "清輝",
-            "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200720",
-            "pdfUrl": null
-          },
-          {
-            "id": "katsuragi-epi-8a2b5370",
-            "municipality": "葛城市",
-            "title": "歴史博物館外壁・防水等改修工事設計業務",
-            "status": "落札",
-            "announcementDate": "2026-05-07",
-            "biddingDate": "2026-05-28",
-            "winningContractor": "(株)岩岸設計",
             "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200720",
             "pdfUrl": null
           },
@@ -148,6 +137,17 @@
             "id": "katsuragi-epi-aef9d1f0",
             "municipality": "葛城市",
             "title": "新庄スポーツセンタープール床改修工事",
+            "status": "受付終了",
+            "announcementDate": "2025-04-08",
+            "biddingDate": "2025-04-28",
+            "winningContractor": null,
+            "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200720",
+            "pdfUrl": null
+          },
+          {
+            "id": "katsuragi-epi-9f6cdfe9",
+            "municipality": "葛城市",
+            "title": "葛城市火葬場待合棟等トイレ改修工事",
             "status": "受付終了",
             "announcementDate": "2025-04-08",
             "biddingDate": "2025-04-28",
@@ -300,43 +300,43 @@
         "municipality": "奈良県",
         "status": "ok",
         "severity": "error",
-        "totalCount": 37,
+        "totalCount": 23,
         "requiredLinkIncludes": [
           "ppi.ebid-kouji-gyoumu.pref.nara.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "ppi.ebid-kouji-gyoumu.pref.nara.jp": 37
+          "ppi.ebid-kouji-gyoumu.pref.nara.jp": 23
         },
-        "message": "奈良県: 37件 / sources OK"
+        "message": "奈良県: 23件 / sources OK"
       },
       {
         "municipality": "奈良市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 10,
+        "totalCount": 9,
         "requiredLinkIncludes": [
           "nara.efftis.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "nara.efftis.jp": 10
+          "nara.efftis.jp": 9
         },
-        "message": "奈良市: 10件 / sources OK"
+        "message": "奈良市: 9件 / sources OK"
       },
       {
         "municipality": "橿原市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 19,
+        "totalCount": 17,
         "requiredLinkIncludes": [
           "city.kashihara.nara.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.kashihara.nara.jp": 19
+          "city.kashihara.nara.jp": 17
         },
-        "message": "橿原市: 19件 / sources OK"
+        "message": "橿原市: 17件 / sources OK"
       },
       {
         "municipality": "生駒市",
@@ -356,15 +356,17 @@
         "municipality": "大和高田市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 1,
+        "totalCount": 0,
         "requiredLinkIncludes": [
           "city.yamatotakada.nara.jp"
         ],
-        "missingLinkIncludes": [],
+        "missingLinkIncludes": [
+          "city.yamatotakada.nara.jp"
+        ],
         "sourceCounts": {
-          "city.yamatotakada.nara.jp": 1
+          "city.yamatotakada.nara.jp": 0
         },
-        "message": "大和高田市: 1件 / sources OK"
+        "message": "大和高田市: 対象案件なし / filtered scope OK"
       },
       {
         "municipality": "大和郡山市",
@@ -384,89 +386,89 @@
         "municipality": "葛城市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 26,
+        "totalCount": 20,
         "requiredLinkIncludes": [
           "city.katsuragi.nara.jp",
           "epi-cloud.fwd.ne.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.katsuragi.nara.jp": 14,
-          "epi-cloud.fwd.ne.jp": 12
+          "city.katsuragi.nara.jp": 9,
+          "epi-cloud.fwd.ne.jp": 11
         },
-        "message": "葛城市: 26件 / sources OK"
+        "message": "葛城市: 20件 / sources OK"
       },
       {
         "municipality": "五條市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 16,
+        "totalCount": 14,
         "requiredLinkIncludes": [
           "city.gojo.lg.jp",
           "epi-cloud.fwd.ne.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.gojo.lg.jp": 5,
+          "city.gojo.lg.jp": 3,
           "epi-cloud.fwd.ne.jp": 11
         },
-        "message": "五條市: 16件 / sources OK"
+        "message": "五條市: 14件 / sources OK"
       },
       {
         "municipality": "御所市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 2,
+        "totalCount": 1,
         "requiredLinkIncludes": [
           "city.gose.nara.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.gose.nara.jp": 2
+          "city.gose.nara.jp": 1
         },
-        "message": "御所市: 2件 / sources OK"
+        "message": "御所市: 1件 / sources OK"
       },
       {
         "municipality": "天理市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 4,
+        "totalCount": 3,
         "requiredLinkIncludes": [
           "city.tenri.nara.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.tenri.nara.jp": 4
+          "city.tenri.nara.jp": 3
         },
-        "message": "天理市: 4件 / sources OK"
+        "message": "天理市: 3件 / sources OK"
       },
       {
         "municipality": "桜井市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 4,
+        "totalCount": 3,
         "requiredLinkIncludes": [
           "city.sakurai.lg.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.sakurai.lg.jp": 4
+          "city.sakurai.lg.jp": 3
         },
-        "message": "桜井市: 4件 / sources OK"
+        "message": "桜井市: 3件 / sources OK"
       },
       {
         "municipality": "宇陀市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 20,
+        "totalCount": 19,
         "requiredLinkIncludes": [
           "epi-cloud.fwd.ne.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "epi-cloud.fwd.ne.jp": 20
+          "epi-cloud.fwd.ne.jp": 19
         },
-        "message": "宇陀市: 20件 / sources OK"
+        "message": "宇陀市: 19件 / sources OK"
       },
       {
         "municipality": "田原本町",
@@ -486,15 +488,15 @@
         "municipality": "広陵町",
         "status": "ok",
         "severity": "error",
-        "totalCount": 3,
+        "totalCount": 1,
         "requiredLinkIncludes": [
           "town.koryo.nara.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "town.koryo.nara.jp": 3
+          "town.koryo.nara.jp": 1
         },
-        "message": "広陵町: 3件 / sources OK"
+        "message": "広陵町: 1件 / sources OK"
       },
       {
         "municipality": "香芝市",
@@ -514,15 +516,15 @@
         "municipality": "川西町",
         "status": "ok",
         "severity": "error",
-        "totalCount": 5,
+        "totalCount": 4,
         "requiredLinkIncludes": [
           "town.nara-kawanishi.lg.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "town.nara-kawanishi.lg.jp": 5
+          "town.nara-kawanishi.lg.jp": 4
         },
-        "message": "川西町: 5件 / sources OK"
+        "message": "川西町: 4件 / sources OK"
       },
       {
         "municipality": "三宅町",
@@ -570,15 +572,17 @@
         "municipality": "安堵町",
         "status": "ok",
         "severity": "error",
-        "totalCount": 3,
+        "totalCount": 0,
         "requiredLinkIncludes": [
           "town.ando.nara.jp"
         ],
-        "missingLinkIncludes": [],
+        "missingLinkIncludes": [
+          "town.ando.nara.jp"
+        ],
         "sourceCounts": {
-          "town.ando.nara.jp": 3
+          "town.ando.nara.jp": 0
         },
-        "message": "安堵町: 3件 / sources OK"
+        "message": "安堵町: 対象案件なし / filtered scope OK"
       },
       {
         "municipality": "高取町",
@@ -612,15 +616,15 @@
         "municipality": "三郷町",
         "status": "ok",
         "severity": "error",
-        "totalCount": 3,
+        "totalCount": 2,
         "requiredLinkIncludes": [
           "epi-cloud.fwd.ne.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "epi-cloud.fwd.ne.jp": 3
+          "epi-cloud.fwd.ne.jp": 2
         },
-        "message": "三郷町: 3件 / sources OK"
+        "message": "三郷町: 2件 / sources OK"
       },
       {
         "municipality": "王寺町",
