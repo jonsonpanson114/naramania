@@ -106,16 +106,6 @@
     "status": "受付中"
   },
   {
-    "id": "ikoma-6eaef5d9de",
-    "municipality": "生駒市",
-    "title": "認定こども園生駒幼稚園管理棟及び保育棟屋根防水工事",
-    "type": "建築",
-    "announcementDate": "2026-06-25",
-    "biddingDate": "2026-07-09",
-    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-    "status": "受付中"
-  },
-  {
     "id": "斑鳩町-2026-06-24-安田家住宅維持補修工事",
     "municipality": "斑鳩町",
     "title": "安田家住宅維持補修工事",
@@ -209,26 +199,6 @@
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260095&gamenMode=0",
     "status": "受付中",
     "winnerType": "設計事務所"
-  },
-  {
-    "id": "nara-city-0000002549",
-    "municipality": "奈良市",
-    "title": "富雄中学校校舎屋上防水改修工事",
-    "type": "建築",
-    "announcementDate": "2026-06-15",
-    "biddingDate": "2026-07-07",
-    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
-    "status": "受付中"
-  },
-  {
-    "id": "nara-city-0000002550",
-    "municipality": "奈良市",
-    "title": "あやめ池小学校校舎屋上防水改修工事",
-    "type": "建築",
-    "announcementDate": "2026-06-15",
-    "biddingDate": "2026-07-08",
-    "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
-    "status": "受付中"
   },
   {
     "id": "ikoma-result-2601010029",
@@ -361,18 +331,6 @@
     "municipality": "奈良県"
   },
   {
-    "id": "nara-pref-29001013060020260058",
-    "title": "県営住宅坊城団地１～３号棟屋上防水改修工事監理業務（県営住宅環境改善事業（防災・安全）） 委（監）第８－８号",
-    "type": "コンサル",
-    "announcementDate": "2026-06-01",
-    "biddingDate": "2026-06-22",
-    "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260058&gamenMode=0",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "municipality": "奈良県",
-    "winningContractor": "ニッタ建築事務所"
-  },
-  {
     "id": "tenri-d992a9bd",
     "municipality": "天理市",
     "title": "天理市環境クリーンセンター解体工事",
@@ -390,18 +348,6 @@
     "biddingDate": "2026-06-22",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/javaScript:void(0);",
     "status": "受付終了"
-  },
-  {
-    "id": "nara-pref-29001013060020260031",
-    "municipality": "奈良県",
-    "title": "県営住宅坊城団地１～３号棟屋上防水改修工事（県営住宅環境改善事業（防災・安全）） 第８－７号",
-    "type": "建築",
-    "announcementDate": "2026-05-28",
-    "biddingDate": "2026-06-22",
-    "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260031&gamenMode=0",
-    "status": "落札",
-    "winningContractor": "株式会社中川組",
-    "winnerType": "ゼネコン"
   },
   {
     "id": "nara-pref-29001013060020260034",
@@ -572,18 +518,6 @@
     "municipality": "奈良県"
   },
   {
-    "id": "ikoma-result-2601100003",
-    "municipality": "生駒市",
-    "title": "緑ヶ丘中学校外３校屋上防水改修設計業務",
-    "type": "コンサル",
-    "announcementDate": "2026-05-21",
-    "biddingDate": "2026-05-21",
-    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-    "status": "落札",
-    "winningContractor": "有限会社優建築工房",
-    "winnerType": "ゼネコン"
-  },
-  {
     "id": "oji-aHR0cHM6Ly93",
     "municipality": "王寺町",
     "title": "やわらぎ会館改修工事",
@@ -614,17 +548,6 @@
     ],
     "isIntelligenceExtracted": true,
     "extractionSource": "gemini"
-  },
-  {
-    "id": "uda-result-2695010002",
-    "municipality": "宇陀市",
-    "title": "【第08-A001号】保養センター美榛苑屋上防水改修工事",
-    "type": "建築",
-    "announcementDate": "2026-05-14",
-    "biddingDate": "2026-05-14",
-    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200700",
-    "status": "落札",
-    "winningContractor": "（株）北脇組"
   },
   {
     "id": "uda-result-2695100001",
@@ -1481,18 +1404,6 @@
     "extractionSource": "gemini"
   },
   {
-    "id": "ikoma-result-2501010082",
-    "municipality": "生駒市",
-    "title": "生駒中学校屋内運動場屋根防水改修工事",
-    "type": "建築",
-    "announcementDate": "2025-10-21",
-    "biddingDate": "2025-10-21",
-    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-    "status": "落札",
-    "winningContractor": "グローバル工業株式会社",
-    "winnerType": "ゼネコン"
-  },
-  {
     "id": "yamato-koriyama-2be46dab",
     "municipality": "大和郡山市",
     "title": "大和郡山市立スポーツ会館体育室床修繕",
@@ -1502,17 +1413,6 @@
     "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsunooshirase/r7/17105.html",
     "status": "落札",
     "winningContractor": "マツダ塗装株式会社"
-  },
-  {
-    "id": "uda-4cf3e6cb6c",
-    "municipality": "宇陀市",
-    "title": "【第07-C009号】保養センター美榛苑屋上防水改修工事設計業務",
-    "type": "コンサル",
-    "announcementDate": "2025-10-09",
-    "biddingDate": "2025-10-23",
-    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200700",
-    "status": "落札",
-    "winningContractor": "（株）伸構造事務所"
   },
   {
     "id": "kashiba-web-886968df",
@@ -1662,18 +1562,6 @@
     "winnerType": "設計事務所"
   },
   {
-    "id": "ikoma-result-2501010052",
-    "municipality": "生駒市",
-    "title": "生駒小学校及び生駒台小学校屋上防水改修工事",
-    "type": "建築",
-    "announcementDate": "2025-08-22",
-    "biddingDate": "2025-08-22",
-    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-    "status": "落札",
-    "winningContractor": "吉野塗装株式会社",
-    "winnerType": "ゼネコン"
-  },
-  {
     "id": "kashihara-result-5072000836",
     "municipality": "橿原市",
     "title": "旧中央公民館・分館解体跡増築工事に伴う工事監理業務委託",
@@ -1696,18 +1584,6 @@
     "isIntelligenceExtracted": true,
     "extractionSource": "gemini",
     "designFirm": "(株)内藤建築事務所 奈良事務所"
-  },
-  {
-    "id": "ikoma-result-2501010051",
-    "municipality": "生駒市",
-    "title": "介護老人保健施設やすらぎの杜優楽バルコニー防水改修工事",
-    "type": "建築",
-    "announcementDate": "2025-08-08",
-    "biddingDate": "2025-08-08",
-    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-    "status": "落札",
-    "winningContractor": "グローバル工業株式会社",
-    "winnerType": "ゼネコン"
   },
   {
     "id": "katsuragi-web-1d54ab75",
@@ -2002,17 +1878,6 @@
     "winningContractor": "YARD吉村建築設計"
   },
   {
-    "id": "katsuragi-epi-2e2f83fc",
-    "municipality": "葛城市",
-    "title": "新庄中学校北館昇降口防水改修工事",
-    "type": "建築",
-    "announcementDate": "2025-06-04",
-    "biddingDate": "2025-06-25",
-    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200720",
-    "status": "落札",
-    "winningContractor": "(株)生野建設"
-  },
-  {
     "id": "sango-epi-5Luk5ZKMN+W5",
     "municipality": "三郷町",
     "title": "令和7年度 西部保育園築山人工芝化工事",
@@ -2167,29 +2032,6 @@
       "改修",
       "建築",
       "トイレ"
-    ],
-    "isIntelligenceExtracted": true,
-    "extractionSource": "gemini"
-  },
-  {
-    "id": "kashihara-result-5071000093",
-    "municipality": "橿原市",
-    "title": "鴨公幼稚園トイレ及び屋上防水改修工事",
-    "type": "建築",
-    "announcementDate": "2025-04-22",
-    "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
-    "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000093k.pdf",
-    "status": "落札",
-    "winnerType": "ゼネコン",
-    "winningContractor": "(株)奥井建設",
-    "biddingDate": "2025-04-22",
-    "estimatedPrice": "104,456,000円(消費税10%含む)",
-    "constructionPeriod": "契約日の翌日から令和 8年 3月18日まで",
-    "description": "鴨公幼稚園トイレ及び屋上防水改修工事",
-    "tags": [
-      "改修",
-      "防水",
-      "建築"
     ],
     "isIntelligenceExtracted": true,
     "extractionSource": "gemini"

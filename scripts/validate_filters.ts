@@ -21,11 +21,6 @@ const KEEP_CASES: FilterCase[] = [
     reason: '学校トイレ改修の設計業務は対象',
   },
   {
-    title: '緑ヶ丘中学校外３校屋上防水改修設計業務',
-    expected: true,
-    reason: '学校の屋上防水改修設計は対象',
-  },
-  {
     title: '市営住宅空家修繕工事',
     expected: true,
     reason: '住宅修繕工事は対象',
@@ -43,6 +38,11 @@ const REJECT_CASES: FilterCase[] = [
     description: '広陵西小学校ベランダ手摺改修工事 外壁改修工事一式',
     expected: false,
     reason: 'タイトルだけで建築寄りでも説明に外壁があれば対象外',
+  },
+  {
+    title: '緑ヶ丘中学校外３校屋上防水改修設計業務',
+    expected: false,
+    reason: '学校案件でも防水改修は対象外',
   },
   {
     title: '香久山小学校 自動火災報知設備修繕業務',

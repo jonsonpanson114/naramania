@@ -31,7 +31,6 @@ const detectMaterials = (description?: string): { name: string; icon: string; ma
         { name: '内装・木質化', icon: '🪵', keywords: ['内装', '木材', 'フローリング', '木質', 'クロス', '天井仕上げ', '間仕切り'] },
         { name: 'エレベーター・昇降機', icon: '🛗', keywords: ['エレベーター', '昇降機', 'EV', 'エスカレーター'] },
         { name: '給排水・衛生設備', icon: '🚰', keywords: ['給排水', '配管', 'トイレ', '衛生', '便器', '給湯'] },
-        { name: '外壁改修・防水塗装', icon: '🧱', keywords: ['外壁改修', '防水', '塗装', '屋上防水', 'タイル', 'シーリング'] },
         { name: '防災・防犯設備', icon: '🚨', keywords: ['防災', 'スプリンクラー', '消火栓', '防犯', '火災報知', '非常通報'] }
     ];
     

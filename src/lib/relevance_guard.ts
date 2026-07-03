@@ -66,6 +66,10 @@ const NOISE_KEYWORDS = [
   '外壁改修',
   '外壁等',
   '外装',
+  '防水',
+  '屋上防水',
+  '防水工事',
+  '防水改修',
 ];
 
 const TARGET_CONTEXT_KEYWORDS = [
@@ -94,7 +98,6 @@ const TARGET_CONTEXT_KEYWORDS = [
   '屋上',
   '屋根',
   '内装',
-  '防水',
   '耐震',
   '仮眠室',
   '書庫',
@@ -135,6 +138,10 @@ const NOISE_LABELS: Record<string, string> = {
   外壁改修: '外壁系',
   外壁等: '外壁系',
   外装: '外壁系',
+  防水: '防水系',
+  屋上防水: '防水系',
+  防水工事: '防水系',
+  防水改修: '防水系',
 };
 
 function normalize(value: string): string {

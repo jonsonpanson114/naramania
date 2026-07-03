@@ -16,7 +16,7 @@ export function TargetScopePanel({ items }: { items: BiddingItem[] }) {
           </div>
           <h3 className="mt-4 text-2xl font-semibold tracking-[0.04em]">必要案件だけを残すガード</h3>
           <p className="mt-3 max-w-3xl text-sm leading-7 tracking-[0.04em] text-emerald-50/75">
-            このサイトは、建築本体・設計監理・トイレ改修などを優先します。土木、道路、舗装、水道、設備、空調、照明、エレベーター、外壁系は対象外候補として監視し、一覧では初期表示から外します。
+            このサイトは、建築本体・設計監理・トイレ改修などを優先します。土木、道路、舗装、水道、設備、空調、照明、エレベーター、外壁、防水系は対象外候補として監視し、一覧では初期表示から外します。
           </p>
 
           <div className="mt-6 grid gap-3 sm:grid-cols-3">
@@ -33,7 +33,7 @@ export function TargetScopePanel({ items }: { items: BiddingItem[] }) {
             <div className="rounded-2xl border border-white/10 bg-white/10 px-4 py-4">
               <p className="text-[9px] tracking-[0.22em] text-rose-100/70 uppercase">対象外候補</p>
               <p className={`mt-1 text-2xl tabular-nums ${hasNoise ? 'text-rose-200' : 'text-emerald-200'}`}>{summary.noiseCount}</p>
-              <p className="mt-1 text-xs text-emerald-50/55">土木・設備・EV・外壁 など</p>
+              <p className="mt-1 text-xs text-emerald-50/55">土木・設備・EV・外壁・防水 など</p>
             </div>
           </div>
         </div>
@@ -44,7 +44,7 @@ export function TargetScopePanel({ items }: { items: BiddingItem[] }) {
             <div>
               <p className="text-sm font-semibold tracking-[0.08em]">{hasNoise ? '対象外候補が残っています' : '対象外候補は検出されていません'}</p>
               <p className="mt-1 text-xs leading-6 text-white/60">
-                {hasNoise ? '一覧では初期非表示です。必要なら検索画面で表示を切り替えて確認できます。' : '現在の掲載データは、土木・設備・エレベーター・外壁系の除外判定を通過しています。'}
+                {hasNoise ? '一覧では初期非表示です。必要なら検索画面で表示を切り替えて確認できます。' : '現在の掲載データは、土木・設備・エレベーター・外壁・防水系の除外判定を通過しています。'}
               </p>
             </div>
           </div>

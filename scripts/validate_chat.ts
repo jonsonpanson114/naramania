@@ -61,14 +61,6 @@ async function main() {
     fail(`大和郡山市落札者はローカル確定回答で返すべきです: model=${koriyamaWinner.model}`);
   }
 
-  const naraRoof = await answerBiddingQuestionWithContext('富雄中学校校舎屋上防水改修工事はある？');
-  assertIncludes(naraRoof.answer, '富雄中学校校舎屋上防水改修工事', '奈良市屋上防水案件回答');
-  assertIncludes(naraRoof.answer, '奈良市', '奈良市屋上防水案件回答');
-  assertIncludes(naraRoof.answer, '2026-07-07', '奈良市屋上防水案件回答');
-  if (naraRoof.model !== 'local-answer') {
-    fail(`奈良市屋上防水案件はローカル確定回答で返すべきです: model=${naraRoof.model}`);
-  }
-
   const kashibaDesign = await answerBiddingQuestionWithContext('志都美小学校改築工事に伴う実施設計業務はある？');
   assertIncludes(kashibaDesign.answer, '志都美小学校改築工事に伴う実施設計業務', '香芝市設計案件回答');
   assertIncludes(kashibaDesign.answer, '香芝市', '香芝市設計案件回答');

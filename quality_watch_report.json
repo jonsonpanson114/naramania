@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-07-03T22:07:03.913Z",
-  "qualityGeneratedAt": "2026-07-03T22:06:52.930Z",
-  "itemCount": 181,
+  "generatedAt": "2026-07-03T22:14:32.921Z",
+  "qualityGeneratedAt": "2026-07-03T22:14:20.974Z",
+  "itemCount": 168,
   "criticalWatch": {
     "activeCount": 3,
     "okCount": 3,
@@ -39,11 +39,11 @@
         "municipality": "葛城市",
         "status": "ok",
         "severity": "error",
-        "count": 11,
+        "count": 10,
         "requiredLinkIncludes": [
           "0620064007200720"
         ],
-        "message": "葛城市 情報公開サイト: 11件確認",
+        "message": "葛城市 情報公開サイト: 10件確認",
         "matches": [
           {
             "id": "katsuragi-epi-d289edf8",
@@ -112,17 +112,6 @@
             "pdfUrl": null
           },
           {
-            "id": "katsuragi-epi-2e2f83fc",
-            "municipality": "葛城市",
-            "title": "新庄中学校北館昇降口防水改修工事",
-            "status": "落札",
-            "announcementDate": "2025-06-04",
-            "biddingDate": "2025-06-25",
-            "winningContractor": "(株)生野建設",
-            "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200720",
-            "pdfUrl": null
-          },
-          {
             "id": "katsuragi-epi-92f71a52",
             "municipality": "葛城市",
             "title": "第7-508号 市営住宅堂の久保団地空家解体設計委託業務",
@@ -148,6 +137,17 @@
             "id": "katsuragi-epi-9f6cdfe9",
             "municipality": "葛城市",
             "title": "葛城市火葬場待合棟等トイレ改修工事",
+            "status": "受付終了",
+            "announcementDate": "2025-04-08",
+            "biddingDate": "2025-04-28",
+            "winningContractor": null,
+            "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200720",
+            "pdfUrl": null
+          },
+          {
+            "id": "katsuragi-epi-a6be4395",
+            "municipality": "葛城市",
+            "title": "磐城第２保育所保育室ウレタン塗装・プールシート貼替工事",
             "status": "受付終了",
             "announcementDate": "2025-04-08",
             "biddingDate": "2025-04-28",
@@ -300,57 +300,57 @@
         "municipality": "奈良県",
         "status": "ok",
         "severity": "error",
-        "totalCount": 23,
+        "totalCount": 21,
         "requiredLinkIncludes": [
           "ppi.ebid-kouji-gyoumu.pref.nara.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "ppi.ebid-kouji-gyoumu.pref.nara.jp": 23
+          "ppi.ebid-kouji-gyoumu.pref.nara.jp": 21
         },
-        "message": "奈良県: 23件 / sources OK"
+        "message": "奈良県: 21件 / sources OK"
       },
       {
         "municipality": "奈良市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 9,
+        "totalCount": 7,
         "requiredLinkIncludes": [
           "nara.efftis.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "nara.efftis.jp": 9
+          "nara.efftis.jp": 7
         },
-        "message": "奈良市: 9件 / sources OK"
+        "message": "奈良市: 7件 / sources OK"
       },
       {
         "municipality": "橿原市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 17,
+        "totalCount": 16,
         "requiredLinkIncludes": [
           "city.kashihara.nara.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.kashihara.nara.jp": 17
+          "city.kashihara.nara.jp": 16
         },
-        "message": "橿原市: 17件 / sources OK"
+        "message": "橿原市: 16件 / sources OK"
       },
       {
         "municipality": "生駒市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 18,
+        "totalCount": 13,
         "requiredLinkIncludes": [
           "epi-cloud.fwd.ne.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "epi-cloud.fwd.ne.jp": 18
+          "epi-cloud.fwd.ne.jp": 13
         },
-        "message": "生駒市: 18件 / sources OK"
+        "message": "生駒市: 13件 / sources OK"
       },
       {
         "municipality": "大和高田市",
@@ -386,7 +386,7 @@
         "municipality": "葛城市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 20,
+        "totalCount": 19,
         "requiredLinkIncludes": [
           "city.katsuragi.nara.jp",
           "epi-cloud.fwd.ne.jp"
@@ -394,9 +394,9 @@
         "missingLinkIncludes": [],
         "sourceCounts": {
           "city.katsuragi.nara.jp": 9,
-          "epi-cloud.fwd.ne.jp": 11
+          "epi-cloud.fwd.ne.jp": 10
         },
-        "message": "葛城市: 20件 / sources OK"
+        "message": "葛城市: 19件 / sources OK"
       },
       {
         "municipality": "五條市",
@@ -460,15 +460,15 @@
         "municipality": "宇陀市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 19,
+        "totalCount": 17,
         "requiredLinkIncludes": [
           "epi-cloud.fwd.ne.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "epi-cloud.fwd.ne.jp": 19
+          "epi-cloud.fwd.ne.jp": 17
         },
-        "message": "宇陀市: 19件 / sources OK"
+        "message": "宇陀市: 17件 / sources OK"
       },
       {
         "municipality": "田原本町",

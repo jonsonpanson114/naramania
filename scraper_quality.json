@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-03T22:06:52.930Z",
-  "source": "outer_wall_filter_cleanup",
+  "generatedAt": "2026-07-03T22:14:20.974Z",
+  "source": "waterproof_filter_cleanup",
   "originalCount": 218,
-  "removedCount": 29,
+  "removedCount": 42,
   "scrapedCount": 38,
-  "keptCount": 181,
-  "rejectedCount": 30,
+  "keptCount": 168,
+  "rejectedCount": 43,
   "oldestAnnouncementDate": "2025-02-02",
   "latestAnnouncementDate": "2026-07-03",
   "municipalityCount": 23,
@@ -23,18 +23,13 @@
     "breakdown": [
       {
         "municipality": "奈良県",
-        "count": 23,
-        "changeFromPrevious": 0
+        "count": 21,
+        "changeFromPrevious": -2
       },
       {
         "municipality": "葛城市",
-        "count": 20,
-        "changeFromPrevious": 0
-      },
-      {
-        "municipality": "宇陀市",
         "count": 19,
-        "changeFromPrevious": 0
+        "changeFromPrevious": -1
       },
       {
         "municipality": "高取町",
@@ -42,19 +37,24 @@
         "changeFromPrevious": 0
       },
       {
-        "municipality": "生駒市",
-        "count": 18,
-        "changeFromPrevious": 0
+        "municipality": "宇陀市",
+        "count": 17,
+        "changeFromPrevious": -2
       },
       {
         "municipality": "橿原市",
-        "count": 17,
-        "changeFromPrevious": 0
+        "count": 16,
+        "changeFromPrevious": -1
       },
       {
         "municipality": "五條市",
         "count": 14,
         "changeFromPrevious": 0
+      },
+      {
+        "municipality": "生駒市",
+        "count": 13,
+        "changeFromPrevious": -5
       },
       {
         "municipality": "香芝市",
@@ -63,8 +63,8 @@
       },
       {
         "municipality": "奈良市",
-        "count": 9,
-        "changeFromPrevious": 0
+        "count": 7,
+        "changeFromPrevious": -2
       },
       {
         "municipality": "川西町",
@@ -164,12 +164,12 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 23,
+        "totalCount": 21,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "ppi.ebid-kouji-gyoumu.pref.nara.jp": 23
+          "ppi.ebid-kouji-gyoumu.pref.nara.jp": 21
         },
-        "message": "奈良県: 23件 / sources OK"
+        "message": "奈良県: 21件 / sources OK"
       },
       {
         "expectation": {
@@ -182,12 +182,12 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 9,
+        "totalCount": 7,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "nara.efftis.jp": 9
+          "nara.efftis.jp": 7
         },
-        "message": "奈良市: 9件 / sources OK"
+        "message": "奈良市: 7件 / sources OK"
       },
       {
         "expectation": {
@@ -200,12 +200,12 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 17,
+        "totalCount": 16,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.kashihara.nara.jp": 17
+          "city.kashihara.nara.jp": 16
         },
-        "message": "橿原市: 17件 / sources OK"
+        "message": "橿原市: 16件 / sources OK"
       },
       {
         "expectation": {
@@ -218,12 +218,12 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 18,
+        "totalCount": 13,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "epi-cloud.fwd.ne.jp": 18
+          "epi-cloud.fwd.ne.jp": 13
         },
-        "message": "生駒市: 18件 / sources OK"
+        "message": "生駒市: 13件 / sources OK"
       },
       {
         "expectation": {
@@ -275,13 +275,13 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 20,
+        "totalCount": 19,
         "missingLinkIncludes": [],
         "sourceCounts": {
           "city.katsuragi.nara.jp": 9,
-          "epi-cloud.fwd.ne.jp": 11
+          "epi-cloud.fwd.ne.jp": 10
         },
-        "message": "葛城市: 20件 / sources OK"
+        "message": "葛城市: 19件 / sources OK"
       },
       {
         "expectation": {
@@ -368,12 +368,12 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 19,
+        "totalCount": 17,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "epi-cloud.fwd.ne.jp": 19
+          "epi-cloud.fwd.ne.jp": 17
         },
-        "message": "宇陀市: 19件 / sources OK"
+        "message": "宇陀市: 17件 / sources OK"
       },
       {
         "expectation": {
@@ -614,10 +614,10 @@
     ]
   },
   "intelligence": {
-    "itemsWithPdf": 33,
-    "itemsWithDescription": 33,
-    "intelligenceExtractedCount": 30,
-    "geminiExtractedCount": 30,
-    "taggedCount": 30
+    "itemsWithPdf": 32,
+    "itemsWithDescription": 32,
+    "intelligenceExtractedCount": 29,
+    "geminiExtractedCount": 29,
+    "taggedCount": 29
   }
 }
