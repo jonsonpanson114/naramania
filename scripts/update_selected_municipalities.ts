@@ -1,17 +1,24 @@
 import fs from 'fs';
 import path from 'path';
 import { NaraCityScraper } from '../src/scrapers/nara_city';
+import { NaraPrefScraper } from '../src/scrapers/nara_pref';
 import { GojoCityScraper } from '../src/scrapers/gojo_city';
 import { IkomaCityScraper } from '../src/scrapers/ikoma_city';
 import { UdaCityScraper } from '../src/scrapers/uda_city';
 import { KatsuragiCityScraper } from '../src/scrapers/katsuragi_city';
 import { KashiharaCityScraper } from '../src/scrapers/kashihara_city';
 import { KashibaCityScraper } from '../src/scrapers/kashiba_city';
+import { KawanishiCityScraper } from '../src/scrapers/kawanishi_city';
+import { MiyakeCityScraper } from '../src/scrapers/miyake_city';
+import { SakuraiCityScraper } from '../src/scrapers/sakurai_city';
+import { SangoTownScraper } from '../src/scrapers/sango_town';
+import { TawaramotoTownScraper } from '../src/scrapers/tawaramoto_town';
 import { IkarugaTownScraper, TakatoriTownScraper } from '../src/scrapers/takatori_ikaruga';
 import { KoryoTownScraper } from '../src/scrapers/koryo_town';
 import { OjiTownScraper } from '../src/scrapers/oji_town';
-import { HiragawaScraper } from '../src/scrapers/yamazohiragawa_city';
+import { HiragawaScraper, YamazomuraScraper } from '../src/scrapers/yamazohiragawa_city';
 import { OyodoTownScraper } from '../src/scrapers/oyodo_town';
+import { YamatoTakadaCityScraper } from '../src/scrapers/yamato_takada_city';
 import { YamatokoriyamaCityScraper } from '../src/scrapers/yamatokoriyama_city';
 import { TenriCityScraper } from '../src/scrapers/tenri_city';
 import { GoseCityScraper } from '../src/scrapers/gose_city';
@@ -25,6 +32,9 @@ const RESULT_PATH = path.join(process.cwd(), 'scraper_result.json');
 const QUALITY_PATH = path.join(process.cwd(), 'scraper_quality.json');
 
 const SCRAPER_MAP: Record<string, Scraper> = {
+    nara_pref: new NaraPrefScraper(),
+    pref: new NaraPrefScraper(),
+    prefecture: new NaraPrefScraper(),
     nara: new NaraCityScraper(),
     nara_city: new NaraCityScraper(),
     gojo: new GojoCityScraper(),
@@ -40,6 +50,14 @@ const SCRAPER_MAP: Record<string, Scraper> = {
     heguri: new HiragawaScraper(),
     oyodo: new OyodoTownScraper(),
     koriyama: new YamatokoriyamaCityScraper(),
+    yamatokoriyama: new YamatokoriyamaCityScraper(),
+    yamato_takada: new YamatoTakadaCityScraper(),
+    tawaramoto: new TawaramotoTownScraper(),
+    kawanishi: new KawanishiCityScraper(),
+    miyake: new MiyakeCityScraper(),
+    sakurai: new SakuraiCityScraper(),
+    yamazoe: new YamazomuraScraper(),
+    sango: new SangoTownScraper(),
     tenri: new TenriCityScraper(),
     gose: new GoseCityScraper(),
     ando: new AndoCityScraper(),
@@ -94,6 +112,16 @@ function mergeBiddingItem(existing: BiddingItem, candidate: BiddingItem) {
     if (candidate.biddingDate && !existing.biddingDate) existing.biddingDate = candidate.biddingDate;
     if (candidate.pdfUrl && (!existing.pdfUrl || existing.pdfUrl.includes('nara.jp.'))) existing.pdfUrl = candidate.pdfUrl;
     if (candidate.link && !existing.link) existing.link = candidate.link;
+    if (candidate.estimatedPrice && !existing.estimatedPrice) existing.estimatedPrice = candidate.estimatedPrice;
+    if (candidate.designFirm && !existing.designFirm) existing.designFirm = candidate.designFirm;
+    if (candidate.constructionPeriod && !existing.constructionPeriod) existing.constructionPeriod = candidate.constructionPeriod;
+    if (candidate.description && !existing.description) existing.description = candidate.description;
+    if (candidate.winnerType && !existing.winnerType) existing.winnerType = candidate.winnerType;
+    if (candidate.extractionSource && !existing.extractionSource) existing.extractionSource = candidate.extractionSource;
+    if (candidate.isIntelligenceExtracted && existing.isIntelligenceExtracted === undefined) {
+        existing.isIntelligenceExtracted = candidate.isIntelligenceExtracted;
+    }
+    if (candidate.tags?.length && !existing.tags?.length) existing.tags = candidate.tags;
     existing.announcementDate = keepEarlierDate(existing.announcementDate, candidate.announcementDate);
 }
 

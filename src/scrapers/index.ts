@@ -96,6 +96,16 @@ function mergeBiddingItem(existing: BiddingItem, candidate: BiddingItem) {
     if (candidate.biddingDate && !existing.biddingDate) existing.biddingDate = candidate.biddingDate;
     if (candidate.pdfUrl && !existing.pdfUrl) existing.pdfUrl = candidate.pdfUrl;
     if (candidate.link && !existing.link) existing.link = candidate.link;
+    if (candidate.estimatedPrice && !existing.estimatedPrice) existing.estimatedPrice = candidate.estimatedPrice;
+    if (candidate.designFirm && !existing.designFirm) existing.designFirm = candidate.designFirm;
+    if (candidate.constructionPeriod && !existing.constructionPeriod) existing.constructionPeriod = candidate.constructionPeriod;
+    if (candidate.description && !existing.description) existing.description = candidate.description;
+    if (candidate.winnerType && !existing.winnerType) existing.winnerType = candidate.winnerType;
+    if (candidate.extractionSource && !existing.extractionSource) existing.extractionSource = candidate.extractionSource;
+    if (candidate.isIntelligenceExtracted && existing.isIntelligenceExtracted === undefined) {
+        existing.isIntelligenceExtracted = candidate.isIntelligenceExtracted;
+    }
+    if (candidate.tags?.length && !existing.tags?.length) existing.tags = candidate.tags;
     existing.announcementDate = keepEarlierDate(existing.announcementDate, candidate.announcementDate);
 }
 
@@ -202,6 +212,26 @@ function hasScrapeFailureIssue(issueEntries: MunicipalityIssueEntry[] = []) {
         issue.level === 'error'
         || /エラー|失敗|forbidden|403|unexpected search page structure|サービス停止中|取得をスキップ/i.test(issue.message),
     );
+}
+
+function shouldAllowMunicipalityShrink(): boolean {
+    return process.env.SCRAPE_ALLOW_SHRINK === '1';
+}
+
+function isSuspiciousMunicipalityShrink(
+    keptItems: BiddingItem[],
+    previousMunicipalityItems: BiddingItem[],
+    snapshotMunicipalityItems: BiddingItem[],
+): boolean {
+    if (shouldAllowMunicipalityShrink()) return false;
+
+    const baselineCount = Math.max(previousMunicipalityItems.length, snapshotMunicipalityItems.length);
+    if (baselineCount < 3) return false;
+
+    const droppedCount = baselineCount - keptItems.length;
+    if (droppedCount < 2) return false;
+
+    return keptItems.length < Math.ceil(baselineCount * 0.75);
 }
 
 function readMunicipalitySnapshots(): MunicipalitySnapshots {
@@ -456,6 +486,20 @@ async function main() {
                         municipality: scraper.municipality,
                         level: 'warning',
                         message: `[${scraper.municipality}] 部分取得エラーのため既存データ ${previousMunicipalityItems.length}件を維持しています (new kept=${keptItems.length})`,
+                    },
+                ]);
+                continue;
+            }
+            if (isSuspiciousMunicipalityShrink(keptItems, previousMunicipalityItems, snapshotMunicipalityItems)) {
+                const baselineCount = Math.max(previousMunicipalityItems.length, snapshotMunicipalityItems.length);
+                retainedMunicipalities.add(scraper.municipality);
+                console.warn(`[${scraper.municipality}] 取得件数が急減したため既存データを維持します (baseline=${baselineCount}, new kept=${keptItems.length})`);
+                municipalityIssues.set(scraper.municipality, [
+                    ...currentIssues,
+                    {
+                        municipality: scraper.municipality,
+                        level: 'warning',
+                        message: `[${scraper.municipality}] 取得件数が急減したため既存データを維持しています (baseline=${baselineCount}, new kept=${keptItems.length})`,
                     },
                 ]);
                 continue;

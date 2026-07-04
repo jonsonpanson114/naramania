@@ -228,8 +228,18 @@ async function scrapeCurrentAnnouncementPage(): Promise<BiddingItem[]> {
 
 export class YamatokoriyamaCityScraper implements Scraper {
     municipality: '大和郡山市' = '大和郡山市' as const;
+    private errors: string[] = [];
+
+    getDiagnostics() {
+        return { errors: this.errors };
+    }
+
+    private recordError(message: string) {
+        this.errors.push(message);
+    }
 
     async scrape(): Promise<BiddingItem[]> {
+        this.errors = [];
         const allItems = new Map<string, BiddingItem>();
 
         for (const { jsonUrl, status, label } of [
@@ -286,7 +296,9 @@ export class YamatokoriyamaCityScraper implements Scraper {
                 }
                 console.log(`[大和郡山市] ${label}: ${allItems.size}件（累計）`);
             } catch (e: unknown) {
-                console.error(`[大和郡山市] ${label} エラー:`, e instanceof Error ? e instanceof Error ? e.message : String(e) : String(e));
+                const message = e instanceof Error ? e.message : String(e);
+                this.recordError(`[大和郡山市] ${label} エラー: ${message}`);
+                console.error(`[大和郡山市] ${label} エラー:`, message);
             }
         }
 
