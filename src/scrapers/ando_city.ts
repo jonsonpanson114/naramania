@@ -106,6 +106,12 @@ function normalizeAndoTitle(title: string): string {
     return ANDO_TITLE_NORMALIZATIONS[title] || title;
 }
 
+function errorMessage(error: unknown): string {
+    if (error instanceof Error && error.message) return error.message;
+    if (error && typeof error === 'object' && 'code' in error) return String(error.code);
+    return String(error || 'unknown error');
+}
+
 function parseUpdatedDate(text: string): string {
     const western = text.match(/更新日[:：]\s*(20\d{2})年(\d{1,2})月(\d{1,2})日/);
     if (western) {
@@ -171,7 +177,7 @@ async function extractAndoResultDetails(resultPageUrl: string): Promise<{
     }
 }
 
-async function scrapeAndoCity(): Promise<BiddingItem[]> {
+async function scrapeAndoCity(recordError?: (message: string) => void): Promise<BiddingItem[]> {
     const items = new Map<string, BiddingItem>();
 
     try {
@@ -260,7 +266,9 @@ async function scrapeAndoCity(): Promise<BiddingItem[]> {
         });
 
     } catch (e: unknown) {
-        console.error('[安堵町] エラー:', e instanceof Error ? e.message : String(e) || e);
+        const message = `[安堵町] エラー: ${errorMessage(e)}`;
+        recordError?.(message);
+        console.error(message);
     }
 
     const result = Array.from(items.values());
@@ -297,8 +305,16 @@ async function scrapeAndoCity(): Promise<BiddingItem[]> {
 
 export class AndoCityScraper implements Scraper {
     municipality: '安堵町' = '安堵町' as const;
+    private errors: string[] = [];
+
+    getDiagnostics() {
+        return { errors: this.errors };
+    }
 
     async scrape(): Promise<BiddingItem[]> {
-        return scrapeAndoCity();
+        this.errors = [];
+        return scrapeAndoCity((message) => {
+            this.errors.push(message);
+        });
     }
 }

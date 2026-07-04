@@ -130,13 +130,17 @@ async function main() {
       const rawItems = await scraper.scrape();
       const diagnostics = scraper.getDiagnostics?.();
       const keptItems = rawItems.filter((item) => shouldKeepBiddingItem(item));
+      const currentMunicipalityCount = currentItems.filter((item) => item.municipality === scraper.municipality).length;
+      const zeroCoverageWarnings = rawItems.length === 0 && currentMunicipalityCount === 0
+        ? [`${scraper.municipality}: ライブ取得0件かつDB掲載0件です。対象案件なしなのか、取得失敗なのか確認が必要です。`]
+        : [];
       liveSnapshots[scraper.municipality] = rawItems;
       scraperResults.push({
         municipality: scraper.municipality,
         rawCount: rawItems.length,
         keptCount: keptItems.length,
         rejectedCount: rawItems.length - keptItems.length,
-        warnings: diagnostics?.warnings || [],
+        warnings: [...(diagnostics?.warnings || []), ...zeroCoverageWarnings],
         errors: diagnostics?.errors || [],
       });
       console.log(`[live-audit] ${scraper.municipality}: raw=${rawItems.length} keep=${keptItems.length}`);

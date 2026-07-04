@@ -75,10 +75,26 @@ function findPageUpdateDate($: cheerio.CheerioAPI): string {
 
 const HEADERS = { 'User-Agent': 'Mozilla/5.0 (compatible; naramania-scraper/1.0)' };
 
+function errorMessage(error: unknown): string {
+    if (error instanceof Error && error.message) return error.message;
+    if (error && typeof error === 'object' && 'code' in error) return String(error.code);
+    return String(error || 'unknown error');
+}
+
 export class YamatoTakadaCityScraper implements Scraper {
     municipality: '大和高田市' = '大和高田市' as const;
+    private errors: string[] = [];
+
+    getDiagnostics() {
+        return { errors: this.errors };
+    }
+
+    private recordError(message: string) {
+        this.errors.push(message);
+    }
 
     async scrape(): Promise<BiddingItem[]> {
+        this.errors = [];
         const allItems: BiddingItem[] = [];
 
         // ── 入札公告（受付中）────────────────────────────
@@ -113,7 +129,9 @@ export class YamatoTakadaCityScraper implements Scraper {
                 });
                 console.log(`[大和高田市] ${label}/入札公告: ${allItems.length}件（累計）`);
             } catch (e: unknown) {
-                console.warn(`[大和高田市] ${label}/入札公告 エラー:`, e instanceof Error ? e instanceof Error ? e.message : String(e).split('\n')[0] : String(e));
+                const message = `[大和高田市] ${label}/入札公告 エラー: ${errorMessage(e)}`;
+                this.recordError(message);
+                console.warn(message);
             }
         }
 
@@ -170,7 +188,9 @@ export class YamatoTakadaCityScraper implements Scraper {
 
             console.log(`[大和高田市] 入札結果: ${allItems.length - beforeCount}件`);
         } catch (e: unknown) {
-            console.warn(`[大和高田市] 入札結果 エラー:`, e instanceof Error ? e instanceof Error ? e.message : String(e).split('\n')[0] : String(e));
+            const message = `[大和高田市] 入札結果 エラー: ${errorMessage(e)}`;
+            this.recordError(message);
+            console.warn(message);
         }
 
         console.log(`[大和高田市] 合計 ${allItems.length} 件`);
