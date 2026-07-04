@@ -37,6 +37,11 @@ jobs:
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps chromium
 
+      - name: Validate AI Models
+        run: npm run validate:ai-models
+        env:
+          NODE_ENV: production
+
       - name: Run Scraper
         run: npm run scrape
         env:

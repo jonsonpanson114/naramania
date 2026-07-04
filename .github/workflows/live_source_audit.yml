@@ -49,6 +49,11 @@ jobs:
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps chromium
 
+      - name: Validate AI Models
+        run: npm run validate:ai-models
+        env:
+          NODE_ENV: production
+
       - name: Run live source audit
         id: audit
         continue-on-error: true

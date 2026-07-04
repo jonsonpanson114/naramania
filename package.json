@@ -10,6 +10,7 @@
     "scrape": "tsx src/scrapers/index.ts",
     "augment:intelligence": "tsx scripts/augment_intelligence.ts",
     "validate:quality": "tsx scripts/validate_quality.ts",
+    "validate:ai-models": "tsx scripts/validate_ai_models.ts",
     "validate:filters": "tsx scripts/validate_filters.ts",
     "validate:chat": "tsx scripts/validate_chat.ts",
     "validate:snapshots": "tsx scripts/validate_snapshot_coverage.ts",
