@@ -1,6 +1,6 @@
 import type { BiddingItem } from '@/types/bidding';
 
-export type PracticalFilter = 'all' | 'missingWinner' | 'opened' | 'schoolToilet' | 'active';
+export type PracticalFilter = 'all' | 'missingWinner' | 'resultFollowUp' | 'opened' | 'schoolToilet' | 'active';
 
 export type PracticalFilterDefinition = {
   id: PracticalFilter;
@@ -21,6 +21,12 @@ export const PRACTICAL_FILTERS: PracticalFilterDefinition[] = [
     label: '落札者未取得だけ',
     shortLabel: '落札者未取得',
     description: '落札済みなのに落札者が空の案件を確認',
+  },
+  {
+    id: 'resultFollowUp',
+    label: '結果追跡待ちだけ',
+    shortLabel: '結果追跡待ち',
+    description: '受付終了のまま落札・不調まで追えていない案件を確認',
   },
   {
     id: 'opened',
@@ -67,6 +73,7 @@ export function isSchoolToiletItem(item: BiddingItem): boolean {
 export function matchesPracticalFilter(item: BiddingItem, filter: PracticalFilter): boolean {
   if (filter === 'all') return true;
   if (filter === 'missingWinner') return item.status === '落札' && !item.winningContractor;
+  if (filter === 'resultFollowUp') return item.status === '受付終了' || (item.status === '落札' && !item.winningContractor);
   if (filter === 'opened') return isOpenedItem(item);
   if (filter === 'schoolToilet') return isSchoolToiletItem(item);
   if (filter === 'active') return item.status === '受付中' && !isOpenedItem(item);

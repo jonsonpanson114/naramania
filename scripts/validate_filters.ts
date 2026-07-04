@@ -181,6 +181,13 @@ function main() {
     biddingDate: '2026-05-29',
     winningContractor: undefined,
   };
+  const endedWithoutResult = {
+    ...gojoToilet,
+    id: 'filter-test-result-follow-up',
+    status: '受付終了' as const,
+    biddingDate: '2026-05-29',
+    winningContractor: undefined,
+  };
 
   if (!isSchoolToiletItem(gojoToilet) || !matchesPracticalFilter(gojoToilet, 'schoolToilet')) {
     failures.push('Practical filter expected schoolToilet: 五條市立小学校トイレ改修工事');
@@ -190,6 +197,12 @@ function main() {
   }
   if (!matchesPracticalFilter(awardedWithoutWinner, 'missingWinner')) {
     failures.push('Practical filter expected missingWinner: 落札者未取得案件');
+  }
+  if (!matchesPracticalFilter(endedWithoutResult, 'resultFollowUp')) {
+    failures.push('Practical filter expected resultFollowUp: 受付終了の結果追跡待ち案件');
+  }
+  if (matchesPracticalFilter(awardedWithWinner, 'resultFollowUp')) {
+    failures.push('Practical filter must not mark winner-filled awarded item as resultFollowUp');
   }
   if (matchesPracticalFilter(awardedWithWinner, 'missingWinner')) {
     failures.push('Practical filter must not mark winner-filled awarded item as missingWinner');

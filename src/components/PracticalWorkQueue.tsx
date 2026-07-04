@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import type { LucideIcon } from 'lucide-react';
-import { AlertTriangle, ArrowRight, CheckCircle2, Clock3, School, Trophy } from 'lucide-react';
+import { AlertTriangle, ArrowRight, CheckCircle2, Clock3, Radar, School, Trophy } from 'lucide-react';
 import type { BiddingItem } from '@/types/bidding';
 import { countPracticalFilter, matchesPracticalFilter, type PracticalFilter } from '@/lib/practical_filters';
 
@@ -25,6 +25,15 @@ const WORK_QUEUE: WorkQueueCard[] = [
     href: '/search?quick=missingWinner',
     icon: AlertTriangle,
     tone: 'rose',
+  },
+  {
+    id: 'resultFollowUp',
+    label: '結果追跡待ち',
+    eyebrow: '開札後追い',
+    description: '受付終了のまま落札・不調まで確定できていない案件。次に潰すべき残タスクです。',
+    href: '/search?quick=resultFollowUp',
+    icon: Radar,
+    tone: 'amber',
   },
   {
     id: 'schoolToilet',
@@ -107,13 +116,15 @@ function getSampleItems(items: BiddingItem[], filter: QueueFilter): BiddingItem[
 
 export function PracticalWorkQueue({ items }: { items: BiddingItem[] }) {
   const missingWinnerCount = countPracticalFilter(items, 'missingWinner');
+  const resultFollowUpCount = countPracticalFilter(items, 'resultFollowUp');
   const schoolToiletCount = countPracticalFilter(items, 'schoolToilet');
   const openedCount = countPracticalFilter(items, 'opened');
   const activeCount = countPracticalFilter(items, 'active');
-  const reviewCount = missingWinnerCount + schoolToiletCount;
+  const reviewCount = missingWinnerCount + resultFollowUpCount + schoolToiletCount;
 
   const counts: Record<QueueFilter, number> = {
     missingWinner: missingWinnerCount,
+    resultFollowUp: resultFollowUpCount,
     schoolToilet: schoolToiletCount,
     opened: openedCount,
     active: activeCount,
@@ -148,7 +159,7 @@ export function PracticalWorkQueue({ items }: { items: BiddingItem[] }) {
         </div>
       </div>
 
-      <div className="mt-6 grid gap-4 xl:grid-cols-4 md:grid-cols-2">
+      <div className="mt-6 grid gap-4 xl:grid-cols-5 md:grid-cols-2">
         {WORK_QUEUE.map((queue) => {
           const Icon = queue.icon;
           const tone = toneStyles[queue.tone];

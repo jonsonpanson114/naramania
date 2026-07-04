@@ -1,7 +1,242 @@
 {
-  "generatedAt": "2026-07-03T22:14:32.921Z",
+  "generatedAt": "2026-07-04T13:46:30.249Z",
   "qualityGeneratedAt": "2026-07-03T22:14:20.974Z",
   "itemCount": 168,
+  "resultFollowUp": {
+    "totalCount": 31,
+    "highCount": 16,
+    "mediumCount": 15,
+    "lowCount": 0,
+    "missingBiddingDateCount": 11,
+    "byMunicipality": [
+      {
+        "municipality": "葛城市",
+        "count": 4
+      },
+      {
+        "municipality": "香芝市",
+        "count": 4
+      },
+      {
+        "municipality": "川西町",
+        "count": 4
+      },
+      {
+        "municipality": "田原本町",
+        "count": 3
+      },
+      {
+        "municipality": "大和郡山市",
+        "count": 2
+      },
+      {
+        "municipality": "奈良県",
+        "count": 2
+      },
+      {
+        "municipality": "斑鳩町",
+        "count": 2
+      },
+      {
+        "municipality": "平群町",
+        "count": 2
+      },
+      {
+        "municipality": "宇陀市",
+        "count": 1
+      },
+      {
+        "municipality": "王寺町",
+        "count": 1
+      },
+      {
+        "municipality": "橿原市",
+        "count": 1
+      },
+      {
+        "municipality": "五條市",
+        "count": 1
+      },
+      {
+        "municipality": "三宅町",
+        "count": 1
+      },
+      {
+        "municipality": "山添村",
+        "count": 1
+      },
+      {
+        "municipality": "天理市",
+        "count": 1
+      },
+      {
+        "municipality": "奈良市",
+        "count": 1
+      }
+    ],
+    "samples": [
+      {
+        "priority": "high",
+        "ageDays": 432,
+        "reason": "開札日から432日経過",
+        "item": {
+          "id": "katsuragi-epi-aef9d1f0",
+          "municipality": "葛城市",
+          "title": "新庄スポーツセンタープール床改修工事",
+          "status": "受付終了",
+          "announcementDate": "2025-04-08",
+          "biddingDate": "2025-04-28",
+          "winningContractor": null,
+          "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200720",
+          "pdfUrl": null
+        }
+      },
+      {
+        "priority": "high",
+        "ageDays": 432,
+        "reason": "開札日から432日経過",
+        "item": {
+          "id": "katsuragi-epi-9f6cdfe9",
+          "municipality": "葛城市",
+          "title": "葛城市火葬場待合棟等トイレ改修工事",
+          "status": "受付終了",
+          "announcementDate": "2025-04-08",
+          "biddingDate": "2025-04-28",
+          "winningContractor": null,
+          "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200720",
+          "pdfUrl": null
+        }
+      },
+      {
+        "priority": "high",
+        "ageDays": 432,
+        "reason": "開札日から432日経過",
+        "item": {
+          "id": "katsuragi-epi-a6be4395",
+          "municipality": "葛城市",
+          "title": "磐城第２保育所保育室ウレタン塗装・プールシート貼替工事",
+          "status": "受付終了",
+          "announcementDate": "2025-04-08",
+          "biddingDate": "2025-04-28",
+          "winningContractor": null,
+          "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200720",
+          "pdfUrl": null
+        }
+      },
+      {
+        "priority": "high",
+        "ageDays": 367,
+        "reason": "開札日から367日経過",
+        "item": {
+          "id": "katsuragi-web-1a9fe639",
+          "municipality": "葛城市",
+          "title": "新庄小学校管理棟及び屋内運動場長寿命化改修工事監理業務委託",
+          "status": "受付終了",
+          "announcementDate": "2025-06-06",
+          "biddingDate": "2025-07-02",
+          "winningContractor": null,
+          "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/3-03-03-2025-1-2.pdf",
+          "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/3-03-03-2025-1-2.pdf"
+        }
+      },
+      {
+        "priority": "high",
+        "ageDays": 352,
+        "reason": "開札日から352日経過",
+        "item": {
+          "id": "uda-1467b94fb1",
+          "municipality": "宇陀市",
+          "title": "【第07-C034号】宇陀市文化会館施設改修計画策定事業 宇陀市文化会館施設改修計画策定支援業務",
+          "status": "受付終了",
+          "announcementDate": "2025-07-03",
+          "biddingDate": "2025-07-17",
+          "winningContractor": null,
+          "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200700",
+          "pdfUrl": null
+        }
+      },
+      {
+        "priority": "high",
+        "ageDays": 249,
+        "reason": "開札日から249日経過",
+        "item": {
+          "id": "kashiba-web-886968df",
+          "municipality": "香芝市",
+          "title": "志都美小学校建替工事に伴う基本設計業務",
+          "status": "受付終了",
+          "announcementDate": "2025-10-09",
+          "biddingDate": "2025-10-28",
+          "winningContractor": null,
+          "link": "https://www.city.kashiba.lg.jp/soshiki/7/60631.html",
+          "pdfUrl": null
+        }
+      },
+      {
+        "priority": "high",
+        "ageDays": 241,
+        "reason": "開札日から241日経過",
+        "item": {
+          "id": "kashiba-web-38161edb",
+          "municipality": "香芝市",
+          "title": "五位堂小学校建替工事に伴う基本設計業務",
+          "status": "受付終了",
+          "announcementDate": "2025-10-09",
+          "biddingDate": "2025-11-05",
+          "winningContractor": null,
+          "link": "https://www.city.kashiba.lg.jp/soshiki/7/60631.html",
+          "pdfUrl": null
+        }
+      },
+      {
+        "priority": "high",
+        "ageDays": 155,
+        "reason": "開札日から155日経過",
+        "item": {
+          "id": "斑鳩町-2026-01-08-町営興留東団地住宅解体工事",
+          "municipality": "斑鳩町",
+          "title": "町営興留東団地住宅解体工事",
+          "status": "受付終了",
+          "announcementDate": "2026-01-08",
+          "biddingDate": "2026-01-30",
+          "winningContractor": null,
+          "link": "https://www.town.ikaruga.nara.jp/category/1-10-0-0-0-0-0-0-0-0.html",
+          "pdfUrl": null
+        }
+      },
+      {
+        "priority": "high",
+        "ageDays": 67,
+        "reason": "開札日から67日経過",
+        "item": {
+          "id": "kashiba-web-f9a78168",
+          "municipality": "香芝市",
+          "title": "三和小学校校舎増築工事に伴う設計業務",
+          "status": "受付終了",
+          "announcementDate": "2026-04-09",
+          "biddingDate": "2026-04-28",
+          "winningContractor": null,
+          "link": "https://www.city.kashiba.lg.jp/uploaded/attachment/31836.pdf",
+          "pdfUrl": null
+        }
+      },
+      {
+        "priority": "high",
+        "ageDays": 47,
+        "reason": "開札日から47日経過",
+        "item": {
+          "id": "oji-supplemental-aHR0cHM6Ly93",
+          "municipality": "王寺町",
+          "title": "やわらぎ会館改修工事",
+          "status": "受付終了",
+          "announcementDate": "2026-05-13",
+          "biddingDate": "2026-05-18",
+          "winningContractor": null,
+          "link": "https://www.town.oji.nara.jp/kakuka/somu/somu/gyomuannai/nyuusatu/nyuusatukouhyou/11512.html",
+          "pdfUrl": null
+        }
+      }
+    ]
+  },
   "criticalWatch": {
     "activeCount": 3,
     "okCount": 3,

@@ -12,6 +12,7 @@ import { CriticalWatchPanel } from '@/components/CriticalWatchPanel';
 import { PracticalWorkQueue } from '@/components/PracticalWorkQueue';
 import { LiveSourceAuditPanel, type LiveSourceAuditReport } from '@/components/LiveSourceAuditPanel';
 import { OpeningResultDigest } from '@/components/OpeningResultDigest';
+import { ResultFollowUpPanel } from '@/components/ResultFollowUpPanel';
 import { NewsSection } from '@/components/NewsSection';
 import { NewsTicker } from '@/components/NewsTicker';
 import { getShortBiddingLabel } from '@/lib/bidding_schedule';
@@ -140,7 +141,7 @@ export default async function Home() {
   const keptCount = qualitySummary?.keptCount ?? allItems.length;
   const latestQualityDate = qualitySummary?.generatedAt ? new Date(qualitySummary.generatedAt).toLocaleDateString('ja-JP') : null;
   const activeCount = countPracticalFilter(allItems, 'active');
-  const missingWinnerCount = countPracticalFilter(allItems, 'missingWinner');
+  const resultFollowUpCount = countPracticalFilter(allItems, 'resultFollowUp');
   
   const upcomingBiddings = allItems
     .filter(item => item.biddingDate && item.status !== '落札' && item.status !== '受付終了')
@@ -162,7 +163,7 @@ export default async function Home() {
               </div>
               <h3 className="mt-4 text-3xl font-light tracking-[0.08em]">今日見るところ</h3>
               <p className="mt-3 text-sm leading-7 tracking-[0.05em] text-stone-200/75">
-                まず受付中、次に直近開札、最後に落札者未取得を確認します。市町村別や監査情報は下部に分けました。
+                まず受付中、次に直近開札、最後に結果追跡待ちを確認します。市町村別や監査情報は下部に分けました。
               </p>
             </div>
             <div className="grid w-full max-w-xl grid-cols-3 gap-2 rounded-3xl border border-white/10 bg-white/10 p-2 text-center backdrop-blur">
@@ -174,9 +175,9 @@ export default async function Home() {
                 <p className="text-[9px] tracking-[0.2em] text-stone-300 uppercase">直近開札</p>
                 <p className="mt-1 text-2xl font-light tabular-nums text-amber-200">{urgentCount}</p>
               </a>
-              <Link href="/search?quick=missingWinner" className="rounded-2xl bg-white/10 px-3 py-3 transition hover:bg-white/15">
-                <p className="text-[9px] tracking-[0.2em] text-stone-300 uppercase">未取得</p>
-                <p className="mt-1 text-2xl font-light tabular-nums text-rose-200">{missingWinnerCount}</p>
+              <Link href="/search?quick=resultFollowUp" className="rounded-2xl bg-white/10 px-3 py-3 transition hover:bg-white/15">
+                <p className="text-[9px] tracking-[0.2em] text-stone-300 uppercase">追跡待ち</p>
+                <p className="mt-1 text-2xl font-light tabular-nums text-rose-200">{resultFollowUpCount}</p>
               </Link>
             </div>
           </div>
@@ -232,6 +233,8 @@ export default async function Home() {
         </div>
 
         <OpeningResultDigest items={allItems} report={openingResultReport} />
+
+        <ResultFollowUpPanel items={allItems} />
 
         {/* Main Project Board */}
         <BiddingTable items={allItems} />

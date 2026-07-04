@@ -3,6 +3,7 @@ import path from 'path';
 import { buildDateAuditSummary, type QualitySummary } from '../src/lib/quality_summary';
 import { evaluateCriticalWatch, type CriticalWatchResult } from '../src/lib/critical_watch';
 import { evaluateSourceCoverage, type SourceCoverageSummary } from '../src/lib/source_coverage';
+import { buildResultFollowUpSummary } from '../src/lib/result_follow_up';
 import type { BiddingItem } from '../src/types/bidding';
 import { shouldKeepBiddingItem } from '../src/scrapers/common/filter';
 
@@ -191,6 +192,23 @@ function writeWatchReport(
         generatedAt: new Date().toISOString(),
         qualityGeneratedAt: summary.generatedAt || null,
         itemCount: items.length,
+        resultFollowUp: (() => {
+            const followUp = buildResultFollowUpSummary(items);
+            return {
+                totalCount: followUp.totalCount,
+                highCount: followUp.highCount,
+                mediumCount: followUp.mediumCount,
+                lowCount: followUp.lowCount,
+                missingBiddingDateCount: followUp.missingBiddingDateCount,
+                byMunicipality: followUp.byMunicipality,
+                samples: followUp.entries.slice(0, 10).map((entry) => ({
+                    priority: entry.priority,
+                    ageDays: entry.ageDays,
+                    reason: entry.reason,
+                    item: compactItem(entry.item),
+                })),
+            };
+        })(),
         criticalWatch: {
             activeCount: watch.activeCount,
             okCount: watch.okCount,
