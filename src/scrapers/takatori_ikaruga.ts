@@ -24,7 +24,7 @@ const KNOWN_IKARUGA_ITEMS: BiddingItem[] = [
         type: 'コンサル',
         announcementDate: '2026-05-01',
         link: 'https://www.town.ikaruga.nara.jp/cmsfiles/contents/0000000/234/R8-5-1.pdf',
-        status: '受付終了',
+        status: '受付中',
     },
 ];
 function classifyType(title: string): BiddingType {

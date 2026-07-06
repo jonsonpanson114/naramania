@@ -1,20 +1,16 @@
 {
-  "generatedAt": "2026-07-06T12:12:37.994Z",
+  "generatedAt": "2026-07-06T21:46:04.913Z",
   "qualityGeneratedAt": "2026-07-06T12:12:24.184Z",
   "itemCount": 172,
   "resultFollowUp": {
-    "totalCount": 26,
+    "totalCount": 19,
     "highCount": 14,
-    "mediumCount": 12,
+    "mediumCount": 5,
     "lowCount": 0,
-    "missingBiddingDateCount": 11,
+    "missingBiddingDateCount": 4,
     "byMunicipality": [
       {
         "municipality": "香芝市",
-        "count": 4
-      },
-      {
-        "municipality": "川西町",
         "count": 4
       },
       {
@@ -30,10 +26,6 @@
         "count": 2
       },
       {
-        "municipality": "斑鳩町",
-        "count": 2
-      },
-      {
         "municipality": "平群町",
         "count": 2
       },
@@ -46,10 +38,6 @@
         "count": 1
       },
       {
-        "municipality": "五條市",
-        "count": 1
-      },
-      {
         "municipality": "三宅町",
         "count": 1
       },
@@ -58,19 +46,19 @@
         "count": 1
       },
       {
-        "municipality": "天理市",
+        "municipality": "奈良市",
         "count": 1
       },
       {
-        "municipality": "奈良市",
+        "municipality": "斑鳩町",
         "count": 1
       }
     ],
     "samples": [
       {
         "priority": "high",
-        "ageDays": 354,
-        "reason": "開札日から354日経過",
+        "ageDays": 355,
+        "reason": "開札日から355日経過",
         "item": {
           "id": "uda-1467b94fb1",
           "municipality": "宇陀市",
@@ -85,8 +73,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 251,
-        "reason": "開札日から251日経過",
+        "ageDays": 252,
+        "reason": "開札日から252日経過",
         "item": {
           "id": "kashiba-web-886968df",
           "municipality": "香芝市",
@@ -101,8 +89,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 243,
-        "reason": "開札日から243日経過",
+        "ageDays": 244,
+        "reason": "開札日から244日経過",
         "item": {
           "id": "kashiba-web-38161edb",
           "municipality": "香芝市",
@@ -117,8 +105,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 157,
-        "reason": "開札日から157日経過",
+        "ageDays": 158,
+        "reason": "開札日から158日経過",
         "item": {
           "id": "斑鳩町-2026-01-08-町営興留東団地住宅解体工事",
           "municipality": "斑鳩町",
@@ -133,8 +121,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 69,
-        "reason": "開札日から69日経過",
+        "ageDays": 70,
+        "reason": "開札日から70日経過",
         "item": {
           "id": "kashiba-web-f9a78168",
           "municipality": "香芝市",
@@ -149,8 +137,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 49,
-        "reason": "開札日から49日経過",
+        "ageDays": 50,
+        "reason": "開札日から50日経過",
         "item": {
           "id": "tawaramoto-2026051803",
           "municipality": "田原本町",
@@ -165,8 +153,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 41,
-        "reason": "開札日から41日経過",
+        "ageDays": 42,
+        "reason": "開札日から42日経過",
         "item": {
           "id": "kashihara-proposal-5082000026",
           "municipality": "橿原市",
@@ -181,8 +169,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 41,
-        "reason": "開札日から41日経過",
+        "ageDays": 42,
+        "reason": "開札日から42日経過",
         "item": {
           "id": "kashiba-web-1bf7b65a",
           "municipality": "香芝市",
@@ -197,8 +185,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 40,
-        "reason": "開札日から40日経過",
+        "ageDays": 41,
+        "reason": "開札日から41日経過",
         "item": {
           "id": "nara-city-0000002346",
           "municipality": "奈良市",
@@ -213,8 +201,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 19,
-        "reason": "開札日から19日経過",
+        "ageDays": 20,
+        "reason": "開札日から20日経過",
         "item": {
           "id": "yamato-koriyama-ee85746d",
           "municipality": "大和郡山市",
