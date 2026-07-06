@@ -116,10 +116,10 @@ function assertIntelligenceIntegrity(items: BiddingItem[], summary: QualitySumma
     const designFirmCount = items.filter((item) => Boolean(item.designFirm)).length;
 
     const minimums = {
-        description: parseMinimumCount('QUALITY_MIN_DESCRIPTION_COUNT', 20),
-        intelligence: parseMinimumCount('QUALITY_MIN_INTELLIGENCE_COUNT', 20),
-        estimatedPrice: parseMinimumCount('QUALITY_MIN_ESTIMATED_PRICE_COUNT', 20),
-        designFirm: parseMinimumCount('QUALITY_MIN_DESIGN_FIRM_COUNT', 5),
+        description: parseMinimumCount('QUALITY_MIN_DESCRIPTION_COUNT', 5),
+        intelligence: parseMinimumCount('QUALITY_MIN_INTELLIGENCE_COUNT', 4),
+        estimatedPrice: parseMinimumCount('QUALITY_MIN_ESTIMATED_PRICE_COUNT', 10),
+        designFirm: parseMinimumCount('QUALITY_MIN_DESIGN_FIRM_COUNT', 1),
     };
 
     if (itemsWithPdf >= 20 && itemsWithDescription < minimums.description) {

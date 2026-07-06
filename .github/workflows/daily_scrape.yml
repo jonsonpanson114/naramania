@@ -47,6 +47,12 @@ jobs:
         env:
           NODE_ENV: production
 
+      - name: Run AI Augmentation
+        if: ${{ env.GOOGLE_GENERATIVE_AI_API_KEY != '' }}
+        run: npm run augment:intelligence
+        env:
+          NODE_ENV: production
+
       - name: Validate Quality
         run: npm run validate:quality
         env:
@@ -64,12 +70,6 @@ jobs:
 
       - name: Validate Chat Answers
         run: npm run validate:chat
-        env:
-          NODE_ENV: production
-
-      - name: Run AI Augmentation
-        if: ${{ env.GOOGLE_GENERATIVE_AI_API_KEY != '' }}
-        run: npm run augment:intelligence
         env:
           NODE_ENV: production
 

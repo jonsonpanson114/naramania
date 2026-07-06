@@ -549,8 +549,10 @@ async function main() {
                 .sort((a, b) => b.announcementDate.localeCompare(a.announcementDate));
             if (municipalityItemsAfterMerge.length > 0) {
                 snapshots[scraper.municipality] = municipalityItemsAfterMerge;
-                writeMunicipalitySnapshots(snapshots);
+            } else {
+                delete snapshots[scraper.municipality];
             }
+            writeMunicipalitySnapshots(snapshots);
             fs.writeFileSync(outputPath, JSON.stringify(reconciledCurrentUnique, null, 2), 'utf-8');
             console.log(`[${scraper.municipality}] データを保存しました。合計: ${reconciledCurrentUnique.length}件`);
 

@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-07-04T13:46:30.249Z",
-  "qualityGeneratedAt": "2026-07-03T22:14:20.974Z",
-  "itemCount": 168,
+  "generatedAt": "2026-07-06T11:29:50.859Z",
+  "qualityGeneratedAt": "2026-07-06T11:10:08.194Z",
+  "itemCount": 173,
   "resultFollowUp": {
     "totalCount": 31,
-    "highCount": 16,
-    "mediumCount": 15,
+    "highCount": 19,
+    "mediumCount": 12,
     "lowCount": 0,
     "missingBiddingDateCount": 11,
     "byMunicipality": [
       {
         "municipality": "葛城市",
-        "count": 4
+        "count": 5
       },
       {
         "municipality": "香芝市",
@@ -46,10 +46,6 @@
         "count": 1
       },
       {
-        "municipality": "王寺町",
-        "count": 1
-      },
-      {
         "municipality": "橿原市",
         "count": 1
       },
@@ -77,8 +73,8 @@
     "samples": [
       {
         "priority": "high",
-        "ageDays": 432,
-        "reason": "開札日から432日経過",
+        "ageDays": 434,
+        "reason": "開札日から434日経過",
         "item": {
           "id": "katsuragi-epi-aef9d1f0",
           "municipality": "葛城市",
@@ -93,8 +89,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 432,
-        "reason": "開札日から432日経過",
+        "ageDays": 434,
+        "reason": "開札日から434日経過",
         "item": {
           "id": "katsuragi-epi-9f6cdfe9",
           "municipality": "葛城市",
@@ -109,8 +105,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 432,
-        "reason": "開札日から432日経過",
+        "ageDays": 434,
+        "reason": "開札日から434日経過",
         "item": {
           "id": "katsuragi-epi-a6be4395",
           "municipality": "葛城市",
@@ -125,8 +121,24 @@
       },
       {
         "priority": "high",
-        "ageDays": 367,
-        "reason": "開札日から367日経過",
+        "ageDays": 417,
+        "reason": "開札日から417日経過",
+        "item": {
+          "id": "katsuragi-web-89be2c69",
+          "municipality": "葛城市",
+          "title": "第1号 葛城市立新庄小学校管理棟及び屋内運動場長寿命化改修工事",
+          "status": "受付終了",
+          "announcementDate": "2025-04-11",
+          "biddingDate": "2025-05-15",
+          "winningContractor": null,
+          "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/1-06-07-01-3.pdf",
+          "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/1-06-07-01-3.pdf"
+        }
+      },
+      {
+        "priority": "high",
+        "ageDays": 369,
+        "reason": "開札日から369日経過",
         "item": {
           "id": "katsuragi-web-1a9fe639",
           "municipality": "葛城市",
@@ -141,8 +153,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 352,
-        "reason": "開札日から352日経過",
+        "ageDays": 354,
+        "reason": "開札日から354日経過",
         "item": {
           "id": "uda-1467b94fb1",
           "municipality": "宇陀市",
@@ -157,8 +169,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 249,
-        "reason": "開札日から249日経過",
+        "ageDays": 251,
+        "reason": "開札日から251日経過",
         "item": {
           "id": "kashiba-web-886968df",
           "municipality": "香芝市",
@@ -173,8 +185,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 241,
-        "reason": "開札日から241日経過",
+        "ageDays": 243,
+        "reason": "開札日から243日経過",
         "item": {
           "id": "kashiba-web-38161edb",
           "municipality": "香芝市",
@@ -189,8 +201,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 155,
-        "reason": "開札日から155日経過",
+        "ageDays": 157,
+        "reason": "開札日から157日経過",
         "item": {
           "id": "斑鳩町-2026-01-08-町営興留東団地住宅解体工事",
           "municipality": "斑鳩町",
@@ -205,8 +217,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 67,
-        "reason": "開札日から67日経過",
+        "ageDays": 69,
+        "reason": "開札日から69日経過",
         "item": {
           "id": "kashiba-web-f9a78168",
           "municipality": "香芝市",
@@ -216,22 +228,6 @@
           "biddingDate": "2026-04-28",
           "winningContractor": null,
           "link": "https://www.city.kashiba.lg.jp/uploaded/attachment/31836.pdf",
-          "pdfUrl": null
-        }
-      },
-      {
-        "priority": "high",
-        "ageDays": 47,
-        "reason": "開札日から47日経過",
-        "item": {
-          "id": "oji-supplemental-aHR0cHM6Ly93",
-          "municipality": "王寺町",
-          "title": "やわらぎ会館改修工事",
-          "status": "受付終了",
-          "announcementDate": "2026-05-13",
-          "biddingDate": "2026-05-18",
-          "winningContractor": null,
-          "link": "https://www.town.oji.nara.jp/kakuka/somu/somu/gyomuannai/nyuusatu/nyuusatukouhyou/11512.html",
           "pdfUrl": null
         }
       }
@@ -563,15 +559,15 @@
         "municipality": "橿原市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 16,
+        "totalCount": 17,
         "requiredLinkIncludes": [
           "city.kashihara.nara.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.kashihara.nara.jp": 16
+          "city.kashihara.nara.jp": 17
         },
-        "message": "橿原市: 16件 / sources OK"
+        "message": "橿原市: 17件 / sources OK"
       },
       {
         "municipality": "生駒市",
@@ -621,17 +617,17 @@
         "municipality": "葛城市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 19,
+        "totalCount": 24,
         "requiredLinkIncludes": [
           "city.katsuragi.nara.jp",
           "epi-cloud.fwd.ne.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.katsuragi.nara.jp": 9,
+          "city.katsuragi.nara.jp": 14,
           "epi-cloud.fwd.ne.jp": 10
         },
-        "message": "葛城市: 19件 / sources OK"
+        "message": "葛城市: 24件 / sources OK"
       },
       {
         "municipality": "五條市",
@@ -723,15 +719,15 @@
         "municipality": "広陵町",
         "status": "ok",
         "severity": "error",
-        "totalCount": 1,
+        "totalCount": 2,
         "requiredLinkIncludes": [
           "town.koryo.nara.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "town.koryo.nara.jp": 1
+          "town.koryo.nara.jp": 2
         },
-        "message": "広陵町: 1件 / sources OK"
+        "message": "広陵町: 2件 / sources OK"
       },
       {
         "municipality": "香芝市",
@@ -865,15 +861,17 @@
         "municipality": "王寺町",
         "status": "ok",
         "severity": "error",
-        "totalCount": 2,
+        "totalCount": 0,
         "requiredLinkIncludes": [
           "town.oji.nara.jp"
         ],
-        "missingLinkIncludes": [],
+        "missingLinkIncludes": [
+          "town.oji.nara.jp"
+        ],
         "sourceCounts": {
-          "town.oji.nara.jp": 2
+          "town.oji.nara.jp": 0
         },
-        "message": "王寺町: 2件 / sources OK"
+        "message": "王寺町: 対象案件なし / filtered scope OK"
       },
       {
         "municipality": "大淀町",

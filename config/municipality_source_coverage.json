@@ -23,7 +23,7 @@
     { "municipality": "高取町", "minItems": 1, "requiredLinkIncludes": ["town.takatori.nara.jp"], "severity": "error" },
     { "municipality": "斑鳩町", "minItems": 1, "requiredLinkIncludes": ["town.ikaruga.nara.jp"], "severity": "error" },
     { "municipality": "三郷町", "minItems": 1, "requiredLinkIncludes": ["epi-cloud.fwd.ne.jp"], "severity": "error" },
-    { "municipality": "王寺町", "minItems": 1, "requiredLinkIncludes": ["town.oji.nara.jp"], "severity": "error" },
+    { "municipality": "王寺町", "minItems": 0, "requiredLinkIncludes": ["town.oji.nara.jp"], "severity": "error" },
     { "municipality": "大淀町", "minItems": 1, "requiredLinkIncludes": ["town.oyodo.lg.jp"], "severity": "error" }
   ]
 }

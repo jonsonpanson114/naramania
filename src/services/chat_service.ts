@@ -163,7 +163,7 @@ const SEARCH_KEYWORDS = [
 ];
 
 function getChatModelName(): string {
-    return process.env.GOOGLE_GENERATIVE_AI_CHAT_MODEL || 'gemini-3.5-flash';
+    return process.env.GOOGLE_GENERATIVE_AI_CHAT_MODEL || 'gemini-2.5-flash';
 }
 
 function getNowInJst(): Date {

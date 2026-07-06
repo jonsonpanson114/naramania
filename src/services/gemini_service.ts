@@ -36,12 +36,12 @@ const BIDDING_INFO_SCHEMA = {
 const PDF_EXTRACTION_MODELS = buildModelCandidates(
     process.env.GOOGLE_GENERATIVE_AI_PDF_MODEL,
     process.env.GOOGLE_GENERATIVE_AI_PDF_MODELS,
-    ["gemini-3.5-flash", "gemini-2.5-flash", "gemini-3.1-flash-lite"],
+    ["gemini-2.5-flash", "gemini-2.5-flash-lite"],
 );
 const TEXT_EXTRACTION_MODELS = buildModelCandidates(
     process.env.GOOGLE_GENERATIVE_AI_TEXT_MODEL,
     process.env.GOOGLE_GENERATIVE_AI_TEXT_MODELS,
-    ["gemini-3.1-flash-lite", "gemini-2.5-flash-lite", "gemini-3.5-flash", "gemini-2.5-flash"],
+    ["gemini-2.5-flash-lite", "gemini-2.5-flash"],
 );
 
 function buildModelCandidates(

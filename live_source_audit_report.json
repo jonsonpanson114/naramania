@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-06T11:27:39.588Z",
-  "currentItemCount": 168,
+  "generatedAt": "2026-07-06T11:23:02.424Z",
+  "currentItemCount": 173,
   "checkedMunicipalities": [
     "奈良市",
     "橿原市",
@@ -215,10 +215,12 @@
     },
     {
       "municipality": "王寺町",
-      "rawCount": 3,
-      "keptCount": 3,
+      "rawCount": 0,
+      "keptCount": 0,
       "rejectedCount": 0,
-      "warnings": [],
+      "warnings": [
+        "王寺町: ライブ取得0件かつDB掲載0件です。対象案件なしなのか、取得失敗なのか確認が必要です。"
+      ],
       "errors": []
     },
     {
@@ -232,117 +234,22 @@
   ],
   "coverage": {
     "checkedMunicipalityCount": 24,
-    "expectedItemCount": 178,
-    "matchedItemCount": 171,
-    "missingItemCount": 7,
-    "duplicateTitleGroupCount": 25,
-    "duplicateTitleItemCount": 53,
+    "expectedItemCount": 175,
+    "matchedItemCount": 175,
+    "missingItemCount": 0,
+    "duplicateTitleGroupCount": 24,
+    "duplicateTitleItemCount": 51,
     "results": [
       {
         "municipality": "葛城市",
         "snapshotCount": 31,
         "expectedCount": 24,
-        "matchedCount": 19,
-        "missingCount": 5,
+        "matchedCount": 24,
+        "missingCount": 0,
         "duplicateTitleGroupCount": 4,
         "duplicateTitleItemCount": 8,
-        "missingItems": [
-          {
-            "id": "katsuragi-web-35f8c757",
-            "municipality": "葛城市",
-            "title": "忍海小学校区学童保育所施設整備工事",
-            "status": "落札",
-            "announcementDate": "2026-04-13",
-            "biddingDate": "2026-05-12",
-            "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/1-6-1-2026-1.pdf",
-            "reason": "duplicate title snapshot item requires id, link, or date match in scraper_result"
-          },
-          {
-            "id": "katsuragi-web-fe90b52b",
-            "municipality": "葛城市",
-            "title": "當麻スポーツセンタートイレ改修工事",
-            "status": "落札",
-            "announcementDate": "2025-08-07",
-            "biddingDate": "2025-09-09",
-            "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/5-02-06-2025-1.pdf",
-            "reason": "duplicate title snapshot item requires id, link, or date match in scraper_result"
-          },
-          {
-            "id": "katsuragi-web-55d14639",
-            "municipality": "葛城市",
-            "title": "白鳳中学校武道場改修工事",
-            "status": "落札",
-            "announcementDate": "2025-08-07",
-            "biddingDate": "2025-09-09",
-            "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/5-02-07-2025-1.pdf",
-            "reason": "duplicate title snapshot item requires id, link, or date match in scraper_result"
-          },
-          {
-            "id": "katsuragi-web-7d37438d",
-            "municipality": "葛城市",
-            "title": "白鳳中学校武道場改修工事",
-            "status": "不調",
-            "announcementDate": "2025-07-10",
-            "biddingDate": "2025-08-05",
-            "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/4-03-02-2025-1.pdf",
-            "reason": "duplicate title snapshot item requires id, link, or date match in scraper_result"
-          },
-          {
-            "id": "katsuragi-web-89be2c69",
-            "municipality": "葛城市",
-            "title": "第1号 葛城市立新庄小学校管理棟及び屋内運動場長寿命化改修工事",
-            "status": "受付終了",
-            "announcementDate": "2025-04-11",
-            "biddingDate": "2025-05-15",
-            "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/1-06-07-01-3.pdf",
-            "reason": "snapshot item should be present in scraper_result"
-          }
-        ],
-        "status": "missing"
-      },
-      {
-        "municipality": "橿原市",
-        "snapshotCount": 228,
-        "expectedCount": 17,
-        "matchedCount": 16,
-        "missingCount": 1,
-        "duplicateTitleGroupCount": 0,
-        "duplicateTitleItemCount": 0,
-        "missingItems": [
-          {
-            "id": "kashihara-result-5071000279",
-            "municipality": "橿原市",
-            "title": "晩成小学校屋外便所改修工事",
-            "status": "落札",
-            "announcementDate": "2025-05-20",
-            "biddingDate": "2025-05-20",
-            "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
-            "reason": "snapshot item should be present in scraper_result"
-          }
-        ],
-        "status": "missing"
-      },
-      {
-        "municipality": "広陵町",
-        "snapshotCount": 2,
-        "expectedCount": 2,
-        "matchedCount": 1,
-        "missingCount": 1,
-        "duplicateTitleGroupCount": 0,
-        "duplicateTitleItemCount": 0,
-        "missingItems": [
-          {
-            "id": "koryo-2025-05-29-No6",
-            "municipality": "広陵町",
-            "title": "広陵西小学校ベランダ手摺改修工事",
-            "status": "落札",
-            "announcementDate": "2025-05-29",
-            "biddingDate": "2025-05-29",
-            "link": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7919/NO6-2.pdf",
-            "reason": "snapshot item should be present in scraper_result"
-          }
-        ],
-        "status": "missing"
+        "missingItems": [],
+        "status": "ok"
       },
       {
         "municipality": "五條市",
@@ -369,6 +276,17 @@
       {
         "municipality": "宇陀市",
         "snapshotCount": 18,
+        "expectedCount": 17,
+        "matchedCount": 17,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 0,
+        "duplicateTitleItemCount": 0,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
+        "municipality": "橿原市",
+        "snapshotCount": 228,
         "expectedCount": 17,
         "matchedCount": 17,
         "missingCount": 0,
@@ -444,17 +362,6 @@
         "status": "ok"
       },
       {
-        "municipality": "王寺町",
-        "snapshotCount": 3,
-        "expectedCount": 3,
-        "matchedCount": 3,
-        "missingCount": 0,
-        "duplicateTitleGroupCount": 1,
-        "duplicateTitleItemCount": 2,
-        "missingItems": [],
-        "status": "ok"
-      },
-      {
         "municipality": "桜井市",
         "snapshotCount": 3,
         "expectedCount": 3,
@@ -492,6 +399,17 @@
         "snapshotCount": 3,
         "expectedCount": 3,
         "matchedCount": 3,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 0,
+        "duplicateTitleItemCount": 0,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
+        "municipality": "広陵町",
+        "snapshotCount": 2,
+        "expectedCount": 2,
+        "matchedCount": 2,
         "missingCount": 0,
         "duplicateTitleGroupCount": 0,
         "duplicateTitleItemCount": 0,
@@ -555,6 +473,17 @@
       },
       {
         "municipality": "安堵町",
+        "snapshotCount": 0,
+        "expectedCount": 0,
+        "matchedCount": 0,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 0,
+        "duplicateTitleItemCount": 0,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
+        "municipality": "王寺町",
         "snapshotCount": 0,
         "expectedCount": 0,
         "matchedCount": 0,

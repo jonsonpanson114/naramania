@@ -1,35 +1,35 @@
 {
-  "generatedAt": "2026-07-03T22:14:20.974Z",
-  "source": "waterproof_filter_cleanup",
-  "originalCount": 218,
-  "removedCount": 42,
-  "scrapedCount": 38,
-  "keptCount": 168,
-  "rejectedCount": 43,
+  "generatedAt": "2026-07-06T11:10:08.194Z",
+  "source": "daily_scrape",
+  "scrapedCount": 0,
+  "keptCount": 173,
+  "rejectedCount": 0,
   "oldestAnnouncementDate": "2025-02-02",
   "latestAnnouncementDate": "2026-07-03",
-  "municipalityCount": 23,
+  "municipalityCount": 22,
   "municipalityAudit": {
     "expectedMunicipalityCount": 25,
-    "coveredMunicipalityCount": 23,
+    "coveredMunicipalityCount": 22,
     "missingMunicipalities": [
       "大和高田市",
-      "安堵町"
+      "安堵町",
+      "王寺町"
     ],
     "zeroCountMunicipalities": [
       "大和高田市",
-      "安堵町"
+      "安堵町",
+      "王寺町"
     ],
     "breakdown": [
       {
-        "municipality": "奈良県",
-        "count": 21,
-        "changeFromPrevious": -2
+        "municipality": "葛城市",
+        "count": 24,
+        "changeFromPrevious": 0
       },
       {
-        "municipality": "葛城市",
-        "count": 19,
-        "changeFromPrevious": -1
+        "municipality": "奈良県",
+        "count": 21,
+        "changeFromPrevious": 0
       },
       {
         "municipality": "高取町",
@@ -39,12 +39,12 @@
       {
         "municipality": "宇陀市",
         "count": 17,
-        "changeFromPrevious": -2
+        "changeFromPrevious": 0
       },
       {
         "municipality": "橿原市",
-        "count": 16,
-        "changeFromPrevious": -1
+        "count": 17,
+        "changeFromPrevious": 0
       },
       {
         "municipality": "五條市",
@@ -54,7 +54,7 @@
       {
         "municipality": "生駒市",
         "count": 13,
-        "changeFromPrevious": -5
+        "changeFromPrevious": 0
       },
       {
         "municipality": "香芝市",
@@ -64,7 +64,7 @@
       {
         "municipality": "奈良市",
         "count": 7,
-        "changeFromPrevious": -2
+        "changeFromPrevious": 0
       },
       {
         "municipality": "川西町",
@@ -97,7 +97,7 @@
         "changeFromPrevious": 0
       },
       {
-        "municipality": "王寺町",
+        "municipality": "広陵町",
         "count": 2,
         "changeFromPrevious": 0
       },
@@ -123,11 +123,6 @@
       },
       {
         "municipality": "御所市",
-        "count": 1,
-        "changeFromPrevious": 0
-      },
-      {
-        "municipality": "広陵町",
         "count": 1,
         "changeFromPrevious": 0
       },
@@ -200,12 +195,12 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 16,
+        "totalCount": 17,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.kashihara.nara.jp": 16
+          "city.kashihara.nara.jp": 17
         },
-        "message": "橿原市: 16件 / sources OK"
+        "message": "橿原市: 17件 / sources OK"
       },
       {
         "expectation": {
@@ -275,13 +270,13 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 19,
+        "totalCount": 24,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.katsuragi.nara.jp": 9,
+          "city.katsuragi.nara.jp": 14,
           "epi-cloud.fwd.ne.jp": 10
         },
-        "message": "葛城市: 19件 / sources OK"
+        "message": "葛城市: 24件 / sources OK"
       },
       {
         "expectation": {
@@ -404,12 +399,12 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 1,
+        "totalCount": 2,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "town.koryo.nara.jp": 1
+          "town.koryo.nara.jp": 2
         },
-        "message": "広陵町: 1件 / sources OK"
+        "message": "広陵町: 2件 / sources OK"
       },
       {
         "expectation": {
@@ -578,7 +573,7 @@
       {
         "expectation": {
           "municipality": "王寺町",
-          "minItems": 1,
+          "minItems": 0,
           "requiredLinkIncludes": [
             "town.oji.nara.jp"
           ],
@@ -586,12 +581,14 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 2,
-        "missingLinkIncludes": [],
+        "totalCount": 0,
+        "missingLinkIncludes": [
+          "town.oji.nara.jp"
+        ],
         "sourceCounts": {
-          "town.oji.nara.jp": 2
+          "town.oji.nara.jp": 0
         },
-        "message": "王寺町: 2件 / sources OK"
+        "message": "王寺町: 対象案件なし / filtered scope OK"
       },
       {
         "expectation": {
@@ -614,10 +611,10 @@
     ]
   },
   "intelligence": {
-    "itemsWithPdf": 32,
-    "itemsWithDescription": 32,
-    "intelligenceExtractedCount": 29,
-    "geminiExtractedCount": 29,
-    "taggedCount": 29
+    "itemsWithPdf": 39,
+    "itemsWithDescription": 7,
+    "intelligenceExtractedCount": 4,
+    "geminiExtractedCount": 4,
+    "taggedCount": 4
   }
 }

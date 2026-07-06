@@ -12,11 +12,19 @@ const IGNORED_PATH_PARTS = [
 const BANNED_MODELS = [
     {
         model: 'gemini-3.1-flash-lite-preview',
-        replacement: 'gemini-2.5-flash-lite or gemini-3.1-flash-lite',
+        replacement: 'gemini-2.5-flash-lite',
     },
     {
         model: 'gemini-3.1-flash',
-        replacement: 'gemini-2.5-flash or gemini-3.5-flash',
+        replacement: 'gemini-2.5-flash',
+    },
+    {
+        model: 'gemini-3.1-flash-lite',
+        replacement: 'gemini-2.5-flash-lite',
+    },
+    {
+        model: 'gemini-3.5-flash',
+        replacement: 'gemini-2.5-flash',
     },
 ];
 

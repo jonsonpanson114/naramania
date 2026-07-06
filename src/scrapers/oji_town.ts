@@ -21,11 +21,26 @@ const OJI_SUPPLEMENTAL_ITEMS: Array<{
     {
         title: '事後審査型条件付一般競争入札の公表について（やわらぎ会館改修工事）',
         link: 'https://www.town.oji.nara.jp/kakuka/somu/somu/gyomuannai/nyuusatu/nyuusatukouhyou/11512.html',
-        announcementDate: '2026-05-13',
+        announcementDate: '2026-04-27',
         biddingDate: '2026-05-18',
         status: '受付終了' as const,
     },
 ];
+
+const OJI_KNOWN_SCHEDULES: Record<string, { announcementDate: string; biddingDate: string }> = {
+    'やわらぎ会館改修工事': {
+        announcementDate: '2026-04-27',
+        biddingDate: '2026-05-18',
+    },
+    '事後審査型条件付一般競争入札の公表について（やわらぎ会館改修工事）': {
+        announcementDate: '2026-04-27',
+        biddingDate: '2026-05-18',
+    },
+};
+
+const OJI_OUT_OF_SCOPE_TITLES = new Set([
+    'やわらぎ会館改修工事',
+]);
 
 type OjiPage = {
     page_name: string;
@@ -62,6 +77,40 @@ function normalizeOjiTitle(title: string): string {
         return wrapped[1].trim();
     }
     return title.trim();
+}
+
+function getKnownOjiSchedule(title: string): { announcementDate: string; biddingDate: string } | undefined {
+    return OJI_KNOWN_SCHEDULES[title] || OJI_KNOWN_SCHEDULES[normalizeOjiTitle(title)];
+}
+
+function mergeOjiSupplementalItem(items: BiddingItem[], supplemental: typeof OJI_SUPPLEMENTAL_ITEMS[number]): void {
+    const title = normalizeOjiTitle(supplemental.title);
+    if (OJI_OUT_OF_SCOPE_TITLES.has(title)) return;
+    if (!shouldKeepItem(title)) return;
+
+    const existing = items.find(item => normalizeOjiTitle(item.title) === title);
+    if (existing) {
+        if (existing.biddingDate && existing.announcementDate > existing.biddingDate) {
+            existing.announcementDate = supplemental.announcementDate;
+        }
+        if (!existing.biddingDate && supplemental.biddingDate) existing.biddingDate = supplemental.biddingDate;
+        if (!existing.pdfUrl && supplemental.pdfUrl) existing.pdfUrl = supplemental.pdfUrl;
+        if (!existing.winningContractor && supplemental.winningContractor) existing.winningContractor = supplemental.winningContractor;
+        return;
+    }
+
+    items.push({
+        id: `oji-supplemental-${Buffer.from(supplemental.link).toString('base64').slice(0, 12)}`,
+        municipality: '王寺町',
+        title,
+        type: classifyType(title),
+        announcementDate: supplemental.announcementDate,
+        biddingDate: supplemental.biddingDate,
+        link: supplemental.link,
+        pdfUrl: supplemental.pdfUrl,
+        status: supplemental.status,
+        winningContractor: supplemental.winningContractor,
+    });
 }
 
 async function fetchOjiProcurementSitemapEntries(): Promise<OjiSitemapEntry[]> {
@@ -103,19 +152,22 @@ async function scrapeOjiProcurementSitemapPages(): Promise<BiddingItem[]> {
             const rawTitle = $detail('h1').first().text().replace(/\s+/g, ' ').trim()
                 || $detail('title').first().text().replace(/／王寺町$/, '').trim();
             const title = normalizeOjiTitle(rawTitle);
+            if (OJI_OUT_OF_SCOPE_TITLES.has(title)) continue;
             const bodyText = $detail('body').text().replace(/\s+/g, ' ').trim();
 
             if (!title || !shouldKeepItem(title, bodyText)) continue;
 
             const announcementDate = parseUpdatedDate(detailHtml) || entry.lastmod?.slice(0, 10) || '';
             const isResult = /事後公表|落札|結果/u.test(rawTitle) || /落札|結果/u.test(bodyText);
+            const knownSchedule = getKnownOjiSchedule(title);
 
             items.push({
                 id: `oji-procurement-${Buffer.from(entry.url).toString('base64').slice(0, 12)}`,
                 municipality: '王寺町',
                 title,
                 type: classifyType(title),
-                announcementDate,
+                announcementDate: knownSchedule?.announcementDate || announcementDate,
+                biddingDate: knownSchedule?.biddingDate,
                 link: entry.url,
                 status: isResult ? '受付終了' : '受付中',
             });
@@ -157,14 +209,18 @@ export class OjiTownScraper implements Scraper {
                 const fullUrl = makeAbsoluteUrl(link.href);
                 const detailRes = await axios.get(fullUrl, { headers: HEADERS, timeout: 15000 });
                 const detailHtml = detailRes.data as string;
+                const $detail = cheerio.load(detailHtml);
+                const bodyText = $detail('body').text().replace(/\s+/g, ' ').trim();
                 const detailDate = parseUpdatedDate(detailHtml);
-                const isAwardResult = /落札|入札結果|開札結果/u.test(detailHtml) || /落札|入札結果|開札結果/u.test(normalizedTitle);
+                const isAwardResult = /落札結果|入札結果|開札結果|落札者/u.test(bodyText) || /落札結果|入札結果|開札結果/u.test(normalizedTitle);
                 const titleMatch = detailHtml.match(/<h1[^>]*>([^<]+)<\/h1>/);
                 const title = normalizeOjiTitle(titleMatch?.[1]?.trim() || normalizedTitle);
+                if (OJI_OUT_OF_SCOPE_TITLES.has(title)) continue;
+                const knownSchedule = getKnownOjiSchedule(title);
                 let biddingDate = '';
+                let pdfTextForFilter = '';
 
                 if (!isAwardResult) {
-                    const $detail = cheerio.load(detailHtml);
                     const pdfHref = $detail('a').toArray()
                         .map(el => $detail(el).attr('href') || '')
                         .find(href => /nyusatukoukoku/i.test(href) || /公告/i.test(href));
@@ -172,6 +228,7 @@ export class OjiTownScraper implements Scraper {
                         const pdfUrl = pdfHref.startsWith('http') ? pdfHref : `https:${pdfHref}`;
                         try {
                             const pdfText = await extractPdfText(pdfUrl, 6);
+                            pdfTextForFilter = pdfText;
                             const match = pdfText.match(/(?:第\s*6\s*入札日時等[\s\S]*?)?入札日時\s*令和\s*(\d+)\s*年\s*(\d+)\s*月\s*(\d+)\s*日/);
                             if (match) {
                                 const year = 2018 + parseInt(match[1], 10);
@@ -183,15 +240,18 @@ export class OjiTownScraper implements Scraper {
                     }
                 }
 
+                if (!shouldKeepItem(title, `${bodyText} ${pdfTextForFilter}`)) continue;
+
+                const effectiveBiddingDate = biddingDate || knownSchedule?.biddingDate;
                 items.push({
                     id: `oji-${Buffer.from(fullUrl).toString('base64').slice(0, 12)}`,
                     municipality: '王寺町',
                     title,
                     type: classifyType(title),
-                    announcementDate: detailDate || link.announcementDate || parseUpdatedDate(indexRes.data),
-                    biddingDate: biddingDate || undefined,
+                    announcementDate: knownSchedule?.announcementDate || detailDate || link.announcementDate || parseUpdatedDate(indexRes.data),
+                    biddingDate: effectiveBiddingDate,
                     link: fullUrl,
-                    status: isAwardResult ? '落札' : '受付中',
+                    status: isAwardResult ? '落札' : effectiveBiddingDate && effectiveBiddingDate < new Date().toISOString().slice(0, 10) ? '受付終了' : '受付中',
                 });
             }
 
@@ -206,19 +266,7 @@ export class OjiTownScraper implements Scraper {
         }
 
         for (const supplemental of OJI_SUPPLEMENTAL_ITEMS) {
-            if (items.some(item => item.title === supplemental.title) || !shouldKeepItem(supplemental.title)) continue;
-            items.push({
-                id: `oji-supplemental-${Buffer.from(supplemental.link).toString('base64').slice(0, 12)}`,
-                municipality: '王寺町',
-                title: normalizeOjiTitle(supplemental.title),
-                type: classifyType(normalizeOjiTitle(supplemental.title)),
-                announcementDate: supplemental.announcementDate,
-                biddingDate: supplemental.biddingDate,
-                link: supplemental.link,
-                pdfUrl: supplemental.pdfUrl,
-                status: supplemental.status,
-                winningContractor: supplemental.winningContractor,
-            });
+            mergeOjiSupplementalItem(items, supplemental);
         }
 
         console.log(`[王寺町] 合計 ${items.length} 件`);

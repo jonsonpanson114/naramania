@@ -1,122 +1,7 @@
 {
-  "generatedAt": "2026-07-03T21:54:23.329Z",
+  "generatedAt": "2026-07-06T11:10:08.187Z",
   "source": "daily_scrape",
-  "updates": [
-    {
-      "id": "nara-pref-29001013060020260062",
-      "municipality": "奈良県",
-      "title": "県営住宅桜井団地第三期除却工事設計業務（近鉄大福駅周辺地区拠点整備事業） 委（設）第８－３０号",
-      "announcementDate": "2026-06-02",
-      "biddingDate": "2026-06-25",
-      "status": "落札",
-      "winningContractor": "株式会社北和設計",
-      "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260062&gamenMode=0",
-      "previousStatus": "受付終了",
-      "detectedAt": "2026-07-03T21:54:23.329Z",
-      "kind": "new_winner"
-    },
-    {
-      "id": "nara-pref-29001013060020260057",
-      "municipality": "奈良県",
-      "title": "野外活動センター旧第２センター（仮称）管理棟新築工事監理業務 委（監）第８－６号",
-      "announcementDate": "2026-06-01",
-      "biddingDate": "2026-06-22",
-      "status": "不調",
-      "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260057&gamenMode=0",
-      "previousStatus": "受付終了",
-      "detectedAt": "2026-07-03T21:54:23.329Z",
-      "kind": "new_failure"
-    },
-    {
-      "id": "nara-pref-29001013060020260054",
-      "municipality": "奈良県",
-      "title": "宇陀高校（榛原学舎）トイレ環境改善整備工事及び宇陀高校（大宇陀学舎）トイレ環境改善整備工事監理業務 委（監）第８－２号",
-      "announcementDate": "2026-05-27",
-      "biddingDate": "2026-06-17",
-      "status": "落札",
-      "winningContractor": "株式会社桝谷設計",
-      "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260054&gamenMode=0",
-      "previousStatus": "受付終了",
-      "detectedAt": "2026-07-03T21:54:23.329Z",
-      "kind": "new_winner"
-    },
-    {
-      "id": "nara-pref-29001013060020260025",
-      "municipality": "奈良県",
-      "title": "宇陀高校（榛原学舎）トイレ環境改善整備工事 第８－３号",
-      "announcementDate": "2026-05-25",
-      "biddingDate": "2026-06-17",
-      "status": "落札",
-      "winningContractor": "松塚建設株式会社",
-      "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260025&gamenMode=0",
-      "previousStatus": "受付終了",
-      "detectedAt": "2026-07-03T21:54:23.329Z",
-      "kind": "new_winner"
-    },
-    {
-      "id": "nara-pref-29001013060020260009",
-      "municipality": "奈良県",
-      "title": "西和清陵高校トイレ環境改善整備工事 第８－２号",
-      "announcementDate": "2026-05-22",
-      "biddingDate": "2026-06-16",
-      "status": "落札",
-      "winningContractor": "株式会社クラハラ",
-      "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260009&gamenMode=0",
-      "previousStatus": "受付終了",
-      "detectedAt": "2026-07-03T21:54:23.329Z",
-      "kind": "new_winner"
-    },
-    {
-      "id": "nara-pref-29001013060020260053",
-      "municipality": "奈良県",
-      "title": "商業高校トイレ環境改善整備工事及び西和清陵高校トイレ環境改善整備工事監理業務 委（監）第８－３号",
-      "announcementDate": "2026-05-26",
-      "biddingDate": "2026-06-16",
-      "status": "落札",
-      "winningContractor": "株式会社尾川建築設計事務所",
-      "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260053&gamenMode=0",
-      "previousStatus": "受付終了",
-      "detectedAt": "2026-07-03T21:54:23.329Z",
-      "kind": "new_winner"
-    },
-    {
-      "id": "nara-pref-29001013060020260011",
-      "municipality": "奈良県",
-      "title": "商業高校トイレ環境改善整備工事 第８－５号",
-      "announcementDate": "2026-05-22",
-      "biddingDate": "2026-06-16",
-      "status": "落札",
-      "winningContractor": "株式会社中尾組",
-      "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260011&gamenMode=0",
-      "previousStatus": "受付終了",
-      "detectedAt": "2026-07-03T21:54:23.329Z",
-      "kind": "new_winner"
-    },
-    {
-      "id": "nara-pref-29001013060020260014",
-      "municipality": "奈良県",
-      "title": "県営住宅纒向団地６号棟（２０６号室他）住戸改修工事 第８－１１号",
-      "announcementDate": "2026-05-22",
-      "biddingDate": "2026-06-16",
-      "status": "不調",
-      "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260014&gamenMode=0",
-      "previousStatus": "受付終了",
-      "detectedAt": "2026-07-03T21:54:23.329Z",
-      "kind": "new_failure"
-    },
-    {
-      "id": "nara-pref-29001013060020260016",
-      "municipality": "奈良県",
-      "title": "県営住宅姫寺団地４号棟（５０１号室他）住戸改修工事 第８－１０号",
-      "announcementDate": "2026-05-22",
-      "biddingDate": "2026-06-16",
-      "status": "不調",
-      "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260016&gamenMode=0",
-      "previousStatus": "受付終了",
-      "detectedAt": "2026-07-03T21:54:23.329Z",
-      "kind": "new_failure"
-    }
-  ],
+  "updates": [],
   "latestResults": [
     {
       "id": "ikoma-result-2601010038",
@@ -127,7 +12,7 @@
       "status": "落札",
       "winningContractor": "株式会社イシハラ工務店",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-      "detectedAt": "2026-07-03T21:54:23.329Z",
+      "detectedAt": "2026-07-06T11:10:08.187Z",
       "kind": "new_winner"
     },
     {
@@ -139,7 +24,7 @@
       "status": "落札",
       "winningContractor": "有限会社三都設計",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-      "detectedAt": "2026-07-03T21:54:23.329Z",
+      "detectedAt": "2026-07-06T11:10:08.187Z",
       "kind": "new_winner"
     },
     {
@@ -150,7 +35,7 @@
       "biddingDate": "2026-06-26",
       "status": "不調",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-      "detectedAt": "2026-07-03T21:54:23.329Z",
+      "detectedAt": "2026-07-06T11:10:08.187Z",
       "kind": "new_failure"
     },
     {
@@ -162,7 +47,7 @@
       "status": "落札",
       "winningContractor": "株式会社北和設計",
       "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260062&gamenMode=0",
-      "detectedAt": "2026-07-03T21:54:23.329Z",
+      "detectedAt": "2026-07-06T11:10:08.187Z",
       "kind": "new_winner"
     },
     {
@@ -173,8 +58,90 @@
       "biddingDate": "2026-06-22",
       "status": "不調",
       "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260057&gamenMode=0",
-      "detectedAt": "2026-07-03T21:54:23.329Z",
+      "detectedAt": "2026-07-06T11:10:08.187Z",
       "kind": "new_failure"
+    },
+    {
+      "id": "nara-pref-29001013060020260049",
+      "municipality": "奈良県",
+      "title": "高円芸術高校格技場（５）屋根改修工事 第８－９号",
+      "announcementDate": "2026-05-26",
+      "biddingDate": "2026-06-18",
+      "status": "不調",
+      "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260049&gamenMode=0",
+      "detectedAt": "2026-07-06T11:10:08.187Z",
+      "kind": "new_failure"
+    },
+    {
+      "id": "uda-14d83225dc",
+      "municipality": "宇陀市",
+      "title": "【第08-C019号】市単独事業 室生地域事務所庁舎耐震診断業務",
+      "announcementDate": "2026-06-04",
+      "biddingDate": "2026-06-18",
+      "status": "落札",
+      "winningContractor": "（株）福本設計",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200700",
+      "detectedAt": "2026-07-06T11:10:08.187Z",
+      "kind": "new_winner"
+    },
+    {
+      "id": "uda-result-2695010009",
+      "municipality": "宇陀市",
+      "title": "【第08-A003号】旧伊那佐文化センター集会所整備事業 旧伊那佐文化センター集会所整備工事",
+      "announcementDate": "2026-06-18",
+      "biddingDate": "2026-06-18",
+      "status": "落札",
+      "winningContractor": "大国産業",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200700",
+      "detectedAt": "2026-07-06T11:10:08.187Z",
+      "kind": "new_winner"
+    },
+    {
+      "id": "nara-pref-29001013060020260050",
+      "municipality": "奈良県",
+      "title": "消防学校本館内装等改修工事設計業務 委（設）第８－８号",
+      "announcementDate": "2026-05-27",
+      "biddingDate": "2026-06-17",
+      "status": "不調",
+      "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260050&gamenMode=0",
+      "detectedAt": "2026-07-06T11:10:08.187Z",
+      "kind": "new_failure"
+    },
+    {
+      "id": "nara-pref-29001013060020260054",
+      "municipality": "奈良県",
+      "title": "宇陀高校（榛原学舎）トイレ環境改善整備工事及び宇陀高校（大宇陀学舎）トイレ環境改善整備工事監理業務 委（監）第８－２号",
+      "announcementDate": "2026-05-27",
+      "biddingDate": "2026-06-17",
+      "status": "落札",
+      "winningContractor": "株式会社桝谷設計",
+      "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260054&gamenMode=0",
+      "detectedAt": "2026-07-06T11:10:08.187Z",
+      "kind": "new_winner"
+    },
+    {
+      "id": "nara-pref-29001013060020260025",
+      "municipality": "奈良県",
+      "title": "宇陀高校（榛原学舎）トイレ環境改善整備工事 第８－３号",
+      "announcementDate": "2026-05-25",
+      "biddingDate": "2026-06-17",
+      "status": "落札",
+      "winningContractor": "松塚建設株式会社",
+      "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260025&gamenMode=0",
+      "detectedAt": "2026-07-06T11:10:08.187Z",
+      "kind": "new_winner"
+    },
+    {
+      "id": "nara-pref-29001013060020260009",
+      "municipality": "奈良県",
+      "title": "西和清陵高校トイレ環境改善整備工事 第８－２号",
+      "announcementDate": "2026-05-22",
+      "biddingDate": "2026-06-16",
+      "status": "落札",
+      "winningContractor": "株式会社クラハラ",
+      "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260009&gamenMode=0",
+      "detectedAt": "2026-07-06T11:10:08.187Z",
+      "kind": "new_winner"
     }
   ]
 }
