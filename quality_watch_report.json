@@ -1,18 +1,14 @@
 {
-  "generatedAt": "2026-07-06T11:29:50.859Z",
-  "qualityGeneratedAt": "2026-07-06T11:10:08.194Z",
-  "itemCount": 173,
+  "generatedAt": "2026-07-06T12:12:37.994Z",
+  "qualityGeneratedAt": "2026-07-06T12:12:24.184Z",
+  "itemCount": 172,
   "resultFollowUp": {
-    "totalCount": 31,
-    "highCount": 19,
+    "totalCount": 26,
+    "highCount": 14,
     "mediumCount": 12,
     "lowCount": 0,
     "missingBiddingDateCount": 11,
     "byMunicipality": [
-      {
-        "municipality": "葛城市",
-        "count": 5
-      },
       {
         "municipality": "香芝市",
         "count": 4
@@ -71,86 +67,6 @@
       }
     ],
     "samples": [
-      {
-        "priority": "high",
-        "ageDays": 434,
-        "reason": "開札日から434日経過",
-        "item": {
-          "id": "katsuragi-epi-aef9d1f0",
-          "municipality": "葛城市",
-          "title": "新庄スポーツセンタープール床改修工事",
-          "status": "受付終了",
-          "announcementDate": "2025-04-08",
-          "biddingDate": "2025-04-28",
-          "winningContractor": null,
-          "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200720",
-          "pdfUrl": null
-        }
-      },
-      {
-        "priority": "high",
-        "ageDays": 434,
-        "reason": "開札日から434日経過",
-        "item": {
-          "id": "katsuragi-epi-9f6cdfe9",
-          "municipality": "葛城市",
-          "title": "葛城市火葬場待合棟等トイレ改修工事",
-          "status": "受付終了",
-          "announcementDate": "2025-04-08",
-          "biddingDate": "2025-04-28",
-          "winningContractor": null,
-          "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200720",
-          "pdfUrl": null
-        }
-      },
-      {
-        "priority": "high",
-        "ageDays": 434,
-        "reason": "開札日から434日経過",
-        "item": {
-          "id": "katsuragi-epi-a6be4395",
-          "municipality": "葛城市",
-          "title": "磐城第２保育所保育室ウレタン塗装・プールシート貼替工事",
-          "status": "受付終了",
-          "announcementDate": "2025-04-08",
-          "biddingDate": "2025-04-28",
-          "winningContractor": null,
-          "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200720",
-          "pdfUrl": null
-        }
-      },
-      {
-        "priority": "high",
-        "ageDays": 417,
-        "reason": "開札日から417日経過",
-        "item": {
-          "id": "katsuragi-web-89be2c69",
-          "municipality": "葛城市",
-          "title": "第1号 葛城市立新庄小学校管理棟及び屋内運動場長寿命化改修工事",
-          "status": "受付終了",
-          "announcementDate": "2025-04-11",
-          "biddingDate": "2025-05-15",
-          "winningContractor": null,
-          "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/1-06-07-01-3.pdf",
-          "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/1-06-07-01-3.pdf"
-        }
-      },
-      {
-        "priority": "high",
-        "ageDays": 369,
-        "reason": "開札日から369日経過",
-        "item": {
-          "id": "katsuragi-web-1a9fe639",
-          "municipality": "葛城市",
-          "title": "新庄小学校管理棟及び屋内運動場長寿命化改修工事監理業務委託",
-          "status": "受付終了",
-          "announcementDate": "2025-06-06",
-          "biddingDate": "2025-07-02",
-          "winningContractor": null,
-          "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/3-03-03-2025-1-2.pdf",
-          "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/3-03-03-2025-1-2.pdf"
-        }
-      },
       {
         "priority": "high",
         "ageDays": 354,
@@ -230,6 +146,86 @@
           "link": "https://www.city.kashiba.lg.jp/uploaded/attachment/31836.pdf",
           "pdfUrl": null
         }
+      },
+      {
+        "priority": "high",
+        "ageDays": 49,
+        "reason": "開札日から49日経過",
+        "item": {
+          "id": "tawaramoto-2026051803",
+          "municipality": "田原本町",
+          "title": "田原本町立まほろば小学校新築工事",
+          "status": "受付終了",
+          "announcementDate": "2026-04-09",
+          "biddingDate": "2026-05-18",
+          "winningContractor": null,
+          "link": "https://tawaramoto.efftis.jp/PPI/Public/javaScript:void(0);",
+          "pdfUrl": null
+        }
+      },
+      {
+        "priority": "high",
+        "ageDays": 41,
+        "reason": "開札日から41日経過",
+        "item": {
+          "id": "kashihara-proposal-5082000026",
+          "municipality": "橿原市",
+          "title": "橿原運動公園体育館・屋内プール新築工事に伴う基本設計業務 (圧縮ファイル: 1.7MB)",
+          "status": "受付終了",
+          "announcementDate": "2026-04-03",
+          "biddingDate": "2026-05-26",
+          "winningContractor": null,
+          "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/7/8272.html",
+          "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5082000026.zip"
+        }
+      },
+      {
+        "priority": "high",
+        "ageDays": 41,
+        "reason": "開札日から41日経過",
+        "item": {
+          "id": "kashiba-web-1bf7b65a",
+          "municipality": "香芝市",
+          "title": "五位堂小学校改築工事に伴う実施設計業務",
+          "status": "受付終了",
+          "announcementDate": "2026-04-23",
+          "biddingDate": "2026-05-26",
+          "winningContractor": null,
+          "link": "https://www.city.kashiba.lg.jp/site/nyuusatsu/list288-1034.html",
+          "pdfUrl": null
+        }
+      },
+      {
+        "priority": "high",
+        "ageDays": 40,
+        "reason": "開札日から40日経過",
+        "item": {
+          "id": "nara-city-0000002346",
+          "municipality": "奈良市",
+          "title": "庁舎中央棟地下書庫改修その他工事に伴う建築設計業務委託",
+          "status": "受付終了",
+          "announcementDate": "2026-04-15",
+          "biddingDate": "2026-05-27",
+          "winningContractor": null,
+          "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+          "pdfUrl": null
+        }
+      },
+      {
+        "priority": "high",
+        "ageDays": 19,
+        "reason": "開札日から19日経過",
+        "item": {
+          "id": "yamato-koriyama-ee85746d",
+          "municipality": "大和郡山市",
+          "title": "市立郡山南小学校廊下改修工事（2期）",
+          "status": "受付終了",
+          "announcementDate": "2026-05-26",
+          "biddingDate": "2026-06-17",
+          "winningContractor": null,
+          "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/9328.html",
+          "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk260617_06k.pdf"
+        }
       }
     ]
   },
@@ -270,11 +266,11 @@
         "municipality": "葛城市",
         "status": "ok",
         "severity": "error",
-        "count": 10,
+        "count": 9,
         "requiredLinkIncludes": [
           "0620064007200720"
         ],
-        "message": "葛城市 情報公開サイト: 10件確認",
+        "message": "葛城市 情報公開サイト: 9件確認",
         "matches": [
           {
             "id": "katsuragi-epi-d289edf8",
@@ -332,17 +328,6 @@
             "pdfUrl": null
           },
           {
-            "id": "katsuragi-epi-c08b4d97",
-            "municipality": "葛城市",
-            "title": "葛城市立新庄小学校管理棟及び屋内運動場長寿命化改修工事監理業務委託",
-            "status": "落札",
-            "announcementDate": "2025-06-06",
-            "biddingDate": "2025-07-02",
-            "winningContractor": "(株)村井設計",
-            "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200720",
-            "pdfUrl": null
-          },
-          {
             "id": "katsuragi-epi-92f71a52",
             "municipality": "葛城市",
             "title": "第7-508号 市営住宅堂の久保団地空家解体設計委託業務",
@@ -357,10 +342,10 @@
             "id": "katsuragi-epi-aef9d1f0",
             "municipality": "葛城市",
             "title": "新庄スポーツセンタープール床改修工事",
-            "status": "受付終了",
+            "status": "落札",
             "announcementDate": "2025-04-08",
             "biddingDate": "2025-04-28",
-            "winningContractor": null,
+            "winningContractor": "(株)葛城工務店",
             "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200720",
             "pdfUrl": null
           },
@@ -368,10 +353,10 @@
             "id": "katsuragi-epi-9f6cdfe9",
             "municipality": "葛城市",
             "title": "葛城市火葬場待合棟等トイレ改修工事",
-            "status": "受付終了",
+            "status": "落札",
             "announcementDate": "2025-04-08",
             "biddingDate": "2025-04-28",
-            "winningContractor": null,
+            "winningContractor": "(株)生野建設",
             "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200720",
             "pdfUrl": null
           },
@@ -379,10 +364,10 @@
             "id": "katsuragi-epi-a6be4395",
             "municipality": "葛城市",
             "title": "磐城第２保育所保育室ウレタン塗装・プールシート貼替工事",
-            "status": "受付終了",
+            "status": "落札",
             "announcementDate": "2025-04-08",
             "biddingDate": "2025-04-28",
-            "winningContractor": null,
+            "winningContractor": "(有)エバー工業",
             "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200720",
             "pdfUrl": null
           }
@@ -617,7 +602,7 @@
         "municipality": "葛城市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 24,
+        "totalCount": 23,
         "requiredLinkIncludes": [
           "city.katsuragi.nara.jp",
           "epi-cloud.fwd.ne.jp"
@@ -625,9 +610,9 @@
         "missingLinkIncludes": [],
         "sourceCounts": {
           "city.katsuragi.nara.jp": 14,
-          "epi-cloud.fwd.ne.jp": 10
+          "epi-cloud.fwd.ne.jp": 9
         },
-        "message": "葛城市: 24件 / sources OK"
+        "message": "葛城市: 23件 / sources OK"
       },
       {
         "municipality": "五條市",

@@ -1704,18 +1704,8 @@
     "announcementDate": "2025-06-06",
     "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/3-03-03-2025-1-2.pdf",
     "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/3-03-03-2025-1-2.pdf",
-    "status": "受付終了",
-    "biddingDate": "2025-07-02"
-  },
-  {
-    "id": "katsuragi-epi-c08b4d97",
-    "municipality": "葛城市",
-    "title": "葛城市立新庄小学校管理棟及び屋内運動場長寿命化改修工事監理業務委託",
-    "type": "コンサル",
-    "announcementDate": "2025-06-06",
-    "biddingDate": "2025-07-02",
-    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200720",
     "status": "落札",
+    "biddingDate": "2025-07-02",
     "winningContractor": "(株)村井設計"
   },
   {
@@ -1823,8 +1813,7 @@
     "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/2-05-01-2025-1-2.pdf",
     "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/2-05-01-2025-1-2.pdf",
     "status": "不調",
-    "biddingDate": "2025-06-30",
-    "winningContractor": "‐"
+    "biddingDate": "2025-06-30"
   },
   {
     "id": "katsuragi-epi-92f71a52",
@@ -1908,8 +1897,9 @@
     "announcementDate": "2025-04-11",
     "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/1-06-07-01-3.pdf",
     "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/1-06-07-01-3.pdf",
-    "status": "受付終了",
-    "biddingDate": "2025-05-15"
+    "status": "落札",
+    "biddingDate": "2025-05-15",
+    "winningContractor": "和光建設(株)"
   },
   {
     "id": "katsuragi-epi-aef9d1f0",
@@ -1919,7 +1909,8 @@
     "announcementDate": "2025-04-08",
     "biddingDate": "2025-04-28",
     "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200720",
-    "status": "受付終了"
+    "status": "落札",
+    "winningContractor": "(株)葛城工務店"
   },
   {
     "id": "katsuragi-epi-9f6cdfe9",
@@ -1929,7 +1920,8 @@
     "announcementDate": "2025-04-08",
     "biddingDate": "2025-04-28",
     "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200720",
-    "status": "受付終了"
+    "status": "落札",
+    "winningContractor": "(株)生野建設"
   },
   {
     "id": "katsuragi-epi-a6be4395",
@@ -1939,7 +1931,8 @@
     "announcementDate": "2025-04-08",
     "biddingDate": "2025-04-28",
     "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200720",
-    "status": "受付終了"
+    "status": "落札",
+    "winningContractor": "(有)エバー工業"
   },
   {
     "id": "山添村-山添村義務教育学校建設基本計画業務",

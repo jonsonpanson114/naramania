@@ -31,6 +31,7 @@ function normalizeTitle(title: string): string {
         .normalize('NFKC')
         .replace(/\s+/g, '')
         .replace(/[・･]/g, '')
+        .replace(/^(第[0-9]+号)?葛城市立/u, '$1')
         .trim();
 }
 
@@ -132,11 +133,14 @@ function extractResultBlocks(text: string): string[] {
 function cleanResultValue(value?: string): string | undefined {
     if (!value) return undefined;
     const cleaned = value.replace(/\s+/g, ' ').trim();
+    if (/^[-‐－ー―]+$/.test(cleaned)) return undefined;
     return cleaned || undefined;
 }
 
 function extractResultTitle(block: string): string | undefined {
-    const match = block.match(/(?:一般|指名)競争入札結果公表書\s+(.+?)\s+[^\s]+(?:課|室|所|館|校|園|センター|委員会)/u);
+    const match = block.match(
+        /(?:一般|指名)競争入札結果公表書\s+(.+?)\s+(?:[^\s]+課|[^\s]+室|[^\s]+局|[^\s]+事務所|教育委員会)(?=\s+(?:奈良県|入札参加業者|指名業者))/u,
+    );
     return cleanResultValue(match?.[1]);
 }
 
@@ -183,7 +187,7 @@ async function extractResultInfosFromPdf(pdfUrl: string): Promise<KatsuragiResul
         const doc = await pdfjsLib.getDocument({ data, verbosity: 0, isEvalSupported: false }).promise;
 
         let text = '';
-        for (let i = 1; i <= Math.min(doc.numPages, 8); i++) {
+        for (let i = 1; i <= doc.numPages; i++) {
             const page = await doc.getPage(i);
             const content = await page.getTextContent();
             text += content.items.map(item => ('str' in item ? item.str : '')).join(' ');

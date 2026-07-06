@@ -82,8 +82,12 @@ function keepEarlierDate(currentDate: string, candidateDate: string): string {
 }
 
 function mergeBiddingItem(existing: BiddingItem, candidate: BiddingItem) {
-    if (candidate.status === '落札') {
-        existing.status = '落札';
+    if (candidate.status === '落札' || candidate.status === '不調') {
+        existing.status = candidate.status;
+        if (candidate.status === '不調') {
+            delete existing.winningContractor;
+            delete existing.winnerType;
+        }
     } else if (
         candidate.status === '受付終了' &&
         (existing.status === '受付中' || existing.status === '締切間近' || (existing.status === '落札' && !existing.winningContractor))
@@ -92,7 +96,7 @@ function mergeBiddingItem(existing: BiddingItem, candidate: BiddingItem) {
     } else if (candidate.status === '締切間近' && existing.status === '受付中') {
         existing.status = '締切間近';
     }
-    if (candidate.winningContractor && !existing.winningContractor) existing.winningContractor = candidate.winningContractor;
+    if (candidate.status !== '不調' && candidate.winningContractor && !existing.winningContractor) existing.winningContractor = candidate.winningContractor;
     if (candidate.biddingDate && !existing.biddingDate) existing.biddingDate = candidate.biddingDate;
     if (candidate.pdfUrl && !existing.pdfUrl) existing.pdfUrl = candidate.pdfUrl;
     if (candidate.link && !existing.link) existing.link = candidate.link;
@@ -115,7 +119,9 @@ function carryForwardEnrichment(candidate: BiddingItem, previous?: BiddingItem):
     return {
         ...candidate,
         estimatedPrice: candidate.estimatedPrice || previous.estimatedPrice,
-        winningContractor: candidate.winningContractor || previous.winningContractor,
+        winningContractor: candidate.status === '不調'
+            ? undefined
+            : candidate.winningContractor || previous.winningContractor,
         designFirm: candidate.designFirm || previous.designFirm,
         constructionPeriod: candidate.constructionPeriod || previous.constructionPeriod,
         description: candidate.description || previous.description,

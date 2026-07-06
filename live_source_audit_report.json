@@ -1,21 +1,16 @@
 {
-  "generatedAt": "2026-07-06T11:38:00.309Z",
-  "currentItemCount": 173,
+  "generatedAt": "2026-07-06T12:14:25.849Z",
+  "currentItemCount": 172,
   "checkedMunicipalities": [
-    "橿原市",
-    "葛城市",
-    "広陵町",
-    "王寺町"
+    "葛城市"
   ],
   "onlyMunicipalities": [
-    "葛城市",
-    "橿原市",
-    "広陵町",
-    "王寺町"
+    "葛城市"
   ],
   "excludedMunicipalities": [
     "奈良県",
     "奈良市",
+    "橿原市",
     "生駒市",
     "大和高田市",
     "大和郡山市",
@@ -25,6 +20,7 @@
     "桜井市",
     "宇陀市",
     "田原本町",
+    "広陵町",
     "香芝市",
     "川西町",
     "山添村",
@@ -34,94 +30,36 @@
     "高取町",
     "斑鳩町",
     "三郷町",
+    "王寺町",
     "大淀町"
   ],
   "scraperErrorCount": 0,
   "scraperResults": [
     {
-      "municipality": "橿原市",
-      "rawCount": 228,
-      "keptCount": 17,
-      "rejectedCount": 211,
-      "warnings": [],
-      "errors": []
-    },
-    {
       "municipality": "葛城市",
-      "rawCount": 31,
-      "keptCount": 24,
+      "rawCount": 30,
+      "keptCount": 23,
       "rejectedCount": 7,
       "warnings": [],
-      "errors": []
-    },
-    {
-      "municipality": "広陵町",
-      "rawCount": 2,
-      "keptCount": 2,
-      "rejectedCount": 0,
-      "warnings": [],
-      "errors": []
-    },
-    {
-      "municipality": "王寺町",
-      "rawCount": 0,
-      "keptCount": 0,
-      "rejectedCount": 0,
-      "warnings": [
-        "王寺町: ライブ取得0件かつDB掲載0件です。対象案件なしなのか、取得失敗なのか確認が必要です。"
-      ],
       "errors": []
     }
   ],
   "coverage": {
-    "checkedMunicipalityCount": 4,
-    "expectedItemCount": 43,
-    "matchedItemCount": 43,
+    "checkedMunicipalityCount": 1,
+    "expectedItemCount": 23,
+    "matchedItemCount": 23,
     "missingItemCount": 0,
     "duplicateTitleGroupCount": 4,
     "duplicateTitleItemCount": 8,
     "results": [
       {
         "municipality": "葛城市",
-        "snapshotCount": 31,
-        "expectedCount": 24,
-        "matchedCount": 24,
+        "snapshotCount": 30,
+        "expectedCount": 23,
+        "matchedCount": 23,
         "missingCount": 0,
         "duplicateTitleGroupCount": 4,
         "duplicateTitleItemCount": 8,
-        "missingItems": [],
-        "status": "ok"
-      },
-      {
-        "municipality": "橿原市",
-        "snapshotCount": 228,
-        "expectedCount": 17,
-        "matchedCount": 17,
-        "missingCount": 0,
-        "duplicateTitleGroupCount": 0,
-        "duplicateTitleItemCount": 0,
-        "missingItems": [],
-        "status": "ok"
-      },
-      {
-        "municipality": "広陵町",
-        "snapshotCount": 2,
-        "expectedCount": 2,
-        "matchedCount": 2,
-        "missingCount": 0,
-        "duplicateTitleGroupCount": 0,
-        "duplicateTitleItemCount": 0,
-        "missingItems": [],
-        "status": "ok"
-      },
-      {
-        "municipality": "王寺町",
-        "snapshotCount": 0,
-        "expectedCount": 0,
-        "matchedCount": 0,
-        "missingCount": 0,
-        "duplicateTitleGroupCount": 0,
-        "duplicateTitleItemCount": 0,
         "missingItems": [],
         "status": "ok"
       }
