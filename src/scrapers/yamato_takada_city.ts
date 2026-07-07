@@ -4,6 +4,7 @@ import crypto from 'crypto';
 import type { Element } from 'domhandler';
 import { BiddingItem, Scraper, BiddingType } from '../types/bidding';
 import { shouldKeepItem } from './common/filter';
+import { fiscalMonthToCalendarYear, getCurrentReiwaFiscalYear } from './common/fiscal_year';
 
 // 大和高田市 入札情報
 const BASE = 'https://www.city.yamatotakada.nara.jp';
@@ -11,7 +12,10 @@ const ANNOUNCEMENT_PAGES = [
     { url: `${BASE}/soshikikarasagasu/somuka/keiyakukanri/nyusatsu_keiyaku/2/1422.html`, label: '建設工事' },
     { url: `${BASE}/soshikikarasagasu/somuka/keiyakukanri/nyusatsu_keiyaku/2/1427.html`, label: '測量コンサル' },
 ];
-const RESULT_PAGE = `${BASE}/soshikikarasagasu/somuka/keiyakukanri/nyusatsu_keiyaku/1/9099.html`;
+// 入札結果は年度ごとに別ページが作られるため、カテゴリindexから
+// 現在年度の「令和N年度 入札結果(建設工事等)」リンクを解決する
+const RESULT_INDEX_PAGE = `${BASE}/soshikikarasagasu/somuka/keiyakukanri/nyusatsu_keiyaku/1/index.html`;
+const RESULT_PAGE_FALLBACK = `${BASE}/soshikikarasagasu/somuka/keiyakukanri/nyusatsu_keiyaku/1/10344.html`; // 令和8年度
 const RESULT_BIDDING_DATES: Record<string, string> = {
     // 大和高田市公報 第439号（2025-08-08）で確認
     '市営住宅礒野団地4号棟外壁等改修工事設計業務委託': '2025-07-18',
@@ -74,6 +78,30 @@ function findPageUpdateDate($: cheerio.CheerioAPI): string {
 }
 
 const HEADERS = { 'User-Agent': 'Mozilla/5.0 (compatible; naramania-scraper/1.0)' };
+
+async function resolveResultPage(): Promise<{ url: string; reiwaYear: number }> {
+    const currentReiwa = getCurrentReiwaFiscalYear();
+    try {
+        const res = await axios.get(RESULT_INDEX_PAGE, { timeout: 30000, headers: HEADERS });
+        const $ = cheerio.load(res.data);
+        let found: { url: string; reiwaYear: number } | null = null;
+        $('a').each((_, el) => {
+            const text = $(el).text().replace(/\s+/g, '').trim();
+            const href = $(el).attr('href') || '';
+            const m = text.match(/令和(\d+)年度入札結果\(建設工事等\)/);
+            if (!m || !href) return;
+            const reiwaYear = parseInt(m[1]);
+            if (reiwaYear > currentReiwa) return;
+            if (!found || reiwaYear > found.reiwaYear) {
+                found = { url: href.startsWith('http') ? href : `${BASE}${href}`, reiwaYear };
+            }
+        });
+        if (found) return found;
+    } catch (e: unknown) {
+        console.warn(`[大和高田市] 結果ページ解決エラー: ${errorMessage(e)}`);
+    }
+    return { url: RESULT_PAGE_FALLBACK, reiwaYear: currentReiwa };
+}
 
 function errorMessage(error: unknown): string {
     if (error instanceof Error && error.message) return error.message;
@@ -138,7 +166,10 @@ export class YamatoTakadaCityScraper implements Scraper {
         // ── 入札結果（落札）─────────────────────────────
         console.log(`[大和高田市] 入札結果 取得中...`);
         try {
-            const res = await axios.get(RESULT_PAGE, { timeout: 30000, headers: HEADERS });
+            const { url: resultPage, reiwaYear } = await resolveResultPage();
+            const fiscalYearStart = reiwaYear + 2018;
+            console.log(`[大和高田市] 結果ページ: 令和${reiwaYear}年度 ${resultPage}`);
+            const res = await axios.get(resultPage, { timeout: 30000, headers: HEADERS });
             const $ = cheerio.load(res.data);
             const beforeCount = allItems.length;
 
@@ -168,14 +199,16 @@ export class YamatoTakadaCityScraper implements Scraper {
 
                         if (title && !shouldSkip('', title)) {
                             const isAwarded = contractor && contractor !== '不成立' && contractor !== 'なし';
+                            // 年度ページの月見出しから暦年に変換（4〜12月=年度開始年、1〜3月=翌年）
+                            const calendarYear = fiscalMonthToCalendarYear(fiscalYearStart, currentMonth);
                             allItems.push({
                                 id: makeId(title + '-result'),
                                 municipality: '大和高田市',
                                 title,
                                 type: classifyType('', title),
-                                announcementDate: `2025-${String(currentMonth).padStart(2, '0')}-01`,
+                                announcementDate: `${calendarYear}-${String(currentMonth).padStart(2, '0')}-01`,
                                 biddingDate: RESULT_BIDDING_DATES[title],
-                                link: RESULT_PAGE,
+                                link: resultPage,
                                 status: isAwarded ? '落札' : '受付終了',
                                 ...(isAwarded ? { winningContractor: contractor } : {}),
                             });

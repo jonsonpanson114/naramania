@@ -1,21 +1,20 @@
-- [ ] Project Initialization and Planning
-  - [x] Create implementation plan <!-- id: 0 -->
-  - [x] Generate design mockups <!-- id: 13 -->
-  - [x] Refine design (Elegant/Professional) <!-- id: 14 -->
-  - [x] Refine design (Gorgeous/Premium) <!-- id: 15 -->
-  - [x] Refine design (Light Beige Luxury) <!-- id: 16 -->
-  - [ ] Set up Next.js project structure <!-- id: 1 -->
-- [ ] Backend & Scraper Development
-  - [ ] Design data schema (Supabase/PostgreSQL or local JSON for prototype) <!-- id: 2 -->
-  - [ ] Implement Nara Prefecture scraper <!-- id: 3 -->
-  - [ ] Implement Nara City scraper <!-- id: 4 -->
-  - [ ] Implement Kashihara City scraper <!-- id: 5 -->
-  - [ ] Implement Ikoma City scraper <!-- id: 6 -->
-  - [ ] Integrate PDF parsing logic (Gemini/pdfplumber) <!-- id: 7 -->
-- [ ] Frontend Development
-  - [ ] Build main dashboard (Aggregated list) <!-- id: 8 -->
-  - [ ] Implement search and filter functionality <!-- id: 9 -->
-  - [ ] Create individual detail views <!-- id: 10 -->
-- [ ] Automation & Deployment
-  - [ ] Set up scheduled scraping jobs <!-- id: 11 -->
-  - [ ] Deploy to Vercel/Netlify <!-- id: 12 -->
+# タスク管理
+
+## 完了
+- [x] Next.js プロジェクト構築・ダッシュボード・検索・詳細・チャット・ランキング
+- [x] 25自治体スクレイパー実装（奈良県は self-hosted runner）
+- [x] PDF解析（pdfjs-dist）＋ Gemini インテリジェンス抽出
+- [x] GitHub Actions による自動運用（daily scrape / live source audit）
+- [x] Vercel デプロイ
+- [x] 2026-07-08: ゼロ件3自治体（大和高田市・安堵町・王寺町）復旧
+- [x] 2026-07-08: 年度ハードコード除去（広陵町・三宅町ほか、`common/fiscal_year.ts` 導入）
+- [x] 2026-07-08: AI補強後にCIが落ちるフィルタ反転バグ修正
+- [x] 2026-07-08: 結果追跡を今年度（2026-04以降）スコープに変更、発注見通し案件を除外
+
+## 運用方針
+- 物件情報は今年度（2026年4月〜）分から収集。過年度の漏れは追わない。
+
+## 未着手・監視中
+- [ ] daily scrape のAI抽出消化と追跡待ち13件の解消を監視
+- [ ] 奈良県 self-hosted runner の定期起動運用
+- [ ] 大淀町の落札者文字列クリーニング

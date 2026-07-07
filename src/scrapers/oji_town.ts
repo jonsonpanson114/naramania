@@ -38,9 +38,8 @@ const OJI_KNOWN_SCHEDULES: Record<string, { announcementDate: string; biddingDat
     },
 };
 
-const OJI_OUT_OF_SCOPE_TITLES = new Set([
-    'やわらぎ会館改修工事',
-]);
+// タイトル単位で恒久除外したい案件だけを登録する（現在は無し）
+const OJI_OUT_OF_SCOPE_TITLES = new Set<string>([]);
 
 type OjiPage = {
     page_name: string;
@@ -57,6 +56,14 @@ function makeAbsoluteUrl(href: string): string {
     if (!href) return OJI_INDEX;
     if (href.startsWith('http')) return href;
     return `${BASE_URL}${href}`;
+}
+
+// ページ全文にはナビゲーション文言（「業務案内」など）が含まれ、
+// 除外キーワードに誤ヒットするため本文コンテナだけを判定に使う
+function extractOjiMainText($: cheerio.CheerioAPI): string {
+    const main = $('#contents').first();
+    const text = (main.length ? main.text() : $('body').text());
+    return text.replace(/\s+/g, ' ').trim();
 }
 
 function parseUpdatedDate(html: string): string {
@@ -153,9 +160,10 @@ async function scrapeOjiProcurementSitemapPages(): Promise<BiddingItem[]> {
                 || $detail('title').first().text().replace(/／王寺町$/, '').trim();
             const title = normalizeOjiTitle(rawTitle);
             if (OJI_OUT_OF_SCOPE_TITLES.has(title)) continue;
-            const bodyText = $detail('body').text().replace(/\s+/g, ' ').trim();
+            const bodyText = extractOjiMainText($detail);
 
-            if (!title || !shouldKeepItem(title, bodyText)) continue;
+            // 本文には定型文由来の除外キーワードが混ざるため、判定はタイトルのみで行う
+            if (!title || !shouldKeepItem(title)) continue;
 
             const announcementDate = parseUpdatedDate(detailHtml) || entry.lastmod?.slice(0, 10) || '';
             const isResult = /事後公表|落札|結果/u.test(rawTitle) || /落札|結果/u.test(bodyText);
@@ -210,7 +218,7 @@ export class OjiTownScraper implements Scraper {
                 const detailRes = await axios.get(fullUrl, { headers: HEADERS, timeout: 15000 });
                 const detailHtml = detailRes.data as string;
                 const $detail = cheerio.load(detailHtml);
-                const bodyText = $detail('body').text().replace(/\s+/g, ' ').trim();
+                const bodyText = extractOjiMainText($detail);
                 const detailDate = parseUpdatedDate(detailHtml);
                 const isAwardResult = /落札結果|入札結果|開札結果|落札者/u.test(bodyText) || /落札結果|入札結果|開札結果/u.test(normalizedTitle);
                 const titleMatch = detailHtml.match(/<h1[^>]*>([^<]+)<\/h1>/);
@@ -218,7 +226,6 @@ export class OjiTownScraper implements Scraper {
                 if (OJI_OUT_OF_SCOPE_TITLES.has(title)) continue;
                 const knownSchedule = getKnownOjiSchedule(title);
                 let biddingDate = '';
-                let pdfTextForFilter = '';
 
                 if (!isAwardResult) {
                     const pdfHref = $detail('a').toArray()
@@ -228,7 +235,6 @@ export class OjiTownScraper implements Scraper {
                         const pdfUrl = pdfHref.startsWith('http') ? pdfHref : `https:${pdfHref}`;
                         try {
                             const pdfText = await extractPdfText(pdfUrl, 6);
-                            pdfTextForFilter = pdfText;
                             const match = pdfText.match(/(?:第\s*6\s*入札日時等[\s\S]*?)?入札日時\s*令和\s*(\d+)\s*年\s*(\d+)\s*月\s*(\d+)\s*日/);
                             if (match) {
                                 const year = 2018 + parseInt(match[1], 10);
@@ -240,7 +246,10 @@ export class OjiTownScraper implements Scraper {
                     }
                 }
 
-                if (!shouldKeepItem(title, `${bodyText} ${pdfTextForFilter}`)) continue;
+                // タイトルが建築案件として通っていれば採用する。
+                // 本文やPDFには「低入札価格調査制度」「ソフトウェアをダウンロード」等の
+                // 定型文が含まれ、除外キーワードに誤ヒットするため判定に使わない。
+                if (!shouldKeepItem(title)) continue;
 
                 const effectiveBiddingDate = biddingDate || knownSchedule?.biddingDate;
                 items.push({

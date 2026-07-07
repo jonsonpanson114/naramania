@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-07-06T12:12:38.223Z",
+  "generatedAt": "2026-07-07T21:55:32.181Z",
   "checkedMunicipalityCount": 22,
-  "expectedItemCount": 172,
-  "matchedItemCount": 172,
+  "expectedItemCount": 170,
+  "matchedItemCount": 170,
   "missingItemCount": 0,
   "duplicateTitleGroupCount": 10,
   "duplicateTitleItemCount": 21,
@@ -173,17 +173,6 @@
       "status": "ok"
     },
     {
-      "municipality": "広陵町",
-      "snapshotCount": 2,
-      "expectedCount": 2,
-      "matchedCount": 2,
-      "missingCount": 0,
-      "duplicateTitleGroupCount": 0,
-      "duplicateTitleItemCount": 0,
-      "missingItems": [],
-      "status": "ok"
-    },
-    {
       "municipality": "三郷町",
       "snapshotCount": 2,
       "expectedCount": 2,
@@ -243,6 +232,17 @@
       "snapshotCount": 1,
       "expectedCount": 1,
       "matchedCount": 1,
+      "missingCount": 0,
+      "duplicateTitleGroupCount": 0,
+      "duplicateTitleItemCount": 0,
+      "missingItems": [],
+      "status": "ok"
+    },
+    {
+      "municipality": "広陵町",
+      "snapshotCount": 0,
+      "expectedCount": 0,
+      "matchedCount": 0,
       "missingCount": 0,
       "duplicateTitleGroupCount": 0,
       "duplicateTitleItemCount": 0,

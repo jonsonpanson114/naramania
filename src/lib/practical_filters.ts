@@ -57,6 +57,19 @@ function todayIso(): string {
   }).format(new Date());
 }
 
+/** 今年度の開始日（4月1日）をISO形式で返す */
+export function fiscalYearStartIso(referenceDate = todayIso()): string {
+  const [year, month] = referenceDate.split('-').map(Number);
+  const fiscalYearStart = month >= 4 ? year : year - 1;
+  return `${fiscalYearStart}-04-01`;
+}
+
+/** 今年度（4月1日以降に開札または公告）の案件か */
+export function isCurrentFiscalYearItem(item: BiddingItem, referenceDate = todayIso()): boolean {
+  const baseDate = item.biddingDate || item.announcementDate;
+  return Boolean(baseDate && baseDate >= fiscalYearStartIso(referenceDate));
+}
+
 export function isOpenedItem(item: BiddingItem, referenceDate = todayIso()): boolean {
   if (item.status === '落札' || item.status === '不調' || item.status === '受付終了') return true;
   return Boolean(item.biddingDate && item.biddingDate < referenceDate);
@@ -73,7 +86,13 @@ export function isSchoolToiletItem(item: BiddingItem): boolean {
 export function matchesPracticalFilter(item: BiddingItem, filter: PracticalFilter): boolean {
   if (filter === 'all') return true;
   if (filter === 'missingWinner') return item.status === '落札' && !item.winningContractor;
-  if (filter === 'resultFollowUp') return item.status === '受付終了' || (item.status === '落札' && !item.winningContractor);
+  // 結果追跡は今年度案件のみ対象（過年度の未解決分は追わない運用方針）
+  // 発注見通し由来の公告前案件も追跡しない
+  if (filter === 'resultFollowUp') {
+    return !item.isForecast
+      && isCurrentFiscalYearItem(item)
+      && (item.status === '受付終了' || (item.status === '落札' && !item.winningContractor));
+  }
   if (filter === 'opened') return isOpenedItem(item);
   if (filter === 'schoolToilet') return isSchoolToiletItem(item);
   if (filter === 'active') return item.status === '受付中' && !isOpenedItem(item);

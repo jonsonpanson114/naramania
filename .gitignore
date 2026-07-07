@@ -31,6 +31,17 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
+# scraper debug artifacts (screenshots, dumps, one-off logs at repo root)
+/debug_*.png
+/debug_log*.txt
+/ikoma_*
+/uda_*.png
+/news_test_result*.txt
+/verify_*.log
+/verify_*.txt
+/*.log
+/scraper_result_backup*.json
+
 # env files (can opt-in for committing if needed)
 .env*
 

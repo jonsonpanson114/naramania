@@ -2,6 +2,7 @@ import axios from 'axios';
 import * as cheerio from 'cheerio';
 import { BiddingItem, Scraper, BiddingType } from '../types/bidding';
 import { shouldKeepItem } from './common/filter';
+import { fiscalMonthToCalendarYear, getCurrentReiwaFiscalYear } from './common/fiscal_year';
 
 interface PdfJsContentItem {
     str: string;
@@ -84,15 +85,16 @@ function classifyType(section: string, title: string): BiddingType {
     return '建築';
 }
 
-// "No3 案件名（5月13日開札）" → { no: '3', name: '案件名', date: '2025-05-13' }
-function parseItem(text: string): { no: string; name: string; date: string } | null {
+// "No3 案件名（5月13日開札）" → { no: '3', name: '案件名', date: '2026-05-13' }
+// 年はページの「令和N年度」表記から算出する
+function parseItem(text: string, fiscalYearStart: number): { no: string; name: string; date: string } | null {
     const m = text.match(/^No(\d+)\s+(.+?)（(\d+)月(\d+)日開札）/);
     if (!m) return null;
     const no = m[1];
     const name = m[2].trim();
     const month = parseInt(m[3]);
     const day = parseInt(m[4]);
-    const year = month >= 4 ? 2025 : 2026;
+    const year = fiscalMonthToCalendarYear(fiscalYearStart, month);
     const date = `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
     return { no, name, date };
 }
@@ -111,21 +113,27 @@ export class KoryoTownScraper implements Scraper {
             });
             const $cat = cheerio.load(catRes.data);
 
+            // 「令和N年度 指名競争入札結果」のうち現在年度以下で最大のNを選ぶ
+            const currentReiwa = getCurrentReiwaFiscalYear();
             let yearUrl = '';
+            let reiwaYear = 0;
             $cat('a[href]').each((_, el) => {
-                if (yearUrl) return;
                 const href = $cat(el).attr('href') || '';
                 const text = $cat(el).text().trim();
-                if (text.includes('令和') && text.includes('指名競争入札結果')) {
-                    yearUrl = href.startsWith('http') ? href : `${BASE_URL}${href}`;
-                }
+                const m = text.match(/令和(\d+)年度\s*指名競争入札結果/);
+                if (!m || !href) return;
+                const year = parseInt(m[1]);
+                if (year > currentReiwa || year <= reiwaYear) return;
+                reiwaYear = year;
+                yearUrl = href.startsWith('http') ? href : `${BASE_URL}${href}`;
             });
 
             if (!yearUrl) {
                 console.warn('[広陵町] 指名競争入札結果URLが見つかりません');
                 return items;
             }
-            console.log(`[広陵町] URL: ${yearUrl}`);
+            const fiscalYearStart = reiwaYear + 2018;
+            console.log(`[広陵町] URL: 令和${reiwaYear}年度 ${yearUrl}`);
 
             const res = await axios.get(yearUrl, {
                 headers: { 'User-Agent': 'Mozilla/5.0' },
@@ -147,7 +155,7 @@ export class KoryoTownScraper implements Scraper {
                 $(block).find('ul li').each((_, li) => {
                     const text = $(li).text().replace(/\s+/g, ' ').trim();
                     if (!text) return;
-                    const parsed = parseItem(text);
+                    const parsed = parseItem(text, fiscalYearStart);
                     if (!parsed) return;
                     const { no, name, date } = parsed;
                     if (!name || shouldSkip(name)) return;

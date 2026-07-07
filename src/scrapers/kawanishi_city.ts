@@ -18,6 +18,7 @@ const KNOWN_KAWANISHI_ITEMS: BiddingItem[] = [
         announcementDate: '2026-04-01',
         link: 'https://www.town.nara-kawanishi.lg.jp/0000008785.html',
         status: '受付終了',
+        isForecast: true,
     },
     {
         id: buildId('2026-04-01', '中央体育館修繕改修工事'),
@@ -27,6 +28,7 @@ const KNOWN_KAWANISHI_ITEMS: BiddingItem[] = [
         announcementDate: '2026-04-01',
         link: 'https://www.town.nara-kawanishi.lg.jp/0000008785.html',
         status: '受付終了',
+        isForecast: true,
     },
     {
         id: buildId('2026-04-01', '梅戸体育館屋根改修工事'),
@@ -36,6 +38,7 @@ const KNOWN_KAWANISHI_ITEMS: BiddingItem[] = [
         announcementDate: '2026-04-01',
         link: 'https://www.town.nara-kawanishi.lg.jp/0000008785.html',
         status: '受付終了',
+        isForecast: true,
     },
     {
         id: buildId('2026-04-01', 'ふれあいセンター改修工事'),
@@ -45,6 +48,7 @@ const KNOWN_KAWANISHI_ITEMS: BiddingItem[] = [
         announcementDate: '2026-04-01',
         link: 'https://www.town.nara-kawanishi.lg.jp/0000008785.html',
         status: '受付終了',
+        isForecast: true,
     },
     {
         id: buildId('2026-04-01', '式下中学校体育館屋根・外壁その他改修工事設計業務'),

@@ -190,23 +190,34 @@ export function shouldKeepItem(title: string, otherText?: string): boolean {
 }
 
 export function shouldKeepBiddingItem(item: BiddingItem, referenceDate = new Date()): boolean {
+    // 除外判定にはスクレイパー由来のテキストだけを使う。
+    // AI由来の要約やタグには「設備」「調査」「空調」などの語が正当な建築案件でも
+    // 普通に登場するため、AI付与後のテキストで除外すると、スクレイプ時に通過した
+    // 案件が品質チェックで「対象外」に反転してCIが失敗する。
+    // （タグは常にAI生成なので除外判定には使わない）
+    const isAiDescription = item.isIntelligenceExtracted === true || item.extractionSource === 'gemini';
+    const exclusionText = isAiDescription
+        ? item.title
+        : `${item.title} ${item.description || ''}`;
+
+    if (includesAny(exclusionText, ALWAYS_EXCLUDE_KEYWORDS)) {
+        return false;
+    }
+
+    // タイトル単体で判定できない案件は、補足テキストでの救済を許す
     const textToMatch = [
         item.title,
         item.description || '',
         ...(item.tags || []),
     ].join(' ');
-
-    if (includesAny(textToMatch, ALWAYS_EXCLUDE_KEYWORDS)) {
-        return false;
-    }
-
     const titleMatches = shouldKeepItem(item.title);
+    const matches = titleMatches || shouldKeepItem(textToMatch);
 
     if (DATE_FILTER_EXEMPT_TITLES.includes(item.title)) {
-        return titleMatches || shouldKeepItem(textToMatch);
+        return matches;
     }
 
-    return isRecentBiddingDate(item.announcementDate, referenceDate) && (titleMatches || shouldKeepItem(textToMatch));
+    return isRecentBiddingDate(item.announcementDate, referenceDate) && matches;
 }
 
 export type WinnerType = 'ゼネコン' | '設計事務所' | 'その他';

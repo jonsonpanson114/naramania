@@ -1447,32 +1447,7 @@
       "status": "受付終了"
     }
   ],
-  "広陵町": [
-    {
-      "id": "koryo-2025-05-29-No6",
-      "municipality": "広陵町",
-      "title": "広陵西小学校ベランダ手摺改修工事",
-      "type": "建築",
-      "announcementDate": "2025-05-29",
-      "biddingDate": "2025-05-29",
-      "link": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7919/NO6-2.pdf",
-      "pdfUrl": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7919/NO6-2.pdf",
-      "status": "落札",
-      "winningContractor": "株式会社hinata"
-    },
-    {
-      "id": "koryo-2025-04-28-No2",
-      "municipality": "広陵町",
-      "title": "広陵運動公園トイレ改築工事実施設計業務委託",
-      "type": "コンサル",
-      "announcementDate": "2025-04-28",
-      "biddingDate": "2025-04-28",
-      "link": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7919/NO2-2.pdf",
-      "pdfUrl": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7919/NO2-2.pdf",
-      "status": "落札",
-      "winningContractor": "株式会社彩都建築設計"
-    }
-  ],
+  "広陵町": [],
   "川西町": [
     {
       "id": "kawanishi-2026-04-01-川西文化会館トイレ改修工事",
@@ -1481,7 +1456,8 @@
       "type": "建築",
       "announcementDate": "2026-04-01",
       "link": "https://www.town.nara-kawanishi.lg.jp/0000008785.html",
-      "status": "受付終了"
+      "status": "受付終了",
+      "isForecast": true
     },
     {
       "id": "kawanishi-2026-04-01-中央体育館修繕改修工事",
@@ -1490,7 +1466,8 @@
       "type": "建築",
       "announcementDate": "2026-04-01",
       "link": "https://www.town.nara-kawanishi.lg.jp/0000008785.html",
-      "status": "受付終了"
+      "status": "受付終了",
+      "isForecast": true
     },
     {
       "id": "kawanishi-2026-04-01-梅戸体育館屋根改修工事",
@@ -1499,7 +1476,8 @@
       "type": "建築",
       "announcementDate": "2026-04-01",
       "link": "https://www.town.nara-kawanishi.lg.jp/0000008785.html",
-      "status": "受付終了"
+      "status": "受付終了",
+      "isForecast": true
     },
     {
       "id": "kawanishi-2026-04-01-ふれあいセンター改修工事",
@@ -1508,7 +1486,8 @@
       "type": "建築",
       "announcementDate": "2026-04-01",
       "link": "https://www.town.nara-kawanishi.lg.jp/0000008785.html",
-      "status": "受付終了"
+      "status": "受付終了",
+      "isForecast": true
     }
   ],
   "三宅町": [

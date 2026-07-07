@@ -1,135 +1,113 @@
 {
-  "generatedAt": "2026-07-06T12:12:24.184Z",
-  "source": "daily_scrape",
-  "scrapedCount": 30,
-  "keptCount": 172,
-  "rejectedCount": 7,
+  "generatedAt": "2026-07-07T10:09:52.044Z",
+  "source": "update_selected_municipalities",
+  "keptCount": 167,
   "oldestAnnouncementDate": "2025-02-02",
   "latestAnnouncementDate": "2026-07-03",
-  "municipalityCount": 22,
+  "municipalityCount": 23,
   "municipalityAudit": {
     "expectedMunicipalityCount": 25,
-    "coveredMunicipalityCount": 22,
+    "coveredMunicipalityCount": 23,
     "missingMunicipalities": [
       "大和高田市",
-      "安堵町",
-      "王寺町"
+      "安堵町"
     ],
     "zeroCountMunicipalities": [
       "大和高田市",
-      "安堵町",
-      "王寺町"
+      "安堵町"
     ],
     "breakdown": [
       {
-        "municipality": "葛城市",
-        "count": 23,
-        "changeFromPrevious": 0
-      },
-      {
         "municipality": "奈良県",
-        "count": 21,
-        "changeFromPrevious": 0
+        "count": 21
       },
       {
-        "municipality": "高取町",
-        "count": 19,
-        "changeFromPrevious": 0
+        "municipality": "葛城市",
+        "count": 20
       },
       {
         "municipality": "宇陀市",
-        "count": 17,
-        "changeFromPrevious": 0
+        "count": 17
       },
       {
         "municipality": "橿原市",
-        "count": 17,
-        "changeFromPrevious": 0
+        "count": 17
+      },
+      {
+        "municipality": "高取町",
+        "count": 14
       },
       {
         "municipality": "五條市",
-        "count": 14,
-        "changeFromPrevious": 0
+        "count": 14
       },
       {
         "municipality": "生駒市",
-        "count": 13,
-        "changeFromPrevious": 0
+        "count": 13
       },
       {
         "municipality": "香芝市",
-        "count": 9,
-        "changeFromPrevious": 0
+        "count": 9
       },
       {
         "municipality": "奈良市",
-        "count": 7,
-        "changeFromPrevious": 0
-      },
-      {
-        "municipality": "川西町",
-        "count": 4,
-        "changeFromPrevious": 0
+        "count": 7
       },
       {
         "municipality": "大和郡山市",
-        "count": 4,
-        "changeFromPrevious": 0
-      },
-      {
-        "municipality": "桜井市",
-        "count": 3,
-        "changeFromPrevious": 0
-      },
-      {
-        "municipality": "天理市",
-        "count": 3,
-        "changeFromPrevious": 0
-      },
-      {
-        "municipality": "田原本町",
-        "count": 3,
-        "changeFromPrevious": 0
-      },
-      {
-        "municipality": "斑鳩町",
-        "count": 3,
-        "changeFromPrevious": 0
-      },
-      {
-        "municipality": "広陵町",
-        "count": 2,
-        "changeFromPrevious": 0
-      },
-      {
-        "municipality": "三郷町",
-        "count": 2,
-        "changeFromPrevious": 0
+        "count": 4
       },
       {
         "municipality": "三宅町",
-        "count": 2,
-        "changeFromPrevious": 0
+        "count": 4
       },
       {
-        "municipality": "山添村",
-        "count": 2,
-        "changeFromPrevious": 0
+        "municipality": "川西町",
+        "count": 4
+      },
+      {
+        "municipality": "桜井市",
+        "count": 3
+      },
+      {
+        "municipality": "斑鳩町",
+        "count": 3
+      },
+      {
+        "municipality": "天理市",
+        "count": 3
+      },
+      {
+        "municipality": "田原本町",
+        "count": 3
+      },
+      {
+        "municipality": "広陵町",
+        "count": 2
+      },
+      {
+        "municipality": "三郷町",
+        "count": 2
       },
       {
         "municipality": "平群町",
-        "count": 2,
-        "changeFromPrevious": 0
+        "count": 2
+      },
+      {
+        "municipality": "山添村",
+        "count": 2
       },
       {
         "municipality": "御所市",
-        "count": 1,
-        "changeFromPrevious": 0
+        "count": 1
+      },
+      {
+        "municipality": "王寺町",
+        "count": 1
       },
       {
         "municipality": "大淀町",
-        "count": 1,
-        "changeFromPrevious": 0
+        "count": 1
       }
     ],
     "retainedFromPrevious": [],
@@ -270,13 +248,13 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 23,
+        "totalCount": 20,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.katsuragi.nara.jp": 14,
+          "city.katsuragi.nara.jp": 11,
           "epi-cloud.fwd.ne.jp": 9
         },
-        "message": "葛城市: 23件 / sources OK"
+        "message": "葛城市: 20件 / sources OK"
       },
       {
         "expectation": {
@@ -453,12 +431,12 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 2,
+        "totalCount": 4,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "town.miyake.lg.jp": 2
+          "town.miyake.lg.jp": 4
         },
-        "message": "三宅町: 2件 / sources OK"
+        "message": "三宅町: 4件 / sources OK"
       },
       {
         "expectation": {
@@ -527,12 +505,12 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 19,
+        "totalCount": 14,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "town.takatori.nara.jp": 19
+          "town.takatori.nara.jp": 14
         },
-        "message": "高取町: 19件 / sources OK"
+        "message": "高取町: 14件 / sources OK"
       },
       {
         "expectation": {
@@ -581,14 +559,12 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 0,
-        "missingLinkIncludes": [
-          "town.oji.nara.jp"
-        ],
+        "totalCount": 1,
+        "missingLinkIncludes": [],
         "sourceCounts": {
-          "town.oji.nara.jp": 0
+          "town.oji.nara.jp": 1
         },
-        "message": "王寺町: 対象案件なし / filtered scope OK"
+        "message": "王寺町: 1件 / sources OK"
       },
       {
         "expectation": {
@@ -611,7 +587,7 @@
     ]
   },
   "intelligence": {
-    "itemsWithPdf": 39,
+    "itemsWithPdf": 38,
     "itemsWithDescription": 7,
     "intelligenceExtractedCount": 4,
     "geminiExtractedCount": 4,
