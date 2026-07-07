@@ -89,7 +89,7 @@ const KNOWN_GOJO_ITEMS: Array<Pick<BiddingItem, 'title' | 'announcementDate' | '
         link: 'https://www.city.gojo.lg.jp/material/files/group/4/7itaku2.pdf',
         pdfUrl: 'https://www.city.gojo.lg.jp/material/files/group/4/7itaku2.pdf',
         type: 'コンサル',
-        status: '受付終了',
+        status: '受付中',
     },
     {
         title: '宗桧公民館改修工事設計業務',
@@ -97,7 +97,7 @@ const KNOWN_GOJO_ITEMS: Array<Pick<BiddingItem, 'title' | 'announcementDate' | '
         link: 'https://www.city.gojo.lg.jp/material/files/group/4/7itaku2.pdf',
         pdfUrl: 'https://www.city.gojo.lg.jp/material/files/group/4/7itaku2.pdf',
         type: 'コンサル',
-        status: '受付終了',
+        status: '受付中',
     },
     {
         title: '宗桧公民館改修工事',

@@ -94,9 +94,9 @@ interface CmsPage {
 
 async function fetchChildPages(jsonUrl: string, yearPattern: RegExp): Promise<CmsPage[]> {
     const pages = await fetchJson<CmsPage[]>(jsonUrl, 15000);
-    // 令和7年度のカテゴリインデックスを探す
-    const r7 = pages.find(p => p.is_category_index && yearPattern.test(p.page_name));
-    if (r7?.child_pages) return r7.child_pages;
+    const matchingCategories = pages.filter(p => p.is_category_index && yearPattern.test(p.page_name));
+    const childPages = matchingCategories.flatMap(category => category.child_pages || []);
+    if (childPages.length > 0) return childPages;
     // フォールバック: child_pages_count最大のもの
     const sorted = [...pages].sort((a, b) => (b.child_pages_count || 0) - (a.child_pages_count || 0));
     return sorted[0]?.child_pages || [];
@@ -248,7 +248,7 @@ export class YamatokoriyamaCityScraper implements Scraper {
         ]) {
             console.log(`[大和郡山市] ${label} JSON取得中...`);
             try {
-                const children = await fetchChildPages(jsonUrl, /令和7年度|R7/i);
+                const children = await fetchChildPages(jsonUrl, /令和8年度|R8|令和7年度|R7/i);
                 const relevant = children.filter(p => !p.is_category_index && titleSeemsRelevant(p.page_name));
                 console.log(`[大和郡山市] ${label}: ${children.length}件中 ${relevant.length}件が対象`);
 

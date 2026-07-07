@@ -84,26 +84,35 @@ export class TawaramotoTownScraper implements Scraper {
                         const contractNo = (await cells[0].innerText()).trim();
                         const title = (await cells[2].innerText()).trim();
                         const koushu = (await cells[3].innerText()).trim();
-                        // cells[5] は状況（「入札参加申請終了」等）で落札者ではない
+                        const cell5 = cells.length > 5 ? (await cells[5].innerText()).trim().replace(/\s+/g, ' ') : '';
 
                         if (!title || !contractNo || contractNo.includes('契約番号')) continue;
                         if (!shouldKeepItem(title, koushu)) continue;
 
-                        // 田原本町の行構造（常に3行）:
-                        //   主行 (7セル): 契約番号|担当課|件名|工種|入札方式|状況|ボタン
-                        //   サブ行1 (1セル): ステータス（「入札終了」等）
-                        //   サブ行2 (4セル): 場所|電子|公告日|開札日
-                        if (i + 2 >= rows.length) continue;
-                        const dateCells = await rows[i + 2].locator('td').all();
-                        if (dateCells.length < 3) continue;
+                        // 公告は3行構造、結果は奈良市と同じ2行構造で返る。
+                        const nextCells = await rows[i + 1].locator('td').all();
+                        let annoDate = '';
+                        let biddingDate: string | undefined;
 
-                        const rawAnnoDate = parseJapaneseDate((await dateCells[2].innerText()).trim());
-                        if (!rawAnnoDate) continue;
-                        const annoDate = rawAnnoDate;
-                        const bd = dateCells.length >= 4
-                            ? parseJapaneseDate((await dateCells[3].innerText()).trim())
-                            : '';
-                        const biddingDate = bd || undefined;
+                        if (nextCells.length === 1) {
+                            if (i + 2 >= rows.length) continue;
+                            const dateCells = await rows[i + 2].locator('td').all();
+                            if (dateCells.length < 3) continue;
+
+                            annoDate = parseJapaneseDate((await dateCells[2].innerText()).trim());
+                            const bd = dateCells.length >= 4
+                                ? parseJapaneseDate((await dateCells[3].innerText()).trim())
+                                : '';
+                            biddingDate = bd || undefined;
+                        } else {
+                            const dateStr = nextCells.length >= 2
+                                ? parseJapaneseDate((await nextCells[1].innerText()).trim())
+                                : '';
+                            annoDate = dateStr;
+                            biddingDate = dateStr || undefined;
+                        }
+
+                        if (!annoDate) continue;
 
                         const linkEl = cells[2].locator('a').first();
                         let link = EFFTIS_TOP;
@@ -121,6 +130,9 @@ export class TawaramotoTownScraper implements Scraper {
                             biddingDate,
                             link,
                             status,
+                            winningContractor: status === '落札' && cell5 && !/入札|申請|終了|未公開|なし|－|-/.test(cell5)
+                                ? cell5
+                                : undefined,
                         });
                     }
 

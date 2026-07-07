@@ -1,19 +1,13 @@
 {
-  "generatedAt": "2026-07-06T12:14:25.849Z",
+  "generatedAt": "2026-07-07T10:21:34.189Z",
   "currentItemCount": 172,
   "checkedMunicipalities": [
-    "葛城市"
-  ],
-  "onlyMunicipalities": [
-    "葛城市"
-  ],
-  "excludedMunicipalities": [
-    "奈良県",
     "奈良市",
     "橿原市",
     "生駒市",
     "大和高田市",
     "大和郡山市",
+    "葛城市",
     "五條市",
     "御所市",
     "天理市",
@@ -33,33 +27,491 @@
     "王寺町",
     "大淀町"
   ],
+  "onlyMunicipalities": [],
+  "excludedMunicipalities": [
+    "奈良県"
+  ],
   "scraperErrorCount": 0,
   "scraperResults": [
     {
+      "municipality": "奈良市",
+      "rawCount": 14,
+      "keptCount": 12,
+      "rejectedCount": 2,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "municipality": "橿原市",
+      "rawCount": 228,
+      "keptCount": 17,
+      "rejectedCount": 211,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "municipality": "生駒市",
+      "rawCount": 13,
+      "keptCount": 13,
+      "rejectedCount": 0,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "municipality": "大和高田市",
+      "rawCount": 0,
+      "keptCount": 0,
+      "rejectedCount": 0,
+      "warnings": [
+        "大和高田市: ライブ取得0件かつDB掲載0件です。対象案件なしなのか、取得失敗なのか確認が必要です。"
+      ],
+      "errors": []
+    },
+    {
+      "municipality": "大和郡山市",
+      "rawCount": 7,
+      "keptCount": 5,
+      "rejectedCount": 2,
+      "warnings": [],
+      "errors": []
+    },
+    {
       "municipality": "葛城市",
-      "rawCount": 30,
-      "keptCount": 23,
+      "rawCount": 31,
+      "keptCount": 24,
       "rejectedCount": 7,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "municipality": "五條市",
+      "rawCount": 61,
+      "keptCount": 24,
+      "rejectedCount": 37,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "municipality": "御所市",
+      "rawCount": 1,
+      "keptCount": 1,
+      "rejectedCount": 0,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "municipality": "天理市",
+      "rawCount": 4,
+      "keptCount": 3,
+      "rejectedCount": 1,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "municipality": "桜井市",
+      "rawCount": 3,
+      "keptCount": 3,
+      "rejectedCount": 0,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "municipality": "宇陀市",
+      "rawCount": 18,
+      "keptCount": 17,
+      "rejectedCount": 1,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "municipality": "田原本町",
+      "rawCount": 3,
+      "keptCount": 3,
+      "rejectedCount": 0,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "municipality": "広陵町",
+      "rawCount": 2,
+      "keptCount": 2,
+      "rejectedCount": 0,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "municipality": "香芝市",
+      "rawCount": 9,
+      "keptCount": 9,
+      "rejectedCount": 0,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "municipality": "川西町",
+      "rawCount": 5,
+      "keptCount": 4,
+      "rejectedCount": 1,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "municipality": "山添村",
+      "rawCount": 2,
+      "keptCount": 2,
+      "rejectedCount": 0,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "municipality": "平群町",
+      "rawCount": 2,
+      "keptCount": 2,
+      "rejectedCount": 0,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "municipality": "三宅町",
+      "rawCount": 2,
+      "keptCount": 2,
+      "rejectedCount": 0,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "municipality": "安堵町",
+      "rawCount": 0,
+      "keptCount": 0,
+      "rejectedCount": 0,
+      "warnings": [
+        "安堵町: ライブ取得0件かつDB掲載0件です。対象案件なしなのか、取得失敗なのか確認が必要です。"
+      ],
+      "errors": []
+    },
+    {
+      "municipality": "高取町",
+      "rawCount": 19,
+      "keptCount": 19,
+      "rejectedCount": 0,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "municipality": "斑鳩町",
+      "rawCount": 3,
+      "keptCount": 3,
+      "rejectedCount": 0,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "municipality": "三郷町",
+      "rawCount": 20,
+      "keptCount": 9,
+      "rejectedCount": 11,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "municipality": "王寺町",
+      "rawCount": 0,
+      "keptCount": 0,
+      "rejectedCount": 0,
+      "warnings": [
+        "王寺町: ライブ取得0件かつDB掲載0件です。対象案件なしなのか、取得失敗なのか確認が必要です。"
+      ],
+      "errors": []
+    },
+    {
+      "municipality": "大淀町",
+      "rawCount": 1,
+      "keptCount": 1,
+      "rejectedCount": 0,
       "warnings": [],
       "errors": []
     }
   ],
   "coverage": {
-    "checkedMunicipalityCount": 1,
-    "expectedItemCount": 23,
-    "matchedItemCount": 23,
-    "missingItemCount": 0,
-    "duplicateTitleGroupCount": 4,
-    "duplicateTitleItemCount": 8,
+    "checkedMunicipalityCount": 24,
+    "expectedItemCount": 175,
+    "matchedItemCount": 174,
+    "missingItemCount": 1,
+    "duplicateTitleGroupCount": 25,
+    "duplicateTitleItemCount": 53,
     "results": [
       {
+        "municipality": "大和郡山市",
+        "snapshotCount": 7,
+        "expectedCount": 5,
+        "matchedCount": 4,
+        "missingCount": 1,
+        "duplicateTitleGroupCount": 1,
+        "duplicateTitleItemCount": 2,
+        "missingItems": [
+          {
+            "id": "yamato-koriyama-e1146a80",
+            "municipality": "大和郡山市",
+            "title": "市営霞ヶ丘住宅空家改修工事（203号、205号、208号、209号、302号、306号）",
+            "status": "受付中",
+            "announcementDate": "2026-07-07",
+            "biddingDate": "2026-07-22",
+            "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/9328.html",
+            "reason": "snapshot item should be present in scraper_result"
+          }
+        ],
+        "status": "missing"
+      },
+      {
         "municipality": "葛城市",
-        "snapshotCount": 30,
-        "expectedCount": 23,
-        "matchedCount": 23,
+        "snapshotCount": 31,
+        "expectedCount": 24,
+        "matchedCount": 24,
         "missingCount": 0,
-        "duplicateTitleGroupCount": 4,
-        "duplicateTitleItemCount": 8,
+        "duplicateTitleGroupCount": 5,
+        "duplicateTitleItemCount": 10,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
+        "municipality": "五條市",
+        "snapshotCount": 61,
+        "expectedCount": 24,
+        "matchedCount": 24,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 9,
+        "duplicateTitleItemCount": 20,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
+        "municipality": "高取町",
+        "snapshotCount": 19,
+        "expectedCount": 19,
+        "matchedCount": 19,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 5,
+        "duplicateTitleItemCount": 11,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
+        "municipality": "宇陀市",
+        "snapshotCount": 18,
+        "expectedCount": 17,
+        "matchedCount": 17,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 0,
+        "duplicateTitleItemCount": 0,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
+        "municipality": "橿原市",
+        "snapshotCount": 228,
+        "expectedCount": 17,
+        "matchedCount": 17,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 0,
+        "duplicateTitleItemCount": 0,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
+        "municipality": "生駒市",
+        "snapshotCount": 13,
+        "expectedCount": 13,
+        "matchedCount": 13,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 0,
+        "duplicateTitleItemCount": 0,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
+        "municipality": "奈良市",
+        "snapshotCount": 14,
+        "expectedCount": 12,
+        "matchedCount": 12,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 5,
+        "duplicateTitleItemCount": 10,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
+        "municipality": "香芝市",
+        "snapshotCount": 9,
+        "expectedCount": 9,
+        "matchedCount": 9,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 0,
+        "duplicateTitleItemCount": 0,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
+        "municipality": "三郷町",
+        "snapshotCount": 20,
+        "expectedCount": 9,
+        "matchedCount": 9,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 0,
+        "duplicateTitleItemCount": 0,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
+        "municipality": "川西町",
+        "snapshotCount": 5,
+        "expectedCount": 4,
+        "matchedCount": 4,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 0,
+        "duplicateTitleItemCount": 0,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
+        "municipality": "桜井市",
+        "snapshotCount": 3,
+        "expectedCount": 3,
+        "matchedCount": 3,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 0,
+        "duplicateTitleItemCount": 0,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
+        "municipality": "天理市",
+        "snapshotCount": 4,
+        "expectedCount": 3,
+        "matchedCount": 3,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 0,
+        "duplicateTitleItemCount": 0,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
+        "municipality": "田原本町",
+        "snapshotCount": 3,
+        "expectedCount": 3,
+        "matchedCount": 3,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 0,
+        "duplicateTitleItemCount": 0,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
+        "municipality": "斑鳩町",
+        "snapshotCount": 3,
+        "expectedCount": 3,
+        "matchedCount": 3,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 0,
+        "duplicateTitleItemCount": 0,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
+        "municipality": "広陵町",
+        "snapshotCount": 2,
+        "expectedCount": 2,
+        "matchedCount": 2,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 0,
+        "duplicateTitleItemCount": 0,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
+        "municipality": "三宅町",
+        "snapshotCount": 2,
+        "expectedCount": 2,
+        "matchedCount": 2,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 0,
+        "duplicateTitleItemCount": 0,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
+        "municipality": "山添村",
+        "snapshotCount": 2,
+        "expectedCount": 2,
+        "matchedCount": 2,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 0,
+        "duplicateTitleItemCount": 0,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
+        "municipality": "平群町",
+        "snapshotCount": 2,
+        "expectedCount": 2,
+        "matchedCount": 2,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 0,
+        "duplicateTitleItemCount": 0,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
+        "municipality": "御所市",
+        "snapshotCount": 1,
+        "expectedCount": 1,
+        "matchedCount": 1,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 0,
+        "duplicateTitleItemCount": 0,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
+        "municipality": "大淀町",
+        "snapshotCount": 1,
+        "expectedCount": 1,
+        "matchedCount": 1,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 0,
+        "duplicateTitleItemCount": 0,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
+        "municipality": "安堵町",
+        "snapshotCount": 0,
+        "expectedCount": 0,
+        "matchedCount": 0,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 0,
+        "duplicateTitleItemCount": 0,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
+        "municipality": "王寺町",
+        "snapshotCount": 0,
+        "expectedCount": 0,
+        "matchedCount": 0,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 0,
+        "duplicateTitleItemCount": 0,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
+        "municipality": "大和高田市",
+        "snapshotCount": 0,
+        "expectedCount": 0,
+        "matchedCount": 0,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 0,
+        "duplicateTitleItemCount": 0,
         "missingItems": [],
         "status": "ok"
       }
