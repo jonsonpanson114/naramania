@@ -201,6 +201,26 @@
     "winnerType": "設計事務所"
   },
   {
+    "id": "miyake-2026-06-15-三宅町文化ホールトイレ改修工事",
+    "municipality": "三宅町",
+    "title": "三宅町文化ホールトイレ改修工事",
+    "type": "建築",
+    "announcementDate": "2026-06-15",
+    "link": "https://www.town.miyake.lg.jp/uploaded/attachment/5499.pdf",
+    "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5499.pdf",
+    "status": "受付中"
+  },
+  {
+    "id": "miyake-2026-06-15-上但馬保育所解体工事設計委託業務",
+    "municipality": "三宅町",
+    "title": "上但馬保育所解体工事設計委託業務",
+    "type": "コンサル",
+    "announcementDate": "2026-06-15",
+    "link": "https://www.town.miyake.lg.jp/uploaded/attachment/5498.pdf",
+    "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5498.pdf",
+    "status": "受付中"
+  },
+  {
     "id": "ikoma-result-2601010029",
     "municipality": "生駒市",
     "title": "RAKU-RAKUはうす改修工事",
@@ -317,6 +337,18 @@
     "announcementDate": "2026-05-29",
     "link": "https://www.city.tenri.nara.jp/kakuka/soumubu/nyuusatsushinsashitsu/construction_work/kouji_hattyuu_kanren/1395887232147.html",
     "status": "受付中"
+  },
+  {
+    "id": "koryo-2026-05-29-No6",
+    "municipality": "広陵町",
+    "title": "広陵西小学校ベランダ手摺改修工事",
+    "type": "建築",
+    "announcementDate": "2026-05-29",
+    "biddingDate": "2026-05-29",
+    "link": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7919/NO6-2.pdf",
+    "pdfUrl": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7919/NO6-2.pdf",
+    "status": "落札",
+    "winningContractor": "株式会社hinata"
   },
   {
     "id": "tawaramoto-1008062207",
@@ -629,7 +661,29 @@
     "type": "コンサル",
     "announcementDate": "2026-05-01",
     "link": "https://www.town.ikaruga.nara.jp/cmsfiles/contents/0000000/234/R8-5-1.pdf",
-    "status": "受付中"
+    "status": "受付終了"
+  },
+  {
+    "id": "koryo-2026-04-28-No2",
+    "municipality": "広陵町",
+    "title": "広陵運動公園トイレ改築工事実施設計業務委託",
+    "type": "コンサル",
+    "announcementDate": "2026-04-28",
+    "biddingDate": "2026-04-28",
+    "link": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7919/NO2-2.pdf",
+    "pdfUrl": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7919/NO2-2.pdf",
+    "status": "落札",
+    "winningContractor": "株式会社彩都建築設計"
+  },
+  {
+    "id": "oji-aHR0cHM6Ly93",
+    "municipality": "王寺町",
+    "title": "やわらぎ会館改修工事",
+    "type": "建築",
+    "announcementDate": "2026-04-27",
+    "biddingDate": "2026-05-18",
+    "link": "https://www.town.oji.nara.jp/kakuka/somu/somu/gyomuannai/nyuusatu/nyuusatukouhyou/11512.html",
+    "status": "受付終了"
   },
   {
     "id": "kashiba-web-1bf7b65a",
@@ -738,18 +792,6 @@
     "winningContractor": "株式会社システムクリエイト"
   },
   {
-    "id": "katsuragi-web-35f8c757",
-    "municipality": "葛城市",
-    "title": "忍海小学校区学童保育所施設整備工事",
-    "type": "建築",
-    "announcementDate": "2026-04-13",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/1-6-1-2026-1.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/1-6-1-2026-1.pdf",
-    "status": "落札",
-    "biddingDate": "2026-05-12",
-    "winningContractor": "(株)米杉建設"
-  },
-  {
     "id": "tawaramoto-2026051803",
     "municipality": "田原本町",
     "title": "田原本町立まほろば小学校新築工事",
@@ -808,7 +850,8 @@
     "type": "建築",
     "announcementDate": "2026-04-01",
     "link": "https://www.town.nara-kawanishi.lg.jp/0000008785.html",
-    "status": "受付中"
+    "status": "受付終了",
+    "isForecast": true
   },
   {
     "id": "kawanishi-2026-04-01-中央体育館修繕改修工事",
@@ -817,7 +860,8 @@
     "type": "建築",
     "announcementDate": "2026-04-01",
     "link": "https://www.town.nara-kawanishi.lg.jp/0000008785.html",
-    "status": "受付中"
+    "status": "受付終了",
+    "isForecast": true
   },
   {
     "id": "kawanishi-2026-04-01-梅戸体育館屋根改修工事",
@@ -826,7 +870,8 @@
     "type": "建築",
     "announcementDate": "2026-04-01",
     "link": "https://www.town.nara-kawanishi.lg.jp/0000008785.html",
-    "status": "受付中"
+    "status": "受付終了",
+    "isForecast": true
   },
   {
     "id": "kawanishi-2026-04-01-ふれあいセンター改修工事",
@@ -835,7 +880,8 @@
     "type": "建築",
     "announcementDate": "2026-04-01",
     "link": "https://www.town.nara-kawanishi.lg.jp/0000008785.html",
-    "status": "受付中"
+    "status": "受付終了",
+    "isForecast": true
   },
   {
     "id": "kashiba-web-a1acb745",
@@ -871,15 +917,16 @@
     "winningContractor": "株式会社上村組"
   },
   {
-    "id": "katsuragi-web-874379b9",
+    "id": "katsuragi-web-35f8c757",
     "municipality": "葛城市",
     "title": "忍海小学校区学童保育所施設整備工事",
     "type": "建築",
     "announcementDate": "2026-03-10",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/9-05-02-2025-1.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/9-05-02-2025-1.pdf",
-    "status": "不調",
-    "biddingDate": "2026-04-15"
+    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/1-6-1-2026-1.pdf",
+    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/1-6-1-2026-1.pdf",
+    "status": "落札",
+    "biddingDate": "2026-05-12",
+    "winningContractor": "(株)米杉建設"
   },
   {
     "id": "ikoma-result-2501010110",
@@ -898,7 +945,7 @@
     "type": "委託",
     "announcementDate": "2026-03-04",
     "link": "https://www.city.tenri.nara.jp/kakuka/kankyoukeizaibu/kankyou_cleancenter_gyoumuka/15455.html",
-    "status": "不明",
+    "status": "受付終了",
     "winningContractor": "株式会社 建設技術研究所 奈良事務所"
   },
   {
@@ -906,7 +953,7 @@
     "municipality": "高取町",
     "title": "町営住宅空家修繕工事監理業務",
     "type": "コンサル",
-    "announcementDate": "2026-02-27",
+    "announcementDate": "2026-01-30",
     "biddingDate": "2026-02-27",
     "link": "https://www.town.takatori.nara.jp/contents_detail.php?frmId=2205",
     "status": "落札",
@@ -918,32 +965,12 @@
     "municipality": "高取町",
     "title": "町営住宅空家修繕工事",
     "type": "建築",
-    "announcementDate": "2026-02-27",
+    "announcementDate": "2026-01-30",
     "biddingDate": "2026-02-27",
     "link": "https://www.town.takatori.nara.jp/contents_detail.php?frmId=2205",
     "status": "落札",
     "winningContractor": "(株)松吉組",
     "winnerType": "ゼネコン"
-  },
-  {
-    "id": "高取町-2026-01-30-町営住宅空家修繕工事監理業務",
-    "municipality": "高取町",
-    "title": "町営住宅空家修繕工事監理業務",
-    "type": "コンサル",
-    "announcementDate": "2026-01-30",
-    "biddingDate": "2026-01-30",
-    "link": "https://www.town.takatori.nara.jp/contents_detail.php?frmId=2205",
-    "status": "不調"
-  },
-  {
-    "id": "高取町-2026-01-30-町営住宅空家修繕工事",
-    "municipality": "高取町",
-    "title": "町営住宅空家修繕工事",
-    "type": "建築",
-    "announcementDate": "2026-01-30",
-    "biddingDate": "2026-01-30",
-    "link": "https://www.town.takatori.nara.jp/contents_detail.php?frmId=2205",
-    "status": "不調"
   },
   {
     "id": "高取町-2026-01-30-公営住宅丹生谷第1団地屋根葺替等改修工事監理業務",
@@ -956,18 +983,6 @@
     "status": "落札",
     "winningContractor": "(株)福井建築設計事務所",
     "winnerType": "設計事務所"
-  },
-  {
-    "id": "高取町-2026-01-30-公営住宅丹生谷第1団地屋根葺替等改修工事",
-    "municipality": "高取町",
-    "title": "公営住宅丹生谷第1団地屋根葺替等改修工事",
-    "type": "建築",
-    "announcementDate": "2026-01-30",
-    "biddingDate": "2026-01-30",
-    "link": "https://www.town.takatori.nara.jp/contents_detail.php?frmId=2205",
-    "status": "落札",
-    "winningContractor": "(株)上田工務店",
-    "winnerType": "ゼネコン"
   },
   {
     "id": "kashihara-result-5072001239",
@@ -1003,26 +1018,6 @@
     "status": "落札",
     "winningContractor": "株式会社武部商会",
     "winnerType": "ゼネコン"
-  },
-  {
-    "id": "高取町-2025-12-25-公営住宅丹生谷第1団地屋根葺替等改修工事管理業務",
-    "municipality": "高取町",
-    "title": "公営住宅丹生谷第1団地屋根葺替等改修工事管理業務",
-    "type": "委託",
-    "announcementDate": "2025-12-25",
-    "biddingDate": "2025-12-25",
-    "link": "https://www.town.takatori.nara.jp/contents_detail.php?frmId=2205",
-    "status": "不調"
-  },
-  {
-    "id": "高取町-2025-12-25-公営住宅丹生谷第1団地屋根葺替等改修工事",
-    "municipality": "高取町",
-    "title": "公営住宅丹生谷第1団地屋根葺替等改修工事",
-    "type": "建築",
-    "announcementDate": "2025-12-25",
-    "biddingDate": "2025-12-25",
-    "link": "https://www.town.takatori.nara.jp/contents_detail.php?frmId=2205",
-    "status": "不調"
   },
   {
     "id": "高取町-2025-12-25-旧高取町立高取幼稚園除去工事設計業務委託",
@@ -1090,22 +1085,24 @@
     "status": "不調"
   },
   {
-    "id": "高取町-2025-11-27-公営住宅丹生谷第1団地屋根葺替等改修工事管理業務",
-    "municipality": "高取町",
-    "title": "公営住宅丹生谷第1団地屋根葺替等改修工事管理業務",
-    "type": "委託",
-    "announcementDate": "2025-11-27",
-    "biddingDate": "2025-11-27",
-    "link": "https://www.town.takatori.nara.jp/contents_detail.php?frmId=2205",
-    "status": "不調"
-  },
-  {
-    "id": "高取町-2025-11-27-公営住宅丹生谷第1団地屋根葺替等改修工事",
+    "id": "高取町-2026-01-30-公営住宅丹生谷第1団地屋根葺替等改修工事",
     "municipality": "高取町",
     "title": "公営住宅丹生谷第1団地屋根葺替等改修工事",
     "type": "建築",
     "announcementDate": "2025-11-27",
-    "biddingDate": "2025-11-27",
+    "biddingDate": "2026-01-30",
+    "link": "https://www.town.takatori.nara.jp/contents_detail.php?frmId=2205",
+    "status": "落札",
+    "winningContractor": "(株)上田工務店",
+    "winnerType": "ゼネコン"
+  },
+  {
+    "id": "高取町-2025-12-25-公営住宅丹生谷第1団地屋根葺替等改修工事管理業務",
+    "municipality": "高取町",
+    "title": "公営住宅丹生谷第1団地屋根葺替等改修工事管理業務",
+    "type": "委託",
+    "announcementDate": "2025-11-27",
+    "biddingDate": "2025-12-25",
     "link": "https://www.town.takatori.nara.jp/contents_detail.php?frmId=2205",
     "status": "不調"
   },
@@ -1465,30 +1462,6 @@
     "biddingDate": "2025-08-21"
   },
   {
-    "id": "katsuragi-web-fe90b52b",
-    "municipality": "葛城市",
-    "title": "當麻スポーツセンタートイレ改修工事",
-    "type": "建築",
-    "announcementDate": "2025-08-07",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/5-02-06-2025-1.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/5-02-06-2025-1.pdf",
-    "status": "落札",
-    "biddingDate": "2025-09-09",
-    "winningContractor": "新和建設(株)"
-  },
-  {
-    "id": "katsuragi-web-55d14639",
-    "municipality": "葛城市",
-    "title": "白鳳中学校武道場改修工事",
-    "type": "建築",
-    "announcementDate": "2025-08-07",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/5-02-07-2025-1.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/5-02-07-2025-1.pdf",
-    "status": "落札",
-    "biddingDate": "2025-09-09",
-    "winningContractor": "(株)生野建設"
-  },
-  {
     "id": "katsuragi-web-1d54ab75",
     "municipality": "葛城市",
     "title": "（仮称）當麻複合施設整備工事",
@@ -1512,26 +1485,28 @@
     "winningContractor": "㈱シティ・プランニング 関西支店 1１． 業 務 種 別 建設コンサルタント（「都市計画及び地方計画部門」） ㈱シティ・プランニング 関西支店 3,200,000 3,900,000"
   },
   {
-    "id": "katsuragi-web-a9d471b5",
+    "id": "katsuragi-web-fe90b52b",
     "municipality": "葛城市",
     "title": "當麻スポーツセンタートイレ改修工事",
     "type": "建築",
     "announcementDate": "2025-07-10",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/4-03-01-2025-1-2.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/4-03-01-2025-1-2.pdf",
-    "status": "不調",
-    "biddingDate": "2025-08-05"
+    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/5-02-06-2025-1.pdf",
+    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/5-02-06-2025-1.pdf",
+    "status": "落札",
+    "biddingDate": "2025-09-09",
+    "winningContractor": "新和建設(株)"
   },
   {
-    "id": "katsuragi-web-7d37438d",
+    "id": "katsuragi-web-55d14639",
     "municipality": "葛城市",
     "title": "白鳳中学校武道場改修工事",
     "type": "建築",
     "announcementDate": "2025-07-10",
-    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/4-03-02-2025-1.pdf",
-    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/4-03-02-2025-1.pdf",
-    "status": "不調",
-    "biddingDate": "2025-08-05"
+    "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/5-02-07-2025-1.pdf",
+    "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/5-02-07-2025-1.pdf",
+    "status": "落札",
+    "biddingDate": "2025-09-09",
+    "winningContractor": "(株)生野建設"
   },
   {
     "id": "katsuragi-epi-e099d2ca",
@@ -1586,7 +1561,7 @@
     "announcementDate": "2025-07-01",
     "link": "https://www.city.gojo.lg.jp/material/files/group/4/7itaku2.pdf",
     "pdfUrl": "https://www.city.gojo.lg.jp/material/files/group/4/7itaku2.pdf",
-    "status": "受付中"
+    "status": "受付終了"
   },
   {
     "id": "山添村-山添村立小中学校建設工事",
@@ -1720,18 +1695,6 @@
     "winningContractor": "YARD吉村建築設計"
   },
   {
-    "id": "koryo-2025-05-29-No6",
-    "municipality": "広陵町",
-    "title": "広陵西小学校ベランダ手摺改修工事",
-    "type": "建築",
-    "announcementDate": "2025-05-29",
-    "biddingDate": "2025-05-29",
-    "link": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7919/NO6-2.pdf",
-    "pdfUrl": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7919/NO6-2.pdf",
-    "status": "落札",
-    "winningContractor": "株式会社hinata"
-  },
-  {
     "id": "sango-epi-5Luk5ZKMN+W5",
     "municipality": "三郷町",
     "title": "令和7年度 西部保育園築山人工芝化工事",
@@ -1825,18 +1788,6 @@
     "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200720",
     "status": "落札",
     "winningContractor": "細谷設計事務所"
-  },
-  {
-    "id": "koryo-2025-04-28-No2",
-    "municipality": "広陵町",
-    "title": "広陵運動公園トイレ改築工事実施設計業務委託",
-    "type": "コンサル",
-    "announcementDate": "2025-04-28",
-    "biddingDate": "2025-04-28",
-    "link": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7919/NO2-2.pdf",
-    "pdfUrl": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7919/NO2-2.pdf",
-    "status": "落札",
-    "winningContractor": "株式会社彩都建築設計"
   },
   {
     "id": "kashihara-result-5071000096",

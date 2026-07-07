@@ -2,6 +2,7 @@ import axios from 'axios';
 import * as cheerio from 'cheerio';
 import { BiddingItem, Scraper, BiddingType } from '../types/bidding';
 import { shouldKeepItem } from './common/filter';
+import { getCurrentReiwaFiscalYear } from './common/fiscal_year';
 
 // 安堵町
 const RSS_URL = 'https://www.town.ando.nara.jp/rss/rss.xml';
@@ -235,9 +236,9 @@ async function scrapeAndoCity(recordError?: (message: string) => void): Promise<
                 return;
             }
 
-            // 令和8年度以降は対象外（令和7年度のみ収集）
+            // 未来年度（来年度以降の資格登録案内など）は対象外
             const fyMatch = title.match(/令和(\d+)年度/);
-            if (fyMatch && parseInt(fyMatch[1]) > 7) return;
+            if (fyMatch && parseInt(fyMatch[1]) > getCurrentReiwaFiscalYear()) return;
 
             if (shouldSkip(title)) return;
 

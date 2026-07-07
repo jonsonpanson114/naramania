@@ -38,31 +38,38 @@ naramania/
 └── scraper_result.json  # スクレイピング結果データ
 ```
 
-## 対応自治体
+## 対応自治体（25自治体）
 
-| 自治体 | スクレイパー | 実績（2026-02-25時点） |
-|--------|------------|------------------------|
-| 奈良県 | `nara_pref.ts` | 244件 |
-| 奈良市 | `nara_city.ts` | 85件 |
-| 橿原市 | `kashihara_city.ts` | 98件 |
-| 大和高田市 | `yamato_takada_city.ts` | 21件 |
-| 大和郡山市 | `yamatokoriyama_city.ts` | 23件 |
-| 葛城市 | `katsuragi_city.ts` | 70件 |
-| 天理市 | `tenri_city.ts` | 2件 |
-| 桜井市 | `sakurai_city.ts` | 1件 |
-| 五條市 | `gojo_city.ts` | 0件（非建築のみ） |
-| 御所市 | `gose_city.ts` | - |
-| 宇陀市 | `uda_city.ts` | - |
-| 斑鳩町 | `kashiba_city.ts` | - |
-| 三郷町 | `miyake_city.ts` | - |
-| 田原本町 | `tawaramoto_town.ts` | - |
-| 広陵町 | `koryo_town.ts` | - |
-| 香芝市 | `kawanishi_city.ts` | - |
-| 川西村 | `kawanishi_city.ts` | - |
-| 安堵町 | `ando_city.ts` | - |
-| 山添村 | `yamazohiragawa_city.ts` | - |
-| 平群町 | `kawanishi_city.ts` | - |
-| 高取町 | `takatori_ikaruga.ts` | - |
+| 自治体 | スクレイパー |
+|--------|------------|
+| 奈良県 | `nara_pref.ts`（self-hosted runner 必須） |
+| 奈良市 | `nara_city.ts` |
+| 橿原市 | `kashihara_city.ts` |
+| 生駒市 | `ikoma_city.ts` |
+| 大和高田市 | `yamato_takada_city.ts` |
+| 大和郡山市 | `yamatokoriyama_city.ts` |
+| 葛城市 | `katsuragi_city.ts` |
+| 五條市 | `gojo_city.ts` |
+| 御所市 | `gose_city.ts` |
+| 天理市 | `tenri_city.ts` |
+| 桜井市 | `sakurai_city.ts` |
+| 宇陀市 | `uda_city.ts` |
+| 田原本町 | `tawaramoto_town.ts` |
+| 広陵町 | `koryo_town.ts` |
+| 香芝市 | `kashiba_city.ts` |
+| 川西町 | `kawanishi_city.ts` |
+| 三宅町 | `miyake_city.ts` |
+| 山添村 | `yamazohiragawa_city.ts`（YamazomuraScraper） |
+| 平群町 | `yamazohiragawa_city.ts`（HiragawaScraper） |
+| 安堵町 | `ando_city.ts` |
+| 高取町 | `takatori_ikaruga.ts`（TakatoriTownScraper） |
+| 斑鳩町 | `takatori_ikaruga.ts`（IkarugaTownScraper） |
+| 三郷町 | `sango_town.ts` |
+| 王寺町 | `oji_town.ts` |
+| 大淀町 | `oyodo_town.ts` |
+
+年度が替わってもページを追従できるよう、年度依存のURL・日付は
+`src/scrapers/common/fiscal_year.ts` のヘルパーで動的に解決します。
 
 ## セットアップ
 
@@ -112,7 +119,8 @@ npx tsx src/scrapers/index.ts
 
 - **ファイル**: `scraper_result.json`
 - **形式**: JSON配列
-- **件数**: 約540件（2026-02-25時点）
+- **収集方針**: 今年度（4月1日以降）の建築・建物系案件を中心に収集。
+  過年度分の網羅は行わない（前年度開始日より古い公告は自動除外）。
 
 ### 重複除外
 
@@ -127,8 +135,9 @@ npx tsx src/scrapers/index.ts
 建築・建物系ではない一般業務や古い案件を除外するため、共通フィルタを使用しています。
 
 - **設定ファイル**: `config/data_filters.json`
-- **除外例**: 広報、印刷、給食、警備、計画策定、道路・水道などのインフラ案件
+- **除外例**: 広報、印刷、給食、警備、計画策定、道路・水道などのインフラ案件、外壁・防水・空調・設備単体の工事
 - **保持条件**: 建物文脈のキーワードと、工事・設計・改修などの作業キーワードを両方含む案件
+- **注意**: 除外判定はタイトルベース。AI生成の要約・タグは除外判定に使わない（付随的な語で建築案件が誤除外されるのを防ぐため）
 
 既存データへフィルタを再適用する場合：
 

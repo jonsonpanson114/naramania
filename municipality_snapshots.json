@@ -1131,7 +1131,7 @@
       "announcementDate": "2025-07-01",
       "link": "https://www.city.gojo.lg.jp/material/files/group/4/7itaku2.pdf",
       "pdfUrl": "https://www.city.gojo.lg.jp/material/files/group/4/7itaku2.pdf",
-      "status": "受付中"
+      "status": "受付終了"
     },
     {
       "id": "gojo-epi-2501007",
@@ -1195,7 +1195,7 @@
       "type": "委託",
       "announcementDate": "2026-03-04",
       "link": "https://www.city.tenri.nara.jp/kakuka/kankyoukeizaibu/kankyou_cleancenter_gyoumuka/15455.html",
-      "status": "不明",
+      "status": "受付終了",
       "winningContractor": "株式会社 建設技術研究所 奈良事務所"
     }
   ],
@@ -1447,32 +1447,7 @@
       "status": "受付終了"
     }
   ],
-  "広陵町": [
-    {
-      "id": "koryo-2025-05-29-No6",
-      "municipality": "広陵町",
-      "title": "広陵西小学校ベランダ手摺改修工事",
-      "type": "建築",
-      "announcementDate": "2025-05-29",
-      "biddingDate": "2025-05-29",
-      "link": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7919/NO6-2.pdf",
-      "pdfUrl": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7919/NO6-2.pdf",
-      "status": "落札",
-      "winningContractor": "株式会社hinata"
-    },
-    {
-      "id": "koryo-2025-04-28-No2",
-      "municipality": "広陵町",
-      "title": "広陵運動公園トイレ改築工事実施設計業務委託",
-      "type": "コンサル",
-      "announcementDate": "2025-04-28",
-      "biddingDate": "2025-04-28",
-      "link": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7919/NO2-2.pdf",
-      "pdfUrl": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7919/NO2-2.pdf",
-      "status": "落札",
-      "winningContractor": "株式会社彩都建築設計"
-    }
-  ],
+  "広陵町": [],
   "川西町": [
     {
       "id": "kawanishi-2026-04-01-川西文化会館トイレ改修工事",
@@ -1481,7 +1456,8 @@
       "type": "建築",
       "announcementDate": "2026-04-01",
       "link": "https://www.town.nara-kawanishi.lg.jp/0000008785.html",
-      "status": "受付中"
+      "status": "受付終了",
+      "isForecast": true
     },
     {
       "id": "kawanishi-2026-04-01-中央体育館修繕改修工事",
@@ -1490,7 +1466,8 @@
       "type": "建築",
       "announcementDate": "2026-04-01",
       "link": "https://www.town.nara-kawanishi.lg.jp/0000008785.html",
-      "status": "受付中"
+      "status": "受付終了",
+      "isForecast": true
     },
     {
       "id": "kawanishi-2026-04-01-梅戸体育館屋根改修工事",
@@ -1499,7 +1476,8 @@
       "type": "建築",
       "announcementDate": "2026-04-01",
       "link": "https://www.town.nara-kawanishi.lg.jp/0000008785.html",
-      "status": "受付中"
+      "status": "受付終了",
+      "isForecast": true
     },
     {
       "id": "kawanishi-2026-04-01-ふれあいセンター改修工事",
@@ -1508,7 +1486,8 @@
       "type": "建築",
       "announcementDate": "2026-04-01",
       "link": "https://www.town.nara-kawanishi.lg.jp/0000008785.html",
-      "status": "受付中"
+      "status": "受付終了",
+      "isForecast": true
     }
   ],
   "三宅町": [
@@ -1810,7 +1789,7 @@
       "type": "コンサル",
       "announcementDate": "2026-05-01",
       "link": "https://www.town.ikaruga.nara.jp/cmsfiles/contents/0000000/234/R8-5-1.pdf",
-      "status": "受付中"
+      "status": "受付終了"
     },
     {
       "id": "斑鳩町-2026-01-08-町営興留東団地住宅解体工事",

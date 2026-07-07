@@ -6,11 +6,11 @@ import { fetchHtml } from './common/html_fetch';
 
 // 平群町（heguri）
 const HEGURI_URL = 'https://www.town.heguri.nara.jp/soshiki/list7-1.html';
+// 削除された個別記事（404）はKNOWN_HEGURI_ITEMSで補完するためリストから除外済み
 const HEGURI_SUPPLEMENTAL_URLS = [
-    'https://www.town.heguri.nara.jp/soshiki/5/16618.html',
     'https://www.town.heguri.nara.jp/life/2/14/44/',
-    'https://www.town.heguri.nara.jp/soshiki/14/16450.html',
 ];
+const YAMAZOE_NEWS_LIST_URL = 'https://www.vill.yamazoe.nara.jp/life/news';
 const YAMAZOE_NEWS_URLS = [
     'https://www.vill.yamazoe.nara.jp/life/news/25298',
     'https://www.vill.yamazoe.nara.jp/life/news/25817',
@@ -237,10 +237,31 @@ async function scrapeHeguriSupplementalPages(): Promise<BiddingItem[]> {
     return items;
 }
 
+// newsリストから入札・工事関連の記事URLを自動発見する
+// （固定URLだけだと年度が替わった時に新着案件を拾えない）
+async function discoverYamazoeNewsUrls(): Promise<string[]> {
+    const urls = new Set<string>(YAMAZOE_NEWS_URLS);
+    try {
+        const html = await fetchHtml(YAMAZOE_NEWS_LIST_URL, 15000);
+        const $ = cheerio.load(html);
+        $('a').each((_, el) => {
+            const title = $(el).text().replace(/\s+/g, ' ').trim();
+            const href = $(el).attr('href') || '';
+            if (!/\/life\/news\/\d+/.test(href)) return;
+            if (!/入札|工事/.test(title)) return;
+            if (/発注見通し/.test(title)) return;
+            urls.add(href.startsWith('http') ? href : `https://www.vill.yamazoe.nara.jp${href}`);
+        });
+    } catch (error) {
+        console.warn('[山添村] newsリスト取得エラー:', error instanceof Error ? error.message : String(error));
+    }
+    return Array.from(urls);
+}
+
 async function scrapeYamazoeVillage(): Promise<BiddingItem[]> {
     const items: BiddingItem[] = [];
 
-    for (const url of YAMAZOE_NEWS_URLS) {
+    for (const url of await discoverYamazoeNewsUrls()) {
         try {
             const html = await fetchHtml(url, 15000);
         const $ = cheerio.load(html);

@@ -21,6 +21,7 @@ export interface BiddingItem {
   constructionPeriod?: string; // 工期
   winnerType?: 'ゼネコン' | '設計事務所' | 'その他'; // 落札種別
   pdfUrl?: string; // Link to the actual PDF document
+  isForecast?: boolean; // 発注見通し由来の公告前案件（入札結果の追跡対象外）
   isIntelligenceExtracted?: boolean; // True if Gemini has processed the PDF
   extractionSource?: 'scraper' | 'gemini' | 'gemini_3.1'; // Where the data came from
   tags?: string[]; // AI generated tags for filtering

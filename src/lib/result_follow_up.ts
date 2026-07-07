@@ -1,4 +1,5 @@
 import type { BiddingItem } from '@/types/bidding';
+import { isCurrentFiscalYearItem } from '@/lib/practical_filters';
 
 export type ResultFollowUpPriority = 'high' | 'medium' | 'low';
 
@@ -54,7 +55,11 @@ function getReason(item: BiddingItem, ageDays: number | null): string {
   return '開札直後の結果待ち';
 }
 
-function isFollowUpTarget(item: BiddingItem): boolean {
+function isFollowUpTarget(item: BiddingItem, referenceDateIso: string): boolean {
+  // 発注見通し由来の公告前案件はまだ入札していないので追跡しない
+  if (item.isForecast) return false;
+  // 過年度案件の結果追跡はしない（今年度分のみ追う運用方針）
+  if (!isCurrentFiscalYearItem(item, referenceDateIso)) return false;
   return item.status === '受付終了' || (item.status === '落札' && !item.winningContractor);
 }
 
@@ -63,7 +68,7 @@ export function buildResultFollowUpSummary(
   referenceDateIso = getTokyoTodayIso(),
 ): ResultFollowUpSummary {
   const entries = items
-    .filter(isFollowUpTarget)
+    .filter((item) => isFollowUpTarget(item, referenceDateIso))
     .map((item) => {
       const ageDays = item.biddingDate ? daysSince(item.biddingDate, referenceDateIso) : null;
       const priority = classifyPriority(ageDays, Boolean(item.biddingDate));
