@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-07-07T22:15:10.220Z",
-  "checkedMunicipalityCount": 22,
-  "expectedItemCount": 170,
-  "matchedItemCount": 170,
+  "generatedAt": "2026-07-08T13:01:27.872Z",
+  "checkedMunicipalityCount": 23,
+  "expectedItemCount": 177,
+  "matchedItemCount": 177,
   "missingItemCount": 0,
-  "duplicateTitleGroupCount": 10,
-  "duplicateTitleItemCount": 21,
+  "duplicateTitleGroupCount": 11,
+  "duplicateTitleItemCount": 23,
   "results": [
     {
       "municipality": "葛城市",
-      "snapshotCount": 23,
-      "expectedCount": 23,
-      "matchedCount": 23,
+      "snapshotCount": 24,
+      "expectedCount": 24,
+      "matchedCount": 24,
       "missingCount": 0,
-      "duplicateTitleGroupCount": 4,
-      "duplicateTitleItemCount": 8,
+      "duplicateTitleGroupCount": 5,
+      "duplicateTitleItemCount": 10,
       "missingItems": [],
       "status": "ok"
     },
@@ -107,6 +107,17 @@
       "status": "ok"
     },
     {
+      "municipality": "三宅町",
+      "snapshotCount": 4,
+      "expectedCount": 4,
+      "matchedCount": 4,
+      "missingCount": 0,
+      "duplicateTitleGroupCount": 0,
+      "duplicateTitleItemCount": 0,
+      "missingItems": [],
+      "status": "ok"
+    },
+    {
       "municipality": "川西町",
       "snapshotCount": 4,
       "expectedCount": 4,
@@ -130,6 +141,17 @@
     },
     {
       "municipality": "桜井市",
+      "snapshotCount": 3,
+      "expectedCount": 3,
+      "matchedCount": 3,
+      "missingCount": 0,
+      "duplicateTitleGroupCount": 0,
+      "duplicateTitleItemCount": 0,
+      "missingItems": [],
+      "status": "ok"
+    },
+    {
+      "municipality": "三郷町",
       "snapshotCount": 3,
       "expectedCount": 3,
       "matchedCount": 3,
@@ -173,18 +195,7 @@
       "status": "ok"
     },
     {
-      "municipality": "三郷町",
-      "snapshotCount": 2,
-      "expectedCount": 2,
-      "matchedCount": 2,
-      "missingCount": 0,
-      "duplicateTitleGroupCount": 0,
-      "duplicateTitleItemCount": 0,
-      "missingItems": [],
-      "status": "ok"
-    },
-    {
-      "municipality": "三宅町",
+      "municipality": "広陵町",
       "snapshotCount": 2,
       "expectedCount": 2,
       "matchedCount": 2,
@@ -217,6 +228,17 @@
       "status": "ok"
     },
     {
+      "municipality": "王寺町",
+      "snapshotCount": 1,
+      "expectedCount": 1,
+      "matchedCount": 1,
+      "missingCount": 0,
+      "duplicateTitleGroupCount": 0,
+      "duplicateTitleItemCount": 0,
+      "missingItems": [],
+      "status": "ok"
+    },
+    {
       "municipality": "御所市",
       "snapshotCount": 1,
       "expectedCount": 1,
@@ -232,17 +254,6 @@
       "snapshotCount": 1,
       "expectedCount": 1,
       "matchedCount": 1,
-      "missingCount": 0,
-      "duplicateTitleGroupCount": 0,
-      "duplicateTitleItemCount": 0,
-      "missingItems": [],
-      "status": "ok"
-    },
-    {
-      "municipality": "広陵町",
-      "snapshotCount": 0,
-      "expectedCount": 0,
-      "matchedCount": 0,
       "missingCount": 0,
       "duplicateTitleGroupCount": 0,
       "duplicateTitleItemCount": 0,

@@ -259,7 +259,8 @@
       "biddingDate": "2026-06-04",
       "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
       "status": "落札",
-      "winningContractor": "株式会社システムクリエイト"
+      "winningContractor": "株式会社システムクリエイト",
+      "winnerType": "ゼネコン"
     },
     {
       "id": "nara-city-0000002345",
@@ -270,7 +271,8 @@
       "biddingDate": "2026-05-27",
       "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
       "status": "落札",
-      "winningContractor": "株式会社ＵＬＴＲＡ　Ｃ"
+      "winningContractor": "株式会社ＵＬＴＲＡ　Ｃ",
+      "winnerType": "ゼネコン"
     },
     {
       "id": "nara-city-0000002346",
@@ -291,7 +293,8 @@
       "biddingDate": "2026-05-27",
       "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
       "status": "落札",
-      "winningContractor": "岡田建築設計事務所"
+      "winningContractor": "岡田建築設計事務所",
+      "winnerType": "設計事務所"
     },
     {
       "id": "nara-city-0000002348",
@@ -302,7 +305,8 @@
       "biddingDate": "2026-05-27",
       "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
       "status": "落札",
-      "winningContractor": "株式会社建綜研"
+      "winningContractor": "株式会社建綜研",
+      "winnerType": "ゼネコン"
     },
     {
       "id": "nara-city-0000002349",
@@ -313,7 +317,8 @@
       "biddingDate": "2026-05-27",
       "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
       "status": "落札",
-      "winningContractor": "株式会社システムクリエイト"
+      "winningContractor": "株式会社システムクリエイト",
+      "winnerType": "ゼネコン"
     }
   ],
   "橿原市": [
@@ -689,15 +694,15 @@
   ],
   "大和郡山市": [
     {
-      "id": "yamato-koriyama-90e6a790",
+      "id": "yamato-koriyama-e1146a80",
       "municipality": "大和郡山市",
-      "title": "郡山城跡公園（蓮池）実施設計業務委託",
-      "type": "コンサル",
-      "announcementDate": "2026-06-16",
-      "biddingDate": "2026-07-01",
+      "title": "市営霞ヶ丘住宅空家改修工事（203号、205号、208号、209号、302号、306号）",
+      "type": "建築",
+      "announcementDate": "2026-07-07",
+      "biddingDate": "2026-07-22",
       "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/9328.html",
-      "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk260701_42k.pdf",
-      "status": "受付終了"
+      "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk260722_02k.pdf",
+      "status": "受付中"
     },
     {
       "id": "yamato-koriyama-ee85746d",
@@ -731,19 +736,19 @@
       "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/1893.html",
       "status": "落札",
       "winningContractor": "YARD吉村建築設計"
-    },
-    {
-      "id": "yamato-koriyama-e1146a80",
-      "municipality": "大和郡山市",
-      "title": "市営霞ヶ丘住宅空家改修工事（203号、205号、208号、209号、302号、306号）",
-      "type": "建築",
-      "announcementDate": "2026-07-07",
-      "biddingDate": "2026-07-22",
-      "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/9328.html",
-      "status": "受付中"
     }
   ],
   "葛城市": [
+    {
+      "id": "katsuragi-epi-c558f1c5",
+      "municipality": "葛城市",
+      "title": "葛城市立学校施設各所改修工事",
+      "type": "建築",
+      "announcementDate": "2026-07-07",
+      "biddingDate": "2026-07-28",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200720",
+      "status": "受付中"
+    },
     {
       "id": "katsuragi-epi-d289edf8",
       "municipality": "葛城市",
@@ -1141,7 +1146,7 @@
       "announcementDate": "2025-07-01",
       "link": "https://www.city.gojo.lg.jp/material/files/group/4/7itaku2.pdf",
       "pdfUrl": "https://www.city.gojo.lg.jp/material/files/group/4/7itaku2.pdf",
-      "status": "受付終了"
+      "status": "受付中"
     },
     {
       "id": "gojo-epi-2501007",
@@ -1205,7 +1210,7 @@
       "type": "委託",
       "announcementDate": "2026-03-04",
       "link": "https://www.city.tenri.nara.jp/kakuka/kankyoukeizaibu/kankyou_cleancenter_gyoumuka/15455.html",
-      "status": "受付終了",
+      "status": "不明",
       "winningContractor": "株式会社 建設技術研究所 奈良事務所"
     }
   ],
@@ -1457,7 +1462,32 @@
       "status": "受付終了"
     }
   ],
-  "広陵町": [],
+  "広陵町": [
+    {
+      "id": "koryo-2026-05-29-No6",
+      "municipality": "広陵町",
+      "title": "広陵西小学校ベランダ手摺改修工事",
+      "type": "建築",
+      "announcementDate": "2026-05-29",
+      "biddingDate": "2026-05-29",
+      "link": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7919/NO6-2.pdf",
+      "pdfUrl": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7919/NO6-2.pdf",
+      "status": "落札",
+      "winningContractor": "株式会社hinata"
+    },
+    {
+      "id": "koryo-2026-04-28-No2",
+      "municipality": "広陵町",
+      "title": "広陵運動公園トイレ改築工事実施設計業務委託",
+      "type": "コンサル",
+      "announcementDate": "2026-04-28",
+      "biddingDate": "2026-04-28",
+      "link": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7919/NO2-2.pdf",
+      "pdfUrl": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7919/NO2-2.pdf",
+      "status": "落札",
+      "winningContractor": "株式会社彩都建築設計"
+    }
+  ],
   "川西町": [
     {
       "id": "kawanishi-2026-04-01-川西文化会館トイレ改修工事",
@@ -1502,6 +1532,26 @@
   ],
   "三宅町": [
     {
+      "id": "miyake-2026-06-15-三宅町文化ホールトイレ改修工事",
+      "municipality": "三宅町",
+      "title": "三宅町文化ホールトイレ改修工事",
+      "type": "建築",
+      "announcementDate": "2026-06-15",
+      "link": "https://www.town.miyake.lg.jp/uploaded/attachment/5499.pdf",
+      "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5499.pdf",
+      "status": "受付中"
+    },
+    {
+      "id": "miyake-2026-06-15-上但馬保育所解体工事設計委託業務",
+      "municipality": "三宅町",
+      "title": "上但馬保育所解体工事設計委託業務",
+      "type": "コンサル",
+      "announcementDate": "2026-06-15",
+      "link": "https://www.town.miyake.lg.jp/uploaded/attachment/5498.pdf",
+      "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5498.pdf",
+      "status": "受付中"
+    },
+    {
       "id": "miyake-2025-11-04-三宅町つながり総合センター解体工事",
       "municipality": "三宅町",
       "title": "三宅町つながり総合センター解体工事",
@@ -1509,8 +1559,7 @@
       "announcementDate": "2025-11-04",
       "biddingDate": "2025-11-04",
       "link": "https://www.town.miyake.lg.jp/soshiki/1/7653.html",
-      "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/4577.pdf",
-      "status": "落札"
+      "status": "受付終了"
     },
     {
       "id": "miyake-2025-02-02-三宅町つながり総合センター解体工事設計委託業務",
@@ -1799,7 +1848,7 @@
       "type": "コンサル",
       "announcementDate": "2026-05-01",
       "link": "https://www.town.ikaruga.nara.jp/cmsfiles/contents/0000000/234/R8-5-1.pdf",
-      "status": "受付終了"
+      "status": "受付中"
     },
     {
       "id": "斑鳩町-2026-01-08-町営興留東団地住宅解体工事",
@@ -1813,6 +1862,17 @@
     }
   ],
   "三郷町": [
+    {
+      "id": "sango-epi-5Luk5ZKMOOW5",
+      "municipality": "三郷町",
+      "title": "令和8年度 竜田運動公園北側トイレ改修工事",
+      "type": "建築",
+      "announcementDate": "2026-04-30",
+      "biddingDate": "2026-07-24",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0660064007200640",
+      "status": "落札",
+      "winningContractor": "浅野アタカ株式会社 奈良営業所"
+    },
     {
       "id": "sango-epi-5Luk5ZKM77yY",
       "municipality": "三郷町",
@@ -1832,8 +1892,7 @@
       "announcementDate": "2025-05-28",
       "biddingDate": "2025-11-14",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0660064007200640",
-      "status": "落札",
-      "winningContractor": "長谷川体育施設株式会社 関西支店"
+      "status": "不調"
     }
   ],
   "大淀町": [
@@ -1942,6 +2001,18 @@
       "announcementDate": "2025-10-09",
       "biddingDate": "2025-11-05",
       "link": "https://www.city.kashiba.lg.jp/soshiki/7/60631.html",
+      "status": "受付終了"
+    }
+  ],
+  "王寺町": [
+    {
+      "id": "oji-aHR0cHM6Ly93",
+      "municipality": "王寺町",
+      "title": "やわらぎ会館改修工事",
+      "type": "建築",
+      "announcementDate": "2026-04-27",
+      "biddingDate": "2026-05-18",
+      "link": "https://www.town.oji.nara.jp/kakuka/somu/somu/gyomuannai/nyuusatu/nyuusatukouhyou/11512.html",
       "status": "受付終了"
     }
   ]
