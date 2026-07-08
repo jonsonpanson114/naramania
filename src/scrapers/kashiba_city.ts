@@ -11,8 +11,11 @@ import { shouldKeepItem } from './common/filter';
 
 const EPI_URL = 'https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=062006E007200640';
 
-// 令和6年度(2024), 令和7年度(2025), 令和8年度(2026予測) を対象にする
-const NENDOS = ['2026', '2025', '2024'];
+// 令和8年度(2026年度)のみを対象にする。
+// 過去年度(令和7=2025, 令和6=2024)まで EPI をページ送りすると数時間かかり、
+// Promise.race のタイムアウトで「スキップ」した後も裏で延々と遡り続けるため、
+// 当年度だけに限定する。
+const NENDOS = ['2026'];
 const KASHIBA_KNOWN_SCHEDULES: Record<string, {
     announcementDate?: string;
     biddingDate: string;
