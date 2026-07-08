@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-07T10:21:34.189Z",
-  "currentItemCount": 172,
+  "generatedAt": "2026-07-08T05:03:17.767Z",
+  "currentItemCount": 167,
   "checkedMunicipalities": [
     "奈良市",
     "橿原市",
@@ -141,8 +141,8 @@
     },
     {
       "municipality": "香芝市",
-      "rawCount": 9,
-      "keptCount": 9,
+      "rawCount": 8,
+      "keptCount": 8,
       "rejectedCount": 0,
       "warnings": [],
       "errors": []
@@ -173,8 +173,8 @@
     },
     {
       "municipality": "三宅町",
-      "rawCount": 2,
-      "keptCount": 2,
+      "rawCount": 4,
+      "keptCount": 4,
       "rejectedCount": 0,
       "warnings": [],
       "errors": []
@@ -207,20 +207,18 @@
     },
     {
       "municipality": "三郷町",
-      "rawCount": 20,
-      "keptCount": 9,
+      "rawCount": 21,
+      "keptCount": 10,
       "rejectedCount": 11,
       "warnings": [],
       "errors": []
     },
     {
       "municipality": "王寺町",
-      "rawCount": 0,
-      "keptCount": 0,
+      "rawCount": 2,
+      "keptCount": 2,
       "rejectedCount": 0,
-      "warnings": [
-        "王寺町: ライブ取得0件かつDB掲載0件です。対象案件なしなのか、取得失敗なのか確認が必要です。"
-      ],
+      "warnings": [],
       "errors": []
     },
     {
@@ -234,8 +232,8 @@
   ],
   "coverage": {
     "checkedMunicipalityCount": 24,
-    "expectedItemCount": 175,
-    "matchedItemCount": 174,
+    "expectedItemCount": 179,
+    "matchedItemCount": 178,
     "missingItemCount": 1,
     "duplicateTitleGroupCount": 25,
     "duplicateTitleItemCount": 53,
@@ -340,10 +338,10 @@
         "status": "ok"
       },
       {
-        "municipality": "香芝市",
-        "snapshotCount": 9,
-        "expectedCount": 9,
-        "matchedCount": 9,
+        "municipality": "三郷町",
+        "snapshotCount": 21,
+        "expectedCount": 10,
+        "matchedCount": 10,
         "missingCount": 0,
         "duplicateTitleGroupCount": 0,
         "duplicateTitleItemCount": 0,
@@ -351,10 +349,21 @@
         "status": "ok"
       },
       {
-        "municipality": "三郷町",
-        "snapshotCount": 20,
-        "expectedCount": 9,
-        "matchedCount": 9,
+        "municipality": "香芝市",
+        "snapshotCount": 8,
+        "expectedCount": 8,
+        "matchedCount": 8,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 0,
+        "duplicateTitleItemCount": 0,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
+        "municipality": "三宅町",
+        "snapshotCount": 4,
+        "expectedCount": 4,
+        "matchedCount": 4,
         "missingCount": 0,
         "duplicateTitleGroupCount": 0,
         "duplicateTitleItemCount": 0,
@@ -417,7 +426,7 @@
         "status": "ok"
       },
       {
-        "municipality": "広陵町",
+        "municipality": "王寺町",
         "snapshotCount": 2,
         "expectedCount": 2,
         "matchedCount": 2,
@@ -428,7 +437,7 @@
         "status": "ok"
       },
       {
-        "municipality": "三宅町",
+        "municipality": "広陵町",
         "snapshotCount": 2,
         "expectedCount": 2,
         "matchedCount": 2,
@@ -484,17 +493,6 @@
       },
       {
         "municipality": "安堵町",
-        "snapshotCount": 0,
-        "expectedCount": 0,
-        "matchedCount": 0,
-        "missingCount": 0,
-        "duplicateTitleGroupCount": 0,
-        "duplicateTitleItemCount": 0,
-        "missingItems": [],
-        "status": "ok"
-      },
-      {
-        "municipality": "王寺町",
         "snapshotCount": 0,
         "expectedCount": 0,
         "matchedCount": 0,
