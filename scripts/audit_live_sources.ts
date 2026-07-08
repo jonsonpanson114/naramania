@@ -50,6 +50,42 @@ function parseMunicipalityEnvList(value?: string): Set<string> {
   return new Set(value.split(/[,\n]/).map((entry) => entry.trim()).filter(Boolean));
 }
 
+// 一時的なネットワーク障害（相手サイトの過負荷・瞬断）を表すエラーは
+// 監査を失敗させず警告に格下げする。24自治体を毎回巡回すると
+// どこか1つは高確率で503やタイムアウトを返すため。
+const TRANSIENT_ERROR_PATTERNS = [
+  /\b(429|500|502|503|504)\b/,
+  /status code (429|500|502|503|504)/i,
+  /ETIMEDOUT/i,
+  /ECONNRESET/i,
+  /ECONNABORTED/i,
+  /ECONNREFUSED/i,
+  /EAI_AGAIN/i,
+  /ENOTFOUND/i,
+  /socket hang up/i,
+  /timeout/i,
+  /Navigation timeout/i,
+  /net::ERR_/i,
+];
+
+function isTransientError(message: string): boolean {
+  return TRANSIENT_ERROR_PATTERNS.some((pattern) => pattern.test(message));
+}
+
+// 診断メッセージを「恒久的なエラー（要調査）」と「一時的な警告」に振り分ける
+function partitionScraperMessages(messages: string[]): { errors: string[]; transient: string[] } {
+  const errors: string[] = [];
+  const transient: string[] = [];
+  for (const message of messages) {
+    if (isTransientError(message)) {
+      transient.push(`一時的な取得失敗（次回再試行）: ${message}`);
+    } else {
+      errors.push(message);
+    }
+  }
+  return { errors, transient };
+}
+
 function createScrapers(): Scraper[] {
   return [
     new NaraPrefScraper(),
@@ -135,32 +171,39 @@ async function main() {
         ? [`${scraper.municipality}: ライブ取得0件かつDB掲載0件です。対象案件なしなのか、取得失敗なのか確認が必要です。`]
         : [];
       liveSnapshots[scraper.municipality] = rawItems;
+      const { errors: genuineErrors, transient } = partitionScraperMessages(diagnostics?.errors || []);
       scraperResults.push({
         municipality: scraper.municipality,
         rawCount: rawItems.length,
         keptCount: keptItems.length,
         rejectedCount: rawItems.length - keptItems.length,
-        warnings: [...(diagnostics?.warnings || []), ...zeroCoverageWarnings],
-        errors: diagnostics?.errors || [],
+        warnings: [...(diagnostics?.warnings || []), ...transient, ...zeroCoverageWarnings],
+        errors: genuineErrors,
       });
       console.log(`[live-audit] ${scraper.municipality}: raw=${rawItems.length} keep=${keptItems.length}`);
     } catch (error) {
       const message = error instanceof Error ? error.message : String(error);
       liveSnapshots[scraper.municipality] = [];
+      const transient = isTransientError(message);
       scraperResults.push({
         municipality: scraper.municipality,
         rawCount: 0,
         keptCount: 0,
         rejectedCount: 0,
-        warnings: [],
-        errors: [message],
+        warnings: transient ? [`一時的な取得失敗（次回再試行）: ${message}`] : [],
+        errors: transient ? [] : [message],
       });
-      console.error(`[live-audit] ${scraper.municipality}: ${message}`);
+      console.error(`[live-audit] ${scraper.municipality}: ${transient ? '一時エラー（警告扱い）' : 'エラー'}: ${message}`);
     }
   }
 
   const coverage = evaluateSnapshotCoverage(currentItems, liveSnapshots);
+  // scraperErrorCount は「恒久的な障害」だけを数える。一時的エラーは warnings 側。
   const scraperErrorCount = scraperResults.reduce((sum, result) => sum + result.errors.length, 0);
+  const transientWarningCount = scraperResults.reduce(
+    (sum, result) => sum + result.warnings.filter((w) => w.startsWith('一時的な取得失敗')).length,
+    0,
+  );
   const report = {
     generatedAt: new Date().toISOString(),
     currentItemCount: currentItems.length,
@@ -168,9 +211,14 @@ async function main() {
     onlyMunicipalities: scraperFilter.onlyMunicipalities,
     excludedMunicipalities: scraperFilter.excludedMunicipalities,
     scraperErrorCount,
+    transientWarningCount,
     scraperResults,
     coverage,
   };
+
+  if (transientWarningCount > 0) {
+    console.warn(`[live-audit] 一時的な取得失敗 ${transientWarningCount}件（警告扱い・監査は継続）`);
+  }
 
   fs.writeFileSync(REPORT_PATH, `${JSON.stringify(report, null, 2)}\n`, 'utf-8');
 

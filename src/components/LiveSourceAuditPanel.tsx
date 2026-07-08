@@ -5,6 +5,7 @@ export type LiveSourceAuditReport = {
   currentItemCount?: number;
   checkedMunicipalities?: string[];
   scraperErrorCount?: number;
+  transientWarningCount?: number;
   scraperResults?: Array<{
     municipality: string;
     rawCount: number;
