@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-08T09:21:52.333Z",
-  "currentItemCount": 167,
+  "generatedAt": "2026-07-09T06:03:42.757Z",
+  "currentItemCount": 177,
   "checkedMunicipalities": [
     "奈良市",
     "橿原市",
@@ -142,8 +142,8 @@
     },
     {
       "municipality": "香芝市",
-      "rawCount": 9,
-      "keptCount": 9,
+      "rawCount": 10,
+      "keptCount": 10,
       "rejectedCount": 0,
       "warnings": [],
       "errors": []
@@ -200,8 +200,8 @@
     },
     {
       "municipality": "斑鳩町",
-      "rawCount": 3,
-      "keptCount": 3,
+      "rawCount": 4,
+      "keptCount": 4,
       "rejectedCount": 0,
       "warnings": [],
       "errors": []
@@ -233,29 +233,51 @@
   ],
   "coverage": {
     "checkedMunicipalityCount": 24,
-    "expectedItemCount": 180,
-    "matchedItemCount": 179,
-    "missingItemCount": 1,
+    "expectedItemCount": 182,
+    "matchedItemCount": 180,
+    "missingItemCount": 2,
     "duplicateTitleGroupCount": 25,
     "duplicateTitleItemCount": 53,
     "results": [
       {
-        "municipality": "大和郡山市",
-        "snapshotCount": 7,
-        "expectedCount": 5,
-        "matchedCount": 4,
+        "municipality": "香芝市",
+        "snapshotCount": 10,
+        "expectedCount": 10,
+        "matchedCount": 9,
         "missingCount": 1,
-        "duplicateTitleGroupCount": 1,
-        "duplicateTitleItemCount": 2,
+        "duplicateTitleGroupCount": 0,
+        "duplicateTitleItemCount": 0,
         "missingItems": [
           {
-            "id": "yamato-koriyama-e1146a80",
-            "municipality": "大和郡山市",
-            "title": "市営霞ヶ丘住宅空家改修工事（203号、205号、208号、209号、302号、306号）",
+            "id": "kashiba-web-9d36d968",
+            "municipality": "香芝市",
+            "title": "令和7年度流域貯留浸透事業施設整備工事",
             "status": "受付中",
-            "announcementDate": "2026-07-07",
-            "biddingDate": "2026-07-22",
-            "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/9328.html",
+            "announcementDate": "2026-07-09",
+            "biddingDate": "2026-07-28",
+            "link": "https://www.city.kashiba.lg.jp/site/nyuusatsu/68143.html",
+            "reason": "snapshot item should be present in scraper_result"
+          }
+        ],
+        "status": "missing"
+      },
+      {
+        "municipality": "斑鳩町",
+        "snapshotCount": 4,
+        "expectedCount": 4,
+        "matchedCount": 3,
+        "missingCount": 1,
+        "duplicateTitleGroupCount": 0,
+        "duplicateTitleItemCount": 0,
+        "missingItems": [
+          {
+            "id": "斑鳩町-2026-07-09-町営住宅内装修繕",
+            "municipality": "斑鳩町",
+            "title": "町営住宅内装修繕",
+            "status": "受付中",
+            "announcementDate": "2026-07-09",
+            "biddingDate": "2026-07-30",
+            "link": "https://www.town.ikaruga.nara.jp/0000003346.html",
             "reason": "snapshot item should be present in scraper_result"
           }
         ],
@@ -350,13 +372,13 @@
         "status": "ok"
       },
       {
-        "municipality": "香芝市",
-        "snapshotCount": 9,
-        "expectedCount": 9,
-        "matchedCount": 9,
+        "municipality": "大和郡山市",
+        "snapshotCount": 7,
+        "expectedCount": 5,
+        "matchedCount": 5,
         "missingCount": 0,
-        "duplicateTitleGroupCount": 0,
-        "duplicateTitleItemCount": 0,
+        "duplicateTitleGroupCount": 1,
+        "duplicateTitleItemCount": 2,
         "missingItems": [],
         "status": "ok"
       },
@@ -406,17 +428,6 @@
       },
       {
         "municipality": "田原本町",
-        "snapshotCount": 3,
-        "expectedCount": 3,
-        "matchedCount": 3,
-        "missingCount": 0,
-        "duplicateTitleGroupCount": 0,
-        "duplicateTitleItemCount": 0,
-        "missingItems": [],
-        "status": "ok"
-      },
-      {
-        "municipality": "斑鳩町",
         "snapshotCount": 3,
         "expectedCount": 3,
         "matchedCount": 3,
