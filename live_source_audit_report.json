@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-09T06:03:42.757Z",
-  "currentItemCount": 177,
+  "generatedAt": "2026-07-09T08:18:56.847Z",
+  "currentItemCount": 179,
   "checkedMunicipalities": [
     "奈良市",
     "橿原市",
@@ -234,55 +234,11 @@
   "coverage": {
     "checkedMunicipalityCount": 24,
     "expectedItemCount": 182,
-    "matchedItemCount": 180,
-    "missingItemCount": 2,
+    "matchedItemCount": 182,
+    "missingItemCount": 0,
     "duplicateTitleGroupCount": 25,
     "duplicateTitleItemCount": 53,
     "results": [
-      {
-        "municipality": "香芝市",
-        "snapshotCount": 10,
-        "expectedCount": 10,
-        "matchedCount": 9,
-        "missingCount": 1,
-        "duplicateTitleGroupCount": 0,
-        "duplicateTitleItemCount": 0,
-        "missingItems": [
-          {
-            "id": "kashiba-web-9d36d968",
-            "municipality": "香芝市",
-            "title": "令和7年度流域貯留浸透事業施設整備工事",
-            "status": "受付中",
-            "announcementDate": "2026-07-09",
-            "biddingDate": "2026-07-28",
-            "link": "https://www.city.kashiba.lg.jp/site/nyuusatsu/68143.html",
-            "reason": "snapshot item should be present in scraper_result"
-          }
-        ],
-        "status": "missing"
-      },
-      {
-        "municipality": "斑鳩町",
-        "snapshotCount": 4,
-        "expectedCount": 4,
-        "matchedCount": 3,
-        "missingCount": 1,
-        "duplicateTitleGroupCount": 0,
-        "duplicateTitleItemCount": 0,
-        "missingItems": [
-          {
-            "id": "斑鳩町-2026-07-09-町営住宅内装修繕",
-            "municipality": "斑鳩町",
-            "title": "町営住宅内装修繕",
-            "status": "受付中",
-            "announcementDate": "2026-07-09",
-            "biddingDate": "2026-07-30",
-            "link": "https://www.town.ikaruga.nara.jp/0000003346.html",
-            "reason": "snapshot item should be present in scraper_result"
-          }
-        ],
-        "status": "missing"
-      },
       {
         "municipality": "葛城市",
         "snapshotCount": 31,
@@ -361,6 +317,17 @@
         "status": "ok"
       },
       {
+        "municipality": "香芝市",
+        "snapshotCount": 10,
+        "expectedCount": 10,
+        "matchedCount": 10,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 0,
+        "duplicateTitleItemCount": 0,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
         "municipality": "三郷町",
         "snapshotCount": 21,
         "expectedCount": 10,
@@ -396,6 +363,17 @@
       {
         "municipality": "川西町",
         "snapshotCount": 5,
+        "expectedCount": 4,
+        "matchedCount": 4,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 0,
+        "duplicateTitleItemCount": 0,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
+        "municipality": "斑鳩町",
+        "snapshotCount": 4,
         "expectedCount": 4,
         "matchedCount": 4,
         "missingCount": 0,
