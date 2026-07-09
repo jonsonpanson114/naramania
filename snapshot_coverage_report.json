@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-07-08T13:01:27.872Z",
+  "generatedAt": "2026-07-09T05:51:47.404Z",
   "checkedMunicipalityCount": 23,
-  "expectedItemCount": 177,
-  "matchedItemCount": 177,
+  "expectedItemCount": 179,
+  "matchedItemCount": 179,
   "missingItemCount": 0,
   "duplicateTitleGroupCount": 11,
   "duplicateTitleItemCount": 23,
@@ -86,9 +86,9 @@
     },
     {
       "municipality": "香芝市",
-      "snapshotCount": 9,
-      "expectedCount": 9,
-      "matchedCount": 9,
+      "snapshotCount": 10,
+      "expectedCount": 10,
+      "matchedCount": 10,
       "missingCount": 0,
       "duplicateTitleGroupCount": 0,
       "duplicateTitleItemCount": 0,
@@ -140,6 +140,17 @@
       "status": "ok"
     },
     {
+      "municipality": "斑鳩町",
+      "snapshotCount": 4,
+      "expectedCount": 4,
+      "matchedCount": 4,
+      "missingCount": 0,
+      "duplicateTitleGroupCount": 0,
+      "duplicateTitleItemCount": 0,
+      "missingItems": [],
+      "status": "ok"
+    },
+    {
       "municipality": "桜井市",
       "snapshotCount": 3,
       "expectedCount": 3,
@@ -174,17 +185,6 @@
     },
     {
       "municipality": "田原本町",
-      "snapshotCount": 3,
-      "expectedCount": 3,
-      "matchedCount": 3,
-      "missingCount": 0,
-      "duplicateTitleGroupCount": 0,
-      "duplicateTitleItemCount": 0,
-      "missingItems": [],
-      "status": "ok"
-    },
-    {
-      "municipality": "斑鳩町",
       "snapshotCount": 3,
       "expectedCount": 3,
       "matchedCount": 3,

@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-08T12:17:25.769Z",
+  "generatedAt": "2026-07-09T05:07:06.697Z",
   "source": "daily_scrape",
-  "keptCount": 177,
+  "keptCount": 179,
   "municipalityCount": 23,
   "oldestAnnouncementDate": "2025-02-02",
-  "latestAnnouncementDate": "2026-07-07",
-  "scrapedCount": 453,
+  "latestAnnouncementDate": "2026-07-09",
+  "scrapedCount": 455,
   "rejectedCount": 273,
   "municipalityAudit": {
     "expectedMunicipalityCount": 25,
@@ -22,7 +22,7 @@
       {
         "municipality": "葛城市",
         "count": 24,
-        "changeFromPrevious": 4
+        "changeFromPrevious": 0
       },
       {
         "municipality": "奈良県",
@@ -32,7 +32,7 @@
       {
         "municipality": "高取町",
         "count": 19,
-        "changeFromPrevious": 5
+        "changeFromPrevious": 0
       },
       {
         "municipality": "宇陀市",
@@ -56,8 +56,8 @@
       },
       {
         "municipality": "香芝市",
-        "count": 9,
-        "changeFromPrevious": 0
+        "count": 10,
+        "changeFromPrevious": 1
       },
       {
         "municipality": "奈良市",
@@ -80,6 +80,11 @@
         "changeFromPrevious": 0
       },
       {
+        "municipality": "斑鳩町",
+        "count": 4,
+        "changeFromPrevious": 1
+      },
+      {
         "municipality": "桜井市",
         "count": 3,
         "changeFromPrevious": 0
@@ -87,7 +92,7 @@
       {
         "municipality": "三郷町",
         "count": 3,
-        "changeFromPrevious": 1
+        "changeFromPrevious": 0
       },
       {
         "municipality": "天理市",
@@ -96,11 +101,6 @@
       },
       {
         "municipality": "田原本町",
-        "count": 3,
-        "changeFromPrevious": 0
-      },
-      {
-        "municipality": "斑鳩町",
         "count": 3,
         "changeFromPrevious": 0
       },
@@ -151,6 +151,6 @@
     "intelligenceExtractedCount": 35,
     "geminiExtractedCount": 35,
     "taggedCount": 35,
-    "lastAugmentedAt": "2026-07-08T12:54:36.897Z"
+    "lastAugmentedAt": "2026-07-09T05:44:37.625Z"
   }
 }
