@@ -20,6 +20,17 @@ function hasSummary(item: BiddingItem): boolean {
     return Boolean(item.description?.trim());
 }
 
+function parseMunicipalityEnvList(value?: string): Set<string> {
+    if (!value) return new Set();
+
+    return new Set(
+        value
+            .split(/[,\n]/)
+            .map((entry) => entry.trim())
+            .filter(Boolean),
+    );
+}
+
 async function main() {
     console.log('--- 🚀 Gemini Intelligence Processor ---');
     console.log('[Native PDF + JSON Schema Enforcement]');
@@ -38,12 +49,23 @@ async function main() {
     const rawData = fs.readFileSync(RESULT_PATH, 'utf-8');
     const items: BiddingItem[] = JSON.parse(rawData);
 
+    const onlyMunicipalities = parseMunicipalityEnvList(process.env.SCRAPE_ONLY_MUNICIPALITIES);
+    const exceptMunicipalities = parseMunicipalityEnvList(process.env.SCRAPE_EXCEPT_MUNICIPALITIES);
+    if (onlyMunicipalities.size > 0) {
+        console.log(`[intelligence] 対象自治体限定: ${Array.from(onlyMunicipalities).join(', ')}`);
+    }
+    if (exceptMunicipalities.size > 0) {
+        console.log(`[intelligence] 除外自治体: ${Array.from(exceptMunicipalities).join(', ')}`);
+    }
+
     // Target items:
     // 1. PDF exists, can be parsed, and AI summary has not been generated yet
     // 2. Existing summary exists but tags are still missing
     const targetItems = items.filter((item) =>
-        (supportsPdfExtraction(item) && !hasSummary(item)) ||
-        (hasSummary(item) && (!item.tags || item.tags.length === 0))
+        (onlyMunicipalities.size === 0 || onlyMunicipalities.has(item.municipality))
+        && !exceptMunicipalities.has(item.municipality)
+        && ((supportsPdfExtraction(item) && !hasSummary(item))
+            || (hasSummary(item) && (!item.tags || item.tags.length === 0)))
     );
 
     console.log(`Found ${targetItems.length} items requiring intelligence or tagging.`);
