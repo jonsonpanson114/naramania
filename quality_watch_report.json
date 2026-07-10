@@ -1,21 +1,21 @@
 {
-  "generatedAt": "2026-07-10T12:14:17.462Z",
-  "qualityGeneratedAt": "2026-07-10T12:14:13.633Z",
+  "generatedAt": "2026-07-10T15:37:15.025Z",
+  "qualityGeneratedAt": "2026-07-10T15:37:11.191Z",
   "itemCount": 184,
   "resultFollowUp": {
-    "totalCount": 11,
+    "totalCount": 13,
     "highCount": 10,
     "mediumCount": 1,
-    "lowCount": 0,
+    "lowCount": 2,
     "missingBiddingDateCount": 0,
     "byMunicipality": [
       {
-        "municipality": "田原本町",
+        "municipality": "香芝市",
         "count": 3
       },
       {
-        "municipality": "香芝市",
-        "count": 2
+        "municipality": "田原本町",
+        "count": 3
       },
       {
         "municipality": "奈良県",
@@ -30,6 +30,10 @@
         "count": 1
       },
       {
+        "municipality": "五條市",
+        "count": 1
+      },
+      {
         "municipality": "大和郡山市",
         "count": 1
       },
@@ -41,8 +45,8 @@
     "samples": [
       {
         "priority": "high",
-        "ageDays": 73,
-        "reason": "開札日から73日経過",
+        "ageDays": 74,
+        "reason": "開札日から74日経過",
         "item": {
           "id": "kashiba-web-f9a78168",
           "municipality": "香芝市",
@@ -57,8 +61,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 53,
-        "reason": "開札日から53日経過",
+        "ageDays": 54,
+        "reason": "開札日から54日経過",
         "item": {
           "id": "oji-aHR0cHM6Ly93",
           "municipality": "王寺町",
@@ -73,8 +77,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 53,
-        "reason": "開札日から53日経過",
+        "ageDays": 54,
+        "reason": "開札日から54日経過",
         "item": {
           "id": "tawaramoto-2026051803",
           "municipality": "田原本町",
@@ -89,8 +93,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 45,
-        "reason": "開札日から45日経過",
+        "ageDays": 46,
+        "reason": "開札日から46日経過",
         "item": {
           "id": "kashihara-proposal-5082000026",
           "municipality": "橿原市",
@@ -105,8 +109,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 45,
-        "reason": "開札日から45日経過",
+        "ageDays": 46,
+        "reason": "開札日から46日経過",
         "item": {
           "id": "kashiba-web-1bf7b65a",
           "municipality": "香芝市",
@@ -121,8 +125,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 44,
-        "reason": "開札日から44日経過",
+        "ageDays": 45,
+        "reason": "開札日から45日経過",
         "item": {
           "id": "nara-city-0000002346",
           "municipality": "奈良市",
@@ -137,8 +141,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 23,
-        "reason": "開札日から23日経過",
+        "ageDays": 24,
+        "reason": "開札日から24日経過",
         "item": {
           "id": "yamato-koriyama-ee85746d",
           "municipality": "大和郡山市",
@@ -153,8 +157,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 22,
-        "reason": "開札日から22日経過",
+        "ageDays": 23,
+        "reason": "開札日から23日経過",
         "item": {
           "id": "nara-pref-29001013060020260055",
           "municipality": "奈良県",
@@ -169,8 +173,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 18,
-        "reason": "開札日から18日経過",
+        "ageDays": 19,
+        "reason": "開札日から19日経過",
         "item": {
           "id": "tawaramoto-1008062207",
           "municipality": "田原本町",
@@ -185,8 +189,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 18,
-        "reason": "開札日から18日経過",
+        "ageDays": 19,
+        "reason": "開札日から19日経過",
         "item": {
           "id": "tawaramoto-2026062201",
           "municipality": "田原本町",
@@ -372,7 +376,7 @@
             "id": "gojo-epi-2601022",
             "municipality": "五條市",
             "title": "向加名生団地B棟屋根改修工事",
-            "status": "受付中",
+            "status": "受付終了",
             "announcementDate": "2026-06-30",
             "biddingDate": "2026-07-10",
             "winningContractor": null,
