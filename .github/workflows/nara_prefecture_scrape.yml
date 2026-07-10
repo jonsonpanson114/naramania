@@ -2,14 +2,12 @@ name: Nara Prefecture Scrape
 
 on:
   # 奈良県PPIはself-hosted Windows runnerが必要です。
-  # 【前提】schedule実行にはrunnerが常時オンラインである必要があります。
+  # 【前提】schedule実行時にrunnerがオンラインである必要があります。
   # runnerがオフラインのままだと各run最大24hほど queued のまま cancelled になり、
   # 履歴にノイズが溜まります(過去にこの理由でscheduleを一時撤去)。
   # runnerを常設できない期間は schedule をコメントアウトし workflow_dispatch のみに戻すこと。
   schedule:
-    - cron: '25 1 * * 1-5' # 平日日本時間10:25
-    - cron: '25 4 * * 1-5' # 平日日本時間13:25
-    - cron: '25 6 * * 1-5' # 平日日本時間15:25
+    - cron: '0 13 * * 1-5' # 平日日本時間22:00
   workflow_dispatch:
 
 concurrency:

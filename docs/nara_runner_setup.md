@@ -6,8 +6,8 @@
 - [.github/workflows/nara_prefecture_scrape.yml](C:\Users\jonso\.gemini\antigravity\playground\azimuthal-pioneer\naramania\.github\workflows\nara_prefecture_scrape.yml)
 
 実行時刻:
-- hosted daily の 10:00 / 13:00 / 15:00 JST とは分離
-- 奈良県専用は 10:25 / 13:25 / 15:25 JST
+- hosted daily の 10:00 / 15:00 JST とは分離
+- 奈良県専用は平日 22:00 JST
 - 理由は `scraper_result.json` と `scraper_quality.json` の commit 競合回避
 
 前提:
@@ -37,9 +37,12 @@ Set-Location C:\Users\jonso\.gemini\antigravity\playground\azimuthal-pioneer\nar
   - `nara-pref`
 - `run.cmd` を起動
 
-## サービス化
+## 自動起動
 
-常駐させるなら、GitHub Docs の Windows runner service 手順に従って `svc install` / `svc start` を使う。
+このノートパソコンでは、Windows のスタートアップに登録した `NaramaniaNaraRunner` がログオン時に `run.cmd` を起動する。
+22:00 の実行時に、ログオン済みで、パソコンが起動中・ネット接続中・スリープしていないことが必要。
+
+Windows サービスとして常駐させる場合は、GitHub Docs の Windows runner service 手順に従う。
 
 参考:
 - GitHub Docs: [Adding self-hosted runners](https://docs.github.com/en/actions/how-tos/manage-runners/self-hosted-runners/add-runners?learn=hosting_your_own_runners)
