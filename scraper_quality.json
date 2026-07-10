@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-10T05:04:08.021Z",
+  "generatedAt": "2026-07-10T09:40:23.722Z",
   "source": "daily_scrape",
   "keptCount": 181,
   "municipalityCount": 23,
@@ -22,7 +22,7 @@
       {
         "municipality": "葛城市",
         "count": 25,
-        "changeFromPrevious": 1
+        "changeFromPrevious": 0
       },
       {
         "municipality": "奈良県",
@@ -47,7 +47,7 @@
       {
         "municipality": "五條市",
         "count": 15,
-        "changeFromPrevious": 1
+        "changeFromPrevious": 0
       },
       {
         "municipality": "生駒市",
@@ -151,6 +151,6 @@
     "intelligenceExtractedCount": 36,
     "geminiExtractedCount": 36,
     "taggedCount": 36,
-    "lastAugmentedAt": "2026-07-10T05:41:57.312Z"
+    "lastAugmentedAt": "2026-07-10T10:18:13.320Z"
   }
 }
