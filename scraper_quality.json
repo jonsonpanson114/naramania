@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-07-09T09:44:09.307Z",
+  "generatedAt": "2026-07-10T05:04:08.021Z",
   "source": "daily_scrape",
-  "keptCount": 179,
+  "keptCount": 181,
   "municipalityCount": 23,
   "oldestAnnouncementDate": "2025-02-02",
-  "latestAnnouncementDate": "2026-07-09",
-  "scrapedCount": 455,
-  "rejectedCount": 273,
+  "latestAnnouncementDate": "2026-07-10",
+  "scrapedCount": 458,
+  "rejectedCount": 274,
   "municipalityAudit": {
     "expectedMunicipalityCount": 25,
     "coveredMunicipalityCount": 23,
@@ -21,8 +21,8 @@
     "breakdown": [
       {
         "municipality": "葛城市",
-        "count": 24,
-        "changeFromPrevious": 0
+        "count": 25,
+        "changeFromPrevious": 1
       },
       {
         "municipality": "奈良県",
@@ -46,8 +46,8 @@
       },
       {
         "municipality": "五條市",
-        "count": 14,
-        "changeFromPrevious": 0
+        "count": 15,
+        "changeFromPrevious": 1
       },
       {
         "municipality": "生駒市",
@@ -146,11 +146,11 @@
     "sampleTitles": []
   },
   "intelligence": {
-    "itemsWithPdf": 40,
-    "itemsWithDescription": 36,
-    "intelligenceExtractedCount": 35,
-    "geminiExtractedCount": 35,
-    "taggedCount": 35,
-    "lastAugmentedAt": "2026-07-09T10:22:00.542Z"
+    "itemsWithPdf": 41,
+    "itemsWithDescription": 37,
+    "intelligenceExtractedCount": 36,
+    "geminiExtractedCount": 36,
+    "taggedCount": 36,
+    "lastAugmentedAt": "2026-07-10T05:41:57.312Z"
   }
 }

@@ -740,6 +740,17 @@
   ],
   "葛城市": [
     {
+      "id": "katsuragi-web-42be9c8c",
+      "municipality": "葛城市",
+      "title": "第8-402号 市営住宅堂の久保団地空家解体工事",
+      "type": "建築",
+      "announcementDate": "2026-07-10",
+      "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/4-4-3-2026-1.pdf",
+      "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/4-4-3-2026-1.pdf",
+      "status": "受付中",
+      "biddingDate": "2026-08-04"
+    },
+    {
       "id": "katsuragi-epi-c558f1c5",
       "municipality": "葛城市",
       "title": "葛城市立学校施設各所改修工事",
@@ -1011,6 +1022,17 @@
     }
   ],
   "五條市": [
+    {
+      "id": "gojo-epi-2601022",
+      "municipality": "五條市",
+      "title": "向加名生団地B棟屋根改修工事",
+      "type": "建築",
+      "announcementDate": "2026-06-30",
+      "biddingDate": "2026-07-10",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002601022",
+      "status": "受付中",
+      "estimatedPrice": "4,930,000円"
+    },
     {
       "id": "gojo-epi-2601002",
       "municipality": "五條市",
