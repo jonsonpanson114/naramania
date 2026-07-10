@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-10T10:25:07.000Z",
+  "generatedAt": "2026-07-10T12:09:44.501Z",
   "checkedMunicipalityCount": 23,
-  "expectedItemCount": 181,
-  "matchedItemCount": 181,
+  "expectedItemCount": 184,
+  "matchedItemCount": 184,
   "missingItemCount": 0,
-  "duplicateTitleGroupCount": 11,
-  "duplicateTitleItemCount": 23,
+  "duplicateTitleGroupCount": 12,
+  "duplicateTitleItemCount": 25,
   "results": [
     {
       "municipality": "葛城市",
@@ -20,12 +20,12 @@
     },
     {
       "municipality": "奈良県",
-      "snapshotCount": 21,
-      "expectedCount": 21,
-      "matchedCount": 21,
+      "snapshotCount": 24,
+      "expectedCount": 24,
+      "matchedCount": 24,
       "missingCount": 0,
-      "duplicateTitleGroupCount": 0,
-      "duplicateTitleItemCount": 0,
+      "duplicateTitleGroupCount": 1,
+      "duplicateTitleItemCount": 2,
       "missingItems": [],
       "status": "ok"
     },

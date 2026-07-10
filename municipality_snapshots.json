@@ -1,6 +1,39 @@
 {
   "奈良県": [
     {
+      "id": "nara-pref-29001013060020260127",
+      "municipality": "奈良県",
+      "title": "県営住宅姫寺団地４号棟（５０１号室他）及び県営住宅纒向団地６号棟（２０６号室他）住戸改修工事監理業務 委（監）第８－５号",
+      "type": "コンサル",
+      "announcementDate": "2026-07-10",
+      "biddingDate": "2026-08-05",
+      "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260127&gamenMode=0",
+      "status": "受付中",
+      "winnerType": "設計事務所"
+    },
+    {
+      "id": "nara-pref-29001013060020260131",
+      "municipality": "奈良県",
+      "title": "県営住宅姫寺団地４号棟（５０１号室他）住戸改修工事 第８－２７号",
+      "type": "建築",
+      "announcementDate": "2026-07-10",
+      "biddingDate": "2026-08-05",
+      "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260131&gamenMode=0",
+      "status": "受付中",
+      "winnerType": "ゼネコン"
+    },
+    {
+      "id": "nara-pref-29001013060020260132",
+      "municipality": "奈良県",
+      "title": "県営住宅纒向団地６号棟（２０６号室他）住戸改修工事 第８－２８号",
+      "type": "建築",
+      "announcementDate": "2026-07-10",
+      "biddingDate": "2026-08-05",
+      "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260132&gamenMode=0",
+      "status": "受付中",
+      "winnerType": "ゼネコン"
+    },
+    {
       "id": "nara-pref-29001013060020260116",
       "municipality": "奈良県",
       "title": "竜田公園管理事務所兼公衆トイレ内装等改修工事監理業務（補助都市計画公園事業（防災・安全交付金）） 委（監）第８－１２号",
@@ -41,7 +74,7 @@
       "announcementDate": "2026-06-19",
       "biddingDate": "2026-07-07",
       "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29005007060120260015&gamenMode=0",
-      "status": "受付中",
+      "status": "受付終了",
       "winnerType": "設計事務所"
     },
     {
@@ -52,7 +85,7 @@
       "announcementDate": "2026-06-16",
       "biddingDate": "2026-07-08",
       "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260093&gamenMode=0",
-      "status": "受付中",
+      "status": "不調",
       "winnerType": "設計事務所"
     },
     {
@@ -63,7 +96,7 @@
       "announcementDate": "2026-06-16",
       "biddingDate": "2026-07-09",
       "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260095&gamenMode=0",
-      "status": "受付中",
+      "status": "不調",
       "winnerType": "設計事務所"
     },
     {
@@ -97,7 +130,8 @@
       "announcementDate": "2026-05-28",
       "biddingDate": "2026-06-22",
       "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260034&gamenMode=0",
-      "status": "受付終了",
+      "status": "落札",
+      "winningContractor": "株式会社中和コンストラクション",
       "winnerType": "ゼネコン"
     },
     {

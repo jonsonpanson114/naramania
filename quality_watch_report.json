@@ -1,24 +1,24 @@
 {
-  "generatedAt": "2026-07-10T10:25:05.893Z",
-  "qualityGeneratedAt": "2026-07-10T09:40:23.722Z",
-  "itemCount": 181,
+  "generatedAt": "2026-07-10T12:09:41.204Z",
+  "qualityGeneratedAt": "2026-07-10T12:09:37.731Z",
+  "itemCount": 184,
   "resultFollowUp": {
-    "totalCount": 14,
-    "highCount": 11,
+    "totalCount": 11,
+    "highCount": 10,
     "mediumCount": 1,
-    "lowCount": 2,
+    "lowCount": 0,
     "missingBiddingDateCount": 0,
     "byMunicipality": [
-      {
-        "municipality": "奈良県",
-        "count": 5
-      },
       {
         "municipality": "田原本町",
         "count": 3
       },
       {
         "municipality": "香芝市",
+        "count": 2
+      },
+      {
+        "municipality": "奈良県",
         "count": 2
       },
       {
@@ -499,15 +499,15 @@
         "municipality": "奈良県",
         "status": "ok",
         "severity": "error",
-        "totalCount": 21,
+        "totalCount": 24,
         "requiredLinkIncludes": [
           "ppi.ebid-kouji-gyoumu.pref.nara.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "ppi.ebid-kouji-gyoumu.pref.nara.jp": 21
+          "ppi.ebid-kouji-gyoumu.pref.nara.jp": 24
         },
-        "message": "奈良県: 21件 / sources OK"
+        "message": "奈良県: 24件 / sources OK"
       },
       {
         "municipality": "奈良市",
