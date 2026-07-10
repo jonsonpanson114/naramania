@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-10T05:57:25.406Z",
-  "currentItemCount": 179,
+  "generatedAt": "2026-07-10T08:15:17.599Z",
+  "currentItemCount": 181,
   "checkedMunicipalities": [
     "奈良市",
     "橿原市",
@@ -234,8 +234,8 @@
   "coverage": {
     "checkedMunicipalityCount": 24,
     "expectedItemCount": 184,
-    "matchedItemCount": 182,
-    "missingItemCount": 2,
+    "matchedItemCount": 184,
+    "missingItemCount": 0,
     "duplicateTitleGroupCount": 25,
     "duplicateTitleItemCount": 53,
     "results": [
@@ -243,45 +243,23 @@
         "municipality": "葛城市",
         "snapshotCount": 32,
         "expectedCount": 25,
-        "matchedCount": 24,
-        "missingCount": 1,
+        "matchedCount": 25,
+        "missingCount": 0,
         "duplicateTitleGroupCount": 5,
         "duplicateTitleItemCount": 10,
-        "missingItems": [
-          {
-            "id": "katsuragi-web-42be9c8c",
-            "municipality": "葛城市",
-            "title": "第8-402号 市営住宅堂の久保団地空家解体工事",
-            "status": "受付中",
-            "announcementDate": "2026-07-10",
-            "biddingDate": "2026-08-04",
-            "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/4-4-3-2026-1.pdf",
-            "reason": "snapshot item should be present in scraper_result"
-          }
-        ],
-        "status": "missing"
+        "missingItems": [],
+        "status": "ok"
       },
       {
         "municipality": "五條市",
         "snapshotCount": 63,
         "expectedCount": 25,
-        "matchedCount": 24,
-        "missingCount": 1,
+        "matchedCount": 25,
+        "missingCount": 0,
         "duplicateTitleGroupCount": 9,
         "duplicateTitleItemCount": 20,
-        "missingItems": [
-          {
-            "id": "gojo-epi-2601022",
-            "municipality": "五條市",
-            "title": "向加名生団地B棟屋根改修工事",
-            "status": "落札",
-            "announcementDate": "2026-06-30",
-            "biddingDate": "2026-07-10",
-            "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002601022",
-            "reason": "snapshot item should be present in scraper_result"
-          }
-        ],
-        "status": "missing"
+        "missingItems": [],
+        "status": "ok"
       },
       {
         "municipality": "高取町",
