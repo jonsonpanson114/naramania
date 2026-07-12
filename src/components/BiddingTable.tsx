@@ -155,7 +155,7 @@ export function BiddingTable({ items, initialTab = 'active', initialKeyword = ''
     const [detailedSearch, setDetailedSearch] = useState(false);
     const [hideOutOfScope, setHideOutOfScope] = useState(true);
     const [showDetailFilters, setShowDetailFilters] = useState(false);
-    const [viewMode, setViewMode] = useState<ViewMode>('compact');
+    const [viewMode, setViewMode] = useState<ViewMode>('card');
     const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
 
     const scopeById = useMemo(() => new Map(items.map(item => [item.id, assessBiddingScope(item)])), [items]);
@@ -630,14 +630,16 @@ export function BiddingTable({ items, initialTab = 'active', initialKeyword = ''
 
                                     <div className="border-t border-stone-100 bg-gradient-to-br from-stone-50 to-white p-3 lg:border-l lg:border-t-0">
                                         <div className="rounded-xl border border-stone-200 bg-white p-3">
-                                            <div className={item.designFirm ? 'border-b border-stone-100 pb-2' : ''}>
-                                                <p className="flex items-center gap-1.5 text-[9px] font-bold uppercase tracking-[0.18em] text-stone-400">
-                                                    <Trophy size={12} /> 落札者
-                                                </p>
-                                                <p className={`mt-1 line-clamp-1 text-sm font-bold leading-5 tracking-[0.02em] ${item.winningContractor ? 'text-emerald-800' : 'text-stone-400'}`}>
-                                                    {item.winningContractor || (item.status === '落札' ? '未取得' : '開札前')}
-                                                </p>
-                                            </div>
+                                            {(item.winningContractor || !['落札', '不調', '受付終了'].includes(item.status)) && (
+                                                <div className={item.designFirm ? 'border-b border-stone-100 pb-2' : ''}>
+                                                    <p className="flex items-center gap-1.5 text-[9px] font-bold uppercase tracking-[0.18em] text-stone-400">
+                                                        <Trophy size={12} /> 落札者
+                                                    </p>
+                                                    <p className={`mt-1 line-clamp-1 text-sm font-bold leading-5 tracking-[0.02em] ${item.winningContractor ? 'text-emerald-800' : 'text-stone-400'}`}>
+                                                        {item.winningContractor || '開札前'}
+                                                    </p>
+                                                </div>
+                                            )}
                                             {item.designFirm && (
                                                 <div className="pt-2">
                                                     <p className="flex items-center gap-1.5 text-[9px] font-bold uppercase tracking-[0.18em] text-stone-400">
