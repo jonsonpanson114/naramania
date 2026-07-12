@@ -10,6 +10,7 @@ import {
     Building2,
     CalendarClock,
     ChevronDown,
+    Download,
     FileText,
     LayoutGrid,
     List,
@@ -19,6 +20,7 @@ import {
     Trophy,
     X,
 } from 'lucide-react';
+import { WatchButton } from '@/components/WatchButton';
 
 export type ViewTab = 'active' | 'followUp' | 'results' | 'all';
 
@@ -100,6 +102,36 @@ function sortDate(value?: string, fallback = Number.POSITIVE_INFINITY): number {
     if (!value) return fallback;
     const date = new Date(value).getTime();
     return Number.isNaN(date) ? fallback : date;
+}
+
+function exportCsv(items: BiddingItem[]) {
+    const headers = ['自治体', '案件名', '種別', 'ステータス', '公告日', '開札日', '落札者', '設計者', '予定価格', '工期', 'リンク'];
+    const esc = (value?: string) => `"${String(value ?? '').replace(/"/g, '""')}"`;
+    const rows = items.map(item => [
+        item.municipality,
+        item.title,
+        item.type,
+        item.status,
+        item.announcementDate,
+        item.biddingDate || '',
+        item.winningContractor || '',
+        item.designFirm || '',
+        item.estimatedPrice || '',
+        item.constructionPeriod || '',
+        item.link,
+    ].map(esc).join(','));
+
+    // BOM付きUTF-8にしないとExcelで文字化けする
+    const csv = '﻿' + [headers.map(esc).join(','), ...rows].join('\r\n');
+    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const anchor = document.createElement('a');
+    const today = new Date();
+    const stamp = `${today.getFullYear()}${String(today.getMonth() + 1).padStart(2, '0')}${String(today.getDate()).padStart(2, '0')}`;
+    anchor.href = url;
+    anchor.download = `naramania_${stamp}.csv`;
+    anchor.click();
+    URL.revokeObjectURL(url);
 }
 
 function StatusPill({ status }: { status: BiddingStatus }) {
@@ -259,25 +291,36 @@ export function BiddingTable({ items, initialTab = 'active', initialKeyword = ''
                             );
                         })}
 
-                        <div className="ml-auto flex items-center gap-1 rounded-full border border-stone-200 bg-stone-50 p-1">
+                        <div className="ml-auto flex items-center gap-2">
                             <button
                                 type="button"
-                                onClick={() => setViewMode('compact')}
-                                title="コンパクト表示"
-                                className={`flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[10px] font-bold tracking-[0.1em] transition ${viewMode === 'compact' ? 'bg-stone-950 text-white' : 'text-stone-500 hover:text-stone-900'}`}
+                                onClick={() => exportCsv(filteredItems)}
+                                title="現在の絞り込み結果をCSVで保存（営業リスト用）"
+                                className="flex items-center gap-1.5 rounded-full border border-stone-200 bg-white px-3 py-1.5 text-[10px] font-bold tracking-[0.1em] text-stone-500 transition hover:border-emerald-400 hover:text-emerald-700"
                             >
-                                <List size={13} />
-                                リスト
+                                <Download size={13} />
+                                CSV
                             </button>
-                            <button
-                                type="button"
-                                onClick={() => setViewMode('card')}
-                                title="カード表示"
-                                className={`flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[10px] font-bold tracking-[0.1em] transition ${viewMode === 'card' ? 'bg-stone-950 text-white' : 'text-stone-500 hover:text-stone-900'}`}
-                            >
-                                <LayoutGrid size={13} />
-                                カード
-                            </button>
+                            <div className="flex items-center gap-1 rounded-full border border-stone-200 bg-stone-50 p-1">
+                                <button
+                                    type="button"
+                                    onClick={() => setViewMode('compact')}
+                                    title="コンパクト表示"
+                                    className={`flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[10px] font-bold tracking-[0.1em] transition ${viewMode === 'compact' ? 'bg-stone-950 text-white' : 'text-stone-500 hover:text-stone-900'}`}
+                                >
+                                    <List size={13} />
+                                    リスト
+                                </button>
+                                <button
+                                    type="button"
+                                    onClick={() => setViewMode('card')}
+                                    title="カード表示"
+                                    className={`flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[10px] font-bold tracking-[0.1em] transition ${viewMode === 'card' ? 'bg-stone-950 text-white' : 'text-stone-500 hover:text-stone-900'}`}
+                                >
+                                    <LayoutGrid size={13} />
+                                    カード
+                                </button>
+                            </div>
                         </div>
                     </div>
 
@@ -436,7 +479,7 @@ export function BiddingTable({ items, initialTab = 'active', initialKeyword = ''
                             <a
                                 key={item.id}
                                 href={`/project/${item.id}`}
-                                className={`grid grid-cols-[92px_minmax(0,1fr)] items-center gap-3 px-4 py-3 transition hover:bg-amber-50/60 md:grid-cols-[92px_minmax(0,1fr)_190px] ${index > 0 ? 'border-t border-stone-100' : ''}`}
+                                className={`grid grid-cols-[92px_minmax(0,1fr)_36px] items-center gap-3 px-4 py-3 transition hover:bg-amber-50/60 md:grid-cols-[92px_minmax(0,1fr)_190px_36px] ${index > 0 ? 'border-t border-stone-100' : ''}`}
                             >
                                 <div className={`rounded-xl px-2 py-1.5 text-center ${distance.urgent
                                     ? 'bg-rose-50'
@@ -485,6 +528,8 @@ export function BiddingTable({ items, initialTab = 'active', initialKeyword = ''
                                         <p className="text-[10px] tracking-[0.1em] text-stone-300">-</p>
                                     )}
                                 </div>
+
+                                <WatchButton itemId={item.id} compact />
                             </a>
                         );
                     })}
@@ -609,6 +654,9 @@ export function BiddingTable({ items, initialTab = 'active', initialKeyword = ''
                                             >
                                                 詳細を見る
                                             </a>
+                                            <div className="mt-2">
+                                                <WatchButton itemId={item.id} />
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

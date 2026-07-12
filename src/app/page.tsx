@@ -4,6 +4,8 @@ import { AlertNotificationPanel } from '@/components/AlertNotificationPanel';
 import { OpeningResultDigest } from '@/components/OpeningResultDigest';
 import { ResultFollowUpPanel } from '@/components/ResultFollowUpPanel';
 import { RecentChangesPanel } from '@/components/RecentChangesPanel';
+import { WatchResultsPanel } from '@/components/WatchResultsPanel';
+import { SavedCountBadge } from '@/components/SavedCountBadge';
 import { NewsSection } from '@/components/NewsSection';
 import { NewsTicker } from '@/components/NewsTicker';
 import { getShortBiddingLabel } from '@/lib/bidding_schedule';
@@ -120,6 +122,8 @@ export default async function Home() {
           </div>
         </div>
 
+        <WatchResultsPanel items={allItems} />
+
         <RecentChangesPanel items={allItems} />
 
         <div className="mb-8 grid gap-2 md:grid-cols-4">
@@ -136,7 +140,7 @@ export default async function Home() {
           <Link href="/saved" className="group rounded-2xl border border-stone-200 bg-white/80 p-4 shadow-sm transition hover:-translate-y-0.5 hover:border-sky-300 hover:shadow-md">
             <p className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-[0.22em] text-sky-700"><Briefcase size={12} /> Sales</p>
             <p className="mt-2 text-base font-semibold tracking-[0.05em] text-primary">営業管理</p>
-            <p className="mt-1 text-xs leading-5 text-secondary/55">保存案件とアプローチ状況</p>
+            <SavedCountBadge />
           </Link>
           <Link href="/chat" className="group rounded-2xl border border-stone-200 bg-white/80 p-4 shadow-sm transition hover:-translate-y-0.5 hover:border-rose-300 hover:shadow-md">
             <p className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-[0.22em] text-rose-700"><MessageSquareText size={12} /> Chat</p>

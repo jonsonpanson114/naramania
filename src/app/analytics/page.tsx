@@ -93,6 +93,51 @@ export default async function AnalyticsPage() {
         : 0;
     const maxItem = scatterData[0];
 
+    // --- 自治体別の動き ---
+    const municipalityStats = new Map<string, { total: number; active: number; awarded: number; failed: number }>();
+    items.forEach((item) => {
+        const stats = municipalityStats.get(item.municipality) || { total: 0, active: 0, awarded: 0, failed: 0 };
+        stats.total += 1;
+        if (item.status === '受付中') stats.active += 1;
+        if (item.status === '落札') stats.awarded += 1;
+        if (item.status === '不調') stats.failed += 1;
+        municipalityStats.set(item.municipality, stats);
+    });
+    const municipalityRows = Array.from(municipalityStats.entries())
+        .map(([municipality, stats]) => ({
+            municipality,
+            ...stats,
+            failRate: stats.awarded + stats.failed > 0
+                ? Math.round((stats.failed / (stats.awarded + stats.failed)) * 100)
+                : null,
+        }))
+        .sort((a, b) => b.total - a.total);
+
+    // 月×自治体マトリクス（直近6ヶ月・公告日ベース）
+    const now = new Date();
+    const months: string[] = [];
+    for (let i = 5; i >= 0; i -= 1) {
+        const d = new Date(now.getFullYear(), now.getMonth() - i, 1);
+        months.push(`${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}`);
+    }
+    const heatMunicipalities = municipalityRows.slice(0, 12).map(row => row.municipality);
+    const monthCounts = new Map<string, number>();
+    items.forEach((item) => {
+        const month = (item.announcementDate || '').slice(0, 7);
+        if (!months.includes(month)) return;
+        const key = `${item.municipality}:${month}`;
+        monthCounts.set(key, (monthCounts.get(key) || 0) + 1);
+    });
+    const maxMonthCount = Math.max(1, ...Array.from(monthCounts.values()));
+
+    const heatColor = (count: number): string => {
+        if (count === 0) return 'bg-stone-50 text-stone-300';
+        const ratio = count / maxMonthCount;
+        if (ratio > 0.66) return 'bg-amber-500 text-white';
+        if (ratio > 0.33) return 'bg-amber-300 text-stone-900';
+        return 'bg-amber-100 text-stone-700';
+    };
+
     return (
         <AppShell>
             <div className="space-y-12">
@@ -102,6 +147,72 @@ export default async function AnalyticsPage() {
                         落札実績のランキングと価格相場をまとめた分析ページです。
                     </p>
                 </div>
+
+                {/* 自治体別の動き */}
+                <section aria-label="自治体別の動き">
+                    <h2 className="text-xl font-bold text-gray-900 mb-6">自治体別の動き</h2>
+
+                    <div className="bg-white rounded-3xl p-6 border border-amber-900/10 shadow-sm overflow-x-auto mb-6">
+                        <h3 className="text-sm font-bold text-gray-700 mb-4">月別の公告件数（直近6ヶ月・上位{heatMunicipalities.length}自治体）</h3>
+                        <table className="w-full min-w-[560px] border-separate border-spacing-1 text-center">
+                            <thead>
+                                <tr>
+                                    <th className="text-left text-[11px] font-bold text-gray-400 px-2">自治体</th>
+                                    {months.map(month => (
+                                        <th key={month} className="text-[11px] font-bold text-gray-400 px-1 tabular-nums">
+                                            {Number(month.slice(5, 7))}月
+                                        </th>
+                                    ))}
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {heatMunicipalities.map(municipality => (
+                                    <tr key={municipality}>
+                                        <td className="text-left text-xs font-bold text-gray-700 px-2 whitespace-nowrap">{municipality}</td>
+                                        {months.map(month => {
+                                            const count = monthCounts.get(`${municipality}:${month}`) || 0;
+                                            return (
+                                                <td key={month} className={`rounded-lg py-2 text-xs font-bold tabular-nums ${heatColor(count)}`}>
+                                                    {count > 0 ? count : ''}
+                                                </td>
+                                            );
+                                        })}
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div className="bg-white rounded-3xl p-6 border border-amber-900/10 shadow-sm overflow-x-auto">
+                        <h3 className="text-sm font-bold text-gray-700 mb-4">掲載・落札・不調の内訳（不調率 = 不調 ÷ 開札結果）</h3>
+                        <table className="w-full min-w-[480px] text-sm">
+                            <thead>
+                                <tr className="text-[11px] font-bold text-gray-400 border-b border-gray-100">
+                                    <th className="text-left py-2 px-2">自治体</th>
+                                    <th className="text-right py-2 px-2">掲載</th>
+                                    <th className="text-right py-2 px-2">受付中</th>
+                                    <th className="text-right py-2 px-2">落札</th>
+                                    <th className="text-right py-2 px-2">不調</th>
+                                    <th className="text-right py-2 px-2">不調率</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {municipalityRows.map(row => (
+                                    <tr key={row.municipality} className="border-b border-gray-50 hover:bg-amber-50/40">
+                                        <td className="py-2 px-2 font-bold text-gray-800">{row.municipality}</td>
+                                        <td className="py-2 px-2 text-right tabular-nums text-gray-600">{row.total}</td>
+                                        <td className="py-2 px-2 text-right tabular-nums text-sky-700">{row.active || ''}</td>
+                                        <td className="py-2 px-2 text-right tabular-nums text-emerald-700">{row.awarded || ''}</td>
+                                        <td className="py-2 px-2 text-right tabular-nums text-amber-700">{row.failed || ''}</td>
+                                        <td className={`py-2 px-2 text-right tabular-nums font-bold ${row.failRate !== null && row.failRate >= 30 ? 'text-rose-600' : 'text-gray-500'}`}>
+                                            {row.failRate !== null ? `${row.failRate}%` : '-'}
+                                        </td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
 
                 {/* 落札実績ランキング */}
                 <section aria-label="落札実績ランキング">
