@@ -43,7 +43,7 @@ const TABS: Array<{ id: ViewTab; label: string; hint: string }> = [
     { id: 'all', label: 'すべて', hint: '対象案件を全部見る' },
 ];
 
-const PAGE_SIZE = 30;
+const PAGE_SIZE = 20;
 
 const STATUS_TONES: Record<BiddingStatus, { label: string; pill: string; dot: string }> = {
     '受付中': { label: '受付中', pill: 'border-sky-200 bg-sky-50 text-sky-700', dot: 'bg-sky-500' },
@@ -479,9 +479,9 @@ export function BiddingTable({ items, initialTab = 'active', initialKeyword = ''
                             <a
                                 key={item.id}
                                 href={`/project/${item.id}`}
-                                className={`grid grid-cols-[92px_minmax(0,1fr)_36px] items-center gap-3 px-4 py-3 transition hover:bg-amber-50/60 md:grid-cols-[92px_minmax(0,1fr)_190px_36px] ${index > 0 ? 'border-t border-stone-100' : ''}`}
+                                className={`grid grid-cols-[92px_minmax(0,1fr)_36px] items-center gap-4 px-5 py-5 transition hover:bg-amber-50/60 md:grid-cols-[92px_minmax(0,1fr)_190px_36px] lg:gap-5 ${index > 0 ? 'border-t border-stone-100' : ''}`}
                             >
-                                <div className={`rounded-xl px-2 py-1.5 text-center ${distance.urgent
+                                <div className={`rounded-xl px-2 py-2.5 text-center ${distance.urgent
                                     ? 'bg-rose-50'
                                     : distance.done
                                         ? 'bg-stone-50'
@@ -497,7 +497,7 @@ export function BiddingTable({ items, initialTab = 'active', initialKeyword = ''
                                 </div>
 
                                 <div className="min-w-0">
-                                    <div className="flex flex-wrap items-center gap-1.5">
+                                    <div className="flex flex-wrap items-center gap-2">
                                         <StatusPill status={item.status} />
                                         <span className="inline-flex items-center gap-1 text-[10px] font-bold tracking-[0.08em] text-stone-500">
                                             <MapPin size={10} />
@@ -508,7 +508,7 @@ export function BiddingTable({ items, initialTab = 'active', initialKeyword = ''
                                             <span className="rounded-full bg-rose-50 px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-[0.1em] text-rose-600">New</span>
                                         )}
                                     </div>
-                                    <p className="mt-1 truncate text-[14px] font-bold leading-6 tracking-[0.02em] text-stone-900">
+                                    <p className="mt-2 truncate text-[14px] font-bold leading-6 tracking-[0.02em] text-stone-900">
                                         {item.title}
                                     </p>
                                 </div>

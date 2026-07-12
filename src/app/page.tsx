@@ -6,6 +6,7 @@ import { ResultFollowUpPanel } from '@/components/ResultFollowUpPanel';
 import { RecentChangesPanel } from '@/components/RecentChangesPanel';
 import { WatchResultsPanel } from '@/components/WatchResultsPanel';
 import { SavedCountBadge } from '@/components/SavedCountBadge';
+import { BiddingTable } from '@/components/BiddingTable';
 import { NewsSection } from '@/components/NewsSection';
 import { NewsTicker } from '@/components/NewsTicker';
 import { getShortBiddingLabel } from '@/lib/bidding_schedule';
@@ -154,6 +155,11 @@ export default async function Home() {
         <OpeningResultDigest items={allItems} report={openingResultReport} />
 
         <ResultFollowUpPanel items={allItems} />
+
+        {/* 案件一覧 */}
+        <div className="mt-10">
+          <BiddingTable items={allItems} />
+        </div>
 
         {/* News Section */}
         <NewsSection />
