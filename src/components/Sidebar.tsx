@@ -1,17 +1,15 @@
 'use client';
 
-import { LayoutDashboard, Search, Bookmark, Settings, Newspaper, MessageSquareText, MapPinned } from 'lucide-react';
-import Image from 'next/image';
+import { LayoutDashboard, Search, Briefcase, Settings, MessageSquareText, ChartColumn, Wrench } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 const navItems = [
     { href: '/', label: 'ダッシュボード', icon: LayoutDashboard },
-    { href: '/#news', label: '奈良ニュース', icon: Newspaper },
-    { href: '/#municipality-status', label: '市町村状況', icon: MapPinned },
     { href: '/search', label: '案件検索', icon: Search },
+    { href: '/analytics', label: '分析', icon: ChartColumn },
+    { href: '/saved', label: '営業管理', icon: Briefcase },
     { href: '/chat', label: '入札チャット', icon: MessageSquareText },
-    { href: '/saved', label: '保存済み', icon: Bookmark },
     { href: '/settings', label: '設定', icon: Settings },
 ];
 
@@ -56,18 +54,17 @@ export function Sidebar() {
                 })}
             </nav>
 
-            <div className="p-6 text-center">
-                <div className="inline-block relative">
-                    <Image
-                        src="https://ui-avatars.com/api/?name=User&background=c5a059&color=fff"
-                        alt="User"
-                        width={40}
-                        height={40}
-                        className="w-10 h-10 rounded-full mx-auto mb-2 opacity-90 object-cover"
-                    />
-                    <div className="w-full h-full absolute top-0 left-0 rounded-full border border-accent/20 scale-125"></div>
-                </div>
-                <p className="text-xs text-primary mt-3 tracking-widest font-serif">山田 太郎</p>
+            <div className="p-5">
+                <Link
+                    href="/admin"
+                    className={`flex items-center justify-center gap-2 rounded-xl px-3 py-2.5 text-[11px] tracking-widest transition-all ${pathname === '/admin'
+                        ? 'text-accent bg-accent/5'
+                        : 'text-secondary/50 hover:text-accent hover:bg-accent/5'
+                    }`}
+                >
+                    <Wrench size={13} />
+                    <span>運用状況</span>
+                </Link>
             </div>
         </aside>
         <nav className="fixed inset-x-0 top-0 z-30 flex items-center gap-3 overflow-x-auto border-b border-border bg-sidebar/95 px-4 py-3 font-serif backdrop-blur lg:hidden">
