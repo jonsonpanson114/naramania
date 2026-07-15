@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { BiddingItem } from '@/types/bidding';
 import { Bookmark, Briefcase, Trash2, Award, AlertTriangle, Layers, Send, TrendingUp, type LucideIcon } from 'lucide-react';
+import { WatchButton } from '@/components/WatchButton';
 
 type SalesStatus = 'pending' | 'active' | 'negotiating' | 'won' | 'lost';
 type SavedBiddingItem = BiddingItem & { salesStatus?: SalesStatus };
@@ -112,6 +113,9 @@ export function ProjectActionPanel({ item }: ProjectActionPanelProps) {
             </div>
 
             <div className="flex items-center gap-3 shrink-0">
+                <div className="w-40">
+                    <WatchButton itemId={item.id} />
+                </div>
                 {isSaved ? (
                     <>
                         <div className="flex items-center gap-2 bg-slate-50 border border-border/20 px-4 py-2.5 rounded-lg shadow-sm">

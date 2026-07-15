@@ -262,7 +262,7 @@ export function BiddingTable({ items, initialTab = 'active', initialKeyword = ''
     };
 
     return (
-        <section id="project-board" className="space-y-5 scroll-mt-24 [font-family:'BIZ_UDPGothic','Yu_Gothic','Hiragino_Kaku_Gothic_ProN',sans-serif]" aria-label="案件一覧">
+        <section id="project-board" className="space-y-5 scroll-mt-24" aria-label="案件一覧">
             <div className="overflow-hidden rounded-[2rem] border border-stone-200/80 bg-white/80 shadow-sm backdrop-blur-xl">
                 <div className="space-y-4 p-5 lg:p-6">
                     {/* メインタブ */}

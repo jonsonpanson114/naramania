@@ -11,7 +11,10 @@
   --color-sidebar: #f7f4ef;   /* Beige */
   --color-border: #e6e2d8;
   
+  /* 見出し・ロゴ用のアクセント書体。本文には使わない */
   --font-serif: "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", "MS PMincho", "Times New Roman", serif;
+  /* 本文の既定書体 */
+  --font-sans: "BIZ UDPGothic", "Yu Gothic", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
 }
 
 @theme inline {
@@ -23,9 +26,10 @@
   --color-background: var(--color-background);
   --color-sidebar: var(--color-sidebar);
   --color-border: var(--color-border);
-  
+
   --font-serif: var(--font-serif);
-  
+  --font-sans: var(--font-sans);
+
   --shadow-soft: 0 4px 20px rgba(197, 160, 89, 0.08);
   --shadow-card: 0 2px 10px rgba(0, 0, 0, 0.03);
 }
@@ -33,7 +37,7 @@
 body {
   background-color: var(--color-background);
   color: var(--color-primary);
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
 }
 
 /* Utilities for sidebar links */

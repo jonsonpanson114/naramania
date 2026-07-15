@@ -13,12 +13,15 @@ const navItems = [
     { href: '/settings', label: '設定', icon: Settings },
 ];
 
+// スマホは横幅が限られるため、下部タブには主要5項目だけを出す
+const MOBILE_TAB_ITEMS = navItems.filter(item => item.href !== '/settings');
+
 export function Sidebar() {
     const pathname = usePathname();
 
     return (
         <>
-        <aside className="hidden w-56 bg-sidebar h-screen lg:flex flex-col fixed left-0 top-0 z-20 border-r border-border font-serif">
+        <aside className="hidden w-56 bg-sidebar h-screen lg:flex flex-col fixed left-0 top-0 z-20 border-r border-border">
             <div className="px-8 py-9 flex flex-col items-center gap-4 mb-1">
                 <Link href="/" className="flex flex-col items-center gap-4 hover:opacity-80 transition-opacity">
                     <div className="w-12 h-12 flex items-center justify-center border border-accent/30 rotate-45">
@@ -67,26 +70,47 @@ export function Sidebar() {
                 </Link>
             </div>
         </aside>
-        <nav className="fixed inset-x-0 top-0 z-30 flex items-center gap-3 overflow-x-auto border-b border-border bg-sidebar/95 px-4 py-3 font-serif backdrop-blur lg:hidden">
-            <Link href="/" className="mr-1 flex shrink-0 items-center gap-2 pr-2">
+        {/* モバイル: 上部はロゴと副次リンクだけの薄いバー */}
+        <nav className="fixed inset-x-0 top-0 z-30 flex items-center justify-between border-b border-border bg-sidebar/95 px-4 py-3 backdrop-blur lg:hidden">
+            <Link href="/" className="flex items-center gap-2">
                 <div className="flex h-8 w-8 rotate-45 items-center justify-center border border-accent/30">
                     <span className="-rotate-45 text-sm text-accent font-serif">N</span>
                 </div>
                 <span className="whitespace-nowrap text-xs font-bold tracking-widest text-primary">奈良入札</span>
             </Link>
-            {navItems.map((item) => {
+            <div className="flex items-center gap-1">
+                <Link
+                    href="/admin"
+                    className={`flex h-9 w-9 items-center justify-center rounded-full transition-colors ${pathname === '/admin' ? 'text-accent bg-accent/10' : 'text-secondary/50'}`}
+                    aria-label="運用状況"
+                >
+                    <Wrench size={16} />
+                </Link>
+                <Link
+                    href="/settings"
+                    className={`flex h-9 w-9 items-center justify-center rounded-full transition-colors ${pathname === '/settings' ? 'text-accent bg-accent/10' : 'text-secondary/50'}`}
+                    aria-label="設定"
+                >
+                    <Settings size={16} />
+                </Link>
+            </div>
+        </nav>
+
+        {/* モバイル: 下部固定タブで主要導線を親指の届く位置に */}
+        <nav
+            className="fixed inset-x-0 bottom-0 z-30 grid border-t border-border bg-sidebar/95 backdrop-blur lg:hidden"
+            style={{ gridTemplateColumns: `repeat(${MOBILE_TAB_ITEMS.length}, minmax(0, 1fr))`, paddingBottom: 'env(safe-area-inset-bottom)' }}
+        >
+            {MOBILE_TAB_ITEMS.map((item) => {
                 const isActive = item.href === '/' ? pathname === '/' : pathname === item.href;
                 const Icon = item.icon;
                 return (
                     <Link
                         key={item.href}
                         href={item.href}
-                        className={`flex shrink-0 items-center gap-1.5 rounded-md border px-3 py-2 text-[10px] tracking-wider transition-all ${isActive
-                            ? 'border-accent/30 bg-accent/10 text-accent'
-                            : 'border-transparent text-secondary hover:border-accent/20 hover:text-accent'
-                            }`}
+                        className={`flex flex-col items-center gap-1 py-2.5 text-[10px] tracking-wide transition-colors ${isActive ? 'text-accent' : 'text-secondary/60'}`}
                     >
-                        <Icon size={14} />
+                        <Icon size={18} strokeWidth={isActive ? 2.4 : 2} />
                         <span>{item.label}</span>
                     </Link>
                 );
