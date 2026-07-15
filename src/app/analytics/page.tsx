@@ -13,12 +13,15 @@ interface ScatterDataPoint {
     type: BiddingType;
 }
 
-// Convert "12,345,000円" to 12345000
+// Convert "12,345,000円" to 12345000.
+// 「1,834,283,000円(消費税10%含む)」のような注記の数字まで連結しないよう、
+// 「円」の直前の数字列だけを金額として扱う。
 function parsePrice(priceStr?: string): number | null {
     if (!priceStr) return null;
-    const clean = priceStr.replace(/[^0-9]/g, '');
-    const num = parseInt(clean, 10);
-    return isNaN(num) ? null : num;
+    const yenMatch = priceStr.match(/([0-9][0-9,]*)\s*円/);
+    const target = yenMatch ? yenMatch[1] : (priceStr.match(/[0-9][0-9,]*/)?.[0] ?? '');
+    const num = parseInt(target.replace(/,/g, ''), 10);
+    return Number.isFinite(num) && num > 0 ? num : null;
 }
 
 function formatCurrency(val: number): string {
@@ -34,11 +37,7 @@ export default async function AnalyticsPage() {
     const contractorStats: Record<string, { count: number, totalAmount: number }> = {};
     const designStats: Record<string, { count: number, totalAmount: number }> = {};
 
-    const parseAmount = (price: string | undefined): number => {
-        if (!price) return 0;
-        const normalized = price.replace(/[^\d]/g, '');
-        return parseInt(normalized) || 0;
-    };
+    const parseAmount = (price: string | undefined): number => parsePrice(price) ?? 0;
 
     items.forEach((item: BiddingItem) => {
         if (item.winningContractor) {
