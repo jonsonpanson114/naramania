@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-14T08:51:37.549Z",
+  "generatedAt": "2026-07-15T04:45:53.213Z",
   "currentItemCount": 184,
   "checkedMunicipalities": [
     "奈良市",
@@ -36,8 +36,8 @@
   "scraperResults": [
     {
       "municipality": "奈良市",
-      "rawCount": 14,
-      "keptCount": 12,
+      "rawCount": 15,
+      "keptCount": 13,
       "rejectedCount": 2,
       "warnings": [],
       "errors": []
@@ -52,8 +52,8 @@
     },
     {
       "municipality": "生駒市",
-      "rawCount": 13,
-      "keptCount": 13,
+      "rawCount": 14,
+      "keptCount": 14,
       "rejectedCount": 0,
       "warnings": [],
       "errors": []
@@ -94,8 +94,8 @@
     },
     {
       "municipality": "御所市",
-      "rawCount": 1,
-      "keptCount": 1,
+      "rawCount": 2,
+      "keptCount": 2,
       "rejectedCount": 0,
       "warnings": [],
       "errors": []
@@ -233,12 +233,33 @@
   ],
   "coverage": {
     "checkedMunicipalityCount": 24,
-    "expectedItemCount": 183,
-    "matchedItemCount": 183,
-    "missingItemCount": 0,
+    "expectedItemCount": 186,
+    "matchedItemCount": 185,
+    "missingItemCount": 1,
     "duplicateTitleGroupCount": 25,
     "duplicateTitleItemCount": 53,
     "results": [
+      {
+        "municipality": "御所市",
+        "snapshotCount": 2,
+        "expectedCount": 2,
+        "matchedCount": 1,
+        "missingCount": 1,
+        "duplicateTitleGroupCount": 0,
+        "duplicateTitleItemCount": 0,
+        "missingItems": [
+          {
+            "id": "gose-（仮称）御所市北部認定こども園整備工事設-2",
+            "municipality": "御所市",
+            "title": "（仮称）御所市北部認定こども園整備工事設計業務委託に係る公募型プロポーザル",
+            "status": "受付中",
+            "announcementDate": "2026-07-14",
+            "link": "",
+            "reason": "snapshot item should be present in scraper_result"
+          }
+        ],
+        "status": "missing"
+      },
       {
         "municipality": "葛城市",
         "snapshotCount": 32,
@@ -296,9 +317,9 @@
       },
       {
         "municipality": "生駒市",
-        "snapshotCount": 13,
-        "expectedCount": 13,
-        "matchedCount": 13,
+        "snapshotCount": 14,
+        "expectedCount": 14,
+        "matchedCount": 14,
         "missingCount": 0,
         "duplicateTitleGroupCount": 0,
         "duplicateTitleItemCount": 0,
@@ -307,9 +328,9 @@
       },
       {
         "municipality": "奈良市",
-        "snapshotCount": 14,
-        "expectedCount": 12,
-        "matchedCount": 12,
+        "snapshotCount": 15,
+        "expectedCount": 13,
+        "matchedCount": 13,
         "missingCount": 0,
         "duplicateTitleGroupCount": 5,
         "duplicateTitleItemCount": 10,
@@ -453,17 +474,6 @@
         "snapshotCount": 2,
         "expectedCount": 2,
         "matchedCount": 2,
-        "missingCount": 0,
-        "duplicateTitleGroupCount": 0,
-        "duplicateTitleItemCount": 0,
-        "missingItems": [],
-        "status": "ok"
-      },
-      {
-        "municipality": "御所市",
-        "snapshotCount": 1,
-        "expectedCount": 1,
-        "matchedCount": 1,
         "missingCount": 0,
         "duplicateTitleGroupCount": 0,
         "duplicateTitleItemCount": 0,
