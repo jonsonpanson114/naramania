@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-15T09:08:38.192Z",
+  "generatedAt": "2026-07-16T04:55:25.339Z",
   "currentItemCount": 184,
   "checkedMunicipalities": [
     "奈良市",
@@ -174,8 +174,8 @@
     },
     {
       "municipality": "三宅町",
-      "rawCount": 4,
-      "keptCount": 4,
+      "rawCount": 2,
+      "keptCount": 2,
       "rejectedCount": 0,
       "warnings": [],
       "errors": []
@@ -233,8 +233,8 @@
   ],
   "coverage": {
     "checkedMunicipalityCount": 24,
-    "expectedItemCount": 186,
-    "matchedItemCount": 185,
+    "expectedItemCount": 184,
+    "matchedItemCount": 183,
     "missingItemCount": 1,
     "duplicateTitleGroupCount": 25,
     "duplicateTitleItemCount": 53,
@@ -371,17 +371,6 @@
         "status": "ok"
       },
       {
-        "municipality": "三宅町",
-        "snapshotCount": 4,
-        "expectedCount": 4,
-        "matchedCount": 4,
-        "missingCount": 0,
-        "duplicateTitleGroupCount": 0,
-        "duplicateTitleItemCount": 0,
-        "missingItems": [],
-        "status": "ok"
-      },
-      {
         "municipality": "川西町",
         "snapshotCount": 5,
         "expectedCount": 4,
@@ -449,6 +438,17 @@
       },
       {
         "municipality": "広陵町",
+        "snapshotCount": 2,
+        "expectedCount": 2,
+        "matchedCount": 2,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 0,
+        "duplicateTitleItemCount": 0,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
+        "municipality": "三宅町",
         "snapshotCount": 2,
         "expectedCount": 2,
         "matchedCount": 2,
