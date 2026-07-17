@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-16T09:10:30.721Z",
+  "generatedAt": "2026-07-17T04:58:37.714Z",
   "currentItemCount": 184,
   "checkedMunicipalities": [
     "奈良市",
@@ -142,8 +142,8 @@
     },
     {
       "municipality": "香芝市",
-      "rawCount": 9,
-      "keptCount": 9,
+      "rawCount": 10,
+      "keptCount": 10,
       "rejectedCount": 0,
       "warnings": [],
       "errors": []
@@ -233,8 +233,8 @@
   ],
   "coverage": {
     "checkedMunicipalityCount": 24,
-    "expectedItemCount": 184,
-    "matchedItemCount": 183,
+    "expectedItemCount": 185,
+    "matchedItemCount": 184,
     "missingItemCount": 1,
     "duplicateTitleGroupCount": 25,
     "duplicateTitleItemCount": 53,
@@ -338,8 +338,8 @@
         "status": "ok"
       },
       {
-        "municipality": "三郷町",
-        "snapshotCount": 21,
+        "municipality": "香芝市",
+        "snapshotCount": 10,
         "expectedCount": 10,
         "matchedCount": 10,
         "missingCount": 0,
@@ -349,10 +349,10 @@
         "status": "ok"
       },
       {
-        "municipality": "香芝市",
-        "snapshotCount": 9,
-        "expectedCount": 9,
-        "matchedCount": 9,
+        "municipality": "三郷町",
+        "snapshotCount": 21,
+        "expectedCount": 10,
+        "matchedCount": 10,
         "missingCount": 0,
         "duplicateTitleGroupCount": 0,
         "duplicateTitleItemCount": 0,
