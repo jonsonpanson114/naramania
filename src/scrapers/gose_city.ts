@@ -12,6 +12,11 @@ const GOSE_PROPOSAL_FALLBACKS: Record<string, { link: string; biddingDate: strin
         link: 'https://www.city.gose.nara.jp/0000004589.html',
         biddingDate: '2026-07-29',
     },
+    // RSSのlinkが空で流れてくるため、公開ページのURLを補完する
+    '（仮称）御所市北部認定こども園整備工事設計業務委託に係る公募型プロポーザル': {
+        link: 'https://www.city.gose.nara.jp/0000004649.html',
+        biddingDate: '',
+    },
 };
 
 function classifyType(title: string): '建築' | 'コンサル' | 'その他' {

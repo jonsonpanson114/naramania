@@ -20,13 +20,20 @@ const KASHIBA_KNOWN_SCHEDULES: Record<string, {
     announcementDate?: string;
     biddingDate: string;
     link?: string;
-    status?: '受付中' | '落札';
+    status?: '受付中' | '受付終了' | '落札';
     winningContractor?: string;
 }> = {
+    '志都美小学校改築工事に伴う実施設計業務': {
+        announcementDate: '2026-06-18',
+        biddingDate: '2026-07-10',
+        link: 'https://www.city.kashiba.lg.jp/site/nyuusatsu/67641.html',
+        status: '受付終了',
+    },
     '五位堂小学校改築工事に伴う実施設計業務': {
         announcementDate: '2026-04-23',
         biddingDate: '2026-05-26',
         link: 'https://www.city.kashiba.lg.jp/site/nyuusatsu/list288-1034.html',
+        status: '受付終了',
     },
     '下田小学校長寿命化改修工事': {
         announcementDate: '2026-04-23',
