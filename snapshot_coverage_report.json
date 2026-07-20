@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-15T15:01:27.051Z",
+  "generatedAt": "2026-07-20T04:47:25.385Z",
   "checkedMunicipalityCount": 23,
   "expectedItemCount": 184,
   "matchedItemCount": 184,
   "missingItemCount": 0,
-  "duplicateTitleGroupCount": 12,
-  "duplicateTitleItemCount": 25,
+  "duplicateTitleGroupCount": 11,
+  "duplicateTitleItemCount": 23,
   "results": [
     {
       "municipality": "葛城市",
@@ -64,12 +64,12 @@
     },
     {
       "municipality": "五條市",
-      "snapshotCount": 15,
-      "expectedCount": 15,
-      "matchedCount": 15,
+      "snapshotCount": 13,
+      "expectedCount": 13,
+      "matchedCount": 13,
       "missingCount": 0,
-      "duplicateTitleGroupCount": 1,
-      "duplicateTitleItemCount": 2,
+      "duplicateTitleGroupCount": 0,
+      "duplicateTitleItemCount": 0,
       "missingItems": [],
       "status": "ok"
     },
@@ -97,9 +97,9 @@
     },
     {
       "municipality": "奈良市",
-      "snapshotCount": 7,
-      "expectedCount": 7,
-      "matchedCount": 7,
+      "snapshotCount": 8,
+      "expectedCount": 8,
+      "matchedCount": 8,
       "missingCount": 0,
       "duplicateTitleGroupCount": 0,
       "duplicateTitleItemCount": 0,
@@ -195,6 +195,17 @@
       "status": "ok"
     },
     {
+      "municipality": "御所市",
+      "snapshotCount": 2,
+      "expectedCount": 2,
+      "matchedCount": 2,
+      "missingCount": 0,
+      "duplicateTitleGroupCount": 0,
+      "duplicateTitleItemCount": 0,
+      "missingItems": [],
+      "status": "ok"
+    },
+    {
       "municipality": "広陵町",
       "snapshotCount": 2,
       "expectedCount": 2,
@@ -229,17 +240,6 @@
     },
     {
       "municipality": "王寺町",
-      "snapshotCount": 1,
-      "expectedCount": 1,
-      "matchedCount": 1,
-      "missingCount": 0,
-      "duplicateTitleGroupCount": 0,
-      "duplicateTitleItemCount": 0,
-      "missingItems": [],
-      "status": "ok"
-    },
-    {
-      "municipality": "御所市",
       "snapshotCount": 1,
       "expectedCount": 1,
       "matchedCount": 1,

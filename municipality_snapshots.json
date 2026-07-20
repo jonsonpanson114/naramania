@@ -275,6 +275,16 @@
   ],
   "奈良市": [
     {
+      "id": "nara-city-0000002593",
+      "municipality": "奈良市",
+      "title": "庁舎中央棟地下書庫内部改修に伴う建築設計業務委託",
+      "type": "コンサル",
+      "announcementDate": "2026-07-15",
+      "biddingDate": "2026-08-27",
+      "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+      "status": "受付中"
+    },
+    {
       "id": "nara-city-0000002557",
       "municipality": "奈良市",
       "title": "ＪＲ奈良駅高架下公衆トイレ改修工事",
@@ -1057,24 +1067,13 @@
   ],
   "五條市": [
     {
-      "id": "gojo-epi-2601022",
-      "municipality": "五條市",
-      "title": "向加名生団地B棟屋根改修工事",
-      "type": "建築",
-      "announcementDate": "2026-06-30",
-      "biddingDate": "2026-07-10",
-      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002601022",
-      "status": "受付中",
-      "estimatedPrice": "4,930,000円"
-    },
-    {
-      "id": "gojo-epi-2601002",
+      "id": "gojo-7218f3ca",
       "municipality": "五條市",
       "title": "宗桧公民館改修工事",
       "type": "建築",
       "announcementDate": "2026-05-01",
-      "biddingDate": "2026-05-27",
-      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002601002",
+      "biddingDate": "2026-05-01",
+      "link": "https://www.city.gojo.lg.jp/jigyousha/nyuusatsu/8/R8/index.html",
       "status": "不調",
       "estimatedPrice": "44,460,000円"
     },
@@ -1111,88 +1110,64 @@
       "status": "受付中"
     },
     {
-      "id": "gojo-epi-2501056",
+      "id": "gojo-dabc76a7",
       "municipality": "五條市",
       "title": "川端住宅２２・２３号解体工事",
       "type": "建築",
       "announcementDate": "2025-12-16",
-      "biddingDate": "2026-01-09",
-      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002501056",
+      "biddingDate": "2025-12-16",
+      "link": "https://www.city.gojo.lg.jp/jigyousha/nyuusatsu/8/R7/index.html",
       "status": "落札",
       "winningContractor": "逢坂建設",
       "estimatedPrice": "3,188,000円"
     },
     {
-      "id": "gojo-epi-2501048",
+      "id": "gojo-71ef87a9",
       "municipality": "五條市",
       "title": "向加名生団地Ａ棟屋根改修工事",
       "type": "建築",
       "announcementDate": "2025-11-18",
-      "biddingDate": "2025-12-02",
-      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002501048",
+      "biddingDate": "2025-11-18",
+      "link": "https://www.city.gojo.lg.jp/jigyousha/nyuusatsu/8/R7/index.html",
       "status": "落札",
       "winningContractor": "グローバル工業（株）",
       "estimatedPrice": "4,085,000円"
     },
     {
-      "id": "gojo-epi-2501040",
+      "id": "gojo-9d5d8c46",
       "municipality": "五條市",
       "title": "ベストラインスタジアム（上野公園野球場）施設改修工事",
       "type": "建築",
       "announcementDate": "2025-11-04",
-      "biddingDate": "2025-12-19",
-      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002501040",
+      "biddingDate": "2025-11-04",
+      "link": "https://www.city.gojo.lg.jp/jigyousha/nyuusatsu/8/R7/index.html",
       "status": "落札",
       "winningContractor": "（株）森岡組",
       "estimatedPrice": "43,258,000円"
     },
     {
-      "id": "gojo-epi-2501039",
-      "municipality": "五條市",
-      "title": "市営住宅空家修繕工事",
-      "type": "建築",
-      "announcementDate": "2025-10-07",
-      "biddingDate": "2025-10-20",
-      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002501039",
-      "status": "落札",
-      "winningContractor": "前根建設",
-      "estimatedPrice": "5,213,000円"
-    },
-    {
-      "id": "gojo-epi-2501036",
+      "id": "gojo-580ad002",
       "municipality": "五條市",
       "title": "須恵児童公園トイレ撤去工事",
       "type": "建築",
       "announcementDate": "2025-09-30",
-      "biddingDate": "2025-10-10",
-      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002501036",
+      "biddingDate": "2025-09-30",
+      "link": "https://www.city.gojo.lg.jp/jigyousha/nyuusatsu/8/R7/index.html",
       "status": "落札",
       "winningContractor": "たけや興業（株）",
       "estimatedPrice": "929,000円"
     },
     {
-      "id": "gojo-epi-2501011",
+      "id": "gojo-98fbdc6b",
       "municipality": "五條市",
       "title": "阿田峯公園トイレ洋式化工事",
       "type": "建築",
       "announcementDate": "2025-07-08",
-      "biddingDate": "2025-07-18",
-      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002501011",
+      "biddingDate": "2025-07-08",
+      "link": "https://www.city.gojo.lg.jp/jigyousha/nyuusatsu/8/R7/index.html",
       "status": "落札",
       "winningContractor": "（株）福嶋組",
       "estimatedPrice": "2,992,000円"
-    },
-    {
-      "id": "gojo-epi-2501009",
-      "municipality": "五條市",
-      "title": "五條市立田園公民館男子トイレ洋式化工事",
-      "type": "建築",
-      "announcementDate": "2025-07-01",
-      "biddingDate": "2025-07-11",
-      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002501009",
-      "status": "落札",
-      "winningContractor": "（株）福嶋組",
-      "estimatedPrice": "886,000円"
     },
     {
       "id": "gojo-1edb38ae",
@@ -1205,31 +1180,53 @@
       "status": "受付中"
     },
     {
-      "id": "gojo-epi-2501007",
+      "id": "gojo-d17a73c5",
+      "municipality": "五條市",
+      "title": "五條市立田園公民館男子トイレ洋式化工事",
+      "type": "建築",
+      "announcementDate": "2025-07-01",
+      "biddingDate": "2025-07-01",
+      "link": "https://www.city.gojo.lg.jp/jigyousha/nyuusatsu/8/R7/index.html",
+      "status": "落札",
+      "winningContractor": "（株）福嶋組",
+      "estimatedPrice": "886,000円"
+    },
+    {
+      "id": "gojo-16cb7224",
       "municipality": "五條市",
       "title": "平沼田老人憩の家屋根修繕工事",
       "type": "建築",
       "announcementDate": "2025-06-17",
-      "biddingDate": "2025-06-27",
-      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002501007",
+      "biddingDate": "2025-06-17",
+      "link": "https://www.city.gojo.lg.jp/jigyousha/nyuusatsu/8/R7/index.html",
       "status": "落札",
       "winningContractor": "逢坂建設",
       "estimatedPrice": "2,715,000円"
     },
     {
-      "id": "gojo-epi-2501001",
+      "id": "gojo-6bb4979d",
       "municipality": "五條市",
       "title": "市営住宅空家修繕工事",
       "type": "建築",
       "announcementDate": "2025-05-27",
-      "biddingDate": "2025-06-27",
-      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002501001",
+      "biddingDate": "2025-10-07",
+      "link": "https://www.city.gojo.lg.jp/jigyousha/nyuusatsu/8/R7/index.html",
       "status": "落札",
-      "winningContractor": "（株）近井工務店",
-      "estimatedPrice": "7,698,000円"
+      "winningContractor": "前根建設",
+      "estimatedPrice": "5,213,000円"
     }
   ],
   "御所市": [
+    {
+      "id": "gose-（仮称）御所市北部認定こども園整備工事設-3",
+      "municipality": "御所市",
+      "title": "（仮称）御所市北部認定こども園整備工事設計業務委託に係る公募型プロポーザル",
+      "type": "コンサル",
+      "announcementDate": "2026-07-14",
+      "biddingDate": "",
+      "link": "https://www.city.gose.nara.jp/0000004649.html",
+      "status": "受付中"
+    },
     {
       "id": "gose-2026-06-08-御所市義務教育学校建設に関する基本設計及び実施設-fallback",
       "municipality": "御所市",
@@ -1905,7 +1902,7 @@
       "announcementDate": "2026-06-24",
       "biddingDate": "2026-07-15",
       "link": "https://www.town.ikaruga.nara.jp/0000002502.html",
-      "status": "受付中"
+      "status": "受付終了"
     },
     {
       "id": "斑鳩町-2026-05-01-斑鳩小学校の長寿命化工事に向けた基本計画",
@@ -1976,6 +1973,16 @@
   ],
   "香芝市": [
     {
+      "id": "kashiba-web-64af3394",
+      "municipality": "香芝市",
+      "title": "志都美小学校改築工事に伴う実施設計業務",
+      "type": "コンサル",
+      "announcementDate": "2026-07-16",
+      "biddingDate": "2026-07-31",
+      "link": "https://www.city.kashiba.lg.jp/site/nyuusatsu/67641.html",
+      "status": "受付中"
+    },
+    {
       "id": "kashiba-web-9d36d968",
       "municipality": "香芝市",
       "title": "令和7年度流域貯留浸透事業施設整備工事",
@@ -1983,16 +1990,6 @@
       "announcementDate": "2026-07-09",
       "biddingDate": "2026-07-28",
       "link": "https://www.city.kashiba.lg.jp/site/nyuusatsu/68143.html",
-      "status": "受付中"
-    },
-    {
-      "id": "kashiba-web-65a0eda8",
-      "municipality": "香芝市",
-      "title": "志都美小学校改築工事に伴う実施設計業務",
-      "type": "コンサル",
-      "announcementDate": "2026-06-18",
-      "biddingDate": "2026-07-10",
-      "link": "https://www.city.kashiba.lg.jp/site/nyuusatsu/67641.html",
       "status": "受付中"
     },
     {
