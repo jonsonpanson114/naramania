@@ -124,13 +124,12 @@
     "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/9328.html",
     "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk260722_02k.pdf",
     "status": "受付中",
-    "estimatedPrice": "2,695,000円(内、消費税等相当額 245,000円)",
+    "estimatedPrice": "¥2,695,000円(内、消費税等相当額¥245,000円)",
     "constructionPeriod": "着工の日から令和8年10月23日まで",
     "description": "市営霞ヶ丘住宅空家改修工事(203号、205号、208号、209号、302号、306号)",
     "tags": [
       "改修",
-      "建築",
-      "住宅"
+      "建築"
     ],
     "isIntelligenceExtracted": true,
     "extractionSource": "gemini"
@@ -475,11 +474,12 @@
     "status": "落札",
     "winningContractor": "株式会社hinata",
     "estimatedPrice": "42,460,000円",
-    "constructionPeriod": "令和9年1月29日",
+    "constructionPeriod": "契約日～令和9年1月29日",
     "description": "広陵西小学校ベランダ手摺改修工事",
     "tags": [
       "改修",
-      "建築"
+      "建築",
+      "外壁"
     ],
     "isIntelligenceExtracted": true,
     "extractionSource": "gemini"
@@ -822,12 +822,12 @@
     "winningContractor": "株式会社彩都建築設計",
     "estimatedPrice": "2,710,000円",
     "designFirm": "株式会社彩都建築設計",
-    "constructionPeriod": "令和8年11月30日",
+    "constructionPeriod": "契約日 ~ 令和8年11月30日",
     "description": "広陵運動公園トイレ改築工事実施設計業務委託",
     "tags": [
-      "建築",
-      "改修",
-      "設計"
+      "改築",
+      "設計",
+      "建築"
     ],
     "isIntelligenceExtracted": true,
     "extractionSource": "gemini"
@@ -884,12 +884,12 @@
     "link": "https://www.city.gojo.lg.jp/jigyousha/nyuusatsu/2/12102.html",
     "pdfUrl": "https://www.city.gojo.lg.jp/material/files/group/4/r842.pdf",
     "status": "受付中",
-    "constructionPeriod": "6ヶ月",
-    "description": "道路改良工事 排水構造物工一式 (上野町)",
+    "constructionPeriod": "6",
+    "description": "道路改良工事 (上野町): 排水構造物工一式",
     "tags": [
+      "土木",
       "道路",
-      "改良",
-      "土木"
+      "排水"
     ],
     "isIntelligenceExtracted": true,
     "extractionSource": "gemini"
@@ -1026,13 +1026,12 @@
     "link": "https://www.city.gojo.lg.jp/jigyousha/nyuusatsu/2/index.html",
     "pdfUrl": "https://www.city.gojo.lg.jp/material/files/group/4/r843.pdf",
     "status": "受付中",
-    "designFirm": "建築関係建設コンサルタント",
-    "constructionPeriod": "3ヶ月",
-    "description": "保健福祉センター空調設備更新工事設計業務委託 (野原西6丁目) 空調設備更新工事の設計",
+    "constructionPeriod": "3",
+    "description": "保健福祉センター空調設備更新工事設計業務委託",
     "tags": [
       "空調",
-      "設備",
-      "設計"
+      "設計",
+      "建築"
     ],
     "isIntelligenceExtracted": true,
     "extractionSource": "gemini"
@@ -1234,12 +1233,12 @@
     "biddingDate": "2026-01-29",
     "estimatedPrice": "2,189,000円",
     "designFirm": "(有)坪岡建築事務所",
-    "constructionPeriod": "契約日の翌日 から令和8年3月19日",
+    "constructionPeriod": "契約日の翌日から令和8年3月19日まで",
     "description": "市営住宅内装改修工事に伴う設計委託",
     "tags": [
       "設計",
       "改修",
-      "住宅"
+      "建築"
     ],
     "isIntelligenceExtracted": true,
     "extractionSource": "gemini"
@@ -1319,13 +1318,12 @@
     "winnerType": "ゼネコン",
     "winningContractor": "(株)タカギ工業",
     "biddingDate": "2025-12-18",
-    "estimatedPrice": "29,502,000円(消費税%含む)",
-    "constructionPeriod": "契約日の翌日 から 令和 8年3月31日",
+    "estimatedPrice": "29,502,000円",
+    "constructionPeriod": "契約日の翌日から令和8年3月31日まで",
     "description": "耳成地区公民館屋根等改修工事",
     "tags": [
       "改修",
-      "建築",
-      "屋根工事"
+      "建築"
     ],
     "isIntelligenceExtracted": true,
     "extractionSource": "gemini"
@@ -1474,8 +1472,8 @@
     "constructionPeriod": "契約日の翌日から令和8年2月27日まで",
     "description": "市営住宅内装等改修工事に伴う設計委託",
     "tags": [
-      "改修",
       "設計",
+      "改修",
       "内装"
     ],
     "isIntelligenceExtracted": true,
@@ -1563,12 +1561,12 @@
     "winningContractor": "(株)大谷建設",
     "biddingDate": "2025-10-23",
     "estimatedPrice": "4,621,100円(消費税含む)",
-    "constructionPeriod": "契約日の翌日から令和8年2月27日まで",
+    "constructionPeriod": "契約日の翌日 から 令和 8年2月27日",
     "description": "八木グリーンタウン公園他施設更新工事",
     "tags": [
-      "改修",
-      "建築",
-      "公園施設"
+      "公園",
+      "施設更新",
+      "土木"
     ],
     "isIntelligenceExtracted": true,
     "extractionSource": "gemini"
@@ -1585,12 +1583,11 @@
     "winnerType": "ゼネコン",
     "biddingDate": "2025-10-23",
     "estimatedPrice": "29,238,000円",
-    "constructionPeriod": "令和 8年2月27日まで",
+    "constructionPeriod": "契約日の翌日から令和 8年2月27日まで",
     "description": "耳成地区公民館屋根改修工事",
     "tags": [
       "改修",
-      "建築",
-      "屋根"
+      "建築"
     ],
     "isIntelligenceExtracted": true,
     "extractionSource": "gemini"
@@ -1650,7 +1647,8 @@
     "winnerType": "ゼネコン",
     "winningContractor": "(株)内藤建築事務所 奈良事務所",
     "biddingDate": "2025-09-30",
-    "estimatedPrice": "4,532,000円(消費税10%含む)",
+    "estimatedPrice": "4,532,000円",
+    "designFirm": "(株)内藤建築事務所 奈良事務所",
     "constructionPeriod": "契約日の翌日から令和8年3月31日まで",
     "description": "畝傍中学校EV棟増築工事に伴う工事監理業務委託",
     "tags": [
@@ -1757,9 +1755,9 @@
     "constructionPeriod": "契約日の翌日から令和8年2月27日まで",
     "description": "旧中央公民館・分館解体跡増築工事に伴う工事監理業務委託",
     "tags": [
-      "建築",
+      "工事監理",
       "解体",
-      "監理"
+      "増築"
     ],
     "isIntelligenceExtracted": true,
     "extractionSource": "gemini"
@@ -1932,13 +1930,13 @@
     "winnerType": "ゼネコン",
     "winningContractor": "大日本土木・崎山組特定建設工事共同企業体",
     "biddingDate": "2025-07-01",
-    "estimatedPrice": "1,667,530,000円 (税抜)",
-    "constructionPeriod": "議会議決日の翌日 から 令和9年3月18日",
-    "description": "八木中学校長寿命化改良工事（第１期）",
+    "estimatedPrice": "1,834,283,000円",
+    "constructionPeriod": "議会議決日の翌日 から令和 9年 3月18日",
+    "description": "八木中学校長寿命化改良工事(第1期)",
     "tags": [
       "建築",
       "改修",
-      "長寿命化"
+      "耐震"
     ],
     "isIntelligenceExtracted": true,
     "extractionSource": "gemini"
@@ -1990,12 +1988,12 @@
     "winningContractor": "(株)ゆうび建設",
     "biddingDate": "2025-06-26",
     "estimatedPrice": "7,755,000円(消費税含む)",
-    "constructionPeriod": "契約日の翌日から令和7年10月17日まで",
+    "constructionPeriod": "契約日の翌日から令和7年10月17日",
     "description": "市営住宅内装等改修工事",
     "tags": [
       "改修",
-      "内装",
-      "建築"
+      "建築",
+      "内装"
     ],
     "isIntelligenceExtracted": true,
     "extractionSource": "gemini"
@@ -2012,13 +2010,13 @@
     "winnerType": "設計事務所",
     "winningContractor": "(有)坪岡建築事務所",
     "biddingDate": "2025-06-26",
-    "estimatedPrice": "13,920,000円",
+    "estimatedPrice": "15,312,000円",
     "designFirm": "(有)坪岡建築事務所",
-    "constructionPeriod": "契約日の翌日から令和 8年 1月30日",
+    "constructionPeriod": "契約日の翌日 から 令和 8年 1月30日 まで",
     "description": "各小学校便所改修工事に伴う設計委託",
     "tags": [
-      "設計",
       "改修",
+      "設計",
       "建築"
     ],
     "isIntelligenceExtracted": true,
@@ -2160,9 +2158,9 @@
     "winnerType": "ゼネコン",
     "winningContractor": "(株)広澤建設",
     "biddingDate": "2025-05-20",
-    "estimatedPrice": "12,177,000円(消費税%含む)",
+    "estimatedPrice": "11,070,000円 (消費税抜)",
     "constructionPeriod": "契約日の翌日から令和7年9月30日まで",
-    "description": "晩成小学校屋外便所改修工事",
+    "description": "晚成小学校屋外便所改修工事",
     "tags": [
       "改修",
       "建築"
@@ -2227,13 +2225,13 @@
     "winnerType": "ゼネコン",
     "winningContractor": "国際航業(株) 奈良営業所",
     "biddingDate": "2025-05-15",
-    "estimatedPrice": "13,948,000円(消費税%含む)",
-    "constructionPeriod": "契約日の翌日から 令和 8年 2月27日",
+    "estimatedPrice": "13,948,000円",
+    "constructionPeriod": "契約日の翌日から令和8年2月27日まで",
     "description": "令和7年度橿原市耐震改修促進計画改定業務委託",
     "tags": [
       "耐震",
       "改修",
-      "調査"
+      "計画"
     ],
     "isIntelligenceExtracted": true,
     "extractionSource": "gemini"
@@ -2261,12 +2259,13 @@
     "winnerType": "ゼネコン",
     "winningContractor": "(株)AZ",
     "biddingDate": "2025-04-22",
-    "estimatedPrice": "129,404,000円(消費税%含む)",
-    "constructionPeriod": "契約日の翌日 から 令和8年3月18日",
+    "estimatedPrice": "129,404,000円 (消費税%含む)",
+    "constructionPeriod": "契約日の翌日から 令和8年3月18日",
     "description": "畝傍東幼稚園及び晩成幼稚園トイレ改修工事",
     "tags": [
       "改修",
-      "建築"
+      "建築",
+      "設備"
     ],
     "isIntelligenceExtracted": true,
     "extractionSource": "gemini"
@@ -2283,12 +2282,12 @@
     "winnerType": "ゼネコン",
     "winningContractor": "(株)崎山組",
     "biddingDate": "2025-04-22",
-    "estimatedPrice": "92,796,000円",
-    "constructionPeriod": "契約日の翌日 から 令和7年12月19日",
+    "estimatedPrice": "92,796,000円(消費税%含む)",
+    "constructionPeriod": "契約日の翌日から令和7年12月19日",
     "description": "四条団地(ペア)解体工事(3工区)",
     "tags": [
       "解体",
-      "工事"
+      "建築"
     ],
     "isIntelligenceExtracted": true,
     "extractionSource": "gemini"
@@ -2306,11 +2305,11 @@
     "winningContractor": "(株)南村組",
     "biddingDate": "2025-04-22",
     "estimatedPrice": "92,235,000円",
-    "constructionPeriod": "契約日の翌日から令和8年1月16日まで",
+    "constructionPeriod": "契約日の翌日 から 令和8年1月16日",
     "description": "四条団地(ペア)解体工事(2工区)",
     "tags": [
       "解体",
-      "土木"
+      "工事"
     ],
     "isIntelligenceExtracted": true,
     "extractionSource": "gemini"
