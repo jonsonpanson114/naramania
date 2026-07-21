@@ -840,7 +840,27 @@ function extractTextFromCandidate(response: GeminiRestResponse): string {
     return response.candidates?.[0]?.content?.parts?.map(part => part.text || '').join('').trim() || '';
 }
 
-function buildPrompt(query: string, localMatches: BiddingItem[], history: ChatTurn[]): string {
+/**
+ * Geminiのチャット応答をJSONとして寛容に解釈する。
+ * responseSchemaを使えるモードでは素直にJSONが返るが、google_search併用モードでは
+ * コードフェンス付きや前後に余計な文が混じることがある。JSONが取れなければ
+ * 本文そのものを answer として扱う。
+ */
+function parseChatJson(rawText: string): { answer?: string; followups?: string[] } {
+    const fenced = rawText.match(/```(?:json)?\s*([\s\S]*?)```/i);
+    const candidate = (fenced ? fenced[1] : rawText).trim();
+    try {
+        const parsed = JSON.parse(candidate);
+        if (parsed && typeof parsed === 'object' && typeof parsed.answer === 'string') {
+            return parsed as { answer?: string; followups?: string[] };
+        }
+    } catch {
+        // JSONでなければ本文をそのまま回答として使う
+    }
+    return { answer: rawText.trim() };
+}
+
+function buildPrompt(query: string, localMatches: BiddingItem[], history: ChatTurn[], enforceJsonInPrompt = false): string {
     const today = getNowInJst().toLocaleDateString('ja-JP');
     const weekRange = getThisWeekRangeJst();
     const lastWeekRange = getRelativeWeekRangeJst(-1);
@@ -876,7 +896,10 @@ ${query}
 
 ローカル案件データ:
 ${localSummary}
-`;
+${enforceJsonInPrompt ? `
+出力形式(重要): 説明文やコードフェンス(\`\`\`)を付けず、次のJSONオブジェクトだけを返してください。
+{"answer": "<回答本文>", "followups": ["<次に聞くと良い短い質問1>", "<質問2>", "<質問3>"]}
+` : ''}`;
 }
 
 async function callGeminiChat(prompt: string, useGoogleSearch: boolean, modelName: string, apiKey: string) {
@@ -892,11 +915,16 @@ async function callGeminiChat(prompt: string, useGoogleSearch: boolean, modelNam
                     parts: [{ text: prompt }],
                 },
             ],
-            generationConfig: {
-                responseMimeType: 'application/json',
-                responseSchema: CHAT_RESPONSE_SCHEMA,
-                temperature: 0.2,
-            },
+            // Gemini は google_search ツールと responseSchema(JSON構造化出力)を
+            // 同時に使えず 400 になる。検索を使うときはスキーマを外し、
+            // 代わりにプロンプトでJSON形式を指示する。
+            generationConfig: useGoogleSearch
+                ? { temperature: 0.2 }
+                : {
+                    responseMimeType: 'application/json',
+                    responseSchema: CHAT_RESPONSE_SCHEMA,
+                    temperature: 0.2,
+                },
             ...(useGoogleSearch ? { tools: [{ google_search: {} }] } : {}),
         }),
         cache: 'no-store',
@@ -1057,7 +1085,7 @@ function finalizeAnswer({
 
     const modelName = getChatModelName();
     const shouldUseWebSearch = intent.explicitWebSearch || localMatches.length < 3;
-    const prompt = buildPrompt(query, localMatches, history);
+    const prompt = buildPrompt(query, localMatches, history, shouldUseWebSearch);
     return callGeminiChat(prompt, shouldUseWebSearch, modelName, apiKey)
         .then((result) => {
             const rawText = extractTextFromCandidate(result);
@@ -1065,7 +1093,7 @@ function finalizeAnswer({
                 throw new Error('Gemini returned an empty response');
             }
 
-            const parsed = JSON.parse(rawText) as { answer?: string; followups?: string[] };
+            const parsed = parseChatJson(rawText);
             if (!parsed.answer?.trim()) {
                 throw new Error('Gemini response did not include an answer');
             }
