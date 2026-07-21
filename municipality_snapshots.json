@@ -586,6 +586,16 @@
   ],
   "生駒市": [
     {
+      "id": "ikoma-be8e4258d8",
+      "municipality": "生駒市",
+      "title": "上中学校校舎長寿命化改修工事（Ⅰ・Ⅱ期）",
+      "type": "建築",
+      "announcementDate": "2026-07-15",
+      "biddingDate": "2026-08-17",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+      "status": "受付中"
+    },
+    {
       "id": "ikoma-result-2601010038",
       "municipality": "生駒市",
       "title": "中保育園本館保育室床改修工事",
@@ -738,6 +748,17 @@
   ],
   "大和郡山市": [
     {
+      "id": "yamato-koriyama-4ff4ec8e",
+      "municipality": "大和郡山市",
+      "title": "【事前申請】大和郡山市立小泉出屋敷スポーツ会館補修工事",
+      "type": "建築",
+      "announcementDate": "2026-07-21",
+      "biddingDate": "2026-08-19",
+      "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/9328.html",
+      "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk260819_01k.pdf",
+      "status": "受付中"
+    },
+    {
       "id": "yamato-koriyama-e1146a80",
       "municipality": "大和郡山市",
       "title": "市営霞ヶ丘住宅空家改修工事（203号、205号、208号、209号、302号、306号）",
@@ -822,7 +843,7 @@
       "announcementDate": "2026-06-08",
       "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/3-4-5-2026-1.pdf",
       "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/3-4-5-2026-1.pdf",
-      "status": "受付中",
+      "status": "受付終了",
       "biddingDate": "2026-07-13"
     },
     {
@@ -833,7 +854,7 @@
       "announcementDate": "2026-06-08",
       "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/3-4-1-2026-1.pdf",
       "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/3-4-1-2026-1.pdf",
-      "status": "受付中",
+      "status": "受付終了",
       "biddingDate": "2026-07-13"
     },
     {
@@ -1067,13 +1088,25 @@
   ],
   "五條市": [
     {
-      "id": "gojo-7218f3ca",
+      "id": "gojo-epi-2601022",
+      "municipality": "五條市",
+      "title": "向加名生団地B棟屋根改修工事",
+      "type": "建築",
+      "announcementDate": "2026-06-30",
+      "biddingDate": "2026-07-10",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002601022",
+      "status": "落札",
+      "winningContractor": "東洋技建工業（株）",
+      "estimatedPrice": "4,490,000円"
+    },
+    {
+      "id": "gojo-epi-2601002",
       "municipality": "五條市",
       "title": "宗桧公民館改修工事",
       "type": "建築",
       "announcementDate": "2026-05-01",
-      "biddingDate": "2026-05-01",
-      "link": "https://www.city.gojo.lg.jp/jigyousha/nyuusatsu/8/R8/index.html",
+      "biddingDate": "2026-05-27",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002601002",
       "status": "不調",
       "estimatedPrice": "44,460,000円"
     },
@@ -1110,64 +1143,88 @@
       "status": "受付中"
     },
     {
-      "id": "gojo-dabc76a7",
+      "id": "gojo-epi-2501056",
       "municipality": "五條市",
       "title": "川端住宅２２・２３号解体工事",
       "type": "建築",
       "announcementDate": "2025-12-16",
-      "biddingDate": "2025-12-16",
-      "link": "https://www.city.gojo.lg.jp/jigyousha/nyuusatsu/8/R7/index.html",
+      "biddingDate": "2026-01-09",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002501056",
       "status": "落札",
       "winningContractor": "逢坂建設",
       "estimatedPrice": "3,188,000円"
     },
     {
-      "id": "gojo-71ef87a9",
+      "id": "gojo-epi-2501048",
       "municipality": "五條市",
       "title": "向加名生団地Ａ棟屋根改修工事",
       "type": "建築",
       "announcementDate": "2025-11-18",
-      "biddingDate": "2025-11-18",
-      "link": "https://www.city.gojo.lg.jp/jigyousha/nyuusatsu/8/R7/index.html",
+      "biddingDate": "2025-12-02",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002501048",
       "status": "落札",
       "winningContractor": "グローバル工業（株）",
       "estimatedPrice": "4,085,000円"
     },
     {
-      "id": "gojo-9d5d8c46",
+      "id": "gojo-epi-2501040",
       "municipality": "五條市",
       "title": "ベストラインスタジアム（上野公園野球場）施設改修工事",
       "type": "建築",
       "announcementDate": "2025-11-04",
-      "biddingDate": "2025-11-04",
-      "link": "https://www.city.gojo.lg.jp/jigyousha/nyuusatsu/8/R7/index.html",
+      "biddingDate": "2025-12-19",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002501040",
       "status": "落札",
       "winningContractor": "（株）森岡組",
       "estimatedPrice": "43,258,000円"
     },
     {
-      "id": "gojo-580ad002",
+      "id": "gojo-epi-2501039",
+      "municipality": "五條市",
+      "title": "市営住宅空家修繕工事",
+      "type": "建築",
+      "announcementDate": "2025-10-07",
+      "biddingDate": "2025-10-20",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002501039",
+      "status": "落札",
+      "winningContractor": "前根建設",
+      "estimatedPrice": "5,213,000円"
+    },
+    {
+      "id": "gojo-epi-2501036",
       "municipality": "五條市",
       "title": "須恵児童公園トイレ撤去工事",
       "type": "建築",
       "announcementDate": "2025-09-30",
-      "biddingDate": "2025-09-30",
-      "link": "https://www.city.gojo.lg.jp/jigyousha/nyuusatsu/8/R7/index.html",
+      "biddingDate": "2025-10-10",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002501036",
       "status": "落札",
       "winningContractor": "たけや興業（株）",
       "estimatedPrice": "929,000円"
     },
     {
-      "id": "gojo-98fbdc6b",
+      "id": "gojo-epi-2501011",
       "municipality": "五條市",
       "title": "阿田峯公園トイレ洋式化工事",
       "type": "建築",
       "announcementDate": "2025-07-08",
-      "biddingDate": "2025-07-08",
-      "link": "https://www.city.gojo.lg.jp/jigyousha/nyuusatsu/8/R7/index.html",
+      "biddingDate": "2025-07-18",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002501011",
       "status": "落札",
       "winningContractor": "（株）福嶋組",
       "estimatedPrice": "2,992,000円"
+    },
+    {
+      "id": "gojo-epi-2501009",
+      "municipality": "五條市",
+      "title": "五條市立田園公民館男子トイレ洋式化工事",
+      "type": "建築",
+      "announcementDate": "2025-07-01",
+      "biddingDate": "2025-07-11",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002501009",
+      "status": "落札",
+      "winningContractor": "（株）福嶋組",
+      "estimatedPrice": "886,000円"
     },
     {
       "id": "gojo-1edb38ae",
@@ -1180,45 +1237,33 @@
       "status": "受付中"
     },
     {
-      "id": "gojo-d17a73c5",
-      "municipality": "五條市",
-      "title": "五條市立田園公民館男子トイレ洋式化工事",
-      "type": "建築",
-      "announcementDate": "2025-07-01",
-      "biddingDate": "2025-07-01",
-      "link": "https://www.city.gojo.lg.jp/jigyousha/nyuusatsu/8/R7/index.html",
-      "status": "落札",
-      "winningContractor": "（株）福嶋組",
-      "estimatedPrice": "886,000円"
-    },
-    {
-      "id": "gojo-16cb7224",
+      "id": "gojo-epi-2501007",
       "municipality": "五條市",
       "title": "平沼田老人憩の家屋根修繕工事",
       "type": "建築",
       "announcementDate": "2025-06-17",
-      "biddingDate": "2025-06-17",
-      "link": "https://www.city.gojo.lg.jp/jigyousha/nyuusatsu/8/R7/index.html",
+      "biddingDate": "2025-06-27",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002501007",
       "status": "落札",
       "winningContractor": "逢坂建設",
       "estimatedPrice": "2,715,000円"
     },
     {
-      "id": "gojo-6bb4979d",
+      "id": "gojo-epi-2501001",
       "municipality": "五條市",
       "title": "市営住宅空家修繕工事",
       "type": "建築",
       "announcementDate": "2025-05-27",
-      "biddingDate": "2025-10-07",
-      "link": "https://www.city.gojo.lg.jp/jigyousha/nyuusatsu/8/R7/index.html",
+      "biddingDate": "2025-06-27",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002501001",
       "status": "落札",
-      "winningContractor": "前根建設",
-      "estimatedPrice": "5,213,000円"
+      "winningContractor": "（株）近井工務店",
+      "estimatedPrice": "7,698,000円"
     }
   ],
   "御所市": [
     {
-      "id": "gose-（仮称）御所市北部認定こども園整備工事設-3",
+      "id": "gose-（仮称）御所市北部認定こども園整備工事設-4",
       "municipality": "御所市",
       "title": "（仮称）御所市北部認定こども園整備工事設計業務委託に係る公募型プロポーザル",
       "type": "コンサル",
@@ -1306,7 +1351,7 @@
       "announcementDate": "2026-07-02",
       "biddingDate": "2026-07-16",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200700",
-      "status": "受付中"
+      "status": "受付終了"
     },
     {
       "id": "uda-dfe10e6d40",
@@ -1316,7 +1361,7 @@
       "announcementDate": "2026-07-02",
       "biddingDate": "2026-07-16",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200700",
-      "status": "受付中"
+      "status": "受付終了"
     },
     {
       "id": "uda-result-2695010009",
@@ -1585,23 +1630,25 @@
   ],
   "三宅町": [
     {
-      "id": "miyake-2026-06-15-三宅町文化ホールトイレ改修工事",
+      "id": "miyake-2026-07-21-三宅町文化ホールトイレ改修工事",
       "municipality": "三宅町",
       "title": "三宅町文化ホールトイレ改修工事",
       "type": "建築",
-      "announcementDate": "2026-06-15",
-      "link": "https://www.town.miyake.lg.jp/uploaded/attachment/5499.pdf",
-      "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5499.pdf",
+      "announcementDate": "2026-07-21",
+      "biddingDate": "2026-07-21",
+      "link": "https://www.town.miyake.lg.jp/soshiki/1/9375.html",
+      "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5616.pdf",
       "status": "受付中"
     },
     {
-      "id": "miyake-2026-06-15-上但馬保育所解体工事設計委託業務",
+      "id": "miyake-2026-07-21-上但馬保育所解体工事設計委託業務",
       "municipality": "三宅町",
       "title": "上但馬保育所解体工事設計委託業務",
       "type": "コンサル",
-      "announcementDate": "2026-06-15",
-      "link": "https://www.town.miyake.lg.jp/uploaded/attachment/5498.pdf",
-      "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5498.pdf",
+      "announcementDate": "2026-07-21",
+      "biddingDate": "2026-07-21",
+      "link": "https://www.town.miyake.lg.jp/soshiki/1/9376.html",
+      "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5619.pdf",
       "status": "受付中"
     },
     {

@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-20T09:03:21.643Z",
+  "generatedAt": "2026-07-21T05:21:14.580Z",
   "checkedMunicipalityCount": 23,
-  "expectedItemCount": 184,
-  "matchedItemCount": 184,
+  "expectedItemCount": 188,
+  "matchedItemCount": 188,
   "missingItemCount": 0,
-  "duplicateTitleGroupCount": 11,
-  "duplicateTitleItemCount": 23,
+  "duplicateTitleGroupCount": 12,
+  "duplicateTitleItemCount": 25,
   "results": [
     {
       "municipality": "葛城市",
@@ -64,20 +64,20 @@
     },
     {
       "municipality": "五條市",
-      "snapshotCount": 13,
-      "expectedCount": 13,
-      "matchedCount": 13,
+      "snapshotCount": 15,
+      "expectedCount": 15,
+      "matchedCount": 15,
       "missingCount": 0,
-      "duplicateTitleGroupCount": 0,
-      "duplicateTitleItemCount": 0,
+      "duplicateTitleGroupCount": 1,
+      "duplicateTitleItemCount": 2,
       "missingItems": [],
       "status": "ok"
     },
     {
       "municipality": "生駒市",
-      "snapshotCount": 13,
-      "expectedCount": 13,
-      "matchedCount": 13,
+      "snapshotCount": 14,
+      "expectedCount": 14,
+      "matchedCount": 14,
       "missingCount": 0,
       "duplicateTitleGroupCount": 0,
       "duplicateTitleItemCount": 0,
@@ -107,6 +107,17 @@
       "status": "ok"
     },
     {
+      "municipality": "大和郡山市",
+      "snapshotCount": 5,
+      "expectedCount": 5,
+      "matchedCount": 5,
+      "missingCount": 0,
+      "duplicateTitleGroupCount": 0,
+      "duplicateTitleItemCount": 0,
+      "missingItems": [],
+      "status": "ok"
+    },
+    {
       "municipality": "三宅町",
       "snapshotCount": 4,
       "expectedCount": 4,
@@ -119,17 +130,6 @@
     },
     {
       "municipality": "川西町",
-      "snapshotCount": 4,
-      "expectedCount": 4,
-      "matchedCount": 4,
-      "missingCount": 0,
-      "duplicateTitleGroupCount": 0,
-      "duplicateTitleItemCount": 0,
-      "missingItems": [],
-      "status": "ok"
-    },
-    {
-      "municipality": "大和郡山市",
       "snapshotCount": 4,
       "expectedCount": 4,
       "matchedCount": 4,

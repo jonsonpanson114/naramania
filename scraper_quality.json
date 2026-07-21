@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-07-20T08:58:29.071Z",
+  "generatedAt": "2026-07-21T04:28:08.037Z",
   "source": "daily_scrape",
-  "keptCount": 184,
+  "keptCount": 188,
   "municipalityCount": 23,
   "oldestAnnouncementDate": "2025-02-02",
-  "latestAnnouncementDate": "2026-07-16",
-  "scrapedCount": 357,
-  "rejectedCount": 234,
+  "latestAnnouncementDate": "2026-07-21",
+  "scrapedCount": 461,
+  "rejectedCount": 273,
   "municipalityAudit": {
     "expectedMunicipalityCount": 25,
     "coveredMunicipalityCount": 23,
@@ -46,13 +46,13 @@
       },
       {
         "municipality": "五條市",
-        "count": 13,
-        "changeFromPrevious": 0
+        "count": 15,
+        "changeFromPrevious": 2
       },
       {
         "municipality": "生駒市",
-        "count": 13,
-        "changeFromPrevious": 0
+        "count": 14,
+        "changeFromPrevious": 1
       },
       {
         "municipality": "香芝市",
@@ -65,17 +65,17 @@
         "changeFromPrevious": 0
       },
       {
+        "municipality": "大和郡山市",
+        "count": 5,
+        "changeFromPrevious": 1
+      },
+      {
         "municipality": "三宅町",
         "count": 4,
         "changeFromPrevious": 0
       },
       {
         "municipality": "川西町",
-        "count": 4,
-        "changeFromPrevious": 0
-      },
-      {
-        "municipality": "大和郡山市",
         "count": 4,
         "changeFromPrevious": 0
       },
@@ -135,45 +135,8 @@
         "changeFromPrevious": 0
       }
     ],
-    "retainedFromPrevious": [
-      "生駒市",
-      "葛城市",
-      "宇陀市",
-      "三宅町",
-      "三郷町"
-    ],
-    "issues": [
-      {
-        "municipality": "生駒市",
-        "level": "warning",
-        "message": "[生駒市] EPI 情報公開サービス停止中のため取得をスキップします。"
-      },
-      {
-        "municipality": "生駒市",
-        "level": "warning",
-        "message": "[生駒市] 部分取得エラーのため既存データ 13件を維持しています (new kept=0)"
-      },
-      {
-        "municipality": "葛城市",
-        "level": "warning",
-        "message": "[葛城市] 取得件数が急減したため既存データを維持しています (baseline=25, new kept=15)"
-      },
-      {
-        "municipality": "宇陀市",
-        "level": "warning",
-        "message": "[宇陀市] 取得件数が急減したため既存データを維持しています (baseline=17, new kept=0)"
-      },
-      {
-        "municipality": "三宅町",
-        "level": "warning",
-        "message": "[三宅町] 取得件数が急減したため既存データを維持しています (baseline=4, new kept=2)"
-      },
-      {
-        "municipality": "三郷町",
-        "level": "warning",
-        "message": "[三郷町] 取得件数が急減したため既存データを維持しています (baseline=3, new kept=0)"
-      }
-    ]
+    "retainedFromPrevious": [],
+    "issues": []
   },
   "dateAudit": {
     "announcementAfterBiddingCount": 0,
@@ -183,11 +146,11 @@
     "sampleTitles": []
   },
   "intelligence": {
-    "itemsWithPdf": 41,
-    "itemsWithDescription": 37,
-    "intelligenceExtractedCount": 36,
-    "geminiExtractedCount": 36,
-    "taggedCount": 36,
-    "lastAugmentedAt": "2026-07-20T08:59:23.755Z"
+    "itemsWithPdf": 42,
+    "itemsWithDescription": 40,
+    "intelligenceExtractedCount": 39,
+    "geminiExtractedCount": 39,
+    "taggedCount": 39,
+    "lastAugmentedAt": "2026-07-21T05:13:55.113Z"
   }
 }

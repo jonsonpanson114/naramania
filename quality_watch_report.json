@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-20T09:03:20.496Z",
-  "qualityGeneratedAt": "2026-07-20T08:58:29.071Z",
-  "itemCount": 184,
+  "generatedAt": "2026-07-21T05:21:13.459Z",
+  "qualityGeneratedAt": "2026-07-21T04:28:08.037Z",
+  "itemCount": 188,
   "resultFollowUp": {
     "totalCount": 17,
-    "highCount": 10,
-    "mediumCount": 7,
+    "highCount": 11,
+    "mediumCount": 6,
     "lowCount": 0,
     "missingBiddingDateCount": 0,
     "byMunicipality": [
@@ -53,8 +53,8 @@
     "samples": [
       {
         "priority": "high",
-        "ageDays": 83,
-        "reason": "開札日から83日経過",
+        "ageDays": 84,
+        "reason": "開札日から84日経過",
         "item": {
           "id": "kashiba-web-f9a78168",
           "municipality": "香芝市",
@@ -69,8 +69,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 63,
-        "reason": "開札日から63日経過",
+        "ageDays": 64,
+        "reason": "開札日から64日経過",
         "item": {
           "id": "oji-aHR0cHM6Ly93",
           "municipality": "王寺町",
@@ -85,8 +85,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 63,
-        "reason": "開札日から63日経過",
+        "ageDays": 64,
+        "reason": "開札日から64日経過",
         "item": {
           "id": "tawaramoto-2026051803",
           "municipality": "田原本町",
@@ -101,8 +101,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 55,
-        "reason": "開札日から55日経過",
+        "ageDays": 56,
+        "reason": "開札日から56日経過",
         "item": {
           "id": "kashihara-proposal-5082000026",
           "municipality": "橿原市",
@@ -117,8 +117,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 55,
-        "reason": "開札日から55日経過",
+        "ageDays": 56,
+        "reason": "開札日から56日経過",
         "item": {
           "id": "kashiba-web-1bf7b65a",
           "municipality": "香芝市",
@@ -133,8 +133,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 54,
-        "reason": "開札日から54日経過",
+        "ageDays": 55,
+        "reason": "開札日から55日経過",
         "item": {
           "id": "nara-city-0000002346",
           "municipality": "奈良市",
@@ -149,8 +149,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 33,
-        "reason": "開札日から33日経過",
+        "ageDays": 34,
+        "reason": "開札日から34日経過",
         "item": {
           "id": "yamato-koriyama-ee85746d",
           "municipality": "大和郡山市",
@@ -165,8 +165,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 32,
-        "reason": "開札日から32日経過",
+        "ageDays": 33,
+        "reason": "開札日から33日経過",
         "item": {
           "id": "nara-pref-29001013060020260055",
           "municipality": "奈良県",
@@ -181,8 +181,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 28,
-        "reason": "開札日から28日経過",
+        "ageDays": 29,
+        "reason": "開札日から29日経過",
         "item": {
           "id": "tawaramoto-1008062207",
           "municipality": "田原本町",
@@ -197,8 +197,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 28,
-        "reason": "開札日から28日経過",
+        "ageDays": 29,
+        "reason": "開札日から29日経過",
         "item": {
           "id": "tawaramoto-2026062201",
           "municipality": "田原本町",
@@ -374,12 +374,34 @@
         "municipality": "五條市",
         "status": "ok",
         "severity": "error",
-        "count": 1,
+        "count": 12,
         "requiredLinkIncludes": [
           "epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction"
         ],
-        "message": "五條市 情報公開サイト: 1件確認",
+        "message": "五條市 情報公開サイト: 12件確認",
         "matches": [
+          {
+            "id": "gojo-epi-2601022",
+            "municipality": "五條市",
+            "title": "向加名生団地B棟屋根改修工事",
+            "status": "落札",
+            "announcementDate": "2026-06-30",
+            "biddingDate": "2026-07-10",
+            "winningContractor": "東洋技建工業（株）",
+            "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002601022",
+            "pdfUrl": null
+          },
+          {
+            "id": "gojo-epi-2601002",
+            "municipality": "五條市",
+            "title": "宗桧公民館改修工事",
+            "status": "不調",
+            "announcementDate": "2026-05-01",
+            "biddingDate": "2026-05-27",
+            "winningContractor": null,
+            "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002601002",
+            "pdfUrl": null
+          },
           {
             "id": "gojo-6fab770c",
             "municipality": "五條市",
@@ -389,6 +411,83 @@
             "biddingDate": "2026-05-29",
             "winningContractor": "有希建設（株）",
             "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002501076",
+            "pdfUrl": null
+          },
+          {
+            "id": "gojo-epi-2501056",
+            "municipality": "五條市",
+            "title": "川端住宅２２・２３号解体工事",
+            "status": "落札",
+            "announcementDate": "2025-12-16",
+            "biddingDate": "2026-01-09",
+            "winningContractor": "逢坂建設",
+            "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002501056",
+            "pdfUrl": null
+          },
+          {
+            "id": "gojo-epi-2501048",
+            "municipality": "五條市",
+            "title": "向加名生団地Ａ棟屋根改修工事",
+            "status": "落札",
+            "announcementDate": "2025-11-18",
+            "biddingDate": "2025-12-02",
+            "winningContractor": "グローバル工業（株）",
+            "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002501048",
+            "pdfUrl": null
+          },
+          {
+            "id": "gojo-epi-2501040",
+            "municipality": "五條市",
+            "title": "ベストラインスタジアム（上野公園野球場）施設改修工事",
+            "status": "落札",
+            "announcementDate": "2025-11-04",
+            "biddingDate": "2025-12-19",
+            "winningContractor": "（株）森岡組",
+            "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002501040",
+            "pdfUrl": null
+          },
+          {
+            "id": "gojo-epi-2501039",
+            "municipality": "五條市",
+            "title": "市営住宅空家修繕工事",
+            "status": "落札",
+            "announcementDate": "2025-10-07",
+            "biddingDate": "2025-10-20",
+            "winningContractor": "前根建設",
+            "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002501039",
+            "pdfUrl": null
+          },
+          {
+            "id": "gojo-epi-2501036",
+            "municipality": "五條市",
+            "title": "須恵児童公園トイレ撤去工事",
+            "status": "落札",
+            "announcementDate": "2025-09-30",
+            "biddingDate": "2025-10-10",
+            "winningContractor": "たけや興業（株）",
+            "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002501036",
+            "pdfUrl": null
+          },
+          {
+            "id": "gojo-epi-2501011",
+            "municipality": "五條市",
+            "title": "阿田峯公園トイレ洋式化工事",
+            "status": "落札",
+            "announcementDate": "2025-07-08",
+            "biddingDate": "2025-07-18",
+            "winningContractor": "（株）福嶋組",
+            "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002501011",
+            "pdfUrl": null
+          },
+          {
+            "id": "gojo-epi-2501009",
+            "municipality": "五條市",
+            "title": "五條市立田園公民館男子トイレ洋式化工事",
+            "status": "落札",
+            "announcementDate": "2025-07-01",
+            "biddingDate": "2025-07-11",
+            "winningContractor": "（株）福嶋組",
+            "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002501009",
             "pdfUrl": null
           }
         ]
@@ -454,15 +553,15 @@
         "municipality": "生駒市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 13,
+        "totalCount": 14,
         "requiredLinkIncludes": [
           "epi-cloud.fwd.ne.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "epi-cloud.fwd.ne.jp": 13
+          "epi-cloud.fwd.ne.jp": 14
         },
-        "message": "生駒市: 13件 / sources OK"
+        "message": "生駒市: 14件 / sources OK"
       },
       {
         "municipality": "大和高田市",
@@ -484,15 +583,15 @@
         "municipality": "大和郡山市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 4,
+        "totalCount": 5,
         "requiredLinkIncludes": [
           "city.yamatokoriyama.lg.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.yamatokoriyama.lg.jp": 4
+          "city.yamatokoriyama.lg.jp": 5
         },
-        "message": "大和郡山市: 4件 / sources OK"
+        "message": "大和郡山市: 5件 / sources OK"
       },
       {
         "municipality": "葛城市",
@@ -514,17 +613,17 @@
         "municipality": "五條市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 13,
+        "totalCount": 15,
         "requiredLinkIncludes": [
           "city.gojo.lg.jp",
           "epi-cloud.fwd.ne.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.gojo.lg.jp": 12,
-          "epi-cloud.fwd.ne.jp": 1
+          "city.gojo.lg.jp": 3,
+          "epi-cloud.fwd.ne.jp": 12
         },
-        "message": "五條市: 13件 / sources OK"
+        "message": "五條市: 15件 / sources OK"
       },
       {
         "municipality": "御所市",
