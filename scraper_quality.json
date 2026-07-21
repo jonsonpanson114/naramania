@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-21T04:28:08.037Z",
+  "generatedAt": "2026-07-21T08:34:19.721Z",
   "source": "daily_scrape",
   "keptCount": 188,
   "municipalityCount": 23,
@@ -47,12 +47,12 @@
       {
         "municipality": "五條市",
         "count": 15,
-        "changeFromPrevious": 2
+        "changeFromPrevious": 0
       },
       {
         "municipality": "生駒市",
         "count": 14,
-        "changeFromPrevious": 1
+        "changeFromPrevious": 0
       },
       {
         "municipality": "香芝市",
@@ -67,7 +67,7 @@
       {
         "municipality": "大和郡山市",
         "count": 5,
-        "changeFromPrevious": 1
+        "changeFromPrevious": 0
       },
       {
         "municipality": "三宅町",
@@ -151,6 +151,6 @@
     "intelligenceExtractedCount": 39,
     "geminiExtractedCount": 39,
     "taggedCount": 39,
-    "lastAugmentedAt": "2026-07-21T05:13:55.113Z"
+    "lastAugmentedAt": "2026-07-21T09:20:03.809Z"
   }
 }
