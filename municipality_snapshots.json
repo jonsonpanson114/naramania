@@ -833,7 +833,8 @@
       "announcementDate": "2026-06-26",
       "biddingDate": "2026-07-21",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200720",
-      "status": "受付中"
+      "status": "落札",
+      "winningContractor": "細谷設計事務所"
     },
     {
       "id": "katsuragi-web-78fce717",
@@ -843,8 +844,9 @@
       "announcementDate": "2026-06-08",
       "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/3-4-5-2026-1.pdf",
       "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/3-4-5-2026-1.pdf",
-      "status": "受付終了",
-      "biddingDate": "2026-07-13"
+      "status": "落札",
+      "biddingDate": "2026-07-13",
+      "winningContractor": "センコーテック(株)"
     },
     {
       "id": "katsuragi-web-54c2ed1f",
@@ -854,8 +856,9 @@
       "announcementDate": "2026-06-08",
       "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/3-4-1-2026-1.pdf",
       "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/3-4-1-2026-1.pdf",
-      "status": "受付終了",
-      "biddingDate": "2026-07-13"
+      "status": "落札",
+      "biddingDate": "2026-07-13",
+      "winningContractor": "矢羽田建設(株)"
     },
     {
       "id": "katsuragi-web-0e5ecc43",
@@ -1263,7 +1266,7 @@
   ],
   "御所市": [
     {
-      "id": "gose-（仮称）御所市北部認定こども園整備工事設-5",
+      "id": "gose-（仮称）御所市北部認定こども園整備工事設-6",
       "municipality": "御所市",
       "title": "（仮称）御所市北部認定こども園整備工事設計業務委託に係る公募型プロポーザル",
       "type": "コンサル",
@@ -1638,7 +1641,7 @@
       "biddingDate": "2026-07-21",
       "link": "https://www.town.miyake.lg.jp/soshiki/1/9375.html",
       "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5616.pdf",
-      "status": "受付中"
+      "status": "落札"
     },
     {
       "id": "miyake-2026-07-21-上但馬保育所解体工事設計委託業務",
@@ -1649,7 +1652,7 @@
       "biddingDate": "2026-07-21",
       "link": "https://www.town.miyake.lg.jp/soshiki/1/9376.html",
       "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5619.pdf",
-      "status": "受付中"
+      "status": "落札"
     },
     {
       "id": "miyake-2025-11-04-三宅町つながり総合センター解体工事",

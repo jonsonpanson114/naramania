@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-07-21T09:27:27.016Z",
-  "qualityGeneratedAt": "2026-07-21T08:34:19.721Z",
+  "generatedAt": "2026-07-22T05:23:18.386Z",
+  "qualityGeneratedAt": "2026-07-22T04:30:30.867Z",
   "itemCount": 188,
   "resultFollowUp": {
     "totalCount": 17,
     "highCount": 11,
-    "mediumCount": 6,
-    "lowCount": 0,
+    "mediumCount": 4,
+    "lowCount": 2,
     "missingBiddingDateCount": 0,
     "byMunicipality": [
       {
@@ -22,11 +22,11 @@
         "count": 2
       },
       {
-        "municipality": "葛城市",
+        "municipality": "香芝市",
         "count": 2
       },
       {
-        "municipality": "香芝市",
+        "municipality": "三宅町",
         "count": 2
       },
       {
@@ -53,8 +53,8 @@
     "samples": [
       {
         "priority": "high",
-        "ageDays": 84,
-        "reason": "開札日から84日経過",
+        "ageDays": 85,
+        "reason": "開札日から85日経過",
         "item": {
           "id": "kashiba-web-f9a78168",
           "municipality": "香芝市",
@@ -69,8 +69,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 64,
-        "reason": "開札日から64日経過",
+        "ageDays": 65,
+        "reason": "開札日から65日経過",
         "item": {
           "id": "oji-aHR0cHM6Ly93",
           "municipality": "王寺町",
@@ -85,8 +85,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 64,
-        "reason": "開札日から64日経過",
+        "ageDays": 65,
+        "reason": "開札日から65日経過",
         "item": {
           "id": "tawaramoto-2026051803",
           "municipality": "田原本町",
@@ -101,8 +101,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 56,
-        "reason": "開札日から56日経過",
+        "ageDays": 57,
+        "reason": "開札日から57日経過",
         "item": {
           "id": "kashihara-proposal-5082000026",
           "municipality": "橿原市",
@@ -117,8 +117,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 56,
-        "reason": "開札日から56日経過",
+        "ageDays": 57,
+        "reason": "開札日から57日経過",
         "item": {
           "id": "kashiba-web-1bf7b65a",
           "municipality": "香芝市",
@@ -133,8 +133,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 55,
-        "reason": "開札日から55日経過",
+        "ageDays": 56,
+        "reason": "開札日から56日経過",
         "item": {
           "id": "nara-city-0000002346",
           "municipality": "奈良市",
@@ -149,8 +149,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 34,
-        "reason": "開札日から34日経過",
+        "ageDays": 35,
+        "reason": "開札日から35日経過",
         "item": {
           "id": "yamato-koriyama-ee85746d",
           "municipality": "大和郡山市",
@@ -165,8 +165,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 33,
-        "reason": "開札日から33日経過",
+        "ageDays": 34,
+        "reason": "開札日から34日経過",
         "item": {
           "id": "nara-pref-29001013060020260055",
           "municipality": "奈良県",
@@ -181,8 +181,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 29,
-        "reason": "開札日から29日経過",
+        "ageDays": 30,
+        "reason": "開札日から30日経過",
         "item": {
           "id": "tawaramoto-1008062207",
           "municipality": "田原本町",
@@ -197,8 +197,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 29,
-        "reason": "開札日から29日経過",
+        "ageDays": 30,
+        "reason": "開札日から30日経過",
         "item": {
           "id": "tawaramoto-2026062201",
           "municipality": "田原本町",
@@ -271,10 +271,10 @@
             "id": "katsuragi-epi-d289edf8",
             "municipality": "葛城市",
             "title": "磐城第１保育所除却工事監理業務",
-            "status": "受付中",
+            "status": "落札",
             "announcementDate": "2026-06-26",
             "biddingDate": "2026-07-21",
-            "winningContractor": null,
+            "winningContractor": "細谷設計事務所",
             "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200720",
             "pdfUrl": null
           },
@@ -497,9 +497,24 @@
   "dateIntegrity": {
     "announcementAfterBiddingCount": 0,
     "awardedWithoutBiddingDateCount": 0,
-    "awardedWithoutWinnerCount": 0,
+    "awardedWithoutWinnerCount": 2,
     "openWithWinnerCount": 0,
-    "sampleTitles": []
+    "sampleTitles": [
+      {
+        "municipality": "三宅町",
+        "title": "三宅町文化ホールトイレ改修工事",
+        "status": "落札",
+        "announcementDate": "2026-07-21",
+        "biddingDate": "2026-07-21"
+      },
+      {
+        "municipality": "三宅町",
+        "title": "上但馬保育所解体工事設計委託業務",
+        "status": "落札",
+        "announcementDate": "2026-07-21",
+        "biddingDate": "2026-07-21"
+      }
+    ]
   },
   "sourceCoverage": {
     "activeCount": 25,
