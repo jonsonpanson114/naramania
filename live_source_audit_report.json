@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-17T08:50:34.439Z",
-  "currentItemCount": 184,
+  "generatedAt": "2026-07-23T05:09:22.995Z",
+  "currentItemCount": 188,
   "checkedMunicipalities": [
     "奈良市",
     "橿原市",
@@ -70,8 +70,8 @@
     },
     {
       "municipality": "大和郡山市",
-      "rawCount": 7,
-      "keptCount": 5,
+      "rawCount": 8,
+      "keptCount": 6,
       "rejectedCount": 2,
       "warnings": [],
       "errors": []
@@ -174,8 +174,8 @@
     },
     {
       "municipality": "三宅町",
-      "rawCount": 2,
-      "keptCount": 2,
+      "rawCount": 4,
+      "keptCount": 4,
       "rejectedCount": 0,
       "warnings": [],
       "errors": []
@@ -209,8 +209,8 @@
     {
       "municipality": "三郷町",
       "rawCount": 21,
-      "keptCount": 10,
-      "rejectedCount": 11,
+      "keptCount": 8,
+      "rejectedCount": 13,
       "warnings": [],
       "errors": []
     },
@@ -233,33 +233,12 @@
   ],
   "coverage": {
     "checkedMunicipalityCount": 24,
-    "expectedItemCount": 185,
-    "matchedItemCount": 184,
-    "missingItemCount": 1,
+    "expectedItemCount": 186,
+    "matchedItemCount": 186,
+    "missingItemCount": 0,
     "duplicateTitleGroupCount": 25,
     "duplicateTitleItemCount": 53,
     "results": [
-      {
-        "municipality": "御所市",
-        "snapshotCount": 2,
-        "expectedCount": 2,
-        "matchedCount": 1,
-        "missingCount": 1,
-        "duplicateTitleGroupCount": 0,
-        "duplicateTitleItemCount": 0,
-        "missingItems": [
-          {
-            "id": "gose-（仮称）御所市北部認定こども園整備工事設-3",
-            "municipality": "御所市",
-            "title": "（仮称）御所市北部認定こども園整備工事設計業務委託に係る公募型プロポーザル",
-            "status": "受付中",
-            "announcementDate": "2026-07-14",
-            "link": "",
-            "reason": "snapshot item should be present in scraper_result"
-          }
-        ],
-        "status": "missing"
-      },
       {
         "municipality": "葛城市",
         "snapshotCount": 32,
@@ -351,8 +330,8 @@
       {
         "municipality": "三郷町",
         "snapshotCount": 21,
-        "expectedCount": 10,
-        "matchedCount": 10,
+        "expectedCount": 8,
+        "matchedCount": 8,
         "missingCount": 0,
         "duplicateTitleGroupCount": 0,
         "duplicateTitleItemCount": 0,
@@ -361,12 +340,23 @@
       },
       {
         "municipality": "大和郡山市",
-        "snapshotCount": 7,
-        "expectedCount": 5,
-        "matchedCount": 5,
+        "snapshotCount": 8,
+        "expectedCount": 6,
+        "matchedCount": 6,
         "missingCount": 0,
         "duplicateTitleGroupCount": 1,
         "duplicateTitleItemCount": 2,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
+        "municipality": "三宅町",
+        "snapshotCount": 4,
+        "expectedCount": 4,
+        "matchedCount": 4,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 0,
+        "duplicateTitleItemCount": 0,
         "missingItems": [],
         "status": "ok"
       },
@@ -437,7 +427,7 @@
         "status": "ok"
       },
       {
-        "municipality": "広陵町",
+        "municipality": "御所市",
         "snapshotCount": 2,
         "expectedCount": 2,
         "matchedCount": 2,
@@ -448,7 +438,7 @@
         "status": "ok"
       },
       {
-        "municipality": "三宅町",
+        "municipality": "広陵町",
         "snapshotCount": 2,
         "expectedCount": 2,
         "matchedCount": 2,
