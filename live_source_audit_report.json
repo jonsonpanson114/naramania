@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-24T05:05:30.363Z",
+  "generatedAt": "2026-07-24T07:28:24.660Z",
   "currentItemCount": 188,
   "checkedMunicipalities": [
     "奈良市",
@@ -94,8 +94,8 @@
     },
     {
       "municipality": "御所市",
-      "rawCount": 2,
-      "keptCount": 2,
+      "rawCount": 3,
+      "keptCount": 3,
       "rejectedCount": 0,
       "warnings": [],
       "errors": []
@@ -233,9 +233,9 @@
   ],
   "coverage": {
     "checkedMunicipalityCount": 24,
-    "expectedItemCount": 187,
+    "expectedItemCount": 188,
     "matchedItemCount": 186,
-    "missingItemCount": 1,
+    "missingItemCount": 2,
     "duplicateTitleGroupCount": 25,
     "duplicateTitleItemCount": 54,
     "results": [
@@ -257,6 +257,28 @@
             "biddingDate": "2026-07-24",
             "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002601014",
             "reason": "duplicate title snapshot item requires id, link, or date match in scraper_result"
+          }
+        ],
+        "status": "missing"
+      },
+      {
+        "municipality": "御所市",
+        "snapshotCount": 3,
+        "expectedCount": 3,
+        "matchedCount": 2,
+        "missingCount": 1,
+        "duplicateTitleGroupCount": 0,
+        "duplicateTitleItemCount": 0,
+        "missingItems": [
+          {
+            "id": "gose-2026-07-17-市営住宅(サン柏原207号・今出団地99号・11-0",
+            "municipality": "御所市",
+            "title": "市営住宅(サン柏原207号・今出団地99号・110号)空家修繕 住 6,506,500 5,915,000 有 6,400,000",
+            "status": "受付終了",
+            "announcementDate": "2026-07-17",
+            "biddingDate": "2026-07-17",
+            "link": "https://www.city.gose.nara.jp/0000001024.html",
+            "reason": "snapshot item should be present in scraper_result"
           }
         ],
         "status": "missing"
@@ -428,17 +450,6 @@
       },
       {
         "municipality": "王寺町",
-        "snapshotCount": 2,
-        "expectedCount": 2,
-        "matchedCount": 2,
-        "missingCount": 0,
-        "duplicateTitleGroupCount": 0,
-        "duplicateTitleItemCount": 0,
-        "missingItems": [],
-        "status": "ok"
-      },
-      {
-        "municipality": "御所市",
         "snapshotCount": 2,
         "expectedCount": 2,
         "matchedCount": 2,
