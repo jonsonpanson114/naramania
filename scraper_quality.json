@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-07-22T08:34:10.004Z",
+  "generatedAt": "2026-07-27T04:49:06.669Z",
   "source": "daily_scrape",
-  "keptCount": 188,
+  "keptCount": 191,
   "municipalityCount": 23,
   "oldestAnnouncementDate": "2025-02-02",
-  "latestAnnouncementDate": "2026-07-21",
-  "scrapedCount": 461,
-  "rejectedCount": 273,
+  "latestAnnouncementDate": "2026-07-27",
+  "scrapedCount": 464,
+  "rejectedCount": 275,
   "municipalityAudit": {
     "expectedMunicipalityCount": 25,
     "coveredMunicipalityCount": 23,
@@ -46,13 +46,13 @@
       },
       {
         "municipality": "五條市",
-        "count": 15,
-        "changeFromPrevious": 0
+        "count": 16,
+        "changeFromPrevious": 1
       },
       {
         "municipality": "生駒市",
-        "count": 14,
-        "changeFromPrevious": 0
+        "count": 16,
+        "changeFromPrevious": 2
       },
       {
         "municipality": "香芝市",
@@ -80,9 +80,9 @@
         "changeFromPrevious": 0
       },
       {
-        "municipality": "斑鳩町",
-        "count": 4,
-        "changeFromPrevious": 0
+        "municipality": "御所市",
+        "count": 3,
+        "changeFromPrevious": 1
       },
       {
         "municipality": "桜井市",
@@ -105,9 +105,9 @@
         "changeFromPrevious": 0
       },
       {
-        "municipality": "御所市",
-        "count": 2,
-        "changeFromPrevious": 0
+        "municipality": "斑鳩町",
+        "count": 3,
+        "changeFromPrevious": -1
       },
       {
         "municipality": "広陵町",
@@ -166,6 +166,6 @@
     "intelligenceExtractedCount": 39,
     "geminiExtractedCount": 39,
     "taggedCount": 39,
-    "lastAugmentedAt": "2026-07-22T09:19:57.098Z"
+    "lastAugmentedAt": "2026-07-27T05:34:59.532Z"
   }
 }

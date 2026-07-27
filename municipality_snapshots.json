@@ -586,6 +586,26 @@
   ],
   "生駒市": [
     {
+      "id": "ikoma-ab4d291423",
+      "municipality": "生駒市",
+      "title": "生駒北スポーツセンター及びむかいやま公園体育施設トイレ改修工事",
+      "type": "建築",
+      "announcementDate": "2026-07-27",
+      "biddingDate": "2026-08-20",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+      "status": "受付中"
+    },
+    {
+      "id": "ikoma-a16c2f5343",
+      "municipality": "生駒市",
+      "title": "白藤会館解体工事設計業務",
+      "type": "コンサル",
+      "announcementDate": "2026-07-27",
+      "biddingDate": "2026-08-17",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+      "status": "受付中"
+    },
+    {
       "id": "ikoma-be8e4258d8",
       "municipality": "生駒市",
       "title": "上中学校校舎長寿命化改修工事（Ⅰ・Ⅱ期）",
@@ -767,7 +787,7 @@
       "biddingDate": "2026-07-22",
       "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/9328.html",
       "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk260722_02k.pdf",
-      "status": "受付中"
+      "status": "受付終了"
     },
     {
       "id": "yamato-koriyama-ee85746d",
@@ -1103,6 +1123,17 @@
       "estimatedPrice": "4,490,000円"
     },
     {
+      "id": "gojo-epi-2601014",
+      "municipality": "五條市",
+      "title": "宗桧公民館改修工事",
+      "type": "建築",
+      "announcementDate": "2026-06-24",
+      "biddingDate": "2026-07-24",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002601014",
+      "status": "受付終了",
+      "estimatedPrice": "44,520,000円"
+    },
+    {
       "id": "gojo-epi-2601002",
       "municipality": "五條市",
       "title": "宗桧公民館改修工事",
@@ -1266,7 +1297,17 @@
   ],
   "御所市": [
     {
-      "id": "gose-（仮称）御所市北部認定こども園整備工事設-7",
+      "id": "gose-2026-07-17-市営住宅(サン柏原207号・今出団地99号・11-0",
+      "municipality": "御所市",
+      "title": "市営住宅(サン柏原207号・今出団地99号・110号)空家修繕 住 6,506,500 5,915,000 有 6,400,000",
+      "type": "その他",
+      "announcementDate": "2026-07-17",
+      "biddingDate": "2026-07-17",
+      "link": "https://www.city.gose.nara.jp/0000001024.html",
+      "status": "受付終了"
+    },
+    {
+      "id": "gose-（仮称）御所市北部認定こども園整備工事設-24",
       "municipality": "御所市",
       "title": "（仮称）御所市北部認定こども園整備工事設計業務委託に係る公募型プロポーザル",
       "type": "コンサル",
@@ -1945,16 +1986,6 @@
       "status": "受付中"
     },
     {
-      "id": "斑鳩町-2026-06-24-安田家住宅維持補修工事",
-      "municipality": "斑鳩町",
-      "title": "安田家住宅維持補修工事",
-      "type": "建築",
-      "announcementDate": "2026-06-24",
-      "biddingDate": "2026-07-15",
-      "link": "https://www.town.ikaruga.nara.jp/0000002502.html",
-      "status": "受付終了"
-    },
-    {
       "id": "斑鳩町-2026-05-01-斑鳩小学校の長寿命化工事に向けた基本計画",
       "municipality": "斑鳩町",
       "title": "斑鳩小学校の長寿命化工事に向けた基本計画",
@@ -1980,11 +2011,11 @@
       "municipality": "三郷町",
       "title": "令和8年度 竜田運動公園北側トイレ改修工事",
       "type": "建築",
-      "announcementDate": "2026-04-30",
+      "announcementDate": "2026-07-08",
       "biddingDate": "2026-07-24",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0660064007200640",
       "status": "落札",
-      "winningContractor": "浅野アタカ株式会社 奈良営業所"
+      "winningContractor": "阪本水道商会 三郷営業所"
     },
     {
       "id": "sango-epi-5Luk5ZKM77yY",
