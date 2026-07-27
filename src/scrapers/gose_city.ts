@@ -117,6 +117,16 @@ function parseGoseResultPdfDate(label: string): string {
     return parseJapaneseDateToIso(partial[0]) || '';
 }
 
+/**
+ * 通常は「部署コード 御所市...」と続くが、案件によっては部署コードの直後に
+ * 金額列(カンマ区切りの数値)が挟まり、御所市が後方に出現することがある。
+ * その場合タイトル抽出の正規表現が金額まで飲み込むため、
+ * 「部署コード＋カンマ区切り数値」以降を切り落として防御する。
+ */
+function sanitizeExtractedTitle(title: string): string {
+    return title.replace(/\s+\S{1,4}\s+[0-9]{1,3}(,[0-9]{3}).*$/u, '').trim();
+}
+
 function extractGoseResultPdfRecords(pdfText: string, biddingDate: string): GoseDetailRecord[] {
     const normalized = pdfText.replace(/\s+/g, ' ').trim();
     const blocks = normalized.split(/公\s*表\s*開\s*札\s*録/u).map(part => part.trim()).filter(Boolean);
@@ -125,7 +135,7 @@ function extractGoseResultPdfRecords(pdfText: string, biddingDate: string): Gose
     for (const block of blocks) {
         const titleMatch = block.match(/入札執行\s+(.+?)\s+[^\s]{2,6}\s+御所市/u);
         const winnerMatch = block.match(/有\s+[0-9,]+\s+円?\s+(.+?)\s+落札率/u);
-        const title = titleMatch?.[1]?.trim().replace(/\s+/g, ' ');
+        const title = sanitizeExtractedTitle(titleMatch?.[1]?.trim().replace(/\s+/g, ' ') || '');
         const winningContractor = winnerMatch?.[1]?.trim().replace(/\s+/g, ' ');
         if (!title || !shouldKeepItem(title)) continue;
 
