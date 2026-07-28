@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-28T05:15:44.066Z",
+  "generatedAt": "2026-07-28T09:32:01.059Z",
   "checkedMunicipalityCount": 23,
-  "expectedItemCount": 189,
-  "matchedItemCount": 189,
+  "expectedItemCount": 190,
+  "matchedItemCount": 190,
   "missingItemCount": 0,
-  "duplicateTitleGroupCount": 12,
-  "duplicateTitleItemCount": 25,
+  "duplicateTitleGroupCount": 13,
+  "duplicateTitleItemCount": 27,
   "results": [
     {
       "municipality": "葛城市",
@@ -63,6 +63,17 @@
       "status": "ok"
     },
     {
+      "municipality": "五條市",
+      "snapshotCount": 16,
+      "expectedCount": 16,
+      "matchedCount": 16,
+      "missingCount": 0,
+      "duplicateTitleGroupCount": 2,
+      "duplicateTitleItemCount": 4,
+      "missingItems": [],
+      "status": "ok"
+    },
+    {
       "municipality": "生駒市",
       "snapshotCount": 16,
       "expectedCount": 16,
@@ -70,17 +81,6 @@
       "missingCount": 0,
       "duplicateTitleGroupCount": 0,
       "duplicateTitleItemCount": 0,
-      "missingItems": [],
-      "status": "ok"
-    },
-    {
-      "municipality": "五條市",
-      "snapshotCount": 15,
-      "expectedCount": 15,
-      "matchedCount": 15,
-      "missingCount": 0,
-      "duplicateTitleGroupCount": 1,
-      "duplicateTitleItemCount": 2,
       "missingItems": [],
       "status": "ok"
     },
