@@ -779,17 +779,6 @@
       "status": "受付中"
     },
     {
-      "id": "yamato-koriyama-e1146a80",
-      "municipality": "大和郡山市",
-      "title": "市営霞ヶ丘住宅空家改修工事（203号、205号、208号、209号、302号、306号）",
-      "type": "建築",
-      "announcementDate": "2026-07-07",
-      "biddingDate": "2026-07-22",
-      "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/9328.html",
-      "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk260722_02k.pdf",
-      "status": "受付終了"
-    },
-    {
       "id": "yamato-koriyama-ee85746d",
       "municipality": "大和郡山市",
       "title": "市立郡山南小学校廊下改修工事（2期）",
@@ -1123,17 +1112,6 @@
       "estimatedPrice": "4,490,000円"
     },
     {
-      "id": "gojo-epi-2601014",
-      "municipality": "五條市",
-      "title": "宗桧公民館改修工事",
-      "type": "建築",
-      "announcementDate": "2026-06-24",
-      "biddingDate": "2026-07-24",
-      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002601014",
-      "status": "受付終了",
-      "estimatedPrice": "44,520,000円"
-    },
-    {
       "id": "gojo-epi-2601002",
       "municipality": "五條市",
       "title": "宗桧公民館改修工事",
@@ -1297,6 +1275,17 @@
   ],
   "御所市": [
     {
+      "id": "gose-2026-07-17-市営住宅(サン柏原207号・今出団地99号・11-0",
+      "municipality": "御所市",
+      "title": "市営住宅(サン柏原207号・今出団地99号・110号)空家修繕",
+      "type": "その他",
+      "announcementDate": "2026-07-17",
+      "biddingDate": "2026-07-17",
+      "link": "https://www.city.gose.nara.jp/0000001024.html",
+      "status": "受付終了",
+      "winningContractor": "(株)阪本"
+    },
+    {
       "id": "gose-（仮称）御所市北部認定こども園整備工事設-24",
       "municipality": "御所市",
       "title": "（仮称）御所市北部認定こども園整備工事設計業務委託に係る公募型プロポーザル",
@@ -1385,7 +1374,8 @@
       "announcementDate": "2026-07-02",
       "biddingDate": "2026-07-16",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200700",
-      "status": "受付終了"
+      "status": "落札",
+      "winningContractor": "（株）福本設計"
     },
     {
       "id": "uda-dfe10e6d40",
@@ -1395,7 +1385,8 @@
       "announcementDate": "2026-07-02",
       "biddingDate": "2026-07-16",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200700",
-      "status": "受付終了"
+      "status": "落札",
+      "winningContractor": "（株）福本設計"
     },
     {
       "id": "uda-result-2695010009",

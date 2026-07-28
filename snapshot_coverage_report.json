@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-27T10:49:18.787Z",
+  "generatedAt": "2026-07-28T05:15:44.066Z",
   "checkedMunicipalityCount": 23,
-  "expectedItemCount": 191,
-  "matchedItemCount": 191,
+  "expectedItemCount": 189,
+  "matchedItemCount": 189,
   "missingItemCount": 0,
-  "duplicateTitleGroupCount": 13,
-  "duplicateTitleItemCount": 27,
+  "duplicateTitleGroupCount": 12,
+  "duplicateTitleItemCount": 25,
   "results": [
     {
       "municipality": "葛城市",
@@ -63,17 +63,6 @@
       "status": "ok"
     },
     {
-      "municipality": "五條市",
-      "snapshotCount": 16,
-      "expectedCount": 16,
-      "matchedCount": 16,
-      "missingCount": 0,
-      "duplicateTitleGroupCount": 2,
-      "duplicateTitleItemCount": 4,
-      "missingItems": [],
-      "status": "ok"
-    },
-    {
       "municipality": "生駒市",
       "snapshotCount": 16,
       "expectedCount": 16,
@@ -81,6 +70,17 @@
       "missingCount": 0,
       "duplicateTitleGroupCount": 0,
       "duplicateTitleItemCount": 0,
+      "missingItems": [],
+      "status": "ok"
+    },
+    {
+      "municipality": "五條市",
+      "snapshotCount": 15,
+      "expectedCount": 15,
+      "matchedCount": 15,
+      "missingCount": 0,
+      "duplicateTitleGroupCount": 1,
+      "duplicateTitleItemCount": 2,
       "missingItems": [],
       "status": "ok"
     },
@@ -107,17 +107,6 @@
       "status": "ok"
     },
     {
-      "municipality": "大和郡山市",
-      "snapshotCount": 5,
-      "expectedCount": 5,
-      "matchedCount": 5,
-      "missingCount": 0,
-      "duplicateTitleGroupCount": 0,
-      "duplicateTitleItemCount": 0,
-      "missingItems": [],
-      "status": "ok"
-    },
-    {
       "municipality": "三宅町",
       "snapshotCount": 4,
       "expectedCount": 4,
@@ -130,6 +119,17 @@
     },
     {
       "municipality": "川西町",
+      "snapshotCount": 4,
+      "expectedCount": 4,
+      "matchedCount": 4,
+      "missingCount": 0,
+      "duplicateTitleGroupCount": 0,
+      "duplicateTitleItemCount": 0,
+      "missingItems": [],
+      "status": "ok"
+    },
+    {
+      "municipality": "大和郡山市",
       "snapshotCount": 4,
       "expectedCount": 4,
       "matchedCount": 4,

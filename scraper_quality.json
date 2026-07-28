@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-27T09:56:24.944Z",
+  "generatedAt": "2026-07-28T04:23:07.711Z",
   "source": "daily_scrape",
-  "keptCount": 191,
+  "keptCount": 189,
   "municipalityCount": 23,
   "oldestAnnouncementDate": "2025-02-02",
   "latestAnnouncementDate": "2026-07-27",
-  "scrapedCount": 464,
+  "scrapedCount": 462,
   "rejectedCount": 275,
   "municipalityAudit": {
     "expectedMunicipalityCount": 25,
@@ -45,14 +45,14 @@
         "changeFromPrevious": 0
       },
       {
-        "municipality": "五條市",
+        "municipality": "生駒市",
         "count": 16,
         "changeFromPrevious": 0
       },
       {
-        "municipality": "生駒市",
-        "count": 16,
-        "changeFromPrevious": 0
+        "municipality": "五條市",
+        "count": 15,
+        "changeFromPrevious": -1
       },
       {
         "municipality": "香芝市",
@@ -65,11 +65,6 @@
         "changeFromPrevious": 0
       },
       {
-        "municipality": "大和郡山市",
-        "count": 5,
-        "changeFromPrevious": 0
-      },
-      {
         "municipality": "三宅町",
         "count": 4,
         "changeFromPrevious": 0
@@ -78,6 +73,11 @@
         "municipality": "川西町",
         "count": 4,
         "changeFromPrevious": 0
+      },
+      {
+        "municipality": "大和郡山市",
+        "count": 4,
+        "changeFromPrevious": -1
       },
       {
         "municipality": "御所市",
@@ -161,11 +161,11 @@
     ]
   },
   "intelligence": {
-    "itemsWithPdf": 42,
-    "itemsWithDescription": 40,
-    "intelligenceExtractedCount": 39,
-    "geminiExtractedCount": 39,
-    "taggedCount": 39,
-    "lastAugmentedAt": "2026-07-27T10:42:04.112Z"
+    "itemsWithPdf": 41,
+    "itemsWithDescription": 39,
+    "intelligenceExtractedCount": 38,
+    "geminiExtractedCount": 38,
+    "taggedCount": 38,
+    "lastAugmentedAt": "2026-07-28T05:08:52.398Z"
   }
 }
