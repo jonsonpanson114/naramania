@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-28T04:58:38.871Z",
-  "currentItemCount": 191,
+  "generatedAt": "2026-07-28T07:35:55.212Z",
+  "currentItemCount": 189,
   "checkedMunicipalities": [
     "奈良市",
     "橿原市",
@@ -234,8 +234,8 @@
   "coverage": {
     "checkedMunicipalityCount": 24,
     "expectedItemCount": 188,
-    "matchedItemCount": 188,
-    "missingItemCount": 0,
+    "matchedItemCount": 187,
+    "missingItemCount": 1,
     "duplicateTitleGroupCount": 25,
     "duplicateTitleItemCount": 54,
     "results": [
@@ -243,12 +243,23 @@
         "municipality": "五條市",
         "snapshotCount": 63,
         "expectedCount": 26,
-        "matchedCount": 26,
-        "missingCount": 0,
+        "matchedCount": 25,
+        "missingCount": 1,
         "duplicateTitleGroupCount": 9,
         "duplicateTitleItemCount": 21,
-        "missingItems": [],
-        "status": "ok"
+        "missingItems": [
+          {
+            "id": "gojo-epi-2601014",
+            "municipality": "五條市",
+            "title": "宗桧公民館改修工事",
+            "status": "落札",
+            "announcementDate": "2026-06-24",
+            "biddingDate": "2026-07-24",
+            "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002601014",
+            "reason": "duplicate title snapshot item requires id, link, or date match in scraper_result"
+          }
+        ],
+        "status": "missing"
       },
       {
         "municipality": "葛城市",
