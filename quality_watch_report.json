@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-07-29T05:18:46.752Z",
-  "qualityGeneratedAt": "2026-07-29T04:26:09.903Z",
+  "generatedAt": "2026-07-29T09:38:23.583Z",
+  "qualityGeneratedAt": "2026-07-29T08:45:37.632Z",
   "itemCount": 190,
   "resultFollowUp": {
-    "totalCount": 17,
+    "totalCount": 16,
     "highCount": 12,
     "mediumCount": 3,
-    "lowCount": 2,
+    "lowCount": 1,
     "missingBiddingDateCount": 0,
     "byMunicipality": [
       {
@@ -31,10 +31,6 @@
       },
       {
         "municipality": "橿原市",
-        "count": 1
-      },
-      {
-        "municipality": "葛城市",
         "count": 1
       },
       {
@@ -260,10 +256,10 @@
             "id": "katsuragi-epi-c558f1c5",
             "municipality": "葛城市",
             "title": "葛城市立学校施設各所改修工事",
-            "status": "受付終了",
+            "status": "落札",
             "announcementDate": "2026-07-07",
             "biddingDate": "2026-07-28",
-            "winningContractor": null,
+            "winningContractor": "新和建設(株)",
             "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200720",
             "pdfUrl": null
           },
