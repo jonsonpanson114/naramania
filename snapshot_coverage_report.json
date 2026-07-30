@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-07-30T05:01:29.932Z",
+  "generatedAt": "2026-07-30T09:25:08.117Z",
   "checkedMunicipalityCount": 23,
-  "expectedItemCount": 189,
-  "matchedItemCount": 189,
+  "expectedItemCount": 188,
+  "matchedItemCount": 188,
   "missingItemCount": 0,
   "duplicateTitleGroupCount": 13,
   "duplicateTitleItemCount": 27,
@@ -140,17 +140,6 @@
       "status": "ok"
     },
     {
-      "municipality": "御所市",
-      "snapshotCount": 3,
-      "expectedCount": 3,
-      "matchedCount": 3,
-      "missingCount": 0,
-      "duplicateTitleGroupCount": 0,
-      "duplicateTitleItemCount": 0,
-      "missingItems": [],
-      "status": "ok"
-    },
-    {
       "municipality": "桜井市",
       "snapshotCount": 3,
       "expectedCount": 3,
@@ -199,6 +188,17 @@
       "snapshotCount": 3,
       "expectedCount": 3,
       "matchedCount": 3,
+      "missingCount": 0,
+      "duplicateTitleGroupCount": 0,
+      "duplicateTitleItemCount": 0,
+      "missingItems": [],
+      "status": "ok"
+    },
+    {
+      "municipality": "御所市",
+      "snapshotCount": 2,
+      "expectedCount": 2,
+      "matchedCount": 2,
       "missingCount": 0,
       "duplicateTitleGroupCount": 0,
       "duplicateTitleItemCount": 0,

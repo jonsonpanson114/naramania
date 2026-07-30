@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-07-30T05:01:28.755Z",
-  "qualityGeneratedAt": "2026-07-30T04:08:41.291Z",
-  "itemCount": 189,
+  "generatedAt": "2026-07-30T09:25:06.998Z",
+  "qualityGeneratedAt": "2026-07-30T08:32:18.995Z",
+  "itemCount": 188,
   "resultFollowUp": {
     "totalCount": 15,
     "highCount": 12,
@@ -640,15 +640,15 @@
         "municipality": "御所市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 3,
+        "totalCount": 2,
         "requiredLinkIncludes": [
           "city.gose.nara.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.gose.nara.jp": 3
+          "city.gose.nara.jp": 2
         },
-        "message": "御所市: 3件 / sources OK"
+        "message": "御所市: 2件 / sources OK"
       },
       {
         "municipality": "天理市",
