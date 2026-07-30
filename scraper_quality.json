@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-29T08:45:37.632Z",
+  "generatedAt": "2026-07-30T04:08:41.291Z",
   "source": "daily_scrape",
-  "keptCount": 190,
+  "keptCount": 189,
   "municipalityCount": 23,
   "oldestAnnouncementDate": "2025-02-02",
   "latestAnnouncementDate": "2026-07-27",
-  "scrapedCount": 463,
+  "scrapedCount": 462,
   "rejectedCount": 275,
   "municipalityAudit": {
     "expectedMunicipalityCount": 25,
@@ -56,8 +56,8 @@
       },
       {
         "municipality": "香芝市",
-        "count": 10,
-        "changeFromPrevious": 0
+        "count": 9,
+        "changeFromPrevious": -1
       },
       {
         "municipality": "奈良市",
@@ -166,6 +166,6 @@
     "intelligenceExtractedCount": 38,
     "geminiExtractedCount": 38,
     "taggedCount": 38,
-    "lastAugmentedAt": "2026-07-29T09:31:28.958Z"
+    "lastAugmentedAt": "2026-07-30T04:54:37.310Z"
   }
 }
