@@ -292,7 +292,9 @@
       "announcementDate": "2026-07-01",
       "biddingDate": "2026-07-30",
       "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
-      "status": "受付中"
+      "status": "落札",
+      "winningContractor": "廣岡建設株式会社",
+      "winnerType": "ゼネコン"
     },
     {
       "id": "nara-city-0000002440",
@@ -366,6 +368,18 @@
     }
   ],
   "橿原市": [
+    {
+      "id": "kashihara-5082000865",
+      "municipality": "橿原市",
+      "title": "八木中学校長寿命化改良工事(第1期)に伴う工事監理業務委託",
+      "type": "建築",
+      "announcementDate": "2026-07-31",
+      "biddingDate": "2026-08-05",
+      "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/7/12117.html",
+      "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5082000865.pdf",
+      "status": "受付中",
+      "winnerType": "ゼネコン"
+    },
     {
       "id": "kashihara-proposal-5082000026",
       "municipality": "橿原市",
@@ -1101,6 +1115,28 @@
   ],
   "五條市": [
     {
+      "id": "gojo-epi-2601025",
+      "municipality": "五條市",
+      "title": "市営住宅空家修繕工事",
+      "type": "建築",
+      "announcementDate": "2026-07-07",
+      "biddingDate": "2026-07-31",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002601025",
+      "status": "受付終了",
+      "estimatedPrice": "9,220,000円"
+    },
+    {
+      "id": "gojo-epi-2601023",
+      "municipality": "五條市",
+      "title": "五條市大塔ふれあい交流館改修工事",
+      "type": "建築",
+      "announcementDate": "2026-06-30",
+      "biddingDate": "2026-07-31",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002601023",
+      "status": "受付終了",
+      "estimatedPrice": "79,920,000円"
+    },
+    {
       "id": "gojo-epi-2601022",
       "municipality": "五條市",
       "title": "向加名生団地B棟屋根改修工事",
@@ -1744,6 +1780,18 @@
   ],
   "高取町": [
     {
+      "id": "高取町-2026-07-28-町営住宅空家修繕工事設計業務",
+      "municipality": "高取町",
+      "title": "町営住宅空家修繕工事設計業務",
+      "type": "コンサル",
+      "announcementDate": "2026-07-28",
+      "biddingDate": "2026-07-28",
+      "link": "https://www.town.takatori.nara.jp/contents_detail.php?frmId=2205",
+      "status": "落札",
+      "winningContractor": "(株)福井建築設計事務所",
+      "winnerType": "設計事務所"
+    },
+    {
       "id": "高取町-2026-05-11-高取町文化センター解体工事監理業務",
       "municipality": "高取町",
       "title": "高取町文化センター解体工事監理業務",
@@ -1967,7 +2015,7 @@
       "announcementDate": "2026-07-09",
       "biddingDate": "2026-07-30",
       "link": "https://www.town.ikaruga.nara.jp/0000003346.html",
-      "status": "受付中"
+      "status": "受付終了"
     },
     {
       "id": "斑鳩町-2026-05-01-斑鳩小学校の長寿命化工事に向けた基本計画",

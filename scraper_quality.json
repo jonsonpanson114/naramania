@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-07-30T08:32:18.995Z",
+  "generatedAt": "2026-07-31T04:34:41.740Z",
   "source": "daily_scrape",
-  "keptCount": 188,
+  "keptCount": 192,
   "municipalityCount": 23,
   "oldestAnnouncementDate": "2025-02-02",
-  "latestAnnouncementDate": "2026-07-27",
-  "scrapedCount": 461,
-  "rejectedCount": 275,
+  "latestAnnouncementDate": "2026-07-31",
+  "scrapedCount": 467,
+  "rejectedCount": 276,
   "municipalityAudit": {
     "expectedMunicipalityCount": 25,
     "coveredMunicipalityCount": 23,
@@ -31,22 +31,22 @@
       },
       {
         "municipality": "高取町",
-        "count": 19,
-        "changeFromPrevious": 0
+        "count": 20,
+        "changeFromPrevious": 1
+      },
+      {
+        "municipality": "橿原市",
+        "count": 18,
+        "changeFromPrevious": 1
+      },
+      {
+        "municipality": "五條市",
+        "count": 18,
+        "changeFromPrevious": 2
       },
       {
         "municipality": "宇陀市",
         "count": 17,
-        "changeFromPrevious": 0
-      },
-      {
-        "municipality": "橿原市",
-        "count": 17,
-        "changeFromPrevious": 0
-      },
-      {
-        "municipality": "五條市",
-        "count": 16,
         "changeFromPrevious": 0
       },
       {
@@ -107,7 +107,7 @@
       {
         "municipality": "御所市",
         "count": 2,
-        "changeFromPrevious": -1
+        "changeFromPrevious": 0
       },
       {
         "municipality": "広陵町",
@@ -161,11 +161,11 @@
     ]
   },
   "intelligence": {
-    "itemsWithPdf": 41,
-    "itemsWithDescription": 39,
-    "intelligenceExtractedCount": 38,
-    "geminiExtractedCount": 38,
-    "taggedCount": 38,
-    "lastAugmentedAt": "2026-07-30T09:17:56.342Z"
+    "itemsWithPdf": 42,
+    "itemsWithDescription": 40,
+    "intelligenceExtractedCount": 39,
+    "geminiExtractedCount": 39,
+    "taggedCount": 39,
+    "lastAugmentedAt": "2026-07-31T05:20:32.633Z"
   }
 }

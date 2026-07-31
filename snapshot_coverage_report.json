@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-30T09:25:08.117Z",
+  "generatedAt": "2026-07-31T05:27:51.628Z",
   "checkedMunicipalityCount": 23,
-  "expectedItemCount": 188,
-  "matchedItemCount": 188,
+  "expectedItemCount": 192,
+  "matchedItemCount": 192,
   "missingItemCount": 0,
-  "duplicateTitleGroupCount": 13,
-  "duplicateTitleItemCount": 27,
+  "duplicateTitleGroupCount": 14,
+  "duplicateTitleItemCount": 30,
   "results": [
     {
       "municipality": "葛城市",
@@ -31,12 +31,34 @@
     },
     {
       "municipality": "高取町",
-      "snapshotCount": 19,
-      "expectedCount": 19,
-      "matchedCount": 19,
+      "snapshotCount": 20,
+      "expectedCount": 20,
+      "matchedCount": 20,
       "missingCount": 0,
-      "duplicateTitleGroupCount": 5,
-      "duplicateTitleItemCount": 11,
+      "duplicateTitleGroupCount": 6,
+      "duplicateTitleItemCount": 13,
+      "missingItems": [],
+      "status": "ok"
+    },
+    {
+      "municipality": "橿原市",
+      "snapshotCount": 18,
+      "expectedCount": 18,
+      "matchedCount": 18,
+      "missingCount": 0,
+      "duplicateTitleGroupCount": 0,
+      "duplicateTitleItemCount": 0,
+      "missingItems": [],
+      "status": "ok"
+    },
+    {
+      "municipality": "五條市",
+      "snapshotCount": 18,
+      "expectedCount": 18,
+      "matchedCount": 18,
+      "missingCount": 0,
+      "duplicateTitleGroupCount": 2,
+      "duplicateTitleItemCount": 5,
       "missingItems": [],
       "status": "ok"
     },
@@ -48,28 +70,6 @@
       "missingCount": 0,
       "duplicateTitleGroupCount": 0,
       "duplicateTitleItemCount": 0,
-      "missingItems": [],
-      "status": "ok"
-    },
-    {
-      "municipality": "橿原市",
-      "snapshotCount": 17,
-      "expectedCount": 17,
-      "matchedCount": 17,
-      "missingCount": 0,
-      "duplicateTitleGroupCount": 0,
-      "duplicateTitleItemCount": 0,
-      "missingItems": [],
-      "status": "ok"
-    },
-    {
-      "municipality": "五條市",
-      "snapshotCount": 16,
-      "expectedCount": 16,
-      "matchedCount": 16,
-      "missingCount": 0,
-      "duplicateTitleGroupCount": 2,
-      "duplicateTitleItemCount": 4,
       "missingItems": [],
       "status": "ok"
     },
