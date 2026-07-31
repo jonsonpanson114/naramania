@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-31T04:34:41.740Z",
+  "generatedAt": "2026-07-31T08:56:33.599Z",
   "source": "daily_scrape",
   "keptCount": 192,
   "municipalityCount": 23,
@@ -32,17 +32,17 @@
       {
         "municipality": "高取町",
         "count": 20,
-        "changeFromPrevious": 1
+        "changeFromPrevious": 0
       },
       {
         "municipality": "橿原市",
         "count": 18,
-        "changeFromPrevious": 1
+        "changeFromPrevious": 0
       },
       {
         "municipality": "五條市",
         "count": 18,
-        "changeFromPrevious": 2
+        "changeFromPrevious": 0
       },
       {
         "municipality": "宇陀市",
@@ -166,6 +166,6 @@
     "intelligenceExtractedCount": 39,
     "geminiExtractedCount": 39,
     "taggedCount": 39,
-    "lastAugmentedAt": "2026-07-31T05:20:32.633Z"
+    "lastAugmentedAt": "2026-07-31T09:42:16.435Z"
   }
 }
