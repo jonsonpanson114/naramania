@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-07-31T09:49:08.111Z",
+  "generatedAt": "2026-08-03T05:37:18.272Z",
   "checkedMunicipalityCount": 23,
-  "expectedItemCount": 192,
-  "matchedItemCount": 192,
+  "expectedItemCount": 191,
+  "matchedItemCount": 191,
   "missingItemCount": 0,
   "duplicateTitleGroupCount": 14,
   "duplicateTitleItemCount": 30,
@@ -140,17 +140,6 @@
       "status": "ok"
     },
     {
-      "municipality": "桜井市",
-      "snapshotCount": 3,
-      "expectedCount": 3,
-      "matchedCount": 3,
-      "missingCount": 0,
-      "duplicateTitleGroupCount": 0,
-      "duplicateTitleItemCount": 0,
-      "missingItems": [],
-      "status": "ok"
-    },
-    {
       "municipality": "三郷町",
       "snapshotCount": 3,
       "expectedCount": 3,
@@ -207,6 +196,17 @@
     },
     {
       "municipality": "広陵町",
+      "snapshotCount": 2,
+      "expectedCount": 2,
+      "matchedCount": 2,
+      "missingCount": 0,
+      "duplicateTitleGroupCount": 0,
+      "duplicateTitleItemCount": 0,
+      "missingItems": [],
+      "status": "ok"
+    },
+    {
+      "municipality": "桜井市",
       "snapshotCount": 2,
       "expectedCount": 2,
       "matchedCount": 2,

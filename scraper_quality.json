@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-31T08:56:33.599Z",
+  "generatedAt": "2026-08-03T04:44:02.501Z",
   "source": "daily_scrape",
-  "keptCount": 192,
+  "keptCount": 191,
   "municipalityCount": 23,
   "oldestAnnouncementDate": "2025-02-02",
   "latestAnnouncementDate": "2026-07-31",
-  "scrapedCount": 467,
+  "scrapedCount": 466,
   "rejectedCount": 276,
   "municipalityAudit": {
     "expectedMunicipalityCount": 25,
@@ -80,11 +80,6 @@
         "changeFromPrevious": 0
       },
       {
-        "municipality": "桜井市",
-        "count": 3,
-        "changeFromPrevious": 0
-      },
-      {
         "municipality": "三郷町",
         "count": 3,
         "changeFromPrevious": 0
@@ -113,6 +108,11 @@
         "municipality": "広陵町",
         "count": 2,
         "changeFromPrevious": 0
+      },
+      {
+        "municipality": "桜井市",
+        "count": 2,
+        "changeFromPrevious": -1
       },
       {
         "municipality": "山添村",
@@ -162,10 +162,10 @@
   },
   "intelligence": {
     "itemsWithPdf": 42,
-    "itemsWithDescription": 40,
+    "itemsWithDescription": 39,
     "intelligenceExtractedCount": 39,
     "geminiExtractedCount": 39,
     "taggedCount": 39,
-    "lastAugmentedAt": "2026-07-31T09:42:16.435Z"
+    "lastAugmentedAt": "2026-08-03T05:29:47.203Z"
   }
 }
