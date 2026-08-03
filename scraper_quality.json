@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-03T04:44:02.501Z",
+  "generatedAt": "2026-08-03T09:48:25.804Z",
   "source": "daily_scrape",
   "keptCount": 191,
   "municipalityCount": 23,
@@ -112,7 +112,7 @@
       {
         "municipality": "桜井市",
         "count": 2,
-        "changeFromPrevious": -1
+        "changeFromPrevious": 0
       },
       {
         "municipality": "山添村",
@@ -166,6 +166,6 @@
     "intelligenceExtractedCount": 39,
     "geminiExtractedCount": 39,
     "taggedCount": 39,
-    "lastAugmentedAt": "2026-08-03T05:29:47.203Z"
+    "lastAugmentedAt": "2026-08-03T10:34:21.045Z"
   }
 }
