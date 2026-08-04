@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-04T05:20:26.840Z",
-  "qualityGeneratedAt": "2026-08-04T04:27:24.740Z",
-  "itemCount": 191,
+  "generatedAt": "2026-08-04T09:36:44.249Z",
+  "qualityGeneratedAt": "2026-08-04T08:43:01.440Z",
+  "itemCount": 190,
   "resultFollowUp": {
-    "totalCount": 19,
+    "totalCount": 18,
     "highCount": 16,
-    "mediumCount": 3,
+    "mediumCount": 2,
     "lowCount": 0,
     "missingBiddingDateCount": 0,
     "byMunicipality": [
@@ -43,10 +43,6 @@
       },
       {
         "municipality": "奈良市",
-        "count": 1
-      },
-      {
-        "municipality": "斑鳩町",
         "count": 1
       }
     ],
@@ -828,15 +824,15 @@
         "municipality": "斑鳩町",
         "status": "ok",
         "severity": "error",
-        "totalCount": 3,
+        "totalCount": 2,
         "requiredLinkIncludes": [
           "town.ikaruga.nara.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "town.ikaruga.nara.jp": 3
+          "town.ikaruga.nara.jp": 2
         },
-        "message": "斑鳩町: 3件 / sources OK"
+        "message": "斑鳩町: 2件 / sources OK"
       },
       {
         "municipality": "三郷町",

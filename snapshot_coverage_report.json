@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-08-04T05:20:28.004Z",
+  "generatedAt": "2026-08-04T09:36:45.291Z",
   "checkedMunicipalityCount": 23,
-  "expectedItemCount": 191,
-  "matchedItemCount": 191,
+  "expectedItemCount": 190,
+  "matchedItemCount": 190,
   "missingItemCount": 0,
   "duplicateTitleGroupCount": 14,
   "duplicateTitleItemCount": 30,
@@ -173,17 +173,6 @@
       "status": "ok"
     },
     {
-      "municipality": "斑鳩町",
-      "snapshotCount": 3,
-      "expectedCount": 3,
-      "matchedCount": 3,
-      "missingCount": 0,
-      "duplicateTitleGroupCount": 0,
-      "duplicateTitleItemCount": 0,
-      "missingItems": [],
-      "status": "ok"
-    },
-    {
       "municipality": "御所市",
       "snapshotCount": 2,
       "expectedCount": 2,
@@ -218,6 +207,17 @@
     },
     {
       "municipality": "山添村",
+      "snapshotCount": 2,
+      "expectedCount": 2,
+      "matchedCount": 2,
+      "missingCount": 0,
+      "duplicateTitleGroupCount": 0,
+      "duplicateTitleItemCount": 0,
+      "missingItems": [],
+      "status": "ok"
+    },
+    {
+      "municipality": "斑鳩町",
       "snapshotCount": 2,
       "expectedCount": 2,
       "matchedCount": 2,
