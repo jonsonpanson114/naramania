@@ -600,6 +600,26 @@
   ],
   "生駒市": [
     {
+      "id": "ikoma-98e3ef20c8",
+      "municipality": "生駒市",
+      "title": "生駒中学校ＬＥＤ改修工事",
+      "type": "建築",
+      "announcementDate": "2026-08-05",
+      "biddingDate": "2026-08-24",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+      "status": "受付中"
+    },
+    {
+      "id": "ikoma-444ee706b8",
+      "municipality": "生駒市",
+      "title": "緑ヶ丘中学校ＬＥＤ改修工事",
+      "type": "建築",
+      "announcementDate": "2026-08-05",
+      "biddingDate": "2026-08-26",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+      "status": "受付中"
+    },
+    {
       "id": "ikoma-ab4d291423",
       "municipality": "生駒市",
       "title": "生駒北スポーツセンター及びむかいやま公園体育施設トイレ改修工事",
@@ -615,16 +635,6 @@
       "title": "白藤会館解体工事設計業務",
       "type": "コンサル",
       "announcementDate": "2026-07-27",
-      "biddingDate": "2026-08-17",
-      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-      "status": "受付中"
-    },
-    {
-      "id": "ikoma-be8e4258d8",
-      "municipality": "生駒市",
-      "title": "上中学校校舎長寿命化改修工事（Ⅰ・Ⅱ期）",
-      "type": "建築",
-      "announcementDate": "2026-07-15",
       "biddingDate": "2026-08-17",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
       "status": "受付中"
@@ -835,7 +845,7 @@
       "announcementDate": "2026-07-10",
       "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/4-4-3-2026-1.pdf",
       "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/4-4-3-2026-1.pdf",
-      "status": "受付中",
+      "status": "受付終了",
       "biddingDate": "2026-08-04"
     },
     {
@@ -1325,6 +1335,16 @@
     }
   ],
   "御所市": [
+    {
+      "id": "gose-（仮称）御所市北部認定こども園整備工事設-2",
+      "municipality": "御所市",
+      "title": "（仮称）御所市北部認定こども園整備工事設計業務委託に係る公募型プロポーザル",
+      "type": "コンサル",
+      "announcementDate": "2026-08-05",
+      "biddingDate": "",
+      "link": "https://www.city.gose.nara.jp/0000004649.html",
+      "status": "受付中"
+    },
     {
       "id": "gose-2026-07-17-市営住宅(サン柏原207号・今出団地99号・11-0",
       "municipality": "御所市",
@@ -2030,17 +2050,6 @@
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0660064007200640",
       "status": "落札",
       "winningContractor": "阪本水道商会 三郷営業所"
-    },
-    {
-      "id": "sango-epi-5Luk5ZKM77yY",
-      "municipality": "三郷町",
-      "title": "令和８年度 三郷小学校建替事業設計業務",
-      "type": "コンサル",
-      "announcementDate": "2026-04-08",
-      "biddingDate": "2026-05-22",
-      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0660064007200640",
-      "status": "落札",
-      "winningContractor": "株式会社大建設計 大阪事務所"
     },
     {
       "id": "sango-epi-5Luk5ZKMN+W5",

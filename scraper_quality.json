@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-08-04T08:43:01.440Z",
+  "generatedAt": "2026-08-05T04:23:48.266Z",
   "source": "daily_scrape",
-  "keptCount": 190,
+  "keptCount": 191,
   "municipalityCount": 23,
   "oldestAnnouncementDate": "2025-02-02",
-  "latestAnnouncementDate": "2026-07-31",
-  "scrapedCount": 465,
-  "rejectedCount": 276,
+  "latestAnnouncementDate": "2026-08-05",
+  "scrapedCount": 467,
+  "rejectedCount": 277,
   "municipalityAudit": {
     "expectedMunicipalityCount": 25,
     "coveredMunicipalityCount": 23,
@@ -51,8 +51,8 @@
       },
       {
         "municipality": "生駒市",
-        "count": 16,
-        "changeFromPrevious": 0
+        "count": 17,
+        "changeFromPrevious": 1
       },
       {
         "municipality": "香芝市",
@@ -80,9 +80,9 @@
         "changeFromPrevious": 0
       },
       {
-        "municipality": "三郷町",
+        "municipality": "御所市",
         "count": 3,
-        "changeFromPrevious": 0
+        "changeFromPrevious": 1
       },
       {
         "municipality": "天理市",
@@ -92,11 +92,6 @@
       {
         "municipality": "田原本町",
         "count": 3,
-        "changeFromPrevious": 0
-      },
-      {
-        "municipality": "御所市",
-        "count": 2,
         "changeFromPrevious": 0
       },
       {
@@ -110,6 +105,11 @@
         "changeFromPrevious": 0
       },
       {
+        "municipality": "三郷町",
+        "count": 2,
+        "changeFromPrevious": -1
+      },
+      {
         "municipality": "山添村",
         "count": 2,
         "changeFromPrevious": 0
@@ -117,7 +117,7 @@
       {
         "municipality": "斑鳩町",
         "count": 2,
-        "changeFromPrevious": -1
+        "changeFromPrevious": 0
       },
       {
         "municipality": "平群町",
@@ -166,6 +166,6 @@
     "intelligenceExtractedCount": 39,
     "geminiExtractedCount": 39,
     "taggedCount": 39,
-    "lastAugmentedAt": "2026-08-04T09:28:49.254Z"
+    "lastAugmentedAt": "2026-08-05T05:09:29.828Z"
   }
 }
