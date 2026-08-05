@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-04T09:36:33.395Z",
-  "currentItemCount": 191,
+  "generatedAt": "2026-08-05T04:59:23.097Z",
+  "currentItemCount": 190,
   "checkedMunicipalities": [
     "奈良市",
     "橿原市",
@@ -52,8 +52,8 @@
     },
     {
       "municipality": "生駒市",
-      "rawCount": 16,
-      "keptCount": 16,
+      "rawCount": 17,
+      "keptCount": 17,
       "rejectedCount": 0,
       "warnings": [],
       "errors": []
@@ -94,8 +94,8 @@
     },
     {
       "municipality": "御所市",
-      "rawCount": 2,
-      "keptCount": 2,
+      "rawCount": 3,
+      "keptCount": 3,
       "rejectedCount": 0,
       "warnings": [],
       "errors": []
@@ -209,8 +209,8 @@
     {
       "municipality": "三郷町",
       "rawCount": 21,
-      "keptCount": 8,
-      "rejectedCount": 13,
+      "keptCount": 7,
+      "rejectedCount": 14,
       "warnings": [],
       "errors": []
     },
@@ -233,12 +233,33 @@
   ],
   "coverage": {
     "checkedMunicipalityCount": 24,
-    "expectedItemCount": 189,
+    "expectedItemCount": 190,
     "matchedItemCount": 189,
-    "missingItemCount": 0,
+    "missingItemCount": 1,
     "duplicateTitleGroupCount": 27,
     "duplicateTitleItemCount": 59,
     "results": [
+      {
+        "municipality": "御所市",
+        "snapshotCount": 3,
+        "expectedCount": 3,
+        "matchedCount": 2,
+        "missingCount": 1,
+        "duplicateTitleGroupCount": 0,
+        "duplicateTitleItemCount": 0,
+        "missingItems": [
+          {
+            "id": "gose-（仮称）御所市北部認定こども園整備工事設-2",
+            "municipality": "御所市",
+            "title": "（仮称）御所市北部認定こども園整備工事設計業務委託に係る公募型プロポーザル",
+            "status": "受付中",
+            "announcementDate": "2026-08-05",
+            "link": "https://www.city.gose.nara.jp/0000004649.html",
+            "reason": "snapshot item should be present in scraper_result"
+          }
+        ],
+        "status": "missing"
+      },
       {
         "municipality": "五條市",
         "snapshotCount": 66,
@@ -296,9 +317,9 @@
       },
       {
         "municipality": "生駒市",
-        "snapshotCount": 16,
-        "expectedCount": 16,
-        "matchedCount": 16,
+        "snapshotCount": 17,
+        "expectedCount": 17,
+        "matchedCount": 17,
         "missingCount": 0,
         "duplicateTitleGroupCount": 0,
         "duplicateTitleItemCount": 0,
@@ -330,8 +351,8 @@
       {
         "municipality": "三郷町",
         "snapshotCount": 21,
-        "expectedCount": 8,
-        "matchedCount": 8,
+        "expectedCount": 7,
+        "matchedCount": 7,
         "missingCount": 0,
         "duplicateTitleGroupCount": 0,
         "duplicateTitleItemCount": 0,
@@ -395,17 +416,6 @@
       },
       {
         "municipality": "王寺町",
-        "snapshotCount": 2,
-        "expectedCount": 2,
-        "matchedCount": 2,
-        "missingCount": 0,
-        "duplicateTitleGroupCount": 0,
-        "duplicateTitleItemCount": 0,
-        "missingItems": [],
-        "status": "ok"
-      },
-      {
-        "municipality": "御所市",
         "snapshotCount": 2,
         "expectedCount": 2,
         "matchedCount": 2,
