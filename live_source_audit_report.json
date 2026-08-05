@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-05T04:59:23.097Z",
-  "currentItemCount": 190,
+  "generatedAt": "2026-08-05T07:35:40.085Z",
+  "currentItemCount": 191,
   "checkedMunicipalities": [
     "奈良市",
     "橿原市",
@@ -36,9 +36,9 @@
   "scraperResults": [
     {
       "municipality": "奈良市",
-      "rawCount": 16,
+      "rawCount": 17,
       "keptCount": 14,
-      "rejectedCount": 2,
+      "rejectedCount": 3,
       "warnings": [],
       "errors": []
     },
@@ -234,32 +234,11 @@
   "coverage": {
     "checkedMunicipalityCount": 24,
     "expectedItemCount": 190,
-    "matchedItemCount": 189,
-    "missingItemCount": 1,
+    "matchedItemCount": 190,
+    "missingItemCount": 0,
     "duplicateTitleGroupCount": 27,
     "duplicateTitleItemCount": 59,
     "results": [
-      {
-        "municipality": "御所市",
-        "snapshotCount": 3,
-        "expectedCount": 3,
-        "matchedCount": 2,
-        "missingCount": 1,
-        "duplicateTitleGroupCount": 0,
-        "duplicateTitleItemCount": 0,
-        "missingItems": [
-          {
-            "id": "gose-（仮称）御所市北部認定こども園整備工事設-2",
-            "municipality": "御所市",
-            "title": "（仮称）御所市北部認定こども園整備工事設計業務委託に係る公募型プロポーザル",
-            "status": "受付中",
-            "announcementDate": "2026-08-05",
-            "link": "https://www.city.gose.nara.jp/0000004649.html",
-            "reason": "snapshot item should be present in scraper_result"
-          }
-        ],
-        "status": "missing"
-      },
       {
         "municipality": "五條市",
         "snapshotCount": 66,
@@ -328,7 +307,7 @@
       },
       {
         "municipality": "奈良市",
-        "snapshotCount": 16,
+        "snapshotCount": 17,
         "expectedCount": 14,
         "matchedCount": 14,
         "missingCount": 0,
@@ -386,6 +365,17 @@
         "snapshotCount": 5,
         "expectedCount": 4,
         "matchedCount": 4,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 0,
+        "duplicateTitleItemCount": 0,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
+        "municipality": "御所市",
+        "snapshotCount": 3,
+        "expectedCount": 3,
+        "matchedCount": 3,
         "missingCount": 0,
         "duplicateTitleGroupCount": 0,
         "duplicateTitleItemCount": 0,
