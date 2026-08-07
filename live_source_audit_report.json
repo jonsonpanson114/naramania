@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-06T09:37:19.973Z",
+  "generatedAt": "2026-08-07T04:26:14.520Z",
   "currentItemCount": 191,
   "checkedMunicipalities": [
     "奈良市",
@@ -134,8 +134,8 @@
     },
     {
       "municipality": "広陵町",
-      "rawCount": 2,
-      "keptCount": 2,
+      "rawCount": 5,
+      "keptCount": 5,
       "rejectedCount": 0,
       "warnings": [],
       "errors": []
@@ -233,12 +233,54 @@
   ],
   "coverage": {
     "checkedMunicipalityCount": 24,
-    "expectedItemCount": 190,
+    "expectedItemCount": 193,
     "matchedItemCount": 190,
-    "missingItemCount": 0,
+    "missingItemCount": 3,
     "duplicateTitleGroupCount": 27,
     "duplicateTitleItemCount": 59,
     "results": [
+      {
+        "municipality": "広陵町",
+        "snapshotCount": 5,
+        "expectedCount": 5,
+        "matchedCount": 2,
+        "missingCount": 3,
+        "duplicateTitleGroupCount": 0,
+        "duplicateTitleItemCount": 0,
+        "missingItems": [
+          {
+            "id": "koryo-2026-07-29-No18",
+            "municipality": "広陵町",
+            "title": "真美北保育園改修工事",
+            "status": "落札",
+            "announcementDate": "2026-07-29",
+            "biddingDate": "2026-07-29",
+            "link": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7919/NO18-2.pdf",
+            "reason": "snapshot item should be present in scraper_result"
+          },
+          {
+            "id": "koryo-2026-07-29-No21",
+            "municipality": "広陵町",
+            "title": "横峯公園トイレ改修工事",
+            "status": "落札",
+            "announcementDate": "2026-07-29",
+            "biddingDate": "2026-07-29",
+            "link": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7919/NO21-2.pdf",
+            "reason": "snapshot item should be present in scraper_result"
+          },
+          {
+            "id": "koryo-2026-07-29-No22",
+            "municipality": "広陵町",
+            "title": "真美ケ丘第二小学校外構改修工事",
+            "status": "落札",
+            "announcementDate": "2026-07-29",
+            "biddingDate": "2026-07-29",
+            "link": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7919/NO22-2.pdf",
+            "reason": "snapshot item should be present in scraper_result"
+          }
+        ],
+        "status": "missing"
+      },
       {
         "municipality": "五條市",
         "snapshotCount": 66,
@@ -406,17 +448,6 @@
       },
       {
         "municipality": "王寺町",
-        "snapshotCount": 2,
-        "expectedCount": 2,
-        "matchedCount": 2,
-        "missingCount": 0,
-        "duplicateTitleGroupCount": 0,
-        "duplicateTitleItemCount": 0,
-        "missingItems": [],
-        "status": "ok"
-      },
-      {
-        "municipality": "広陵町",
         "snapshotCount": 2,
         "expectedCount": 2,
         "matchedCount": 2,
