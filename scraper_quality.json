@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-07T04:01:09.628Z",
+  "generatedAt": "2026-08-07T07:21:24.395Z",
   "source": "daily_scrape",
   "keptCount": 194,
   "municipalityCount": 23,
   "oldestAnnouncementDate": "2025-02-02",
-  "latestAnnouncementDate": "2026-08-05",
+  "latestAnnouncementDate": "2026-08-07",
   "scrapedCount": 471,
   "rejectedCount": 278,
   "municipalityAudit": {
@@ -67,7 +67,7 @@
       {
         "municipality": "広陵町",
         "count": 5,
-        "changeFromPrevious": 3
+        "changeFromPrevious": 0
       },
       {
         "municipality": "三宅町",
@@ -141,19 +141,12 @@
   "dateAudit": {
     "announcementAfterBiddingCount": 0,
     "awardedWithoutBiddingDateCount": 0,
-    "awardedWithoutWinnerCount": 2,
+    "awardedWithoutWinnerCount": 1,
     "openWithWinnerCount": 0,
     "sampleTitles": [
       {
         "municipality": "三宅町",
         "title": "三宅町文化ホールトイレ改修工事",
-        "status": "落札",
-        "announcementDate": "2026-07-21",
-        "biddingDate": "2026-07-21"
-      },
-      {
-        "municipality": "三宅町",
-        "title": "上但馬保育所解体工事設計委託業務",
         "status": "落札",
         "announcementDate": "2026-07-21",
         "biddingDate": "2026-07-21"
@@ -166,6 +159,6 @@
     "intelligenceExtractedCount": 42,
     "geminiExtractedCount": 42,
     "taggedCount": 42,
-    "lastAugmentedAt": "2026-08-07T04:55:10.101Z"
+    "lastAugmentedAt": "2026-08-07T08:15:07.712Z"
   }
 }
