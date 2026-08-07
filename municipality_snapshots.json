@@ -1336,7 +1336,7 @@
   ],
   "御所市": [
     {
-      "id": "gose-（仮称）御所市北部認定こども園整備工事設-7",
+      "id": "gose-（仮称）御所市北部認定こども園整備工事設-8",
       "municipality": "御所市",
       "title": "（仮称）御所市北部認定こども園整備工事設計業務委託に係る公募型プロポーザル",
       "type": "コンサル",
@@ -1637,6 +1637,42 @@
     }
   ],
   "広陵町": [
+    {
+      "id": "koryo-2026-07-29-No18",
+      "municipality": "広陵町",
+      "title": "真美北保育園改修工事",
+      "type": "建築",
+      "announcementDate": "2026-07-29",
+      "biddingDate": "2026-07-29",
+      "link": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7919/NO18-2.pdf",
+      "pdfUrl": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7919/NO18-2.pdf",
+      "status": "落札",
+      "winningContractor": "株式会社 クラハラ"
+    },
+    {
+      "id": "koryo-2026-07-29-No21",
+      "municipality": "広陵町",
+      "title": "横峯公園トイレ改修工事",
+      "type": "建築",
+      "announcementDate": "2026-07-29",
+      "biddingDate": "2026-07-29",
+      "link": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7919/NO21-2.pdf",
+      "pdfUrl": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7919/NO21-2.pdf",
+      "status": "落札",
+      "winningContractor": "小池光建設株式会社"
+    },
+    {
+      "id": "koryo-2026-07-29-No22",
+      "municipality": "広陵町",
+      "title": "真美ケ丘第二小学校外構改修工事",
+      "type": "建築",
+      "announcementDate": "2026-07-29",
+      "biddingDate": "2026-07-29",
+      "link": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7919/NO22-2.pdf",
+      "pdfUrl": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7919/NO22-2.pdf",
+      "status": "落札",
+      "winningContractor": "株式会社 出井組"
+    },
     {
       "id": "koryo-2026-05-29-No6",
       "municipality": "広陵町",

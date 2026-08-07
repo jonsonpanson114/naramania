@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-06T08:50:40.349Z",
+  "generatedAt": "2026-08-07T04:01:09.628Z",
   "source": "daily_scrape",
-  "keptCount": 191,
+  "keptCount": 194,
   "municipalityCount": 23,
   "oldestAnnouncementDate": "2025-02-02",
   "latestAnnouncementDate": "2026-08-05",
-  "scrapedCount": 468,
+  "scrapedCount": 471,
   "rejectedCount": 278,
   "municipalityAudit": {
     "expectedMunicipalityCount": 25,
@@ -65,6 +65,11 @@
         "changeFromPrevious": 0
       },
       {
+        "municipality": "広陵町",
+        "count": 5,
+        "changeFromPrevious": 3
+      },
+      {
         "municipality": "三宅町",
         "count": 4,
         "changeFromPrevious": 0
@@ -92,11 +97,6 @@
       {
         "municipality": "田原本町",
         "count": 3,
-        "changeFromPrevious": 0
-      },
-      {
-        "municipality": "広陵町",
-        "count": 2,
         "changeFromPrevious": 0
       },
       {
@@ -161,11 +161,11 @@
     ]
   },
   "intelligence": {
-    "itemsWithPdf": 42,
-    "itemsWithDescription": 39,
-    "intelligenceExtractedCount": 39,
-    "geminiExtractedCount": 39,
-    "taggedCount": 39,
-    "lastAugmentedAt": "2026-08-06T09:44:34.212Z"
+    "itemsWithPdf": 45,
+    "itemsWithDescription": 42,
+    "intelligenceExtractedCount": 42,
+    "geminiExtractedCount": 42,
+    "taggedCount": 42,
+    "lastAugmentedAt": "2026-08-07T04:55:10.101Z"
   }
 }
