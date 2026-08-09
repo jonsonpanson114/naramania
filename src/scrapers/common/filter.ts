@@ -109,6 +109,21 @@ const DEFAULT_ARCHITECTURE_WORK_KEYWORDS = [
     '基本設計', '基本計画', '工事監理', '耐震診断', '発注支援',
 ];
 
+// 際どい救済トリガー専用のサブセット。ARCHITECTURE_CONTEXT_KEYWORDS全体を条件にすると
+// 「公民館外壁改修工事」「体育館空調設備更新工事」のような、まさにこのフィルタが
+// 除外すべき単体設備更新工事まで「施設種別語+作業語」だけで丸ごと救済してしまう。
+// 施設種別語(学校・こども園等)に加えて、トイレ改修のような具体的な建築要素語が
+// タイトルに明記されている場合だけを「複合的な建築工事」とみなして救済する。
+const FACILITY_TYPE_KEYWORDS = [
+    '建築', '建物', '庁舎', '校舎', '学校', '小学校', '中学校',
+    '小中学校', '屋内運動場',
+    '幼稚園', 'こども園', '保育園', '保育所', '認定こども園',
+    '公民館', '会館', '交流館', 'センター', '体育館', '図書館', '消防署',
+    '交番', '住宅', '市営住宅', '団地', '施設', 'ホール',
+    'ハウス', 'はうす',
+];
+const SPECIFIC_ELEMENT_KEYWORDS = ['トイレ', '便所', '屋根', '内装', '防火戸', '仮眠室', '書庫'];
+
 const ALWAYS_EXCLUDE_KEYWORDS = [...new Set([...DEFAULT_ALWAYS_EXCLUDE_KEYWORDS, ...dataFilters.alwaysExcludeKeywords])];
 const INFRA_EXCLUDE_KEYWORDS = [...new Set([...DEFAULT_INFRA_EXCLUDE_KEYWORDS, ...dataFilters.infraExcludeKeywords])];
 const ARCHITECTURE_CONTEXT_KEYWORDS = [...new Set([...DEFAULT_ARCHITECTURE_CONTEXT_KEYWORDS, ...dataFilters.architectureContextKeywords])];
@@ -144,6 +159,10 @@ function includesAny(text: string, keywords: string[]): boolean {
     return keywords.some(keyword => text.includes(keyword));
 }
 
+function matchedAny(text: string, keywords: string[]): string[] {
+    return keywords.filter(keyword => text.includes(keyword));
+}
+
 /**
  * 除外キーワードが含まれているか判定する
  * @param text 判定対象のテキスト
@@ -155,9 +174,57 @@ export function isExclusionTarget(text: string): boolean {
 }
 
 /**
+ * 収集時にフィルタで捨てられた（または際どく救済された）案件のログ。
+ * 「何を採用したか」は scraper_result.json で追えるが、「何を・なぜ捨てたか」は
+ * どこにも残らず、安堵町・大和高田市が丸ごと0件になっても6週間気づけなかった。
+ * これを可視化するための最小限の仕組み。
+ */
+export type RejectionReason =
+    | 'always_exclude_keyword'
+    | 'exclusion_keyword'
+    | 'no_architecture_context'
+    | 'infra_exclude_keyword'
+    | 'stale_date';
+
+export interface RejectionLogEntry {
+    municipality?: string;
+    title: string;
+    reason: RejectionReason;
+    matchedKeywords: string[];
+    borderlineRescue?: boolean;
+}
+
+let currentScrapeMunicipality: string | undefined;
+let rejectionLog: RejectionLogEntry[] = [];
+
+/** スクレイプ対象の自治体を設定する。以降の shouldKeepItem 呼び出しはこの自治体名でログされる。 */
+export function setScrapeContext(municipality?: string): void {
+    currentScrapeMunicipality = municipality;
+}
+
+export function getRejectionLog(): RejectionLogEntry[] {
+    return rejectionLog;
+}
+
+export function clearRejectionLog(): void {
+    rejectionLog = [];
+    currentScrapeMunicipality = undefined;
+}
+
+function recordRejection(title: string, reason: RejectionReason, matchedKeywords: string[], borderlineRescue?: boolean, municipality?: string): void {
+    rejectionLog.push({
+        municipality: municipality ?? currentScrapeMunicipality,
+        title,
+        reason,
+        matchedKeywords,
+        ...(borderlineRescue ? { borderlineRescue: true } : {}),
+    });
+}
+
+/**
  * 建築・コンサル系として保持すべき案件か判定する
  */
-export function shouldKeepItem(title: string, otherText?: string): boolean {
+export function shouldKeepItem(title: string, otherText?: string, municipality?: string): boolean {
     const target = `${title} ${otherText || ''}`;
     const hasPriorityArchitecturePattern = includesAny(target, PRIORITY_ARCHITECTURE_PATTERNS);
 
@@ -165,25 +232,45 @@ export function shouldKeepItem(title: string, otherText?: string): boolean {
         return true;
     }
 
-    // 一般業務・物品・広報系は、入札語を含んでも建築案件ではないため除外する。
-    if (includesAny(target, ALWAYS_EXCLUDE_KEYWORDS)) {
+    const hasArchitectureContext = includesAny(target, ARCHITECTURE_CONTEXT_KEYWORDS);
+    const hasArchitectureWork = includesAny(target, ARCHITECTURE_WORK_KEYWORDS);
+    const isArchitectureCandidate = hasArchitectureContext && hasArchitectureWork;
+
+    // 「外壁」「空調」など単体の設備更新を除外するためのキーワードだが、部分一致のため
+    // 「こども園南館外壁改修、トイレ乾式化及び洋式化工事」のように学校・こども園等の
+    // 施設本体を対象とした複合工事まで一語で全否定してしまう。
+    // 一方「公民館外壁改修工事」「体育館空調設備更新工事」のように、施設種別語＋作業語
+    // だけを条件にすると、まさにこのフィルタが除外したい単体設備更新の典型例まで
+    // 復活してしまう。施設種別語(学校・こども園等)に加えて、トイレ改修のような
+    // 具体的な建築要素語が明記されている場合だけを「複合工事」とみなして際どく救済する。
+    const hasFacilityType = includesAny(target, FACILITY_TYPE_KEYWORDS);
+    const hasSpecificElement = includesAny(target, SPECIFIC_ELEMENT_KEYWORDS);
+    const isComplexArchitectureWork = hasFacilityType && hasSpecificElement && hasArchitectureWork;
+
+    const alwaysExcludeMatches = matchedAny(target, ALWAYS_EXCLUDE_KEYWORDS);
+    if (alwaysExcludeMatches.length > 0 && !isComplexArchitectureWork) {
+        recordRejection(title, 'always_exclude_keyword', alwaysExcludeMatches, false, municipality);
         return false;
     }
 
     if (includesAny(target, EXCLUSION_KEYWORDS)) {
+        recordRejection(title, 'exclusion_keyword', matchedAny(target, EXCLUSION_KEYWORDS), false, municipality);
         return false;
     }
 
-    const hasArchitectureContext = includesAny(target, ARCHITECTURE_CONTEXT_KEYWORDS);
-    const hasArchitectureWork = includesAny(target, ARCHITECTURE_WORK_KEYWORDS);
-
-    if (!hasArchitectureContext || !hasArchitectureWork) {
+    if (!isArchitectureCandidate) {
+        recordRejection(title, 'no_architecture_context', [], false, municipality);
         return false;
     }
 
     // 道路・水道などのインフラ案件は、建物語が偶然混ざる場合だけを除外する。
     if (includesAny(target, INFRA_EXCLUDE_KEYWORDS) && !includesAny(target, INFRA_ALLOWED_KEYWORDS)) {
+        recordRejection(title, 'infra_exclude_keyword', matchedAny(target, INFRA_EXCLUDE_KEYWORDS), false, municipality);
         return false;
+    }
+
+    if (alwaysExcludeMatches.length > 0) {
+        recordRejection(title, 'always_exclude_keyword', alwaysExcludeMatches, true, municipality);
     }
 
     return true;
@@ -200,7 +287,14 @@ export function shouldKeepBiddingItem(item: BiddingItem, referenceDate = new Dat
         ? item.title
         : `${item.title} ${item.description || ''}`;
 
-    if (includesAny(exclusionText, ALWAYS_EXCLUDE_KEYWORDS)) {
+    // shouldKeepItem 本体と同じ基準(施設種別語+具体的建築要素語+作業語)で
+    // 際どい救済の可否を揃える。hasArchitectureContext(施設種別語+要素語の混合)だけを
+    // 条件にすると、「公民館外壁改修工事」のような単体設備更新まで救済してしまう。
+    const hasArchitectureWork = includesAny(exclusionText, ARCHITECTURE_WORK_KEYWORDS);
+    const isComplexArchitectureWork = includesAny(exclusionText, FACILITY_TYPE_KEYWORDS)
+        && includesAny(exclusionText, SPECIFIC_ELEMENT_KEYWORDS)
+        && hasArchitectureWork;
+    if (includesAny(exclusionText, ALWAYS_EXCLUDE_KEYWORDS) && !isComplexArchitectureWork) {
         return false;
     }
 
@@ -210,8 +304,8 @@ export function shouldKeepBiddingItem(item: BiddingItem, referenceDate = new Dat
         item.description || '',
         ...(item.tags || []),
     ].join(' ');
-    const titleMatches = shouldKeepItem(item.title);
-    const matches = titleMatches || shouldKeepItem(textToMatch);
+    const titleMatches = shouldKeepItem(item.title, undefined, item.municipality);
+    const matches = titleMatches || shouldKeepItem(textToMatch, undefined, item.municipality);
 
     if (DATE_FILTER_EXEMPT_TITLES.includes(item.title)) {
         return matches;

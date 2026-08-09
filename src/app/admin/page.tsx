@@ -5,6 +5,7 @@ import { CriticalWatchPanel } from '@/components/CriticalWatchPanel';
 import { PracticalWorkQueue } from '@/components/PracticalWorkQueue';
 import { LiveSourceAuditPanel } from '@/components/LiveSourceAuditPanel';
 import { TargetScopePanel } from '@/components/TargetScopePanel';
+import { RejectedItemsPanel } from '@/components/RejectedItemsPanel';
 import { loadDashboardData } from '@/lib/dashboard_data';
 import { Activity, ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
@@ -17,7 +18,7 @@ function formatDateLabel(dateStr?: string | null): string {
 }
 
 export default async function AdminPage() {
-  const { allItems, qualitySummary, liveAuditReport } = loadDashboardData();
+  const { allItems, qualitySummary, liveAuditReport, rejectedItemsReport } = loadDashboardData();
 
   const latestAnnouncementDate = qualitySummary?.latestAnnouncementDate || allItems[0]?.announcementDate;
   const hasHealthRecord = Boolean(qualitySummary?.generatedAt);
@@ -73,6 +74,8 @@ export default async function AdminPage() {
         </div>
 
         <MunicipalityStatusOverview items={allItems} quality={qualitySummary} />
+
+        <RejectedItemsPanel report={rejectedItemsReport} />
 
         <PracticalWorkQueue items={allItems} />
 

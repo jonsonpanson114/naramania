@@ -24,13 +24,14 @@ import { OyodoTownScraper } from './oyodo_town';
 import { BiddingItem, Scraper } from '../types/bidding';
 import fs from 'fs';
 import path from 'path';
-import { shouldKeepBiddingItem } from './common/filter';
+import { shouldKeepBiddingItem, setScrapeContext, getRejectionLog, clearRejectionLog, type RejectionLogEntry } from './common/filter';
 import { EXPECTED_MUNICIPALITIES, QUALITY_PATH, buildDateAuditSummary, buildIntelligenceSummary, readQualitySummary } from '../lib/quality_summary';
 import type { MunicipalityIssueEntry } from '../lib/quality_summary';
 import { evaluateSourceCoverage } from '../lib/source_coverage';
 import { OPENING_RESULT_UPDATES_PATH, buildOpeningResultUpdateReport } from '../lib/opening_result_updates';
 
 const SNAPSHOT_PATH = path.join(process.cwd(), 'municipality_snapshots.json');
+const REJECTED_ITEMS_PATH = path.join(process.cwd(), 'rejected_items_report.json');
 type MunicipalitySnapshots = Partial<Record<BiddingItem['municipality'], BiddingItem[]>>;
 
 function parseMunicipalityEnvList(value?: string): Set<string> {
@@ -232,6 +233,13 @@ function isSuspiciousMunicipalityShrink(
     if (shouldAllowMunicipalityShrink()) return false;
 
     const baselineCount = Math.max(previousMunicipalityItems.length, snapshotMunicipalityItems.length);
+    if (baselineCount === 0) return false;
+
+    // 以前は案件があった自治体が今回0件になるのは、件数の規模によらず常に疑わしい。
+    // 安堵町(2件)のような小規模自治体は below の baselineCount<3 の足切りに阻まれ、
+    // フィルタで全滅しても検知されないまま6週間気づけなかった実例がある。
+    if (keptItems.length === 0) return true;
+
     if (baselineCount < 3) return false;
 
     const droppedCount = baselineCount - keptItems.length;
@@ -288,6 +296,39 @@ function getTodayIsoInTokyo(): string {
         month: '2-digit',
         day: '2-digit',
     }).format(new Date());
+}
+
+/**
+ * フィルタで捨てた（または際どく救済した）案件のログを書き出す。
+ * これまでは「採用した案件」しか記録されず、「何を・なぜ捨てたか」が
+ * 完全にブラックボックスだったため、安堵町のこども園案件のような
+ * 全滅事故が6週間気づかれないまま放置されていた。
+ */
+function writeRejectedItemsReport(entries: RejectionLogEntry[]) {
+    const byMunicipality: Record<string, { rejected: number; borderlineRescued: number }> = {};
+    let borderlineRescuedTotal = 0;
+
+    for (const entry of entries) {
+        const key = entry.municipality || '不明';
+        const bucket = byMunicipality[key] || { rejected: 0, borderlineRescued: 0 };
+        if (entry.borderlineRescue) {
+            bucket.borderlineRescued += 1;
+            borderlineRescuedTotal += 1;
+        } else {
+            bucket.rejected += 1;
+        }
+        byMunicipality[key] = bucket;
+    }
+
+    const report = {
+        generatedAt: new Date().toISOString(),
+        totalRejected: entries.filter(e => !e.borderlineRescue).length,
+        totalBorderlineRescued: borderlineRescuedTotal,
+        byMunicipality,
+        entries,
+    };
+
+    fs.writeFileSync(REJECTED_ITEMS_PATH, JSON.stringify(report, null, 2), 'utf-8');
 }
 
 function writeQualitySummary(
@@ -437,8 +478,10 @@ async function main() {
         }
     }
 
+    clearRejectionLog();
     for (const scraper of scrapers) {
         console.log(`\n--- ${scraper.municipality} 開始 ---`);
+        setScrapeContext(scraper.municipality);
         try {
             const items = await scraper.scrape();
             const diagnostics = scraper.getDiagnostics?.();
@@ -597,6 +640,9 @@ async function main() {
         Array.from(retainedMunicipalities),
         Array.from(municipalityIssues.values()).flat(),
     );
+    const rejectionLog = getRejectionLog();
+    writeRejectedItemsReport(rejectionLog);
+    console.log(`\n除外ログ: 除外 ${rejectionLog.filter(e => !e.borderlineRescue).length}件 / 際どく救済 ${rejectionLog.filter(e => e.borderlineRescue).length}件`);
     console.log(`最終合計: ${finalUnique.length} 件`);
 
     // 内訳表示

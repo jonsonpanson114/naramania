@@ -4,6 +4,20 @@ import type { BiddingItem } from '@/types/bidding';
 import type { LiveSourceAuditReport } from '@/components/LiveSourceAuditPanel';
 import { OPENING_RESULT_UPDATES_PATH, type OpeningResultUpdateReport } from '@/lib/opening_result_updates';
 
+export interface RejectedItemsReport {
+  generatedAt: string;
+  totalRejected: number;
+  totalBorderlineRescued: number;
+  byMunicipality: Record<string, { rejected: number; borderlineRescued: number }>;
+  entries: Array<{
+    municipality?: string;
+    title: string;
+    reason: string;
+    matchedKeywords: string[];
+    borderlineRescue?: boolean;
+  }>;
+}
+
 export interface QualitySummary {
   generatedAt?: string;
   source?: string;
@@ -56,6 +70,7 @@ export interface DashboardData {
   qualitySummary: QualitySummary | null;
   liveAuditReport: LiveSourceAuditReport | null;
   openingResultReport: OpeningResultUpdateReport | null;
+  rejectedItemsReport: RejectedItemsReport | null;
 }
 
 function readJson<T>(filePath: string): T | null {
@@ -78,5 +93,6 @@ export function loadDashboardData(): DashboardData {
     qualitySummary: readJson<QualitySummary>(path.join(cwd, 'scraper_quality.json')),
     liveAuditReport: readJson<LiveSourceAuditReport>(path.join(cwd, 'live_source_audit_report.json')),
     openingResultReport: readJson<OpeningResultUpdateReport>(path.join(cwd, OPENING_RESULT_UPDATES_PATH)),
+    rejectedItemsReport: readJson<RejectedItemsReport>(path.join(cwd, 'rejected_items_report.json')),
   };
 }

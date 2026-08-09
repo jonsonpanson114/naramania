@@ -165,8 +165,22 @@ export function assessBiddingScope(item: BiddingItem): RelevanceAssessment {
   const matchedWork = uniqueMatches(text, TARGET_WORK_KEYWORDS);
   const matchedTarget = Array.from(new Set([...matchedContext, ...matchedWork]));
 
+  const isArchitectureCandidate = matchedContext.length > 0 && matchedWork.length > 0;
+
   if (matchedNoise.length > 0) {
     const noiseReasons = describeNoise(matchedNoise);
+    // 「外壁」「空調」等は部分一致のため、学校・こども園等の施設本体を対象とした
+    // 複合工事（例: こども園の外壁改修＋トイレ洋式化）まで一語で対象外にしてしまう。
+    // 建築文脈と工事文脈が両方そろう際どいケースは、対象外候補ではなく要確認に留める。
+    if (isArchitectureCandidate) {
+      return {
+        status: 'watch',
+        label: '要確認',
+        reasons: [`除外語との際どい一致(${noiseReasons.join('/')})`],
+        matchedNoise,
+        matchedTarget,
+      };
+    }
     return {
       status: 'noise',
       label: '対象外候補',
@@ -176,7 +190,7 @@ export function assessBiddingScope(item: BiddingItem): RelevanceAssessment {
     };
   }
 
-  if (matchedContext.length > 0 && matchedWork.length > 0) {
+  if (isArchitectureCandidate) {
     return {
       status: 'target',
       label: '対象',
