@@ -1,0 +1,341 @@
+{
+  "generatedAt": "2026-08-09T00:14:56.738Z",
+  "totalRejected": 27,
+  "totalBorderlineRescued": 10,
+  "byMunicipality": {
+    "大和高田市": {
+      "rejected": 24,
+      "borderlineRescued": 0
+    },
+    "安堵町": {
+      "rejected": 3,
+      "borderlineRescued": 10
+    }
+  },
+  "entries": [
+    {
+      "municipality": "大和高田市",
+      "title": "大和高田市マテリアルリサイクル推進施設整備・運営事業",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "マテリアルリサイクル",
+        "清掃施設"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "奥田他地内道路除草作業",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "除草"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "材木町他地内道路除草作業",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "除草"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "高田千本桜大中公園周辺他川沿いの桜剪定伐採管理業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "曽6枝根成柿地内管渠工事（2）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "土木"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "土枝土庫2丁目地内管渠工事（3）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "土木"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "高5枝東中2丁目地内管渠工事（5）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "土木"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "高107号線舗装維持工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "高515号線舗装維持工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "天150号線舗装維持工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "こちら",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "清掃施設"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "公共下水道事業に伴う管更生実施設計業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道",
+        "土木"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "地籍調査業務委託（大字土庫C工程･大字土庫1.－1E・F1.・F2.－1工程）",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "地籍調査"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "公共下水道事業に伴う管渠実施設計（1）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道",
+        "土木"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "公共下水道事業に伴う管渠実施設計（2）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道",
+        "土木"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "大和高田市橋梁定期点検業務委託（No.1）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋",
+        "土木",
+        "定期点検"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "大和高田市橋梁定期点検業務委託（No.2）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋",
+        "土木",
+        "定期点検"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "栄町地内仮設駐車場撤去工事",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "駐車場"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "大和高田市立高田こども園空調設備更新工事",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "空調",
+        "設備",
+        "設備更新"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "幹線管路不明水調査及び管路診断業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "高田商業高等学校体育館空調機器設置工事設計業務委託",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "空調"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "敷枝有井地内管渠工事（4）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "公共下水道事業に伴う管更生実施設計業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "高5枝曽大根1丁目地内管渠工事（1）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "安堵町",
+      "title": "【条件付き一般競争入札の結果】安堵こども園南館外壁改修、トイレ乾式化および洋式化改修工事",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "外壁",
+        "外壁改修"
+      ],
+      "borderlineRescue": true
+    },
+    {
+      "municipality": "安堵町",
+      "title": "条件付き一般競争入札の実施について（令和8年度「広報安堵」印刷製本並びにその付帯業務事業）",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "広報",
+        "印刷"
+      ]
+    },
+    {
+      "municipality": "安堵町",
+      "title": "【条件付き一般競争入札の結果】安堵町コロナ対策備品調達事業",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "備品",
+        "調達"
+      ]
+    },
+    {
+      "municipality": "安堵町",
+      "title": "【条件付き一般競争入札の結果】安堵こども園南館外壁改修、トイレ乾式化および洋式化改修工事",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "外壁",
+        "外壁改修"
+      ],
+      "borderlineRescue": true
+    },
+    {
+      "municipality": "安堵町",
+      "title": "水道管布設工事（西安堵バス停付近）に伴うバス停移動のお知らせについて",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "バス"
+      ]
+    },
+    {
+      "municipality": "安堵町",
+      "title": "安堵こども園南館外壁改修、トイレ乾式化及び洋式化工事に伴う設計業務委託",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "外壁",
+        "外壁改修"
+      ],
+      "borderlineRescue": true
+    },
+    {
+      "municipality": "安堵町",
+      "title": "〖再度公告〗条件付き一般競争入札の実施について（安堵こども園南館外壁改修、トイレ乾式化および洋式化改修工事）",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "外壁",
+        "外壁改修"
+      ],
+      "borderlineRescue": true
+    },
+    {
+      "municipality": "安堵町",
+      "title": "【条件付き一般競争入札の結果】安堵こども園南館外壁改修、トイレ乾式化および洋式化改修工事",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "外壁",
+        "外壁改修"
+      ],
+      "borderlineRescue": true
+    },
+    {
+      "municipality": "安堵町",
+      "title": "安堵こども園南館外壁改修、トイレ乾式化及び洋式化工事に伴う設計業務委託",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "外壁",
+        "外壁改修"
+      ],
+      "borderlineRescue": true
+    },
+    {
+      "municipality": "安堵町",
+      "title": "〖再度公告〗条件付き一般競争入札の実施について（安堵こども園南館外壁改修、トイレ乾式化および洋式化改修工事）",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "外壁",
+        "外壁改修"
+      ],
+      "borderlineRescue": true
+    },
+    {
+      "municipality": "安堵町",
+      "title": "【条件付き一般競争入札の結果】安堵こども園南館外壁改修、トイレ乾式化および洋式化改修工事",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "外壁",
+        "外壁改修"
+      ],
+      "borderlineRescue": true
+    },
+    {
+      "municipality": "安堵町",
+      "title": "安堵こども園南館外壁改修、トイレ乾式化及び洋式化工事に伴う設計業務委託",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "外壁",
+        "外壁改修"
+      ],
+      "borderlineRescue": true
+    },
+    {
+      "municipality": "安堵町",
+      "title": "〖再度公告〗条件付き一般競争入札の実施について（安堵こども園南館外壁改修、トイレ乾式化および洋式化改修工事）",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "外壁",
+        "外壁改修"
+      ],
+      "borderlineRescue": true
+    }
+  ]
+}

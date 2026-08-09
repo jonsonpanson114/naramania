@@ -1,7 +1,7 @@
 {
   "generatedAt": "2026-08-07T07:21:24.395Z",
   "source": "daily_scrape",
-  "keptCount": 194,
+  "keptCount": 197,
   "municipalityCount": 23,
   "oldestAnnouncementDate": "2025-02-02",
   "latestAnnouncementDate": "2026-08-07",
@@ -9,14 +9,12 @@
   "rejectedCount": 278,
   "municipalityAudit": {
     "expectedMunicipalityCount": 25,
-    "coveredMunicipalityCount": 23,
+    "coveredMunicipalityCount": 24,
     "missingMunicipalities": [
-      "大和高田市",
-      "安堵町"
+      "大和高田市"
     ],
     "zeroCountMunicipalities": [
-      "大和高田市",
-      "安堵町"
+      "大和高田市"
     ],
     "breakdown": [
       {
@@ -83,6 +81,10 @@
         "municipality": "大和郡山市",
         "count": 4,
         "changeFromPrevious": 0
+      },
+      {
+        "municipality": "安堵町",
+        "count": 3
       },
       {
         "municipality": "御所市",
@@ -154,7 +156,7 @@
     ]
   },
   "intelligence": {
-    "itemsWithPdf": 45,
+    "itemsWithPdf": 46,
     "itemsWithDescription": 42,
     "intelligenceExtractedCount": 42,
     "geminiExtractedCount": 42,
