@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-10T06:15:05.723Z",
+  "generatedAt": "2026-08-10T08:27:55.084Z",
   "currentItemCount": 197,
   "checkedMunicipalities": [
     "奈良市",
@@ -94,8 +94,8 @@
     },
     {
       "municipality": "御所市",
-      "rawCount": 4,
-      "keptCount": 4,
+      "rawCount": 3,
+      "keptCount": 3,
       "rejectedCount": 0,
       "warnings": [],
       "errors": []
@@ -231,8 +231,8 @@
   ],
   "coverage": {
     "checkedMunicipalityCount": 24,
-    "expectedItemCount": 202,
-    "matchedItemCount": 200,
+    "expectedItemCount": 201,
+    "matchedItemCount": 199,
     "missingItemCount": 2,
     "duplicateTitleGroupCount": 28,
     "duplicateTitleItemCount": 61,
@@ -392,17 +392,6 @@
         "status": "ok"
       },
       {
-        "municipality": "御所市",
-        "snapshotCount": 4,
-        "expectedCount": 4,
-        "matchedCount": 4,
-        "missingCount": 0,
-        "duplicateTitleGroupCount": 1,
-        "duplicateTitleItemCount": 2,
-        "missingItems": [],
-        "status": "ok"
-      },
-      {
         "municipality": "安堵町",
         "snapshotCount": 3,
         "expectedCount": 3,
@@ -410,6 +399,17 @@
         "missingCount": 0,
         "duplicateTitleGroupCount": 0,
         "duplicateTitleItemCount": 0,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
+        "municipality": "御所市",
+        "snapshotCount": 3,
+        "expectedCount": 3,
+        "matchedCount": 3,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 1,
+        "duplicateTitleItemCount": 2,
         "missingItems": [],
         "status": "ok"
       },
