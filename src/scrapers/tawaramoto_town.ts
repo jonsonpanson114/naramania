@@ -40,19 +40,26 @@ export class TawaramotoTownScraper implements Scraper {
             const page = await browser.newPage();
 
             // EffTis は Content-Type に Shift_JIS と宣言するが実態は UTF-8 → 強制上書き
+            // route.fetch() がタイムアウト等で失敗すると、このコールバックの外側の
+            // try/catch では捕捉できず未処理のPromise拒否としてプロセス全体を
+            // クラッシュさせるため、必ず内部で catch して fallback に逃がす。
             await page.route('**/*', async (route) => {
-                const response = await route.fetch();
-                const headers = response.headers();
-                const contentType = headers['content-type'] || '';
-                if (contentType.includes('text/html')) {
-                    const buffer = await response.body();
-                    await route.fulfill({
-                        response,
-                        body: buffer,
-                        headers: { ...headers, 'content-type': 'text/html; charset=utf-8' }
-                    });
-                } else {
-                    await route.fallback();
+                try {
+                    const response = await route.fetch();
+                    const headers = response.headers();
+                    const contentType = headers['content-type'] || '';
+                    if (contentType.includes('text/html')) {
+                        const buffer = await response.body();
+                        await route.fulfill({
+                            response,
+                            body: buffer,
+                            headers: { ...headers, 'content-type': 'text/html; charset=utf-8' }
+                        });
+                    } else {
+                        await route.fallback();
+                    }
+                } catch {
+                    await route.fallback().catch(() => { });
                 }
             });
 

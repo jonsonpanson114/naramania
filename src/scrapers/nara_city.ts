@@ -49,20 +49,27 @@ export class NaraCityScraper implements Scraper {
             // EFFTISサーバーはContent-TypeにShift_JISを指定しているが、実際の中身はUTF-8で送られてくる。
             // これによりChromiumがUTF-8をShift_JISとしてデコードしようとし、文字化け（Mojibake）が発生していた。
             // 対策: レスポンスを横取りし、文字コード宣言を強制的にUTF-8に書き換える。
+            // route.fetch() がタイムアウト等で失敗すると、このコールバックの外側の
+            // try/catch では捕捉できず未処理のPromise拒否としてプロセス全体を
+            // クラッシュさせるため、必ず内部で catch して fallback に逃がす。
             await page.route('**/*', async (route) => {
-                const response = await route.fetch();
-                const headers = response.headers();
-                const contentType = headers['content-type'] || '';
+                try {
+                    const response = await route.fetch();
+                    const headers = response.headers();
+                    const contentType = headers['content-type'] || '';
 
-                if (contentType.includes('text/html')) {
-                    const buffer = await response.body();
-                    await route.fulfill({
-                        response,
-                        body: buffer,
-                        headers: { ...headers, 'content-type': 'text/html; charset=utf-8' }
-                    });
-                } else {
-                    await route.fallback();
+                    if (contentType.includes('text/html')) {
+                        const buffer = await response.body();
+                        await route.fulfill({
+                            response,
+                            body: buffer,
+                            headers: { ...headers, 'content-type': 'text/html; charset=utf-8' }
+                        });
+                    } else {
+                        await route.fallback();
+                    }
+                } catch {
+                    await route.fallback().catch(() => { });
                 }
             });
 
