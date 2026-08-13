@@ -19,7 +19,12 @@ const SEARCH_TARGETS = [
         gyomuType: '02',
         type: 'コンサル' as BiddingType,
         label: 'コンサル',
-        gyoushuCodes: ['0300000'],
+        // 従来は「建築設計」(0300000)だけを検索しており、工事監理業務のような
+        // 「建設コンサルタント」(0100000, 単独で200件超)分類の案件が丸ごと
+        // 検索対象から漏れていた。関連度の絞り込みは shouldKeepItem 側で行う
+        // 設計のため、コンサル区分の主要業種は幅広く検索する
+        // (特殊工事(道路暗渠清掃)=9900000のみ明確に対象外として除外)。
+        gyoushuCodes: ['0300000', '0100000', '0200000', '0400000', '0500000', '0600000'],
     },
     {
         gyomuType: '01',
@@ -358,6 +363,42 @@ async function extractRows(surface: SearchSurface): Promise<SearchRow[]> {
     });
 }
 
+/**
+ * 検索結果は1ページ25件で最大18ページ等になることがあり(例: コンサル区分だけで
+ * 432件)、extractRows は現在表示中のページしか読まない。ページ送りUI
+ * (#pager_pageSet / #pager_arrow_next)を一切操作していなかったため、
+ * 直近の1ページ目(最新25件)以外の案件が丸ごとスクレイプから漏れていた。
+ * 表示件数を100件に上げたうえで「次へ」ボタンが disabled になるまで
+ * 全ページを読む。
+ */
+async function collectAllRows(surface: SearchSurface, scrapeDeadline: number): Promise<SearchRow[]> {
+    // #pager_pageSet と #pager_arrow_next はページ上部・下部の2箇所に同じidで
+    // 存在する(id重複)。.first()を付けずに操作するとPlaywrightのstrict modeで
+    // 例外になり、.catch(() => {})で握りつぶされて表示件数の変更もページ送りも
+    // 常に無言で失敗していた。
+    await surface.locator('#pager_pageSet').first().selectOption('100').catch(() => { });
+    await new Promise((resolve) => setTimeout(resolve, 1500));
+
+    const allRows: SearchRow[] = [];
+    const maxPages = 40;
+
+    for (let pageIndex = 0; pageIndex < maxPages; pageIndex += 1) {
+        if (Date.now() > scrapeDeadline) break;
+
+        allRows.push(...await extractRows(surface));
+
+        const nextButton = surface.locator('#pager_arrow_next').first();
+        if (await nextButton.count() === 0) break;
+        const isDisabled = await nextButton.getAttribute('disabled').catch(() => 'true');
+        if (isDisabled !== null) break;
+
+        await nextButton.click({ timeout: 10000 }).catch(() => { });
+        await new Promise((resolve) => setTimeout(resolve, 1500));
+    }
+
+    return allRows;
+}
+
 async function hasNoResultPopup(page: Page): Promise<boolean> {
     const visible = await page.locator('#bg_pop.display_b').count();
     if (!visible) return false;
@@ -477,6 +518,15 @@ export class NaraPrefScraper implements Scraper {
         const searchPage = await browser.newPage();
         const detailPage = await browser.newPage();
         const items = new Map<string, BiddingItem>();
+        // ページネーション対応で見えるようになった行が数百件規模に増えるため、
+        // 開札日を過ぎた行を全て詳細取得しているとdetailFetchLimitをすぐ使い切る。
+        // 前回のスクレイプで既に落札者/不調まで確定している案件は再取得せず
+        // 使い回し、まだ結果が出ていない案件の取得に予算を回す。
+        const existingByKanriNo = new Map<string, BiddingItem>();
+        for (const existingItem of loadExistingNaraPrefItems()) {
+            const kanriNo = extractKanriNoFromItem(existingItem);
+            if (kanriNo) existingByKanriNo.set(kanriNo, existingItem);
+        }
 
         try {
             const referenceDate = new Date();
@@ -484,8 +534,11 @@ export class NaraPrefScraper implements Scraper {
             const resultLookbackDays = parsePositiveIntegerEnv('NARA_PREF_RESULT_LOOKBACK_DAYS', 370);
             const resultLookbackIso = isoDateDaysBefore(referenceDate, resultLookbackDays);
             let detailFetchCount = 0;
-            const detailFetchLimit = parsePositiveIntegerEnv('NARA_PREF_DETAIL_FETCH_LIMIT', 80);
-            const scrapeDeadline = Date.now() + 150000;
+            // ページネーション対応前は検索結果の1ページ目(最大25件)しか見ておらず
+            // detailFetchLimit=80まで使い切ることはまずなかった。全ページを読むと
+            // 対象行が数百件規模になるため、詳細取得の上限と全体の時間上限を広げる。
+            const detailFetchLimit = parsePositiveIntegerEnv('NARA_PREF_DETAIL_FETCH_LIMIT', 200);
+            const scrapeDeadline = Date.now() + 260000;
             const fiscalYear = fiscalYearForDate(referenceDate);
             const searchStart = startOfFiscalYear(referenceDate);
             const searchEnd = referenceDate;
@@ -512,7 +565,7 @@ export class NaraPrefScraper implements Scraper {
                             continue;
                         }
 
-                        const rows = await extractRows(searchSurface);
+                        const rows = await collectAllRows(searchSurface, scrapeDeadline);
                         console.log(`[奈良県] ${target.label} ${gyoushuCode || 'all'} ${searchStart.toISOString().slice(0, 10)}: ${rows.length}件 raw rows`);
 
                         for (const row of rows) {
@@ -530,7 +583,18 @@ export class NaraPrefScraper implements Scraper {
                                 skip: false,
                             };
 
-                            if (
+                            const existingResolved = existingByKanriNo.get(row.kanriNo);
+                            const alreadyResolved = existingResolved
+                                && (existingResolved.status === '不調'
+                                    || (existingResolved.status === '落札' && Boolean(existingResolved.winningContractor)));
+
+                            if (alreadyResolved && existingResolved) {
+                                detail = {
+                                    status: existingResolved.status,
+                                    winningContractor: existingResolved.winningContractor,
+                                    skip: false,
+                                };
+                            } else if (
                                 biddingDate &&
                                 biddingDate < todayIso &&
                                 biddingDate >= resultLookbackIso &&
