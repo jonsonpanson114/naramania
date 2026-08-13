@@ -1,7 +1,5 @@
 import { chromium } from 'playwright';
 import { BiddingItem, Scraper, BiddingType } from '../types/bidding';
-import { shouldKeepItem } from './common/filter';
-
 // 田原本町の入札情報サービス（EffTis PPI）
 const EFFTIS_BASE = 'https://tawaramoto.efftis.jp/PPI/Public';
 const EFFTIS_TOP = `${EFFTIS_BASE}/PPUBC00100`;
@@ -20,6 +18,15 @@ function parseJapaneseDate(text: string): string {
         return `${year}-${m[2].padStart(2, '0')}-${m[3].padStart(2, '0')}`;
     }
     return '';
+}
+
+function getTodayIsoInTokyo(): string {
+    return new Intl.DateTimeFormat('en-CA', {
+        timeZone: 'Asia/Tokyo',
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+    }).format(new Date());
 }
 
 function classifyType(koushu: string, chotatsu: string): BiddingType {
@@ -94,12 +101,16 @@ export class TawaramotoTownScraper implements Scraper {
                         const cell5 = cells.length > 5 ? (await cells[5].innerText()).trim().replace(/\s+/g, ' ') : '';
 
                         if (!title || !contractNo || contractNo.includes('契約番号')) continue;
-                        if (!shouldKeepItem(title, koushu)) continue;
+                        // 建築関連性の判定(shouldKeepItem)はここでは行わない。
+                        // ここで弾くとフィルタ対象外の案件が index.ts に一切渡らず、
+                        // market_items.json（全件一覧）に載らなくなる。関連性の判定は
+                        // index.ts が shouldKeepBiddingItem で一元的に行う設計になっている。
 
                         // 公告は3行構造、結果は奈良市と同じ2行構造で返る。
                         const nextCells = await rows[i + 1].locator('td').all();
                         let annoDate = '';
                         let biddingDate: string | undefined;
+                        let isCancelled = false;
 
                         if (nextCells.length === 1) {
                             if (i + 2 >= rows.length) continue;
@@ -112,20 +123,29 @@ export class TawaramotoTownScraper implements Scraper {
                                 : '';
                             biddingDate = bd || undefined;
                         } else {
-                            const dateStr = nextCells.length >= 2
-                                ? parseJapaneseDate((await nextCells[1].innerText()).trim())
+                            // 「取止め」の案件は開札日の位置に日付ではなく「取止め」という
+                            // 状態文字列が入る。従来は日付が取れない行を丸ごとスキップしており、
+                            // 取止め案件が結果一覧から完全に消えていた（奈良市と同じ不具合）。
+                            const rawDateText = nextCells.length >= 2
+                                ? (await nextCells[1].innerText()).trim()
                                 : '';
-                            annoDate = dateStr;
+                            const dateStr = parseJapaneseDate(rawDateText);
+                            isCancelled = !dateStr && /取止め|中止/.test(rawDateText);
+                            annoDate = dateStr || (isCancelled ? getTodayIsoInTokyo() : '');
                             biddingDate = dateStr || undefined;
                         }
 
                         if (!annoDate) continue;
 
+                        // 件名リンクの href が実URLではなく "javaScript:void(0);" という
+                        // JSポップアップ起動用の疑似リンクのことがある。素通りさせると
+                        // EFFTIS_BASE + '/javaScript:void(0);' という壊れたリンクになるため、
+                        // 実URLでなければ検索トップにフォールバックする。
                         const linkEl = cells[2].locator('a').first();
                         let link = EFFTIS_TOP;
                         try {
                             const href = await linkEl.getAttribute('href');
-                            if (href) link = href.startsWith('http') ? href : `${EFFTIS_BASE}/${href}`;
+                            if (href && href.startsWith('http')) link = href;
                         } catch { }
 
                         allItems.push({
@@ -136,8 +156,8 @@ export class TawaramotoTownScraper implements Scraper {
                             announcementDate: annoDate,
                             biddingDate,
                             link,
-                            status,
-                            winningContractor: status === '落札' && cell5 && !/入札|申請|終了|未公開|なし|－|-/.test(cell5)
+                            status: isCancelled ? '不調' : status,
+                            winningContractor: status === '落札' && !isCancelled && cell5 && !/入札|申請|終了|未公開|なし|－|-/.test(cell5)
                                 ? cell5
                                 : undefined,
                         });

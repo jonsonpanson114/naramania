@@ -1,6 +1,6 @@
 import { chromium } from 'playwright';
 import { BiddingItem, Scraper, BiddingType } from '../types/bidding';
-import { shouldKeepItem, classifyWinner } from './common/filter';
+import { classifyWinner } from './common/filter';
 // 奈良市の入札情報公開システム（efftis）
 const EFFTIS_BASE = 'https://nara.efftis.jp/PPI/Public';
 const EFFTIS_TOP = `${EFFTIS_BASE}/PPUBC00100?kikanno=0201`;
@@ -27,6 +27,15 @@ function parseJapaneseDate(text: string): string {
         return `${year}-${m[2].padStart(2, '0')}-${m[3].padStart(2, '0')}`;
     }
     return '';
+}
+
+function getTodayIsoInTokyo(): string {
+    return new Intl.DateTimeFormat('en-CA', {
+        timeZone: 'Asia/Tokyo',
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+    }).format(new Date());
 }
 
 function classifyType(koushu: string, chotatsu: string): BiddingType {
@@ -111,12 +120,16 @@ export class NaraCityScraper implements Scraper {
 
                         if (!title || !contractNo || contractNo.includes('契約番号')) continue;
                         if (shouldSkipKoushu(koushu)) continue;
-                        if (!shouldKeepItem(title, koushu)) continue;
+                        // 建築関連性の判定(shouldKeepItem)はここでは行わない。
+                        // ここで弾くとフィルタ対象外の案件が index.ts に一切渡らず、
+                        // market_items.json（全件一覧）に載らなくなる。関連性の判定は
+                        // index.ts が shouldKeepBiddingItem で一元的に行う設計になっている。
 
                         // i+1 行目の列数で構造を判定
                         const nextCells = await rows[i + 1].locator('td').all();
                         let annoDate: string;
                         let biddingDate: string | undefined;
+                        let isCancelled = false;
 
                         if (nextCells.length === 1) {
                             // 3行構造（受付中）: i+2 が「電子|公告日|開札日」
@@ -133,25 +146,34 @@ export class NaraCityScraper implements Scraper {
                                 : '';
                             biddingDate = bd || undefined;
                         } else {
-                            // 2行構造（落札）: i+1 が「電子|入札公告日」
-                            // 奈良市の結果一覧では、この2行目の日付が結果ページ上の開札日として扱われる。
-                            const dateStr = nextCells.length >= 2
-                                ? parseJapaneseDate((await nextCells[1].innerText()).trim())
+                            // 2行構造（落札）: i+1 が「電子|開札日」。
+                            // 「取止め」の案件はこの開札日の位置に日付ではなく「取止め」という
+                            // 状態文字列が入る。従来は日付が取れない行を丸ごとスキップしており、
+                            // 取止め案件が結果一覧から完全に消えていた。
+                            const rawDateText = nextCells.length >= 2
+                                ? (await nextCells[1].innerText()).trim()
                                 : '';
-                            if (!dateStr) continue; // 「取止め」等、日付なし → スキップ
-                            annoDate = dateStr;
-                            biddingDate = dateStr;
+                            const dateStr = parseJapaneseDate(rawDateText);
+                            isCancelled = !dateStr && /取止め|中止/.test(rawDateText);
+                            if (!dateStr && !isCancelled) continue; // 日付も取止め表記もない行は構造不明としてスキップ
+                            annoDate = dateStr || getTodayIsoInTokyo();
+                            biddingDate = dateStr || undefined;
                         }
 
-                        // 詳細リンク（件名列のa要素）
+                        // 詳細リンク（件名列のa要素）。
+                        // このシステムは件名リンクの href が実URLではなく "javaScript:void(0);"
+                        // というJSポップアップ起動用の疑似リンクになっている。素通りさせると
+                        // EFFTIS_BASE + '/javaScript:void(0);' という壊れたリンクが生成されるため、
+                        // 実URLでなければ検索トップにフォールバックする。
                         const linkEl = cells[2].locator('a').first();
                         let link = EFFTIS_TOP;
                         try {
                             const href = await linkEl.getAttribute('href');
-                            if (href) link = href.startsWith('http') ? href : `${EFFTIS_BASE}/${href}`;
+                            if (href && href.startsWith('http')) link = href;
                         } catch { }
 
-                        const winningContractor = status === '落札' && cell5 ? cell5 : undefined;
+                        const winningContractor = status === '落札' && !isCancelled && cell5 ? cell5 : undefined;
+                        const itemStatus = isCancelled ? '不調' : status;
 
                         allItems.push({
                             id: `nara-city-${contractNo}`,
@@ -161,7 +183,7 @@ export class NaraCityScraper implements Scraper {
                             announcementDate: annoDate,
                             biddingDate,
                             link,
-                            status,
+                            status: itemStatus,
                             winningContractor: winningContractor,
                             winnerType: classifyWinner(winningContractor || ''),
                         });
