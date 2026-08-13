@@ -1,8 +1,9 @@
 import axios from 'axios';
 import * as cheerio from 'cheerio';
-import { BiddingItem, BiddingType, Scraper } from '../types/bidding';
+import { BiddingItem, BiddingStatus, BiddingType, Scraper } from '../types/bidding';
 import { classifyWinner, shouldKeepItem } from './common/filter';
 import { getCurrentReiwaFiscalYear } from './common/fiscal_year';
+import { extractPdfText } from './common/pdf_text';
 
 const BASE_URL = 'https://www.town.miyake.lg.jp';
 // 公告・結果ページは年度替わりでURLが変わるため、総務課ページから動的に解決する
@@ -137,6 +138,42 @@ async function scrapeAnnouncements(announceUrl: string): Promise<BiddingItem[]> 
     return items;
 }
 
+function normalizeMiyakeWinner(raw: string): string {
+    return raw
+        .replace(/\s+/g, ' ')
+        .replace(/\s+(代表取締役|代表社員|代表|所長|支店長|営業所長).*$/, '')
+        .trim();
+}
+
+/**
+ * 結果PDF(様式第2号・第5号)から「落札の有無」「落札者の氏名」を読む。
+ * 従来はPDFリンクが見つかった時点で無条件に status:'落札' としていたが、
+ * 実際には「落札の有無：無」の不調案件も同じ様式で公表されており、
+ * 中身を読まないと不調/落札の区別も落札者名も分からない。
+ */
+async function extractMiyakeResultDetails(pdfUrl: string): Promise<{
+    status?: BiddingStatus;
+    winningContractor?: string;
+}> {
+    try {
+        const text = await extractPdfText(pdfUrl, 4);
+        // PDFは1文字ずつ描画されており抽出テキストも文字間にスペースが入るため、
+        // 「落札の有無」のような連続文字列ではなく文字ごとに \s* を挟んでマッチさせる。
+        const hasResult = text.match(/落\s*札\s*の\s*有\s*無\s*(有|無)/);
+        if (!hasResult) return {};
+        if (hasResult[1] === '無') return { status: '不調' };
+
+        const winnerMatch = text.match(/落\s*札\s*者\s*の\s*氏\s*名\s*(.+?)\s*入\s*札\s*業\s*者\s*名/);
+        return {
+            status: '落札',
+            winningContractor: winnerMatch?.[1] ? normalizeMiyakeWinner(winnerMatch[1]) : undefined,
+        };
+    } catch (e: unknown) {
+        console.warn('[三宅町] 結果PDF解析失敗:', pdfUrl, e instanceof Error ? e.message : String(e));
+        return {};
+    }
+}
+
 async function scrapeResultPage(url: string): Promise<BiddingItem[]> {
     const items: BiddingItem[] = [];
 
@@ -145,11 +182,17 @@ async function scrapeResultPage(url: string): Promise<BiddingItem[]> {
         const $ = cheerio.load(res.data);
         const pageDate = parseJapaneseDate($('body').text());
 
+        const links: { title: string; pdfUrl: string }[] = [];
         $('a[href$=".pdf"]').each((_, el) => {
             const title = cleanTitle($(el).text());
             const pdfUrl = makeAbsoluteUrl($(el).attr('href'));
             if (!title || !pdfUrl) return;
             if (!shouldKeepItem(title)) return;
+            links.push({ title, pdfUrl });
+        });
+
+        for (const { title, pdfUrl } of links) {
+            const details = await extractMiyakeResultDetails(pdfUrl);
 
             items.push({
                 id: buildId(pageDate, title),
@@ -160,10 +203,12 @@ async function scrapeResultPage(url: string): Promise<BiddingItem[]> {
                 biddingDate: pageDate || undefined,
                 link: url,
                 pdfUrl,
-                status: '落札',
-                winnerType: classifyWinner(''),
+                status: details.status || '落札',
+                ...(details.winningContractor
+                    ? { winningContractor: details.winningContractor, winnerType: classifyWinner(details.winningContractor) }
+                    : {}),
             });
-        });
+        }
     } catch (e: unknown) {
         console.error('[三宅町] 結果取得エラー:', e instanceof Error ? e.message : String(e));
     }

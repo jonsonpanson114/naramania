@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-13T00:26:10.408Z",
-  "qualityGeneratedAt": "2026-08-13T00:21:20.560Z",
+  "generatedAt": "2026-08-13T00:52:01.166Z",
+  "qualityGeneratedAt": "2026-08-13T00:47:53.774Z",
   "itemCount": 199,
   "resultFollowUp": {
-    "totalCount": 25,
-    "highCount": 19,
-    "mediumCount": 6,
+    "totalCount": 23,
+    "highCount": 18,
+    "mediumCount": 5,
     "lowCount": 0,
     "missingBiddingDateCount": 0,
     "byMunicipality": [
@@ -23,10 +23,6 @@
       },
       {
         "municipality": "橿原市",
-        "count": 2
-      },
-      {
-        "municipality": "三宅町",
         "count": 2
       },
       {
@@ -505,16 +501,9 @@
   "dateIntegrity": {
     "announcementAfterBiddingCount": 0,
     "awardedWithoutBiddingDateCount": 0,
-    "awardedWithoutWinnerCount": 2,
+    "awardedWithoutWinnerCount": 1,
     "openWithWinnerCount": 0,
     "sampleTitles": [
-      {
-        "municipality": "三宅町",
-        "title": "三宅町文化ホールトイレ改修工事",
-        "status": "落札",
-        "announcementDate": "2026-07-21",
-        "biddingDate": "2026-07-21"
-      },
       {
         "municipality": "川西町",
         "title": "式下中学校体育館屋根・外壁その他改修工事設計業務",

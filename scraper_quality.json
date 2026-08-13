@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-13T00:21:20.560Z",
+  "generatedAt": "2026-08-13T00:47:53.774Z",
   "source": "daily_scrape",
-  "scrapedCount": 229,
+  "scrapedCount": 4,
   "keptCount": 199,
-  "rejectedCount": 210,
+  "rejectedCount": 0,
   "oldestAnnouncementDate": "2025-02-02",
-  "latestAnnouncementDate": "2026-08-07",
+  "latestAnnouncementDate": "2026-08-08",
   "municipalityCount": 24,
   "municipalityAudit": {
     "expectedMunicipalityCount": 25,
@@ -35,7 +35,7 @@
       {
         "municipality": "橿原市",
         "count": 19,
-        "changeFromPrevious": 1
+        "changeFromPrevious": 0
       },
       {
         "municipality": "五條市",
@@ -70,7 +70,7 @@
       {
         "municipality": "川西町",
         "count": 5,
-        "changeFromPrevious": 1
+        "changeFromPrevious": 0
       },
       {
         "municipality": "三宅町",
@@ -144,16 +144,9 @@
   "dateAudit": {
     "announcementAfterBiddingCount": 0,
     "awardedWithoutBiddingDateCount": 0,
-    "awardedWithoutWinnerCount": 2,
+    "awardedWithoutWinnerCount": 1,
     "openWithWinnerCount": 0,
     "sampleTitles": [
-      {
-        "municipality": "三宅町",
-        "title": "三宅町文化ホールトイレ改修工事",
-        "status": "落札",
-        "announcementDate": "2026-07-21",
-        "biddingDate": "2026-07-21"
-      },
       {
         "municipality": "川西町",
         "title": "式下中学校体育館屋根・外壁その他改修工事設計業務",
@@ -629,9 +622,9 @@
   },
   "intelligence": {
     "itemsWithPdf": 47,
-    "itemsWithDescription": 25,
-    "intelligenceExtractedCount": 25,
-    "geminiExtractedCount": 25,
-    "taggedCount": 25
+    "itemsWithDescription": 23,
+    "intelligenceExtractedCount": 23,
+    "geminiExtractedCount": 23,
+    "taggedCount": 23
   }
 }
