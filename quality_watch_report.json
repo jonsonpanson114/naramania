@@ -1,24 +1,24 @@
 {
-  "generatedAt": "2026-08-13T00:52:01.166Z",
-  "qualityGeneratedAt": "2026-08-13T00:47:53.774Z",
-  "itemCount": 199,
+  "generatedAt": "2026-08-13T08:06:02.036Z",
+  "qualityGeneratedAt": "2026-08-13T07:04:08.620Z",
+  "itemCount": 203,
   "resultFollowUp": {
-    "totalCount": 23,
-    "highCount": 18,
-    "mediumCount": 5,
+    "totalCount": 17,
+    "highCount": 14,
+    "mediumCount": 3,
     "lowCount": 0,
     "missingBiddingDateCount": 0,
     "byMunicipality": [
-      {
-        "municipality": "奈良県",
-        "count": 8
-      },
       {
         "municipality": "香芝市",
         "count": 3
       },
       {
         "municipality": "田原本町",
+        "count": 3
+      },
+      {
+        "municipality": "奈良県",
         "count": 3
       },
       {
@@ -39,10 +39,6 @@
       },
       {
         "municipality": "御所市",
-        "count": 1
-      },
-      {
-        "municipality": "川西町",
         "count": 1
       },
       {
@@ -99,7 +95,7 @@
           "announcementDate": "2026-04-09",
           "biddingDate": "2026-05-18",
           "winningContractor": null,
-          "link": "https://tawaramoto.efftis.jp/PPI/Public/javaScript:void(0);",
+          "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
           "pdfUrl": null
         }
       },
@@ -147,7 +143,7 @@
           "announcementDate": "2026-04-15",
           "biddingDate": "2026-05-27",
           "winningContractor": null,
-          "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+          "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
           "pdfUrl": null
         }
       },
@@ -195,7 +191,7 @@
           "announcementDate": "2026-05-28",
           "biddingDate": "2026-06-22",
           "winningContractor": null,
-          "link": "https://tawaramoto.efftis.jp/PPI/Public/javaScript:void(0);",
+          "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
           "pdfUrl": null
         }
       },
@@ -211,7 +207,7 @@
           "announcementDate": "2026-05-14",
           "biddingDate": "2026-06-22",
           "winningContractor": null,
-          "link": "https://tawaramoto.efftis.jp/PPI/Public/javaScript:void(0);",
+          "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
           "pdfUrl": null
         }
       }
@@ -501,17 +497,9 @@
   "dateIntegrity": {
     "announcementAfterBiddingCount": 0,
     "awardedWithoutBiddingDateCount": 0,
-    "awardedWithoutWinnerCount": 1,
+    "awardedWithoutWinnerCount": 0,
     "openWithWinnerCount": 0,
-    "sampleTitles": [
-      {
-        "municipality": "川西町",
-        "title": "式下中学校体育館屋根・外壁その他改修工事設計業務",
-        "status": "落札",
-        "announcementDate": "2026-04-01",
-        "biddingDate": "2026-06-26"
-      }
-    ]
+    "sampleTitles": []
   },
   "sourceCoverage": {
     "activeCount": 25,
@@ -537,15 +525,15 @@
         "municipality": "奈良市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 8,
+        "totalCount": 9,
         "requiredLinkIncludes": [
           "nara.efftis.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "nara.efftis.jp": 8
+          "nara.efftis.jp": 9
         },
-        "message": "奈良市: 8件 / sources OK"
+        "message": "奈良市: 9件 / sources OK"
       },
       {
         "municipality": "橿原市",
@@ -565,15 +553,15 @@
         "municipality": "生駒市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 17,
+        "totalCount": 20,
         "requiredLinkIncludes": [
           "epi-cloud.fwd.ne.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "epi-cloud.fwd.ne.jp": 17
+          "epi-cloud.fwd.ne.jp": 20
         },
-        "message": "生駒市: 17件 / sources OK"
+        "message": "生駒市: 20件 / sources OK"
       },
       {
         "municipality": "大和高田市",
@@ -641,15 +629,15 @@
         "municipality": "御所市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 3,
+        "totalCount": 2,
         "requiredLinkIncludes": [
           "city.gose.nara.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.gose.nara.jp": 3
+          "city.gose.nara.jp": 2
         },
-        "message": "御所市: 3件 / sources OK"
+        "message": "御所市: 2件 / sources OK"
       },
       {
         "municipality": "天理市",
@@ -683,15 +671,15 @@
         "municipality": "宇陀市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 17,
+        "totalCount": 18,
         "requiredLinkIncludes": [
           "epi-cloud.fwd.ne.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "epi-cloud.fwd.ne.jp": 17
+          "epi-cloud.fwd.ne.jp": 18
         },
-        "message": "宇陀市: 17件 / sources OK"
+        "message": "宇陀市: 18件 / sources OK"
       },
       {
         "municipality": "田原本町",

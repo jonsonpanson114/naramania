@@ -1,30 +1,79 @@
 {
-  "generatedAt": "2026-08-13T00:47:53.738Z",
+  "generatedAt": "2026-08-13T07:04:08.615Z",
   "source": "daily_scrape",
   "updates": [
     {
-      "id": "miyake-2026-08-08-上但馬保育所解体工事設計委託業務",
-      "municipality": "三宅町",
-      "title": "上但馬保育所解体工事設計委託業務",
-      "announcementDate": "2026-08-08",
-      "biddingDate": "2026-08-08",
-      "status": "不調",
-      "link": "https://www.town.miyake.lg.jp/soshiki/1/9376.html",
-      "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5619.pdf",
-      "detectedAt": "2026-08-13T00:47:53.738Z",
-      "kind": "new_failure"
+      "id": "nara-city-0000002571",
+      "municipality": "奈良市",
+      "title": "環境清美センター焼却炉棟防火戸改修その他工事",
+      "announcementDate": "2026-07-31",
+      "biddingDate": "2026-07-31",
+      "status": "落札",
+      "winningContractor": "株式会社水野工務店",
+      "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+      "detectedAt": "2026-08-13T07:04:08.615Z",
+      "kind": "new_winner"
     },
     {
-      "id": "miyake-2026-08-08-三宅町文化ホールトイレ改修工事",
-      "municipality": "三宅町",
-      "title": "三宅町文化ホールトイレ改修工事",
-      "announcementDate": "2026-08-08",
-      "biddingDate": "2026-08-08",
-      "status": "不調",
-      "link": "https://www.town.miyake.lg.jp/soshiki/1/9375.html",
-      "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5616.pdf",
-      "detectedAt": "2026-08-13T00:47:53.738Z",
-      "kind": "new_failure"
+      "id": "gose-2026-08-10-御所市義務教育学校建設に関する基本設計及び実施設-fallback",
+      "municipality": "御所市",
+      "title": "御所市義務教育学校建設に関する基本設計及び実施設計業務に係る公募型プロポーザル",
+      "announcementDate": "2026-07-29",
+      "biddingDate": "2026-07-29",
+      "status": "落札",
+      "winningContractor": "石本・シード設計共同体",
+      "link": "https://www.city.gose.nara.jp/0000004589.html",
+      "detectedAt": "2026-08-13T07:04:08.615Z",
+      "kind": "new_winner"
+    },
+    {
+      "id": "ikoma-result-2601010041",
+      "municipality": "生駒市",
+      "title": "認定こども園生駒幼稚園管理棟及び保育棟屋根防水工事",
+      "announcementDate": "2026-07-09",
+      "biddingDate": "2026-07-09",
+      "status": "落札",
+      "winningContractor": "マツダ塗装株式会社",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+      "detectedAt": "2026-08-13T07:04:08.615Z",
+      "kind": "new_winner"
+    },
+    {
+      "id": "kawanishi-2026-04-01-式下中学校体育館屋根・外壁その他改修工事設計業務",
+      "municipality": "川西町",
+      "title": "式下中学校体育館屋根・外壁その他改修工事設計業務",
+      "announcementDate": "2026-04-01",
+      "biddingDate": "2026-06-26",
+      "status": "落札",
+      "winningContractor": "株式会社岩崎建築設計事務所",
+      "link": "https://www.town.nara-kawanishi.lg.jp/cmsfiles/contents/0000008/8733/2406.pdf",
+      "previousStatus": "落札",
+      "detectedAt": "2026-08-13T07:04:08.615Z",
+      "kind": "new_winner"
+    },
+    {
+      "id": "ikoma-result-2501010082",
+      "municipality": "生駒市",
+      "title": "生駒中学校屋内運動場屋根防水改修工事",
+      "announcementDate": "2025-10-21",
+      "biddingDate": "2025-10-21",
+      "status": "落札",
+      "winningContractor": "グローバル工業株式会社",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+      "detectedAt": "2026-08-13T07:04:08.615Z",
+      "kind": "new_winner"
+    },
+    {
+      "id": "uda-result-2595010020",
+      "municipality": "宇陀市",
+      "title": "【第07-B004号】社会資本整備総合交付金事業（防災・安全） 市営住宅川向団地屋根外壁改善工事",
+      "announcementDate": "2025-09-18",
+      "biddingDate": "2025-09-18",
+      "status": "落札",
+      "winningContractor": "（株）的場工務店",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200700",
+      "detectedAt": "2026-08-13T07:04:08.615Z",
+      "kind": "new_winner"
     }
   ],
   "latestResults": [
@@ -37,7 +86,7 @@
       "status": "不調",
       "link": "https://www.town.miyake.lg.jp/soshiki/1/9376.html",
       "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5619.pdf",
-      "detectedAt": "2026-08-13T00:47:53.738Z",
+      "detectedAt": "2026-08-13T07:04:08.615Z",
       "kind": "new_failure"
     },
     {
@@ -49,7 +98,29 @@
       "status": "不調",
       "link": "https://www.town.miyake.lg.jp/soshiki/1/9375.html",
       "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5616.pdf",
-      "detectedAt": "2026-08-13T00:47:53.738Z",
+      "detectedAt": "2026-08-13T07:04:08.615Z",
+      "kind": "new_failure"
+    },
+    {
+      "id": "nara-pref-29001013060020260132",
+      "municipality": "奈良県",
+      "title": "県営住宅纒向団地６号棟（２０６号室他）住戸改修工事 第８－２８号",
+      "announcementDate": "2026-07-10",
+      "biddingDate": "2026-08-05",
+      "status": "不調",
+      "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260132&gamenMode=0",
+      "detectedAt": "2026-08-13T07:04:08.615Z",
+      "kind": "new_failure"
+    },
+    {
+      "id": "nara-pref-29001013060020260127",
+      "municipality": "奈良県",
+      "title": "県営住宅姫寺団地４号棟（５０１号室他）及び県営住宅纒向団地６号棟（２０６号室他）住戸改修工事監理業務 委（監）第８－５号",
+      "announcementDate": "2026-07-10",
+      "biddingDate": "2026-08-05",
+      "status": "不調",
+      "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260127&gamenMode=0",
+      "detectedAt": "2026-08-13T07:04:08.615Z",
       "kind": "new_failure"
     },
     {
@@ -61,7 +132,7 @@
       "status": "落札",
       "winningContractor": "（株）近井工務店",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002601025",
-      "detectedAt": "2026-08-13T00:47:53.738Z",
+      "detectedAt": "2026-08-13T07:04:08.615Z",
       "kind": "new_winner"
     },
     {
@@ -73,8 +144,42 @@
       "status": "落札",
       "winningContractor": "（株）椋本工務店",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002601023",
-      "detectedAt": "2026-08-13T00:47:53.738Z",
+      "detectedAt": "2026-08-13T07:04:08.615Z",
       "kind": "new_winner"
+    },
+    {
+      "id": "nara-city-0000002571",
+      "municipality": "奈良市",
+      "title": "環境清美センター焼却炉棟防火戸改修その他工事",
+      "announcementDate": "2026-07-31",
+      "biddingDate": "2026-07-31",
+      "status": "落札",
+      "winningContractor": "株式会社水野工務店",
+      "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+      "detectedAt": "2026-08-13T07:04:08.615Z",
+      "kind": "new_winner"
+    },
+    {
+      "id": "nara-pref-29001013060020260116",
+      "municipality": "奈良県",
+      "title": "竜田公園管理事務所兼公衆トイレ内装等改修工事監理業務（補助都市計画公園事業（防災・安全交付金）） 委（監）第８－１２号",
+      "announcementDate": "2026-07-03",
+      "biddingDate": "2026-07-30",
+      "status": "不調",
+      "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260116&gamenMode=0",
+      "detectedAt": "2026-08-13T07:04:08.615Z",
+      "kind": "new_failure"
+    },
+    {
+      "id": "nara-pref-29001013060020260118",
+      "municipality": "奈良県",
+      "title": "竜田公園管理事務所兼公衆トイレ内装等改修工事（補助都市計画公園事業（防災・安全交付金）） 第８－２０号",
+      "announcementDate": "2026-07-01",
+      "biddingDate": "2026-07-30",
+      "status": "不調",
+      "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260118&gamenMode=0",
+      "detectedAt": "2026-08-13T07:04:08.615Z",
+      "kind": "new_failure"
     },
     {
       "id": "nara-city-0000002557",
@@ -84,8 +189,8 @@
       "biddingDate": "2026-07-30",
       "status": "落札",
       "winningContractor": "廣岡建設株式会社",
-      "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
-      "detectedAt": "2026-08-13T00:47:53.738Z",
+      "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+      "detectedAt": "2026-08-13T07:04:08.615Z",
       "kind": "new_winner"
     },
     {
@@ -98,7 +203,7 @@
       "winningContractor": "株式会社 クラハラ",
       "link": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7919/NO18-2.pdf",
       "pdfUrl": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7919/NO18-2.pdf",
-      "detectedAt": "2026-08-13T00:47:53.738Z",
+      "detectedAt": "2026-08-13T07:04:08.615Z",
       "kind": "new_winner"
     },
     {
@@ -111,68 +216,7 @@
       "winningContractor": "株式会社 出井組",
       "link": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7919/NO22-2.pdf",
       "pdfUrl": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7919/NO22-2.pdf",
-      "detectedAt": "2026-08-13T00:47:53.738Z",
-      "kind": "new_winner"
-    },
-    {
-      "id": "koryo-2026-07-29-No21",
-      "municipality": "広陵町",
-      "title": "横峯公園トイレ改修工事",
-      "announcementDate": "2026-07-29",
-      "biddingDate": "2026-07-29",
-      "status": "落札",
-      "winningContractor": "小池光建設株式会社",
-      "link": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7919/NO21-2.pdf",
-      "pdfUrl": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7919/NO21-2.pdf",
-      "detectedAt": "2026-08-13T00:47:53.738Z",
-      "kind": "new_winner"
-    },
-    {
-      "id": "高取町-2026-07-28-町営住宅空家修繕工事設計業務",
-      "municipality": "高取町",
-      "title": "町営住宅空家修繕工事設計業務",
-      "announcementDate": "2026-07-28",
-      "biddingDate": "2026-07-28",
-      "status": "落札",
-      "winningContractor": "(株)福井建築設計事務所",
-      "link": "https://www.town.takatori.nara.jp/contents_detail.php?frmId=2205",
-      "detectedAt": "2026-08-13T00:47:53.738Z",
-      "kind": "new_winner"
-    },
-    {
-      "id": "katsuragi-epi-c558f1c5",
-      "municipality": "葛城市",
-      "title": "葛城市立学校施設各所改修工事",
-      "announcementDate": "2026-07-07",
-      "biddingDate": "2026-07-28",
-      "status": "落札",
-      "winningContractor": "新和建設(株)",
-      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200720",
-      "detectedAt": "2026-08-13T00:47:53.738Z",
-      "kind": "new_winner"
-    },
-    {
-      "id": "sango-epi-5Luk5ZKMOOW5",
-      "municipality": "三郷町",
-      "title": "令和8年度 竜田運動公園北側トイレ改修工事",
-      "announcementDate": "2026-07-08",
-      "biddingDate": "2026-07-24",
-      "status": "落札",
-      "winningContractor": "阪本水道商会 三郷営業所",
-      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0660064007200640",
-      "detectedAt": "2026-08-13T00:47:53.738Z",
-      "kind": "new_winner"
-    },
-    {
-      "id": "gojo-epi-2601014",
-      "municipality": "五條市",
-      "title": "宗桧公民館改修工事",
-      "announcementDate": "2026-06-24",
-      "biddingDate": "2026-07-24",
-      "status": "落札",
-      "winningContractor": "（株）タツミ建設",
-      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002601014",
-      "detectedAt": "2026-08-13T00:47:53.738Z",
+      "detectedAt": "2026-08-13T07:04:08.615Z",
       "kind": "new_winner"
     }
   ]

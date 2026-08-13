@@ -275,13 +275,25 @@
   ],
   "奈良市": [
     {
+      "id": "nara-city-0000002571",
+      "municipality": "奈良市",
+      "title": "環境清美センター焼却炉棟防火戸改修その他工事",
+      "type": "建築",
+      "announcementDate": "2026-07-31",
+      "biddingDate": "2026-07-31",
+      "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+      "status": "落札",
+      "winningContractor": "株式会社水野工務店",
+      "winnerType": "ゼネコン"
+    },
+    {
       "id": "nara-city-0000002593",
       "municipality": "奈良市",
       "title": "庁舎中央棟地下書庫内部改修に伴う建築設計業務委託",
       "type": "コンサル",
       "announcementDate": "2026-07-15",
       "biddingDate": "2026-08-27",
-      "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+      "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
       "status": "受付中"
     },
     {
@@ -291,7 +303,7 @@
       "type": "建築",
       "announcementDate": "2026-07-01",
       "biddingDate": "2026-07-30",
-      "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+      "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
       "status": "落札",
       "winningContractor": "廣岡建設株式会社",
       "winnerType": "ゼネコン"
@@ -303,7 +315,7 @@
       "type": "コンサル",
       "announcementDate": "2026-05-01",
       "biddingDate": "2026-06-04",
-      "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+      "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
       "status": "落札",
       "winningContractor": "株式会社システムクリエイト",
       "winnerType": "ゼネコン"
@@ -315,7 +327,7 @@
       "type": "コンサル",
       "announcementDate": "2026-04-15",
       "biddingDate": "2026-05-27",
-      "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+      "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
       "status": "落札",
       "winningContractor": "株式会社ＵＬＴＲＡ　Ｃ",
       "winnerType": "ゼネコン"
@@ -327,7 +339,7 @@
       "type": "コンサル",
       "announcementDate": "2026-04-15",
       "biddingDate": "2026-05-27",
-      "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+      "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
       "status": "受付終了"
     },
     {
@@ -337,7 +349,7 @@
       "type": "コンサル",
       "announcementDate": "2026-04-15",
       "biddingDate": "2026-05-27",
-      "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+      "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
       "status": "落札",
       "winningContractor": "岡田建築設計事務所",
       "winnerType": "設計事務所"
@@ -349,7 +361,7 @@
       "type": "コンサル",
       "announcementDate": "2026-04-15",
       "biddingDate": "2026-05-27",
-      "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+      "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
       "status": "落札",
       "winningContractor": "株式会社建綜研",
       "winnerType": "ゼネコン"
@@ -361,7 +373,7 @@
       "type": "コンサル",
       "announcementDate": "2026-04-15",
       "biddingDate": "2026-05-27",
-      "link": "https://nara.efftis.jp/PPI/Public/javaScript:void(0);",
+      "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
       "status": "落札",
       "winningContractor": "株式会社システムクリエイト",
       "winnerType": "ゼネコン"
@@ -633,6 +645,16 @@
       "status": "受付中"
     },
     {
+      "id": "ikoma-c67ad46e0e",
+      "municipality": "生駒市",
+      "title": "光明中学校ＬＥＤ改修工事",
+      "type": "建築",
+      "announcementDate": "2026-08-05",
+      "biddingDate": "2026-08-26",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+      "status": "受付中"
+    },
+    {
       "id": "ikoma-ab4d291423",
       "municipality": "生駒市",
       "title": "生駒北スポーツセンター及びむかいやま公園体育施設トイレ改修工事",
@@ -651,6 +673,18 @@
       "biddingDate": "2026-08-17",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
       "status": "受付中"
+    },
+    {
+      "id": "ikoma-result-2601010041",
+      "municipality": "生駒市",
+      "title": "認定こども園生駒幼稚園管理棟及び保育棟屋根防水工事",
+      "type": "建築",
+      "announcementDate": "2026-07-09",
+      "biddingDate": "2026-07-09",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+      "status": "落札",
+      "winningContractor": "マツダ塗装株式会社",
+      "winnerType": "ゼネコン"
     },
     {
       "id": "ikoma-result-2601010038",
@@ -765,6 +799,18 @@
       "status": "落札",
       "winningContractor": "空間設計",
       "winnerType": "設計事務所"
+    },
+    {
+      "id": "ikoma-result-2501010082",
+      "municipality": "生駒市",
+      "title": "生駒中学校屋内運動場屋根防水改修工事",
+      "type": "建築",
+      "announcementDate": "2025-10-21",
+      "biddingDate": "2025-10-21",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+      "status": "落札",
+      "winningContractor": "グローバル工業株式会社",
+      "winnerType": "ゼネコン"
     },
     {
       "id": "ikoma-result-2501010071",
@@ -1349,14 +1395,16 @@
   ],
   "御所市": [
     {
-      "id": "gose-（仮称）御所市北部認定こども園整備工事設-9",
+      "id": "gose-2026-08-10-御所市義務教育学校建設に関する基本設計及び実施設-fallback",
       "municipality": "御所市",
-      "title": "（仮称）御所市北部認定こども園整備工事設計業務委託に係る公募型プロポーザル",
+      "title": "御所市義務教育学校建設に関する基本設計及び実施設計業務に係る公募型プロポーザル",
       "type": "コンサル",
-      "announcementDate": "2026-08-05",
-      "biddingDate": "",
-      "link": "https://www.city.gose.nara.jp/0000004649.html",
-      "status": "受付中"
+      "announcementDate": "2026-07-29",
+      "biddingDate": "2026-07-29",
+      "link": "https://www.city.gose.nara.jp/0000004589.html",
+      "status": "落札",
+      "winningContractor": "石本・シード設計共同体",
+      "winnerType": "設計事務所"
     },
     {
       "id": "gose-2026-07-17-市営住宅(サン柏原207号・今出団地99号・11-0",
@@ -1368,15 +1416,6 @@
       "link": "https://www.city.gose.nara.jp/0000001024.html",
       "status": "受付終了",
       "winningContractor": "(株)阪本"
-    },
-    {
-      "id": "gose-2026-06-08-御所市義務教育学校建設に関する基本設計及び実施設-fallback",
-      "municipality": "御所市",
-      "title": "御所市義務教育学校建設に関する基本設計及び実施設計業務に係る公募型プロポーザル",
-      "type": "コンサル",
-      "announcementDate": "2026-06-08",
-      "link": "https://www.city.gose.nara.jp/0000004589.html",
-      "status": "受付中"
     }
   ],
   "天理市": [
@@ -1563,6 +1602,17 @@
       "winningContractor": "（株）ハクリュウ"
     },
     {
+      "id": "uda-result-2595010020",
+      "municipality": "宇陀市",
+      "title": "【第07-B004号】社会資本整備総合交付金事業（防災・安全） 市営住宅川向団地屋根外壁改善工事",
+      "type": "建築",
+      "announcementDate": "2025-09-18",
+      "biddingDate": "2025-09-18",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200700",
+      "status": "落札",
+      "winningContractor": "（株）的場工務店"
+    },
+    {
       "id": "uda-1467b94fb1",
       "municipality": "宇陀市",
       "title": "【第07-C034号】宇陀市文化会館施設改修計画策定事業 宇陀市文化会館施設改修計画策定支援業務",
@@ -1625,7 +1675,7 @@
       "type": "委託",
       "announcementDate": "2026-05-28",
       "biddingDate": "2026-06-22",
-      "link": "https://tawaramoto.efftis.jp/PPI/Public/javaScript:void(0);",
+      "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
       "status": "受付終了"
     },
     {
@@ -1635,7 +1685,7 @@
       "type": "建築",
       "announcementDate": "2026-05-14",
       "biddingDate": "2026-06-22",
-      "link": "https://tawaramoto.efftis.jp/PPI/Public/javaScript:void(0);",
+      "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
       "status": "受付終了"
     },
     {
@@ -1645,7 +1695,7 @@
       "type": "建築",
       "announcementDate": "2026-04-09",
       "biddingDate": "2026-05-18",
-      "link": "https://tawaramoto.efftis.jp/PPI/Public/javaScript:void(0);",
+      "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
       "status": "受付終了"
     }
   ],
@@ -1751,6 +1801,17 @@
       "link": "https://www.town.nara-kawanishi.lg.jp/0000008785.html",
       "status": "受付終了",
       "isForecast": true
+    },
+    {
+      "id": "kawanishi-2026-04-01-式下中学校体育館屋根・外壁その他改修工事設計業務",
+      "municipality": "川西町",
+      "title": "式下中学校体育館屋根・外壁その他改修工事設計業務",
+      "type": "コンサル",
+      "announcementDate": "2026-04-01",
+      "biddingDate": "2026-06-26",
+      "link": "https://www.town.nara-kawanishi.lg.jp/cmsfiles/contents/0000008/8733/2406.pdf",
+      "status": "落札",
+      "winningContractor": "株式会社岩崎建築設計事務所"
     }
   ],
   "三宅町": [
@@ -2115,11 +2176,11 @@
     {
       "id": "oyodo-aHR0cHM6Ly93",
       "municipality": "大淀町",
-      "title": "令和7年度耐震改修促進計画改訂業務（第7－建築委－1号）【令和7年7月22日執行】",
-      "type": "委託",
-      "announcementDate": "2025-07-22",
-      "biddingDate": "2025-07-22",
-      "link": "https://www.town.oyodo.lg.jp/./cmsfiles/contents/0000001/1718/so070722.pdf",
+      "title": "マンホールトイレシステム実施設計業務委託（第7－総委2号）【令和7年8月4日執行】",
+      "type": "コンサル",
+      "announcementDate": "2025-08-04",
+      "biddingDate": "2025-08-04",
+      "link": "https://www.town.oyodo.lg.jp/./cmsfiles/contents/0000001/1718/so070804.pdf",
       "status": "落札",
       "winningContractor": "㈱シティ・プランニング 関西支店 1１． 業 務 種 別 建設コンサルタント（「都市計画及び地方計画部門」） ㈱シティ・プランニング 関西支店 3,200,000 3,900,000"
     }
