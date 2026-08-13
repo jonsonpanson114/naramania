@@ -379,7 +379,10 @@ async function readVisibleDetailInfo(page: Page, fallbackStatus: BiddingStatus):
             || (document.getElementById('nyusatsuKekkaFlg') as HTMLInputElement | null)?.value === '1'
             || (document.getElementById('keiyakuNaiyoFlg') as HTMLInputElement | null)?.value === '1';
         const isCanceled = /【中止】|中止となりました|取止め|取り止め|入札中止/.test(text);
-        const isUnsuccessful = /不調|不落|取止め|取り止め|入札参加者なし|中止しました/.test(text);
+        // 「落札結果」欄の値が「中止」単体のケース(例: 業務名【中止】の案件は
+        // 落札者欄が空のまま「落札結果 中止 落札者 落札金額(税抜) ￥ ...」と表示される)を
+        // 拾えていなかったため、開札後に中止になった案件が受付終了のまま止まっていた。
+        const isUnsuccessful = /不調|不落|取止め|取り止め|入札参加者なし|中止しました|落札結果\s*中止/.test(text);
 
         const winnerPatterns = [
             /落札者\s*[:：]?\s+(.+?)(?=\s+(?:落札金額|落札額|契約金額|予定価格|最低制限|調査基準価格|入札金額|$))/,
