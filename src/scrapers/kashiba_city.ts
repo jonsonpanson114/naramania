@@ -318,9 +318,13 @@ async function scrapeKashibaCity(): Promise<BiddingItem[]> {
                         });
                     }
 
-                    // ページネーション: データフレーム内の「次へ」リンクを確認
-                    const nextLink = dataFrame.locator('a:has-text("次へ")').first();
-                    if (await nextLink.count() === 0) break;
+                    // ページネーション: 「次へ」リンクは結果データとは別に、外側の
+                    // frmRIGHT フレーム(検索件数サマリーと一緒に描画される)にしかない。
+                    // データフレーム(name="right")側で探すと常に0件で、2ページ目以降が
+                    // 一切読まれず古い案件(4月・5月開札分など)が丸ごと欠落していた。
+                    const outerFrame = await getRightFrame(page);
+                    const nextLink = outerFrame?.locator('a:has-text("次へ")').first();
+                    if (!nextLink || await nextLink.count() === 0) break;
 
                     page_num++;
                     console.log(`[香芝市] ページ ${page_num} へ`);
