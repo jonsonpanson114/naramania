@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import type { BiddingItem } from '@/types/bidding';
+import type { BiddingItem, MarketItem } from '@/types/bidding';
 import type { LiveSourceAuditReport } from '@/components/LiveSourceAuditPanel';
 import { OPENING_RESULT_UPDATES_PATH, type OpeningResultUpdateReport } from '@/lib/opening_result_updates';
 
@@ -95,4 +95,13 @@ export function loadDashboardData(): DashboardData {
     openingResultReport: readJson<OpeningResultUpdateReport>(path.join(cwd, OPENING_RESULT_UPDATES_PATH)),
     rejectedItemsReport: readJson<RejectedItemsReport>(path.join(cwd, 'rejected_items_report.json')),
   };
+}
+
+/**
+ * 市場全体の案件一覧（フィルタで本線から外れた土木・設備案件も含む）。
+ * 業者別の受注実績を追うために使う。
+ */
+export function loadMarketItems(): MarketItem[] {
+  const items = readJson<MarketItem[]>(path.join(process.cwd(), 'market_items.json')) || [];
+  return items.sort((a, b) => (b.announcementDate || '').localeCompare(a.announcementDate || ''));
 }

@@ -21,7 +21,7 @@ import { TakatoriTownScraper, IkarugaTownScraper } from './takatori_ikaruga';
 import { SangoTownScraper } from './sango_town';
 import { OjiTownScraper } from './oji_town';
 import { OyodoTownScraper } from './oyodo_town';
-import { BiddingItem, Scraper } from '../types/bidding';
+import { BiddingItem, MarketItem, Scraper } from '../types/bidding';
 import fs from 'fs';
 import path from 'path';
 import { shouldKeepBiddingItem, setScrapeContext, getRejectionLog, clearRejectionLog, type RejectionLogEntry } from './common/filter';
@@ -32,6 +32,7 @@ import { OPENING_RESULT_UPDATES_PATH, buildOpeningResultUpdateReport } from '../
 
 const SNAPSHOT_PATH = path.join(process.cwd(), 'municipality_snapshots.json');
 const REJECTED_ITEMS_PATH = path.join(process.cwd(), 'rejected_items_report.json');
+const MARKET_ITEMS_PATH = path.join(process.cwd(), 'market_items.json');
 type MunicipalitySnapshots = Partial<Record<BiddingItem['municipality'], BiddingItem[]>>;
 
 function parseMunicipalityEnvList(value?: string): Set<string> {
@@ -298,6 +299,36 @@ function getTodayIsoInTokyo(): string {
     }).format(new Date());
 }
 
+function readMarketItems(): MarketItem[] {
+    if (!fs.existsSync(MARKET_ITEMS_PATH)) return [];
+
+    try {
+        const parsed = JSON.parse(fs.readFileSync(MARKET_ITEMS_PATH, 'utf-8'));
+        return Array.isArray(parsed) ? parsed as MarketItem[] : [];
+    } catch {
+        return [];
+    }
+}
+
+/**
+ * 市場全体の一覧を書き出す。scraper_result.json はフィルタを通った建築・設計案件だけを
+ * 持つが、こちらは対象外の土木・設備案件も含めて保持する。橿原市のように毎回229件取得して
+ * 19件しか残していない自治体では、捨てている210件にも落札者・設計事務所が入っており、
+ * 業者の受注実績を追うにはそちらが必要になるため。
+ * 過去分を失わないよう、既存ファイルと id ベースでマージする（同一idは今回の取得で上書き）。
+ */
+function writeMarketItems(newItems: MarketItem[]) {
+    const byId = new Map<string, MarketItem>();
+    for (const item of readMarketItems()) byId.set(item.id, item);
+    for (const item of newItems) byId.set(item.id, item);
+
+    const merged = Array.from(byId.values()).sort((a, b) =>
+        (b.announcementDate || '').localeCompare(a.announcementDate || ''),
+    );
+    fs.writeFileSync(MARKET_ITEMS_PATH, JSON.stringify(merged, null, 2), 'utf-8');
+    return merged;
+}
+
 /**
  * フィルタで捨てた（または際どく救済した）案件のログを書き出す。
  * これまでは「採用した案件」しか記録されず、「何を・なぜ捨てたか」が
@@ -479,11 +510,18 @@ async function main() {
     }
 
     clearRejectionLog();
+    const marketItems: MarketItem[] = [];
     for (const scraper of scrapers) {
         console.log(`\n--- ${scraper.municipality} 開始 ---`);
         setScrapeContext(scraper.municipality);
         try {
             const items = await scraper.scrape();
+            // 市場全体の一覧用に、フィルタ前の取得結果を控えておく。
+            // 以降の早期 continue（前回値保持・急減検知）に入っても記録が残るよう、
+            // 判定より前のこの位置で拾う。
+            items.forEach((item) => {
+                marketItems.push({ ...item, isRelevant: shouldKeepBiddingItem(item) });
+            });
             const diagnostics = scraper.getDiagnostics?.();
             const issueEntries: MunicipalityIssueEntry[] = [
                 ...(diagnostics?.warnings || []).map((message: string) => ({
@@ -643,6 +681,8 @@ async function main() {
     const rejectionLog = getRejectionLog();
     writeRejectedItemsReport(rejectionLog);
     console.log(`\n除外ログ: 除外 ${rejectionLog.filter(e => !e.borderlineRescue).length}件 / 際どく救済 ${rejectionLog.filter(e => e.borderlineRescue).length}件`);
+    const mergedMarketItems = writeMarketItems(marketItems);
+    console.log(`市場全体: 今回 ${marketItems.length}件取得 / 累計 ${mergedMarketItems.length}件（うち対象 ${mergedMarketItems.filter(i => i.isRelevant).length}件）`);
     console.log(`最終合計: ${finalUnique.length} 件`);
 
     // 内訳表示

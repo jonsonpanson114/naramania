@@ -27,6 +27,16 @@ export interface BiddingItem {
   tags?: string[]; // AI generated tags for filtering
 }
 
+/**
+ * 市場全体の一覧用アイテム。フィルタで本線(scraper_result.json)に採用されなかった
+ * 案件も含めて保持する。対象外の土木・設備案件にも落札者・設計事務所が入っているため、
+ * 「この設計事務所が自社に関係ない仕事をどれだけ取っているか」を追える。
+ */
+export type MarketItem = BiddingItem & {
+  /** 本線の掲載対象(建築・設計監理)としてフィルタを通過したか */
+  isRelevant: boolean;
+};
+
 export interface Scraper {
   municipality: Municipality;
   scrape(): Promise<BiddingItem[]>;

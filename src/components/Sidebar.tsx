@@ -1,6 +1,6 @@
 'use client';
 
-import { LayoutDashboard, Search, Briefcase, Settings, MessageSquareText, ChartColumn, Wrench } from 'lucide-react';
+import { LayoutDashboard, Search, Briefcase, Settings, MessageSquareText, ChartColumn, Wrench, Store } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -8,6 +8,7 @@ const navItems = [
     { href: '/', label: 'ダッシュボード', icon: LayoutDashboard },
     { href: '/search', label: '案件検索', icon: Search },
     { href: '/analytics', label: '分析', icon: ChartColumn },
+    { href: '/market', label: '市場全体', icon: Store },
     { href: '/saved', label: '営業管理', icon: Briefcase },
     { href: '/chat', label: '入札チャット', icon: MessageSquareText },
     { href: '/settings', label: '設定', icon: Settings },
