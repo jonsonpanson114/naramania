@@ -151,19 +151,49 @@ function extractGoseResultPdfRecords(pdfText: string, biddingDate: string): Gose
     return records;
 }
 
-async function extractProposalReviewDate(link: string): Promise<string | undefined> {
+type ProposalPageDetails = {
+    biddingDate?: string;
+    winningContractor?: string;
+};
+
+/**
+ * プロポーザルの詳細ページから審査(開札相当)日と、公表済みなら優先交渉権者を読む。
+ * このページは「実施のお知らせ」→「質問への回答」→「選定結果の公表」と同じURLのまま
+ * 内容が更新されていくため、ページの[公開日/更新日]は結果公表のたびに新しくなる。
+ * これをそのまま announcementDate に使うと、審査日(biddingDate相当)より後の日付になり、
+ * 「公告日が開札日より後」という整合性エラーでCIが落ちる。
+ */
+function parseProposalPageDetails(html: string): ProposalPageDetails {
+    const $ = cheerio.load(html);
+    const text = $('body').text().replace(/\s+/g, ' ');
+    const scheduleMatch = text.match(/プレゼンテーション・ヒアリング実施\s*令和\s*\d+\s*年\s*\d+\s*月\s*\d+\s*日/u);
+    const winnerMatch = text.match(/優先交渉権者[：:]([^（）:：]+)/u);
+    return {
+        biddingDate: scheduleMatch ? parseJapaneseDateToIso(scheduleMatch[0]) || undefined : undefined,
+        winningContractor: winnerMatch?.[1]?.trim() || undefined,
+    };
+}
+
+async function extractProposalPageDetails(link: string): Promise<ProposalPageDetails> {
     try {
         const res = await axios.get(link, {
             headers: { 'User-Agent': 'Mozilla/5.0' },
             timeout: 15000,
         });
-        const $ = cheerio.load(res.data);
-        const text = $('body').text().replace(/\s+/g, ' ');
-        const scheduleMatch = text.match(/プレゼンテーション・ヒアリング実施\s*令和\s*\d+\s*年\s*\d+\s*月\s*\d+\s*日/u);
-        return scheduleMatch ? parseJapaneseDateToIso(scheduleMatch[0]) || undefined : undefined;
+        return parseProposalPageDetails(res.data);
     } catch {
-        return undefined;
+        return {};
     }
+}
+
+/**
+ * announcementDate は「ページの[公開日/更新日]」や「RSSのpubDate」から取っているため、
+ * 選定結果の公表などページが後から更新されると開札相当日(biddingDate)より後になり得る。
+ * announcementDate が biddingDate を超えないようクランプする。
+ */
+function clampAnnouncementDate(announcementDate: string, biddingDate: string | undefined): string {
+    if (biddingDate && announcementDate > biddingDate) return biddingDate;
+    return announcementDate;
 }
 
 async function scrapeGoseCategoryLinks(items: BiddingItem[]): Promise<void> {
@@ -221,14 +251,23 @@ async function scrapeGoseCategoryLinks(items: BiddingItem[]): Promise<void> {
             const mergedRecords = [...detailRecords, ...pdfRecords];
 
             if (mergedRecords.length === 0 && shouldKeepItem(link.title)) {
+                const proposalDetails = link.title.includes('プロポーザル')
+                    ? parseProposalPageDetails(detailHtml)
+                    : {};
+                const rawAnnouncementDate = detailDate || new Date().toISOString().split('T')[0];
                 items.push({
                     id: buildGoseId(link.title, detailDate, '-fallback'),
                     municipality: '御所市',
                     title: link.title,
                     type: classifyType(link.title),
-                    announcementDate: detailDate || new Date().toISOString().split('T')[0],
+                    announcementDate: clampAnnouncementDate(rawAnnouncementDate, proposalDetails.biddingDate),
+                    biddingDate: proposalDetails.biddingDate,
                     link: link.href,
-                    status: link.title.includes('結果') ? '落札' : '受付中',
+                    status: proposalDetails.winningContractor
+                        ? '落札'
+                        : (link.title.includes('結果') ? '落札' : '受付中'),
+                    winningContractor: proposalDetails.winningContractor,
+                    winnerType: classifyWinner(proposalDetails.winningContractor || ''),
                 });
                 continue;
             }
@@ -289,23 +328,25 @@ async function scrapeGoseCity(): Promise<BiddingItem[]> {
             if (!shouldKeepItem(title)) continue;
 
             const pubDateStr = $(el).find('pubDate').text().trim();
-            const announcementDate = parseRssDate(pubDateStr) || parseRssDate(new Date().toString());
+            const rawAnnouncementDate = parseRssDate(pubDateStr) || parseRssDate(new Date().toString());
             const proposalFallback = GOSE_PROPOSAL_FALLBACKS[title];
             const resolvedLink = link || proposalFallback?.link || '';
-            const biddingDate = title.includes('プロポーザル') && resolvedLink
-                ? await extractProposalReviewDate(resolvedLink).then(date => date || proposalFallback?.biddingDate)
-                : undefined;
+            const proposalDetails = title.includes('プロポーザル') && resolvedLink
+                ? await extractProposalPageDetails(resolvedLink)
+                : {};
+            const biddingDate = proposalDetails.biddingDate || proposalFallback?.biddingDate;
 
-            const winningContractor = title.includes('落札') ? title.split('：').pop()?.trim() : undefined;
+            const winningContractor = (title.includes('落札') ? title.split('：').pop()?.trim() : undefined)
+                || proposalDetails.winningContractor;
             items.push({
                 id: `gose-${title.slice(0, 20)}-${index}`,
                 municipality: '御所市',
                 title,
                 type: classifyType(title),
-                announcementDate: announcementDate,
+                announcementDate: clampAnnouncementDate(rawAnnouncementDate, biddingDate),
                 biddingDate,
                 link: resolvedLink,
-                status: title.includes('落札') ? '落札' : '受付中',
+                status: (title.includes('落札') || winningContractor) ? '落札' : '受付中',
                 winningContractor: winningContractor,
                 winnerType: classifyWinner(winningContractor || '')
             });
