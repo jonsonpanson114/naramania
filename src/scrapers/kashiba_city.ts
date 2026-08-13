@@ -165,15 +165,23 @@ async function getRightFrame(page: Page): Promise<Frame | null> {
 }
 
 async function getKashibaDataFrame(page: Page, pattern: RegExp): Promise<Frame | null> {
+    // 検索結果一覧の実データは frmRIGHT の中にネストされた name="right" の
+    // iframe(KFC401FrameShow/KFK401FrameShow)にしかない。frmRIGHT自体のURLも
+    // pattern(KK401SearchAction)にマッチしてしまい、page.frames()内ではその
+    // frmRIGHT が name="right" のiframeより先に列挙されるため、従来は
+    // find()が常にfrmRIGHT(検索フォームのみで結果データ0件)を返してしまい、
+    // 結果が一件も取得できていなかった。name="right"を優先して探す。
     for (let i = 0; i < 20; i += 1) {
-        const frame = page.frames().find(candidate => pattern.test(candidate.url()) || candidate.name() === 'right');
-        if (frame) return frame;
+        const namedFrame = page.frames().find(candidate => candidate.name() === 'right');
+        if (namedFrame) return namedFrame;
+        const patternFrame = page.frames().find(candidate => pattern.test(candidate.url()));
+        if (patternFrame) return patternFrame;
         await page.waitForTimeout(500);
     }
     return null;
 }
 
-async function openKashibaIssuePage(page: Page): Promise<Frame | null> {
+async function openKashibaIssuePage(page: Page, categoryText: string): Promise<Frame | null> {
     for (let attempt = 0; attempt < 3; attempt += 1) {
         await page.goto(EPI_URL, { waitUntil: 'load', timeout: 30000 });
         await page.waitForTimeout(1500);
@@ -184,7 +192,7 @@ async function openKashibaIssuePage(page: Page): Promise<Frame | null> {
             return null;
         }
 
-        const category = page.locator('span.ATYPE').filter({ hasText: '工事' }).first();
+        const category = page.locator('span.ATYPE').filter({ hasText: categoryText }).first();
         if (await category.count() === 0) {
             await page.waitForTimeout(1000);
             continue;
@@ -200,8 +208,8 @@ async function openKashibaIssuePage(page: Page): Promise<Frame | null> {
     return null;
 }
 
-async function openKashibaMenu(page: Page, menuText: string): Promise<Frame | null> {
-    const rightFrame = await openKashibaIssuePage(page);
+async function openKashibaMenu(page: Page, categoryText: string, menuText: string): Promise<Frame | null> {
+    const rightFrame = await openKashibaIssuePage(page, categoryText);
     if (!rightFrame) return null;
 
     const menu = rightFrame.locator(`span.ATYPE:has-text("${menuText}")`).first();
@@ -212,6 +220,10 @@ async function openKashibaMenu(page: Page, menuText: string): Promise<Frame | nu
     return getRightFrame(page);
 }
 
+// 「工事」だけでなく「コンサル」業務区分も見る。設計業務・測量業務等はコンサル区分に
+// しか出てこないため、工事だけ見ていると設計事務所の受注案件が丸ごと欠落する。
+const EPI_CATEGORIES = ['工事', 'コンサル'];
+
 async function scrapeKashibaCity(): Promise<BiddingItem[]> {
     const itemsMap = new Map<string, BiddingItem>();
 
@@ -221,95 +233,104 @@ async function scrapeKashibaCity(): Promise<BiddingItem[]> {
     page.setDefaultTimeout(120000);
 
     try {
-        const initialRightFrame = await openKashibaIssuePage(page);
-        if (!initialRightFrame) {
-            return [];
-        }
-
-        // 3) 部局 = 「香芝市」全体（1792ZZZZZZ）を選択（もしあれば）
-        // 以前の 179205ZZZZ より広い可能性がある
-        const bukyokuSel = page.locator('select[name="bukyoku"]');
-        if (await bukyokuSel.count() > 0) {
-            await bukyokuSel.selectOption('1792ZZZZZZ').catch(() => bukyokuSel.selectOption({ index: 0 }));
-            await page.waitForTimeout(1000);
-        }
-
-        for (const nendo of NENDOS) {
-            console.log(`[香芝市] 年度 ${nendo} 検索中...`);
-            const rightFrame = await openKashibaMenu(page, '入札・契約結果情報');
-            if (!rightFrame) continue;
-
-            // 年度選択
-            const nendoExists = await rightFrame.locator(`select[name="nendo"] option[value="${nendo}"]`).count();
-            if (nendoExists === 0) {
-                console.log(`[香芝市] 年度 ${nendo} は選択肢にありません`);
+        for (const categoryText of EPI_CATEGORIES) {
+            const initialRightFrame = await openKashibaIssuePage(page, categoryText);
+            if (!initialRightFrame) {
+                console.warn(`[香芝市] 業務区分「${categoryText}」の初期画面取得に失敗`);
                 continue;
             }
-            await rightFrame.selectOption('select[name="nendo"]', nendo);
-            await rightFrame.locator('input[type=button][value="検索"]').first().click();
-            await page.waitForTimeout(5000);
 
-            // 6) データiframe (KFK401FrameShow or name='right') からデータ取得
-            let page_num = 1;
-            while (true) {
-                const dataFrame = await getKashibaDataFrame(page, /KFK4|KK401SearchAction/);
-                if (!dataFrame) {
-                    console.warn('[香芝市] データフレームが見つかりません');
-                    break;
-                }
-
-                const rows = await dataFrame.locator('table tr').all();
-
-                for (const row of rows) {
-                    const cells = await row.locator('td').all();
-                    if (cells.length < 7) continue;
-
-                    // col: 0=結果種別, 1=公開日, 2=工事名, 3=契約管理番号, 4=入札方式, 5=落札者, 6=金額, 7=課所名
-                    const pubDate = parseJpDate((await cells[1].textContent() || '').trim());
-                    const title = (await cells[2].textContent() || '').trim().replace(/\s+/g, ' ');
-                    const contractNo = (await cells[3].textContent() || '').trim().replace(/\s+/g, '');
-                    const rawWinner = cells.length >= 6 ? (await cells[5].textContent() || '').trim().replace(/\s+/g, ' ') : '';
-                    const winner = rawWinner === '-' ? '' : rawWinner;
-                    const amountText = cells.length >= 7 ? (await cells[6].textContent() || '').trim().replace(/[,円\s]/g, '') : '';
-                    const parsedAmount = amountText ? parseInt(amountText, 10) : Number.NaN;
-                    const knownSchedule = KASHIBA_KNOWN_SCHEDULES[title];
-                    const titleLink = row.locator('a').first();
-                    const href = await titleLink.getAttribute('href').catch(() => null);
-                    const controlNo = href?.match(/doEdit030\('([^']+)'\)/)?.[1];
-                    const detailUrl = controlNo
-                        ? `https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=${controlNo}`
-                        : knownSchedule?.link || EPI_URL;
-
-                    if (!title || !pubDate) continue;
-                    if (!shouldKeepItem(title)) continue;
-
-                    const id = `kashiba-${contractNo || pubDate + '-' + title.slice(0, 10)}`;
-                    itemsMap.set(id, {
-                        id,
-                        municipality: '香芝市',
-                        title,
-                        type: inferKashibaType(title),
-                        announcementDate: knownSchedule?.announcementDate || pubDate,
-                        biddingDate: knownSchedule?.biddingDate || pubDate,
-                        link: detailUrl,
-                        status: knownSchedule?.status || '落札',
-                        winningContractor: winner || knownSchedule?.winningContractor,
-                        estimatedPrice: Number.isFinite(parsedAmount) ? `${parsedAmount.toLocaleString()}円` : undefined,
-                    });
-                }
-
-                // ページネーション: データフレーム内の「次へ」リンクを確認
-                const nextLink = dataFrame.locator('a:has-text("次へ")').first();
-                if (await nextLink.count() === 0) break;
-
-                page_num++;
-                console.log(`[香芝市] ページ ${page_num} へ`);
-                await nextLink.click();
-                await page.waitForTimeout(4000);
+            // 3) 部局 = 「香芝市」全体（1792ZZZZZZ）を選択（もしあれば）
+            // 以前の 179205ZZZZ より広い可能性がある
+            const bukyokuSel = page.locator('select[name="bukyoku"]');
+            if (await bukyokuSel.count() > 0) {
+                await bukyokuSel.selectOption('1792ZZZZZZ').catch(() => bukyokuSel.selectOption({ index: 0 }));
+                await page.waitForTimeout(1000);
             }
 
-            // 検索画面に戻るために一旦初期画面へ
-            await openKashibaIssuePage(page);
+            for (const nendo of NENDOS) {
+                console.log(`[香芝市] 業務区分「${categoryText}」年度 ${nendo} 検索中...`);
+                const rightFrame = await openKashibaMenu(page, categoryText, '入札・契約結果情報');
+                if (!rightFrame) continue;
+
+                // 年度選択
+                const nendoExists = await rightFrame.locator(`select[name="nendo"] option[value="${nendo}"]`).count();
+                if (nendoExists === 0) {
+                    console.log(`[香芝市] 年度 ${nendo} は選択肢にありません`);
+                    continue;
+                }
+                await rightFrame.selectOption('select[name="nendo"]', nendo);
+                await rightFrame.locator('input[type=button][value="検索"]').first().click();
+                await page.waitForTimeout(5000);
+
+                // 6) データiframe (KFK401FrameShow/KFC401FrameShow, name='right') からデータ取得
+                let page_num = 1;
+                while (true) {
+                    const dataFrame = await getKashibaDataFrame(page, /KFK4|KFC4|KK401SearchAction/);
+                    if (!dataFrame) {
+                        console.warn('[香芝市] データフレームが見つかりません');
+                        break;
+                    }
+
+                    const rows = await dataFrame.locator('table tr').all();
+
+                    for (const row of rows) {
+                        const cells = await row.locator('td').all();
+                        if (cells.length < 7) continue;
+
+                        // col: 0=結果種別, 1=公開日, 2=工事名/業務名, 3=契約管理番号, 4=入札方式, 5=落札者, 6=金額, 7=課所名
+                        const pubDate = parseJpDate((await cells[1].textContent() || '').trim());
+                        const title = (await cells[2].textContent() || '').trim().replace(/\s+/g, ' ');
+                        const contractNo = (await cells[3].textContent() || '').trim().replace(/\s+/g, '');
+                        const rawWinner = cells.length >= 6 ? (await cells[5].textContent() || '').trim().replace(/\s+/g, ' ') : '';
+                        const winner = rawWinner === '-' ? '' : rawWinner;
+                        // 金額セルには document.write() で金額を書き出すインラインscriptのソースが
+                        // textContent に混ざって入ってくるため、末尾の「◯,◯◯◯円」だけを拾う。
+                        const rawAmountText = cells.length >= 7 ? (await cells[6].textContent() || '').trim() : '';
+                        const amountMatch = rawAmountText.match(/([\d,]+)\s*円\s*$/);
+                        const parsedAmount = amountMatch ? parseInt(amountMatch[1].replace(/,/g, ''), 10) : Number.NaN;
+                        const knownSchedule = KASHIBA_KNOWN_SCHEDULES[title];
+                        const titleLink = row.locator('a').first();
+                        const href = await titleLink.getAttribute('href').catch(() => null);
+                        const controlNo = href?.match(/doEdit030\('([^']+)'\)/)?.[1];
+                        const detailUrl = controlNo
+                            ? `https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=${controlNo}`
+                            : knownSchedule?.link || EPI_URL;
+
+                        if (!title || !pubDate) continue;
+                        if (!shouldKeepItem(title)) continue;
+
+                        const id = `kashiba-${contractNo || pubDate + '-' + title.slice(0, 10)}`;
+                        itemsMap.set(id, {
+                            id,
+                            municipality: '香芝市',
+                            title,
+                            type: inferKashibaType(title),
+                            announcementDate: knownSchedule?.announcementDate || pubDate,
+                            biddingDate: knownSchedule?.biddingDate || pubDate,
+                            link: detailUrl,
+                            // knownSchedule.status は結果が出る前に手打ちした「受付終了」のままの
+                            // ことがある。EPIの結果一覧行そのものに落札者が載っている場合は、
+                            // 古い手打ちステータスより実際の落札の有無を優先する。
+                            status: winner ? '落札' : (knownSchedule?.status || '落札'),
+                            winningContractor: winner || knownSchedule?.winningContractor,
+                            estimatedPrice: Number.isFinite(parsedAmount) ? `${parsedAmount.toLocaleString()}円` : undefined,
+                        });
+                    }
+
+                    // ページネーション: データフレーム内の「次へ」リンクを確認
+                    const nextLink = dataFrame.locator('a:has-text("次へ")').first();
+                    if (await nextLink.count() === 0) break;
+
+                    page_num++;
+                    console.log(`[香芝市] ページ ${page_num} へ`);
+                    await nextLink.click();
+                    await page.waitForTimeout(4000);
+                }
+
+                // 検索画面に戻るために一旦初期画面へ
+                await openKashibaIssuePage(page, categoryText);
+            }
         }
 
     } catch (e: unknown) {
@@ -491,8 +512,10 @@ export class KashibaCityScraper implements Scraper {
         try {
             epiItems = await Promise.race([
                 scrapeKashibaCity(),
+                // 工事・コンサルの2区分を順に見るようになったため、1区分あたり
+                // ~50秒として余裕を持たせる(以前は工事1区分だけで90秒)。
                 new Promise<BiddingItem[]>((_, reject) => {
-                    setTimeout(() => reject(new Error('EPI timeout')), 90000);
+                    setTimeout(() => reject(new Error('EPI timeout')), 180000);
                 }),
             ]);
         } catch (error) {
