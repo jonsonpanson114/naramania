@@ -1,8 +1,17 @@
 import axios from 'axios';
 import * as cheerio from 'cheerio';
+import crypto from 'crypto';
 import { BiddingItem, Scraper, BiddingType } from '../types/bidding';
 import { shouldKeepItem } from './common/filter';
 import { extractPdfText } from './common/pdf_text';
+
+// 王寺町のURLは "https://www.town.oji.nara.jp/kakuka/somu/somu/gyomuannai/nyuusatu/
+// nyuusatukouhyou/xxxxx.html" のように長い共通接頭辞を持つ。base64の先頭12文字だけを
+// 切り出すと、その共通接頭辞部分しかエンコードされず末尾のページ番号の違いが
+// 反映されないため、別案件のIDが衝突していた(2件が同じidになりMapで上書きされる)。
+function ojiUrlHash(value: string): string {
+    return crypto.createHash('md5').update(value).digest('hex').slice(0, 10);
+}
 
 const OJI_INDEX = 'https://www.town.oji.nara.jp/kakuka/somu/somu/gyomuannai/nyuusatu/nyuusatukouhyou/index.html';
 const OJI_INDEX_JSON = 'https://www.town.oji.nara.jp/kakuka/somu/somu/gyomuannai/nyuusatu/nyuusatukouhyou/index.tree.json';
@@ -19,11 +28,15 @@ const OJI_SUPPLEMENTAL_ITEMS: Array<{
     winningContractor?: string;
 }> = [
     {
+        // 事後公表PDF(jigokohyou_20260525_yawaragi.pdf)に「入札不調」「事後審査の結果
+        // 不適格」と明記されている。唯一の入札者(株式会社上村組)が事後審査で不適格
+        // となり、7月に同工事が再公告(11747.html)された。
         title: '事後審査型条件付一般競争入札の公表について（やわらぎ会館改修工事）',
         link: 'https://www.town.oji.nara.jp/kakuka/somu/somu/gyomuannai/nyuusatu/nyuusatukouhyou/11512.html',
+        pdfUrl: 'https://www.town.oji.nara.jp/material/files/group/4/jigokohyou_20260525_yawaragi.pdf',
         announcementDate: '2026-04-27',
         biddingDate: '2026-05-18',
-        status: '受付終了' as const,
+        status: '不調' as const,
     },
 ];
 
@@ -103,11 +116,20 @@ function mergeOjiSupplementalItem(items: BiddingItem[], supplemental: typeof OJI
         if (!existing.biddingDate && supplemental.biddingDate) existing.biddingDate = supplemental.biddingDate;
         if (!existing.pdfUrl && supplemental.pdfUrl) existing.pdfUrl = supplemental.pdfUrl;
         if (!existing.winningContractor && supplemental.winningContractor) existing.winningContractor = supplemental.winningContractor;
+        // OJI_SUPPLEMENTAL_ITEMSは人手で事後公表PDF等を確認した上で登録するため、
+        // 不調・落札のような確定済みステータスは、サイトマップ由来の粗い判定
+        // (isResult ? '受付終了' : '受付中') より優先する。
+        if (
+            (supplemental.status === '不調' || supplemental.status === '落札')
+            && existing.status !== supplemental.status
+        ) {
+            existing.status = supplemental.status;
+        }
         return;
     }
 
     items.push({
-        id: `oji-supplemental-${Buffer.from(supplemental.link).toString('base64').slice(0, 12)}`,
+        id: `oji-supplemental-${ojiUrlHash(supplemental.link)}`,
         municipality: '王寺町',
         title,
         type: classifyType(title),
@@ -170,7 +192,7 @@ async function scrapeOjiProcurementSitemapPages(): Promise<BiddingItem[]> {
             const knownSchedule = getKnownOjiSchedule(title);
 
             items.push({
-                id: `oji-procurement-${Buffer.from(entry.url).toString('base64').slice(0, 12)}`,
+                id: `oji-procurement-${ojiUrlHash(entry.url)}`,
                 municipality: '王寺町',
                 title,
                 type: classifyType(title),
@@ -253,7 +275,7 @@ export class OjiTownScraper implements Scraper {
 
                 const effectiveBiddingDate = biddingDate || knownSchedule?.biddingDate;
                 items.push({
-                    id: `oji-${Buffer.from(fullUrl).toString('base64').slice(0, 12)}`,
+                    id: `oji-${ojiUrlHash(fullUrl)}`,
                     municipality: '王寺町',
                     title,
                     type: classifyType(title),
