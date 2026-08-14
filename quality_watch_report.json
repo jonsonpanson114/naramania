@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-08-14T08:16:55.230Z",
-  "qualityGeneratedAt": "2026-08-14T08:08:08.332Z",
-  "itemCount": 235,
+  "generatedAt": "2026-08-14T15:21:52.619Z",
+  "qualityGeneratedAt": "2026-08-14T15:21:48.669Z",
+  "itemCount": 248,
   "resultFollowUp": {
-    "totalCount": 6,
-    "highCount": 4,
+    "totalCount": 7,
+    "highCount": 5,
     "mediumCount": 2,
     "lowCount": 0,
     "missingBiddingDateCount": 0,
     "byMunicipality": [
       {
         "municipality": "奈良県",
-        "count": 3
+        "count": 4
       },
       {
         "municipality": "王寺町",
@@ -29,8 +29,8 @@
     "samples": [
       {
         "priority": "high",
-        "ageDays": 79,
-        "reason": "開札日から79日経過",
+        "ageDays": 80,
+        "reason": "開札日から80日経過",
         "item": {
           "id": "nara-city-0000002346",
           "municipality": "奈良市",
@@ -45,8 +45,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 57,
-        "reason": "開札日から57日経過",
+        "ageDays": 58,
+        "reason": "開札日から58日経過",
         "item": {
           "id": "nara-pref-29001013060020260055",
           "municipality": "奈良県",
@@ -61,8 +61,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 38,
-        "reason": "開札日から38日経過",
+        "ageDays": 39,
+        "reason": "開札日から39日経過",
         "item": {
           "id": "nara-pref-29005007060120260015",
           "municipality": "奈良県",
@@ -77,8 +77,24 @@
       },
       {
         "priority": "high",
-        "ageDays": 23,
-        "reason": "開札日から23日経過",
+        "ageDays": 29,
+        "reason": "開札日から29日経過",
+        "item": {
+          "id": "nara-pref-29005007060120260018",
+          "municipality": "奈良県",
+          "title": "送水施設受水地工事(田原本町第２)に伴う実施設計業務委託 その３",
+          "status": "受付終了",
+          "announcementDate": "2026-06-26",
+          "biddingDate": "2026-07-17",
+          "winningContractor": null,
+          "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29005007060120260018&gamenMode=0",
+          "pdfUrl": null
+        }
+      },
+      {
+        "priority": "high",
+        "ageDays": 24,
+        "reason": "開札日から24日経過",
         "item": {
           "id": "oji-ffe0646cd8",
           "municipality": "王寺町",
@@ -93,8 +109,8 @@
       },
       {
         "priority": "medium",
-        "ageDays": 9,
-        "reason": "開札日から9日経過",
+        "ageDays": 10,
+        "reason": "開札日から10日経過",
         "item": {
           "id": "kashihara-5082000865",
           "municipality": "橿原市",
@@ -109,8 +125,8 @@
       },
       {
         "priority": "medium",
-        "ageDays": 9,
-        "reason": "開札日から9日経過",
+        "ageDays": 10,
+        "reason": "開札日から10日経過",
         "item": {
           "id": "nara-pref-29001013060020260131",
           "municipality": "奈良県",
@@ -423,15 +439,15 @@
         "municipality": "奈良県",
         "status": "ok",
         "severity": "error",
-        "totalCount": 24,
+        "totalCount": 37,
         "requiredLinkIncludes": [
           "ppi.ebid-kouji-gyoumu.pref.nara.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "ppi.ebid-kouji-gyoumu.pref.nara.jp": 24
+          "ppi.ebid-kouji-gyoumu.pref.nara.jp": 37
         },
-        "message": "奈良県: 24件 / sources OK"
+        "message": "奈良県: 37件 / sources OK"
       },
       {
         "municipality": "奈良市",

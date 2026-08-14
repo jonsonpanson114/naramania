@@ -1,12 +1,23 @@
 {
-  "generatedAt": "2026-08-14T08:16:56.373Z",
+  "generatedAt": "2026-08-14T15:21:56.034Z",
   "checkedMunicipalityCount": 24,
-  "expectedItemCount": 235,
-  "matchedItemCount": 235,
+  "expectedItemCount": 248,
+  "matchedItemCount": 248,
   "missingItemCount": 0,
-  "duplicateTitleGroupCount": 18,
-  "duplicateTitleItemCount": 38,
+  "duplicateTitleGroupCount": 19,
+  "duplicateTitleItemCount": 40,
   "results": [
+    {
+      "municipality": "奈良県",
+      "snapshotCount": 37,
+      "expectedCount": 37,
+      "matchedCount": 37,
+      "missingCount": 0,
+      "duplicateTitleGroupCount": 2,
+      "duplicateTitleItemCount": 4,
+      "missingItems": [],
+      "status": "ok"
+    },
     {
       "municipality": "橿原市",
       "snapshotCount": 30,
@@ -26,17 +37,6 @@
       "missingCount": 0,
       "duplicateTitleGroupCount": 5,
       "duplicateTitleItemCount": 10,
-      "missingItems": [],
-      "status": "ok"
-    },
-    {
-      "municipality": "奈良県",
-      "snapshotCount": 24,
-      "expectedCount": 24,
-      "matchedCount": 24,
-      "missingCount": 0,
-      "duplicateTitleGroupCount": 1,
-      "duplicateTitleItemCount": 2,
       "missingItems": [],
       "status": "ok"
     },

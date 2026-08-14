@@ -254,6 +254,39 @@
     "extractionSource": "gemini"
   },
   {
+    "id": "nara-pref-29001013060020260135",
+    "municipality": "奈良県",
+    "title": "ワタキューテニスパーク明日香南コート横トイレ改修工事監理業務 委（監）第８－１８号",
+    "type": "コンサル",
+    "announcementDate": "2026-07-22",
+    "biddingDate": "2026-08-18",
+    "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260135&gamenMode=0",
+    "status": "受付中",
+    "winnerType": "設計事務所"
+  },
+  {
+    "id": "nara-pref-29001013060020260136",
+    "municipality": "奈良県",
+    "title": "御所実業高校トイレ環境改善整備工事、大和広陵高校トイレ環境改善整備工事及び奈良南高校（大淀学舎）トイレ環境改善整備工事監理業務 委（監）第８－１１号",
+    "type": "コンサル",
+    "announcementDate": "2026-07-22",
+    "biddingDate": "2026-08-21",
+    "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260136&gamenMode=0",
+    "status": "受付中",
+    "winnerType": "設計事務所"
+  },
+  {
+    "id": "nara-pref-29001013060020260144",
+    "municipality": "奈良県",
+    "title": "社会福祉総合センター本館１・２階トイレ改修工事監理業務 委（監）第８－１７号",
+    "type": "コンサル",
+    "announcementDate": "2026-07-22",
+    "biddingDate": "2026-08-18",
+    "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260144&gamenMode=0",
+    "status": "受付中",
+    "winnerType": "設計事務所"
+  },
+  {
     "id": "yamato-koriyama-4ff4ec8e",
     "municipality": "大和郡山市",
     "title": "【事前申請】大和郡山市立小泉出屋敷スポーツ会館補修工事",
@@ -275,6 +308,17 @@
     "extractionSource": "gemini"
   },
   {
+    "id": "nara-pref-29001013060020260134",
+    "municipality": "奈良県",
+    "title": "野外活動センター旧第２センター（仮称）管理棟新築工事監理業務 委（監）第８－６号",
+    "type": "コンサル",
+    "announcementDate": "2026-07-21",
+    "biddingDate": "2026-08-18",
+    "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260134&gamenMode=0",
+    "status": "受付中",
+    "winnerType": "設計事務所"
+  },
+  {
     "id": "gose-2026-07-17-市営住宅(サン柏原207号・今出団地99号・11-0",
     "municipality": "御所市",
     "title": "市営住宅(サン柏原207号・今出団地99号・110号)空家修繕",
@@ -285,6 +329,18 @@
     "status": "落札",
     "winningContractor": "(株)阪本",
     "winnerType": "ゼネコン"
+  },
+  {
+    "id": "nara-pref-29001013052020260117",
+    "municipality": "奈良県",
+    "title": "県営畑地帯総合整備事業 法貴寺地区 実施設計その３業務委託 Ｒ８Ｂ１委４",
+    "type": "コンサル",
+    "announcementDate": "2026-07-16",
+    "biddingDate": "2026-07-31",
+    "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013052020260117&gamenMode=0",
+    "status": "落札",
+    "winningContractor": "株式会社エイト日本技術開発",
+    "winnerType": "設計事務所"
   },
   {
     "id": "nara-city-0000002593",
@@ -305,37 +361,6 @@
     "biddingDate": "2026-07-22",
     "link": "https://www.town.oji.nara.jp/kakuka/somu/somu/gyomuannai/nyuusatu/nyuusatukouhyou/11747.html",
     "status": "受付終了"
-  },
-  {
-    "id": "nara-pref-29001013060020260127",
-    "municipality": "奈良県",
-    "title": "県営住宅姫寺団地４号棟（５０１号室他）及び県営住宅纒向団地６号棟（２０６号室他）住戸改修工事監理業務 委（監）第８－５号",
-    "type": "コンサル",
-    "announcementDate": "2026-07-10",
-    "biddingDate": "2026-08-05",
-    "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260127&gamenMode=0",
-    "status": "不調"
-  },
-  {
-    "id": "nara-pref-29001013060020260131",
-    "municipality": "奈良県",
-    "title": "県営住宅姫寺団地４号棟（５０１号室他）住戸改修工事 第８－２７号",
-    "type": "建築",
-    "announcementDate": "2026-07-10",
-    "biddingDate": "2026-08-05",
-    "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260131&gamenMode=0",
-    "status": "受付終了",
-    "winnerType": "ゼネコン"
-  },
-  {
-    "id": "nara-pref-29001013060020260132",
-    "municipality": "奈良県",
-    "title": "県営住宅纒向団地６号棟（２０６号室他）住戸改修工事 第８－２８号",
-    "type": "建築",
-    "announcementDate": "2026-07-10",
-    "biddingDate": "2026-08-05",
-    "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260132&gamenMode=0",
-    "status": "不調"
   },
   {
     "id": "katsuragi-web-42be9c8c",
@@ -359,6 +384,37 @@
     ],
     "isIntelligenceExtracted": true,
     "extractionSource": "gemini"
+  },
+  {
+    "id": "nara-pref-29001013060020260131",
+    "municipality": "奈良県",
+    "title": "県営住宅姫寺団地４号棟（５０１号室他）住戸改修工事 第８－２７号",
+    "type": "建築",
+    "announcementDate": "2026-07-10",
+    "biddingDate": "2026-08-05",
+    "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260131&gamenMode=0",
+    "status": "受付終了",
+    "winnerType": "ゼネコン"
+  },
+  {
+    "id": "nara-pref-29001013060020260127",
+    "municipality": "奈良県",
+    "title": "県営住宅姫寺団地４号棟（５０１号室他）及び県営住宅纒向団地６号棟（２０６号室他）住戸改修工事監理業務 委（監）第８－５号",
+    "type": "コンサル",
+    "announcementDate": "2026-07-10",
+    "biddingDate": "2026-08-05",
+    "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260127&gamenMode=0",
+    "status": "不調"
+  },
+  {
+    "id": "nara-pref-29001013060020260132",
+    "municipality": "奈良県",
+    "title": "県営住宅纒向団地６号棟（２０６号室他）住戸改修工事 第８－２８号",
+    "type": "建築",
+    "announcementDate": "2026-07-10",
+    "biddingDate": "2026-08-05",
+    "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260132&gamenMode=0",
+    "status": "不調"
   },
   {
     "id": "ikoma-result-2601010041",
@@ -439,16 +495,6 @@
     "winningContractor": "（株）福本設計"
   },
   {
-    "id": "nara-pref-29001013060020260118",
-    "municipality": "奈良県",
-    "title": "竜田公園管理事務所兼公衆トイレ内装等改修工事（補助都市計画公園事業（防災・安全交付金）） 第８－２０号",
-    "type": "建築",
-    "announcementDate": "2026-07-01",
-    "biddingDate": "2026-07-30",
-    "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260118&gamenMode=0",
-    "status": "不調"
-  },
-  {
     "id": "nara-city-0000002557",
     "municipality": "奈良市",
     "title": "ＪＲ奈良駅高架下公衆トイレ改修工事",
@@ -481,6 +527,16 @@
     ],
     "isIntelligenceExtracted": true,
     "extractionSource": "gemini"
+  },
+  {
+    "id": "nara-pref-29001013060020260118",
+    "municipality": "奈良県",
+    "title": "竜田公園管理事務所兼公衆トイレ内装等改修工事（補助都市計画公園事業（防災・安全交付金）） 第８－２０号",
+    "type": "建築",
+    "announcementDate": "2026-07-01",
+    "biddingDate": "2026-07-30",
+    "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260118&gamenMode=0",
+    "status": "不調"
   },
   {
     "id": "gojo-epi-2601023",
@@ -552,6 +608,17 @@
     "winningContractor": "細谷設計事務所"
   },
   {
+    "id": "nara-pref-29005007060120260018",
+    "municipality": "奈良県",
+    "title": "送水施設受水地工事(田原本町第２)に伴う実施設計業務委託 その３",
+    "type": "コンサル",
+    "announcementDate": "2026-06-26",
+    "biddingDate": "2026-07-17",
+    "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29005007060120260018&gamenMode=0",
+    "status": "受付終了",
+    "winnerType": "設計事務所"
+  },
+  {
     "id": "kashihara-result-5081000595",
     "municipality": "橿原市",
     "title": "旧白橿南小学校解体工事",
@@ -584,16 +651,6 @@
     "status": "落札",
     "winningContractor": "（株）タツミ建設",
     "estimatedPrice": "40,780,000円"
-  },
-  {
-    "id": "nara-pref-29001013060020260115",
-    "municipality": "奈良県",
-    "title": "吉野保健所本館トイレ改修工事設計業務 委（設）第８－７号",
-    "type": "コンサル",
-    "announcementDate": "2026-06-23",
-    "biddingDate": "2026-07-14",
-    "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260115&gamenMode=0",
-    "status": "不調"
   },
   {
     "id": "kashihara-result-5081000510",
@@ -653,6 +710,16 @@
     "estimatedPrice": "3,250,000円"
   },
   {
+    "id": "nara-pref-29001013060020260115",
+    "municipality": "奈良県",
+    "title": "吉野保健所本館トイレ改修工事設計業務 委（設）第８－７号",
+    "type": "コンサル",
+    "announcementDate": "2026-06-23",
+    "biddingDate": "2026-07-14",
+    "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260115&gamenMode=0",
+    "status": "不調"
+  },
+  {
     "id": "nara-pref-29005007060120260015",
     "municipality": "奈良県",
     "title": "下市取水場管理本館修繕工事実施設計業務委託",
@@ -706,6 +773,18 @@
     "biddingDate": "2026-07-09",
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260095&gamenMode=0",
     "status": "不調",
+    "winnerType": "設計事務所"
+  },
+  {
+    "id": "nara-pref-29001013060020260078",
+    "municipality": "奈良県",
+    "title": "奈良東養護学校（管理普通特別教室棟（５１），普通特別教室棟（５２））外壁・内装改修工事、奈良北高校屋内運動場（６）等屋根・外壁改修工事及び明日香養護学校教室棟（3，１０）屋上防水改修工事設計業務 委（設）第８－１８号",
+    "type": "コンサル",
+    "announcementDate": "2026-06-09",
+    "biddingDate": "2026-06-30",
+    "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260078&gamenMode=0",
+    "status": "落札",
+    "winningContractor": "有限会社優建築工房",
     "winnerType": "設計事務所"
   },
   {
@@ -830,18 +909,6 @@
     "extractionSource": "gemini"
   },
   {
-    "id": "nara-pref-29001013060020260062",
-    "title": "県営住宅桜井団地第三期除却工事設計業務（近鉄大福駅周辺地区拠点整備事業） 委（設）第８－３０号",
-    "type": "コンサル",
-    "announcementDate": "2026-06-02",
-    "biddingDate": "2026-06-25",
-    "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260062&gamenMode=0",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "municipality": "奈良県",
-    "winningContractor": "株式会社北和設計"
-  },
-  {
     "id": "kashiba-r8-g4-27",
     "municipality": "香芝市",
     "title": "香芝市スポーツ公園整備事業に係るクライミング施設詳細設計業務",
@@ -854,15 +921,28 @@
     "estimatedPrice": "59,135,000円"
   },
   {
-    "id": "nara-pref-29001013060020260057",
-    "title": "野外活動センター旧第２センター（仮称）管理棟新築工事監理業務 委（監）第８－６号",
+    "id": "nara-pref-29001013060020260062",
+    "municipality": "奈良県",
+    "title": "県営住宅桜井団地第三期除却工事設計業務（近鉄大福駅周辺地区拠点整備事業） 委（設）第８－３０号",
     "type": "コンサル",
-    "announcementDate": "2026-06-01",
-    "biddingDate": "2026-06-22",
-    "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260057&gamenMode=0",
-    "status": "不調",
-    "winnerType": "設計事務所",
-    "municipality": "奈良県"
+    "announcementDate": "2026-06-02",
+    "biddingDate": "2026-06-25",
+    "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260062&gamenMode=0",
+    "status": "落札",
+    "winningContractor": "株式会社北和設計",
+    "winnerType": "設計事務所"
+  },
+  {
+    "id": "nara-pref-29001013060020260063",
+    "municipality": "奈良県",
+    "title": "県営住宅橿原団地（Ｃ８，Ｃ１０～Ｃ１３号棟）及び六条山団地（５，６号棟）屋上防水、屋根及び外壁改修工事設計業務（県営住宅環境改善事業（防災・安全）） 委（設）第８－４号",
+    "type": "コンサル",
+    "announcementDate": "2026-06-02",
+    "biddingDate": "2026-06-23",
+    "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260063&gamenMode=0",
+    "status": "落札",
+    "winningContractor": "株式会社桝谷設計",
+    "winnerType": "設計事務所"
   },
   {
     "id": "sakurai-2026-06-01-芝運動公園運動場等再整備基本設計業務委託",
@@ -881,6 +961,17 @@
     "announcementDate": "2026-06-01",
     "link": "https://www.city.sakurai.lg.jp/sosiki/soumu/kanzaikeiyaku/nyuusatukeiyakukensa/notice/6596.html",
     "status": "受付中"
+  },
+  {
+    "id": "nara-pref-29001013060020260057",
+    "title": "野外活動センター旧第２センター（仮称）管理棟新築工事監理業務 委（監）第８－６号",
+    "type": "コンサル",
+    "announcementDate": "2026-06-01",
+    "biddingDate": "2026-06-22",
+    "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260057&gamenMode=0",
+    "status": "不調",
+    "winnerType": "設計事務所",
+    "municipality": "奈良県"
   },
   {
     "id": "tenri-d992a9bd",
@@ -914,6 +1005,29 @@
     "extractionSource": "gemini"
   },
   {
+    "id": "tawaramoto-1008062207",
+    "municipality": "田原本町",
+    "title": "平野幼稚園配膳室出入口改修等業務",
+    "type": "委託",
+    "announcementDate": "2026-05-28",
+    "biddingDate": "2026-06-22",
+    "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
+    "status": "落札",
+    "winningContractor": "福辻工務店"
+  },
+  {
+    "id": "nara-pref-29001013060020260032",
+    "municipality": "奈良県",
+    "title": "県営住宅六条団地（１～３号棟）屋根・外壁等改修工事監理業務（県営住宅環境改善事業（防災・安全）） 委（監）第８ー１０号",
+    "type": "コンサル",
+    "announcementDate": "2026-05-28",
+    "biddingDate": "2026-06-18",
+    "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260032&gamenMode=0",
+    "status": "落札",
+    "winningContractor": "ニッタ建築事務所",
+    "winnerType": "設計事務所"
+  },
+  {
     "id": "nara-pref-29001013060020260034",
     "municipality": "奈良県",
     "title": "野外活動センター旧第２センター（仮称）管理棟新築工事 第８－８号",
@@ -937,15 +1051,25 @@
     "municipality": "奈良県"
   },
   {
-    "id": "tawaramoto-1008062207",
-    "municipality": "田原本町",
-    "title": "平野幼稚園配膳室出入口改修等業務",
-    "type": "委託",
-    "announcementDate": "2026-05-28",
-    "biddingDate": "2026-06-22",
-    "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
+    "id": "tenri-4d4dd96a",
+    "municipality": "天理市",
+    "title": "天理市立丹波市・前栽・櫟本小学校屋内運動場断熱化工事",
+    "type": "建築",
+    "announcementDate": "2026-05-27",
+    "link": "https://www.city.tenri.nara.jp/kakuka/soumubu/nyuusatsushinsashitsu/construction_work/kouji_hattyuu_kanren/1395887232147.html",
+    "status": "受付中"
+  },
+  {
+    "id": "nara-pref-29001013060020260054",
+    "municipality": "奈良県",
+    "title": "宇陀高校（榛原学舎）トイレ環境改善整備工事及び宇陀高校（大宇陀学舎）トイレ環境改善整備工事監理業務 委（監）第８－２号",
+    "type": "コンサル",
+    "announcementDate": "2026-05-27",
+    "biddingDate": "2026-06-17",
+    "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260054&gamenMode=0",
     "status": "落札",
-    "winningContractor": "福辻工務店"
+    "winningContractor": "株式会社桝谷設計",
+    "winnerType": "設計事務所"
   },
   {
     "id": "nara-pref-29001013060020260050",
@@ -956,61 +1080,6 @@
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260050&gamenMode=0",
     "status": "不調",
     "winnerType": "設計事務所",
-    "municipality": "奈良県"
-  },
-  {
-    "id": "nara-pref-29001013060020260054",
-    "title": "宇陀高校（榛原学舎）トイレ環境改善整備工事及び宇陀高校（大宇陀学舎）トイレ環境改善整備工事監理業務 委（監）第８－２号",
-    "type": "コンサル",
-    "announcementDate": "2026-05-27",
-    "biddingDate": "2026-06-17",
-    "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260054&gamenMode=0",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "municipality": "奈良県",
-    "winningContractor": "株式会社桝谷設計"
-  },
-  {
-    "id": "tenri-4d4dd96a",
-    "municipality": "天理市",
-    "title": "天理市立丹波市・前栽・櫟本小学校屋内運動場断熱化工事",
-    "type": "建築",
-    "announcementDate": "2026-05-27",
-    "link": "https://www.city.tenri.nara.jp/kakuka/soumubu/nyuusatsushinsashitsu/construction_work/kouji_hattyuu_kanren/1395887232147.html",
-    "status": "受付中"
-  },
-  {
-    "id": "nara-pref-29001013060020260026",
-    "title": "県営住宅姫寺団地４号棟（５０１号室他）及び県営住宅纒向団地６号棟（２０６号室他）住戸改修工事監理業務 委（監）第８－５号",
-    "type": "コンサル",
-    "announcementDate": "2026-05-26",
-    "biddingDate": "2026-06-16",
-    "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260026&gamenMode=0",
-    "status": "不調",
-    "winnerType": "設計事務所",
-    "municipality": "奈良県"
-  },
-  {
-    "id": "nara-pref-29001013060020260053",
-    "title": "商業高校トイレ環境改善整備工事及び西和清陵高校トイレ環境改善整備工事監理業務 委（監）第８－３号",
-    "type": "コンサル",
-    "announcementDate": "2026-05-26",
-    "biddingDate": "2026-06-16",
-    "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260053&gamenMode=0",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "municipality": "奈良県",
-    "winningContractor": "株式会社尾川建築設計事務所"
-  },
-  {
-    "id": "nara-pref-29001013060020260049",
-    "title": "高円芸術高校格技場（５）屋根改修工事 第８－９号",
-    "type": "建築",
-    "announcementDate": "2026-05-26",
-    "biddingDate": "2026-06-18",
-    "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260049&gamenMode=0",
-    "status": "不調",
-    "winnerType": "ゼネコン",
     "municipality": "奈良県"
   },
   {
@@ -1057,6 +1126,52 @@
     "status": "落札",
     "winningContractor": "株式会社尾川建築設計事務所",
     "estimatedPrice": "9,850,000円"
+  },
+  {
+    "id": "nara-pref-29001013060020260053",
+    "municipality": "奈良県",
+    "title": "商業高校トイレ環境改善整備工事及び西和清陵高校トイレ環境改善整備工事監理業務 委（監）第８－３号",
+    "type": "コンサル",
+    "announcementDate": "2026-05-26",
+    "biddingDate": "2026-06-16",
+    "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260053&gamenMode=0",
+    "status": "落札",
+    "winningContractor": "株式会社尾川建築設計事務所",
+    "winnerType": "設計事務所"
+  },
+  {
+    "id": "nara-pref-29001013060020260030",
+    "municipality": "奈良県",
+    "title": "県営住宅六条団地（１～３号棟）屋根・外壁等改修工事（県営住宅環境改善事業（防災・安全）） 第８－１３号",
+    "type": "建築",
+    "announcementDate": "2026-05-26",
+    "biddingDate": "2026-06-18",
+    "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260030&gamenMode=0",
+    "status": "落札",
+    "winningContractor": "米杉・谷特定建設工事共同企業体",
+    "winnerType": "ゼネコン"
+  },
+  {
+    "id": "nara-pref-29001013060020260026",
+    "title": "県営住宅姫寺団地４号棟（５０１号室他）及び県営住宅纒向団地６号棟（２０６号室他）住戸改修工事監理業務 委（監）第８－５号",
+    "type": "コンサル",
+    "announcementDate": "2026-05-26",
+    "biddingDate": "2026-06-16",
+    "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260026&gamenMode=0",
+    "status": "不調",
+    "winnerType": "設計事務所",
+    "municipality": "奈良県"
+  },
+  {
+    "id": "nara-pref-29001013060020260049",
+    "title": "高円芸術高校格技場（５）屋根改修工事 第８－９号",
+    "type": "建築",
+    "announcementDate": "2026-05-26",
+    "biddingDate": "2026-06-18",
+    "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260049&gamenMode=0",
+    "status": "不調",
+    "winnerType": "ゼネコン",
+    "municipality": "奈良県"
   },
   {
     "id": "nara-pref-29001013060020260025",
@@ -1264,18 +1379,6 @@
     "winningContractor": "塚竜(株)"
   },
   {
-    "id": "nara-pref-29001013060020260006",
-    "title": "大渕池公園（西地区）児童広場及び少年運動広場公衆トイレ新築工事基本・実施設計業務（補助都市計画公園事業（防災・安全交付金）） 委（設）第７－２７号",
-    "type": "コンサル",
-    "announcementDate": "2026-05-11",
-    "biddingDate": "2026-06-01",
-    "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260006&gamenMode=0",
-    "status": "落札",
-    "winnerType": "設計事務所",
-    "municipality": "奈良県",
-    "winningContractor": "エム・アイ・エー・アーキテクツ有限会社"
-  },
-  {
     "id": "高取町-2026-05-11-高取町文化センター解体工事監理業務",
     "municipality": "高取町",
     "title": "高取町文化センター解体工事監理業務",
@@ -1322,6 +1425,30 @@
     "status": "落札",
     "winningContractor": "吉井建設(株)",
     "winnerType": "ゼネコン"
+  },
+  {
+    "id": "nara-pref-29001013060020260006",
+    "municipality": "奈良県",
+    "title": "大渕池公園（西地区）児童広場及び少年運動広場公衆トイレ新築工事基本・実施設計業務（補助都市計画公園事業（防災・安全交付金）） 委（設）第７－２７号",
+    "type": "コンサル",
+    "announcementDate": "2026-05-11",
+    "biddingDate": "2026-06-01",
+    "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260006&gamenMode=0",
+    "status": "落札",
+    "winningContractor": "エム・アイ・エー・アーキテクツ有限会社",
+    "winnerType": "設計事務所"
+  },
+  {
+    "id": "nara-pref-29001013060020260007",
+    "municipality": "奈良県",
+    "title": "大渕池公園（東地区）公衆トイレ改築工事及び体育館トイレ改修・空調設備設置工事設計業務（補助都市計画公園事業（防災・安全交付金）） 委（設）第７－２８号",
+    "type": "コンサル",
+    "announcementDate": "2026-05-11",
+    "biddingDate": "2026-06-01",
+    "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260007&gamenMode=0",
+    "status": "落札",
+    "winningContractor": "エム・アイ・エー・アーキテクツ有限会社",
+    "winnerType": "設計事務所"
   },
   {
     "id": "katsuragi-epi-f06e211f",
@@ -1784,6 +1911,30 @@
     "link": "https://www.town.nara-kawanishi.lg.jp/cmsfiles/contents/0000008/8733/2406.pdf",
     "status": "落札",
     "winningContractor": "株式会社岩崎建築設計事務所"
+  },
+  {
+    "id": "nara-pref-29005007050120250003",
+    "municipality": "奈良県",
+    "title": "広域化に伴う施設整備に係る通信回線等デジタル化対応工事設計業務委託（その１）",
+    "type": "コンサル",
+    "announcementDate": "2026-04-01",
+    "biddingDate": "2026-04-23",
+    "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29005007050120250003&gamenMode=0",
+    "status": "落札",
+    "winningContractor": "株式会社潮技術コンサルタント",
+    "winnerType": "設計事務所"
+  },
+  {
+    "id": "nara-pref-29005007050120250004",
+    "municipality": "奈良県",
+    "title": "広域化に伴う施設整備に係る通信回線等デジタル化対応工事設計業務委託（その２）",
+    "type": "コンサル",
+    "announcementDate": "2026-04-01",
+    "biddingDate": "2026-04-23",
+    "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29005007050120250004&gamenMode=0",
+    "status": "落札",
+    "winningContractor": "株式会社潮技術コンサルタント",
+    "winnerType": "設計事務所"
   },
   {
     "id": "kashiba-web-a1acb745",
