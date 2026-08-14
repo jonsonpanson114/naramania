@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-13T07:04:08.621Z",
-  "totalRejected": 3078,
+  "generatedAt": "2026-08-14T00:26:05.805Z",
+  "totalRejected": 3262,
   "totalBorderlineRescued": 39,
   "byMunicipality": {
     "奈良市": {
@@ -55,6 +55,10 @@
       "rejected": 19,
       "borderlineRescued": 0
     },
+    "香芝市": {
+      "rejected": 88,
+      "borderlineRescued": 0
+    },
     "川西町": {
       "rejected": 0,
       "borderlineRescued": 3
@@ -68,7 +72,7 @@
       "borderlineRescued": 0
     },
     "三宅町": {
-      "rejected": 13,
+      "rejected": 109,
       "borderlineRescued": 0
     },
     "安堵町": {
@@ -17905,13 +17909,13 @@
     },
     {
       "municipality": "御所市",
-      "title": "一般競争入札公告（建設コンサルタント等）（管財課）",
+      "title": "一般競争入札公告（建設工事）（管財課）",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },
     {
       "municipality": "御所市",
-      "title": "一般競争入札公告（建設工事）（管財課）",
+      "title": "一般競争入札公告（建設コンサルタント等）（管財課）",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },
@@ -20710,6 +20714,700 @@
       ]
     },
     {
+      "municipality": "香芝市",
+      "title": "令和８年度香芝市スポーツ公園整備事業に係る造成工事（その１）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "舗装維持工事 公－０６８号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "公園遊具設置工事 公－０６３号",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "遊具"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "公園遊具設置工事 公－０６２号",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "遊具"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "令和８年度ストックマネジメント計画に基づく管路更生工事",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "ストックマネジメント"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "公共下水道工事（２６－単１０３－４）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "公共下水道工事（２６－補８－３）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "五位堂10-167号線南側配水管布設替工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "北今市7-183号線西配水管布設替工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "磯壁9-109号線配水管布設替工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "上中5-19号線配水管布設替工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "今泉1-40号線他配水管布設替工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "関屋2-157号線他配水管布設替工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "香芝市総合公園等維持管理業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "認定こども園真美ヶ丘東幼稚園受変電設備改修工事",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "設備",
+        "受変電設備"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "公共下水道工事（２６－補３－３）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "公園遊具設置工事 公－０１５号",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "遊具"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "公園遊具設置工事 公－０１４号",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "遊具"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "舗装維持工事 公－０２２号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "舗装維持工事 公－０１７号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "舗装維持工事 公－０１９号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "舗装維持工事 公－０１８号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "真美ヶ丘西小学校児童用ロッカー改修工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "ロッカー"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "公共下水道工事（２６－補１－５）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "公共下水道工事（２６－補４－４）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "国道168号西側配水管布設替工事（1工区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "国道"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "下田東8-288号線他配水管布設替工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "穴虫国道165号北側配水管布設替工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "国道"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "西真美8-18号線他配水管布設替工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "穴虫4-80号線他配水管布設替工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "舗装維持工事 公－０１３号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "公園遊具設置工事 公－０１１号",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "遊具"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "公園遊具設置工事 公－０１０号",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "遊具"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "公園遊具設置工事 公－００９号",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "遊具"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "舗装維持工事 公－０１２号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "令和８年度畑分川線（１工区）築造工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "公共下水道工事に伴う舗装復旧工事（２５－補４－４）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装",
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "公共下水道工事に伴う舗装復旧工事（２４－補５－４、２５－単１０１－４）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装",
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "公共下水道工事（２６－補５－５）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "公共下水道工事（２６－補７－６）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "公共下水道工事（２６－単１０２－４）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "都市公園維持管理業務（その４） 公－５０８号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "都市公園維持管理業務（その３） 公－５０７号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "都市公園維持管理業務（その２） 公－５０６号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "都市公園維持管理業務（その１） 公－５０５号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "街路維持管理業務（その４） 公－５０４号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "街路維持管理業務（その３） 公－５０３号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "街路維持管理業務（その２） 公－５０２号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "街路維持管理業務（その１） 公－５０１号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "排水路浚渫工事 公－００４号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "浚渫",
+        "排水路",
+        "水路"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "公園遊具設置工事 公－００３号",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "遊具"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "公園遊具設置工事 公－００２号",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "遊具"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "緊急維持工事（照明） 公－００１号",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "照明"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "中学校草刈業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "小学校草刈業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "香芝市立中学校照明設備改修工事（２工区）",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "照明",
+        "設備"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "香芝市立中学校照明設備改修工事（１工区）",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "照明",
+        "設備"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "香芝市立小学校照明設備改修工事（２工区）",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "照明",
+        "設備"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "香芝市立小学校照明設備改修工事（１工区）",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "照明",
+        "設備"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "香芝市立小学校屋内運動場空調設備設置工事（３工区）",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "空調",
+        "設備"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "香芝市立小学校屋内運動場空調設備設置工事（２工区）",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "空調",
+        "設備"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "香芝市立小学校屋内運動場空調設備設置工事（１工区）",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "空調",
+        "設備"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "香芝市立認定こども園及び幼稚園照明設備改修工事",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "照明",
+        "設備"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "市道８－２９０号線交差点改良事業に係る測量設計業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "測量"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "市道１０－１３４号線道路拡幅事業に係る測量設計業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "測量"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "公共下水道工事に伴う設計業務（２６－単１）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "市道１０－３６号線道路改良事業に係る詳細設計業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "配水本管φ600更新工事（3工区）基本及び詳細設計業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "路面性状調査業務 公－５４５号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "西の川第１雨水幹線暗渠化設計業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "市道１０－１３号線他道路拡幅事業に係る測量設計業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "測量"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "令和８年度香芝市スポーツ公園整備事業に係る補償再算定業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "補償"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "市道５－７３号線道路拡幅事業に係る測量設計業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "測量"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "地籍調査業務（高Ｅ２・ＦⅠ・ＦⅡ－１・ＦＲ・ＦⅡ－２・Ｇ・Ｈ工程） 公－５３１号",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "地籍調査"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "二上小学校擁壁改修工事に伴う測量設計業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "擁壁",
+        "測量"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "令和８年度ストックマネジメント計画に基づく管路診断業務",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "ストックマネジメント"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "中和幹線法面設計業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "法面"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "狐井中央公園整備事業に係る概略設計業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "市道4-42号線改良事業に係る概略設計業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "近鉄五位堂駅北自転車駐車場大規模改修工事に伴う設計業務",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "駐車場"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "香芝市総合公園設計業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "市道2-171号線道路改良に伴う測量設計業務 公－５３３号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "測量"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "市道1-25号線道路改良に伴う測量設計業務 公－５２２号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "測量"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "令和８年度香芝市流域関連公共下水道全体計画変更業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "公共下水道工事に伴う設計業務（２６－補１）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "香芝西中学校法面測量調査設計業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "法面",
+        "測量",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "香芝西中学校及び香芝東中学校屋上防水改修工事に伴う設計業務",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "防水",
+        "屋上防水",
+        "防水改修"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "三和小学校外壁及び屋上防水改修工事に伴う設計業務",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "外壁",
+        "防水",
+        "屋上防水",
+        "防水改修"
+      ]
+    },
+    {
       "municipality": "川西町",
       "title": "式下中学校体育館屋根・外壁その他改修工事設計業務",
       "reason": "always_exclude_keyword",
@@ -21013,6 +21711,612 @@
       "matchedKeywords": [
         "税"
       ]
+    },
+    {
+      "municipality": "三宅町",
+      "title": "メニューを飛ばして本文へ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "本文へ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "Foreign language",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "標準",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "拡大",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "白",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "黒",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "青",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "くらしの情報",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "入札情報",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "プレスリリース",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "リース"
+      ]
+    },
+    {
+      "municipality": "三宅町",
+      "title": "各課への連絡先",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "検索",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "ページID検索とは？",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "さがし方を変える閉じる",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "分類でさがす",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "組織でさがす",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "よくある質問でさがす",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "カレンダーでさがす",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "カレンダー"
+      ]
+    },
+    {
+      "municipality": "三宅町",
+      "title": "妊娠・出産",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "子育て",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "結婚・離婚",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "引越し",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "介護",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "おくやみ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "各種申請・届出",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "入札・契約",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "ごみ・リサイクル",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "三宅町",
+      "title": "各種相談",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "イベント",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "イベント"
+      ]
+    },
+    {
+      "municipality": "三宅町",
+      "title": "公共交通",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "交通"
+      ]
+    },
+    {
+      "municipality": "三宅町",
+      "title": "トップページ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "組織でさがす",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "総務部",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "総務課",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "印刷ページ表示",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "印刷"
+      ]
+    },
+    {
+      "municipality": "三宅町",
+      "title": "※郵便入札についてはこちらをご確認ください。",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "三宅63号線舗装補修工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三宅町",
+      "title": "総務部",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "総務課",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "見つからないときは",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "よくある質問と回答",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "メールでのお問い合わせはこちら",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "サイトマップ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "サイトマップ"
+      ]
+    },
+    {
+      "municipality": "三宅町",
+      "title": "個人情報の取扱い方針",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "アクセシビリティ方針",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "リンク集",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "お問い合わせ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "メニューを飛ばして本文へ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "本文へ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "Foreign language",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "標準",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "拡大",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "白",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "黒",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "青",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "くらしの情報",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "入札情報",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "プレスリリース",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "リース"
+      ]
+    },
+    {
+      "municipality": "三宅町",
+      "title": "各課への連絡先",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "検索",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "ページID検索とは？",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "さがし方を変える閉じる",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "分類でさがす",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "組織でさがす",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "よくある質問でさがす",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "カレンダーでさがす",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "カレンダー"
+      ]
+    },
+    {
+      "municipality": "三宅町",
+      "title": "妊娠・出産",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "子育て",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "結婚・離婚",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "引越し",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "介護",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "おくやみ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "各種申請・届出",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "入札・契約",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "ごみ・リサイクル",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "三宅町",
+      "title": "各種相談",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "イベント",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "イベント"
+      ]
+    },
+    {
+      "municipality": "三宅町",
+      "title": "公共交通",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "交通"
+      ]
+    },
+    {
+      "municipality": "三宅町",
+      "title": "トップページ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "組織でさがす",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "総務部",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "総務課",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "印刷ページ表示",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "印刷"
+      ]
+    },
+    {
+      "municipality": "三宅町",
+      "title": "※郵便入札についてはこちらをご確認ください。",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "三河老人憩いの家解体工事設計委託業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "総務部",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "総務課",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "見つからないときは",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "よくある質問と回答",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "メールでのお問い合わせはこちら",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "サイトマップ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "サイトマップ"
+      ]
+    },
+    {
+      "municipality": "三宅町",
+      "title": "個人情報の取扱い方針",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "アクセシビリティ方針",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "リンク集",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三宅町",
+      "title": "お問い合わせ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
     },
     {
       "municipality": "三宅町",

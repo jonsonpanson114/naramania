@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-13T07:04:08.620Z",
+  "generatedAt": "2026-08-14T00:26:05.803Z",
   "source": "daily_scrape",
-  "keptCount": 203,
+  "keptCount": 211,
   "municipalityCount": 24,
   "oldestAnnouncementDate": "2025-02-02",
-  "latestAnnouncementDate": "2026-08-08",
-  "scrapedCount": 628,
+  "latestAnnouncementDate": "2026-08-14",
+  "scrapedCount": 641,
   "rejectedCount": 425,
   "municipalityAudit": {
     "expectedMunicipalityCount": 25,
@@ -35,7 +35,7 @@
       {
         "municipality": "生駒市",
         "count": 20,
-        "changeFromPrevious": 3
+        "changeFromPrevious": 0
       },
       {
         "municipality": "橿原市",
@@ -45,7 +45,7 @@
       {
         "municipality": "宇陀市",
         "count": 18,
-        "changeFromPrevious": 1
+        "changeFromPrevious": 0
       },
       {
         "municipality": "五條市",
@@ -54,13 +54,13 @@
       },
       {
         "municipality": "香芝市",
-        "count": 9,
-        "changeFromPrevious": 0
+        "count": 16,
+        "changeFromPrevious": 7
       },
       {
         "municipality": "奈良市",
         "count": 9,
-        "changeFromPrevious": 1
+        "changeFromPrevious": 0
       },
       {
         "municipality": "広陵町",
@@ -68,13 +68,13 @@
         "changeFromPrevious": 0
       },
       {
-        "municipality": "川西町",
+        "municipality": "三宅町",
         "count": 5,
-        "changeFromPrevious": 0
+        "changeFromPrevious": 1
       },
       {
-        "municipality": "三宅町",
-        "count": 4,
+        "municipality": "川西町",
+        "count": 5,
         "changeFromPrevious": 0
       },
       {
@@ -100,7 +100,7 @@
       {
         "municipality": "御所市",
         "count": 2,
-        "changeFromPrevious": -1
+        "changeFromPrevious": 0
       },
       {
         "municipality": "桜井市",
@@ -144,16 +144,31 @@
   "dateAudit": {
     "announcementAfterBiddingCount": 0,
     "awardedWithoutBiddingDateCount": 0,
-    "awardedWithoutWinnerCount": 0,
+    "awardedWithoutWinnerCount": 2,
     "openWithWinnerCount": 0,
-    "sampleTitles": []
+    "sampleTitles": [
+      {
+        "municipality": "香芝市",
+        "title": "三和幼稚園トイレ改修工事に伴う設計業務",
+        "status": "落札",
+        "announcementDate": "2026-05-20",
+        "biddingDate": "2026-05-20"
+      },
+      {
+        "municipality": "香芝市",
+        "title": "香芝中学校プール長寿命化改修工事に伴う設計業務",
+        "status": "落札",
+        "announcementDate": "2026-04-28",
+        "biddingDate": "2026-04-28"
+      }
+    ]
   },
   "intelligence": {
-    "itemsWithPdf": 47,
+    "itemsWithPdf": 48,
     "itemsWithDescription": 44,
     "intelligenceExtractedCount": 44,
     "geminiExtractedCount": 44,
     "taggedCount": 44,
-    "lastAugmentedAt": "2026-08-13T07:58:06.190Z"
+    "lastAugmentedAt": "2026-08-14T00:26:18.538Z"
   }
 }

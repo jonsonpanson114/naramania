@@ -1676,7 +1676,8 @@
       "announcementDate": "2026-05-28",
       "biddingDate": "2026-06-22",
       "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
-      "status": "受付終了"
+      "status": "落札",
+      "winningContractor": "福辻工務店"
     },
     {
       "id": "tawaramoto-2026062201",
@@ -1686,7 +1687,8 @@
       "announcementDate": "2026-05-14",
       "biddingDate": "2026-06-22",
       "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
-      "status": "受付終了"
+      "status": "落札",
+      "winningContractor": "塚竜(株)"
     },
     {
       "id": "tawaramoto-2026051803",
@@ -1696,7 +1698,8 @@
       "announcementDate": "2026-04-09",
       "biddingDate": "2026-05-18",
       "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
-      "status": "受付終了"
+      "status": "落札",
+      "winningContractor": "村本建設(株)奈良本店"
     }
   ],
   "広陵町": [
@@ -1815,6 +1818,16 @@
     }
   ],
   "三宅町": [
+    {
+      "id": "miyake-2026-08-14-三宅町文化ホールトイレ改修工事",
+      "municipality": "三宅町",
+      "title": "三宅町文化ホールトイレ改修工事",
+      "type": "建築",
+      "announcementDate": "2026-08-14",
+      "link": "https://www.town.miyake.lg.jp/uploaded/attachment/5684.pdf",
+      "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5684.pdf",
+      "status": "受付中"
+    },
     {
       "id": "miyake-2026-08-08-三宅町文化ホールトイレ改修工事",
       "municipality": "三宅町",
@@ -2187,45 +2200,132 @@
   ],
   "香芝市": [
     {
-      "id": "kashiba-web-65a0eda8",
+      "id": "kashiba-r8-k5-12",
+      "municipality": "香芝市",
+      "title": "令和７年度流域貯留浸透事業施設整備工事",
+      "type": "建築",
+      "announcementDate": "2026-07-28",
+      "biddingDate": "2026-07-28",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=001792050100r8-k5-12",
+      "status": "落札",
+      "winningContractor": "百々土木工業",
+      "estimatedPrice": "4,543,000円"
+    },
+    {
+      "id": "kashiba-r8-g5-09",
+      "municipality": "香芝市",
+      "title": "高塚地区公園トイレ更新工事に伴う設計業務 公－５４３号",
+      "type": "コンサル",
+      "announcementDate": "2026-06-23",
+      "biddingDate": "2026-06-23",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=011792050100r8-g5-09",
+      "status": "落札",
+      "winningContractor": "万葉建築設計事務所",
+      "estimatedPrice": "3,250,000円"
+    },
+    {
+      "id": "kashiba-r8-g5-5",
       "municipality": "香芝市",
       "title": "志都美小学校改築工事に伴う実施設計業務",
       "type": "コンサル",
       "announcementDate": "2026-06-18",
       "biddingDate": "2026-07-10",
-      "link": "https://www.city.kashiba.lg.jp/site/nyuusatsu/67641.html",
-      "status": "受付終了"
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=011792050100r8-g5-5",
+      "status": "落札",
+      "winningContractor": "株式会社長大 奈良事務所",
+      "estimatedPrice": "67,260,000円"
     },
     {
-      "id": "kashiba-web-1bf7b65a",
+      "id": "kashiba-r8-g4-27",
       "municipality": "香芝市",
-      "title": "五位堂小学校改築工事に伴う実施設計業務",
+      "title": "香芝市スポーツ公園整備事業に係るクライミング施設詳細設計業務",
       "type": "コンサル",
-      "announcementDate": "2026-04-23",
-      "biddingDate": "2026-05-26",
-      "link": "https://www.city.kashiba.lg.jp/site/nyuusatsu/list288-1034.html",
-      "status": "受付終了"
+      "announcementDate": "2026-06-02",
+      "biddingDate": "2026-06-02",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=011792050100r8-g4-27",
+      "status": "落札",
+      "winningContractor": "中央コンサルタンツ株式会社 奈良事務所",
+      "estimatedPrice": "59,135,000円"
     },
     {
-      "id": "kashiba-web-b1d487b5",
+      "id": "kashiba-r8-g4-23",
+      "municipality": "香芝市",
+      "title": "香芝市子育て支援センター中規模修繕工事に伴う設計業務",
+      "type": "コンサル",
+      "announcementDate": "2026-05-26",
+      "biddingDate": "2026-05-26",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=011792050100r8-g4-23",
+      "status": "落札",
+      "winningContractor": "株式会社彩都建築設計",
+      "estimatedPrice": "4,928,000円"
+    },
+    {
+      "id": "kashiba-r8-g4-22",
+      "municipality": "香芝市",
+      "title": "下田小学校長寿命化改修工事に伴う監理業務",
+      "type": "建築",
+      "announcementDate": "2026-05-26",
+      "biddingDate": "2026-05-26",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=011792050100r8-g4-22",
+      "status": "落札",
+      "winningContractor": "株式会社尾川建築設計事務所",
+      "estimatedPrice": "9,850,000円"
+    },
+    {
+      "id": "kashiba-r8-g4-01",
+      "municipality": "香芝市",
+      "title": "三和幼稚園トイレ改修工事に伴う設計業務",
+      "type": "コンサル",
+      "announcementDate": "2026-05-20",
+      "biddingDate": "2026-05-20",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=011792050100r8-g4-01",
+      "status": "落札"
+    },
+    {
+      "id": "kashiba-r8-g4-03",
+      "municipality": "香芝市",
+      "title": "香芝中学校プール長寿命化改修工事に伴う設計業務",
+      "type": "コンサル",
+      "announcementDate": "2026-04-28",
+      "biddingDate": "2026-04-28",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=011792050100r8-g4-03",
+      "status": "落札"
+    },
+    {
+      "id": "kashiba-r8-k4-19",
       "municipality": "香芝市",
       "title": "下田小学校長寿命化改修工事",
       "type": "建築",
       "announcementDate": "2026-04-23",
       "biddingDate": "2026-05-21",
-      "link": "https://www.city.kashiba.lg.jp/site/nyuusatsu/65857.html",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=001792050100r8-k4-19",
       "status": "落札",
-      "winningContractor": "株式会社上村組"
+      "winningContractor": "株式会社上村組",
+      "estimatedPrice": "618,000,000円"
     },
     {
-      "id": "kashiba-web-f9a78168",
+      "id": "kashiba-r8-g4-06",
+      "municipality": "香芝市",
+      "title": "五位堂小学校改築工事に伴う実施設計業務",
+      "type": "コンサル",
+      "announcementDate": "2026-04-23",
+      "biddingDate": "2026-05-26",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=011792050100r8-g4-06",
+      "status": "落札",
+      "winningContractor": "株式会社綜企画設計 奈良支店",
+      "estimatedPrice": "126,593,000円"
+    },
+    {
+      "id": "kashiba-r8-g4-05",
       "municipality": "香芝市",
       "title": "三和小学校校舎増築工事に伴う設計業務",
       "type": "コンサル",
       "announcementDate": "2026-04-09",
       "biddingDate": "2026-04-28",
-      "link": "https://www.city.kashiba.lg.jp/uploaded/attachment/31836.pdf",
-      "status": "受付終了"
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=011792050100r8-g4-05",
+      "status": "落札",
+      "winningContractor": "株式会社福本設計",
+      "estimatedPrice": "18,224,800円"
     },
     {
       "id": "kashiba-web-a1acb745",

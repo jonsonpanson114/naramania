@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-13T08:06:03.124Z",
+  "generatedAt": "2026-08-14T00:33:37.678Z",
   "checkedMunicipalityCount": 24,
-  "expectedItemCount": 203,
-  "matchedItemCount": 203,
+  "expectedItemCount": 211,
+  "matchedItemCount": 211,
   "missingItemCount": 0,
-  "duplicateTitleGroupCount": 14,
-  "duplicateTitleItemCount": 30,
+  "duplicateTitleGroupCount": 15,
+  "duplicateTitleItemCount": 32,
   "results": [
     {
       "municipality": "葛城市",
@@ -86,9 +86,9 @@
     },
     {
       "municipality": "香芝市",
-      "snapshotCount": 9,
-      "expectedCount": 9,
-      "matchedCount": 9,
+      "snapshotCount": 16,
+      "expectedCount": 16,
+      "matchedCount": 16,
       "missingCount": 0,
       "duplicateTitleGroupCount": 0,
       "duplicateTitleItemCount": 0,
@@ -118,21 +118,21 @@
       "status": "ok"
     },
     {
-      "municipality": "川西町",
+      "municipality": "三宅町",
       "snapshotCount": 5,
       "expectedCount": 5,
       "matchedCount": 5,
       "missingCount": 0,
-      "duplicateTitleGroupCount": 0,
-      "duplicateTitleItemCount": 0,
+      "duplicateTitleGroupCount": 1,
+      "duplicateTitleItemCount": 2,
       "missingItems": [],
       "status": "ok"
     },
     {
-      "municipality": "三宅町",
-      "snapshotCount": 4,
-      "expectedCount": 4,
-      "matchedCount": 4,
+      "municipality": "川西町",
+      "snapshotCount": 5,
+      "expectedCount": 5,
+      "matchedCount": 5,
       "missingCount": 0,
       "duplicateTitleGroupCount": 0,
       "duplicateTitleItemCount": 0,
