@@ -2,6 +2,7 @@ import axios from 'axios';
 import * as cheerio from 'cheerio';
 import { BiddingItem, Scraper, BiddingType } from '../types/bidding';
 import { shouldKeepItem } from './common/filter';
+import { getCurrentReiwaFiscalYear } from './common/fiscal_year';
 
 const BASE_URL = 'https://www.city.kashihara.nara.jp';
 
@@ -19,14 +20,100 @@ const PROPOSAL_REVIEW_DATES: Record<string, string> = {
     '5082000026': '2026-05-26',
 };
 
-// 令和7年度入札結果ページ（テーブル形式: 契約番号|案件名|公表開札録PDF、業種列なし、日付はh2見出し）
-const KEKKA_PAGES = [
-    { url: `${BASE_URL}/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18369.html`, label: '役務結果' },
-    { url: `${BASE_URL}/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html`, label: '工事結果' },
-    { url: `${BASE_URL}/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18373.html`, label: '発掘調査等結果' },
-    { url: `${BASE_URL}/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18375.html`, label: '委託結果' },
-    { url: `${BASE_URL}/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/19190.html`, label: '随意契約委託結果' },
-];
+// 「橿原市入札・見積結果」ページ。年度ごとにサブページのURLパスが
+// 「/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/」→「/soshiki/1019/gyomu/1/1/1/reiwa8nen/」の
+// ようにパターンごと変わり、ページIDも年度と無関係に振られるため、ハードコードでは
+// 年度が変わるたびに古い年度のページを見続けて新しい結果が一切拾えなくなる。
+// (実際、reiwa7固定のままだったため令和8年度に入ってからの結果が全滅していた。)
+// 都度ここから最新年度のサブページ一覧を解決する。
+const KEKKA_INDEX_URL = `${BASE_URL}/jigyosha/nyusatsu_keiyaku/1/8/index.html`;
+
+function normalizeKashiharaUrl(href: string): string {
+    if (!href) return '';
+    if (href.startsWith('http')) return href;
+    if (href.startsWith('//')) return `https:${href}`;
+    if (href.startsWith('/')) return `${BASE_URL}${href}`;
+    return href;
+}
+
+type YearResultPages = {
+    kekkaPages: { url: string; label: string }[];
+    proposalResultUrl?: string;
+};
+
+async function resolveResultPagesForYear(targetReiwa: number): Promise<YearResultPages> {
+    const indexRes = await axios.get<string>(KEKKA_INDEX_URL, { headers: AXIOS_HEADERS, timeout: 20000 });
+    const $index = cheerio.load(indexRes.data);
+
+    let yearPageUrl = '';
+    $index('a').each((_, el) => {
+        const text = $index(el).text().normalize('NFKC').replace(/\s+/g, '').trim();
+        const m = text.match(/^令和(\d+)年度$/);
+        if (m && parseInt(m[1], 10) === targetReiwa) {
+            yearPageUrl = normalizeKashiharaUrl($index(el).attr('href') || '');
+        }
+    });
+    if (!yearPageUrl) return { kekkaPages: [] };
+
+    const yearRes = await axios.get<string>(yearPageUrl, { headers: AXIOS_HEADERS, timeout: 20000 });
+    const $year = cheerio.load(yearRes.data);
+    const kekkaPages: { url: string; label: string }[] = [];
+    let proposalResultUrl: string | undefined;
+
+    $year('a').each((_, el) => {
+        const text = $year(el).text().normalize('NFKC').replace(/\s+/g, '').trim();
+        const href = normalizeKashiharaUrl($year(el).attr('href') || '');
+        if (!href) return;
+
+        if (text.includes('プロポーザル案件実施結果')) {
+            proposalResultUrl = href;
+            return;
+        }
+
+        const m = text.match(/^(?:入札結果|見積結果)\(令和\d+年度(.+?)\)$/);
+        if (!m) return;
+        if (m[1].includes('物品')) return; // 物品購入は建築・設計と無関係のため対象外
+
+        kekkaPages.push({ url: href, label: `令和${targetReiwa}年度${m[1]}結果` });
+    });
+
+    return { kekkaPages, proposalResultUrl };
+}
+
+/**
+ * 「橿原市入札・見積結果」ページから結果一覧のサブページを解決する。
+ * 当年度だけを見ると、年度替わり直後は前年度末に決まった結果がまだ大量に
+ * 残っている一方で当年度側の掲載がまだ少なく、取得件数が急減して
+ * isSuspiciousMunicipalityShrink のセーフガードに毎回引っかかり続ける
+ * (実際、当年度のみにしたところ 19件→13件 に見えて弾かれた)。
+ * 当年度・前年度の両方を見て安定させる。
+ */
+async function resolveCurrentYearResultPages(): Promise<YearResultPages> {
+    const currentReiwa = getCurrentReiwaFiscalYear();
+
+    try {
+        const [current, previous] = await Promise.all([
+            resolveResultPagesForYear(currentReiwa),
+            resolveResultPagesForYear(currentReiwa - 1),
+        ]);
+
+        const seenUrls = new Set<string>();
+        const kekkaPages: { url: string; label: string }[] = [];
+        for (const page of [...current.kekkaPages, ...previous.kekkaPages]) {
+            if (seenUrls.has(page.url)) continue;
+            seenUrls.add(page.url);
+            kekkaPages.push(page);
+        }
+
+        return {
+            kekkaPages,
+            proposalResultUrl: current.proposalResultUrl || previous.proposalResultUrl,
+        };
+    } catch (e: unknown) {
+        console.error('[橿原市] 年度別結果ページ解決エラー:', e instanceof Error ? e.message : String(e));
+        return { kekkaPages: [] };
+    }
+}
 
 // 業種（登録業種）に基づくスキップキーワード（入札予報テーブル用）
 const GYOSHU_SKIP = [
@@ -110,6 +197,23 @@ async function extractResultDetailsFromPdf(pdfUrl: string): Promise<PdfResultDet
             };
         }
 
+        // パターン3: プロポーザル方式実施結果(様式第6号)は「落札者」ではなく
+        // 「契約業者名 ○○ 契約業者所在地」という様式になっている。
+        const m3 = text.match(/契約業者名\s+(.+?)契約業者所在地/);
+        if (m3?.[1]) {
+            const name = m3[1]
+                .replace(/[０-９\d]+\s*[．.]\s*$/, '') // 末尾に紛れ込む項目番号(「１０．」等)を除去
+                .replace(/\s+/g, ' ')
+                .trim();
+            if (name && !/^\d/.test(name)) {
+                return {
+                    winningContractor: name,
+                    biddingDate,
+                    isAwarded: true,
+                };
+            }
+        }
+
         return { biddingDate };
     } catch {
         return {};
@@ -170,6 +274,8 @@ export class KashiharaCityScraper implements Scraper {
 
     async scrape(): Promise<BiddingItem[]> {
         const items: BiddingItem[] = [];
+        const { kekkaPages, proposalResultUrl } = await resolveCurrentYearResultPages();
+        console.log(`[橿原市] 今年度の結果ページ ${kekkaPages.length}件を解決 (プロポーザル結果: ${proposalResultUrl ? 'あり' : 'なし'})`);
 
         // === 1. 入札予報ページ（テーブル形式・業種列あり）===
         for (const { url, label } of YOHO_PAGES) {
@@ -298,8 +404,42 @@ export class KashiharaCityScraper implements Scraper {
             }
         }
 
-        // === 3. 令和7年度入札結果ページ（テーブル形式・業種列なし・日付はh2見出し）===
-        for (const { url, label } of KEKKA_PAGES) {
+        // === 2b. プロポーザル案件実施結果ページで結果を補完 ===
+        // 案件名をクリック→個別PDF(1案件1PDF)という構造で、公告ページとは
+        // 契約番号が共通なので、公告から拾った項目にPDFを紐付けて④のPDF解析に回す。
+        if (proposalResultUrl) {
+            try {
+                console.log(`[橿原市] Fetching プロポーザル結果: ${proposalResultUrl}`);
+                const res = await axios.get<string>(proposalResultUrl, { headers: AXIOS_HEADERS, timeout: 30000 });
+                const $ = cheerio.load(res.data);
+                let matched = 0;
+
+                $('a').each((_, el) => {
+                    const linkText = $(el).text().trim();
+                    const href = $(el).attr('href') || '';
+                    if (!linkText || !href) return;
+
+                    const m = linkText.match(/^(\d{6,})/);
+                    if (!m) return;
+                    const contractNo = m[1];
+                    const pdfUrl = normalizePdfUrl(href);
+                    if (!pdfUrl) return;
+
+                    const target = items.find(item => item.id === `kashihara-proposal-${contractNo}`);
+                    if (!target) return;
+                    target.pdfUrl = pdfUrl;
+                    target.status = '落札'; // ④のPDF解析ループが pdfUrl から実際の可否/落札者を確定させる
+                    matched += 1;
+                });
+
+                console.log(`[橿原市] プロポーザル結果: ${matched}件を公告済み案件に紐付け`);
+            } catch (e: unknown) {
+                console.error('[橿原市] プロポーザル結果 エラー:', e instanceof Error ? e.message : String(e) || e);
+            }
+        }
+
+        // === 3. 今年度入札結果ページ（テーブル形式・業種列なし・日付はh2見出し）===
+        for (const { url, label } of kekkaPages) {
             const beforeCount = items.length;
             try {
                 console.log(`[橿原市] Fetching ${label}: ${url}`);
