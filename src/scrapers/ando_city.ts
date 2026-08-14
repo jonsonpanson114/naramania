@@ -24,21 +24,10 @@ const ANDO_SUPPLEMENTAL_ITEMS: Array<{
         status: '落札' as const,
         winningContractor: '株式会社 岩崎建築設計事務所',
     },
-    {
-        title: '〖再度公告〗条件付き一般競争入札の実施について（安堵こども園南館外壁改修、トイレ乾式化および洋式化改修工事）',
-        link: 'https://www.town.ando.nara.jp/0000003967.html',
-        announcementDate: '2026-05-19',
-        biddingDate: '2026-06-26',
-        status: '受付中' as const,
-    },
-    {
-        title: '【条件付き一般競争入札の結果】安堵こども園南館外壁改修、トイレ乾式化および洋式化改修工事',
-        link: 'https://www.town.ando.nara.jp/0000004012.html',
-        announcementDate: '2026-05-19',
-        biddingDate: '2026-06-26',
-        status: '落札' as const,
-        pdfUrl: 'https://www.town.ando.nara.jp/cmsfiles/contents/0000004/4012/nyuusatukekka.pdf',
-    },
+    // 「再度公告」「結果」の2件は以前ここにハードコードされていたが、実際は
+    // カテゴリ一覧から普通に見つかり、結果ページのPDFから落札者(株式会社竹澤工業)も
+    // 正しく抽出できることを確認したため削除。ANDO_TITLE_NORMALIZATIONSで同じ見出しに
+    // まとめているので、ここに残すと正規化前のタイトルのまま重複して追加されてしまう。
 ];
 const ANDO_KNOWN_BIDDING_DATES: Record<string, string> = {
     // 公式ページの公告PDFと建設新報の公告要約から確認
@@ -47,10 +36,20 @@ const ANDO_KNOWN_BIDDING_DATES: Record<string, string> = {
     '【条件付き一般競争入札の結果】安堵こども園南館外壁改修、トイレ乾式化および洋式化改修工事': '2026-06-26',
 };
 
-const ANDO_TITLE_NORMALIZATIONS: Record<string, string> = {};
+const ANDO_TITLE_NORMALIZATIONS: Record<string, string> = {
+    // 「再度公告」と「結果」はカテゴリ一覧上は別記事(別タイトル)だが同一案件のため、
+    // 同じ見出しに正規化してMap上で1件にまとめる(そうしないと結果側だけ落札者が
+    // 埋まり、再公告側は開札日を過ぎても受付中のまま延々と残ってしまう)。
+    '〖再度公告〗条件付き一般競争入札の実施について（安堵こども園南館外壁改修、トイレ乾式化および洋式化改修工事）':
+        '安堵こども園南館外壁改修、トイレ乾式化および洋式化改修工事',
+    '【再度公告】条件付き一般競争入札の実施について（安堵こども園南館外壁改修、トイレ乾式化および洋式化改修工事）':
+        '安堵こども園南館外壁改修、トイレ乾式化および洋式化改修工事',
+    '【条件付き一般競争入札の結果】安堵こども園南館外壁改修、トイレ乾式化および洋式化改修工事':
+        '安堵こども園南館外壁改修、トイレ乾式化および洋式化改修工事',
+};
 
 const ANDO_KNOWN_ANNOUNCEMENT_DATES: Record<string, string> = {
-    '【条件付き一般競争入札の結果】安堵こども園南館外壁改修、トイレ乾式化および洋式化改修工事': '2026-05-19',
+    '安堵こども園南館外壁改修、トイレ乾式化および洋式化改修工事': '2026-05-19',
 };
 
 function shouldSkip(title: string): boolean {
@@ -105,6 +104,32 @@ function normalizeAndoWinner(raw: string): string {
 
 function normalizeAndoTitle(title: string): string {
     return ANDO_TITLE_NORMALIZATIONS[title] || title;
+}
+
+/**
+ * ANDO_TITLE_NORMALIZATIONSで同じ見出しに正規化された「再度公告」と「結果」が
+ * 同じMapキーで衝突したとき、単純な上書きだと処理順序次第で結果側の情報
+ * (落札・落札者・結果ページへのリンク)が再公告側に消されてしまう。
+ * 落札/不調の確定情報を常に優先し、biddingDateは空いている方だけ埋める。
+ */
+function upsertAndoItem(items: Map<string, BiddingItem>, item: BiddingItem): void {
+    const existing = items.get(item.title);
+    if (!existing) {
+        items.set(item.title, item);
+        return;
+    }
+
+    const isResolved = item.status === '落札' || item.status === '不調';
+    if (isResolved) {
+        existing.status = item.status;
+        existing.link = item.link;
+    }
+    if (!existing.winningContractor && item.winningContractor) existing.winningContractor = item.winningContractor;
+    if (!existing.biddingDate && item.biddingDate) existing.biddingDate = item.biddingDate;
+    if (!existing.pdfUrl && item.pdfUrl) existing.pdfUrl = item.pdfUrl;
+    if (item.announcementDate && item.announcementDate < existing.announcementDate) {
+        existing.announcementDate = item.announcementDate;
+    }
 }
 
 function errorMessage(error: unknown): string {
@@ -212,7 +237,7 @@ async function scrapeAndoCity(recordError?: (message: string) => void): Promise<
                 link,
                 status: title.includes('結果') ? '落札' : '受付中',
             };
-            items.set(item.title, item);
+            upsertAndoItem(items, item);
         });
 
         // RSSフィードを取得
@@ -263,7 +288,7 @@ async function scrapeAndoCity(recordError?: (message: string) => void): Promise<
                 link,
                 status,
             };
-            if (!items.has(normalizedTitle)) items.set(normalizedTitle, item);
+            upsertAndoItem(items, item);
         });
 
     } catch (e: unknown) {
