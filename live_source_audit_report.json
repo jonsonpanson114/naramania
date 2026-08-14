@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-14T06:21:00.578Z",
+  "generatedAt": "2026-08-14T08:17:00.865Z",
   "currentItemCount": 236,
   "checkedMunicipalities": [
     "奈良市",
@@ -182,16 +182,16 @@
     },
     {
       "municipality": "安堵町",
-      "rawCount": 3,
-      "keptCount": 3,
+      "rawCount": 2,
+      "keptCount": 2,
       "rejectedCount": 0,
       "warnings": [],
       "errors": []
     },
     {
       "municipality": "高取町",
-      "rawCount": 20,
-      "keptCount": 20,
+      "rawCount": 0,
+      "keptCount": 0,
       "rejectedCount": 0,
       "warnings": [],
       "errors": []
@@ -231,11 +231,11 @@
   ],
   "coverage": {
     "checkedMunicipalityCount": 24,
-    "expectedItemCount": 242,
-    "matchedItemCount": 242,
+    "expectedItemCount": 221,
+    "matchedItemCount": 221,
     "missingItemCount": 0,
-    "duplicateTitleGroupCount": 37,
-    "duplicateTitleItemCount": 81,
+    "duplicateTitleGroupCount": 31,
+    "duplicateTitleItemCount": 68,
     "results": [
       {
         "municipality": "橿原市",
@@ -278,17 +278,6 @@
         "missingCount": 0,
         "duplicateTitleGroupCount": 4,
         "duplicateTitleItemCount": 9,
-        "missingItems": [],
-        "status": "ok"
-      },
-      {
-        "municipality": "高取町",
-        "snapshotCount": 20,
-        "expectedCount": 20,
-        "matchedCount": 20,
-        "missingCount": 0,
-        "duplicateTitleGroupCount": 6,
-        "duplicateTitleItemCount": 13,
         "missingItems": [],
         "status": "ok"
       },
@@ -381,17 +370,6 @@
         "status": "ok"
       },
       {
-        "municipality": "安堵町",
-        "snapshotCount": 3,
-        "expectedCount": 3,
-        "matchedCount": 3,
-        "missingCount": 0,
-        "duplicateTitleGroupCount": 0,
-        "duplicateTitleItemCount": 0,
-        "missingItems": [],
-        "status": "ok"
-      },
-      {
         "municipality": "御所市",
         "snapshotCount": 3,
         "expectedCount": 3,
@@ -418,6 +396,17 @@
         "snapshotCount": 57,
         "expectedCount": 3,
         "matchedCount": 3,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 0,
+        "duplicateTitleItemCount": 0,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
+        "municipality": "安堵町",
+        "snapshotCount": 2,
+        "expectedCount": 2,
+        "matchedCount": 2,
         "missingCount": 0,
         "duplicateTitleGroupCount": 0,
         "duplicateTitleItemCount": 0,
@@ -484,6 +473,17 @@
         "snapshotCount": 1,
         "expectedCount": 1,
         "matchedCount": 1,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 0,
+        "duplicateTitleItemCount": 0,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
+        "municipality": "高取町",
+        "snapshotCount": 0,
+        "expectedCount": 0,
+        "matchedCount": 0,
         "missingCount": 0,
         "duplicateTitleGroupCount": 0,
         "duplicateTitleItemCount": 0,
