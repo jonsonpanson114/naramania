@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-08-14T07:38:08.177Z",
+  "generatedAt": "2026-08-14T08:08:08.332Z",
   "source": "daily_scrape",
-  "keptCount": 236,
+  "keptCount": 235,
   "municipalityCount": 24,
   "oldestAnnouncementDate": "2025-02-02",
   "latestAnnouncementDate": "2026-08-14",
-  "scrapedCount": 732,
-  "rejectedCount": 535,
+  "scrapedCount": 763,
+  "rejectedCount": 542,
   "municipalityAudit": {
     "expectedMunicipalityCount": 25,
     "coveredMunicipalityCount": 24,
@@ -83,11 +83,6 @@
         "changeFromPrevious": 0
       },
       {
-        "municipality": "安堵町",
-        "count": 3,
-        "changeFromPrevious": 0
-      },
-      {
         "municipality": "天理市",
         "count": 3,
         "changeFromPrevious": 0
@@ -96,6 +91,11 @@
         "municipality": "田原本町",
         "count": 3,
         "changeFromPrevious": 0
+      },
+      {
+        "municipality": "安堵町",
+        "count": 2,
+        "changeFromPrevious": -1
       },
       {
         "municipality": "王寺町",
@@ -139,15 +139,9 @@
       }
     ],
     "retainedFromPrevious": [
-      "葛城市",
       "高取町"
     ],
     "issues": [
-      {
-        "municipality": "葛城市",
-        "level": "warning",
-        "message": "[葛城市] 取得件数が急減したため既存データを維持しています (baseline=25, new kept=0)"
-      },
       {
         "municipality": "高取町",
         "level": "warning",
@@ -164,10 +158,10 @@
   },
   "intelligence": {
     "itemsWithPdf": 74,
-    "itemsWithDescription": 56,
-    "intelligenceExtractedCount": 56,
-    "geminiExtractedCount": 56,
-    "taggedCount": 56,
-    "lastAugmentedAt": "2026-08-14T07:38:09.069Z"
+    "itemsWithDescription": 49,
+    "intelligenceExtractedCount": 49,
+    "geminiExtractedCount": 49,
+    "taggedCount": 49,
+    "lastAugmentedAt": "2026-08-14T08:08:10.168Z"
   }
 }

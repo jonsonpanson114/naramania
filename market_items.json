@@ -802,7 +802,9 @@
     "announcementDate": "2026-07-17",
     "biddingDate": "2026-07-17",
     "link": "https://www.city.gose.nara.jp/0000001024.html",
-    "status": "受付終了",
+    "status": "落札",
+    "winningContractor": "(株)阪本",
+    "winnerType": "ゼネコン",
     "isRelevant": true
   },
   {
@@ -1234,8 +1236,9 @@
     "announcementDate": "2026-07-10",
     "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/4-4-3-2026-1.pdf",
     "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/4-4-3-2026-1.pdf",
-    "status": "受付中",
+    "status": "落札",
     "biddingDate": "2026-08-04",
+    "winningContractor": "(株)関鉄",
     "isRelevant": true
   },
   {
@@ -3264,7 +3267,7 @@
   {
     "id": "ando-category-62",
     "municipality": "安堵町",
-    "title": "【条件付き一般競争入札の結果】安堵こども園南館外壁改修、トイレ乾式化および洋式化改修工事",
+    "title": "安堵こども園南館外壁改修、トイレ乾式化および洋式化改修工事",
     "type": "建築",
     "announcementDate": "2026-05-19",
     "biddingDate": "2026-06-26",
@@ -8030,6 +8033,8 @@
     "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5073000254k.pdf",
     "status": "落札",
     "winnerType": "設計事務所",
+    "winningContractor": "環境システム㈱",
+    "biddingDate": "2025-05-21",
     "isRelevant": false
   },
   {

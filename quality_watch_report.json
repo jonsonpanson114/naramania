@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-14T07:46:09.770Z",
-  "qualityGeneratedAt": "2026-08-14T07:38:08.177Z",
-  "itemCount": 236,
+  "generatedAt": "2026-08-14T08:16:55.230Z",
+  "qualityGeneratedAt": "2026-08-14T08:08:08.332Z",
+  "itemCount": 235,
   "resultFollowUp": {
-    "totalCount": 9,
-    "highCount": 6,
-    "mediumCount": 3,
+    "totalCount": 6,
+    "highCount": 4,
+    "mediumCount": 2,
     "lowCount": 0,
     "missingBiddingDateCount": 0,
     "byMunicipality": [
@@ -14,23 +14,11 @@
         "count": 3
       },
       {
-        "municipality": "安堵町",
-        "count": 1
-      },
-      {
         "municipality": "王寺町",
         "count": 1
       },
       {
         "municipality": "橿原市",
-        "count": 1
-      },
-      {
-        "municipality": "葛城市",
-        "count": 1
-      },
-      {
-        "municipality": "御所市",
         "count": 1
       },
       {
@@ -73,22 +61,6 @@
       },
       {
         "priority": "high",
-        "ageDays": 49,
-        "reason": "開札日から49日経過",
-        "item": {
-          "id": "ando-supplemental-0000003967",
-          "municipality": "安堵町",
-          "title": "〖再度公告〗条件付き一般競争入札の実施について（安堵こども園南館外壁改修、トイレ乾式化および洋式化改修工事）",
-          "status": "受付終了",
-          "announcementDate": "2026-05-19",
-          "biddingDate": "2026-06-26",
-          "winningContractor": null,
-          "link": "https://www.town.ando.nara.jp/0000003967.html",
-          "pdfUrl": null
-        }
-      },
-      {
-        "priority": "high",
         "ageDays": 38,
         "reason": "開札日から38日経過",
         "item": {
@@ -100,22 +72,6 @@
           "biddingDate": "2026-07-07",
           "winningContractor": null,
           "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29005007060120260015&gamenMode=0",
-          "pdfUrl": null
-        }
-      },
-      {
-        "priority": "high",
-        "ageDays": 28,
-        "reason": "開札日から28日経過",
-        "item": {
-          "id": "gose-2026-07-17-市営住宅(サン柏原207号・今出団地99号・11-0",
-          "municipality": "御所市",
-          "title": "市営住宅(サン柏原207号・今出団地99号・110号)空家修繕",
-          "status": "受付終了",
-          "announcementDate": "2026-07-17",
-          "biddingDate": "2026-07-17",
-          "winningContractor": "(株)阪本",
-          "link": "https://www.city.gose.nara.jp/0000001024.html",
           "pdfUrl": null
         }
       },
@@ -133,22 +89,6 @@
           "winningContractor": null,
           "link": "https://www.town.oji.nara.jp/kakuka/somu/somu/gyomuannai/nyuusatu/nyuusatukouhyou/11747.html",
           "pdfUrl": null
-        }
-      },
-      {
-        "priority": "medium",
-        "ageDays": 10,
-        "reason": "開札日から10日経過",
-        "item": {
-          "id": "katsuragi-web-42be9c8c",
-          "municipality": "葛城市",
-          "title": "第8-402号 市営住宅堂の久保団地空家解体工事",
-          "status": "受付終了",
-          "announcementDate": "2026-07-10",
-          "biddingDate": "2026-08-04",
-          "winningContractor": null,
-          "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/4-4-3-2026-1.pdf",
-          "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/4-4-3-2026-1.pdf"
         }
       },
       {
@@ -755,15 +695,15 @@
         "municipality": "安堵町",
         "status": "ok",
         "severity": "error",
-        "totalCount": 3,
+        "totalCount": 2,
         "requiredLinkIncludes": [
           "town.ando.nara.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "town.ando.nara.jp": 3
+          "town.ando.nara.jp": 2
         },
-        "message": "安堵町: 3件 / sources OK"
+        "message": "安堵町: 2件 / sources OK"
       },
       {
         "municipality": "高取町",

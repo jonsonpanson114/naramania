@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-08-14T07:46:10.896Z",
+  "generatedAt": "2026-08-14T08:16:56.373Z",
   "checkedMunicipalityCount": 24,
-  "expectedItemCount": 236,
-  "matchedItemCount": 236,
+  "expectedItemCount": 235,
+  "matchedItemCount": 235,
   "missingItemCount": 0,
   "duplicateTitleGroupCount": 18,
   "duplicateTitleItemCount": 38,
@@ -151,17 +151,6 @@
       "status": "ok"
     },
     {
-      "municipality": "安堵町",
-      "snapshotCount": 3,
-      "expectedCount": 3,
-      "matchedCount": 3,
-      "missingCount": 0,
-      "duplicateTitleGroupCount": 0,
-      "duplicateTitleItemCount": 0,
-      "missingItems": [],
-      "status": "ok"
-    },
-    {
       "municipality": "天理市",
       "snapshotCount": 3,
       "expectedCount": 3,
@@ -177,6 +166,17 @@
       "snapshotCount": 3,
       "expectedCount": 3,
       "matchedCount": 3,
+      "missingCount": 0,
+      "duplicateTitleGroupCount": 0,
+      "duplicateTitleItemCount": 0,
+      "missingItems": [],
+      "status": "ok"
+    },
+    {
+      "municipality": "安堵町",
+      "snapshotCount": 2,
+      "expectedCount": 2,
+      "matchedCount": 2,
       "missingCount": 0,
       "duplicateTitleGroupCount": 0,
       "duplicateTitleItemCount": 0,
