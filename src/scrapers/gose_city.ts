@@ -134,7 +134,15 @@ function extractGoseResultPdfRecords(pdfText: string, biddingDate: string): Gose
 
     for (const block of blocks) {
         const titleMatch = block.match(/入札執行\s+(.+?)\s+[^\s]{2,6}\s+御所市/u);
-        const winnerMatch = block.match(/有\s+[0-9,]+\s+円?\s+(.+?)\s+落札率/u);
+        // 「落札(候補)金額」欄は"円"が付かないことが多い(例:「有 6,400,000 (株)阪本」)。
+        // 旧パターン(\s+円?\s+)は"円"が無い場合に空白2回分を要求してしまい常に
+        // マッチしなかった(normalizeで空白は1個に潰れているため)。\s*に緩和。
+        // さらに、PDFのテキスト抽出順は様式のフィールド順と一致せず、案件によっては
+        // 落札者名の直後に「履行場所(御所市大字...)」を含む別フィールド群が
+        // 挟まってから「落札率」に到達する。「落札率」だけを終端にすると、その
+        // 間の文字列(他の入札者情報等)まで丸ごと拾ってしまうため、次の
+        // フィールドの先頭である「御所市」も終端候補に加える。
+        const winnerMatch = block.match(/有\s+[0-9,]+\s*円?\s+(.+?)(?:\s+御所市|\s+落札率)/u);
         const title = sanitizeExtractedTitle(titleMatch?.[1]?.trim().replace(/\s+/g, ' ') || '');
         const winningContractor = winnerMatch?.[1]?.trim().replace(/\s+/g, ' ');
         if (!title || !shouldKeepItem(title)) continue;
