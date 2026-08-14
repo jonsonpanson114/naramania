@@ -286,7 +286,9 @@ async function scrapeKashibaCity(): Promise<BiddingItem[]> {
                         const winner = rawWinner === '-' ? '' : rawWinner;
                         // 金額セルには document.write() で金額を書き出すインラインscriptのソースが
                         // textContent に混ざって入ってくるため、末尾の「◯,◯◯◯円」だけを拾う。
+                        // 落札者欄が"-"(空)の行はここに「取止め・不調」という文字列が入る。
                         const rawAmountText = cells.length >= 7 ? (await cells[6].textContent() || '').trim() : '';
+                        const isCancelled = !winner && /取止め|不調/.test(rawAmountText);
                         const amountMatch = rawAmountText.match(/([\d,]+)\s*円\s*$/);
                         const parsedAmount = amountMatch ? parseInt(amountMatch[1].replace(/,/g, ''), 10) : Number.NaN;
                         const knownSchedule = KASHIBA_KNOWN_SCHEDULES[title];
@@ -312,8 +314,11 @@ async function scrapeKashibaCity(): Promise<BiddingItem[]> {
                             // knownSchedule.status は結果が出る前に手打ちした「受付終了」のままの
                             // ことがある。EPIの結果一覧行そのものに落札者が載っている場合は、
                             // 古い手打ちステータスより実際の落札の有無を優先する。
-                            status: winner ? '落札' : (knownSchedule?.status || '落札'),
-                            winningContractor: winner || knownSchedule?.winningContractor,
+                            // 落札者欄が"-"で金額欄に「取止め・不調」と明記されている行を
+                            // 単純に knownSchedule?.status || '落札' にフォールバックさせると
+                            // 落札者不在のまま「落札」と誤表示していたため、不調を明示的に判定する。
+                            status: winner ? '落札' : isCancelled ? '不調' : (knownSchedule?.status || '受付終了'),
+                            winningContractor: isCancelled ? undefined : (winner || knownSchedule?.winningContractor),
                             estimatedPrice: Number.isFinite(parsedAmount) ? `${parsedAmount.toLocaleString()}円` : undefined,
                         });
                     }
