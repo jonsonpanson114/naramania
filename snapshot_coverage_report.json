@@ -1,12 +1,23 @@
 {
-  "generatedAt": "2026-08-14T00:33:37.678Z",
+  "generatedAt": "2026-08-14T01:52:46.546Z",
   "checkedMunicipalityCount": 24,
-  "expectedItemCount": 211,
-  "matchedItemCount": 211,
+  "expectedItemCount": 222,
+  "matchedItemCount": 222,
   "missingItemCount": 0,
-  "duplicateTitleGroupCount": 15,
-  "duplicateTitleItemCount": 32,
+  "duplicateTitleGroupCount": 17,
+  "duplicateTitleItemCount": 36,
   "results": [
+    {
+      "municipality": "橿原市",
+      "snapshotCount": 30,
+      "expectedCount": 30,
+      "matchedCount": 30,
+      "missingCount": 0,
+      "duplicateTitleGroupCount": 2,
+      "duplicateTitleItemCount": 4,
+      "missingItems": [],
+      "status": "ok"
+    },
     {
       "municipality": "葛城市",
       "snapshotCount": 25,
@@ -45,17 +56,6 @@
       "snapshotCount": 20,
       "expectedCount": 20,
       "matchedCount": 20,
-      "missingCount": 0,
-      "duplicateTitleGroupCount": 0,
-      "duplicateTitleItemCount": 0,
-      "missingItems": [],
-      "status": "ok"
-    },
-    {
-      "municipality": "橿原市",
-      "snapshotCount": 19,
-      "expectedCount": 19,
-      "matchedCount": 19,
       "missingCount": 0,
       "duplicateTitleGroupCount": 0,
       "duplicateTitleItemCount": 0,

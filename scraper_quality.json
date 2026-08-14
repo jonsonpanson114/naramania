@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-08-14T00:26:05.803Z",
+  "generatedAt": "2026-08-14T01:44:46.812Z",
   "source": "daily_scrape",
-  "keptCount": 211,
+  "keptCount": 222,
   "municipalityCount": 24,
   "oldestAnnouncementDate": "2025-02-02",
   "latestAnnouncementDate": "2026-08-14",
-  "scrapedCount": 641,
-  "rejectedCount": 425,
+  "scrapedCount": 769,
+  "rejectedCount": 542,
   "municipalityAudit": {
     "expectedMunicipalityCount": 25,
     "coveredMunicipalityCount": 24,
@@ -17,6 +17,11 @@
       "大和高田市"
     ],
     "breakdown": [
+      {
+        "municipality": "橿原市",
+        "count": 30,
+        "changeFromPrevious": 11
+      },
       {
         "municipality": "葛城市",
         "count": 25,
@@ -38,11 +43,6 @@
         "changeFromPrevious": 0
       },
       {
-        "municipality": "橿原市",
-        "count": 19,
-        "changeFromPrevious": 0
-      },
-      {
         "municipality": "宇陀市",
         "count": 18,
         "changeFromPrevious": 0
@@ -55,7 +55,7 @@
       {
         "municipality": "香芝市",
         "count": 16,
-        "changeFromPrevious": 7
+        "changeFromPrevious": 0
       },
       {
         "municipality": "奈良市",
@@ -70,7 +70,7 @@
       {
         "municipality": "三宅町",
         "count": 5,
-        "changeFromPrevious": 1
+        "changeFromPrevious": 0
       },
       {
         "municipality": "川西町",
@@ -144,31 +144,16 @@
   "dateAudit": {
     "announcementAfterBiddingCount": 0,
     "awardedWithoutBiddingDateCount": 0,
-    "awardedWithoutWinnerCount": 2,
+    "awardedWithoutWinnerCount": 0,
     "openWithWinnerCount": 0,
-    "sampleTitles": [
-      {
-        "municipality": "香芝市",
-        "title": "三和幼稚園トイレ改修工事に伴う設計業務",
-        "status": "落札",
-        "announcementDate": "2026-05-20",
-        "biddingDate": "2026-05-20"
-      },
-      {
-        "municipality": "香芝市",
-        "title": "香芝中学校プール長寿命化改修工事に伴う設計業務",
-        "status": "落札",
-        "announcementDate": "2026-04-28",
-        "biddingDate": "2026-04-28"
-      }
-    ]
+    "sampleTitles": []
   },
   "intelligence": {
-    "itemsWithPdf": 48,
-    "itemsWithDescription": 44,
-    "intelligenceExtractedCount": 44,
-    "geminiExtractedCount": 44,
-    "taggedCount": 44,
-    "lastAugmentedAt": "2026-08-14T00:26:18.538Z"
+    "itemsWithPdf": 59,
+    "itemsWithDescription": 47,
+    "intelligenceExtractedCount": 47,
+    "geminiExtractedCount": 47,
+    "taggedCount": 47,
+    "lastAugmentedAt": "2026-08-14T01:44:47.723Z"
   }
 }

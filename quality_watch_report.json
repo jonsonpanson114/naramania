@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-14T00:33:36.558Z",
-  "qualityGeneratedAt": "2026-08-14T00:26:05.803Z",
-  "itemCount": 211,
+  "generatedAt": "2026-08-14T01:52:45.457Z",
+  "qualityGeneratedAt": "2026-08-14T01:44:46.812Z",
+  "itemCount": 222,
   "resultFollowUp": {
-    "totalCount": 13,
-    "highCount": 10,
+    "totalCount": 10,
+    "highCount": 7,
     "mediumCount": 3,
     "lowCount": 0,
     "missingBiddingDateCount": 0,
@@ -14,19 +14,15 @@
         "count": 3
       },
       {
-        "municipality": "橿原市",
-        "count": 2
-      },
-      {
-        "municipality": "香芝市",
-        "count": 2
-      },
-      {
         "municipality": "安堵町",
         "count": 1
       },
       {
         "municipality": "王寺町",
+        "count": 1
+      },
+      {
+        "municipality": "橿原市",
         "count": 1
       },
       {
@@ -49,22 +45,6 @@
     "samples": [
       {
         "priority": "high",
-        "ageDays": 108,
-        "reason": "落札済みだが落札者が空",
-        "item": {
-          "id": "kashiba-r8-g4-03",
-          "municipality": "香芝市",
-          "title": "香芝中学校プール長寿命化改修工事に伴う設計業務",
-          "status": "落札",
-          "announcementDate": "2026-04-28",
-          "biddingDate": "2026-04-28",
-          "winningContractor": null,
-          "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=011792050100r8-g4-03",
-          "pdfUrl": null
-        }
-      },
-      {
-        "priority": "high",
         "ageDays": 88,
         "reason": "開札日から88日経過",
         "item": {
@@ -77,38 +57,6 @@
           "winningContractor": null,
           "link": "https://www.town.oji.nara.jp/kakuka/somu/somu/gyomuannai/nyuusatu/nyuusatukouhyou/11512.html",
           "pdfUrl": null
-        }
-      },
-      {
-        "priority": "high",
-        "ageDays": 86,
-        "reason": "落札済みだが落札者が空",
-        "item": {
-          "id": "kashiba-r8-g4-01",
-          "municipality": "香芝市",
-          "title": "三和幼稚園トイレ改修工事に伴う設計業務",
-          "status": "落札",
-          "announcementDate": "2026-05-20",
-          "biddingDate": "2026-05-20",
-          "winningContractor": null,
-          "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=011792050100r8-g4-01",
-          "pdfUrl": null
-        }
-      },
-      {
-        "priority": "high",
-        "ageDays": 80,
-        "reason": "開札日から80日経過",
-        "item": {
-          "id": "kashihara-proposal-5082000026",
-          "municipality": "橿原市",
-          "title": "橿原運動公園体育館・屋内プール新築工事に伴う基本設計業務 (圧縮ファイル: 1.7MB)",
-          "status": "受付終了",
-          "announcementDate": "2026-04-03",
-          "biddingDate": "2026-05-26",
-          "winningContractor": null,
-          "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/7/8272.html",
-          "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5082000026.zip"
         }
       },
       {
@@ -204,6 +152,54 @@
           "biddingDate": "2026-07-17",
           "winningContractor": "(株)阪本",
           "link": "https://www.city.gose.nara.jp/0000001024.html",
+          "pdfUrl": null
+        }
+      },
+      {
+        "priority": "medium",
+        "ageDays": 10,
+        "reason": "開札日から10日経過",
+        "item": {
+          "id": "katsuragi-web-42be9c8c",
+          "municipality": "葛城市",
+          "title": "第8-402号 市営住宅堂の久保団地空家解体工事",
+          "status": "受付終了",
+          "announcementDate": "2026-07-10",
+          "biddingDate": "2026-08-04",
+          "winningContractor": null,
+          "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/4-4-3-2026-1.pdf",
+          "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/4-4-3-2026-1.pdf"
+        }
+      },
+      {
+        "priority": "medium",
+        "ageDays": 9,
+        "reason": "開札日から9日経過",
+        "item": {
+          "id": "kashihara-5082000865",
+          "municipality": "橿原市",
+          "title": "八木中学校長寿命化改良工事(第1期)に伴う工事監理業務委託",
+          "status": "受付終了",
+          "announcementDate": "2026-07-31",
+          "biddingDate": "2026-08-05",
+          "winningContractor": null,
+          "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/7/12117.html",
+          "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5082000865.pdf"
+        }
+      },
+      {
+        "priority": "medium",
+        "ageDays": 9,
+        "reason": "開札日から9日経過",
+        "item": {
+          "id": "nara-pref-29001013060020260131",
+          "municipality": "奈良県",
+          "title": "県営住宅姫寺団地４号棟（５０１号室他）住戸改修工事 第８－２７号",
+          "status": "受付終了",
+          "announcementDate": "2026-07-10",
+          "biddingDate": "2026-08-05",
+          "winningContractor": null,
+          "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260131&gamenMode=0",
           "pdfUrl": null
         }
       }
@@ -493,24 +489,9 @@
   "dateIntegrity": {
     "announcementAfterBiddingCount": 0,
     "awardedWithoutBiddingDateCount": 0,
-    "awardedWithoutWinnerCount": 2,
+    "awardedWithoutWinnerCount": 0,
     "openWithWinnerCount": 0,
-    "sampleTitles": [
-      {
-        "municipality": "香芝市",
-        "title": "三和幼稚園トイレ改修工事に伴う設計業務",
-        "status": "落札",
-        "announcementDate": "2026-05-20",
-        "biddingDate": "2026-05-20"
-      },
-      {
-        "municipality": "香芝市",
-        "title": "香芝中学校プール長寿命化改修工事に伴う設計業務",
-        "status": "落札",
-        "announcementDate": "2026-04-28",
-        "biddingDate": "2026-04-28"
-      }
-    ]
+    "sampleTitles": []
   },
   "sourceCoverage": {
     "activeCount": 25,
@@ -550,15 +531,15 @@
         "municipality": "橿原市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 19,
+        "totalCount": 30,
         "requiredLinkIncludes": [
           "city.kashihara.nara.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.kashihara.nara.jp": 19
+          "city.kashihara.nara.jp": 30
         },
-        "message": "橿原市: 19件 / sources OK"
+        "message": "橿原市: 30件 / sources OK"
       },
       {
         "municipality": "生駒市",

@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-14T00:26:05.805Z",
-  "totalRejected": 3262,
+  "generatedAt": "2026-08-14T01:44:46.814Z",
+  "totalRejected": 3688,
   "totalBorderlineRescued": 39,
   "byMunicipality": {
     "奈良市": {
@@ -8,7 +8,7 @@
       "borderlineRescued": 3
     },
     "橿原市": {
-      "rejected": 734,
+      "rejected": 1160,
       "borderlineRescued": 3
     },
     "生駒市": {
@@ -2647,6 +2647,1120 @@
     },
     {
       "municipality": "橿原市",
+      "title": "電線共同溝敷設工事（第7－7工区）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "電線共同溝敷設工事（第7－7工区） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "市道路舗装維持修繕工事8－5",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "市道路舗装維持修繕工事8－5 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "市道路舗装維持修繕工事8－4",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "市道路舗装維持修繕工事8－4 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "市道路舗装維持修繕工事8-7",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "市道路舗装維持修繕工事8-7 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "市道路舗装維持修繕工事8－2",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "市道路舗装維持修繕工事8－2 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "市道路舗装維持修繕工事8－1",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "市道路舗装維持修繕工事8－1 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "幹線街路維持修繕工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "幹線街路維持修繕工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "市営香久山墓園植栽管理業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "市営香久山墓園植栽管理業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "かしはら万葉ホール周辺植栽場所の剪定等管理業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "かしはら万葉ホール周辺植栽場所の剪定等管理業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原文化会館前広場管理業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原文化会館前広場管理業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "今井町内植栽剪定・刈り込み業務委託",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "今井町内植栽剪定・刈り込み業務委託 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "街路樹植栽管理作業委託 1工区",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "街路樹植栽管理作業委託 1工区 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "街路樹植栽管理作業委託 2工区",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "街路樹植栽管理作業委託 2工区 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "白橿町公園緑地植栽管理委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "管理委託"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "白橿町公園緑地植栽管理委託 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "管理委託"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "街路樹植栽管理作業委託 4工区",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "街路樹植栽管理作業委託 4工区 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "公営住宅・改良住宅 草刈・剪定・消毒委託業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "公営住宅・改良住宅 草刈・剪定・消毒委託業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "街路樹植栽管理作業委託 3工区",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "街路樹植栽管理作業委託 3工区 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "市内公園等植栽管理委託 第1工区",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "管理委託"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "市内公園等植栽管理委託 第1工区 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "管理委託"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "街路樹植栽管理作業委託 7工区",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "街路樹植栽管理作業委託 7工区 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "市内公園等植栽管理委託 第2工区",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "管理委託"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "市内公園等植栽管理委託 第2工区 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "管理委託"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "街路樹植栽管理作業委託 6工区",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "街路樹植栽管理作業委託 6工区 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 市内小中学校植栽管理委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "管理委託"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 市内小中学校植栽管理委託 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "管理委託"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "街路樹植栽管理作業委託 5工区",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "街路樹植栽管理作業委託 5工区 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 橿原市地番図等修正業務委託",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 橿原市地番図等修正業務委託 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "道路施設定期点検業務委託8-1",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "定期点検"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "道路施設定期点検業務委託8-1 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "定期点検"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "ひがしたけだドームアリーナ改修工事に伴う設計委託",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "ひがしたけだドームアリーナ改修工事に伴う設計委託 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原運動公園再整備物件調査等業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "物件調査",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原運動公園再整備物件調査等業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "物件調査",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "中学校特殊建築物等定期点検及び非構造部材点検業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "定期点検"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "中学校特殊建築物等定期点検及び非構造部材点検業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "定期点検"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "大久保町老人憩いの家等解体工事に伴う設計委託",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "大久保町老人憩いの家等解体工事に伴う設計委託 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度橿原市空家等実態調査及び空家等対策計画改定業務委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度橿原市空家等実態調査及び空家等対策計画改定業務委託 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原市役所本庁舎等で使用する電力調達業務（グループ1）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調達"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原市役所本庁舎等で使用する電力調達業務（グループ1） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調達"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原市役所本庁舎等で使用する電力調達業務（グループ2）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調達"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原市役所本庁舎等で使用する電力調達業務（グループ2） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調達"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原市役所本庁舎等で使用する電力調達業務（グループ3）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調達"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原市役所本庁舎等で使用する電力調達業務（グループ3） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調達"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原市役所本庁舎等で使用する電力調達業務（グループ4）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調達"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原市役所本庁舎等で使用する電力調達業務（グループ4） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調達"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度仮想基盤サーバ改修委託業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度仮想基盤サーバ改修委託業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度ごみ質等環境分析検査（8月～3月分）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度ごみ質等環境分析検査（8月～3月分） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度ダイオキシン類等分析検査（8月～3月分）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度ダイオキシン類等分析検査（8月～3月分） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度不用パソコン等売却",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "パソコン",
+        "売却"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度不用パソコン等売却 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "パソコン",
+        "売却"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原市本庁舎電話交換業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原市本庁舎電話交換業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "電照看板広告代理店・保守業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "看板",
+        "保守"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "電照看板広告代理店・保守業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "看板",
+        "保守"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "ICT支援員業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "ICT"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "ICT支援員業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "ICT"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度第2回ごみ処理施設排出資源物（新聞）の売却業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度第2回ごみ処理施設排出資源物（新聞）の売却業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第2回ごみ処理施設排出資源物（ダンボール）の売却業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第2回ごみ処理施設排出資源物（ダンボール）の売却業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第2回ごみ処理施設排出資源物（雑誌）の売却業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第2回ごみ処理施設排出資源物（雑誌）の売却業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第2回ごみ処理施設排出資源物（金属不適物）の売却業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第2回ごみ処理施設排出資源物（金属不適物）の売却業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第2回ごみ処理施設排出資源物（アルミ缶プレス品）の売却業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第2回ごみ処理施設排出資源物（アルミ缶プレス品）の売却業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第2回ごみ処理施設排出資源物（破砕鉄）の売却業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第2回ごみ処理施設排出資源物（破砕鉄）の売却業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第2回ごみ処理施設排出資源物（スチール缶プレス品）の売却業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第2回ごみ処理施設排出資源物（スチール缶プレス品）の売却業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第2回ごみ処理施設排出資源物（破砕アルミ）の売却業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第2回ごみ処理施設排出資源物（破砕アルミ）の売却業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "一般廃棄物（可燃ごみ類、カン・ビンごみ）収集運搬業務委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "運搬",
+        "ごみ",
+        "廃棄物"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "一般廃棄物（可燃ごみ類、カン・ビンごみ）収集運搬業務委託 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "運搬",
+        "ごみ",
+        "廃棄物"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和11年度分クリーンセンターかしはら余剰電力の容量価値売却業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和11年度分クリーンセンターかしはら余剰電力の容量価値売却業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "藤原宮跡仮設バイオトイレ設置管理業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "藤原宮跡仮設バイオトイレ設置管理業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度人材派遣業務（物価高騰対応生活者支援事業室）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度人材派遣業務（物価高騰対応生活者支援事業室） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "藤原宮跡仮設トイレ設置管理業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "藤原宮跡仮設トイレ設置管理業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "資材価格特別調査業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "資材価格特別調査業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "白橿小学校物品搬送業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "物品",
+        "搬送"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "白橿小学校物品搬送業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "物品",
+        "搬送"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 橿原市河川水等水質検査業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "河川"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 橿原市河川水等水質検査業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "河川"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "区画線設置業務委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "区画線"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "区画線設置業務委託 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "区画線"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "旅券等運送業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "旅券等運送業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原運動公園硬式野球場グラウンド整備業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原運動公園硬式野球場グラウンド整備業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "市庁舎等建物総合管理業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "市庁舎等建物総合管理業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "かしはら万葉ホール清掃委託業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "清掃",
+        "清掃"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "かしはら万葉ホール清掃委託業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "清掃",
+        "清掃"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度橿原市各施設の浄化槽保守点検業務（新沢・畝傍地区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "保守"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度橿原市各施設の浄化槽保守点検業務（新沢・畝傍地区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "保守"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "中央公民館夜間管理業務委託",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "中央公民館夜間管理業務委託 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度橿原市各施設の浄化槽保守点検業務（香久山・鴨公地区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "保守"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度橿原市各施設の浄化槽保守点検業務（香久山・鴨公地区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "保守"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度橿原市各施設の浄化槽保守点検業務（耳成地区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "保守"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度橿原市各施設の浄化槽保守点検業務（耳成地区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "保守"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度橿原市各施設の浄化槽保守点検業務（真菅・多地区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "保守"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度橿原市各施設の浄化槽保守点検業務（真菅・多地区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "保守"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度小中学校・こども園汚水中継ポンプ保守点検業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "保守"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度小中学校・こども園汚水中継ポンプ保守点検業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "保守"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "小規模舗装道路維持修繕業務委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "小規模舗装道路維持修繕業務委託 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 小中学校・幼稚園及びこども園プール清掃業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "清掃",
+        "清掃"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 小中学校・幼稚園及びこども園プール清掃業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "清掃",
+        "清掃"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度空家等対策業務委託",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度空家等対策業務委託 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
       "title": "令和8年度ごみ処理施設排出資源物（ガラスびん無色・茶色）の売却業務",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -4604,6 +5718,1120 @@
     },
     {
       "municipality": "橿原市",
+      "title": "電線共同溝敷設工事（第7－7工区）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "電線共同溝敷設工事（第7－7工区） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "市道路舗装維持修繕工事8－5",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "市道路舗装維持修繕工事8－5 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "市道路舗装維持修繕工事8－4",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "市道路舗装維持修繕工事8－4 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "市道路舗装維持修繕工事8-7",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "市道路舗装維持修繕工事8-7 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "市道路舗装維持修繕工事8－2",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "市道路舗装維持修繕工事8－2 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "市道路舗装維持修繕工事8－1",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "市道路舗装維持修繕工事8－1 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "幹線街路維持修繕工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "幹線街路維持修繕工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "市営香久山墓園植栽管理業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "市営香久山墓園植栽管理業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "かしはら万葉ホール周辺植栽場所の剪定等管理業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "かしはら万葉ホール周辺植栽場所の剪定等管理業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原文化会館前広場管理業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原文化会館前広場管理業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "今井町内植栽剪定・刈り込み業務委託",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "今井町内植栽剪定・刈り込み業務委託 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "街路樹植栽管理作業委託 1工区",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "街路樹植栽管理作業委託 1工区 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "街路樹植栽管理作業委託 2工区",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "街路樹植栽管理作業委託 2工区 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "白橿町公園緑地植栽管理委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "管理委託"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "白橿町公園緑地植栽管理委託 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "管理委託"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "街路樹植栽管理作業委託 4工区",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "街路樹植栽管理作業委託 4工区 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "公営住宅・改良住宅 草刈・剪定・消毒委託業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "公営住宅・改良住宅 草刈・剪定・消毒委託業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "街路樹植栽管理作業委託 3工区",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "街路樹植栽管理作業委託 3工区 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "市内公園等植栽管理委託 第1工区",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "管理委託"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "市内公園等植栽管理委託 第1工区 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "管理委託"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "街路樹植栽管理作業委託 7工区",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "街路樹植栽管理作業委託 7工区 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "市内公園等植栽管理委託 第2工区",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "管理委託"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "市内公園等植栽管理委託 第2工区 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "管理委託"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "街路樹植栽管理作業委託 6工区",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "街路樹植栽管理作業委託 6工区 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 市内小中学校植栽管理委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "管理委託"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 市内小中学校植栽管理委託 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "管理委託"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "街路樹植栽管理作業委託 5工区",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "街路樹植栽管理作業委託 5工区 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 橿原市地番図等修正業務委託",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 橿原市地番図等修正業務委託 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "道路施設定期点検業務委託8-1",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "定期点検"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "道路施設定期点検業務委託8-1 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "定期点検"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "ひがしたけだドームアリーナ改修工事に伴う設計委託",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "ひがしたけだドームアリーナ改修工事に伴う設計委託 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原運動公園再整備物件調査等業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "物件調査",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原運動公園再整備物件調査等業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "物件調査",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "中学校特殊建築物等定期点検及び非構造部材点検業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "定期点検"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "中学校特殊建築物等定期点検及び非構造部材点検業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "定期点検"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "大久保町老人憩いの家等解体工事に伴う設計委託",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "大久保町老人憩いの家等解体工事に伴う設計委託 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度橿原市空家等実態調査及び空家等対策計画改定業務委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度橿原市空家等実態調査及び空家等対策計画改定業務委託 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原市役所本庁舎等で使用する電力調達業務（グループ1）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調達"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原市役所本庁舎等で使用する電力調達業務（グループ1） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調達"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原市役所本庁舎等で使用する電力調達業務（グループ2）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調達"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原市役所本庁舎等で使用する電力調達業務（グループ2） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調達"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原市役所本庁舎等で使用する電力調達業務（グループ3）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調達"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原市役所本庁舎等で使用する電力調達業務（グループ3） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調達"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原市役所本庁舎等で使用する電力調達業務（グループ4）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調達"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原市役所本庁舎等で使用する電力調達業務（グループ4） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調達"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度仮想基盤サーバ改修委託業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度仮想基盤サーバ改修委託業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度ごみ質等環境分析検査（8月～3月分）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度ごみ質等環境分析検査（8月～3月分） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度ダイオキシン類等分析検査（8月～3月分）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度ダイオキシン類等分析検査（8月～3月分） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度不用パソコン等売却",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "パソコン",
+        "売却"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度不用パソコン等売却 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "パソコン",
+        "売却"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原市本庁舎電話交換業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原市本庁舎電話交換業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "電照看板広告代理店・保守業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "看板",
+        "保守"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "電照看板広告代理店・保守業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "看板",
+        "保守"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "ICT支援員業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "ICT"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "ICT支援員業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "ICT"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度第2回ごみ処理施設排出資源物（新聞）の売却業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度第2回ごみ処理施設排出資源物（新聞）の売却業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第2回ごみ処理施設排出資源物（ダンボール）の売却業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第2回ごみ処理施設排出資源物（ダンボール）の売却業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第2回ごみ処理施設排出資源物（雑誌）の売却業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第2回ごみ処理施設排出資源物（雑誌）の売却業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第2回ごみ処理施設排出資源物（金属不適物）の売却業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第2回ごみ処理施設排出資源物（金属不適物）の売却業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第2回ごみ処理施設排出資源物（アルミ缶プレス品）の売却業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第2回ごみ処理施設排出資源物（アルミ缶プレス品）の売却業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第2回ごみ処理施設排出資源物（破砕鉄）の売却業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第2回ごみ処理施設排出資源物（破砕鉄）の売却業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第2回ごみ処理施設排出資源物（スチール缶プレス品）の売却業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第2回ごみ処理施設排出資源物（スチール缶プレス品）の売却業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第2回ごみ処理施設排出資源物（破砕アルミ）の売却業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第2回ごみ処理施設排出資源物（破砕アルミ）の売却業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "一般廃棄物（可燃ごみ類、カン・ビンごみ）収集運搬業務委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "運搬",
+        "ごみ",
+        "廃棄物"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "一般廃棄物（可燃ごみ類、カン・ビンごみ）収集運搬業務委託 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "運搬",
+        "ごみ",
+        "廃棄物"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和11年度分クリーンセンターかしはら余剰電力の容量価値売却業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和11年度分クリーンセンターかしはら余剰電力の容量価値売却業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "藤原宮跡仮設バイオトイレ設置管理業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "藤原宮跡仮設バイオトイレ設置管理業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度人材派遣業務（物価高騰対応生活者支援事業室）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度人材派遣業務（物価高騰対応生活者支援事業室） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "藤原宮跡仮設トイレ設置管理業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "藤原宮跡仮設トイレ設置管理業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "資材価格特別調査業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "資材価格特別調査業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "白橿小学校物品搬送業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "物品",
+        "搬送"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "白橿小学校物品搬送業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "物品",
+        "搬送"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 橿原市河川水等水質検査業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "河川"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 橿原市河川水等水質検査業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "河川"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "区画線設置業務委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "区画線"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "区画線設置業務委託 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "区画線"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "旅券等運送業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "旅券等運送業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原運動公園硬式野球場グラウンド整備業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原運動公園硬式野球場グラウンド整備業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "市庁舎等建物総合管理業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "市庁舎等建物総合管理業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "かしはら万葉ホール清掃委託業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "清掃",
+        "清掃"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "かしはら万葉ホール清掃委託業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "清掃",
+        "清掃"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度橿原市各施設の浄化槽保守点検業務（新沢・畝傍地区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "保守"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度橿原市各施設の浄化槽保守点検業務（新沢・畝傍地区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "保守"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "中央公民館夜間管理業務委託",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "中央公民館夜間管理業務委託 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度橿原市各施設の浄化槽保守点検業務（香久山・鴨公地区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "保守"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度橿原市各施設の浄化槽保守点検業務（香久山・鴨公地区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "保守"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度橿原市各施設の浄化槽保守点検業務（耳成地区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "保守"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度橿原市各施設の浄化槽保守点検業務（耳成地区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "保守"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度橿原市各施設の浄化槽保守点検業務（真菅・多地区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "保守"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度橿原市各施設の浄化槽保守点検業務（真菅・多地区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "保守"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度小中学校・こども園汚水中継ポンプ保守点検業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "保守"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度小中学校・こども園汚水中継ポンプ保守点検業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "保守"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "小規模舗装道路維持修繕業務委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "小規模舗装道路維持修繕業務委託 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 小中学校・幼稚園及びこども園プール清掃業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "清掃",
+        "清掃"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 小中学校・幼稚園及びこども園プール清掃業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "清掃",
+        "清掃"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度空家等対策業務委託",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度空家等対策業務委託 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
       "title": "令和8年度ごみ処理施設排出資源物（ガラスびん無色・茶色）の売却業務",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -6558,6 +8786,1120 @@
       "matchedKeywords": [
         "定期点検"
       ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "電線共同溝敷設工事（第7－7工区）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "電線共同溝敷設工事（第7－7工区） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "市道路舗装維持修繕工事8－5",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "市道路舗装維持修繕工事8－5 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "市道路舗装維持修繕工事8－4",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "市道路舗装維持修繕工事8－4 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "市道路舗装維持修繕工事8-7",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "市道路舗装維持修繕工事8-7 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "市道路舗装維持修繕工事8－2",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "市道路舗装維持修繕工事8－2 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "市道路舗装維持修繕工事8－1",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "市道路舗装維持修繕工事8－1 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "幹線街路維持修繕工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "幹線街路維持修繕工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "市営香久山墓園植栽管理業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "市営香久山墓園植栽管理業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "かしはら万葉ホール周辺植栽場所の剪定等管理業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "かしはら万葉ホール周辺植栽場所の剪定等管理業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原文化会館前広場管理業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原文化会館前広場管理業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "今井町内植栽剪定・刈り込み業務委託",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "今井町内植栽剪定・刈り込み業務委託 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "街路樹植栽管理作業委託 1工区",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "街路樹植栽管理作業委託 1工区 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "街路樹植栽管理作業委託 2工区",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "街路樹植栽管理作業委託 2工区 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "白橿町公園緑地植栽管理委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "管理委託"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "白橿町公園緑地植栽管理委託 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "管理委託"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "街路樹植栽管理作業委託 4工区",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "街路樹植栽管理作業委託 4工区 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "公営住宅・改良住宅 草刈・剪定・消毒委託業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "公営住宅・改良住宅 草刈・剪定・消毒委託業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "街路樹植栽管理作業委託 3工区",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "街路樹植栽管理作業委託 3工区 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "市内公園等植栽管理委託 第1工区",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "管理委託"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "市内公園等植栽管理委託 第1工区 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "管理委託"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "街路樹植栽管理作業委託 7工区",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "街路樹植栽管理作業委託 7工区 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "市内公園等植栽管理委託 第2工区",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "管理委託"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "市内公園等植栽管理委託 第2工区 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "管理委託"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "街路樹植栽管理作業委託 6工区",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "街路樹植栽管理作業委託 6工区 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 市内小中学校植栽管理委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "管理委託"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 市内小中学校植栽管理委託 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "管理委託"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "街路樹植栽管理作業委託 5工区",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "街路樹植栽管理作業委託 5工区 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 橿原市地番図等修正業務委託",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 橿原市地番図等修正業務委託 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "道路施設定期点検業務委託8-1",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "定期点検"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "道路施設定期点検業務委託8-1 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "定期点検"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "ひがしたけだドームアリーナ改修工事に伴う設計委託",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "ひがしたけだドームアリーナ改修工事に伴う設計委託 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原運動公園再整備物件調査等業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "物件調査",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原運動公園再整備物件調査等業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "物件調査",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "中学校特殊建築物等定期点検及び非構造部材点検業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "定期点検"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "中学校特殊建築物等定期点検及び非構造部材点検業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "定期点検"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "大久保町老人憩いの家等解体工事に伴う設計委託",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "大久保町老人憩いの家等解体工事に伴う設計委託 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度橿原市空家等実態調査及び空家等対策計画改定業務委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度橿原市空家等実態調査及び空家等対策計画改定業務委託 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原市役所本庁舎等で使用する電力調達業務（グループ1）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調達"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原市役所本庁舎等で使用する電力調達業務（グループ1） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調達"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原市役所本庁舎等で使用する電力調達業務（グループ2）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調達"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原市役所本庁舎等で使用する電力調達業務（グループ2） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調達"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原市役所本庁舎等で使用する電力調達業務（グループ3）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調達"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原市役所本庁舎等で使用する電力調達業務（グループ3） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調達"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原市役所本庁舎等で使用する電力調達業務（グループ4）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調達"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原市役所本庁舎等で使用する電力調達業務（グループ4） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調達"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度仮想基盤サーバ改修委託業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度仮想基盤サーバ改修委託業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度ごみ質等環境分析検査（8月～3月分）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度ごみ質等環境分析検査（8月～3月分） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度ダイオキシン類等分析検査（8月～3月分）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度ダイオキシン類等分析検査（8月～3月分） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度不用パソコン等売却",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "パソコン",
+        "売却"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度不用パソコン等売却 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "パソコン",
+        "売却"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原市本庁舎電話交換業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原市本庁舎電話交換業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "電照看板広告代理店・保守業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "看板",
+        "保守"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "電照看板広告代理店・保守業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "看板",
+        "保守"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "ICT支援員業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "ICT"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "ICT支援員業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "ICT"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度第2回ごみ処理施設排出資源物（新聞）の売却業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度第2回ごみ処理施設排出資源物（新聞）の売却業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第2回ごみ処理施設排出資源物（ダンボール）の売却業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第2回ごみ処理施設排出資源物（ダンボール）の売却業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第2回ごみ処理施設排出資源物（雑誌）の売却業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第2回ごみ処理施設排出資源物（雑誌）の売却業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第2回ごみ処理施設排出資源物（金属不適物）の売却業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第2回ごみ処理施設排出資源物（金属不適物）の売却業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第2回ごみ処理施設排出資源物（アルミ缶プレス品）の売却業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第2回ごみ処理施設排出資源物（アルミ缶プレス品）の売却業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第2回ごみ処理施設排出資源物（破砕鉄）の売却業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第2回ごみ処理施設排出資源物（破砕鉄）の売却業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第2回ごみ処理施設排出資源物（スチール缶プレス品）の売却業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第2回ごみ処理施設排出資源物（スチール缶プレス品）の売却業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第2回ごみ処理施設排出資源物（破砕アルミ）の売却業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第2回ごみ処理施設排出資源物（破砕アルミ）の売却業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "一般廃棄物（可燃ごみ類、カン・ビンごみ）収集運搬業務委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "運搬",
+        "ごみ",
+        "廃棄物"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "一般廃棄物（可燃ごみ類、カン・ビンごみ）収集運搬業務委託 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "運搬",
+        "ごみ",
+        "廃棄物"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和11年度分クリーンセンターかしはら余剰電力の容量価値売却業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和11年度分クリーンセンターかしはら余剰電力の容量価値売却業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "藤原宮跡仮設バイオトイレ設置管理業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "藤原宮跡仮設バイオトイレ設置管理業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度人材派遣業務（物価高騰対応生活者支援事業室）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度人材派遣業務（物価高騰対応生活者支援事業室） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "藤原宮跡仮設トイレ設置管理業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "藤原宮跡仮設トイレ設置管理業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "資材価格特別調査業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "資材価格特別調査業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "白橿小学校物品搬送業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "物品",
+        "搬送"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "白橿小学校物品搬送業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "物品",
+        "搬送"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 橿原市河川水等水質検査業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "河川"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 橿原市河川水等水質検査業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "河川"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "区画線設置業務委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "区画線"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "区画線設置業務委託 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "区画線"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "旅券等運送業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "旅券等運送業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原運動公園硬式野球場グラウンド整備業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原運動公園硬式野球場グラウンド整備業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "市庁舎等建物総合管理業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "市庁舎等建物総合管理業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "かしはら万葉ホール清掃委託業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "清掃",
+        "清掃"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "かしはら万葉ホール清掃委託業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "清掃",
+        "清掃"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度橿原市各施設の浄化槽保守点検業務（新沢・畝傍地区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "保守"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度橿原市各施設の浄化槽保守点検業務（新沢・畝傍地区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "保守"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "中央公民館夜間管理業務委託",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "中央公民館夜間管理業務委託 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度橿原市各施設の浄化槽保守点検業務（香久山・鴨公地区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "保守"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度橿原市各施設の浄化槽保守点検業務（香久山・鴨公地区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "保守"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度橿原市各施設の浄化槽保守点検業務（耳成地区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "保守"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度橿原市各施設の浄化槽保守点検業務（耳成地区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "保守"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度橿原市各施設の浄化槽保守点検業務（真菅・多地区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "保守"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度橿原市各施設の浄化槽保守点検業務（真菅・多地区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "保守"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度小中学校・こども園汚水中継ポンプ保守点検業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "保守"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度小中学校・こども園汚水中継ポンプ保守点検業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "保守"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "小規模舗装道路維持修繕業務委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "小規模舗装道路維持修繕業務委託 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 小中学校・幼稚園及びこども園プール清掃業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "清掃",
+        "清掃"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 小中学校・幼稚園及びこども園プール清掃業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "清掃",
+        "清掃"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度空家等対策業務委託",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度空家等対策業務委託 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
     },
     {
       "municipality": "橿原市",
@@ -17901,6 +21243,12 @@
     },
     {
       "municipality": "御所市",
+      "title": "一般競争入札公告（建設コンサルタント等）（管財課）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
       "title": "現場説明書（仕様書）のダウンロード（測量・建設コンサルタント業務）（管財課）",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -17910,12 +21258,6 @@
     {
       "municipality": "御所市",
       "title": "一般競争入札公告（建設工事）（管財課）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "一般競争入札公告（建設コンサルタント等）（管財課）",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },
