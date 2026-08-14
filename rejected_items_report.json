@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-14T01:44:46.814Z",
-  "totalRejected": 3688,
+  "generatedAt": "2026-08-14T03:43:29.389Z",
+  "totalRejected": 3823,
   "totalBorderlineRescued": 39,
   "byMunicipality": {
     "奈良市": {
@@ -20,7 +20,7 @@
       "borderlineRescued": 0
     },
     "大和郡山市": {
-      "rejected": 96,
+      "rejected": 231,
       "borderlineRescued": 0
     },
     "葛城市": {
@@ -14332,6 +14332,1079 @@
       "matchedKeywords": [
         "道路",
         "舗装"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市道城小泉線道路改良工事（1工区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "交通安全施設設置工事（外環状線他）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "交通"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "草刈業務委託（鰻堀池他）その2",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "公共下水道整備工事美濃庄町測量業務委託（第1工区）その2",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道",
+        "測量"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "排水路改修工事（新川）に伴う設計業務委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "排水路",
+        "水路"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "橋梁定期点検業務委託（その1）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋",
+        "定期点検"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "橋梁補修設計業務委託（無名橋0585他）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "大和郡山市総合公園ナイター照明LED化及び高圧受電設備更新工事他設計業務委託",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "LED",
+        "照明",
+        "設備",
+        "設備更新",
+        "受電設備",
+        "高圧受電設備"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "草刈業務委託（番条高野線他）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "排水路改修工事（新川）に伴う測量業務委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "排水路",
+        "水路",
+        "測量"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "草刈業務委託（小泉町他）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "大和中央道第2調整池草刈業務委託",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "大和郡山市ハザードマップ改訂業務委託",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市立片桐中学校屋内運動場等空調設置工事",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "空調"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市立郡山中学校屋内運動場等空調設置工事",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "空調"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市立郡山東中学校屋内運動場等空調設置工事",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "空調"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市立郡山西中学校屋内運動場等空調設置工事",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "空調"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市立郡山南中学校屋内運動場等空調設置工事",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "空調"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "公共下水道整備工事横田町実施設計業務委託（第1工区）その1、その2",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "公共下水道整備工事横田町測量業務委託（第1工区）その1、その2",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道",
+        "測量"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "南井町雨水調整池ポンプ更新工事",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "ポンプ更新"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "歩道設置工事（椎木町）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "道路維持工事（九条町）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "草刈業務委託（紺屋川他）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内街路樹維持管理業務委託（Aブロック）夏期剪定",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内街路樹維持管理業務委託（Bブロック）夏期剪定",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内街路樹維持管理業務委託（Cブロック）夏期剪定",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内街路樹維持管理業務委託（Dブロック）夏期剪定",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "蟹川流域治水対策測量業務委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "測量"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "公共下水道管渠更生工事泉原町（第1工区）その1、その2",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "公共下水道昭和工業団地地区改築実施設計業務委託（第1工区）その1、その2",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "公共下水道管渠更生工事小泉町（第1工区）その1、その2",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内公園緑地維持管理業務委託（Aブロック）夏期剪定",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内公園緑地維持管理業務委託（Bブロック）夏期剪定",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内公園緑地維持管理業務委託（Cブロック）夏期剪定",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内公園緑地維持管理業務委託（Eブロック）夏期剪定",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内公園緑地維持管理業務委託（Gブロック）剪定業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "朝日町水路改修調査設計業務委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "水路",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "草刈業務委託（鰻堀池他）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内公園緑地維持管理業務委託（Dブロック）夏期剪定",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内公園緑地維持管理業務委託（Fブロック）夏期剪定",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内街路樹維持管理業務委託（Aブロック）薬剤散布（クビアカツヤカミキリ対策含む）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "薬剤",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内街路樹維持管理業務委託（Bブロック）薬剤散布（クビアカツヤカミキリ対策含む）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "薬剤",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内花壇植栽及び管理業務委託（Aブロック）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内花壇植栽及び管理業務委託（Bブロック）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内公園緑地維持管理業務委託薬剤散布Aブロック（クビアカツヤカミキリ対策含む）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "薬剤",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内公園緑地維持管理業務委託薬剤散布Bブロック（クビアカツヤカミキリ対策含む）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "薬剤",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内公園緑地維持管理業務委託薬剤散布Cブロック（クビアカツヤカミキリ対策含む）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "薬剤",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内公園緑地維持管理業務委託薬剤散布Dブロック（クビアカツヤカミキリ対策含む）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "薬剤",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "郡山城跡周辺維持管理業務委託薬剤散布（クビアカツヤカミキリ対策含む）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "薬剤",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "郡山城跡公園年間維持管理業務（西エリア）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "郡山城跡公園年間維持管理業務（中央エリア）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "郡山城跡公園年間維持管理業務（東エリア）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "近鉄郡山駅周辺整備事業に伴う仮設駐輪場整備工事（第1期）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "公園遊具改修工事（第1工区）",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "遊具"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "道路維持工事（新町）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市道城小泉線道路改良工事（1工区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "道路舗装補修工事（西田中町他）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内公園緑地維持管理業務委託（Aブロック）冬期剪定",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内公園緑地維持管理業務委託（Bブロック）冬期剪定",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "公共下水道整備工事外川町（第1工区）その1、その2",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "郡山城跡公園整備に伴う設計業務委託",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "道路舗装補修工事（城小泉線）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "大和中央道第2調整池法面防護工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "法面"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "大和中央道第1調整池浚渫工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "浚渫"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "城廻り線事業に伴う案内標識整備工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "標識",
+        "案内"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "第二期郡山城跡公園基本設計業務委託",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "農業水路等長寿命化・防災減災事業（宮堂地区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "水路"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "追手門坂舗装補修工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "郡山城跡公園整備に伴う設計業務委託",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "大和中央道第2調整池草刈業務委託（2）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "道路舗装補修工事（美濃庄町他）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内街路樹維持管理業務委託（Aブロック）冬期剪定",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内街路樹維持管理業務委託（Bブロック）冬期剪定",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内街路樹維持管理業務委託（Cブロック）冬期剪定",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内街路樹維持管理業務委託（Dブロック）冬期剪定",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "第二期郡山城跡公園基本設計業務委託",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "交通安全施設設置工事（下三橋町他）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋",
+        "交通"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "城廻り線街路事業に伴う道路整備工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "歩道改良工事（高田町他）その2",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "伊豆七条高野線ほか4路線道路改良工事（1工区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "公共下水道整備工事筒井町（第1工区）その2",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "公共下水道整備工事杉町（第1工区）その2",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "排水路改修工事（量川）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "排水路",
+        "水路"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "橋梁補修設計業務委託（松尾寺口歩道橋）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "九条公園ランニングコース改修工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "道路舗装補修工事（丹後庄町他）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "公共下水道整備工事丹後庄町（第1工区）その1、その2",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "草刈業務委託（鰻堀池他）その2",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "郡山城跡公園左京堀維持管理業務委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "郡山城跡公園維持管理業務委託（石垣除草）",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "除草"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "交通安全施設設置工事（藺町他）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "交通"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "城廻り線街なみ環境整備事業に伴う整備工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市営丸尾南団地B棟外壁等改修工事",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "外壁",
+        "外壁等"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "郡山城跡史跡解説サイン設置工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "農業水路等長寿命化・防災減災事業（矢田地区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "水路"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "道路舗装補修工事（近鉄三ノ丸線他）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "大和中央道第2調整池草刈業務委託（1）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "公共下水道整備工事横田町測量業務委託（第1工区）その1、その2",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道",
+        "測量"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "橋梁補修設計及び点検業務委託（蟹川橋他）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "公共下水道管渠更生工事泉原町（第1工区）その1、その2",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "公共汚水桝設置工事（番条町）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "草刈業務委託（番条高野線他）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "草刈業務委託（小泉町他）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "草刈業務委託（紺屋川他）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "公共下水道泉原町改築実施設計業務委託（第1工区）その1、その2",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "大和郡山市総合公園球場スコアボード設備改修工事",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "設備"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "大和郡山市消防団第三分団庫建設工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内街路樹維持管理業務委託（Aブロック）夏期剪定",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内街路樹維持管理業務委託（Bブロック）夏期剪定",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内街路樹維持管理業務委託（Cブロック）夏期剪定",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内街路樹維持管理業務委託（Dブロック）夏期剪定",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "大和郡山市総合公園球場ベンチ改修工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "公園遊具改修工事（第1工区）",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "遊具"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "草刈業務委託（鰻堀池他）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内街路樹維持管理業務委託（Aブロック）薬剤散布",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "薬剤",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内街路樹維持管理業務委託（Bブロック）薬剤散布",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "薬剤",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内公園緑地維持管理業務委託（Aブロック）夏期剪定",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内公園緑地維持管理業務委託（Bブロック）夏期剪定",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内公園緑地維持管理業務委託（Cブロック）夏期剪定",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内公園緑地維持管理業務委託（Dブロック）夏期剪定",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内公園緑地維持管理業務委託（Eブロック）夏期剪定",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内公園緑地維持管理業務委託（Fブロック）夏期剪定",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内公園緑地維持管理業務委託（Gブロック）剪定業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市立中学校（郡山南・郡山西・片桐）屋内運動場等空調設置工事設計業務委託",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "空調"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市立中学校（郡山・郡山東）屋内運動場等空調設置工事設計業務委託",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "空調"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内公園緑地維持管理業務委託（Aブロック）薬剤散布",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "薬剤",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内公園緑地維持管理業務委託（Bブロック）薬剤散布",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "薬剤",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内公園緑地維持管理業務委託（Cブロック）薬剤散布",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "薬剤",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内公園緑地維持管理業務委託（Dブロック）薬剤散布",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "薬剤",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内花壇植栽及び管理業務委託（Aブロック）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内花壇植栽及び管理業務委託（Bブロック）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "郡山城跡公園年間維持管理業務（西エリア）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "郡山城跡公園年間維持管理業務（中央エリア）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "郡山城跡公園年間維持管理業務（東エリア）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
       ]
     },
     {

@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-14T01:52:46.546Z",
+  "generatedAt": "2026-08-14T03:51:26.255Z",
   "checkedMunicipalityCount": 24,
-  "expectedItemCount": 222,
-  "matchedItemCount": 222,
+  "expectedItemCount": 236,
+  "matchedItemCount": 236,
   "missingItemCount": 0,
-  "duplicateTitleGroupCount": 17,
-  "duplicateTitleItemCount": 36,
+  "duplicateTitleGroupCount": 18,
+  "duplicateTitleItemCount": 38,
   "results": [
     {
       "municipality": "橿原市",
@@ -85,6 +85,17 @@
       "status": "ok"
     },
     {
+      "municipality": "大和郡山市",
+      "snapshotCount": 17,
+      "expectedCount": 17,
+      "matchedCount": 17,
+      "missingCount": 0,
+      "duplicateTitleGroupCount": 1,
+      "duplicateTitleItemCount": 2,
+      "missingItems": [],
+      "status": "ok"
+    },
+    {
       "municipality": "香芝市",
       "snapshotCount": 16,
       "expectedCount": 16,
@@ -140,17 +151,6 @@
       "status": "ok"
     },
     {
-      "municipality": "大和郡山市",
-      "snapshotCount": 4,
-      "expectedCount": 4,
-      "matchedCount": 4,
-      "missingCount": 0,
-      "duplicateTitleGroupCount": 0,
-      "duplicateTitleItemCount": 0,
-      "missingItems": [],
-      "status": "ok"
-    },
-    {
       "municipality": "安堵町",
       "snapshotCount": 3,
       "expectedCount": 3,
@@ -177,6 +177,17 @@
       "snapshotCount": 3,
       "expectedCount": 3,
       "matchedCount": 3,
+      "missingCount": 0,
+      "duplicateTitleGroupCount": 0,
+      "duplicateTitleItemCount": 0,
+      "missingItems": [],
+      "status": "ok"
+    },
+    {
+      "municipality": "王寺町",
+      "snapshotCount": 2,
+      "expectedCount": 2,
+      "matchedCount": 2,
       "missingCount": 0,
       "duplicateTitleGroupCount": 0,
       "duplicateTitleItemCount": 0,
@@ -243,17 +254,6 @@
       "snapshotCount": 2,
       "expectedCount": 2,
       "matchedCount": 2,
-      "missingCount": 0,
-      "duplicateTitleGroupCount": 0,
-      "duplicateTitleItemCount": 0,
-      "missingItems": [],
-      "status": "ok"
-    },
-    {
-      "municipality": "王寺町",
-      "snapshotCount": 1,
-      "expectedCount": 1,
-      "matchedCount": 1,
       "missingCount": 0,
       "duplicateTitleGroupCount": 0,
       "duplicateTitleItemCount": 0,

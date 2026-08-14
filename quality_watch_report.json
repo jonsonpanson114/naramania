@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-14T01:52:45.457Z",
-  "qualityGeneratedAt": "2026-08-14T01:44:46.812Z",
-  "itemCount": 222,
+  "generatedAt": "2026-08-14T03:51:25.069Z",
+  "qualityGeneratedAt": "2026-08-14T03:43:29.386Z",
+  "itemCount": 236,
   "resultFollowUp": {
-    "totalCount": 10,
-    "highCount": 7,
+    "totalCount": 9,
+    "highCount": 6,
     "mediumCount": 3,
     "lowCount": 0,
     "missingBiddingDateCount": 0,
@@ -34,31 +34,11 @@
         "count": 1
       },
       {
-        "municipality": "大和郡山市",
-        "count": 1
-      },
-      {
         "municipality": "奈良市",
         "count": 1
       }
     ],
     "samples": [
-      {
-        "priority": "high",
-        "ageDays": 88,
-        "reason": "開札日から88日経過",
-        "item": {
-          "id": "oji-aHR0cHM6Ly93",
-          "municipality": "王寺町",
-          "title": "やわらぎ会館改修工事",
-          "status": "受付終了",
-          "announcementDate": "2026-04-27",
-          "biddingDate": "2026-05-18",
-          "winningContractor": null,
-          "link": "https://www.town.oji.nara.jp/kakuka/somu/somu/gyomuannai/nyuusatu/nyuusatukouhyou/11512.html",
-          "pdfUrl": null
-        }
-      },
       {
         "priority": "high",
         "ageDays": 79,
@@ -73,22 +53,6 @@
           "winningContractor": null,
           "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
           "pdfUrl": null
-        }
-      },
-      {
-        "priority": "high",
-        "ageDays": 58,
-        "reason": "開札日から58日経過",
-        "item": {
-          "id": "yamato-koriyama-ee85746d",
-          "municipality": "大和郡山市",
-          "title": "市立郡山南小学校廊下改修工事（2期）",
-          "status": "受付終了",
-          "announcementDate": "2026-05-26",
-          "biddingDate": "2026-06-17",
-          "winningContractor": null,
-          "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/9328.html",
-          "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk260617_06k.pdf"
         }
       },
       {
@@ -152,6 +116,22 @@
           "biddingDate": "2026-07-17",
           "winningContractor": "(株)阪本",
           "link": "https://www.city.gose.nara.jp/0000001024.html",
+          "pdfUrl": null
+        }
+      },
+      {
+        "priority": "high",
+        "ageDays": 23,
+        "reason": "開札日から23日経過",
+        "item": {
+          "id": "oji-ffe0646cd8",
+          "municipality": "王寺町",
+          "title": "やわらぎ会館改修工事（7月）",
+          "status": "受付終了",
+          "announcementDate": "2026-07-15",
+          "biddingDate": "2026-07-22",
+          "winningContractor": null,
+          "link": "https://www.town.oji.nara.jp/kakuka/somu/somu/gyomuannai/nyuusatu/nyuusatukouhyou/11747.html",
           "pdfUrl": null
         }
       },
@@ -575,15 +555,15 @@
         "municipality": "大和郡山市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 4,
+        "totalCount": 17,
         "requiredLinkIncludes": [
           "city.yamatokoriyama.lg.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.yamatokoriyama.lg.jp": 4
+          "city.yamatokoriyama.lg.jp": 17
         },
-        "message": "大和郡山市: 4件 / sources OK"
+        "message": "大和郡山市: 17件 / sources OK"
       },
       {
         "municipality": "葛城市",
@@ -831,15 +811,15 @@
         "municipality": "王寺町",
         "status": "ok",
         "severity": "error",
-        "totalCount": 1,
+        "totalCount": 2,
         "requiredLinkIncludes": [
           "town.oji.nara.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "town.oji.nara.jp": 1
+          "town.oji.nara.jp": 2
         },
-        "message": "王寺町: 1件 / sources OK"
+        "message": "王寺町: 2件 / sources OK"
       },
       {
         "municipality": "大淀町",

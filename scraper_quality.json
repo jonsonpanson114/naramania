@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-14T01:44:46.812Z",
+  "generatedAt": "2026-08-14T03:43:29.386Z",
   "source": "daily_scrape",
-  "keptCount": 222,
+  "keptCount": 236,
   "municipalityCount": 24,
   "oldestAnnouncementDate": "2025-02-02",
   "latestAnnouncementDate": "2026-08-14",
-  "scrapedCount": 769,
+  "scrapedCount": 784,
   "rejectedCount": 542,
   "municipalityAudit": {
     "expectedMunicipalityCount": 25,
@@ -20,7 +20,7 @@
       {
         "municipality": "橿原市",
         "count": 30,
-        "changeFromPrevious": 11
+        "changeFromPrevious": 0
       },
       {
         "municipality": "葛城市",
@@ -53,6 +53,11 @@
         "changeFromPrevious": 0
       },
       {
+        "municipality": "大和郡山市",
+        "count": 17,
+        "changeFromPrevious": 13
+      },
+      {
         "municipality": "香芝市",
         "count": 16,
         "changeFromPrevious": 0
@@ -78,11 +83,6 @@
         "changeFromPrevious": 0
       },
       {
-        "municipality": "大和郡山市",
-        "count": 4,
-        "changeFromPrevious": 0
-      },
-      {
         "municipality": "安堵町",
         "count": 3,
         "changeFromPrevious": 0
@@ -96,6 +96,11 @@
         "municipality": "田原本町",
         "count": 3,
         "changeFromPrevious": 0
+      },
+      {
+        "municipality": "王寺町",
+        "count": 2,
+        "changeFromPrevious": 1
       },
       {
         "municipality": "御所市",
@@ -128,11 +133,6 @@
         "changeFromPrevious": 0
       },
       {
-        "municipality": "王寺町",
-        "count": 1,
-        "changeFromPrevious": 0
-      },
-      {
         "municipality": "大淀町",
         "count": 1,
         "changeFromPrevious": 0
@@ -149,11 +149,11 @@
     "sampleTitles": []
   },
   "intelligence": {
-    "itemsWithPdf": 59,
-    "itemsWithDescription": 47,
-    "intelligenceExtractedCount": 47,
-    "geminiExtractedCount": 47,
-    "taggedCount": 47,
-    "lastAugmentedAt": "2026-08-14T01:44:47.723Z"
+    "itemsWithPdf": 74,
+    "itemsWithDescription": 49,
+    "intelligenceExtractedCount": 49,
+    "geminiExtractedCount": 49,
+    "taggedCount": 49,
+    "lastAugmentedAt": "2026-08-14T03:43:30.385Z"
   }
 }
