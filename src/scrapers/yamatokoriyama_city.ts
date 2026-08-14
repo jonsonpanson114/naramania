@@ -3,12 +3,18 @@ import crypto from 'crypto';
 import { BiddingItem, Scraper, BiddingType } from '../types/bidding';
 import { shouldKeepItem } from './common/filter';
 import { fetchHtml, fetchJson } from './common/html_fetch';
+import { getCurrentReiwaFiscalYear, fiscalMonthToCalendarYear } from './common/fiscal_year';
 
 // 大和郡山市 入札情報（SMART CMS JSON API 経由）
 const BASE = 'https://www.city.yamatokoriyama.lg.jp';
+// このJSONツリーは「入札のお知らせ」という一般調達(車両賃貸借・図書館機器購入等)の
+// お知らせ欄で、建築・土木の入札結果はほぼ載っていない。建設工事等の結果は別途
+// 「建設工事・建設工事に係る業務委託等入札の結果」という専用ページ(下記
+// KENSETSU_KEKKA_INDEX から年度別に解決)に一覧表で載っている。
 const RESULT_JSON   = `${BASE}/shigoto_sangyo/nyusatsu_keiyaku/nyusatsunooshirase/index.tree.json`;
 const ANNOUNCE_JSON = `${BASE}/shigoto_sangyo/nyusatsu_keiyaku/nyusatsu/index.tree.json`;
 const CURRENT_ANNOUNCE_PAGE = `${BASE}/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/9328.html`;
+const KENSETSU_KEKKA_INDEX = `${BASE}/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/index.html`;
 const KNOWN_CURRENT_ITEMS: Array<Pick<BiddingItem, 'title' | 'announcementDate' | 'biddingDate' | 'link' | 'pdfUrl' | 'type' | 'status'>> = [
     {
         title: '市立郡山南小学校廊下改修工事（2期）',
@@ -226,6 +232,91 @@ async function scrapeCurrentAnnouncementPage(): Promise<BiddingItem[]> {
     }
 }
 
+/**
+ * 「入札」目次ページから「建設工事・建設工事に係る業務委託等入札の結果(令和X年度分)」
+ * リンクを当年度・前年度分だけ解決する。ページIDが年度ごとに変わる(令和7年度=1893,
+ * 令和8年度=1892 等)ためハードコードできない。
+ */
+async function resolveKensetsuKekkaPages(): Promise<{ url: string; reiwaYear: number }[]> {
+    try {
+        const currentReiwa = getCurrentReiwaFiscalYear();
+        const html = await fetchHtml(KENSETSU_KEKKA_INDEX, 20000);
+        const $ = cheerio.load(html);
+        const pages: { url: string; reiwaYear: number }[] = [];
+
+        $('a').each((_, el) => {
+            const text = $(el).text().normalize('NFKC').replace(/\s+/g, '');
+            const m = text.match(/建設工事.*入札の結果\(令和(\d+)年度分\)/);
+            if (!m) return;
+            const reiwaYear = parseInt(m[1], 10);
+            if (reiwaYear !== currentReiwa && reiwaYear !== currentReiwa - 1) return;
+
+            const href = $(el).attr('href') || '';
+            if (!href) return;
+            const url = href.startsWith('http') ? href : new URL(href, KENSETSU_KEKKA_INDEX).toString();
+            pages.push({ url, reiwaYear });
+        });
+
+        return pages;
+    } catch (e: unknown) {
+        console.error('[大和郡山市] 建設工事結果ページ解決エラー:', e instanceof Error ? e.message : String(e));
+        return [];
+    }
+}
+
+/**
+ * 建設工事等入札結果ページの一覧表(開札日|事業担当課|工事名|落札者|落札金額|結果PDF)を読む。
+ * HTML中に落札者名・金額が直接載っているため、PDFを開かなくても結果が確定できる。
+ */
+async function scrapeKensetsuKekkaPage(url: string, reiwaYear: number): Promise<BiddingItem[]> {
+    const items: BiddingItem[] = [];
+    const fiscalYearStart = 2018 + reiwaYear;
+
+    try {
+        const html = await fetchHtml(url, 20000);
+        const $ = cheerio.load(html);
+
+        $('table').first().find('tr').slice(1).each((_, row) => {
+            const cells = $(row).find('td').map((_, c) => $(c).text().trim()).toArray();
+            if (cells.length < 6) return;
+
+            const [dateText, , title, winnerRaw, amountText] = cells;
+            if (!title || title.length < 4 || !titleSeemsRelevant(title)) return;
+            if (SKIP_TITLE_KEYWORDS.some(kw => title.includes(kw))) return;
+
+            const dm = dateText.match(/(\d{1,2})月(\d{1,2})日/);
+            const biddingDate = dm
+                ? `${fiscalMonthToCalendarYear(fiscalYearStart, parseInt(dm[1], 10))}-${dm[1].padStart(2, '0')}-${dm[2].padStart(2, '0')}`
+                : undefined;
+
+            const isUnsuccessful = /不成立|不調|中止/.test(amountText) || /^[‐－\-]$/.test(winnerRaw.trim());
+            const winner = isUnsuccessful ? undefined : winnerRaw.trim();
+
+            const pdfHref = $(row).find('a').first().attr('href') || '';
+            const pdfUrl = pdfHref ? (pdfHref.startsWith('http') ? pdfHref : new URL(pdfHref, url).toString()) : undefined;
+
+            items.push({
+                id: makeId(title, `${url}-${dateText}`),
+                municipality: '大和郡山市',
+                title,
+                type: classifyType(title),
+                announcementDate: biddingDate || new Date().toISOString().split('T')[0],
+                biddingDate,
+                link: url,
+                pdfUrl,
+                status: isUnsuccessful ? '不調' : '落札',
+                ...(winner ? { winningContractor: winner } : {}),
+            });
+        });
+
+        console.log(`[大和郡山市] 建設工事結果(令和${reiwaYear}年度分): ${items.length}件`);
+    } catch (e: unknown) {
+        console.error(`[大和郡山市] 建設工事結果ページ取得エラー (${url}):`, e instanceof Error ? e.message : String(e));
+    }
+
+    return items;
+}
+
 export class YamatokoriyamaCityScraper implements Scraper {
     municipality: '大和郡山市' = '大和郡山市' as const;
     private errors: string[] = [];
@@ -304,6 +395,19 @@ export class YamatokoriyamaCityScraper implements Scraper {
 
         for (const item of await scrapeCurrentAnnouncementPage()) {
             allItems.set(item.id, item);
+        }
+
+        try {
+            const kekkaPages = await resolveKensetsuKekkaPages();
+            for (const { url, reiwaYear } of kekkaPages) {
+                for (const item of await scrapeKensetsuKekkaPage(url, reiwaYear)) {
+                    allItems.set(item.id, item);
+                }
+            }
+        } catch (e: unknown) {
+            const message = e instanceof Error ? e.message : String(e);
+            this.recordError(`[大和郡山市] 建設工事結果 エラー: ${message}`);
+            console.error('[大和郡山市] 建設工事結果 エラー:', message);
         }
 
         for (const item of KNOWN_CURRENT_ITEMS) {
