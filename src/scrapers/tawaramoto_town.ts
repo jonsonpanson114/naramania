@@ -1,8 +1,17 @@
+import axios from 'axios';
+import * as cheerio from 'cheerio';
 import { chromium } from 'playwright';
 import { BiddingItem, Scraper, BiddingType } from '../types/bidding';
+import { downloadPDFBuffer } from '../utils/pdf_utils';
+import { extractTargetedResultsFromPDF } from '../services/gemini_service';
 // 田原本町の入札情報サービス（EffTis PPI）
 const EFFTIS_BASE = 'https://tawaramoto.efftis.jp/PPI/Public';
 const EFFTIS_TOP = `${EFFTIS_BASE}/PPUBC00100`;
+
+// EffTisの「入札・契約結果」メニューは無効化されており(submenu-disable)結果が
+// たどれないため、町公式サイトが別途公表している「入札結果等」月次PDFを併用する。
+const RESULT_LIST_URL = 'https://www.town.tawaramoto.nara.jp/buisiness/nyusatsu/5103.html';
+const AXIOS_HEADERS = { 'User-Agent': 'Mozilla/5.0 (compatible; naramania-scraper/1.0)' };
 
 const SEARCH_TARGETS = [
     { screenId: 'PPUBC00400', chotatsu_kbn: '00', status: '受付中' as const, label: '建設工事/入札公告' },
@@ -34,6 +43,84 @@ function classifyType(koushu: string, chotatsu: string): BiddingType {
     if (koushu.includes('建築')) return '建築';
     if (koushu.includes('設計') || koushu.includes('測量') || koushu.includes('コンサル')) return 'コンサル';
     return '建築';
+}
+
+type ResultBulletin = { date: string; pdfUrl: string };
+
+/**
+ * 「入札結果等」ページから月次(直近は週次寄り)のPDF一覧を取得する。
+ * リンク文言は「令和8年6月22日分」のように「◯月◯日分」形式。
+ */
+async function fetchResultBulletins(): Promise<ResultBulletin[]> {
+    try {
+        const res = await axios.get<string>(RESULT_LIST_URL, { headers: AXIOS_HEADERS, timeout: 20000 });
+        const $ = cheerio.load(res.data);
+        const bulletins: ResultBulletin[] = [];
+
+        $('a').each((_, el) => {
+            const href = $(el).attr('href') || '';
+            if (!/\.pdf$/i.test(href)) return;
+            const text = $(el).text();
+            const date = parseJapaneseDate(text);
+            if (!date) return;
+
+            const pdfUrl = href.startsWith('http')
+                ? href
+                : `https://www.town.tawaramoto.nara.jp${href.replace(/^\/\/[^/]+/, '')}`;
+            bulletins.push({ date, pdfUrl });
+        });
+
+        return bulletins.sort((a, b) => a.date.localeCompare(b.date));
+    } catch (e: unknown) {
+        console.warn('[田原本町] 入札結果等ページ取得エラー:', e instanceof Error ? e.message : String(e));
+        return [];
+    }
+}
+
+/**
+ * EffTis側で結果が確認できなかった案件を、町公式サイトの結果PDFで補う。
+ * 開札日以降で最初に出た号(bulletin)にその案件の結果が載っている前提で
+ * 対応するPDFを選び、Geminiで案件名ごとに結果を抽出する。
+ */
+async function enrichViaResultBulletins(items: BiddingItem[]): Promise<void> {
+    const unresolved = items.filter(item =>
+        item.municipality === '田原本町'
+        && item.biddingDate
+        && (!item.winningContractor || item.status === '受付終了'),
+    );
+    if (unresolved.length === 0) return;
+
+    const bulletins = await fetchResultBulletins();
+    if (bulletins.length === 0) return;
+
+    const byPdfUrl = new Map<string, BiddingItem[]>();
+    for (const item of unresolved) {
+        const bulletin = bulletins.find(b => b.date >= item.biddingDate!);
+        if (!bulletin) continue;
+        const bucket = byPdfUrl.get(bulletin.pdfUrl) || [];
+        bucket.push(item);
+        byPdfUrl.set(bulletin.pdfUrl, bucket);
+    }
+
+    for (const [pdfUrl, pdfItems] of byPdfUrl.entries()) {
+        console.log(`[田原本町] 結果PDF確認: ${pdfUrl} (${pdfItems.length}件)`);
+        const buffer = await downloadPDFBuffer(pdfUrl);
+        if (!buffer) continue;
+
+        const results = await extractTargetedResultsFromPDF(buffer, pdfItems.map(item => item.title));
+        if (!results) continue;
+
+        const resultMap = new Map(results.map(result => [result.title, result]));
+        for (const item of pdfItems) {
+            const resolved = resultMap.get(item.title);
+            if (!resolved?.found) continue;
+
+            if (resolved.winningContractor) item.winningContractor = resolved.winningContractor;
+            if (resolved.status === '落札' || resolved.status === '不調') {
+                item.status = resolved.status;
+            }
+        }
+    }
 }
 
 export class TawaramotoTownScraper implements Scraper {
@@ -174,6 +261,12 @@ export class TawaramotoTownScraper implements Scraper {
             console.error('[田原本町] スクレイパーエラー:', e instanceof Error ? e.message : String(e) || e);
         } finally {
             await browser.close();
+        }
+
+        try {
+            await enrichViaResultBulletins(allItems);
+        } catch (e: unknown) {
+            console.warn('[田原本町] 結果PDF補完エラー:', e instanceof Error ? e.message : String(e));
         }
 
         console.log(`[田原本町] 合計 ${allItems.length} 件`);
