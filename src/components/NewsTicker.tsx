@@ -19,7 +19,7 @@ export function NewsTicker() {
     useEffect(() => {
         const load = async () => {
             try {
-                const res = await fetch('/api/news');
+                const res = await fetch('/api/news', { cache: 'no-store' });
                 const data: unknown = await res.json();
                 if (!res.ok || !Array.isArray(data)) {
                     setNews([]);

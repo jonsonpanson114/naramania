@@ -2,6 +2,14 @@ import axios from 'axios';
 import * as cheerio from 'cheerio';
 import { fetchNewsViaBrowser } from './news_browser_service';
 
+/** 記事本文から読み取った落札・選定の結果 */
+export interface NewsResultEntry {
+    kind: '落札' | '選定';
+    contractor: string;
+    /** 原文の表記を半角化しただけのもの（例: 1億2800万円） */
+    amount?: string;
+}
+
 export interface NewsItem {
     id: string;
     source: string;
@@ -12,6 +20,10 @@ export interface NewsItem {
     excerpt?: string;
     category?: 'construction' | 'general';
     relevanceScore?: number;
+    /** 発注者・自治体（例: 近畿地方整備局、県立医科大学、御所市） */
+    orderer?: string;
+    /** 記事から抽出した落札者・落札金額。公告記事では空になる */
+    results?: NewsResultEntry[];
 }
 
 const HEADERS = {
@@ -178,6 +190,68 @@ function cleanTitle(title: string): string {
         .trim();
 }
 
+function toHalfWidthDigits(s: string): string {
+    return s.replace(/[０-９]/g, c => String.fromCharCode(c.charCodeAt(0) - 0xFEE0));
+}
+
+/**
+ * 「▼工事名（橿原市小槻町）＝清川組」「入札は中和・中川ＪＶ」のような
+ * 前置きが付いた状態から業者名だけを取り出す。
+ */
+function cleanEntityName(raw: string): string {
+    let s = raw.trim();
+    const eq = s.lastIndexOf('＝');
+    if (eq >= 0) s = s.slice(eq + 1);
+    const paren = s.lastIndexOf('）');
+    if (paren >= 0) s = s.slice(paren + 1);
+    s = s.replace(/^(?:にて|では|には|からは|より)/, '');
+    s = s.replace(/^[はがのをにでとへやも、。・「」\s]+/, '');
+    return s.trim();
+}
+
+const AWARD_PATTERN = /([^\s、。「」]{2,30})が([０-９0-9]+(?:億)?[０-９0-9]*(?:万)?[０-９0-9]*円)(?:（[^）]*）)?で落札/g;
+const SELECT_PATTERNS = [
+    /([^\s、。「」（(]{2,28})を(?:優先交渉権者|受託候補者|落札候補者|契約候補者|受託者|受注者)に(?:特定|選定|決定)/g,
+    /(?:受託者|受注者|受託候補者)に([^、。]{2,40}?)を(?:特定|選定|決定)/g,
+    /[、。」]([^\s、。「」（(]{2,28})を選定した/g,
+    /([^\s、。「」（(]{2,28})に業務を委託/g,
+];
+
+/** 記事本文から落札者・落札金額（無ければ選定業者）を抜き出す */
+function extractResults(text: string): NewsResultEntry[] {
+    if (!text) return [];
+    const results: NewsResultEntry[] = [];
+    const seen = new Set<string>();
+
+    for (const m of text.matchAll(AWARD_PATTERN)) {
+        const contractor = cleanEntityName(m[1]);
+        if (!contractor || seen.has(contractor)) continue;
+        seen.add(contractor);
+        results.push({ kind: '落札', contractor, amount: toHalfWidthDigits(m[2]) });
+    }
+
+    for (const pattern of SELECT_PATTERNS) {
+        for (const m of text.matchAll(pattern)) {
+            const contractor = cleanEntityName(m[1]);
+            if (!contractor || seen.has(contractor)) continue;
+            seen.add(contractor);
+            results.push({ kind: '選定', contractor });
+        }
+    }
+
+    return results.slice(0, 4);
+}
+
+/** 「奈良県御所市は、…」「横浜市は「◯◯事業」…」のような書き出しから発注者を拾う */
+function extractOrderer(text: string): string | undefined {
+    const m = text.match(/^([^、。\s]{2,20}?)は/);
+    const name = m?.[1]?.trim();
+    if (!name || name.length < 2) return undefined;
+    // 「これ」「同社」など発注者ではない語を弾く
+    if (/^(これ|それ|同社|同市|同町|今回|一方|なお)$/.test(name)) return undefined;
+    return name;
+}
+
 function scoreConstructionNews(item: Pick<NewsItem, 'source' | 'title' | 'excerpt'>): number {
     const text = `${item.title} ${item.excerpt || ''}`;
     let score = CONSTRUCTION_NEWS_SOURCES.has(item.source) ? 6 : 0;
@@ -197,12 +271,21 @@ function enrichNewsItem(item: NewsItem): NewsItem | null {
 
     const relevanceScore = scoreConstructionNews({ ...item, title });
     const category = relevanceScore >= 4 ? 'construction' : 'general';
+
+    // 新報奈良は取得時に本文全文から抽出済み。他紙は抜粋から拾えるだけ拾う。
+    const results = item.results?.length
+        ? item.results
+        : extractResults(`${title} ${item.excerpt ?? ''}`);
+    const orderer = item.orderer || extractOrderer(item.excerpt ?? '');
+
     return {
         ...item,
         title,
         link,
         category,
         relevanceScore,
+        results,
+        orderer,
     };
 }
 
@@ -217,11 +300,32 @@ async function fetchShinpouNara(): Promise<NewsItem[]> {
             const title = stripHtml($(el).find('title').text().trim());
             const link = normalizeLink($(el).find('link').text().trim() || $(el).find('guid').text().trim(), 'https://shinpou-nara.com/');
             const pubDate = $(el).find('pubDate').text().trim();
-            const description = stripHtml($(el).find('description').text()).slice(0, 100);
             if (isNoiseTitle(title) || !link) return;
-            items.push({ id: `shinpou-${i}`, source: 'shinpou', sourceLabel: '新報奈良', title, date: parseRssDate(pubDate), link, excerpt: description || undefined });
+
+            // content:encoded に本文全文が入る。コロン付きタグは
+            // セレクタで扱えないため子要素を走査して取り出す。
+            const encoded = $(el).children()
+                .filter((_, child) => (child as { tagName?: string }).tagName === 'content:encoded')
+                .first().text();
+            const body = stripHtml(encoded || $(el).find('description').text());
+
+            // category は発注者名（近畿地方整備局・県立医科大学 など）が入る
+            const orderer = stripHtml($(el).find('category').first().text()) || undefined;
+
+            items.push({
+                id: `shinpou-${i}`,
+                source: 'shinpou',
+                sourceLabel: '新報奈良',
+                title,
+                date: parseRssDate(pubDate),
+                link,
+                excerpt: body.slice(0, 140) || undefined,
+                orderer,
+                results: extractResults(`${title} ${body}`),
+            });
         });
-        console.log(`[News] 新報奈良: ${items.length}件`);
+        const withResult = items.filter(i => i.results && i.results.length > 0).length;
+        console.log(`[News] 新報奈良: ${items.length}件（落札・選定を抽出 ${withResult}件）`);
         return items;
     } catch (e) {
         console.warn('[News] 新報奈良 エラー:', (e as Error).message);

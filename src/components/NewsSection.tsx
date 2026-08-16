@@ -6,17 +6,15 @@ import { ArrowRight, ExternalLink, RefreshCw, Search, X } from 'lucide-react';
 import Link from 'next/link';
 import { NewsItem } from '@/services/news_service';
 
-const SOURCE_STYLES: Record<string, { color: string; bg: string; border: string }> = {
-    shinpou:   { color: '#1d4ed8', bg: '#eff6ff',  border: '#bfdbfe' },
-    constnews: { color: '#7c3aed', bg: '#f5f3ff',  border: '#ddd6fe' },
-    decn:      { color: '#065f46', bg: '#ecfdf5',  border: '#a7f3d0' },
-    naranp:    { color: '#991b1b', bg: '#fef2f2',  border: '#fecaca' },
-    kentsu:    { color: '#92400e', bg: '#fffbeb',  border: '#fde68a' },
+const SOURCE_LABEL_COLOR: Record<string, string> = {
+    shinpou: '#1d4ed8',
+    constnews: '#7c3aed',
+    decn: '#065f46',
+    naranp: '#991b1b',
+    kentsu: '#92400e',
 };
 
-function sourceStyle(source: string) {
-    return SOURCE_STYLES[source] ?? { color: '#6b7280', bg: '#f9fafb', border: '#e5e7eb' };
-}
+const WEEKDAYS = ['日', '月', '火', '水', '木', '金', '土'];
 
 /** "2026-08-16" をローカル日付として解釈する（new Date(str) はUTC扱いで前日にずれる） */
 function parseLocalDate(dateStr: string): Date | null {
@@ -34,110 +32,111 @@ function daysSince(d: Date): number {
     return Math.round((today - target) / 86400000);
 }
 
-/** 直近はひと目で分かるよう相対表記、それ以降は日付表記にする */
-function formatDate(dateStr: string): string {
+/** 日付見出し。「8月12日(水)」に、直近なら「今日」等を添える */
+function formatDateHeading(dateStr: string): { main: string; relative?: string } {
     const d = parseLocalDate(dateStr);
-    if (!d) return dateStr || '日付不明';
+    if (!d) return { main: '日付不明' };
+    const main = `${d.getMonth() + 1}月${d.getDate()}日（${WEEKDAYS[d.getDay()]}）`;
     const diff = daysSince(d);
-    if (diff === 0) return '今日';
-    if (diff === 1) return '昨日';
-    if (diff >= 2 && diff <= 6) return `${diff}日前`;
-    return `${d.getMonth() + 1}月${d.getDate()}日`;
+    if (diff === 0) return { main, relative: '今日' };
+    if (diff === 1) return { main, relative: '昨日' };
+    if (diff >= 2 && diff <= 6) return { main, relative: `${diff}日前` };
+    return { main };
 }
 
-/** 日付が常に出るようになったので、NEWは3日以内に絞って目印としての意味を保つ */
-function isNewItem(dateStr: string): boolean {
-    const d = parseLocalDate(dateStr);
-    if (!d) return false;
-    const diff = daysSince(d);
-    return diff >= 0 && diff <= 3;
-}
-
-type SourceFilter = 'all' | string;
 type CategoryFilter = 'all' | 'construction' | 'general';
 
 function isConstructionNews(item: NewsItem): boolean {
     return item.category === 'construction' || ['constnews', 'kentsu', 'decn'].includes(item.source);
 }
 
-function MetaRow({ item }: { item: NewsItem }) {
-    const style = sourceStyle(item.source);
+function hasResults(item: NewsItem): boolean {
+    return (item.results?.length ?? 0) > 0;
+}
+
+/** 同じ日付の記事をまとめる。filtered は日付降順で渡ってくる前提 */
+function groupByDate(items: NewsItem[]): Array<{ date: string; items: NewsItem[] }> {
+    const groups: Array<{ date: string; items: NewsItem[] }> = [];
+    for (const item of items) {
+        const last = groups[groups.length - 1];
+        if (last && last.date === item.date) last.items.push(item);
+        else groups.push({ date: item.date, items: [item] });
+    }
+    return groups;
+}
+
+/** 落札者と金額。この欄で一番見たい情報なので枠で囲って際立たせる */
+function ResultBox({ item }: { item: NewsItem }) {
+    if (!item.results?.length) return null;
     return (
-        <div className="flex flex-wrap items-center gap-2">
-            <span
-                className="shrink-0 rounded-sm px-2 py-0.5 text-[10px] font-bold tracking-[0.15em]"
-                style={{ color: style.color, backgroundColor: style.bg, border: `1px solid ${style.border}` }}
-            >
-                {item.sourceLabel}
-            </span>
-            {item.category === 'construction' && (
-                <span className="shrink-0 rounded-sm border border-emerald-100 bg-emerald-50 px-1.5 py-0.5 text-[10px] font-bold tracking-wider text-emerald-700">
-                    入札・建設
-                </span>
-            )}
-            {isNewItem(item.date) && (
-                <span className="shrink-0 rounded-sm bg-red-500 px-1.5 py-0.5 text-[10px] font-bold tracking-wider text-white">
-                    NEW
-                </span>
-            )}
-            <span className="ml-auto shrink-0 text-[12px] font-medium tracking-wide text-secondary/70 tabular-nums">
-                {formatDate(item.date)}
-            </span>
+        <div className="mt-3 rounded-sm border border-accent/25 bg-accent/[0.06] px-4 py-2.5">
+            {item.results.map((r, i) => (
+                <div key={`${r.contractor}-${i}`} className="flex items-baseline justify-between gap-3 py-1">
+                    <div className="flex min-w-0 items-baseline gap-2">
+                        <span
+                            className={`shrink-0 rounded-sm px-1.5 py-0.5 text-[10px] font-bold tracking-wider ${
+                                r.kind === '落札'
+                                    ? 'bg-accent text-white'
+                                    : 'border border-border/50 bg-white text-secondary'
+                            }`}
+                        >
+                            {r.kind}
+                        </span>
+                        <span className="truncate text-sm font-semibold text-primary">{r.contractor}</span>
+                    </div>
+                    {r.amount && (
+                        <span className="shrink-0 text-sm font-bold tabular-nums text-primary">{r.amount}</span>
+                    )}
+                </div>
+            ))}
         </div>
     );
 }
 
-/** 先頭記事。ニュースサイトのトップ記事のように大きく見せる */
-function FeaturedArticle({ item }: { item: NewsItem }) {
+function Article({ item, index }: { item: NewsItem; index: number }) {
     return (
         <motion.a
             href={item.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="group block rounded-sm border bg-white p-7 transition-all duration-300 hover:border-accent/40 hover:shadow-lg md:p-9"
-            style={{ borderColor: '#e6e2d8' }}
-            initial={{ opacity: 0, y: 10 }}
+            className="group block rounded-sm px-3 py-5 transition-colors duration-300 hover:bg-white/70"
+            initial={{ opacity: 0, y: 6 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.35 }}
+            transition={{ duration: 0.28, delay: Math.min(index, 8) * 0.025 }}
         >
-            <MetaRow item={item} />
-            <h3 className="mt-5 font-serif text-xl leading-[1.6] tracking-wide text-primary transition-colors duration-300 group-hover:text-accent md:text-2xl">
-                {item.title}
-            </h3>
-            {item.excerpt && (
-                <p className="mt-4 line-clamp-3 font-sans text-sm leading-[2] text-secondary/70">
-                    {item.excerpt}
-                </p>
-            )}
-            <div className="mt-6 flex items-center gap-1.5 text-[11px] tracking-widest text-gray-400 transition-colors duration-300 group-hover:text-accent">
-                <ExternalLink size={12} />
-                <span>記事を読む</span>
+            {/* 誰の案件か（発注者）を最初に見せる。取れない記事では媒体名だけ出す */}
+            <div className="flex items-baseline justify-between gap-3">
+                {item.orderer && item.orderer !== item.sourceLabel ? (
+                    <span className="truncate font-serif text-[13px] font-semibold tracking-wide text-accent">
+                        {item.orderer}
+                    </span>
+                ) : (
+                    <span />
+                )}
+                <span
+                    className="shrink-0 text-[10px] tracking-wider"
+                    style={{ color: SOURCE_LABEL_COLOR[item.source] ?? '#9ca3af' }}
+                >
+                    {item.sourceLabel}
+                </span>
             </div>
-        </motion.a>
-    );
-}
 
-/** 2件目以降。囲みを外して見出しリストにし、視覚的なノイズを減らす */
-function ArticleRow({ item, index }: { item: NewsItem; index: number }) {
-    return (
-        <motion.a
-            href={item.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group block border-b border-border/40 px-2 py-6 transition-colors duration-300 hover:bg-white/60"
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, delay: Math.min(index, 6) * 0.03 }}
-        >
-            <MetaRow item={item} />
-            <h3 className="mt-3 font-serif text-[17px] leading-[1.7] tracking-wide text-primary transition-colors duration-300 group-hover:text-accent">
+            <h3 className="mt-2 font-serif text-[17px] leading-[1.7] tracking-wide text-primary transition-colors duration-300 group-hover:text-accent">
                 {item.title}
             </h3>
+
+            <ResultBox item={item} />
+
             {item.excerpt && (
                 <p className="mt-2.5 line-clamp-2 font-sans text-[13px] leading-[1.9] text-secondary/60">
                     {item.excerpt}
                 </p>
             )}
+
+            <div className="mt-3 flex items-center gap-1.5 text-[10px] tracking-widest text-gray-300 transition-colors duration-300 group-hover:text-accent">
+                <ExternalLink size={11} />
+                <span>記事を読む</span>
+            </div>
         </motion.a>
     );
 }
@@ -155,14 +154,16 @@ export function NewsSection({ detailed = false, pageSize = 6, showAllLink = fals
     const [news, setNews] = useState<NewsItem[]>([]);
     const [loading, setLoading] = useState(true);
     const [activeCategory, setActiveCategory] = useState<CategoryFilter>('construction');
-    const [activeSource, setActiveSource] = useState<SourceFilter>('all');
+    const [activeSource, setActiveSource] = useState<string>('all');
+    const [onlyResults, setOnlyResults] = useState(false);
     const [refreshing, setRefreshing] = useState(false);
     const [keyword, setKeyword] = useState('');
     const [visibleCount, setVisibleCount] = useState(pageSize);
 
     const load = async () => {
         try {
-            const res = await fetch('/api/news');
+            // ブラウザキャッシュが効くと「更新」を押しても古い記事のままになる
+            const res = await fetch('/api/news', { cache: 'no-store' });
             const data: unknown = await res.json();
             setNews(res.ok && Array.isArray(data) ? data : []);
         } catch {
@@ -180,29 +181,29 @@ export function NewsSection({ detailed = false, pageSize = 6, showAllLink = fals
         load();
     };
 
-    // カテゴリフィルタ
     const filteredByCategory = activeCategory === 'all'
         ? news
         : activeCategory === 'construction'
             ? news.filter(isConstructionNews)
             : news.filter(n => !isConstructionNews(n));
 
-    // 媒体の一覧（カテゴリフィルタ後のもの）
     const sources = Array.from(new Set(filteredByCategory.map(n => n.source)));
-    const filteredBySource = activeSource === 'all' ? filteredByCategory : filteredByCategory.filter(n => n.source === activeSource);
+    const filteredBySource = activeSource === 'all'
+        ? filteredByCategory
+        : filteredByCategory.filter(n => n.source === activeSource);
 
-    // キーワード検索（タイトル・本文抜粋）
     const trimmedKeyword = keyword.trim();
-    const filtered = trimmedKeyword
-        ? filteredBySource.filter(n =>
-            n.title.includes(trimmedKeyword) || (n.excerpt ?? '').includes(trimmedKeyword)
-        )
-        : filteredBySource;
+    const filtered = filteredBySource.filter(n => {
+        if (onlyResults && !hasResults(n)) return false;
+        if (!trimmedKeyword) return true;
+        const haystack = `${n.title} ${n.excerpt ?? ''} ${n.orderer ?? ''} ${(n.results ?? []).map(r => r.contractor).join(' ')}`;
+        return haystack.includes(trimmedKeyword);
+    });
 
     // 絞り込みを変えたら表示件数を初期値に戻す
     useEffect(() => {
         setVisibleCount(pageSize);
-    }, [activeCategory, activeSource, trimmedKeyword, pageSize]);
+    }, [activeCategory, activeSource, trimmedKeyword, onlyResults, pageSize]);
 
     const handleCategoryChange = (cat: CategoryFilter) => {
         setActiveCategory(cat);
@@ -210,8 +211,9 @@ export function NewsSection({ detailed = false, pageSize = 6, showAllLink = fals
     };
 
     const visible = filtered.slice(0, visibleCount);
-    const [lead, ...rest] = visible;
+    const groups = groupByDate(visible);
     const remaining = filtered.length - visible.length;
+    const resultCount = filteredBySource.filter(hasResults).length;
 
     return (
         <section className="mt-10" id="news">
@@ -231,9 +233,8 @@ export function NewsSection({ detailed = false, pageSize = 6, showAllLink = fals
                 <div className="h-px flex-1" style={{ background: 'linear-gradient(to left, rgba(197,160,89,0.2), transparent)' }} />
             </div>
 
-            {/* Category Filter Tabs */}
             {!loading && news.length > 0 && (
-                <div className="mb-6 flex justify-center">
+                <div className="mb-6 flex flex-wrap items-center justify-center gap-3">
                     <div className="flex items-center gap-1 rounded-full border border-border/20 bg-white/40 p-1 shadow-inner">
                         {([
                             ['all', 'すべて'],
@@ -249,6 +250,18 @@ export function NewsSection({ detailed = false, pageSize = 6, showAllLink = fals
                             </button>
                         ))}
                     </div>
+
+                    {/* 落札結果を追いたいときの絞り込み */}
+                    <button
+                        onClick={() => setOnlyResults(v => !v)}
+                        className={`rounded-full border px-5 py-2 text-[10px] tracking-[0.2em] transition-all ${
+                            onlyResults
+                                ? 'border-accent bg-accent text-white shadow-sm'
+                                : 'border-border/40 bg-white/40 text-secondary hover:border-accent/40 hover:text-accent'
+                        }`}
+                    >
+                        落札・選定のみ（{resultCount}）
+                    </button>
                 </div>
             )}
 
@@ -261,7 +274,7 @@ export function NewsSection({ detailed = false, pageSize = 6, showAllLink = fals
                             type="text"
                             value={keyword}
                             onChange={(e) => setKeyword(e.target.value)}
-                            placeholder="キーワードでニュースを検索"
+                            placeholder="業者名・発注者・キーワードで検索"
                             className="w-full rounded-full border border-border/30 bg-white/60 py-2.5 pl-10 pr-9 text-xs tracking-wider text-primary placeholder:text-secondary/40 focus:outline-none focus:ring-1 focus:ring-accent/40"
                         />
                         {keyword && (
@@ -277,59 +290,45 @@ export function NewsSection({ detailed = false, pageSize = 6, showAllLink = fals
                 </div>
             )}
 
-            {/* Source Filter Tabs（媒体が多く横に伸びるため一覧ページのみ） */}
+            {/* Source Filter（媒体が横に伸びるため一覧ページのみ） */}
             {detailed && !loading && news.length > 0 && (
-                <div className="mb-8 flex justify-center">
-                    <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 border-b border-border/30 px-8 pb-5">
-                        {(['all', ...sources] as SourceFilter[]).map(src => {
-                            const label = src === 'all' ? 'すべて' : (news.find(n => n.source === src)?.sourceLabel ?? src);
-                            const count = src === 'all' ? filteredByCategory.length : filteredByCategory.filter(n => n.source === src).length;
-                            const isActive = activeSource === src;
-                            return (
-                                <button
-                                    key={src}
-                                    onClick={() => setActiveSource(src)}
-                                    className="relative flex items-center gap-1.5 font-serif text-[10px] tracking-[0.25em] transition-all duration-300"
-                                    style={{ color: isActive ? '#3a3a3a' : '#9ca3af', fontWeight: isActive ? 600 : 400 }}
+                <div className="mb-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 border-b border-border/30 px-8 pb-5">
+                    {(['all', ...sources]).map(src => {
+                        const label = src === 'all' ? 'すべて' : (news.find(n => n.source === src)?.sourceLabel ?? src);
+                        const count = src === 'all' ? filteredByCategory.length : filteredByCategory.filter(n => n.source === src).length;
+                        const isActive = activeSource === src;
+                        return (
+                            <button
+                                key={src}
+                                onClick={() => setActiveSource(src)}
+                                className="flex items-center gap-1.5 font-serif text-[10px] tracking-[0.25em] transition-all duration-300"
+                                style={{ color: isActive ? '#3a3a3a' : '#9ca3af', fontWeight: isActive ? 600 : 400 }}
+                            >
+                                {label}
+                                <span
+                                    className="rounded-full px-1.5 py-0.5 font-sans text-[9px]"
+                                    style={{
+                                        color: isActive ? '#c5a059' : '#9ca3af',
+                                        backgroundColor: isActive ? 'rgba(197,160,89,0.1)' : '#f3f4f6',
+                                    }}
                                 >
-                                    {label}
-                                    <span
-                                        className="rounded-full px-1.5 py-0.5 font-sans text-[9px]"
-                                        style={{
-                                            color: isActive ? '#c5a059' : '#9ca3af',
-                                            backgroundColor: isActive ? 'rgba(197,160,89,0.1)' : '#f3f4f6',
-                                        }}
-                                    >
-                                        {count}
-                                    </span>
-                                    {isActive && (
-                                        <motion.span
-                                            layoutId="newsFilterDot"
-                                            className="absolute rounded-full"
-                                            style={{ bottom: '-21px', left: '50%', transform: 'translateX(-50%)', width: '4px', height: '4px', backgroundColor: '#c5a059' }}
-                                            transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-                                        />
-                                    )}
-                                </button>
-                            );
-                        })}
-                    </div>
+                                    {count}
+                                </span>
+                            </button>
+                        );
+                    })}
                 </div>
             )}
 
-            {/* 記事は読みやすい幅に収める */}
             <div className="mx-auto max-w-3xl">
-                {/* Loading skeleton */}
                 {loading && (
                     <div className="space-y-6">
-                        <div className="h-52 animate-pulse rounded-sm border border-border/20 bg-white/60" />
                         {[...Array(3)].map((_, i) => (
-                            <div key={i} className="h-24 animate-pulse rounded-sm border border-border/20 bg-white/40" />
+                            <div key={i} className="h-32 animate-pulse rounded-sm border border-border/20 bg-white/50" />
                         ))}
                     </div>
                 )}
 
-                {/* Empty state */}
                 {!loading && news.length === 0 && (
                     <p className="py-12 text-center font-serif text-sm tracking-widest text-secondary/40">
                         ニュースを取得できませんでした
@@ -339,47 +338,55 @@ export function NewsSection({ detailed = false, pageSize = 6, showAllLink = fals
                     <p className="py-12 text-center font-serif text-sm tracking-widest text-secondary/40">
                         {trimmedKeyword
                             ? `「${trimmedKeyword}」に一致するニュースは見つかりませんでした`
-                            : '該当するニュースがありません'}
+                            : onlyResults
+                                ? '落札・選定の結果が出た記事はまだありません'
+                                : '該当するニュースがありません'}
                     </p>
                 )}
 
-                {/* 記事一覧: 先頭は大きく、以降は見出しリスト */}
-                {!loading && lead && (
-                    <>
-                        <FeaturedArticle key={lead.id} item={lead} />
-                        {rest.length > 0 && (
-                            <div className="mt-4">
-                                {rest.map((item, index) => (
-                                    <ArticleRow key={item.id} item={item} index={index} />
+                {/* 日付ごとにまとめて表示 */}
+                {!loading && groups.map(group => {
+                    const heading = formatDateHeading(group.date);
+                    return (
+                        <div key={group.date || 'unknown'} className="mb-8">
+                            <div className="flex items-baseline gap-3 border-b-2 border-primary/15 pb-2">
+                                <h3 className="font-serif text-lg tracking-wider text-primary">{heading.main}</h3>
+                                {heading.relative && (
+                                    <span className="rounded-full bg-accent/10 px-2 py-0.5 text-[10px] font-bold tracking-wider text-accent">
+                                        {heading.relative}
+                                    </span>
+                                )}
+                                <span className="ml-auto font-serif text-[10px] tracking-widest text-secondary/40">
+                                    {group.items.length}件
+                                </span>
+                            </div>
+                            <div className="divide-y divide-border/30">
+                                {group.items.map((item, index) => (
+                                    <Article key={item.id} item={item} index={index} />
                                 ))}
                             </div>
-                        )}
-                    </>
-                )}
+                        </div>
+                    );
+                })}
 
-                {/* 続きの読み込み / 一覧への導線 */}
                 {!loading && filtered.length > 0 && (
                     <div className="mt-8 flex flex-col items-center gap-3">
-                        {showAllLink ? (
-                            remaining > 0 && (
-                                <Link
-                                    href="/news"
-                                    className="flex items-center gap-2 rounded-full border border-border/40 bg-white/60 px-7 py-2.5 font-serif text-[11px] tracking-[0.2em] text-secondary transition-all hover:border-accent/40 hover:text-accent"
-                                >
-                                    ニュースをすべて見る（他 {remaining} 件）
-                                    <ArrowRight size={13} />
-                                </Link>
-                            )
+                        {remaining > 0 && (showAllLink ? (
+                            <Link
+                                href="/news"
+                                className="flex items-center gap-2 rounded-full border border-border/40 bg-white/60 px-7 py-2.5 font-serif text-[11px] tracking-[0.2em] text-secondary transition-all hover:border-accent/40 hover:text-accent"
+                            >
+                                ニュースをすべて見る（他 {remaining} 件）
+                                <ArrowRight size={13} />
+                            </Link>
                         ) : (
-                            remaining > 0 && (
-                                <button
-                                    onClick={() => setVisibleCount(c => c + pageSize)}
-                                    className="rounded-full border border-border/40 bg-white/60 px-7 py-2.5 font-serif text-[11px] tracking-[0.2em] text-secondary transition-all hover:border-accent/40 hover:text-accent"
-                                >
-                                    もっと見る（残り {remaining} 件）
-                                </button>
-                            )
-                        )}
+                            <button
+                                onClick={() => setVisibleCount(c => c + pageSize)}
+                                className="rounded-full border border-border/40 bg-white/60 px-7 py-2.5 font-serif text-[11px] tracking-[0.2em] text-secondary transition-all hover:border-accent/40 hover:text-accent"
+                            >
+                                もっと見る（残り {remaining} 件）
+                            </button>
+                        ))}
                         <p className="font-serif text-[10px] tracking-widest text-secondary/40">
                             全 {filtered.length} 件中 {visible.length} 件を表示
                         </p>
