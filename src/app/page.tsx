@@ -157,7 +157,7 @@ export default async function Home() {
         <ResultFollowUpPanel items={allItems} />
 
         {/* News Section */}
-        <NewsSection />
+        <NewsSection pageSize={5} showAllLink />
 
         {/* 案件一覧 */}
         <div className="mt-10">

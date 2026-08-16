@@ -12,7 +12,7 @@ export default function NewsPage() {
                     奈良県内の入札・建設関連ニュースをまとめて確認できます。キーワードでの検索にも対応しています。
                 </p>
             </div>
-            <NewsSection searchable maxItems={200} />
+            <NewsSection detailed pageSize={10} />
         </AppShell>
     );
 }
