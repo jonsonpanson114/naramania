@@ -65,19 +65,21 @@ export function NewsTicker() {
                             transition={{ duration: 0.5, ease: "easeOut" }}
                             className="absolute inset-0 flex items-center"
                         >
-                            <Link 
-                                href="/#news" 
+                            <a
+                                href={current.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="text-xs text-primary font-serif truncate hover:text-accent transition-colors block w-full"
                             >
                                 <span className="text-[10px] text-gray-400 mr-3">{current.sourceLabel}</span>
                                 {current.title}
-                            </Link>
+                            </a>
                         </motion.div>
                     </AnimatePresence>
                 </div>
 
-                <Link 
-                    href="/#news" 
+                <Link
+                    href="/news"
                     className="shrink-0 flex items-center gap-1 text-[10px] text-secondary/40 hover:text-accent transition-colors tracking-widest uppercase font-serif"
                 >
                     すべて見る

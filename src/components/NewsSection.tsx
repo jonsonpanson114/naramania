@@ -13,15 +13,31 @@ const SOURCE_STYLES: Record<string, { color: string; bg: string; border: string 
     kentsu:    { color: '#92400e', bg: '#fffbeb',  border: '#fde68a' },
 };
 
+/** "2026-08-16" をローカル日付として解釈する（new Date(str) はUTC扱いで前日にずれる） */
+function parseLocalDate(dateStr: string): Date | null {
+    const m = dateStr?.match(/^(\d{4})-(\d{1,2})-(\d{1,2})$/);
+    if (!m) return null;
+    const d = new Date(Number(m[1]), Number(m[2]) - 1, Number(m[3]));
+    return isNaN(d.getTime()) ? null : d;
+}
+
+/** 今日を0とした経過日数。未来日は負になる */
+function daysSince(d: Date): number {
+    const now = new Date();
+    const today = new Date(now.getFullYear(), now.getMonth(), now.getDate()).getTime();
+    const target = new Date(d.getFullYear(), d.getMonth(), d.getDate()).getTime();
+    return Math.round((today - target) / 86400000);
+}
+
+/** 直近はひと目で分かるよう相対表記、それ以降は日付表記にする */
 function formatDate(dateStr: string): string {
-    if (!dateStr) return '日付未取得';
-    try {
-        const d = new Date(dateStr);
-        if (isNaN(d.getTime())) return dateStr;
-        return `${d.getMonth() + 1}月${d.getDate()}日`;
-    } catch {
-        return dateStr;
-    }
+    const d = parseLocalDate(dateStr);
+    if (!d) return dateStr || '日付不明';
+    const diff = daysSince(d);
+    if (diff === 0) return '今日';
+    if (diff === 1) return '昨日';
+    if (diff >= 2 && diff <= 6) return `${diff}日前`;
+    return `${d.getMonth() + 1}月${d.getDate()}日`;
 }
 
 type SourceFilter = 'all' | string;
@@ -46,13 +62,12 @@ export function NewsSection({ searchable = false, maxItems = 18 }: NewsSectionPr
     const [refreshing, setRefreshing] = useState(false);
     const [keyword, setKeyword] = useState('');
 
+    // 日付が常に出るようになったので、NEWは3日以内に絞って目印としての意味を保つ
     const isNewItem = (dateStr: string) => {
-        if (!dateStr) return false;
-        const d = new Date(dateStr);
-        if (isNaN(d.getTime())) return false;
-        const diffTime = new Date().getTime() - d.getTime();
-        if (diffTime < 0) return false;
-        return Math.ceil(diffTime / (1000 * 60 * 60 * 24)) <= 7;
+        const d = parseLocalDate(dateStr);
+        if (!d) return false;
+        const diff = daysSince(d);
+        return diff >= 0 && diff <= 3;
     };
 
     const load = async () => {
@@ -247,43 +262,49 @@ export function NewsSection({ searchable = false, maxItems = 18 }: NewsSectionPr
                                     href={item.link}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="bg-white group block p-6 border rounded-sm hover:shadow-sm transition-all duration-300"
+                                    className="bg-white group flex h-full flex-col p-5 border rounded-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md hover:border-accent/40"
                                     style={{ borderColor: '#e6e2d8' }}
                                     initial={{ opacity: 0, y: 8 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.3, delay: index * 0.025 }}
                                 >
-                                    <div className="flex items-start justify-between gap-2 mb-3">
-                                        <div className="flex items-center gap-2">
+                                    <div className="flex items-center justify-between gap-2 mb-3">
+                                        <div className="flex min-w-0 items-center gap-1.5">
                                             <span
-                                                className="text-[9px] tracking-[0.2em] px-2 py-0.5 rounded-sm font-bold uppercase shrink-0"
+                                                className="text-[9px] tracking-[0.15em] px-2 py-0.5 rounded-sm font-bold shrink-0"
                                                 style={{ color: style.color, backgroundColor: style.bg, border: `1px solid ${style.border}` }}
                                             >
                                                 {item.sourceLabel}
                                             </span>
                                             {item.category === 'construction' && (
-                                                <span className="shrink-0 rounded-sm border border-emerald-100 bg-emerald-50 px-1.5 py-0.5 text-[8px] font-bold tracking-wider text-emerald-700">
+                                                <span className="shrink-0 rounded-sm border border-emerald-100 bg-emerald-50 px-1.5 py-0.5 text-[9px] font-bold tracking-wider text-emerald-700">
                                                     入札・建設
                                                 </span>
                                             )}
-                                            {isNewItem(item.date) && (
-                                                <span className="shrink-0 px-1.5 py-0.5 rounded text-[8px] font-bold tracking-wider bg-red-500 text-white animate-pulse shadow-sm">NEW</span>
-                                            )}
                                         </div>
-                                        <span className="text-[10px] text-gray-400 tracking-widest shrink-0 font-serif">
-                                            {formatDate(item.date)}
-                                        </span>
+                                        <div className="flex shrink-0 items-center gap-1.5">
+                                            {isNewItem(item.date) && (
+                                                <span className="rounded-sm bg-red-500 px-1.5 py-0.5 text-[9px] font-bold tracking-wider text-white">NEW</span>
+                                            )}
+                                            <span className="text-[11px] font-medium tracking-wide text-secondary/70 tabular-nums">
+                                                {formatDate(item.date)}
+                                            </span>
+                                        </div>
                                     </div>
-                                    <h3 className="text-sm text-primary font-serif leading-relaxed tracking-wide group-hover:text-accent transition-colors duration-300 line-clamp-3">
+
+                                    <h3 className="text-[15px] text-primary font-serif leading-[1.75] tracking-wide group-hover:text-accent transition-colors duration-300 line-clamp-3">
                                         {item.title}
                                     </h3>
+
                                     {item.excerpt && (
-                                        <p className="text-[11px] text-secondary/50 mt-2 leading-relaxed line-clamp-2 font-sans">
+                                        <p className="text-xs text-secondary/60 mt-3 leading-[1.9] line-clamp-3 font-sans">
                                             {item.excerpt}
                                         </p>
                                     )}
-                                    <div className="flex items-center gap-1 mt-4 text-[10px] text-gray-300 group-hover:text-accent transition-colors duration-300">
-                                        <ExternalLink size={10} />
+
+                                    {/* mt-auto で本文量に関わらずリンクをカード下端に揃える */}
+                                    <div className="flex items-center gap-1.5 mt-auto pt-4 text-[10px] text-gray-400 group-hover:text-accent transition-colors duration-300">
+                                        <ExternalLink size={11} />
                                         <span className="tracking-widest">記事を読む</span>
                                     </div>
                                 </motion.a>

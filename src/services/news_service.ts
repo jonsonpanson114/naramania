@@ -34,7 +34,7 @@ const GENERAL_NEWS_NOISE_KEYWORDS = [
 async function fetchUrl(url: string): Promise<string> {
     const res = await axios.get<ArrayBuffer>(url, {
         headers: HEADERS,
-        timeout: 10000,
+        timeout: 15000,
         maxRedirects: 3,
         responseType: 'arraybuffer',
     });
@@ -57,11 +57,45 @@ async function withTimeout<T>(promise: Promise<T>, timeoutMs: number, fallback: 
     }
 }
 
+/** ローカル日付で YYYY-MM-DD を組み立てる（toISOString はUTCへずれるため使わない） */
+function formatLocalDate(d: Date): string {
+    const y = d.getFullYear();
+    const m = String(d.getMonth() + 1).padStart(2, '0');
+    const day = String(d.getDate()).padStart(2, '0');
+    return `${y}-${m}-${day}`;
+}
+
 function parseRssDate(dateStr: string): string {
     try {
         const d = new Date(dateStr);
-        if (!isNaN(d.getTime())) return d.toISOString().split('T')[0];
+        if (!isNaN(d.getTime())) return formatLocalDate(d);
     } catch { }
+    return '';
+}
+
+/**
+ * 各紙で表記がまちまちな日付文字列から YYYY-MM-DD を取り出す。
+ * 例: 「2026年8月7日 [2面]」「2026.08.10」「2026/8/7」「社会2026.08.16」
+ */
+function parseFlexibleDate(text: string): string {
+    if (!text) return '';
+    const normalized = text.replace(/\s+/g, '');
+
+    const ymd = normalized.match(/(\d{4})[年.\-/](\d{1,2})[月.\-/](\d{1,2})/);
+    if (ymd) {
+        const [, y, m, d] = ymd;
+        return `${y}-${m.padStart(2, '0')}-${d.padStart(2, '0')}`;
+    }
+
+    // 記事URLに埋め込まれた 20260816211249 のような形式
+    const compact = normalized.match(/(20\d{2})(\d{2})(\d{2})\d{0,6}/);
+    if (compact) {
+        const [, y, m, d] = compact;
+        const month = Number(m);
+        const day = Number(d);
+        if (month >= 1 && month <= 12 && day >= 1 && day <= 31) return `${y}-${m}-${d}`;
+    }
+
     return '';
 }
 
@@ -201,24 +235,35 @@ async function fetchDecn(): Promise<NewsItem[]> {
         const html = await fetchUrl('https://www.decn.co.jp/?s=%E5%A5%88%E8%89%AF');
         const $ = cheerio.load(html);
         const items: NewsItem[] = [];
+        const seenLinks = new Set<string>();
 
-        $('a[href*="?p="]').each((i, el) => {
+        // 1記事 = .topNewsCatBox（見出し・日付・本文が兄弟要素として並ぶ）
+        $('.topNewsCatBox').each((_, box) => {
             if (items.length >= 10) return false;
-            const title = cleanTitle($(el).text().trim());
-            const href = normalizeLink($(el).attr('href') || '', 'https://www.decn.co.jp/');
-            if (isNoiseTitle(title) || !href) return;
+            const $box = $(box);
 
-            // Date is usually nearby in the parent container
-            const container = $(el).closest('div, li, article');
-            const containerText = container.length ? container.text() : $(el).parent().text();
-            const dateMatch = containerText.match(/(\d{4})年(\d{1,2})月(\d{1,2})日/);
-            const date = dateMatch
-                ? `${dateMatch[1]}-${dateMatch[2].padStart(2, '0')}-${dateMatch[3].padStart(2, '0')}`
-                : '';
+            const anchor = $box.find('.topTitle a').filter((_, a) => $(a).text().trim().length > 0).first();
+            const title = cleanTitle(anchor.text().trim());
+            const href = normalizeLink(anchor.attr('href') || '', 'https://www.decn.co.jp/');
+            if (isNoiseTitle(title) || !href || seenLinks.has(href)) return;
+            seenLinks.add(href);
 
-            items.push({ id: `decn-${items.length}`, source: 'decn', sourceLabel: '建設工業新聞', title, date, link: href });
+            // 「2026年8月7日 [2面]」形式
+            const date = parseFlexibleDate($box.find('.topNewsCatData .date').text());
+            const excerpt = stripHtml($box.find('.topText .Text').text()).slice(0, 120);
+
+            items.push({
+                id: `decn-${items.length}`,
+                source: 'decn',
+                sourceLabel: '建設工業新聞',
+                title,
+                date,
+                link: href,
+                excerpt: excerpt || undefined,
+            });
         });
-        console.log(`[News] 建設工業新聞: ${items.length}件`);
+
+        console.log(`[News] 建設工業新聞: ${items.length}件（日付あり ${items.filter(i => i.date).length}件）`);
         return items;
     } catch (e) {
         console.warn('[News] 建設工業新聞 エラー:', (e as Error).message);
@@ -253,23 +298,40 @@ async function fetchNaraNp(): Promise<NewsItem[]> {
         const html = await fetchUrl('https://www.nara-np.co.jp/');
         const $ = cheerio.load(html);
         const items: NewsItem[] = [];
-        $('a').each((i, el) => {
+        const seenLinks = new Set<string>();
+
+        // 記事カードは必ず日付要素(p.date)を持つ。これを起点にすると
+        // ナビゲーションのカテゴリリンク（「ならリビング」等）を拾わずに済む。
+        $('p.date, .date').each((_, dateEl) => {
             if (items.length >= 15) return false;
-            const href = $(el).attr('href') || '';
-            if (!href.match(/\/(news|article|topics)\//i) && !href.match(/\/\d{5,}/)) return;
+            const anchor = $(dateEl).closest('a');
+            if (!anchor.length) return;
 
-            const title = cleanTitle($(el).find('h3, h4, .title').text().trim() || $(el).text().trim());
-            if (isNoiseTitle(title)) return;
-
-            const dateText = $(el).find('[class*="date"], time').text().trim();
-            const dateMatch = dateText.match(/(\d{4})[.\-/](\d{2})[.\-/](\d{2})/);
-            const date = dateMatch ? `${dateMatch[1]}-${dateMatch[2]}-${dateMatch[3]}` : '';
-
+            const href = anchor.attr('href') || '';
             const fullHref = normalizeLink(href, 'https://www.nara-np.co.jp/');
-            if (!fullHref) return;
-            items.push({ id: `naranp-${items.length}`, source: 'naranp', sourceLabel: '奈良新聞', title, date, link: fullHref });
+            if (!fullHref || seenLinks.has(fullHref)) return;
+
+            const title = cleanTitle(anchor.find('h3.title, p.title, .title').first().text().trim());
+            if (isNoiseTitle(title)) return;
+            seenLinks.add(fullHref);
+
+            // 「社会2026.08.16」からカテゴリを除いた日付部分を取る。
+            // 取れない場合は記事URL(/news/20260816211249.html)から補う。
+            const date = parseFlexibleDate($(dateEl).text()) || parseFlexibleDate(href);
+            const excerpt = stripHtml(anchor.find('p.lead').first().text()).slice(0, 120);
+
+            items.push({
+                id: `naranp-${items.length}`,
+                source: 'naranp',
+                sourceLabel: '奈良新聞',
+                title,
+                date,
+                link: fullHref,
+                excerpt: excerpt || undefined,
+            });
         });
-        console.log(`[News] 奈良新聞(HTML): ${items.length}件`);
+
+        console.log(`[News] 奈良新聞(HTML): ${items.length}件（日付あり ${items.filter(i => i.date).length}件）`);
         return items;
     } catch (e) {
         console.warn('[News] 奈良新聞 エラー:', (e as Error).message);
@@ -304,12 +366,13 @@ export async function fetchAllNews(): Promise<NewsItem[]> {
     });
 
     const finalItems = Array.from(unique.values());
+    // 建設系を先に、その中では新しい記事順。日付が取れなかったものは末尾に回す。
     finalItems.sort((a, b) => {
         const categoryRank = (b.category === 'construction' ? 1 : 0) - (a.category === 'construction' ? 1 : 0);
         if (categoryRank !== 0) return categoryRank;
-        const scoreRank = (b.relevanceScore || 0) - (a.relevanceScore || 0);
-        if (scoreRank !== 0) return scoreRank;
-        return (b.date || '0000-00-00').localeCompare(a.date || '0000-00-00');
+        const dateRank = (b.date || '').localeCompare(a.date || '');
+        if (dateRank !== 0) return dateRank;
+        return (b.relevanceScore || 0) - (a.relevanceScore || 0);
     });
     return finalItems;
 }
