@@ -156,13 +156,13 @@ export default async function Home() {
 
         <ResultFollowUpPanel items={allItems} />
 
+        {/* News Section */}
+        <NewsSection />
+
         {/* 案件一覧 */}
         <div className="mt-10">
           <BiddingTable items={allItems} />
         </div>
-
-        {/* News Section */}
-        <NewsSection />
 
         {/* 運用サマリ（詳細は /admin） */}
         <div className="mt-12">

@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ExternalLink, RefreshCw } from 'lucide-react';
+import { ExternalLink, RefreshCw, Search, X } from 'lucide-react';
 import { NewsItem } from '@/services/news_service';
 
 const SOURCE_STYLES: Record<string, { color: string; bg: string; border: string }> = {
@@ -31,12 +31,20 @@ function isConstructionNews(item: NewsItem): boolean {
     return item.category === 'construction' || ['constnews', 'kentsu', 'decn'].includes(item.source);
 }
 
-export function NewsSection() {
+interface NewsSectionProps {
+    /** 検索ボックスを表示するか（ニュース専用ページ用） */
+    searchable?: boolean;
+    /** グリッドに表示する最大件数（未指定なら18件） */
+    maxItems?: number;
+}
+
+export function NewsSection({ searchable = false, maxItems = 18 }: NewsSectionProps) {
     const [news, setNews] = useState<NewsItem[]>([]);
     const [loading, setLoading] = useState(true);
     const [activeCategory, setActiveCategory] = useState<CategoryFilter>('construction');
     const [activeSource, setActiveSource] = useState<SourceFilter>('all');
     const [refreshing, setRefreshing] = useState(false);
+    const [keyword, setKeyword] = useState('');
 
     const isNewItem = (dateStr: string) => {
         if (!dateStr) return false;
@@ -76,7 +84,15 @@ export function NewsSection() {
 
     // ソースの一覧（カテゴリフィルタ後のもの）
     const sources = Array.from(new Set(filteredByCategory.map(n => n.source)));
-    const filtered = activeSource === 'all' ? filteredByCategory : filteredByCategory.filter(n => n.source === activeSource);
+    const filteredBySource = activeSource === 'all' ? filteredByCategory : filteredByCategory.filter(n => n.source === activeSource);
+
+    // キーワード検索（タイトル・本文抜粋）
+    const trimmedKeyword = keyword.trim();
+    const filtered = trimmedKeyword
+        ? filteredBySource.filter(n =>
+            n.title.includes(trimmedKeyword) || (n.excerpt ?? '').includes(trimmedKeyword)
+        )
+        : filteredBySource;
 
     // カテゴリ変更時にソースフィルタをリセット
     const handleCategoryChange = (cat: CategoryFilter) => {
@@ -85,7 +101,7 @@ export function NewsSection() {
     };
 
     return (
-        <section className="mt-24 pt-12" id="news">
+        <section className="mt-10" id="news">
             {/* Section Header */}
             <div className="flex items-center gap-6 mb-10">
                 <div className="flex-1 h-px" style={{ background: 'linear-gradient(to right, rgba(197,160,89,0.2), transparent)' }} />
@@ -124,6 +140,31 @@ export function NewsSection() {
                         >
                             一般ニュース
                         </button>
+                    </div>
+                </div>
+            )}
+
+            {/* Search Box */}
+            {searchable && !loading && news.length > 0 && (
+                <div className="flex justify-center mb-6">
+                    <div className="relative w-full max-w-md">
+                        <Search size={13} className="absolute left-4 top-1/2 -translate-y-1/2 text-secondary/40" />
+                        <input
+                            type="text"
+                            value={keyword}
+                            onChange={(e) => setKeyword(e.target.value)}
+                            placeholder="キーワードでニュースを検索"
+                            className="w-full rounded-full border border-border/30 bg-white/60 py-2.5 pl-10 pr-9 text-xs tracking-wider text-primary placeholder:text-secondary/40 focus:outline-none focus:ring-1 focus:ring-accent/40"
+                        />
+                        {keyword && (
+                            <button
+                                onClick={() => setKeyword('')}
+                                className="absolute right-3 top-1/2 -translate-y-1/2 text-secondary/40 hover:text-accent"
+                                aria-label="検索をクリア"
+                            >
+                                <X size={13} />
+                            </button>
+                        )}
                     </div>
                 </div>
             )}
@@ -181,6 +222,11 @@ export function NewsSection() {
                     ニュースを取得できませんでした
                 </p>
             )}
+            {!loading && news.length > 0 && filtered.length === 0 && (
+                <p className="text-center py-12 text-sm tracking-widest text-secondary/40 font-serif">
+                    「{trimmedKeyword}」に一致するニュースは見つかりませんでした
+                </p>
+            )}
 
             {/* News Grid */}
             {!loading && filtered.length > 0 && (
@@ -193,7 +239,7 @@ export function NewsSection() {
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.35 }}
                     >
-                        {filtered.slice(0, 18).map((item, index) => {
+                        {filtered.slice(0, maxItems).map((item, index) => {
                             const style = SOURCE_STYLES[item.source] ?? { color: '#6b7280', bg: '#f9fafb', border: '#e5e7eb' };
                             return (
                                 <motion.a
