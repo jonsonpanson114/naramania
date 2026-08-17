@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-17T02:40:33.891Z",
+  "generatedAt": "2026-08-17T07:04:16.348Z",
   "source": "daily_scrape",
-  "keptCount": 247,
+  "keptCount": 248,
   "municipalityCount": 24,
   "oldestAnnouncementDate": "2025-02-02",
   "latestAnnouncementDate": "2026-08-17",
-  "scrapedCount": 763,
+  "scrapedCount": 784,
   "rejectedCount": 543,
   "municipalityAudit": {
     "expectedMunicipalityCount": 25,
@@ -39,8 +39,8 @@
       },
       {
         "municipality": "生駒市",
-        "count": 19,
-        "changeFromPrevious": -1
+        "count": 20,
+        "changeFromPrevious": 1
       },
       {
         "municipality": "宇陀市",
@@ -138,16 +138,8 @@
         "changeFromPrevious": 0
       }
     ],
-    "retainedFromPrevious": [
-      "高取町"
-    ],
-    "issues": [
-      {
-        "municipality": "高取町",
-        "level": "warning",
-        "message": "[高取町] 取得件数が急減したため既存データを維持しています (baseline=20, new kept=0)"
-      }
-    ]
+    "retainedFromPrevious": [],
+    "issues": []
   },
   "dateAudit": {
     "announcementAfterBiddingCount": 0,
@@ -162,6 +154,6 @@
     "intelligenceExtractedCount": 49,
     "geminiExtractedCount": 49,
     "taggedCount": 49,
-    "lastAugmentedAt": "2026-08-17T02:40:34.805Z"
+    "lastAugmentedAt": "2026-08-17T07:04:26.518Z"
   }
 }

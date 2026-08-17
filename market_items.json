@@ -122,6 +122,17 @@
     "isRelevant": false
   },
   {
+    "id": "ikoma-result-2601010047",
+    "municipality": "生駒市",
+    "title": "上中学校校舎長寿命化改修工事（Ⅰ・Ⅱ期）",
+    "type": "建築",
+    "announcementDate": "2026-08-17",
+    "biddingDate": "2026-08-17",
+    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+    "status": "受付終了",
+    "isRelevant": true
+  },
+  {
     "id": "miyake-2026-08-14-三宅町文化ホールトイレ改修工事",
     "municipality": "三宅町",
     "title": "三宅町文化ホールトイレ改修工事",
@@ -525,6 +536,19 @@
   },
   {
     "id": "gose-御所市義務教育学校建設に関する基本設計及-9",
+    "municipality": "御所市",
+    "title": "御所市義務教育学校建設に関する基本設計及び実施設計業務に係る公募型プロポーザル",
+    "type": "コンサル",
+    "announcementDate": "2026-07-29",
+    "biddingDate": "2026-07-29",
+    "link": "https://www.city.gose.nara.jp/0000004589.html",
+    "status": "落札",
+    "winningContractor": "石本・シード設計共同体",
+    "winnerType": "設計事務所",
+    "isRelevant": true
+  },
+  {
+    "id": "gose-御所市義務教育学校建設に関する基本設計及-10",
     "municipality": "御所市",
     "title": "御所市義務教育学校建設に関する基本設計及び実施設計業務に係る公募型プロポーザル",
     "type": "コンサル",

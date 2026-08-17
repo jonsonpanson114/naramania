@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-17T02:40:33.893Z",
-  "totalRejected": 3807,
+  "generatedAt": "2026-08-17T07:04:16.350Z",
+  "totalRejected": 3839,
   "totalBorderlineRescued": 35,
   "byMunicipality": {
     "奈良市": {
@@ -12,7 +12,7 @@
       "borderlineRescued": 3
     },
     "生駒市": {
-      "rejected": 191,
+      "rejected": 194,
       "borderlineRescued": 8
     },
     "大和高田市": {
@@ -78,6 +78,10 @@
     "安堵町": {
       "rejected": 2,
       "borderlineRescued": 9
+    },
+    "高取町": {
+      "rejected": 29,
+      "borderlineRescued": 0
     },
     "斑鳩町": {
       "rejected": 46,
@@ -11950,6 +11954,12 @@
     },
     {
       "municipality": "生駒市",
+      "title": "消防本部防火扉取替改修工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
       "title": "生駒小学校西館及び屋内運動場防水改修工事",
       "reason": "always_exclude_keyword",
       "matchedKeywords": [
@@ -13021,6 +13031,24 @@
       "matchedKeywords": [
         "街路樹",
         "維持管理"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "松ヶ丘通り線道路法面工予備設計業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "法面"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "公共施設照明LED化改修工事実施設計業務",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "LED",
+        "照明"
       ]
     },
     {
@@ -22408,14 +22436,6 @@
     },
     {
       "municipality": "御所市",
-      "title": "現場説明書（仕様書）のダウンロード（測量・建設コンサルタント業務）（管財課）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "測量"
-      ]
-    },
-    {
-      "municipality": "御所市",
       "title": "一般競争入札公告（建設工事）（管財課）",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -22425,6 +22445,14 @@
       "title": "一般競争入札公告（建設コンサルタント等）（管財課）",
       "reason": "no_architecture_context",
       "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "現場説明書（仕様書）のダウンロード（測量・建設コンサルタント業務）（管財課）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "測量"
+      ]
     },
     {
       "municipality": "天理市",
@@ -27041,6 +27069,231 @@
         "外壁改修"
       ],
       "borderlineRescue": true
+    },
+    {
+      "municipality": "高取町",
+      "title": "改良住宅第1団地防水等改修工事設計業務",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "防水"
+      ]
+    },
+    {
+      "municipality": "高取町",
+      "title": "塵芥収集用軽ダンプトラック購入事業",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入"
+      ]
+    },
+    {
+      "municipality": "高取町",
+      "title": "水道施設修繕等業務委託",
+      "reason": "infra_exclude_keyword",
+      "matchedKeywords": [
+        "水道"
+      ]
+    },
+    {
+      "municipality": "高取町",
+      "title": "高取町立学校教職員用端末整備業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "高取町",
+      "title": "高取町公共下水道工事7－1工区",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "高取町",
+      "title": "防災・安全交付金事業 舗装補修工事（8－1工区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "高取町",
+      "title": "道路メンテナンス事業 橋梁定期点検業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "橋梁",
+        "橋",
+        "定期点検"
+      ]
+    },
+    {
+      "municipality": "高取町",
+      "title": "地籍調査事業委託業務（2項委託）",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "地籍調査"
+      ]
+    },
+    {
+      "municipality": "高取町",
+      "title": "町道除草業務",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "除草"
+      ]
+    },
+    {
+      "municipality": "高取町",
+      "title": "高取町立高取中学校体育館空調設備設置工事",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "空調",
+        "設備"
+      ]
+    },
+    {
+      "municipality": "高取町",
+      "title": "高取町立たかむち小学校体育館空調設備設置工事",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "空調",
+        "設備"
+      ]
+    },
+    {
+      "municipality": "高取町",
+      "title": "公用車購入",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入"
+      ]
+    },
+    {
+      "municipality": "高取町",
+      "title": "壺阪山駅周辺地区拠点にかかる整地設計業務（観覚寺地区）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "高取町",
+      "title": "町単道路測量設計業務（下子島地区外）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "測量"
+      ]
+    },
+    {
+      "municipality": "高取町",
+      "title": "水道管布設工事（7－3工区）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "高取町",
+      "title": "水道管布設工事（7－4工区）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "高取町",
+      "title": "水道メーター検針業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "検針"
+      ]
+    },
+    {
+      "municipality": "高取町",
+      "title": "水道営業窓口補助業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "高取町",
+      "title": "高取町立小・中学校体育館空調設備設置工事設計、工事監理業務委託",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "空調",
+        "設備"
+      ]
+    },
+    {
+      "municipality": "高取町",
+      "title": "水道管布設工事（7－1工区）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "高取町",
+      "title": "水道管布設工事（7－2工区）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "高取町",
+      "title": "道路メンテナンス事業 橋梁補修工事(下土佐4号橋)",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "橋梁",
+        "橋"
+      ]
+    },
+    {
+      "municipality": "高取町",
+      "title": "高取町公共下水道工事に伴う舗装本復旧工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装",
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "高取町",
+      "title": "水道管布設工事（7－1工区）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "高取町",
+      "title": "水道管布設工事（7－2工区）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "高取町",
+      "title": "令和7年度 高取町水道施設台帳作成業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "高取町",
+      "title": "町単道路歩道改良工事（清水谷地区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "高取町",
+      "title": "防災・安全交付金事業舗装補修工事(7-1工区)",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "高取町",
+      "title": "道路メンテナンス事業 橋梁定期点検業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "橋梁",
+        "橋",
+        "定期点検"
+      ]
     },
     {
       "municipality": "斑鳩町",

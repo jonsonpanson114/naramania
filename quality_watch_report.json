@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-08-17T02:48:37.940Z",
-  "qualityGeneratedAt": "2026-08-17T02:40:33.891Z",
-  "itemCount": 247,
+  "generatedAt": "2026-08-17T07:12:31.580Z",
+  "qualityGeneratedAt": "2026-08-17T07:04:16.348Z",
+  "itemCount": 248,
   "resultFollowUp": {
-    "totalCount": 7,
+    "totalCount": 8,
     "highCount": 5,
     "mediumCount": 2,
-    "lowCount": 0,
+    "lowCount": 1,
     "missingBiddingDateCount": 0,
     "byMunicipality": [
       {
@@ -19,6 +19,10 @@
       },
       {
         "municipality": "橿原市",
+        "count": 1
+      },
+      {
+        "municipality": "生駒市",
         "count": 1
       },
       {
@@ -136,6 +140,22 @@
           "biddingDate": "2026-08-05",
           "winningContractor": null,
           "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260131&gamenMode=0",
+          "pdfUrl": null
+        }
+      },
+      {
+        "priority": "low",
+        "ageDays": 0,
+        "reason": "開札直後の結果待ち",
+        "item": {
+          "id": "ikoma-result-2601010047",
+          "municipality": "生駒市",
+          "title": "上中学校校舎長寿命化改修工事（Ⅰ・Ⅱ期）",
+          "status": "受付終了",
+          "announcementDate": "2026-08-17",
+          "biddingDate": "2026-08-17",
+          "winningContractor": null,
+          "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
           "pdfUrl": null
         }
       }
@@ -481,15 +501,15 @@
         "municipality": "生駒市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 19,
+        "totalCount": 20,
         "requiredLinkIncludes": [
           "epi-cloud.fwd.ne.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "epi-cloud.fwd.ne.jp": 19
+          "epi-cloud.fwd.ne.jp": 20
         },
-        "message": "生駒市: 19件 / sources OK"
+        "message": "生駒市: 20件 / sources OK"
       },
       {
         "municipality": "大和高田市",
