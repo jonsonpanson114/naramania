@@ -156,13 +156,13 @@ export default async function Home() {
 
         <ResultFollowUpPanel items={allItems} />
 
-        {/* News Section */}
-        <NewsSection pageSize={5} showAllLink />
-
         {/* 案件一覧 */}
         <div className="mt-10">
           <BiddingTable items={allItems} />
         </div>
+
+        {/* News Section（一覧の下。ニュースは上部ティッカーと /news が主動線） */}
+        <NewsSection pageSize={5} showAllLink />
 
         {/* 運用サマリ（詳細は /admin） */}
         <div className="mt-12">
