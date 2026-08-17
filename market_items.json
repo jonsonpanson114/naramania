@@ -4,7 +4,7 @@
     "municipality": "奈良市",
     "title": "梅の郷月ヶ瀬温泉ボイラー設備改修その他工事に伴う建築設計業務委託",
     "type": "コンサル",
-    "announcementDate": "2026-08-14",
+    "announcementDate": "2026-08-17",
     "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
     "status": "不調",
     "isRelevant": false
@@ -14,7 +14,7 @@
     "municipality": "奈良市",
     "title": "庁舎非常用発電機燃料タンク増設その他改修に伴う建築設計業務委託",
     "type": "コンサル",
-    "announcementDate": "2026-08-14",
+    "announcementDate": "2026-08-17",
     "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
     "status": "不調",
     "isRelevant": false
@@ -24,7 +24,7 @@
     "municipality": "奈良市",
     "title": "奈良市総合医療検査センター空調設備改修その他工事に伴う建築設計業務委託",
     "type": "コンサル",
-    "announcementDate": "2026-08-14",
+    "announcementDate": "2026-08-17",
     "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
     "status": "不調",
     "isRelevant": false
@@ -34,7 +34,7 @@
     "municipality": "奈良市",
     "title": "平城中学校他３校給水設備等改修に伴う設計業務委託",
     "type": "コンサル",
-    "announcementDate": "2026-08-14",
+    "announcementDate": "2026-08-17",
     "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
     "status": "不調",
     "isRelevant": false
@@ -44,7 +44,7 @@
     "municipality": "奈良市",
     "title": "中央体育館汚水配管改修工事に伴う建築設計業務委託",
     "type": "コンサル",
-    "announcementDate": "2026-08-14",
+    "announcementDate": "2026-08-17",
     "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
     "status": "不調",
     "isRelevant": false
@@ -54,7 +54,7 @@
     "municipality": "奈良市",
     "title": "ならまちセンター空調設備改修その他工事に伴う建築設計業務委託",
     "type": "コンサル",
-    "announcementDate": "2026-08-14",
+    "announcementDate": "2026-08-17",
     "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
     "status": "不調",
     "isRelevant": false
@@ -64,7 +64,7 @@
     "municipality": "奈良市",
     "title": "庁舎非常用発電機燃料タンク増設その他改修に伴う建築設計業務委託",
     "type": "コンサル",
-    "announcementDate": "2026-08-14",
+    "announcementDate": "2026-08-17",
     "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
     "status": "不調",
     "isRelevant": false
@@ -74,7 +74,7 @@
     "municipality": "奈良市",
     "title": "生涯学習センター吸収冷温水機改修に伴う設計業務委託",
     "type": "コンサル",
-    "announcementDate": "2026-08-14",
+    "announcementDate": "2026-08-17",
     "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
     "status": "不調",
     "isRelevant": false
@@ -84,7 +84,7 @@
     "municipality": "奈良市",
     "title": "奈良市月ヶ瀬福祉センター温水設備改修工事に伴う建築設計業務委託",
     "type": "コンサル",
-    "announcementDate": "2026-08-14",
+    "announcementDate": "2026-08-17",
     "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
     "status": "不調",
     "isRelevant": false
@@ -94,9 +94,31 @@
     "municipality": "奈良市",
     "title": "鴻ノ池球場放送設備改修工事に伴う建築設計業務委託",
     "type": "コンサル",
-    "announcementDate": "2026-08-14",
+    "announcementDate": "2026-08-17",
     "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
     "status": "不調",
+    "isRelevant": false
+  },
+  {
+    "id": "ikoma-51a7adacd5",
+    "municipality": "生駒市",
+    "title": "学びの多様化学校整備工事",
+    "type": "建築",
+    "announcementDate": "2026-08-17",
+    "biddingDate": "2026-09-07",
+    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+    "status": "受付中",
+    "isRelevant": true
+  },
+  {
+    "id": "ikoma-8634ad1dc0",
+    "municipality": "生駒市",
+    "title": "救急施設屋上荷重検討業務",
+    "type": "コンサル",
+    "announcementDate": "2026-08-17",
+    "biddingDate": "2026-08-31",
+    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+    "status": "受付中",
     "isRelevant": false
   },
   {
@@ -490,6 +512,19 @@
   },
   {
     "id": "gose-御所市義務教育学校建設に関する基本設計及-6",
+    "municipality": "御所市",
+    "title": "御所市義務教育学校建設に関する基本設計及び実施設計業務に係る公募型プロポーザル",
+    "type": "コンサル",
+    "announcementDate": "2026-07-29",
+    "biddingDate": "2026-07-29",
+    "link": "https://www.city.gose.nara.jp/0000004589.html",
+    "status": "落札",
+    "winningContractor": "石本・シード設計共同体",
+    "winnerType": "設計事務所",
+    "isRelevant": true
+  },
+  {
+    "id": "gose-御所市義務教育学校建設に関する基本設計及-9",
     "municipality": "御所市",
     "title": "御所市義務教育学校建設に関する基本設計及び実施設計業務に係る公募型プロポーザル",
     "type": "コンサル",
