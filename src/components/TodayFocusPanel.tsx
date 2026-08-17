@@ -57,15 +57,15 @@ function Row({
     return (
         <Link
             href={href}
-            className="group flex items-center gap-3 border-b border-border/30 px-2 py-3.5 transition-colors last:border-b-0 hover:bg-accent/[0.04]"
+            className="group flex items-center gap-4 border-b border-border/30 px-2 py-4 transition-colors last:border-b-0 hover:bg-accent/[0.04]"
         >
-            <span className="w-24 shrink-0 truncate text-[13px] tracking-wider text-secondary/70">
+            <span className="w-28 shrink-0 truncate text-[15px] tracking-wider text-secondary/70">
                 {municipality}
             </span>
-            <span className="min-w-0 flex-1 truncate text-[15px] leading-7 text-primary transition-colors group-hover:text-accent">
+            <span className="min-w-0 flex-1 truncate text-[18px] leading-8 text-primary transition-colors group-hover:text-accent">
                 {title}
             </span>
-            <span className={`shrink-0 text-[13px] font-medium tabular-nums tracking-wider ${metaColor}`}>
+            <span className={`shrink-0 text-[15px] font-semibold tabular-nums tracking-wider ${metaColor}`}>
                 {meta}
             </span>
         </Link>
@@ -148,12 +148,12 @@ export function TodayFocusPanel({
             {/* 数字だけの横1行。詳細は下のタブで切り替える */}
             <div className="rounded-t-[2rem] border border-amber-200/70 bg-gradient-to-br from-stone-950 via-stone-900 to-amber-950 px-5 py-4 text-white shadow-soft lg:px-7">
                 <div className="mb-3 flex items-center gap-2">
-                    <CalendarClock size={15} className="text-amber-200" />
-                    <span className="text-[12px] font-bold uppercase tracking-[0.24em] text-amber-100">
+                    <CalendarClock size={16} className="text-amber-200" />
+                    <span className="text-[13px] font-bold uppercase tracking-[0.24em] text-amber-100">
                         Today Focus
                     </span>
                     {sinceDate && (
-                        <span className="ml-auto text-[12px] tracking-wider text-stone-400">
+                        <span className="ml-auto text-[13px] tracking-wider text-stone-400">
                             {isFirstVisit ? '直近7日' : `前回確認 ${formatDate(sinceDate)} 以降`}
                         </span>
                     )}
@@ -162,8 +162,8 @@ export function TodayFocusPanel({
                     {stats.map(stat => {
                         const inner = (
                             <>
-                                <p className="text-[12px] tracking-[0.14em] text-stone-300">{stat.label}</p>
-                                <p className={`mt-1 text-3xl font-light tabular-nums ${stat.tone}`}>{stat.value}</p>
+                                <p className="text-[14px] tracking-[0.1em] text-stone-300">{stat.label}</p>
+                                <p className={`mt-1 text-4xl font-light tabular-nums ${stat.tone}`}>{stat.value}</p>
                             </>
                         );
                         const cls = `rounded-2xl bg-white/10 px-2 py-2.5 text-center transition hover:bg-white/20 ${
@@ -187,19 +187,19 @@ export function TodayFocusPanel({
                         <button
                             key={t.key}
                             onClick={() => setTab(t.key)}
-                            className={`rounded-t-lg px-4 py-3 text-[15px] tracking-wider transition-colors ${
+                            className={`rounded-t-lg px-4 py-3.5 text-[17px] tracking-wider transition-colors ${
                                 tab === t.key
                                     ? 'border-b-2 border-accent font-semibold text-primary'
                                     : 'text-secondary/60 hover:text-accent'
                             }`}
                         >
                             {t.label}
-                            <span className="ml-1.5 tabular-nums text-[13px] text-secondary/50">{t.count}</span>
+                            <span className="ml-2 tabular-nums text-[15px] text-secondary/50">{t.count}</span>
                         </button>
                     ))}
                 </div>
 
-                <div className="min-h-[132px]">
+                <div className="min-h-[160px]">
                     {tab === 'new' && (newItems.length > 0 ? newItems.slice(0, 5).map(item => (
                         <Row
                             key={item.id}
@@ -247,10 +247,10 @@ export function TodayFocusPanel({
                 <div className="flex justify-end pt-2">
                     <Link
                         href={seeAllHref}
-                        className="inline-flex items-center gap-1.5 text-[13px] tracking-wider text-secondary/60 transition-colors hover:text-accent"
+                        className="inline-flex items-center gap-1.5 text-[15px] tracking-wider text-secondary/60 transition-colors hover:text-accent"
                     >
                         一覧で見る
-                        <ArrowRight size={14} />
+                        <ArrowRight size={16} />
                     </Link>
                 </div>
             </div>
@@ -260,6 +260,6 @@ export function TodayFocusPanel({
 
 function Empty({ text }: { text: string }) {
     return (
-        <p className="py-12 text-center text-[14px] tracking-wider text-secondary/40">{text}</p>
+        <p className="py-12 text-center text-[16px] tracking-wider text-secondary/40">{text}</p>
     );
 }
