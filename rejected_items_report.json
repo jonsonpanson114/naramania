@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-18T02:35:08.466Z",
+  "generatedAt": "2026-08-18T06:56:20.887Z",
   "totalRejected": 3838,
   "totalBorderlineRescued": 35,
   "byMunicipality": {
@@ -22444,9 +22444,11 @@
     },
     {
       "municipality": "御所市",
-      "title": "一般競争入札公告（建設工事）（管財課）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
+      "title": "現場説明書（仕様書）のダウンロード（測量・建設コンサルタント業務）（管財課）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "測量"
+      ]
     },
     {
       "municipality": "御所市",
@@ -22456,11 +22458,9 @@
     },
     {
       "municipality": "御所市",
-      "title": "現場説明書（仕様書）のダウンロード（測量・建設コンサルタント業務）（管財課）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "測量"
-      ]
+      "title": "一般競争入札公告（建設工事）（管財課）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
     },
     {
       "municipality": "天理市",

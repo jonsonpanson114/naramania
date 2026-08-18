@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-18T02:35:08.464Z",
+  "generatedAt": "2026-08-18T06:56:20.884Z",
   "source": "daily_scrape",
   "keptCount": 249,
   "municipalityCount": 24,
@@ -55,7 +55,7 @@
       {
         "municipality": "大和郡山市",
         "count": 18,
-        "changeFromPrevious": 1
+        "changeFromPrevious": 0
       },
       {
         "municipality": "香芝市",
@@ -154,6 +154,6 @@
     "intelligenceExtractedCount": 49,
     "geminiExtractedCount": 49,
     "taggedCount": 49,
-    "lastAugmentedAt": "2026-08-18T02:35:10.847Z"
+    "lastAugmentedAt": "2026-08-18T06:56:21.800Z"
   }
 }
