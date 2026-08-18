@@ -543,7 +543,12 @@ export class NaraPrefScraper implements Scraper {
             // detailFetchLimit=80まで使い切ることはまずなかった。全ページを読むと
             // 対象行が数百件規模になるため、詳細取得の上限と全体の時間上限を広げる。
             const detailFetchLimit = parsePositiveIntegerEnv('NARA_PREF_DETAIL_FETCH_LIMIT', 200);
-            const scrapeDeadline = Date.now() + 260000;
+            // コンサル区分だけで6業種・うち1業種186件（ページネーションで数十秒）かかり、
+            // 260秒では工事区分（建築一式・暖冷房衛生設備・機械設備）に一度も到達できず
+            // 毎回打ち切られていた。ワークフロー全体には240分の余裕があるため、
+            // 全区分を確実に一巡できるよう大きく広げる。
+            const scrapeDeadlineMs = parsePositiveIntegerEnv('NARA_PREF_SCRAPE_DEADLINE_MS', 1200000);
+            const scrapeDeadline = Date.now() + scrapeDeadlineMs;
             const fiscalYear = fiscalYearForDate(referenceDate);
             const searchStart = startOfFiscalYear(referenceDate);
             const searchEnd = referenceDate;
