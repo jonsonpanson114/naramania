@@ -1,7 +1,20 @@
 {
-  "generatedAt": "2026-08-18T09:42:02.884Z",
+  "generatedAt": "2026-08-18T09:51:45.922Z",
   "source": "daily_scrape",
-  "updates": [],
+  "updates": [
+    {
+      "id": "nara-pref-29001013060020260051",
+      "municipality": "奈良県",
+      "title": "宇陀高校（大宇陀学舎）トイレ環境改善整備工事 第８－４号",
+      "announcementDate": "2026-05-27",
+      "biddingDate": "2026-06-17",
+      "status": "落札",
+      "winningContractor": "株式会社タケガミ電気水道",
+      "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260051&gamenMode=0",
+      "detectedAt": "2026-08-18T09:51:45.922Z",
+      "kind": "new_winner"
+    }
+  ],
   "latestResults": [
     {
       "id": "miyake-2026-08-08-上但馬保育所解体工事設計委託業務",
@@ -12,7 +25,7 @@
       "status": "不調",
       "link": "https://www.town.miyake.lg.jp/soshiki/1/9376.html",
       "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5619.pdf",
-      "detectedAt": "2026-08-18T09:42:02.884Z",
+      "detectedAt": "2026-08-18T09:51:45.922Z",
       "kind": "new_failure"
     },
     {
@@ -24,7 +37,7 @@
       "status": "不調",
       "link": "https://www.town.miyake.lg.jp/soshiki/1/9375.html",
       "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5616.pdf",
-      "detectedAt": "2026-08-18T09:42:02.884Z",
+      "detectedAt": "2026-08-18T09:51:45.922Z",
       "kind": "new_failure"
     },
     {
@@ -35,7 +48,7 @@
       "biddingDate": "2026-08-05",
       "status": "不調",
       "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260132&gamenMode=0",
-      "detectedAt": "2026-08-18T09:42:02.884Z",
+      "detectedAt": "2026-08-18T09:51:45.922Z",
       "kind": "new_failure"
     },
     {
@@ -46,7 +59,7 @@
       "biddingDate": "2026-08-05",
       "status": "不調",
       "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260127&gamenMode=0",
-      "detectedAt": "2026-08-18T09:42:02.884Z",
+      "detectedAt": "2026-08-18T09:51:45.922Z",
       "kind": "new_failure"
     },
     {
@@ -59,7 +72,7 @@
       "winningContractor": "(株)関鉄",
       "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/4-4-3-2026-1.pdf",
       "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/4-4-3-2026-1.pdf",
-      "detectedAt": "2026-08-18T09:42:02.884Z",
+      "detectedAt": "2026-08-18T09:51:45.922Z",
       "kind": "new_winner"
     },
     {
@@ -71,7 +84,7 @@
       "status": "落札",
       "winningContractor": "（株）近井工務店",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002601025",
-      "detectedAt": "2026-08-18T09:42:02.884Z",
+      "detectedAt": "2026-08-18T09:51:45.922Z",
       "kind": "new_winner"
     },
     {
@@ -83,7 +96,7 @@
       "status": "落札",
       "winningContractor": "（株）椋本工務店",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002601023",
-      "detectedAt": "2026-08-18T09:42:02.884Z",
+      "detectedAt": "2026-08-18T09:51:45.922Z",
       "kind": "new_winner"
     },
     {
@@ -95,7 +108,7 @@
       "status": "落札",
       "winningContractor": "株式会社エイト日本技術開発",
       "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013052020260117&gamenMode=0",
-      "detectedAt": "2026-08-18T09:42:02.884Z",
+      "detectedAt": "2026-08-18T09:51:45.922Z",
       "kind": "new_winner"
     },
     {
@@ -107,7 +120,7 @@
       "status": "落札",
       "winningContractor": "株式会社水野工務店",
       "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-      "detectedAt": "2026-08-18T09:42:02.884Z",
+      "detectedAt": "2026-08-18T09:51:45.922Z",
       "kind": "new_winner"
     },
     {
@@ -118,7 +131,7 @@
       "biddingDate": "2026-07-30",
       "status": "不調",
       "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260116&gamenMode=0",
-      "detectedAt": "2026-08-18T09:42:02.884Z",
+      "detectedAt": "2026-08-18T09:51:45.922Z",
       "kind": "new_failure"
     },
     {
@@ -129,7 +142,7 @@
       "biddingDate": "2026-07-30",
       "status": "不調",
       "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260118&gamenMode=0",
-      "detectedAt": "2026-08-18T09:42:02.884Z",
+      "detectedAt": "2026-08-18T09:51:45.922Z",
       "kind": "new_failure"
     },
     {
@@ -141,7 +154,7 @@
       "status": "落札",
       "winningContractor": "廣岡建設株式会社",
       "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-      "detectedAt": "2026-08-18T09:42:02.884Z",
+      "detectedAt": "2026-08-18T09:51:45.922Z",
       "kind": "new_winner"
     }
   ]
