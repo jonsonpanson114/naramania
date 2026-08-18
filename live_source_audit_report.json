@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-17T07:54:13.920Z",
+  "generatedAt": "2026-08-18T03:05:16.981Z",
   "currentItemCount": 248,
   "checkedMunicipalities": [
     "奈良市",
@@ -70,8 +70,8 @@
     },
     {
       "municipality": "大和郡山市",
-      "rawCount": 22,
-      "keptCount": 20,
+      "rawCount": 23,
+      "keptCount": 21,
       "rejectedCount": 2,
       "warnings": [],
       "errors": []
@@ -231,12 +231,34 @@
   ],
   "coverage": {
     "checkedMunicipalityCount": 24,
-    "expectedItemCount": 241,
+    "expectedItemCount": 242,
     "matchedItemCount": 241,
-    "missingItemCount": 0,
+    "missingItemCount": 1,
     "duplicateTitleGroupCount": 37,
     "duplicateTitleItemCount": 81,
     "results": [
+      {
+        "municipality": "大和郡山市",
+        "snapshotCount": 23,
+        "expectedCount": 21,
+        "matchedCount": 20,
+        "missingCount": 1,
+        "duplicateTitleGroupCount": 3,
+        "duplicateTitleItemCount": 7,
+        "missingItems": [
+          {
+            "id": "yamato-koriyama-f322174a",
+            "municipality": "大和郡山市",
+            "title": "市営住宅空家改修工事（市営向畑住宅11号、片桐東団地A棟202号・C棟202号、西田中改良住宅A18号・B81号）",
+            "status": "受付中",
+            "announcementDate": "2026-08-18",
+            "biddingDate": "2026-09-02",
+            "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/9328.html",
+            "reason": "snapshot item should be present in scraper_result"
+          }
+        ],
+        "status": "missing"
+      },
       {
         "municipality": "橿原市",
         "snapshotCount": 357,
@@ -300,17 +322,6 @@
         "missingCount": 0,
         "duplicateTitleGroupCount": 0,
         "duplicateTitleItemCount": 0,
-        "missingItems": [],
-        "status": "ok"
-      },
-      {
-        "municipality": "大和郡山市",
-        "snapshotCount": 22,
-        "expectedCount": 20,
-        "matchedCount": 20,
-        "missingCount": 0,
-        "duplicateTitleGroupCount": 3,
-        "duplicateTitleItemCount": 7,
         "missingItems": [],
         "status": "ok"
       },
