@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-17T07:04:16.348Z",
+  "generatedAt": "2026-08-18T02:35:08.464Z",
   "source": "daily_scrape",
-  "keptCount": 248,
+  "keptCount": 249,
   "municipalityCount": 24,
   "oldestAnnouncementDate": "2025-02-02",
-  "latestAnnouncementDate": "2026-08-17",
-  "scrapedCount": 784,
+  "latestAnnouncementDate": "2026-08-18",
+  "scrapedCount": 785,
   "rejectedCount": 543,
   "municipalityAudit": {
     "expectedMunicipalityCount": 25,
@@ -40,7 +40,7 @@
       {
         "municipality": "生駒市",
         "count": 20,
-        "changeFromPrevious": 1
+        "changeFromPrevious": 0
       },
       {
         "municipality": "宇陀市",
@@ -54,8 +54,8 @@
       },
       {
         "municipality": "大和郡山市",
-        "count": 17,
-        "changeFromPrevious": 0
+        "count": 18,
+        "changeFromPrevious": 1
       },
       {
         "municipality": "香芝市",
@@ -149,11 +149,11 @@
     "sampleTitles": []
   },
   "intelligence": {
-    "itemsWithPdf": 74,
+    "itemsWithPdf": 75,
     "itemsWithDescription": 49,
     "intelligenceExtractedCount": 49,
     "geminiExtractedCount": 49,
     "taggedCount": 49,
-    "lastAugmentedAt": "2026-08-17T07:04:26.518Z"
+    "lastAugmentedAt": "2026-08-18T02:35:10.847Z"
   }
 }

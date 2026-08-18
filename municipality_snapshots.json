@@ -962,7 +962,7 @@
       "announcementDate": "2026-07-27",
       "biddingDate": "2026-08-17",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-      "status": "受付中"
+      "status": "受付終了"
     },
     {
       "id": "ikoma-result-2601010041",
@@ -1140,6 +1140,17 @@
     }
   ],
   "大和郡山市": [
+    {
+      "id": "yamato-koriyama-f322174a",
+      "municipality": "大和郡山市",
+      "title": "市営住宅空家改修工事（市営向畑住宅11号、片桐東団地A棟202号・C棟202号、西田中改良住宅A18号・B81号）",
+      "type": "建築",
+      "announcementDate": "2026-08-18",
+      "biddingDate": "2026-09-02",
+      "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/9328.html",
+      "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk260902_04k.pdf",
+      "status": "受付中"
+    },
     {
       "id": "yamato-koriyama-e4987f3a",
       "municipality": "大和郡山市",
@@ -2127,7 +2138,7 @@
       "biddingDate": "2026-06-22",
       "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
       "status": "落札",
-      "winningContractor": "福辻工務店"
+      "winningContractor": "福比工務店"
     },
     {
       "id": "tawaramoto-2026062201",
@@ -2138,7 +2149,7 @@
       "biddingDate": "2026-06-22",
       "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
       "status": "落札",
-      "winningContractor": "塚竜(株)"
+      "winningContractor": "塚竜 (株)"
     },
     {
       "id": "tawaramoto-2026051803",

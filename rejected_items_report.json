@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-17T07:04:16.350Z",
-  "totalRejected": 3839,
+  "generatedAt": "2026-08-18T02:35:08.466Z",
+  "totalRejected": 3838,
   "totalBorderlineRescued": 35,
   "byMunicipality": {
     "奈良市": {
@@ -20,7 +20,7 @@
       "borderlineRescued": 0
     },
     "大和郡山市": {
-      "rejected": 231,
+      "rejected": 232,
       "borderlineRescued": 0
     },
     "葛城市": {
@@ -68,7 +68,7 @@
       "borderlineRescued": 0
     },
     "平群町": {
-      "rejected": 32,
+      "rejected": 30,
       "borderlineRescued": 0
     },
     "三宅町": {
@@ -14320,6 +14320,14 @@
     },
     {
       "municipality": "大和郡山市",
+      "title": "【事前申請】公共下水道マンホール蓋取替工事（第1工区）その1、その2 土木一式ABC",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "マンホール蓋"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
       "title": "公共下水道整備工事九条町（第1工区）その1、その2 土木一式A",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -26028,14 +26036,6 @@
     },
     {
       "municipality": "平群町",
-      "title": "防災備蓄品購入業務(循環型シャワー)に係る一般競争入札（条件付き）を実施します。",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "購入"
-      ]
-    },
-    {
-      "municipality": "平群町",
       "title": "メニューを飛ばして本文へ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -26150,14 +26150,6 @@
       "title": "しごとの情報",
       "reason": "no_architecture_context",
       "matchedKeywords": []
-    },
-    {
-      "municipality": "平群町",
-      "title": "防災備蓄品購入業務(循環型シャワー)に係る一般競争入札（条件付き）を実施します。",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "購入"
-      ]
     },
     {
       "municipality": "平群町",
