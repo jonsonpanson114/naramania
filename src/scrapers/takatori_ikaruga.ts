@@ -1,7 +1,7 @@
 import axios from 'axios';
 import * as cheerio from 'cheerio';
 import { BiddingItem, Scraper, BiddingType, Municipality } from '../types/bidding';
-import { shouldKeepItem, classifyWinner } from './common/filter';
+import { classifyWinner } from './common/filter';
 
 const TAKATORI_RESULT_URL = 'https://www.town.takatori.nara.jp/contents_detail.php?frmId=2205';
 const IKARUGA_INDEX_URL = 'https://www.town.ikaruga.nara.jp/category/1-10-0-0-0-0-0-0-0-0.html';
@@ -95,7 +95,7 @@ async function scrapeTakatoriResults(): Promise<BiddingItem[]> {
             const title = $(cells[0]).text().replace(/\s+/g, ' ').trim();
             const winner = $(cells[2]).text().replace(/\s+/g, ' ').trim();
             const amount = $(cells[3]).text().replace(/\s+/g, ' ').trim();
-            if (!title || title === '業務名' || !shouldKeepItem(title)) return;
+            if (!title || title === '業務名') return;
 
             const status = amount.includes('不調') || amount.includes('不成立') ? '不調' : '落札';
             const winningContractor = status === '落札' && winner && winner !== '-' ? winner : undefined;
@@ -152,7 +152,7 @@ async function scrapeIkarugaAnnouncements(): Promise<BiddingItem[]> {
                 const cells = $$(tr).find('td');
                 if (cells.length < 2) return;
                 const title = $$(cells[1]).text().replace(/\s+/g, ' ').trim() || $$(cells[0]).text().replace(/\s+/g, ' ').trim();
-                if (!title || title === '工事名' || title === '業務名' || !shouldKeepItem(title)) return;
+                if (!title || title === '工事名' || title === '業務名') return;
                 const pageTitle = $$('.pageTitle, h1').first().text().replace(/\s+/g, ' ').trim() || $$('body').text();
                 const biddingDate = parseIkarugaBiddingDate(pageTitle, pageDate);
 

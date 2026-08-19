@@ -2,7 +2,6 @@ import axios from 'axios';
 import * as cheerio from 'cheerio';
 import crypto from 'crypto';
 import { BiddingItem, Scraper, BiddingType } from '../types/bidding';
-import { shouldKeepItem } from './common/filter';
 
 // 天理市 入札情報
 // 入札公告: 1ページに全案件の案件概要テーブルが埋め込まれた静的HTML
@@ -103,7 +102,6 @@ export class TenriCityScraper implements Scraper {
                 const type = kv['工事種別'] || kv['業種'] || '';
 
                 if (!title) return;
-                if (!shouldKeepItem(title, type)) return;
 
                 const annoDate = parseJapaneseDate(annoDateText) || new Date().toISOString().split('T')[0];
 
@@ -131,7 +129,7 @@ export class TenriCityScraper implements Scraper {
         }
 
         for (const supplemental of TENRI_SUPPLEMENTAL_ITEMS) {
-            if (allItems.some(item => item.title === supplemental.title) || !shouldKeepItem(supplemental.title)) continue;
+            if (allItems.some(item => item.title === supplemental.title)) continue;
             allItems.push({
                 id: makeId(supplemental.title),
                 municipality: '天理市',

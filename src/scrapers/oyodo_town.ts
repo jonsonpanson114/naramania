@@ -1,7 +1,7 @@
 import axios from 'axios';
 import * as cheerio from 'cheerio';
+import crypto from 'crypto';
 import { BiddingItem, Scraper, BiddingType } from '../types/bidding';
-import { shouldKeepItem } from './common/filter';
 
 const OYODO_URLS = [
     { url: 'https://www.town.oyodo.lg.jp/contents_detail.php?frmId=218', status: '受付中' as const },
@@ -11,6 +11,13 @@ const OYODO_URLS = [
 
 const BASE_URL = 'https://www.town.oyodo.lg.jp';
 const HEADERS = { 'User-Agent': 'Mozilla/5.0' };
+
+// 同一ドメイン・同一パスプレフィックスを共有するURLが多いと、末尾12文字だけの
+// base64切り出しでは衝突しうる(oji_town.tsで実際に発生した不具合と同型)。
+// md5ハッシュを使うことで衝突確率を実用上無視できる水準まで下げる。
+function oyodoUrlHash(value: string): string {
+    return crypto.createHash('md5').update(value).digest('hex').slice(0, 10);
+}
 
 function makeAbsoluteUrl(href: string): string {
     if (!href) return BASE_URL;
@@ -111,7 +118,7 @@ function parseOyodoAnnouncementTables($: cheerio.CheerioAPI): BiddingItem[] {
     $('table caption').each((_, captionEl) => {
         const caption = $(captionEl).text().trim();
         const title = cleanTitle(caption.replace(/^【令和.*?】/, '').trim());
-        if (!title || !shouldKeepItem(title)) return;
+        if (!title) return;
 
         const table = $(captionEl).closest('table');
         const row = table.find('tbody tr').eq(1);
@@ -123,7 +130,6 @@ function parseOyodoAnnouncementTables($: cheerio.CheerioAPI): BiddingItem[] {
         const bodyTitle = cleanTitle(cells.eq(2).text().trim()) || title;
         const place = cells.eq(4).text().trim();
         const finalTitle = bodyTitle || title;
-        if (!shouldKeepItem(finalTitle, `${gyoshu} ${place}`)) return;
 
         const pdfHref = table.parent().nextAll('div').find('a[href$=\".pdf\"]').first().attr('href') || '';
         const pdfUrl = pdfHref ? makeAbsoluteUrl(pdfHref) : undefined;
@@ -135,6 +141,7 @@ function parseOyodoAnnouncementTables($: cheerio.CheerioAPI): BiddingItem[] {
             title: finalTitle,
             type: classifyType(`${finalTitle} ${gyoshu}`),
             announcementDate,
+            ...(place ? { description: place } : {}),
             link: pdfUrl || 'https://www.town.oyodo.lg.jp/0000000218.html',
             pdfUrl,
             status: '受付中',
@@ -172,11 +179,11 @@ export class OyodoTownScraper implements Scraper {
                     if (!rawText || !href) return;
 
                     const title = cleanTitle(rawText);
-                    if (!title || !shouldKeepItem(title)) return;
+                    if (!title) return;
 
                     const date = parseJapaneseDate(rawText) || pageDate;
                     const fullUrl = makeAbsoluteUrl(href);
-                    const id = `oyodo-${Buffer.from(fullUrl).toString('base64').slice(0, 12)}`;
+                    const id = `oyodo-${oyodoUrlHash(fullUrl)}`;
 
                     items.set(id, {
                         id,

@@ -4,7 +4,6 @@ import crypto from 'crypto';
 import { chromium } from 'playwright';
 import type { Browser, BrowserContext, Frame, Page } from 'playwright';
 import { BiddingItem, BiddingStatus, BiddingType, Scraper } from '../types/bidding';
-import { shouldKeepItem } from './common/filter';
 
 const BASE_URL = 'https://www.city.gojo.lg.jp';
 const GOJO_EPI_URL = 'https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=06200640072006C0';
@@ -181,16 +180,6 @@ const KNOWN_GOJO_ITEMS: Array<Pick<BiddingItem, 'title' | 'announcementDate' | '
     },
 ];
 
-const ARCHITECTURE_CONTEXT = [
-    '建築', '建築設備', '公民館', '施設', '庁舎', '学校', '校舎', '住宅',
-    '団地', '消防', '空調', '防火設備', '特定建築物',
-];
-
-const ARCHITECTURE_WORK = [
-    '工事', '改修', '修繕', '新築', '解体', '設計', '監理', '業務委託',
-    '委託', '定期調査', '定期検査', '更新',
-];
-
 const EXCLUDE = [
     '印刷', '配付', '広告', '購入', 'おむつ', 'システム', '物品', '車両',
     '電気工作物保安管理', '開票', '投票', '広報', '紙',
@@ -227,12 +216,12 @@ type GojoDiagnostics = {
     logError: (message: string) => void;
 };
 
-function shouldKeepGojoTitle(title: string): boolean {
-    if (EXCLUDE.some(keyword => title.includes(keyword))) return false;
-    return shouldKeepItem(title) || (
-        ARCHITECTURE_CONTEXT.some(keyword => title.includes(keyword))
-        && ARCHITECTURE_WORK.some(keyword => title.includes(keyword))
-    );
+// 建築関連性の判定(shouldKeepItem)はここでは行わない。ここで弾くと対象外案件が
+// index.tsに一切渡らずmarket_items.json（全件一覧）に載らなくなる。関連性判定は
+// index.tsが一元的に行う設計になっている。ここでは明らかにノイズ（入札情報ですら
+// ない印刷・広報・物品購入等）だけを弾く。
+function isGojoNoiseTitle(title: string): boolean {
+    return EXCLUDE.some(keyword => title.includes(keyword));
 }
 
 function classifyType(title: string): BiddingType {
@@ -576,7 +565,7 @@ async function scrapeGojoForecastItems(diagnostics?: GojoDiagnostics): Promise<B
 
             for (const match of matches) {
                 const rawTitle = compactJapaneseText(match[2] || '');
-                if (!rawTitle || !shouldKeepGojoTitle(rawTitle)) continue;
+                if (!rawTitle || isGojoNoiseTitle(rawTitle)) continue;
 
                 const key = gojoItemKey(rawTitle, undefined, link.pdfUrl);
                 seen.set(key, mergeGojoItem(seen.get(key), {
@@ -632,7 +621,7 @@ async function scrapeGojoEpiResults(diagnostics?: GojoDiagnostics): Promise<Bidd
                     if (cells.length < 8) continue;
 
                     const rawTitle = (await cells[2].textContent() || '').replace(/\s+/g, ' ').trim();
-                    if (!rawTitle || !shouldKeepGojoTitle(rawTitle)) continue;
+                    if (!rawTitle || isGojoNoiseTitle(rawTitle)) continue;
 
                     const normalizedTitle = normalizeGojoTitle(rawTitle);
                     const biddingDate = parseSlashDate((await cells[1].textContent() || '').trim()) || undefined;
@@ -696,7 +685,7 @@ async function scrapeEducationPages(diagnostics?: GojoDiagnostics): Promise<Bidd
         for (const anchor of $('li.page a').toArray()) {
             const title = $(anchor).text().trim();
             if (!title.startsWith('【入札')) continue;
-            if (!shouldKeepGojoTitle(title)) continue;
+            if (isGojoNoiseTitle(title)) continue;
 
             const href = $(anchor).attr('href');
             if (!href) continue;
@@ -797,7 +786,7 @@ export class GojoCityScraper implements Scraper {
         for (const feedUrl of RESULT_JSON_URLS) {
             try {
                 const res = await axios.get<CmsPage[]>(feedUrl, { timeout: 15000, headers: HEADERS });
-                const pages = res.data.filter(page => shouldKeepGojoTitle(page.page_name));
+                const pages = res.data.filter(page => !isGojoNoiseTitle(page.page_name));
                 console.log(`[五條市] ${feedUrl}: ${pages.length}件対象`);
 
                 for (const page of pages) {
@@ -833,7 +822,7 @@ export class GojoCityScraper implements Scraper {
         }
 
         for (const item of KNOWN_GOJO_ITEMS) {
-            if (!shouldKeepGojoTitle(item.title)) continue;
+            if (isGojoNoiseTitle(item.title)) continue;
             const key = gojoItemKey(item.title, item.biddingDate, item.pdfUrl || item.link);
             items.set(key, mergeGojoItem(items.get(key), {
                 id: makeId(item.title, item.pdfUrl || item.link),

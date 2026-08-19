@@ -1,7 +1,6 @@
 import * as cheerio from 'cheerio';
 import crypto from 'crypto';
 import { BiddingItem, Scraper, BiddingType } from '../types/bidding';
-import { shouldKeepItem } from './common/filter';
 import { fetchHtml, fetchJson } from './common/html_fetch';
 import { getCurrentReiwaFiscalYear, fiscalMonthToCalendarYear } from './common/fiscal_year';
 
@@ -61,10 +60,6 @@ const SKIP_TITLE_KEYWORDS = [
     '下水道', '管渠', '舗装', '土木', '河川', '造園', '電気通信', '水道施設',
     '農業', '交通安全施設', '道路維持', '橋梁', '浄水', '井戸',
 ];
-
-function titleSeemsRelevant(title: string): boolean {
-    return shouldKeepItem(title);
-}
 
 function classifyType(title: string): BiddingType {
     if (title.includes('設計') || title.includes('測量') || title.includes('コンサル') || title.includes('地質')) return 'コンサル';
@@ -200,7 +195,7 @@ async function scrapeCurrentAnnouncementPage(): Promise<BiddingItem[]> {
             const title = titleCell.text().replace(/\(PDFファイル:[^)]+\)/g, '').replace(/\s+/g, ' ').trim();
             const typeText = $(cells[5]).text().trim();
 
-            if (!title || title === '該当なし' || !titleSeemsRelevant(`${title} ${typeText}`)) return;
+            if (!title || title === '該当なし') return;
 
             const pdfHref = titleCell.find('a').first().attr('href') || '';
             const pdfUrl = pdfHref
@@ -281,7 +276,7 @@ async function scrapeKensetsuKekkaPage(url: string, reiwaYear: number): Promise<
             if (cells.length < 6) return;
 
             const [dateText, , title, winnerRaw, amountText] = cells;
-            if (!title || title.length < 4 || !titleSeemsRelevant(title)) return;
+            if (!title || title.length < 4) return;
             if (SKIP_TITLE_KEYWORDS.some(kw => title.includes(kw))) return;
 
             const dm = dateText.match(/(\d{1,2})月(\d{1,2})日/);
@@ -340,7 +335,7 @@ export class YamatokoriyamaCityScraper implements Scraper {
             console.log(`[大和郡山市] ${label} JSON取得中...`);
             try {
                 const children = await fetchChildPages(jsonUrl, /令和8年度|R8|令和7年度|R7/i);
-                const relevant = children.filter(p => !p.is_category_index && titleSeemsRelevant(p.page_name));
+                const relevant = children.filter(p => !p.is_category_index);
                 console.log(`[大和郡山市] ${label}: ${children.length}件中 ${relevant.length}件が対象`);
 
                 for (const page of relevant) {

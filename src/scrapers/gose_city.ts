@@ -1,7 +1,7 @@
 import axios from 'axios';
 import * as cheerio from 'cheerio';
 import { BiddingItem, Scraper } from '../types/bidding';
-import { isRealBiddingItem, classifyWinner, shouldKeepItem } from './common/filter';
+import { isRealBiddingItem, classifyWinner } from './common/filter';
 import { extractPdfText, parseJapaneseDateToIso } from './common/pdf_text';
 
 // 御所市
@@ -145,7 +145,7 @@ function extractGoseResultPdfRecords(pdfText: string, biddingDate: string): Gose
         const winnerMatch = block.match(/有\s+[0-9,]+\s*円?\s+(.+?)(?:\s+御所市|\s+落札率)/u);
         const title = sanitizeExtractedTitle(titleMatch?.[1]?.trim().replace(/\s+/g, ' ') || '');
         const winningContractor = winnerMatch?.[1]?.trim().replace(/\s+/g, ' ');
-        if (!title || !shouldKeepItem(title)) continue;
+        if (!title) continue;
 
         records.push({
             title,
@@ -258,7 +258,7 @@ async function scrapeGoseCategoryLinks(items: BiddingItem[]): Promise<void> {
 
             const mergedRecords = [...detailRecords, ...pdfRecords];
 
-            if (mergedRecords.length === 0 && shouldKeepItem(link.title)) {
+            if (mergedRecords.length === 0) {
                 const proposalDetails = link.title.includes('プロポーザル')
                     ? parseProposalPageDetails(detailHtml)
                     : {};
@@ -281,7 +281,6 @@ async function scrapeGoseCategoryLinks(items: BiddingItem[]): Promise<void> {
             }
 
             mergedRecords.forEach((record, index) => {
-                if (!shouldKeepItem(record.title)) return;
                 items.push({
                     id: buildGoseId(record.title, record.announcementDate || detailDate, `-${index}`),
                     municipality: '御所市',
@@ -332,8 +331,9 @@ async function scrapeGoseCity(): Promise<BiddingItem[]> {
             ];
             if (NON_BIDDING_PATTERNS.some(p => title.includes(p))) continue;
 
-            // ③ NGワードフィルター（共通）
-            if (!shouldKeepItem(title)) continue;
+            // 建築関連性の判定(shouldKeepItem)はここでは行わない。ここで弾くと
+            // 対象外案件がindex.tsに一切渡らずmarket_items.json（全件一覧）に
+            // 載らなくなる。関連性判定はindex.tsが一元的に行う設計になっている。
 
             const pubDateStr = $(el).find('pubDate').text().trim();
             const rawAnnouncementDate = parseRssDate(pubDateStr) || parseRssDate(new Date().toString());

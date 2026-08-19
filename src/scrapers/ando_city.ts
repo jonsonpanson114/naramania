@@ -1,7 +1,6 @@
 import axios from 'axios';
 import * as cheerio from 'cheerio';
 import { BiddingItem, Scraper, BiddingType } from '../types/bidding';
-import { shouldKeepItem } from './common/filter';
 import { getCurrentReiwaFiscalYear } from './common/fiscal_year';
 
 // 安堵町
@@ -51,10 +50,6 @@ const ANDO_TITLE_NORMALIZATIONS: Record<string, string> = {
 const ANDO_KNOWN_ANNOUNCEMENT_DATES: Record<string, string> = {
     '安堵こども園南館外壁改修、トイレ乾式化および洋式化改修工事': '2026-05-19',
 };
-
-function shouldSkip(title: string): boolean {
-    return !shouldKeepItem(title);
-}
 
 function classifyType(title: string): BiddingType {
     if (title.includes('設計') || title.includes('測量') || title.includes('コンサル')) {
@@ -218,7 +213,9 @@ async function scrapeAndoCity(recordError?: (message: string) => void): Promise<
             const href = $category(el).attr('href') || '';
             if (!title || !href) return;
             if (!title.includes('条件付き一般競争入札')) return;
-            if (shouldSkip(title)) return;
+            // 建築関連性の判定(shouldKeepItem)はここでは行わない。ここで弾くと
+            // 対象外案件がindex.tsに一切渡らずmarket_items.json（全件一覧）に
+            // 載らなくなる。関連性判定はindex.tsが一元的に行う設計になっている。
 
             const link = normalizeAndoLink(href);
             const surroundingText = $category(el).parent().text().replace(/\s+/g, ' ');
@@ -265,8 +262,6 @@ async function scrapeAndoCity(recordError?: (message: string) => void): Promise<
             const fyMatch = title.match(/令和(\d+)年度/);
             if (fyMatch && parseInt(fyMatch[1]) > getCurrentReiwaFiscalYear()) return;
 
-            if (shouldSkip(title)) return;
-
             // ステータス判定
             let status: '受付中' | '締切間近' | '受付終了' | '落札' = '受付中';
             if (title.includes('落札') || title.includes('結果')) {
@@ -309,7 +304,7 @@ async function scrapeAndoCity(recordError?: (message: string) => void): Promise<
     }
 
     for (const supplemental of ANDO_SUPPLEMENTAL_ITEMS) {
-        if (!items.has(supplemental.title) && !shouldSkip(supplemental.title)) {
+        if (!items.has(supplemental.title)) {
             result.push({
                 id: `ando-supplemental-${supplemental.link.split('/').pop()?.replace('.html', '')}`,
                 municipality: '安堵町',

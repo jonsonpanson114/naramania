@@ -3,7 +3,6 @@ import * as cheerio from 'cheerio';
 import crypto from 'crypto';
 import type { Element } from 'domhandler';
 import { BiddingItem, Scraper, BiddingType } from '../types/bidding';
-import { shouldKeepItem } from './common/filter';
 import { fiscalMonthToCalendarYear, getCurrentReiwaFiscalYear } from './common/fiscal_year';
 
 // 大和高田市 入札情報
@@ -28,10 +27,6 @@ function classifyType(gyoshu: string, title: string): BiddingType {
     if (t.includes('コンサル') || t.includes('設計') || t.includes('測量')) return 'コンサル';
     if (t.includes('委託') || t.includes('業務')) return '委託';
     return '建築';
-}
-
-function shouldSkip(gyoshu: string, title: string): boolean {
-    return !shouldKeepItem(title, gyoshu);
 }
 
 function extractAnnouncementTitle(cell: cheerio.Cheerio<Element>): string {
@@ -143,7 +138,6 @@ export class YamatoTakadaCityScraper implements Scraper {
                     const gyoshu = cells.eq(4).text().trim();
 
                     if (!titleRaw || titleRaw === '件名') return;
-                    if (shouldSkip(gyoshu, titleRaw)) return;
 
                     allItems.push({
                         id: makeId(titleRaw),
@@ -197,7 +191,7 @@ export class YamatoTakadaCityScraper implements Scraper {
                             }
                         });
 
-                        if (title && !shouldSkip('', title)) {
+                        if (title) {
                             const isAwarded = contractor && contractor !== '不成立' && contractor !== 'なし';
                             // 年度ページの月見出しから暦年に変換（4〜12月=年度開始年、1〜3月=翌年）
                             const calendarYear = fiscalMonthToCalendarYear(fiscalYearStart, currentMonth);

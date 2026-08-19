@@ -1,7 +1,6 @@
 import axios from 'axios';
 import * as cheerio from 'cheerio';
 import { BiddingItem, BiddingType, Scraper } from '../types/bidding';
-import { shouldKeepItem } from './common/filter';
 
 const BASE_URL = 'https://www.town.nara-kawanishi.lg.jp';
 const ANNOUNCEMENT_URLS = [
@@ -99,7 +98,7 @@ async function scrapeAnnouncementPages(): Promise<BiddingItem[]> {
             const $ = cheerio.load(res.data);
             const title = $('h1').first().text().replace(/\s+/g, ' ').trim();
             const announcementDate = parseJapaneseDate($('body').text());
-            if (!title || !shouldKeepItem(title)) continue;
+            if (!title) continue;
 
             items.push({
                 id: buildId(announcementDate, title),

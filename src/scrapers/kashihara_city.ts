@@ -1,7 +1,6 @@
 import axios from 'axios';
 import * as cheerio from 'cheerio';
 import { BiddingItem, Scraper, BiddingType } from '../types/bidding';
-import { shouldKeepItem } from './common/filter';
 import { getCurrentReiwaFiscalYear } from './common/fiscal_year';
 
 const BASE_URL = 'https://www.city.kashihara.nara.jp';
@@ -316,11 +315,6 @@ export class KashiharaCityScraper implements Scraper {
                             return;
                         }
 
-                        if (!shouldKeepItem(title, gyoshu)) {
-                            console.log(`[橿原市] スキップ（土木キーワード）: ${title}`);
-                            return;
-                        }
-
                         items.push({
                             id: `kashihara-${contractNo}`,
                             municipality: '橿原市',
@@ -376,11 +370,6 @@ export class KashiharaCityScraper implements Scraper {
 
                         if (TITLE_SKIP.some(kw => title.includes(kw))) {
                             console.log(`[橿原市] スキップ（土木系）: ${title}`);
-                            return;
-                        }
-
-                        if (!shouldKeepItem(title)) {
-                            console.log(`[橿原市] スキップ（土木キーワード）: ${title}`);
                             return;
                         }
 

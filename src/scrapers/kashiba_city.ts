@@ -7,7 +7,6 @@ import type { Frame, Page } from 'playwright';
 import { BiddingItem, Scraper } from '../types/bidding';
 import { extractTargetedResultsFromPDF } from '../services/gemini_service';
 import { downloadPDFBuffer } from '../utils/pdf_utils';
-import { shouldKeepItem } from './common/filter';
 
 const EPI_URL = 'https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=062006E007200640';
 
@@ -300,7 +299,6 @@ async function scrapeKashibaCity(): Promise<BiddingItem[]> {
                             : knownSchedule?.link || EPI_URL;
 
                         if (!title || !pubDate) continue;
-                        if (!shouldKeepItem(title)) continue;
 
                         const id = `kashiba-${contractNo || pubDate + '-' + title.slice(0, 10)}`;
                         itemsMap.set(id, {
@@ -410,7 +408,7 @@ async function scrapeKashibaWebsite(): Promise<BiddingItem[]> {
                         const cleanTitle = rawTitle.replace(/\[(PDF|Excel)ファイル.*?\]/g, '').trim() || rawTitle;
                         const rawBiddingDate = cells[biddingDateIdx] || '';
 
-                        if (!cleanTitle || !shouldKeepItem(cleanTitle)) return;
+                        if (!cleanTitle) return;
 
                         const biddingDate = parseImperialDate(rawBiddingDate)
                             || parseJpDate(rawBiddingDate.replace(/年|月/g, '/').replace(/日/g, ''));
@@ -447,41 +445,39 @@ async function scrapeKashibaWebsite(): Promise<BiddingItem[]> {
                 
                     if (text.length < 5) return;
 
-                    if (shouldKeepItem(text)) {
-                        // タイトルのクリーンアップ（[PDFファイル...] などを削除）
-                        const cleanTitle = text.replace(/\[(PDF|Excel)ファイル.*?\]/g, '').trim() || text;
-                        const isResult = cleanTitle.includes('結果') || link.title.includes('結果');
-                        const fullUrl = href.startsWith('http') ? href : 'https://www.city.kashiba.lg.jp' + href;
-                    
-                        // 日付抽出
-                        let date = '2025-03-01';
-                        const m1 = link.title.match(/(?:令和|R)(\d+)年(\d+)月(\d+)日/);
-                        const m2 = link.title.match(/(\d+)月(\d+)日(?:公告|結果)/);
+                    // タイトルのクリーンアップ（[PDFファイル...] などを削除）
+                    const cleanTitle = text.replace(/\[(PDF|Excel)ファイル.*?\]/g, '').trim() || text;
+                    const isResult = cleanTitle.includes('結果') || link.title.includes('結果');
+                    const fullUrl = href.startsWith('http') ? href : 'https://www.city.kashiba.lg.jp' + href;
 
-                        if (m1) {
-                            const year = 2018 + parseInt(m1[1]);
-                            date = `${year}-${m1[2].padStart(2, '0')}-${m1[3].padStart(2, '0')}`;
-                        } else if (m2) {
-                            const month = parseInt(m2[1]);
-                            const day = parseInt(m2[2]);
-                            const year = pageYear;
-                            date = `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
-                        }
+                    // 日付抽出
+                    let date = '2025-03-01';
+                    const m1 = link.title.match(/(?:令和|R)(\d+)年(\d+)月(\d+)日/);
+                    const m2 = link.title.match(/(\d+)月(\d+)日(?:公告|結果)/);
 
-                        const id = `kashiba-web-${crypto.createHash('md5').update(cleanTitle + fullUrl).digest('hex').slice(0, 8)}`;
-                    
-                        if (!items.some(i => i.id === id)) {
-                            items.push({
-                                id,
-                                municipality: '香芝市',
-                                title: cleanTitle,
-                                type: inferKashibaType(cleanTitle),
-                                announcementDate: detailAnnouncementDate || date,
-                                biddingDate: undefined,
-                                link: fullUrl,
-                                status: isResult ? '落札' : '受付中',
-                            });
-                        }
+                    if (m1) {
+                        const year = 2018 + parseInt(m1[1]);
+                        date = `${year}-${m1[2].padStart(2, '0')}-${m1[3].padStart(2, '0')}`;
+                    } else if (m2) {
+                        const month = parseInt(m2[1]);
+                        const day = parseInt(m2[2]);
+                        const year = pageYear;
+                        date = `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+                    }
+
+                    const id = `kashiba-web-${crypto.createHash('md5').update(cleanTitle + fullUrl).digest('hex').slice(0, 8)}`;
+
+                    if (!items.some(i => i.id === id)) {
+                        items.push({
+                            id,
+                            municipality: '香芝市',
+                            title: cleanTitle,
+                            type: inferKashibaType(cleanTitle),
+                            announcementDate: detailAnnouncementDate || date,
+                            biddingDate: undefined,
+                            link: fullUrl,
+                            status: isResult ? '落札' : '受付中',
+                        });
                     }
                 });
                 await new Promise(r => setTimeout(r, 200));

@@ -1,7 +1,6 @@
 import axios from 'axios';
 import * as cheerio from 'cheerio';
 import { BiddingItem, Scraper, BiddingType } from '../types/bidding';
-import { shouldKeepItem } from './common/filter';
 import { fiscalMonthToCalendarYear, getCurrentReiwaFiscalYear } from './common/fiscal_year';
 
 interface PdfJsContentItem {
@@ -70,10 +69,6 @@ async function extractContractorFromPdf(pdfUrl: string): Promise<string | undefi
 const BASE_URL = 'https://www.town.koryo.nara.jp';
 // 指名競争入札結果カテゴリページ
 const CATEGORY_URL = `${BASE_URL}/category/19-4-2-0-0-0-0-0-0-0.html`;
-
-function shouldSkip(title: string): boolean {
-    return !shouldKeepItem(title);
-}
 
 function classifyType(section: string, title: string): BiddingType {
     if (section.includes('測量') || section.includes('設計') || section.includes('コンサル')) {
@@ -158,7 +153,7 @@ export class KoryoTownScraper implements Scraper {
                     const parsed = parseItem(text, fiscalYearStart);
                     if (!parsed) return;
                     const { no, name, date } = parsed;
-                    if (!name || shouldSkip(name)) return;
+                    if (!name) return;
 
                     const pdfHref = $(li).find('a').attr('href') || '';
                     const pdfUrl = pdfHref

@@ -1,6 +1,5 @@
 import * as cheerio from 'cheerio';
 import { BiddingItem, Scraper, BiddingType } from '../types/bidding';
-import { shouldKeepItem } from './common/filter';
 import { parseJapaneseDateToIso } from './common/pdf_text';
 import { fetchHtml } from './common/html_fetch';
 
@@ -29,10 +28,6 @@ const KNOWN_SAKURAI_ITEMS: BiddingItem[] = [
         status: '受付中',
     },
 ];
-
-function shouldSkip(title: string, category: string): boolean {
-    return !shouldKeepItem(title, category);
-}
 
 function classifyType(category: string): BiddingType {
     if (category.includes('委託') || category.includes('業務') || category.includes('コンサル') || category.includes('設計')) return 'コンサル';
@@ -83,7 +78,7 @@ async function scrapeSupplementalPages(): Promise<BiddingItem[]> {
             const $ = cheerio.load(html);
             const title = $('h1').first().text().replace(/\s+/g, ' ').trim();
             const bodyText = $('body').text().replace(/\s+/g, ' ').trim();
-            if (!title || !shouldKeepItem(title, bodyText)) continue;
+            if (!title) continue;
 
             const announcementDate = parseDate(bodyText) || new Date().toISOString().split('T')[0];
             const biddingDate = parseSupplementalBiddingDate(bodyText);
@@ -141,7 +136,6 @@ export class SakuraiCityScraper implements Scraper {
                     const koushu = industryIdx >= 0 ? (cells[industryIdx] || '') : '';
 
                     if (!title || category === '区分' || title === '工事（委託）名') return;
-                    if (shouldSkip(title, `${category} ${koushu}`)) return;
 
                     const id = `sakurai-${annoDate}-${title}`.normalize('NFKC').replace(/[^\w\u3040-\u30ff\u3400-\u9fff-]+/g, '-').slice(0, 120);
                     if (items.some(item => item.id === id)) return;

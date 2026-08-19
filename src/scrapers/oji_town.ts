@@ -2,7 +2,6 @@ import axios from 'axios';
 import * as cheerio from 'cheerio';
 import crypto from 'crypto';
 import { BiddingItem, Scraper, BiddingType } from '../types/bidding';
-import { shouldKeepItem } from './common/filter';
 import { extractPdfText } from './common/pdf_text';
 
 // 王寺町のURLは "https://www.town.oji.nara.jp/kakuka/somu/somu/gyomuannai/nyuusatu/
@@ -106,7 +105,6 @@ function getKnownOjiSchedule(title: string): { announcementDate: string; bidding
 function mergeOjiSupplementalItem(items: BiddingItem[], supplemental: typeof OJI_SUPPLEMENTAL_ITEMS[number]): void {
     const title = normalizeOjiTitle(supplemental.title);
     if (OJI_OUT_OF_SCOPE_TITLES.has(title)) return;
-    if (!shouldKeepItem(title)) return;
 
     const existing = items.find(item => normalizeOjiTitle(item.title) === title);
     if (existing) {
@@ -184,8 +182,7 @@ async function scrapeOjiProcurementSitemapPages(): Promise<BiddingItem[]> {
             if (OJI_OUT_OF_SCOPE_TITLES.has(title)) continue;
             const bodyText = extractOjiMainText($detail);
 
-            // 本文には定型文由来の除外キーワードが混ざるため、判定はタイトルのみで行う
-            if (!title || !shouldKeepItem(title)) continue;
+            if (!title) continue;
 
             const announcementDate = parseUpdatedDate(detailHtml) || entry.lastmod?.slice(0, 10) || '';
             const isResult = /事後公表|落札|結果/u.test(rawTitle) || /落札|結果/u.test(bodyText);
@@ -234,7 +231,6 @@ export class OjiTownScraper implements Scraper {
 
             for (const link of links) {
                 const normalizedTitle = link.title.replace(/\s+/g, ' ').trim();
-                if (!shouldKeepItem(normalizedTitle)) continue;
 
                 const fullUrl = makeAbsoluteUrl(link.href);
                 const detailRes = await axios.get(fullUrl, { headers: HEADERS, timeout: 15000 });
@@ -267,11 +263,6 @@ export class OjiTownScraper implements Scraper {
                         }
                     }
                 }
-
-                // タイトルが建築案件として通っていれば採用する。
-                // 本文やPDFには「低入札価格調査制度」「ソフトウェアをダウンロード」等の
-                // 定型文が含まれ、除外キーワードに誤ヒットするため判定に使わない。
-                if (!shouldKeepItem(title)) continue;
 
                 const effectiveBiddingDate = biddingDate || knownSchedule?.biddingDate;
                 items.push({

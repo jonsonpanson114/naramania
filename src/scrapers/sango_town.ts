@@ -1,9 +1,9 @@
 import axios from 'axios';
 import * as cheerio from 'cheerio';
+import crypto from 'crypto';
 import { chromium } from 'playwright';
 import type { Frame, Page } from 'playwright';
 import { BiddingItem, Scraper, BiddingType } from '../types/bidding';
-import { shouldKeepItem } from './common/filter';
 
 const SANGO_INDEX = 'https://www.town.sango.nara.jp/soshiki/list8-1.html';
 const SANGO_CONTRACT = 'https://www.town.sango.nara.jp/soshiki/4/13385.html';
@@ -12,6 +12,13 @@ const EPI_BASE = 'https://www.epi-cloud.fwd.ne.jp';
 const TARGET_NENDOS = ['2026', '2025'];
 const BASE_URL = 'https://www.town.sango.nara.jp';
 const HEADERS = { 'User-Agent': 'Mozilla/5.0' };
+
+// 同一ドメイン・同一パスプレフィックスを共有するURLが多いと、末尾12文字だけの
+// base64切り出しでは衝突しうる(oji_town.tsで実際に発生した不具合と同型)。
+// md5ハッシュを使うことで衝突確率を実用上無視できる水準まで下げる。
+function sangoUrlHash(value: string): string {
+    return crypto.createHash('md5').update(value).digest('hex').slice(0, 10);
+}
 
 function makeAbsoluteUrl(href: string): string {
     if (!href) return SANGO_INDEX;
@@ -121,8 +128,6 @@ async function extractIssueResults(frame: Frame): Promise<BiddingItem[]> {
             .filter(Boolean);
         const gyoshu = cellTexts.find(text => /(建築|電気|管|機械|防水|解体|設計|測量|コンサル|監理|調査)/.test(text)) || '';
 
-        if (!shouldKeepItem(title, `${gyoshu} ${rowText}`)) continue;
-
         const href = await link.getAttribute('href');
         const fullLink = toAbsoluteEpiUrl(href || '');
         const announcementDate = dates[0] || '';
@@ -165,7 +170,6 @@ async function extractResultResults(frame: Frame): Promise<BiddingItem[]> {
         const titleCell = cells[2];
         const title = ((await titleCell.innerText().catch(() => '')) || '').replace(/\s+/g, ' ').trim();
         if (!title) continue;
-        if (!shouldKeepItem(title)) continue;
 
         const biddingDate = parseDate(((await cells[1].innerText().catch(() => '')) || '').trim()) || undefined;
         const winnerRaw = ((await cells[5].innerText().catch(() => '')) || '').replace(/\s+/g, ' ').trim();
@@ -264,11 +268,10 @@ export class SangoTownScraper implements Scraper {
                 const href = $index(el).attr('href') || '';
                 if (!title || !href) return;
                 if (!title.includes('入札')) return;
-                if (!shouldKeepItem(title)) return;
 
                 const link = makeAbsoluteUrl(href);
                 const date = parseDate(title) || parseUpdatedDate(indexRes.data);
-                const id = `sango-open-${Buffer.from(link).toString('base64').slice(0, 12)}`;
+                const id = `sango-open-${sangoUrlHash(link)}`;
 
                 upsert({
                     id,
@@ -286,10 +289,9 @@ export class SangoTownScraper implements Scraper {
                 const title = $contract(el).parent().next().text().replace(/\s+/g, ' ').trim();
                 const href = $contract(el).attr('href') || '';
                 if (!title || !href) return;
-                if (!shouldKeepItem(title)) return;
 
                 const link = makeAbsoluteUrl(href);
-                const id = `sango-result-${Buffer.from(link).toString('base64').slice(0, 12)}`;
+                const id = `sango-result-${sangoUrlHash(link)}`;
                 const sectionText = $contract(el).closest('section, div, article, li, tr').text();
                 const date = parseDate(sectionText) || parseUpdatedDate(contractRes.data);
 

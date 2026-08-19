@@ -4,7 +4,6 @@ import { chromium } from 'playwright';
 import type { Frame, Page } from 'playwright';
 import crypto from 'crypto';
 import { BiddingItem, BiddingType, Scraper } from '../types/bidding';
-import { shouldKeepItem } from './common/filter';
 import { parseJapaneseDateToIso } from './common/pdf_text';
 
 const BASE = 'https://www.city.katsuragi.nara.jp';
@@ -14,10 +13,6 @@ const EPI_CLOUD_FORM = 'https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowActio
 const EPI_BASE = 'https://www.epi-cloud.fwd.ne.jp';
 const TARGET_NENDOS = ['2026', '2025'];
 const HEADERS = { 'User-Agent': 'Mozilla/5.0 (compatible; naramania-scraper/1.0)' };
-
-function titleSeemsRelevant(title: string): boolean {
-    return shouldKeepItem(title);
-}
 
 function classifyType(title: string, gyoshu = ''): BiddingType {
     const target = `${title} ${gyoshu}`;
@@ -197,7 +192,7 @@ async function extractResultInfosFromPdf(pdfUrl: string): Promise<KatsuragiResul
         return extractResultBlocks(text)
             .map((block): KatsuragiResultInfo | null => {
                 const title = extractResultTitle(block);
-                if (!title || !titleSeemsRelevant(title)) return null;
+                if (!title) return null;
                 const { biddingDate, winningContractor } = extractResultBidAndWinner(block);
                 return {
                     title,
@@ -301,7 +296,7 @@ async function extractIssueResults(frame: Frame): Promise<BiddingItem[]> {
         if (await link.count() === 0) continue;
 
         const title = ((await link.textContent()) || '').replace(/\s+/g, ' ').trim();
-        if (!title || !titleSeemsRelevant(title)) continue;
+        if (!title) continue;
 
         const cells = await row.locator('td').all();
         const cellTexts = await Promise.all(
@@ -341,7 +336,7 @@ async function extractResultResults(frame: Frame): Promise<BiddingItem[]> {
         if (cells.length < 7) continue;
 
         const title = ((await cells[2].innerText().catch(() => '')) || '').replace(/\s+/g, ' ').trim();
-        if (!title || !titleSeemsRelevant(title)) continue;
+        if (!title) continue;
 
         const biddingDate = parseJapaneseDate(((await cells[1].innerText().catch(() => '')) || '').trim()) || undefined;
         const controlNo = ((await cells[3].innerText().catch(() => '')) || '').replace(/\s+/g, '').trim();
@@ -443,7 +438,7 @@ async function scrapeWebsiteAnnouncements(): Promise<BiddingItem[]> {
             .replace(/\(PDFファイル:[^)]*\)/g, '')
             .replace(/\s+/g, ' ')
             .trim();
-        if (!title || !titleSeemsRelevant(title)) return;
+        if (!title) return;
 
         const pdfHref = titleEl.find('a').attr('href') || '';
         const dept = cells.eq(2).text().trim();

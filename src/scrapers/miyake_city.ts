@@ -1,7 +1,7 @@
 import axios from 'axios';
 import * as cheerio from 'cheerio';
 import { BiddingItem, BiddingStatus, BiddingType, Scraper } from '../types/bidding';
-import { classifyWinner, shouldKeepItem } from './common/filter';
+import { classifyWinner } from './common/filter';
 import { getCurrentReiwaFiscalYear } from './common/fiscal_year';
 import { extractPdfText } from './common/pdf_text';
 
@@ -117,7 +117,6 @@ async function scrapeAnnouncements(announceUrl: string): Promise<BiddingItem[]> 
             const title = cleanTitle($(el).text());
             const href = makeAbsoluteUrl($(el).attr('href'));
             if (!title || !href) return;
-            if (!shouldKeepItem(title)) return;
             if (!/(工事|設計|委託|業務)/.test(title)) return;
 
             items.push({
@@ -187,7 +186,6 @@ async function scrapeResultPage(url: string): Promise<BiddingItem[]> {
             const title = cleanTitle($(el).text());
             const pdfUrl = makeAbsoluteUrl($(el).attr('href'));
             if (!title || !pdfUrl) return;
-            if (!shouldKeepItem(title)) return;
             links.push({ title, pdfUrl });
         });
 

@@ -4,7 +4,7 @@ import { chromium } from 'playwright';
 import type { Frame, Page } from 'playwright';
 import crypto from 'crypto';
 import { BiddingItem, BiddingType, Scraper } from '../types/bidding';
-import { classifyWinner, shouldKeepItem } from './common/filter';
+import { classifyWinner } from './common/filter';
 import { parseJapaneseDateToIso } from './common/pdf_text';
 
 const EPI_CLOUD_FORM = 'https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680';
@@ -108,8 +108,6 @@ async function extractIssueResults(frame: Frame): Promise<BiddingItem[]> {
             .map(text => parseJapaneseDate(text))
             .filter(Boolean);
         const gyoshu = cellTexts.find(text => /(建築|電気|管|機械|防水|解体|設計|測量|コンサル|監理|調査)/.test(text)) || '';
-
-        if (!shouldKeepItem(title, `${gyoshu} ${rowText}`)) continue;
 
         const href = await link.getAttribute('href');
         const fullLink = toAbsoluteUrl(href || '');
@@ -215,7 +213,7 @@ async function scrapeSupplementalPages(): Promise<BiddingItem[]> {
             const $ = cheerio.load(res.data);
             const title = $('h1').first().text().replace(/\s+/g, ' ').trim();
             const bodyText = $('body').text().replace(/\s+/g, ' ').trim();
-            if (!title || !shouldKeepItem(title, bodyText)) continue;
+            if (!title) continue;
 
             const winningContractor = parseIkomaSupplementalWinner(bodyText);
             items.push({
@@ -257,7 +255,7 @@ async function extractResultResults(frame: Frame): Promise<BiddingItem[]> {
         if (cells.length < 7) continue;
 
         const title = ((await cells[2].innerText().catch(() => '')) || '').replace(/\s+/g, ' ').trim();
-        if (!title || !shouldKeepItem(title)) continue;
+        if (!title) continue;
 
         const biddingDate = parseJapaneseDate(((await cells[1].innerText().catch(() => '')) || '').trim()) || undefined;
         const contractNo = ((await cells[3].innerText().catch(() => '')) || '').replace(/\s+/g, '').trim();

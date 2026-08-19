@@ -1,6 +1,5 @@
 import * as cheerio from 'cheerio';
 import { BiddingItem, Scraper, Municipality } from '../types/bidding';
-import { shouldKeepItem } from './common/filter';
 import { extractPdfText } from './common/pdf_text';
 import { fetchHtml } from './common/html_fetch';
 
@@ -132,8 +131,6 @@ async function scrapeSmallTown(url: string, municipality: string): Promise<Biddi
             const POSITIVE = ['入札', '公告', '工事', '設計', '委託', '修繕', '改修', '解体', '開札結果', '落札'];
             if (!POSITIVE.some(kw => title.includes(kw))) continue;
 
-            if (!shouldKeepItem(title)) continue;
-
             const hrefVal = linkEl.attr('href') || '';
             if (!hrefVal) continue;
             const updatedText = linkEl.parent().text().replace(/\s+/g, ' ');
@@ -209,14 +206,12 @@ async function scrapeHeguriSupplementalPages(): Promise<BiddingItem[]> {
             const candidateTitles = new Set<string>(titleCandidates);
             $('a').each((_, element) => {
                 const text = $(element).text().replace(/\s+/g, ' ').trim();
-                if (text.length >= 6 && shouldKeepItem(text)) {
+                if (text.length >= 6) {
                     candidateTitles.add(text);
                 }
             });
 
             for (const title of candidateTitles) {
-                if (!shouldKeepItem(title, pageText)) continue;
-
                 const isResult = /開札結果|落札/u.test(title) || /開札結果|落札/u.test(pageText);
                 items.push({
                     id: `平群町-${title}`.normalize('NFKC').replace(/[^\w\u3040-\u30ff\u3400-\u9fff-]+/g, '-').slice(0, 120),
@@ -267,7 +262,7 @@ async function scrapeYamazoeVillage(): Promise<BiddingItem[]> {
         const $ = cheerio.load(html);
             const title = $('h1').first().text().replace(/\s+/g, ' ').trim();
             const bodyText = $('body').text().replace(/\s+/g, ' ').trim();
-            if (!title || !shouldKeepItem(title, bodyText)) continue;
+            if (!title) continue;
 
             const announcementDate = parseUpdatedDate(bodyText) || new Date().toISOString().split('T')[0];
             const biddingDate = parseYamazoeBiddingDate(bodyText);
