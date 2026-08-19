@@ -1024,6 +1024,16 @@
       "status": "受付終了"
     },
     {
+      "id": "ikoma-result-2601100020",
+      "municipality": "生駒市",
+      "title": "白藤会館解体工事設計業務",
+      "type": "コンサル",
+      "announcementDate": "2026-08-17",
+      "biddingDate": "2026-08-17",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+      "status": "受付終了"
+    },
+    {
       "id": "ikoma-98e3ef20c8",
       "municipality": "生駒市",
       "title": "生駒中学校ＬＥＤ改修工事",
@@ -1042,16 +1052,6 @@
       "biddingDate": "2026-08-26",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
       "status": "受付中"
-    },
-    {
-      "id": "ikoma-a16c2f5343",
-      "municipality": "生駒市",
-      "title": "白藤会館解体工事設計業務",
-      "type": "コンサル",
-      "announcementDate": "2026-07-27",
-      "biddingDate": "2026-08-17",
-      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-      "status": "受付終了"
     },
     {
       "id": "ikoma-result-2601010041",
@@ -2227,7 +2227,7 @@
       "biddingDate": "2026-06-22",
       "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
       "status": "落札",
-      "winningContractor": "福比工務店"
+      "winningContractor": "福辻工務店"
     },
     {
       "id": "tawaramoto-2026062201",
