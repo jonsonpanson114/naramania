@@ -1,14 +1,62 @@
 {
-  "generatedAt": "2026-08-19T13:52:45.546Z",
-  "totalRejected": 414,
-  "totalBorderlineRescued": 42,
+  "generatedAt": "2026-08-20T13:55:18.275Z",
+  "totalRejected": 423,
+  "totalBorderlineRescued": 47,
   "byMunicipality": {
     "奈良県": {
-      "rejected": 414,
-      "borderlineRescued": 42
+      "rejected": 423,
+      "borderlineRescued": 47
     }
   },
   "entries": [
+    {
+      "municipality": "奈良県",
+      "title": "橿原考古学研究所管理棟写場及び理学研究室空調設備改修工事設計業務 委（設）第８－３５号",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "空調",
+        "設備"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "洞川エコミュージアムセンター本館及び屋外トイレ等屋根・外壁改修工事設計業務（自然環境整備交付金） 委（設）第８－６号",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "外壁",
+        "外壁改修"
+      ],
+      "borderlineRescue": true
+    },
+    {
+      "municipality": "奈良県",
+      "title": "精華学院体育館空調設備設置工事設計業務 委（設）第８－３４号",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "空調",
+        "設備"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "大淀養護学校エレベーター棟（３）昇降機設備改修工事設計業務 委（設）第８－３３号",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "設備",
+        "エレベーター",
+        "昇降機"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "万葉文化館本館空調設備及び内装改修工事設計業務 委（設）第８－１５号",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "空調",
+        "設備"
+      ],
+      "borderlineRescue": true
+    },
     {
       "municipality": "奈良県",
       "title": "奈良西警察署消防設備改修工事 監理委託",
@@ -207,6 +255,49 @@
         "設備"
       ],
       "borderlineRescue": true
+    },
+    {
+      "municipality": "奈良県",
+      "title": "一般国道１６５号 舗装補修設計業務委託（単独舗装道補修費） 第 ５１３－２－３－委１ 号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装",
+        "国道"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "一般国道１６９号 残土処分場検討業務委託（道路メンテナンス事業（国道橋りょう更新・撤去）） 繰３－Ａ－６Ｒ－委１",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "橋",
+        "国道"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "令和８年度 復旧治山事業 測量設計業務委託 第 委 ３ 号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "測量"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "第繰８－５４－２－委－１号他 法隆寺線 歩道詳細設計修正業務（防災・安全交付金事業（道路環境整備）他）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "一般国道１６８号 小規模附属物点検業務委託（公共施設等適正管理推進事業） ７４５－委１",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "国道"
+      ]
     },
     {
       "municipality": "奈良県",
@@ -1770,6 +1861,14 @@
     },
     {
       "municipality": "奈良県",
+      "title": "（都）西九条佐保線 大安寺西地区 測量委託（（仮称）奈良ＩＣ周辺整備単独街路事業） Ｇ８０－委－３",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "測量"
+      ]
+    },
+    {
+      "municipality": "奈良県",
       "title": "初田川 測量委託（緊急自然災害防止対策事業債対象事業（臨時・特別）） 第 Ｔ－１０６－委１ 号",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -2604,6 +2703,15 @@
     },
     {
       "municipality": "奈良県",
+      "title": "和田地区 地盤変動影響調査（事前調査）業務委託（防災・安全交付金事業（南部・東部）（急傾斜）他） 繰７３－１５－用委１他",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "補償",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "奈良県",
       "title": "一般国道１６９号御所高取バイパス 工作物等補償調査業務委託（防災・安全（道路改良）） ４－１０－Ａ４－委－１１",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -3234,14 +3342,6 @@
     },
     {
       "municipality": "奈良県",
-      "title": "御所香芝線 他 嘱託登記業務委託（公共用地登記推進事業（物件費）） 第 高田土木登記推進委託料－用委０４ 号",
-      "reason": "always_exclude_keyword",
-      "matchedKeywords": [
-        "登記"
-      ]
-    },
-    {
-      "municipality": "奈良県",
       "title": "龍神十津川線 嘱託登記業務委託（公共用地登記推進事業（物件費）） 五條土木登記推進委託料－用委１",
       "reason": "always_exclude_keyword",
       "matchedKeywords": [
@@ -3809,6 +3909,16 @@
     },
     {
       "municipality": "奈良県",
+      "title": "洞川エコミュージアムセンター本館及び屋外トイレ等屋根・外壁改修工事設計業務（自然環境整備交付金） 委（設）第８－６号",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "外壁",
+        "外壁改修"
+      ],
+      "borderlineRescue": true
+    },
+    {
+      "municipality": "奈良県",
       "title": "果樹・薬草研究所本館、加工展示施設及び農機用舎屋根・外壁改修工事設計業務 委（設）第８－１３号",
       "reason": "always_exclude_keyword",
       "matchedKeywords": [
@@ -3886,6 +3996,16 @@
     },
     {
       "municipality": "奈良県",
+      "title": "洞川エコミュージアムセンター本館及び屋外トイレ等屋根・外壁改修工事設計業務（自然環境整備交付金） 委（設）第８－６号",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "外壁",
+        "外壁改修"
+      ],
+      "borderlineRescue": true
+    },
+    {
+      "municipality": "奈良県",
       "title": "果樹・薬草研究所本館、加工展示施設及び農機用舎屋根・外壁改修工事設計業務 委（設）第８－１３号",
       "reason": "always_exclude_keyword",
       "matchedKeywords": [
@@ -3958,6 +4078,16 @@
       "matchedKeywords": [
         "空調",
         "設備"
+      ],
+      "borderlineRescue": true
+    },
+    {
+      "municipality": "奈良県",
+      "title": "洞川エコミュージアムセンター本館及び屋外トイレ等屋根・外壁改修工事設計業務（自然環境整備交付金） 委（設）第８－６号",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "外壁",
+        "外壁改修"
       ],
       "borderlineRescue": true
     },
