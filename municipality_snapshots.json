@@ -776,6 +776,19 @@
       "biddingDate": "2026-04-28"
     },
     {
+      "id": "kashihara-result-5082000010",
+      "municipality": "橿原市",
+      "title": "大久保町老人憩いの家等解体工事に伴う設計委託",
+      "type": "コンサル",
+      "announcementDate": "2026-04-28",
+      "link": "https://www.city.kashihara.nara.jp/soshiki/1019/gyomu/1/1/1/reiwa8nen/20258.html",
+      "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5082000010k.pdf",
+      "status": "落札",
+      "winnerType": "設計事務所",
+      "winningContractor": "㈱ワールド設計",
+      "biddingDate": "2026-04-28"
+    },
+    {
       "id": "kashihara-result-5082000002",
       "municipality": "橿原市",
       "title": "子育て支援センタートイレ等改修工事に伴う設計委託",
@@ -1048,6 +1061,16 @@
   ],
   "生駒市": [
     {
+      "id": "ikoma-result-2601010049",
+      "municipality": "生駒市",
+      "title": "生駒北スポーツセンター及びむかいやま公園体育施設トイレ改修工事",
+      "type": "建築",
+      "announcementDate": "2026-08-20",
+      "biddingDate": "2026-08-20",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+      "status": "受付終了"
+    },
+    {
       "id": "ikoma-51a7adacd5",
       "municipality": "生駒市",
       "title": "学びの多様化学校整備工事",
@@ -1065,7 +1088,9 @@
       "announcementDate": "2026-08-17",
       "biddingDate": "2026-08-17",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-      "status": "受付終了"
+      "status": "落札",
+      "winningContractor": "村本建設株式会社",
+      "winnerType": "ゼネコン"
     },
     {
       "id": "ikoma-result-2601100020",
@@ -1075,7 +1100,9 @@
       "announcementDate": "2026-08-17",
       "biddingDate": "2026-08-17",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-      "status": "受付終了"
+      "status": "落札",
+      "winningContractor": "株式会社彩都建築設計",
+      "winnerType": "設計事務所"
     },
     {
       "id": "ikoma-98e3ef20c8",
@@ -1270,9 +1297,33 @@
       "status": "落札",
       "winningContractor": "有限会社三都設計",
       "winnerType": "設計事務所"
+    },
+    {
+      "id": "ikoma-result-2501100003",
+      "municipality": "生駒市",
+      "title": "生駒市立病院６階東病棟整備設計業務",
+      "type": "コンサル",
+      "announcementDate": "2025-06-09",
+      "biddingDate": "2025-06-09",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+      "status": "落札",
+      "winningContractor": "株式会社石本建築事務所 大阪オフィス",
+      "winnerType": "ゼネコン"
     }
   ],
   "大和郡山市": [
+    {
+      "id": "yamato-koriyama-1cf310ec",
+      "municipality": "大和郡山市",
+      "title": "大和郡山市立小泉出屋敷スポーツ会館補修工事",
+      "type": "建築",
+      "announcementDate": "2026-08-19",
+      "biddingDate": "2026-08-19",
+      "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/1892.html",
+      "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk_kekka8-060.pdf",
+      "status": "落札",
+      "winningContractor": "石神塗装"
+    },
     {
       "id": "yamato-koriyama-f322174a",
       "municipality": "大和郡山市",
@@ -1305,7 +1356,7 @@
       "biddingDate": "2026-08-19",
       "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/9328.html",
       "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk260819_01k.pdf",
-      "status": "受付中"
+      "status": "受付終了"
     },
     {
       "id": "yamato-koriyama-02bb39f9",
@@ -1461,6 +1512,18 @@
       "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk_kekka7-036.pdf",
       "status": "落札",
       "winningContractor": "昭和 株式会社 奈良営業所"
+    },
+    {
+      "id": "yamato-koriyama-8219fab2",
+      "municipality": "大和郡山市",
+      "title": "大和郡山市消防団第三分団庫建設工事",
+      "type": "建築",
+      "announcementDate": "2025-06-04",
+      "biddingDate": "2025-06-04",
+      "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/1893.html",
+      "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk_kekka7-026.pdf",
+      "status": "落札",
+      "winningContractor": "株式会社 クラハラ"
     },
     {
       "id": "yamato-koriyama-742d7cbe",
@@ -1777,6 +1840,17 @@
   ],
   "五條市": [
     {
+      "id": "gojo-epi-2601030",
+      "municipality": "五條市",
+      "title": "牧野住宅１０・１１号解体工事",
+      "type": "建築",
+      "announcementDate": "2026-08-04",
+      "biddingDate": "2026-08-21",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002601030",
+      "status": "受付中",
+      "estimatedPrice": "3,130,000円"
+    },
+    {
       "id": "gojo-epi-2601025",
       "municipality": "五條市",
       "title": "市営住宅空家修繕工事",
@@ -1799,6 +1873,18 @@
       "status": "落札",
       "winningContractor": "（株）椋本工務店",
       "estimatedPrice": "78,800,000円"
+    },
+    {
+      "id": "gojo-epi-2601012",
+      "municipality": "五條市",
+      "title": "五條市消防団第７方面隊２０－１消防格納庫新築工事",
+      "type": "建築",
+      "announcementDate": "2026-06-30",
+      "biddingDate": "2026-07-31",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002601012",
+      "status": "落札",
+      "winningContractor": "福本鉄工所",
+      "estimatedPrice": "39,800,000円"
     },
     {
       "id": "gojo-epi-2601022",
@@ -2000,7 +2086,7 @@
       "winnerType": "設計事務所"
     },
     {
-      "id": "gose-2026-07-17-市営住宅(サン柏原207号・今出団地99号・11-0",
+      "id": "gose-2026-07-17-市営住宅(サン柏原207号・今出団地99号・11-13",
       "municipality": "御所市",
       "title": "市営住宅(サン柏原207号・今出団地99号・110号)空家修繕",
       "type": "その他",
@@ -2423,6 +2509,16 @@
       "status": "受付中"
     },
     {
+      "id": "miyake-2026-08-14-三河老人憩いの家解体工事設計委託業務",
+      "municipality": "三宅町",
+      "title": "三河老人憩いの家解体工事設計委託業務",
+      "type": "コンサル",
+      "announcementDate": "2026-08-14",
+      "link": "https://www.town.miyake.lg.jp/uploaded/attachment/5685.pdf",
+      "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5685.pdf",
+      "status": "受付中"
+    },
+    {
       "id": "miyake-2026-08-08-三宅町文化ホールトイレ改修工事",
       "municipality": "三宅町",
       "title": "三宅町文化ホールトイレ改修工事",
@@ -2466,16 +2562,25 @@
   ],
   "山添村": [
     {
-      "id": "山添村-山添村立小中学校建設工事",
+      "id": "山添村-山添村立小中学校建設工事における一般競争入札の結果について",
       "municipality": "山添村",
       "title": "山添村立小中学校建設工事",
-      "type": "建築",
-      "announcementDate": "2025-07-01",
+      "type": "委託",
+      "announcementDate": "2025-08-08",
       "biddingDate": "2025-08-08",
       "link": "https://www.vill.yamazoe.nara.jp/life/news/25817",
       "status": "落札",
-      "winningContractor": "藤本建設株式会社",
+      "winningContractor": "が決定しましたのでお知らせします。 落札結果 工事名 山添村立小中学校建設工事 落札者 藤本建設 株式会社 代表取締役 藤本 正成",
       "winnerType": "ゼネコン"
+    },
+    {
+      "id": "山添村-山添村立山添小中学校建設工事の一般競争入札について",
+      "municipality": "山添村",
+      "title": "山添村立山添小中学校建設工事",
+      "type": "委託",
+      "announcementDate": "2025-07-01",
+      "link": "https://www.vill.yamazoe.nara.jp/life/news/25298",
+      "status": "受付中"
     },
     {
       "id": "山添村-山添村義務教育学校建設基本計画業務",
@@ -2781,7 +2886,48 @@
   ],
   "大淀町": [
     {
-      "id": "oyodo-aHR0cHM6Ly93",
+      "id": "oyodo-46ab50dbc8",
+      "municipality": "大淀町",
+      "title": "大淀町立平畑運動公園体育館大規模改修工事に伴う実施設計業務【令和8年6月15日執行】 （pdf, 47.46KB）",
+      "type": "コンサル",
+      "announcementDate": "2026-06-15",
+      "biddingDate": "2026-06-15",
+      "link": "https://www.town.oyodo.lg.jp/./cmsfiles/contents/0000001/1945/so080615.pdf",
+      "status": "落札"
+    },
+    {
+      "id": "oyodo-79dc14038b",
+      "municipality": "大淀町",
+      "title": "大淀町立緑ヶ丘小学校プレジャールーム移転改修工事に伴う設計業務【令和8年4月21日執行 （pdf, 36.64KB）",
+      "type": "コンサル",
+      "announcementDate": "2026-04-21",
+      "biddingDate": "2026-04-21",
+      "link": "https://www.town.oyodo.lg.jp/./cmsfiles/contents/0000001/1945/so080421.pdf",
+      "status": "落札"
+    },
+    {
+      "id": "oyodo-656a30af1c",
+      "municipality": "大淀町",
+      "title": "マンホールトイレシステム築造工事（第7－総工3号）【令和8年1月16日執行】",
+      "type": "建築",
+      "announcementDate": "2026-01-16",
+      "biddingDate": "2026-01-16",
+      "link": "https://www.town.oyodo.lg.jp/./cmsfiles/contents/0000001/1718/ko08011601.pdf",
+      "status": "落札"
+    },
+    {
+      "id": "oyodo-157bf18d24",
+      "municipality": "大淀町",
+      "title": "大淀町役場ロータリー等改修工事（第7－総工2号）【令和7年9月11日執行】",
+      "type": "建築",
+      "announcementDate": "2025-09-11",
+      "biddingDate": "2025-09-11",
+      "link": "https://www.town.oyodo.lg.jp/./cmsfiles/contents/0000001/1718/ko070911.pdf",
+      "status": "落札",
+      "winningContractor": "契 約 期 間 入札書比較価格 最低制限比較価格 ㈱ダイシン 次項参照 令和 ７年１２月２５日（木）まで ９．"
+    },
+    {
+      "id": "oyodo-c80c6e66e2",
       "municipality": "大淀町",
       "title": "マンホールトイレシステム実施設計業務委託（第7－総委2号）【令和7年8月4日執行】",
       "type": "コンサル",
@@ -2790,6 +2936,27 @@
       "link": "https://www.town.oyodo.lg.jp/./cmsfiles/contents/0000001/1718/so070804.pdf",
       "status": "落札",
       "winningContractor": "㈱シティ・プランニング 関西支店 1１． 業 務 種 別 建設コンサルタント（「都市計画及び地方計画部門」） ㈱シティ・プランニング 関西支店 3,200,000 3,900,000"
+    },
+    {
+      "id": "oyodo-31ffc8525d",
+      "municipality": "大淀町",
+      "title": "令和7年度耐震改修促進計画改訂業務（第7－建築委－1号）【令和7年7月22日執行】",
+      "type": "委託",
+      "announcementDate": "2025-07-22",
+      "biddingDate": "2025-07-22",
+      "link": "https://www.town.oyodo.lg.jp/./cmsfiles/contents/0000001/1718/so070722.pdf",
+      "status": "落札",
+      "winningContractor": "㈱シティ・プランニング 関西支店 1１． 業 務 種 別 建設コンサルタント（「都市計画及び地方計画部門」） ㈱シティ・プランニング 関西支店 3,200,000 3,900,000"
+    },
+    {
+      "id": "oyodo-518688ed82",
+      "municipality": "大淀町",
+      "title": "大淀町立大淀中学校トイレ洋式化工事（第7‐学工1号）【令和7年5月26日執行】",
+      "type": "建築",
+      "announcementDate": "2025-05-26",
+      "biddingDate": "2025-05-26",
+      "link": "https://www.town.oyodo.lg.jp/./cmsfiles/contents/0000001/1718/ko070526.pdf",
+      "status": "落札"
     }
   ],
   "香芝市": [

@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-08-20T13:55:26.700Z",
+  "generatedAt": "2026-08-21T13:49:00.118Z",
   "checkedMunicipalityCount": 24,
-  "expectedItemCount": 261,
-  "matchedItemCount": 261,
+  "expectedItemCount": 276,
+  "matchedItemCount": 276,
   "missingItemCount": 0,
   "duplicateTitleGroupCount": 23,
   "duplicateTitleItemCount": 48,
@@ -20,9 +20,9 @@
     },
     {
       "municipality": "橿原市",
-      "snapshotCount": 30,
-      "expectedCount": 30,
-      "matchedCount": 30,
+      "snapshotCount": 31,
+      "expectedCount": 31,
+      "matchedCount": 31,
       "missingCount": 0,
       "duplicateTitleGroupCount": 2,
       "duplicateTitleItemCount": 4,
@@ -41,6 +41,28 @@
       "status": "ok"
     },
     {
+      "municipality": "生駒市",
+      "snapshotCount": 22,
+      "expectedCount": 22,
+      "matchedCount": 22,
+      "missingCount": 0,
+      "duplicateTitleGroupCount": 0,
+      "duplicateTitleItemCount": 0,
+      "missingItems": [],
+      "status": "ok"
+    },
+    {
+      "municipality": "五條市",
+      "snapshotCount": 20,
+      "expectedCount": 20,
+      "matchedCount": 20,
+      "missingCount": 0,
+      "duplicateTitleGroupCount": 2,
+      "duplicateTitleItemCount": 5,
+      "missingItems": [],
+      "status": "ok"
+    },
+    {
       "municipality": "高取町",
       "snapshotCount": 20,
       "expectedCount": 20,
@@ -52,13 +74,13 @@
       "status": "ok"
     },
     {
-      "municipality": "生駒市",
+      "municipality": "大和郡山市",
       "snapshotCount": 20,
       "expectedCount": 20,
       "matchedCount": 20,
       "missingCount": 0,
-      "duplicateTitleGroupCount": 0,
-      "duplicateTitleItemCount": 0,
+      "duplicateTitleGroupCount": 1,
+      "duplicateTitleItemCount": 2,
       "missingItems": [],
       "status": "ok"
     },
@@ -70,28 +92,6 @@
       "missingCount": 0,
       "duplicateTitleGroupCount": 0,
       "duplicateTitleItemCount": 0,
-      "missingItems": [],
-      "status": "ok"
-    },
-    {
-      "municipality": "五條市",
-      "snapshotCount": 18,
-      "expectedCount": 18,
-      "matchedCount": 18,
-      "missingCount": 0,
-      "duplicateTitleGroupCount": 2,
-      "duplicateTitleItemCount": 5,
-      "missingItems": [],
-      "status": "ok"
-    },
-    {
-      "municipality": "大和郡山市",
-      "snapshotCount": 18,
-      "expectedCount": 18,
-      "matchedCount": 18,
-      "missingCount": 0,
-      "duplicateTitleGroupCount": 1,
-      "duplicateTitleItemCount": 2,
       "missingItems": [],
       "status": "ok"
     },
@@ -118,6 +118,28 @@
       "status": "ok"
     },
     {
+      "municipality": "大淀町",
+      "snapshotCount": 7,
+      "expectedCount": 7,
+      "matchedCount": 7,
+      "missingCount": 0,
+      "duplicateTitleGroupCount": 0,
+      "duplicateTitleItemCount": 0,
+      "missingItems": [],
+      "status": "ok"
+    },
+    {
+      "municipality": "三宅町",
+      "snapshotCount": 6,
+      "expectedCount": 6,
+      "matchedCount": 6,
+      "missingCount": 0,
+      "duplicateTitleGroupCount": 1,
+      "duplicateTitleItemCount": 2,
+      "missingItems": [],
+      "status": "ok"
+    },
+    {
       "municipality": "広陵町",
       "snapshotCount": 5,
       "expectedCount": 5,
@@ -129,21 +151,21 @@
       "status": "ok"
     },
     {
-      "municipality": "三宅町",
-      "snapshotCount": 5,
-      "expectedCount": 5,
-      "matchedCount": 5,
-      "missingCount": 0,
-      "duplicateTitleGroupCount": 1,
-      "duplicateTitleItemCount": 2,
-      "missingItems": [],
-      "status": "ok"
-    },
-    {
       "municipality": "川西町",
       "snapshotCount": 5,
       "expectedCount": 5,
       "matchedCount": 5,
+      "missingCount": 0,
+      "duplicateTitleGroupCount": 0,
+      "duplicateTitleItemCount": 0,
+      "missingItems": [],
+      "status": "ok"
+    },
+    {
+      "municipality": "山添村",
+      "snapshotCount": 3,
+      "expectedCount": 3,
+      "matchedCount": 3,
       "missingCount": 0,
       "duplicateTitleGroupCount": 0,
       "duplicateTitleItemCount": 0,
@@ -228,17 +250,6 @@
       "status": "ok"
     },
     {
-      "municipality": "山添村",
-      "snapshotCount": 2,
-      "expectedCount": 2,
-      "matchedCount": 2,
-      "missingCount": 0,
-      "duplicateTitleGroupCount": 0,
-      "duplicateTitleItemCount": 0,
-      "missingItems": [],
-      "status": "ok"
-    },
-    {
       "municipality": "斑鳩町",
       "snapshotCount": 2,
       "expectedCount": 2,
@@ -254,17 +265,6 @@
       "snapshotCount": 2,
       "expectedCount": 2,
       "matchedCount": 2,
-      "missingCount": 0,
-      "duplicateTitleGroupCount": 0,
-      "duplicateTitleItemCount": 0,
-      "missingItems": [],
-      "status": "ok"
-    },
-    {
-      "municipality": "大淀町",
-      "snapshotCount": 1,
-      "expectedCount": 1,
-      "matchedCount": 1,
       "missingCount": 0,
       "duplicateTitleGroupCount": 0,
       "duplicateTitleItemCount": 0,

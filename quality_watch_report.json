@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-08-20T13:55:21.742Z",
-  "qualityGeneratedAt": "2026-08-20T13:55:18.271Z",
-  "itemCount": 261,
+  "generatedAt": "2026-08-21T13:48:59.206Z",
+  "qualityGeneratedAt": "2026-08-21T13:41:03.758Z",
+  "itemCount": 276,
   "resultFollowUp": {
-    "totalCount": 14,
-    "highCount": 7,
-    "mediumCount": 2,
-    "lowCount": 5,
+    "totalCount": 15,
+    "highCount": 9,
+    "mediumCount": 4,
+    "lowCount": 2,
     "missingBiddingDateCount": 0,
     "byMunicipality": [
       {
@@ -14,7 +14,7 @@
         "count": 8
       },
       {
-        "municipality": "生駒市",
+        "municipality": "大淀町",
         "count": 2
       },
       {
@@ -23,6 +23,10 @@
       },
       {
         "municipality": "橿原市",
+        "count": 1
+      },
+      {
+        "municipality": "生駒市",
         "count": 1
       },
       {
@@ -37,8 +41,24 @@
     "samples": [
       {
         "priority": "high",
-        "ageDays": 85,
-        "reason": "開札日から85日経過",
+        "ageDays": 122,
+        "reason": "落札済みだが落札者が空",
+        "item": {
+          "id": "oyodo-79dc14038b",
+          "municipality": "大淀町",
+          "title": "大淀町立緑ヶ丘小学校プレジャールーム移転改修工事に伴う設計業務【令和8年4月21日執行 （pdf, 36.64KB）",
+          "status": "落札",
+          "announcementDate": "2026-04-21",
+          "biddingDate": "2026-04-21",
+          "winningContractor": null,
+          "link": "https://www.town.oyodo.lg.jp/./cmsfiles/contents/0000001/1945/so080421.pdf",
+          "pdfUrl": null
+        }
+      },
+      {
+        "priority": "high",
+        "ageDays": 86,
+        "reason": "開札日から86日経過",
         "item": {
           "id": "nara-city-0000002346",
           "municipality": "奈良市",
@@ -53,8 +73,24 @@
       },
       {
         "priority": "high",
-        "ageDays": 63,
-        "reason": "開札日から63日経過",
+        "ageDays": 67,
+        "reason": "落札済みだが落札者が空",
+        "item": {
+          "id": "oyodo-46ab50dbc8",
+          "municipality": "大淀町",
+          "title": "大淀町立平畑運動公園体育館大規模改修工事に伴う実施設計業務【令和8年6月15日執行】 （pdf, 47.46KB）",
+          "status": "落札",
+          "announcementDate": "2026-06-15",
+          "biddingDate": "2026-06-15",
+          "winningContractor": null,
+          "link": "https://www.town.oyodo.lg.jp/./cmsfiles/contents/0000001/1945/so080615.pdf",
+          "pdfUrl": null
+        }
+      },
+      {
+        "priority": "high",
+        "ageDays": 64,
+        "reason": "開札日から64日経過",
         "item": {
           "id": "nara-pref-29001013060020260055",
           "municipality": "奈良県",
@@ -69,8 +105,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 44,
-        "reason": "開札日から44日経過",
+        "ageDays": 45,
+        "reason": "開札日から45日経過",
         "item": {
           "id": "nara-pref-29005007060120260015",
           "municipality": "奈良県",
@@ -85,8 +121,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 34,
-        "reason": "開札日から34日経過",
+        "ageDays": 35,
+        "reason": "開札日から35日経過",
         "item": {
           "id": "nara-pref-29005007060120260018",
           "municipality": "奈良県",
@@ -101,8 +137,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 29,
-        "reason": "開札日から29日経過",
+        "ageDays": 30,
+        "reason": "開札日から30日経過",
         "item": {
           "id": "oji-ffe0646cd8",
           "municipality": "王寺町",
@@ -117,8 +153,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 15,
-        "reason": "開札日から15日経過",
+        "ageDays": 16,
+        "reason": "開札日から16日経過",
         "item": {
           "id": "kashihara-5082000865",
           "municipality": "橿原市",
@@ -133,8 +169,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 15,
-        "reason": "開札日から15日経過",
+        "ageDays": 16,
+        "reason": "開札日から16日経過",
         "item": {
           "id": "nara-pref-29001013060020260131",
           "municipality": "奈良県",
@@ -151,38 +187,6 @@
         "priority": "medium",
         "ageDays": 3,
         "reason": "開札日から3日経過",
-        "item": {
-          "id": "ikoma-result-2601010047",
-          "municipality": "生駒市",
-          "title": "上中学校校舎長寿命化改修工事（Ⅰ・Ⅱ期）",
-          "status": "受付終了",
-          "announcementDate": "2026-08-17",
-          "biddingDate": "2026-08-17",
-          "winningContractor": null,
-          "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-          "pdfUrl": null
-        }
-      },
-      {
-        "priority": "medium",
-        "ageDays": 3,
-        "reason": "開札日から3日経過",
-        "item": {
-          "id": "ikoma-result-2601100020",
-          "municipality": "生駒市",
-          "title": "白藤会館解体工事設計業務",
-          "status": "受付終了",
-          "announcementDate": "2026-08-17",
-          "biddingDate": "2026-08-17",
-          "winningContractor": null,
-          "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-          "pdfUrl": null
-        }
-      },
-      {
-        "priority": "low",
-        "ageDays": 2,
-        "reason": "開札直後の結果待ち",
         "item": {
           "id": "nara-pref-29001013060020260144",
           "municipality": "奈良県",
@@ -358,12 +362,23 @@
         "municipality": "五條市",
         "status": "ok",
         "severity": "error",
-        "count": 15,
+        "count": 17,
         "requiredLinkIncludes": [
           "epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction"
         ],
-        "message": "五條市 情報公開サイト: 15件確認",
+        "message": "五條市 情報公開サイト: 17件確認",
         "matches": [
+          {
+            "id": "gojo-epi-2601030",
+            "municipality": "五條市",
+            "title": "牧野住宅１０・１１号解体工事",
+            "status": "受付中",
+            "announcementDate": "2026-08-04",
+            "biddingDate": "2026-08-21",
+            "winningContractor": null,
+            "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002601030",
+            "pdfUrl": null
+          },
           {
             "id": "gojo-epi-2601025",
             "municipality": "五條市",
@@ -384,6 +399,17 @@
             "biddingDate": "2026-07-31",
             "winningContractor": "（株）椋本工務店",
             "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002601023",
+            "pdfUrl": null
+          },
+          {
+            "id": "gojo-epi-2601012",
+            "municipality": "五條市",
+            "title": "五條市消防団第７方面隊２０－１消防格納庫新築工事",
+            "status": "落札",
+            "announcementDate": "2026-06-30",
+            "biddingDate": "2026-07-31",
+            "winningContractor": "福本鉄工所",
+            "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002601012",
             "pdfUrl": null
           },
           {
@@ -451,28 +477,6 @@
             "winningContractor": "グローバル工業（株）",
             "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002501048",
             "pdfUrl": null
-          },
-          {
-            "id": "gojo-epi-2501040",
-            "municipality": "五條市",
-            "title": "ベストラインスタジアム（上野公園野球場）施設改修工事",
-            "status": "落札",
-            "announcementDate": "2025-11-04",
-            "biddingDate": "2025-12-19",
-            "winningContractor": "（株）森岡組",
-            "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002501040",
-            "pdfUrl": null
-          },
-          {
-            "id": "gojo-epi-2501039",
-            "municipality": "五條市",
-            "title": "市営住宅空家修繕工事",
-            "status": "落札",
-            "announcementDate": "2025-10-07",
-            "biddingDate": "2025-10-20",
-            "winningContractor": "前根建設",
-            "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002501039",
-            "pdfUrl": null
           }
         ]
       }
@@ -481,9 +485,31 @@
   "dateIntegrity": {
     "announcementAfterBiddingCount": 0,
     "awardedWithoutBiddingDateCount": 0,
-    "awardedWithoutWinnerCount": 0,
+    "awardedWithoutWinnerCount": 4,
     "openWithWinnerCount": 0,
-    "sampleTitles": []
+    "sampleTitles": [
+      {
+        "municipality": "大淀町",
+        "title": "大淀町立平畑運動公園体育館大規模改修工事に伴う実施設計業務【令和8年6月15日執行】 （pdf, 47.46KB）",
+        "status": "落札",
+        "announcementDate": "2026-06-15",
+        "biddingDate": "2026-06-15"
+      },
+      {
+        "municipality": "大淀町",
+        "title": "大淀町立緑ヶ丘小学校プレジャールーム移転改修工事に伴う設計業務【令和8年4月21日執行 （pdf, 36.64KB）",
+        "status": "落札",
+        "announcementDate": "2026-04-21",
+        "biddingDate": "2026-04-21"
+      },
+      {
+        "municipality": "大淀町",
+        "title": "マンホールトイレシステム築造工事（第7－総工3号）【令和8年1月16日執行】",
+        "status": "落札",
+        "announcementDate": "2026-01-16",
+        "biddingDate": "2026-01-16"
+      }
+    ]
   },
   "sourceCoverage": {
     "activeCount": 25,
@@ -523,29 +549,29 @@
         "municipality": "橿原市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 30,
+        "totalCount": 31,
         "requiredLinkIncludes": [
           "city.kashihara.nara.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.kashihara.nara.jp": 30
+          "city.kashihara.nara.jp": 31
         },
-        "message": "橿原市: 30件 / sources OK"
+        "message": "橿原市: 31件 / sources OK"
       },
       {
         "municipality": "生駒市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 20,
+        "totalCount": 22,
         "requiredLinkIncludes": [
           "epi-cloud.fwd.ne.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "epi-cloud.fwd.ne.jp": 20
+          "epi-cloud.fwd.ne.jp": 22
         },
-        "message": "生駒市: 20件 / sources OK"
+        "message": "生駒市: 22件 / sources OK"
       },
       {
         "municipality": "大和高田市",
@@ -567,15 +593,15 @@
         "municipality": "大和郡山市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 18,
+        "totalCount": 20,
         "requiredLinkIncludes": [
           "city.yamatokoriyama.lg.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.yamatokoriyama.lg.jp": 18
+          "city.yamatokoriyama.lg.jp": 20
         },
-        "message": "大和郡山市: 18件 / sources OK"
+        "message": "大和郡山市: 20件 / sources OK"
       },
       {
         "municipality": "葛城市",
@@ -597,7 +623,7 @@
         "municipality": "五條市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 18,
+        "totalCount": 20,
         "requiredLinkIncludes": [
           "city.gojo.lg.jp",
           "epi-cloud.fwd.ne.jp"
@@ -605,9 +631,9 @@
         "missingLinkIncludes": [],
         "sourceCounts": {
           "city.gojo.lg.jp": 3,
-          "epi-cloud.fwd.ne.jp": 15
+          "epi-cloud.fwd.ne.jp": 17
         },
-        "message": "五條市: 18件 / sources OK"
+        "message": "五條市: 20件 / sources OK"
       },
       {
         "municipality": "御所市",
@@ -725,29 +751,29 @@
         "municipality": "三宅町",
         "status": "ok",
         "severity": "error",
-        "totalCount": 5,
+        "totalCount": 6,
         "requiredLinkIncludes": [
           "town.miyake.lg.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "town.miyake.lg.jp": 5
+          "town.miyake.lg.jp": 6
         },
-        "message": "三宅町: 5件 / sources OK"
+        "message": "三宅町: 6件 / sources OK"
       },
       {
         "municipality": "山添村",
         "status": "ok",
         "severity": "error",
-        "totalCount": 2,
+        "totalCount": 3,
         "requiredLinkIncludes": [
           "vill.yamazoe.nara.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "vill.yamazoe.nara.jp": 2
+          "vill.yamazoe.nara.jp": 3
         },
-        "message": "山添村: 2件 / sources OK"
+        "message": "山添村: 3件 / sources OK"
       },
       {
         "municipality": "平群町",
@@ -837,15 +863,15 @@
         "municipality": "大淀町",
         "status": "ok",
         "severity": "error",
-        "totalCount": 1,
+        "totalCount": 7,
         "requiredLinkIncludes": [
           "town.oyodo.lg.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "town.oyodo.lg.jp": 1
+          "town.oyodo.lg.jp": 7
         },
-        "message": "大淀町: 1件 / sources OK"
+        "message": "大淀町: 7件 / sources OK"
       }
     ]
   }
