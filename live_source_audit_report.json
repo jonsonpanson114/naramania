@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-20T07:45:33.994Z",
-  "currentItemCount": 259,
+  "generatedAt": "2026-08-21T03:08:06.160Z",
+  "currentItemCount": 261,
   "checkedMunicipalities": [
     "奈良市",
     "橿原市",
@@ -68,8 +68,8 @@
     },
     {
       "municipality": "大和郡山市",
-      "rawCount": 220,
-      "keptCount": 22,
+      "rawCount": 221,
+      "keptCount": 23,
       "rejectedCount": 198,
       "warnings": [],
       "errors": []
@@ -84,9 +84,9 @@
     },
     {
       "municipality": "五條市",
-      "rawCount": 232,
-      "keptCount": 29,
-      "rejectedCount": 203,
+      "rawCount": 235,
+      "keptCount": 30,
+      "rejectedCount": 205,
       "warnings": [],
       "errors": []
     },
@@ -220,24 +220,24 @@
     },
     {
       "municipality": "大淀町",
-      "rawCount": 132,
+      "rawCount": 133,
       "keptCount": 7,
-      "rejectedCount": 125,
+      "rejectedCount": 126,
       "warnings": [],
       "errors": []
     }
   ],
   "coverage": {
     "checkedMunicipalityCount": 24,
-    "expectedItemCount": 260,
+    "expectedItemCount": 262,
     "matchedItemCount": 245,
-    "missingItemCount": 15,
+    "missingItemCount": 17,
     "duplicateTitleGroupCount": 37,
     "duplicateTitleItemCount": 81,
     "results": [
       {
         "municipality": "大淀町",
-        "snapshotCount": 132,
+        "snapshotCount": 133,
         "expectedCount": 7,
         "matchedCount": 1,
         "missingCount": 6,
@@ -356,6 +356,70 @@
         "status": "missing"
       },
       {
+        "municipality": "五條市",
+        "snapshotCount": 235,
+        "expectedCount": 30,
+        "matchedCount": 28,
+        "missingCount": 2,
+        "duplicateTitleGroupCount": 9,
+        "duplicateTitleItemCount": 22,
+        "missingItems": [
+          {
+            "id": "gojo-epi-2601030",
+            "municipality": "五條市",
+            "title": "牧野住宅１０・１１号解体工事",
+            "status": "落札",
+            "announcementDate": "2026-08-04",
+            "biddingDate": "2026-08-21",
+            "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002601030",
+            "reason": "snapshot item should be present in scraper_result"
+          },
+          {
+            "id": "gojo-epi-2601012",
+            "municipality": "五條市",
+            "title": "五條市消防団第７方面隊２０－１消防格納庫新築工事",
+            "status": "落札",
+            "announcementDate": "2026-06-30",
+            "biddingDate": "2026-07-31",
+            "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002601012",
+            "reason": "snapshot item should be present in scraper_result"
+          }
+        ],
+        "status": "missing"
+      },
+      {
+        "municipality": "大和郡山市",
+        "snapshotCount": 221,
+        "expectedCount": 23,
+        "matchedCount": 21,
+        "missingCount": 2,
+        "duplicateTitleGroupCount": 3,
+        "duplicateTitleItemCount": 7,
+        "missingItems": [
+          {
+            "id": "yamato-koriyama-1cf310ec",
+            "municipality": "大和郡山市",
+            "title": "大和郡山市立小泉出屋敷スポーツ会館補修工事",
+            "status": "落札",
+            "announcementDate": "2026-08-19",
+            "biddingDate": "2026-08-19",
+            "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/1892.html",
+            "reason": "snapshot item should be present in scraper_result"
+          },
+          {
+            "id": "yamato-koriyama-8219fab2",
+            "municipality": "大和郡山市",
+            "title": "大和郡山市消防団第三分団庫建設工事",
+            "status": "落札",
+            "announcementDate": "2025-06-04",
+            "biddingDate": "2025-06-04",
+            "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/1893.html",
+            "reason": "snapshot item should be present in scraper_result"
+          }
+        ],
+        "status": "missing"
+      },
+      {
         "municipality": "橿原市",
         "snapshotCount": 377,
         "expectedCount": 31,
@@ -372,50 +436,6 @@
             "announcementDate": "2026-04-28",
             "biddingDate": "2026-04-28",
             "link": "https://www.city.kashihara.nara.jp/soshiki/1019/gyomu/1/1/1/reiwa8nen/20258.html",
-            "reason": "snapshot item should be present in scraper_result"
-          }
-        ],
-        "status": "missing"
-      },
-      {
-        "municipality": "五條市",
-        "snapshotCount": 232,
-        "expectedCount": 29,
-        "matchedCount": 28,
-        "missingCount": 1,
-        "duplicateTitleGroupCount": 9,
-        "duplicateTitleItemCount": 22,
-        "missingItems": [
-          {
-            "id": "gojo-epi-2601012",
-            "municipality": "五條市",
-            "title": "五條市消防団第７方面隊２０－１消防格納庫新築工事",
-            "status": "落札",
-            "announcementDate": "2026-06-30",
-            "biddingDate": "2026-07-31",
-            "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002601012",
-            "reason": "snapshot item should be present in scraper_result"
-          }
-        ],
-        "status": "missing"
-      },
-      {
-        "municipality": "大和郡山市",
-        "snapshotCount": 220,
-        "expectedCount": 22,
-        "matchedCount": 21,
-        "missingCount": 1,
-        "duplicateTitleGroupCount": 3,
-        "duplicateTitleItemCount": 7,
-        "missingItems": [
-          {
-            "id": "yamato-koriyama-8219fab2",
-            "municipality": "大和郡山市",
-            "title": "大和郡山市消防団第三分団庫建設工事",
-            "status": "落札",
-            "announcementDate": "2025-06-04",
-            "biddingDate": "2025-06-04",
-            "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/1893.html",
             "reason": "snapshot item should be present in scraper_result"
           }
         ],
