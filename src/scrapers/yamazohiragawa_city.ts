@@ -232,6 +232,11 @@ async function scrapeHeguriSupplementalPages(): Promise<BiddingItem[]> {
     return items;
 }
 
+// 入札案件のページか、単なる広報記事かをタイトルで判定する。
+// ページ本文($('body').text())にはサイト共通ナビの「入札情報」リンクが
+// 必ず含まれるため本文では判別できない。
+const YAMAZOE_TENDER_TITLE = /入札|公告|開札|落札|見積|契約|公募|プロポーザル/u;
+
 // newsリストから入札・工事関連の記事URLを自動発見する
 // （固定URLだけだと年度が替わった時に新着案件を拾えない）
 async function discoverYamazoeNewsUrls(): Promise<string[]> {
@@ -263,10 +268,19 @@ async function scrapeYamazoeVillage(): Promise<BiddingItem[]> {
             const title = $('h1').first().text().replace(/\s+/g, ' ').trim();
             const bodyText = $('body').text().replace(/\s+/g, ' ').trim();
             if (!title) continue;
+            // 「◯◯工事の進捗状況」のような広報記事は入札案件ではない。URL発見側は
+            // 「入札|工事」で拾うため工事の進捗報告まで入ってくる。以前は
+            // shouldKeepItem がこれらを結果的に弾いていたが、建築関連性の判定を
+            // index.ts に一元化した際に一緒に外れ、進捗報告や学校建設の告知ページが
+            // 「落札」扱い・開札日なしで混入して品質チェックを落としていた。
+            if (!YAMAZOE_TENDER_TITLE.test(title)) continue;
 
             const announcementDate = parseUpdatedDate(bodyText) || new Date().toISOString().split('T')[0];
             const biddingDate = parseYamazoeBiddingDate(bodyText);
-            const isResult = /落札結果|落札者|結果について/u.test(bodyText) || /結果について/u.test(title);
+            // 結果ページか公告ページかはタイトルで判定する。bodyText はサイト共通ナビに
+            // 他記事の「〜結果について」リンクを含むため、公告ページまで結果扱いになり
+            // 「落札なのに開札日がない」案件を作ってしまう。
+            const isResult = /結果|落札/u.test(title);
 
             items.push({
                 id: `山添村-${title}`.normalize('NFKC').replace(/[^\w\u3040-\u30ff\u3400-\u9fff-]+/g, '-').slice(0, 120),
