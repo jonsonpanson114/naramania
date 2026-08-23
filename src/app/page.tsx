@@ -2,6 +2,7 @@ import { AppShell } from '@/components/AppShell';
 import { Header } from '@/components/Header';
 import { AlertNotificationPanel } from '@/components/AlertNotificationPanel';
 import { TodayFocusPanel } from '@/components/TodayFocusPanel';
+import { DataFreshnessBanner } from '@/components/DataFreshnessBanner';
 import { WatchResultsPanel } from '@/components/WatchResultsPanel';
 import { BiddingTable } from '@/components/BiddingTable';
 import { NewsSection } from '@/components/NewsSection';
@@ -9,6 +10,7 @@ import { NewsTicker } from '@/components/NewsTicker';
 import { countPracticalFilter } from '@/lib/practical_filters';
 import { buildLatestOpeningResults } from '@/lib/opening_result_updates';
 import { buildResultFollowUpSummary } from '@/lib/result_follow_up';
+import { getDataFreshness } from '@/lib/data_freshness';
 import { loadDashboardData } from '@/lib/dashboard_data';
 import { Activity, AlertTriangle } from 'lucide-react';
 import Link from 'next/link';
@@ -47,12 +49,16 @@ export default async function Home() {
     (qualitySummary?.municipalityAudit?.issues || []).filter(issue => issue.level === 'error').length
     + (liveAuditReport?.coverage?.missingItemCount ?? 0)
     + (liveAuditReport?.scraperErrorCount ?? 0);
-  const operationsHealthy = auditIssueCount === 0;
+  // 監査に問題が無くても、収集自体が止まっていれば「正常」と言ってはいけない
+  const dataFreshness = getDataFreshness(qualitySummary?.generatedAt);
+  const operationsHealthy = auditIssueCount === 0 && !dataFreshness.isStale;
 
   return (
     <AppShell>
         <NewsTicker />
         <Header />
+
+        <DataFreshnessBanner generatedAt={qualitySummary?.generatedAt} />
 
         <TodayFocusPanel
           items={allItems}
@@ -90,7 +96,9 @@ export default async function Home() {
               データ更新: {latestQualityDate || '-'}
               {operationsHealthy
                 ? ' / 収集・監査は正常です'
-                : ` / 要確認 ${auditIssueCount}件`}
+                : dataFreshness.isStale
+                  ? ' / 収集が止まっています'
+                  : ` / 要確認 ${auditIssueCount}件`}
             </span>
             <span className="text-xs font-bold tracking-[0.14em] underline-offset-4 hover:underline">運用状況を見る →</span>
           </Link>
