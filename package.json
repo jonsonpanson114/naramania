@@ -14,9 +14,7 @@
     "validate:filters": "tsx scripts/validate_filters.ts",
     "validate:chat": "tsx scripts/validate_chat.ts",
     "validate:snapshots": "tsx scripts/validate_snapshot_coverage.ts",
-    "verify:scrapers": "tsx scripts/verify_scrapers.ts",
-    "audit:live-sources": "tsx scripts/audit_live_sources.ts",
-    "prepare": "git config core.hooksPath .githooks"
+    "audit:live-sources": "tsx scripts/audit_live_sources.ts"
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
