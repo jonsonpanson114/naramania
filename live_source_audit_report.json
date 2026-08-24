@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-24T05:43:35.833Z",
+  "generatedAt": "2026-08-24T08:01:56.797Z",
   "currentItemCount": 276,
   "checkedMunicipalities": [
     "奈良市",
@@ -156,9 +156,9 @@
     },
     {
       "municipality": "山添村",
-      "rawCount": 4,
+      "rawCount": 3,
       "keptCount": 3,
-      "rejectedCount": 1,
+      "rejectedCount": 0,
       "warnings": [],
       "errors": []
     },
@@ -402,7 +402,7 @@
       },
       {
         "municipality": "山添村",
-        "snapshotCount": 4,
+        "snapshotCount": 3,
         "expectedCount": 3,
         "matchedCount": 3,
         "missingCount": 0,
