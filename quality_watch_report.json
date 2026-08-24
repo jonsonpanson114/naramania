@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-24T02:52:37.307Z",
-  "qualityGeneratedAt": "2026-08-24T02:44:55.551Z",
+  "generatedAt": "2026-08-24T07:23:01.799Z",
+  "qualityGeneratedAt": "2026-08-24T07:14:47.604Z",
   "itemCount": 276,
   "resultFollowUp": {
     "totalCount": 21,
@@ -30,7 +30,7 @@
         "count": 1
       },
       {
-        "municipality": "三郷町",
+        "municipality": "三宅町",
         "count": 1
       },
       {
@@ -161,22 +161,6 @@
       },
       {
         "priority": "high",
-        "ageDays": 31,
-        "reason": "開札日から31日経過",
-        "item": {
-          "id": "sango-epi-5Luk5ZKMOOW5",
-          "municipality": "三郷町",
-          "title": "令和8年度 竜田運動公園北側トイレ改修工事",
-          "status": "受付終了",
-          "announcementDate": "2026-07-08",
-          "biddingDate": "2026-07-24",
-          "winningContractor": "阪本水道商会 三郷営業所",
-          "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0660064007200640",
-          "pdfUrl": null
-        }
-      },
-      {
-        "priority": "high",
         "ageDays": 19,
         "reason": "開札日から19日経過",
         "item": {
@@ -205,6 +189,22 @@
           "winningContractor": null,
           "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260131&gamenMode=0",
           "pdfUrl": null
+        }
+      },
+      {
+        "priority": "high",
+        "ageDays": 16,
+        "reason": "落札済みだが落札者が空",
+        "item": {
+          "id": "miyake-2026-08-08-三宅町文化ホールトイレ改修工事",
+          "municipality": "三宅町",
+          "title": "三宅町文化ホールトイレ改修工事",
+          "status": "落札",
+          "announcementDate": "2026-08-08",
+          "biddingDate": "2026-08-08",
+          "winningContractor": null,
+          "link": "https://www.town.miyake.lg.jp/soshiki/1/9375.html",
+          "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5616.pdf"
         }
       }
     ]
@@ -493,9 +493,16 @@
   "dateIntegrity": {
     "announcementAfterBiddingCount": 0,
     "awardedWithoutBiddingDateCount": 0,
-    "awardedWithoutWinnerCount": 5,
+    "awardedWithoutWinnerCount": 6,
     "openWithWinnerCount": 0,
     "sampleTitles": [
+      {
+        "municipality": "三宅町",
+        "title": "三宅町文化ホールトイレ改修工事",
+        "status": "落札",
+        "announcementDate": "2026-08-08",
+        "biddingDate": "2026-08-08"
+      },
       {
         "municipality": "五條市",
         "title": "牧野住宅１０・１１号解体工事",
@@ -509,13 +516,6 @@
         "status": "落札",
         "announcementDate": "2026-06-15",
         "biddingDate": "2026-06-15"
-      },
-      {
-        "municipality": "大淀町",
-        "title": "大淀町立緑ヶ丘小学校プレジャールーム移転改修工事に伴う設計業務【令和8年4月21日執行 （pdf, 36.64KB）",
-        "status": "落札",
-        "announcementDate": "2026-04-21",
-        "biddingDate": "2026-04-21"
       }
     ]
   },

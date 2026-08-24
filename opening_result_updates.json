@@ -1,32 +1,32 @@
 {
-  "generatedAt": "2026-08-24T02:44:55.545Z",
+  "generatedAt": "2026-08-24T07:14:47.598Z",
   "source": "daily_scrape",
   "updates": [
     {
-      "id": "gojo-epi-2601030",
-      "municipality": "五條市",
-      "title": "牧野住宅１０・１１号解体工事",
-      "announcementDate": "2026-08-04",
-      "biddingDate": "2026-08-21",
+      "id": "miyake-2026-08-08-三宅町文化ホールトイレ改修工事",
+      "municipality": "三宅町",
+      "title": "三宅町文化ホールトイレ改修工事",
+      "announcementDate": "2026-08-08",
+      "biddingDate": "2026-08-08",
       "status": "落札",
-      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002601030",
-      "previousStatus": "受付中",
-      "detectedAt": "2026-08-24T02:44:55.545Z",
+      "link": "https://www.town.miyake.lg.jp/soshiki/1/9375.html",
+      "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5616.pdf",
+      "previousStatus": "不調",
+      "detectedAt": "2026-08-24T07:14:47.598Z",
       "kind": "new_opened_status"
     },
     {
-      "id": "yamato-koriyama-1cf310ec",
-      "municipality": "大和郡山市",
-      "title": "大和郡山市立小泉出屋敷スポーツ会館補修工事",
-      "announcementDate": "2026-08-19",
-      "biddingDate": "2026-08-19",
+      "id": "sango-epi-5Luk5ZKMOOW5",
+      "municipality": "三郷町",
+      "title": "令和8年度 竜田運動公園北側トイレ改修工事",
+      "announcementDate": "2026-07-08",
+      "biddingDate": "2026-07-24",
       "status": "落札",
-      "winningContractor": "石神塗装",
-      "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/1892.html",
-      "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk_kekka8-060.pdf",
-      "previousStatus": "落札",
-      "previousWinningContractor": "マツダ塗装(株)",
-      "detectedAt": "2026-08-24T02:44:55.545Z",
+      "winningContractor": "阪本水道商会 三郷営業所",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0660064007200640",
+      "previousStatus": "受付終了",
+      "previousWinningContractor": "阪本水道商会 三郷営業所",
+      "detectedAt": "2026-08-24T07:14:47.598Z",
       "kind": "new_winner"
     },
     {
@@ -40,8 +40,8 @@
       "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/1892.html",
       "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk_kekka8-055.pdf",
       "previousStatus": "落札",
-      "previousWinningContractor": "(有)龍田",
-      "detectedAt": "2026-08-24T02:44:55.545Z",
+      "previousWinningContractor": "(株)周防組",
+      "detectedAt": "2026-08-24T07:14:47.598Z",
       "kind": "new_winner"
     },
     {
@@ -55,8 +55,8 @@
       "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/1892.html",
       "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk_kekka8-050.pdf",
       "previousStatus": "落札",
-      "previousWinningContractor": "(株)松本コンサルタント 奈良支店",
-      "detectedAt": "2026-08-24T02:44:55.545Z",
+      "previousWinningContractor": "株式会社松本コンサルタント 奈良支店",
+      "detectedAt": "2026-08-24T07:14:47.598Z",
       "kind": "new_winner"
     },
     {
@@ -71,7 +71,7 @@
       "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5081000595k.pdf",
       "previousStatus": "落札",
       "previousWinningContractor": "(株)松村組",
-      "detectedAt": "2026-08-24T02:44:55.545Z",
+      "detectedAt": "2026-08-24T07:14:47.598Z",
       "kind": "new_winner"
     },
     {
@@ -86,7 +86,7 @@
       "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5082000530k.pdf",
       "previousStatus": "落札",
       "previousWinningContractor": "(有)坪岡建築事務所",
-      "detectedAt": "2026-08-24T02:44:55.545Z",
+      "detectedAt": "2026-08-24T07:14:47.598Z",
       "kind": "new_winner"
     },
     {
@@ -100,8 +100,8 @@
       "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/1892.html",
       "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk_kekka8-042.pdf",
       "previousStatus": "落札",
-      "previousWinningContractor": "(株)木村組",
-      "detectedAt": "2026-08-24T02:44:55.545Z",
+      "previousWinningContractor": "木村組",
+      "detectedAt": "2026-08-24T07:14:47.598Z",
       "kind": "new_winner"
     },
     {
@@ -116,22 +116,7 @@
       "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk_kekka8-026.pdf",
       "previousStatus": "落札",
       "previousWinningContractor": "(株)クラハラ",
-      "detectedAt": "2026-08-24T02:44:55.545Z",
-      "kind": "new_winner"
-    },
-    {
-      "id": "kashihara-proposal-5082000026",
-      "municipality": "橿原市",
-      "title": "橿原運動公園体育館・屋内プール新築工事に伴う基本設計業務 (圧縮ファイル: 1.7MB)",
-      "announcementDate": "2026-04-03",
-      "biddingDate": "2026-05-26",
-      "status": "落札",
-      "winningContractor": "株式会社東畑建築事務所 本社オフィス大阪",
-      "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/7/8272.html",
-      "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5082000026k.pdf",
-      "previousStatus": "落札",
-      "previousWinningContractor": "株式会社東畑建築事務所",
-      "detectedAt": "2026-08-24T02:44:55.545Z",
+      "detectedAt": "2026-08-24T07:14:47.598Z",
       "kind": "new_winner"
     },
     {
@@ -146,7 +131,7 @@
       "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5082000350k.pdf",
       "previousStatus": "落札",
       "previousWinningContractor": "(有)坪岡建築事務所",
-      "detectedAt": "2026-08-24T02:44:55.545Z",
+      "detectedAt": "2026-08-24T07:14:47.598Z",
       "kind": "new_winner"
     },
     {
@@ -161,7 +146,7 @@
       "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5082000288k.pdf",
       "previousStatus": "落札",
       "previousWinningContractor": "(有)坪岡建築事務所",
-      "detectedAt": "2026-08-24T02:44:55.545Z",
+      "detectedAt": "2026-08-24T07:14:47.598Z",
       "kind": "new_winner"
     },
     {
@@ -176,7 +161,7 @@
       "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5082000353k.pdf",
       "previousStatus": "落札",
       "previousWinningContractor": "(株)中和設計",
-      "detectedAt": "2026-08-24T02:44:55.545Z",
+      "detectedAt": "2026-08-24T07:14:47.598Z",
       "kind": "new_winner"
     },
     {
@@ -191,22 +176,7 @@
       "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5082000010k.pdf",
       "previousStatus": "落札",
       "previousWinningContractor": "(株)ワールド設計",
-      "detectedAt": "2026-08-24T02:44:55.545Z",
-      "kind": "new_winner"
-    },
-    {
-      "id": "kashihara-result-5082000002",
-      "municipality": "橿原市",
-      "title": "子育て支援センタートイレ等改修工事に伴う設計委託",
-      "announcementDate": "2026-04-28",
-      "biddingDate": "2026-04-28",
-      "status": "落札",
-      "winningContractor": "㈱中和設計",
-      "link": "https://www.city.kashihara.nara.jp/soshiki/1019/gyomu/1/1/1/reiwa8nen/20258.html",
-      "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/508200002k.pdf",
-      "previousStatus": "落札",
-      "previousWinningContractor": "(株)中和設計",
-      "detectedAt": "2026-08-24T02:44:55.545Z",
+      "detectedAt": "2026-08-24T07:14:47.598Z",
       "kind": "new_winner"
     },
     {
@@ -221,7 +191,7 @@
       "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5082000004k.pdf",
       "previousStatus": "落札",
       "previousWinningContractor": "(株)中西構造設計",
-      "detectedAt": "2026-08-24T02:44:55.545Z",
+      "detectedAt": "2026-08-24T07:14:47.598Z",
       "kind": "new_winner"
     },
     {
@@ -236,7 +206,7 @@
       "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5081000021k.pdf",
       "previousStatus": "落札",
       "previousWinningContractor": "(株)松村組",
-      "detectedAt": "2026-08-24T02:44:55.545Z",
+      "detectedAt": "2026-08-24T07:14:47.598Z",
       "kind": "new_winner"
     },
     {
@@ -251,7 +221,7 @@
       "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5082000046k.pdf",
       "previousStatus": "落札",
       "previousWinningContractor": "(株)トーニチコンサルタント 奈良事務所",
-      "detectedAt": "2026-08-24T02:44:55.545Z",
+      "detectedAt": "2026-08-24T07:14:47.598Z",
       "kind": "new_winner"
     },
     {
@@ -266,7 +236,7 @@
       "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5081000006k.pdf",
       "previousStatus": "落札",
       "previousWinningContractor": "(株)平成建設",
-      "detectedAt": "2026-08-24T02:44:55.545Z",
+      "detectedAt": "2026-08-24T07:14:47.598Z",
       "kind": "new_winner"
     },
     {
@@ -281,7 +251,7 @@
       "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5072001239k.pdf",
       "previousStatus": "落札",
       "previousWinningContractor": "(有)坪岡建築事務所",
-      "detectedAt": "2026-08-24T02:44:55.545Z",
+      "detectedAt": "2026-08-24T07:14:47.598Z",
       "kind": "new_winner"
     },
     {
@@ -296,7 +266,37 @@
       "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071001189k.pdf",
       "previousStatus": "落札",
       "previousWinningContractor": "(株)タカギ工業",
-      "detectedAt": "2026-08-24T02:44:55.545Z",
+      "detectedAt": "2026-08-24T07:14:47.598Z",
+      "kind": "new_winner"
+    },
+    {
+      "id": "kashihara-result-5071001006",
+      "municipality": "橿原市",
+      "title": "八木グリーンタウン公園他施設更新工事",
+      "announcementDate": "2025-10-23",
+      "biddingDate": "2025-10-23",
+      "status": "落札",
+      "winningContractor": "㈱大谷建設",
+      "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
+      "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071001006k.pdf",
+      "previousStatus": "落札",
+      "previousWinningContractor": "(株)大谷建設",
+      "detectedAt": "2026-08-24T07:14:47.598Z",
+      "kind": "new_winner"
+    },
+    {
+      "id": "kashihara-result-5072000944",
+      "municipality": "橿原市",
+      "title": "畝傍中学校EV棟増築工事に伴う工事監理業務委託",
+      "announcementDate": "2025-09-30",
+      "biddingDate": "2025-09-30",
+      "status": "落札",
+      "winningContractor": "㈱内藤建築事務所",
+      "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18375.html",
+      "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5072000944k.pdf",
+      "previousStatus": "落札",
+      "previousWinningContractor": "(株)内藤建築事務所 奈良事務所",
+      "detectedAt": "2026-08-24T07:14:47.598Z",
       "kind": "new_winner"
     }
   ],
@@ -309,7 +309,7 @@
       "biddingDate": "2026-08-21",
       "status": "落札",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002601030",
-      "detectedAt": "2026-08-24T02:44:55.545Z",
+      "detectedAt": "2026-08-24T07:14:47.598Z",
       "kind": "new_opened_status"
     },
     {
@@ -322,7 +322,7 @@
       "winningContractor": "石神塗装",
       "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/1892.html",
       "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk_kekka8-060.pdf",
-      "detectedAt": "2026-08-24T02:44:55.545Z",
+      "detectedAt": "2026-08-24T07:14:47.598Z",
       "kind": "new_winner"
     },
     {
@@ -334,7 +334,7 @@
       "status": "落札",
       "winningContractor": "株式会社彩都建築設計",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-      "detectedAt": "2026-08-24T02:44:55.545Z",
+      "detectedAt": "2026-08-24T07:14:47.598Z",
       "kind": "new_winner"
     },
     {
@@ -346,7 +346,7 @@
       "status": "落札",
       "winningContractor": "村本建設株式会社",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-      "detectedAt": "2026-08-24T02:44:55.545Z",
+      "detectedAt": "2026-08-24T07:14:47.598Z",
       "kind": "new_winner"
     },
     {
@@ -358,7 +358,7 @@
       "status": "不調",
       "link": "https://www.town.miyake.lg.jp/soshiki/1/9376.html",
       "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5619.pdf",
-      "detectedAt": "2026-08-24T02:44:55.545Z",
+      "detectedAt": "2026-08-24T07:14:47.598Z",
       "kind": "new_failure"
     },
     {
@@ -367,11 +367,11 @@
       "title": "三宅町文化ホールトイレ改修工事",
       "announcementDate": "2026-08-08",
       "biddingDate": "2026-08-08",
-      "status": "不調",
+      "status": "落札",
       "link": "https://www.town.miyake.lg.jp/soshiki/1/9375.html",
       "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5616.pdf",
-      "detectedAt": "2026-08-24T02:44:55.545Z",
-      "kind": "new_failure"
+      "detectedAt": "2026-08-24T07:14:47.598Z",
+      "kind": "new_opened_status"
     },
     {
       "id": "nara-pref-29001013060020260132",
@@ -381,7 +381,7 @@
       "biddingDate": "2026-08-05",
       "status": "不調",
       "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260132&gamenMode=0",
-      "detectedAt": "2026-08-24T02:44:55.545Z",
+      "detectedAt": "2026-08-24T07:14:47.598Z",
       "kind": "new_failure"
     },
     {
@@ -392,7 +392,7 @@
       "biddingDate": "2026-08-05",
       "status": "不調",
       "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260127&gamenMode=0",
-      "detectedAt": "2026-08-24T02:44:55.545Z",
+      "detectedAt": "2026-08-24T07:14:47.598Z",
       "kind": "new_failure"
     },
     {
@@ -405,7 +405,7 @@
       "winningContractor": "(株)関鉄",
       "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/4-4-3-2026-1.pdf",
       "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/4-4-3-2026-1.pdf",
-      "detectedAt": "2026-08-24T02:44:55.545Z",
+      "detectedAt": "2026-08-24T07:14:47.598Z",
       "kind": "new_winner"
     },
     {
@@ -417,7 +417,7 @@
       "status": "落札",
       "winningContractor": "（株）近井工務店",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002601025",
-      "detectedAt": "2026-08-24T02:44:55.545Z",
+      "detectedAt": "2026-08-24T07:14:47.598Z",
       "kind": "new_winner"
     },
     {
@@ -429,7 +429,7 @@
       "status": "落札",
       "winningContractor": "（株）椋本工務店",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002601023",
-      "detectedAt": "2026-08-24T02:44:55.545Z",
+      "detectedAt": "2026-08-24T07:14:47.598Z",
       "kind": "new_winner"
     },
     {
@@ -441,7 +441,7 @@
       "status": "落札",
       "winningContractor": "福本鉄工所",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002601012",
-      "detectedAt": "2026-08-24T02:44:55.545Z",
+      "detectedAt": "2026-08-24T07:14:47.598Z",
       "kind": "new_winner"
     }
   ]

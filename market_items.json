@@ -776,7 +776,7 @@
     "biddingDate": "2026-08-08",
     "link": "https://www.town.miyake.lg.jp/soshiki/1/9375.html",
     "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5616.pdf",
-    "status": "不調",
+    "status": "落札",
     "isRelevant": true
   },
   {
@@ -1136,7 +1136,8 @@
     "announcementDate": "2026-08-06",
     "biddingDate": "2026-08-20",
     "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200700",
-    "status": "受付中",
+    "status": "落札",
+    "winningContractor": "都総業",
     "isRelevant": false
   },
   {
@@ -1147,7 +1148,8 @@
     "announcementDate": "2026-08-06",
     "biddingDate": "2026-08-20",
     "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200700",
-    "status": "受付中",
+    "status": "落札",
+    "winningContractor": "（株）大國",
     "isRelevant": false
   },
   {
@@ -1158,7 +1160,8 @@
     "announcementDate": "2026-08-06",
     "biddingDate": "2026-08-20",
     "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200700",
-    "status": "受付中",
+    "status": "落札",
+    "winningContractor": "奥窪電気商会",
     "isRelevant": false
   },
   {
@@ -2305,6 +2308,19 @@
   },
   {
     "id": "gose-御所市義務教育学校建設に関する基本設計及-19",
+    "municipality": "御所市",
+    "title": "御所市義務教育学校建設に関する基本設計及び実施設計業務に係る公募型プロポーザル",
+    "type": "コンサル",
+    "announcementDate": "2026-07-29",
+    "biddingDate": "2026-07-29",
+    "link": "https://www.city.gose.nara.jp/0000004589.html",
+    "status": "落札",
+    "winningContractor": "石本・シード設計共同体",
+    "winnerType": "設計事務所",
+    "isRelevant": true
+  },
+  {
+    "id": "gose-御所市義務教育学校建設に関する基本設計及-21",
     "municipality": "御所市",
     "title": "御所市義務教育学校建設に関する基本設計及び実施設計業務に係る公募型プロポーザル",
     "type": "コンサル",
@@ -10583,7 +10599,8 @@
     "announcementDate": "2026-05-14",
     "biddingDate": "2026-06-08",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
-    "status": "受付中",
+    "status": "落札",
+    "winningContractor": "(株)堂浦土木",
     "isRelevant": false
   },
   {
@@ -10594,7 +10611,8 @@
     "announcementDate": "2026-05-14",
     "biddingDate": "2026-06-08",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
-    "status": "受付中",
+    "status": "落札",
+    "winningContractor": "(有)吉田舗装",
     "isRelevant": false
   },
   {

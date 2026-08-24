@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-24T02:44:55.554Z",
-  "totalRejected": 8604,
+  "generatedAt": "2026-08-24T07:14:47.607Z",
+  "totalRejected": 8730,
   "totalBorderlineRescued": 30,
   "byMunicipality": {
     "奈良市": {
@@ -63,10 +63,6 @@
       "rejected": 0,
       "borderlineRescued": 3
     },
-    "山添村": {
-      "rejected": 6,
-      "borderlineRescued": 0
-    },
     "平群町": {
       "rejected": 162,
       "borderlineRescued": 0
@@ -88,7 +84,7 @@
       "borderlineRescued": 0
     },
     "三郷町": {
-      "rejected": 552,
+      "rejected": 684,
       "borderlineRescued": 0
     },
     "王寺町": {
@@ -52410,42 +52406,6 @@
       "borderlineRescue": true
     },
     {
-      "municipality": "山添村",
-      "title": "山添村簡易水道一般競争入札結果について",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "山添村",
-      "title": "山添村簡易水道一般競争入札結果について ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "山添村",
-      "title": "山添村簡易水道一般競争入札結果について",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "山添村",
-      "title": "山添村簡易水道一般競争入札結果について ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "山添村",
-      "title": "山添村簡易水道一般競争入札結果について",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "山添村",
-      "title": "山添村簡易水道一般競争入札結果について ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
       "municipality": "平群町",
       "title": "入札",
       "reason": "no_architecture_context",
@@ -57998,6 +57958,330 @@
     {
       "municipality": "三郷町",
       "title": "一般競争入札 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 立野汚水中継ポンプ場着水ゲート分解整備工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 立野汚水中継ポンプ場着水ゲート分解整備工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 汚水ポンプ3号分解整備修繕",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 汚水ポンプ3号分解整備修繕 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 町道勢野2号線他舗装修繕工事（長寿命化事業）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 町道勢野2号線他舗装修繕工事（長寿命化事業） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 町道立野162号線舗装修繕工事（長寿命化事業）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 町道立野162号線舗装修繕工事（長寿命化事業） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 三郷町水質改善下水道汚水管築造工事（勢野東14工区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 三郷町水質改善下水道汚水管築造工事（勢野東14工区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 大門ダムマンホールポンプ場2号ポンプ等取替工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "ダム"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 大門ダムマンホールポンプ場2号ポンプ等取替工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "ダム"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和８年度 城山台ポンプ場ＬＥＤ化工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和８年度 城山台ポンプ場ＬＥＤ化工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 公共下水道人孔蓋更新工事（城山台）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 公共下水道人孔蓋更新工事（城山台） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 三郷町浸水対策下水道雨水管築造工事（勢野東2工区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 三郷町浸水対策下水道雨水管築造工事（勢野東2工区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 町道三室7号線他舗装修繕工事（長寿命化事業）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 町道三室7号線他舗装修繕工事（長寿命化事業） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 町道立野124号線他舗装修繕工事（長寿命化事業）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 町道立野124号線他舗装修繕工事（長寿命化事業） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 町道城山台35号線舗装修繕工事（長寿命化事業）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 町道城山台35号線舗装修繕工事（長寿命化事業） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 三郷町水質改善下水道汚水管築造工事（惣持寺5-2工区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 三郷町水質改善下水道汚水管築造工事（惣持寺5-2工区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 大型看板取替等工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "看板"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 大型看板取替等工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "看板"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 汚水ポンプ分解整備修繕",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 汚水ポンプ分解整備修繕 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 勢野地域し尿処理場流量計更新等工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 勢野地域し尿処理場流量計更新等工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 町道立野163号線他舗装修繕工事（長寿命化事業）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 町道立野163号線他舗装修繕工事（長寿命化事業） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 町道美松ヶ丘38号線他舗装修繕工事（長寿命化事業）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 町道美松ヶ丘38号線他舗装修繕工事（長寿命化事業） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 町道立野31号線舗装修繕工事（長寿命化事業）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 町道立野31号線舗装修繕工事（長寿命化事業） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 竜の子斎場火葬炉耐火物等修繕工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 竜の子斎場火葬炉耐火物等修繕工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 三郷町水質改善下水道汚水管築造工事（勢野東1）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 三郷町水質改善下水道汚水管築造工事（勢野東1） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 ウォーターパーク汚水ポンプ等取替工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 ウォーターパーク汚水ポンプ等取替工事 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },
@@ -59341,6 +59625,330 @@
     },
     {
       "municipality": "三郷町",
+      "title": "令和8年度 立野汚水中継ポンプ場着水ゲート分解整備工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 立野汚水中継ポンプ場着水ゲート分解整備工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 汚水ポンプ3号分解整備修繕",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 汚水ポンプ3号分解整備修繕 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 町道勢野2号線他舗装修繕工事（長寿命化事業）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 町道勢野2号線他舗装修繕工事（長寿命化事業） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 町道立野162号線舗装修繕工事（長寿命化事業）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 町道立野162号線舗装修繕工事（長寿命化事業） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 三郷町水質改善下水道汚水管築造工事（勢野東14工区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 三郷町水質改善下水道汚水管築造工事（勢野東14工区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 大門ダムマンホールポンプ場2号ポンプ等取替工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "ダム"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 大門ダムマンホールポンプ場2号ポンプ等取替工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "ダム"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和８年度 城山台ポンプ場ＬＥＤ化工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和８年度 城山台ポンプ場ＬＥＤ化工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 公共下水道人孔蓋更新工事（城山台）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 公共下水道人孔蓋更新工事（城山台） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 三郷町浸水対策下水道雨水管築造工事（勢野東2工区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 三郷町浸水対策下水道雨水管築造工事（勢野東2工区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 町道三室7号線他舗装修繕工事（長寿命化事業）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 町道三室7号線他舗装修繕工事（長寿命化事業） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 町道立野124号線他舗装修繕工事（長寿命化事業）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 町道立野124号線他舗装修繕工事（長寿命化事業） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 町道城山台35号線舗装修繕工事（長寿命化事業）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 町道城山台35号線舗装修繕工事（長寿命化事業） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 三郷町水質改善下水道汚水管築造工事（惣持寺5-2工区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 三郷町水質改善下水道汚水管築造工事（惣持寺5-2工区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 大型看板取替等工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "看板"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 大型看板取替等工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "看板"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 汚水ポンプ分解整備修繕",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 汚水ポンプ分解整備修繕 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 勢野地域し尿処理場流量計更新等工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 勢野地域し尿処理場流量計更新等工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 町道立野163号線他舗装修繕工事（長寿命化事業）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 町道立野163号線他舗装修繕工事（長寿命化事業） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 町道美松ヶ丘38号線他舗装修繕工事（長寿命化事業）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 町道美松ヶ丘38号線他舗装修繕工事（長寿命化事業） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 町道立野31号線舗装修繕工事（長寿命化事業）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 町道立野31号線舗装修繕工事（長寿命化事業） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 竜の子斎場火葬炉耐火物等修繕工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 竜の子斎場火葬炉耐火物等修繕工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 三郷町水質改善下水道汚水管築造工事（勢野東1）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 三郷町水質改善下水道汚水管築造工事（勢野東1） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 ウォーターパーク汚水ポンプ等取替工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 ウォーターパーク汚水ポンプ等取替工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
       "title": "令和8年度 三郷町雨水排水台帳図作成業務",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -60674,6 +61282,330 @@
     {
       "municipality": "三郷町",
       "title": "一般競争入札 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 立野汚水中継ポンプ場着水ゲート分解整備工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 立野汚水中継ポンプ場着水ゲート分解整備工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 汚水ポンプ3号分解整備修繕",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 汚水ポンプ3号分解整備修繕 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 町道勢野2号線他舗装修繕工事（長寿命化事業）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 町道勢野2号線他舗装修繕工事（長寿命化事業） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 町道立野162号線舗装修繕工事（長寿命化事業）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 町道立野162号線舗装修繕工事（長寿命化事業） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 三郷町水質改善下水道汚水管築造工事（勢野東14工区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 三郷町水質改善下水道汚水管築造工事（勢野東14工区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 大門ダムマンホールポンプ場2号ポンプ等取替工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "ダム"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 大門ダムマンホールポンプ場2号ポンプ等取替工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "ダム"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和８年度 城山台ポンプ場ＬＥＤ化工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和８年度 城山台ポンプ場ＬＥＤ化工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 公共下水道人孔蓋更新工事（城山台）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 公共下水道人孔蓋更新工事（城山台） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 三郷町浸水対策下水道雨水管築造工事（勢野東2工区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 三郷町浸水対策下水道雨水管築造工事（勢野東2工区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 町道三室7号線他舗装修繕工事（長寿命化事業）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 町道三室7号線他舗装修繕工事（長寿命化事業） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 町道立野124号線他舗装修繕工事（長寿命化事業）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 町道立野124号線他舗装修繕工事（長寿命化事業） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 町道城山台35号線舗装修繕工事（長寿命化事業）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 町道城山台35号線舗装修繕工事（長寿命化事業） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 三郷町水質改善下水道汚水管築造工事（惣持寺5-2工区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 三郷町水質改善下水道汚水管築造工事（惣持寺5-2工区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 大型看板取替等工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "看板"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 大型看板取替等工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "看板"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 汚水ポンプ分解整備修繕",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 汚水ポンプ分解整備修繕 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 勢野地域し尿処理場流量計更新等工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 勢野地域し尿処理場流量計更新等工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 町道立野163号線他舗装修繕工事（長寿命化事業）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 町道立野163号線他舗装修繕工事（長寿命化事業） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 町道美松ヶ丘38号線他舗装修繕工事（長寿命化事業）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 町道美松ヶ丘38号線他舗装修繕工事（長寿命化事業） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 町道立野31号線舗装修繕工事（長寿命化事業）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 町道立野31号線舗装修繕工事（長寿命化事業） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 竜の子斎場火葬炉耐火物等修繕工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 竜の子斎場火葬炉耐火物等修繕工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 三郷町水質改善下水道汚水管築造工事（勢野東1）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 三郷町水質改善下水道汚水管築造工事（勢野東1） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 ウォーターパーク汚水ポンプ等取替工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 ウォーターパーク汚水ポンプ等取替工事 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },

@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-08-24T02:44:55.551Z",
+  "generatedAt": "2026-08-24T07:14:47.604Z",
   "source": "daily_scrape",
   "keptCount": 276,
   "municipalityCount": 24,
   "oldestAnnouncementDate": "2025-02-02",
   "latestAnnouncementDate": "2026-08-20",
-  "scrapedCount": 2314,
-  "rejectedCount": 2056,
+  "scrapedCount": 2351,
+  "rejectedCount": 2093,
   "municipalityAudit": {
     "expectedMunicipalityCount": 25,
     "coveredMunicipalityCount": 24,
@@ -144,9 +144,16 @@
   "dateAudit": {
     "announcementAfterBiddingCount": 0,
     "awardedWithoutBiddingDateCount": 0,
-    "awardedWithoutWinnerCount": 5,
+    "awardedWithoutWinnerCount": 6,
     "openWithWinnerCount": 0,
     "sampleTitles": [
+      {
+        "municipality": "三宅町",
+        "title": "三宅町文化ホールトイレ改修工事",
+        "status": "落札",
+        "announcementDate": "2026-08-08",
+        "biddingDate": "2026-08-08"
+      },
       {
         "municipality": "五條市",
         "title": "牧野住宅１０・１１号解体工事",
@@ -160,13 +167,6 @@
         "status": "落札",
         "announcementDate": "2026-06-15",
         "biddingDate": "2026-06-15"
-      },
-      {
-        "municipality": "大淀町",
-        "title": "大淀町立緑ヶ丘小学校プレジャールーム移転改修工事に伴う設計業務【令和8年4月21日執行 （pdf, 36.64KB）",
-        "status": "落札",
-        "announcementDate": "2026-04-21",
-        "biddingDate": "2026-04-21"
       }
     ]
   },
@@ -176,6 +176,6 @@
     "intelligenceExtractedCount": 48,
     "geminiExtractedCount": 48,
     "taggedCount": 48,
-    "lastAugmentedAt": "2026-08-24T02:44:59.361Z"
+    "lastAugmentedAt": "2026-08-24T07:14:48.511Z"
   }
 }
