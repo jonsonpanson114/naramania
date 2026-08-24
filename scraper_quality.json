@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-08-21T13:41:03.758Z",
+  "generatedAt": "2026-08-24T02:44:55.551Z",
   "source": "daily_scrape",
   "keptCount": 276,
   "municipalityCount": 24,
   "oldestAnnouncementDate": "2025-02-02",
   "latestAnnouncementDate": "2026-08-20",
-  "scrapedCount": 2330,
-  "rejectedCount": 2074,
+  "scrapedCount": 2314,
+  "rejectedCount": 2056,
   "municipalityAudit": {
     "expectedMunicipalityCount": 25,
     "coveredMunicipalityCount": 24,
@@ -25,7 +25,7 @@
       {
         "municipality": "橿原市",
         "count": 31,
-        "changeFromPrevious": 1
+        "changeFromPrevious": 0
       },
       {
         "municipality": "葛城市",
@@ -35,12 +35,12 @@
       {
         "municipality": "生駒市",
         "count": 22,
-        "changeFromPrevious": 2
+        "changeFromPrevious": 0
       },
       {
         "municipality": "五條市",
         "count": 20,
-        "changeFromPrevious": 2
+        "changeFromPrevious": 0
       },
       {
         "municipality": "高取町",
@@ -50,7 +50,7 @@
       {
         "municipality": "大和郡山市",
         "count": 20,
-        "changeFromPrevious": 2
+        "changeFromPrevious": 0
       },
       {
         "municipality": "宇陀市",
@@ -70,12 +70,12 @@
       {
         "municipality": "大淀町",
         "count": 7,
-        "changeFromPrevious": 6
+        "changeFromPrevious": 0
       },
       {
         "municipality": "三宅町",
         "count": 6,
-        "changeFromPrevious": 1
+        "changeFromPrevious": 0
       },
       {
         "municipality": "広陵町",
@@ -90,7 +90,7 @@
       {
         "municipality": "山添村",
         "count": 3,
-        "changeFromPrevious": 1
+        "changeFromPrevious": 0
       },
       {
         "municipality": "天理市",
@@ -138,23 +138,22 @@
         "changeFromPrevious": 0
       }
     ],
-    "retainedFromPrevious": [
-      "田原本町"
-    ],
-    "issues": [
-      {
-        "municipality": "田原本町",
-        "level": "warning",
-        "message": "[田原本町] 取得件数が急減したため既存データを維持しています (baseline=3, new kept=1)"
-      }
-    ]
+    "retainedFromPrevious": [],
+    "issues": []
   },
   "dateAudit": {
     "announcementAfterBiddingCount": 0,
     "awardedWithoutBiddingDateCount": 0,
-    "awardedWithoutWinnerCount": 4,
+    "awardedWithoutWinnerCount": 5,
     "openWithWinnerCount": 0,
     "sampleTitles": [
+      {
+        "municipality": "五條市",
+        "title": "牧野住宅１０・１１号解体工事",
+        "status": "落札",
+        "announcementDate": "2026-08-04",
+        "biddingDate": "2026-08-21"
+      },
       {
         "municipality": "大淀町",
         "title": "大淀町立平畑運動公園体育館大規模改修工事に伴う実施設計業務【令和8年6月15日執行】 （pdf, 47.46KB）",
@@ -168,13 +167,6 @@
         "status": "落札",
         "announcementDate": "2026-04-21",
         "biddingDate": "2026-04-21"
-      },
-      {
-        "municipality": "大淀町",
-        "title": "マンホールトイレシステム築造工事（第7－総工3号）【令和8年1月16日執行】",
-        "status": "落札",
-        "announcementDate": "2026-01-16",
-        "biddingDate": "2026-01-16"
       }
     ]
   },
@@ -184,6 +176,6 @@
     "intelligenceExtractedCount": 48,
     "geminiExtractedCount": 48,
     "taggedCount": 48,
-    "lastAugmentedAt": "2026-08-21T13:41:04.512Z"
+    "lastAugmentedAt": "2026-08-24T02:44:59.361Z"
   }
 }
