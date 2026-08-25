@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-25T05:35:38.641Z",
+  "generatedAt": "2026-08-25T07:48:12.084Z",
   "currentItemCount": 274,
   "checkedMunicipalities": [
     "奈良市",
@@ -60,9 +60,9 @@
     },
     {
       "municipality": "大和高田市",
-      "rawCount": 25,
+      "rawCount": 24,
       "keptCount": 0,
-      "rejectedCount": 25,
+      "rejectedCount": 24,
       "warnings": [],
       "errors": []
     },
@@ -490,7 +490,7 @@
       },
       {
         "municipality": "大和高田市",
-        "snapshotCount": 25,
+        "snapshotCount": 24,
         "expectedCount": 0,
         "matchedCount": 0,
         "missingCount": 0,
