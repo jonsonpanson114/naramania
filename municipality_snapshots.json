@@ -1112,17 +1112,7 @@
       "announcementDate": "2026-08-05",
       "biddingDate": "2026-08-24",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-      "status": "受付中"
-    },
-    {
-      "id": "ikoma-444ee706b8",
-      "municipality": "生駒市",
-      "title": "緑ヶ丘中学校ＬＥＤ改修工事",
-      "type": "建築",
-      "announcementDate": "2026-08-05",
-      "biddingDate": "2026-08-26",
-      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-      "status": "受付中"
+      "status": "受付終了"
     },
     {
       "id": "ikoma-result-2601010041",
@@ -1346,17 +1336,6 @@
       "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk_kekka8-055.pdf",
       "status": "落札",
       "winningContractor": "有限会社 龍田"
-    },
-    {
-      "id": "yamato-koriyama-4ff4ec8e",
-      "municipality": "大和郡山市",
-      "title": "【事前申請】大和郡山市立小泉出屋敷スポーツ会館補修工事",
-      "type": "建築",
-      "announcementDate": "2026-07-21",
-      "biddingDate": "2026-08-19",
-      "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/9328.html",
-      "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk260819_01k.pdf",
-      "status": "受付終了"
     },
     {
       "id": "yamato-koriyama-02bb39f9",
@@ -2499,6 +2478,17 @@
   ],
   "三宅町": [
     {
+      "id": "miyake-2026-08-25-三宅町文化ホールトイレ改修工事",
+      "municipality": "三宅町",
+      "title": "三宅町文化ホールトイレ改修工事",
+      "type": "建築",
+      "announcementDate": "2026-08-25",
+      "biddingDate": "2026-08-25",
+      "link": "https://www.town.miyake.lg.jp/soshiki/1/9375.html",
+      "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5616.pdf",
+      "status": "不調"
+    },
+    {
       "id": "miyake-2026-08-14-三宅町文化ホールトイレ改修工事",
       "municipality": "三宅町",
       "title": "三宅町文化ホールトイレ改修工事",
@@ -2517,17 +2507,6 @@
       "link": "https://www.town.miyake.lg.jp/uploaded/attachment/5685.pdf",
       "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5685.pdf",
       "status": "受付中"
-    },
-    {
-      "id": "miyake-2026-08-08-三宅町文化ホールトイレ改修工事",
-      "municipality": "三宅町",
-      "title": "三宅町文化ホールトイレ改修工事",
-      "type": "建築",
-      "announcementDate": "2026-08-08",
-      "biddingDate": "2026-08-08",
-      "link": "https://www.town.miyake.lg.jp/soshiki/1/9375.html",
-      "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5616.pdf",
-      "status": "落札"
     },
     {
       "id": "miyake-2026-08-08-上但馬保育所解体工事設計委託業務",

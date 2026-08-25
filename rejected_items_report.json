@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-24T07:14:47.607Z",
-  "totalRejected": 8730,
+  "generatedAt": "2026-08-25T02:39:52.990Z",
+  "totalRejected": 8766,
   "totalBorderlineRescued": 30,
   "byMunicipality": {
     "奈良市": {
@@ -12,7 +12,7 @@
       "borderlineRescued": 3
     },
     "生駒市": {
-      "rejected": 798,
+      "rejected": 804,
       "borderlineRescued": 6
     },
     "大和高田市": {
@@ -20,7 +20,7 @@
       "borderlineRescued": 0
     },
     "大和郡山市": {
-      "rejected": 846,
+      "rejected": 870,
       "borderlineRescued": 0
     },
     "葛城市": {
@@ -68,7 +68,7 @@
       "borderlineRescued": 0
     },
     "三宅町": {
-      "rejected": 48,
+      "rejected": 54,
       "borderlineRescued": 0
     },
     "安堵町": {
@@ -12397,6 +12397,22 @@
     },
     {
       "municipality": "生駒市",
+      "title": "生駒市流域関連公共下水道北新町118号線工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市流域関連公共下水道北新町118号線工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "生駒市",
       "title": "消防本部訓練棟改修及び付属倉庫解体工事",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -14469,6 +14485,22 @@
     },
     {
       "municipality": "生駒市",
+      "title": "生駒市流域関連公共下水道北新町118号線工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市流域関連公共下水道北新町118号線工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "生駒市",
       "title": "消防本部訓練棟改修及び付属倉庫解体工事",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -16541,6 +16573,22 @@
     },
     {
       "municipality": "生駒市",
+      "title": "生駒市流域関連公共下水道北新町118号線工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市流域関連公共下水道北新町118号線工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "生駒市",
       "title": "消防本部訓練棟改修及び付属倉庫解体工事",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -19473,6 +19521,72 @@
     },
     {
       "municipality": "大和郡山市",
+      "title": "公共下水道整備工事丹後庄町（第1工区）その1、その2",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "公共下水道整備工事丹後庄町（第1工区）その1、その2 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "公共下水道整備工事下三橋町（第1工区）その1、その2",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道",
+        "橋"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "公共下水道整備工事下三橋町（第1工区）その1、その2 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道",
+        "橋"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "伊豆七条高野線ほか4路線道路改良工事（1工区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "伊豆七条高野線ほか4路線道路改良工事（1工区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "伊豆七条高野線ほか4路線道路改良工事（2工区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "伊豆七条高野線ほか4路線道路改良工事（2工区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
       "title": "大和郡山市コピー用紙購入単価契約",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -21595,6 +21709,72 @@
     },
     {
       "municipality": "大和郡山市",
+      "title": "公共下水道整備工事丹後庄町（第1工区）その1、その2",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "公共下水道整備工事丹後庄町（第1工区）その1、その2 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "公共下水道整備工事下三橋町（第1工区）その1、その2",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道",
+        "橋"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "公共下水道整備工事下三橋町（第1工区）その1、その2 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道",
+        "橋"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "伊豆七条高野線ほか4路線道路改良工事（1工区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "伊豆七条高野線ほか4路線道路改良工事（1工区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "伊豆七条高野線ほか4路線道路改良工事（2工区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "伊豆七条高野線ほか4路線道路改良工事（2工区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
       "title": "大和郡山市コピー用紙購入単価契約",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -23714,6 +23894,72 @@
       "title": "西田中町共同浴場解体工事設計委託業務 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "公共下水道整備工事丹後庄町（第1工区）その1、その2",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "公共下水道整備工事丹後庄町（第1工区）その1、その2 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "公共下水道整備工事下三橋町（第1工区）その1、その2",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道",
+        "橋"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "公共下水道整備工事下三橋町（第1工区）その1、その2 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道",
+        "橋"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "伊豆七条高野線ほか4路線道路改良工事（1工区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "伊豆七条高野線ほか4路線道路改良工事（1工区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "伊豆七条高野線ほか4路線道路改良工事（2工区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "伊豆七条高野線ほか4路線道路改良工事（2工区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
     },
     {
       "municipality": "大和郡山市",
@@ -53550,6 +53796,22 @@
     {
       "municipality": "三宅町",
       "title": "三宅9・27号線舗装維持補修工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三宅町",
+      "title": "三宅1号線舗装補修工事（8／25修正）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三宅町",
+      "title": "三宅1号線舗装補修工事（8／25修正） ",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
         "舗装"
@@ -53691,6 +53953,22 @@
     },
     {
       "municipality": "三宅町",
+      "title": "三宅1号線舗装補修工事（8／25修正）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三宅町",
+      "title": "三宅1号線舗装補修工事（8／25修正） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三宅町",
       "title": "三宅150号線道路改良工事",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -53818,6 +54096,22 @@
     {
       "municipality": "三宅町",
       "title": "三宅9・27号線舗装維持補修工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三宅町",
+      "title": "三宅1号線舗装補修工事（8／25修正）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三宅町",
+      "title": "三宅1号線舗装補修工事（8／25修正） ",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
         "舗装"
@@ -57875,18 +58169,6 @@
     },
     {
       "municipality": "三郷町",
-      "title": "指名競争入札9月3日実施分",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "指名競争入札9月3日実施分 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
       "title": "入札参加資格者入札参加停止措置一覧",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -57894,6 +58176,18 @@
     {
       "municipality": "三郷町",
       "title": "入札参加資格者入札参加停止措置一覧 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "指名競争入札9月3日実施分",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "指名競争入札9月3日実施分 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },
@@ -59537,18 +59831,6 @@
     },
     {
       "municipality": "三郷町",
-      "title": "指名競争入札9月3日実施分",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "指名競争入札9月3日実施分 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
       "title": "入札参加資格者入札参加停止措置一覧",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -59556,6 +59838,18 @@
     {
       "municipality": "三郷町",
       "title": "入札参加資格者入札参加停止措置一覧 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "指名競争入札9月3日実施分",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "指名競争入札9月3日実施分 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },
@@ -61199,18 +61493,6 @@
     },
     {
       "municipality": "三郷町",
-      "title": "指名競争入札9月3日実施分",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "指名競争入札9月3日実施分 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
       "title": "入札参加資格者入札参加停止措置一覧",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -61218,6 +61500,18 @@
     {
       "municipality": "三郷町",
       "title": "入札参加資格者入札参加停止措置一覧 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "指名競争入札9月3日実施分",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "指名競争入札9月3日実施分 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },
@@ -61973,6 +62267,78 @@
     },
     {
       "municipality": "大淀町",
+      "title": "入札結果（建設工事）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大淀町",
+      "title": "入札結果（建設工事） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大淀町",
+      "title": "入札結果（測量・建設コンサルタント等）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "測量"
+      ]
+    },
+    {
+      "municipality": "大淀町",
+      "title": "入札結果（測量・建設コンサルタント等） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "測量"
+      ]
+    },
+    {
+      "municipality": "大淀町",
+      "title": "入札結果（物品・役務等）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "物品"
+      ]
+    },
+    {
+      "municipality": "大淀町",
+      "title": "入札結果（物品・役務等） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "物品"
+      ]
+    },
+    {
+      "municipality": "大淀町",
+      "title": "中増地内道路復旧工事（第7繰－災単－工－5号）【令和8年8月20日執行】 （pdf, 68.35KB）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "大淀町",
+      "title": "中増地内道路復旧工事（第7繰－災単－工－5号）【令和8年8月20日執行】 （pdf, 68.35KB） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "大淀町",
+      "title": "お問い合わせフォーム",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大淀町",
+      "title": "お問い合わせフォーム ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大淀町",
       "title": "越部地内道路改良工事",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -62021,66 +62387,6 @@
     },
     {
       "municipality": "大淀町",
-      "title": "中増地内道路復旧工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "大淀町",
-      "title": "中増地内道路復旧工事 大淀町　中増　地内",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "大淀町",
-      "title": "入札結果（建設工事）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大淀町",
-      "title": "入札結果（建設工事） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大淀町",
-      "title": "入札結果（測量・建設コンサルタント等）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "測量"
-      ]
-    },
-    {
-      "municipality": "大淀町",
-      "title": "入札結果（測量・建設コンサルタント等） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "測量"
-      ]
-    },
-    {
-      "municipality": "大淀町",
-      "title": "入札結果（物品・役務等）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "物品"
-      ]
-    },
-    {
-      "municipality": "大淀町",
-      "title": "入札結果（物品・役務等） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "物品"
-      ]
-    },
-    {
-      "municipality": "大淀町",
       "title": "おおよどパークゴルフ場境界フェンス設置工事（第8－社工1号）【令和8年7月16日執行】 （pdf, 33.10KB）",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -62094,18 +62400,6 @@
       "matchedKeywords": [
         "境界"
       ]
-    },
-    {
-      "municipality": "大淀町",
-      "title": "お問い合わせフォーム",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大淀町",
-      "title": "お問い合わせフォーム ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
     },
     {
       "municipality": "大淀町",
@@ -63583,6 +63877,78 @@
     },
     {
       "municipality": "大淀町",
+      "title": "入札結果（建設工事）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大淀町",
+      "title": "入札結果（建設工事） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大淀町",
+      "title": "入札結果（測量・建設コンサルタント等）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "測量"
+      ]
+    },
+    {
+      "municipality": "大淀町",
+      "title": "入札結果（測量・建設コンサルタント等） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "測量"
+      ]
+    },
+    {
+      "municipality": "大淀町",
+      "title": "入札結果（物品・役務等）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "物品"
+      ]
+    },
+    {
+      "municipality": "大淀町",
+      "title": "入札結果（物品・役務等） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "物品"
+      ]
+    },
+    {
+      "municipality": "大淀町",
+      "title": "中増地内道路復旧工事（第7繰－災単－工－5号）【令和8年8月20日執行】 （pdf, 68.35KB）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "大淀町",
+      "title": "中増地内道路復旧工事（第7繰－災単－工－5号）【令和8年8月20日執行】 （pdf, 68.35KB） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "大淀町",
+      "title": "お問い合わせフォーム",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大淀町",
+      "title": "お問い合わせフォーム ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大淀町",
       "title": "越部地内道路改良工事",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -63631,66 +63997,6 @@
     },
     {
       "municipality": "大淀町",
-      "title": "中増地内道路復旧工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "大淀町",
-      "title": "中増地内道路復旧工事 大淀町　中増　地内",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "大淀町",
-      "title": "入札結果（建設工事）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大淀町",
-      "title": "入札結果（建設工事） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大淀町",
-      "title": "入札結果（測量・建設コンサルタント等）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "測量"
-      ]
-    },
-    {
-      "municipality": "大淀町",
-      "title": "入札結果（測量・建設コンサルタント等） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "測量"
-      ]
-    },
-    {
-      "municipality": "大淀町",
-      "title": "入札結果（物品・役務等）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "物品"
-      ]
-    },
-    {
-      "municipality": "大淀町",
-      "title": "入札結果（物品・役務等） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "物品"
-      ]
-    },
-    {
-      "municipality": "大淀町",
       "title": "おおよどパークゴルフ場境界フェンス設置工事（第8－社工1号）【令和8年7月16日執行】 （pdf, 33.10KB）",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -63704,18 +64010,6 @@
       "matchedKeywords": [
         "境界"
       ]
-    },
-    {
-      "municipality": "大淀町",
-      "title": "お問い合わせフォーム",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大淀町",
-      "title": "お問い合わせフォーム ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
     },
     {
       "municipality": "大淀町",
@@ -65193,6 +65487,78 @@
     },
     {
       "municipality": "大淀町",
+      "title": "入札結果（建設工事）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大淀町",
+      "title": "入札結果（建設工事） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大淀町",
+      "title": "入札結果（測量・建設コンサルタント等）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "測量"
+      ]
+    },
+    {
+      "municipality": "大淀町",
+      "title": "入札結果（測量・建設コンサルタント等） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "測量"
+      ]
+    },
+    {
+      "municipality": "大淀町",
+      "title": "入札結果（物品・役務等）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "物品"
+      ]
+    },
+    {
+      "municipality": "大淀町",
+      "title": "入札結果（物品・役務等） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "物品"
+      ]
+    },
+    {
+      "municipality": "大淀町",
+      "title": "中増地内道路復旧工事（第7繰－災単－工－5号）【令和8年8月20日執行】 （pdf, 68.35KB）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "大淀町",
+      "title": "中増地内道路復旧工事（第7繰－災単－工－5号）【令和8年8月20日執行】 （pdf, 68.35KB） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "大淀町",
+      "title": "お問い合わせフォーム",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大淀町",
+      "title": "お問い合わせフォーム ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大淀町",
       "title": "越部地内道路改良工事",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -65241,66 +65607,6 @@
     },
     {
       "municipality": "大淀町",
-      "title": "中増地内道路復旧工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "大淀町",
-      "title": "中増地内道路復旧工事 大淀町　中増　地内",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "大淀町",
-      "title": "入札結果（建設工事）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大淀町",
-      "title": "入札結果（建設工事） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大淀町",
-      "title": "入札結果（測量・建設コンサルタント等）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "測量"
-      ]
-    },
-    {
-      "municipality": "大淀町",
-      "title": "入札結果（測量・建設コンサルタント等） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "測量"
-      ]
-    },
-    {
-      "municipality": "大淀町",
-      "title": "入札結果（物品・役務等）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "物品"
-      ]
-    },
-    {
-      "municipality": "大淀町",
-      "title": "入札結果（物品・役務等） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "物品"
-      ]
-    },
-    {
-      "municipality": "大淀町",
       "title": "おおよどパークゴルフ場境界フェンス設置工事（第8－社工1号）【令和8年7月16日執行】 （pdf, 33.10KB）",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -65314,18 +65620,6 @@
       "matchedKeywords": [
         "境界"
       ]
-    },
-    {
-      "municipality": "大淀町",
-      "title": "お問い合わせフォーム",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大淀町",
-      "title": "お問い合わせフォーム ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
     },
     {
       "municipality": "大淀町",

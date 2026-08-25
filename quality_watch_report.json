@@ -1,17 +1,21 @@
 {
-  "generatedAt": "2026-08-24T07:23:01.799Z",
-  "qualityGeneratedAt": "2026-08-24T07:14:47.604Z",
-  "itemCount": 276,
+  "generatedAt": "2026-08-25T02:47:29.701Z",
+  "qualityGeneratedAt": "2026-08-25T02:39:52.987Z",
+  "itemCount": 274,
   "resultFollowUp": {
-    "totalCount": 21,
-    "highCount": 10,
-    "mediumCount": 11,
-    "lowCount": 0,
+    "totalCount": 20,
+    "highCount": 9,
+    "mediumCount": 10,
+    "lowCount": 1,
     "missingBiddingDateCount": 0,
     "byMunicipality": [
       {
         "municipality": "奈良県",
         "count": 12
+      },
+      {
+        "municipality": "生駒市",
+        "count": 2
       },
       {
         "municipality": "大淀町",
@@ -30,18 +34,6 @@
         "count": 1
       },
       {
-        "municipality": "三宅町",
-        "count": 1
-      },
-      {
-        "municipality": "生駒市",
-        "count": 1
-      },
-      {
-        "municipality": "大和郡山市",
-        "count": 1
-      },
-      {
         "municipality": "奈良市",
         "count": 1
       }
@@ -49,7 +41,7 @@
     "samples": [
       {
         "priority": "high",
-        "ageDays": 125,
+        "ageDays": 126,
         "reason": "落札済みだが落札者が空",
         "item": {
           "id": "oyodo-79dc14038b",
@@ -65,8 +57,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 89,
-        "reason": "開札日から89日経過",
+        "ageDays": 90,
+        "reason": "開札日から90日経過",
         "item": {
           "id": "nara-city-0000002346",
           "municipality": "奈良市",
@@ -81,7 +73,7 @@
       },
       {
         "priority": "high",
-        "ageDays": 70,
+        "ageDays": 71,
         "reason": "落札済みだが落札者が空",
         "item": {
           "id": "oyodo-46ab50dbc8",
@@ -97,8 +89,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 67,
-        "reason": "開札日から67日経過",
+        "ageDays": 68,
+        "reason": "開札日から68日経過",
         "item": {
           "id": "nara-pref-29001013060020260055",
           "municipality": "奈良県",
@@ -113,8 +105,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 48,
-        "reason": "開札日から48日経過",
+        "ageDays": 49,
+        "reason": "開札日から49日経過",
         "item": {
           "id": "nara-pref-29005007060120260015",
           "municipality": "奈良県",
@@ -129,8 +121,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 38,
-        "reason": "開札日から38日経過",
+        "ageDays": 39,
+        "reason": "開札日から39日経過",
         "item": {
           "id": "nara-pref-29005007060120260018",
           "municipality": "奈良県",
@@ -145,8 +137,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 33,
-        "reason": "開札日から33日経過",
+        "ageDays": 34,
+        "reason": "開札日から34日経過",
         "item": {
           "id": "oji-ffe0646cd8",
           "municipality": "王寺町",
@@ -161,8 +153,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 19,
-        "reason": "開札日から19日経過",
+        "ageDays": 20,
+        "reason": "開札日から20日経過",
         "item": {
           "id": "kashihara-5082000865",
           "municipality": "橿原市",
@@ -177,8 +169,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 19,
-        "reason": "開札日から19日経過",
+        "ageDays": 20,
+        "reason": "開札日から20日経過",
         "item": {
           "id": "nara-pref-29001013060020260131",
           "municipality": "奈良県",
@@ -192,19 +184,19 @@
         }
       },
       {
-        "priority": "high",
-        "ageDays": 16,
-        "reason": "落札済みだが落札者が空",
+        "priority": "medium",
+        "ageDays": 7,
+        "reason": "開札日から7日経過",
         "item": {
-          "id": "miyake-2026-08-08-三宅町文化ホールトイレ改修工事",
-          "municipality": "三宅町",
-          "title": "三宅町文化ホールトイレ改修工事",
-          "status": "落札",
-          "announcementDate": "2026-08-08",
-          "biddingDate": "2026-08-08",
+          "id": "nara-pref-29001013060020260144",
+          "municipality": "奈良県",
+          "title": "社会福祉総合センター本館１・２階トイレ改修工事監理業務 委（監）第８－１７号",
+          "status": "受付終了",
+          "announcementDate": "2026-07-22",
+          "biddingDate": "2026-08-18",
           "winningContractor": null,
-          "link": "https://www.town.miyake.lg.jp/soshiki/1/9375.html",
-          "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5616.pdf"
+          "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260144&gamenMode=0",
+          "pdfUrl": null
         }
       }
     ]
@@ -493,16 +485,9 @@
   "dateIntegrity": {
     "announcementAfterBiddingCount": 0,
     "awardedWithoutBiddingDateCount": 0,
-    "awardedWithoutWinnerCount": 6,
+    "awardedWithoutWinnerCount": 5,
     "openWithWinnerCount": 0,
     "sampleTitles": [
-      {
-        "municipality": "三宅町",
-        "title": "三宅町文化ホールトイレ改修工事",
-        "status": "落札",
-        "announcementDate": "2026-08-08",
-        "biddingDate": "2026-08-08"
-      },
       {
         "municipality": "五條市",
         "title": "牧野住宅１０・１１号解体工事",
@@ -516,6 +501,13 @@
         "status": "落札",
         "announcementDate": "2026-06-15",
         "biddingDate": "2026-06-15"
+      },
+      {
+        "municipality": "大淀町",
+        "title": "大淀町立緑ヶ丘小学校プレジャールーム移転改修工事に伴う設計業務【令和8年4月21日執行 （pdf, 36.64KB）",
+        "status": "落札",
+        "announcementDate": "2026-04-21",
+        "biddingDate": "2026-04-21"
       }
     ]
   },
@@ -571,15 +563,15 @@
         "municipality": "生駒市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 22,
+        "totalCount": 21,
         "requiredLinkIncludes": [
           "epi-cloud.fwd.ne.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "epi-cloud.fwd.ne.jp": 22
+          "epi-cloud.fwd.ne.jp": 21
         },
-        "message": "生駒市: 22件 / sources OK"
+        "message": "生駒市: 21件 / sources OK"
       },
       {
         "municipality": "大和高田市",
@@ -601,15 +593,15 @@
         "municipality": "大和郡山市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 20,
+        "totalCount": 19,
         "requiredLinkIncludes": [
           "city.yamatokoriyama.lg.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.yamatokoriyama.lg.jp": 20
+          "city.yamatokoriyama.lg.jp": 19
         },
-        "message": "大和郡山市: 20件 / sources OK"
+        "message": "大和郡山市: 19件 / sources OK"
       },
       {
         "municipality": "葛城市",
