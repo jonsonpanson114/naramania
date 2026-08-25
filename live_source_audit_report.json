@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-25T03:05:26.233Z",
-  "currentItemCount": 276,
+  "generatedAt": "2026-08-25T05:35:38.641Z",
+  "currentItemCount": 274,
   "checkedMunicipalities": [
     "奈良市",
     "橿原市",
@@ -92,9 +92,9 @@
     },
     {
       "municipality": "御所市",
-      "rawCount": 16,
+      "rawCount": 15,
       "keptCount": 2,
-      "rejectedCount": 14,
+      "rejectedCount": 13,
       "warnings": [],
       "errors": []
     },
@@ -446,7 +446,7 @@
       },
       {
         "municipality": "御所市",
-        "snapshotCount": 16,
+        "snapshotCount": 15,
         "expectedCount": 2,
         "matchedCount": 2,
         "missingCount": 0,
