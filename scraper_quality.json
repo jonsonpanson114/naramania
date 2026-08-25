@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-08-25T02:39:52.987Z",
+  "generatedAt": "2026-08-25T06:59:56.149Z",
   "source": "daily_scrape",
   "keptCount": 274,
   "municipalityCount": 24,
   "oldestAnnouncementDate": "2025-02-02",
   "latestAnnouncementDate": "2026-08-25",
-  "scrapedCount": 2354,
-  "rejectedCount": 2099,
+  "scrapedCount": 2296,
+  "rejectedCount": 2050,
   "municipalityAudit": {
     "expectedMunicipalityCount": 25,
     "coveredMunicipalityCount": 24,
@@ -35,7 +35,7 @@
       {
         "municipality": "生駒市",
         "count": 21,
-        "changeFromPrevious": -1
+        "changeFromPrevious": 0
       },
       {
         "municipality": "五條市",
@@ -50,7 +50,7 @@
       {
         "municipality": "大和郡山市",
         "count": 19,
-        "changeFromPrevious": -1
+        "changeFromPrevious": 0
       },
       {
         "municipality": "宇陀市",
@@ -138,8 +138,16 @@
         "changeFromPrevious": 0
       }
     ],
-    "retainedFromPrevious": [],
-    "issues": []
+    "retainedFromPrevious": [
+      "宇陀市"
+    ],
+    "issues": [
+      {
+        "municipality": "宇陀市",
+        "level": "warning",
+        "message": "[宇陀市] 取得件数が急減したため既存データを維持しています (baseline=18, new kept=9)"
+      }
+    ]
   },
   "dateAudit": {
     "announcementAfterBiddingCount": 0,
@@ -176,6 +184,6 @@
     "intelligenceExtractedCount": 48,
     "geminiExtractedCount": 48,
     "taggedCount": 48,
-    "lastAugmentedAt": "2026-08-25T02:39:53.696Z"
+    "lastAugmentedAt": "2026-08-25T06:59:57.028Z"
   }
 }

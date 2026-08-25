@@ -1068,7 +1068,9 @@
       "announcementDate": "2026-08-20",
       "biddingDate": "2026-08-20",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-      "status": "受付終了"
+      "status": "落札",
+      "winningContractor": "京和建設株式会社",
+      "winnerType": "ゼネコン"
     },
     {
       "id": "ikoma-51a7adacd5",
@@ -2065,7 +2067,7 @@
       "winnerType": "設計事務所"
     },
     {
-      "id": "gose-2026-07-17-市営住宅(サン柏原207号・今出団地99号・11-13",
+      "id": "gose-2026-07-17-市営住宅(サン柏原207号・今出団地99号・11-7",
       "municipality": "御所市",
       "title": "市営住宅(サン柏原207号・今出団地99号・110号)空家修繕",
       "type": "その他",

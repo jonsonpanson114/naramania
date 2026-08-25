@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-25T02:39:52.990Z",
-  "totalRejected": 8766,
-  "totalBorderlineRescued": 30,
+  "generatedAt": "2026-08-25T06:59:56.152Z",
+  "totalRejected": 8550,
+  "totalBorderlineRescued": 27,
   "byMunicipality": {
     "奈良市": {
       "rejected": 288,
@@ -16,7 +16,7 @@
       "borderlineRescued": 6
     },
     "大和高田市": {
-      "rejected": 120,
+      "rejected": 114,
       "borderlineRescued": 0
     },
     "大和郡山市": {
@@ -44,8 +44,8 @@
       "borderlineRescued": 0
     },
     "宇陀市": {
-      "rejected": 408,
-      "borderlineRescued": 3
+      "rejected": 198,
+      "borderlineRescued": 0
     },
     "田原本町": {
       "rejected": 252,
@@ -18741,15 +18741,283 @@
     },
     {
       "municipality": "大和高田市",
-      "title": "特定空家等解体除却工事",
+      "title": "令和8年度区画線等設置工事（単価契約）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "区画線"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "令和8年度区画線等設置工事（単価契約） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "区画線"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "こちら",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },
     {
       "municipality": "大和高田市",
-      "title": "特定空家等解体除却工事 ",
+      "title": "こちら ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "公共下水道事業に伴う管更生実施設計業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "公共下水道事業に伴う管更生実施設計業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "公共下水道事業に伴う管渠実施設計（1）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "公共下水道事業に伴う管渠実施設計（1） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "公共下水道事業に伴う管渠実施設計（2）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "公共下水道事業に伴う管渠実施設計（2） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "大和高田市橋梁定期点検業務委託（No.1）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋",
+        "定期点検"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "大和高田市橋梁定期点検業務委託（No.1） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋",
+        "定期点検"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "大和高田市橋梁定期点検業務委託（No.2）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋",
+        "定期点検"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "大和高田市橋梁定期点検業務委託（No.2） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋",
+        "定期点検"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "令和8年度大和高田市洪水・地震ハザードマップ更新業務委託",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "令和8年度大和高田市洪水・地震ハザードマップ更新業務委託 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "幹線管路不明水調査及び管路診断業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "幹線管路不明水調査及び管路診断業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "敷枝有井地内管渠工事（4）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "敷枝有井地内管渠工事（4） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "公共下水道事業に伴う管更生実施設計業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "公共下水道事業に伴う管更生実施設計業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "高5枝曽大根1丁目地内管渠工事（1）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "高5枝曽大根1丁目地内管渠工事（1） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "高田千本桜大中公園周辺他川沿いの桜剪定伐採管理業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "高田千本桜大中公園周辺他川沿いの桜剪定伐採管理業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "曽6枝根成柿地内管渠工事（2）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "曽6枝根成柿地内管渠工事（2） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "土枝土庫2丁目地内管渠工事（3）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "土枝土庫2丁目地内管渠工事（3） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "高5枝東中2丁目地内管渠工事（5）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "高5枝東中2丁目地内管渠工事（5） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "高107号線舗装維持工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "高107号線舗装維持工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "高515号線舗装維持工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "高515号線舗装維持工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "天150号線舗装維持工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "天150号線舗装維持工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
     },
     {
       "municipality": "大和高田市",
@@ -19033,310 +19301,6 @@
     },
     {
       "municipality": "大和高田市",
-      "title": "特定空家等解体除却工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "特定空家等解体除却工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "令和8年度区画線等設置工事（単価契約）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "区画線"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "令和8年度区画線等設置工事（単価契約） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "区画線"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "こちら",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "こちら ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "公共下水道事業に伴う管更生実施設計業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "公共下水道事業に伴う管更生実施設計業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "公共下水道事業に伴う管渠実施設計（1）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "公共下水道事業に伴う管渠実施設計（1） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "公共下水道事業に伴う管渠実施設計（2）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "公共下水道事業に伴う管渠実施設計（2） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "大和高田市橋梁定期点検業務委託（No.1）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋梁",
-        "橋",
-        "定期点検"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "大和高田市橋梁定期点検業務委託（No.1） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋梁",
-        "橋",
-        "定期点検"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "大和高田市橋梁定期点検業務委託（No.2）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋梁",
-        "橋",
-        "定期点検"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "大和高田市橋梁定期点検業務委託（No.2） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋梁",
-        "橋",
-        "定期点検"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "令和8年度大和高田市洪水・地震ハザードマップ更新業務委託",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "令和8年度大和高田市洪水・地震ハザードマップ更新業務委託 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "幹線管路不明水調査及び管路診断業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "調査"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "幹線管路不明水調査及び管路診断業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "調査"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "敷枝有井地内管渠工事（4）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "敷枝有井地内管渠工事（4） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "公共下水道事業に伴う管更生実施設計業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "公共下水道事業に伴う管更生実施設計業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "高5枝曽大根1丁目地内管渠工事（1）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "高5枝曽大根1丁目地内管渠工事（1） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "高田千本桜大中公園周辺他川沿いの桜剪定伐採管理業務",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "高田千本桜大中公園周辺他川沿いの桜剪定伐採管理業務 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "曽6枝根成柿地内管渠工事（2）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "曽6枝根成柿地内管渠工事（2） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "土枝土庫2丁目地内管渠工事（3）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "土枝土庫2丁目地内管渠工事（3） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "高5枝東中2丁目地内管渠工事（5）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "高5枝東中2丁目地内管渠工事（5） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "高107号線舗装維持工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "高107号線舗装維持工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "高515号線舗装維持工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "高515号線舗装維持工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "天150号線舗装維持工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "天150号線舗装維持工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "特定空家等解体除却工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "特定空家等解体除却工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大和高田市",
       "title": "令和8年度区画線等設置工事（単価契約）",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -43275,19 +43239,51 @@
     },
     {
       "municipality": "御所市",
-      "title": "御所市一般廃棄物処理基本計画策定(見直し)業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "廃棄物"
-      ]
+      "title": "今住調整池維持 建 御所市大字",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
     },
     {
       "municipality": "御所市",
-      "title": "御所市一般廃棄物処理基本計画策定(見直し)業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "廃棄物"
-      ]
+      "title": "今住調整池維持 建 御所市大字 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "御所汚水9-1号幹線(2工区)管路築造",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "御所汚水9-1号幹線(2工区)管路築造 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "小林保育所解体",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "小林保育所解体 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "御所汚水9号幹線(10工区)管路築造",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "御所汚水9号幹線(10工区)管路築造 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
     },
     {
       "municipality": "御所市",
@@ -43327,19 +43323,15 @@
     },
     {
       "municipality": "御所市",
-      "title": "御所市一般廃棄物処理基本計画策定(見直し)業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "廃棄物"
-      ]
+      "title": "御所汚水9号幹線(10工区)管路築造",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
     },
     {
       "municipality": "御所市",
-      "title": "御所市一般廃棄物処理基本計画策定(見直し)業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "廃棄物"
-      ]
+      "title": "御所汚水9号幹線(10工区)管路築造 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
     },
     {
       "municipality": "御所市",
@@ -43379,53 +43371,13 @@
     },
     {
       "municipality": "御所市",
-      "title": "御所市一般廃棄物処理基本計画策定(見直し)業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "廃棄物"
-      ]
-    },
-    {
-      "municipality": "御所市",
-      "title": "御所市一般廃棄物処理基本計画策定(見直し)業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "廃棄物"
-      ]
-    },
-    {
-      "municipality": "御所市",
-      "title": "今住調整池維持 建 御所市大字",
+      "title": "御所汚水9号幹線(10工区)管路築造",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },
     {
       "municipality": "御所市",
-      "title": "今住調整池維持 建 御所市大字 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "御所汚水9-1号幹線(2工区)管路築造",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "御所汚水9-1号幹線(2工区)管路築造 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "小林保育所解体",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "小林保育所解体 ",
+      "title": "御所汚水9号幹線(10工区)管路築造 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },
@@ -44057,575 +44009,6 @@
       "matchedKeywords": [
         "地質",
         "調査"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-A005号】都市公園等維持修繕事業 防草シート設置工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-A005号】都市公園等維持修繕事業 防草シート設置工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-A002号】都市公園等維持修繕事業 都市公園等維持工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-A002号】都市公園等維持修繕事業 都市公園等維持工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-A008号】道路維持事業 市道平井比布線舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-A008号】道路維持事業 市道平井比布線舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-A011号】里山整備事業 カエデの郷ひらら周辺整備工事（第３期）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-A011号】里山整備事業 カエデの郷ひらら周辺整備工事（第３期） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-A009号】道路維持事業 市道赤埴乙７号線舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-A009号】道路維持事業 市道赤埴乙７号線舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-A007号】道路維持事業 市道赤砂利拾生線舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装",
-        "砂利"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-A007号】道路維持事業 市道赤砂利拾生線舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装",
-        "砂利"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-A006号】道路維持事業 市道多田かわぞえ線舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-A006号】道路維持事業 市道多田かわぞえ線舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-B001号】史 宇陀松山城跡（災害復旧）歴史活き活き！史跡等総合活用整備事業 史跡宇陀松山城跡災害復旧工事（崩落地⑬-1）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-B001号】史 宇陀松山城跡（災害復旧）歴史活き活き！史跡等総合活用整備事業 史跡宇陀松山城跡災害復旧工事（崩落地⑬-1） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-B005号】史宇陀松山城跡（災害復旧）歴史活き活き！史跡等総合活用整備事業 史跡宇陀松山城跡仮設保護対策工事（崩落地⑫⑬）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-B005号】史宇陀松山城跡（災害復旧）歴史活き活き！史跡等総合活用整備事業 史跡宇陀松山城跡仮設保護対策工事（崩落地⑫⑬） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A028号】道路維持事業 市道赤砂利野依線他舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装",
-        "砂利"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A028号】道路維持事業 市道赤砂利野依線他舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装",
-        "砂利"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "舗装復旧工事（大宇陀大熊地区）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "舗装復旧工事（大宇陀大熊地区） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "舗装復旧工事（大宇陀東平尾地区）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "舗装復旧工事（大宇陀東平尾地区） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A018号】道路維持事業 市道玉立2号線舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A018号】道路維持事業 市道玉立2号線舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A025号】宇陀市公共下水道事業 流量計及びマンホール設置工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A025号】宇陀市公共下水道事業 流量計及びマンホール設置工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【7災国補第2号】公共土木施設災害復旧事業 道路災害復旧工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "土木"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【7災国補第2号】公共土木施設災害復旧事業 道路災害復旧工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "土木"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-B002号】農山漁村地域整備交付金林道改良（保全整備）事業 林道橋補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-B002号】農山漁村地域整備交付金林道改良（保全整備）事業 林道橋補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A023号】市道高倉山辺三線落石対策工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "落石"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A023号】市道高倉山辺三線落石対策工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "落石"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-B004号】社会資本整備総合交付金事業（防災・安全） 市営住宅川向団地屋根外壁改善工事",
-      "reason": "always_exclude_keyword",
-      "matchedKeywords": [
-        "外壁"
-      ],
-      "borderlineRescue": true
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-B003号】道路メンテナンス事業 橋梁長寿命化修繕工事（太古良橋）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "橋梁",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-B003号】道路メンテナンス事業 橋梁長寿命化修繕工事（太古良橋） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "橋梁",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A021号】道路維持事業 市道小附庄屋ヶ谷線他舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A021号】道路維持事業 市道小附庄屋ヶ谷線他舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A019号】道路改良事業 市道平井比布線道路改良工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A019号】道路改良事業 市道平井比布線道路改良工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "水道未普及地域解消事業 本郷高区送水ポンプ場築造工事（10工区）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "水道未普及地域解消事業 本郷高区送水ポンプ場築造工事（10工区） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A016号】道路維持事業 市道無山中央線防草コンクリート設置工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A016号】道路維持事業 市道無山中央線防草コンクリート設置工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A014号】道路維持事業 市道平井比布線舗装補修工事（２工区）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A014号】道路維持事業 市道平井比布線舗装補修工事（２工区） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "檜牧浄水場取水施設撤去工事",
-      "reason": "infra_exclude_keyword",
-      "matchedKeywords": [
-        "浄水場"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "檜牧浄水場取水施設撤去工事 ",
-      "reason": "infra_exclude_keyword",
-      "matchedKeywords": [
-        "浄水場"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "水道未普及地域解消事業 本郷高区配水池築造・本郷地区送配給水管工事（１１工区）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "水道未普及地域解消事業 本郷高区配水池築造・本郷地区送配給水管工事（１１工区） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "水道未普及地域解消事業 本郷地区給配水管工事（９工区）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "水道未普及地域解消事業 本郷地区給配水管工事（９工区） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A015号】道路維持事業 市道萩原２６号線舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A015号】道路維持事業 市道萩原２６号線舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A013号】道路維持事業 市道平井比布線（１工区）舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A013号】道路維持事業 市道平井比布線（１工区）舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A011号】都市公園等維持修繕事業 防草シート設置工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A011号】都市公園等維持修繕事業 防草シート設置工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A010号】都市公園等維持修繕事業 都市公園等維持工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A010号】都市公園等維持修繕事業 都市公園等維持工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A005号】道路維持事業 市道中尾谷清水線舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A005号】道路維持事業 市道中尾谷清水線舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A008号】道路維持事業 市道菟田野485号線舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A008号】道路維持事業 市道菟田野485号線舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A004号】道路維持事業 市道四ケ村線舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A004号】道路維持事業 市道四ケ村線舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A002号】道路維持事業 市道桐山垣内４号線舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A002号】道路維持事業 市道桐山垣内４号線舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A001号】道路維持事業 市道野依篠楽線舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A001号】道路維持事業 市道野依篠楽線舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
       ]
     },
     {
@@ -45196,575 +44579,6 @@
     },
     {
       "municipality": "宇陀市",
-      "title": "【第08-A005号】都市公園等維持修繕事業 防草シート設置工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-A005号】都市公園等維持修繕事業 防草シート設置工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-A002号】都市公園等維持修繕事業 都市公園等維持工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-A002号】都市公園等維持修繕事業 都市公園等維持工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-A008号】道路維持事業 市道平井比布線舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-A008号】道路維持事業 市道平井比布線舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-A011号】里山整備事業 カエデの郷ひらら周辺整備工事（第３期）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-A011号】里山整備事業 カエデの郷ひらら周辺整備工事（第３期） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-A009号】道路維持事業 市道赤埴乙７号線舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-A009号】道路維持事業 市道赤埴乙７号線舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-A007号】道路維持事業 市道赤砂利拾生線舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装",
-        "砂利"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-A007号】道路維持事業 市道赤砂利拾生線舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装",
-        "砂利"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-A006号】道路維持事業 市道多田かわぞえ線舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-A006号】道路維持事業 市道多田かわぞえ線舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-B001号】史 宇陀松山城跡（災害復旧）歴史活き活き！史跡等総合活用整備事業 史跡宇陀松山城跡災害復旧工事（崩落地⑬-1）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-B001号】史 宇陀松山城跡（災害復旧）歴史活き活き！史跡等総合活用整備事業 史跡宇陀松山城跡災害復旧工事（崩落地⑬-1） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-B005号】史宇陀松山城跡（災害復旧）歴史活き活き！史跡等総合活用整備事業 史跡宇陀松山城跡仮設保護対策工事（崩落地⑫⑬）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-B005号】史宇陀松山城跡（災害復旧）歴史活き活き！史跡等総合活用整備事業 史跡宇陀松山城跡仮設保護対策工事（崩落地⑫⑬） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A028号】道路維持事業 市道赤砂利野依線他舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装",
-        "砂利"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A028号】道路維持事業 市道赤砂利野依線他舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装",
-        "砂利"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "舗装復旧工事（大宇陀大熊地区）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "舗装復旧工事（大宇陀大熊地区） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "舗装復旧工事（大宇陀東平尾地区）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "舗装復旧工事（大宇陀東平尾地区） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A018号】道路維持事業 市道玉立2号線舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A018号】道路維持事業 市道玉立2号線舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A025号】宇陀市公共下水道事業 流量計及びマンホール設置工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A025号】宇陀市公共下水道事業 流量計及びマンホール設置工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【7災国補第2号】公共土木施設災害復旧事業 道路災害復旧工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "土木"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【7災国補第2号】公共土木施設災害復旧事業 道路災害復旧工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "土木"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-B002号】農山漁村地域整備交付金林道改良（保全整備）事業 林道橋補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-B002号】農山漁村地域整備交付金林道改良（保全整備）事業 林道橋補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A023号】市道高倉山辺三線落石対策工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "落石"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A023号】市道高倉山辺三線落石対策工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "落石"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-B004号】社会資本整備総合交付金事業（防災・安全） 市営住宅川向団地屋根外壁改善工事",
-      "reason": "always_exclude_keyword",
-      "matchedKeywords": [
-        "外壁"
-      ],
-      "borderlineRescue": true
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-B003号】道路メンテナンス事業 橋梁長寿命化修繕工事（太古良橋）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "橋梁",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-B003号】道路メンテナンス事業 橋梁長寿命化修繕工事（太古良橋） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "橋梁",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A021号】道路維持事業 市道小附庄屋ヶ谷線他舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A021号】道路維持事業 市道小附庄屋ヶ谷線他舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A019号】道路改良事業 市道平井比布線道路改良工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A019号】道路改良事業 市道平井比布線道路改良工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "水道未普及地域解消事業 本郷高区送水ポンプ場築造工事（10工区）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "水道未普及地域解消事業 本郷高区送水ポンプ場築造工事（10工区） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A016号】道路維持事業 市道無山中央線防草コンクリート設置工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A016号】道路維持事業 市道無山中央線防草コンクリート設置工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A014号】道路維持事業 市道平井比布線舗装補修工事（２工区）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A014号】道路維持事業 市道平井比布線舗装補修工事（２工区） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "檜牧浄水場取水施設撤去工事",
-      "reason": "infra_exclude_keyword",
-      "matchedKeywords": [
-        "浄水場"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "檜牧浄水場取水施設撤去工事 ",
-      "reason": "infra_exclude_keyword",
-      "matchedKeywords": [
-        "浄水場"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "水道未普及地域解消事業 本郷高区配水池築造・本郷地区送配給水管工事（１１工区）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "水道未普及地域解消事業 本郷高区配水池築造・本郷地区送配給水管工事（１１工区） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "水道未普及地域解消事業 本郷地区給配水管工事（９工区）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "水道未普及地域解消事業 本郷地区給配水管工事（９工区） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A015号】道路維持事業 市道萩原２６号線舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A015号】道路維持事業 市道萩原２６号線舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A013号】道路維持事業 市道平井比布線（１工区）舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A013号】道路維持事業 市道平井比布線（１工区）舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A011号】都市公園等維持修繕事業 防草シート設置工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A011号】都市公園等維持修繕事業 防草シート設置工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A010号】都市公園等維持修繕事業 都市公園等維持工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A010号】都市公園等維持修繕事業 都市公園等維持工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A005号】道路維持事業 市道中尾谷清水線舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A005号】道路維持事業 市道中尾谷清水線舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A008号】道路維持事業 市道菟田野485号線舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A008号】道路維持事業 市道菟田野485号線舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A004号】道路維持事業 市道四ケ村線舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A004号】道路維持事業 市道四ケ村線舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A002号】道路維持事業 市道桐山垣内４号線舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A002号】道路維持事業 市道桐山垣内４号線舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A001号】道路維持事業 市道野依篠楽線舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A001号】道路維持事業 市道野依篠楽線舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
       "title": "【第07-C018号】道路メンテナンス事業 橋梁定期点検業務",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -46327,575 +45141,6 @@
       "matchedKeywords": [
         "地質",
         "調査"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-A005号】都市公園等維持修繕事業 防草シート設置工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-A005号】都市公園等維持修繕事業 防草シート設置工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-A002号】都市公園等維持修繕事業 都市公園等維持工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-A002号】都市公園等維持修繕事業 都市公園等維持工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-A008号】道路維持事業 市道平井比布線舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-A008号】道路維持事業 市道平井比布線舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-A011号】里山整備事業 カエデの郷ひらら周辺整備工事（第３期）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-A011号】里山整備事業 カエデの郷ひらら周辺整備工事（第３期） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-A009号】道路維持事業 市道赤埴乙７号線舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-A009号】道路維持事業 市道赤埴乙７号線舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-A007号】道路維持事業 市道赤砂利拾生線舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装",
-        "砂利"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-A007号】道路維持事業 市道赤砂利拾生線舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装",
-        "砂利"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-A006号】道路維持事業 市道多田かわぞえ線舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-A006号】道路維持事業 市道多田かわぞえ線舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-B001号】史 宇陀松山城跡（災害復旧）歴史活き活き！史跡等総合活用整備事業 史跡宇陀松山城跡災害復旧工事（崩落地⑬-1）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-B001号】史 宇陀松山城跡（災害復旧）歴史活き活き！史跡等総合活用整備事業 史跡宇陀松山城跡災害復旧工事（崩落地⑬-1） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-B005号】史宇陀松山城跡（災害復旧）歴史活き活き！史跡等総合活用整備事業 史跡宇陀松山城跡仮設保護対策工事（崩落地⑫⑬）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-B005号】史宇陀松山城跡（災害復旧）歴史活き活き！史跡等総合活用整備事業 史跡宇陀松山城跡仮設保護対策工事（崩落地⑫⑬） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A028号】道路維持事業 市道赤砂利野依線他舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装",
-        "砂利"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A028号】道路維持事業 市道赤砂利野依線他舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装",
-        "砂利"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "舗装復旧工事（大宇陀大熊地区）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "舗装復旧工事（大宇陀大熊地区） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "舗装復旧工事（大宇陀東平尾地区）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "舗装復旧工事（大宇陀東平尾地区） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A018号】道路維持事業 市道玉立2号線舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A018号】道路維持事業 市道玉立2号線舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A025号】宇陀市公共下水道事業 流量計及びマンホール設置工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A025号】宇陀市公共下水道事業 流量計及びマンホール設置工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【7災国補第2号】公共土木施設災害復旧事業 道路災害復旧工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "土木"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【7災国補第2号】公共土木施設災害復旧事業 道路災害復旧工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "土木"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-B002号】農山漁村地域整備交付金林道改良（保全整備）事業 林道橋補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-B002号】農山漁村地域整備交付金林道改良（保全整備）事業 林道橋補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A023号】市道高倉山辺三線落石対策工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "落石"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A023号】市道高倉山辺三線落石対策工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "落石"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-B004号】社会資本整備総合交付金事業（防災・安全） 市営住宅川向団地屋根外壁改善工事",
-      "reason": "always_exclude_keyword",
-      "matchedKeywords": [
-        "外壁"
-      ],
-      "borderlineRescue": true
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-B003号】道路メンテナンス事業 橋梁長寿命化修繕工事（太古良橋）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "橋梁",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-B003号】道路メンテナンス事業 橋梁長寿命化修繕工事（太古良橋） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "橋梁",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A021号】道路維持事業 市道小附庄屋ヶ谷線他舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A021号】道路維持事業 市道小附庄屋ヶ谷線他舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A019号】道路改良事業 市道平井比布線道路改良工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A019号】道路改良事業 市道平井比布線道路改良工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "水道未普及地域解消事業 本郷高区送水ポンプ場築造工事（10工区）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "水道未普及地域解消事業 本郷高区送水ポンプ場築造工事（10工区） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A016号】道路維持事業 市道無山中央線防草コンクリート設置工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A016号】道路維持事業 市道無山中央線防草コンクリート設置工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A014号】道路維持事業 市道平井比布線舗装補修工事（２工区）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A014号】道路維持事業 市道平井比布線舗装補修工事（２工区） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "檜牧浄水場取水施設撤去工事",
-      "reason": "infra_exclude_keyword",
-      "matchedKeywords": [
-        "浄水場"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "檜牧浄水場取水施設撤去工事 ",
-      "reason": "infra_exclude_keyword",
-      "matchedKeywords": [
-        "浄水場"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "水道未普及地域解消事業 本郷高区配水池築造・本郷地区送配給水管工事（１１工区）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "水道未普及地域解消事業 本郷高区配水池築造・本郷地区送配給水管工事（１１工区） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "水道未普及地域解消事業 本郷地区給配水管工事（９工区）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "水道未普及地域解消事業 本郷地区給配水管工事（９工区） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A015号】道路維持事業 市道萩原２６号線舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A015号】道路維持事業 市道萩原２６号線舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A013号】道路維持事業 市道平井比布線（１工区）舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A013号】道路維持事業 市道平井比布線（１工区）舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A011号】都市公園等維持修繕事業 防草シート設置工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A011号】都市公園等維持修繕事業 防草シート設置工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A010号】都市公園等維持修繕事業 都市公園等維持工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A010号】都市公園等維持修繕事業 都市公園等維持工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A005号】道路維持事業 市道中尾谷清水線舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A005号】道路維持事業 市道中尾谷清水線舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A008号】道路維持事業 市道菟田野485号線舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A008号】道路維持事業 市道菟田野485号線舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A004号】道路維持事業 市道四ケ村線舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A004号】道路維持事業 市道四ケ村線舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A002号】道路維持事業 市道桐山垣内４号線舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A002号】道路維持事業 市道桐山垣内４号線舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A001号】道路維持事業 市道野依篠楽線舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第07-A001号】道路維持事業 市道野依篠楽線舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
       ]
     },
     {

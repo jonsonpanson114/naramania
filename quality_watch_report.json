@@ -1,21 +1,17 @@
 {
-  "generatedAt": "2026-08-25T02:47:29.701Z",
-  "qualityGeneratedAt": "2026-08-25T02:39:52.987Z",
+  "generatedAt": "2026-08-25T07:08:11.804Z",
+  "qualityGeneratedAt": "2026-08-25T06:59:56.149Z",
   "itemCount": 274,
   "resultFollowUp": {
-    "totalCount": 20,
+    "totalCount": 19,
     "highCount": 9,
-    "mediumCount": 10,
+    "mediumCount": 9,
     "lowCount": 1,
     "missingBiddingDateCount": 0,
     "byMunicipality": [
       {
         "municipality": "奈良県",
         "count": 12
-      },
-      {
-        "municipality": "生駒市",
-        "count": 2
       },
       {
         "municipality": "大淀町",
@@ -31,6 +27,10 @@
       },
       {
         "municipality": "五條市",
+        "count": 1
+      },
+      {
+        "municipality": "生駒市",
         "count": 1
       },
       {
