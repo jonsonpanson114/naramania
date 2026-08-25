@@ -20,9 +20,12 @@ const RUN_HOURS_JST = [10, 15];
  * 自前のWindowsランナーが必要な構成で失敗しやすく、Daily Scrapeが全て成功して
  * いても奈良県だけ数日止まることがある(実際に8/20→8/25で5日間停止した)。
  */
-const NARA_PREF_RUN_HOURS_JST = [22];
+const NARA_PREF_RUN_HOURS_JST = [7, 22];
 const NARA_PREF = '奈良県';
-/** 22時実行は翌日にまたがるため、1回落ちた程度では警告しない */
+/**
+ * 7:00と22:00の2便あり、どちらかが通ればその日のデータは入る。
+ * 1便落ちた程度では警告せず、2便続けて落ちた時点で知らせる。
+ */
 const NARA_PREF_MISSED_THRESHOLD = 2;
 /** 実行に30分ほどかかるため、予定時刻の直後は猶予を持たせる */
 const GRACE_HOURS = 2;
