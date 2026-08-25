@@ -21,6 +21,8 @@ export interface RejectedItemsReport {
 export interface QualitySummary {
   generatedAt?: string;
   source?: string;
+  /** 自治体ごとの最終収集時刻。奈良県は別ワークフローのため片側だけ止まりうる */
+  municipalityLastScraped?: Record<string, string>;
   originalCount?: number;
   scrapedCount?: number;
   keptCount?: number;

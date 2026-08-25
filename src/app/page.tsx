@@ -10,7 +10,7 @@ import { NewsTicker } from '@/components/NewsTicker';
 import { countPracticalFilter } from '@/lib/practical_filters';
 import { buildLatestOpeningResults } from '@/lib/opening_result_updates';
 import { buildResultFollowUpSummary } from '@/lib/result_follow_up';
-import { getDataFreshness } from '@/lib/data_freshness';
+import { getDataFreshness, getStaleMunicipalities } from '@/lib/data_freshness';
 import { loadDashboardData } from '@/lib/dashboard_data';
 import { Activity, AlertTriangle } from 'lucide-react';
 import Link from 'next/link';
@@ -49,16 +49,22 @@ export default async function Home() {
     (qualitySummary?.municipalityAudit?.issues || []).filter(issue => issue.level === 'error').length
     + (liveAuditReport?.coverage?.missingItemCount ?? 0)
     + (liveAuditReport?.scraperErrorCount ?? 0);
-  // 監査に問題が無くても、収集自体が止まっていれば「正常」と言ってはいけない
+  // 監査に問題が無くても、収集自体が止まっていれば「正常」と言ってはいけない。
+  // 奈良県のように一部の自治体だけ止まる場合もあるため両方見る。
   const dataFreshness = getDataFreshness(qualitySummary?.generatedAt);
-  const operationsHealthy = auditIssueCount === 0 && !dataFreshness.isStale;
+  const staleMunicipalities = getStaleMunicipalities(qualitySummary?.municipalityLastScraped);
+  const collectionStopped = dataFreshness.isStale || staleMunicipalities.length > 0;
+  const operationsHealthy = auditIssueCount === 0 && !collectionStopped;
 
   return (
     <AppShell>
         <NewsTicker />
         <Header />
 
-        <DataFreshnessBanner generatedAt={qualitySummary?.generatedAt} />
+        <DataFreshnessBanner
+          generatedAt={qualitySummary?.generatedAt}
+          municipalityLastScraped={qualitySummary?.municipalityLastScraped}
+        />
 
         <TodayFocusPanel
           items={allItems}
@@ -96,8 +102,10 @@ export default async function Home() {
               データ更新: {latestQualityDate || '-'}
               {operationsHealthy
                 ? ' / 収集・監査は正常です'
-                : dataFreshness.isStale
-                  ? ' / 収集が止まっています'
+                : collectionStopped
+                  ? dataFreshness.isStale
+                    ? ' / 収集が止まっています'
+                    : ` / ${staleMunicipalities.map(s => s.municipality).join('・')}の収集が止まっています`
                   : ` / 要確認 ${auditIssueCount}件`}
             </span>
             <span className="text-xs font-bold tracking-[0.14em] underline-offset-4 hover:underline">運用状況を見る →</span>

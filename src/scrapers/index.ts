@@ -368,6 +368,7 @@ function writeQualitySummary(
     rejectedCount: number,
     retainedMunicipalities: string[] = [],
     issues: MunicipalityIssueEntry[] = [],
+    scrapedMunicipalities: string[] = [],
 ) {
     const previousSummary = readQualitySummary();
     const dates = items
@@ -393,9 +394,22 @@ function writeQualitySummary(
         }));
     const missingMunicipalities = EXPECTED_MUNICIPALITIES.filter(municipality => !(municipality in counts));
 
+    // 今回収集できた自治体だけ時刻を更新し、対象外だった自治体は前回値を引き継ぐ。
+    // これにより「Daily Scrapeは通っているが奈良県だけ数日止まっている」状態を
+    // 自治体単位で検知できる(generatedAtはどちらのワークフローでも更新されるため
+    // 全体の鮮度だけ見ていると片側の停止に気づけない)。
+    const nowIso = new Date().toISOString();
+    const municipalityLastScraped: Record<string, string> = {
+        ...(previousSummary?.municipalityLastScraped || {}),
+    };
+    for (const municipality of scrapedMunicipalities) {
+        municipalityLastScraped[municipality] = nowIso;
+    }
+
     const summary = {
-        generatedAt: new Date().toISOString(),
+        generatedAt: nowIso,
         source: 'daily_scrape',
+        municipalityLastScraped,
         scrapedCount,
         keptCount: items.length,
         rejectedCount,
@@ -483,6 +497,10 @@ async function main() {
     let previousAllItems: BiddingItem[] = [];
     const retainedMunicipalities = new Set<string>();
     const municipalityIssues = new Map<string, MunicipalityIssueEntry[]>();
+    // 今回この実行で実際に収集できた自治体。奈良県は別ワークフロー(平日22:00)で
+    // 動くため、Daily Scrapeが成功していても奈良県だけ止まっていることがある。
+    // 自治体ごとの最終収集時刻を残さないと、その片側停止を検知できない。
+    const scrapedMunicipalities = new Set<string>();
 
     // Load existing data
     if (fs.existsSync(outputPath)) {
@@ -539,6 +557,7 @@ async function main() {
                 municipalityIssues.set(scraper.municipality, issueEntries);
             }
             console.log(`→ ${scraper.municipality}: ${items.length}件取得`);
+            scrapedMunicipalities.add(scraper.municipality);
             scrapedCount += items.length;
             rejectedCount += items.filter(item => !shouldKeepBiddingItem(item)).length;
             const previousMunicipalityItems = getMunicipalityItems(seen, scraper.municipality);
@@ -677,6 +696,7 @@ async function main() {
         rejectedCount,
         Array.from(retainedMunicipalities),
         Array.from(municipalityIssues.values()).flat(),
+        Array.from(scrapedMunicipalities),
     );
     const rejectionLog = getRejectionLog();
     writeRejectedItemsReport(rejectionLog);
