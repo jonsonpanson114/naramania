@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-08-25T07:08:11.804Z",
-  "qualityGeneratedAt": "2026-08-25T06:59:56.149Z",
+  "generatedAt": "2026-08-25T14:00:29.217Z",
+  "qualityGeneratedAt": "2026-08-25T14:00:25.709Z",
   "itemCount": 274,
   "resultFollowUp": {
-    "totalCount": 19,
-    "highCount": 9,
-    "mediumCount": 9,
+    "totalCount": 14,
+    "highCount": 8,
+    "mediumCount": 5,
     "lowCount": 1,
     "missingBiddingDateCount": 0,
     "byMunicipality": [
       {
         "municipality": "奈良県",
-        "count": 12
+        "count": 7
       },
       {
         "municipality": "大淀町",
@@ -168,34 +168,34 @@
         }
       },
       {
-        "priority": "high",
-        "ageDays": 20,
-        "reason": "開札日から20日経過",
+        "priority": "medium",
+        "ageDays": 4,
+        "reason": "落札済みだが落札者が空",
         "item": {
-          "id": "nara-pref-29001013060020260131",
-          "municipality": "奈良県",
-          "title": "県営住宅姫寺団地４号棟（５０１号室他）住戸改修工事 第８－２７号",
-          "status": "受付終了",
-          "announcementDate": "2026-07-10",
-          "biddingDate": "2026-08-05",
+          "id": "gojo-epi-2601030",
+          "municipality": "五條市",
+          "title": "牧野住宅１０・１１号解体工事",
+          "status": "落札",
+          "announcementDate": "2026-08-04",
+          "biddingDate": "2026-08-21",
           "winningContractor": null,
-          "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260131&gamenMode=0",
+          "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002601030",
           "pdfUrl": null
         }
       },
       {
         "priority": "medium",
-        "ageDays": 7,
-        "reason": "開札日から7日経過",
+        "ageDays": 4,
+        "reason": "開札日から4日経過",
         "item": {
-          "id": "nara-pref-29001013060020260144",
+          "id": "nara-pref-29001013060020260136",
           "municipality": "奈良県",
-          "title": "社会福祉総合センター本館１・２階トイレ改修工事監理業務 委（監）第８－１７号",
+          "title": "御所実業高校トイレ環境改善整備工事、大和広陵高校トイレ環境改善整備工事及び奈良南高校（大淀学舎）トイレ環境改善整備工事監理業務 委（監）第８－１１号",
           "status": "受付終了",
           "announcementDate": "2026-07-22",
-          "biddingDate": "2026-08-18",
+          "biddingDate": "2026-08-21",
           "winningContractor": null,
-          "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260144&gamenMode=0",
+          "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260136&gamenMode=0",
           "pdfUrl": null
         }
       }
