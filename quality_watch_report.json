@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-08-25T14:00:29.217Z",
-  "qualityGeneratedAt": "2026-08-25T14:00:25.709Z",
-  "itemCount": 274,
+  "generatedAt": "2026-08-26T02:53:40.581Z",
+  "qualityGeneratedAt": "2026-08-26T02:45:50.341Z",
+  "itemCount": 275,
   "resultFollowUp": {
-    "totalCount": 14,
+    "totalCount": 13,
     "highCount": 8,
     "mediumCount": 5,
-    "lowCount": 1,
+    "lowCount": 0,
     "missingBiddingDateCount": 0,
     "byMunicipality": [
       {
@@ -30,10 +30,6 @@
         "count": 1
       },
       {
-        "municipality": "生駒市",
-        "count": 1
-      },
-      {
         "municipality": "奈良市",
         "count": 1
       }
@@ -41,7 +37,7 @@
     "samples": [
       {
         "priority": "high",
-        "ageDays": 126,
+        "ageDays": 127,
         "reason": "落札済みだが落札者が空",
         "item": {
           "id": "oyodo-79dc14038b",
@@ -57,8 +53,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 90,
-        "reason": "開札日から90日経過",
+        "ageDays": 91,
+        "reason": "開札日から91日経過",
         "item": {
           "id": "nara-city-0000002346",
           "municipality": "奈良市",
@@ -73,7 +69,7 @@
       },
       {
         "priority": "high",
-        "ageDays": 71,
+        "ageDays": 72,
         "reason": "落札済みだが落札者が空",
         "item": {
           "id": "oyodo-46ab50dbc8",
@@ -89,8 +85,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 68,
-        "reason": "開札日から68日経過",
+        "ageDays": 69,
+        "reason": "開札日から69日経過",
         "item": {
           "id": "nara-pref-29001013060020260055",
           "municipality": "奈良県",
@@ -105,8 +101,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 49,
-        "reason": "開札日から49日経過",
+        "ageDays": 50,
+        "reason": "開札日から50日経過",
         "item": {
           "id": "nara-pref-29005007060120260015",
           "municipality": "奈良県",
@@ -121,8 +117,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 39,
-        "reason": "開札日から39日経過",
+        "ageDays": 40,
+        "reason": "開札日から40日経過",
         "item": {
           "id": "nara-pref-29005007060120260018",
           "municipality": "奈良県",
@@ -137,8 +133,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 34,
-        "reason": "開札日から34日経過",
+        "ageDays": 35,
+        "reason": "開札日から35日経過",
         "item": {
           "id": "oji-ffe0646cd8",
           "municipality": "王寺町",
@@ -153,8 +149,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 20,
-        "reason": "開札日から20日経過",
+        "ageDays": 21,
+        "reason": "開札日から21日経過",
         "item": {
           "id": "kashihara-5082000865",
           "municipality": "橿原市",
@@ -169,7 +165,7 @@
       },
       {
         "priority": "medium",
-        "ageDays": 4,
+        "ageDays": 5,
         "reason": "落札済みだが落札者が空",
         "item": {
           "id": "gojo-epi-2601030",
@@ -185,8 +181,8 @@
       },
       {
         "priority": "medium",
-        "ageDays": 4,
-        "reason": "開札日から4日経過",
+        "ageDays": 5,
+        "reason": "開札日から5日経過",
         "item": {
           "id": "nara-pref-29001013060020260136",
           "municipality": "奈良県",
@@ -563,15 +559,15 @@
         "municipality": "生駒市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 21,
+        "totalCount": 22,
         "requiredLinkIncludes": [
           "epi-cloud.fwd.ne.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "epi-cloud.fwd.ne.jp": 21
+          "epi-cloud.fwd.ne.jp": 22
         },
-        "message": "生駒市: 21件 / sources OK"
+        "message": "生駒市: 22件 / sources OK"
       },
       {
         "municipality": "大和高田市",

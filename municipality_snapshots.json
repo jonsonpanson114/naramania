@@ -1110,14 +1110,24 @@
       "winnerType": "設計事務所"
     },
     {
-      "id": "ikoma-98e3ef20c8",
+      "id": "ikoma-444ee706b8",
       "municipality": "生駒市",
-      "title": "生駒中学校ＬＥＤ改修工事",
+      "title": "緑ヶ丘中学校ＬＥＤ改修工事",
       "type": "建築",
       "announcementDate": "2026-08-05",
-      "biddingDate": "2026-08-24",
+      "biddingDate": "2026-08-26",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-      "status": "受付終了"
+      "status": "受付中"
+    },
+    {
+      "id": "ikoma-c67ad46e0e",
+      "municipality": "生駒市",
+      "title": "光明中学校ＬＥＤ改修工事",
+      "type": "建築",
+      "announcementDate": "2026-08-05",
+      "biddingDate": "2026-08-26",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+      "status": "受付中"
     },
     {
       "id": "ikoma-result-2601010041",
@@ -2363,7 +2373,7 @@
       "biddingDate": "2026-05-18",
       "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
       "status": "落札",
-      "winningContractor": "村本建設(株)奈良本店"
+      "winningContractor": "村本建設"
     }
   ],
   "広陵町": [
