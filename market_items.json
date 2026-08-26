@@ -483,7 +483,9 @@
     "announcementDate": "2026-08-24",
     "biddingDate": "2026-08-24",
     "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-    "status": "受付終了",
+    "status": "落札",
+    "winningContractor": "環境テクノス株式会社",
+    "winnerType": "ゼネコン",
     "isRelevant": false
   },
   {
@@ -494,7 +496,9 @@
     "announcementDate": "2026-08-24",
     "biddingDate": "2026-08-24",
     "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-    "status": "受付終了",
+    "status": "落札",
+    "winningContractor": "株式会社阪奈電設",
+    "winnerType": "ゼネコン",
     "isRelevant": false
   },
   {
@@ -3521,6 +3525,8 @@
     "biddingDate": "2026-08-24",
     "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
     "status": "不調",
+    "winningContractor": "株式会社ヤマサキ建設",
+    "winnerType": "ゼネコン",
     "isRelevant": false
   },
   {
@@ -8155,7 +8161,7 @@
     "biddingDate": "2026-06-29",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "NTT西日本(株)奈良支店",
+    "winningContractor": "(株)内田洋行 大阪支店",
     "isRelevant": false
   },
   {
@@ -12783,7 +12789,7 @@
     "biddingDate": "2026-05-18",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "森下組",
+    "winningContractor": "(株)森下組",
     "isRelevant": false
   },
   {
@@ -12795,7 +12801,7 @@
     "biddingDate": "2026-05-18",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "村本建設",
+    "winningContractor": "村本建設(株)奈良本店",
     "isRelevant": true
   },
   {
@@ -12854,7 +12860,8 @@
     "announcementDate": "2026-04-09",
     "biddingDate": "2026-05-11",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
-    "status": "受付中",
+    "status": "落札",
+    "winningContractor": "木村モータース",
     "isRelevant": false
   },
   {
@@ -12877,7 +12884,8 @@
     "announcementDate": "2026-04-09",
     "biddingDate": "2026-05-11",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
-    "status": "受付中",
+    "status": "落札",
+    "winningContractor": "橋本造園",
     "isRelevant": false
   },
   {
@@ -13456,7 +13464,7 @@
     "biddingDate": "2026-04-13",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "冨田自動車",
+    "winningContractor": "新晃自動車整備工場",
     "isRelevant": false
   },
   {

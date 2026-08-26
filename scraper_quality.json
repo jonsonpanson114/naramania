@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-08-26T02:45:50.341Z",
+  "generatedAt": "2026-08-26T07:03:37.466Z",
   "source": "daily_scrape",
   "keptCount": 275,
   "municipalityCount": 24,
   "oldestAnnouncementDate": "2025-02-02",
   "latestAnnouncementDate": "2026-08-25",
-  "scrapedCount": 2357,
-  "rejectedCount": 2101,
+  "scrapedCount": 2350,
+  "rejectedCount": 2094,
   "municipalityAudit": {
     "expectedMunicipalityCount": 25,
     "coveredMunicipalityCount": 24,
@@ -35,7 +35,7 @@
       {
         "municipality": "生駒市",
         "count": 22,
-        "changeFromPrevious": 1
+        "changeFromPrevious": 0
       },
       {
         "municipality": "五條市",
@@ -176,6 +176,6 @@
     "intelligenceExtractedCount": 48,
     "geminiExtractedCount": 48,
     "taggedCount": 48,
-    "lastAugmentedAt": "2026-08-26T02:45:51.223Z"
+    "lastAugmentedAt": "2026-08-26T07:03:38.373Z"
   }
 }
