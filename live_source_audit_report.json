@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-26T07:48:45.113Z",
+  "generatedAt": "2026-08-27T12:21:14.858Z",
   "currentItemCount": 275,
   "checkedMunicipalities": [
     "奈良市",
@@ -36,9 +36,9 @@
   "scraperResults": [
     {
       "municipality": "奈良市",
-      "rawCount": 105,
+      "rawCount": 102,
       "keptCount": 15,
-      "rejectedCount": 90,
+      "rejectedCount": 87,
       "warnings": [],
       "errors": []
     },
@@ -68,9 +68,9 @@
     },
     {
       "municipality": "大和郡山市",
-      "rawCount": 224,
+      "rawCount": 225,
       "keptCount": 22,
-      "rejectedCount": 202,
+      "rejectedCount": 203,
       "warnings": [],
       "errors": []
     },
@@ -140,9 +140,9 @@
     },
     {
       "municipality": "香芝市",
-      "rawCount": 112,
+      "rawCount": 114,
       "keptCount": 21,
-      "rejectedCount": 91,
+      "rejectedCount": 93,
       "warnings": [],
       "errors": []
     },
@@ -281,7 +281,7 @@
       },
       {
         "municipality": "大和郡山市",
-        "snapshotCount": 224,
+        "snapshotCount": 225,
         "expectedCount": 22,
         "matchedCount": 22,
         "missingCount": 0,
@@ -292,7 +292,7 @@
       },
       {
         "municipality": "香芝市",
-        "snapshotCount": 112,
+        "snapshotCount": 114,
         "expectedCount": 21,
         "matchedCount": 21,
         "missingCount": 0,
@@ -325,7 +325,7 @@
       },
       {
         "municipality": "奈良市",
-        "snapshotCount": 105,
+        "snapshotCount": 102,
         "expectedCount": 15,
         "matchedCount": 15,
         "missingCount": 0,
