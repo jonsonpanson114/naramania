@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-26T07:03:37.469Z",
-  "totalRejected": 8772,
+  "generatedAt": "2026-08-27T11:19:56.164Z",
+  "totalRejected": 8790,
   "totalBorderlineRescued": 30,
   "byMunicipality": {
     "奈良市": {
@@ -32,7 +32,7 @@
       "borderlineRescued": 0
     },
     "御所市": {
-      "rejected": 24,
+      "rejected": 30,
       "borderlineRescued": 0
     },
     "天理市": {
@@ -56,7 +56,7 @@
       "borderlineRescued": 0
     },
     "香芝市": {
-      "rejected": 390,
+      "rejected": 402,
       "borderlineRescued": 0
     },
     "川西町": {
@@ -43371,49 +43371,13 @@
     },
     {
       "municipality": "御所市",
-      "title": "今住調整池維持 建 御所市大字",
+      "title": "御所市文書関係事務適正化支援業務委託プロポーザルを実施します（業務委託）",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },
     {
       "municipality": "御所市",
-      "title": "今住調整池維持 建 御所市大字 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "御所汚水9-1号幹線(2工区)管路築造",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "御所汚水9-1号幹線(2工区)管路築造 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "小林保育所解体",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "小林保育所解体 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "御所汚水9号幹線(10工区)管路築造",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "御所汚水9号幹線(10工区)管路築造 ",
+      "title": "御所市文書関係事務適正化支援業務委託プロポーザルを実施します（業務委託） ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },
@@ -43466,51 +43430,123 @@
       "matchedKeywords": []
     },
     {
+      "municipality": "御所市",
+      "title": "御所市文書関係事務適正化支援業務委託プロポーザルを実施します（業務委託）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "御所市文書関係事務適正化支援業務委託プロポーザルを実施します（業務委託） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "今住調整池維持 建 御所市大字",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "今住調整池維持 建 御所市大字 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "御所汚水9-1号幹線(2工区)管路築造",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "御所汚水9-1号幹線(2工区)管路築造 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "小林保育所解体",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "小林保育所解体 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "御所汚水9号幹線(10工区)管路築造",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "御所汚水9号幹線(10工区)管路築造 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "御所市文書関係事務適正化支援業務委託プロポーザルを実施します（業務委託）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "御所市文書関係事務適正化支援業務委託プロポーザルを実施します（業務委託） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
       "municipality": "天理市",
-      "title": "道路改良工事 別所丹波市線（R7補正）及び道路改良工事 別所丹波市線（R8現年）",
-      "reason": "exclusion_keyword",
+      "title": "井戸堂小学校プール集約化に伴う改修工事",
+      "reason": "infra_exclude_keyword",
       "matchedKeywords": [
-        "道路"
+        "井戸"
       ]
     },
     {
       "municipality": "天理市",
-      "title": "道路改良工事 別所丹波市線（R7補正）及び道路改良工事 別所丹波市線（R8現年） ",
-      "reason": "exclusion_keyword",
+      "title": "井戸堂小学校プール集約化に伴う改修工事 ",
+      "reason": "infra_exclude_keyword",
       "matchedKeywords": [
-        "道路"
+        "井戸"
       ]
     },
     {
       "municipality": "天理市",
-      "title": "道路改良工事 別所丹波市線（R7補正）及び道路改良工事 別所丹波市線（R8現年）",
-      "reason": "exclusion_keyword",
+      "title": "井戸堂小学校プール集約化に伴う改修工事",
+      "reason": "infra_exclude_keyword",
       "matchedKeywords": [
-        "道路"
+        "井戸"
       ]
     },
     {
       "municipality": "天理市",
-      "title": "道路改良工事 別所丹波市線（R7補正）及び道路改良工事 別所丹波市線（R8現年） ",
-      "reason": "exclusion_keyword",
+      "title": "井戸堂小学校プール集約化に伴う改修工事 ",
+      "reason": "infra_exclude_keyword",
       "matchedKeywords": [
-        "道路"
+        "井戸"
       ]
     },
     {
       "municipality": "天理市",
-      "title": "道路改良工事 別所丹波市線（R7補正）及び道路改良工事 別所丹波市線（R8現年）",
-      "reason": "exclusion_keyword",
+      "title": "井戸堂小学校プール集約化に伴う改修工事",
+      "reason": "infra_exclude_keyword",
       "matchedKeywords": [
-        "道路"
+        "井戸"
       ]
     },
     {
       "municipality": "天理市",
-      "title": "道路改良工事 別所丹波市線（R7補正）及び道路改良工事 別所丹波市線（R8現年） ",
-      "reason": "exclusion_keyword",
+      "title": "井戸堂小学校プール集約化に伴う改修工事 ",
+      "reason": "infra_exclude_keyword",
       "matchedKeywords": [
-        "道路"
+        "井戸"
       ]
     },
     {
@@ -50640,6 +50676,22 @@
     },
     {
       "municipality": "香芝市",
+      "title": "舗装維持工事 公-021号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "舗装維持工事 公-021号 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "香芝市",
       "title": "公共下水道工事に伴う舗装復旧工事（25－補5－3）",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -50670,6 +50722,26 @@
       "reason": "exclusion_keyword",
       "matchedKeywords": [
         "法面"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "香芝市橋梁定期点検委託業務 公－554号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋",
+        "定期点検"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "香芝市橋梁定期点検委託業務 公－554号 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋",
+        "定期点検"
       ]
     },
     {
@@ -51634,6 +51706,22 @@
     },
     {
       "municipality": "香芝市",
+      "title": "舗装維持工事 公-021号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "舗装維持工事 公-021号 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "香芝市",
       "title": "公共下水道工事に伴う舗装復旧工事（25－補5－3）",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -51664,6 +51752,26 @@
       "reason": "exclusion_keyword",
       "matchedKeywords": [
         "法面"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "香芝市橋梁定期点検委託業務 公－554号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋",
+        "定期点検"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "香芝市橋梁定期点検委託業務 公－554号 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋",
+        "定期点検"
       ]
     },
     {
@@ -52628,6 +52736,22 @@
     },
     {
       "municipality": "香芝市",
+      "title": "舗装維持工事 公-021号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "舗装維持工事 公-021号 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "香芝市",
       "title": "公共下水道工事に伴う舗装復旧工事（25－補5－3）",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -52658,6 +52782,26 @@
       "reason": "exclusion_keyword",
       "matchedKeywords": [
         "法面"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "香芝市橋梁定期点検委託業務 公－554号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋",
+        "定期点検"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "香芝市橋梁定期点検委託業務 公－554号 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋",
+        "定期点検"
       ]
     },
     {

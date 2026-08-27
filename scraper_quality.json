@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-08-26T07:03:37.466Z",
+  "generatedAt": "2026-08-27T11:19:56.161Z",
   "source": "daily_scrape",
   "keptCount": 275,
   "municipalityCount": 24,
   "oldestAnnouncementDate": "2025-02-02",
   "latestAnnouncementDate": "2026-08-25",
-  "scrapedCount": 2350,
-  "rejectedCount": 2094,
+  "scrapedCount": 2351,
+  "rejectedCount": 2095,
   "municipalityAudit": {
     "expectedMunicipalityCount": 25,
     "coveredMunicipalityCount": 24,
@@ -144,16 +144,9 @@
   "dateAudit": {
     "announcementAfterBiddingCount": 0,
     "awardedWithoutBiddingDateCount": 0,
-    "awardedWithoutWinnerCount": 5,
+    "awardedWithoutWinnerCount": 4,
     "openWithWinnerCount": 0,
     "sampleTitles": [
-      {
-        "municipality": "五條市",
-        "title": "牧野住宅１０・１１号解体工事",
-        "status": "落札",
-        "announcementDate": "2026-08-04",
-        "biddingDate": "2026-08-21"
-      },
       {
         "municipality": "大淀町",
         "title": "大淀町立平畑運動公園体育館大規模改修工事に伴う実施設計業務【令和8年6月15日執行】 （pdf, 47.46KB）",
@@ -167,6 +160,13 @@
         "status": "落札",
         "announcementDate": "2026-04-21",
         "biddingDate": "2026-04-21"
+      },
+      {
+        "municipality": "大淀町",
+        "title": "マンホールトイレシステム築造工事（第7－総工3号）【令和8年1月16日執行】",
+        "status": "落札",
+        "announcementDate": "2026-01-16",
+        "biddingDate": "2026-01-16"
       }
     ]
   },
@@ -176,6 +176,6 @@
     "intelligenceExtractedCount": 48,
     "geminiExtractedCount": 48,
     "taggedCount": 48,
-    "lastAugmentedAt": "2026-08-26T07:03:38.373Z"
+    "lastAugmentedAt": "2026-08-27T11:19:57.041Z"
   }
 }
