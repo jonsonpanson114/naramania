@@ -576,7 +576,9 @@
       "announcementDate": "2026-07-15",
       "biddingDate": "2026-08-27",
       "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-      "status": "受付中"
+      "status": "落札",
+      "winningContractor": "岡田建築設計事務所",
+      "winnerType": "設計事務所"
     },
     {
       "id": "nara-city-0000002557",
@@ -662,18 +664,6 @@
     }
   ],
   "橿原市": [
-    {
-      "id": "kashihara-5082000865",
-      "municipality": "橿原市",
-      "title": "八木中学校長寿命化改良工事(第1期)に伴う工事監理業務委託",
-      "type": "建築",
-      "announcementDate": "2026-07-31",
-      "biddingDate": "2026-08-05",
-      "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/7/12117.html",
-      "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5082000865.pdf",
-      "status": "受付終了",
-      "winnerType": "ゼネコン"
-    },
     {
       "id": "kashihara-result-5081000595",
       "municipality": "橿原市",
@@ -1064,6 +1054,26 @@
   ],
   "生駒市": [
     {
+      "id": "ikoma-result-2601010059",
+      "municipality": "生駒市",
+      "title": "光明中学校ＬＥＤ改修工事",
+      "type": "建築",
+      "announcementDate": "2026-08-26",
+      "biddingDate": "2026-08-26",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+      "status": "受付終了"
+    },
+    {
+      "id": "ikoma-result-2601010057",
+      "municipality": "生駒市",
+      "title": "緑ヶ丘中学校ＬＥＤ改修工事",
+      "type": "建築",
+      "announcementDate": "2026-08-26",
+      "biddingDate": "2026-08-26",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+      "status": "受付終了"
+    },
+    {
       "id": "ikoma-result-2601010049",
       "municipality": "生駒市",
       "title": "生駒北スポーツセンター及びむかいやま公園体育施設トイレ改修工事",
@@ -1108,26 +1118,6 @@
       "status": "落札",
       "winningContractor": "株式会社彩都建築設計",
       "winnerType": "設計事務所"
-    },
-    {
-      "id": "ikoma-444ee706b8",
-      "municipality": "生駒市",
-      "title": "緑ヶ丘中学校ＬＥＤ改修工事",
-      "type": "建築",
-      "announcementDate": "2026-08-05",
-      "biddingDate": "2026-08-26",
-      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-      "status": "受付終了"
-    },
-    {
-      "id": "ikoma-c67ad46e0e",
-      "municipality": "生駒市",
-      "title": "光明中学校ＬＥＤ改修工事",
-      "type": "建築",
-      "announcementDate": "2026-08-05",
-      "biddingDate": "2026-08-26",
-      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-      "status": "受付終了"
     },
     {
       "id": "ikoma-result-2601010041",

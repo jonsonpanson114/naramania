@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-08-27T17:41:20.413Z",
-  "qualityGeneratedAt": "2026-08-27T17:32:08.583Z",
-  "itemCount": 275,
+  "generatedAt": "2026-08-28T13:05:18.991Z",
+  "qualityGeneratedAt": "2026-08-28T12:56:22.496Z",
+  "itemCount": 274,
   "resultFollowUp": {
-    "totalCount": 15,
-    "highCount": 8,
+    "totalCount": 13,
+    "highCount": 7,
     "mediumCount": 4,
-    "lowCount": 3,
+    "lowCount": 2,
     "missingBiddingDateCount": 0,
     "byMunicipality": [
       {
@@ -22,15 +22,11 @@
         "count": 2
       },
       {
-        "municipality": "奈良市",
-        "count": 2
-      },
-      {
         "municipality": "王寺町",
         "count": 1
       },
       {
-        "municipality": "橿原市",
+        "municipality": "奈良市",
         "count": 1
       }
     ],
@@ -148,22 +144,6 @@
         }
       },
       {
-        "priority": "high",
-        "ageDays": 23,
-        "reason": "開札日から23日経過",
-        "item": {
-          "id": "kashihara-5082000865",
-          "municipality": "橿原市",
-          "title": "八木中学校長寿命化改良工事(第1期)に伴う工事監理業務委託",
-          "status": "受付終了",
-          "announcementDate": "2026-07-31",
-          "biddingDate": "2026-08-05",
-          "winningContractor": null,
-          "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/7/12117.html",
-          "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5082000865.pdf"
-        }
-      },
-      {
         "priority": "medium",
         "ageDays": 7,
         "reason": "開札日から7日経過",
@@ -192,6 +172,22 @@
           "biddingDate": "2026-08-21",
           "winningContractor": null,
           "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260145&gamenMode=0",
+          "pdfUrl": null
+        }
+      },
+      {
+        "priority": "medium",
+        "ageDays": 7,
+        "reason": "開札日から7日経過",
+        "item": {
+          "id": "nara-pref-29001013060020260148",
+          "municipality": "奈良県",
+          "title": "大和広陵高校トイレ環境改善整備工事 第８－１６号",
+          "status": "受付終了",
+          "announcementDate": "2026-07-22",
+          "biddingDate": "2026-08-21",
+          "winningContractor": null,
+          "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260148&gamenMode=0",
           "pdfUrl": null
         }
       }
@@ -545,15 +541,15 @@
         "municipality": "橿原市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 31,
+        "totalCount": 30,
         "requiredLinkIncludes": [
           "city.kashihara.nara.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.kashihara.nara.jp": 31
+          "city.kashihara.nara.jp": 30
         },
-        "message": "橿原市: 31件 / sources OK"
+        "message": "橿原市: 30件 / sources OK"
       },
       {
         "municipality": "生駒市",

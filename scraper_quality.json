@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-08-27T17:32:08.583Z",
+  "generatedAt": "2026-08-28T12:56:22.496Z",
   "source": "daily_scrape",
-  "keptCount": 275,
+  "keptCount": 274,
   "municipalityCount": 24,
   "oldestAnnouncementDate": "2025-02-02",
-  "latestAnnouncementDate": "2026-08-25",
-  "scrapedCount": 1457,
-  "rejectedCount": 1302,
+  "latestAnnouncementDate": "2026-08-26",
+  "scrapedCount": 2225,
+  "rejectedCount": 1976,
   "municipalityAudit": {
     "expectedMunicipalityCount": 25,
     "coveredMunicipalityCount": 24,
@@ -24,8 +24,8 @@
       },
       {
         "municipality": "橿原市",
-        "count": 31,
-        "changeFromPrevious": 0
+        "count": 30,
+        "changeFromPrevious": -1
       },
       {
         "municipality": "葛城市",
@@ -139,54 +139,13 @@
       }
     ],
     "retainedFromPrevious": [
-      "奈良市",
-      "生駒市",
-      "葛城市",
-      "五條市",
-      "宇陀市",
-      "香芝市",
-      "三郷町"
+      "大淀町"
     ],
     "issues": [
       {
-        "municipality": "奈良市",
+        "municipality": "大淀町",
         "level": "warning",
-        "message": "[奈良市] 取得件数が急減したため既存データを維持しています (baseline=9, new kept=0)"
-      },
-      {
-        "municipality": "生駒市",
-        "level": "warning",
-        "message": "[生駒市] EPI 情報公開サービス停止中のため取得をスキップします。"
-      },
-      {
-        "municipality": "生駒市",
-        "level": "warning",
-        "message": "[生駒市] 部分取得エラーのため既存データ 22件を維持しています (new kept=0)"
-      },
-      {
-        "municipality": "葛城市",
-        "level": "warning",
-        "message": "[葛城市] 取得件数が急減したため既存データを維持しています (baseline=25, new kept=15)"
-      },
-      {
-        "municipality": "五條市",
-        "level": "warning",
-        "message": "[五條市] 取得件数が急減したため既存データを維持しています (baseline=20, new kept=14)"
-      },
-      {
-        "municipality": "宇陀市",
-        "level": "warning",
-        "message": "[宇陀市] 取得件数が急減したため既存データを維持しています (baseline=18, new kept=0)"
-      },
-      {
-        "municipality": "香芝市",
-        "level": "warning",
-        "message": "[香芝市] 取得件数が急減したため既存データを維持しています (baseline=16, new kept=9)"
-      },
-      {
-        "municipality": "三郷町",
-        "level": "warning",
-        "message": "[三郷町] 取得件数が急減したため既存データを維持しています (baseline=2, new kept=0)"
+        "message": "[大淀町] 取得件数が急減したため既存データを維持しています (baseline=7, new kept=0)"
       }
     ]
   },
@@ -220,11 +179,11 @@
     ]
   },
   "intelligence": {
-    "itemsWithPdf": 78,
-    "itemsWithDescription": 56,
-    "intelligenceExtractedCount": 56,
-    "geminiExtractedCount": 56,
-    "taggedCount": 56,
-    "lastAugmentedAt": "2026-08-27T17:33:56.634Z"
+    "itemsWithPdf": 77,
+    "itemsWithDescription": 48,
+    "intelligenceExtractedCount": 48,
+    "geminiExtractedCount": 48,
+    "taggedCount": 48,
+    "lastAugmentedAt": "2026-08-28T12:56:23.417Z"
   }
 }
