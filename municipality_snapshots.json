@@ -1,6 +1,17 @@
 {
   "奈良県": [
     {
+      "id": "nara-pref-29001013401020260007",
+      "municipality": "奈良県",
+      "title": "令和８年度秋津県営住宅55・56棟軒裏落下防止対策工事",
+      "type": "建築",
+      "announcementDate": "2026-08-28",
+      "biddingDate": "2026-09-25",
+      "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013401020260007&gamenMode=0",
+      "status": "受付中",
+      "winnerType": "ゼネコン"
+    },
+    {
       "id": "nara-pref-29001013060020260168",
       "municipality": "奈良県",
       "title": "吉野保健所本館トイレ改修工事設計業務 委（設）第８－７号",
@@ -283,6 +294,18 @@
       "biddingDate": "2026-07-09",
       "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260095&gamenMode=0",
       "status": "不調",
+      "winnerType": "設計事務所"
+    },
+    {
+      "id": "nara-pref-29005007050120260004",
+      "municipality": "奈良県",
+      "title": "広域化に伴う施設整備に係る通信回線等デジタル化対応工事設計業務委託（その３）",
+      "type": "コンサル",
+      "announcementDate": "2026-06-15",
+      "biddingDate": "2026-07-03",
+      "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29005007050120260004&gamenMode=0",
+      "status": "落札",
+      "winningContractor": "株式会社日水コン",
       "winnerType": "設計事務所"
     },
     {

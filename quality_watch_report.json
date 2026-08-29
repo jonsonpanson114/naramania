@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-28T18:34:36.678Z",
-  "qualityGeneratedAt": "2026-08-28T18:25:15.900Z",
-  "itemCount": 274,
+  "generatedAt": "2026-08-29T00:34:50.379Z",
+  "qualityGeneratedAt": "2026-08-29T00:34:46.945Z",
+  "itemCount": 276,
   "resultFollowUp": {
     "totalCount": 13,
     "highCount": 7,
@@ -513,15 +513,15 @@
         "municipality": "奈良県",
         "status": "ok",
         "severity": "error",
-        "totalCount": 49,
+        "totalCount": 51,
         "requiredLinkIncludes": [
           "ppi.ebid-kouji-gyoumu.pref.nara.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "ppi.ebid-kouji-gyoumu.pref.nara.jp": 49
+          "ppi.ebid-kouji-gyoumu.pref.nara.jp": 51
         },
-        "message": "奈良県: 49件 / sources OK"
+        "message": "奈良県: 51件 / sources OK"
       },
       {
         "municipality": "奈良市",

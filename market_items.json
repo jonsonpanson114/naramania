@@ -343,6 +343,18 @@
     "isRelevant": false
   },
   {
+    "id": "nara-pref-29001013401020260007",
+    "municipality": "奈良県",
+    "title": "令和８年度秋津県営住宅55・56棟軒裏落下防止対策工事",
+    "type": "建築",
+    "announcementDate": "2026-08-28",
+    "biddingDate": "2026-09-25",
+    "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013401020260007&gamenMode=0",
+    "status": "受付中",
+    "winnerType": "ゼネコン",
+    "isRelevant": true
+  },
+  {
     "id": "yamato-koriyama-294ca859",
     "municipality": "大和郡山市",
     "title": "総合公園施設市営球場ファウルポール更新",
@@ -7910,6 +7922,19 @@
     "biddingDate": "2026-06-15",
     "link": "https://www.town.oyodo.lg.jp/./cmsfiles/contents/0000001/1945/so080615.pdf",
     "status": "落札",
+    "isRelevant": true
+  },
+  {
+    "id": "nara-pref-29005007050120260004",
+    "municipality": "奈良県",
+    "title": "広域化に伴う施設整備に係る通信回線等デジタル化対応工事設計業務委託（その３）",
+    "type": "コンサル",
+    "announcementDate": "2026-06-15",
+    "biddingDate": "2026-07-03",
+    "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29005007050120260004&gamenMode=0",
+    "status": "落札",
+    "winningContractor": "株式会社日水コン",
+    "winnerType": "設計事務所",
     "isRelevant": true
   },
   {
