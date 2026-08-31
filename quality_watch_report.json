@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-31T07:17:54.556Z",
-  "qualityGeneratedAt": "2026-08-31T07:09:25.702Z",
-  "itemCount": 280,
+  "generatedAt": "2026-08-31T13:06:46.949Z",
+  "qualityGeneratedAt": "2026-08-31T12:58:38.982Z",
+  "itemCount": 281,
   "resultFollowUp": {
     "totalCount": 13,
     "highCount": 7,
@@ -615,17 +615,17 @@
         "municipality": "五條市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 20,
+        "totalCount": 21,
         "requiredLinkIncludes": [
           "city.gojo.lg.jp",
           "epi-cloud.fwd.ne.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.gojo.lg.jp": 3,
+          "city.gojo.lg.jp": 4,
           "epi-cloud.fwd.ne.jp": 17
         },
-        "message": "五條市: 20件 / sources OK"
+        "message": "五條市: 21件 / sources OK"
       },
       {
         "municipality": "御所市",
