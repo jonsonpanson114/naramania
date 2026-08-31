@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-31T07:57:08.922Z",
+  "generatedAt": "2026-08-31T11:29:23.900Z",
   "currentItemCount": 280,
   "checkedMunicipalities": [
     "奈良市",
@@ -84,8 +84,8 @@
     },
     {
       "municipality": "五條市",
-      "rawCount": 239,
-      "keptCount": 30,
+      "rawCount": 240,
+      "keptCount": 31,
       "rejectedCount": 209,
       "warnings": [],
       "errors": []
@@ -229,12 +229,34 @@
   ],
   "coverage": {
     "checkedMunicipalityCount": 24,
-    "expectedItemCount": 260,
+    "expectedItemCount": 261,
     "matchedItemCount": 260,
-    "missingItemCount": 0,
+    "missingItemCount": 1,
     "duplicateTitleGroupCount": 37,
     "duplicateTitleItemCount": 81,
     "results": [
+      {
+        "municipality": "五條市",
+        "snapshotCount": 240,
+        "expectedCount": 31,
+        "matchedCount": 30,
+        "missingCount": 1,
+        "duplicateTitleGroupCount": 9,
+        "duplicateTitleItemCount": 22,
+        "missingItems": [
+          {
+            "id": "gojo-d18a21bd",
+            "municipality": "五條市",
+            "title": "田園体育館兼集会所カーテン取替修繕",
+            "status": "落札",
+            "announcementDate": "2026-08-28",
+            "biddingDate": "2026-08-28",
+            "link": "https://www.city.gojo.lg.jp/jigyousha/nyuusatsu/8/R8/19721.html",
+            "reason": "snapshot item should be present in scraper_result"
+          }
+        ],
+        "status": "missing"
+      },
       {
         "municipality": "橿原市",
         "snapshotCount": 386,
@@ -243,17 +265,6 @@
         "missingCount": 0,
         "duplicateTitleGroupCount": 2,
         "duplicateTitleItemCount": 4,
-        "missingItems": [],
-        "status": "ok"
-      },
-      {
-        "municipality": "五條市",
-        "snapshotCount": 239,
-        "expectedCount": 30,
-        "matchedCount": 30,
-        "missingCount": 0,
-        "duplicateTitleGroupCount": 9,
-        "duplicateTitleItemCount": 22,
         "missingItems": [],
         "status": "ok"
       },
