@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-08-29T00:34:53.376Z",
+  "generatedAt": "2026-08-31T07:17:55.660Z",
   "checkedMunicipalityCount": 24,
-  "expectedItemCount": 276,
-  "matchedItemCount": 276,
+  "expectedItemCount": 280,
+  "matchedItemCount": 280,
   "missingItemCount": 0,
   "duplicateTitleGroupCount": 23,
   "duplicateTitleItemCount": 48,
@@ -20,9 +20,9 @@
     },
     {
       "municipality": "橿原市",
-      "snapshotCount": 30,
-      "expectedCount": 30,
-      "matchedCount": 30,
+      "snapshotCount": 32,
+      "expectedCount": 32,
+      "matchedCount": 32,
       "missingCount": 0,
       "duplicateTitleGroupCount": 2,
       "duplicateTitleItemCount": 4,
@@ -37,6 +37,17 @@
       "missingCount": 0,
       "duplicateTitleGroupCount": 5,
       "duplicateTitleItemCount": 10,
+      "missingItems": [],
+      "status": "ok"
+    },
+    {
+      "municipality": "高取町",
+      "snapshotCount": 22,
+      "expectedCount": 22,
+      "matchedCount": 22,
+      "missingCount": 0,
+      "duplicateTitleGroupCount": 6,
+      "duplicateTitleItemCount": 13,
       "missingItems": [],
       "status": "ok"
     },
@@ -59,17 +70,6 @@
       "missingCount": 0,
       "duplicateTitleGroupCount": 2,
       "duplicateTitleItemCount": 5,
-      "missingItems": [],
-      "status": "ok"
-    },
-    {
-      "municipality": "高取町",
-      "snapshotCount": 20,
-      "expectedCount": 20,
-      "matchedCount": 20,
-      "missingCount": 0,
-      "duplicateTitleGroupCount": 6,
-      "duplicateTitleItemCount": 13,
       "missingItems": [],
       "status": "ok"
     },
