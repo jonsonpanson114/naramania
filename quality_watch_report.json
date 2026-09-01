@@ -1,21 +1,17 @@
 {
-  "generatedAt": "2026-08-31T13:06:46.949Z",
-  "qualityGeneratedAt": "2026-08-31T12:58:38.982Z",
-  "itemCount": 281,
+  "generatedAt": "2026-09-01T06:33:54.580Z",
+  "qualityGeneratedAt": "2026-09-01T06:25:09.975Z",
+  "itemCount": 285,
   "resultFollowUp": {
-    "totalCount": 13,
+    "totalCount": 11,
     "highCount": 7,
-    "mediumCount": 6,
+    "mediumCount": 4,
     "lowCount": 0,
     "missingBiddingDateCount": 0,
     "byMunicipality": [
       {
         "municipality": "奈良県",
         "count": 7
-      },
-      {
-        "municipality": "生駒市",
-        "count": 2
       },
       {
         "municipality": "大淀町",
@@ -33,7 +29,7 @@
     "samples": [
       {
         "priority": "high",
-        "ageDays": 132,
+        "ageDays": 133,
         "reason": "落札済みだが落札者が空",
         "item": {
           "id": "oyodo-79dc14038b",
@@ -49,8 +45,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 96,
-        "reason": "開札日から96日経過",
+        "ageDays": 97,
+        "reason": "開札日から97日経過",
         "item": {
           "id": "nara-city-0000002346",
           "municipality": "奈良市",
@@ -65,7 +61,7 @@
       },
       {
         "priority": "high",
-        "ageDays": 77,
+        "ageDays": 78,
         "reason": "落札済みだが落札者が空",
         "item": {
           "id": "oyodo-46ab50dbc8",
@@ -81,8 +77,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 74,
-        "reason": "開札日から74日経過",
+        "ageDays": 75,
+        "reason": "開札日から75日経過",
         "item": {
           "id": "nara-pref-29001013060020260055",
           "municipality": "奈良県",
@@ -97,8 +93,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 55,
-        "reason": "開札日から55日経過",
+        "ageDays": 56,
+        "reason": "開札日から56日経過",
         "item": {
           "id": "nara-pref-29005007060120260015",
           "municipality": "奈良県",
@@ -113,8 +109,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 45,
-        "reason": "開札日から45日経過",
+        "ageDays": 46,
+        "reason": "開札日から46日経過",
         "item": {
           "id": "nara-pref-29005007060120260018",
           "municipality": "奈良県",
@@ -129,8 +125,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 40,
-        "reason": "開札日から40日経過",
+        "ageDays": 41,
+        "reason": "開札日から41日経過",
         "item": {
           "id": "oji-ffe0646cd8",
           "municipality": "王寺町",
@@ -145,8 +141,8 @@
       },
       {
         "priority": "medium",
-        "ageDays": 10,
-        "reason": "開札日から10日経過",
+        "ageDays": 11,
+        "reason": "開札日から11日経過",
         "item": {
           "id": "nara-pref-29001013060020260136",
           "municipality": "奈良県",
@@ -161,8 +157,8 @@
       },
       {
         "priority": "medium",
-        "ageDays": 10,
-        "reason": "開札日から10日経過",
+        "ageDays": 11,
+        "reason": "開札日から11日経過",
         "item": {
           "id": "nara-pref-29001013060020260145",
           "municipality": "奈良県",
@@ -177,8 +173,8 @@
       },
       {
         "priority": "medium",
-        "ageDays": 10,
-        "reason": "開札日から10日経過",
+        "ageDays": 11,
+        "reason": "開札日から11日経過",
         "item": {
           "id": "nara-pref-29001013060020260148",
           "municipality": "奈良県",
@@ -527,15 +523,15 @@
         "municipality": "奈良市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 9,
+        "totalCount": 11,
         "requiredLinkIncludes": [
           "nara.efftis.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "nara.efftis.jp": 9
+          "nara.efftis.jp": 11
         },
-        "message": "奈良市: 9件 / sources OK"
+        "message": "奈良市: 11件 / sources OK"
       },
       {
         "municipality": "橿原市",
@@ -645,29 +641,29 @@
         "municipality": "天理市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 3,
+        "totalCount": 4,
         "requiredLinkIncludes": [
           "city.tenri.nara.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.tenri.nara.jp": 3
+          "city.tenri.nara.jp": 4
         },
-        "message": "天理市: 3件 / sources OK"
+        "message": "天理市: 4件 / sources OK"
       },
       {
         "municipality": "桜井市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 2,
+        "totalCount": 3,
         "requiredLinkIncludes": [
           "city.sakurai.lg.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.sakurai.lg.jp": 2
+          "city.sakurai.lg.jp": 3
         },
-        "message": "桜井市: 2件 / sources OK"
+        "message": "桜井市: 3件 / sources OK"
       },
       {
         "municipality": "宇陀市",

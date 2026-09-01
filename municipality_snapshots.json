@@ -580,6 +580,26 @@
   ],
   "奈良市": [
     {
+      "id": "nara-city-0000002637",
+      "municipality": "奈良市",
+      "title": "本庁舎中央棟地下売店等内部改修工事",
+      "type": "建築",
+      "announcementDate": "2026-09-01",
+      "biddingDate": "2026-09-25",
+      "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+      "status": "受付中"
+    },
+    {
+      "id": "nara-city-0000002650",
+      "municipality": "奈良市",
+      "title": "都祁交流センター受電用高圧ケーブル改修工事",
+      "type": "建築",
+      "announcementDate": "2026-09-01",
+      "biddingDate": "2026-09-28",
+      "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+      "status": "受付中"
+    },
+    {
       "id": "nara-city-0000002571",
       "municipality": "奈良市",
       "title": "環境清美センター焼却炉棟防火戸改修その他工事",
@@ -589,6 +609,18 @@
       "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
       "status": "落札",
       "winningContractor": "株式会社水野工務店",
+      "winnerType": "ゼネコン"
+    },
+    {
+      "id": "nara-city-0000002557",
+      "municipality": "奈良市",
+      "title": "ＪＲ奈良駅高架下公衆トイレ改修工事",
+      "type": "建築",
+      "announcementDate": "2026-07-30",
+      "biddingDate": "2026-07-30",
+      "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+      "status": "落札",
+      "winningContractor": "廣岡建設株式会社",
       "winnerType": "ゼネコン"
     },
     {
@@ -602,18 +634,6 @@
       "status": "落札",
       "winningContractor": "岡田建築設計事務所",
       "winnerType": "設計事務所"
-    },
-    {
-      "id": "nara-city-0000002557",
-      "municipality": "奈良市",
-      "title": "ＪＲ奈良駅高架下公衆トイレ改修工事",
-      "type": "建築",
-      "announcementDate": "2026-07-01",
-      "biddingDate": "2026-07-30",
-      "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-      "status": "落札",
-      "winningContractor": "廣岡建設株式会社",
-      "winnerType": "ゼネコン"
     },
     {
       "id": "nara-city-0000002440",
@@ -1110,7 +1130,9 @@
       "announcementDate": "2026-08-26",
       "biddingDate": "2026-08-26",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-      "status": "受付終了"
+      "status": "落札",
+      "winningContractor": "株式会社開崎工業",
+      "winnerType": "ゼネコン"
     },
     {
       "id": "ikoma-result-2601010057",
@@ -1120,7 +1142,9 @@
       "announcementDate": "2026-08-26",
       "biddingDate": "2026-08-26",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-      "status": "受付終了"
+      "status": "落札",
+      "winningContractor": "松岡電気株式会社",
+      "winnerType": "ゼネコン"
     },
     {
       "id": "ikoma-result-2601010049",
@@ -2145,6 +2169,15 @@
   ],
   "天理市": [
     {
+      "id": "tenri-4da76864",
+      "municipality": "天理市",
+      "title": "天理市立御経野児童館耐震補強工事",
+      "type": "建築",
+      "announcementDate": "2026-09-01",
+      "link": "https://www.city.tenri.nara.jp/kakuka/soumubu/nyuusatsushinsashitsu/construction_work/kouji_hattyuu_kanren/1395887232147.html",
+      "status": "受付中"
+    },
+    {
       "id": "tenri-d992a9bd",
       "municipality": "天理市",
       "title": "天理市環境クリーンセンター解体工事",
@@ -2174,6 +2207,16 @@
     }
   ],
   "桜井市": [
+    {
+      "id": "sakurai-2026-09-01-桜井市立みなみこども園-建設工事",
+      "municipality": "桜井市",
+      "title": "桜井市立みなみこども園 建設工事",
+      "type": "建築",
+      "announcementDate": "2026-09-01",
+      "link": "https://www.city.sakurai.lg.jp/sosiki/soumu/kanzaikeiyaku/nyuusatukeiyakukensa/notice/6596.html",
+      "status": "受付中",
+      "description": "河西 地内"
+    },
     {
       "id": "sakurai-2026-06-01-芝運動公園運動場等再整備基本設計業務委託",
       "municipality": "桜井市",

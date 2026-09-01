@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-31T12:58:38.985Z",
-  "totalRejected": 8856,
+  "generatedAt": "2026-09-01T06:25:09.979Z",
+  "totalRejected": 8880,
   "totalBorderlineRescued": 30,
   "byMunicipality": {
     "奈良市": {
-      "rejected": 312,
+      "rejected": 306,
       "borderlineRescued": 3
     },
     "橿原市": {
@@ -20,7 +20,7 @@
       "borderlineRescued": 0
     },
     "大和郡山市": {
-      "rejected": 882,
+      "rejected": 894,
       "borderlineRescued": 0
     },
     "葛城市": {
@@ -40,7 +40,7 @@
       "borderlineRescued": 0
     },
     "桜井市": {
-      "rejected": 12,
+      "rejected": 36,
       "borderlineRescued": 0
     },
     "宇陀市": {
@@ -68,7 +68,7 @@
       "borderlineRescued": 0
     },
     "三宅町": {
-      "rejected": 54,
+      "rejected": 48,
       "borderlineRescued": 0
     },
     "安堵町": {
@@ -99,6 +99,76 @@
   "entries": [
     {
       "municipality": "奈良市",
+      "title": "橋梁長寿命化修繕工事（南部第１０５号線（無名橋０１２）他）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "橋梁長寿命化修繕工事（南部第１０５号線（無名橋０１２）他） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "橋梁長寿命化修繕・耐震補強工事（六条奈良阪線（佐保橋））",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "橋梁長寿命化修繕・耐震補強工事（六条奈良阪線（佐保橋）） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "橋梁長寿命化修繕工事（南部第２０９号線（地蔵院橋）他）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "橋梁長寿命化修繕工事（南部第２０９号線（地蔵院橋）他） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "交通安全施設整備工事（右京三丁目地内・中部第１０６１号線）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "交通"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "交通安全施設整備工事（右京三丁目地内・中部第１０６１号線） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "交通"
+      ]
+    },
+    {
+      "municipality": "奈良市",
       "title": "灰汚水処理装置点検整備補修",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -118,80 +188,6 @@
     {
       "municipality": "奈良市",
       "title": "奈良市写真美術館軒裏改修工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "奈良市",
-      "title": "横断歩道橋長寿命化修繕及び橋梁排水施設改良工事（西部第７２２号線他（中町１号歩道橋）他）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋梁",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "横断歩道橋長寿命化修繕及び橋梁排水施設改良工事（西部第７２２号線他（中町１号歩道橋）他） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋梁",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "地山土留補強対策工事（北椿尾町地内・東部第３００号線）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "奈良市",
-      "title": "地山土留補強対策工事（北椿尾町地内・東部第３００号線） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "奈良市",
-      "title": "交通安全施設修繕工事（交安修８）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "交通"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "交通安全施設修繕工事（交安修８） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "交通"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "汚泥再生処理施設点検修繕",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "汚泥"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "汚泥再生処理施設点検修繕 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "汚泥"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "第３段電気透析装置部品取替修繕",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "奈良市",
-      "title": "第３段電気透析装置部品取替修繕 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },
@@ -952,6 +948,76 @@
     },
     {
       "municipality": "奈良市",
+      "title": "橋梁長寿命化修繕工事（南部第１０５号線（無名橋０１２）他）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "橋梁長寿命化修繕工事（南部第１０５号線（無名橋０１２）他） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "橋梁長寿命化修繕・耐震補強工事（六条奈良阪線（佐保橋））",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "橋梁長寿命化修繕・耐震補強工事（六条奈良阪線（佐保橋）） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "橋梁長寿命化修繕工事（南部第２０９号線（地蔵院橋）他）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "橋梁長寿命化修繕工事（南部第２０９号線（地蔵院橋）他） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "交通安全施設整備工事（右京三丁目地内・中部第１０６１号線）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "交通"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "交通安全施設整備工事（右京三丁目地内・中部第１０６１号線） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "交通"
+      ]
+    },
+    {
+      "municipality": "奈良市",
       "title": "灰汚水処理装置点検整備補修",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -971,80 +1037,6 @@
     {
       "municipality": "奈良市",
       "title": "奈良市写真美術館軒裏改修工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "奈良市",
-      "title": "横断歩道橋長寿命化修繕及び橋梁排水施設改良工事（西部第７２２号線他（中町１号歩道橋）他）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋梁",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "横断歩道橋長寿命化修繕及び橋梁排水施設改良工事（西部第７２２号線他（中町１号歩道橋）他） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋梁",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "地山土留補強対策工事（北椿尾町地内・東部第３００号線）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "奈良市",
-      "title": "地山土留補強対策工事（北椿尾町地内・東部第３００号線） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "奈良市",
-      "title": "交通安全施設修繕工事（交安修８）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "交通"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "交通安全施設修繕工事（交安修８） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "交通"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "汚泥再生処理施設点検修繕",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "汚泥"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "汚泥再生処理施設点検修繕 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "汚泥"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "第３段電気透析装置部品取替修繕",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "奈良市",
-      "title": "第３段電気透析装置部品取替修繕 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },
@@ -1805,6 +1797,76 @@
     },
     {
       "municipality": "奈良市",
+      "title": "橋梁長寿命化修繕工事（南部第１０５号線（無名橋０１２）他）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "橋梁長寿命化修繕工事（南部第１０５号線（無名橋０１２）他） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "橋梁長寿命化修繕・耐震補強工事（六条奈良阪線（佐保橋））",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "橋梁長寿命化修繕・耐震補強工事（六条奈良阪線（佐保橋）） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "橋梁長寿命化修繕工事（南部第２０９号線（地蔵院橋）他）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "橋梁長寿命化修繕工事（南部第２０９号線（地蔵院橋）他） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "交通安全施設整備工事（右京三丁目地内・中部第１０６１号線）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "交通"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "交通安全施設整備工事（右京三丁目地内・中部第１０６１号線） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "交通"
+      ]
+    },
+    {
+      "municipality": "奈良市",
       "title": "灰汚水処理装置点検整備補修",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -1824,80 +1886,6 @@
     {
       "municipality": "奈良市",
       "title": "奈良市写真美術館軒裏改修工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "奈良市",
-      "title": "横断歩道橋長寿命化修繕及び橋梁排水施設改良工事（西部第７２２号線他（中町１号歩道橋）他）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋梁",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "横断歩道橋長寿命化修繕及び橋梁排水施設改良工事（西部第７２２号線他（中町１号歩道橋）他） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋梁",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "地山土留補強対策工事（北椿尾町地内・東部第３００号線）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "奈良市",
-      "title": "地山土留補強対策工事（北椿尾町地内・東部第３００号線） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "奈良市",
-      "title": "交通安全施設修繕工事（交安修８）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "交通"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "交通安全施設修繕工事（交安修８） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "交通"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "汚泥再生処理施設点検修繕",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "汚泥"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "汚泥再生処理施設点検修繕 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "汚泥"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "第３段電気透析装置部品取替修繕",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "奈良市",
-      "title": "第３段電気透析装置部品取替修繕 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },
@@ -12609,22 +12597,6 @@
     },
     {
       "municipality": "生駒市",
-      "title": "奈良阪南田原線舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "奈良阪南田原線舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "生駒市",
       "title": "生駒市流域関連公共下水道北新町118号線工事",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -12637,6 +12609,22 @@
       "reason": "exclusion_keyword",
       "matchedKeywords": [
         "下水道"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "奈良阪南田原線舗装補修工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "奈良阪南田原線舗装補修工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
       ]
     },
     {
@@ -12683,50 +12671,6 @@
     },
     {
       "municipality": "生駒市",
-      "title": "令和８年度東生駒２丁目他地内汚水管路施設点検調査業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "調査"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "令和８年度東生駒２丁目他地内汚水管路施設点検調査業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "調査"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "中菜畑歩道橋耐震補強工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "中菜畑歩道橋耐震補強工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "真弓地内配水管布設替工事（R８-２工区）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "真弓地内配水管布設替工事（R８-２工区） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
       "title": "生駒市流域関連公共下水道緑ケ丘215号線工事",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -12766,6 +12710,50 @@
     {
       "municipality": "生駒市",
       "title": "小平尾バイパス配水管布設工事（R８） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "令和８年度東生駒２丁目他地内汚水管路施設点検調査業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "令和８年度東生駒２丁目他地内汚水管路施設点検調査業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "中菜畑歩道橋耐震補強工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "中菜畑歩道橋耐震補強工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "真弓地内配水管布設替工事（R８-２工区）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "真弓地内配水管布設替工事（R８-２工区） ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },
@@ -14725,22 +14713,6 @@
     },
     {
       "municipality": "生駒市",
-      "title": "奈良阪南田原線舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "奈良阪南田原線舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "生駒市",
       "title": "生駒市流域関連公共下水道北新町118号線工事",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -14753,6 +14725,22 @@
       "reason": "exclusion_keyword",
       "matchedKeywords": [
         "下水道"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "奈良阪南田原線舗装補修工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "奈良阪南田原線舗装補修工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
       ]
     },
     {
@@ -14799,50 +14787,6 @@
     },
     {
       "municipality": "生駒市",
-      "title": "令和８年度東生駒２丁目他地内汚水管路施設点検調査業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "調査"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "令和８年度東生駒２丁目他地内汚水管路施設点検調査業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "調査"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "中菜畑歩道橋耐震補強工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "中菜畑歩道橋耐震補強工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "真弓地内配水管布設替工事（R８-２工区）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "真弓地内配水管布設替工事（R８-２工区） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
       "title": "生駒市流域関連公共下水道緑ケ丘215号線工事",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -14882,6 +14826,50 @@
     {
       "municipality": "生駒市",
       "title": "小平尾バイパス配水管布設工事（R８） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "令和８年度東生駒２丁目他地内汚水管路施設点検調査業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "令和８年度東生駒２丁目他地内汚水管路施設点検調査業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "中菜畑歩道橋耐震補強工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "中菜畑歩道橋耐震補強工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "真弓地内配水管布設替工事（R８-２工区）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "真弓地内配水管布設替工事（R８-２工区） ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },
@@ -16841,22 +16829,6 @@
     },
     {
       "municipality": "生駒市",
-      "title": "奈良阪南田原線舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "奈良阪南田原線舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "生駒市",
       "title": "生駒市流域関連公共下水道北新町118号線工事",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -16869,6 +16841,22 @@
       "reason": "exclusion_keyword",
       "matchedKeywords": [
         "下水道"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "奈良阪南田原線舗装補修工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "奈良阪南田原線舗装補修工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
       ]
     },
     {
@@ -16915,50 +16903,6 @@
     },
     {
       "municipality": "生駒市",
-      "title": "令和８年度東生駒２丁目他地内汚水管路施設点検調査業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "調査"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "令和８年度東生駒２丁目他地内汚水管路施設点検調査業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "調査"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "中菜畑歩道橋耐震補強工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "中菜畑歩道橋耐震補強工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "真弓地内配水管布設替工事（R８-２工区）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "真弓地内配水管布設替工事（R８-２工区） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
       "title": "生駒市流域関連公共下水道緑ケ丘215号線工事",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -16998,6 +16942,50 @@
     {
       "municipality": "生駒市",
       "title": "小平尾バイパス配水管布設工事（R８） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "令和８年度東生駒２丁目他地内汚水管路施設点検調査業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "令和８年度東生駒２丁目他地内汚水管路施設点検調査業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "中菜畑歩道橋耐震補強工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "中菜畑歩道橋耐震補強工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "真弓地内配水管布設替工事（R８-２工区）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "真弓地内配水管布設替工事（R８-２工区） ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },
@@ -19746,6 +19734,94 @@
       "title": "高5枝曽大根1丁目地内管渠工事（1） ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "公共下水道整備工事外川町（第1工区）その1、その2",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "公共下水道整備工事外川町（第1工区）その1、その2 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内街路樹維持管理業務委託（Aブロック）冬期剪定",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内街路樹維持管理業務委託（Aブロック）冬期剪定 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内街路樹維持管理業務委託（Bブロック）冬期剪定",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内街路樹維持管理業務委託（Bブロック）冬期剪定 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内街路樹維持管理業務委託（Cブロック）冬期剪定",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内街路樹維持管理業務委託（Cブロック）冬期剪定 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内街路樹維持管理業務委託（Dブロック）冬期剪定",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内街路樹維持管理業務委託（Dブロック）冬期剪定 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "維持管理"
+      ]
     },
     {
       "municipality": "大和郡山市",
@@ -19939,34 +20015,6 @@
     },
     {
       "municipality": "大和郡山市",
-      "title": "郡山城跡公園左京堀維持管理業務委託",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "大和郡山市",
-      "title": "郡山城跡公園左京堀維持管理業務委託 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "大和郡山市",
-      "title": "大和郡山市雨水出水浸水想定区域図等作成業務委託",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大和郡山市",
-      "title": "大和郡山市雨水出水浸水想定区域図等作成業務委託 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大和郡山市",
       "title": "大和郡山市立図書館資料ICタグ関連機器購入",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -20007,24 +20055,6 @@
       "reason": "exclusion_keyword",
       "matchedKeywords": [
         "道路"
-      ]
-    },
-    {
-      "municipality": "大和郡山市",
-      "title": "【事前申請】道路舗装補修工事（城小泉線・昭和工業団地）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "大和郡山市",
-      "title": "【事前申請】道路舗装補修工事（城小泉線・昭和工業団地） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
       ]
     },
     {
@@ -21965,6 +21995,94 @@
     },
     {
       "municipality": "大和郡山市",
+      "title": "公共下水道整備工事外川町（第1工区）その1、その2",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "公共下水道整備工事外川町（第1工区）その1、その2 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内街路樹維持管理業務委託（Aブロック）冬期剪定",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内街路樹維持管理業務委託（Aブロック）冬期剪定 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内街路樹維持管理業務委託（Bブロック）冬期剪定",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内街路樹維持管理業務委託（Bブロック）冬期剪定 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内街路樹維持管理業務委託（Cブロック）冬期剪定",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内街路樹維持管理業務委託（Cブロック）冬期剪定 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内街路樹維持管理業務委託（Dブロック）冬期剪定",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内街路樹維持管理業務委託（Dブロック）冬期剪定 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
       "title": "令和8年度 下半期ベール化ペットボトル売払単価",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -22155,34 +22273,6 @@
     },
     {
       "municipality": "大和郡山市",
-      "title": "郡山城跡公園左京堀維持管理業務委託",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "大和郡山市",
-      "title": "郡山城跡公園左京堀維持管理業務委託 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "大和郡山市",
-      "title": "大和郡山市雨水出水浸水想定区域図等作成業務委託",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大和郡山市",
-      "title": "大和郡山市雨水出水浸水想定区域図等作成業務委託 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大和郡山市",
       "title": "大和郡山市立図書館資料ICタグ関連機器購入",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -22223,24 +22313,6 @@
       "reason": "exclusion_keyword",
       "matchedKeywords": [
         "道路"
-      ]
-    },
-    {
-      "municipality": "大和郡山市",
-      "title": "【事前申請】道路舗装補修工事（城小泉線・昭和工業団地）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "大和郡山市",
-      "title": "【事前申請】道路舗装補修工事（城小泉線・昭和工業団地） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
       ]
     },
     {
@@ -24181,6 +24253,94 @@
     },
     {
       "municipality": "大和郡山市",
+      "title": "公共下水道整備工事外川町（第1工区）その1、その2",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "公共下水道整備工事外川町（第1工区）その1、その2 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内街路樹維持管理業務委託（Aブロック）冬期剪定",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内街路樹維持管理業務委託（Aブロック）冬期剪定 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内街路樹維持管理業務委託（Bブロック）冬期剪定",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内街路樹維持管理業務委託（Bブロック）冬期剪定 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内街路樹維持管理業務委託（Cブロック）冬期剪定",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内街路樹維持管理業務委託（Cブロック）冬期剪定 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内街路樹維持管理業務委託（Dブロック）冬期剪定",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "市内街路樹維持管理業務委託（Dブロック）冬期剪定 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
       "title": "令和8年度 下半期ベール化ペットボトル売払単価",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -24371,34 +24531,6 @@
     },
     {
       "municipality": "大和郡山市",
-      "title": "郡山城跡公園左京堀維持管理業務委託",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "大和郡山市",
-      "title": "郡山城跡公園左京堀維持管理業務委託 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "大和郡山市",
-      "title": "大和郡山市雨水出水浸水想定区域図等作成業務委託",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大和郡山市",
-      "title": "大和郡山市雨水出水浸水想定区域図等作成業務委託 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大和郡山市",
       "title": "大和郡山市立図書館資料ICタグ関連機器購入",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -24439,24 +24571,6 @@
       "reason": "exclusion_keyword",
       "matchedKeywords": [
         "道路"
-      ]
-    },
-    {
-      "municipality": "大和郡山市",
-      "title": "【事前申請】道路舗装補修工事（城小泉線・昭和工業団地）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "大和郡山市",
-      "title": "【事前申請】道路舗装補修工事（城小泉線・昭和工業団地） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
       ]
     },
     {
@@ -43863,109 +43977,301 @@
     },
     {
       "municipality": "桜井市",
-      "title": "水路浚渫工事",
+      "title": "水路改修工事",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
-        "浚渫",
         "水路"
       ]
     },
     {
       "municipality": "桜井市",
-      "title": "水路浚渫工事 粟殿・外山 地内",
+      "title": "水路改修工事 粟原 地内",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
-        "浚渫",
         "水路"
       ]
     },
     {
       "municipality": "桜井市",
-      "title": "下水道管路点検調査業務委託",
+      "title": "橋梁補修工事",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
-        "下水道",
+        "橋梁",
+        "橋"
+      ]
+    },
+    {
+      "municipality": "桜井市",
+      "title": "橋梁補修工事 芝 地内",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋"
+      ]
+    },
+    {
+      "municipality": "桜井市",
+      "title": "道路維持修繕工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "桜井市",
+      "title": "道路維持修繕工事 東田 地内",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "桜井市",
+      "title": "NAFICアクセス道路 防草シート整備工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "桜井市",
+      "title": "NAFICアクセス道路 防草シート整備工事 山田 地内",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "桜井市",
+      "title": "桜井市下水道全体計画及び 事業計画変更業務委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "桜井市",
+      "title": "桜井市下水道全体計画及び 事業計画変更業務委託 市内一円",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "桜井市",
+      "title": "纒向古墳群公有化事業 補償費調査業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "補償",
         "調査"
       ]
     },
     {
       "municipality": "桜井市",
-      "title": "下水道管路点検調査業務委託 市内一円",
+      "title": "纒向古墳群公有化事業 補償費調査業務 東田 地内",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
-        "下水道",
+        "補償",
         "調査"
       ]
     },
     {
       "municipality": "桜井市",
-      "title": "水路浚渫工事",
+      "title": "水路改修工事",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
-        "浚渫",
         "水路"
       ]
     },
     {
       "municipality": "桜井市",
-      "title": "水路浚渫工事 粟殿・外山 地内",
+      "title": "水路改修工事 粟原 地内",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
-        "浚渫",
         "水路"
       ]
     },
     {
       "municipality": "桜井市",
-      "title": "下水道管路点検調査業務委託",
+      "title": "橋梁補修工事",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
-        "下水道",
+        "橋梁",
+        "橋"
+      ]
+    },
+    {
+      "municipality": "桜井市",
+      "title": "橋梁補修工事 芝 地内",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋"
+      ]
+    },
+    {
+      "municipality": "桜井市",
+      "title": "道路維持修繕工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "桜井市",
+      "title": "道路維持修繕工事 東田 地内",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "桜井市",
+      "title": "NAFICアクセス道路 防草シート整備工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "桜井市",
+      "title": "NAFICアクセス道路 防草シート整備工事 山田 地内",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "桜井市",
+      "title": "桜井市下水道全体計画及び 事業計画変更業務委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "桜井市",
+      "title": "桜井市下水道全体計画及び 事業計画変更業務委託 市内一円",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "桜井市",
+      "title": "纒向古墳群公有化事業 補償費調査業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "補償",
         "調査"
       ]
     },
     {
       "municipality": "桜井市",
-      "title": "下水道管路点検調査業務委託 市内一円",
+      "title": "纒向古墳群公有化事業 補償費調査業務 東田 地内",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
-        "下水道",
+        "補償",
         "調査"
       ]
     },
     {
       "municipality": "桜井市",
-      "title": "水路浚渫工事",
+      "title": "水路改修工事",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
-        "浚渫",
         "水路"
       ]
     },
     {
       "municipality": "桜井市",
-      "title": "水路浚渫工事 粟殿・外山 地内",
+      "title": "水路改修工事 粟原 地内",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
-        "浚渫",
         "水路"
       ]
     },
     {
       "municipality": "桜井市",
-      "title": "下水道管路点検調査業務委託",
+      "title": "橋梁補修工事",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
-        "下水道",
+        "橋梁",
+        "橋"
+      ]
+    },
+    {
+      "municipality": "桜井市",
+      "title": "橋梁補修工事 芝 地内",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋"
+      ]
+    },
+    {
+      "municipality": "桜井市",
+      "title": "道路維持修繕工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "桜井市",
+      "title": "道路維持修繕工事 東田 地内",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "桜井市",
+      "title": "NAFICアクセス道路 防草シート整備工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "桜井市",
+      "title": "NAFICアクセス道路 防草シート整備工事 山田 地内",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "桜井市",
+      "title": "桜井市下水道全体計画及び 事業計画変更業務委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "桜井市",
+      "title": "桜井市下水道全体計画及び 事業計画変更業務委託 市内一円",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "桜井市",
+      "title": "纒向古墳群公有化事業 補償費調査業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "補償",
         "調査"
       ]
     },
     {
       "municipality": "桜井市",
-      "title": "下水道管路点検調査業務委託 市内一円",
+      "title": "纒向古墳群公有化事業 補償費調査業務 東田 地内",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
-        "下水道",
+        "補償",
         "調査"
       ]
     },
@@ -54213,22 +54519,6 @@
     },
     {
       "municipality": "三宅町",
-      "title": "三宅63号線舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "三宅町",
-      "title": "三宅63号線舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "三宅町",
       "title": "伴堂第二児童公園改修工事",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -54363,22 +54653,6 @@
     },
     {
       "municipality": "三宅町",
-      "title": "三宅63号線舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "三宅町",
-      "title": "三宅63号線舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "三宅町",
       "title": "伴堂第二児童公園改修工事",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -54509,22 +54783,6 @@
       "matchedKeywords": [
         "測量",
         "用地"
-      ]
-    },
-    {
-      "municipality": "三宅町",
-      "title": "三宅63号線舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "三宅町",
-      "title": "三宅63号線舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
       ]
     },
     {
@@ -62831,38 +63089,6 @@
       "reason": "exclusion_keyword",
       "matchedKeywords": [
         "調査"
-      ]
-    },
-    {
-      "municipality": "大淀町",
-      "title": "大淀町長選挙ポスター掲示場製作、設置等業務【令和8年8月31日執行】 （pdf, 84.56KB）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大淀町",
-      "title": "大淀町長選挙ポスター掲示場製作、設置等業務【令和8年8月31日執行】 （pdf, 84.56KB） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大淀町",
-      "title": "大淀町コミュニティバス車両購入業務【令和8年8月21日執行】 （pdf, 97.64KB）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "購入",
-        "車両",
-        "バス"
-      ]
-    },
-    {
-      "municipality": "大淀町",
-      "title": "大淀町コミュニティバス車両購入業務【令和8年8月21日執行】 （pdf, 97.64KB） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "購入",
-        "車両",
-        "バス"
       ]
     },
     {
@@ -62911,6 +63137,50 @@
     },
     {
       "municipality": "大淀町",
+      "title": "大淀町長選挙ポスター掲示場製作、設置等業務【令和8年8月31日執行】 （pdf, 84.56KB）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大淀町",
+      "title": "大淀町長選挙ポスター掲示場製作、設置等業務【令和8年8月31日執行】 （pdf, 84.56KB） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大淀町",
+      "title": "お問い合わせフォーム",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大淀町",
+      "title": "お問い合わせフォーム ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大淀町",
+      "title": "大淀町コミュニティバス車両購入業務【令和8年8月21日執行】 （pdf, 97.64KB）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入",
+        "車両",
+        "バス"
+      ]
+    },
+    {
+      "municipality": "大淀町",
+      "title": "大淀町コミュニティバス車両購入業務【令和8年8月21日執行】 （pdf, 97.64KB） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入",
+        "車両",
+        "バス"
+      ]
+    },
+    {
+      "municipality": "大淀町",
       "title": "中増地内道路復旧工事（第7繰－災単－工－5号）【令和8年8月20日執行】 （pdf, 68.35KB）",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -62924,18 +63194,6 @@
       "matchedKeywords": [
         "道路"
       ]
-    },
-    {
-      "municipality": "大淀町",
-      "title": "お問い合わせフォーム",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大淀町",
-      "title": "お問い合わせフォーム ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
     },
     {
       "municipality": "大淀町",
@@ -64457,38 +64715,6 @@
     },
     {
       "municipality": "大淀町",
-      "title": "大淀町長選挙ポスター掲示場製作、設置等業務【令和8年8月31日執行】 （pdf, 84.56KB）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大淀町",
-      "title": "大淀町長選挙ポスター掲示場製作、設置等業務【令和8年8月31日執行】 （pdf, 84.56KB） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大淀町",
-      "title": "大淀町コミュニティバス車両購入業務【令和8年8月21日執行】 （pdf, 97.64KB）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "購入",
-        "車両",
-        "バス"
-      ]
-    },
-    {
-      "municipality": "大淀町",
-      "title": "大淀町コミュニティバス車両購入業務【令和8年8月21日執行】 （pdf, 97.64KB） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "購入",
-        "車両",
-        "バス"
-      ]
-    },
-    {
-      "municipality": "大淀町",
       "title": "入札結果（建設工事）",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -64533,6 +64759,50 @@
     },
     {
       "municipality": "大淀町",
+      "title": "大淀町長選挙ポスター掲示場製作、設置等業務【令和8年8月31日執行】 （pdf, 84.56KB）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大淀町",
+      "title": "大淀町長選挙ポスター掲示場製作、設置等業務【令和8年8月31日執行】 （pdf, 84.56KB） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大淀町",
+      "title": "お問い合わせフォーム",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大淀町",
+      "title": "お問い合わせフォーム ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大淀町",
+      "title": "大淀町コミュニティバス車両購入業務【令和8年8月21日執行】 （pdf, 97.64KB）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入",
+        "車両",
+        "バス"
+      ]
+    },
+    {
+      "municipality": "大淀町",
+      "title": "大淀町コミュニティバス車両購入業務【令和8年8月21日執行】 （pdf, 97.64KB） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入",
+        "車両",
+        "バス"
+      ]
+    },
+    {
+      "municipality": "大淀町",
       "title": "中増地内道路復旧工事（第7繰－災単－工－5号）【令和8年8月20日執行】 （pdf, 68.35KB）",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -64546,18 +64816,6 @@
       "matchedKeywords": [
         "道路"
       ]
-    },
-    {
-      "municipality": "大淀町",
-      "title": "お問い合わせフォーム",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大淀町",
-      "title": "お問い合わせフォーム ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
     },
     {
       "municipality": "大淀町",
@@ -66079,38 +66337,6 @@
     },
     {
       "municipality": "大淀町",
-      "title": "大淀町長選挙ポスター掲示場製作、設置等業務【令和8年8月31日執行】 （pdf, 84.56KB）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大淀町",
-      "title": "大淀町長選挙ポスター掲示場製作、設置等業務【令和8年8月31日執行】 （pdf, 84.56KB） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大淀町",
-      "title": "大淀町コミュニティバス車両購入業務【令和8年8月21日執行】 （pdf, 97.64KB）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "購入",
-        "車両",
-        "バス"
-      ]
-    },
-    {
-      "municipality": "大淀町",
-      "title": "大淀町コミュニティバス車両購入業務【令和8年8月21日執行】 （pdf, 97.64KB） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "購入",
-        "車両",
-        "バス"
-      ]
-    },
-    {
-      "municipality": "大淀町",
       "title": "入札結果（建設工事）",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -66155,6 +66381,50 @@
     },
     {
       "municipality": "大淀町",
+      "title": "大淀町長選挙ポスター掲示場製作、設置等業務【令和8年8月31日執行】 （pdf, 84.56KB）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大淀町",
+      "title": "大淀町長選挙ポスター掲示場製作、設置等業務【令和8年8月31日執行】 （pdf, 84.56KB） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大淀町",
+      "title": "お問い合わせフォーム",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大淀町",
+      "title": "お問い合わせフォーム ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大淀町",
+      "title": "大淀町コミュニティバス車両購入業務【令和8年8月21日執行】 （pdf, 97.64KB）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入",
+        "車両",
+        "バス"
+      ]
+    },
+    {
+      "municipality": "大淀町",
+      "title": "大淀町コミュニティバス車両購入業務【令和8年8月21日執行】 （pdf, 97.64KB） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入",
+        "車両",
+        "バス"
+      ]
+    },
+    {
+      "municipality": "大淀町",
       "title": "中増地内道路復旧工事（第7繰－災単－工－5号）【令和8年8月20日執行】 （pdf, 68.35KB）",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -66168,18 +66438,6 @@
       "matchedKeywords": [
         "道路"
       ]
-    },
-    {
-      "municipality": "大淀町",
-      "title": "お問い合わせフォーム",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大淀町",
-      "title": "お問い合わせフォーム ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
     },
     {
       "municipality": "大淀町",
