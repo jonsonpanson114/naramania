@@ -346,6 +346,38 @@
     "isRelevant": true
   },
   {
+    "id": "gojo-b2abf15c",
+    "municipality": "五條市",
+    "title": "西吉野農業高等学校寄宿舎食事調理及び配送業務委託（令和8年9月1日）",
+    "type": "委託",
+    "announcementDate": "2026-09-01",
+    "link": "https://www.city.gojo.lg.jp/soshiki/kyouiku/1_2/19742.html",
+    "pdfUrl": "https://www.city.gojo.lg.jp/material/files/group/38/nyuusatukoukokuoukaryouuu.pdf",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
+    "id": "gose-2026-09-01-小林児童遊園⑦改修工事-0",
+    "municipality": "御所市",
+    "title": "小林児童遊園⑦改修工事",
+    "type": "建築",
+    "announcementDate": "2026-09-01",
+    "biddingDate": "2026-09-18",
+    "link": "https://www.city.gose.nara.jp/0000002746.html",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
+    "id": "gose-一般競争入札公告（建設工事）（管財課）-8",
+    "municipality": "御所市",
+    "title": "一般競争入札公告（建設工事）（管財課）",
+    "type": "建築",
+    "announcementDate": "2026-09-01",
+    "link": "",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
     "id": "平群町-入札",
     "municipality": "平群町",
     "title": "入札",
@@ -21071,7 +21103,7 @@
     "id": "山添村-山添村立小中学校建設工事における一般競争入札の結果について",
     "municipality": "山添村",
     "title": "山添村立小中学校建設工事",
-    "type": "委託",
+    "type": "建築",
     "announcementDate": "2025-08-08",
     "biddingDate": "2025-08-08",
     "link": "https://www.vill.yamazoe.nara.jp/life/news/25817",
@@ -22583,7 +22615,7 @@
     "id": "山添村-山添村立山添小中学校建設工事の一般競争入札について",
     "municipality": "山添村",
     "title": "山添村立山添小中学校建設工事",
-    "type": "委託",
+    "type": "建築",
     "announcementDate": "2025-07-01",
     "link": "https://www.vill.yamazoe.nara.jp/life/news/25298",
     "status": "受付中",

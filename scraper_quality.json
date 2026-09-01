@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-09-01T06:25:09.975Z",
+  "generatedAt": "2026-09-01T11:23:27.715Z",
   "source": "daily_scrape",
   "keptCount": 285,
   "municipalityCount": 24,
   "oldestAnnouncementDate": "2025-02-02",
   "latestAnnouncementDate": "2026-09-01",
-  "scrapedCount": 2379,
-  "rejectedCount": 2117,
+  "scrapedCount": 2319,
+  "rejectedCount": 2060,
   "municipalityAudit": {
     "expectedMunicipalityCount": 25,
     "coveredMunicipalityCount": 24,
@@ -65,7 +65,7 @@
       {
         "municipality": "奈良市",
         "count": 11,
-        "changeFromPrevious": 2
+        "changeFromPrevious": 0
       },
       {
         "municipality": "大淀町",
@@ -90,12 +90,12 @@
       {
         "municipality": "天理市",
         "count": 4,
-        "changeFromPrevious": 1
+        "changeFromPrevious": 0
       },
       {
         "municipality": "桜井市",
         "count": 3,
-        "changeFromPrevious": 1
+        "changeFromPrevious": 0
       },
       {
         "municipality": "山添村",
@@ -139,9 +139,15 @@
       }
     ],
     "retainedFromPrevious": [
+      "田原本町",
       "三宅町"
     ],
     "issues": [
+      {
+        "municipality": "田原本町",
+        "level": "warning",
+        "message": "[田原本町] 取得件数が急減したため既存データを維持しています (baseline=3, new kept=0)"
+      },
       {
         "municipality": "三宅町",
         "level": "warning",
@@ -184,6 +190,6 @@
     "intelligenceExtractedCount": 49,
     "geminiExtractedCount": 49,
     "taggedCount": 49,
-    "lastAugmentedAt": "2026-09-01T06:25:10.580Z"
+    "lastAugmentedAt": "2026-09-01T11:23:28.678Z"
   }
 }
