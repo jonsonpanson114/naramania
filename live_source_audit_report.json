@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-01T07:05:00.720Z",
+  "generatedAt": "2026-09-01T09:56:43.831Z",
   "currentItemCount": 285,
   "checkedMunicipalities": [
     "奈良市",
@@ -84,17 +84,17 @@
     },
     {
       "municipality": "五條市",
-      "rawCount": 239,
+      "rawCount": 240,
       "keptCount": 31,
-      "rejectedCount": 208,
+      "rejectedCount": 209,
       "warnings": [],
       "errors": []
     },
     {
       "municipality": "御所市",
-      "rawCount": 15,
+      "rawCount": 17,
       "keptCount": 2,
-      "rejectedCount": 13,
+      "rejectedCount": 15,
       "warnings": [],
       "errors": []
     },
@@ -248,7 +248,7 @@
       },
       {
         "municipality": "五條市",
-        "snapshotCount": 239,
+        "snapshotCount": 240,
         "expectedCount": 31,
         "matchedCount": 31,
         "missingCount": 0,
@@ -457,7 +457,7 @@
       },
       {
         "municipality": "御所市",
-        "snapshotCount": 15,
+        "snapshotCount": 17,
         "expectedCount": 2,
         "matchedCount": 2,
         "missingCount": 0,
