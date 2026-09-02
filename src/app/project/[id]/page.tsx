@@ -88,10 +88,20 @@ function getResultAudit(item: BiddingItem) {
 }
 
 export default async function ProjectDetailPage({ params }: PageProps) {
-    const { id } = await params;
+    const { id: rawId } = await params;
+    // params.id はURLエンコードされたまま渡ってくる。日本語を含むid
+    // (例: sakurai-2026-09-01-桜井市立みなみこども園-建設工事)はデコードしないと
+    // 一致せず、詳細ページが常に「案件が見つかりません」になっていた。
+    let id = rawId;
+    try {
+        id = decodeURIComponent(rawId);
+    } catch {
+        // 不正なエスケープを含むURLはそのまま扱う
+    }
 
     // Load data
     const jsonPath = path.join(process.cwd(), 'scraper_result.json');
+    const marketPath = path.join(process.cwd(), 'market_items.json');
     let item: BiddingItem | null = null;
     let allItems: BiddingItem[] = [];
 
@@ -102,6 +112,21 @@ export default async function ProjectDetailPage({ params }: PageProps) {
         }
     } catch {
         // エラー時はnull
+    }
+
+    // 本線(scraper_result.json)に無ければ市場全体からも探す。
+    // /market は建築フィルタ対象外の案件にも詳細リンクを張っているため、
+    // 本線だけを見ていると対象外案件(2000件超)が全て「案件が見つかりません」に
+    // なっていた。関連案件の一覧には本線側を使いたいので allItems は上書きしない。
+    if (!item) {
+        try {
+            if (fs.existsSync(marketPath)) {
+                const marketItems: BiddingItem[] = JSON.parse(fs.readFileSync(marketPath, 'utf-8'));
+                item = marketItems.find(i => i.id === id) || null;
+            }
+        } catch {
+            // エラー時はnull
+        }
     }
 
     if (!item) {

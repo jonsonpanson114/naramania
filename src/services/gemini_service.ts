@@ -33,15 +33,18 @@ const BIDDING_INFO_SCHEMA = {
     required: ["description"]
 };
 
+// 先頭が本命で、失敗したら順に後ろへフォールバックする。
+// 新モデルが利用できない状況(権限・提供終了など)でも収集が止まらないよう、
+// 実績のある2.5系を最後尾に残しておく。
 const PDF_EXTRACTION_MODELS = buildModelCandidates(
     process.env.GOOGLE_GENERATIVE_AI_PDF_MODEL,
     process.env.GOOGLE_GENERATIVE_AI_PDF_MODELS,
-    ["gemini-2.5-flash", "gemini-2.5-flash-lite"],
+    ["gemini-3.7-flash", "gemini-2.5-flash", "gemini-2.5-flash-lite"],
 );
 const TEXT_EXTRACTION_MODELS = buildModelCandidates(
     process.env.GOOGLE_GENERATIVE_AI_TEXT_MODEL,
     process.env.GOOGLE_GENERATIVE_AI_TEXT_MODELS,
-    ["gemini-2.5-flash-lite", "gemini-2.5-flash"],
+    ["gemini-3.7-flash", "gemini-2.5-flash-lite", "gemini-2.5-flash"],
 );
 
 function buildModelCandidates(
