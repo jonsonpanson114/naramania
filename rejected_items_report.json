@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-01T11:23:27.717Z",
-  "totalRejected": 8646,
+  "generatedAt": "2026-09-02T05:52:47.971Z",
+  "totalRejected": 8916,
   "totalBorderlineRescued": 30,
   "byMunicipality": {
     "奈良市": {
-      "rejected": 306,
+      "rejected": 312,
       "borderlineRescued": 3
     },
     "橿原市": {
@@ -12,7 +12,7 @@
       "borderlineRescued": 3
     },
     "生駒市": {
-      "rejected": 816,
+      "rejected": 810,
       "borderlineRescued": 6
     },
     "大和高田市": {
@@ -24,7 +24,7 @@
       "borderlineRescued": 0
     },
     "葛城市": {
-      "rejected": 1290,
+      "rejected": 1302,
       "borderlineRescued": 0
     },
     "五條市": {
@@ -46,6 +46,10 @@
     "宇陀市": {
       "rejected": 408,
       "borderlineRescued": 3
+    },
+    "田原本町": {
+      "rejected": 252,
+      "borderlineRescued": 0
     },
     "広陵町": {
       "rejected": 102,
@@ -80,7 +84,7 @@
       "borderlineRescued": 0
     },
     "三郷町": {
-      "rejected": 684,
+      "rejected": 690,
       "borderlineRescued": 0
     },
     "王寺町": {
@@ -189,6 +193,18 @@
     },
     {
       "municipality": "奈良市",
+      "title": "奈良市写真美術館軒裏改修工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "奈良市",
+      "title": "奈良市写真美術館軒裏改修工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "奈良市",
       "title": "地山土留補強対策工事（北椿尾町地内・東部第３００号線）",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -1021,6 +1037,18 @@
     {
       "municipality": "奈良市",
       "title": "灰汚水処理装置点検整備補修 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "奈良市",
+      "title": "奈良市写真美術館軒裏改修工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "奈良市",
+      "title": "奈良市写真美術館軒裏改修工事 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },
@@ -1887,6 +1915,18 @@
     },
     {
       "municipality": "奈良市",
+      "title": "奈良市写真美術館軒裏改修工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "奈良市",
+      "title": "奈良市写真美術館軒裏改修工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "奈良市",
       "title": "地山土留補強対策工事（北椿尾町地内・東部第３００号線）",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -12609,64 +12649,6 @@
     },
     {
       "municipality": "生駒市",
-      "title": "奈良阪南田原線舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "奈良阪南田原線舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "消防本部訓練棟改修及び付属倉庫解体工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "消防本部訓練棟改修及び付属倉庫解体工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "清掃リレーセンター門扉設置工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "清掃",
-        "清掃"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "清掃リレーセンター門扉設置工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "清掃",
-        "清掃"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "救急施設屋上荷重検討業務",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "救急施設屋上荷重検討業務 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
       "title": "生駒市流域関連公共下水道緑ケ丘215号線工事",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -12706,6 +12688,36 @@
     {
       "municipality": "生駒市",
       "title": "小平尾バイパス配水管布設工事（R８） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "清掃リレーセンター門扉設置工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "清掃",
+        "清掃"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "清掃リレーセンター門扉設置工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "清掃",
+        "清掃"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "消防本部訓練棟改修及び付属倉庫解体工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "消防本部訓練棟改修及び付属倉庫解体工事 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },
@@ -14246,6 +14258,18 @@
     {
       "municipality": "生駒市",
       "title": "令和７年度生駒市道草刈業務委託（その２） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "救急施設屋上荷重検討業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "救急施設屋上荷重検討業務 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },
@@ -14725,64 +14749,6 @@
     },
     {
       "municipality": "生駒市",
-      "title": "奈良阪南田原線舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "奈良阪南田原線舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "消防本部訓練棟改修及び付属倉庫解体工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "消防本部訓練棟改修及び付属倉庫解体工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "清掃リレーセンター門扉設置工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "清掃",
-        "清掃"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "清掃リレーセンター門扉設置工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "清掃",
-        "清掃"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "救急施設屋上荷重検討業務",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "救急施設屋上荷重検討業務 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
       "title": "生駒市流域関連公共下水道緑ケ丘215号線工事",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -14822,6 +14788,36 @@
     {
       "municipality": "生駒市",
       "title": "小平尾バイパス配水管布設工事（R８） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "清掃リレーセンター門扉設置工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "清掃",
+        "清掃"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "清掃リレーセンター門扉設置工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "清掃",
+        "清掃"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "消防本部訓練棟改修及び付属倉庫解体工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "消防本部訓練棟改修及び付属倉庫解体工事 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },
@@ -16362,6 +16358,18 @@
     {
       "municipality": "生駒市",
       "title": "令和７年度生駒市道草刈業務委託（その２） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "救急施設屋上荷重検討業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "救急施設屋上荷重検討業務 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },
@@ -16841,64 +16849,6 @@
     },
     {
       "municipality": "生駒市",
-      "title": "奈良阪南田原線舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "奈良阪南田原線舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "消防本部訓練棟改修及び付属倉庫解体工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "消防本部訓練棟改修及び付属倉庫解体工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "清掃リレーセンター門扉設置工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "清掃",
-        "清掃"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "清掃リレーセンター門扉設置工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "清掃",
-        "清掃"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "救急施設屋上荷重検討業務",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "救急施設屋上荷重検討業務 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
       "title": "生駒市流域関連公共下水道緑ケ丘215号線工事",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -16938,6 +16888,36 @@
     {
       "municipality": "生駒市",
       "title": "小平尾バイパス配水管布設工事（R８） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "清掃リレーセンター門扉設置工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "清掃",
+        "清掃"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "清掃リレーセンター門扉設置工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "清掃",
+        "清掃"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "消防本部訓練棟改修及び付属倉庫解体工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "消防本部訓練棟改修及び付属倉庫解体工事 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },
@@ -18478,6 +18458,18 @@
     {
       "municipality": "生駒市",
       "title": "令和７年度生駒市道草刈業務委託（その２） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "救急施設屋上荷重検討業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "救急施設屋上荷重検討業務 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },
@@ -26507,6 +26499,40 @@
     },
     {
       "municipality": "葛城市",
+      "title": "第8-604号 木戸・八川・大畑線道路補修工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "葛城市",
+      "title": "第8-604号 木戸・八川・大畑線道路補修工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "葛城市",
+      "title": "第8-601号 小柳川支流河川他浚渫工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "河川",
+        "浚渫"
+      ]
+    },
+    {
+      "municipality": "葛城市",
+      "title": "第8-601号 小柳川支流河川他浚渫工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "河川",
+        "浚渫"
+      ]
+    },
+    {
+      "municipality": "葛城市",
       "title": "自動車騒音常時監視業務委託",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -29867,6 +29893,40 @@
     },
     {
       "municipality": "葛城市",
+      "title": "第8-604号 木戸・八川・大畑線道路補修工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "葛城市",
+      "title": "第8-604号 木戸・八川・大畑線道路補修工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "葛城市",
+      "title": "第8-601号 小柳川支流河川他浚渫工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "河川",
+        "浚渫"
+      ]
+    },
+    {
+      "municipality": "葛城市",
+      "title": "第8-601号 小柳川支流河川他浚渫工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "河川",
+        "浚渫"
+      ]
+    },
+    {
+      "municipality": "葛城市",
       "title": "自動車騒音常時監視業務委託",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -33224,6 +33284,40 @@
       "title": "新庄第1健民運動場及び新町公園球技場芝生管理アドバイザー業務委託 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
+    },
+    {
+      "municipality": "葛城市",
+      "title": "第8-604号 木戸・八川・大畑線道路補修工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "葛城市",
+      "title": "第8-604号 木戸・八川・大畑線道路補修工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "葛城市",
+      "title": "第8-601号 小柳川支流河川他浚渫工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "河川",
+        "浚渫"
+      ]
+    },
+    {
+      "municipality": "葛城市",
+      "title": "第8-601号 小柳川支流河川他浚渫工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "河川",
+        "浚渫"
+      ]
     },
     {
       "municipality": "葛城市",
@@ -47794,6 +47888,1848 @@
       "reason": "exclusion_keyword",
       "matchedKeywords": [
         "橋"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "令和８年度田原本町同報系防災行政無線再整備工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "令和８年度田原本町同報系防災行政無線再整備工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本１３号線他舗装工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本１３号線他舗装工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "金剛寺１１号線舗装工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "金剛寺１１号線舗装工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "大安寺為川南方線舗装工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "大安寺為川南方線舗装工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "町道環境整備工事第１期曽我川・飛鳥川筋",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "町道環境整備工事第１期曽我川・飛鳥川筋 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "町道環境整備工事第１期寺川筋",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "町道環境整備工事第１期寺川筋 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "宮古１号線他舗装工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "宮古１号線他舗装工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "西竹田満田線舗装工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "西竹田満田線舗装工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "秦庄７号線舗装他工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "秦庄７号線舗装他工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "六の坪井堰改修工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "六の坪井堰改修工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "公共下水道整備工事（公）　第８－１号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "公共下水道整備工事（公）　第８－１号 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "橋梁長寿命化修繕事業　八条笠形平田線１号橋他補修工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "橋梁長寿命化修繕事業　八条笠形平田線１号橋他補修工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "寺川沿新町多線他舗装工事（新町）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "寺川沿新町多線他舗装工事（新町） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "三笠宮森線舗装工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "三笠宮森線舗装工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "寺川沿新町多線舗装工事（多）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "寺川沿新町多線舗装工事（多） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "コピー用紙",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "用紙"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "コピー用紙 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "用紙"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "電気自動車（軽乗用）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "自動車"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "電気自動車（軽乗用） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "自動車"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本青垣生涯学習センター舞台操作業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本青垣生涯学習センター舞台操作業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本町学習支援教室（地域未来塾）事業業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本町学習支援教室（地域未来塾）事業業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本町短期集中予防サービス（教室型）事業",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本町短期集中予防サービス（教室型）事業 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "いきいき百歳体操体力測定サポート支援事業",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "いきいき百歳体操体力測定サポート支援事業 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本町ねたきり老人紙おむつ等給付事業",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本町ねたきり老人紙おむつ等給付事業 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本町庁舎高圧変圧器更新業務（８－１）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本町庁舎高圧変圧器更新業務（８－１） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "８－１交通安全施設維持工事（防護柵）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "防護柵",
+        "交通"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "８－１交通安全施設維持工事（防護柵） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "防護柵",
+        "交通"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "８－１交通安全施設維持工事（道路反射鏡）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "交通"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "８－１交通安全施設維持工事（道路反射鏡） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "交通"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "８－１交通安全施設維持工事（区画線）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "区画線",
+        "交通"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "８－１交通安全施設維持工事（区画線） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "区画線",
+        "交通"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "スズキ　キャリイ　１台",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "スズキ　キャリイ　１台 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "緊急維持修繕業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "緊急維持修繕業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "使用済小型電子機器等再資源化業務（引渡契約）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "資源"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "使用済小型電子機器等再資源化業務（引渡契約） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "資源"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "マンホールポンプ保守点検管理委託業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "保守",
+        "管理委託"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "マンホールポンプ保守点検管理委託業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "保守",
+        "管理委託"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "町内遺跡出土遺物保存処理業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "町内遺跡出土遺物保存処理業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "特殊建築物等定期点検業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "定期点検"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "特殊建築物等定期点検業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "定期点検"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本町学習支援教室（地域未来塾）事業業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本町学習支援教室（地域未来塾）事業業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本町立学校（園）植木剪定等業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本町立学校（園）植木剪定等業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本町清掃センター各種測定業務委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "清掃",
+        "清掃"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本町清掃センター各種測定業務委託 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "清掃",
+        "清掃"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本町中央体育館施設機器・器具保守点検業務委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "保守"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本町中央体育館施設機器・器具保守点検業務委託 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "保守"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本町指定ごみ袋製造請負業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本町指定ごみ袋製造請負業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本・南幼稚園防犯カメラ設置業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本・南幼稚園防犯カメラ設置業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "ともぱ！たわらもとフェンス設置業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "ともぱ！たわらもとフェンス設置業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本町中央体育館・健民運動場高圧進相コンデンサ取替業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本町中央体育館・健民運動場高圧進相コンデンサ取替業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "家屋調査業務（公）第１号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "家屋調査",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "家屋調査業務（公）第１号 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "家屋調査",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "令和８年度下水道施設点検業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "令和８年度下水道施設点検業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "令和８年度田原本町同報系防災行政無線再整備工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "令和８年度田原本町同報系防災行政無線再整備工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本１３号線他舗装工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本１３号線他舗装工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "金剛寺１１号線舗装工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "金剛寺１１号線舗装工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "大安寺為川南方線舗装工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "大安寺為川南方線舗装工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "町道環境整備工事第１期曽我川・飛鳥川筋",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "町道環境整備工事第１期曽我川・飛鳥川筋 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "町道環境整備工事第１期寺川筋",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "町道環境整備工事第１期寺川筋 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "宮古１号線他舗装工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "宮古１号線他舗装工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "西竹田満田線舗装工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "西竹田満田線舗装工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "秦庄７号線舗装他工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "秦庄７号線舗装他工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "六の坪井堰改修工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "六の坪井堰改修工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "公共下水道整備工事（公）　第８－１号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "公共下水道整備工事（公）　第８－１号 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "橋梁長寿命化修繕事業　八条笠形平田線１号橋他補修工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "橋梁長寿命化修繕事業　八条笠形平田線１号橋他補修工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "寺川沿新町多線他舗装工事（新町）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "寺川沿新町多線他舗装工事（新町） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "三笠宮森線舗装工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "三笠宮森線舗装工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "寺川沿新町多線舗装工事（多）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "寺川沿新町多線舗装工事（多） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "コピー用紙",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "用紙"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "コピー用紙 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "用紙"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "電気自動車（軽乗用）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "自動車"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "電気自動車（軽乗用） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "自動車"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本青垣生涯学習センター舞台操作業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本青垣生涯学習センター舞台操作業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本町学習支援教室（地域未来塾）事業業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本町学習支援教室（地域未来塾）事業業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本町短期集中予防サービス（教室型）事業",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本町短期集中予防サービス（教室型）事業 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "いきいき百歳体操体力測定サポート支援事業",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "いきいき百歳体操体力測定サポート支援事業 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本町ねたきり老人紙おむつ等給付事業",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本町ねたきり老人紙おむつ等給付事業 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本町庁舎高圧変圧器更新業務（８－１）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本町庁舎高圧変圧器更新業務（８－１） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "８－１交通安全施設維持工事（防護柵）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "防護柵",
+        "交通"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "８－１交通安全施設維持工事（防護柵） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "防護柵",
+        "交通"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "８－１交通安全施設維持工事（道路反射鏡）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "交通"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "８－１交通安全施設維持工事（道路反射鏡） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "交通"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "８－１交通安全施設維持工事（区画線）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "区画線",
+        "交通"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "８－１交通安全施設維持工事（区画線） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "区画線",
+        "交通"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "スズキ　キャリイ　１台",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "スズキ　キャリイ　１台 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "緊急維持修繕業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "緊急維持修繕業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "使用済小型電子機器等再資源化業務（引渡契約）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "資源"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "使用済小型電子機器等再資源化業務（引渡契約） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "資源"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "マンホールポンプ保守点検管理委託業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "保守",
+        "管理委託"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "マンホールポンプ保守点検管理委託業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "保守",
+        "管理委託"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "町内遺跡出土遺物保存処理業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "町内遺跡出土遺物保存処理業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "特殊建築物等定期点検業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "定期点検"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "特殊建築物等定期点検業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "定期点検"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本町学習支援教室（地域未来塾）事業業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本町学習支援教室（地域未来塾）事業業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本町立学校（園）植木剪定等業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本町立学校（園）植木剪定等業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本町清掃センター各種測定業務委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "清掃",
+        "清掃"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本町清掃センター各種測定業務委託 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "清掃",
+        "清掃"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本町中央体育館施設機器・器具保守点検業務委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "保守"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本町中央体育館施設機器・器具保守点検業務委託 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "保守"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本町指定ごみ袋製造請負業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本町指定ごみ袋製造請負業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本・南幼稚園防犯カメラ設置業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本・南幼稚園防犯カメラ設置業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "ともぱ！たわらもとフェンス設置業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "ともぱ！たわらもとフェンス設置業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本町中央体育館・健民運動場高圧進相コンデンサ取替業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本町中央体育館・健民運動場高圧進相コンデンサ取替業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "家屋調査業務（公）第１号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "家屋調査",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "家屋調査業務（公）第１号 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "家屋調査",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "令和８年度下水道施設点検業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "令和８年度下水道施設点検業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "令和８年度田原本町同報系防災行政無線再整備工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "令和８年度田原本町同報系防災行政無線再整備工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本１３号線他舗装工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本１３号線他舗装工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "金剛寺１１号線舗装工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "金剛寺１１号線舗装工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "大安寺為川南方線舗装工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "大安寺為川南方線舗装工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "町道環境整備工事第１期曽我川・飛鳥川筋",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "町道環境整備工事第１期曽我川・飛鳥川筋 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "町道環境整備工事第１期寺川筋",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "町道環境整備工事第１期寺川筋 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "宮古１号線他舗装工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "宮古１号線他舗装工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "西竹田満田線舗装工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "西竹田満田線舗装工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "秦庄７号線舗装他工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "秦庄７号線舗装他工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "六の坪井堰改修工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "六の坪井堰改修工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "公共下水道整備工事（公）　第８－１号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "公共下水道整備工事（公）　第８－１号 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "橋梁長寿命化修繕事業　八条笠形平田線１号橋他補修工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "橋梁長寿命化修繕事業　八条笠形平田線１号橋他補修工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "寺川沿新町多線他舗装工事（新町）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "寺川沿新町多線他舗装工事（新町） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "三笠宮森線舗装工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "三笠宮森線舗装工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "寺川沿新町多線舗装工事（多）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "寺川沿新町多線舗装工事（多） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "コピー用紙",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "用紙"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "コピー用紙 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "用紙"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "電気自動車（軽乗用）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "自動車"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "電気自動車（軽乗用） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "自動車"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本青垣生涯学習センター舞台操作業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本青垣生涯学習センター舞台操作業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本町学習支援教室（地域未来塾）事業業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本町学習支援教室（地域未来塾）事業業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本町短期集中予防サービス（教室型）事業",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本町短期集中予防サービス（教室型）事業 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "いきいき百歳体操体力測定サポート支援事業",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "いきいき百歳体操体力測定サポート支援事業 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本町ねたきり老人紙おむつ等給付事業",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本町ねたきり老人紙おむつ等給付事業 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本町庁舎高圧変圧器更新業務（８－１）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本町庁舎高圧変圧器更新業務（８－１） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "８－１交通安全施設維持工事（防護柵）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "防護柵",
+        "交通"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "８－１交通安全施設維持工事（防護柵） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "防護柵",
+        "交通"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "８－１交通安全施設維持工事（道路反射鏡）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "交通"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "８－１交通安全施設維持工事（道路反射鏡） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "交通"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "８－１交通安全施設維持工事（区画線）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "区画線",
+        "交通"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "８－１交通安全施設維持工事（区画線） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "区画線",
+        "交通"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "スズキ　キャリイ　１台",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "スズキ　キャリイ　１台 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "緊急維持修繕業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "緊急維持修繕業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "使用済小型電子機器等再資源化業務（引渡契約）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "資源"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "使用済小型電子機器等再資源化業務（引渡契約） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "資源"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "マンホールポンプ保守点検管理委託業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "保守",
+        "管理委託"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "マンホールポンプ保守点検管理委託業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "保守",
+        "管理委託"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "町内遺跡出土遺物保存処理業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "町内遺跡出土遺物保存処理業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "特殊建築物等定期点検業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "定期点検"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "特殊建築物等定期点検業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "定期点検"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本町学習支援教室（地域未来塾）事業業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本町学習支援教室（地域未来塾）事業業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本町立学校（園）植木剪定等業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本町立学校（園）植木剪定等業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本町清掃センター各種測定業務委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "清掃",
+        "清掃"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本町清掃センター各種測定業務委託 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "清掃",
+        "清掃"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本町中央体育館施設機器・器具保守点検業務委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "保守"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本町中央体育館施設機器・器具保守点検業務委託 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "保守"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本町指定ごみ袋製造請負業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本町指定ごみ袋製造請負業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本・南幼稚園防犯カメラ設置業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本・南幼稚園防犯カメラ設置業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "ともぱ！たわらもとフェンス設置業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "ともぱ！たわらもとフェンス設置業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本町中央体育館・健民運動場高圧進相コンデンサ取替業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "田原本町中央体育館・健民運動場高圧進相コンデンサ取替業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "田原本町",
+      "title": "家屋調査業務（公）第１号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "家屋調査",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "家屋調査業務（公）第１号 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "家屋調査",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "令和８年度下水道施設点検業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "田原本町",
+      "title": "令和８年度下水道施設点検業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
       ]
     },
     {
@@ -57284,6 +59220,18 @@
     {
       "municipality": "三郷町",
       "title": "令和7年度 三郷町3D都市モデル整備業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "指名競争入札9月17日実施分",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "指名競争入札9月17日実施分 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },
@@ -58951,6 +60899,18 @@
     },
     {
       "municipality": "三郷町",
+      "title": "指名競争入札9月17日実施分",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "指名競争入札9月17日実施分 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
       "title": "入札参加資格者入札参加停止措置一覧",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -60608,6 +62568,18 @@
     {
       "municipality": "三郷町",
       "title": "令和7年度 三郷町3D都市モデル整備業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "指名競争入札9月17日実施分",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "指名競争入札9月17日実施分 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },

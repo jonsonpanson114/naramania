@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-01T11:31:42.558Z",
+  "generatedAt": "2026-09-02T06:00:52.028Z",
   "checkedMunicipalityCount": 24,
-  "expectedItemCount": 285,
-  "matchedItemCount": 285,
+  "expectedItemCount": 286,
+  "matchedItemCount": 286,
   "missingItemCount": 0,
   "duplicateTitleGroupCount": 23,
   "duplicateTitleItemCount": 48,
@@ -184,6 +184,17 @@
       "status": "ok"
     },
     {
+      "municipality": "三郷町",
+      "snapshotCount": 3,
+      "expectedCount": 3,
+      "matchedCount": 3,
+      "missingCount": 0,
+      "duplicateTitleGroupCount": 0,
+      "duplicateTitleItemCount": 0,
+      "missingItems": [],
+      "status": "ok"
+    },
+    {
       "municipality": "山添村",
       "snapshotCount": 3,
       "expectedCount": 3,
@@ -229,17 +240,6 @@
     },
     {
       "municipality": "御所市",
-      "snapshotCount": 2,
-      "expectedCount": 2,
-      "matchedCount": 2,
-      "missingCount": 0,
-      "duplicateTitleGroupCount": 0,
-      "duplicateTitleItemCount": 0,
-      "missingItems": [],
-      "status": "ok"
-    },
-    {
-      "municipality": "三郷町",
       "snapshotCount": 2,
       "expectedCount": 2,
       "matchedCount": 2,
