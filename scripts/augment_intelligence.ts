@@ -147,18 +147,18 @@ async function main() {
 
     fs.writeFileSync(RESULT_PATH, JSON.stringify(items, null, 2), 'utf-8');
     const existingQuality = readQualitySummary();
+    // 引き継ぎたい項目を手で列挙すると、後から index.ts 側にフィールドを足した時に
+    // 列挙漏れで静かに消える(実際 municipalityLastScraped と sourceCoverage が
+    // ここで毎回消えており、自治体別の最終収集時刻がずっと空だった)。
+    // スプレッドで丸ごと引き継ぎ、このスクリプトが更新する分だけ上書きする。
     writeQualitySummary({
+        ...existingQuality,
         generatedAt: existingQuality?.generatedAt || augmentedAt,
         source: existingQuality?.source || 'augment_intelligence',
         keptCount: existingQuality?.keptCount ?? items.length,
         municipalityCount: existingQuality?.municipalityCount ?? new Set(items.map((item) => item.municipality)).size,
         oldestAnnouncementDate: existingQuality?.oldestAnnouncementDate ?? null,
         latestAnnouncementDate: existingQuality?.latestAnnouncementDate ?? null,
-        ...(existingQuality?.scrapedCount !== undefined ? { scrapedCount: existingQuality.scrapedCount } : {}),
-        ...(existingQuality?.rejectedCount !== undefined ? { rejectedCount: existingQuality.rejectedCount } : {}),
-        ...(existingQuality?.originalCount !== undefined ? { originalCount: existingQuality.originalCount } : {}),
-        ...(existingQuality?.removedCount !== undefined ? { removedCount: existingQuality.removedCount } : {}),
-        ...(existingQuality?.municipalityAudit ? { municipalityAudit: existingQuality.municipalityAudit } : {}),
         dateAudit: buildDateAuditSummary(items),
         intelligence: buildIntelligenceSummary(items, augmentedAt),
     });
