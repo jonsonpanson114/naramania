@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-02T05:52:47.971Z",
-  "totalRejected": 8916,
+  "generatedAt": "2026-09-02T10:53:12.038Z",
+  "totalRejected": 8892,
   "totalBorderlineRescued": 30,
   "byMunicipality": {
     "奈良市": {
@@ -16,7 +16,7 @@
       "borderlineRescued": 6
     },
     "大和高田市": {
-      "rejected": 108,
+      "rejected": 84,
       "borderlineRescued": 0
     },
     "大和郡山市": {
@@ -12649,6 +12649,36 @@
     },
     {
       "municipality": "生駒市",
+      "title": "清掃リレーセンター門扉設置工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "清掃",
+        "清掃"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "清掃リレーセンター門扉設置工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "清掃",
+        "清掃"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "消防本部訓練棟改修及び付属倉庫解体工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "消防本部訓練棟改修及び付属倉庫解体工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
       "title": "生駒市流域関連公共下水道緑ケ丘215号線工事",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -12688,36 +12718,6 @@
     {
       "municipality": "生駒市",
       "title": "小平尾バイパス配水管布設工事（R８） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "清掃リレーセンター門扉設置工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "清掃",
-        "清掃"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "清掃リレーセンター門扉設置工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "清掃",
-        "清掃"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "消防本部訓練棟改修及び付属倉庫解体工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "消防本部訓練棟改修及び付属倉庫解体工事 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },
@@ -14749,6 +14749,36 @@
     },
     {
       "municipality": "生駒市",
+      "title": "清掃リレーセンター門扉設置工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "清掃",
+        "清掃"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "清掃リレーセンター門扉設置工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "清掃",
+        "清掃"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "消防本部訓練棟改修及び付属倉庫解体工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "消防本部訓練棟改修及び付属倉庫解体工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
       "title": "生駒市流域関連公共下水道緑ケ丘215号線工事",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -14788,36 +14818,6 @@
     {
       "municipality": "生駒市",
       "title": "小平尾バイパス配水管布設工事（R８） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "清掃リレーセンター門扉設置工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "清掃",
-        "清掃"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "清掃リレーセンター門扉設置工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "清掃",
-        "清掃"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "消防本部訓練棟改修及び付属倉庫解体工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "消防本部訓練棟改修及び付属倉庫解体工事 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },
@@ -16849,6 +16849,36 @@
     },
     {
       "municipality": "生駒市",
+      "title": "清掃リレーセンター門扉設置工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "清掃",
+        "清掃"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "清掃リレーセンター門扉設置工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "清掃",
+        "清掃"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "消防本部訓練棟改修及び付属倉庫解体工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "消防本部訓練棟改修及び付属倉庫解体工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
       "title": "生駒市流域関連公共下水道緑ケ丘215号線工事",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -16888,36 +16918,6 @@
     {
       "municipality": "生駒市",
       "title": "小平尾バイパス配水管布設工事（R８） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "清掃リレーセンター門扉設置工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "清掃",
-        "清掃"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "清掃リレーセンター門扉設置工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "清掃",
-        "清掃"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "消防本部訓練棟改修及び付属倉庫解体工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "消防本部訓練棟改修及び付属倉庫解体工事 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },
@@ -19041,94 +19041,6 @@
     },
     {
       "municipality": "大和高田市",
-      "title": "公共下水道事業に伴う管更生実施設計業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "公共下水道事業に伴う管更生実施設計業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "公共下水道事業に伴う管渠実施設計（1）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "公共下水道事業に伴う管渠実施設計（1） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "公共下水道事業に伴う管渠実施設計（2）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "公共下水道事業に伴う管渠実施設計（2） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "大和高田市橋梁定期点検業務委託（No.1）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋梁",
-        "橋",
-        "定期点検"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "大和高田市橋梁定期点検業務委託（No.1） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋梁",
-        "橋",
-        "定期点検"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "大和高田市橋梁定期点検業務委託（No.2）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋梁",
-        "橋",
-        "定期点検"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "大和高田市橋梁定期点検業務委託（No.2） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋梁",
-        "橋",
-        "定期点検"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
       "title": "令和8年度大和高田市洪水・地震ハザードマップ更新業務委託",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -19136,6 +19048,18 @@
     {
       "municipality": "大和高田市",
       "title": "令和8年度大和高田市洪水・地震ハザードマップ更新業務委託 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "令和8年度大和高田市航空写真撮影業務委託",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "令和8年度大和高田市航空写真撮影業務委託 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },
@@ -19305,94 +19229,6 @@
     },
     {
       "municipality": "大和高田市",
-      "title": "公共下水道事業に伴う管更生実施設計業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "公共下水道事業に伴う管更生実施設計業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "公共下水道事業に伴う管渠実施設計（1）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "公共下水道事業に伴う管渠実施設計（1） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "公共下水道事業に伴う管渠実施設計（2）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "公共下水道事業に伴う管渠実施設計（2） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "大和高田市橋梁定期点検業務委託（No.1）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋梁",
-        "橋",
-        "定期点検"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "大和高田市橋梁定期点検業務委託（No.1） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋梁",
-        "橋",
-        "定期点検"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "大和高田市橋梁定期点検業務委託（No.2）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋梁",
-        "橋",
-        "定期点検"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "大和高田市橋梁定期点検業務委託（No.2） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋梁",
-        "橋",
-        "定期点検"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
       "title": "令和8年度大和高田市洪水・地震ハザードマップ更新業務委託",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -19400,6 +19236,18 @@
     {
       "municipality": "大和高田市",
       "title": "令和8年度大和高田市洪水・地震ハザードマップ更新業務委託 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "令和8年度大和高田市航空写真撮影業務委託",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "令和8年度大和高田市航空写真撮影業務委託 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },
@@ -19569,94 +19417,6 @@
     },
     {
       "municipality": "大和高田市",
-      "title": "公共下水道事業に伴う管更生実施設計業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "公共下水道事業に伴う管更生実施設計業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "公共下水道事業に伴う管渠実施設計（1）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "公共下水道事業に伴う管渠実施設計（1） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "公共下水道事業に伴う管渠実施設計（2）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "公共下水道事業に伴う管渠実施設計（2） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "大和高田市橋梁定期点検業務委託（No.1）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋梁",
-        "橋",
-        "定期点検"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "大和高田市橋梁定期点検業務委託（No.1） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋梁",
-        "橋",
-        "定期点検"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "大和高田市橋梁定期点検業務委託（No.2）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋梁",
-        "橋",
-        "定期点検"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "大和高田市橋梁定期点検業務委託（No.2） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋梁",
-        "橋",
-        "定期点検"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
       "title": "令和8年度大和高田市洪水・地震ハザードマップ更新業務委託",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -19664,6 +19424,18 @@
     {
       "municipality": "大和高田市",
       "title": "令和8年度大和高田市洪水・地震ハザードマップ更新業務委託 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "令和8年度大和高田市航空写真撮影業務委託",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "令和8年度大和高田市航空写真撮影業務委託 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },

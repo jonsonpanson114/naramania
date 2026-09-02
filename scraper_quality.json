@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-09-02T05:52:47.968Z",
+  "generatedAt": "2026-09-02T10:53:12.036Z",
   "source": "daily_scrape",
   "keptCount": 286,
   "municipalityCount": 24,
   "oldestAnnouncementDate": "2025-02-02",
   "latestAnnouncementDate": "2026-09-02",
-  "scrapedCount": 2387,
-  "rejectedCount": 2124,
+  "scrapedCount": 2382,
+  "rejectedCount": 2119,
   "municipalityAudit": {
     "expectedMunicipalityCount": 25,
     "coveredMunicipalityCount": 24,
@@ -100,7 +100,7 @@
       {
         "municipality": "三郷町",
         "count": 3,
-        "changeFromPrevious": 1
+        "changeFromPrevious": 0
       },
       {
         "municipality": "山添村",
@@ -184,6 +184,6 @@
     "intelligenceExtractedCount": 49,
     "geminiExtractedCount": 49,
     "taggedCount": 49,
-    "lastAugmentedAt": "2026-09-02T05:52:48.914Z"
+    "lastAugmentedAt": "2026-09-02T10:53:12.794Z"
   }
 }

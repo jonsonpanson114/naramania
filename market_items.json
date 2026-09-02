@@ -445,6 +445,16 @@
     "isRelevant": false
   },
   {
+    "id": "gose-一般競争入札公告（建設工事）（管財課）-13",
+    "municipality": "御所市",
+    "title": "一般競争入札公告（建設工事）（管財課）",
+    "type": "建築",
+    "announcementDate": "2026-09-01",
+    "link": "",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
     "id": "平群町-入札",
     "municipality": "平群町",
     "title": "入札",
@@ -809,7 +819,9 @@
     "announcementDate": "2026-08-31",
     "biddingDate": "2026-08-31",
     "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-    "status": "受付終了",
+    "status": "落札",
+    "winningContractor": "株式会社イシハラ工務店",
+    "winnerType": "ゼネコン",
     "isRelevant": false
   },
   {
@@ -820,7 +832,9 @@
     "announcementDate": "2026-08-31",
     "biddingDate": "2026-08-31",
     "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-    "status": "受付終了",
+    "status": "落札",
+    "winningContractor": "株式会社中川組",
+    "winnerType": "ゼネコン",
     "isRelevant": false
   },
   {
@@ -831,7 +845,9 @@
     "announcementDate": "2026-08-31",
     "biddingDate": "2026-08-31",
     "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-    "status": "受付終了",
+    "status": "落札",
+    "winningContractor": "株式会社伸構造事務所",
+    "winnerType": "ゼネコン",
     "isRelevant": false
   },
   {
@@ -3300,6 +3316,16 @@
     "announcementDate": "2026-08-05",
     "biddingDate": "2026-08-26",
     "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
+    "id": "yamato-takada-85d15362",
+    "municipality": "大和高田市",
+    "title": "令和8年度大和高田市航空写真撮影業務委託",
+    "type": "コンサル",
+    "announcementDate": "2026-08-05",
+    "link": "https://www.city.yamatotakada.nara.jp/soshikikarasagasu/somuka/keiyakukanri/nyusatsu_keiyaku/2/1427.html",
     "status": "受付中",
     "isRelevant": false
   },
