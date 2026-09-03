@@ -4,9 +4,17 @@ import crypto from 'crypto';
 import type { Element } from 'domhandler';
 import { BiddingItem, Scraper, BiddingType } from '../types/bidding';
 import { fiscalMonthToCalendarYear, getCurrentReiwaFiscalYear } from './common/fiscal_year';
+import { scrapeEpiCloud } from './common/epi_cloud';
 
 // 大和高田市 入札情報
 const BASE = 'https://www.city.yamatotakada.nara.jp';
+// 大和高田市は自治体サイトとは別に「入札情報公開サービス」(EPI)にも公告・開札結果を
+// 出しており、そちらの方が案件数・落札者情報ともに充実している。
+// 市サイトだけを見ていた頃は建築案件が1件も残らない日が続いていたため、EPIを主線に加える。
+const EPI_ENTRY_URLS = [
+    'https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=06200640072006E0',
+    'https://www.epi-cloud.fwd.ne.jp/koukai/do/logon?name1=06200640072006E0',
+];
 const ANNOUNCEMENT_PAGES = [
     { url: `${BASE}/soshikikarasagasu/somuka/keiyakukanri/nyusatsu_keiyaku/2/1422.html`, label: '建設工事' },
     { url: `${BASE}/soshikikarasagasu/somuka/keiyakukanri/nyusatsu_keiyaku/2/1427.html`, label: '測量コンサル' },
@@ -219,6 +227,24 @@ export class YamatoTakadaCityScraper implements Scraper {
             this.recordError(message);
             console.warn(message);
         }
+
+        // ── 入札情報公開サービス(EPI): 発注情報(公告)＋入札・契約結果 ──────
+        console.log('[大和高田市] EPI(入札情報公開サービス) 取得中...');
+        const epi = await scrapeEpiCloud({
+            municipality: '大和高田市',
+            idPrefix: 'yamato-takada',
+            entryUrls: EPI_ENTRY_URLS,
+        });
+        for (const warning of epi.warnings) {
+            this.recordError(warning);
+            console.warn(warning);
+        }
+        for (const item of epi.items) {
+            const known = RESULT_BIDDING_DATES[item.title];
+            if (known && !item.biddingDate) item.biddingDate = known;
+            allItems.push(item);
+        }
+        console.log(`[大和高田市] EPI: ${epi.items.length}件`);
 
         console.log(`[大和高田市] 合計 ${allItems.length} 件`);
         return allItems;

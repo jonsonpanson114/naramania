@@ -3,11 +3,19 @@ import * as cheerio from 'cheerio';
 import { BiddingItem, BiddingType, Scraper } from '../types/bidding';
 
 const BASE_URL = 'https://www.town.nara-kawanishi.lg.jp';
-const ANNOUNCEMENT_URLS = [
+// 入札・契約の一覧カテゴリ。個別記事ID(0000008784等)を直接ハードコードしていたため、
+// 町が新しい記事を出しても永久に古い2ページしか見ておらず、公告も結果も追従できていなかった。
+// 一覧から都度記事を解決する。
+const CATEGORY_URLS = [
+    `${BASE_URL}/category/22-1-0-0-0-0-0-0-0-0.html`,
+];
+// 一覧から辿れなかった場合の保険（従来のハードコード先）
+const FALLBACK_ARTICLE_URLS = [
     `${BASE_URL}/0000008784.html`,
     `${BASE_URL}/0000008613.html`,
 ];
 const HEADERS = { 'User-Agent': 'Mozilla/5.0 (compatible; naramania-scraper/1.0)' };
+const ARTICLE_URL_PATTERN = /\/(?:\d{7,}|cmsfiles\/[^\s"']+)\.html?$/;
 const KNOWN_KAWANISHI_ITEMS: BiddingItem[] = [
     {
         id: buildId('2026-04-01', '川西文化会館トイレ改修工事'),
@@ -89,26 +97,90 @@ function buildId(date: string, title: string): string {
         .slice(0, 120);
 }
 
+function toAbsoluteUrl(href: string): string {
+    if (!href) return '';
+    if (href.startsWith('http')) return href;
+    if (href.startsWith('//')) return `https:${href}`;
+    if (href.startsWith('/')) return `${BASE_URL}${href}`;
+    return `${BASE_URL}/${href.replace(/^\.\//, '')}`;
+}
+
+/** 一覧カテゴリから入札関連の記事URLを解決する */
+async function resolveArticleUrls(): Promise<string[]> {
+    const urls = new Set<string>();
+
+    for (const categoryUrl of CATEGORY_URLS) {
+        try {
+            const res = await axios.get(categoryUrl, { headers: HEADERS, timeout: 20000 });
+            const $ = cheerio.load(res.data);
+
+            $('a[href]').each((_, el) => {
+                const text = $(el).text().replace(/\s+/g, '').trim();
+                const href = toAbsoluteUrl($(el).attr('href') || '');
+                if (!href || !text) return;
+                if (!href.startsWith(BASE_URL)) return;
+                if (!ARTICLE_URL_PATTERN.test(href)) return;
+                // 公告・結果の両方を対象にする（結果だけ／公告だけを見ない）
+                if (!/(入札|公告|開札|落札|見積|プロポーザル|契約)/.test(text)) return;
+                urls.add(href);
+            });
+        } catch (error) {
+            console.warn('[川西町] 一覧取得エラー:', error instanceof Error ? error.message : String(error));
+        }
+    }
+
+    for (const fallback of FALLBACK_ARTICLE_URLS) {
+        urls.add(fallback);
+    }
+
+    return Array.from(urls);
+}
+
+function extractWinner(bodyText: string): string | undefined {
+    const patterns = [
+        /落札(?:者|業者|事業者)(?:名)?[：:\s]*([^\s。、]{2,40})/u,
+        /契約(?:の)?相手方[：:\s]*([^\s。、]{2,40})/u,
+        /受託(?:候補)?者[：:\s]*([^\s。、]{2,40})/u,
+    ];
+    for (const pattern of patterns) {
+        const match = bodyText.match(pattern);
+        const winner = match?.[1]?.trim();
+        if (winner && !/^[0-9,]+$/.test(winner)) return winner;
+    }
+    return undefined;
+}
+
 async function scrapeAnnouncementPages(): Promise<BiddingItem[]> {
     const items: BiddingItem[] = [];
+    const articleUrls = await resolveArticleUrls();
+    console.log(`[川西町] 入札関連記事 ${articleUrls.length}件を解決`);
 
-    for (const url of ANNOUNCEMENT_URLS) {
+    for (const url of articleUrls) {
         try {
             const res = await axios.get(url, { headers: HEADERS, timeout: 20000 });
             const $ = cheerio.load(res.data);
             const title = $('h1').first().text().replace(/\s+/g, ' ').trim();
-            const announcementDate = parseJapaneseDate($('body').text());
+            const bodyText = $('body').text().replace(/\s+/g, ' ');
+            const announcementDate = parseJapaneseDate(bodyText);
             if (!title) continue;
 
+            const isResultPage = /(入札結果|開札結果|落札者|契約の相手方)/.test(title + bodyText);
+            const winningContractor = isResultPage ? extractWinner(bodyText) : undefined;
+            const isFailed = isResultPage && /(不調|不落|中止|取止め)/.test(bodyText);
+
+            const id = buildId(announcementDate, title);
+            if (items.some(existing => existing.id === id)) continue;
+
             items.push({
-                id: buildId(announcementDate, title),
+                id,
                 municipality: '川西町',
                 title,
                 type: classifyType(title),
                 announcementDate,
-                biddingDate: parseJapaneseDate($('body').text().match(/開札日時[\s\S]{0,100}/)?.[0] || '') || undefined,
+                biddingDate: parseJapaneseDate(bodyText.match(/開札日時?[\s\S]{0,100}/)?.[0] || '') || undefined,
                 link: url,
-                status: '受付中',
+                status: isFailed ? '不調' : winningContractor ? '落札' : isResultPage ? '受付終了' : '受付中',
+                winningContractor,
             });
         } catch {
             // Skip missing historical pages.
