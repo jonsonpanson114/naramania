@@ -151,6 +151,28 @@ npx tsx src/scrapers/index.ts
 - `npm run validate:quality` … 保存済みデータに対して警告
 - `npm run audit:live-sources` … 公開サイトへ実アクセスして自治体ごとに
   `公告N件 / 結果N件` を出力し、片側0件なら警告
+- `npm run report:coverage` … 上記の結果を自治体ごとの表にして出力
+  （GitHub Actions 上では実行結果画面の Summary に表示される）
+
+### 収集元の検証（PC不要）
+
+スクレイパーを直したとき、実サイトに対して効いているかを確認する手順。
+
+GitHub の **Actions → Verify Source Coverage → Run workflow** で
+ブランチを選んで実行すると、実サイトへアクセスして自治体ごとの
+`公告N件 / 結果N件` が実行結果画面に表で出る。ブラウザだけで完結する。
+
+このワークフローは `permissions: contents: read` で **commit も push もしない**ため、
+ブランチ上（PRレビュー中）で実行しても main に影響しない。
+
+対して `daily_scrape` と `live_source_audit` は結果を main に commit & push する。
+こちらは main 以外での実行時に commit/push をスキップするガードを入れてある
+（ガードが無かった頃は、ブランチ上で手動実行するとそのブランチの中身が
+main へ push されてしまう状態だった）。
+
+なお **`workflow_dispatch` はワークフローファイルが default ブランチ(main)に
+存在しないと実行ボタンが出ない**（GitHubの仕様）。新しい検証ワークフローを
+追加した直後は、先にそれを main へ入れてから対象ブランチを選んで実行する。
 
 ### データ品質フィルタ
 

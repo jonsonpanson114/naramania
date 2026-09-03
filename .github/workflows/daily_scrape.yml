@@ -77,7 +77,18 @@ jobs:
           NODE_ENV: production
 
       - name: Commit and Push changes
+        env:
+          # main 以外（ブランチでの手動実行など）では commit / push しない。
+          # 以前はこのガードが無く、末尾が無条件の `git push origin main` だったため、
+          # ブランチ上で手動実行するとそのブランチの中身がそのまま main へ入ってしまう
+          # 状態だった（レビュー前のコードが本番に出る事故になりうる）。
+          IS_MAIN: ${{ github.ref == 'refs/heads/main' }}
+          CURRENT_REF: ${{ github.ref }}
         run: |
+          if [ "$IS_MAIN" != "true" ]; then
+            echo "::notice::main ブランチ以外での実行のため commit/push をスキップしました (ref=$CURRENT_REF)"
+            exit 0
+          fi
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add scraper_result.json scraper_quality.json municipality_snapshots.json quality_watch_report.json snapshot_coverage_report.json opening_result_updates.json rejected_items_report.json market_items.json
