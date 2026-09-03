@@ -1,12 +1,38 @@
 {
-  "generatedAt": "2026-09-02T10:53:12.036Z",
+  "generatedAt": "2026-09-03T05:51:22.120Z",
   "source": "daily_scrape",
-  "keptCount": 286,
-  "municipalityCount": 24,
+  "municipalityLastScraped": {
+    "奈良市": "2026-09-03T05:51:22.120Z",
+    "橿原市": "2026-09-03T05:51:22.120Z",
+    "生駒市": "2026-09-03T05:51:22.120Z",
+    "大和高田市": "2026-09-03T05:51:22.120Z",
+    "大和郡山市": "2026-09-03T05:51:22.120Z",
+    "葛城市": "2026-09-03T05:51:22.120Z",
+    "五條市": "2026-09-03T05:51:22.120Z",
+    "御所市": "2026-09-03T05:51:22.120Z",
+    "天理市": "2026-09-03T05:51:22.120Z",
+    "桜井市": "2026-09-03T05:51:22.120Z",
+    "宇陀市": "2026-09-03T05:51:22.120Z",
+    "田原本町": "2026-09-03T05:51:22.120Z",
+    "広陵町": "2026-09-03T05:51:22.120Z",
+    "香芝市": "2026-09-03T05:51:22.120Z",
+    "川西町": "2026-09-03T05:51:22.120Z",
+    "山添村": "2026-09-03T05:51:22.120Z",
+    "平群町": "2026-09-03T05:51:22.120Z",
+    "三宅町": "2026-09-03T05:51:22.120Z",
+    "安堵町": "2026-09-03T05:51:22.120Z",
+    "高取町": "2026-09-03T05:51:22.120Z",
+    "斑鳩町": "2026-09-03T05:51:22.120Z",
+    "三郷町": "2026-09-03T05:51:22.120Z",
+    "王寺町": "2026-09-03T05:51:22.120Z",
+    "大淀町": "2026-09-03T05:51:22.120Z"
+  },
+  "scrapedCount": 2387,
+  "keptCount": 288,
+  "rejectedCount": 2122,
   "oldestAnnouncementDate": "2025-02-02",
   "latestAnnouncementDate": "2026-09-02",
-  "scrapedCount": 2382,
-  "rejectedCount": 2119,
+  "municipalityCount": 24,
   "municipalityAudit": {
     "expectedMunicipalityCount": 25,
     "coveredMunicipalityCount": 24,
@@ -34,8 +60,8 @@
       },
       {
         "municipality": "高取町",
-        "count": 22,
-        "changeFromPrevious": 0
+        "count": 24,
+        "changeFromPrevious": 2
       },
       {
         "municipality": "生駒市",
@@ -178,12 +204,476 @@
       }
     ]
   },
+  "sourceCoverage": {
+    "activeCount": 25,
+    "okCount": 25,
+    "missingErrorCount": 0,
+    "missingWarningCount": 0,
+    "results": [
+      {
+        "expectation": {
+          "municipality": "奈良県",
+          "minItems": 1,
+          "requiredLinkIncludes": [
+            "ppi.ebid-kouji-gyoumu.pref.nara.jp"
+          ],
+          "severity": "error"
+        },
+        "status": "ok",
+        "severity": "error",
+        "totalCount": 51,
+        "missingLinkIncludes": [],
+        "sourceCounts": {
+          "ppi.ebid-kouji-gyoumu.pref.nara.jp": 51
+        },
+        "message": "奈良県: 51件 / sources OK"
+      },
+      {
+        "expectation": {
+          "municipality": "奈良市",
+          "minItems": 1,
+          "requiredLinkIncludes": [
+            "nara.efftis.jp"
+          ],
+          "severity": "error"
+        },
+        "status": "ok",
+        "severity": "error",
+        "totalCount": 11,
+        "missingLinkIncludes": [],
+        "sourceCounts": {
+          "nara.efftis.jp": 11
+        },
+        "message": "奈良市: 11件 / sources OK"
+      },
+      {
+        "expectation": {
+          "municipality": "橿原市",
+          "minItems": 1,
+          "requiredLinkIncludes": [
+            "city.kashihara.nara.jp"
+          ],
+          "severity": "error"
+        },
+        "status": "ok",
+        "severity": "error",
+        "totalCount": 32,
+        "missingLinkIncludes": [],
+        "sourceCounts": {
+          "city.kashihara.nara.jp": 32
+        },
+        "message": "橿原市: 32件 / sources OK"
+      },
+      {
+        "expectation": {
+          "municipality": "生駒市",
+          "minItems": 1,
+          "requiredLinkIncludes": [
+            "epi-cloud.fwd.ne.jp"
+          ],
+          "severity": "error"
+        },
+        "status": "ok",
+        "severity": "error",
+        "totalCount": 22,
+        "missingLinkIncludes": [],
+        "sourceCounts": {
+          "epi-cloud.fwd.ne.jp": 22
+        },
+        "message": "生駒市: 22件 / sources OK"
+      },
+      {
+        "expectation": {
+          "municipality": "大和高田市",
+          "minItems": 0,
+          "requiredLinkIncludes": [
+            "city.yamatotakada.nara.jp"
+          ],
+          "severity": "error"
+        },
+        "status": "ok",
+        "severity": "error",
+        "totalCount": 0,
+        "missingLinkIncludes": [
+          "city.yamatotakada.nara.jp"
+        ],
+        "sourceCounts": {
+          "city.yamatotakada.nara.jp": 0
+        },
+        "message": "大和高田市: 対象案件なし / filtered scope OK"
+      },
+      {
+        "expectation": {
+          "municipality": "大和郡山市",
+          "minItems": 1,
+          "requiredLinkIncludes": [
+            "city.yamatokoriyama.lg.jp"
+          ],
+          "severity": "error"
+        },
+        "status": "ok",
+        "severity": "error",
+        "totalCount": 19,
+        "missingLinkIncludes": [],
+        "sourceCounts": {
+          "city.yamatokoriyama.lg.jp": 19
+        },
+        "message": "大和郡山市: 19件 / sources OK"
+      },
+      {
+        "expectation": {
+          "municipality": "葛城市",
+          "minItems": 1,
+          "requiredLinkIncludes": [
+            "city.katsuragi.nara.jp",
+            "epi-cloud.fwd.ne.jp"
+          ],
+          "severity": "error"
+        },
+        "status": "ok",
+        "severity": "error",
+        "totalCount": 25,
+        "missingLinkIncludes": [],
+        "sourceCounts": {
+          "city.katsuragi.nara.jp": 15,
+          "epi-cloud.fwd.ne.jp": 10
+        },
+        "message": "葛城市: 25件 / sources OK"
+      },
+      {
+        "expectation": {
+          "municipality": "五條市",
+          "minItems": 1,
+          "requiredLinkIncludes": [
+            "city.gojo.lg.jp",
+            "epi-cloud.fwd.ne.jp"
+          ],
+          "severity": "error"
+        },
+        "status": "ok",
+        "severity": "error",
+        "totalCount": 21,
+        "missingLinkIncludes": [],
+        "sourceCounts": {
+          "city.gojo.lg.jp": 4,
+          "epi-cloud.fwd.ne.jp": 17
+        },
+        "message": "五條市: 21件 / sources OK"
+      },
+      {
+        "expectation": {
+          "municipality": "御所市",
+          "minItems": 1,
+          "requiredLinkIncludes": [
+            "city.gose.nara.jp"
+          ],
+          "severity": "error"
+        },
+        "status": "ok",
+        "severity": "error",
+        "totalCount": 2,
+        "missingLinkIncludes": [],
+        "sourceCounts": {
+          "city.gose.nara.jp": 2
+        },
+        "message": "御所市: 2件 / sources OK"
+      },
+      {
+        "expectation": {
+          "municipality": "天理市",
+          "minItems": 1,
+          "requiredLinkIncludes": [
+            "city.tenri.nara.jp"
+          ],
+          "severity": "error"
+        },
+        "status": "ok",
+        "severity": "error",
+        "totalCount": 4,
+        "missingLinkIncludes": [],
+        "sourceCounts": {
+          "city.tenri.nara.jp": 4
+        },
+        "message": "天理市: 4件 / sources OK"
+      },
+      {
+        "expectation": {
+          "municipality": "桜井市",
+          "minItems": 1,
+          "requiredLinkIncludes": [
+            "city.sakurai.lg.jp"
+          ],
+          "severity": "error"
+        },
+        "status": "ok",
+        "severity": "error",
+        "totalCount": 3,
+        "missingLinkIncludes": [],
+        "sourceCounts": {
+          "city.sakurai.lg.jp": 3
+        },
+        "message": "桜井市: 3件 / sources OK"
+      },
+      {
+        "expectation": {
+          "municipality": "宇陀市",
+          "minItems": 1,
+          "requiredLinkIncludes": [
+            "epi-cloud.fwd.ne.jp"
+          ],
+          "severity": "error"
+        },
+        "status": "ok",
+        "severity": "error",
+        "totalCount": 18,
+        "missingLinkIncludes": [],
+        "sourceCounts": {
+          "epi-cloud.fwd.ne.jp": 18
+        },
+        "message": "宇陀市: 18件 / sources OK"
+      },
+      {
+        "expectation": {
+          "municipality": "田原本町",
+          "minItems": 1,
+          "requiredLinkIncludes": [
+            "tawaramoto.efftis.jp"
+          ],
+          "severity": "error"
+        },
+        "status": "ok",
+        "severity": "error",
+        "totalCount": 3,
+        "missingLinkIncludes": [],
+        "sourceCounts": {
+          "tawaramoto.efftis.jp": 3
+        },
+        "message": "田原本町: 3件 / sources OK"
+      },
+      {
+        "expectation": {
+          "municipality": "広陵町",
+          "minItems": 1,
+          "requiredLinkIncludes": [
+            "town.koryo.nara.jp"
+          ],
+          "severity": "error"
+        },
+        "status": "ok",
+        "severity": "error",
+        "totalCount": 5,
+        "missingLinkIncludes": [],
+        "sourceCounts": {
+          "town.koryo.nara.jp": 5
+        },
+        "message": "広陵町: 5件 / sources OK"
+      },
+      {
+        "expectation": {
+          "municipality": "香芝市",
+          "minItems": 1,
+          "requiredLinkIncludes": [
+            "city.kashiba.lg.jp"
+          ],
+          "severity": "error"
+        },
+        "status": "ok",
+        "severity": "error",
+        "totalCount": 16,
+        "missingLinkIncludes": [],
+        "sourceCounts": {
+          "city.kashiba.lg.jp": 5
+        },
+        "message": "香芝市: 16件 / sources OK"
+      },
+      {
+        "expectation": {
+          "municipality": "川西町",
+          "minItems": 1,
+          "requiredLinkIncludes": [
+            "town.nara-kawanishi.lg.jp"
+          ],
+          "severity": "error"
+        },
+        "status": "ok",
+        "severity": "error",
+        "totalCount": 5,
+        "missingLinkIncludes": [],
+        "sourceCounts": {
+          "town.nara-kawanishi.lg.jp": 5
+        },
+        "message": "川西町: 5件 / sources OK"
+      },
+      {
+        "expectation": {
+          "municipality": "三宅町",
+          "minItems": 1,
+          "requiredLinkIncludes": [
+            "town.miyake.lg.jp"
+          ],
+          "severity": "error"
+        },
+        "status": "ok",
+        "severity": "error",
+        "totalCount": 6,
+        "missingLinkIncludes": [],
+        "sourceCounts": {
+          "town.miyake.lg.jp": 6
+        },
+        "message": "三宅町: 6件 / sources OK"
+      },
+      {
+        "expectation": {
+          "municipality": "山添村",
+          "minItems": 1,
+          "requiredLinkIncludes": [
+            "vill.yamazoe.nara.jp"
+          ],
+          "severity": "error"
+        },
+        "status": "ok",
+        "severity": "error",
+        "totalCount": 3,
+        "missingLinkIncludes": [],
+        "sourceCounts": {
+          "vill.yamazoe.nara.jp": 3
+        },
+        "message": "山添村: 3件 / sources OK"
+      },
+      {
+        "expectation": {
+          "municipality": "平群町",
+          "minItems": 1,
+          "requiredLinkIncludes": [
+            "town.heguri.nara.jp"
+          ],
+          "severity": "error"
+        },
+        "status": "ok",
+        "severity": "error",
+        "totalCount": 2,
+        "missingLinkIncludes": [],
+        "sourceCounts": {
+          "town.heguri.nara.jp": 2
+        },
+        "message": "平群町: 2件 / sources OK"
+      },
+      {
+        "expectation": {
+          "municipality": "安堵町",
+          "minItems": 0,
+          "requiredLinkIncludes": [
+            "town.ando.nara.jp"
+          ],
+          "severity": "error"
+        },
+        "status": "ok",
+        "severity": "error",
+        "totalCount": 2,
+        "missingLinkIncludes": [],
+        "sourceCounts": {
+          "town.ando.nara.jp": 2
+        },
+        "message": "安堵町: 2件 / sources OK"
+      },
+      {
+        "expectation": {
+          "municipality": "高取町",
+          "minItems": 1,
+          "requiredLinkIncludes": [
+            "town.takatori.nara.jp"
+          ],
+          "severity": "error"
+        },
+        "status": "ok",
+        "severity": "error",
+        "totalCount": 24,
+        "missingLinkIncludes": [],
+        "sourceCounts": {
+          "town.takatori.nara.jp": 24
+        },
+        "message": "高取町: 24件 / sources OK"
+      },
+      {
+        "expectation": {
+          "municipality": "斑鳩町",
+          "minItems": 1,
+          "requiredLinkIncludes": [
+            "town.ikaruga.nara.jp"
+          ],
+          "severity": "error"
+        },
+        "status": "ok",
+        "severity": "error",
+        "totalCount": 2,
+        "missingLinkIncludes": [],
+        "sourceCounts": {
+          "town.ikaruga.nara.jp": 2
+        },
+        "message": "斑鳩町: 2件 / sources OK"
+      },
+      {
+        "expectation": {
+          "municipality": "三郷町",
+          "minItems": 1,
+          "requiredLinkIncludes": [
+            "epi-cloud.fwd.ne.jp"
+          ],
+          "severity": "error"
+        },
+        "status": "ok",
+        "severity": "error",
+        "totalCount": 3,
+        "missingLinkIncludes": [],
+        "sourceCounts": {
+          "epi-cloud.fwd.ne.jp": 3
+        },
+        "message": "三郷町: 3件 / sources OK"
+      },
+      {
+        "expectation": {
+          "municipality": "王寺町",
+          "minItems": 0,
+          "requiredLinkIncludes": [
+            "town.oji.nara.jp"
+          ],
+          "severity": "error"
+        },
+        "status": "ok",
+        "severity": "error",
+        "totalCount": 2,
+        "missingLinkIncludes": [],
+        "sourceCounts": {
+          "town.oji.nara.jp": 2
+        },
+        "message": "王寺町: 2件 / sources OK"
+      },
+      {
+        "expectation": {
+          "municipality": "大淀町",
+          "minItems": 1,
+          "requiredLinkIncludes": [
+            "town.oyodo.lg.jp"
+          ],
+          "severity": "error"
+        },
+        "status": "ok",
+        "severity": "error",
+        "totalCount": 7,
+        "missingLinkIncludes": [],
+        "sourceCounts": {
+          "town.oyodo.lg.jp": 7
+        },
+        "message": "大淀町: 7件 / sources OK"
+      }
+    ]
+  },
   "intelligence": {
     "itemsWithPdf": 80,
     "itemsWithDescription": 50,
     "intelligenceExtractedCount": 49,
     "geminiExtractedCount": 49,
     "taggedCount": 49,
-    "lastAugmentedAt": "2026-09-02T10:53:12.794Z"
+    "lastAugmentedAt": "2026-09-03T05:51:23.038Z"
   }
 }

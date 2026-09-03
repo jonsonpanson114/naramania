@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-09-02T11:00:48.066Z",
+  "generatedAt": "2026-09-03T05:56:13.177Z",
   "checkedMunicipalityCount": 24,
-  "expectedItemCount": 286,
-  "matchedItemCount": 286,
+  "expectedItemCount": 288,
+  "matchedItemCount": 288,
   "missingItemCount": 0,
-  "duplicateTitleGroupCount": 23,
-  "duplicateTitleItemCount": 48,
+  "duplicateTitleGroupCount": 24,
+  "duplicateTitleItemCount": 51,
   "results": [
     {
       "municipality": "奈良県",
@@ -42,12 +42,12 @@
     },
     {
       "municipality": "高取町",
-      "snapshotCount": 22,
-      "expectedCount": 22,
-      "matchedCount": 22,
+      "snapshotCount": 24,
+      "expectedCount": 24,
+      "matchedCount": 24,
       "missingCount": 0,
-      "duplicateTitleGroupCount": 6,
-      "duplicateTitleItemCount": 13,
+      "duplicateTitleGroupCount": 7,
+      "duplicateTitleItemCount": 16,
       "missingItems": [],
       "status": "ok"
     },

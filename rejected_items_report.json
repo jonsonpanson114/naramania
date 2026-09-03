@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-02T10:53:12.038Z",
-  "totalRejected": 8892,
+  "generatedAt": "2026-09-03T05:51:22.122Z",
+  "totalRejected": 8904,
   "totalBorderlineRescued": 30,
   "byMunicipality": {
     "奈良市": {
@@ -44,7 +44,7 @@
       "borderlineRescued": 0
     },
     "宇陀市": {
-      "rejected": 408,
+      "rejected": 420,
       "borderlineRescued": 3
     },
     "田原本町": {
@@ -44259,6 +44259,36 @@
     },
     {
       "municipality": "宇陀市",
+      "title": "【第08-A024号】道路維持事業 市道玉立２号線舗装補修工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "宇陀市",
+      "title": "【第08-A024号】道路維持事業 市道玉立２号線舗装補修工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "宇陀市",
+      "title": "【第08-B003号】市町村治山事業 菟田野下芳野地区治山工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "宇陀市",
+      "title": "【第08-B003号】市町村治山事業 菟田野下芳野地区治山工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "宇陀市",
       "title": "10-R8GT3-003 令和8年度 内山浄水場取水施設撤去工事",
       "reason": "infra_exclude_keyword",
       "matchedKeywords": [
@@ -44321,60 +44351,6 @@
     {
       "municipality": "宇陀市",
       "title": "【第08-A016号】道路維持事業 市道八滝1号線舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-A017号】道路維持事業 市道問屋坂線舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-A017号】道路維持事業 市道問屋坂線舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-A022号】道路維持事業 市道古市場守道線他舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-A022号】道路維持事業 市道古市場守道線他舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-A010号】道路維持事業 市道菟田野35号線舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-A010号】道路維持事業 市道菟田野35号線舗装補修工事 ",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
         "道路",
@@ -44742,6 +44718,60 @@
       "title": "【第08-A005号】都市公園等維持修繕事業 防草シート設置工事 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
+    },
+    {
+      "municipality": "宇陀市",
+      "title": "【第08-A010号】道路維持事業 市道菟田野35号線舗装補修工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "宇陀市",
+      "title": "【第08-A010号】道路維持事業 市道菟田野35号線舗装補修工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "宇陀市",
+      "title": "【第08-A022号】道路維持事業 市道古市場守道線他舗装補修工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "宇陀市",
+      "title": "【第08-A022号】道路維持事業 市道古市場守道線他舗装補修工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "宇陀市",
+      "title": "【第08-A017号】道路維持事業 市道問屋坂線舗装補修工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "宇陀市",
+      "title": "【第08-A017号】道路維持事業 市道問屋坂線舗装補修工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
     },
     {
       "municipality": "宇陀市",
@@ -45394,6 +45424,36 @@
     },
     {
       "municipality": "宇陀市",
+      "title": "【第08-A024号】道路維持事業 市道玉立２号線舗装補修工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "宇陀市",
+      "title": "【第08-A024号】道路維持事業 市道玉立２号線舗装補修工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "宇陀市",
+      "title": "【第08-B003号】市町村治山事業 菟田野下芳野地区治山工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "宇陀市",
+      "title": "【第08-B003号】市町村治山事業 菟田野下芳野地区治山工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "宇陀市",
       "title": "10-R8GT3-003 令和8年度 内山浄水場取水施設撤去工事",
       "reason": "infra_exclude_keyword",
       "matchedKeywords": [
@@ -45456,60 +45516,6 @@
     {
       "municipality": "宇陀市",
       "title": "【第08-A016号】道路維持事業 市道八滝1号線舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-A017号】道路維持事業 市道問屋坂線舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-A017号】道路維持事業 市道問屋坂線舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-A022号】道路維持事業 市道古市場守道線他舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-A022号】道路維持事業 市道古市場守道線他舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-A010号】道路維持事業 市道菟田野35号線舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-A010号】道路維持事業 市道菟田野35号線舗装補修工事 ",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
         "道路",
@@ -45877,6 +45883,60 @@
       "title": "【第08-A005号】都市公園等維持修繕事業 防草シート設置工事 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
+    },
+    {
+      "municipality": "宇陀市",
+      "title": "【第08-A010号】道路維持事業 市道菟田野35号線舗装補修工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "宇陀市",
+      "title": "【第08-A010号】道路維持事業 市道菟田野35号線舗装補修工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "宇陀市",
+      "title": "【第08-A022号】道路維持事業 市道古市場守道線他舗装補修工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "宇陀市",
+      "title": "【第08-A022号】道路維持事業 市道古市場守道線他舗装補修工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "宇陀市",
+      "title": "【第08-A017号】道路維持事業 市道問屋坂線舗装補修工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "宇陀市",
+      "title": "【第08-A017号】道路維持事業 市道問屋坂線舗装補修工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
     },
     {
       "municipality": "宇陀市",
@@ -46529,6 +46589,36 @@
     },
     {
       "municipality": "宇陀市",
+      "title": "【第08-A024号】道路維持事業 市道玉立２号線舗装補修工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "宇陀市",
+      "title": "【第08-A024号】道路維持事業 市道玉立２号線舗装補修工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "宇陀市",
+      "title": "【第08-B003号】市町村治山事業 菟田野下芳野地区治山工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "宇陀市",
+      "title": "【第08-B003号】市町村治山事業 菟田野下芳野地区治山工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "宇陀市",
       "title": "10-R8GT3-003 令和8年度 内山浄水場取水施設撤去工事",
       "reason": "infra_exclude_keyword",
       "matchedKeywords": [
@@ -46591,60 +46681,6 @@
     {
       "municipality": "宇陀市",
       "title": "【第08-A016号】道路維持事業 市道八滝1号線舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-A017号】道路維持事業 市道問屋坂線舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-A017号】道路維持事業 市道問屋坂線舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-A022号】道路維持事業 市道古市場守道線他舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-A022号】道路維持事業 市道古市場守道線他舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-A010号】道路維持事業 市道菟田野35号線舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "宇陀市",
-      "title": "【第08-A010号】道路維持事業 市道菟田野35号線舗装補修工事 ",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
         "道路",
@@ -47012,6 +47048,60 @@
       "title": "【第08-A005号】都市公園等維持修繕事業 防草シート設置工事 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
+    },
+    {
+      "municipality": "宇陀市",
+      "title": "【第08-A010号】道路維持事業 市道菟田野35号線舗装補修工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "宇陀市",
+      "title": "【第08-A010号】道路維持事業 市道菟田野35号線舗装補修工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "宇陀市",
+      "title": "【第08-A022号】道路維持事業 市道古市場守道線他舗装補修工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "宇陀市",
+      "title": "【第08-A022号】道路維持事業 市道古市場守道線他舗装補修工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "宇陀市",
+      "title": "【第08-A017号】道路維持事業 市道問屋坂線舗装補修工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "宇陀市",
+      "title": "【第08-A017号】道路維持事業 市道問屋坂線舗装補修工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
     },
     {
       "municipality": "宇陀市",
