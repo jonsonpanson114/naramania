@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-02T12:01:44.032Z",
-  "currentItemCount": 286,
+  "generatedAt": "2026-09-03T06:48:56.026Z",
+  "currentItemCount": 288,
   "checkedMunicipalities": [
     "奈良市",
     "橿原市",
@@ -116,9 +116,9 @@
     },
     {
       "municipality": "宇陀市",
-      "rawCount": 107,
+      "rawCount": 110,
       "keptCount": 18,
-      "rejectedCount": 89,
+      "rejectedCount": 92,
       "warnings": [],
       "errors": []
     },
@@ -188,8 +188,8 @@
     },
     {
       "municipality": "高取町",
-      "rawCount": 53,
-      "keptCount": 22,
+      "rawCount": 55,
+      "keptCount": 24,
       "rejectedCount": 31,
       "warnings": [],
       "errors": []
@@ -229,11 +229,11 @@
   ],
   "coverage": {
     "checkedMunicipalityCount": 24,
-    "expectedItemCount": 263,
-    "matchedItemCount": 263,
+    "expectedItemCount": 265,
+    "matchedItemCount": 265,
     "missingItemCount": 0,
-    "duplicateTitleGroupCount": 35,
-    "duplicateTitleItemCount": 77,
+    "duplicateTitleGroupCount": 36,
+    "duplicateTitleItemCount": 80,
     "results": [
       {
         "municipality": "橿原市",
@@ -270,12 +270,12 @@
       },
       {
         "municipality": "高取町",
-        "snapshotCount": 53,
-        "expectedCount": 22,
-        "matchedCount": 22,
+        "snapshotCount": 55,
+        "expectedCount": 24,
+        "matchedCount": 24,
         "missingCount": 0,
-        "duplicateTitleGroupCount": 6,
-        "duplicateTitleItemCount": 13,
+        "duplicateTitleGroupCount": 7,
+        "duplicateTitleItemCount": 16,
         "missingItems": [],
         "status": "ok"
       },
@@ -314,7 +314,7 @@
       },
       {
         "municipality": "宇陀市",
-        "snapshotCount": 107,
+        "snapshotCount": 110,
         "expectedCount": 18,
         "matchedCount": 18,
         "missingCount": 0,
