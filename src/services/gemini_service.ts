@@ -171,6 +171,70 @@ export async function extractBiddingInfoFromText(text: string): Promise<Extracte
     return null;
 }
 
+/**
+ * 入札公告PDFから案件名だけを取り出す。
+ *
+ * 高取町のようにHTML側へ案件名を出さず、スキャン画像のPDFだけを貼る自治体があり、
+ * pdf-parse ではテキスト層が無いため1文字も取れない。案件名が無いと
+ * 「入札情報（令和8年9月29日執行）」のような見出ししか残らず、
+ * 建築案件かどうかを判定できずに丸ごと除外されてしまう。
+ *
+ * 既存の BIDDING_INFO_SCHEMA に項目を足すと全自治体の抽出結果に影響するため、
+ * 案件名専用の最小スキーマで独立させている。
+ */
+export async function extractAnnouncementTitleFromPDF(
+    pdfBuffer: Buffer,
+    mimeType: string = "application/pdf",
+): Promise<string | null> {
+    const apiKey = process.env.GOOGLE_GENERATIVE_AI_API_KEY || process.env.GEMINI_API_KEY || "";
+    if (!apiKey) return null;
+
+    const genAI = new GoogleGenerativeAI(apiKey);
+    const prompt = `
+この入札公告から「工事名」「業務名」にあたる案件名を1つだけ抜き出してください。
+原文の表記をそのまま使い、番号・記号・説明文は含めないでください。
+案件名が読み取れない場合は空文字を返してください。
+`;
+
+    for (const modelName of PDF_EXTRACTION_MODELS) {
+        const model = genAI.getGenerativeModel({
+            model: modelName,
+            generationConfig: {
+                responseMimeType: "application/json",
+                responseSchema: {
+                    type: "object",
+                    properties: { title: { type: "string" } },
+                    required: ["title"],
+                } as never,
+            },
+        });
+
+        let retries = 3;
+        while (retries > 0) {
+            try {
+                const result = await model.generateContent([
+                    prompt,
+                    { inlineData: { data: pdfBuffer.toString("base64"), mimeType } },
+                ]);
+                const parsed = JSON.parse(result.response.text()) as { title?: string };
+                return parsed.title?.trim() || null;
+            } catch (error: unknown) {
+                const status = getErrorStatus(error);
+                if (isModelUnavailableStatus(status)) break;
+                if (isRetryableStatus(status) && retries > 1) {
+                    await new Promise(resolve => setTimeout(resolve, status === 429 ? 20000 : 10000));
+                    retries--;
+                    continue;
+                }
+                console.error(`Gemini 案件名抽出エラー (${modelName}):`, error);
+                return null;
+            }
+        }
+    }
+
+    return null;
+}
+
 export async function extractTargetedResultsFromPDF(
     pdfBuffer: Buffer,
     titles: string[],

@@ -106,6 +106,24 @@ async function getDataFrame(page: Page): Promise<Frame | null> {
     return null;
 }
 
+/**
+ * 入口URLを正規化する。
+ *
+ * logon 形式のURLは、本体(KF001ShowAction)を window.open で開くだけの誘導ページ。
+ * これを踏むとブラウザ上にウィンドウが2つある状態になり、EPI側が
+ * 「複数ウインドウや複数タブでの操作は行えません」(NoMultipleWindowTop.html)と
+ * 判定して、以降どのURLを開いても業務区分が出なくなる。
+ * つまり後ろに正しいURLを並べてもフォールバックが効かない。
+ * 開き先は KF001ShowAction と同一なので、最初から差し替えて重複を除く。
+ */
+function normalizeEntryUrls(entryUrls: string[]): string[] {
+    const normalized = entryUrls.map(url => url.replace('/do/logon?', '/do/KF001ShowAction?'));
+    return Array.from(new Set(normalized));
+}
+
+/** EPIがメンテナンス停止中であることを示す openCategory の戻り値 */
+const EPI_MAINTENANCE = '__EPI_MAINTENANCE__';
+
 /** 入口URLを順に試し、業務区分メニューが出た画面を開く */
 async function openCategory(page: Page, entryUrls: string[], categoryLabel: string): Promise<string | null> {
     for (const entryUrl of entryUrls) {
@@ -114,12 +132,22 @@ async function openCategory(page: Page, entryUrls: string[], categoryLabel: stri
             await page.waitForTimeout(2000);
 
             const bodyText = ((await page.locator('body').innerText().catch(() => '')) || '').replace(/\s+/g, ' ');
-            if (bodyText.includes('サービス停止中') && bodyText.includes('情報公開')) {
-                return null;
+            // EPIは夜間などに停止する。以前は「情報公開」も同時に含む場合しか停止と
+            // みなしておらず、停止中でも「業務区分を開けませんでした」という
+            // スクレイパー側の不具合に見える警告が出ていた。停止と不具合は
+            // 対処がまったく違うので、文言で区別できるようにする。
+            if (bodyText.includes('サービス停止中')) {
+                return EPI_MAINTENANCE;
             }
+            // logon 形式のURLは本体を別ウィンドウで開く誘導ページで、この画面自体には
+            // 業務区分が無い。次の入口URLへ回さないと、正しいURLが後ろに控えていても
+            // 「業務区分を開けませんでした」で終わってしまう(桜井市が0件だった原因)。
+            if (bodyText.includes('ポップアップ')) continue;
 
-            const category = page.locator('span.ATYPE').filter({ hasText: categoryLabel }).first();
-            if (await category.count() === 0) continue;
+            // 業務区分は入口URLや遷移状況によって、トップ文書ではなくフレーム内に出る。
+            // page.locator はトップ文書しか見ないため、全フレームを対象に探す。
+            const category = await findCategoryLocator(page, categoryLabel);
+            if (!category) continue;
 
             await category.click({ force: true, timeout: 30000 });
             await page.waitForTimeout(3000);
@@ -127,6 +155,15 @@ async function openCategory(page: Page, entryUrls: string[], categoryLabel: stri
         } catch {
             // 次の入口URLへ
         }
+    }
+    return null;
+}
+
+/** 業務区分リンクを全フレームから探す */
+async function findCategoryLocator(page: Page, categoryLabel: string) {
+    for (const frame of page.frames()) {
+        const candidate = frame.locator('span.ATYPE').filter({ hasText: categoryLabel }).first();
+        if (await candidate.count().catch(() => 0)) return candidate;
     }
     return null;
 }
@@ -299,10 +336,14 @@ async function scrapeWithBrowser(options: EpiScrapeOptions, browser: Browser): P
     const nendos = options.nendos ?? defaultEpiNendos();
     const includeAnnouncements = options.includeAnnouncements ?? true;
     const includeResults = options.includeResults ?? true;
-    const fallbackLink = options.entryUrls[0];
+    const entryUrls = normalizeEntryUrls(options.entryUrls);
+    const fallbackLink = entryUrls[0];
 
     const page = await browser.newPage();
     page.setDefaultTimeout(120000);
+    // 何かの拍子に別ウィンドウが開くと EPI が複数ウインドウ操作とみなして
+    // 以降の画面を返さなくなるため、開いた時点で必ず閉じて1枚に保つ。
+    page.on('popup', popup => { popup.close().catch(() => { }); });
 
     const collect = (items: BiddingItem[]) => {
         for (const item of items) {
@@ -335,7 +376,13 @@ async function scrapeWithBrowser(options: EpiScrapeOptions, browser: Browser): P
 
     for (const categoryLabel of categories) {
         for (const menu of menus) {
-            const opened = await openCategory(page, options.entryUrls, categoryLabel);
+            const opened = await openCategory(page, entryUrls, categoryLabel);
+            if (opened === EPI_MAINTENANCE) {
+                // 停止中は何度試しても同じなので、残りの区分・メニューは回さない。
+                warnings.push(`[${options.municipality}] EPIがサービス停止中のため取得をスキップしました(サイト側の一時停止。次回実行で復帰します)`);
+                await page.close().catch(() => undefined);
+                return { items: Array.from(itemsById.values()), warnings };
+            }
             if (!opened) {
                 warnings.push(`[${options.municipality}] EPI 業務区分「${categoryLabel}」を開けませんでした`);
                 continue;

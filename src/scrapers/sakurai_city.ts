@@ -9,12 +9,16 @@ const ANNOUNCE_URL = 'https://www.city.sakurai.lg.jp/sosiki/soumu/kanzaikeiyaku/
 // 市サイトだけを見ていたため落札者が1件も取れていなかった。公告・結果の両方を持つ
 // EPI を主線に加える（logon 形式・KF001ShowAction 形式のどちらでも入れるよう両方試す）。
 const EPI_ENTRY_URLS = [
-    'https://www.epi-cloud.fwd.ne.jp/koukai/do/logon?name1=06200640072006A0',
+    // KF001ShowAction を先に置く。logon 形式は本体を別ウィンドウで開く誘導ページで、
+    // これを先頭にすると業務区分が見つからず桜井市のEPIが常に0件だった。
     'https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=06200640072006A0',
+    'https://www.epi-cloud.fwd.ne.jp/koukai/do/logon?name1=06200640072006A0',
 ];
+// 個別記事URLの直指定。市が記事を消すと404を出し続けるため、
+// 404になったものは消す(9608.html は市側で削除済み)。
+// 本線はEPIなので、ここは市サイトにしか出ない案件の補完にとどめる。
 const SUPPLEMENTAL_URLS = [
     'https://www.city.sakurai.lg.jp/sosiki/kodomokateibu/kodomoseisakuka/kodomoen/8700.html',
-    'https://www.city.sakurai.lg.jp/sosiki/kyouikuiinkaijimukyoku/soumuka/teianbosyuukoubo/9608.html',
 ];
 const KNOWN_SAKURAI_ITEMS: BiddingItem[] = [
     {
