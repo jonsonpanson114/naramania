@@ -10,15 +10,14 @@ export type MunicipalitySourceExpectation = {
   requiredLinkIncludes: string[];
   severity?: CoverageSeverity;
   /**
-   * 公告側(まだ結果が出ていない案件)の最低件数。
-   * 「結果ページしか見ていない」状態を検知するための指標。
+   * ここでは公告・結果の最低件数を設定できるようにしない。
+   * この関数が受け取るのは建築フィルタ通過後の案件なので、
+   * 「公告ページを見ていない」と「公告は取れているが今回は全部土木だった」を
+   * 区別できず、恒久的な誤警告になる（大和高田市はEPIから公告86件・結果80件を
+   * 取得できているのに、全件が土木で除外されフィルタ後は公告0/結果0に見える）。
+   * 公告・結果の取りこぼし監視は、フィルタ前の件数で判定する
+   * scripts/audit_live_sources.ts の buildPhaseWarnings が担当する。
    */
-  minAnnouncements?: number;
-  /**
-   * 結果側(落札・不調)の最低件数。
-   * 「公告しか見ていない」状態を検知するための指標。
-   */
-  minResults?: number;
   /** 設定の意図を書き残すためのメモ（判定には使わない） */
   note?: string;
 };
@@ -38,8 +37,6 @@ export type MunicipalitySourceCoverageResult = {
   announcementCount: number;
   /** 結果側(落札・不調)の件数 */
   resultCount: number;
-  /** 公告・結果のどちらかが不足しているか */
-  missingPhases: ('announcement' | 'result')[];
   message: string;
 };
 
@@ -100,24 +97,17 @@ export function evaluateSourceCoverage(
     const hasEnoughItems = municipalityItems.length >= minItems;
     const allowsEmptyAfterFiltering = minItems === 0 && municipalityItems.length === 0;
 
+    // 公告・結果の件数は状況把握のためレポートに載せるだけで、判定には使わない。
+    // 理由は MunicipalitySourceExpectation のコメントを参照。
     const resultCount = municipalityItems.filter(isResultItem).length;
     const announcementCount = municipalityItems.length - resultCount;
-    const missingPhases: ('announcement' | 'result')[] = [];
-    if (!allowsEmptyAfterFiltering) {
-      if (announcementCount < (expectation.minAnnouncements ?? 0)) missingPhases.push('announcement');
-      if (resultCount < (expectation.minResults ?? 0)) missingPhases.push('result');
-    }
 
     const status: CoverageStatus =
       allowsEmptyAfterFiltering
-      || (hasEnoughItems && missingLinkIncludes.length === 0 && missingPhases.length === 0)
+      || (hasEnoughItems && missingLinkIncludes.length === 0)
         ? 'ok'
         : 'missing';
     const severity = severityOf(expectation.severity);
-
-    const phaseLabel = missingPhases
-      .map((phase) => (phase === 'announcement' ? '公告(受付中)が0件' : '入札結果(落札)が0件'))
-      .join(', ');
 
     return {
       expectation,
@@ -128,14 +118,12 @@ export function evaluateSourceCoverage(
       sourceCounts,
       announcementCount,
       resultCount,
-      missingPhases,
       message: allowsEmptyAfterFiltering
         ? `${expectation.municipality}: 対象案件なし / filtered scope OK`
         : status === 'ok'
         ? `${expectation.municipality}: ${municipalityItems.length}件 (公告${announcementCount}/結果${resultCount}) / sources OK`
         : `${expectation.municipality}: ${municipalityItems.length}件 (公告${announcementCount}/結果${resultCount})`
-          + `${missingLinkIncludes.length > 0 ? `、missing sources: ${missingLinkIncludes.join(', ')}` : ''}`
-          + `${phaseLabel ? `、${phaseLabel}` : ''}`,
+          + `${missingLinkIncludes.length > 0 ? `、missing sources: ${missingLinkIncludes.join(', ')}` : ''}`,
     };
   });
 

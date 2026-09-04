@@ -25,16 +25,6 @@
     {"municipality": "三郷町", "minItems": 1, "requiredLinkIncludes": ["epi-cloud.fwd.ne.jp"], "severity": "error"},
     {"municipality": "王寺町", "minItems": 0, "requiredLinkIncludes": ["town.oji.nara.jp"], "severity": "error"},
     {"municipality": "大淀町", "minItems": 1, "requiredLinkIncludes": ["town.oyodo.lg.jp"], "severity": "error"},
-    {"municipality": "大和高田市", "minItems": 1, "requiredLinkIncludes": ["epi-cloud.fwd.ne.jp"], "severity": "warning", "note": "入札情報公開サービス。市サイトだけでは案件が拾えない日が多い"},
-    {"municipality": "桜井市", "minItems": 1, "requiredLinkIncludes": ["epi-cloud.fwd.ne.jp"], "severity": "warning", "note": "電子入札情報システム。開札結果はこちらにしかない"},
-    {"municipality": "香芝市", "minItems": 1, "requiredLinkIncludes": ["epi-cloud.fwd.ne.jp"], "severity": "warning", "note": "入札情報公開サービス。公告(発注情報)・結果の両方を見る"},
-    {"municipality": "橿原市", "minItems": 0, "requiredLinkIncludes": [], "severity": "warning", "minAnnouncements": 1, "minResults": 1, "note": "公告(入札情報)と結果(開札情報)の両方を収集できているかの監視"},
-    {"municipality": "大和高田市", "minItems": 0, "requiredLinkIncludes": [], "severity": "warning", "minAnnouncements": 1, "minResults": 1, "note": "公告(入札情報)と結果(開札情報)の両方を収集できているかの監視"},
-    {"municipality": "広陵町", "minItems": 0, "requiredLinkIncludes": [], "severity": "warning", "minAnnouncements": 1, "minResults": 1, "note": "公告(入札情報)と結果(開札情報)の両方を収集できているかの監視"},
-    {"municipality": "香芝市", "minItems": 0, "requiredLinkIncludes": [], "severity": "warning", "minAnnouncements": 1, "minResults": 1, "note": "公告(入札情報)と結果(開札情報)の両方を収集できているかの監視"},
-    {"municipality": "天理市", "minItems": 0, "requiredLinkIncludes": [], "severity": "warning", "minAnnouncements": 1, "minResults": 1, "note": "公告(入札情報)と結果(開札情報)の両方を収集できているかの監視"},
-    {"municipality": "桜井市", "minItems": 0, "requiredLinkIncludes": [], "severity": "warning", "minAnnouncements": 1, "minResults": 1, "note": "公告(入札情報)と結果(開札情報)の両方を収集できているかの監視"},
-    {"municipality": "高取町", "minItems": 0, "requiredLinkIncludes": [], "severity": "warning", "minAnnouncements": 1, "minResults": 1, "note": "公告(入札情報)と結果(開札情報)の両方を収集できているかの監視"},
-    {"municipality": "川西町", "minItems": 0, "requiredLinkIncludes": [], "severity": "warning", "minAnnouncements": 1, "minResults": 1, "note": "公告(入札情報)と結果(開札情報)の両方を収集できているかの監視"}
+    {"municipality": "香芝市", "minItems": 1, "requiredLinkIncludes": ["epi-cloud.fwd.ne.jp"], "severity": "warning", "note": "入札情報公開サービス。公告(発注情報)・結果の両方を見る"}
   ]
 }

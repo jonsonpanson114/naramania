@@ -54,17 +54,23 @@ function isResultItem(item: BiddingItem): boolean {
  * 公告・結果のどちらか一方しか取れていない自治体を警告する。
  * 「結果ページしか見ていない」「公告しか見ていない」状態は
  * スクレイパーが動いているように見えるので、件数だけでは気づけない。
+ *
+ * 判定はフィルタ前(rawItems)で行う。このサイトは建築案件だけを残すため、
+ * フィルタ後の件数で数えると「公告ページを見ていない」と
+ * 「公告は取れているが今回は全部土木だった」を区別できない。
+ * 実際、大和高田市はEPIから公告86件・結果80件を取得できているのに
+ * 全件が土木で除外され、フィルタ後では公告0/結果0に見えていた。
  */
-function buildPhaseWarnings(municipality: string, keptItems: BiddingItem[]): string[] {
-  if (keptItems.length === 0) return [];
-  const resultCount = keptItems.filter(isResultItem).length;
-  const announcementCount = keptItems.length - resultCount;
+function buildPhaseWarnings(municipality: string, rawItems: BiddingItem[]): string[] {
+  if (rawItems.length === 0) return [];
+  const resultCount = rawItems.filter(isResultItem).length;
+  const announcementCount = rawItems.length - resultCount;
 
   if (announcementCount === 0) {
-    return [`${municipality}: 掲載${keptItems.length}件がすべて開札済みです。入札公告(入札情報)ページを見落としていないか確認が必要です。`];
+    return [`${municipality}: 取得${rawItems.length}件がすべて開札済みです。入札公告(入札情報)ページを見落としていないか確認が必要です。`];
   }
   if (resultCount === 0) {
-    return [`${municipality}: 掲載${keptItems.length}件に落札結果が1件もありません。入札結果(開札情報)ページを見落としていないか確認が必要です。`];
+    return [`${municipality}: 取得${rawItems.length}件に落札結果が1件もありません。入札結果(開札情報)ページを見落としていないか確認が必要です。`];
   }
   return [];
 }
@@ -204,7 +210,7 @@ async function main() {
       const { errors: genuineErrors, transient } = partitionScraperMessages(diagnostics?.errors || []);
       const keptResultCount = keptItems.filter(isResultItem).length;
       const keptAnnouncementCount = keptItems.length - keptResultCount;
-      const phaseWarnings = buildPhaseWarnings(scraper.municipality, keptItems);
+      const phaseWarnings = buildPhaseWarnings(scraper.municipality, rawItems);
       scraperResults.push({
         municipality: scraper.municipality,
         rawCount: rawItems.length,
