@@ -133,6 +133,25 @@ const INFRA_EXCLUDE_KEYWORDS = [...new Set([...DEFAULT_INFRA_EXCLUDE_KEYWORDS, .
 const ARCHITECTURE_CONTEXT_KEYWORDS = [...new Set([...DEFAULT_ARCHITECTURE_CONTEXT_KEYWORDS, ...dataFilters.architectureContextKeywords])];
 const ARCHITECTURE_WORK_KEYWORDS = [...new Set([...DEFAULT_ARCHITECTURE_WORK_KEYWORDS, ...dataFilters.architectureWorkKeywords])];
 const INFRA_ALLOWED_KEYWORDS = dataFilters.infraAllowedKeywords;
+
+// インフラ語は部分一致で照合するため、地名や施設名の一部に同じ字面が含まれると
+// 建築案件まで土木案件として落ちる。
+// 実例: 天理市「井戸堂小学校プール集約化に伴う改修工事」が地名『井戸堂』の
+// 『井戸』に一致して除外され、学校の改修工事が丸ごと消えていた。
+// 収集済みデータ上、キーワード『井戸』の一致はすべてこの誤検知で、正当な一致は0件だった。
+// インフラ判定の直前にこれらの並びを空白へ置換してから照合する。
+// 削除ではなく空白にするのは、前後の文字が連結して別のキーワード
+// (例:「下井戸堂水道」→「下水道」)に化けるのを防ぐため。
+const INFRA_PLACE_NAME_EXCEPTIONS = [
+    '井戸堂', // 天理市の地名。『井戸』に一致する
+];
+
+function maskInfraPlaceNames(text: string): string {
+    return INFRA_PLACE_NAME_EXCEPTIONS.reduce(
+        (masked, placeName) => masked.split(placeName).join(' '),
+        text,
+    );
+}
 const PRIORITY_ARCHITECTURE_PATTERNS = [
     '芝運動公園運動場等再整備基本設計業務',
     '立地適正化計画改定業務',
@@ -268,8 +287,9 @@ export function shouldKeepItem(title: string, otherText?: string, municipality?:
     }
 
     // 道路・水道などのインフラ案件は、建物語が偶然混ざる場合だけを除外する。
-    if (includesAny(target, INFRA_EXCLUDE_KEYWORDS) && !includesAny(target, INFRA_ALLOWED_KEYWORDS)) {
-        recordRejection(title, 'infra_exclude_keyword', matchedAny(target, INFRA_EXCLUDE_KEYWORDS), false, municipality);
+    const infraTarget = maskInfraPlaceNames(target);
+    if (includesAny(infraTarget, INFRA_EXCLUDE_KEYWORDS) && !includesAny(infraTarget, INFRA_ALLOWED_KEYWORDS)) {
+        recordRejection(title, 'infra_exclude_keyword', matchedAny(infraTarget, INFRA_EXCLUDE_KEYWORDS), false, municipality);
         return false;
     }
 
