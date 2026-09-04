@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-04T09:25:28.914Z",
+  "generatedAt": "2026-09-04T12:08:04.710Z",
   "currentItemCount": 288,
   "checkedMunicipalities": [
     "奈良市",
@@ -101,8 +101,8 @@
     {
       "municipality": "天理市",
       "rawCount": 6,
-      "keptCount": 4,
-      "rejectedCount": 2,
+      "keptCount": 5,
+      "rejectedCount": 1,
       "warnings": [],
       "errors": []
     },
@@ -229,8 +229,8 @@
   ],
   "coverage": {
     "checkedMunicipalityCount": 24,
-    "expectedItemCount": 242,
-    "matchedItemCount": 242,
+    "expectedItemCount": 243,
+    "matchedItemCount": 243,
     "missingItemCount": 0,
     "duplicateTitleGroupCount": 30,
     "duplicateTitleItemCount": 66,
@@ -368,10 +368,10 @@
         "status": "ok"
       },
       {
-        "municipality": "三宅町",
-        "snapshotCount": 18,
-        "expectedCount": 4,
-        "matchedCount": 4,
+        "municipality": "天理市",
+        "snapshotCount": 6,
+        "expectedCount": 5,
+        "matchedCount": 5,
         "missingCount": 0,
         "duplicateTitleGroupCount": 0,
         "duplicateTitleItemCount": 0,
@@ -379,8 +379,8 @@
         "status": "ok"
       },
       {
-        "municipality": "天理市",
-        "snapshotCount": 6,
+        "municipality": "三宅町",
+        "snapshotCount": 18,
         "expectedCount": 4,
         "matchedCount": 4,
         "missingCount": 0,
