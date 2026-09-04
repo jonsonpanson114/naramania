@@ -2,8 +2,16 @@ import * as cheerio from 'cheerio';
 import { BiddingItem, Scraper, BiddingType } from '../types/bidding';
 import { parseJapaneseDateToIso } from './common/pdf_text';
 import { fetchHtml } from './common/html_fetch';
+import { scrapeEpiCloud } from './common/epi_cloud';
 
 const ANNOUNCE_URL = 'https://www.city.sakurai.lg.jp/sosiki/soumu/kanzaikeiyaku/nyuusatukeiyakukensa/notice/6596.html';
+// 桜井市は市サイトに入札公告しか載せておらず、開札結果は「電子入札情報システム」側にある。
+// 市サイトだけを見ていたため落札者が1件も取れていなかった。公告・結果の両方を持つ
+// EPI を主線に加える（logon 形式・KF001ShowAction 形式のどちらでも入れるよう両方試す）。
+const EPI_ENTRY_URLS = [
+    'https://www.epi-cloud.fwd.ne.jp/koukai/do/logon?name1=06200640072006A0',
+    'https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=06200640072006A0',
+];
 const SUPPLEMENTAL_URLS = [
     'https://www.city.sakurai.lg.jp/sosiki/kodomokateibu/kodomoseisakuka/kodomoen/8700.html',
     'https://www.city.sakurai.lg.jp/sosiki/kyouikuiinkaijimukyoku/soumuka/teianbosyuukoubo/9608.html',
@@ -104,8 +112,14 @@ async function scrapeSupplementalPages(): Promise<BiddingItem[]> {
 
 export class SakuraiCityScraper implements Scraper {
     municipality: '桜井市' = '桜井市' as const;
+    private warnings: string[] = [];
+
+    getDiagnostics() {
+        return { warnings: [...this.warnings] };
+    }
 
     async scrape(): Promise<BiddingItem[]> {
+        this.warnings = [];
         const items: BiddingItem[] = [];
 
         try {
@@ -155,6 +169,33 @@ export class SakuraiCityScraper implements Scraper {
         } catch (e: unknown) {
             console.error('[桜井市] エラー:', e instanceof Error ? e.message : String(e));
         }
+
+        // ── 電子入札情報システム(EPI): 発注情報(公告)＋入札・契約結果 ─────
+        const epi = await scrapeEpiCloud({
+            municipality: '桜井市',
+            idPrefix: 'sakurai',
+            entryUrls: EPI_ENTRY_URLS,
+        });
+        for (const warning of epi.warnings) {
+            this.warnings.push(warning);
+            console.warn(warning);
+        }
+        for (const epiItem of epi.items) {
+            // 市サイト側で既に拾っている公告と重複しても、EPI側にしかない
+            // 開札結果(落札者)は捨てずに残す。
+            const duplicate = items.find(existing => existing.title === epiItem.title);
+            if (!duplicate) {
+                items.push(epiItem);
+                continue;
+            }
+            if (epiItem.winningContractor && !duplicate.winningContractor) {
+                duplicate.winningContractor = epiItem.winningContractor;
+                duplicate.winnerType = epiItem.winnerType;
+            }
+            if (epiItem.status === '落札' || epiItem.status === '不調') duplicate.status = epiItem.status;
+            if (epiItem.biddingDate && !duplicate.biddingDate) duplicate.biddingDate = epiItem.biddingDate;
+        }
+        console.log(`[桜井市] EPI: ${epi.items.length}件`);
 
         const supplementalItems = await scrapeSupplementalPages();
         for (const item of supplementalItems) {

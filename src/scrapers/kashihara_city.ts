@@ -5,12 +5,51 @@ import { getCurrentReiwaFiscalYear } from './common/fiscal_year';
 
 const BASE_URL = 'https://www.city.kashihara.nara.jp';
 
-// 入札予報ページ（テーブル形式: 契約番号|案件名|公告書PDF|登録業種|地域区分|設計図書掲載日）
-const YOHO_PAGES = [
+// 入札予報（公告）の入口ページ。ここから配下の予報ページを都度解決する。
+// ページIDをハードコードしていた頃は「委託」「役務・物品」「クリーンセンター運営委託」の
+// 3ページしか見ておらず、肝心の建設工事の予報ページが丸ごと抜けていた。
+// (実際、橿原市は32件すべてが結果ページ由来で、公告が1件も入っていなかった)
+const YOHO_INDEX_URL = `${BASE_URL}/jigyosha/nyusatsu_keiyaku/1/7/index.html`;
+
+// index が取れなかったときのフォールバック（従来のハードコード先）
+const YOHO_FALLBACK_PAGES = [
     { url: `${BASE_URL}/jigyosha/nyusatsu_keiyaku/1/7/12117.html`, label: '委託' },
     { url: `${BASE_URL}/jigyosha/nyusatsu_keiyaku/1/7/12149.html`, label: '役務・物品' },
     { url: `${BASE_URL}/jigyosha/nyusatsu_keiyaku/1/7/16438.html`, label: 'クリーンセンター運営委託' },
 ];
+
+/**
+ * 入札予報の入口ページから配下の予報ページを列挙する。
+ * 年度替わりやページ追加でIDが変わっても追従できるようにするのが目的。
+ */
+async function resolveYohoPages(): Promise<{ url: string; label: string }[]> {
+    const pages = new Map<string, string>();
+
+    try {
+        const res = await axios.get<string>(YOHO_INDEX_URL, { headers: AXIOS_HEADERS, timeout: 20000 });
+        const $ = cheerio.load(res.data);
+
+        $('a').each((_, el) => {
+            const href = normalizeKashiharaUrl($(el).attr('href') || '');
+            const label = $(el).text().normalize('NFKC').replace(/\s+/g, '').trim();
+            if (!href || !label) return;
+            // 予報カテゴリ配下(1/7/)の個別ページだけを対象にする
+            if (!/\/jigyosha\/nyusatsu_keiyaku\/1\/7\/\d+\.html$/.test(href)) return;
+            // プロポーザルは別ロジックで処理するため除外
+            if (href === PROPOSAL_URL) return;
+            if (label.includes('プロポーザル')) return;
+            pages.set(href, label);
+        });
+    } catch (e: unknown) {
+        console.error('[橿原市] 入札予報index解決エラー:', e instanceof Error ? e.message : String(e));
+    }
+
+    for (const fallback of YOHO_FALLBACK_PAGES) {
+        if (!pages.has(fallback.url)) pages.set(fallback.url, fallback.label);
+    }
+
+    return Array.from(pages.entries()).map(([url, label]) => ({ url, label }));
+}
 
 // プロポーザルページ（リンク形式: 案件番号+案件名がリンクテキスト、日付はh2見出し）
 const PROPOSAL_URL = `${BASE_URL}/jigyosha/nyusatsu_keiyaku/1/7/8272.html`;
@@ -276,8 +315,11 @@ export class KashiharaCityScraper implements Scraper {
         const { kekkaPages, proposalResultUrl } = await resolveCurrentYearResultPages();
         console.log(`[橿原市] 今年度の結果ページ ${kekkaPages.length}件を解決 (プロポーザル結果: ${proposalResultUrl ? 'あり' : 'なし'})`);
 
+        const yohoPages = await resolveYohoPages();
+        console.log(`[橿原市] 入札予報ページ ${yohoPages.length}件を解決: ${yohoPages.map(p => p.label).join(' / ')}`);
+
         // === 1. 入札予報ページ（テーブル形式・業種列あり）===
-        for (const { url, label } of YOHO_PAGES) {
+        for (const { url, label } of yohoPages) {
             const beforeCount = items.length;
             try {
                 console.log(`[橿原市] Fetching ${label}: ${url}`);

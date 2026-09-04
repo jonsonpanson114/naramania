@@ -7,8 +7,16 @@ import type { Frame, Page } from 'playwright';
 import { BiddingItem, Scraper } from '../types/bidding';
 import { extractTargetedResultsFromPDF } from '../services/gemini_service';
 import { downloadPDFBuffer } from '../utils/pdf_utils';
+import { scrapeEpiCloud } from './common/epi_cloud';
 
 const EPI_URL = 'https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=062006E007200640';
+// EPI では「入札・契約結果情報」だけを見ていたため、開札済みの案件しか拾えず、
+// まだ応札できる公告(発注情報)を1件も拾えていなかった。
+// 「発注情報の検索」メニューは共通モジュールで巡回する。
+const EPI_ENTRY_URLS = [
+    EPI_URL,
+    'https://www.epi-cloud.fwd.ne.jp/koukai/do/logon?name1=062006E007200640',
+];
 
 // 令和8年度(2026年度)のみを対象にする。
 // 過去年度(令和7=2025, 令和6=2024)まで EPI をページ送りすると数時間かかり、
@@ -527,10 +535,29 @@ export class KashibaCityScraper implements Scraper {
             console.warn('[香芝市] EPI取得をスキップ:', error instanceof Error ? error.message : String(error));
         }
 
+        // EPI「発注情報の検索」= 入札公告。結果側とはメニューが別で、
+        // 結果だけ見ていると「入札に参加できるうちに気づく」ことができない。
+        const epiAnnouncements = await scrapeEpiCloud({
+            municipality: '香芝市',
+            idPrefix: 'kashiba',
+            entryUrls: EPI_ENTRY_URLS,
+            includeResults: false,
+        });
+        for (const warning of epiAnnouncements.warnings) {
+            console.warn(warning);
+        }
+
         await enrichKnownKashibaResults(webItems);
         await enrichKnownKashibaResults(epiItems);
 
-        console.log(`[香芝市] 合計: ${epiItems.length + webItems.length} 件 (EPI:${epiItems.length}, Web:${webItems.length})`);
-        return [...epiItems, ...webItems];
+        const announcementItems = epiAnnouncements.items.filter(
+            item => ![...epiItems, ...webItems].some(existing => existing.title === item.title),
+        );
+
+        console.log(
+            `[香芝市] 合計: ${epiItems.length + webItems.length + announcementItems.length} 件`
+            + ` (EPI結果:${epiItems.length}, EPI公告:${announcementItems.length}, Web:${webItems.length})`,
+        );
+        return [...epiItems, ...announcementItems, ...webItems];
     }
 }

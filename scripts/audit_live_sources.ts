@@ -35,9 +35,45 @@ type ScraperAuditResult = {
   rawCount: number;
   keptCount: number;
   rejectedCount: number;
+  /** 掲載対象のうち公告側(結果未確定)の件数 */
+  keptAnnouncementCount: number;
+  /** 掲載対象のうち結果側(落札・不調)の件数 */
+  keptResultCount: number;
   errors: string[];
   warnings: string[];
 };
+
+function isResultItem(item: BiddingItem): boolean {
+  // 落札者名が手入力の補足データにだけ入っているケースを「結果を取得できている」と
+  // 数えてしまうと、結果ページを見ていない自治体の警告が消えてしまう。
+  // 開札済みステータスが確定しているものだけを結果として数える。
+  return item.status === '落札' || item.status === '不調';
+}
+
+/**
+ * 公告・結果のどちらか一方しか取れていない自治体を警告する。
+ * 「結果ページしか見ていない」「公告しか見ていない」状態は
+ * スクレイパーが動いているように見えるので、件数だけでは気づけない。
+ *
+ * 判定はフィルタ前(rawItems)で行う。このサイトは建築案件だけを残すため、
+ * フィルタ後の件数で数えると「公告ページを見ていない」と
+ * 「公告は取れているが今回は全部土木だった」を区別できない。
+ * 実際、大和高田市はEPIから公告86件・結果80件を取得できているのに
+ * 全件が土木で除外され、フィルタ後では公告0/結果0に見えていた。
+ */
+function buildPhaseWarnings(municipality: string, rawItems: BiddingItem[]): string[] {
+  if (rawItems.length === 0) return [];
+  const resultCount = rawItems.filter(isResultItem).length;
+  const announcementCount = rawItems.length - resultCount;
+
+  if (announcementCount === 0) {
+    return [`${municipality}: 取得${rawItems.length}件がすべて開札済みです。入札公告(入札情報)ページを見落としていないか確認が必要です。`];
+  }
+  if (resultCount === 0) {
+    return [`${municipality}: 取得${rawItems.length}件に落札結果が1件もありません。入札結果(開札情報)ページを見落としていないか確認が必要です。`];
+  }
+  return [];
+}
 
 type FilteredScrapers = {
   selected: Scraper[];
@@ -172,15 +208,21 @@ async function main() {
         : [];
       liveSnapshots[scraper.municipality] = rawItems;
       const { errors: genuineErrors, transient } = partitionScraperMessages(diagnostics?.errors || []);
+      const keptResultCount = keptItems.filter(isResultItem).length;
+      const keptAnnouncementCount = keptItems.length - keptResultCount;
+      const phaseWarnings = buildPhaseWarnings(scraper.municipality, rawItems);
       scraperResults.push({
         municipality: scraper.municipality,
         rawCount: rawItems.length,
         keptCount: keptItems.length,
         rejectedCount: rawItems.length - keptItems.length,
-        warnings: [...(diagnostics?.warnings || []), ...transient, ...zeroCoverageWarnings],
+        keptAnnouncementCount,
+        keptResultCount,
+        warnings: [...(diagnostics?.warnings || []), ...transient, ...zeroCoverageWarnings, ...phaseWarnings],
         errors: genuineErrors,
       });
-      console.log(`[live-audit] ${scraper.municipality}: raw=${rawItems.length} keep=${keptItems.length}`);
+      phaseWarnings.forEach((warning) => console.warn(`[live-audit] ${warning}`));
+      console.log(`[live-audit] ${scraper.municipality}: raw=${rawItems.length} keep=${keptItems.length} (公告${keptAnnouncementCount}/結果${keptResultCount})`);
     } catch (error) {
       const message = error instanceof Error ? error.message : String(error);
       liveSnapshots[scraper.municipality] = [];
@@ -190,6 +232,8 @@ async function main() {
         rawCount: 0,
         keptCount: 0,
         rejectedCount: 0,
+        keptAnnouncementCount: 0,
+        keptResultCount: 0,
         warnings: transient ? [`一時的な取得失敗（次回再試行）: ${message}`] : [],
         errors: transient ? [] : [message],
       });

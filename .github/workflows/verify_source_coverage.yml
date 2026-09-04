@@ -1,0 +1,75 @@
+name: Verify Source Coverage
+
+# 収集元サイトの「公告(入札情報)」と「結果(開札情報)」の両方を取れているかを
+# 実サイトへアクセスして確認するだけの検証専用ワークフロー。
+#
+# 【他のワークフローとの違い】
+# daily_scrape / live_source_audit は結果を main に commit & push するため、
+# ブランチ上で手動実行するとそのブランチの内容が main に入ってしまう。
+# こちらは permissions: contents: read で、commit も push も一切しない。
+# ブランチ上（PRのレビュー中）でも安全に実行できる。
+#
+# 実行方法: GitHub の Actions タブ → このワークフロー → "Run workflow" →
+#          対象ブランチを選んで実行（スマホのブラウザからでも可）。
+# 結果は実行画面の Summary に自治体ごとの「公告N件 / 結果N件」の表で出る。
+
+on:
+  workflow_dispatch:
+    inputs:
+      municipalities:
+        description: '検証する自治体（カンマ区切り）。空欄なら奈良県を除く全自治体'
+        required: false
+        default: '橿原市,大和高田市,広陵町,香芝市,天理市,桜井市,高取町,川西町'
+
+concurrency:
+  group: naramania-verify-source-coverage
+  cancel-in-progress: false
+
+# 読み取りのみ。このワークフローはリポジトリへ一切書き込まない。
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      GOOGLE_GENERATIVE_AI_API_KEY: ${{ secrets.GOOGLE_GENERATIVE_AI_API_KEY }}
+      LIVE_AUDIT_ONLY_MUNICIPALITIES: ${{ github.event.inputs.municipalities || '' }}
+      LIVE_AUDIT_EXCEPT_MUNICIPALITIES: ${{ github.event.inputs.municipalities && '' || '奈良県' }}
+      # 検証用途では相手サイトの一時的な不調で止めず、結果表を必ず残す。
+      LIVE_AUDIT_ALLOW_SCRAPER_ERRORS: '1'
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps chromium
+
+      - name: Run live source audit
+        id: audit
+        continue-on-error: true
+        run: npm run audit:live-sources
+        env:
+          NODE_ENV: production
+
+      # 監査が途中で失敗してもレポート自体は書き出されているので、必ず表を出す。
+      - name: Print coverage summary
+        if: always()
+        run: npm run report:coverage
+
+      - name: Upload audit report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: live-source-audit-report
+          path: live_source_audit_report.json
+          if-no-files-found: warn

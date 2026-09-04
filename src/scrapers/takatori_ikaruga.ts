@@ -3,7 +3,14 @@ import * as cheerio from 'cheerio';
 import { BiddingItem, Scraper, BiddingType, Municipality } from '../types/bidding';
 import { classifyWinner } from './common/filter';
 
-const TAKATORI_RESULT_URL = 'https://www.town.takatori.nara.jp/contents_detail.php?frmId=2205';
+const TAKATORI_BASE_URL = 'https://www.town.takatori.nara.jp';
+const TAKATORI_RESULT_URL = `${TAKATORI_BASE_URL}/contents_detail.php?frmId=2205`;
+// 入札情報カテゴリ。結果ページ(frmId=2205)だけを見ていたため、
+// 高取町は24件すべてが開札済みで、応札できる公告が1件も入っていなかった。
+// カテゴリ一覧から公告側の詳細ページも都度解決する。
+const TAKATORI_CATEGORY_URL = `${TAKATORI_BASE_URL}/contents_detail.php?co=cat&frmId=2683&frmCd=2-6-0-0-0`;
+const TAKATORI_HEADERS = { 'User-Agent': 'Mozilla/5.0' };
+const TAKATORI_NON_ITEM_TITLE = /^(?:こちら|一覧|トップ|ホーム|前へ|次へ|戻る|PDF|ダウンロード|お問い合わせ|このページ|サイトマップ)/;
 const IKARUGA_INDEX_URL = 'https://www.town.ikaruga.nara.jp/category/1-10-0-0-0-0-0-0-0-0.html';
 const IKARUGA_BASE_URL = 'https://www.town.ikaruga.nara.jp';
 const KNOWN_IKARUGA_ITEMS: BiddingItem[] = [
@@ -68,15 +75,99 @@ function buildId(municipality: Municipality, date: string, title: string): strin
         .slice(0, 120);
 }
 
-async function scrapeTakatoriResults(): Promise<BiddingItem[]> {
+function toTakatoriAbsoluteUrl(href: string): string {
+    if (!href) return '';
+    if (href.startsWith('http')) return href;
+    if (href.startsWith('//')) return `https:${href}`;
+    if (href.startsWith('/')) return `${TAKATORI_BASE_URL}${href}`;
+    return `${TAKATORI_BASE_URL}/${href.replace(/^\.\//, '')}`;
+}
+
+/** 入札情報カテゴリから詳細ページ(公告・結果)のURLを解決する */
+async function resolveTakatoriDetailPages(): Promise<{ url: string; label: string }[]> {
+    const pages = new Map<string, string>();
+
+    try {
+        const res = await axios.get(TAKATORI_CATEGORY_URL, { headers: TAKATORI_HEADERS, timeout: 20000 });
+        const $ = cheerio.load(res.data);
+
+        $('a[href]').each((_, el) => {
+            const label = $(el).text().replace(/\s+/g, ' ').trim();
+            const href = toTakatoriAbsoluteUrl($(el).attr('href') || '');
+            if (!label || !href) return;
+            if (!/contents_detail\.php/.test(href)) return;
+            if (/co=cat/.test(href)) return; // カテゴリ一覧そのものは除外
+            if (!/(入札|公告|見積|開札|落札|プロポーザル|指名|契約)/.test(label)) return;
+            pages.set(href, label);
+        });
+    } catch (error) {
+        console.warn('[高取町] カテゴリ解決エラー:', error instanceof Error ? error.message : String(error));
+    }
+
+    return Array.from(pages.entries()).map(([url, label]) => ({ url, label }));
+}
+
+/** 公告側の詳細ページから受付中案件を拾う（添付PDF一覧構成を想定） */
+async function scrapeTakatoriAnnouncementPage(url: string, label: string): Promise<BiddingItem[]> {
     const items: BiddingItem[] = [];
 
     try {
-        const res = await axios.get(TAKATORI_RESULT_URL, {
-            headers: { 'User-Agent': 'Mozilla/5.0' },
+        const res = await axios.get(url, { headers: TAKATORI_HEADERS, timeout: 20000 });
+        const $ = cheerio.load(res.data);
+        const pageDate = parseJapaneseDate($('body').text());
+
+        $('a[href]').each((_, el) => {
+            const rawTitle = $(el).text().replace(/\s+/g, ' ').trim();
+            const href = toTakatoriAbsoluteUrl($(el).attr('href') || '');
+            if (!rawTitle || !href) return;
+            if (!/\.(pdf|docx?|xlsx?)(?:$|\?)/i.test(href)) return;
+
+            const title = rawTitle
+                .replace(/\((?:PDF|Word|Excel)[^)]*\)/gi, '')
+                .replace(/\[[^\]]*\]/g, '')
+                .trim();
+            if (title.length < 6 || TAKATORI_NON_ITEM_TITLE.test(title)) return;
+
+            const date = parseJapaneseDate(rawTitle) || pageDate;
+            const id = buildId('高取町', date, title);
+            if (items.some(existing => existing.id === id)) return;
+
+            items.push({
+                id,
+                municipality: '高取町',
+                title,
+                type: classifyType(title),
+                announcementDate: date,
+                link: url,
+                pdfUrl: /\.pdf(?:$|\?)/i.test(href) ? href : undefined,
+                status: '受付中',
+            });
+        });
+    } catch (error) {
+        console.warn(`[高取町] 公告ページ取得エラー(${label}):`, error instanceof Error ? error.message : String(error));
+    }
+
+    return items;
+}
+
+async function scrapeTakatoriResults(resultUrl: string = TAKATORI_RESULT_URL): Promise<BiddingItem[]> {
+    const items: BiddingItem[] = [];
+
+    try {
+        const res = await axios.get(resultUrl, {
+            headers: TAKATORI_HEADERS,
             timeout: 20000,
         });
         const $ = cheerio.load(res.data);
+
+        // 4列以上のテーブルを無条件に結果表として読むと、公告ページの案件一覧
+        // (案件名|場所|工期|入札日 等)まで「落札」として取り込んでしまう。
+        // 落札者列を持つページだけを結果表として扱う。
+        const looksLikeResultTable = $('table').toArray().some(table =>
+            /(落札者|落札業者|落札金額|落札額)/.test($(table).text()),
+        );
+        if (!looksLikeResultTable) return items;
+
         let sectionDate = '';
 
         $('h3, h4, tr').each((_, el) => {
@@ -107,7 +198,7 @@ async function scrapeTakatoriResults(): Promise<BiddingItem[]> {
                 type: classifyType(title),
                 announcementDate: sectionDate,
                 biddingDate: sectionDate || undefined,
-                link: TAKATORI_RESULT_URL,
+                link: resultUrl,
                 status,
                 winningContractor,
                 winnerType: classifyWinner(winningContractor || ''),
@@ -180,6 +271,26 @@ export class TakatoriTownScraper implements Scraper {
 
     async scrape(): Promise<BiddingItem[]> {
         const items = await scrapeTakatoriResults();
+
+        const detailPages = await resolveTakatoriDetailPages();
+        console.log(`[高取町] 入札情報カテゴリ: 詳細ページ ${detailPages.length}件を解決`);
+
+        for (const page of detailPages) {
+            if (page.url === TAKATORI_RESULT_URL) continue;
+
+            // 落札者列を持つページだけ結果表として解析し、それ以外は公告として添付PDFを拾う
+            const resultItems = await scrapeTakatoriResults(page.url);
+            const candidates = resultItems.length > 0
+                ? resultItems
+                : await scrapeTakatoriAnnouncementPage(page.url, page.label);
+
+            for (const candidate of candidates) {
+                if (items.some(existing => existing.title === candidate.title)) continue;
+                items.push(candidate);
+            }
+            console.log(`[高取町] ${page.label}: ${candidates.length}件`);
+        }
+
         console.log(`[高取町] 合計 ${items.length} 件`);
         return items;
     }

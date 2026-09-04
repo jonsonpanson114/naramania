@@ -42,7 +42,8 @@ export const MUNICIPALITY_SOURCES: MunicipalitySourceGroup[] = [
         municipality: '橿原市',
         scraper: 'kashihara_city.ts',
         sources: [
-            { label: '入札・契約情報', url: 'https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/index.html' },
+            { label: '入札予報(公告)', url: 'https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/7/index.html', note: '配下の予報ページを都度解決' },
+            { label: '入札・見積結果', url: 'https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/index.html', note: '年度別サブページを都度解決' },
         ],
     },
     {
@@ -57,6 +58,7 @@ export const MUNICIPALITY_SOURCES: MunicipalitySourceGroup[] = [
         scraper: 'yamato_takada_city.ts',
         sources: [
             { label: '入札・契約情報', url: 'https://www.city.yamatotakada.nara.jp/soshikikarasagasu/somuka/keiyakukanri/nyusatsu_keiyaku/1/index.html' },
+            { label: '入札情報公開サービス(EPI)', url: 'https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=06200640072006E0', external: true, note: '発注情報(公告)・入札契約結果の両方' },
         ],
     },
     {
@@ -93,14 +95,16 @@ export const MUNICIPALITY_SOURCES: MunicipalitySourceGroup[] = [
         municipality: '天理市',
         scraper: 'tenri_city.ts',
         sources: [
-            { label: '入札・契約情報', url: 'https://www.city.tenri.nara.jp/kakuka/soumubu/nyuusatsushinsashitsu/construction_work/kouji_hattyuu_kanren/1395887232147.html' },
+            { label: '入札公告', url: 'https://www.city.tenri.nara.jp/kakuka/soumubu/nyuusatsushinsashitsu/construction_work/kouji_hattyuu_kanren/1395887232147.html' },
+            { label: '入札結果', url: 'https://www.city.tenri.nara.jp/kakuka/soumubu/nyuusatsushinsashitsu/construction_work/kouji_hattyuu_kanren/1395912138562.html', note: '案件別PDFを解析して落札者を取得' },
         ],
     },
     {
         municipality: '桜井市',
         scraper: 'sakurai_city.ts',
         sources: [
-            { label: '入札・契約情報', url: 'https://www.city.sakurai.lg.jp/sosiki/soumu/kanzaikeiyaku/nyuusatukeiyakukensa/notice/6596.html' },
+            { label: '入札公告', url: 'https://www.city.sakurai.lg.jp/sosiki/soumu/kanzaikeiyaku/nyuusatukeiyakukensa/notice/6596.html' },
+            { label: '電子入札情報システム(EPI)', url: 'https://www.epi-cloud.fwd.ne.jp/koukai/do/logon?name1=06200640072006A0', external: true, note: '発注情報(公告)・入札契約結果の両方' },
         ],
     },
     {
@@ -122,7 +126,8 @@ export const MUNICIPALITY_SOURCES: MunicipalitySourceGroup[] = [
         municipality: '広陵町',
         scraper: 'koryo_town.ts',
         sources: [
-            { label: '入札・契約情報', url: 'https://www.town.koryo.nara.jp/category/19-4-2-0-0-0-0-0-0-0.html' },
+            { label: '入札・契約(親カテゴリ)', url: 'https://www.town.koryo.nara.jp/category/19-4-0-0-0-0-0-0-0-0.html', note: '公告側のサブカテゴリを都度解決' },
+            { label: '指名競争入札結果', url: 'https://www.town.koryo.nara.jp/category/19-4-2-0-0-0-0-0-0-0.html' },
         ],
     },
     {
@@ -130,13 +135,14 @@ export const MUNICIPALITY_SOURCES: MunicipalitySourceGroup[] = [
         scraper: 'kashiba_city.ts',
         sources: [
             { label: '入札情報', url: 'https://www.city.kashiba.lg.jp/site/nyuusatsu/' },
+            { label: '入札情報公開サービス(EPI)', url: 'https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=062006E007200640', external: true, note: '発注情報(公告)・入札契約結果の両方' },
         ],
     },
     {
         municipality: '川西町',
         scraper: 'kawanishi_city.ts',
         sources: [
-            { label: '入札・契約情報', url: 'https://www.town.nara-kawanishi.lg.jp/0000008785.html' },
+            { label: '入札・契約情報(一覧)', url: 'https://www.town.nara-kawanishi.lg.jp/category/22-1-0-0-0-0-0-0-0-0.html', note: '一覧から個別記事を都度解決' },
         ],
     },
     {
@@ -172,7 +178,8 @@ export const MUNICIPALITY_SOURCES: MunicipalitySourceGroup[] = [
         municipality: '高取町',
         scraper: 'takatori_ikaruga.ts',
         sources: [
-            { label: '入札・契約情報', url: 'https://www.town.takatori.nara.jp/contents_detail.php?frmId=2205' },
+            { label: '入札情報(カテゴリ)', url: 'https://www.town.takatori.nara.jp/contents_detail.php?co=cat&frmId=2683&frmCd=2-6-0-0-0', note: '公告側の詳細ページを都度解決' },
+            { label: '入札結果', url: 'https://www.town.takatori.nara.jp/contents_detail.php?frmId=2205' },
         ],
     },
     {

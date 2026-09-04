@@ -67,8 +67,112 @@ async function extractContractorFromPdf(pdfUrl: string): Promise<string | undefi
 }
 
 const BASE_URL = 'https://www.town.koryo.nara.jp';
-// 指名競争入札結果カテゴリページ
+// 入札・契約の親カテゴリ。指名競争入札結果(19-4-2)だけを見ていたため
+// 開札済みの案件しか拾えず、まだ応札できる入札公告が1件も入っていなかった。
+// 親カテゴリから公告側・結果側の両方のサブカテゴリを都度解決する。
+const PARENT_CATEGORY_URL = `${BASE_URL}/category/19-4-0-0-0-0-0-0-0-0.html`;
+// 指名競争入札結果カテゴリページ（親から辿れなかったときのフォールバック）
 const CATEGORY_URL = `${BASE_URL}/category/19-4-2-0-0-0-0-0-0-0.html`;
+
+const HTTP_HEADERS = { 'User-Agent': 'Mozilla/5.0' };
+
+// 「一覧」「こちら」等のナビゲーション文言を案件名と誤認しないための足切り
+const NON_ITEM_TITLE = /^(?:こちら|一覧|トップ|ホーム|前へ|次へ|戻る|PDF|ダウンロード|お問い合わせ|このページ)/;
+
+function toAbsoluteUrl(href: string): string {
+    if (!href) return '';
+    if (href.startsWith('http')) return href;
+    if (href.startsWith('//')) return `https:${href}`;
+    if (href.startsWith('/')) return `${BASE_URL}${href}`;
+    return `${BASE_URL}/${href.replace(/^\.\//, '')}`;
+}
+
+function parseAnyJapaneseDate(text: string): string {
+    const reiwa = text.match(/令和\s*(\d+)\s*年\s*(\d+)\s*月\s*(\d+)\s*日/);
+    if (reiwa) {
+        const year = 2018 + parseInt(reiwa[1], 10);
+        return `${year}-${reiwa[2].padStart(2, '0')}-${reiwa[3].padStart(2, '0')}`;
+    }
+    const western = text.match(/(20\d{2})\s*[年/-]\s*(\d{1,2})\s*[月/-]\s*(\d{1,2})/);
+    if (western) {
+        return `${western[1]}-${western[2].padStart(2, '0')}-${western[3].padStart(2, '0')}`;
+    }
+    return '';
+}
+
+/** 親カテゴリから「入札公告(発注情報)」側のページURLを解決する */
+async function resolveAnnouncementPages(): Promise<{ url: string; label: string }[]> {
+    const pages = new Map<string, string>();
+
+    try {
+        const res = await axios.get(PARENT_CATEGORY_URL, { headers: HTTP_HEADERS, timeout: 15000 });
+        const $ = cheerio.load(res.data);
+
+        $('a[href]').each((_, el) => {
+            const label = $(el).text().replace(/\s+/g, '').trim();
+            const href = toAbsoluteUrl($(el).attr('href') || '');
+            if (!label || !href) return;
+            if (!/town\.koryo\.nara\.jp/.test(href)) return;
+            // 「結果」系は別ロジックで処理するので公告側だけを拾う
+            if (label.includes('結果')) return;
+            if (!/(入札公告|入札情報|発注(見通し|情報)|公告|指名競争入札(?!結果))/.test(label)) return;
+            pages.set(href, label);
+        });
+    } catch (e: unknown) {
+        console.warn('[広陵町] 入札公告カテゴリ解決エラー:', e instanceof Error ? e.message : String(e));
+    }
+
+    return Array.from(pages.entries()).map(([url, label]) => ({ url, label }));
+}
+
+/** 公告ページから案件(受付中)を拾う。添付ファイル一覧・本文リンクの双方に対応する */
+async function scrapeAnnouncementPage(url: string, label: string): Promise<BiddingItem[]> {
+    const items: BiddingItem[] = [];
+
+    try {
+        const res = await axios.get(url, { headers: HTTP_HEADERS, timeout: 15000 });
+        const $ = cheerio.load(res.data);
+        const pageDate = parseAnyJapaneseDate($('body').text()) || new Date().toISOString().split('T')[0];
+
+        $('a[href]').each((_, el) => {
+            const rawTitle = $(el).text().replace(/\s+/g, ' ').trim();
+            const href = toAbsoluteUrl($(el).attr('href') || '');
+            if (!rawTitle || !href) return;
+            // カテゴリ一覧ページのリンク(/category/19-4-1-....html 等)を案件と誤認しないよう、
+            // 公告文書そのもの(PDF/Word/Excel)へのリンクだけを案件として扱う。
+            if (!/\.(pdf|docx?|xlsx?)(?:$|\?)/i.test(href)) return;
+
+            const title = rawTitle
+                .replace(/\((?:PDF|Word|Excel)ファイル[^)]*\)/g, '')
+                .replace(/\[[^\]]*\]/g, '')
+                .trim();
+            if (title.length < 6 || NON_ITEM_TITLE.test(title)) return;
+
+            const itemDate = parseAnyJapaneseDate(rawTitle) || pageDate;
+            const id = `koryo-announce-${itemDate}-${title}`
+                .normalize('NFKC')
+                .replace(/[^\w\u3040-\u30ff\u3400-\u9fff-]+/g, '-')
+                .replace(/-+/g, '-')
+                .slice(0, 120);
+            if (items.some(existing => existing.id === id)) return;
+
+            items.push({
+                id,
+                municipality: '広陵町',
+                title,
+                type: classifyType(label, title),
+                announcementDate: itemDate,
+                link: href,
+                pdfUrl: /\.pdf(?:$|\?)/i.test(href) ? href : undefined,
+                status: '受付中',
+            });
+        });
+    } catch (e: unknown) {
+        console.warn(`[広陵町] 公告ページ取得エラー(${label}):`, e instanceof Error ? e.message : String(e));
+    }
+
+    return items;
+}
 
 function classifyType(section: string, title: string): BiddingType {
     if (section.includes('測量') || section.includes('設計') || section.includes('コンサル')) {
@@ -191,6 +295,18 @@ export class KoryoTownScraper implements Scraper {
 
         } catch (e: unknown) {
             console.error('[広陵町] エラー:', e instanceof Error ? e.message : String(e) || e);
+        }
+
+        // ── 入札公告（受付中）─────────────────────────────
+        const announcementPages = await resolveAnnouncementPages();
+        console.log(`[広陵町] 入札公告ページ ${announcementPages.length}件を解決: ${announcementPages.map(p => p.label).join(' / ') || 'なし'}`);
+        for (const page of announcementPages) {
+            const announcements = await scrapeAnnouncementPage(page.url, page.label);
+            for (const announcement of announcements) {
+                if (items.some(existing => existing.title === announcement.title)) continue;
+                items.push(announcement);
+            }
+            console.log(`[広陵町] 公告(${page.label}): ${announcements.length}件`);
         }
 
         console.log(`[広陵町] 合計 ${items.length} 件`);
