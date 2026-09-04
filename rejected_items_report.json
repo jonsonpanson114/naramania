@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-03T10:59:10.739Z",
-  "totalRejected": 8904,
+  "generatedAt": "2026-09-04T06:04:16.001Z",
+  "totalRejected": 8802,
   "totalBorderlineRescued": 30,
   "byMunicipality": {
     "奈良市": {
@@ -20,7 +20,7 @@
       "borderlineRescued": 0
     },
     "大和郡山市": {
-      "rejected": 894,
+      "rejected": 900,
       "borderlineRescued": 0
     },
     "葛城市": {
@@ -28,11 +28,11 @@
       "borderlineRescued": 0
     },
     "五條市": {
-      "rejected": 960,
+      "rejected": 972,
       "borderlineRescued": 0
     },
     "御所市": {
-      "rejected": 36,
+      "rejected": 42,
       "borderlineRescued": 0
     },
     "天理市": {
@@ -75,16 +75,12 @@
       "rejected": 6,
       "borderlineRescued": 6
     },
-    "高取町": {
-      "rejected": 150,
-      "borderlineRescued": 0
-    },
     "斑鳩町": {
       "rejected": 264,
       "borderlineRescued": 0
     },
     "三郷町": {
-      "rejected": 690,
+      "rejected": 702,
       "borderlineRescued": 0
     },
     "王寺町": {
@@ -92,7 +88,7 @@
       "borderlineRescued": 0
     },
     "大淀町": {
-      "rejected": 690,
+      "rejected": 702,
       "borderlineRescued": 6
     }
   },
@@ -19497,6 +19493,22 @@
     },
     {
       "municipality": "大和郡山市",
+      "title": "大和中央道第2調整池法面防護工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "法面"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "大和中央道第2調整池法面防護工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "法面"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
       "title": "公共下水道整備工事外川町（第1工区）その1、その2",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -21755,6 +21767,22 @@
     },
     {
       "municipality": "大和郡山市",
+      "title": "大和中央道第2調整池法面防護工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "法面"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "大和中央道第2調整池法面防護工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "法面"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
       "title": "公共下水道整備工事外川町（第1工区）その1、その2",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -24010,6 +24038,22 @@
       "title": "西田中町共同浴場解体工事設計委託業務 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "大和中央道第2調整池法面防護工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "法面"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "大和中央道第2調整池法面防護工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "法面"
+      ]
     },
     {
       "municipality": "大和郡山市",
@@ -36485,6 +36529,40 @@
     },
     {
       "municipality": "五條市",
+      "title": "道路舗装工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "五條市",
+      "title": "道路舗装工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "五條市",
+      "title": "道路維持修繕工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "五條市",
+      "title": "道路維持修繕工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "五條市",
       "title": "にぎわい棟入口自動ドア化工事",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -38899,6 +38977,40 @@
     },
     {
       "municipality": "五條市",
+      "title": "道路舗装工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "五條市",
+      "title": "道路舗装工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "五條市",
+      "title": "道路維持修繕工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "五條市",
+      "title": "道路維持修繕工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "五條市",
       "title": "にぎわい棟入口自動ドア化工事",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -41313,6 +41425,40 @@
     },
     {
       "municipality": "五條市",
+      "title": "道路舗装工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "五條市",
+      "title": "道路舗装工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "五條市",
+      "title": "道路維持修繕工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "五條市",
+      "title": "道路維持修繕工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "五條市",
       "title": "にぎわい棟入口自動ドア化工事",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -43755,73 +43901,13 @@
     },
     {
       "municipality": "御所市",
-      "title": "一般競争入札公告（建設工事）（管財課）",
+      "title": "御所市文書関係事務適正化支援業務委託プロポーザルを実施します（業務委託）",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },
     {
       "municipality": "御所市",
-      "title": "一般競争入札公告（建設工事）（管財課） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "小林児童遊園⑦改修工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "小林児童遊園⑦改修工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "今住調整池維持 建 御所市大字",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "今住調整池維持 建 御所市大字 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "御所汚水9-1号幹線(2工区)管路築造",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "御所汚水9-1号幹線(2工区)管路築造 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "小林保育所解体",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "小林保育所解体 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "御所汚水9号幹線(10工区)管路築造",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "御所汚水9号幹線(10工区)管路築造 ",
+      "title": "御所市文書関係事務適正化支援業務委託プロポーザルを実施します（業務委託） ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },
@@ -43899,6 +43985,102 @@
     },
     {
       "municipality": "御所市",
+      "title": "御所市文書関係事務適正化支援業務委託プロポーザルを実施します（業務委託）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "御所市文書関係事務適正化支援業務委託プロポーザルを実施します（業務委託） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "一般競争入札公告（建設工事）（管財課）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "一般競争入札公告（建設工事）（管財課） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "小林児童遊園⑦改修工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "小林児童遊園⑦改修工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "今住調整池維持 建 御所市大字",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "今住調整池維持 建 御所市大字 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "御所汚水9-1号幹線(2工区)管路築造",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "御所汚水9-1号幹線(2工区)管路築造 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "小林保育所解体",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "小林保育所解体 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "御所汚水9号幹線(10工区)管路築造",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "御所汚水9号幹線(10工区)管路築造 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "御所市文書関係事務適正化支援業務委託プロポーザルを実施します（業務委託）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "御所市文書関係事務適正化支援業務委託プロポーザルを実施します（業務委託） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
       "title": "一般競争入札公告（建設工事）（管財課）",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -55106,1146 +55288,6 @@
       "borderlineRescue": true
     },
     {
-      "municipality": "高取町",
-      "title": "道路メンテナンス事業 橋梁補修工事（上子島16号橋）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "橋梁",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "道路メンテナンス事業 橋梁補修工事（上子島16号橋） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "橋梁",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道管布設工事（8－1工区）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道管布設工事（8－1工区） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "塵芥収集用軽ダンプトラック購入事業",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "購入"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "塵芥収集用軽ダンプトラック購入事業 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "購入"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道施設修繕等業務委託",
-      "reason": "infra_exclude_keyword",
-      "matchedKeywords": [
-        "水道"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道施設修繕等業務委託 ",
-      "reason": "infra_exclude_keyword",
-      "matchedKeywords": [
-        "水道"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "高取町立学校教職員用端末整備業務",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "高取町立学校教職員用端末整備業務 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "高取町公共下水道工事7－1工区",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "高取町公共下水道工事7－1工区 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "防災・安全交付金事業 舗装補修工事（8－1工区）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "防災・安全交付金事業 舗装補修工事（8－1工区） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "道路メンテナンス事業 橋梁定期点検業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "橋梁",
-        "橋",
-        "定期点検"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "道路メンテナンス事業 橋梁定期点検業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "橋梁",
-        "橋",
-        "定期点検"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "公用車購入",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "購入"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "公用車購入 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "購入"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "壺阪山駅周辺地区拠点にかかる整地設計業務（観覚寺地区）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "壺阪山駅周辺地区拠点にかかる整地設計業務（観覚寺地区） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "町単道路測量設計業務（下子島地区外）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "測量"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "町単道路測量設計業務（下子島地区外） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "測量"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道管布設工事（7－3工区）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道管布設工事（7－3工区） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道管布設工事（7－4工区）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道管布設工事（7－4工区） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道メーター検針業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "検針"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道メーター検針業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "検針"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道営業窓口補助業務",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道営業窓口補助業務 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道管布設工事（7－1工区）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道管布設工事（7－1工区） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道管布設工事（7－2工区）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道管布設工事（7－2工区） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "道路メンテナンス事業 橋梁補修工事(下土佐4号橋)",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "橋梁",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "道路メンテナンス事業 橋梁補修工事(下土佐4号橋) ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "橋梁",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "高取町公共下水道工事に伴う舗装本復旧工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装",
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "高取町公共下水道工事に伴う舗装本復旧工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装",
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道管布設工事（7－1工区）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道管布設工事（7－1工区） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道管布設工事（7－2工区）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道管布設工事（7－2工区） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "令和7年度 高取町水道施設台帳作成業務",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "令和7年度 高取町水道施設台帳作成業務 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "町単道路歩道改良工事（清水谷地区）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "町単道路歩道改良工事（清水谷地区） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "防災・安全交付金事業舗装補修工事(7-1工区)",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "防災・安全交付金事業舗装補修工事(7-1工区) ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "道路メンテナンス事業 橋梁定期点検業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "橋梁",
-        "橋",
-        "定期点検"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "道路メンテナンス事業 橋梁定期点検業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "橋梁",
-        "橋",
-        "定期点検"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "道路メンテナンス事業 橋梁補修工事（上子島16号橋）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "橋梁",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "道路メンテナンス事業 橋梁補修工事（上子島16号橋） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "橋梁",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道管布設工事（8－1工区）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道管布設工事（8－1工区） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "塵芥収集用軽ダンプトラック購入事業",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "購入"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "塵芥収集用軽ダンプトラック購入事業 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "購入"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道施設修繕等業務委託",
-      "reason": "infra_exclude_keyword",
-      "matchedKeywords": [
-        "水道"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道施設修繕等業務委託 ",
-      "reason": "infra_exclude_keyword",
-      "matchedKeywords": [
-        "水道"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "高取町立学校教職員用端末整備業務",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "高取町立学校教職員用端末整備業務 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "高取町公共下水道工事7－1工区",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "高取町公共下水道工事7－1工区 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "防災・安全交付金事業 舗装補修工事（8－1工区）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "防災・安全交付金事業 舗装補修工事（8－1工区） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "道路メンテナンス事業 橋梁定期点検業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "橋梁",
-        "橋",
-        "定期点検"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "道路メンテナンス事業 橋梁定期点検業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "橋梁",
-        "橋",
-        "定期点検"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "公用車購入",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "購入"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "公用車購入 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "購入"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "壺阪山駅周辺地区拠点にかかる整地設計業務（観覚寺地区）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "壺阪山駅周辺地区拠点にかかる整地設計業務（観覚寺地区） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "町単道路測量設計業務（下子島地区外）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "測量"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "町単道路測量設計業務（下子島地区外） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "測量"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道管布設工事（7－3工区）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道管布設工事（7－3工区） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道管布設工事（7－4工区）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道管布設工事（7－4工区） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道メーター検針業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "検針"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道メーター検針業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "検針"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道営業窓口補助業務",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道営業窓口補助業務 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道管布設工事（7－1工区）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道管布設工事（7－1工区） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道管布設工事（7－2工区）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道管布設工事（7－2工区） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "道路メンテナンス事業 橋梁補修工事(下土佐4号橋)",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "橋梁",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "道路メンテナンス事業 橋梁補修工事(下土佐4号橋) ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "橋梁",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "高取町公共下水道工事に伴う舗装本復旧工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装",
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "高取町公共下水道工事に伴う舗装本復旧工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装",
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道管布設工事（7－1工区）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道管布設工事（7－1工区） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道管布設工事（7－2工区）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道管布設工事（7－2工区） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "令和7年度 高取町水道施設台帳作成業務",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "令和7年度 高取町水道施設台帳作成業務 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "町単道路歩道改良工事（清水谷地区）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "町単道路歩道改良工事（清水谷地区） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "防災・安全交付金事業舗装補修工事(7-1工区)",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "防災・安全交付金事業舗装補修工事(7-1工区) ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "道路メンテナンス事業 橋梁定期点検業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "橋梁",
-        "橋",
-        "定期点検"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "道路メンテナンス事業 橋梁定期点検業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "橋梁",
-        "橋",
-        "定期点検"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "道路メンテナンス事業 橋梁補修工事（上子島16号橋）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "橋梁",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "道路メンテナンス事業 橋梁補修工事（上子島16号橋） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "橋梁",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道管布設工事（8－1工区）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道管布設工事（8－1工区） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "塵芥収集用軽ダンプトラック購入事業",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "購入"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "塵芥収集用軽ダンプトラック購入事業 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "購入"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道施設修繕等業務委託",
-      "reason": "infra_exclude_keyword",
-      "matchedKeywords": [
-        "水道"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道施設修繕等業務委託 ",
-      "reason": "infra_exclude_keyword",
-      "matchedKeywords": [
-        "水道"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "高取町立学校教職員用端末整備業務",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "高取町立学校教職員用端末整備業務 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "高取町公共下水道工事7－1工区",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "高取町公共下水道工事7－1工区 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "防災・安全交付金事業 舗装補修工事（8－1工区）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "防災・安全交付金事業 舗装補修工事（8－1工区） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "道路メンテナンス事業 橋梁定期点検業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "橋梁",
-        "橋",
-        "定期点検"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "道路メンテナンス事業 橋梁定期点検業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "橋梁",
-        "橋",
-        "定期点検"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "公用車購入",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "購入"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "公用車購入 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "購入"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "壺阪山駅周辺地区拠点にかかる整地設計業務（観覚寺地区）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "壺阪山駅周辺地区拠点にかかる整地設計業務（観覚寺地区） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "町単道路測量設計業務（下子島地区外）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "測量"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "町単道路測量設計業務（下子島地区外） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "測量"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道管布設工事（7－3工区）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道管布設工事（7－3工区） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道管布設工事（7－4工区）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道管布設工事（7－4工区） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道メーター検針業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "検針"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道メーター検針業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "検針"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道営業窓口補助業務",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道営業窓口補助業務 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道管布設工事（7－1工区）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道管布設工事（7－1工区） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道管布設工事（7－2工区）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道管布設工事（7－2工区） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "道路メンテナンス事業 橋梁補修工事(下土佐4号橋)",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "橋梁",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "道路メンテナンス事業 橋梁補修工事(下土佐4号橋) ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "橋梁",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "高取町公共下水道工事に伴う舗装本復旧工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装",
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "高取町公共下水道工事に伴う舗装本復旧工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装",
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道管布設工事（7－1工区）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道管布設工事（7－1工区） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道管布設工事（7－2工区）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道管布設工事（7－2工区） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "令和7年度 高取町水道施設台帳作成業務",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "令和7年度 高取町水道施設台帳作成業務 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "町単道路歩道改良工事（清水谷地区）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "町単道路歩道改良工事（清水谷地区） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "防災・安全交付金事業舗装補修工事(7-1工区)",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "防災・安全交付金事業舗装補修工事(7-1工区) ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "道路メンテナンス事業 橋梁定期点検業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "橋梁",
-        "橋",
-        "定期点検"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "道路メンテナンス事業 橋梁定期点検業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "橋梁",
-        "橋",
-        "定期点検"
-      ]
-    },
-    {
       "municipality": "斑鳩町",
       "title": "令和8年度斑鳩町鳩水園補修整備工事",
       "reason": "no_architecture_context",
@@ -57918,108 +56960,6 @@
       "title": "○ ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 三郷町水質改善下水道汚水管築造工事（信貴山東4-1工区）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 三郷町水質改善下水道汚水管築造工事（信貴山東4-1工区） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 公共下水道人孔蓋更新工事（立野2工区）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 公共下水道人孔蓋更新工事（立野2工区） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 三郷町道路台帳更新業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 三郷町道路台帳更新業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 道路施設定期点検業務（橋梁点検）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "橋梁",
-        "橋",
-        "定期点検"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 道路施設定期点検業務（橋梁点検） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "橋梁",
-        "橋",
-        "定期点検"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 公共下水道人孔蓋更新工事（立野1工区）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 公共下水道人孔蓋更新工事（立野1工区） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 町営住宅特定建築物定期調査業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "調査"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 町営住宅特定建築物定期調査業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "調査"
-      ]
     },
     {
       "municipality": "三郷町",
@@ -58236,6 +57176,50 @@
       "title": "指名競争入札7月9日 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "指名競争入札9月3日",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "指名競争入札9月3日 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 街路樹剪定業務（1工区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 街路樹剪定業務（1工区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 街路樹剪定業務（2工区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 街路樹剪定業務（2工区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹"
+      ]
     },
     {
       "municipality": "三郷町",
@@ -58871,6 +57855,108 @@
     },
     {
       "municipality": "三郷町",
+      "title": "令和8年度 三郷町水質改善下水道汚水管築造工事（信貴山東4-1工区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 三郷町水質改善下水道汚水管築造工事（信貴山東4-1工区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 公共下水道人孔蓋更新工事（立野2工区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 公共下水道人孔蓋更新工事（立野2工区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 三郷町道路台帳更新業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 三郷町道路台帳更新業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 道路施設定期点検業務（橋梁点検）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "橋梁",
+        "橋",
+        "定期点検"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 道路施設定期点検業務（橋梁点検） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "橋梁",
+        "橋",
+        "定期点検"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 公共下水道人孔蓋更新工事（立野1工区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 公共下水道人孔蓋更新工事（立野1工区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 町営住宅特定建築物定期調査業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 町営住宅特定建築物定期調査業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "三郷町",
       "title": "令和8年度 竜の子斎場火葬炉耐火物等修繕工事",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -59106,18 +58192,6 @@
     {
       "municipality": "三郷町",
       "title": "入札参加資格者入札参加停止措置一覧 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "指名競争入札9月3日実施分",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "指名競争入札9月3日実施分 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },
@@ -59595,108 +58669,6 @@
     },
     {
       "municipality": "三郷町",
-      "title": "令和8年度 三郷町水質改善下水道汚水管築造工事（信貴山東4-1工区）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 三郷町水質改善下水道汚水管築造工事（信貴山東4-1工区） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 公共下水道人孔蓋更新工事（立野2工区）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 公共下水道人孔蓋更新工事（立野2工区） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 三郷町道路台帳更新業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 三郷町道路台帳更新業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 道路施設定期点検業務（橋梁点検）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "橋梁",
-        "橋",
-        "定期点検"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 道路施設定期点検業務（橋梁点検） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "橋梁",
-        "橋",
-        "定期点検"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 公共下水道人孔蓋更新工事（立野1工区）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 公共下水道人孔蓋更新工事（立野1工区） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 町営住宅特定建築物定期調査業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "調査"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 町営住宅特定建築物定期調査業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "調査"
-      ]
-    },
-    {
-      "municipality": "三郷町",
       "title": "メニュー 検索 <p>JavaScriptが無効のため、文字の大きさ・背景色を変更する機能を使用できません。</p> 本文へ Foreign Language 文字サイズ標準拡大 背景色白黒青 危険箇所をおしらせください 防犯・安心情報 休日・夜間救急 検索コーナー キーワード検索 Googleカスタム検索 検索対象 すべて ページ PDF ページID検索 暮らし・手続き 健康・福祉・子育て 教育・文化・スポーツ 産業・ビジネス 行政情報",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -59910,6 +58882,50 @@
       "title": "指名競争入札7月9日 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "指名競争入札9月3日",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "指名競争入札9月3日 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 街路樹剪定業務（1工区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 街路樹剪定業務（1工区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 街路樹剪定業務（2工区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 街路樹剪定業務（2工区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹"
+      ]
     },
     {
       "municipality": "三郷町",
@@ -60545,6 +59561,108 @@
     },
     {
       "municipality": "三郷町",
+      "title": "令和8年度 三郷町水質改善下水道汚水管築造工事（信貴山東4-1工区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 三郷町水質改善下水道汚水管築造工事（信貴山東4-1工区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 公共下水道人孔蓋更新工事（立野2工区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 公共下水道人孔蓋更新工事（立野2工区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 三郷町道路台帳更新業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 三郷町道路台帳更新業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 道路施設定期点検業務（橋梁点検）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "橋梁",
+        "橋",
+        "定期点検"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 道路施設定期点検業務（橋梁点検） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "橋梁",
+        "橋",
+        "定期点検"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 公共下水道人孔蓋更新工事（立野1工区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 公共下水道人孔蓋更新工事（立野1工区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 町営住宅特定建築物定期調査業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 町営住宅特定建築物定期調査業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "三郷町",
       "title": "令和8年度 竜の子斎場火葬炉耐火物等修繕工事",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -60780,18 +59898,6 @@
     {
       "municipality": "三郷町",
       "title": "入札参加資格者入札参加停止措置一覧 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "指名競争入札9月3日実施分",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "指名競争入札9月3日実施分 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },
@@ -61269,108 +60375,6 @@
     },
     {
       "municipality": "三郷町",
-      "title": "令和8年度 三郷町水質改善下水道汚水管築造工事（信貴山東4-1工区）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 三郷町水質改善下水道汚水管築造工事（信貴山東4-1工区） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 公共下水道人孔蓋更新工事（立野2工区）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 公共下水道人孔蓋更新工事（立野2工区） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 三郷町道路台帳更新業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 三郷町道路台帳更新業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 道路施設定期点検業務（橋梁点検）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "橋梁",
-        "橋",
-        "定期点検"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 道路施設定期点検業務（橋梁点検） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "橋梁",
-        "橋",
-        "定期点検"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 公共下水道人孔蓋更新工事（立野1工区）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 公共下水道人孔蓋更新工事（立野1工区） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 町営住宅特定建築物定期調査業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "調査"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 町営住宅特定建築物定期調査業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "調査"
-      ]
-    },
-    {
-      "municipality": "三郷町",
       "title": "メニュー 検索 <p>JavaScriptが無効のため、文字の大きさ・背景色を変更する機能を使用できません。</p> 本文へ Foreign Language 文字サイズ標準拡大 背景色白黒青 危険箇所をおしらせください 防犯・安心情報 休日・夜間救急 検索コーナー キーワード検索 Googleカスタム検索 検索対象 すべて ページ PDF ページID検索 暮らし・手続き 健康・福祉・子育て 教育・文化・スポーツ 産業・ビジネス 行政情報",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -61584,6 +60588,50 @@
       "title": "指名競争入札7月9日 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "指名競争入札9月3日",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "指名競争入札9月3日 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 街路樹剪定業務（1工区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 街路樹剪定業務（1工区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 街路樹剪定業務（2工区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 街路樹剪定業務（2工区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹"
+      ]
     },
     {
       "municipality": "三郷町",
@@ -62219,6 +61267,108 @@
     },
     {
       "municipality": "三郷町",
+      "title": "令和8年度 三郷町水質改善下水道汚水管築造工事（信貴山東4-1工区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 三郷町水質改善下水道汚水管築造工事（信貴山東4-1工区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 公共下水道人孔蓋更新工事（立野2工区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 公共下水道人孔蓋更新工事（立野2工区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 三郷町道路台帳更新業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 三郷町道路台帳更新業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 道路施設定期点検業務（橋梁点検）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "橋梁",
+        "橋",
+        "定期点検"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 道路施設定期点検業務（橋梁点検） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "橋梁",
+        "橋",
+        "定期点検"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 公共下水道人孔蓋更新工事（立野1工区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 公共下水道人孔蓋更新工事（立野1工区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 町営住宅特定建築物定期調査業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 町営住宅特定建築物定期調査業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "三郷町",
       "title": "令和8年度 竜の子斎場火葬炉耐火物等修繕工事",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -62454,18 +61604,6 @@
     {
       "municipality": "三郷町",
       "title": "入札参加資格者入札参加停止措置一覧 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "指名競争入札9月3日実施分",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "指名競争入札9月3日実施分 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },
@@ -63241,6 +62379,40 @@
       "reason": "exclusion_keyword",
       "matchedKeywords": [
         "物品"
+      ]
+    },
+    {
+      "municipality": "大淀町",
+      "title": "越部地内道路改良工事（第8－道改－工－1号）【令和8年8月31日執行】 （pdf, 64.16KB）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "大淀町",
+      "title": "越部地内道路改良工事（第8－道改－工－1号）【令和8年8月31日執行】 （pdf, 64.16KB） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "大淀町",
+      "title": "北野地内歩道舗装補修工事（第8－道路補修－工－2号）【令和8年8月31日執行】 （pdf, 69.65KB）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "大淀町",
+      "title": "北野地内歩道舗装補修工事（第8－道路補修－工－2号）【令和8年8月31日執行】 （pdf, 69.65KB） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
       ]
     },
     {
@@ -64867,6 +64039,40 @@
     },
     {
       "municipality": "大淀町",
+      "title": "越部地内道路改良工事（第8－道改－工－1号）【令和8年8月31日執行】 （pdf, 64.16KB）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "大淀町",
+      "title": "越部地内道路改良工事（第8－道改－工－1号）【令和8年8月31日執行】 （pdf, 64.16KB） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "大淀町",
+      "title": "北野地内歩道舗装補修工事（第8－道路補修－工－2号）【令和8年8月31日執行】 （pdf, 69.65KB）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "大淀町",
+      "title": "北野地内歩道舗装補修工事（第8－道路補修－工－2号）【令和8年8月31日執行】 （pdf, 69.65KB） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "大淀町",
       "title": "大淀町長選挙ポスター掲示場製作、設置等業務【令和8年8月31日執行】 （pdf, 84.56KB）",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -66485,6 +65691,40 @@
       "reason": "exclusion_keyword",
       "matchedKeywords": [
         "物品"
+      ]
+    },
+    {
+      "municipality": "大淀町",
+      "title": "越部地内道路改良工事（第8－道改－工－1号）【令和8年8月31日執行】 （pdf, 64.16KB）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "大淀町",
+      "title": "越部地内道路改良工事（第8－道改－工－1号）【令和8年8月31日執行】 （pdf, 64.16KB） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "大淀町",
+      "title": "北野地内歩道舗装補修工事（第8－道路補修－工－2号）【令和8年8月31日執行】 （pdf, 69.65KB）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "大淀町",
+      "title": "北野地内歩道舗装補修工事（第8－道路補修－工－2号）【令和8年8月31日執行】 （pdf, 69.65KB） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
       ]
     },
     {
