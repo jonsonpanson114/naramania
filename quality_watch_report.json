@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-04T06:09:32.499Z",
-  "qualityGeneratedAt": "2026-09-04T06:04:15.999Z",
+  "generatedAt": "2026-09-04T11:09:07.444Z",
+  "qualityGeneratedAt": "2026-09-04T11:04:28.860Z",
   "itemCount": 288,
   "resultFollowUp": {
-    "totalCount": 11,
-    "highCount": 11,
+    "totalCount": 10,
+    "highCount": 10,
     "mediumCount": 0,
     "lowCount": 0,
     "missingBiddingDateCount": 0,
@@ -16,10 +16,6 @@
       {
         "municipality": "大淀町",
         "count": 2
-      },
-      {
-        "municipality": "王寺町",
-        "count": 1
       },
       {
         "municipality": "奈良市",
@@ -125,22 +121,6 @@
       },
       {
         "priority": "high",
-        "ageDays": 44,
-        "reason": "開札日から44日経過",
-        "item": {
-          "id": "oji-ffe0646cd8",
-          "municipality": "王寺町",
-          "title": "やわらぎ会館改修工事（7月）",
-          "status": "受付終了",
-          "announcementDate": "2026-07-15",
-          "biddingDate": "2026-07-22",
-          "winningContractor": null,
-          "link": "https://www.town.oji.nara.jp/kakuka/somu/somu/gyomuannai/nyuusatu/nyuusatukouhyou/11747.html",
-          "pdfUrl": null
-        }
-      },
-      {
-        "priority": "high",
         "ageDays": 14,
         "reason": "開札日から14日経過",
         "item": {
@@ -184,6 +164,22 @@
           "biddingDate": "2026-08-21",
           "winningContractor": null,
           "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260148&gamenMode=0",
+          "pdfUrl": null
+        }
+      },
+      {
+        "priority": "high",
+        "ageDays": 14,
+        "reason": "開札日から14日経過",
+        "item": {
+          "id": "nara-pref-29001013060020260149",
+          "municipality": "奈良県",
+          "title": "奈良南高校（大淀学舎）トイレ環境改善整備工事 第８－１８号",
+          "status": "受付終了",
+          "announcementDate": "2026-07-22",
+          "biddingDate": "2026-08-21",
+          "winningContractor": null,
+          "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260149&gamenMode=0",
           "pdfUrl": null
         }
       }

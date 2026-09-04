@@ -882,6 +882,59 @@
     "isRelevant": false
   },
   {
+    "id": "nara-city-0000002594",
+    "municipality": "奈良市",
+    "title": "灰汚水処理装置点検整備補修",
+    "type": "建築",
+    "announcementDate": "2026-09-04",
+    "biddingDate": "2026-09-04",
+    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+    "status": "落札",
+    "winningContractor": "カナデビア株式会社",
+    "winnerType": "ゼネコン",
+    "isRelevant": false
+  },
+  {
+    "id": "nara-city-0000002597",
+    "municipality": "奈良市",
+    "title": "奈良市役所本庁舎他８施設設備改修工事に伴う建築設計業務委託",
+    "type": "コンサル",
+    "announcementDate": "2026-09-04",
+    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+    "status": "不調",
+    "isRelevant": false
+  },
+  {
+    "id": "oji-ffe0646cd8",
+    "municipality": "王寺町",
+    "title": "やわらぎ会館改修工事（7月）",
+    "type": "建築",
+    "announcementDate": "2026-09-04",
+    "link": "https://www.town.oji.nara.jp/kakuka/somu/somu/gyomuannai/nyuusatu/nyuusatukouhyou/11747.html",
+    "status": "受付中",
+    "isRelevant": true
+  },
+  {
+    "id": "oji-1659042950",
+    "municipality": "王寺町",
+    "title": "役場庁舎給排水管等改修工事",
+    "type": "建築",
+    "announcementDate": "2026-09-04",
+    "link": "https://www.town.oji.nara.jp/kakuka/somu/somu/gyomuannai/nyuusatu/nyuusatukouhyou/11748.html",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
+    "id": "gose-御所市文書関係事務適正化支援業務委託プロ-1",
+    "municipality": "御所市",
+    "title": "御所市文書関係事務適正化支援業務委託プロポーザルを実施します（業務委託）",
+    "type": "その他",
+    "announcementDate": "2026-09-04",
+    "link": "",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
     "id": "uda-41c779fffc",
     "municipality": "宇陀市",
     "title": "【第08-A024号】道路維持事業 市道玉立２号線舗装補修工事",
@@ -4489,17 +4542,6 @@
     "isRelevant": false
   },
   {
-    "id": "nara-city-0000002594",
-    "municipality": "奈良市",
-    "title": "灰汚水処理装置点検整備補修",
-    "type": "建築",
-    "announcementDate": "2026-08-03",
-    "biddingDate": "2026-09-04",
-    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-    "status": "受付中",
-    "isRelevant": false
-  },
-  {
     "id": "nara-city-0000002623",
     "municipality": "奈良市",
     "title": "横断歩道橋長寿命化修繕及び橋梁排水施設改良工事（西部第７２２号線他（中町１号歩道橋）他）",
@@ -4525,17 +4567,6 @@
     "id": "nara-city-0000002596",
     "municipality": "奈良市",
     "title": "電線共同溝整備工事に伴う現場技術業務委託",
-    "type": "コンサル",
-    "announcementDate": "2026-08-03",
-    "biddingDate": "2026-09-04",
-    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-    "status": "受付中",
-    "isRelevant": false
-  },
-  {
-    "id": "nara-city-0000002597",
-    "municipality": "奈良市",
-    "title": "奈良市役所本庁舎他８施設設備改修工事に伴う建築設計業務委託",
     "type": "コンサル",
     "announcementDate": "2026-08-03",
     "biddingDate": "2026-09-04",
@@ -6395,17 +6426,6 @@
     "isRelevant": true
   },
   {
-    "id": "oji-ffe0646cd8",
-    "municipality": "王寺町",
-    "title": "やわらぎ会館改修工事（7月）",
-    "type": "建築",
-    "announcementDate": "2026-07-15",
-    "biddingDate": "2026-07-22",
-    "link": "https://www.town.oji.nara.jp/kakuka/somu/somu/gyomuannai/nyuusatu/nyuusatukouhyou/11747.html",
-    "status": "受付終了",
-    "isRelevant": true
-  },
-  {
     "id": "yamato-koriyama-3e55df1a",
     "municipality": "大和郡山市",
     "title": "落札額（税込）",
@@ -6426,16 +6446,6 @@
     "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/1892.html",
     "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk_kekka8-053.pdf",
     "status": "不調",
-    "isRelevant": false
-  },
-  {
-    "id": "oji-1659042950",
-    "municipality": "王寺町",
-    "title": "役場庁舎給排水管等改修工事",
-    "type": "建築",
-    "announcementDate": "2026-07-15",
-    "link": "https://www.town.oji.nara.jp/kakuka/somu/somu/gyomuannai/nyuusatu/nyuusatukouhyou/11748.html",
-    "status": "受付中",
     "isRelevant": false
   },
   {
@@ -6850,7 +6860,7 @@
     "biddingDate": "2026-08-03",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "（株）上田工務店",
+    "winningContractor": "(株)上田工務店",
     "isRelevant": false
   },
   {
@@ -8690,7 +8700,7 @@
     "biddingDate": "2026-07-21",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "（株）ミズハ",
+    "winningContractor": "(株)ミズハ",
     "isRelevant": false
   },
   {
@@ -8726,7 +8736,7 @@
     "biddingDate": "2026-08-03",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "（株）中西製作所 奈良営業所",
+    "winningContractor": "(株)中西製作所 奈良営業所",
     "isRelevant": false
   },
   {
@@ -9751,7 +9761,7 @@
     "biddingDate": "2026-06-29",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "NTT西日本（株）奈良支店",
+    "winningContractor": "ＮＴＴ西日本（株）奈良支店",
     "isRelevant": false
   },
   {
@@ -14380,7 +14390,7 @@
     "biddingDate": "2026-05-18",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "(株)森下組",
+    "winningContractor": "(株) 森下組",
     "isRelevant": false
   },
   {
@@ -14392,7 +14402,7 @@
     "biddingDate": "2026-05-18",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "村本建設(株)奈良本店",
+    "winningContractor": "村本建設(株) 奈良本店",
     "isRelevant": true
   },
   {
@@ -14838,7 +14848,7 @@
     "biddingDate": "2026-05-11",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "ポシブル医学 (株)",
+    "winningContractor": "ポシブル医科学 (株)",
     "isRelevant": false
   },
   {
@@ -14850,7 +14860,7 @@
     "biddingDate": "2026-05-11",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "ポシブル医学 (株)",
+    "winningContractor": "ポシブル医科学 (株)",
     "isRelevant": false
   },
   {
@@ -15055,7 +15065,7 @@
     "biddingDate": "2026-04-13",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "富田自動車",
+    "winningContractor": "冨田自動車",
     "isRelevant": false
   },
   {
