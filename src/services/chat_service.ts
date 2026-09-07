@@ -163,7 +163,7 @@ const SEARCH_KEYWORDS = [
 ];
 
 function getChatModelName(): string {
-    return process.env.GOOGLE_GENERATIVE_AI_CHAT_MODEL || 'gemini-3.7-flash';
+    return process.env.GOOGLE_GENERATIVE_AI_CHAT_MODEL || 'gemini-3.8-flash';
 }
 
 function getNowInJst(): Date {
@@ -409,10 +409,13 @@ async function callGeminiJson<T>(prompt: string, schema: object, modelName: stri
                     parts: [{ text: prompt }],
                 },
             ],
+            // Gemini 3系では temperature / top_p / top_k は指定しない
+            // (3.8への移行手順で明示的に外すよう案内されている)。
+            // ここは gemini_service と違いフォールバック先が無く、400になると
+            // チャットが丸ごと落ちるため、指定を残さない。
             generationConfig: {
                 responseMimeType: 'application/json',
                 responseSchema: schema,
-                temperature: 0.1,
             },
         }),
         cache: 'no-store',
@@ -918,12 +921,12 @@ async function callGeminiChat(prompt: string, useGoogleSearch: boolean, modelNam
             // Gemini は google_search ツールと responseSchema(JSON構造化出力)を
             // 同時に使えず 400 になる。検索を使うときはスキーマを外し、
             // 代わりにプロンプトでJSON形式を指示する。
+            // temperature を渡さないのは上と同じ理由(Gemini 3系では非対応)。
             generationConfig: useGoogleSearch
-                ? { temperature: 0.2 }
+                ? {}
                 : {
                     responseMimeType: 'application/json',
                     responseSchema: CHAT_RESPONSE_SCHEMA,
-                    temperature: 0.2,
                 },
             ...(useGoogleSearch ? { tools: [{ google_search: {} }] } : {}),
         }),
