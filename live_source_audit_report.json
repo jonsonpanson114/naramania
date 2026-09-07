@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-07T07:01:31.072Z",
+  "generatedAt": "2026-09-07T10:09:21.998Z",
   "currentItemCount": 296,
   "checkedMunicipalities": [
     "奈良市",
@@ -36,9 +36,9 @@
   "scraperResults": [
     {
       "municipality": "奈良市",
-      "rawCount": 108,
+      "rawCount": 109,
       "keptCount": 17,
-      "rejectedCount": 91,
+      "rejectedCount": 92,
       "keptAnnouncementCount": 9,
       "keptResultCount": 8,
       "warnings": [],
@@ -96,9 +96,9 @@
     },
     {
       "municipality": "五條市",
-      "rawCount": 242,
+      "rawCount": 243,
       "keptCount": 31,
-      "rejectedCount": 211,
+      "rejectedCount": 212,
       "keptAnnouncementCount": 3,
       "keptResultCount": 28,
       "warnings": [],
@@ -158,9 +158,9 @@
     },
     {
       "municipality": "広陵町",
-      "rawCount": 40,
+      "rawCount": 47,
       "keptCount": 5,
-      "rejectedCount": 35,
+      "rejectedCount": 42,
       "keptAnnouncementCount": 0,
       "keptResultCount": 5,
       "warnings": [],
@@ -302,7 +302,7 @@
       },
       {
         "municipality": "五條市",
-        "snapshotCount": 242,
+        "snapshotCount": 243,
         "expectedCount": 31,
         "matchedCount": 31,
         "missingCount": 0,
@@ -368,7 +368,7 @@
       },
       {
         "municipality": "奈良市",
-        "snapshotCount": 108,
+        "snapshotCount": 109,
         "expectedCount": 17,
         "matchedCount": 17,
         "missingCount": 0,
@@ -434,7 +434,7 @@
       },
       {
         "municipality": "広陵町",
-        "snapshotCount": 40,
+        "snapshotCount": 47,
         "expectedCount": 5,
         "matchedCount": 5,
         "missingCount": 0,
