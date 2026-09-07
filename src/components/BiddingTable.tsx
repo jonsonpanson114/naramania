@@ -4,7 +4,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { BiddingItem, BiddingStatus } from '@/types/bidding';
 import { getBiddingLabel } from '@/lib/bidding_schedule';
 import { assessBiddingScope } from '@/lib/relevance_guard';
-import { matchesPracticalFilter } from '@/lib/practical_filters';
+import { matchesViewTab, type ViewTab } from '@/lib/practical_filters';
 import { getEnabledMunicipalityNames } from '@/lib/user_settings';
 import { useUserSettings } from '@/lib/use_user_settings';
 import {
@@ -24,7 +24,8 @@ import {
 } from 'lucide-react';
 import { WatchButton } from '@/components/WatchButton';
 
-export type ViewTab = 'active' | 'followUp' | 'results' | 'all';
+// タブの判定条件は practical_filters に集約している(トップの件数と揃えるため)
+export type { ViewTab };
 
 interface BiddingTableProps {
     items: BiddingItem[];
@@ -59,10 +60,7 @@ const STATUS_TONES: Record<BiddingStatus, { label: string; pill: string; dot: st
 };
 
 function matchesTab(item: BiddingItem, tab: ViewTab): boolean {
-    if (tab === 'active') return matchesPracticalFilter(item, 'active');
-    if (tab === 'followUp') return matchesPracticalFilter(item, 'resultFollowUp');
-    if (tab === 'results') return item.status === '落札' || item.status === '不調';
-    return true;
+    return matchesViewTab(item, tab);
 }
 
 function matchesType(item: BiddingItem, type: TypeFilter): boolean {

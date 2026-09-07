@@ -102,3 +102,19 @@ export function matchesPracticalFilter(item: BiddingItem, filter: PracticalFilte
 export function countPracticalFilter(items: BiddingItem[], filter: PracticalFilter): number {
   return items.filter((item) => matchesPracticalFilter(item, filter)).length;
 }
+
+/**
+ * 一覧のタブ。トップの件数と一覧の中身がずれないよう、
+ * タブの判定条件はここに1つだけ置く。
+ *
+ * 以前は一覧側にだけ条件があり、トップの案内カードが別条件で数えていたため、
+ * 「結果269件」と表示して開くと248件、という食い違いが起きた。
+ */
+export type ViewTab = 'active' | 'followUp' | 'results' | 'all';
+
+export function matchesViewTab(item: BiddingItem, tab: ViewTab): boolean {
+  if (tab === 'active') return matchesPracticalFilter(item, 'active');
+  if (tab === 'followUp') return matchesPracticalFilter(item, 'resultFollowUp');
+  if (tab === 'results') return item.status === '落札' || item.status === '不調';
+  return true;
+}

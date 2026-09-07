@@ -4,7 +4,7 @@ import { AlertNotificationPanel } from '@/components/AlertNotificationPanel';
 import { TodayFocusPanel } from '@/components/TodayFocusPanel';
 import { DataFreshnessBanner } from '@/components/DataFreshnessBanner';
 import { WatchResultsPanel } from '@/components/WatchResultsPanel';
-import { BiddingTable } from '@/components/BiddingTable';
+import { ProjectListLink } from '@/components/ProjectListLink';
 import { NewsSection } from '@/components/NewsSection';
 import { NewsTicker } from '@/components/NewsTicker';
 import { countPracticalFilter } from '@/lib/practical_filters';
@@ -80,10 +80,9 @@ export default async function Home() {
 
         <AlertNotificationPanel items={allItems} />
 
-        {/* 案件一覧 */}
-        <div className="mt-10">
-          <BiddingTable items={allItems} />
-        </div>
+        {/* 案件一覧は件数と入口だけ。全件表をここに再掲載すると
+            モバイルでページの8割近くを占め、下の内容まで届かなくなる */}
+        <ProjectListLink items={allItems} />
 
         {/* News Section（一覧の下。ニュースは上部ティッカーと /news が主動線） */}
         <NewsSection pageSize={5} showAllLink />
