@@ -1,37 +1,37 @@
 {
-  "generatedAt": "2026-09-04T11:04:28.860Z",
+  "generatedAt": "2026-09-07T06:12:33.723Z",
   "source": "daily_scrape",
   "municipalityLastScraped": {
-    "奈良市": "2026-09-04T11:04:28.860Z",
-    "橿原市": "2026-09-04T11:04:28.860Z",
-    "生駒市": "2026-09-04T11:04:28.860Z",
-    "大和高田市": "2026-09-04T11:04:28.860Z",
-    "大和郡山市": "2026-09-04T11:04:28.860Z",
-    "葛城市": "2026-09-04T11:04:28.860Z",
-    "五條市": "2026-09-04T11:04:28.860Z",
-    "御所市": "2026-09-04T11:04:28.860Z",
-    "天理市": "2026-09-04T11:04:28.860Z",
-    "桜井市": "2026-09-04T11:04:28.860Z",
-    "宇陀市": "2026-09-04T11:04:28.860Z",
-    "田原本町": "2026-09-04T11:04:28.860Z",
-    "広陵町": "2026-09-04T11:04:28.860Z",
-    "香芝市": "2026-09-04T11:04:28.860Z",
-    "川西町": "2026-09-04T11:04:28.860Z",
-    "山添村": "2026-09-04T11:04:28.860Z",
-    "平群町": "2026-09-04T11:04:28.860Z",
-    "三宅町": "2026-09-04T11:04:28.860Z",
-    "安堵町": "2026-09-04T11:04:28.860Z",
-    "高取町": "2026-09-04T11:04:28.860Z",
-    "斑鳩町": "2026-09-04T11:04:28.860Z",
-    "三郷町": "2026-09-04T11:04:28.860Z",
-    "王寺町": "2026-09-04T11:04:28.860Z",
-    "大淀町": "2026-09-04T11:04:28.860Z"
+    "奈良市": "2026-09-07T06:12:33.723Z",
+    "橿原市": "2026-09-07T06:12:33.723Z",
+    "生駒市": "2026-09-07T06:12:33.723Z",
+    "大和高田市": "2026-09-07T06:12:33.723Z",
+    "大和郡山市": "2026-09-07T06:12:33.723Z",
+    "葛城市": "2026-09-07T06:12:33.723Z",
+    "五條市": "2026-09-07T06:12:33.723Z",
+    "御所市": "2026-09-07T06:12:33.723Z",
+    "天理市": "2026-09-07T06:12:33.723Z",
+    "桜井市": "2026-09-07T06:12:33.723Z",
+    "宇陀市": "2026-09-07T06:12:33.723Z",
+    "田原本町": "2026-09-07T06:12:33.723Z",
+    "広陵町": "2026-09-07T06:12:33.723Z",
+    "香芝市": "2026-09-07T06:12:33.723Z",
+    "川西町": "2026-09-07T06:12:33.723Z",
+    "山添村": "2026-09-07T06:12:33.723Z",
+    "平群町": "2026-09-07T06:12:33.723Z",
+    "三宅町": "2026-09-07T06:12:33.723Z",
+    "安堵町": "2026-09-07T06:12:33.723Z",
+    "高取町": "2026-09-07T06:12:33.723Z",
+    "斑鳩町": "2026-09-07T06:12:33.723Z",
+    "三郷町": "2026-09-07T06:12:33.723Z",
+    "王寺町": "2026-09-07T06:12:33.723Z",
+    "大淀町": "2026-09-07T06:12:33.723Z"
   },
-  "scrapedCount": 2342,
-  "keptCount": 288,
-  "rejectedCount": 2100,
+  "scrapedCount": 2718,
+  "keptCount": 296,
+  "rejectedCount": 2449,
   "oldestAnnouncementDate": "2025-02-02",
-  "latestAnnouncementDate": "2026-09-04",
+  "latestAnnouncementDate": "2026-09-07",
   "municipalityCount": 24,
   "municipalityAudit": {
     "expectedMunicipalityCount": 25,
@@ -94,6 +94,11 @@
         "changeFromPrevious": 0
       },
       {
+        "municipality": "桜井市",
+        "count": 10,
+        "changeFromPrevious": 7
+      },
+      {
         "municipality": "大淀町",
         "count": 7,
         "changeFromPrevious": 0
@@ -115,13 +120,8 @@
       },
       {
         "municipality": "天理市",
-        "count": 4,
-        "changeFromPrevious": 0
-      },
-      {
-        "municipality": "桜井市",
-        "count": 3,
-        "changeFromPrevious": 0
+        "count": 5,
+        "changeFromPrevious": 1
       },
       {
         "municipality": "三郷町",
@@ -165,19 +165,13 @@
       }
     ],
     "retainedFromPrevious": [
-      "三宅町",
       "高取町"
     ],
     "issues": [
       {
-        "municipality": "三宅町",
-        "level": "warning",
-        "message": "[三宅町] 取得件数が急減したため既存データを維持しています (baseline=6, new kept=4)"
-      },
-      {
         "municipality": "高取町",
         "level": "warning",
-        "message": "[高取町] 取得件数が急減したため既存データを維持しています (baseline=24, new kept=0)"
+        "message": "[高取町] 取得件数が急減したため既存データを維持しています (baseline=24, new kept=16)"
       }
     ]
   },
@@ -211,8 +205,8 @@
     ]
   },
   "sourceCoverage": {
-    "activeCount": 25,
-    "okCount": 25,
+    "activeCount": 26,
+    "okCount": 26,
     "missingErrorCount": 0,
     "missingWarningCount": 0,
     "results": [
@@ -232,7 +226,9 @@
         "sourceCounts": {
           "ppi.ebid-kouji-gyoumu.pref.nara.jp": 51
         },
-        "message": "奈良県: 51件 / sources OK"
+        "announcementCount": 15,
+        "resultCount": 36,
+        "message": "奈良県: 51件 (公告15/結果36) / sources OK"
       },
       {
         "expectation": {
@@ -250,7 +246,9 @@
         "sourceCounts": {
           "nara.efftis.jp": 11
         },
-        "message": "奈良市: 11件 / sources OK"
+        "announcementCount": 3,
+        "resultCount": 8,
+        "message": "奈良市: 11件 (公告3/結果8) / sources OK"
       },
       {
         "expectation": {
@@ -268,7 +266,9 @@
         "sourceCounts": {
           "city.kashihara.nara.jp": 32
         },
-        "message": "橿原市: 32件 / sources OK"
+        "announcementCount": 0,
+        "resultCount": 32,
+        "message": "橿原市: 32件 (公告0/結果32) / sources OK"
       },
       {
         "expectation": {
@@ -286,7 +286,9 @@
         "sourceCounts": {
           "epi-cloud.fwd.ne.jp": 22
         },
-        "message": "生駒市: 22件 / sources OK"
+        "announcementCount": 0,
+        "resultCount": 22,
+        "message": "生駒市: 22件 (公告0/結果22) / sources OK"
       },
       {
         "expectation": {
@@ -306,6 +308,8 @@
         "sourceCounts": {
           "city.yamatotakada.nara.jp": 0
         },
+        "announcementCount": 0,
+        "resultCount": 0,
         "message": "大和高田市: 対象案件なし / filtered scope OK"
       },
       {
@@ -324,7 +328,9 @@
         "sourceCounts": {
           "city.yamatokoriyama.lg.jp": 19
         },
-        "message": "大和郡山市: 19件 / sources OK"
+        "announcementCount": 0,
+        "resultCount": 19,
+        "message": "大和郡山市: 19件 (公告0/結果19) / sources OK"
       },
       {
         "expectation": {
@@ -344,7 +350,9 @@
           "city.katsuragi.nara.jp": 15,
           "epi-cloud.fwd.ne.jp": 10
         },
-        "message": "葛城市: 25件 / sources OK"
+        "announcementCount": 0,
+        "resultCount": 25,
+        "message": "葛城市: 25件 (公告0/結果25) / sources OK"
       },
       {
         "expectation": {
@@ -364,7 +372,9 @@
           "city.gojo.lg.jp": 4,
           "epi-cloud.fwd.ne.jp": 17
         },
-        "message": "五條市: 21件 / sources OK"
+        "announcementCount": 3,
+        "resultCount": 18,
+        "message": "五條市: 21件 (公告3/結果18) / sources OK"
       },
       {
         "expectation": {
@@ -382,7 +392,9 @@
         "sourceCounts": {
           "city.gose.nara.jp": 2
         },
-        "message": "御所市: 2件 / sources OK"
+        "announcementCount": 0,
+        "resultCount": 2,
+        "message": "御所市: 2件 (公告0/結果2) / sources OK"
       },
       {
         "expectation": {
@@ -395,12 +407,14 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 4,
+        "totalCount": 5,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.tenri.nara.jp": 4
+          "city.tenri.nara.jp": 5
         },
-        "message": "天理市: 4件 / sources OK"
+        "announcementCount": 5,
+        "resultCount": 0,
+        "message": "天理市: 5件 (公告5/結果0) / sources OK"
       },
       {
         "expectation": {
@@ -413,12 +427,14 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 3,
+        "totalCount": 10,
         "missingLinkIncludes": [],
         "sourceCounts": {
           "city.sakurai.lg.jp": 3
         },
-        "message": "桜井市: 3件 / sources OK"
+        "announcementCount": 4,
+        "resultCount": 6,
+        "message": "桜井市: 10件 (公告4/結果6) / sources OK"
       },
       {
         "expectation": {
@@ -436,7 +452,9 @@
         "sourceCounts": {
           "epi-cloud.fwd.ne.jp": 18
         },
-        "message": "宇陀市: 18件 / sources OK"
+        "announcementCount": 1,
+        "resultCount": 17,
+        "message": "宇陀市: 18件 (公告1/結果17) / sources OK"
       },
       {
         "expectation": {
@@ -454,7 +472,9 @@
         "sourceCounts": {
           "tawaramoto.efftis.jp": 3
         },
-        "message": "田原本町: 3件 / sources OK"
+        "announcementCount": 0,
+        "resultCount": 3,
+        "message": "田原本町: 3件 (公告0/結果3) / sources OK"
       },
       {
         "expectation": {
@@ -472,7 +492,9 @@
         "sourceCounts": {
           "town.koryo.nara.jp": 5
         },
-        "message": "広陵町: 5件 / sources OK"
+        "announcementCount": 0,
+        "resultCount": 5,
+        "message": "広陵町: 5件 (公告0/結果5) / sources OK"
       },
       {
         "expectation": {
@@ -490,7 +512,9 @@
         "sourceCounts": {
           "city.kashiba.lg.jp": 5
         },
-        "message": "香芝市: 16件 / sources OK"
+        "announcementCount": 2,
+        "resultCount": 14,
+        "message": "香芝市: 16件 (公告2/結果14) / sources OK"
       },
       {
         "expectation": {
@@ -508,7 +532,9 @@
         "sourceCounts": {
           "town.nara-kawanishi.lg.jp": 5
         },
-        "message": "川西町: 5件 / sources OK"
+        "announcementCount": 4,
+        "resultCount": 1,
+        "message": "川西町: 5件 (公告4/結果1) / sources OK"
       },
       {
         "expectation": {
@@ -526,7 +552,9 @@
         "sourceCounts": {
           "town.miyake.lg.jp": 6
         },
-        "message": "三宅町: 6件 / sources OK"
+        "announcementCount": 2,
+        "resultCount": 4,
+        "message": "三宅町: 6件 (公告2/結果4) / sources OK"
       },
       {
         "expectation": {
@@ -544,7 +572,9 @@
         "sourceCounts": {
           "vill.yamazoe.nara.jp": 3
         },
-        "message": "山添村: 3件 / sources OK"
+        "announcementCount": 2,
+        "resultCount": 1,
+        "message": "山添村: 3件 (公告2/結果1) / sources OK"
       },
       {
         "expectation": {
@@ -562,7 +592,9 @@
         "sourceCounts": {
           "town.heguri.nara.jp": 2
         },
-        "message": "平群町: 2件 / sources OK"
+        "announcementCount": 2,
+        "resultCount": 0,
+        "message": "平群町: 2件 (公告2/結果0) / sources OK"
       },
       {
         "expectation": {
@@ -580,7 +612,9 @@
         "sourceCounts": {
           "town.ando.nara.jp": 2
         },
-        "message": "安堵町: 2件 / sources OK"
+        "announcementCount": 0,
+        "resultCount": 2,
+        "message": "安堵町: 2件 (公告0/結果2) / sources OK"
       },
       {
         "expectation": {
@@ -598,7 +632,9 @@
         "sourceCounts": {
           "town.takatori.nara.jp": 24
         },
-        "message": "高取町: 24件 / sources OK"
+        "announcementCount": 0,
+        "resultCount": 24,
+        "message": "高取町: 24件 (公告0/結果24) / sources OK"
       },
       {
         "expectation": {
@@ -616,7 +652,9 @@
         "sourceCounts": {
           "town.ikaruga.nara.jp": 2
         },
-        "message": "斑鳩町: 2件 / sources OK"
+        "announcementCount": 2,
+        "resultCount": 0,
+        "message": "斑鳩町: 2件 (公告2/結果0) / sources OK"
       },
       {
         "expectation": {
@@ -634,7 +672,9 @@
         "sourceCounts": {
           "epi-cloud.fwd.ne.jp": 3
         },
-        "message": "三郷町: 3件 / sources OK"
+        "announcementCount": 1,
+        "resultCount": 2,
+        "message": "三郷町: 3件 (公告1/結果2) / sources OK"
       },
       {
         "expectation": {
@@ -652,7 +692,9 @@
         "sourceCounts": {
           "town.oji.nara.jp": 2
         },
-        "message": "王寺町: 2件 / sources OK"
+        "announcementCount": 1,
+        "resultCount": 1,
+        "message": "王寺町: 2件 (公告1/結果1) / sources OK"
       },
       {
         "expectation": {
@@ -670,7 +712,30 @@
         "sourceCounts": {
           "town.oyodo.lg.jp": 7
         },
-        "message": "大淀町: 7件 / sources OK"
+        "announcementCount": 0,
+        "resultCount": 7,
+        "message": "大淀町: 7件 (公告0/結果7) / sources OK"
+      },
+      {
+        "expectation": {
+          "municipality": "香芝市",
+          "minItems": 1,
+          "requiredLinkIncludes": [
+            "epi-cloud.fwd.ne.jp"
+          ],
+          "severity": "warning",
+          "note": "入札情報公開サービス。公告(発注情報)・結果の両方を見る"
+        },
+        "status": "ok",
+        "severity": "warning",
+        "totalCount": 16,
+        "missingLinkIncludes": [],
+        "sourceCounts": {
+          "epi-cloud.fwd.ne.jp": 11
+        },
+        "announcementCount": 2,
+        "resultCount": 14,
+        "message": "香芝市: 16件 (公告2/結果14) / sources OK"
       }
     ]
   },
@@ -680,6 +745,6 @@
     "intelligenceExtractedCount": 49,
     "geminiExtractedCount": 49,
     "taggedCount": 49,
-    "lastAugmentedAt": "2026-09-04T11:04:29.754Z"
+    "lastAugmentedAt": "2026-09-07T06:13:53.648Z"
   }
 }

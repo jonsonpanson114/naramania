@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-09-04T11:09:08.538Z",
+  "generatedAt": "2026-09-07T06:19:03.027Z",
   "checkedMunicipalityCount": 24,
-  "expectedItemCount": 288,
-  "matchedItemCount": 288,
+  "expectedItemCount": 296,
+  "matchedItemCount": 296,
   "missingItemCount": 0,
-  "duplicateTitleGroupCount": 24,
-  "duplicateTitleItemCount": 51,
+  "duplicateTitleGroupCount": 23,
+  "duplicateTitleItemCount": 49,
   "results": [
     {
       "municipality": "奈良県",
@@ -118,6 +118,17 @@
       "status": "ok"
     },
     {
+      "municipality": "桜井市",
+      "snapshotCount": 10,
+      "expectedCount": 10,
+      "matchedCount": 10,
+      "missingCount": 0,
+      "duplicateTitleGroupCount": 0,
+      "duplicateTitleItemCount": 0,
+      "missingItems": [],
+      "status": "ok"
+    },
+    {
       "municipality": "大淀町",
       "snapshotCount": 7,
       "expectedCount": 7,
@@ -134,8 +145,8 @@
       "expectedCount": 6,
       "matchedCount": 6,
       "missingCount": 0,
-      "duplicateTitleGroupCount": 1,
-      "duplicateTitleItemCount": 2,
+      "duplicateTitleGroupCount": 0,
+      "duplicateTitleItemCount": 0,
       "missingItems": [],
       "status": "ok"
     },
@@ -163,20 +174,9 @@
     },
     {
       "municipality": "天理市",
-      "snapshotCount": 4,
-      "expectedCount": 4,
-      "matchedCount": 4,
-      "missingCount": 0,
-      "duplicateTitleGroupCount": 0,
-      "duplicateTitleItemCount": 0,
-      "missingItems": [],
-      "status": "ok"
-    },
-    {
-      "municipality": "桜井市",
-      "snapshotCount": 3,
-      "expectedCount": 3,
-      "matchedCount": 3,
+      "snapshotCount": 5,
+      "expectedCount": 5,
+      "matchedCount": 5,
       "missingCount": 0,
       "duplicateTitleGroupCount": 0,
       "duplicateTitleItemCount": 0,

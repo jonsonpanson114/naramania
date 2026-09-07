@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-04T11:09:07.444Z",
-  "qualityGeneratedAt": "2026-09-04T11:04:28.860Z",
-  "itemCount": 288,
+  "generatedAt": "2026-09-07T06:19:02.255Z",
+  "qualityGeneratedAt": "2026-09-07T06:12:33.723Z",
+  "itemCount": 296,
   "resultFollowUp": {
     "totalCount": 10,
     "highCount": 10,
@@ -25,7 +25,7 @@
     "samples": [
       {
         "priority": "high",
-        "ageDays": 136,
+        "ageDays": 139,
         "reason": "落札済みだが落札者が空",
         "item": {
           "id": "oyodo-79dc14038b",
@@ -41,8 +41,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 100,
-        "reason": "開札日から100日経過",
+        "ageDays": 103,
+        "reason": "開札日から103日経過",
         "item": {
           "id": "nara-city-0000002346",
           "municipality": "奈良市",
@@ -57,7 +57,7 @@
       },
       {
         "priority": "high",
-        "ageDays": 81,
+        "ageDays": 84,
         "reason": "落札済みだが落札者が空",
         "item": {
           "id": "oyodo-46ab50dbc8",
@@ -73,8 +73,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 78,
-        "reason": "開札日から78日経過",
+        "ageDays": 81,
+        "reason": "開札日から81日経過",
         "item": {
           "id": "nara-pref-29001013060020260055",
           "municipality": "奈良県",
@@ -89,8 +89,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 59,
-        "reason": "開札日から59日経過",
+        "ageDays": 62,
+        "reason": "開札日から62日経過",
         "item": {
           "id": "nara-pref-29005007060120260015",
           "municipality": "奈良県",
@@ -105,8 +105,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 49,
-        "reason": "開札日から49日経過",
+        "ageDays": 52,
+        "reason": "開札日から52日経過",
         "item": {
           "id": "nara-pref-29005007060120260018",
           "municipality": "奈良県",
@@ -121,8 +121,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 14,
-        "reason": "開札日から14日経過",
+        "ageDays": 17,
+        "reason": "開札日から17日経過",
         "item": {
           "id": "nara-pref-29001013060020260136",
           "municipality": "奈良県",
@@ -137,8 +137,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 14,
-        "reason": "開札日から14日経過",
+        "ageDays": 17,
+        "reason": "開札日から17日経過",
         "item": {
           "id": "nara-pref-29001013060020260145",
           "municipality": "奈良県",
@@ -153,8 +153,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 14,
-        "reason": "開札日から14日経過",
+        "ageDays": 17,
+        "reason": "開札日から17日経過",
         "item": {
           "id": "nara-pref-29001013060020260148",
           "municipality": "奈良県",
@@ -169,8 +169,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 14,
-        "reason": "開札日から14日経過",
+        "ageDays": 17,
+        "reason": "開札日から17日経過",
         "item": {
           "id": "nara-pref-29001013060020260149",
           "municipality": "奈良県",
@@ -496,8 +496,8 @@
     ]
   },
   "sourceCoverage": {
-    "activeCount": 25,
-    "okCount": 25,
+    "activeCount": 26,
+    "okCount": 26,
     "missingErrorCount": 0,
     "missingWarningCount": 0,
     "results": [
@@ -513,7 +513,7 @@
         "sourceCounts": {
           "ppi.ebid-kouji-gyoumu.pref.nara.jp": 51
         },
-        "message": "奈良県: 51件 / sources OK"
+        "message": "奈良県: 51件 (公告15/結果36) / sources OK"
       },
       {
         "municipality": "奈良市",
@@ -527,7 +527,7 @@
         "sourceCounts": {
           "nara.efftis.jp": 11
         },
-        "message": "奈良市: 11件 / sources OK"
+        "message": "奈良市: 11件 (公告3/結果8) / sources OK"
       },
       {
         "municipality": "橿原市",
@@ -541,7 +541,7 @@
         "sourceCounts": {
           "city.kashihara.nara.jp": 32
         },
-        "message": "橿原市: 32件 / sources OK"
+        "message": "橿原市: 32件 (公告0/結果32) / sources OK"
       },
       {
         "municipality": "生駒市",
@@ -555,7 +555,7 @@
         "sourceCounts": {
           "epi-cloud.fwd.ne.jp": 22
         },
-        "message": "生駒市: 22件 / sources OK"
+        "message": "生駒市: 22件 (公告0/結果22) / sources OK"
       },
       {
         "municipality": "大和高田市",
@@ -585,7 +585,7 @@
         "sourceCounts": {
           "city.yamatokoriyama.lg.jp": 19
         },
-        "message": "大和郡山市: 19件 / sources OK"
+        "message": "大和郡山市: 19件 (公告0/結果19) / sources OK"
       },
       {
         "municipality": "葛城市",
@@ -601,7 +601,7 @@
           "city.katsuragi.nara.jp": 15,
           "epi-cloud.fwd.ne.jp": 10
         },
-        "message": "葛城市: 25件 / sources OK"
+        "message": "葛城市: 25件 (公告0/結果25) / sources OK"
       },
       {
         "municipality": "五條市",
@@ -617,7 +617,7 @@
           "city.gojo.lg.jp": 4,
           "epi-cloud.fwd.ne.jp": 17
         },
-        "message": "五條市: 21件 / sources OK"
+        "message": "五條市: 21件 (公告3/結果18) / sources OK"
       },
       {
         "municipality": "御所市",
@@ -631,27 +631,27 @@
         "sourceCounts": {
           "city.gose.nara.jp": 2
         },
-        "message": "御所市: 2件 / sources OK"
+        "message": "御所市: 2件 (公告0/結果2) / sources OK"
       },
       {
         "municipality": "天理市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 4,
+        "totalCount": 5,
         "requiredLinkIncludes": [
           "city.tenri.nara.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.tenri.nara.jp": 4
+          "city.tenri.nara.jp": 5
         },
-        "message": "天理市: 4件 / sources OK"
+        "message": "天理市: 5件 (公告5/結果0) / sources OK"
       },
       {
         "municipality": "桜井市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 3,
+        "totalCount": 10,
         "requiredLinkIncludes": [
           "city.sakurai.lg.jp"
         ],
@@ -659,7 +659,7 @@
         "sourceCounts": {
           "city.sakurai.lg.jp": 3
         },
-        "message": "桜井市: 3件 / sources OK"
+        "message": "桜井市: 10件 (公告4/結果6) / sources OK"
       },
       {
         "municipality": "宇陀市",
@@ -673,7 +673,7 @@
         "sourceCounts": {
           "epi-cloud.fwd.ne.jp": 18
         },
-        "message": "宇陀市: 18件 / sources OK"
+        "message": "宇陀市: 18件 (公告1/結果17) / sources OK"
       },
       {
         "municipality": "田原本町",
@@ -687,7 +687,7 @@
         "sourceCounts": {
           "tawaramoto.efftis.jp": 3
         },
-        "message": "田原本町: 3件 / sources OK"
+        "message": "田原本町: 3件 (公告0/結果3) / sources OK"
       },
       {
         "municipality": "広陵町",
@@ -701,7 +701,7 @@
         "sourceCounts": {
           "town.koryo.nara.jp": 5
         },
-        "message": "広陵町: 5件 / sources OK"
+        "message": "広陵町: 5件 (公告0/結果5) / sources OK"
       },
       {
         "municipality": "香芝市",
@@ -715,7 +715,7 @@
         "sourceCounts": {
           "city.kashiba.lg.jp": 5
         },
-        "message": "香芝市: 16件 / sources OK"
+        "message": "香芝市: 16件 (公告2/結果14) / sources OK"
       },
       {
         "municipality": "川西町",
@@ -729,7 +729,7 @@
         "sourceCounts": {
           "town.nara-kawanishi.lg.jp": 5
         },
-        "message": "川西町: 5件 / sources OK"
+        "message": "川西町: 5件 (公告4/結果1) / sources OK"
       },
       {
         "municipality": "三宅町",
@@ -743,7 +743,7 @@
         "sourceCounts": {
           "town.miyake.lg.jp": 6
         },
-        "message": "三宅町: 6件 / sources OK"
+        "message": "三宅町: 6件 (公告2/結果4) / sources OK"
       },
       {
         "municipality": "山添村",
@@ -757,7 +757,7 @@
         "sourceCounts": {
           "vill.yamazoe.nara.jp": 3
         },
-        "message": "山添村: 3件 / sources OK"
+        "message": "山添村: 3件 (公告2/結果1) / sources OK"
       },
       {
         "municipality": "平群町",
@@ -771,7 +771,7 @@
         "sourceCounts": {
           "town.heguri.nara.jp": 2
         },
-        "message": "平群町: 2件 / sources OK"
+        "message": "平群町: 2件 (公告2/結果0) / sources OK"
       },
       {
         "municipality": "安堵町",
@@ -785,7 +785,7 @@
         "sourceCounts": {
           "town.ando.nara.jp": 2
         },
-        "message": "安堵町: 2件 / sources OK"
+        "message": "安堵町: 2件 (公告0/結果2) / sources OK"
       },
       {
         "municipality": "高取町",
@@ -799,7 +799,7 @@
         "sourceCounts": {
           "town.takatori.nara.jp": 24
         },
-        "message": "高取町: 24件 / sources OK"
+        "message": "高取町: 24件 (公告0/結果24) / sources OK"
       },
       {
         "municipality": "斑鳩町",
@@ -813,7 +813,7 @@
         "sourceCounts": {
           "town.ikaruga.nara.jp": 2
         },
-        "message": "斑鳩町: 2件 / sources OK"
+        "message": "斑鳩町: 2件 (公告2/結果0) / sources OK"
       },
       {
         "municipality": "三郷町",
@@ -827,7 +827,7 @@
         "sourceCounts": {
           "epi-cloud.fwd.ne.jp": 3
         },
-        "message": "三郷町: 3件 / sources OK"
+        "message": "三郷町: 3件 (公告1/結果2) / sources OK"
       },
       {
         "municipality": "王寺町",
@@ -841,7 +841,7 @@
         "sourceCounts": {
           "town.oji.nara.jp": 2
         },
-        "message": "王寺町: 2件 / sources OK"
+        "message": "王寺町: 2件 (公告1/結果1) / sources OK"
       },
       {
         "municipality": "大淀町",
@@ -855,7 +855,21 @@
         "sourceCounts": {
           "town.oyodo.lg.jp": 7
         },
-        "message": "大淀町: 7件 / sources OK"
+        "message": "大淀町: 7件 (公告0/結果7) / sources OK"
+      },
+      {
+        "municipality": "香芝市",
+        "status": "ok",
+        "severity": "warning",
+        "totalCount": 16,
+        "requiredLinkIncludes": [
+          "epi-cloud.fwd.ne.jp"
+        ],
+        "missingLinkIncludes": [],
+        "sourceCounts": {
+          "epi-cloud.fwd.ne.jp": 11
+        },
+        "message": "香芝市: 16件 (公告2/結果14) / sources OK"
       }
     ]
   }

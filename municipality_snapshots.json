@@ -1166,7 +1166,7 @@
       "announcementDate": "2026-08-17",
       "biddingDate": "2026-09-07",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-      "status": "受付中"
+      "status": "不調"
     },
     {
       "id": "ikoma-result-2601010047",
@@ -2179,6 +2179,15 @@
       "status": "受付中"
     },
     {
+      "id": "tenri-452309b8",
+      "municipality": "天理市",
+      "title": "井戸堂小学校プール集約化に伴う改修工事",
+      "type": "建築",
+      "announcementDate": "2026-08-27",
+      "link": "https://www.city.tenri.nara.jp/kakuka/soumubu/nyuusatsushinsashitsu/construction_work/kouji_hattyuu_kanren/1395887232147.html",
+      "status": "受付中"
+    },
+    {
       "id": "tenri-d992a9bd",
       "municipality": "天理市",
       "title": "天理市環境クリーンセンター解体工事",
@@ -2219,6 +2228,52 @@
       "description": "河西 地内"
     },
     {
+      "id": "sakurai-epi-77e94493c6",
+      "municipality": "桜井市",
+      "title": "【こ政工第2号】桜井市立みなみこども園建設工事",
+      "type": "建築",
+      "announcementDate": "2026-09-01",
+      "biddingDate": "2026-11-04",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=06200640072006A0",
+      "status": "受付中"
+    },
+    {
+      "id": "sakurai-epi-2b1d9eefc2",
+      "municipality": "桜井市",
+      "title": "【社教第2号】芝運動公園総合体育館再整備建築基本設計及び芝運動公園市民プール施設解体基本設計業務委託",
+      "type": "コンサル",
+      "announcementDate": "2026-07-01",
+      "biddingDate": "2026-07-27",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=06200640072006A0",
+      "status": "落札",
+      "winningContractor": "（株）桝谷設計",
+      "winnerType": "設計事務所"
+    },
+    {
+      "id": "sakurai-epi-c968939638",
+      "municipality": "桜井市",
+      "title": "【都計第6号】桜井市立地適正化計画改定業務委託",
+      "type": "コンサル",
+      "announcementDate": "2026-06-01",
+      "biddingDate": "2026-06-24",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=06200640072006A0",
+      "status": "落札",
+      "winningContractor": "パシフィックコンサルタンツ（株） 奈良事務所",
+      "winnerType": "設計事務所"
+    },
+    {
+      "id": "sakurai-epi-09c4bbfee7",
+      "municipality": "桜井市",
+      "title": "【社教第1号】芝運動公園運動場等再整備基本設計業務委託",
+      "type": "コンサル",
+      "announcementDate": "2026-06-01",
+      "biddingDate": "2026-06-24",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=06200640072006A0",
+      "status": "落札",
+      "winningContractor": "（株）ウエスコ 奈良営業所",
+      "winnerType": "ゼネコン"
+    },
+    {
       "id": "sakurai-2026-06-01-芝運動公園運動場等再整備基本設計業務委託",
       "municipality": "桜井市",
       "title": "芝運動公園運動場等再整備基本設計業務委託",
@@ -2235,6 +2290,42 @@
       "announcementDate": "2026-06-01",
       "link": "https://www.city.sakurai.lg.jp/sosiki/soumu/kanzaikeiyaku/nyuusatukeiyakukensa/notice/6596.html",
       "status": "受付中"
+    },
+    {
+      "id": "sakurai-epi-63dcb32d1d",
+      "municipality": "桜井市",
+      "title": "【住宅工第1号】改良住宅西館Ｄ棟屋根葺き替え工事",
+      "type": "建築",
+      "announcementDate": "2025-09-01",
+      "biddingDate": "2025-09-26",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=06200640072006A0",
+      "status": "落札",
+      "winningContractor": "（株）中川組",
+      "winnerType": "ゼネコン"
+    },
+    {
+      "id": "sakurai-epi-b325688c67",
+      "municipality": "桜井市",
+      "title": "【都計第5号】鳥見山緑地公園実施設計業務委託",
+      "type": "コンサル",
+      "announcementDate": "2025-06-02",
+      "biddingDate": "2025-06-25",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=06200640072006A0",
+      "status": "落札",
+      "winningContractor": "サンコーコンサルタント（株） 奈良営業所",
+      "winnerType": "設計事務所"
+    },
+    {
+      "id": "sakurai-epi-f6cfda0425",
+      "municipality": "桜井市",
+      "title": "【住宅委第1号】改良住宅西館D棟屋根葺き替え工事設計業務委託",
+      "type": "コンサル",
+      "announcementDate": "2025-04-24",
+      "biddingDate": "2025-05-12",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=06200640072006A0",
+      "status": "落札",
+      "winningContractor": "第五工房（株）",
+      "winnerType": "ゼネコン"
     }
   ],
   "宇陀市": [
@@ -2468,7 +2559,7 @@
       "biddingDate": "2026-05-18",
       "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
       "status": "落札",
-      "winningContractor": "村本建設(株) 奈良本店"
+      "winningContractor": "村本建設 (株) 奈良本店"
     }
   ],
   "広陵町": [
@@ -2588,46 +2679,54 @@
   ],
   "三宅町": [
     {
-      "id": "miyake-2026-08-25-三宅町文化ホールトイレ改修工事",
+      "id": "miyake-2026-09-07-三宅町文化ホールトイレ改修工事",
       "municipality": "三宅町",
       "title": "三宅町文化ホールトイレ改修工事",
       "type": "建築",
-      "announcementDate": "2026-08-25",
-      "biddingDate": "2026-08-25",
+      "announcementDate": "2026-09-07",
+      "biddingDate": "2026-09-07",
       "link": "https://www.town.miyake.lg.jp/soshiki/1/9375.html",
       "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5616.pdf",
-      "status": "不調"
+      "status": "落札",
+      "winningContractor": "光栄工業",
+      "winnerType": "ゼネコン"
     },
     {
-      "id": "miyake-2026-08-14-三宅町文化ホールトイレ改修工事",
+      "id": "miyake-2026-09-07-式下中学校体育館屋根・外壁その他改修工事",
       "municipality": "三宅町",
-      "title": "三宅町文化ホールトイレ改修工事",
+      "title": "式下中学校体育館屋根・外壁その他改修工事",
       "type": "建築",
-      "announcementDate": "2026-08-14",
-      "link": "https://www.town.miyake.lg.jp/uploaded/attachment/5684.pdf",
-      "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5684.pdf",
-      "status": "受付中"
+      "announcementDate": "2026-09-07",
+      "biddingDate": "2026-09-07",
+      "link": "https://www.town.miyake.lg.jp/soshiki/1/9375.html",
+      "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5774.pdf",
+      "status": "落札",
+      "winningContractor": "株式会社ゴセケン",
+      "winnerType": "ゼネコン"
     },
     {
-      "id": "miyake-2026-08-14-三河老人憩いの家解体工事設計委託業務",
-      "municipality": "三宅町",
-      "title": "三河老人憩いの家解体工事設計委託業務",
-      "type": "コンサル",
-      "announcementDate": "2026-08-14",
-      "link": "https://www.town.miyake.lg.jp/uploaded/attachment/5685.pdf",
-      "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5685.pdf",
-      "status": "受付中"
-    },
-    {
-      "id": "miyake-2026-08-08-上但馬保育所解体工事設計委託業務",
+      "id": "miyake-2026-09-07-上但馬保育所解体工事設計委託業務",
       "municipality": "三宅町",
       "title": "上但馬保育所解体工事設計委託業務",
       "type": "コンサル",
-      "announcementDate": "2026-08-08",
-      "biddingDate": "2026-08-08",
+      "announcementDate": "2026-09-07",
+      "biddingDate": "2026-09-07",
       "link": "https://www.town.miyake.lg.jp/soshiki/1/9376.html",
       "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5619.pdf",
       "status": "不調"
+    },
+    {
+      "id": "miyake-2026-09-07-三宅老人憩いの家解体工事設計委託業務",
+      "municipality": "三宅町",
+      "title": "三宅老人憩いの家解体工事設計委託業務",
+      "type": "コンサル",
+      "announcementDate": "2026-09-07",
+      "biddingDate": "2026-09-07",
+      "link": "https://www.town.miyake.lg.jp/soshiki/1/9376.html",
+      "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5773.pdf",
+      "status": "落札",
+      "winningContractor": "株式会社 礎建築事務所",
+      "winnerType": "ゼネコン"
     },
     {
       "id": "miyake-2025-11-04-三宅町つながり総合センター解体工事",
