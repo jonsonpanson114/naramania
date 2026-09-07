@@ -1,10 +1,12 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { BiddingItem, BiddingStatus } from '@/types/bidding';
 import { getBiddingLabel } from '@/lib/bidding_schedule';
 import { assessBiddingScope } from '@/lib/relevance_guard';
 import { matchesPracticalFilter } from '@/lib/practical_filters';
+import { getEnabledMunicipalityNames } from '@/lib/user_settings';
+import { useUserSettings } from '@/lib/use_user_settings';
 import {
     ArrowUpDown,
     Building2,
@@ -158,11 +160,27 @@ export function BiddingTable({ items, initialTab = 'active', initialKeyword = ''
     const [viewMode, setViewMode] = useState<ViewMode>('card');
     const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
 
+    // 設定画面の内容を反映する。以前はここが常に20件固定で、
+    // 表示件数も対象自治体も、設定しても何も起きなかった。
+    const settings = useUserSettings();
+    const pageSize = settings.itemsPerPage;
+    const enabledMunicipalities = useMemo(
+        () => getEnabledMunicipalityNames(settings),
+        [settings],
+    );
+    // 表示件数の設定が変わったら、表示中の件数も追従させる
+    useEffect(() => {
+        setVisibleCount(pageSize);
+    }, [pageSize]);
+
     const scopeById = useMemo(() => new Map(items.map(item => [item.id, assessBiddingScope(item)])), [items]);
     const visibleItems = useMemo(() => {
-        if (!hideOutOfScope) return items;
-        return items.filter(item => scopeById.get(item.id)?.status !== 'noise');
-    }, [hideOutOfScope, items, scopeById]);
+        const scoped = hideOutOfScope
+            ? items.filter(item => scopeById.get(item.id)?.status !== 'noise')
+            : items;
+        if (!enabledMunicipalities) return scoped;
+        return scoped.filter(item => enabledMunicipalities.includes(item.municipality));
+    }, [hideOutOfScope, items, scopeById, enabledMunicipalities]);
 
     const municipalities = useMemo(() => Array.from(new Set(visibleItems.map(item => item.municipality))).sort(), [visibleItems]);
     const popularTags = useMemo(() => {
@@ -231,7 +249,7 @@ export function BiddingTable({ items, initialTab = 'active', initialKeyword = ''
 
     const changeFilter = (update: () => void) => {
         update();
-        setVisibleCount(PAGE_SIZE);
+        setVisibleCount(pageSize);
     };
 
     const renderSnippet = (text: string, kw: string) => {
@@ -672,7 +690,7 @@ export function BiddingTable({ items, initialTab = 'active', initialKeyword = ''
                 <div className="text-center">
                     <button
                         type="button"
-                        onClick={() => setVisibleCount(visibleCount + 50)}
+                        onClick={() => setVisibleCount(visibleCount + pageSize)}
                         className="rounded-full border border-stone-300 bg-white px-6 py-3 text-xs font-bold tracking-[0.14em] text-stone-600 shadow-sm transition hover:border-stone-900 hover:text-stone-950"
                     >
                         さらに表示（残り {remaining} 件）

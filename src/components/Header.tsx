@@ -1,9 +1,12 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { formatJstDateLabel } from '@/lib/jst_date';
 
 export function Header() {
-    const today = new Date().toLocaleDateString('ja-JP', { year: 'numeric', month: 'long', day: 'numeric' });
+    // タイムゾーンを指定しないと、閲覧者の端末の設定によって日付が変わる。
+    // このサイトが扱うのは奈良県の入札なので日本時間で固定する。
+    const today = formatJstDateLabel();
 
     return (
         <header className="mb-8 px-1 md:px-4">

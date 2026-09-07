@@ -5,89 +5,40 @@ import { AppShell } from '@/components/AppShell';
 import { Header } from '@/components/Header';
 import { motion } from 'framer-motion';
 import { CheckCircle, MessageSquareText, Bell, Tag } from 'lucide-react';
+import { ITEMS_PER_PAGE_OPTIONS, type UserSettings } from '@/lib/user_settings';
+import { updateUserSettings, useUserSettings } from '@/lib/use_user_settings';
 
-const availableMunicipalities = [
-    // 県・市
-    { id: 'nara_pref', label: '奈良県', enabled: true },
-    { id: 'nara_city', label: '奈良市', enabled: true },
-    { id: 'kashihara', label: '橿原市', enabled: true },
-    { id: 'yamatotakada', label: '大和高田市', enabled: true },
-    { id: 'yamatokoriyama', label: '大和郡山市', enabled: true },
-    { id: 'tenri', label: '天理市', enabled: true },
-    { id: 'sakurai', label: '桜井市', enabled: true },
-    { id: 'gose', label: '御所市', enabled: true },
-    { id: 'ikoma', label: '生駒市', enabled: true },
-    { id: 'katsuragi', label: '葛城市', enabled: true },
-    { id: 'uda', label: '宇陀市', enabled: true },
-    { id: 'gojo', label: '五條市', enabled: true },
-    // 町・村
-    { id: 'kawanishi', label: '磯城郡川西町', enabled: true },
-    { id: 'tawaramoto', label: '磯城郡田原本町', enabled: true },
-    { id: 'oji', label: '北葛城郡王寺町', enabled: true },
-    { id: 'koryo', label: '北葛城郡広陵町', enabled: true },
-    { id: 'oyodo', label: '吉野郡大淀町', enabled: true },
-    { id: 'yoshino', label: '吉野町', enabled: true },
-];
-type MunicipalitySetting = typeof availableMunicipalities[number];
-type StoredSettings = {
-    municipalities?: MunicipalitySetting[];
-    itemsPerPage?: number;
-};
 
 export default function SettingsPage() {
-    const [municipalities, setMunicipalities] = useState(() => {
-        if (typeof window === 'undefined') {
-            return availableMunicipalities;
-        }
-        const stored = localStorage.getItem('naramania_settings');
-        if (!stored) {
-            return availableMunicipalities;
-        }
-        try {
-            const settings = JSON.parse(stored) as StoredSettings;
-            return settings.municipalities || availableMunicipalities;
-        } catch {
-            return availableMunicipalities;
-        }
-    });
+    // 保存済みの設定。localStorage を直接読まずフック経由にして、
+    // 保存した瞬間に同じタブの一覧へも反映されるようにする。
+    const stored = useUserSettings();
 
-    const [itemsPerPage, setItemsPerPage] = useState(() => {
-        if (typeof window === 'undefined') {
-            return 20;
-        }
-        const stored = localStorage.getItem('naramania_settings');
-        if (!stored) {
-            return 20;
-        }
-        try {
-            const settings = JSON.parse(stored) as StoredSettings;
-            return settings.itemsPerPage || 20;
-        } catch {
-            return 20;
-        }
-    });
+    // 編集中の値。保存を押すまでは stored に書き戻さない。
+    const [draft, setDraft] = useState<UserSettings | null>(null);
+    const municipalities = draft?.municipalities ?? stored.municipalities;
+    const itemsPerPage = draft?.itemsPerPage ?? stored.itemsPerPage;
 
-    const [alertKeywords, setAlertKeywords] = useState(() => {
-        if (typeof window === 'undefined') {
-            return 'サッシ, エレベーター';
-        }
-        const stored = localStorage.getItem('naramania_alert_keywords');
-        return stored || 'サッシ, エレベーター';
-    });
-
+    const [alertKeywords, setAlertKeywords] = useState('サッシ, エレベーター');
     const [saved, setSaved] = useState(false);
 
     const toggleMunicipality = (id: string) => {
-        setMunicipalities((prev) =>
-            prev.map(m => m.id === id ? { ...m, enabled: !m.enabled } : m)
-        );
+        setDraft({
+            municipalities: municipalities.map(m => m.id === id ? { ...m, enabled: !m.enabled } : m),
+            itemsPerPage,
+        });
+        setSaved(false);
+    };
+
+    const changeItemsPerPage = (value: number) => {
+        setDraft({ municipalities, itemsPerPage: value });
         setSaved(false);
     };
 
     const saveSettings = () => {
-        const settings = { municipalities, itemsPerPage };
-        localStorage.setItem('naramania_settings', JSON.stringify(settings));
+        updateUserSettings({ municipalities, itemsPerPage });
         localStorage.setItem('naramania_alert_keywords', alertKeywords);
+        setDraft(null);
         setSaved(true);
         setTimeout(() => setSaved(false), 2000);
     };
@@ -181,13 +132,14 @@ export default function SettingsPage() {
                     <label className="text-sm tracking-wider text-secondary">1ページあたりの表示件数</label>
                     <select
                         value={itemsPerPage}
-                        onChange={(e) => { setItemsPerPage(Number(e.target.value)); setSaved(false); }}
+                        onChange={(e) => changeItemsPerPage(Number(e.target.value))}
                         className="border border-border/30 rounded-md px-4 py-2 bg-white/50 text-sm tracking-wider font-serif focus:outline-none focus:border-accent appearance-none cursor-pointer"
                     >
-                        <option value={10}>10件</option>
-                        <option value={20}>20件</option>
-                        <option value={50}>50件</option>
-                        <option value={100}>100件</option>
+                        {/* 選択肢は共通モジュールから出す。ここで独自に並べると
+                            保存側が知らない値を選べてしまい、選んでも反映されない */}
+                        {ITEMS_PER_PAGE_OPTIONS.map(option => (
+                            <option key={option} value={option}>{option}件</option>
+                        ))}
                     </select>
                 </div>
             </motion.div>

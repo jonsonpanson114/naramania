@@ -12,6 +12,7 @@ import { buildLatestOpeningResults } from '@/lib/opening_result_updates';
 import { buildResultFollowUpSummary } from '@/lib/result_follow_up';
 import { getDataFreshness, getStaleMunicipalities } from '@/lib/data_freshness';
 import { loadDashboardData } from '@/lib/dashboard_data';
+import { addDaysJstDateKey, toJstDateKey } from '@/lib/jst_date';
 import { Activity, AlertTriangle } from 'lucide-react';
 import Link from 'next/link';
 
@@ -19,14 +20,15 @@ import Link from 'next/link';
 export default async function Home() {
   const { allItems, qualitySummary, liveAuditReport, openingResultReport } = loadDashboardData();
 
-  const today = new Date().toISOString().split('T')[0];
+  // UTCで動くサーバーだと toISOString() は日本時間 0:00〜9:00 のあいだ前日を返し、
+  // 「直近開札」の期間が丸一日ずれる。日本時間で組み立てる。
+  const today = toJstDateKey();
 
   const activeCount = countPracticalFilter(allItems, 'active');
 
-  // 「直近開札」は7日以内。サマリの数字とタブの中身を同じ集合から出す
-  const oneWeekLater = new Date();
-  oneWeekLater.setDate(oneWeekLater.getDate() + 7);
-  const oneWeekLaterIso = `${oneWeekLater.getFullYear()}-${String(oneWeekLater.getMonth() + 1).padStart(2, '0')}-${String(oneWeekLater.getDate()).padStart(2, '0')}`;
+  // 「直近開札」は7日以内。サマリの数字とタブの中身を同じ集合から出す。
+  // 起点(today)と終点で基準がずれないよう、どちらも日本時間で作る。
+  const oneWeekLaterIso = addDaysJstDateKey(7);
 
   const upcomingBiddings = allItems
     .filter(item => item.biddingDate && item.status !== '落札' && item.status !== '受付終了')
