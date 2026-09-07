@@ -1,0 +1,18 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": { "noEmit": true },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "scripts/augment_intelligence.ts",
+    "scripts/generate_tags.ts",
+    "scripts/audit_live_sources.ts",
+    "scripts/print_coverage_summary.ts",
+    "scripts/validate_quality.ts",
+    "scripts/validate_ai_models.ts",
+    "scripts/validate_filters.ts",
+    "scripts/validate_chat.ts",
+    "scripts/validate_snapshot_coverage.ts"
+  ],
+  "exclude": ["node_modules"]
+}

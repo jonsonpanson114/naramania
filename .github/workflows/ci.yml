@@ -1,0 +1,67 @@
+name: CI
+
+# push と PR のたびに、外部サイトへ触らない検証をすべて走らせる。
+#
+# これまで検証は Daily Scrape の中でしか回っておらず、
+# それは実サイトへアクセスするうえ平日の決まった時刻にしか動かないため、
+# コードを壊しても気づくのが最短で数時間後、悪ければ翌日だった。
+# (実際、スクレイパーの修正漏れで Validate Quality が落ち、
+#  commit/push まで到達せずデータが2日止まったことがある)
+#
+# ここでは外部アクセスの無いものだけを対象にする。
+# scrape / audit:live-sources は自治体サイトへ実アクセスするため含めない。
+
+on:
+  push:
+    branches: ['**']
+  pull_request:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      # src だけでなく scripts も検査する。tsconfig.json は scripts/** を
+      # exclude しているため、next build の型検査では scripts を見られない。
+      - name: Type check
+        run: npm run typecheck
+
+      - name: Build
+        run: npm run build
+
+      - name: Validate AI models
+        run: npm run validate:ai-models
+
+      - name: Validate filters
+        run: npm run validate:filters
+
+      - name: Validate quality
+        run: npm run validate:quality
+
+      - name: Validate snapshot coverage
+        run: npm run validate:snapshots
+
+      # チャットは保存済みデータだけで確定回答を返す経路を検証する。
+      # APIキーが無くてもローカル確定回答の検証は動く。
+      - name: Validate chat answers
+        run: npm run validate:chat
