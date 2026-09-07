@@ -294,6 +294,22 @@ function isContinuationQuery(query: string): boolean {
     return /それぞれ|その中|その案件|その結果|この中|前の|さっき|続けて|じゃあ|では|それで|その一覧/.test(query);
 }
 
+/**
+ * 「落札者は？」「開札日は？」のような、直前の案件に対する属性だけを聞く質問。
+ *
+ * こうした質問はそれ単体では案件を特定できないため、直前に選ばれた案件を
+ * 引き継がないと全案件から検索してしまい、まったく別の工事の落札者を答える。
+ * (「五條市立小学校トイレ改修工事はある？」→「落札者は？」で
+ *  田園体育館の落札者を返していた)
+ * 継続表現(「その案件の」等)を含まないため isContinuationQuery では拾えない。
+ */
+const ATTRIBUTE_FOLLOW_UP_PATTERN =
+    /^(?:その|この|あの)?\s*(?:落札者|落札業者|受注者|請負者|施工者|落札金額|予定価格|金額|価格|開札日|開札|入札日|締切|期限|工期|場所|発注者|状態|結果|種別)(?:は|って|とは)?\s*(?:誰|どこ|いつ|いくら|何)?\s*(?:ですか|でしょうか)?\s*[？?。.]?\s*$/;
+
+function isAttributeFollowUp(query: string): boolean {
+    return ATTRIBUTE_FOLLOW_UP_PATTERN.test(query.trim());
+}
+
 function inferIntent(query: string, history: ChatTurn[]): QueryIntent {
     const recentUserContext = history
         .filter(turn => turn.role === 'user')
@@ -316,7 +332,7 @@ function inferIntent(query: string, history: ChatTurn[]): QueryIntent {
         wantsWinner: /ゼネコン|元請け|施工会社|落札者|業者/.test(fullQuery),
         explicitWebSearch: /ネット|web|検索|見つからない|サイトにない|他にも|webでも|外でも/.test(fullQuery),
         asksSpecificProject: looksLikeSpecificProject(fullQuery),
-        wantsCarryOver: isContinuationQuery(query),
+        wantsCarryOver: isContinuationQuery(query) || isAttributeFollowUp(query),
     };
 }
 
