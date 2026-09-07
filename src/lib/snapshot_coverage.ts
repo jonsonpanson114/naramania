@@ -69,16 +69,41 @@ function linkNeedle(item: BiddingItem): string | null {
   }
 }
 
+/** 自治体ごとに、そのURLを何件の案件が使っているかを数える */
+export function countLinkNeedles(items: BiddingItem[]): Map<string, number> {
+  const counts = new Map<string, number>();
+  for (const item of items) {
+    const link = linkNeedle(item);
+    if (!link) continue;
+    const key = `${item.municipality}:${link}`;
+    counts.set(key, (counts.get(key) || 0) + 1);
+  }
+  return counts;
+}
+
+export function linkNeedleKey(item: BiddingItem): string | null {
+  const link = linkNeedle(item);
+  return link ? `${item.municipality}:${link}` : null;
+}
+
 function buildResultKeys(items: BiddingItem[]): Set<string> {
   const keys = new Set<string>();
+  // 自治体トップページのように複数案件が同じURLを持つ場合、URLは案件の識別子に
+  // ならない。1件でも結果にあれば同じURLの案件すべてが「存在する」と判定され、
+  // 実際には欠けている案件を見逃す。
+  // 実データでは296件中111件が他の案件とURLを共有していた。特にEPIは機関IDが
+  // URLに入るだけなので、その自治体の全案件が同じ値になる。
+  // そこで、その自治体内で1件しか使っていないURLだけを識別子として採用する。
+  const needleCounts = countLinkNeedles(items);
+
   for (const item of items) {
     const title = normalizeTitle(item.title);
     const dates = itemDateKeys(item);
-    const link = linkNeedle(item);
+    const linkKey = linkNeedleKey(item);
 
     keys.add(`id:${item.id}`);
     keys.add(`title:${item.municipality}:${title}`);
-    if (link) keys.add(`link:${item.municipality}:${link}`);
+    if (linkKey && needleCounts.get(linkKey) === 1) keys.add(`link:${linkKey}`);
     for (const date of dates) {
       keys.add(`dated-title:${item.municipality}:${title}:${date}`);
     }
@@ -99,13 +124,20 @@ function countTitleGroups(items: BiddingItem[]): Map<string, number> {
   return counts;
 }
 
-function hasResultMatch(item: BiddingItem, resultKeys: Set<string>, allowTitleFallback: boolean): boolean {
+function hasResultMatch(
+  item: BiddingItem,
+  resultKeys: Set<string>,
+  allowTitleFallback: boolean,
+  allowLinkMatch: boolean,
+): boolean {
   const title = normalizeTitle(item.title);
   const dates = itemDateKeys(item);
-  const link = linkNeedle(item);
+  const linkKey = linkNeedleKey(item);
 
   if (resultKeys.has(`id:${item.id}`)) return true;
-  if (link && resultKeys.has(`link:${item.municipality}:${link}`)) return true;
+  // 照合する側のURLも他案件と共有していないときだけ識別子として使う。
+  // 結果側だけを絞っても、期待側で共有していれば別案件に当たりうるため両側で見る。
+  if (allowLinkMatch && linkKey && resultKeys.has(`link:${linkKey}`)) return true;
   if (dates.some((date) => resultKeys.has(`dated-title:${item.municipality}:${title}:${date}`))) return true;
   return allowTitleFallback && resultKeys.has(`title:${item.municipality}:${title}`);
 }
@@ -137,8 +169,18 @@ export function evaluateSnapshotCoverage(
         .filter(([, count]) => count > 1)
         .map(([key]) => key),
     );
+    const expectedNeedleCounts = countLinkNeedles(expectedItems);
     const missingItems = expectedItems
-      .filter((item) => !hasResultMatch(item, resultKeys, !duplicateTitleKeys.has(normalizedTitleKey(item))))
+      .filter((item) => {
+        const linkKey = linkNeedleKey(item);
+        const allowLinkMatch = Boolean(linkKey) && expectedNeedleCounts.get(linkKey!) === 1;
+        return !hasResultMatch(
+          item,
+          resultKeys,
+          !duplicateTitleKeys.has(normalizedTitleKey(item)),
+          allowLinkMatch,
+        );
+      })
       .map((item) => compactMissingItem(
         item,
         duplicateTitleKeys.has(normalizedTitleKey(item))

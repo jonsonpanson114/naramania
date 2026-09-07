@@ -115,6 +115,9 @@ async function resolveTakatoriDetailPages(): Promise<{ url: string; label: strin
     return Array.from(pages.entries()).map(([url, label]) => ({ url, label }));
 }
 
+/** 実行ごとの診断。監査(audit_live_sources)へ「取れなかった理由」を伝えるために使う */
+let takatoriDiagnostics: { warnings: string[]; errors: string[] } = { warnings: [], errors: [] };
+
 /**
  * 案件名がHTMLに無い案件について、公告PDFから案件名を読み取って差し替える。
  *
@@ -128,20 +131,37 @@ async function resolveTakatoriDetailPages(): Promise<{ url: string; label: strin
 async function resolveTitlesFromPdf(items: BiddingItem[], targetIds: Set<string>): Promise<void> {
     if (targetIds.size === 0) return;
 
+    // 案件名がPDFからしか取れないため、抽出できないと案件名不明のまま除外され
+    // 「0件」になる。それを黙って正常として通すと、収集の見逃しと区別がつかない。
+    // 抽出不能はエラーとして監査へ伝える。
+    if (!process.env.GOOGLE_GENERATIVE_AI_API_KEY && !process.env.GEMINI_API_KEY) {
+        takatoriDiagnostics.errors.push(
+            `[高取町] Gemini APIキーが未設定のため公告PDFから案件名を抽出できません(${targetIds.size}件が案件名不明)。件数0を正常と判断できない状態です。`,
+        );
+        return;
+    }
+
     for (const item of items) {
         if (!targetIds.has(item.id) || !item.pdfUrl) continue;
         try {
             const buffer = await downloadPDFBuffer(item.pdfUrl);
             if (!buffer) continue;
             const title = await extractAnnouncementTitleFromPDF(buffer);
-            if (!title || title.length < 6) continue;
+            if (!title || title.length < 6) {
+                takatoriDiagnostics.errors.push(
+                    `[高取町] 公告PDFから案件名を抽出できませんでした: ${item.pdfUrl}`,
+                );
+                continue;
+            }
 
             item.title = title;
             item.type = classifyType(title);
             item.id = buildId('高取町', item.announcementDate || '', title);
             console.log(`[高取町] 公告PDFから案件名を取得: ${title}`);
         } catch (error) {
-            console.warn('[高取町] 公告PDFの案件名取得に失敗:', error instanceof Error ? error.message : String(error));
+            const detail = error instanceof Error ? error.message : String(error);
+            takatoriDiagnostics.errors.push(`[高取町] 公告PDFの案件名取得に失敗: ${detail}`);
+            console.warn('[高取町] 公告PDFの案件名取得に失敗:', detail);
         }
     }
 }
@@ -330,6 +350,7 @@ export class TakatoriTownScraper implements Scraper {
         // 固定の入札結果ページ(frmId=2205)は町が廃止して404になったため、
         // 決め打ちで取りに行かず、カテゴリ一覧から見つかったページだけを見る。
         // 町が結果ページを再掲したら、落札者列の有無で自動的に結果として扱われる。
+        takatoriDiagnostics = { warnings: [], errors: [] };
         const items: BiddingItem[] = [];
 
         const detailPages = await resolveTakatoriDetailPages();
@@ -351,6 +372,10 @@ export class TakatoriTownScraper implements Scraper {
 
         console.log(`[高取町] 合計 ${items.length} 件`);
         return items;
+    }
+
+    getDiagnostics() {
+        return takatoriDiagnostics;
     }
 }
 

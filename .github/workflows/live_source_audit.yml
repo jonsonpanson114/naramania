@@ -31,6 +31,11 @@ jobs:
   audit-live-sources:
     runs-on: ubuntu-latest
     env:
+      # 監査は本番のスクレイプと同じ条件で走らせる必要がある。
+      # 高取町のようにスキャンPDFからGeminiで案件名を読む自治体があり、
+      # キーが無いと案件名が取れず0件になるが、それは「案件が無い」のではなく
+      # 「監査できていない」状態で、見逃しと区別がつかない。
+      GOOGLE_GENERATIVE_AI_API_KEY: ${{ secrets.GOOGLE_GENERATIVE_AI_API_KEY }}
       LIVE_AUDIT_ONLY_MUNICIPALITIES: ${{ github.event.inputs.municipalities || '' }}
       LIVE_AUDIT_EXCEPT_MUNICIPALITIES: ${{ github.event.inputs.municipalities && '' || '奈良県' }}
       LIVE_AUDIT_ALLOW_SCRAPER_ERRORS: ${{ github.event.inputs.allow_scraper_errors == 'true' && '1' || '0' }}
