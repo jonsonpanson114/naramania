@@ -13,8 +13,6 @@ const nextConfig: NextConfig = {
   // データ0件になる。トレース対象に含めて必ずバンドルさせる。
   outputFileTracingIncludes: {
     '/api/chat': ['./scraper_result.json'],
-    '/api/scrape': ['./scraper_result.json'],
-    '/api/analyze': ['./scraper_result.json'],
     '/project/[id]': ['./scraper_result.json'],
   },
   images: {

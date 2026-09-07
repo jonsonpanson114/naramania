@@ -91,7 +91,9 @@ export default function ChatPage() {
 
             const data = await response.json();
             if (!response.ok) {
-                throw new Error(data.details || data.error || 'チャット応答に失敗しました');
+                // サーバーは内部情報を返さないので、利用者向けの message があれば
+                // それを出し、無ければ汎用の文言にする。
+                throw new Error(data.message || 'チャット応答に失敗しました。時間をおいてお試しください。');
             }
 
             setMessages(prev => [
@@ -383,6 +385,9 @@ export default function ChatPage() {
                                     onChange={(event) => setQuestion(event.target.value)}
                                     placeholder="例: 今週の開札物件は？ / 奈良県の新着案件を教えて / この案件を詳しく調べて"
                                     rows={4}
+                                    // サーバー側と同じ上限。送信してから断られるより、
+                                    // 入力の時点で止まる方が分かりやすい。
+                                    maxLength={400}
                                     className="w-full resize-none bg-transparent text-sm leading-7 tracking-[0.04em] text-primary outline-none placeholder:text-secondary/45"
                                 />
                                 <div className="mt-4 flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
