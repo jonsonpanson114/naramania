@@ -598,17 +598,33 @@ async function main() {
             }
             if (isSuspiciousMunicipalityShrink(keptItems, previousMunicipalityItems, snapshotMunicipalityItems)) {
                 const baselineCount = Math.max(previousMunicipalityItems.length, snapshotMunicipalityItems.length);
+                // 新データを丸ごと捨てると、自治体がサイトを作り替えて正当に件数が
+                // 減ったとき、新しく取れた公告が永久に表示されない。
+                // (高取町は町が入札結果ページを廃止して24→16件になり、
+                //  新たに取れた公告2件が毎回この分岐で捨てられていた)
+                // 既存データは守りつつ、新規に取れた案件は足す。
+                // 取りこぼし防止と新着反映は両立できる。
+                // 既存側は shouldKeepBiddingItem で絞らない。ここは「取りこぼしたら
+                // 困る」局面であり、絞ると期限切れ判定などで既存案件が消え、
+                // 従来の「丸ごと維持」より件数が減ってしまう。
+                const carriedItems = [...previousMunicipalityItems, ...snapshotMunicipalityItems].filter(
+                    (previousItem, index, all) =>
+                        !keptItems.some(item => isSameLogicalItem(item, previousItem))
+                        && all.findIndex(other => isSameLogicalItem(other, previousItem)) === index,
+                );
+                const addedCount = keptItems.length;
+                carriedItems.forEach(item => keptItems.push(item));
+
                 retainedMunicipalities.add(scraper.municipality);
-                console.warn(`[${scraper.municipality}] 取得件数が急減したため既存データを維持します (baseline=${baselineCount}, new kept=${keptItems.length})`);
+                console.warn(`[${scraper.municipality}] 取得件数が急減したため既存データを維持します (baseline=${baselineCount}, new kept=${addedCount}, 既存保持=${carriedItems.length})`);
                 municipalityIssues.set(scraper.municipality, [
                     ...currentIssues,
                     {
                         municipality: scraper.municipality,
                         level: 'warning',
-                        message: `[${scraper.municipality}] 取得件数が急減したため既存データを維持しています (baseline=${baselineCount}, new kept=${keptItems.length})`,
+                        message: `[${scraper.municipality}] 取得件数が急減したため既存データ ${carriedItems.length}件を維持しつつ、新規 ${addedCount}件を反映しています (baseline=${baselineCount})`,
                     },
                 ]);
-                continue;
             }
             if (
                 keptItems.length === 0 &&

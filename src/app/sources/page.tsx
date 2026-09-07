@@ -15,7 +15,10 @@ function formatDateTime(iso?: string): string | null {
 export default function SourcesPage() {
     const { allItems, qualitySummary } = loadDashboardData();
     const lastScraped = qualitySummary?.municipalityLastScraped;
-    const staleSet = new Set(getStaleMunicipalities(lastScraped).map(s => s.municipality));
+    // 「古い」と「記録が無くて状態不明」は原因も対処も違うので分けて出す。
+    const freshnessIssues = getStaleMunicipalities(lastScraped);
+    const staleSet = new Set(freshnessIssues.filter(s => s.status === 'stale').map(s => s.municipality));
+    const unknownSet = new Set(freshnessIssues.filter(s => s.status === 'unknown').map(s => s.municipality));
 
     const counts = allItems.reduce<Record<string, number>>((acc, item) => {
         acc[item.municipality] = (acc[item.municipality] || 0) + 1;
@@ -39,12 +42,13 @@ export default function SourcesPage() {
                     const count = counts[group.municipality] ?? 0;
                     const updated = formatDateTime(lastScraped?.[group.municipality]);
                     const isStale = staleSet.has(group.municipality);
+                    const isUnknown = unknownSet.has(group.municipality);
 
                     return (
                         <section
                             key={group.municipality}
                             className={`rounded-2xl border bg-white/80 p-4 shadow-sm transition hover:shadow-md ${
-                                isStale ? 'border-amber-300 bg-amber-50/60' : 'border-stone-200'
+                                isStale || isUnknown ? 'border-amber-300 bg-amber-50/60' : 'border-stone-200'
                             }`}
                         >
                             <div className="flex items-baseline justify-between gap-2">
@@ -59,7 +63,7 @@ export default function SourcesPage() {
                             <p className="mt-1 text-[11px] tracking-wider text-secondary/50">
                                 {updated
                                     ? <>最終収集 {updated}{isStale && <span className="ml-1 font-bold text-amber-700">収集が止まっています</span>}</>
-                                    : '最終収集 記録なし'}
+                                    : <>最終収集 記録なし<span className="ml-1 font-bold text-amber-700">収集できているか不明です</span></>}
                             </p>
 
                             <ul className="mt-3 space-y-1.5">

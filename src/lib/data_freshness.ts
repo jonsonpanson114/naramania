@@ -13,6 +13,8 @@
  * 「本来動くはずだった実行が何回スキップされたか」で数える。
  */
 
+import { MUNICIPALITY_SOURCES } from './municipality_sources';
+
 /** Daily Scrapeの実行時刻(日本時間)。daily_scrape.ymlのcronと対応 */
 const RUN_HOURS_JST = [10, 15];
 /**
@@ -120,10 +122,26 @@ export function getDataFreshness(generatedAt?: string | null, now: Date = new Da
     return { lastUpdated, missedRuns, isStale: true, message };
 }
 
+export type MunicipalityFreshnessStatus =
+    /** 最終収集時刻はあるが古い */
+    | 'stale'
+    /** 最終収集時刻の記録が無い。収集できているのかどうか自体が分からない */
+    | 'unknown';
+
 export interface MunicipalityFreshness {
     municipality: string;
-    lastUpdated: Date;
+    /** 記録が無い場合は null */
+    lastUpdated: Date | null;
     missedRuns: number;
+    status: MunicipalityFreshnessStatus;
+}
+
+/**
+ * 収集対象として設定されている自治体の一覧。
+ * 「記録が無い」ことを異常として検知するには、何が有るべきかを知る必要がある。
+ */
+function getExpectedMunicipalities(): string[] {
+    return Array.from(new Set(MUNICIPALITY_SOURCES.map((group) => group.municipality)));
 }
 
 /**
@@ -136,13 +154,24 @@ export interface MunicipalityFreshness {
 export function getStaleMunicipalities(
     municipalityLastScraped?: Record<string, string> | null,
     now: Date = new Date(),
+    expectedMunicipalities: string[] = getExpectedMunicipalities(),
 ): MunicipalityFreshness[] {
-    if (!municipalityLastScraped) return [];
+    const records = municipalityLastScraped || {};
+    // 記録がある自治体だけを回すと、一度も記録が付いていない自治体が
+    // 検査対象から丸ごと外れて「正常」になる。実際、奈良県は51件を表示したまま
+    // 最終収集時刻が無く、収集が9日間止まっていても正常と表示されていた。
+    // 設定上あるべき自治体と、記録がある自治体の和集合で判定する。
+    const targets = Array.from(new Set([...expectedMunicipalities, ...Object.keys(records)]));
 
     const stale: MunicipalityFreshness[] = [];
-    for (const [municipality, iso] of Object.entries(municipalityLastScraped)) {
-        const lastUpdated = new Date(iso);
-        if (Number.isNaN(lastUpdated.getTime())) continue;
+    for (const municipality of targets) {
+        const iso = records[municipality];
+        const lastUpdated = iso ? new Date(iso) : null;
+
+        if (!lastUpdated || Number.isNaN(lastUpdated.getTime())) {
+            stale.push({ municipality, lastUpdated: null, missedRuns: 0, status: 'unknown' });
+            continue;
+        }
 
         const isNaraPref = municipality === NARA_PREF;
         const missedRuns = countMissedRuns(
@@ -153,9 +182,13 @@ export function getStaleMunicipalities(
         const threshold = isNaraPref ? NARA_PREF_MISSED_THRESHOLD : 2;
 
         if (missedRuns >= threshold) {
-            stale.push({ municipality, lastUpdated, missedRuns });
+            stale.push({ municipality, lastUpdated, missedRuns, status: 'stale' });
         }
     }
 
-    return stale.sort((a, b) => b.missedRuns - a.missedRuns);
+    // 状態不明を先頭に出す。「古い」より「収集できているか分からない」方が危険なため。
+    return stale.sort((a, b) => {
+        if (a.status !== b.status) return a.status === 'unknown' ? -1 : 1;
+        return b.missedRuns - a.missedRuns;
+    });
 }
