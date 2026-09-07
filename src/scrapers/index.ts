@@ -317,14 +317,68 @@ function readMarketItems(): MarketItem[] {
  * 業者の受注実績を追うにはそちらが必要になるため。
  * 過去分を失わないよう、既存ファイルと id ベースでマージする（同一idは今回の取得で上書き）。
  */
+/**
+ * サイトの操作部品を市況データから締め出すための、明らかにナビゲーションだと
+ * 分かる見出しの一覧。実データに混ざっていたものだけを完全一致で並べている。
+ * 部分一致にすると「入札情報（令和8年9月29日執行）」のような本物まで巻き込むため
+ * 完全一致に限定する。
+ */
+const MARKET_NAVIGATION_TITLES = new Set([
+    'お知らせ', 'その他', 'ホーム', 'トップページ', 'サイトマップ', 'ご利用ガイド',
+    'サイト利用案内', 'RSS利用案内', 'アクセシビリティ', '個人情報利用規定',
+    'バナー広告', '元に戻す', '拡大', '標準', '縮小', '閉じる',
+    '行政情報', '町政情報', '町の概要', '関連施設', '広報広聴', '人事情報',
+    '選挙情報', '入札情報', '入札・契約', '町民の方へ',
+    '組織でさがす', '地図でさがす', 'くらしの情報', 'しごとの情報',
+    '防犯・安心情報', '休日・夜間救急', '産業・ビジネス', 'ごみカレンダー',
+]);
+
+function hasUsableUrl(value?: string): boolean {
+    if (!value) return true;
+    // 「https://example.jpjavascript:SetCss(1)」のように、ベースURLと
+    // javascript: が連結された壊れたURLが実際に混ざっていた。
+    // 先頭が https でも中身が壊れているため、プロトコル判定だけでは弾けない。
+    if (/javascript:/i.test(value)) return false;
+    try {
+        return /^https?:$/.test(new URL(value).protocol);
+    } catch {
+        return false;
+    }
+}
+
+/**
+ * 市況データに載せてよい案件かを判定する。
+ *
+ * 市況データはid単位で累積するため、一度混ざったゴミが消えない。
+ * 実際に「拡大」「黒」「青」「標準」「－」といった画面操作のリンクや、
+ * javascript: を含む壊れたURLが残り続けていた。
+ * 書き込み時に判定することで、新規の混入を防ぎつつ既存分も洗い流す。
+ */
+function isPublishableMarketItem(item: MarketItem): boolean {
+    const title = (item.title || '').trim();
+    // 3文字以下は実データ上すべて操作部品だった(黒/青/－/○/拡大/入札/こちら等)。
+    // 4文字以上には「公用車購入」のような本物が含まれるため、ここで切る。
+    if (title.length < 4) return false;
+    if (MARKET_NAVIGATION_TITLES.has(title)) return false;
+    if (!hasUsableUrl(item.link) || !hasUsableUrl(item.pdfUrl)) return false;
+    return true;
+}
+
 function writeMarketItems(newItems: MarketItem[]) {
     const byId = new Map<string, MarketItem>();
     for (const item of readMarketItems()) byId.set(item.id, item);
     for (const item of newItems) byId.set(item.id, item);
 
-    const merged = Array.from(byId.values()).sort((a, b) =>
-        (b.announcementDate || '').localeCompare(a.announcementDate || ''),
-    );
+    const all = Array.from(byId.values());
+    const merged = all
+        .filter(isPublishableMarketItem)
+        .sort((a, b) => (b.announcementDate || '').localeCompare(a.announcementDate || ''));
+
+    const removed = all.length - merged.length;
+    if (removed > 0) {
+        console.log(`市場データ: 案件ではない項目 ${removed}件を除外しました`);
+    }
+
     fs.writeFileSync(MARKET_ITEMS_PATH, JSON.stringify(merged, null, 2), 'utf-8');
     return merged;
 }
