@@ -509,6 +509,18 @@
     "isRelevant": true
   },
   {
+    "id": "gojo-12d22814",
+    "municipality": "五條市",
+    "title": "高天井照明取替修繕",
+    "type": "建築",
+    "announcementDate": "2026-09-07",
+    "biddingDate": "2026-09-04",
+    "link": "https://www.city.gojo.lg.jp/jigyousha/nyuusatsu/8/R8/19646.html",
+    "pdfUrl": "https://www.city.gojo.lg.jp/material/files/group/17/takatennjyousyoumeikigutorikaekoukai.pdf",
+    "status": "落札",
+    "isRelevant": false
+  },
+  {
     "id": "sango-result-b2dc4a6a15",
     "municipality": "三郷町",
     "title": "Foreign Language",
@@ -1322,6 +1334,29 @@
     "isRelevant": false
   },
   {
+    "id": "nara-city-0000002595",
+    "municipality": "奈良市",
+    "title": "市道路面下空洞調査業務委託",
+    "type": "コンサル",
+    "announcementDate": "2026-09-04",
+    "biddingDate": "2026-09-04",
+    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+    "status": "落札",
+    "winningContractor": "ジオ・サーチ株式会社",
+    "winnerType": "ゼネコン",
+    "isRelevant": false
+  },
+  {
+    "id": "gose-御所市文書関係事務適正化支援業務委託プロ-5",
+    "municipality": "御所市",
+    "title": "御所市文書関係事務適正化支援業務委託プロポーザルを実施します（業務委託）",
+    "type": "その他",
+    "announcementDate": "2026-09-04",
+    "link": "",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
     "id": "uda-41c779fffc",
     "municipality": "宇陀市",
     "title": "【第08-A024号】道路維持事業 市道玉立２号線舗装補修工事",
@@ -1974,6 +2009,16 @@
     "pdfUrl": "https://www.town.takatori.nara.jp/cmsfiles/contents/0000002/2683/R8.9.1.pdf",
     "status": "受付中",
     "isRelevant": true
+  },
+  {
+    "id": "gose-一般競争入札公告（建設工事）（管財課）-28",
+    "municipality": "御所市",
+    "title": "一般競争入札公告（建設工事）（管財課）",
+    "type": "建築",
+    "announcementDate": "2026-09-01",
+    "link": "",
+    "status": "受付中",
+    "isRelevant": false
   },
   {
     "id": "平群町-入札",
@@ -2694,6 +2739,97 @@
     "winningContractor": "金森土木",
     "winnerType": "ゼネコン",
     "estimatedPrice": "12,218,000円",
+    "isRelevant": false
+  },
+  {
+    "id": "koryo-2026-08-28-No28",
+    "municipality": "広陵町",
+    "title": "広瀬川河川改修に伴う公共下水道管移設工事（1工区）",
+    "type": "建築",
+    "announcementDate": "2026-08-28",
+    "biddingDate": "2026-08-28",
+    "link": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7919/NO28-2.pdf",
+    "pdfUrl": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7919/NO28-2.pdf",
+    "status": "落札",
+    "winningContractor": "株式会社山崎産業",
+    "isRelevant": false
+  },
+  {
+    "id": "koryo-2026-08-28-No29",
+    "municipality": "広陵町",
+    "title": "馬見川調整池整備に伴う仮設排水管設置工事",
+    "type": "建築",
+    "announcementDate": "2026-08-28",
+    "biddingDate": "2026-08-28",
+    "link": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7919/NO29-2.pdf",
+    "pdfUrl": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7919/NO29-2.pdf",
+    "status": "落札",
+    "winningContractor": "有限会社金井組運輸",
+    "isRelevant": false
+  },
+  {
+    "id": "koryo-2026-08-28-No30",
+    "municipality": "広陵町",
+    "title": "南郷環濠樹木伐採工事",
+    "type": "建築",
+    "announcementDate": "2026-08-28",
+    "biddingDate": "2026-08-28",
+    "link": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7919/NO30-2.pdf",
+    "pdfUrl": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7919/NO30-2.pdf",
+    "status": "落札",
+    "winningContractor": "有限会社庭工房",
+    "isRelevant": false
+  },
+  {
+    "id": "koryo-2026-08-28-No31",
+    "municipality": "広陵町",
+    "title": "1～3号緑地西側剪定工事",
+    "type": "建築",
+    "announcementDate": "2026-08-28",
+    "biddingDate": "2026-08-28",
+    "link": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7919/NO31-2.pdf",
+    "pdfUrl": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7919/NO31-2.pdf",
+    "status": "落札",
+    "winningContractor": "岡本造園",
+    "isRelevant": false
+  },
+  {
+    "id": "koryo-2026-08-28-No32",
+    "municipality": "広陵町",
+    "title": "桜橋補修設計業務委託",
+    "type": "コンサル",
+    "announcementDate": "2026-08-28",
+    "biddingDate": "2026-08-28",
+    "link": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7919/NO32-2.pdf",
+    "pdfUrl": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7919/NO32-2.pdf",
+    "status": "落札",
+    "winningContractor": "株式会社トーニチコンサルタント奈良事務所",
+    "isRelevant": false
+  },
+  {
+    "id": "koryo-2026-08-28-No33",
+    "municipality": "広陵町",
+    "title": "中地区八幡神社東側道路整備に伴う測量設計業務委託",
+    "type": "コンサル",
+    "announcementDate": "2026-08-28",
+    "biddingDate": "2026-08-28",
+    "link": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7919/NO33-2.pdf",
+    "pdfUrl": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7919/NO33-2.pdf",
+    "status": "落札",
+    "winningContractor": "南海測量設計株式会社奈良営業所",
+    "isRelevant": false
+  },
+  {
+    "id": "koryo-2026-08-28-No34",
+    "municipality": "広陵町",
+    "title": "巣山古墳UAVレーザー計測業務委託",
+    "type": "コンサル",
+    "announcementDate": "2026-08-28",
+    "biddingDate": "2026-08-28",
+    "link": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7919/NO34-2.pdf",
+    "pdfUrl": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7919/NO34-2.pdf",
+    "status": "落札",
+    "winningContractor": "株式会社アクセス",
     "isRelevant": false
   },
   {
@@ -5436,17 +5572,6 @@
     "municipality": "奈良市",
     "title": "横断歩道橋長寿命化修繕及び橋梁排水施設改良工事（西部第７２２号線他（中町１号歩道橋）他）",
     "type": "建築",
-    "announcementDate": "2026-08-03",
-    "biddingDate": "2026-09-04",
-    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-    "status": "受付中",
-    "isRelevant": false
-  },
-  {
-    "id": "nara-city-0000002595",
-    "municipality": "奈良市",
-    "title": "市道路面下空洞調査業務委託",
-    "type": "コンサル",
     "announcementDate": "2026-08-03",
     "biddingDate": "2026-09-04",
     "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
@@ -10008,7 +10133,7 @@
     "biddingDate": "2026-07-13",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "(有) 吉田舗装",
+    "winningContractor": "（有）吉田舗装",
     "isRelevant": false
   },
   {
@@ -10020,7 +10145,7 @@
     "biddingDate": "2026-07-13",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "(株) キショウ",
+    "winningContractor": "（株）キショウ",
     "isRelevant": false
   },
   {
@@ -10032,7 +10157,7 @@
     "biddingDate": "2026-07-13",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "竹田建設 (有)",
+    "winningContractor": "竹田建設（有）",
     "isRelevant": false
   },
   {
@@ -10056,7 +10181,7 @@
     "biddingDate": "2026-07-13",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "大和電機工業 (株)",
+    "winningContractor": "大和電機工業（株）",
     "isRelevant": false
   },
   {
@@ -10068,7 +10193,7 @@
     "biddingDate": "2026-07-13",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "シマ産商 (株)",
+    "winningContractor": "シマ産商（株）",
     "isRelevant": false
   },
   {
@@ -14336,7 +14461,7 @@
     "biddingDate": "2026-06-08",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "(株) 堂浦土木",
+    "winningContractor": "（株）堂浦土木",
     "isRelevant": false
   },
   {
@@ -14348,7 +14473,7 @@
     "biddingDate": "2026-06-08",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "(有) 吉田舗装",
+    "winningContractor": "（有）吉田舗装",
     "isRelevant": false
   },
   {
@@ -14360,7 +14485,7 @@
     "biddingDate": "2026-06-08",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "(株) 堂浦土木",
+    "winningContractor": "（株）堂浦土木",
     "isRelevant": false
   },
   {
@@ -15490,7 +15615,7 @@
     "biddingDate": "2026-05-11",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "大阪エンジニアリング (株) 奈良支店",
+    "winningContractor": "大阪エンジニアリング（株）　奈良支店",
     "isRelevant": false
   },
   {
@@ -16228,7 +16353,7 @@
     "biddingDate": "2026-05-18",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "(株) 森下組",
+    "winningContractor": "(株)森下組",
     "isRelevant": false
   },
   {
@@ -16240,7 +16365,7 @@
     "biddingDate": "2026-05-18",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "村本建設 (株) 奈良本店",
+    "winningContractor": "村本建設(株)奈良本店",
     "isRelevant": true
   },
   {
@@ -16264,7 +16389,7 @@
     "biddingDate": "2026-05-11",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "クロカワ工芸 (株)",
+    "winningContractor": "クロカワ工芸（株）",
     "isRelevant": false
   },
   {
@@ -16276,7 +16401,7 @@
     "biddingDate": "2026-05-11",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "クロカワ工芸 (株)",
+    "winningContractor": "クロカワ工芸（株）",
     "isRelevant": false
   },
   {
@@ -16288,7 +16413,7 @@
     "biddingDate": "2026-05-11",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "大和 (株)",
+    "winningContractor": "大和（株）",
     "isRelevant": false
   },
   {
@@ -16312,7 +16437,7 @@
     "biddingDate": "2026-05-11",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "(株) ICHIKEN 田原本営業所",
+    "winningContractor": "（株）ＩＣＨＩＫＥＮ　田原本営業所",
     "isRelevant": false
   },
   {
@@ -16663,7 +16788,7 @@
     "biddingDate": "2026-05-11",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "三精テクノロジーズ (株)",
+    "winningContractor": "三精テクノロジーズ（株）",
     "isRelevant": false
   },
   {
@@ -16686,7 +16811,7 @@
     "biddingDate": "2026-05-11",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "ポシブル医科学 (株)",
+    "winningContractor": "ポシブル医科学（株）",
     "isRelevant": false
   },
   {
@@ -16698,7 +16823,7 @@
     "biddingDate": "2026-05-11",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "ポシブル医科学 (株)",
+    "winningContractor": "ポシブル医科学（株）",
     "isRelevant": false
   },
   {
@@ -16710,7 +16835,7 @@
     "biddingDate": "2026-05-11",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "高田紙業 (有)",
+    "winningContractor": "高田紙業（有）",
     "isRelevant": false
   },
   {
