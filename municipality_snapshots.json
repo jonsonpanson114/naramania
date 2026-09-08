@@ -1381,6 +1381,18 @@
   ],
   "大和郡山市": [
     {
+      "id": "yamato-koriyama-9846d121",
+      "municipality": "大和郡山市",
+      "title": "市営住宅空家改修工事（市営向畑住宅11号、片桐東団地A棟202号・C棟202号、西田中改良住宅A18号・B81号）",
+      "type": "建築",
+      "announcementDate": "2026-09-02",
+      "biddingDate": "2026-09-02",
+      "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/1892.html",
+      "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk_kekka8-070.pdf",
+      "status": "落札",
+      "winningContractor": "有限会社 龍田"
+    },
+    {
       "id": "yamato-koriyama-1cf310ec",
       "municipality": "大和郡山市",
       "title": "大和郡山市立小泉出屋敷スポーツ会館補修工事",
@@ -1391,18 +1403,6 @@
       "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk_kekka8-060.pdf",
       "status": "落札",
       "winningContractor": "石神塗装"
-    },
-    {
-      "id": "yamato-koriyama-9846d121",
-      "municipality": "大和郡山市",
-      "title": "市営住宅空家改修工事（市営向畑住宅11号、片桐東団地A棟202号・C棟202号、西田中改良住宅A18号・B81号）",
-      "type": "建築",
-      "announcementDate": "2026-08-18",
-      "biddingDate": "2026-09-02",
-      "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/1892.html",
-      "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk_kekka8-070.pdf",
-      "status": "落札",
-      "winningContractor": "有限会社 龍田"
     },
     {
       "id": "yamato-koriyama-e4987f3a",
@@ -2802,16 +2802,15 @@
   ],
   "高取町": [
     {
-      "id": "高取町-2026-08-28-公営住宅第5団地除却工事監理業務",
+      "id": "高取町-2026-09-01-公営住宅丹生谷第1団地屋根葺替等改修工事監理業務",
       "municipality": "高取町",
-      "title": "公営住宅第5団地除却工事監理業務",
+      "title": "公営住宅丹生谷第１団地屋根葺替等改修工事監理業務",
       "type": "コンサル",
-      "announcementDate": "2026-08-28",
-      "biddingDate": "2026-08-28",
-      "link": "https://www.town.takatori.nara.jp/contents_detail.php?frmId=2205",
-      "status": "落札",
-      "winningContractor": "(株)福井建築設計事務所",
-      "winnerType": "設計事務所"
+      "announcementDate": "2026-09-01",
+      "biddingDate": "2026-09-29",
+      "link": "https://www.town.takatori.nara.jp/contents_detail.php?co=cat&frmId=2683&frmCd=2-6-0-0-0",
+      "pdfUrl": "https://www.town.takatori.nara.jp/cmsfiles/contents/0000002/2683/R8.9.1.pdf",
+      "status": "受付中"
     },
     {
       "id": "高取町-2026-08-28-公営住宅丹生谷第1団地屋根葺替等改修工事監理業務",
@@ -2820,7 +2819,7 @@
       "type": "コンサル",
       "announcementDate": "2026-08-28",
       "biddingDate": "2026-08-28",
-      "link": "https://www.town.takatori.nara.jp/contents_detail.php?frmId=2205",
+      "link": "https://www.town.takatori.nara.jp/contents_detail.php?co=cat&frmId=2205&frmCd=2-6-0-0-0",
       "status": "不調"
     },
     {
@@ -2830,7 +2829,7 @@
       "type": "建築",
       "announcementDate": "2026-08-28",
       "biddingDate": "2026-08-28",
-      "link": "https://www.town.takatori.nara.jp/contents_detail.php?frmId=2205",
+      "link": "https://www.town.takatori.nara.jp/contents_detail.php?co=cat&frmId=2205&frmCd=2-6-0-0-0",
       "status": "落札",
       "winningContractor": "(株)中川組",
       "winnerType": "ゼネコン"
@@ -2842,8 +2841,21 @@
       "type": "建築",
       "announcementDate": "2026-08-28",
       "biddingDate": "2026-08-28",
-      "link": "https://www.town.takatori.nara.jp/contents_detail.php?frmId=2205",
+      "link": "https://www.town.takatori.nara.jp/contents_detail.php?co=cat&frmId=2205&frmCd=2-6-0-0-0",
       "status": "不調"
+    },
+    {
+      "id": "高取町-2026-08-28-公営住宅第5団地除却工事監理業務",
+      "municipality": "高取町",
+      "title": "公営住宅第5団地除却工事監理業務",
+      "type": "コンサル",
+      "announcementDate": "2026-08-04",
+      "biddingDate": "2026-08-28",
+      "link": "https://www.town.takatori.nara.jp/contents_detail.php?co=cat&frmId=2205&frmCd=2-6-0-0-0",
+      "status": "落札",
+      "winningContractor": "(株)福井建築設計事務所",
+      "winnerType": "設計事務所",
+      "pdfUrl": "https://www.town.takatori.nara.jp/cmsfiles/contents/0000002/2665/R8.8.3.pdf"
     },
     {
       "id": "高取町-2026-07-28-町営住宅空家修繕工事設計業務",
@@ -2852,7 +2864,7 @@
       "type": "コンサル",
       "announcementDate": "2026-07-28",
       "biddingDate": "2026-07-28",
-      "link": "https://www.town.takatori.nara.jp/contents_detail.php?frmId=2205",
+      "link": "https://www.town.takatori.nara.jp/contents_detail.php?co=cat&frmId=2205&frmCd=2-6-0-0-0",
       "status": "落札",
       "winningContractor": "(株)福井建築設計事務所",
       "winnerType": "設計事務所"
@@ -2864,7 +2876,7 @@
       "type": "コンサル",
       "announcementDate": "2026-05-11",
       "biddingDate": "2026-05-11",
-      "link": "https://www.town.takatori.nara.jp/contents_detail.php?frmId=2205",
+      "link": "https://www.town.takatori.nara.jp/contents_detail.php?co=cat&frmId=2205&frmCd=2-6-0-0-0",
       "status": "落札",
       "winningContractor": "(株)礎建築事務所",
       "winnerType": "ゼネコン"
@@ -2876,7 +2888,7 @@
       "type": "建築",
       "announcementDate": "2026-05-11",
       "biddingDate": "2026-05-11",
-      "link": "https://www.town.takatori.nara.jp/contents_detail.php?frmId=2205",
+      "link": "https://www.town.takatori.nara.jp/contents_detail.php?co=cat&frmId=2205&frmCd=2-6-0-0-0",
       "status": "落札",
       "winningContractor": "(株)上田工務店",
       "winnerType": "ゼネコン"
@@ -2888,7 +2900,7 @@
       "type": "コンサル",
       "announcementDate": "2026-05-11",
       "biddingDate": "2026-05-11",
-      "link": "https://www.town.takatori.nara.jp/contents_detail.php?frmId=2205",
+      "link": "https://www.town.takatori.nara.jp/contents_detail.php?co=cat&frmId=2205&frmCd=2-6-0-0-0",
       "status": "落札",
       "winningContractor": "(株)伸構造事務所",
       "winnerType": "ゼネコン"
@@ -2900,7 +2912,7 @@
       "type": "建築",
       "announcementDate": "2026-05-11",
       "biddingDate": "2026-05-11",
-      "link": "https://www.town.takatori.nara.jp/contents_detail.php?frmId=2205",
+      "link": "https://www.town.takatori.nara.jp/contents_detail.php?co=cat&frmId=2205&frmCd=2-6-0-0-0",
       "status": "落札",
       "winningContractor": "吉井建設(株)",
       "winnerType": "ゼネコン"
@@ -2912,7 +2924,7 @@
       "type": "コンサル",
       "announcementDate": "2026-02-27",
       "biddingDate": "2026-02-27",
-      "link": "https://www.town.takatori.nara.jp/contents_detail.php?frmId=2205",
+      "link": "https://www.town.takatori.nara.jp/contents_detail.php?co=cat&frmId=2205&frmCd=2-6-0-0-0",
       "status": "落札",
       "winningContractor": "(株)福井建築設計事務所",
       "winnerType": "設計事務所"
@@ -2924,7 +2936,7 @@
       "type": "建築",
       "announcementDate": "2026-02-27",
       "biddingDate": "2026-02-27",
-      "link": "https://www.town.takatori.nara.jp/contents_detail.php?frmId=2205",
+      "link": "https://www.town.takatori.nara.jp/contents_detail.php?co=cat&frmId=2205&frmCd=2-6-0-0-0",
       "status": "落札",
       "winningContractor": "(株)松吉組",
       "winnerType": "ゼネコン"
@@ -2980,8 +2992,20 @@
       "type": "委託",
       "announcementDate": "2025-12-25",
       "biddingDate": "2025-12-25",
-      "link": "https://www.town.takatori.nara.jp/contents_detail.php?frmId=2205",
+      "link": "https://www.town.takatori.nara.jp/contents_detail.php?co=cat&frmId=2205&frmCd=2-6-0-0-0",
       "status": "不調"
+    },
+    {
+      "id": "高取町-2025-12-25-旧高取町立高取幼稚園除去工事設計業務委託",
+      "municipality": "高取町",
+      "title": "旧高取町立高取幼稚園除去工事設計業務委託",
+      "type": "コンサル",
+      "announcementDate": "2025-12-25",
+      "biddingDate": "2025-12-25",
+      "link": "https://www.town.takatori.nara.jp/contents_detail.php?co=cat&frmId=2205&frmCd=2-6-0-0-0",
+      "status": "落札",
+      "winningContractor": "(株)中和設計",
+      "winnerType": "設計事務所"
     },
     {
       "id": "高取町-2025-12-25-公営住宅丹生谷第1団地屋根葺替等改修工事",
@@ -2992,18 +3016,6 @@
       "biddingDate": "2025-12-25",
       "link": "https://www.town.takatori.nara.jp/contents_detail.php?frmId=2205",
       "status": "不調"
-    },
-    {
-      "id": "高取町-2025-12-25-旧高取町立高取幼稚園除去工事設計業務委託",
-      "municipality": "高取町",
-      "title": "旧高取町立高取幼稚園除去工事設計業務委託",
-      "type": "コンサル",
-      "announcementDate": "2025-12-25",
-      "biddingDate": "2025-12-25",
-      "link": "https://www.town.takatori.nara.jp/contents_detail.php?frmId=2205",
-      "status": "落札",
-      "winningContractor": "(株)中和設計",
-      "winnerType": "設計事務所"
     },
     {
       "id": "高取町-2025-11-27-公営住宅丹生谷第1団地屋根葺替等改修工事管理業務",
@@ -3032,7 +3044,7 @@
       "type": "コンサル",
       "announcementDate": "2025-10-28",
       "biddingDate": "2025-10-28",
-      "link": "https://www.town.takatori.nara.jp/contents_detail.php?frmId=2205",
+      "link": "https://www.town.takatori.nara.jp/contents_detail.php?co=cat&frmId=2205&frmCd=2-6-0-0-0",
       "status": "落札",
       "winningContractor": "(株)中和設計",
       "winnerType": "設計事務所"
@@ -3044,7 +3056,7 @@
       "type": "委託",
       "announcementDate": "2025-09-29",
       "biddingDate": "2025-09-29",
-      "link": "https://www.town.takatori.nara.jp/contents_detail.php?frmId=2205",
+      "link": "https://www.town.takatori.nara.jp/contents_detail.php?co=cat&frmId=2205&frmCd=2-6-0-0-0",
       "status": "落札",
       "winningContractor": "(株)パスコ",
       "winnerType": "ゼネコン"
