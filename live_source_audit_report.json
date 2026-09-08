@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-08T06:57:10.294Z",
+  "generatedAt": "2026-09-08T09:31:18.249Z",
   "currentItemCount": 297,
   "checkedMunicipalities": [
     "奈良市",
@@ -228,10 +228,10 @@
     },
     {
       "municipality": "高取町",
-      "rawCount": 45,
-      "keptCount": 16,
+      "rawCount": 46,
+      "keptCount": 17,
       "rejectedCount": 29,
-      "keptAnnouncementCount": 1,
+      "keptAnnouncementCount": 2,
       "keptResultCount": 15,
       "warnings": [],
       "errors": []
@@ -281,11 +281,11 @@
   ],
   "coverage": {
     "checkedMunicipalityCount": 24,
-    "expectedItemCount": 268,
-    "matchedItemCount": 268,
+    "expectedItemCount": 269,
+    "matchedItemCount": 269,
     "missingItemCount": 0,
-    "duplicateTitleGroupCount": 31,
-    "duplicateTitleItemCount": 68,
+    "duplicateTitleGroupCount": 32,
+    "duplicateTitleItemCount": 70,
     "results": [
       {
         "municipality": "橿原市",
@@ -365,6 +365,17 @@
         "status": "ok"
       },
       {
+        "municipality": "高取町",
+        "snapshotCount": 46,
+        "expectedCount": 17,
+        "matchedCount": 17,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 2,
+        "duplicateTitleItemCount": 4,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
         "municipality": "奈良市",
         "snapshotCount": 109,
         "expectedCount": 17,
@@ -372,17 +383,6 @@
         "missingCount": 0,
         "duplicateTitleGroupCount": 6,
         "duplicateTitleItemCount": 12,
-        "missingItems": [],
-        "status": "ok"
-      },
-      {
-        "municipality": "高取町",
-        "snapshotCount": 45,
-        "expectedCount": 16,
-        "matchedCount": 16,
-        "missingCount": 0,
-        "duplicateTitleGroupCount": 1,
-        "duplicateTitleItemCount": 2,
         "missingItems": [],
         "status": "ok"
       },
