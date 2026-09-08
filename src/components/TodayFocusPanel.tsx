@@ -138,9 +138,14 @@ export function TodayFocusPanel({
         { label: '落札判明', value: openingResults.length, tone: 'text-stone-100', tab: 'results' },
     ];
 
+    // 「新着公告」「直近開札」も専用の入口へ送る。
+    // 以前はこの2つが両方とも受付中一覧へ飛んでおり、
+    // タブで見ていた内容と違うものが出ていた。
     const seeAllHref =
         tab === 'followUp' ? '/search?quick=resultFollowUp'
         : tab === 'results' ? '/search?quick=opened'
+        : tab === 'upcoming' ? '/search?quick=upcomingBidding'
+        : tab === 'new' ? '/search?quick=newArrivals'
         : '/search?quick=active';
 
     return (

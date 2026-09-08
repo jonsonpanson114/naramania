@@ -1,15 +1,8 @@
 import { AppShell } from '@/components/AppShell';
 import { Header } from '@/components/Header';
-import { BiddingTable, type ViewTab } from '@/components/BiddingTable';
+import { BiddingTable } from '@/components/BiddingTable';
 import { loadDashboardData } from '@/lib/dashboard_data';
-
-const QUICK_TO_TAB: Record<string, ViewTab> = {
-    active: 'active',
-    resultFollowUp: 'followUp',
-    missingWinner: 'followUp',
-    opened: 'results',
-    all: 'all',
-};
+import { resolveQuickLink } from '@/lib/quick_links';
 
 interface PageProps {
     searchParams: Promise<Record<string, string | string[] | undefined>>;
@@ -23,8 +16,11 @@ export default async function SearchPage({ searchParams }: PageProps) {
     const params = await searchParams;
     const { allItems } = loadDashboardData();
 
-    const quick = asString(params.quick);
-    const initialTab: ViewTab = (quick && QUICK_TO_TAB[quick]) || 'active';
+    // quick は「タブ」ではなく「用途別の絞り込み」。以前はタブにしか変換しておらず、
+    // 学校トイレ(schoolToilet)は対応が無くて受付中一覧になり、
+    // 落札者未登録(missingWinner)は追跡待ちタブに化けていた。
+    // 押した名前と出てくる一覧が違うのは、間違った案件を見ることに直結する。
+    const quick = resolveQuickLink(asString(params.quick));
     const initialKeyword = asString(params.q) || '';
     const initialMunicipality = asString(params.municipality) || 'すべて';
 
@@ -34,14 +30,17 @@ export default async function SearchPage({ searchParams }: PageProps) {
             <div className="mb-8">
                 <h2 className="text-3xl tracking-widest font-serif">案件検索</h2>
                 <p className="mt-3 text-secondary/60 text-sm tracking-wider">
-                    タブとキーワード、自治体で案件を絞り込めます。
+                    {quick.key === 'all'
+                        ? 'タブとキーワード、自治体で案件を絞り込めます。'
+                        : `「${quick.label}」で絞り込んでいます。${quick.description}`}
                 </p>
             </div>
             <BiddingTable
                 items={allItems}
-                initialTab={initialTab}
+                initialTab={quick.tab}
                 initialKeyword={initialKeyword}
                 initialMunicipality={initialMunicipality}
+                quickFilterKey={quick.key === 'all' ? undefined : quick.key}
             />
         </AppShell>
     );

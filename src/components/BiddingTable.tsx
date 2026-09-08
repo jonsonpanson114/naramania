@@ -5,6 +5,7 @@ import { BiddingItem, BiddingStatus } from '@/types/bidding';
 import { getBiddingLabel } from '@/lib/bidding_schedule';
 import { assessBiddingScope } from '@/lib/relevance_guard';
 import { matchesViewTab, type ViewTab } from '@/lib/practical_filters';
+import { QUICK_LINKS, type QuickLinkKey } from '@/lib/quick_links';
 import { getEnabledMunicipalityNames } from '@/lib/user_settings';
 import { useUserSettings } from '@/lib/use_user_settings';
 import {
@@ -32,6 +33,16 @@ interface BiddingTableProps {
     initialTab?: ViewTab;
     initialKeyword?: string;
     initialMunicipality?: string;
+    /**
+     * 「学校トイレ」「落札者未登録」のような用途別の絞り込み。
+     * タブでは表せないため別に受け取り、解除できるように表示も出す。
+     *
+     * 渡すのはキーだけにする。QuickLink は判定関数を持っており、
+     * サーバーコンポーネントからそのまま渡すと
+     * 「Functions cannot be passed directly to Client Components」で
+     * 実行時に落ちる(型検査もビルドも通ってしまうので実際に踏んだ)。
+     */
+    quickFilterKey?: QuickLinkKey;
 }
 
 type WinnerFilter = 'すべて' | 'ゼネコン' | '設計事務所';
@@ -144,8 +155,12 @@ function StatusPill({ status }: { status: BiddingStatus }) {
     );
 }
 
-export function BiddingTable({ items, initialTab = 'active', initialKeyword = '', initialMunicipality = 'すべて' }: BiddingTableProps) {
+export function BiddingTable({ items, initialTab = 'active', initialKeyword = '', initialMunicipality = 'すべて', quickFilterKey }: BiddingTableProps) {
     const [tab, setTab] = useState<ViewTab>(initialTab);
+    // 用途別の絞り込みは解除できるようにする。押した本人が「なぜこの件数なのか」
+    // 分からないまま見続けるのを避けたい。
+    const [quickActive, setQuickActive] = useState(true);
+    const quickFilter = quickFilterKey ? QUICK_LINKS[quickFilterKey] : undefined;
     const [winnerFilter, setWinnerFilter] = useState<WinnerFilter>('すべて');
     const [typeFilter, setTypeFilter] = useState<TypeFilter>('すべて');
     const [selectedTag, setSelectedTag] = useState<string | null>(null);
@@ -172,13 +187,18 @@ export function BiddingTable({ items, initialTab = 'active', initialKeyword = ''
     }, [pageSize]);
 
     const scopeById = useMemo(() => new Map(items.map(item => [item.id, assessBiddingScope(item)])), [items]);
+    const quickFiltered = useMemo(() => {
+        if (!quickFilter || !quickActive) return items;
+        const now = new Date();
+        return items.filter(item => quickFilter.matches(item, now));
+    }, [items, quickFilter, quickActive]);
     const visibleItems = useMemo(() => {
         const scoped = hideOutOfScope
-            ? items.filter(item => scopeById.get(item.id)?.status !== 'noise')
-            : items;
+            ? quickFiltered.filter(item => scopeById.get(item.id)?.status !== 'noise')
+            : quickFiltered;
         if (!enabledMunicipalities) return scoped;
         return scoped.filter(item => enabledMunicipalities.includes(item.municipality));
-    }, [hideOutOfScope, items, scopeById, enabledMunicipalities]);
+    }, [hideOutOfScope, quickFiltered, scopeById, enabledMunicipalities]);
 
     const municipalities = useMemo(() => Array.from(new Set(visibleItems.map(item => item.municipality))).sort(), [visibleItems]);
     const popularTags = useMemo(() => {
@@ -281,6 +301,26 @@ export function BiddingTable({ items, initialTab = 'active', initialKeyword = ''
         <section id="project-board" className="space-y-5 scroll-mt-24" aria-label="案件一覧">
             <div className="overflow-hidden rounded-[2rem] border border-stone-200/80 bg-white/80 shadow-sm backdrop-blur-xl">
                 <div className="space-y-4 p-5 lg:p-6">
+                    {/* 用途別の絞り込みが効いていることを明示する。
+                        黙って件数だけ減っていると、押した本人にも理由が分からない */}
+                    {quickFilter && quickActive && (
+                        <div className="flex flex-wrap items-center gap-2 rounded-xl border border-accent/30 bg-accent/5 px-4 py-2.5">
+                            <span className="text-[13px] font-bold tracking-[0.06em] text-accent">
+                                「{quickFilter.label}」で絞り込み中
+                            </span>
+                            <span className="text-[12px] tracking-wider text-secondary/60">
+                                {visibleItems.length}件
+                            </span>
+                            <button
+                                onClick={() => changeFilter(() => setQuickActive(false))}
+                                className="ml-auto inline-flex items-center gap-1 rounded-full border border-accent/40 bg-white px-3 py-1 text-[11px] font-bold tracking-[0.08em] text-accent transition hover:bg-accent/10"
+                            >
+                                <X size={11} />
+                                解除
+                            </button>
+                        </div>
+                    )}
+
                     {/* メインタブ */}
                     <div className="flex flex-wrap items-center gap-2">
                         {TABS.map(({ id, label, hint }) => {
