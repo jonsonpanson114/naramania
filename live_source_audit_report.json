@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-07T13:25:34.120Z",
-  "currentItemCount": 296,
+  "generatedAt": "2026-09-08T06:57:10.294Z",
+  "currentItemCount": 297,
   "checkedMunicipalities": [
     "奈良市",
     "橿原市",
@@ -66,9 +66,9 @@
     },
     {
       "municipality": "大和高田市",
-      "rawCount": 183,
+      "rawCount": 185,
       "keptCount": 0,
-      "rejectedCount": 183,
+      "rejectedCount": 185,
       "keptAnnouncementCount": 0,
       "keptResultCount": 0,
       "warnings": [],
@@ -76,10 +76,10 @@
     },
     {
       "municipality": "大和郡山市",
-      "rawCount": 231,
-      "keptCount": 23,
-      "rejectedCount": 208,
-      "keptAnnouncementCount": 3,
+      "rawCount": 226,
+      "keptCount": 22,
+      "rejectedCount": 204,
+      "keptAnnouncementCount": 2,
       "keptResultCount": 20,
       "warnings": [],
       "errors": []
@@ -106,9 +106,9 @@
     },
     {
       "municipality": "御所市",
-      "rawCount": 18,
+      "rawCount": 17,
       "keptCount": 2,
-      "rejectedCount": 16,
+      "rejectedCount": 15,
       "keptAnnouncementCount": 0,
       "keptResultCount": 2,
       "warnings": [],
@@ -149,11 +149,9 @@
       "rawCount": 63,
       "keptCount": 3,
       "rejectedCount": 60,
-      "keptAnnouncementCount": 3,
-      "keptResultCount": 0,
-      "warnings": [
-        "田原本町: 取得63件に落札結果が1件もありません。入札結果(開札情報)ページを見落としていないか確認が必要です。"
-      ],
+      "keptAnnouncementCount": 0,
+      "keptResultCount": 3,
+      "warnings": [],
       "errors": []
     },
     {
@@ -220,9 +218,9 @@
     },
     {
       "municipality": "安堵町",
-      "rawCount": 4,
+      "rawCount": 5,
       "keptCount": 2,
-      "rejectedCount": 2,
+      "rejectedCount": 3,
       "keptAnnouncementCount": 0,
       "keptResultCount": 2,
       "warnings": [],
@@ -230,23 +228,23 @@
     },
     {
       "municipality": "高取町",
-      "rawCount": 46,
-      "keptCount": 15,
-      "rejectedCount": 31,
-      "keptAnnouncementCount": 0,
+      "rawCount": 45,
+      "keptCount": 16,
+      "rejectedCount": 29,
+      "keptAnnouncementCount": 1,
       "keptResultCount": 15,
       "warnings": [],
       "errors": []
     },
     {
       "municipality": "斑鳩町",
-      "rawCount": 48,
+      "rawCount": 37,
       "keptCount": 2,
-      "rejectedCount": 46,
+      "rejectedCount": 35,
       "keptAnnouncementCount": 2,
       "keptResultCount": 0,
       "warnings": [
-        "斑鳩町: 取得48件に落札結果が1件もありません。入札結果(開札情報)ページを見落としていないか確認が必要です。"
+        "斑鳩町: 取得37件に落札結果が1件もありません。入札結果(開札情報)ページを見落としていないか確認が必要です。"
       ],
       "errors": []
     },
@@ -323,17 +321,6 @@
         "status": "ok"
       },
       {
-        "municipality": "大和郡山市",
-        "snapshotCount": 231,
-        "expectedCount": 23,
-        "matchedCount": 23,
-        "missingCount": 0,
-        "duplicateTitleGroupCount": 4,
-        "duplicateTitleItemCount": 9,
-        "missingItems": [],
-        "status": "ok"
-      },
-      {
         "municipality": "生駒市",
         "snapshotCount": 207,
         "expectedCount": 22,
@@ -341,6 +328,17 @@
         "missingCount": 0,
         "duplicateTitleGroupCount": 0,
         "duplicateTitleItemCount": 0,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
+        "municipality": "大和郡山市",
+        "snapshotCount": 226,
+        "expectedCount": 22,
+        "matchedCount": 22,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 3,
+        "duplicateTitleItemCount": 7,
         "missingItems": [],
         "status": "ok"
       },
@@ -379,12 +377,12 @@
       },
       {
         "municipality": "高取町",
-        "snapshotCount": 46,
-        "expectedCount": 15,
-        "matchedCount": 15,
+        "snapshotCount": 45,
+        "expectedCount": 16,
+        "matchedCount": 16,
         "missingCount": 0,
-        "duplicateTitleGroupCount": 0,
-        "duplicateTitleItemCount": 0,
+        "duplicateTitleGroupCount": 1,
+        "duplicateTitleItemCount": 2,
         "missingItems": [],
         "status": "ok"
       },
@@ -489,7 +487,7 @@
       },
       {
         "municipality": "安堵町",
-        "snapshotCount": 4,
+        "snapshotCount": 5,
         "expectedCount": 2,
         "matchedCount": 2,
         "missingCount": 0,
@@ -511,7 +509,7 @@
       },
       {
         "municipality": "御所市",
-        "snapshotCount": 18,
+        "snapshotCount": 17,
         "expectedCount": 2,
         "matchedCount": 2,
         "missingCount": 0,
@@ -522,7 +520,7 @@
       },
       {
         "municipality": "斑鳩町",
-        "snapshotCount": 48,
+        "snapshotCount": 37,
         "expectedCount": 2,
         "matchedCount": 2,
         "missingCount": 0,
@@ -544,7 +542,7 @@
       },
       {
         "municipality": "大和高田市",
-        "snapshotCount": 183,
+        "snapshotCount": 185,
         "expectedCount": 0,
         "matchedCount": 0,
         "missingCount": 0,
