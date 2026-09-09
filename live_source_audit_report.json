@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-08T12:08:12.081Z",
+  "generatedAt": "2026-09-09T07:03:56.678Z",
   "currentItemCount": 297,
   "checkedMunicipalities": [
     "奈良市",
@@ -66,9 +66,9 @@
     },
     {
       "municipality": "大和高田市",
-      "rawCount": 185,
+      "rawCount": 192,
       "keptCount": 0,
-      "rejectedCount": 185,
+      "rejectedCount": 192,
       "keptAnnouncementCount": 0,
       "keptResultCount": 0,
       "warnings": [],
@@ -238,13 +238,13 @@
     },
     {
       "municipality": "斑鳩町",
-      "rawCount": 37,
+      "rawCount": 48,
       "keptCount": 2,
-      "rejectedCount": 35,
+      "rejectedCount": 46,
       "keptAnnouncementCount": 2,
       "keptResultCount": 0,
       "warnings": [
-        "斑鳩町: 取得37件に落札結果が1件もありません。入札結果(開札情報)ページを見落としていないか確認が必要です。"
+        "斑鳩町: 取得48件に落札結果が1件もありません。入札結果(開札情報)ページを見落としていないか確認が必要です。"
       ],
       "errors": []
     },
@@ -520,7 +520,7 @@
       },
       {
         "municipality": "斑鳩町",
-        "snapshotCount": 37,
+        "snapshotCount": 48,
         "expectedCount": 2,
         "matchedCount": 2,
         "missingCount": 0,
@@ -542,7 +542,7 @@
       },
       {
         "municipality": "大和高田市",
-        "snapshotCount": 185,
+        "snapshotCount": 192,
         "expectedCount": 0,
         "matchedCount": 0,
         "missingCount": 0,
