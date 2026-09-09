@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-08T10:55:21.857Z",
-  "totalRejected": 10518,
+  "generatedAt": "2026-09-09T06:10:06.222Z",
+  "totalRejected": 10608,
   "totalBorderlineRescued": 33,
   "byMunicipality": {
     "奈良市": {
@@ -16,7 +16,7 @@
       "borderlineRescued": 6
     },
     "大和高田市": {
-      "rejected": 882,
+      "rejected": 906,
       "borderlineRescued": 0
     },
     "大和郡山市": {
@@ -80,7 +80,7 @@
       "borderlineRescued": 0
     },
     "斑鳩町": {
-      "rejected": 210,
+      "rejected": 276,
       "borderlineRescued": 0
     },
     "三郷町": {
@@ -19355,6 +19355,46 @@
     },
     {
       "municipality": "大和高田市",
+      "title": "敷枝有井地内管渠工事（4）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "敷枝有井地内管渠工事（4） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "公共下水道事業に伴う管更生実施設計業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "公共下水道事業に伴う管更生実施設計業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "高田千本桜大中公園周辺他川沿いの桜剪定伐採管理業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "高田千本桜大中公園周辺他川沿いの桜剪定伐採管理業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和高田市",
       "title": "特定空家等解体除却工事（再度）",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -20063,6 +20103,22 @@
       "reason": "exclusion_keyword",
       "matchedKeywords": [
         "舗装"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "令和８年度区画線等設置工事（単価契約）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "区画線"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "令和８年度区画線等設置工事（単価契約） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "区画線"
       ]
     },
     {
@@ -21435,6 +21491,46 @@
     },
     {
       "municipality": "大和高田市",
+      "title": "敷枝有井地内管渠工事（4）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "敷枝有井地内管渠工事（4） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "公共下水道事業に伴う管更生実施設計業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "公共下水道事業に伴う管更生実施設計業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "高田千本桜大中公園周辺他川沿いの桜剪定伐採管理業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "高田千本桜大中公園周辺他川沿いの桜剪定伐採管理業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和高田市",
       "title": "特定空家等解体除却工事（再度）",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -22143,6 +22239,22 @@
       "reason": "exclusion_keyword",
       "matchedKeywords": [
         "舗装"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "令和８年度区画線等設置工事（単価契約）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "区画線"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "令和８年度区画線等設置工事（単価契約） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "区画線"
       ]
     },
     {
@@ -23515,6 +23627,46 @@
     },
     {
       "municipality": "大和高田市",
+      "title": "敷枝有井地内管渠工事（4）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "敷枝有井地内管渠工事（4） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "公共下水道事業に伴う管更生実施設計業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "公共下水道事業に伴う管更生実施設計業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "高田千本桜大中公園周辺他川沿いの桜剪定伐採管理業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "高田千本桜大中公園周辺他川沿いの桜剪定伐採管理業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和高田市",
       "title": "特定空家等解体除却工事（再度）",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -24223,6 +24375,22 @@
       "reason": "exclusion_keyword",
       "matchedKeywords": [
         "舗装"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "令和８年度区画線等設置工事（単価契約）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "区画線"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "令和８年度区画線等設置工事（単価契約） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "区画線"
       ]
     },
     {
@@ -62528,6 +62696,24 @@
     },
     {
       "municipality": "香芝市",
+      "title": "市道１０－５２号線他道路拡幅事業に係る測量設計業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "測量"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "市道１０－５２号線他道路拡幅事業に係る測量設計業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "測量"
+      ]
+    },
+    {
+      "municipality": "香芝市",
       "title": "市道８－２９０号線交差点改良事業に係る測量設計業務",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -62918,24 +63104,6 @@
         "橋梁",
         "橋",
         "定期点検"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "市道１０－５２号線他道路拡幅事業に係る測量設計業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "測量"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "市道１０－５２号線他道路拡幅事業に係る測量設計業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "測量"
       ]
     },
     {
@@ -63654,6 +63822,24 @@
     },
     {
       "municipality": "香芝市",
+      "title": "市道１０－５２号線他道路拡幅事業に係る測量設計業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "測量"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "市道１０－５２号線他道路拡幅事業に係る測量設計業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "測量"
+      ]
+    },
+    {
+      "municipality": "香芝市",
       "title": "市道８－２９０号線交差点改良事業に係る測量設計業務",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -64044,24 +64230,6 @@
         "橋梁",
         "橋",
         "定期点検"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "市道１０－５２号線他道路拡幅事業に係る測量設計業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "測量"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "市道１０－５２号線他道路拡幅事業に係る測量設計業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "測量"
       ]
     },
     {
@@ -64780,6 +64948,24 @@
     },
     {
       "municipality": "香芝市",
+      "title": "市道１０－５２号線他道路拡幅事業に係る測量設計業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "測量"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "市道１０－５２号線他道路拡幅事業に係る測量設計業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "測量"
+      ]
+    },
+    {
+      "municipality": "香芝市",
       "title": "市道８－２９０号線交差点改良事業に係る測量設計業務",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -65170,24 +65356,6 @@
         "橋梁",
         "橋",
         "定期点検"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "市道１０－５２号線他道路拡幅事業に係る測量設計業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "測量"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "市道１０－５２号線他道路拡幅事業に係る測量設計業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "測量"
       ]
     },
     {
@@ -68820,6 +68988,146 @@
     },
     {
       "municipality": "斑鳩町",
+      "title": "道路改良工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "道路改良工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "道路改良工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "道路改良工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "－",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "－ ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "－",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "－ ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "－",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "－ ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "－",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "－ ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "－",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "－ ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "－",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "－ ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "－",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "－ ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "－",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "－ ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "－",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "－ ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "斑鳩町",
       "title": "令和8年度斑鳩町鳩水園補修整備工事",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -69270,6 +69578,146 @@
     },
     {
       "municipality": "斑鳩町",
+      "title": "道路改良工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "道路改良工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "道路改良工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "道路改良工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "－",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "－ ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "－",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "－ ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "－",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "－ ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "－",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "－ ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "－",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "－ ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "－",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "－ ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "－",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "－ ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "－",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "－ ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "－",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "－ ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "斑鳩町",
       "title": "令和8年度斑鳩町鳩水園補修整備工事",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -69715,6 +70163,146 @@
     {
       "municipality": "斑鳩町",
       "title": "○ ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "道路改良工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "道路改良工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "道路改良工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "道路改良工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "－",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "－ ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "－",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "－ ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "－",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "－ ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "－",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "－ ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "－",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "－ ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "－",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "－ ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "－",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "－ ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "－",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "－ ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "－",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "斑鳩町",
+      "title": "－ ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },

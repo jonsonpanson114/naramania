@@ -1123,6 +1123,16 @@
   ],
   "生駒市": [
     {
+      "id": "ikoma-result-2601010064",
+      "municipality": "生駒市",
+      "title": "学びの多様化学校整備工事",
+      "type": "建築",
+      "announcementDate": "2026-09-07",
+      "biddingDate": "2026-09-07",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+      "status": "不調"
+    },
+    {
       "id": "ikoma-result-2601010059",
       "municipality": "生駒市",
       "title": "光明中学校ＬＥＤ改修工事",
@@ -1157,16 +1167,6 @@
       "status": "落札",
       "winningContractor": "京和建設株式会社",
       "winnerType": "ゼネコン"
-    },
-    {
-      "id": "ikoma-51a7adacd5",
-      "municipality": "生駒市",
-      "title": "学びの多様化学校整備工事",
-      "type": "建築",
-      "announcementDate": "2026-08-17",
-      "biddingDate": "2026-09-07",
-      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-      "status": "不調"
     },
     {
       "id": "ikoma-result-2601010047",
@@ -2548,7 +2548,7 @@
       "biddingDate": "2026-06-22",
       "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
       "status": "落札",
-      "winningContractor": "塚竜(株)"
+      "winningContractor": "塚竜（株）"
     },
     {
       "id": "tawaramoto-2026051803",
@@ -2813,18 +2813,6 @@
       "status": "受付中"
     },
     {
-      "id": "高取町-2026-08-28-公営住宅第5団地除却工事監理業務",
-      "municipality": "高取町",
-      "title": "公営住宅第5団地除却工事監理業務",
-      "type": "コンサル",
-      "announcementDate": "2026-08-28",
-      "biddingDate": "2026-08-28",
-      "link": "https://www.town.takatori.nara.jp/contents_detail.php?co=cat&frmId=2205&frmCd=2-6-0-0-0",
-      "status": "落札",
-      "winningContractor": "(株)福井建築設計事務所",
-      "winnerType": "設計事務所"
-    },
-    {
       "id": "高取町-2026-08-28-公営住宅丹生谷第1団地屋根葺替等改修工事監理業務",
       "municipality": "高取町",
       "title": "公営住宅丹生谷第1団地屋根葺替等改修工事監理業務",
@@ -2855,6 +2843,19 @@
       "biddingDate": "2026-08-28",
       "link": "https://www.town.takatori.nara.jp/contents_detail.php?co=cat&frmId=2205&frmCd=2-6-0-0-0",
       "status": "不調"
+    },
+    {
+      "id": "高取町-2026-08-28-公営住宅第5団地除却工事監理業務",
+      "municipality": "高取町",
+      "title": "公営住宅第5団地除却工事監理業務",
+      "type": "コンサル",
+      "announcementDate": "2026-08-04",
+      "biddingDate": "2026-08-28",
+      "link": "https://www.town.takatori.nara.jp/contents_detail.php?co=cat&frmId=2205&frmCd=2-6-0-0-0",
+      "status": "落札",
+      "winningContractor": "(株)福井建築設計事務所",
+      "winnerType": "設計事務所",
+      "pdfUrl": "https://www.town.takatori.nara.jp/cmsfiles/contents/0000002/2665/R8.8.3.pdf"
     },
     {
       "id": "高取町-2026-07-28-町営住宅空家修繕工事設計業務",

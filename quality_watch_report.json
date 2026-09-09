@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-09-08T11:02:56.630Z",
-  "qualityGeneratedAt": "2026-09-08T10:55:21.853Z",
+  "generatedAt": "2026-09-09T06:17:10.453Z",
+  "qualityGeneratedAt": "2026-09-09T06:10:06.219Z",
   "itemCount": 297,
   "resultFollowUp": {
-    "totalCount": 10,
+    "totalCount": 13,
     "highCount": 10,
     "mediumCount": 0,
-    "lowCount": 0,
+    "lowCount": 3,
     "missingBiddingDateCount": 0,
     "byMunicipality": [
       {
         "municipality": "奈良県",
-        "count": 7
+        "count": 10
       },
       {
         "municipality": "大淀町",
@@ -25,7 +25,7 @@
     "samples": [
       {
         "priority": "high",
-        "ageDays": 140,
+        "ageDays": 141,
         "reason": "落札済みだが落札者が空",
         "item": {
           "id": "oyodo-79dc14038b",
@@ -41,8 +41,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 104,
-        "reason": "開札日から104日経過",
+        "ageDays": 105,
+        "reason": "開札日から105日経過",
         "item": {
           "id": "nara-city-0000002346",
           "municipality": "奈良市",
@@ -57,7 +57,7 @@
       },
       {
         "priority": "high",
-        "ageDays": 85,
+        "ageDays": 86,
         "reason": "落札済みだが落札者が空",
         "item": {
           "id": "oyodo-46ab50dbc8",
@@ -73,8 +73,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 82,
-        "reason": "開札日から82日経過",
+        "ageDays": 83,
+        "reason": "開札日から83日経過",
         "item": {
           "id": "nara-pref-29001013060020260055",
           "municipality": "奈良県",
@@ -89,8 +89,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 63,
-        "reason": "開札日から63日経過",
+        "ageDays": 64,
+        "reason": "開札日から64日経過",
         "item": {
           "id": "nara-pref-29005007060120260015",
           "municipality": "奈良県",
@@ -105,8 +105,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 53,
-        "reason": "開札日から53日経過",
+        "ageDays": 54,
+        "reason": "開札日から54日経過",
         "item": {
           "id": "nara-pref-29005007060120260018",
           "municipality": "奈良県",
@@ -121,8 +121,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 18,
-        "reason": "開札日から18日経過",
+        "ageDays": 19,
+        "reason": "開札日から19日経過",
         "item": {
           "id": "nara-pref-29001013060020260136",
           "municipality": "奈良県",
@@ -137,8 +137,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 18,
-        "reason": "開札日から18日経過",
+        "ageDays": 19,
+        "reason": "開札日から19日経過",
         "item": {
           "id": "nara-pref-29001013060020260145",
           "municipality": "奈良県",
@@ -153,8 +153,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 18,
-        "reason": "開札日から18日経過",
+        "ageDays": 19,
+        "reason": "開札日から19日経過",
         "item": {
           "id": "nara-pref-29001013060020260148",
           "municipality": "奈良県",
@@ -169,8 +169,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 18,
-        "reason": "開札日から18日経過",
+        "ageDays": 19,
+        "reason": "開札日から19日経過",
         "item": {
           "id": "nara-pref-29001013060020260149",
           "municipality": "奈良県",
