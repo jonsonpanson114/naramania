@@ -43,6 +43,16 @@ interface BiddingTableProps {
      * 実行時に落ちる(型検査もビルドも通ってしまうので実際に踏んだ)。
      */
     quickFilterKey?: QuickLinkKey;
+    /**
+     * 絞り込み条件の初期値。すべてURLから受け取る。
+     * 案件詳細を見て戻ったときに条件が消えないよう、
+     * 状態はコンポーネント内だけでなくURLにも持たせる。
+     */
+    initialType?: TypeFilter;
+    initialWinner?: WinnerFilter;
+    initialSort?: SortMode;
+    initialTag?: string | null;
+    initialVisibleCount?: number;
 }
 
 type WinnerFilter = 'すべて' | 'ゼネコン' | '設計事務所';
@@ -56,8 +66,6 @@ const TABS: Array<{ id: ViewTab; label: string; hint: string }> = [
     { id: 'results', label: '結果', hint: '落札・不調が確定した案件' },
     { id: 'all', label: 'すべて', hint: '対象案件を全部見る' },
 ];
-
-const PAGE_SIZE = 20;
 
 const STATUS_TONES: Record<BiddingStatus, { label: string; pill: string; dot: string }> = {
     '受付中': { label: '受付中', pill: 'border-sky-200 bg-sky-50 text-sky-700', dot: 'bg-sky-500' },
@@ -155,23 +163,37 @@ function StatusPill({ status }: { status: BiddingStatus }) {
     );
 }
 
-export function BiddingTable({ items, initialTab = 'active', initialKeyword = '', initialMunicipality = 'すべて', quickFilterKey }: BiddingTableProps) {
+export function BiddingTable({
+    items,
+    initialTab = 'active',
+    initialKeyword = '',
+    initialMunicipality = 'すべて',
+    quickFilterKey,
+    initialType = 'すべて',
+    initialWinner = 'すべて',
+    initialSort = 'newest',
+    initialTag = null,
+    initialVisibleCount,
+}: BiddingTableProps) {
     const [tab, setTab] = useState<ViewTab>(initialTab);
     // 用途別の絞り込みは解除できるようにする。押した本人が「なぜこの件数なのか」
     // 分からないまま見続けるのを避けたい。
     const [quickActive, setQuickActive] = useState(true);
     const quickFilter = quickFilterKey ? QUICK_LINKS[quickFilterKey] : undefined;
-    const [winnerFilter, setWinnerFilter] = useState<WinnerFilter>('すべて');
-    const [typeFilter, setTypeFilter] = useState<TypeFilter>('すべて');
-    const [selectedTag, setSelectedTag] = useState<string | null>(null);
+    const [winnerFilter, setWinnerFilter] = useState<WinnerFilter>(initialWinner);
+    const [typeFilter, setTypeFilter] = useState<TypeFilter>(initialType);
+    const [selectedTag, setSelectedTag] = useState<string | null>(initialTag);
     const [selectedMunicipality, setSelectedMunicipality] = useState<string>(initialMunicipality);
     const [keyword, setKeyword] = useState(initialKeyword);
-    const [sortMode, setSortMode] = useState<SortMode>('newest');
+    const [sortMode, setSortMode] = useState<SortMode>(initialSort);
     const [detailedSearch, setDetailedSearch] = useState(false);
     const [hideOutOfScope, setHideOutOfScope] = useState(true);
     const [showDetailFilters, setShowDetailFilters] = useState(false);
     const [viewMode, setViewMode] = useState<ViewMode>('card');
-    const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
+    // 表示件数は「何ページ分めくったか」だけを状態に持ち、実際の件数は描画時に出す。
+    // 絶対値を状態に持つと、設定の表示件数が変わったときに effect で
+    // 書き直す必要があり、描画が二重になる(lintのset-state-in-effectにも触れる)。
+    const [extraPages, setExtraPages] = useState(0);
 
     // 設定画面の内容を反映する。以前はここが常に20件固定で、
     // 表示件数も対象自治体も、設定しても何も起きなかった。
@@ -181,10 +203,45 @@ export function BiddingTable({ items, initialTab = 'active', initialKeyword = ''
         () => getEnabledMunicipalityNames(settings),
         [settings],
     );
-    // 表示件数の設定が変わったら、表示中の件数も追従させる
+    // URLで件数を指定して戻ってきた場合はその件数から始める
+    const baseCount = initialVisibleCount || pageSize;
+    const visibleCount = baseCount + extraPages * pageSize;
+
+    // 絞り込み条件をURLに書き戻す。
+    //
+    // 条件がコンポーネントの状態にしか無いと、案件詳細を開いて戻るたびに
+    // 絞り込みが消えて探し直しになる。URLに持たせておけば戻る操作で復元され、
+    // 条件付きのURLを人に渡すこともできる。
+    //
+    // router.replace ではなく history.replaceState を使う。前者はサーバー
+    // コンポーネントの再実行を伴い、入力のたびに再描画が走って重くなる。
+    // replaceState は履歴を増やさないので、戻るで詳細ページの手前に帰れる。
     useEffect(() => {
-        setVisibleCount(pageSize);
-    }, [pageSize]);
+        const params = new URLSearchParams(window.location.search);
+        const set = (key: string, value: string, fallback: string) => {
+            if (value === fallback) params.delete(key);
+            else params.set(key, value);
+        };
+
+        set('quick', quickActive && quickFilterKey ? quickFilterKey : '', '');
+        set('tab', tab, 'active');
+        set('q', keyword, '');
+        set('municipality', selectedMunicipality, 'すべて');
+        set('type', typeFilter, 'すべて');
+        set('winner', winnerFilter, 'すべて');
+        set('sort', sortMode, 'newest');
+        set('tag', selectedTag || '', '');
+        set('show', visibleCount === pageSize ? '' : String(visibleCount), '');
+
+        const query = params.toString();
+        const next = `${window.location.pathname}${query ? `?${query}` : ''}`;
+        if (next !== `${window.location.pathname}${window.location.search}`) {
+            window.history.replaceState(null, '', next);
+        }
+    }, [
+        tab, keyword, selectedMunicipality, typeFilter, winnerFilter,
+        sortMode, selectedTag, visibleCount, pageSize, quickActive, quickFilterKey,
+    ]);
 
     const scopeById = useMemo(() => new Map(items.map(item => [item.id, assessBiddingScope(item)])), [items]);
     const quickFiltered = useMemo(() => {
@@ -267,7 +324,7 @@ export function BiddingTable({ items, initialTab = 'active', initialKeyword = ''
 
     const changeFilter = (update: () => void) => {
         update();
-        setVisibleCount(pageSize);
+        setExtraPages(0);
     };
 
     const renderSnippet = (text: string, kw: string) => {
@@ -728,7 +785,7 @@ export function BiddingTable({ items, initialTab = 'active', initialKeyword = ''
                 <div className="text-center">
                     <button
                         type="button"
-                        onClick={() => setVisibleCount(visibleCount + pageSize)}
+                        onClick={() => setExtraPages(pages => pages + 1)}
                         className="rounded-full border border-stone-300 bg-white px-6 py-3 text-xs font-bold tracking-[0.14em] text-stone-600 shadow-sm transition hover:border-stone-900 hover:text-stone-950"
                     >
                         さらに表示（残り {remaining} 件）
