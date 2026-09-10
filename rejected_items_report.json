@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-10T06:03:50.625Z",
-  "totalRejected": 10620,
+  "generatedAt": "2026-09-10T10:56:26.430Z",
+  "totalRejected": 10626,
   "totalBorderlineRescued": 33,
   "byMunicipality": {
     "奈良市": {
@@ -12,7 +12,7 @@
       "borderlineRescued": 3
     },
     "生駒市": {
-      "rejected": 822,
+      "rejected": 828,
       "borderlineRescued": 6
     },
     "大和高田市": {
@@ -12779,6 +12779,22 @@
     },
     {
       "municipality": "生駒市",
+      "title": "生駒市流域関連公共下水道北新町118号線工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市流域関連公共下水道北新町118号線工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "生駒市",
       "title": "真弓地内配水管布設替工事（R８-２工区）",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -14907,6 +14923,22 @@
     },
     {
       "municipality": "生駒市",
+      "title": "生駒市流域関連公共下水道北新町118号線工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市流域関連公共下水道北新町118号線工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "生駒市",
       "title": "真弓地内配水管布設替工事（R８-２工区）",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -17032,6 +17064,22 @@
       "title": "令和８年度生駒市営小平尾桜ケ丘住宅草刈業務委託 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市流域関連公共下水道北新町118号線工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市流域関連公共下水道北新町118号線工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
     },
     {
       "municipality": "生駒市",
