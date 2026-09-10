@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-09T11:07:57.373Z",
-  "totalRejected": 10608,
+  "generatedAt": "2026-09-10T06:03:50.625Z",
+  "totalRejected": 10620,
   "totalBorderlineRescued": 33,
   "byMunicipality": {
     "奈良市": {
@@ -12,7 +12,7 @@
       "borderlineRescued": 3
     },
     "生駒市": {
-      "rejected": 828,
+      "rejected": 822,
       "borderlineRescued": 6
     },
     "大和高田市": {
@@ -20,7 +20,7 @@
       "borderlineRescued": 0
     },
     "大和郡山市": {
-      "rejected": 876,
+      "rejected": 882,
       "borderlineRescued": 0
     },
     "葛城市": {
@@ -76,7 +76,7 @@
       "borderlineRescued": 6
     },
     "高取町": {
-      "rejected": 138,
+      "rejected": 150,
       "borderlineRescued": 0
     },
     "斑鳩町": {
@@ -12779,7 +12779,49 @@
     },
     {
       "municipality": "生駒市",
-      "title": "生駒市流域関連公共下水道北新町118号線工事",
+      "title": "真弓地内配水管布設替工事（R８-２工区）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "真弓地内配水管布設替工事（R８-２工区） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "清掃リレーセンター門扉設置工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "清掃",
+        "清掃"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "清掃リレーセンター門扉設置工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "清掃",
+        "清掃"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "消防本部訓練棟改修及び付属倉庫解体工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "消防本部訓練棟改修及び付属倉庫解体工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市流域関連公共下水道緑ケ丘215号線工事",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
         "下水道"
@@ -12787,11 +12829,2081 @@
     },
     {
       "municipality": "生駒市",
-      "title": "生駒市流域関連公共下水道北新町118号線工事 ",
+      "title": "生駒市流域関連公共下水道緑ケ丘215号線工事 ",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
         "下水道"
       ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市流域関連公共下水道小明町233号線工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市流域関連公共下水道小明町233号線工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "小平尾バイパス配水管布設工事（R８）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "小平尾バイパス配水管布設工事（R８） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "令和８年度東生駒２丁目他地内汚水管路施設点検調査業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "令和８年度東生駒２丁目他地内汚水管路施設点検調査業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "中菜畑歩道橋耐震補強工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "中菜畑歩道橋耐震補強工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "消防本部防火扉取替改修工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "消防本部防火扉取替改修工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "北田原南北線舗装補修工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "北田原南北線舗装補修工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "小学校・中学校樹木維持管理等業務委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "小学校・中学校樹木維持管理等業務委託 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "認定こども園生駒幼稚園管理棟及び保育棟屋根防水工事",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "防水",
+        "防水工事"
+      ],
+      "borderlineRescue": true
+    },
+    {
+      "municipality": "生駒市",
+      "title": "あすか野南２丁目地内人孔鉄蓋入替工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "あすか野南２丁目地内人孔鉄蓋入替工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "令和８年度取水井浚渫業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "浚渫"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "令和８年度取水井浚渫業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "浚渫"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "谷田小明線道路改良工事（第２工区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "谷田小明線道路改良工事（第２工区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "緑ケ丘地内配水管布設工事跡舗装本復旧工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "緑ケ丘地内配水管布設工事跡舗装本復旧工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "西村線舗装補修工事及び人孔鉄蓋入替工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "西村線舗装補修工事及び人孔鉄蓋入替工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "令和８年度単価契約道路舗装本復旧及びボックス嵩上げ工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "令和８年度単価契約道路舗装本復旧及びボックス嵩上げ工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "鹿ノ台南地内配水管布設替工事跡舗装本復旧工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "鹿ノ台南地内配水管布設替工事跡舗装本復旧工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "高山町久保地内通学路安全対策工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "高山町久保地内通学路安全対策工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "令和８年度生駒市道単価契約舗装補修工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "令和８年度生駒市道単価契約舗装補修工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "真弓２丁目地内人孔鉄蓋入替工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "真弓２丁目地内人孔鉄蓋入替工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市公園街路樹維持管理業務（Lブロック）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市公園街路樹維持管理業務（Lブロック） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市公園街路樹維持管理業務（Kブロック）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市公園街路樹維持管理業務（Kブロック） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市公園街路樹維持管理業務（Jブロック）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市公園街路樹維持管理業務（Jブロック） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市公園街路樹維持管理業務（Ｉブロック）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市公園街路樹維持管理業務（Ｉブロック） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "令和８年度東生駒３丁目他地内汚水管流量調査業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "令和８年度東生駒３丁目他地内汚水管流量調査業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市公園街路樹維持管理業務（Hブロック）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市公園街路樹維持管理業務（Hブロック） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市公園街路樹維持管理業務（Gブロック）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市公園街路樹維持管理業務（Gブロック） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市公園街路樹維持管理業務（Fブロック）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市公園街路樹維持管理業務（Fブロック） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市公園街路樹維持管理業務（Eブロック）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市公園街路樹維持管理業務（Eブロック） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "令和８年度萩の台住宅地内ＴＶカメラ調査業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "令和８年度萩の台住宅地内ＴＶカメラ調査業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市公園街路樹維持管理業務（Dブロック）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市公園街路樹維持管理業務（Dブロック） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市公園街路樹維持管理業務（Cブロック）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市公園街路樹維持管理業務（Cブロック） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市公園街路樹維持管理業務（Bブロック）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市公園街路樹維持管理業務（Bブロック） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市公園街路樹維持管理業務（Aブロック）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市公園街路樹維持管理業務（Aブロック） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹",
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "令和８年度重要管路ＴＶカメラ調査業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "令和８年度重要管路ＴＶカメラ調査業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市流域関連公共下水道有里町167-1号線工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市流域関連公共下水道有里町167-1号線工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "令和８年度道路清掃業務委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "清掃",
+        "清掃"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "令和８年度道路清掃業務委託 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "清掃",
+        "清掃"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "令和８年度学研高山地区第２工区内市有地草刈業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "令和８年度学研高山地区第２工区内市有地草刈業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "令和８年度生駒市道草刈業務委託（その２）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "令和８年度生駒市道草刈業務委託（その２） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "令和８年度真弓２丁目他地内ＴＶカメラ調査業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "令和８年度真弓２丁目他地内ＴＶカメラ調査業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "令和８年度市内水路清掃業務委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "水路",
+        "清掃",
+        "清掃"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "令和８年度市内水路清掃業務委託 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "水路",
+        "清掃",
+        "清掃"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "令和８年度生駒市道草刈業務委託（その１）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "令和８年度生駒市道草刈業務委託（その１） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "あすか野南地内配水管布設替工事（R８-１工区）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "あすか野南地内配水管布設替工事（R８-１工区） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "真弓地内配水管布設替工事（R８-１工区）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "真弓地内配水管布設替工事（R８-１工区） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "あすか野南２丁目地内配水管布設替工事（５工区）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "あすか野南２丁目地内配水管布設替工事（５工区） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "小瀬町地内配水管布設替工事（３工区）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "小瀬町地内配水管布設替工事（３工区） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "鹿ノ台第２緑地他保全整備業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "鹿ノ台第２緑地他保全整備業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "滝寺公園保全整備業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "滝寺公園保全整備業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "東旭ヶ丘線支線４号側溝補修工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "側溝"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "東旭ヶ丘線支線４号側溝補修工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "側溝"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "真弓芝線舗装補修工事及び人孔鉄蓋入替工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "真弓芝線舗装補修工事及び人孔鉄蓋入替工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市流域関連公共下水道小明町41号線工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市流域関連公共下水道小明町41号線工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒山麓公園園内灯更新工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒山麓公園園内灯更新工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "壱分乙田線舗装補修工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "壱分乙田線舗装補修工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "学研高山３号線道路改良工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "学研高山３号線道路改良工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "小明上線舗装補修工事及び人孔鉄蓋入替工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "小明上線舗装補修工事及び人孔鉄蓋入替工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "セイセイビル１階改修工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "セイセイビル１階改修工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒台北第１公園転落防止柵設置工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒台北第１公園転落防止柵設置工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "東生駒４丁目地内配水管布設替工事跡舗装本復旧工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "東生駒４丁目地内配水管布設替工事跡舗装本復旧工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "東生駒４丁目地内配水管布設替工事（３工区）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "東生駒４丁目地内配水管布設替工事（３工区） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "西村線法面補修工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "法面"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "西村線法面補修工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "法面"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "みなみ野台１号線他舗装補修工事及び人孔鉄蓋入替工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "みなみ野台１号線他舗装補修工事及び人孔鉄蓋入替工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "真弓２丁目地内配水管布設替工事（５工区）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "真弓２丁目地内配水管布設替工事（５工区） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "菜畑壱分線他交差点安全対策工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "菜畑壱分線他交差点安全対策工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "セラビーいこま健康棟ＬＥＤ改修工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "セラビーいこま健康棟ＬＥＤ改修工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "あすか野南３丁目地内配水管布設替工事跡舗装本復旧工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "あすか野南３丁目地内配水管布設替工事跡舗装本復旧工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "萩の台８号線他舗装補修工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "萩の台８号線他舗装補修工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒中学校屋内運動場屋根防水改修工事",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "防水",
+        "防水改修"
+      ],
+      "borderlineRescue": true
+    },
+    {
+      "municipality": "生駒市",
+      "title": "萩の台住宅地内TVカメラ調査業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "萩の台住宅地内TVカメラ調査業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "東生駒４丁目地内人孔鉄蓋入替工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "東生駒４丁目地内人孔鉄蓋入替工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "東生駒２丁目地内配水管布設替工事跡舗装本復旧工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "東生駒２丁目地内配水管布設替工事跡舗装本復旧工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "鹿ノ台南地内配水管布設替工事（２工区）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "鹿ノ台南地内配水管布設替工事（２工区） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "災害復旧事業１／６０９",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "災害復旧事業１／６０９ ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "鹿ノ台北１丁目他地内人孔鉄蓋入替工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "鹿ノ台北１丁目他地内人孔鉄蓋入替工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "鹿ノ台中央大通り線舗装補修工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "鹿ノ台中央大通り線舗装補修工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "川田橋乙田線他舗装補修工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装",
+        "橋"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "川田橋乙田線他舗装補修工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装",
+        "橋"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "あすか野南２丁目地内配水管布設替工事（４工区）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "あすか野南２丁目地内配水管布設替工事（４工区） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "緑ケ丘地内配水管布設替工事（２工区）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "緑ケ丘地内配水管布設替工事（２工区） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "令和７年度取水井浚渫業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "浚渫"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "令和７年度取水井浚渫業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "浚渫"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "菜畑壱分線舗装補修工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "菜畑壱分線舗装補修工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "東生駒３丁目他地内汚水管路施設点検調査業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "東生駒３丁目他地内汚水管路施設点検調査業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "奈良阪南田原線舗装補修工事及び人孔鉄蓋入替工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "奈良阪南田原線舗装補修工事及び人孔鉄蓋入替工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市流域関連公共下水道有里町172号線工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市流域関連公共下水道有里町172号線工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市流域関連公共下水道辻町275号線工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市流域関連公共下水道辻町275号線工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市大規模下水道管路特別重点調査業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市大規模下水道管路特別重点調査業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "あすか野南３丁目他地内人孔鉄蓋入替工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "あすか野南３丁目他地内人孔鉄蓋入替工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "東生駒４丁目地内配水管布設替工事（２工区）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "東生駒４丁目地内配水管布設替工事（２工区） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "真弓３丁目地内配水管布設替工事に伴う舗装本復旧工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "真弓３丁目地内配水管布設替工事に伴う舗装本復旧工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "こども政策課事務所拡張工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "こども政策課事務所拡張工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "あすか野南中央線舗装補修工事及び人孔鉄蓋入替工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "あすか野南中央線舗装補修工事及び人孔鉄蓋入替工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "真弓２丁目地内配水管布設替工事（４工区）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "真弓２丁目地内配水管布設替工事（４工区） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "令和７年度単価契約道路舗装本復旧及びボックス嵩上げ工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "令和７年度単価契約道路舗装本復旧及びボックス嵩上げ工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市流域関連公共下水道壱分町308号線工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市流域関連公共下水道壱分町308号線工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "谷田小明線他道路改良工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "谷田小明線他道路改良工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "令和７年度生駒市営小平尾桜ケ丘住宅草刈業務委託",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "令和７年度生駒市営小平尾桜ケ丘住宅草刈業務委託 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "東生駒南36号線歩道舗装補修工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "東生駒南36号線歩道舗装補修工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "北山橋耐震補強工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "北山橋耐震補強工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "萩の台住宅地内汚水管流量調査業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "萩の台住宅地内汚水管流量調査業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "真弓３丁目他地内TVカメラ調査業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "真弓３丁目他地内TVカメラ調査業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市流域関連公共下水道俵口町302-3号線工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市流域関連公共下水道俵口町302-3号線工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "鹿ノ台北３丁目地内人孔鉄蓋入替工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "鹿ノ台北３丁目地内人孔鉄蓋入替工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "令和７年度生駒市道単価契約舗装補修工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "令和７年度生駒市道単価契約舗装補修工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "東生駒２丁目地内人孔鉄蓋入替工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "東生駒２丁目地内人孔鉄蓋入替工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "令和７年度道路清掃業務委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "清掃",
+        "清掃"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "令和７年度道路清掃業務委託 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "清掃",
+        "清掃"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "令和７年度学研高山地区第２工区内市有地草刈業務委託",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "令和７年度学研高山地区第２工区内市有地草刈業務委託 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "令和７年度市内水路清掃業務委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "水路",
+        "清掃",
+        "清掃"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "令和７年度市内水路清掃業務委託 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "水路",
+        "清掃",
+        "清掃"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "令和７年度生駒市道草刈業務委託（その２）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "令和７年度生駒市道草刈業務委託（その２） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "救急施設屋上荷重検討業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "救急施設屋上荷重検討業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "松ヶ丘通り線道路法面工予備設計業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "法面"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "松ヶ丘通り線道路法面工予備設計業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "法面"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "辻町ＩＣ整備事業に伴う道路交通影響検討業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "交通"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "辻町ＩＣ整備事業に伴う道路交通影響検討業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "交通"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "都市計画道路上町芝線道路予備設計に伴う測量業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "測量"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "都市計画道路上町芝線道路予備設計に伴う測量業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "測量"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "令和８年度道路橋定期点検業務委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "橋",
+        "定期点検"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "令和８年度道路橋定期点検業務委託 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "橋",
+        "定期点検"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "近鉄南生駒駅前道路整備検討業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "近鉄南生駒駅前道路整備検討業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "狭戸配水場配水池詳細耐震診断業務",
+      "reason": "infra_exclude_keyword",
+      "matchedKeywords": [
+        "配水場",
+        "配水池"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "狭戸配水場配水池詳細耐震診断業務 ",
+      "reason": "infra_exclude_keyword",
+      "matchedKeywords": [
+        "配水場",
+        "配水池"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "真弓１丁目他地内管渠更生等詳細設計業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "真弓１丁目他地内管渠更生等詳細設計業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市流域関連公共下水道有里町259号線工事に伴う測量設計業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道",
+        "測量"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市流域関連公共下水道有里町259号線工事に伴う測量設計業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道",
+        "測量"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市総合公園体育施設地質調査業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "地質",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市総合公園体育施設地質調査業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "地質",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "阿弥陀寺歩道橋耐震補強詳細設計業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "阿弥陀寺歩道橋耐震補強詳細設計業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市流域関連公共下水道青山台240号線工事に伴う測量設計業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道",
+        "測量"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市流域関連公共下水道青山台240号線工事に伴う測量設計業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道",
+        "測量"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "宝山寺駅前線道路修景整備に伴う測量業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "測量"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "宝山寺駅前線道路修景整備に伴う測量業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "測量"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市大規模下水道管路特別重点調査業務に伴う管きょ更生設計業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市大規模下水道管路特別重点調査業務に伴う管きょ更生設計業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市総合公園体育施設測量業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "測量"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市総合公園体育施設測量業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "測量"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "農業用ため池豪雨耐性評価業務委託",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "農業用ため池豪雨耐性評価業務委託 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "農業用ため池劣化状況評価業務委託",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "農業用ため池劣化状況評価業務委託 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "学研高山地区南エリア環境調査等業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "環境調査",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "学研高山地区南エリア環境調査等業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "環境調査",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "郡山坂橋耐震補強工事に伴う設計業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "郡山坂橋耐震補強工事に伴う設計業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "都市計画道路及び関連データ修正業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "都市計画道路及び関連データ修正業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "奈良県広域水道企業団生駒事務所学研高山地区第二工区関連水道施設整備事業基本計画策定業務",
+      "reason": "infra_exclude_keyword",
+      "matchedKeywords": [
+        "水道"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "奈良県広域水道企業団生駒事務所学研高山地区第二工区関連水道施設整備事業基本計画策定業務 ",
+      "reason": "infra_exclude_keyword",
+      "matchedKeywords": [
+        "水道"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "国道163号周辺道路整備事業に伴う道路予備設計等業務委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "国道"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "国道163号周辺道路整備事業に伴う道路予備設計等業務委託 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "国道"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "令和７年度道路橋定期点検業務委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "橋",
+        "定期点検"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "令和７年度道路橋定期点検業務委託 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "橋",
+        "定期点検"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "門前配水場配水池詳細耐震診断業務",
+      "reason": "infra_exclude_keyword",
+      "matchedKeywords": [
+        "配水場",
+        "配水池"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "門前配水場配水池詳細耐震診断業務 ",
+      "reason": "infra_exclude_keyword",
+      "matchedKeywords": [
+        "配水場",
+        "配水池"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市流域関連公共下水道小明町233号線工事に伴う測量設計業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道",
+        "測量"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市流域関連公共下水道小明町233号線工事に伴う測量設計業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道",
+        "測量"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市流域関連公共下水道緑ケ丘215号線工事に伴う測量設計業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道",
+        "測量"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市流域関連公共下水道緑ケ丘215号線工事に伴う測量設計業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道",
+        "測量"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "松ヶ丘通り線道路法面等整備検討業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "法面"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "松ヶ丘通り線道路法面等整備検討業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "法面"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "公共施設劣化状況調査業務委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "公共施設劣化状況調査業務委託 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市流域関連公共下水道小明町45号線工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市流域関連公共下水道小明町45号線工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "令和８年度ひかりが丘３丁目他地内ＴＶカメラ調査業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "令和８年度ひかりが丘３丁目他地内ＴＶカメラ調査業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "令和８年度生駒市営小平尾桜ケ丘住宅草刈業務委託",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "令和８年度生駒市営小平尾桜ケ丘住宅草刈業務委託 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
     },
     {
       "municipality": "生駒市",
@@ -14923,2166 +17035,6 @@
     },
     {
       "municipality": "生駒市",
-      "title": "生駒市流域関連公共下水道北新町118号線工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒市流域関連公共下水道北新町118号線工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "真弓地内配水管布設替工事（R８-２工区）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "真弓地内配水管布設替工事（R８-２工区） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "清掃リレーセンター門扉設置工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "清掃",
-        "清掃"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "清掃リレーセンター門扉設置工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "清掃",
-        "清掃"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "消防本部訓練棟改修及び付属倉庫解体工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "消防本部訓練棟改修及び付属倉庫解体工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒市流域関連公共下水道緑ケ丘215号線工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒市流域関連公共下水道緑ケ丘215号線工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒市流域関連公共下水道小明町233号線工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒市流域関連公共下水道小明町233号線工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "小平尾バイパス配水管布設工事（R８）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "小平尾バイパス配水管布設工事（R８） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "令和８年度東生駒２丁目他地内汚水管路施設点検調査業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "調査"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "令和８年度東生駒２丁目他地内汚水管路施設点検調査業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "調査"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "中菜畑歩道橋耐震補強工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "中菜畑歩道橋耐震補強工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "消防本部防火扉取替改修工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "消防本部防火扉取替改修工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "北田原南北線舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "北田原南北線舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "小学校・中学校樹木維持管理等業務委託",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "小学校・中学校樹木維持管理等業務委託 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "認定こども園生駒幼稚園管理棟及び保育棟屋根防水工事",
-      "reason": "always_exclude_keyword",
-      "matchedKeywords": [
-        "防水",
-        "防水工事"
-      ],
-      "borderlineRescue": true
-    },
-    {
-      "municipality": "生駒市",
-      "title": "あすか野南２丁目地内人孔鉄蓋入替工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "あすか野南２丁目地内人孔鉄蓋入替工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "令和８年度取水井浚渫業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "浚渫"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "令和８年度取水井浚渫業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "浚渫"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "谷田小明線道路改良工事（第２工区）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "谷田小明線道路改良工事（第２工区） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "緑ケ丘地内配水管布設工事跡舗装本復旧工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "緑ケ丘地内配水管布設工事跡舗装本復旧工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "西村線舗装補修工事及び人孔鉄蓋入替工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "西村線舗装補修工事及び人孔鉄蓋入替工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "令和８年度単価契約道路舗装本復旧及びボックス嵩上げ工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "令和８年度単価契約道路舗装本復旧及びボックス嵩上げ工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "鹿ノ台南地内配水管布設替工事跡舗装本復旧工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "鹿ノ台南地内配水管布設替工事跡舗装本復旧工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "高山町久保地内通学路安全対策工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "高山町久保地内通学路安全対策工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "令和８年度生駒市道単価契約舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "令和８年度生駒市道単価契約舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "真弓２丁目地内人孔鉄蓋入替工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "真弓２丁目地内人孔鉄蓋入替工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒市公園街路樹維持管理業務（Lブロック）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "街路樹",
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒市公園街路樹維持管理業務（Lブロック） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "街路樹",
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒市公園街路樹維持管理業務（Kブロック）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "街路樹",
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒市公園街路樹維持管理業務（Kブロック） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "街路樹",
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒市公園街路樹維持管理業務（Jブロック）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "街路樹",
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒市公園街路樹維持管理業務（Jブロック） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "街路樹",
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒市公園街路樹維持管理業務（Ｉブロック）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "街路樹",
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒市公園街路樹維持管理業務（Ｉブロック） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "街路樹",
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "令和８年度東生駒３丁目他地内汚水管流量調査業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "調査"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "令和８年度東生駒３丁目他地内汚水管流量調査業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "調査"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒市公園街路樹維持管理業務（Hブロック）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "街路樹",
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒市公園街路樹維持管理業務（Hブロック） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "街路樹",
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒市公園街路樹維持管理業務（Gブロック）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "街路樹",
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒市公園街路樹維持管理業務（Gブロック） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "街路樹",
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒市公園街路樹維持管理業務（Fブロック）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "街路樹",
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒市公園街路樹維持管理業務（Fブロック） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "街路樹",
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒市公園街路樹維持管理業務（Eブロック）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "街路樹",
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒市公園街路樹維持管理業務（Eブロック） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "街路樹",
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "令和８年度萩の台住宅地内ＴＶカメラ調査業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "調査"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "令和８年度萩の台住宅地内ＴＶカメラ調査業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "調査"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒市公園街路樹維持管理業務（Dブロック）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "街路樹",
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒市公園街路樹維持管理業務（Dブロック） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "街路樹",
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒市公園街路樹維持管理業務（Cブロック）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "街路樹",
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒市公園街路樹維持管理業務（Cブロック） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "街路樹",
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒市公園街路樹維持管理業務（Bブロック）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "街路樹",
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒市公園街路樹維持管理業務（Bブロック） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "街路樹",
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒市公園街路樹維持管理業務（Aブロック）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "街路樹",
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒市公園街路樹維持管理業務（Aブロック） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "街路樹",
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "令和８年度重要管路ＴＶカメラ調査業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "調査"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "令和８年度重要管路ＴＶカメラ調査業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "調査"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒市流域関連公共下水道有里町167-1号線工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒市流域関連公共下水道有里町167-1号線工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "令和８年度道路清掃業務委託",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "清掃",
-        "清掃"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "令和８年度道路清掃業務委託 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "清掃",
-        "清掃"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "令和８年度学研高山地区第２工区内市有地草刈業務",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "令和８年度学研高山地区第２工区内市有地草刈業務 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "令和８年度生駒市道草刈業務委託（その２）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "令和８年度生駒市道草刈業務委託（その２） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "令和８年度真弓２丁目他地内ＴＶカメラ調査業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "調査"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "令和８年度真弓２丁目他地内ＴＶカメラ調査業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "調査"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "令和８年度市内水路清掃業務委託",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "水路",
-        "清掃",
-        "清掃"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "令和８年度市内水路清掃業務委託 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "水路",
-        "清掃",
-        "清掃"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "令和８年度生駒市道草刈業務委託（その１）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "令和８年度生駒市道草刈業務委託（その１） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "あすか野南地内配水管布設替工事（R８-１工区）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "あすか野南地内配水管布設替工事（R８-１工区） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "真弓地内配水管布設替工事（R８-１工区）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "真弓地内配水管布設替工事（R８-１工区） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "あすか野南２丁目地内配水管布設替工事（５工区）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "あすか野南２丁目地内配水管布設替工事（５工区） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "小瀬町地内配水管布設替工事（３工区）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "小瀬町地内配水管布設替工事（３工区） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "鹿ノ台第２緑地他保全整備業務",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "鹿ノ台第２緑地他保全整備業務 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "滝寺公園保全整備業務",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "滝寺公園保全整備業務 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "東旭ヶ丘線支線４号側溝補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "側溝"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "東旭ヶ丘線支線４号側溝補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "側溝"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "真弓芝線舗装補修工事及び人孔鉄蓋入替工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "真弓芝線舗装補修工事及び人孔鉄蓋入替工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒市流域関連公共下水道小明町41号線工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒市流域関連公共下水道小明町41号線工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒山麓公園園内灯更新工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒山麓公園園内灯更新工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "壱分乙田線舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "壱分乙田線舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "学研高山３号線道路改良工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "学研高山３号線道路改良工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "小明上線舗装補修工事及び人孔鉄蓋入替工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "小明上線舗装補修工事及び人孔鉄蓋入替工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "セイセイビル１階改修工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "セイセイビル１階改修工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒台北第１公園転落防止柵設置工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒台北第１公園転落防止柵設置工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "東生駒４丁目地内配水管布設替工事跡舗装本復旧工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "東生駒４丁目地内配水管布設替工事跡舗装本復旧工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "東生駒４丁目地内配水管布設替工事（３工区）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "東生駒４丁目地内配水管布設替工事（３工区） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "西村線法面補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "法面"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "西村線法面補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "法面"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "みなみ野台１号線他舗装補修工事及び人孔鉄蓋入替工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "みなみ野台１号線他舗装補修工事及び人孔鉄蓋入替工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "真弓２丁目地内配水管布設替工事（５工区）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "真弓２丁目地内配水管布設替工事（５工区） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "菜畑壱分線他交差点安全対策工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "菜畑壱分線他交差点安全対策工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "セラビーいこま健康棟ＬＥＤ改修工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "セラビーいこま健康棟ＬＥＤ改修工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "あすか野南３丁目地内配水管布設替工事跡舗装本復旧工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "あすか野南３丁目地内配水管布設替工事跡舗装本復旧工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "萩の台８号線他舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "萩の台８号線他舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒中学校屋内運動場屋根防水改修工事",
-      "reason": "always_exclude_keyword",
-      "matchedKeywords": [
-        "防水",
-        "防水改修"
-      ],
-      "borderlineRescue": true
-    },
-    {
-      "municipality": "生駒市",
-      "title": "萩の台住宅地内TVカメラ調査業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "調査"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "萩の台住宅地内TVカメラ調査業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "調査"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "東生駒４丁目地内人孔鉄蓋入替工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "東生駒４丁目地内人孔鉄蓋入替工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "東生駒２丁目地内配水管布設替工事跡舗装本復旧工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "東生駒２丁目地内配水管布設替工事跡舗装本復旧工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "鹿ノ台南地内配水管布設替工事（２工区）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "鹿ノ台南地内配水管布設替工事（２工区） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "災害復旧事業１／６０９",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "災害復旧事業１／６０９ ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "鹿ノ台北１丁目他地内人孔鉄蓋入替工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "鹿ノ台北１丁目他地内人孔鉄蓋入替工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "鹿ノ台中央大通り線舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "鹿ノ台中央大通り線舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "川田橋乙田線他舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "川田橋乙田線他舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "あすか野南２丁目地内配水管布設替工事（４工区）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "あすか野南２丁目地内配水管布設替工事（４工区） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "緑ケ丘地内配水管布設替工事（２工区）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "緑ケ丘地内配水管布設替工事（２工区） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "令和７年度取水井浚渫業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "浚渫"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "令和７年度取水井浚渫業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "浚渫"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "菜畑壱分線舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "菜畑壱分線舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "東生駒３丁目他地内汚水管路施設点検調査業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "調査"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "東生駒３丁目他地内汚水管路施設点検調査業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "調査"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "奈良阪南田原線舗装補修工事及び人孔鉄蓋入替工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "奈良阪南田原線舗装補修工事及び人孔鉄蓋入替工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒市流域関連公共下水道有里町172号線工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒市流域関連公共下水道有里町172号線工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒市流域関連公共下水道辻町275号線工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒市流域関連公共下水道辻町275号線工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒市大規模下水道管路特別重点調査業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道",
-        "調査"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒市大規模下水道管路特別重点調査業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道",
-        "調査"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "あすか野南３丁目他地内人孔鉄蓋入替工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "あすか野南３丁目他地内人孔鉄蓋入替工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "東生駒４丁目地内配水管布設替工事（２工区）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "東生駒４丁目地内配水管布設替工事（２工区） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "真弓３丁目地内配水管布設替工事に伴う舗装本復旧工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "真弓３丁目地内配水管布設替工事に伴う舗装本復旧工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "こども政策課事務所拡張工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "こども政策課事務所拡張工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "あすか野南中央線舗装補修工事及び人孔鉄蓋入替工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "あすか野南中央線舗装補修工事及び人孔鉄蓋入替工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "真弓２丁目地内配水管布設替工事（４工区）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "真弓２丁目地内配水管布設替工事（４工区） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "令和７年度単価契約道路舗装本復旧及びボックス嵩上げ工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "令和７年度単価契約道路舗装本復旧及びボックス嵩上げ工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒市流域関連公共下水道壱分町308号線工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒市流域関連公共下水道壱分町308号線工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "谷田小明線他道路改良工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "谷田小明線他道路改良工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "令和７年度生駒市営小平尾桜ケ丘住宅草刈業務委託",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "令和７年度生駒市営小平尾桜ケ丘住宅草刈業務委託 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "東生駒南36号線歩道舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "東生駒南36号線歩道舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "北山橋耐震補強工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "北山橋耐震補強工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "萩の台住宅地内汚水管流量調査業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "調査"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "萩の台住宅地内汚水管流量調査業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "調査"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "真弓３丁目他地内TVカメラ調査業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "調査"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "真弓３丁目他地内TVカメラ調査業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "調査"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒市流域関連公共下水道俵口町302-3号線工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒市流域関連公共下水道俵口町302-3号線工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "鹿ノ台北３丁目地内人孔鉄蓋入替工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "鹿ノ台北３丁目地内人孔鉄蓋入替工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "令和７年度生駒市道単価契約舗装補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "令和７年度生駒市道単価契約舗装補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "東生駒２丁目地内人孔鉄蓋入替工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "東生駒２丁目地内人孔鉄蓋入替工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "令和７年度道路清掃業務委託",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "清掃",
-        "清掃"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "令和７年度道路清掃業務委託 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "清掃",
-        "清掃"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "令和７年度学研高山地区第２工区内市有地草刈業務委託",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "令和７年度学研高山地区第２工区内市有地草刈業務委託 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "令和７年度市内水路清掃業務委託",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "水路",
-        "清掃",
-        "清掃"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "令和７年度市内水路清掃業務委託 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "水路",
-        "清掃",
-        "清掃"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "令和７年度生駒市道草刈業務委託（その２）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "令和７年度生駒市道草刈業務委託（その２） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "救急施設屋上荷重検討業務",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "救急施設屋上荷重検討業務 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "松ヶ丘通り線道路法面工予備設計業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "法面"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "松ヶ丘通り線道路法面工予備設計業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "法面"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "辻町ＩＣ整備事業に伴う道路交通影響検討業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "交通"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "辻町ＩＣ整備事業に伴う道路交通影響検討業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "交通"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "都市計画道路上町芝線道路予備設計に伴う測量業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "測量"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "都市計画道路上町芝線道路予備設計に伴う測量業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "測量"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "令和８年度道路橋定期点検業務委託",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "橋",
-        "定期点検"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "令和８年度道路橋定期点検業務委託 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "橋",
-        "定期点検"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "近鉄南生駒駅前道路整備検討業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "近鉄南生駒駅前道路整備検討業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "狭戸配水場配水池詳細耐震診断業務",
-      "reason": "infra_exclude_keyword",
-      "matchedKeywords": [
-        "配水場",
-        "配水池"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "狭戸配水場配水池詳細耐震診断業務 ",
-      "reason": "infra_exclude_keyword",
-      "matchedKeywords": [
-        "配水場",
-        "配水池"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "真弓１丁目他地内管渠更生等詳細設計業務",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "真弓１丁目他地内管渠更生等詳細設計業務 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒市流域関連公共下水道有里町259号線工事に伴う測量設計業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道",
-        "測量"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒市流域関連公共下水道有里町259号線工事に伴う測量設計業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道",
-        "測量"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒市総合公園体育施設地質調査業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "地質",
-        "調査"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒市総合公園体育施設地質調査業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "地質",
-        "調査"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "阿弥陀寺歩道橋耐震補強詳細設計業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "阿弥陀寺歩道橋耐震補強詳細設計業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒市流域関連公共下水道青山台240号線工事に伴う測量設計業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道",
-        "測量"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒市流域関連公共下水道青山台240号線工事に伴う測量設計業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道",
-        "測量"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "宝山寺駅前線道路修景整備に伴う測量業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "測量"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "宝山寺駅前線道路修景整備に伴う測量業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "測量"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒市大規模下水道管路特別重点調査業務に伴う管きょ更生設計業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道",
-        "調査"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒市大規模下水道管路特別重点調査業務に伴う管きょ更生設計業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道",
-        "調査"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒市総合公園体育施設測量業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "測量"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒市総合公園体育施設測量業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "測量"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "農業用ため池豪雨耐性評価業務委託",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "農業用ため池豪雨耐性評価業務委託 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "農業用ため池劣化状況評価業務委託",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "農業用ため池劣化状況評価業務委託 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "学研高山地区南エリア環境調査等業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "環境調査",
-        "調査"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "学研高山地区南エリア環境調査等業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "環境調査",
-        "調査"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "郡山坂橋耐震補強工事に伴う設計業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "郡山坂橋耐震補強工事に伴う設計業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "都市計画道路及び関連データ修正業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "都市計画道路及び関連データ修正業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "奈良県広域水道企業団生駒事務所学研高山地区第二工区関連水道施設整備事業基本計画策定業務",
-      "reason": "infra_exclude_keyword",
-      "matchedKeywords": [
-        "水道"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "奈良県広域水道企業団生駒事務所学研高山地区第二工区関連水道施設整備事業基本計画策定業務 ",
-      "reason": "infra_exclude_keyword",
-      "matchedKeywords": [
-        "水道"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "国道163号周辺道路整備事業に伴う道路予備設計等業務委託",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "国道"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "国道163号周辺道路整備事業に伴う道路予備設計等業務委託 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "国道"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "令和７年度道路橋定期点検業務委託",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "橋",
-        "定期点検"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "令和７年度道路橋定期点検業務委託 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "橋",
-        "定期点検"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "門前配水場配水池詳細耐震診断業務",
-      "reason": "infra_exclude_keyword",
-      "matchedKeywords": [
-        "配水場",
-        "配水池"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "門前配水場配水池詳細耐震診断業務 ",
-      "reason": "infra_exclude_keyword",
-      "matchedKeywords": [
-        "配水場",
-        "配水池"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒市流域関連公共下水道小明町233号線工事に伴う測量設計業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道",
-        "測量"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒市流域関連公共下水道小明町233号線工事に伴う測量設計業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道",
-        "測量"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒市流域関連公共下水道緑ケ丘215号線工事に伴う測量設計業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道",
-        "測量"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒市流域関連公共下水道緑ケ丘215号線工事に伴う測量設計業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道",
-        "測量"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "松ヶ丘通り線道路法面等整備検討業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "法面"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "松ヶ丘通り線道路法面等整備検討業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "法面"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "公共施設劣化状況調査業務委託",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "調査"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "公共施設劣化状況調査業務委託 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "調査"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒市流域関連公共下水道小明町45号線工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒市流域関連公共下水道小明町45号線工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "令和８年度ひかりが丘３丁目他地内ＴＶカメラ調査業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "調査"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "令和８年度ひかりが丘３丁目他地内ＴＶカメラ調査業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "調査"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "令和８年度生駒市営小平尾桜ケ丘住宅草刈業務委託",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "令和８年度生駒市営小平尾桜ケ丘住宅草刈業務委託 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒市流域関連公共下水道北新町118号線工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "生駒市",
-      "title": "生駒市流域関連公共下水道北新町118号線工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "生駒市",
       "title": "真弓地内配水管布設替工事（R８-２工区）",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -25575,6 +25527,24 @@
     },
     {
       "municipality": "大和郡山市",
+      "title": "コピー用紙購入単価契約",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入",
+        "用紙"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "コピー用紙購入単価契約 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入",
+        "用紙"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
       "title": "大和中央道第2調整池法面防護工事",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -27783,6 +27753,24 @@
     },
     {
       "municipality": "大和郡山市",
+      "title": "コピー用紙購入単価契約",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入",
+        "用紙"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "コピー用紙購入単価契約 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入",
+        "用紙"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
       "title": "大和中央道第2調整池法面防護工事",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -29988,6 +29976,24 @@
       "title": "西田中町共同浴場解体工事設計委託業務 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "コピー用紙購入単価契約",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入",
+        "用紙"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "コピー用紙購入単価契約 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入",
+        "用紙"
+      ]
     },
     {
       "municipality": "大和郡山市",
@@ -62052,6 +62058,48 @@
     },
     {
       "municipality": "香芝市",
+      "title": "藤山7-60号線他配水管布設替工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "藤山7-60号線他配水管布設替工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "関屋北2-137号線他配水管布設替工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "関屋北2-137号線他配水管布設替工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "公共下水道工事に伴う舗装復旧工事（２５－補５－３）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装",
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "公共下水道工事に伴う舗装復旧工事（２５－補５－３） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装",
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "香芝市",
       "title": "令和８年度香芝市スポーツ公園整備事業に係る造成工事（その１）",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -63030,24 +63078,6 @@
     },
     {
       "municipality": "香芝市",
-      "title": "公共下水道工事に伴う舗装復旧工事（２５－補５－３）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装",
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "公共下水道工事に伴う舗装復旧工事（２５－補５－３） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装",
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "香芝市",
       "title": "舗装維持工事 公－０２１号",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -63061,30 +63091,6 @@
       "matchedKeywords": [
         "舗装"
       ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "関屋北2-137号線他配水管布設替工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "関屋北2-137号線他配水管布設替工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "藤山7-60号線他配水管布設替工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "藤山7-60号線他配水管布設替工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
     },
     {
       "municipality": "香芝市",
@@ -63178,6 +63184,48 @@
     },
     {
       "municipality": "香芝市",
+      "title": "藤山7-60号線他配水管布設替工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "藤山7-60号線他配水管布設替工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "関屋北2-137号線他配水管布設替工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "関屋北2-137号線他配水管布設替工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "公共下水道工事に伴う舗装復旧工事（２５－補５－３）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装",
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "公共下水道工事に伴う舗装復旧工事（２５－補５－３） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装",
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "香芝市",
       "title": "令和８年度香芝市スポーツ公園整備事業に係る造成工事（その１）",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -64156,24 +64204,6 @@
     },
     {
       "municipality": "香芝市",
-      "title": "公共下水道工事に伴う舗装復旧工事（２５－補５－３）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装",
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "公共下水道工事に伴う舗装復旧工事（２５－補５－３） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装",
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "香芝市",
       "title": "舗装維持工事 公－０２１号",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -64187,30 +64217,6 @@
       "matchedKeywords": [
         "舗装"
       ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "関屋北2-137号線他配水管布設替工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "関屋北2-137号線他配水管布設替工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "藤山7-60号線他配水管布設替工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "藤山7-60号線他配水管布設替工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
     },
     {
       "municipality": "香芝市",
@@ -64304,6 +64310,48 @@
     },
     {
       "municipality": "香芝市",
+      "title": "藤山7-60号線他配水管布設替工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "藤山7-60号線他配水管布設替工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "関屋北2-137号線他配水管布設替工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "関屋北2-137号線他配水管布設替工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "公共下水道工事に伴う舗装復旧工事（２５－補５－３）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装",
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "公共下水道工事に伴う舗装復旧工事（２５－補５－３） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装",
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "香芝市",
       "title": "令和８年度香芝市スポーツ公園整備事業に係る造成工事（その１）",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -65282,24 +65330,6 @@
     },
     {
       "municipality": "香芝市",
-      "title": "公共下水道工事に伴う舗装復旧工事（２５－補５－３）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装",
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "公共下水道工事に伴う舗装復旧工事（２５－補５－３） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装",
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "香芝市",
       "title": "舗装維持工事 公－０２１号",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -65313,30 +65343,6 @@
       "matchedKeywords": [
         "舗装"
       ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "関屋北2-137号線他配水管布設替工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "関屋北2-137号線他配水管布設替工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "藤山7-60号線他配水管布設替工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "藤山7-60号線他配水管布設替工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
     },
     {
       "municipality": "香芝市",
@@ -67935,6 +67941,30 @@
         "外壁改修"
       ],
       "borderlineRescue": true
+    },
+    {
+      "municipality": "高取町",
+      "title": "一般競争入札（郵便入札）について（令和8年9月29日入札分仕様書)",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "高取町",
+      "title": "一般競争入札（郵便入札）について（令和8年9月29日入札分仕様書) ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "高取町",
+      "title": "高取町建設工事等郵便入札の手引き",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "高取町",
+      "title": "高取町建設工事等郵便入札の手引き ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
     },
     {
       "municipality": "高取町",
@@ -68288,6 +68318,30 @@
     },
     {
       "municipality": "高取町",
+      "title": "一般競争入札（郵便入札）について（令和8年9月29日入札分仕様書)",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "高取町",
+      "title": "一般競争入札（郵便入札）について（令和8年9月29日入札分仕様書) ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "高取町",
+      "title": "高取町建設工事等郵便入札の手引き",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "高取町",
+      "title": "高取町建設工事等郵便入札の手引き ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "高取町",
       "title": "小型動力ポンプ付軽四輪駆動消防車購入事業",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -68635,6 +68689,30 @@
       "matchedKeywords": [
         "舗装"
       ]
+    },
+    {
+      "municipality": "高取町",
+      "title": "一般競争入札（郵便入札）について（令和8年9月29日入札分仕様書)",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "高取町",
+      "title": "一般競争入札（郵便入札）について（令和8年9月29日入札分仕様書) ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "高取町",
+      "title": "高取町建設工事等郵便入札の手引き",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "高取町",
+      "title": "高取町建設工事等郵便入札の手引き ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
     },
     {
       "municipality": "高取町",
