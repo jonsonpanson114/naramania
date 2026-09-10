@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-09T12:11:27.661Z",
+  "generatedAt": "2026-09-10T07:03:57.901Z",
   "currentItemCount": 297,
   "checkedMunicipalities": [
     "奈良市",
@@ -31,7 +31,7 @@
   "excludedMunicipalities": [
     "奈良県"
   ],
-  "scraperErrorCount": 0,
+  "scraperErrorCount": 1,
   "transientWarningCount": 0,
   "scraperResults": [
     {
@@ -228,13 +228,15 @@
     },
     {
       "municipality": "高取町",
-      "rawCount": 46,
+      "rawCount": 48,
       "keptCount": 17,
-      "rejectedCount": 29,
+      "rejectedCount": 31,
       "keptAnnouncementCount": 2,
       "keptResultCount": 15,
       "warnings": [],
-      "errors": []
+      "errors": [
+        "[高取町] 公告PDFから案件名を抽出できませんでした: https://www.town.takatori.nara.jp/cmsfiles/contents/0000002/2674/chuiziko.pdf"
+      ]
     },
     {
       "municipality": "斑鳩町",
@@ -366,7 +368,7 @@
       },
       {
         "municipality": "高取町",
-        "snapshotCount": 46,
+        "snapshotCount": 48,
         "expectedCount": 17,
         "matchedCount": 17,
         "missingCount": 0,
