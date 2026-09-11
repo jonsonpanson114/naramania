@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-10T12:11:48.350Z",
-  "currentItemCount": 297,
+  "generatedAt": "2026-09-11T07:02:28.212Z",
+  "currentItemCount": 298,
   "checkedMunicipalities": [
     "奈良市",
     "橿原市",
@@ -56,19 +56,19 @@
     },
     {
       "municipality": "生駒市",
-      "rawCount": 207,
-      "keptCount": 22,
-      "rejectedCount": 185,
+      "rawCount": 180,
+      "keptCount": 18,
+      "rejectedCount": 162,
       "keptAnnouncementCount": 0,
-      "keptResultCount": 22,
+      "keptResultCount": 18,
       "warnings": [],
       "errors": []
     },
     {
       "municipality": "大和高田市",
-      "rawCount": 192,
+      "rawCount": 193,
       "keptCount": 0,
-      "rejectedCount": 192,
+      "rejectedCount": 193,
       "keptAnnouncementCount": 0,
       "keptResultCount": 0,
       "warnings": [],
@@ -96,11 +96,11 @@
     },
     {
       "municipality": "五條市",
-      "rawCount": 243,
-      "keptCount": 31,
-      "rejectedCount": 212,
+      "rawCount": 246,
+      "keptCount": 32,
+      "rejectedCount": 214,
       "keptAnnouncementCount": 3,
-      "keptResultCount": 28,
+      "keptResultCount": 29,
       "warnings": [],
       "errors": []
     },
@@ -283,8 +283,8 @@
   ],
   "coverage": {
     "checkedMunicipalityCount": 24,
-    "expectedItemCount": 269,
-    "matchedItemCount": 269,
+    "expectedItemCount": 266,
+    "matchedItemCount": 266,
     "missingItemCount": 0,
     "duplicateTitleGroupCount": 32,
     "duplicateTitleItemCount": 70,
@@ -302,9 +302,9 @@
       },
       {
         "municipality": "五條市",
-        "snapshotCount": 243,
-        "expectedCount": 31,
-        "matchedCount": 31,
+        "snapshotCount": 246,
+        "expectedCount": 32,
+        "matchedCount": 32,
         "missingCount": 0,
         "duplicateTitleGroupCount": 9,
         "duplicateTitleItemCount": 22,
@@ -319,17 +319,6 @@
         "missingCount": 0,
         "duplicateTitleGroupCount": 5,
         "duplicateTitleItemCount": 10,
-        "missingItems": [],
-        "status": "ok"
-      },
-      {
-        "municipality": "生駒市",
-        "snapshotCount": 207,
-        "expectedCount": 22,
-        "matchedCount": 22,
-        "missingCount": 0,
-        "duplicateTitleGroupCount": 0,
-        "duplicateTitleItemCount": 0,
         "missingItems": [],
         "status": "ok"
       },
@@ -358,6 +347,17 @@
       {
         "municipality": "宇陀市",
         "snapshotCount": 110,
+        "expectedCount": 18,
+        "matchedCount": 18,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 0,
+        "duplicateTitleItemCount": 0,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
+        "municipality": "生駒市",
+        "snapshotCount": 180,
         "expectedCount": 18,
         "matchedCount": 18,
         "missingCount": 0,
@@ -544,7 +544,7 @@
       },
       {
         "municipality": "大和高田市",
-        "snapshotCount": 192,
+        "snapshotCount": 193,
         "expectedCount": 0,
         "matchedCount": 0,
         "missingCount": 0,
