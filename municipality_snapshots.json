@@ -1898,6 +1898,17 @@
   ],
   "五條市": [
     {
+      "id": "gojo-epi-2601041",
+      "municipality": "五條市",
+      "title": "奥谷老人憩の家屋根修繕工事",
+      "type": "建築",
+      "announcementDate": "2026-09-01",
+      "biddingDate": "2026-09-11",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002601041",
+      "status": "受付中",
+      "estimatedPrice": "2,990,000円"
+    },
+    {
       "id": "gojo-d18a21bd",
       "municipality": "五條市",
       "title": "田園体育館兼集会所カーテン取替修繕",
@@ -2548,7 +2559,7 @@
       "biddingDate": "2026-06-22",
       "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
       "status": "落札",
-      "winningContractor": "塚竜(株)"
+      "winningContractor": "塚竜（株）"
     },
     {
       "id": "tawaramoto-2026051803",

@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-10T10:56:26.430Z",
-  "totalRejected": 10626,
+  "generatedAt": "2026-09-11T06:04:48.446Z",
+  "totalRejected": 10644,
   "totalBorderlineRescued": 33,
   "byMunicipality": {
     "奈良市": {
@@ -16,7 +16,7 @@
       "borderlineRescued": 6
     },
     "大和高田市": {
-      "rejected": 906,
+      "rejected": 912,
       "borderlineRescued": 0
     },
     "大和郡山市": {
@@ -28,7 +28,7 @@
       "borderlineRescued": 0
     },
     "五條市": {
-      "rejected": 972,
+      "rejected": 984,
       "borderlineRescued": 0
     },
     "御所市": {
@@ -19367,22 +19367,6 @@
     },
     {
       "municipality": "大和高田市",
-      "title": "公共下水道事業に伴う管更生実施設計業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "公共下水道事業に伴う管更生実施設計業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
       "title": "高田千本桜大中公園周辺他川沿いの桜剪定伐採管理業務",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -20104,6 +20088,18 @@
       "matchedKeywords": [
         "舗装"
       ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "特定空家等解体除却工事（再度）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "特定空家等解体除却工事（再度） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
     },
     {
       "municipality": "大和高田市",
@@ -21054,6 +21050,18 @@
         "橋",
         "定期点検"
       ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "令和８年度大和高田市洪水・地震ハザードマップ更新業務委託",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "令和８年度大和高田市洪水・地震ハザードマップ更新業務委託 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
     },
     {
       "municipality": "大和高田市",
@@ -21503,22 +21511,6 @@
     },
     {
       "municipality": "大和高田市",
-      "title": "公共下水道事業に伴う管更生実施設計業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "公共下水道事業に伴う管更生実施設計業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
       "title": "高田千本桜大中公園周辺他川沿いの桜剪定伐採管理業務",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -22240,6 +22232,18 @@
       "matchedKeywords": [
         "舗装"
       ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "特定空家等解体除却工事（再度）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "特定空家等解体除却工事（再度） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
     },
     {
       "municipality": "大和高田市",
@@ -23190,6 +23194,18 @@
         "橋",
         "定期点検"
       ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "令和８年度大和高田市洪水・地震ハザードマップ更新業務委託",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "令和８年度大和高田市洪水・地震ハザードマップ更新業務委託 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
     },
     {
       "municipality": "大和高田市",
@@ -23639,22 +23655,6 @@
     },
     {
       "municipality": "大和高田市",
-      "title": "公共下水道事業に伴う管更生実施設計業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "公共下水道事業に伴う管更生実施設計業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
       "title": "高田千本桜大中公園周辺他川沿いの桜剪定伐採管理業務",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -24376,6 +24376,18 @@
       "matchedKeywords": [
         "舗装"
       ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "特定空家等解体除却工事（再度）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "特定空家等解体除却工事（再度） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
     },
     {
       "municipality": "大和高田市",
@@ -25326,6 +25338,18 @@
         "橋",
         "定期点検"
       ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "令和８年度大和高田市洪水・地震ハザードマップ更新業務委託",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "令和８年度大和高田市洪水・地震ハザードマップ更新業務委託 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
     },
     {
       "municipality": "大和高田市",
@@ -42432,6 +42456,24 @@
       "title": "新庄第1健民運動場及び新町公園球技場芝生管理アドバイザー業務委託 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
+    },
+    {
+      "municipality": "五條市",
+      "title": "道路舗装工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "五條市",
+      "title": "道路舗装工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
     },
     {
       "municipality": "五條市",
@@ -42576,6 +42618,18 @@
       "matchedKeywords": [
         "資源"
       ]
+    },
+    {
+      "municipality": "五條市",
+      "title": "青貝池農道整備工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "五條市",
+      "title": "青貝池農道整備工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
     },
     {
       "municipality": "五條市",
@@ -44883,6 +44937,24 @@
     },
     {
       "municipality": "五條市",
+      "title": "道路舗装工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "五條市",
+      "title": "道路舗装工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "五條市",
       "title": "西吉野農業高等学校寄宿舎食事調理及び配送業務委託（令和8年9月1日）",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -45024,6 +45096,18 @@
       "matchedKeywords": [
         "資源"
       ]
+    },
+    {
+      "municipality": "五條市",
+      "title": "青貝池農道整備工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "五條市",
+      "title": "青貝池農道整備工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
     },
     {
       "municipality": "五條市",
@@ -47331,6 +47415,24 @@
     },
     {
       "municipality": "五條市",
+      "title": "道路舗装工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "五條市",
+      "title": "道路舗装工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "五條市",
       "title": "西吉野農業高等学校寄宿舎食事調理及び配送業務委託（令和8年9月1日）",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -47472,6 +47574,18 @@
       "matchedKeywords": [
         "資源"
       ]
+    },
+    {
+      "municipality": "五條市",
+      "title": "青貝池農道整備工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "五條市",
+      "title": "青貝池農道整備工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
     },
     {
       "municipality": "五條市",

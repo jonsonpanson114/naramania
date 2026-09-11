@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-09-10T11:03:25.809Z",
-  "qualityGeneratedAt": "2026-09-10T10:56:26.427Z",
-  "itemCount": 297,
+  "generatedAt": "2026-09-11T06:11:44.678Z",
+  "qualityGeneratedAt": "2026-09-11T06:04:48.443Z",
+  "itemCount": 298,
   "resultFollowUp": {
-    "totalCount": 13,
+    "totalCount": 15,
     "highCount": 10,
-    "mediumCount": 0,
-    "lowCount": 3,
+    "mediumCount": 3,
+    "lowCount": 2,
     "missingBiddingDateCount": 0,
     "byMunicipality": [
       {
         "municipality": "奈良県",
-        "count": 10
+        "count": 12
       },
       {
         "municipality": "大淀町",
@@ -25,7 +25,7 @@
     "samples": [
       {
         "priority": "high",
-        "ageDays": 142,
+        "ageDays": 143,
         "reason": "落札済みだが落札者が空",
         "item": {
           "id": "oyodo-79dc14038b",
@@ -41,8 +41,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 106,
-        "reason": "開札日から106日経過",
+        "ageDays": 107,
+        "reason": "開札日から107日経過",
         "item": {
           "id": "nara-city-0000002346",
           "municipality": "奈良市",
@@ -57,7 +57,7 @@
       },
       {
         "priority": "high",
-        "ageDays": 87,
+        "ageDays": 88,
         "reason": "落札済みだが落札者が空",
         "item": {
           "id": "oyodo-46ab50dbc8",
@@ -73,8 +73,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 84,
-        "reason": "開札日から84日経過",
+        "ageDays": 85,
+        "reason": "開札日から85日経過",
         "item": {
           "id": "nara-pref-29001013060020260055",
           "municipality": "奈良県",
@@ -89,8 +89,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 65,
-        "reason": "開札日から65日経過",
+        "ageDays": 66,
+        "reason": "開札日から66日経過",
         "item": {
           "id": "nara-pref-29005007060120260015",
           "municipality": "奈良県",
@@ -105,8 +105,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 55,
-        "reason": "開札日から55日経過",
+        "ageDays": 56,
+        "reason": "開札日から56日経過",
         "item": {
           "id": "nara-pref-29005007060120260018",
           "municipality": "奈良県",
@@ -121,8 +121,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 20,
-        "reason": "開札日から20日経過",
+        "ageDays": 21,
+        "reason": "開札日から21日経過",
         "item": {
           "id": "nara-pref-29001013060020260136",
           "municipality": "奈良県",
@@ -137,8 +137,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 20,
-        "reason": "開札日から20日経過",
+        "ageDays": 21,
+        "reason": "開札日から21日経過",
         "item": {
           "id": "nara-pref-29001013060020260145",
           "municipality": "奈良県",
@@ -153,8 +153,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 20,
-        "reason": "開札日から20日経過",
+        "ageDays": 21,
+        "reason": "開札日から21日経過",
         "item": {
           "id": "nara-pref-29001013060020260148",
           "municipality": "奈良県",
@@ -169,8 +169,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 20,
-        "reason": "開札日から20日経過",
+        "ageDays": 21,
+        "reason": "開札日から21日経過",
         "item": {
           "id": "nara-pref-29001013060020260149",
           "municipality": "奈良県",
@@ -346,12 +346,23 @@
         "municipality": "五條市",
         "status": "ok",
         "severity": "error",
-        "count": 17,
+        "count": 18,
         "requiredLinkIncludes": [
           "epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction"
         ],
-        "message": "五條市 情報公開サイト: 17件確認",
+        "message": "五條市 情報公開サイト: 18件確認",
         "matches": [
+          {
+            "id": "gojo-epi-2601041",
+            "municipality": "五條市",
+            "title": "奥谷老人憩の家屋根修繕工事",
+            "status": "受付中",
+            "announcementDate": "2026-09-01",
+            "biddingDate": "2026-09-11",
+            "winningContractor": null,
+            "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002601041",
+            "pdfUrl": null
+          },
           {
             "id": "gojo-epi-2601030",
             "municipality": "五條市",
@@ -449,17 +460,6 @@
             "biddingDate": "2026-01-09",
             "winningContractor": "逢坂建設",
             "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002501056",
-            "pdfUrl": null
-          },
-          {
-            "id": "gojo-epi-2501048",
-            "municipality": "五條市",
-            "title": "向加名生団地Ａ棟屋根改修工事",
-            "status": "落札",
-            "announcementDate": "2025-11-18",
-            "biddingDate": "2025-12-02",
-            "winningContractor": "グローバル工業（株）",
-            "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002501048",
             "pdfUrl": null
           }
         ]
@@ -607,7 +607,7 @@
         "municipality": "五條市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 21,
+        "totalCount": 22,
         "requiredLinkIncludes": [
           "city.gojo.lg.jp",
           "epi-cloud.fwd.ne.jp"
@@ -615,9 +615,9 @@
         "missingLinkIncludes": [],
         "sourceCounts": {
           "city.gojo.lg.jp": 4,
-          "epi-cloud.fwd.ne.jp": 17
+          "epi-cloud.fwd.ne.jp": 18
         },
-        "message": "五條市: 21件 (公告3/結果18) / sources OK"
+        "message": "五條市: 22件 (公告4/結果18) / sources OK"
       },
       {
         "municipality": "御所市",
