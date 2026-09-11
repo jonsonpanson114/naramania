@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-11T06:04:48.446Z",
-  "totalRejected": 10644,
+  "generatedAt": "2026-09-11T10:56:09.661Z",
+  "totalRejected": 10650,
   "totalBorderlineRescued": 33,
   "byMunicipality": {
     "奈良市": {
@@ -56,7 +56,7 @@
       "borderlineRescued": 0
     },
     "香芝市": {
-      "rejected": 438,
+      "rejected": 444,
       "borderlineRescued": 0
     },
     "川西町": {
@@ -62220,6 +62220,22 @@
     },
     {
       "municipality": "香芝市",
+      "title": "香芝西中学校南側法面整備工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "法面"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "香芝西中学校南側法面整備工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "法面"
+      ]
+    },
+    {
+      "municipality": "香芝市",
       "title": "藤山7-60号線他配水管布設替工事",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -63346,6 +63362,22 @@
     },
     {
       "municipality": "香芝市",
+      "title": "香芝西中学校南側法面整備工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "法面"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "香芝西中学校南側法面整備工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "法面"
+      ]
+    },
+    {
+      "municipality": "香芝市",
       "title": "藤山7-60号線他配水管布設替工事",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -64468,6 +64500,22 @@
         "橋梁",
         "橋",
         "定期点検"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "香芝西中学校南側法面整備工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "法面"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "香芝西中学校南側法面整備工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "法面"
       ]
     },
     {
