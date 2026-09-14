@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-14T06:26:02.984Z",
-  "qualityGeneratedAt": "2026-09-14T06:18:46.618Z",
-  "itemCount": 298,
+  "generatedAt": "2026-09-14T12:14:25.025Z",
+  "qualityGeneratedAt": "2026-09-14T12:07:18.017Z",
+  "itemCount": 299,
   "resultFollowUp": {
     "totalCount": 18,
     "highCount": 10,
@@ -851,15 +851,15 @@
         "municipality": "大淀町",
         "status": "ok",
         "severity": "error",
-        "totalCount": 7,
+        "totalCount": 8,
         "requiredLinkIncludes": [
           "town.oyodo.lg.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "town.oyodo.lg.jp": 7
+          "town.oyodo.lg.jp": 8
         },
-        "message": "大淀町: 7件 (公告0/結果7) / sources OK"
+        "message": "大淀町: 8件 (公告1/結果7) / sources OK"
       },
       {
         "municipality": "香芝市",
