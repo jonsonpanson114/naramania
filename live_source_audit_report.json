@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-14T10:32:25.677Z",
-  "currentItemCount": 298,
+  "generatedAt": "2026-09-14T13:41:47.451Z",
+  "currentItemCount": 299,
   "checkedMunicipalities": [
     "奈良市",
     "橿原市",
@@ -228,10 +228,10 @@
     },
     {
       "municipality": "高取町",
-      "rawCount": 47,
-      "keptCount": 16,
+      "rawCount": 48,
+      "keptCount": 17,
       "rejectedCount": 31,
-      "keptAnnouncementCount": 1,
+      "keptAnnouncementCount": 2,
       "keptResultCount": 15,
       "warnings": [],
       "errors": [
@@ -283,33 +283,12 @@
   ],
   "coverage": {
     "checkedMunicipalityCount": 24,
-    "expectedItemCount": 270,
-    "matchedItemCount": 269,
-    "missingItemCount": 1,
-    "duplicateTitleGroupCount": 31,
-    "duplicateTitleItemCount": 68,
+    "expectedItemCount": 271,
+    "matchedItemCount": 271,
+    "missingItemCount": 0,
+    "duplicateTitleGroupCount": 32,
+    "duplicateTitleItemCount": 70,
     "results": [
-      {
-        "municipality": "大淀町",
-        "snapshotCount": 136,
-        "expectedCount": 8,
-        "matchedCount": 7,
-        "missingCount": 1,
-        "duplicateTitleGroupCount": 0,
-        "duplicateTitleItemCount": 0,
-        "missingItems": [
-          {
-            "id": "oyodo-5Luk5ZKMOOW5",
-            "municipality": "大淀町",
-            "title": "令和8年度大淀町文化会館長寿命化改修工事に伴う設計業務",
-            "status": "受付中",
-            "announcementDate": "2026-09-14",
-            "link": "https://www.town.oyodo.lg.jp/./cmsfiles/contents/0000000/218/nyusatsu_setsumei_080914.pdf",
-            "reason": "snapshot item should be present in scraper_result"
-          }
-        ],
-        "status": "missing"
-      },
       {
         "municipality": "橿原市",
         "snapshotCount": 387,
@@ -388,6 +367,17 @@
         "status": "ok"
       },
       {
+        "municipality": "高取町",
+        "snapshotCount": 48,
+        "expectedCount": 17,
+        "matchedCount": 17,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 2,
+        "duplicateTitleItemCount": 4,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
         "municipality": "奈良市",
         "snapshotCount": 110,
         "expectedCount": 17,
@@ -395,17 +385,6 @@
         "missingCount": 0,
         "duplicateTitleGroupCount": 6,
         "duplicateTitleItemCount": 12,
-        "missingItems": [],
-        "status": "ok"
-      },
-      {
-        "municipality": "高取町",
-        "snapshotCount": 47,
-        "expectedCount": 16,
-        "matchedCount": 16,
-        "missingCount": 0,
-        "duplicateTitleGroupCount": 1,
-        "duplicateTitleItemCount": 2,
         "missingItems": [],
         "status": "ok"
       },
@@ -425,6 +404,17 @@
         "snapshotCount": 176,
         "expectedCount": 9,
         "matchedCount": 9,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 0,
+        "duplicateTitleItemCount": 0,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
+        "municipality": "大淀町",
+        "snapshotCount": 136,
+        "expectedCount": 8,
+        "matchedCount": 8,
         "missingCount": 0,
         "duplicateTitleGroupCount": 0,
         "duplicateTitleItemCount": 0,
