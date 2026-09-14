@@ -1,6 +1,17 @@
 {
   "奈良県": [
     {
+      "id": "nara-pref-29001013060020260196",
+      "municipality": "奈良県",
+      "title": "奈良商工高校トイレ環境改善整備工事 第８－２６号",
+      "type": "建築",
+      "announcementDate": "2026-09-03",
+      "biddingDate": "2026-10-05",
+      "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260196&gamenMode=0",
+      "status": "受付中",
+      "winnerType": "ゼネコン"
+    },
+    {
       "id": "nara-pref-29001013401020260007",
       "municipality": "奈良県",
       "title": "令和８年度秋津県営住宅55・56棟軒裏落下防止対策工事",
@@ -19,7 +30,7 @@
       "announcementDate": "2026-08-20",
       "biddingDate": "2026-09-10",
       "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260168&gamenMode=0",
-      "status": "受付中",
+      "status": "受付終了",
       "winnerType": "設計事務所"
     },
     {
@@ -30,7 +41,7 @@
       "announcementDate": "2026-08-20",
       "biddingDate": "2026-09-10",
       "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260177&gamenMode=0",
-      "status": "受付中",
+      "status": "受付終了",
       "winnerType": "設計事務所"
     },
     {
@@ -41,7 +52,7 @@
       "announcementDate": "2026-08-19",
       "biddingDate": "2026-09-11",
       "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260182&gamenMode=0",
-      "status": "受付中",
+      "status": "不調",
       "winnerType": "設計事務所"
     },
     {
@@ -52,7 +63,7 @@
       "announcementDate": "2026-08-19",
       "biddingDate": "2026-09-11",
       "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260181&gamenMode=0",
-      "status": "受付中",
+      "status": "不調",
       "winnerType": "ゼネコン"
     },
     {
@@ -63,7 +74,7 @@
       "announcementDate": "2026-08-18",
       "biddingDate": "2026-09-08",
       "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260169&gamenMode=0",
-      "status": "受付中",
+      "status": "受付終了",
       "winnerType": "設計事務所"
     },
     {
@@ -74,7 +85,7 @@
       "announcementDate": "2026-08-18",
       "biddingDate": "2026-09-08",
       "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260171&gamenMode=0",
-      "status": "受付中",
+      "status": "不調",
       "winnerType": "設計事務所"
     },
     {
@@ -85,7 +96,7 @@
       "announcementDate": "2026-08-18",
       "biddingDate": "2026-09-08",
       "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260173&gamenMode=0",
-      "status": "受付中",
+      "status": "不調",
       "winnerType": "設計事務所"
     },
     {
@@ -96,7 +107,8 @@
       "announcementDate": "2026-07-22",
       "biddingDate": "2026-08-21",
       "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260136&gamenMode=0",
-      "status": "受付終了",
+      "status": "落札",
+      "winningContractor": "吉井建築事務所",
       "winnerType": "設計事務所"
     },
     {
@@ -119,7 +131,8 @@
       "announcementDate": "2026-07-22",
       "biddingDate": "2026-08-21",
       "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260145&gamenMode=0",
-      "status": "受付終了",
+      "status": "落札",
+      "winningContractor": "松田電気工業株式会社",
       "winnerType": "ゼネコン"
     },
     {
@@ -130,18 +143,8 @@
       "announcementDate": "2026-07-22",
       "biddingDate": "2026-08-21",
       "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260148&gamenMode=0",
-      "status": "受付終了",
-      "winnerType": "ゼネコン"
-    },
-    {
-      "id": "nara-pref-29001013060020260149",
-      "municipality": "奈良県",
-      "title": "奈良南高校（大淀学舎）トイレ環境改善整備工事 第８－１８号",
-      "type": "建築",
-      "announcementDate": "2026-07-22",
-      "biddingDate": "2026-08-21",
-      "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260149&gamenMode=0",
-      "status": "受付終了",
+      "status": "落札",
+      "winningContractor": "株式会社岡本設備",
       "winnerType": "ゼネコン"
     },
     {
@@ -154,6 +157,18 @@
       "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260146&gamenMode=0",
       "status": "落札",
       "winningContractor": "株式会社森村設備",
+      "winnerType": "ゼネコン"
+    },
+    {
+      "id": "nara-pref-29001013060020260149",
+      "municipality": "奈良県",
+      "title": "奈良南高校（大淀学舎）トイレ環境改善整備工事 第８－１８号",
+      "type": "建築",
+      "announcementDate": "2026-07-22",
+      "biddingDate": "2026-08-21",
+      "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260149&gamenMode=0",
+      "status": "落札",
+      "winningContractor": "株式会社博電工業",
       "winnerType": "ゼネコン"
     },
     {

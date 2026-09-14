@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-09-14T12:14:25.025Z",
-  "qualityGeneratedAt": "2026-09-14T12:07:18.017Z",
-  "itemCount": 299,
+  "generatedAt": "2026-09-14T14:19:47.068Z",
+  "qualityGeneratedAt": "2026-09-14T14:19:42.779Z",
+  "itemCount": 300,
   "resultFollowUp": {
-    "totalCount": 18,
-    "highCount": 10,
-    "mediumCount": 8,
+    "totalCount": 10,
+    "highCount": 6,
+    "mediumCount": 4,
     "lowCount": 0,
     "missingBiddingDateCount": 0,
     "byMunicipality": [
       {
         "municipality": "奈良県",
-        "count": 14
+        "count": 6
       },
       {
         "municipality": "大淀町",
@@ -124,66 +124,66 @@
         }
       },
       {
-        "priority": "high",
-        "ageDays": 24,
-        "reason": "開札日から24日経過",
+        "priority": "medium",
+        "ageDays": 6,
+        "reason": "開札日から6日経過",
         "item": {
-          "id": "nara-pref-29001013060020260136",
+          "id": "nara-pref-29001013060020260169",
           "municipality": "奈良県",
-          "title": "御所実業高校トイレ環境改善整備工事、大和広陵高校トイレ環境改善整備工事及び奈良南高校（大淀学舎）トイレ環境改善整備工事監理業務 委（監）第８－１１号",
+          "title": "果樹・薬草研究所本館、加工展示施設及び農機用舎屋根・外壁改修工事設計業務 委（設）第８－１３号",
           "status": "受付終了",
-          "announcementDate": "2026-07-22",
-          "biddingDate": "2026-08-21",
+          "announcementDate": "2026-08-18",
+          "biddingDate": "2026-09-08",
           "winningContractor": null,
-          "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260136&gamenMode=0",
+          "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260169&gamenMode=0",
           "pdfUrl": null
         }
       },
       {
-        "priority": "high",
-        "ageDays": 24,
-        "reason": "開札日から24日経過",
+        "priority": "medium",
+        "ageDays": 4,
+        "reason": "開札日から4日経過",
         "item": {
-          "id": "nara-pref-29001013060020260145",
+          "id": "nara-pref-29001013060020260168",
           "municipality": "奈良県",
-          "title": "御所実業高校トイレ環境改善整備工事 第８－１７号",
+          "title": "吉野保健所本館トイレ改修工事設計業務 委（設）第８－７号",
           "status": "受付終了",
-          "announcementDate": "2026-07-22",
-          "biddingDate": "2026-08-21",
+          "announcementDate": "2026-08-20",
+          "biddingDate": "2026-09-10",
           "winningContractor": null,
-          "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260145&gamenMode=0",
+          "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260168&gamenMode=0",
           "pdfUrl": null
         }
       },
       {
-        "priority": "high",
-        "ageDays": 24,
-        "reason": "開札日から24日経過",
+        "priority": "medium",
+        "ageDays": 4,
+        "reason": "開札日から4日経過",
         "item": {
-          "id": "nara-pref-29001013060020260148",
+          "id": "nara-pref-29001013060020260177",
           "municipality": "奈良県",
-          "title": "大和広陵高校トイレ環境改善整備工事 第８－１６号",
+          "title": "洞川エコミュージアムセンター本館及び屋外トイレ等屋根・外壁改修工事設計業務（自然環境整備交付金） 委（設）第８－６号",
           "status": "受付終了",
-          "announcementDate": "2026-07-22",
-          "biddingDate": "2026-08-21",
+          "announcementDate": "2026-08-20",
+          "biddingDate": "2026-09-10",
           "winningContractor": null,
-          "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260148&gamenMode=0",
+          "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260177&gamenMode=0",
           "pdfUrl": null
         }
       },
       {
-        "priority": "high",
-        "ageDays": 24,
-        "reason": "開札日から24日経過",
+        "priority": "medium",
+        "ageDays": 3,
+        "reason": "落札済みだが落札者が空",
         "item": {
-          "id": "nara-pref-29001013060020260149",
-          "municipality": "奈良県",
-          "title": "奈良南高校（大淀学舎）トイレ環境改善整備工事 第８－１８号",
-          "status": "受付終了",
-          "announcementDate": "2026-07-22",
-          "biddingDate": "2026-08-21",
+          "id": "gojo-epi-2601041",
+          "municipality": "五條市",
+          "title": "奥谷老人憩の家屋根修繕工事",
+          "status": "落札",
+          "announcementDate": "2026-09-01",
+          "biddingDate": "2026-09-11",
           "winningContractor": null,
-          "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260149&gamenMode=0",
+          "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002601041",
           "pdfUrl": null
         }
       }
@@ -509,15 +509,15 @@
         "municipality": "奈良県",
         "status": "ok",
         "severity": "error",
-        "totalCount": 51,
+        "totalCount": 52,
         "requiredLinkIncludes": [
           "ppi.ebid-kouji-gyoumu.pref.nara.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "ppi.ebid-kouji-gyoumu.pref.nara.jp": 51
+          "ppi.ebid-kouji-gyoumu.pref.nara.jp": 52
         },
-        "message": "奈良県: 51件 (公告15/結果36) / sources OK"
+        "message": "奈良県: 52件 (公告8/結果44) / sources OK"
       },
       {
         "municipality": "奈良市",

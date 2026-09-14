@@ -1677,6 +1677,18 @@
     "isRelevant": false
   },
   {
+    "id": "nara-pref-29001013060020260196",
+    "municipality": "奈良県",
+    "title": "奈良商工高校トイレ環境改善整備工事 第８－２６号",
+    "type": "建築",
+    "announcementDate": "2026-09-03",
+    "biddingDate": "2026-10-05",
+    "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260196&gamenMode=0",
+    "status": "受付中",
+    "winnerType": "ゼネコン",
+    "isRelevant": true
+  },
+  {
     "id": "katsuragi-epi-4bcb90bd",
     "municipality": "葛城市",
     "title": "第8-101号 ストックマネジメント修繕改築計画に基づくマンホール蓋更新工事",
@@ -3944,7 +3956,7 @@
     "announcementDate": "2026-08-20",
     "biddingDate": "2026-09-10",
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260168&gamenMode=0",
-    "status": "受付中",
+    "status": "受付終了",
     "winnerType": "設計事務所",
     "isRelevant": true
   },
@@ -3956,7 +3968,7 @@
     "announcementDate": "2026-08-20",
     "biddingDate": "2026-09-10",
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260177&gamenMode=0",
-    "status": "受付中",
+    "status": "受付終了",
     "winnerType": "設計事務所",
     "isRelevant": true
   },
@@ -3968,7 +3980,7 @@
     "announcementDate": "2026-08-20",
     "biddingDate": "2026-09-10",
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260187&gamenMode=0",
-    "status": "受付中",
+    "status": "受付終了",
     "winnerType": "設計事務所",
     "isRelevant": false
   },
@@ -4265,7 +4277,7 @@
     "announcementDate": "2026-08-19",
     "biddingDate": "2026-09-11",
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260182&gamenMode=0",
-    "status": "受付中",
+    "status": "不調",
     "winnerType": "設計事務所",
     "isRelevant": true
   },
@@ -4277,7 +4289,7 @@
     "announcementDate": "2026-08-19",
     "biddingDate": "2026-09-11",
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260181&gamenMode=0",
-    "status": "受付中",
+    "status": "不調",
     "winnerType": "ゼネコン",
     "isRelevant": true
   },
@@ -4335,7 +4347,7 @@
     "announcementDate": "2026-08-18",
     "biddingDate": "2026-09-08",
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260169&gamenMode=0",
-    "status": "受付中",
+    "status": "受付終了",
     "winnerType": "設計事務所",
     "isRelevant": true
   },
@@ -4347,7 +4359,7 @@
     "announcementDate": "2026-08-18",
     "biddingDate": "2026-09-08",
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260171&gamenMode=0",
-    "status": "受付中",
+    "status": "不調",
     "winnerType": "設計事務所",
     "isRelevant": true
   },
@@ -4359,7 +4371,7 @@
     "announcementDate": "2026-08-18",
     "biddingDate": "2026-09-08",
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260172&gamenMode=0",
-    "status": "受付中",
+    "status": "受付終了",
     "winnerType": "設計事務所",
     "isRelevant": false
   },
@@ -4371,7 +4383,7 @@
     "announcementDate": "2026-08-18",
     "biddingDate": "2026-09-08",
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260173&gamenMode=0",
-    "status": "受付中",
+    "status": "不調",
     "winnerType": "設計事務所",
     "isRelevant": true
   },
@@ -6987,7 +6999,8 @@
     "announcementDate": "2026-07-22",
     "biddingDate": "2026-08-21",
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260136&gamenMode=0",
-    "status": "受付終了",
+    "status": "落札",
+    "winningContractor": "吉井建築事務所",
     "winnerType": "設計事務所",
     "isRelevant": true
   },
@@ -7012,7 +7025,8 @@
     "announcementDate": "2026-07-22",
     "biddingDate": "2026-08-21",
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260145&gamenMode=0",
-    "status": "受付終了",
+    "status": "落札",
+    "winningContractor": "松田電気工業株式会社",
     "winnerType": "ゼネコン",
     "isRelevant": true
   },
@@ -7037,7 +7051,8 @@
     "announcementDate": "2026-07-22",
     "biddingDate": "2026-08-21",
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260148&gamenMode=0",
-    "status": "受付終了",
+    "status": "落札",
+    "winningContractor": "株式会社岡本設備",
     "winnerType": "ゼネコン",
     "isRelevant": true
   },
@@ -7049,7 +7064,8 @@
     "announcementDate": "2026-07-22",
     "biddingDate": "2026-08-21",
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260149&gamenMode=0",
-    "status": "受付終了",
+    "status": "落札",
+    "winningContractor": "株式会社博電工業",
     "winnerType": "ゼネコン",
     "isRelevant": true
   },
