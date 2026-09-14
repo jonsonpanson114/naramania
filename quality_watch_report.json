@@ -1,21 +1,25 @@
 {
-  "generatedAt": "2026-09-11T11:03:44.343Z",
-  "qualityGeneratedAt": "2026-09-11T10:56:09.658Z",
+  "generatedAt": "2026-09-14T06:26:02.984Z",
+  "qualityGeneratedAt": "2026-09-14T06:18:46.618Z",
   "itemCount": 298,
   "resultFollowUp": {
-    "totalCount": 15,
+    "totalCount": 18,
     "highCount": 10,
-    "mediumCount": 3,
-    "lowCount": 2,
+    "mediumCount": 8,
+    "lowCount": 0,
     "missingBiddingDateCount": 0,
     "byMunicipality": [
       {
         "municipality": "奈良県",
-        "count": 12
+        "count": 14
       },
       {
         "municipality": "大淀町",
         "count": 2
+      },
+      {
+        "municipality": "五條市",
+        "count": 1
       },
       {
         "municipality": "奈良市",
@@ -25,7 +29,7 @@
     "samples": [
       {
         "priority": "high",
-        "ageDays": 143,
+        "ageDays": 146,
         "reason": "落札済みだが落札者が空",
         "item": {
           "id": "oyodo-79dc14038b",
@@ -41,8 +45,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 107,
-        "reason": "開札日から107日経過",
+        "ageDays": 110,
+        "reason": "開札日から110日経過",
         "item": {
           "id": "nara-city-0000002346",
           "municipality": "奈良市",
@@ -57,7 +61,7 @@
       },
       {
         "priority": "high",
-        "ageDays": 88,
+        "ageDays": 91,
         "reason": "落札済みだが落札者が空",
         "item": {
           "id": "oyodo-46ab50dbc8",
@@ -73,8 +77,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 85,
-        "reason": "開札日から85日経過",
+        "ageDays": 88,
+        "reason": "開札日から88日経過",
         "item": {
           "id": "nara-pref-29001013060020260055",
           "municipality": "奈良県",
@@ -89,8 +93,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 66,
-        "reason": "開札日から66日経過",
+        "ageDays": 69,
+        "reason": "開札日から69日経過",
         "item": {
           "id": "nara-pref-29005007060120260015",
           "municipality": "奈良県",
@@ -105,8 +109,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 56,
-        "reason": "開札日から56日経過",
+        "ageDays": 59,
+        "reason": "開札日から59日経過",
         "item": {
           "id": "nara-pref-29005007060120260018",
           "municipality": "奈良県",
@@ -121,8 +125,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 21,
-        "reason": "開札日から21日経過",
+        "ageDays": 24,
+        "reason": "開札日から24日経過",
         "item": {
           "id": "nara-pref-29001013060020260136",
           "municipality": "奈良県",
@@ -137,8 +141,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 21,
-        "reason": "開札日から21日経過",
+        "ageDays": 24,
+        "reason": "開札日から24日経過",
         "item": {
           "id": "nara-pref-29001013060020260145",
           "municipality": "奈良県",
@@ -153,8 +157,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 21,
-        "reason": "開札日から21日経過",
+        "ageDays": 24,
+        "reason": "開札日から24日経過",
         "item": {
           "id": "nara-pref-29001013060020260148",
           "municipality": "奈良県",
@@ -169,8 +173,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 21,
-        "reason": "開札日から21日経過",
+        "ageDays": 24,
+        "reason": "開札日から24日経過",
         "item": {
           "id": "nara-pref-29001013060020260149",
           "municipality": "奈良県",
@@ -356,7 +360,7 @@
             "id": "gojo-epi-2601041",
             "municipality": "五條市",
             "title": "奥谷老人憩の家屋根修繕工事",
-            "status": "受付中",
+            "status": "落札",
             "announcementDate": "2026-09-01",
             "biddingDate": "2026-09-11",
             "winningContractor": null,
@@ -469,9 +473,16 @@
   "dateIntegrity": {
     "announcementAfterBiddingCount": 0,
     "awardedWithoutBiddingDateCount": 0,
-    "awardedWithoutWinnerCount": 4,
+    "awardedWithoutWinnerCount": 5,
     "openWithWinnerCount": 0,
     "sampleTitles": [
+      {
+        "municipality": "五條市",
+        "title": "奥谷老人憩の家屋根修繕工事",
+        "status": "落札",
+        "announcementDate": "2026-09-01",
+        "biddingDate": "2026-09-11"
+      },
       {
         "municipality": "大淀町",
         "title": "大淀町立平畑運動公園体育館大規模改修工事に伴う実施設計業務【令和8年6月15日執行】 （pdf, 47.46KB）",
@@ -485,13 +496,6 @@
         "status": "落札",
         "announcementDate": "2026-04-21",
         "biddingDate": "2026-04-21"
-      },
-      {
-        "municipality": "大淀町",
-        "title": "マンホールトイレシステム築造工事（第7－総工3号）【令和8年1月16日執行】",
-        "status": "落札",
-        "announcementDate": "2026-01-16",
-        "biddingDate": "2026-01-16"
       }
     ]
   },
@@ -617,7 +621,7 @@
           "city.gojo.lg.jp": 4,
           "epi-cloud.fwd.ne.jp": 18
         },
-        "message": "五條市: 22件 (公告4/結果18) / sources OK"
+        "message": "五條市: 22件 (公告3/結果19) / sources OK"
       },
       {
         "municipality": "御所市",
