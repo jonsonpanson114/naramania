@@ -595,6 +595,16 @@
   ],
   "奈良市": [
     {
+      "id": "nara-city-0000002661",
+      "municipality": "奈良市",
+      "title": "史跡大安寺旧境内六条大路整備工事実施設計業務委託",
+      "type": "コンサル",
+      "announcementDate": "2026-09-15",
+      "biddingDate": "2026-10-21",
+      "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+      "status": "受付中"
+    },
+    {
       "id": "nara-city-0000002637",
       "municipality": "奈良市",
       "title": "本庁舎中央棟地下売店等内部改修工事",
@@ -1137,6 +1147,16 @@
     }
   ],
   "生駒市": [
+    {
+      "id": "ikoma-92153d1de8",
+      "municipality": "生駒市",
+      "title": "元町住宅２号室空家改修工事",
+      "type": "建築",
+      "announcementDate": "2026-09-15",
+      "biddingDate": "2026-10-02",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+      "status": "受付中"
+    },
     {
       "id": "ikoma-result-2601010064",
       "municipality": "生駒市",
@@ -1917,11 +1937,12 @@
       "municipality": "五條市",
       "title": "奥谷老人憩の家屋根修繕工事",
       "type": "建築",
-      "announcementDate": "2026-09-01",
+      "announcementDate": "2026-09-11",
       "biddingDate": "2026-09-11",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002601041",
       "status": "落札",
-      "estimatedPrice": "2,990,000円"
+      "winningContractor": "吉野塗装（株）",
+      "estimatedPrice": "2,705,000円"
     },
     {
       "id": "gojo-d18a21bd",
@@ -2574,7 +2595,7 @@
       "biddingDate": "2026-06-22",
       "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
       "status": "落札",
-      "winningContractor": "塚竜（株）"
+      "winningContractor": "塚竜(株)"
     },
     {
       "id": "tawaramoto-2026051803",

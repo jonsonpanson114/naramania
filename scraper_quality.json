@@ -1,38 +1,38 @@
 {
-  "generatedAt": "2026-09-14T14:19:42.779Z",
+  "generatedAt": "2026-09-15T06:20:29.203Z",
   "source": "daily_scrape",
   "municipalityLastScraped": {
-    "奈良市": "2026-09-14T12:07:18.017Z",
-    "橿原市": "2026-09-14T12:07:18.017Z",
-    "生駒市": "2026-09-14T12:07:18.017Z",
-    "大和高田市": "2026-09-14T12:07:18.017Z",
-    "大和郡山市": "2026-09-14T12:07:18.017Z",
-    "葛城市": "2026-09-14T12:07:18.017Z",
-    "五條市": "2026-09-14T12:07:18.017Z",
-    "御所市": "2026-09-14T12:07:18.017Z",
-    "天理市": "2026-09-14T12:07:18.017Z",
-    "桜井市": "2026-09-14T12:07:18.017Z",
-    "宇陀市": "2026-09-14T12:07:18.017Z",
-    "田原本町": "2026-09-14T12:07:18.017Z",
-    "広陵町": "2026-09-14T12:07:18.017Z",
-    "香芝市": "2026-09-14T12:07:18.017Z",
-    "川西町": "2026-09-14T12:07:18.017Z",
-    "山添村": "2026-09-14T12:07:18.017Z",
-    "平群町": "2026-09-14T12:07:18.017Z",
-    "三宅町": "2026-09-14T12:07:18.017Z",
-    "安堵町": "2026-09-14T12:07:18.017Z",
-    "高取町": "2026-09-14T12:07:18.017Z",
-    "斑鳩町": "2026-09-14T12:07:18.017Z",
-    "三郷町": "2026-09-14T12:07:18.017Z",
-    "王寺町": "2026-09-14T12:07:18.017Z",
-    "大淀町": "2026-09-14T12:07:18.017Z",
+    "奈良市": "2026-09-15T06:20:29.203Z",
+    "橿原市": "2026-09-15T06:20:29.203Z",
+    "生駒市": "2026-09-15T06:20:29.203Z",
+    "大和高田市": "2026-09-15T06:20:29.203Z",
+    "大和郡山市": "2026-09-15T06:20:29.203Z",
+    "葛城市": "2026-09-15T06:20:29.203Z",
+    "五條市": "2026-09-15T06:20:29.203Z",
+    "御所市": "2026-09-15T06:20:29.203Z",
+    "天理市": "2026-09-15T06:20:29.203Z",
+    "桜井市": "2026-09-15T06:20:29.203Z",
+    "宇陀市": "2026-09-15T06:20:29.203Z",
+    "田原本町": "2026-09-15T06:20:29.203Z",
+    "広陵町": "2026-09-15T06:20:29.203Z",
+    "香芝市": "2026-09-15T06:20:29.203Z",
+    "川西町": "2026-09-15T06:20:29.203Z",
+    "山添村": "2026-09-15T06:20:29.203Z",
+    "平群町": "2026-09-15T06:20:29.203Z",
+    "三宅町": "2026-09-15T06:20:29.203Z",
+    "安堵町": "2026-09-15T06:20:29.203Z",
+    "高取町": "2026-09-15T06:20:29.203Z",
+    "斑鳩町": "2026-09-15T06:20:29.203Z",
+    "三郷町": "2026-09-15T06:20:29.203Z",
+    "王寺町": "2026-09-15T06:20:29.203Z",
+    "大淀町": "2026-09-15T06:20:29.203Z",
     "奈良県": "2026-09-14T14:19:42.779Z"
   },
-  "scrapedCount": 54,
-  "keptCount": 300,
-  "rejectedCount": 2,
+  "scrapedCount": 2746,
+  "keptCount": 302,
+  "rejectedCount": 2473,
   "oldestAnnouncementDate": "2025-02-02",
-  "latestAnnouncementDate": "2026-09-14",
+  "latestAnnouncementDate": "2026-09-15",
   "municipalityCount": 24,
   "municipalityAudit": {
     "expectedMunicipalityCount": 25,
@@ -47,7 +47,7 @@
       {
         "municipality": "奈良県",
         "count": 52,
-        "changeFromPrevious": 1
+        "changeFromPrevious": 0
       },
       {
         "municipality": "橿原市",
@@ -65,12 +65,12 @@
         "changeFromPrevious": 0
       },
       {
-        "municipality": "五條市",
-        "count": 22,
-        "changeFromPrevious": 0
+        "municipality": "生駒市",
+        "count": 23,
+        "changeFromPrevious": 1
       },
       {
-        "municipality": "生駒市",
+        "municipality": "五條市",
         "count": 22,
         "changeFromPrevious": 0
       },
@@ -91,8 +91,8 @@
       },
       {
         "municipality": "奈良市",
-        "count": 11,
-        "changeFromPrevious": 0
+        "count": 12,
+        "changeFromPrevious": 1
       },
       {
         "municipality": "桜井市",
@@ -165,22 +165,28 @@
         "changeFromPrevious": 0
       }
     ],
-    "retainedFromPrevious": [],
-    "issues": []
+    "retainedFromPrevious": [
+      "高取町"
+    ],
+    "issues": [
+      {
+        "municipality": "高取町",
+        "level": "error",
+        "message": "[高取町] 公告PDFから案件名を抽出できませんでした: https://www.town.takatori.nara.jp/cmsfiles/contents/0000002/2674/chuiziko.pdf"
+      },
+      {
+        "municipality": "高取町",
+        "level": "warning",
+        "message": "[高取町] 部分取得エラーのため既存データ 25件を維持しています (new kept=17)"
+      }
+    ]
   },
   "dateAudit": {
     "announcementAfterBiddingCount": 0,
     "awardedWithoutBiddingDateCount": 0,
-    "awardedWithoutWinnerCount": 5,
+    "awardedWithoutWinnerCount": 4,
     "openWithWinnerCount": 0,
     "sampleTitles": [
-      {
-        "municipality": "五條市",
-        "title": "奥谷老人憩の家屋根修繕工事",
-        "status": "落札",
-        "announcementDate": "2026-09-01",
-        "biddingDate": "2026-09-11"
-      },
       {
         "municipality": "大淀町",
         "title": "大淀町立平畑運動公園体育館大規模改修工事に伴う実施設計業務【令和8年6月15日執行】 （pdf, 47.46KB）",
@@ -194,6 +200,13 @@
         "status": "落札",
         "announcementDate": "2026-04-21",
         "biddingDate": "2026-04-21"
+      },
+      {
+        "municipality": "大淀町",
+        "title": "マンホールトイレシステム築造工事（第7－総工3号）【令和8年1月16日執行】",
+        "status": "落札",
+        "announcementDate": "2026-01-16",
+        "biddingDate": "2026-01-16"
       }
     ]
   },
@@ -234,14 +247,14 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 11,
+        "totalCount": 12,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "nara.efftis.jp": 11
+          "nara.efftis.jp": 12
         },
-        "announcementCount": 3,
+        "announcementCount": 4,
         "resultCount": 8,
-        "message": "奈良市: 11件 (公告3/結果8) / sources OK"
+        "message": "奈良市: 12件 (公告4/結果8) / sources OK"
       },
       {
         "expectation": {
@@ -274,14 +287,14 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 22,
+        "totalCount": 23,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "epi-cloud.fwd.ne.jp": 22
+          "epi-cloud.fwd.ne.jp": 23
         },
-        "announcementCount": 0,
+        "announcementCount": 1,
         "resultCount": 22,
-        "message": "生駒市: 22件 (公告0/結果22) / sources OK"
+        "message": "生駒市: 23件 (公告1/結果22) / sources OK"
       },
       {
         "expectation": {
@@ -737,6 +750,7 @@
     "itemsWithDescription": 52,
     "intelligenceExtractedCount": 50,
     "geminiExtractedCount": 50,
-    "taggedCount": 50
+    "taggedCount": 50,
+    "lastAugmentedAt": "2026-09-15T06:21:56.768Z"
   }
 }

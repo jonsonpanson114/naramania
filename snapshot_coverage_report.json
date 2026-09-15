@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-14T14:19:50.872Z",
+  "generatedAt": "2026-09-15T06:27:49.564Z",
   "checkedMunicipalityCount": 24,
-  "expectedItemCount": 300,
-  "matchedItemCount": 300,
+  "expectedItemCount": 302,
+  "matchedItemCount": 302,
   "missingItemCount": 0,
   "duplicateTitleGroupCount": 23,
   "duplicateTitleItemCount": 50,
@@ -52,6 +52,17 @@
       "status": "ok"
     },
     {
+      "municipality": "生駒市",
+      "snapshotCount": 23,
+      "expectedCount": 23,
+      "matchedCount": 23,
+      "missingCount": 0,
+      "duplicateTitleGroupCount": 0,
+      "duplicateTitleItemCount": 0,
+      "missingItems": [],
+      "status": "ok"
+    },
+    {
       "municipality": "五條市",
       "snapshotCount": 22,
       "expectedCount": 22,
@@ -59,17 +70,6 @@
       "missingCount": 0,
       "duplicateTitleGroupCount": 2,
       "duplicateTitleItemCount": 5,
-      "missingItems": [],
-      "status": "ok"
-    },
-    {
-      "municipality": "生駒市",
-      "snapshotCount": 22,
-      "expectedCount": 22,
-      "matchedCount": 22,
-      "missingCount": 0,
-      "duplicateTitleGroupCount": 0,
-      "duplicateTitleItemCount": 0,
       "missingItems": [],
       "status": "ok"
     },
@@ -108,9 +108,9 @@
     },
     {
       "municipality": "奈良市",
-      "snapshotCount": 11,
-      "expectedCount": 11,
-      "matchedCount": 11,
+      "snapshotCount": 12,
+      "expectedCount": 12,
+      "matchedCount": 12,
       "missingCount": 0,
       "duplicateTitleGroupCount": 0,
       "duplicateTitleItemCount": 0,

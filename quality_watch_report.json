@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-09-14T14:19:47.068Z",
-  "qualityGeneratedAt": "2026-09-14T14:19:42.779Z",
-  "itemCount": 300,
+  "generatedAt": "2026-09-15T06:27:48.674Z",
+  "qualityGeneratedAt": "2026-09-15T06:20:29.203Z",
+  "itemCount": 302,
   "resultFollowUp": {
-    "totalCount": 10,
+    "totalCount": 9,
     "highCount": 6,
-    "mediumCount": 4,
+    "mediumCount": 3,
     "lowCount": 0,
     "missingBiddingDateCount": 0,
     "byMunicipality": [
@@ -18,10 +18,6 @@
         "count": 2
       },
       {
-        "municipality": "五條市",
-        "count": 1
-      },
-      {
         "municipality": "奈良市",
         "count": 1
       }
@@ -29,7 +25,7 @@
     "samples": [
       {
         "priority": "high",
-        "ageDays": 146,
+        "ageDays": 147,
         "reason": "落札済みだが落札者が空",
         "item": {
           "id": "oyodo-79dc14038b",
@@ -45,8 +41,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 110,
-        "reason": "開札日から110日経過",
+        "ageDays": 111,
+        "reason": "開札日から111日経過",
         "item": {
           "id": "nara-city-0000002346",
           "municipality": "奈良市",
@@ -61,7 +57,7 @@
       },
       {
         "priority": "high",
-        "ageDays": 91,
+        "ageDays": 92,
         "reason": "落札済みだが落札者が空",
         "item": {
           "id": "oyodo-46ab50dbc8",
@@ -77,8 +73,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 88,
-        "reason": "開札日から88日経過",
+        "ageDays": 89,
+        "reason": "開札日から89日経過",
         "item": {
           "id": "nara-pref-29001013060020260055",
           "municipality": "奈良県",
@@ -93,8 +89,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 69,
-        "reason": "開札日から69日経過",
+        "ageDays": 70,
+        "reason": "開札日から70日経過",
         "item": {
           "id": "nara-pref-29005007060120260015",
           "municipality": "奈良県",
@@ -109,8 +105,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 59,
-        "reason": "開札日から59日経過",
+        "ageDays": 60,
+        "reason": "開札日から60日経過",
         "item": {
           "id": "nara-pref-29005007060120260018",
           "municipality": "奈良県",
@@ -125,8 +121,8 @@
       },
       {
         "priority": "medium",
-        "ageDays": 6,
-        "reason": "開札日から6日経過",
+        "ageDays": 7,
+        "reason": "開札日から7日経過",
         "item": {
           "id": "nara-pref-29001013060020260169",
           "municipality": "奈良県",
@@ -141,8 +137,8 @@
       },
       {
         "priority": "medium",
-        "ageDays": 4,
-        "reason": "開札日から4日経過",
+        "ageDays": 5,
+        "reason": "開札日から5日経過",
         "item": {
           "id": "nara-pref-29001013060020260168",
           "municipality": "奈良県",
@@ -157,8 +153,8 @@
       },
       {
         "priority": "medium",
-        "ageDays": 4,
-        "reason": "開札日から4日経過",
+        "ageDays": 5,
+        "reason": "開札日から5日経過",
         "item": {
           "id": "nara-pref-29001013060020260177",
           "municipality": "奈良県",
@@ -168,22 +164,6 @@
           "biddingDate": "2026-09-10",
           "winningContractor": null,
           "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260177&gamenMode=0",
-          "pdfUrl": null
-        }
-      },
-      {
-        "priority": "medium",
-        "ageDays": 3,
-        "reason": "落札済みだが落札者が空",
-        "item": {
-          "id": "gojo-epi-2601041",
-          "municipality": "五條市",
-          "title": "奥谷老人憩の家屋根修繕工事",
-          "status": "落札",
-          "announcementDate": "2026-09-01",
-          "biddingDate": "2026-09-11",
-          "winningContractor": null,
-          "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002601041",
           "pdfUrl": null
         }
       }
@@ -361,9 +341,9 @@
             "municipality": "五條市",
             "title": "奥谷老人憩の家屋根修繕工事",
             "status": "落札",
-            "announcementDate": "2026-09-01",
+            "announcementDate": "2026-09-11",
             "biddingDate": "2026-09-11",
-            "winningContractor": null,
+            "winningContractor": "吉野塗装（株）",
             "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002601041",
             "pdfUrl": null
           },
@@ -473,16 +453,9 @@
   "dateIntegrity": {
     "announcementAfterBiddingCount": 0,
     "awardedWithoutBiddingDateCount": 0,
-    "awardedWithoutWinnerCount": 5,
+    "awardedWithoutWinnerCount": 4,
     "openWithWinnerCount": 0,
     "sampleTitles": [
-      {
-        "municipality": "五條市",
-        "title": "奥谷老人憩の家屋根修繕工事",
-        "status": "落札",
-        "announcementDate": "2026-09-01",
-        "biddingDate": "2026-09-11"
-      },
       {
         "municipality": "大淀町",
         "title": "大淀町立平畑運動公園体育館大規模改修工事に伴う実施設計業務【令和8年6月15日執行】 （pdf, 47.46KB）",
@@ -496,6 +469,13 @@
         "status": "落札",
         "announcementDate": "2026-04-21",
         "biddingDate": "2026-04-21"
+      },
+      {
+        "municipality": "大淀町",
+        "title": "マンホールトイレシステム築造工事（第7－総工3号）【令和8年1月16日執行】",
+        "status": "落札",
+        "announcementDate": "2026-01-16",
+        "biddingDate": "2026-01-16"
       }
     ]
   },
@@ -523,15 +503,15 @@
         "municipality": "奈良市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 11,
+        "totalCount": 12,
         "requiredLinkIncludes": [
           "nara.efftis.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "nara.efftis.jp": 11
+          "nara.efftis.jp": 12
         },
-        "message": "奈良市: 11件 (公告3/結果8) / sources OK"
+        "message": "奈良市: 12件 (公告4/結果8) / sources OK"
       },
       {
         "municipality": "橿原市",
@@ -551,15 +531,15 @@
         "municipality": "生駒市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 22,
+        "totalCount": 23,
         "requiredLinkIncludes": [
           "epi-cloud.fwd.ne.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "epi-cloud.fwd.ne.jp": 22
+          "epi-cloud.fwd.ne.jp": 23
         },
-        "message": "生駒市: 22件 (公告0/結果22) / sources OK"
+        "message": "生駒市: 23件 (公告1/結果22) / sources OK"
       },
       {
         "municipality": "大和高田市",
