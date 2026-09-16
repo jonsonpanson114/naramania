@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-16T11:18:33.961Z",
+  "generatedAt": "2026-09-16T22:17:34.622Z",
   "source": "daily_scrape",
   "municipalityLastScraped": {
     "奈良市": "2026-09-16T11:18:33.961Z",
@@ -26,13 +26,13 @@
     "三郷町": "2026-09-16T11:18:33.961Z",
     "王寺町": "2026-09-16T11:18:33.961Z",
     "大淀町": "2026-09-16T11:18:33.961Z",
-    "奈良県": "2026-09-14T14:19:42.779Z"
+    "奈良県": "2026-09-16T22:17:34.622Z"
   },
-  "scrapedCount": 2744,
-  "keptCount": 302,
-  "rejectedCount": 2472,
+  "scrapedCount": 54,
+  "keptCount": 304,
+  "rejectedCount": 0,
   "oldestAnnouncementDate": "2025-02-02",
-  "latestAnnouncementDate": "2026-09-15",
+  "latestAnnouncementDate": "2026-09-17",
   "municipalityCount": 24,
   "municipalityAudit": {
     "expectedMunicipalityCount": 25,
@@ -46,8 +46,8 @@
     "breakdown": [
       {
         "municipality": "奈良県",
-        "count": 52,
-        "changeFromPrevious": 0
+        "count": 54,
+        "changeFromPrevious": 2
       },
       {
         "municipality": "橿原市",
@@ -165,21 +165,8 @@
         "changeFromPrevious": 0
       }
     ],
-    "retainedFromPrevious": [
-      "高取町"
-    ],
-    "issues": [
-      {
-        "municipality": "高取町",
-        "level": "error",
-        "message": "[高取町] 公告PDFから案件名を抽出できませんでした: https://www.town.takatori.nara.jp/cmsfiles/contents/0000002/2674/chuiziko.pdf"
-      },
-      {
-        "municipality": "高取町",
-        "level": "warning",
-        "message": "[高取町] 部分取得エラーのため既存データ 25件を維持しています (new kept=16)"
-      }
-    ]
+    "retainedFromPrevious": [],
+    "issues": []
   },
   "dateAudit": {
     "announcementAfterBiddingCount": 0,
@@ -227,14 +214,14 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 52,
+        "totalCount": 54,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "ppi.ebid-kouji-gyoumu.pref.nara.jp": 52
+          "ppi.ebid-kouji-gyoumu.pref.nara.jp": 54
         },
-        "announcementCount": 8,
-        "resultCount": 44,
-        "message": "奈良県: 52件 (公告8/結果44) / sources OK"
+        "announcementCount": 7,
+        "resultCount": 47,
+        "message": "奈良県: 54件 (公告7/結果47) / sources OK"
       },
       {
         "expectation": {
@@ -750,7 +737,6 @@
     "itemsWithDescription": 52,
     "intelligenceExtractedCount": 50,
     "geminiExtractedCount": 50,
-    "taggedCount": 50,
-    "lastAugmentedAt": "2026-09-16T11:19:45.904Z"
+    "taggedCount": 50
   }
 }

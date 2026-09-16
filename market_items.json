@@ -24,6 +24,18 @@
     "isRelevant": false
   },
   {
+    "id": "nara-pref-29001013051020260142",
+    "municipality": "奈良県",
+    "title": "第Ｒ８Ａ１委１号 令和８年度 県営畑地帯総合整備事業 上庄・梨本地区 実施設計業務（その２）委託",
+    "type": "コンサル",
+    "announcementDate": "2026-09-17",
+    "biddingDate": "2026-10-15",
+    "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013051020260142&gamenMode=0",
+    "status": "受付中",
+    "winnerType": "設計事務所",
+    "isRelevant": true
+  },
+  {
     "id": "nara-city-0000002531",
     "municipality": "奈良市",
     "title": "梅の郷月ヶ瀬温泉ボイラー設備改修その他工事に伴う建築設計業務委託",
@@ -154,6 +166,18 @@
     "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
     "status": "不調",
     "isRelevant": false
+  },
+  {
+    "id": "nara-pref-29001013052520260089",
+    "municipality": "奈良県",
+    "title": "県営畑地帯総合整備事業 大宇陀政始北部地区 パイプライン実施設計業務委託 第Ｒ８Ｃ１委４号",
+    "type": "コンサル",
+    "announcementDate": "2026-09-16",
+    "biddingDate": "2026-10-06",
+    "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013052520260089&gamenMode=0",
+    "status": "受付中",
+    "winnerType": "設計事務所",
+    "isRelevant": true
   },
   {
     "id": "nara-city-0000002656",
@@ -4162,7 +4186,7 @@
     "announcementDate": "2026-08-20",
     "biddingDate": "2026-09-10",
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260168&gamenMode=0",
-    "status": "受付終了",
+    "status": "不調",
     "winnerType": "設計事務所",
     "isRelevant": true
   },
@@ -4174,7 +4198,7 @@
     "announcementDate": "2026-08-20",
     "biddingDate": "2026-09-10",
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260177&gamenMode=0",
-    "status": "受付終了",
+    "status": "不調",
     "winnerType": "設計事務所",
     "isRelevant": true
   },
@@ -4553,7 +4577,8 @@
     "announcementDate": "2026-08-18",
     "biddingDate": "2026-09-08",
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260169&gamenMode=0",
-    "status": "受付終了",
+    "status": "落札",
+    "winningContractor": "コンストラクションインベストメントマネジャーズ株式会社",
     "winnerType": "設計事務所",
     "isRelevant": true
   },

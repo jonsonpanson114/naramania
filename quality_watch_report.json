@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-09-16T11:26:04.709Z",
-  "qualityGeneratedAt": "2026-09-16T11:18:33.961Z",
-  "itemCount": 302,
+  "generatedAt": "2026-09-16T22:17:38.012Z",
+  "qualityGeneratedAt": "2026-09-16T22:17:34.622Z",
+  "itemCount": 304,
   "resultFollowUp": {
-    "totalCount": 9,
+    "totalCount": 6,
     "highCount": 6,
-    "mediumCount": 3,
+    "mediumCount": 0,
     "lowCount": 0,
     "missingBiddingDateCount": 0,
     "byMunicipality": [
       {
         "municipality": "奈良県",
-        "count": 6
+        "count": 3
       },
       {
         "municipality": "大淀町",
@@ -25,7 +25,7 @@
     "samples": [
       {
         "priority": "high",
-        "ageDays": 148,
+        "ageDays": 149,
         "reason": "落札済みだが落札者が空",
         "item": {
           "id": "oyodo-79dc14038b",
@@ -41,8 +41,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 112,
-        "reason": "開札日から112日経過",
+        "ageDays": 113,
+        "reason": "開札日から113日経過",
         "item": {
           "id": "nara-city-0000002346",
           "municipality": "奈良市",
@@ -57,7 +57,7 @@
       },
       {
         "priority": "high",
-        "ageDays": 93,
+        "ageDays": 94,
         "reason": "落札済みだが落札者が空",
         "item": {
           "id": "oyodo-46ab50dbc8",
@@ -73,8 +73,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 90,
-        "reason": "開札日から90日経過",
+        "ageDays": 91,
+        "reason": "開札日から91日経過",
         "item": {
           "id": "nara-pref-29001013060020260055",
           "municipality": "奈良県",
@@ -89,8 +89,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 71,
-        "reason": "開札日から71日経過",
+        "ageDays": 72,
+        "reason": "開札日から72日経過",
         "item": {
           "id": "nara-pref-29005007060120260015",
           "municipality": "奈良県",
@@ -105,8 +105,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 61,
-        "reason": "開札日から61日経過",
+        "ageDays": 62,
+        "reason": "開札日から62日経過",
         "item": {
           "id": "nara-pref-29005007060120260018",
           "municipality": "奈良県",
@@ -116,54 +116,6 @@
           "biddingDate": "2026-07-17",
           "winningContractor": null,
           "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29005007060120260018&gamenMode=0",
-          "pdfUrl": null
-        }
-      },
-      {
-        "priority": "medium",
-        "ageDays": 8,
-        "reason": "開札日から8日経過",
-        "item": {
-          "id": "nara-pref-29001013060020260169",
-          "municipality": "奈良県",
-          "title": "果樹・薬草研究所本館、加工展示施設及び農機用舎屋根・外壁改修工事設計業務 委（設）第８－１３号",
-          "status": "受付終了",
-          "announcementDate": "2026-08-18",
-          "biddingDate": "2026-09-08",
-          "winningContractor": null,
-          "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260169&gamenMode=0",
-          "pdfUrl": null
-        }
-      },
-      {
-        "priority": "medium",
-        "ageDays": 6,
-        "reason": "開札日から6日経過",
-        "item": {
-          "id": "nara-pref-29001013060020260168",
-          "municipality": "奈良県",
-          "title": "吉野保健所本館トイレ改修工事設計業務 委（設）第８－７号",
-          "status": "受付終了",
-          "announcementDate": "2026-08-20",
-          "biddingDate": "2026-09-10",
-          "winningContractor": null,
-          "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260168&gamenMode=0",
-          "pdfUrl": null
-        }
-      },
-      {
-        "priority": "medium",
-        "ageDays": 6,
-        "reason": "開札日から6日経過",
-        "item": {
-          "id": "nara-pref-29001013060020260177",
-          "municipality": "奈良県",
-          "title": "洞川エコミュージアムセンター本館及び屋外トイレ等屋根・外壁改修工事設計業務（自然環境整備交付金） 委（設）第８－６号",
-          "status": "受付終了",
-          "announcementDate": "2026-08-20",
-          "biddingDate": "2026-09-10",
-          "winningContractor": null,
-          "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260177&gamenMode=0",
           "pdfUrl": null
         }
       }
@@ -489,15 +441,15 @@
         "municipality": "奈良県",
         "status": "ok",
         "severity": "error",
-        "totalCount": 52,
+        "totalCount": 54,
         "requiredLinkIncludes": [
           "ppi.ebid-kouji-gyoumu.pref.nara.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "ppi.ebid-kouji-gyoumu.pref.nara.jp": 52
+          "ppi.ebid-kouji-gyoumu.pref.nara.jp": 54
         },
-        "message": "奈良県: 52件 (公告8/結果44) / sources OK"
+        "message": "奈良県: 54件 (公告7/結果47) / sources OK"
       },
       {
         "municipality": "奈良市",
