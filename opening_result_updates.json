@@ -1,45 +1,7 @@
 {
-  "generatedAt": "2026-09-16T22:17:34.603Z",
+  "generatedAt": "2026-09-16T23:56:29.902Z",
   "source": "daily_scrape",
-  "updates": [
-    {
-      "id": "nara-pref-29001013060020260177",
-      "municipality": "奈良県",
-      "title": "洞川エコミュージアムセンター本館及び屋外トイレ等屋根・外壁改修工事設計業務（自然環境整備交付金） 委（設）第８－６号",
-      "announcementDate": "2026-08-20",
-      "biddingDate": "2026-09-10",
-      "status": "不調",
-      "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260177&gamenMode=0",
-      "previousStatus": "受付終了",
-      "detectedAt": "2026-09-16T22:17:34.603Z",
-      "kind": "new_failure"
-    },
-    {
-      "id": "nara-pref-29001013060020260168",
-      "municipality": "奈良県",
-      "title": "吉野保健所本館トイレ改修工事設計業務 委（設）第８－７号",
-      "announcementDate": "2026-08-20",
-      "biddingDate": "2026-09-10",
-      "status": "不調",
-      "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260168&gamenMode=0",
-      "previousStatus": "受付終了",
-      "detectedAt": "2026-09-16T22:17:34.603Z",
-      "kind": "new_failure"
-    },
-    {
-      "id": "nara-pref-29001013060020260169",
-      "municipality": "奈良県",
-      "title": "果樹・薬草研究所本館、加工展示施設及び農機用舎屋根・外壁改修工事設計業務 委（設）第８－１３号",
-      "announcementDate": "2026-08-18",
-      "biddingDate": "2026-09-08",
-      "status": "落札",
-      "winningContractor": "コンストラクションインベストメントマネジャーズ株式会社",
-      "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260169&gamenMode=0",
-      "previousStatus": "受付終了",
-      "detectedAt": "2026-09-16T22:17:34.603Z",
-      "kind": "new_winner"
-    }
-  ],
+  "updates": [],
   "latestResults": [
     {
       "id": "nara-pref-29001013060020260182",
@@ -49,7 +11,7 @@
       "biddingDate": "2026-09-11",
       "status": "不調",
       "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260182&gamenMode=0",
-      "detectedAt": "2026-09-16T22:17:34.603Z",
+      "detectedAt": "2026-09-16T23:56:29.902Z",
       "kind": "new_failure"
     },
     {
@@ -60,7 +22,7 @@
       "biddingDate": "2026-09-11",
       "status": "不調",
       "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260181&gamenMode=0",
-      "detectedAt": "2026-09-16T22:17:34.603Z",
+      "detectedAt": "2026-09-16T23:56:29.902Z",
       "kind": "new_failure"
     },
     {
@@ -72,7 +34,7 @@
       "status": "落札",
       "winningContractor": "吉野塗装（株）",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002601041",
-      "detectedAt": "2026-09-16T22:17:34.603Z",
+      "detectedAt": "2026-09-16T23:56:29.902Z",
       "kind": "new_winner"
     },
     {
@@ -83,7 +45,7 @@
       "biddingDate": "2026-09-10",
       "status": "不調",
       "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260177&gamenMode=0",
-      "detectedAt": "2026-09-16T22:17:34.603Z",
+      "detectedAt": "2026-09-16T23:56:29.902Z",
       "kind": "new_failure"
     },
     {
@@ -94,7 +56,7 @@
       "biddingDate": "2026-09-10",
       "status": "不調",
       "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260168&gamenMode=0",
-      "detectedAt": "2026-09-16T22:17:34.603Z",
+      "detectedAt": "2026-09-16T23:56:29.902Z",
       "kind": "new_failure"
     },
     {
@@ -105,7 +67,7 @@
       "biddingDate": "2026-09-08",
       "status": "不調",
       "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260173&gamenMode=0",
-      "detectedAt": "2026-09-16T22:17:34.603Z",
+      "detectedAt": "2026-09-16T23:56:29.902Z",
       "kind": "new_failure"
     },
     {
@@ -116,7 +78,7 @@
       "biddingDate": "2026-09-08",
       "status": "不調",
       "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260171&gamenMode=0",
-      "detectedAt": "2026-09-16T22:17:34.603Z",
+      "detectedAt": "2026-09-16T23:56:29.902Z",
       "kind": "new_failure"
     },
     {
@@ -128,7 +90,7 @@
       "status": "落札",
       "winningContractor": "コンストラクションインベストメントマネジャーズ株式会社",
       "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260169&gamenMode=0",
-      "detectedAt": "2026-09-16T22:17:34.603Z",
+      "detectedAt": "2026-09-16T23:56:29.902Z",
       "kind": "new_winner"
     },
     {
@@ -140,7 +102,7 @@
       "status": "不調",
       "link": "https://www.town.miyake.lg.jp/soshiki/1/9376.html",
       "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5619.pdf",
-      "detectedAt": "2026-09-16T22:17:34.603Z",
+      "detectedAt": "2026-09-16T23:56:29.902Z",
       "kind": "new_failure"
     },
     {
@@ -153,7 +115,7 @@
       "winningContractor": "株式会社ゴセケン",
       "link": "https://www.town.miyake.lg.jp/soshiki/1/9375.html",
       "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5774.pdf",
-      "detectedAt": "2026-09-16T22:17:34.603Z",
+      "detectedAt": "2026-09-16T23:56:29.902Z",
       "kind": "new_winner"
     },
     {
@@ -166,7 +128,7 @@
       "winningContractor": "株式会社 礎建築事務所",
       "link": "https://www.town.miyake.lg.jp/soshiki/1/9376.html",
       "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5773.pdf",
-      "detectedAt": "2026-09-16T22:17:34.603Z",
+      "detectedAt": "2026-09-16T23:56:29.902Z",
       "kind": "new_winner"
     },
     {
@@ -179,7 +141,7 @@
       "winningContractor": "光栄工業",
       "link": "https://www.town.miyake.lg.jp/soshiki/1/9375.html",
       "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5616.pdf",
-      "detectedAt": "2026-09-16T22:17:34.603Z",
+      "detectedAt": "2026-09-16T23:56:29.902Z",
       "kind": "new_winner"
     }
   ]
