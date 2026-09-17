@@ -2618,7 +2618,7 @@
       "biddingDate": "2026-06-22",
       "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
       "status": "落札",
-      "winningContractor": "塚竜（株）"
+      "winningContractor": "塚竜(株)"
     },
     {
       "id": "tawaramoto-2026051803",
@@ -2629,7 +2629,7 @@
       "biddingDate": "2026-05-18",
       "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
       "status": "落札",
-      "winningContractor": "村本建設（株）奈良本店"
+      "winningContractor": "村本建設(株)奈良本店"
     }
   ],
   "広陵町": [
@@ -2823,7 +2823,7 @@
       "id": "山添村-山添村立小中学校建設工事における一般競争入札の結果について",
       "municipality": "山添村",
       "title": "山添村立小中学校建設工事",
-      "type": "建築",
+      "type": "委託",
       "announcementDate": "2025-08-08",
       "biddingDate": "2025-08-08",
       "link": "https://www.vill.yamazoe.nara.jp/life/news/25817",
@@ -2835,7 +2835,7 @@
       "id": "山添村-山添村立山添小中学校建設工事の一般競争入札について",
       "municipality": "山添村",
       "title": "山添村立山添小中学校建設工事",
-      "type": "建築",
+      "type": "委託",
       "announcementDate": "2025-07-01",
       "link": "https://www.vill.yamazoe.nara.jp/life/news/25298",
       "status": "受付中"
