@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-16T12:26:14.471Z",
-  "currentItemCount": 302,
+  "generatedAt": "2026-09-17T07:01:34.324Z",
+  "currentItemCount": 304,
   "checkedMunicipalities": [
     "奈良市",
     "橿原市",
@@ -106,9 +106,9 @@
     },
     {
       "municipality": "御所市",
-      "rawCount": 17,
+      "rawCount": 18,
       "keptCount": 2,
-      "rejectedCount": 15,
+      "rejectedCount": 16,
       "keptAnnouncementCount": 0,
       "keptResultCount": 2,
       "warnings": [],
@@ -166,9 +166,9 @@
     },
     {
       "municipality": "香芝市",
-      "rawCount": 118,
+      "rawCount": 117,
       "keptCount": 21,
-      "rejectedCount": 97,
+      "rejectedCount": 96,
       "keptAnnouncementCount": 5,
       "keptResultCount": 16,
       "warnings": [],
@@ -186,9 +186,9 @@
     },
     {
       "municipality": "山添村",
-      "rawCount": 3,
+      "rawCount": 4,
       "keptCount": 3,
-      "rejectedCount": 0,
+      "rejectedCount": 1,
       "keptAnnouncementCount": 2,
       "keptResultCount": 1,
       "warnings": [],
@@ -252,9 +252,9 @@
     },
     {
       "municipality": "三郷町",
-      "rawCount": 176,
+      "rawCount": 175,
       "keptCount": 9,
-      "rejectedCount": 167,
+      "rejectedCount": 166,
       "keptAnnouncementCount": 1,
       "keptResultCount": 8,
       "warnings": [],
@@ -346,7 +346,7 @@
       },
       {
         "municipality": "香芝市",
-        "snapshotCount": 118,
+        "snapshotCount": 117,
         "expectedCount": 21,
         "matchedCount": 21,
         "missingCount": 0,
@@ -401,7 +401,7 @@
       },
       {
         "municipality": "三郷町",
-        "snapshotCount": 176,
+        "snapshotCount": 175,
         "expectedCount": 9,
         "matchedCount": 9,
         "missingCount": 0,
@@ -467,7 +467,7 @@
       },
       {
         "municipality": "山添村",
-        "snapshotCount": 3,
+        "snapshotCount": 4,
         "expectedCount": 3,
         "matchedCount": 3,
         "missingCount": 0,
@@ -511,7 +511,7 @@
       },
       {
         "municipality": "御所市",
-        "snapshotCount": 17,
+        "snapshotCount": 18,
         "expectedCount": 2,
         "matchedCount": 2,
         "missingCount": 0,
