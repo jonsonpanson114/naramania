@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-17T11:20:08.697Z",
-  "totalRejected": 10662,
+  "generatedAt": "2026-09-18T06:01:37.116Z",
+  "totalRejected": 10674,
   "totalBorderlineRescued": 33,
   "byMunicipality": {
     "奈良市": {
@@ -20,7 +20,7 @@
       "borderlineRescued": 0
     },
     "大和郡山市": {
-      "rejected": 894,
+      "rejected": 876,
       "borderlineRescued": 0
     },
     "葛城市": {
@@ -28,7 +28,7 @@
       "borderlineRescued": 0
     },
     "五條市": {
-      "rejected": 984,
+      "rejected": 990,
       "borderlineRescued": 0
     },
     "御所市": {
@@ -40,7 +40,7 @@
       "borderlineRescued": 0
     },
     "桜井市": {
-      "rejected": 600,
+      "rejected": 612,
       "borderlineRescued": 0
     },
     "宇陀市": {
@@ -88,7 +88,7 @@
       "borderlineRescued": 0
     },
     "三郷町": {
-      "rejected": 696,
+      "rejected": 708,
       "borderlineRescued": 0
     },
     "王寺町": {
@@ -25939,82 +25939,34 @@
     },
     {
       "municipality": "大和郡山市",
-      "title": "九条公園プール更新工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大和郡山市",
-      "title": "九条公園プール更新工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大和郡山市",
-      "title": "道路舗装補修工事（山田町他）",
+      "title": "伊豆七条高野線ほか4路線道路改良工事（1工区）",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
-        "道路",
-        "舗装"
+        "道路"
       ]
     },
     {
       "municipality": "大和郡山市",
-      "title": "道路舗装補修工事（山田町他） ",
+      "title": "伊豆七条高野線ほか4路線道路改良工事（1工区） ",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
-        "道路",
-        "舗装"
+        "道路"
       ]
     },
     {
       "municipality": "大和郡山市",
-      "title": "コピー用紙購入単価契約",
+      "title": "伊豆七条高野線ほか4路線道路改良工事（2工区）",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
-        "購入",
-        "用紙"
+        "道路"
       ]
     },
     {
       "municipality": "大和郡山市",
-      "title": "コピー用紙購入単価契約 ",
+      "title": "伊豆七条高野線ほか4路線道路改良工事（2工区） ",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
-        "購入",
-        "用紙"
-      ]
-    },
-    {
-      "municipality": "大和郡山市",
-      "title": "大和中央道第2調整池法面防護工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "法面"
-      ]
-    },
-    {
-      "municipality": "大和郡山市",
-      "title": "大和中央道第2調整池法面防護工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "法面"
-      ]
-    },
-    {
-      "municipality": "大和郡山市",
-      "title": "公共下水道整備工事外川町（第1工区）その1、その2",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "大和郡山市",
-      "title": "公共下水道整備工事外川町（第1工区）その1、その2 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
+        "道路"
       ]
     },
     {
@@ -26091,6 +26043,70 @@
     },
     {
       "municipality": "大和郡山市",
+      "title": "九条公園プール更新工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "九条公園プール更新工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "道路舗装補修工事（山田町他）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "道路舗装補修工事（山田町他） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "コピー用紙購入単価契約",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入",
+        "用紙"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "コピー用紙購入単価契約 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入",
+        "用紙"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "大和中央道第2調整池法面防護工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "法面"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "大和中央道第2調整池法面防護工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "法面"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
       "title": "令和8年度 下半期ベール化ペットボトル売払単価",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -26128,72 +26144,6 @@
       "title": "大和郡山市雨水出水浸水想定区域図等作成業務委託 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
-    },
-    {
-      "municipality": "大和郡山市",
-      "title": "公共下水道整備工事丹後庄町（第1工区）その1、その2",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "大和郡山市",
-      "title": "公共下水道整備工事丹後庄町（第1工区）その1、その2 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "大和郡山市",
-      "title": "公共下水道整備工事下三橋町（第1工区）その1、その2",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "大和郡山市",
-      "title": "公共下水道整備工事下三橋町（第1工区）その1、その2 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "大和郡山市",
-      "title": "伊豆七条高野線ほか4路線道路改良工事（1工区）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "大和郡山市",
-      "title": "伊豆七条高野線ほか4路線道路改良工事（1工区） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "大和郡山市",
-      "title": "伊豆七条高野線ほか4路線道路改良工事（2工区）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "大和郡山市",
-      "title": "伊豆七条高野線ほか4路線道路改良工事（2工区） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
     },
     {
       "municipality": "大和郡山市",
@@ -28195,82 +28145,34 @@
     },
     {
       "municipality": "大和郡山市",
-      "title": "九条公園プール更新工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大和郡山市",
-      "title": "九条公園プール更新工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大和郡山市",
-      "title": "道路舗装補修工事（山田町他）",
+      "title": "伊豆七条高野線ほか4路線道路改良工事（1工区）",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
-        "道路",
-        "舗装"
+        "道路"
       ]
     },
     {
       "municipality": "大和郡山市",
-      "title": "道路舗装補修工事（山田町他） ",
+      "title": "伊豆七条高野線ほか4路線道路改良工事（1工区） ",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
-        "道路",
-        "舗装"
+        "道路"
       ]
     },
     {
       "municipality": "大和郡山市",
-      "title": "コピー用紙購入単価契約",
+      "title": "伊豆七条高野線ほか4路線道路改良工事（2工区）",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
-        "購入",
-        "用紙"
+        "道路"
       ]
     },
     {
       "municipality": "大和郡山市",
-      "title": "コピー用紙購入単価契約 ",
+      "title": "伊豆七条高野線ほか4路線道路改良工事（2工区） ",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
-        "購入",
-        "用紙"
-      ]
-    },
-    {
-      "municipality": "大和郡山市",
-      "title": "大和中央道第2調整池法面防護工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "法面"
-      ]
-    },
-    {
-      "municipality": "大和郡山市",
-      "title": "大和中央道第2調整池法面防護工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "法面"
-      ]
-    },
-    {
-      "municipality": "大和郡山市",
-      "title": "公共下水道整備工事外川町（第1工区）その1、その2",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "大和郡山市",
-      "title": "公共下水道整備工事外川町（第1工区）その1、その2 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
+        "道路"
       ]
     },
     {
@@ -28347,6 +28249,70 @@
     },
     {
       "municipality": "大和郡山市",
+      "title": "九条公園プール更新工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "九条公園プール更新工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "道路舗装補修工事（山田町他）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "道路舗装補修工事（山田町他） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "コピー用紙購入単価契約",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入",
+        "用紙"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "コピー用紙購入単価契約 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入",
+        "用紙"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "大和中央道第2調整池法面防護工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "法面"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "大和中央道第2調整池法面防護工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "法面"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
       "title": "令和8年度 下半期ベール化ペットボトル売払単価",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -28384,72 +28350,6 @@
       "title": "大和郡山市雨水出水浸水想定区域図等作成業務委託 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
-    },
-    {
-      "municipality": "大和郡山市",
-      "title": "公共下水道整備工事丹後庄町（第1工区）その1、その2",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "大和郡山市",
-      "title": "公共下水道整備工事丹後庄町（第1工区）その1、その2 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "大和郡山市",
-      "title": "公共下水道整備工事下三橋町（第1工区）その1、その2",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "大和郡山市",
-      "title": "公共下水道整備工事下三橋町（第1工区）その1、その2 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "大和郡山市",
-      "title": "伊豆七条高野線ほか4路線道路改良工事（1工区）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "大和郡山市",
-      "title": "伊豆七条高野線ほか4路線道路改良工事（1工区） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "大和郡山市",
-      "title": "伊豆七条高野線ほか4路線道路改良工事（2工区）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "大和郡山市",
-      "title": "伊豆七条高野線ほか4路線道路改良工事（2工区） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
     },
     {
       "municipality": "大和郡山市",
@@ -30451,82 +30351,34 @@
     },
     {
       "municipality": "大和郡山市",
-      "title": "九条公園プール更新工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大和郡山市",
-      "title": "九条公園プール更新工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大和郡山市",
-      "title": "道路舗装補修工事（山田町他）",
+      "title": "伊豆七条高野線ほか4路線道路改良工事（1工区）",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
-        "道路",
-        "舗装"
+        "道路"
       ]
     },
     {
       "municipality": "大和郡山市",
-      "title": "道路舗装補修工事（山田町他） ",
+      "title": "伊豆七条高野線ほか4路線道路改良工事（1工区） ",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
-        "道路",
-        "舗装"
+        "道路"
       ]
     },
     {
       "municipality": "大和郡山市",
-      "title": "コピー用紙購入単価契約",
+      "title": "伊豆七条高野線ほか4路線道路改良工事（2工区）",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
-        "購入",
-        "用紙"
+        "道路"
       ]
     },
     {
       "municipality": "大和郡山市",
-      "title": "コピー用紙購入単価契約 ",
+      "title": "伊豆七条高野線ほか4路線道路改良工事（2工区） ",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
-        "購入",
-        "用紙"
-      ]
-    },
-    {
-      "municipality": "大和郡山市",
-      "title": "大和中央道第2調整池法面防護工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "法面"
-      ]
-    },
-    {
-      "municipality": "大和郡山市",
-      "title": "大和中央道第2調整池法面防護工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "法面"
-      ]
-    },
-    {
-      "municipality": "大和郡山市",
-      "title": "公共下水道整備工事外川町（第1工区）その1、その2",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "大和郡山市",
-      "title": "公共下水道整備工事外川町（第1工区）その1、その2 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
+        "道路"
       ]
     },
     {
@@ -30603,6 +30455,70 @@
     },
     {
       "municipality": "大和郡山市",
+      "title": "九条公園プール更新工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "九条公園プール更新工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "道路舗装補修工事（山田町他）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "道路舗装補修工事（山田町他） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "コピー用紙購入単価契約",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入",
+        "用紙"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "コピー用紙購入単価契約 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入",
+        "用紙"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "大和中央道第2調整池法面防護工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "法面"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "大和中央道第2調整池法面防護工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "法面"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
       "title": "令和8年度 下半期ベール化ペットボトル売払単価",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -30640,72 +30556,6 @@
       "title": "大和郡山市雨水出水浸水想定区域図等作成業務委託 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
-    },
-    {
-      "municipality": "大和郡山市",
-      "title": "公共下水道整備工事丹後庄町（第1工区）その1、その2",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "大和郡山市",
-      "title": "公共下水道整備工事丹後庄町（第1工区）その1、その2 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "大和郡山市",
-      "title": "公共下水道整備工事下三橋町（第1工区）その1、その2",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "大和郡山市",
-      "title": "公共下水道整備工事下三橋町（第1工区）その1、その2 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "大和郡山市",
-      "title": "伊豆七条高野線ほか4路線道路改良工事（1工区）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "大和郡山市",
-      "title": "伊豆七条高野線ほか4路線道路改良工事（1工区） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "大和郡山市",
-      "title": "伊豆七条高野線ほか4路線道路改良工事（2工区）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "大和郡山市",
-      "title": "伊豆七条高野線ほか4路線道路改良工事（2工区） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
     },
     {
       "municipality": "大和郡山市",
@@ -42934,6 +42784,22 @@
       "title": "新庄第1健民運動場及び新町公園球技場芝生管理アドバイザー業務委託 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
+    },
+    {
+      "municipality": "五條市",
+      "title": "道路維持修繕工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "五條市",
+      "title": "道路維持修繕工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
     },
     {
       "municipality": "五條市",
@@ -45415,6 +45281,22 @@
     },
     {
       "municipality": "五條市",
+      "title": "道路維持修繕工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "五條市",
+      "title": "道路維持修繕工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "五條市",
       "title": "道路舗装工事",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -47870,6 +47752,22 @@
     {
       "municipality": "五條市",
       "title": "道路災害復旧工事（５災国補６８号） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "五條市",
+      "title": "道路維持修繕工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "五條市",
+      "title": "道路維持修繕工事 ",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
         "道路"
@@ -50759,6 +50657,58 @@
     },
     {
       "municipality": "桜井市",
+      "title": "【土改第2号】道路改良工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "桜井市",
+      "title": "【土改第2号】道路改良工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "桜井市",
+      "title": "【土維第13号】道路舗装補修工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "桜井市",
+      "title": "【土維第13号】道路舗装補修工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "桜井市",
+      "title": "【土維第12号】道路舗装補修工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "桜井市",
+      "title": "【土維第12号】道路舗装補修工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "桜井市",
       "title": "【土維第8号】道路維持修繕工事",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -51597,22 +51547,6 @@
       "reason": "exclusion_keyword",
       "matchedKeywords": [
         "下水道"
-      ]
-    },
-    {
-      "municipality": "桜井市",
-      "title": "【土改第2号】道路改良工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "桜井市",
-      "title": "【土改第2号】道路改良工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
       ]
     },
     {
@@ -52419,6 +52353,58 @@
     },
     {
       "municipality": "桜井市",
+      "title": "【土改第2号】道路改良工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "桜井市",
+      "title": "【土改第2号】道路改良工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "桜井市",
+      "title": "【土維第13号】道路舗装補修工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "桜井市",
+      "title": "【土維第13号】道路舗装補修工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "桜井市",
+      "title": "【土維第12号】道路舗装補修工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "桜井市",
+      "title": "【土維第12号】道路舗装補修工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "桜井市",
       "title": "【土維第8号】道路維持修繕工事",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -53257,22 +53243,6 @@
       "reason": "exclusion_keyword",
       "matchedKeywords": [
         "下水道"
-      ]
-    },
-    {
-      "municipality": "桜井市",
-      "title": "【土改第2号】道路改良工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "桜井市",
-      "title": "【土改第2号】道路改良工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
       ]
     },
     {
@@ -54079,6 +54049,58 @@
     },
     {
       "municipality": "桜井市",
+      "title": "【土改第2号】道路改良工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "桜井市",
+      "title": "【土改第2号】道路改良工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "桜井市",
+      "title": "【土維第13号】道路舗装補修工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "桜井市",
+      "title": "【土維第13号】道路舗装補修工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "桜井市",
+      "title": "【土維第12号】道路舗装補修工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "桜井市",
+      "title": "【土維第12号】道路舗装補修工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "桜井市",
       "title": "【土維第8号】道路維持修繕工事",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -54917,22 +54939,6 @@
       "reason": "exclusion_keyword",
       "matchedKeywords": [
         "下水道"
-      ]
-    },
-    {
-      "municipality": "桜井市",
-      "title": "【土改第2号】道路改良工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "桜井市",
-      "title": "【土改第2号】道路改良工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
       ]
     },
     {
@@ -71399,6 +71405,30 @@
     {
       "municipality": "三郷町",
       "title": "指名競争入札9月3日 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "指名競争入札9月17日",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "指名競争入札9月17日 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 城山台第2児童公園他樹木伐採業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 城山台第2児童公園他樹木伐採業務 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },
@@ -73098,6 +73128,30 @@
     },
     {
       "municipality": "三郷町",
+      "title": "指名競争入札9月17日",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "指名競争入札9月17日 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 城山台第2児童公園他樹木伐採業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 城山台第2児童公園他樹木伐採業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
       "title": "令和8年度 街路樹剪定業務（1工区）",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -74787,6 +74841,30 @@
     {
       "municipality": "三郷町",
       "title": "指名競争入札9月3日 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "指名競争入札9月17日",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "指名競争入札9月17日 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 城山台第2児童公園他樹木伐採業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 城山台第2児童公園他樹木伐採業務 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },

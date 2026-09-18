@@ -2618,7 +2618,7 @@
       "biddingDate": "2026-06-22",
       "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
       "status": "落札",
-      "winningContractor": "塚竜(株)"
+      "winningContractor": "塚竜（株）"
     },
     {
       "id": "tawaramoto-2026051803",
@@ -3184,7 +3184,8 @@
       "announcementDate": "2026-09-02",
       "biddingDate": "2026-09-17",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0660064007200640",
-      "status": "受付中"
+      "status": "落札",
+      "winningContractor": "株式会社ふくろ工房"
     },
     {
       "id": "sango-epi-5Luk5ZKMOOW5",
@@ -3209,6 +3210,17 @@
     }
   ],
   "大淀町": [
+    {
+      "id": "oyodo-5pen5aSn5reA",
+      "municipality": "大淀町",
+      "title": "旧大淀町立第一保育所解体工事に伴う設計業務",
+      "type": "コンサル",
+      "announcementDate": "2026-09-18",
+      "description": "大淀町　桧垣本　地内",
+      "link": "https://www.town.oyodo.lg.jp/./cmsfiles/contents/0000000/218/nyusatsu_setsumei_080918.pdf",
+      "pdfUrl": "https://www.town.oyodo.lg.jp/./cmsfiles/contents/0000000/218/nyusatsu_setsumei_080918.pdf",
+      "status": "受付中"
+    },
     {
       "id": "oyodo-5Luk5ZKMOOW5",
       "municipality": "大淀町",
