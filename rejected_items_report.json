@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-18T06:01:37.116Z",
-  "totalRejected": 10674,
+  "generatedAt": "2026-09-18T10:54:43.568Z",
+  "totalRejected": 10656,
   "totalBorderlineRescued": 33,
   "byMunicipality": {
     "奈良市": {
@@ -16,7 +16,7 @@
       "borderlineRescued": 6
     },
     "大和高田市": {
-      "rejected": 906,
+      "rejected": 882,
       "borderlineRescued": 0
     },
     "大和郡山市": {
@@ -76,7 +76,7 @@
       "borderlineRescued": 3
     },
     "安堵町": {
-      "rejected": 12,
+      "rejected": 18,
       "borderlineRescued": 6
     },
     "高取町": {
@@ -19543,90 +19543,6 @@
     },
     {
       "municipality": "大和高田市",
-      "title": "曽6枝根成柿地内管渠工事（2）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "曽6枝根成柿地内管渠工事（2） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "土枝土庫2丁目地内管渠工事（3）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "土枝土庫2丁目地内管渠工事（3） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "高5枝東中2丁目地内管渠工事（5）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "高5枝東中2丁目地内管渠工事（5） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "高107号線舗装維持工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "高107号線舗装維持工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "高515号線舗装維持工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "高515号線舗装維持工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "令和8年度区画線等設置工事（単価契約）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "区画線"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "令和8年度区画線等設置工事（単価契約） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "区画線"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
       "title": "特定空家等解体除却工事（再度）",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -19636,6 +19552,22 @@
       "title": "特定空家等解体除却工事（再度） ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "令和8年度大和高田当麻線歩道・水路整備工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "水路"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "令和8年度大和高田当麻線歩道・水路整備工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "水路"
+      ]
     },
     {
       "municipality": "大和高田市",
@@ -19740,6 +19672,22 @@
       "title": "高田千本桜大中公園周辺他川沿いの桜剪定伐採管理業務 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "令和８年度大和高田当麻線歩道・水路整備工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "水路"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "令和８年度大和高田当麻線歩道・水路整備工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "水路"
+      ]
     },
     {
       "municipality": "大和高田市",
@@ -21675,90 +21623,6 @@
     },
     {
       "municipality": "大和高田市",
-      "title": "曽6枝根成柿地内管渠工事（2）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "曽6枝根成柿地内管渠工事（2） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "土枝土庫2丁目地内管渠工事（3）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "土枝土庫2丁目地内管渠工事（3） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "高5枝東中2丁目地内管渠工事（5）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "高5枝東中2丁目地内管渠工事（5） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "高107号線舗装維持工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "高107号線舗装維持工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "高515号線舗装維持工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "高515号線舗装維持工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "令和8年度区画線等設置工事（単価契約）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "区画線"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "令和8年度区画線等設置工事（単価契約） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "区画線"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
       "title": "特定空家等解体除却工事（再度）",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -21768,6 +21632,22 @@
       "title": "特定空家等解体除却工事（再度） ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "令和8年度大和高田当麻線歩道・水路整備工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "水路"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "令和8年度大和高田当麻線歩道・水路整備工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "水路"
+      ]
     },
     {
       "municipality": "大和高田市",
@@ -21872,6 +21752,22 @@
       "title": "高田千本桜大中公園周辺他川沿いの桜剪定伐採管理業務 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "令和８年度大和高田当麻線歩道・水路整備工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "水路"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "令和８年度大和高田当麻線歩道・水路整備工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "水路"
+      ]
     },
     {
       "municipality": "大和高田市",
@@ -23807,90 +23703,6 @@
     },
     {
       "municipality": "大和高田市",
-      "title": "曽6枝根成柿地内管渠工事（2）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "曽6枝根成柿地内管渠工事（2） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "土枝土庫2丁目地内管渠工事（3）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "土枝土庫2丁目地内管渠工事（3） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "高5枝東中2丁目地内管渠工事（5）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "高5枝東中2丁目地内管渠工事（5） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "高107号線舗装維持工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "高107号線舗装維持工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "高515号線舗装維持工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "高515号線舗装維持工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "令和8年度区画線等設置工事（単価契約）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "区画線"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
-      "title": "令和8年度区画線等設置工事（単価契約） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "区画線"
-      ]
-    },
-    {
-      "municipality": "大和高田市",
       "title": "特定空家等解体除却工事（再度）",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -23900,6 +23712,22 @@
       "title": "特定空家等解体除却工事（再度） ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "令和8年度大和高田当麻線歩道・水路整備工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "水路"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "令和8年度大和高田当麻線歩道・水路整備工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "水路"
+      ]
     },
     {
       "municipality": "大和高田市",
@@ -24004,6 +23832,22 @@
       "title": "高田千本桜大中公園周辺他川沿いの桜剪定伐採管理業務 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "令和８年度大和高田当麻線歩道・水路整備工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "水路"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "令和８年度大和高田当麻線歩道・水路整備工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "水路"
+      ]
     },
     {
       "municipality": "大和高田市",
@@ -68136,6 +67980,24 @@
       "matchedKeywords": [
         "測量",
         "用地"
+      ]
+    },
+    {
+      "municipality": "安堵町",
+      "title": "安堵町庁内ネットワークサーバー機器等機器調達事業の条件付き一般競争入札の実施について",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "サーバー",
+        "調達"
+      ]
+    },
+    {
+      "municipality": "安堵町",
+      "title": "安堵町庁内ネットワークサーバー機器等機器調達事業の条件付き一般競争入札の実施について ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "サーバー",
+        "調達"
       ]
     },
     {
@@ -68190,6 +68052,24 @@
     },
     {
       "municipality": "安堵町",
+      "title": "安堵町庁内ネットワークサーバー機器等機器調達事業の条件付き一般競争入札の実施について",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "サーバー",
+        "調達"
+      ]
+    },
+    {
+      "municipality": "安堵町",
+      "title": "安堵町庁内ネットワークサーバー機器等機器調達事業の条件付き一般競争入札の実施について ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "サーバー",
+        "調達"
+      ]
+    },
+    {
+      "municipality": "安堵町",
       "title": "安堵こども園南館外壁改修、トイレ乾式化および洋式化改修工事",
       "reason": "always_exclude_keyword",
       "matchedKeywords": [
@@ -68237,6 +68117,24 @@
         "外壁改修"
       ],
       "borderlineRescue": true
+    },
+    {
+      "municipality": "安堵町",
+      "title": "安堵町庁内ネットワークサーバー機器等機器調達事業の条件付き一般競争入札の実施について",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "サーバー",
+        "調達"
+      ]
+    },
+    {
+      "municipality": "安堵町",
+      "title": "安堵町庁内ネットワークサーバー機器等機器調達事業の条件付き一般競争入札の実施について ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "サーバー",
+        "調達"
+      ]
     },
     {
       "municipality": "安堵町",
