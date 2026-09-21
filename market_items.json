@@ -2015,19 +2015,6 @@
     "isRelevant": false
   },
   {
-    "id": "nara-city-0000002594",
-    "municipality": "奈良市",
-    "title": "灰汚水処理装置点検整備補修",
-    "type": "建築",
-    "announcementDate": "2026-09-04",
-    "biddingDate": "2026-09-04",
-    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-    "status": "落札",
-    "winningContractor": "カナデビア株式会社",
-    "winnerType": "ゼネコン",
-    "isRelevant": false
-  },
-  {
     "id": "oji-ffe0646cd8",
     "municipality": "王寺町",
     "title": "やわらぎ会館改修工事（7月）",
@@ -2696,19 +2683,6 @@
     "announcementDate": "2026-09-01",
     "link": "",
     "status": "受付中",
-    "isRelevant": false
-  },
-  {
-    "id": "nara-city-0000002606",
-    "municipality": "奈良市",
-    "title": "奈良市写真美術館軒裏改修工事",
-    "type": "建築",
-    "announcementDate": "2026-09-01",
-    "biddingDate": "2026-09-01",
-    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-    "status": "落札",
-    "winningContractor": "株式会社広成",
-    "winnerType": "ゼネコン",
     "isRelevant": false
   },
   {
@@ -6358,6 +6332,28 @@
     "pdfUrl": "https://www.town.takatori.nara.jp/cmsfiles/contents/0000002/2665/R8.8.3.pdf",
     "status": "受付中",
     "isRelevant": true
+  },
+  {
+    "id": "nara-city-0000002594",
+    "municipality": "奈良市",
+    "title": "灰汚水処理装置点検整備補修",
+    "type": "建築",
+    "announcementDate": "2026-08-03",
+    "biddingDate": "2026-09-04",
+    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
+    "id": "nara-city-0000002606",
+    "municipality": "奈良市",
+    "title": "奈良市写真美術館軒裏改修工事",
+    "type": "建築",
+    "announcementDate": "2026-08-03",
+    "biddingDate": "2026-09-01",
+    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+    "status": "受付中",
+    "isRelevant": false
   },
   {
     "id": "sakurai-2026-08-03-水路浚渫工事",

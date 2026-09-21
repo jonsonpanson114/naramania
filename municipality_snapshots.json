@@ -648,6 +648,18 @@
       "status": "受付中"
     },
     {
+      "id": "nara-city-0000002593",
+      "municipality": "奈良市",
+      "title": "庁舎中央棟地下書庫内部改修に伴う建築設計業務委託",
+      "type": "コンサル",
+      "announcementDate": "2026-08-27",
+      "biddingDate": "2026-08-27",
+      "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+      "status": "落札",
+      "winningContractor": "岡田建築設計事務所",
+      "winnerType": "設計事務所"
+    },
+    {
       "id": "nara-city-0000002571",
       "municipality": "奈良市",
       "title": "環境清美センター焼却炉棟防火戸改修その他工事",
@@ -672,23 +684,11 @@
       "winnerType": "ゼネコン"
     },
     {
-      "id": "nara-city-0000002593",
-      "municipality": "奈良市",
-      "title": "庁舎中央棟地下書庫内部改修に伴う建築設計業務委託",
-      "type": "コンサル",
-      "announcementDate": "2026-07-15",
-      "biddingDate": "2026-08-27",
-      "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-      "status": "落札",
-      "winningContractor": "岡田建築設計事務所",
-      "winnerType": "設計事務所"
-    },
-    {
       "id": "nara-city-0000002440",
       "municipality": "奈良市",
       "title": "佐保バンビーホーム新築に伴う建築設計業務委託",
       "type": "コンサル",
-      "announcementDate": "2026-05-01",
+      "announcementDate": "2026-06-04",
       "biddingDate": "2026-06-04",
       "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
       "status": "落札",
@@ -696,11 +696,47 @@
       "winnerType": "ゼネコン"
     },
     {
+      "id": "nara-city-0000002349",
+      "municipality": "奈良市",
+      "title": "南部生涯スポーツセンタートイレ改修に伴う建築設計業務委託",
+      "type": "コンサル",
+      "announcementDate": "2026-05-27",
+      "biddingDate": "2026-05-27",
+      "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+      "status": "落札",
+      "winningContractor": "株式会社システムクリエイト",
+      "winnerType": "ゼネコン"
+    },
+    {
+      "id": "nara-city-0000002348",
+      "municipality": "奈良市",
+      "title": "鴻ノ池コートトイレ改修に伴う建築設計業務委託",
+      "type": "コンサル",
+      "announcementDate": "2026-05-27",
+      "biddingDate": "2026-05-27",
+      "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+      "status": "落札",
+      "winningContractor": "株式会社建綜研",
+      "winnerType": "ゼネコン"
+    },
+    {
+      "id": "nara-city-0000002347",
+      "municipality": "奈良市",
+      "title": "西部生涯スポーツセンタートイレ改修に伴う建築設計業務委託",
+      "type": "コンサル",
+      "announcementDate": "2026-05-27",
+      "biddingDate": "2026-05-27",
+      "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+      "status": "落札",
+      "winningContractor": "岡田建築設計事務所",
+      "winnerType": "設計事務所"
+    },
+    {
       "id": "nara-city-0000002345",
       "municipality": "奈良市",
       "title": "第１０号市営住宅解体工事に伴う建築設計業務委託",
       "type": "コンサル",
-      "announcementDate": "2026-04-15",
+      "announcementDate": "2026-05-27",
       "biddingDate": "2026-05-27",
       "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
       "status": "落札",
@@ -716,42 +752,6 @@
       "biddingDate": "2026-05-27",
       "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
       "status": "受付終了"
-    },
-    {
-      "id": "nara-city-0000002347",
-      "municipality": "奈良市",
-      "title": "西部生涯スポーツセンタートイレ改修に伴う建築設計業務委託",
-      "type": "コンサル",
-      "announcementDate": "2026-04-15",
-      "biddingDate": "2026-05-27",
-      "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-      "status": "落札",
-      "winningContractor": "岡田建築設計事務所",
-      "winnerType": "設計事務所"
-    },
-    {
-      "id": "nara-city-0000002348",
-      "municipality": "奈良市",
-      "title": "鴻ノ池コートトイレ改修に伴う建築設計業務委託",
-      "type": "コンサル",
-      "announcementDate": "2026-04-15",
-      "biddingDate": "2026-05-27",
-      "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-      "status": "落札",
-      "winningContractor": "株式会社建綜研",
-      "winnerType": "ゼネコン"
-    },
-    {
-      "id": "nara-city-0000002349",
-      "municipality": "奈良市",
-      "title": "南部生涯スポーツセンタートイレ改修に伴う建築設計業務委託",
-      "type": "コンサル",
-      "announcementDate": "2026-04-15",
-      "biddingDate": "2026-05-27",
-      "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-      "status": "落札",
-      "winningContractor": "株式会社システムクリエイト",
-      "winnerType": "ゼネコン"
     }
   ],
   "橿原市": [
