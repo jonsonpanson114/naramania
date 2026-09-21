@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-09-18T11:01:29.807Z",
+  "generatedAt": "2026-09-21T06:26:11.042Z",
   "checkedMunicipalityCount": 24,
-  "expectedItemCount": 305,
-  "matchedItemCount": 305,
+  "expectedItemCount": 303,
+  "matchedItemCount": 303,
   "missingItemCount": 0,
   "duplicateTitleGroupCount": 23,
-  "duplicateTitleItemCount": 50,
+  "duplicateTitleItemCount": 49,
   "results": [
     {
       "municipality": "奈良県",
@@ -64,12 +64,12 @@
     },
     {
       "municipality": "五條市",
-      "snapshotCount": 22,
-      "expectedCount": 22,
-      "matchedCount": 22,
+      "snapshotCount": 21,
+      "expectedCount": 21,
+      "matchedCount": 21,
       "missingCount": 0,
       "duplicateTitleGroupCount": 2,
-      "duplicateTitleItemCount": 5,
+      "duplicateTitleItemCount": 4,
       "missingItems": [],
       "status": "ok"
     },
@@ -206,17 +206,6 @@
       "status": "ok"
     },
     {
-      "municipality": "田原本町",
-      "snapshotCount": 3,
-      "expectedCount": 3,
-      "matchedCount": 3,
-      "missingCount": 0,
-      "duplicateTitleGroupCount": 0,
-      "duplicateTitleItemCount": 0,
-      "missingItems": [],
-      "status": "ok"
-    },
-    {
       "municipality": "安堵町",
       "snapshotCount": 2,
       "expectedCount": 2,
@@ -240,6 +229,17 @@
     },
     {
       "municipality": "御所市",
+      "snapshotCount": 2,
+      "expectedCount": 2,
+      "matchedCount": 2,
+      "missingCount": 0,
+      "duplicateTitleGroupCount": 0,
+      "duplicateTitleItemCount": 0,
+      "missingItems": [],
+      "status": "ok"
+    },
+    {
+      "municipality": "田原本町",
       "snapshotCount": 2,
       "expectedCount": 2,
       "matchedCount": 2,
