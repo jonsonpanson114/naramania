@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-22T06:59:43.123Z",
+  "generatedAt": "2026-09-22T09:40:07.526Z",
   "currentItemCount": 304,
   "checkedMunicipalities": [
     "奈良市",
@@ -36,14 +36,12 @@
   "scraperResults": [
     {
       "municipality": "奈良市",
-      "rawCount": 47,
-      "keptCount": 8,
-      "rejectedCount": 39,
-      "keptAnnouncementCount": 8,
+      "rawCount": 0,
+      "keptCount": 0,
+      "rejectedCount": 0,
+      "keptAnnouncementCount": 0,
       "keptResultCount": 0,
-      "warnings": [
-        "奈良市: 取得47件に落札結果が1件もありません。入札結果(開札情報)ページを見落としていないか確認が必要です。"
-      ],
+      "warnings": [],
       "errors": []
     },
     {
@@ -155,11 +153,11 @@
     },
     {
       "municipality": "田原本町",
-      "rawCount": 41,
-      "keptCount": 1,
-      "rejectedCount": 40,
+      "rawCount": 22,
+      "keptCount": 2,
+      "rejectedCount": 20,
       "keptAnnouncementCount": 0,
-      "keptResultCount": 1,
+      "keptResultCount": 2,
       "warnings": [],
       "errors": []
     },
@@ -292,8 +290,8 @@
   ],
   "coverage": {
     "checkedMunicipalityCount": 24,
-    "expectedItemCount": 165,
-    "matchedItemCount": 165,
+    "expectedItemCount": 158,
+    "matchedItemCount": 158,
     "missingItemCount": 0,
     "duplicateTitleGroupCount": 12,
     "duplicateTitleItemCount": 25,
@@ -369,17 +367,6 @@
         "snapshotCount": 137,
         "expectedCount": 9,
         "matchedCount": 9,
-        "missingCount": 0,
-        "duplicateTitleGroupCount": 0,
-        "duplicateTitleItemCount": 0,
-        "missingItems": [],
-        "status": "ok"
-      },
-      {
-        "municipality": "奈良市",
-        "snapshotCount": 47,
-        "expectedCount": 8,
-        "matchedCount": 8,
         "missingCount": 0,
         "duplicateTitleGroupCount": 0,
         "duplicateTitleItemCount": 0,
@@ -486,6 +473,17 @@
         "status": "ok"
       },
       {
+        "municipality": "田原本町",
+        "snapshotCount": 22,
+        "expectedCount": 2,
+        "matchedCount": 2,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 0,
+        "duplicateTitleItemCount": 0,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
         "municipality": "斑鳩町",
         "snapshotCount": 48,
         "expectedCount": 2,
@@ -501,17 +499,6 @@
         "snapshotCount": 31,
         "expectedCount": 2,
         "matchedCount": 2,
-        "missingCount": 0,
-        "duplicateTitleGroupCount": 0,
-        "duplicateTitleItemCount": 0,
-        "missingItems": [],
-        "status": "ok"
-      },
-      {
-        "municipality": "田原本町",
-        "snapshotCount": 41,
-        "expectedCount": 1,
-        "matchedCount": 1,
         "missingCount": 0,
         "duplicateTitleGroupCount": 0,
         "duplicateTitleItemCount": 0,
@@ -554,6 +541,17 @@
       {
         "municipality": "大和高田市",
         "snapshotCount": 18,
+        "expectedCount": 0,
+        "matchedCount": 0,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 0,
+        "duplicateTitleItemCount": 0,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
+        "municipality": "奈良市",
+        "snapshotCount": 0,
         "expectedCount": 0,
         "matchedCount": 0,
         "missingCount": 0,
