@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-21T12:21:41.553Z",
+  "generatedAt": "2026-09-22T06:24:01.711Z",
   "checkedMunicipalityCount": 24,
-  "expectedItemCount": 303,
-  "matchedItemCount": 303,
+  "expectedItemCount": 304,
+  "matchedItemCount": 304,
   "missingItemCount": 0,
   "duplicateTitleGroupCount": 23,
   "duplicateTitleItemCount": 49,
@@ -206,6 +206,17 @@
       "status": "ok"
     },
     {
+      "municipality": "田原本町",
+      "snapshotCount": 3,
+      "expectedCount": 3,
+      "matchedCount": 3,
+      "missingCount": 0,
+      "duplicateTitleGroupCount": 0,
+      "duplicateTitleItemCount": 0,
+      "missingItems": [],
+      "status": "ok"
+    },
+    {
       "municipality": "安堵町",
       "snapshotCount": 2,
       "expectedCount": 2,
@@ -229,17 +240,6 @@
     },
     {
       "municipality": "御所市",
-      "snapshotCount": 2,
-      "expectedCount": 2,
-      "matchedCount": 2,
-      "missingCount": 0,
-      "duplicateTitleGroupCount": 0,
-      "duplicateTitleItemCount": 0,
-      "missingItems": [],
-      "status": "ok"
-    },
-    {
-      "municipality": "田原本町",
       "snapshotCount": 2,
       "expectedCount": 2,
       "matchedCount": 2,
