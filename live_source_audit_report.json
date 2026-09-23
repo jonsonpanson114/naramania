@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-23T06:48:29.657Z",
+  "generatedAt": "2026-09-23T09:51:23.612Z",
   "currentItemCount": 306,
   "checkedMunicipalities": [
     "奈良市",
@@ -36,12 +36,14 @@
   "scraperResults": [
     {
       "municipality": "奈良市",
-      "rawCount": 0,
-      "keptCount": 0,
-      "rejectedCount": 0,
+      "rawCount": 43,
+      "keptCount": 6,
+      "rejectedCount": 37,
       "keptAnnouncementCount": 0,
-      "keptResultCount": 0,
-      "warnings": [],
+      "keptResultCount": 6,
+      "warnings": [
+        "奈良市: 取得43件がすべて開札済みです。入札公告(入札情報)ページを見落としていないか確認が必要です。"
+      ],
       "errors": []
     },
     {
@@ -153,11 +155,11 @@
     },
     {
       "municipality": "田原本町",
-      "rawCount": 0,
-      "keptCount": 0,
-      "rejectedCount": 0,
+      "rawCount": 41,
+      "keptCount": 1,
+      "rejectedCount": 40,
       "keptAnnouncementCount": 0,
-      "keptResultCount": 0,
+      "keptResultCount": 1,
       "warnings": [],
       "errors": []
     },
@@ -235,10 +237,10 @@
     },
     {
       "municipality": "高取町",
-      "rawCount": 47,
-      "keptCount": 16,
+      "rawCount": 48,
+      "keptCount": 17,
       "rejectedCount": 31,
-      "keptAnnouncementCount": 1,
+      "keptAnnouncementCount": 2,
       "keptResultCount": 15,
       "warnings": [],
       "errors": [
@@ -290,11 +292,11 @@
   ],
   "coverage": {
     "checkedMunicipalityCount": 24,
-    "expectedItemCount": 156,
-    "matchedItemCount": 156,
+    "expectedItemCount": 164,
+    "matchedItemCount": 164,
     "missingItemCount": 0,
-    "duplicateTitleGroupCount": 12,
-    "duplicateTitleItemCount": 25,
+    "duplicateTitleGroupCount": 13,
+    "duplicateTitleItemCount": 27,
     "results": [
       {
         "municipality": "橿原市",
@@ -320,12 +322,12 @@
       },
       {
         "municipality": "高取町",
-        "snapshotCount": 47,
-        "expectedCount": 16,
-        "matchedCount": 16,
+        "snapshotCount": 48,
+        "expectedCount": 17,
+        "matchedCount": 17,
         "missingCount": 0,
-        "duplicateTitleGroupCount": 1,
-        "duplicateTitleItemCount": 2,
+        "duplicateTitleGroupCount": 2,
+        "duplicateTitleItemCount": 4,
         "missingItems": [],
         "status": "ok"
       },
@@ -381,6 +383,17 @@
         "missingCount": 0,
         "duplicateTitleGroupCount": 1,
         "duplicateTitleItemCount": 2,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
+        "municipality": "奈良市",
+        "snapshotCount": 43,
+        "expectedCount": 6,
+        "matchedCount": 6,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 0,
+        "duplicateTitleItemCount": 0,
         "missingItems": [],
         "status": "ok"
       },
@@ -495,6 +508,17 @@
         "status": "ok"
       },
       {
+        "municipality": "田原本町",
+        "snapshotCount": 41,
+        "expectedCount": 1,
+        "matchedCount": 1,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 0,
+        "duplicateTitleItemCount": 0,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
         "municipality": "宇陀市",
         "snapshotCount": 0,
         "expectedCount": 0,
@@ -530,28 +554,6 @@
       {
         "municipality": "大和高田市",
         "snapshotCount": 18,
-        "expectedCount": 0,
-        "matchedCount": 0,
-        "missingCount": 0,
-        "duplicateTitleGroupCount": 0,
-        "duplicateTitleItemCount": 0,
-        "missingItems": [],
-        "status": "ok"
-      },
-      {
-        "municipality": "田原本町",
-        "snapshotCount": 0,
-        "expectedCount": 0,
-        "matchedCount": 0,
-        "missingCount": 0,
-        "duplicateTitleGroupCount": 0,
-        "duplicateTitleItemCount": 0,
-        "missingItems": [],
-        "status": "ok"
-      },
-      {
-        "municipality": "奈良市",
-        "snapshotCount": 0,
         "expectedCount": 0,
         "matchedCount": 0,
         "missingCount": 0,
