@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-23T09:51:23.612Z",
+  "generatedAt": "2026-09-23T12:21:21.083Z",
   "currentItemCount": 306,
   "checkedMunicipalities": [
     "奈良市",
@@ -48,9 +48,9 @@
     },
     {
       "municipality": "橿原市",
-      "rawCount": 389,
+      "rawCount": 311,
       "keptCount": 32,
-      "rejectedCount": 357,
+      "rejectedCount": 279,
       "keptAnnouncementCount": 0,
       "keptResultCount": 32,
       "warnings": [],
@@ -155,11 +155,11 @@
     },
     {
       "municipality": "田原本町",
-      "rawCount": 41,
-      "keptCount": 1,
-      "rejectedCount": 40,
+      "rawCount": 0,
+      "keptCount": 0,
+      "rejectedCount": 0,
       "keptAnnouncementCount": 0,
-      "keptResultCount": 1,
+      "keptResultCount": 0,
       "warnings": [],
       "errors": []
     },
@@ -292,15 +292,15 @@
   ],
   "coverage": {
     "checkedMunicipalityCount": 24,
-    "expectedItemCount": 164,
-    "matchedItemCount": 164,
+    "expectedItemCount": 163,
+    "matchedItemCount": 163,
     "missingItemCount": 0,
     "duplicateTitleGroupCount": 13,
     "duplicateTitleItemCount": 27,
     "results": [
       {
         "municipality": "橿原市",
-        "snapshotCount": 389,
+        "snapshotCount": 311,
         "expectedCount": 32,
         "matchedCount": 32,
         "missingCount": 0,
@@ -508,17 +508,6 @@
         "status": "ok"
       },
       {
-        "municipality": "田原本町",
-        "snapshotCount": 41,
-        "expectedCount": 1,
-        "matchedCount": 1,
-        "missingCount": 0,
-        "duplicateTitleGroupCount": 0,
-        "duplicateTitleItemCount": 0,
-        "missingItems": [],
-        "status": "ok"
-      },
-      {
         "municipality": "宇陀市",
         "snapshotCount": 0,
         "expectedCount": 0,
@@ -554,6 +543,17 @@
       {
         "municipality": "大和高田市",
         "snapshotCount": 18,
+        "expectedCount": 0,
+        "matchedCount": 0,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 0,
+        "duplicateTitleItemCount": 0,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
+        "municipality": "田原本町",
+        "snapshotCount": 0,
         "expectedCount": 0,
         "matchedCount": 0,
         "missingCount": 0,
