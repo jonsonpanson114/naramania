@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-22T11:03:48.281Z",
+  "generatedAt": "2026-09-23T03:04:53.156Z",
   "source": "daily_scrape",
   "municipalityLastScraped": {
     "奈良市": "2026-09-22T11:03:48.281Z",
@@ -26,11 +26,11 @@
     "三郷町": "2026-09-22T11:03:48.281Z",
     "王寺町": "2026-09-22T11:03:48.281Z",
     "大淀町": "2026-09-22T11:03:48.281Z",
-    "奈良県": "2026-09-16T23:56:29.920Z"
+    "奈良県": "2026-09-23T03:04:53.156Z"
   },
-  "scrapedCount": 1455,
-  "keptCount": 304,
-  "rejectedCount": 1299,
+  "scrapedCount": 56,
+  "keptCount": 306,
+  "rejectedCount": 0,
   "oldestAnnouncementDate": "2025-02-02",
   "latestAnnouncementDate": "2026-09-18",
   "municipalityCount": 24,
@@ -46,8 +46,8 @@
     "breakdown": [
       {
         "municipality": "奈良県",
-        "count": 54,
-        "changeFromPrevious": 0
+        "count": 56,
+        "changeFromPrevious": 2
       },
       {
         "municipality": "橿原市",
@@ -165,90 +165,8 @@
         "changeFromPrevious": 0
       }
     ],
-    "retainedFromPrevious": [
-      "奈良市",
-      "生駒市",
-      "葛城市",
-      "五條市",
-      "桜井市",
-      "宇陀市",
-      "田原本町",
-      "香芝市",
-      "高取町",
-      "三郷町"
-    ],
-    "issues": [
-      {
-        "municipality": "奈良市",
-        "level": "warning",
-        "message": "[奈良市] 取得件数が急減したため既存データ 12件を維持しつつ、新規 0件を反映しています (baseline=12)"
-      },
-      {
-        "municipality": "生駒市",
-        "level": "warning",
-        "message": "[生駒市] EPI 情報公開サービス停止中のため取得をスキップします。"
-      },
-      {
-        "municipality": "生駒市",
-        "level": "warning",
-        "message": "[生駒市] 部分取得エラーのため既存データ 23件を維持しています (new kept=0)"
-      },
-      {
-        "municipality": "大和高田市",
-        "level": "error",
-        "message": "[大和高田市] EPIがサービス停止中のため取得をスキップしました(サイト側の一時停止。次回実行で復帰します)"
-      },
-      {
-        "municipality": "葛城市",
-        "level": "warning",
-        "message": "[葛城市] 取得件数が急減したため既存データ 10件を維持しつつ、新規 15件を反映しています (baseline=25)"
-      },
-      {
-        "municipality": "五條市",
-        "level": "warning",
-        "message": "[五條市] 取得件数が急減したため既存データ 7件を維持しつつ、新規 15件を反映しています (baseline=21)"
-      },
-      {
-        "municipality": "桜井市",
-        "level": "warning",
-        "message": "[桜井市] EPIがサービス停止中のため取得をスキップしました(サイト側の一時停止。次回実行で復帰します)"
-      },
-      {
-        "municipality": "桜井市",
-        "level": "warning",
-        "message": "[桜井市] 部分取得エラーのため既存データ 10件を維持しています (new kept=3)"
-      },
-      {
-        "municipality": "宇陀市",
-        "level": "warning",
-        "message": "[宇陀市] 取得件数が急減したため既存データ 18件を維持しつつ、新規 0件を反映しています (baseline=18)"
-      },
-      {
-        "municipality": "田原本町",
-        "level": "warning",
-        "message": "[田原本町] 取得件数が急減したため既存データ 3件を維持しつつ、新規 0件を反映しています (baseline=3)"
-      },
-      {
-        "municipality": "香芝市",
-        "level": "warning",
-        "message": "[香芝市] 取得件数が急減したため既存データ 7件を維持しつつ、新規 9件を反映しています (baseline=16)"
-      },
-      {
-        "municipality": "高取町",
-        "level": "error",
-        "message": "[高取町] 公告PDFから案件名を抽出できませんでした: https://www.town.takatori.nara.jp/cmsfiles/contents/0000002/2674/chuiziko.pdf"
-      },
-      {
-        "municipality": "高取町",
-        "level": "warning",
-        "message": "[高取町] 部分取得エラーのため既存データ 25件を維持しています (new kept=16)"
-      },
-      {
-        "municipality": "三郷町",
-        "level": "warning",
-        "message": "[三郷町] 取得件数が急減したため既存データ 3件を維持しつつ、新規 0件を反映しています (baseline=3)"
-      }
-    ]
+    "retainedFromPrevious": [],
+    "issues": []
   },
   "dateAudit": {
     "announcementAfterBiddingCount": 0,
@@ -296,14 +214,14 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 54,
+        "totalCount": 56,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "ppi.ebid-kouji-gyoumu.pref.nara.jp": 54
+          "ppi.ebid-kouji-gyoumu.pref.nara.jp": 56
         },
-        "announcementCount": 7,
+        "announcementCount": 9,
         "resultCount": 47,
-        "message": "奈良県: 54件 (公告7/結果47) / sources OK"
+        "message": "奈良県: 56件 (公告9/結果47) / sources OK"
       },
       {
         "expectation": {
@@ -819,7 +737,6 @@
     "itemsWithDescription": 52,
     "intelligenceExtractedCount": 49,
     "geminiExtractedCount": 49,
-    "taggedCount": 50,
-    "lastAugmentedAt": "2026-09-22T11:06:43.296Z"
+    "taggedCount": 50
   }
 }
