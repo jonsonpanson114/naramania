@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-09-24T04:34:26.057Z",
+  "generatedAt": "2026-09-24T06:26:11.046Z",
   "checkedMunicipalityCount": 24,
-  "expectedItemCount": 306,
-  "matchedItemCount": 306,
+  "expectedItemCount": 313,
+  "matchedItemCount": 313,
   "missingItemCount": 0,
   "duplicateTitleGroupCount": 23,
-  "duplicateTitleItemCount": 49,
+  "duplicateTitleItemCount": 51,
   "results": [
     {
       "municipality": "奈良県",
@@ -20,12 +20,23 @@
     },
     {
       "municipality": "橿原市",
-      "snapshotCount": 32,
-      "expectedCount": 32,
-      "matchedCount": 32,
+      "snapshotCount": 33,
+      "expectedCount": 33,
+      "matchedCount": 33,
       "missingCount": 0,
       "duplicateTitleGroupCount": 2,
       "duplicateTitleItemCount": 4,
+      "missingItems": [],
+      "status": "ok"
+    },
+    {
+      "municipality": "高取町",
+      "snapshotCount": 26,
+      "expectedCount": 26,
+      "matchedCount": 26,
+      "missingCount": 0,
+      "duplicateTitleGroupCount": 7,
+      "duplicateTitleItemCount": 18,
       "missingItems": [],
       "status": "ok"
     },
@@ -37,17 +48,6 @@
       "missingCount": 0,
       "duplicateTitleGroupCount": 5,
       "duplicateTitleItemCount": 10,
-      "missingItems": [],
-      "status": "ok"
-    },
-    {
-      "municipality": "高取町",
-      "snapshotCount": 25,
-      "expectedCount": 25,
-      "matchedCount": 25,
-      "missingCount": 0,
-      "duplicateTitleGroupCount": 7,
-      "duplicateTitleItemCount": 17,
       "missingItems": [],
       "status": "ok"
     },
@@ -64,12 +64,23 @@
     },
     {
       "municipality": "五條市",
-      "snapshotCount": 21,
-      "expectedCount": 21,
-      "matchedCount": 21,
+      "snapshotCount": 22,
+      "expectedCount": 22,
+      "matchedCount": 22,
       "missingCount": 0,
       "duplicateTitleGroupCount": 2,
-      "duplicateTitleItemCount": 4,
+      "duplicateTitleItemCount": 5,
+      "missingItems": [],
+      "status": "ok"
+    },
+    {
+      "municipality": "香芝市",
+      "snapshotCount": 20,
+      "expectedCount": 20,
+      "matchedCount": 20,
+      "missingCount": 0,
+      "duplicateTitleGroupCount": 0,
+      "duplicateTitleItemCount": 0,
       "missingItems": [],
       "status": "ok"
     },
@@ -89,17 +100,6 @@
       "snapshotCount": 18,
       "expectedCount": 18,
       "matchedCount": 18,
-      "missingCount": 0,
-      "duplicateTitleGroupCount": 0,
-      "duplicateTitleItemCount": 0,
-      "missingItems": [],
-      "status": "ok"
-    },
-    {
-      "municipality": "香芝市",
-      "snapshotCount": 16,
-      "expectedCount": 16,
-      "matchedCount": 16,
       "missingCount": 0,
       "duplicateTitleGroupCount": 0,
       "duplicateTitleItemCount": 0,

@@ -1,38 +1,38 @@
 {
-  "generatedAt": "2026-09-24T04:34:15.446Z",
+  "generatedAt": "2026-09-24T06:18:56.614Z",
   "source": "daily_scrape",
   "municipalityLastScraped": {
-    "奈良市": "2026-09-23T10:54:24.047Z",
-    "橿原市": "2026-09-23T10:54:24.047Z",
-    "生駒市": "2026-09-23T10:54:24.047Z",
-    "大和高田市": "2026-09-23T10:54:24.047Z",
-    "大和郡山市": "2026-09-23T10:54:24.047Z",
-    "葛城市": "2026-09-23T10:54:24.047Z",
-    "五條市": "2026-09-23T10:54:24.047Z",
-    "御所市": "2026-09-23T10:54:24.047Z",
-    "天理市": "2026-09-23T10:54:24.047Z",
-    "桜井市": "2026-09-23T10:54:24.047Z",
-    "宇陀市": "2026-09-23T10:54:24.047Z",
-    "田原本町": "2026-09-23T10:54:24.047Z",
-    "広陵町": "2026-09-23T10:54:24.047Z",
-    "香芝市": "2026-09-23T10:54:24.047Z",
-    "川西町": "2026-09-23T10:54:24.047Z",
-    "山添村": "2026-09-23T10:54:24.047Z",
-    "平群町": "2026-09-23T10:54:24.047Z",
-    "三宅町": "2026-09-23T10:54:24.047Z",
-    "安堵町": "2026-09-23T10:54:24.047Z",
-    "高取町": "2026-09-23T10:54:24.047Z",
-    "斑鳩町": "2026-09-23T10:54:24.047Z",
-    "三郷町": "2026-09-23T10:54:24.047Z",
-    "王寺町": "2026-09-23T10:54:24.047Z",
-    "大淀町": "2026-09-23T10:54:24.047Z",
+    "奈良市": "2026-09-24T06:18:56.614Z",
+    "橿原市": "2026-09-24T06:18:56.614Z",
+    "生駒市": "2026-09-24T06:18:56.614Z",
+    "大和高田市": "2026-09-24T06:18:56.614Z",
+    "大和郡山市": "2026-09-24T06:18:56.614Z",
+    "葛城市": "2026-09-24T06:18:56.614Z",
+    "五條市": "2026-09-24T06:18:56.614Z",
+    "御所市": "2026-09-24T06:18:56.614Z",
+    "天理市": "2026-09-24T06:18:56.614Z",
+    "桜井市": "2026-09-24T06:18:56.614Z",
+    "宇陀市": "2026-09-24T06:18:56.614Z",
+    "田原本町": "2026-09-24T06:18:56.614Z",
+    "広陵町": "2026-09-24T06:18:56.614Z",
+    "香芝市": "2026-09-24T06:18:56.614Z",
+    "川西町": "2026-09-24T06:18:56.614Z",
+    "山添村": "2026-09-24T06:18:56.614Z",
+    "平群町": "2026-09-24T06:18:56.614Z",
+    "三宅町": "2026-09-24T06:18:56.614Z",
+    "安堵町": "2026-09-24T06:18:56.614Z",
+    "高取町": "2026-09-24T06:18:56.614Z",
+    "斑鳩町": "2026-09-24T06:18:56.614Z",
+    "三郷町": "2026-09-24T06:18:56.614Z",
+    "王寺町": "2026-09-24T06:18:56.614Z",
+    "大淀町": "2026-09-24T06:18:56.614Z",
     "奈良県": "2026-09-24T04:34:15.446Z"
   },
-  "scrapedCount": 56,
-  "keptCount": 306,
-  "rejectedCount": 0,
+  "scrapedCount": 2725,
+  "keptCount": 313,
+  "rejectedCount": 2449,
   "oldestAnnouncementDate": "2025-02-02",
-  "latestAnnouncementDate": "2026-09-18",
+  "latestAnnouncementDate": "2026-09-24",
   "municipalityCount": 24,
   "municipalityAudit": {
     "expectedMunicipalityCount": 25,
@@ -51,16 +51,16 @@
       },
       {
         "municipality": "橿原市",
-        "count": 32,
-        "changeFromPrevious": 0
-      },
-      {
-        "municipality": "葛城市",
-        "count": 25,
-        "changeFromPrevious": 0
+        "count": 33,
+        "changeFromPrevious": 1
       },
       {
         "municipality": "高取町",
+        "count": 26,
+        "changeFromPrevious": 1
+      },
+      {
+        "municipality": "葛城市",
         "count": 25,
         "changeFromPrevious": 0
       },
@@ -71,8 +71,13 @@
       },
       {
         "municipality": "五條市",
-        "count": 21,
-        "changeFromPrevious": 0
+        "count": 22,
+        "changeFromPrevious": 1
+      },
+      {
+        "municipality": "香芝市",
+        "count": 20,
+        "changeFromPrevious": 4
       },
       {
         "municipality": "大和郡山市",
@@ -82,11 +87,6 @@
       {
         "municipality": "宇陀市",
         "count": 18,
-        "changeFromPrevious": 0
-      },
-      {
-        "municipality": "香芝市",
-        "count": 16,
         "changeFromPrevious": 0
       },
       {
@@ -165,8 +165,22 @@
         "changeFromPrevious": 0
       }
     ],
-    "retainedFromPrevious": [],
-    "issues": []
+    "retainedFromPrevious": [
+      "田原本町",
+      "高取町"
+    ],
+    "issues": [
+      {
+        "municipality": "田原本町",
+        "level": "warning",
+        "message": "[田原本町] 取得件数が急減したため既存データ 3件を維持しつつ、新規 0件を反映しています (baseline=3)"
+      },
+      {
+        "municipality": "高取町",
+        "level": "warning",
+        "message": "[高取町] 取得件数が急減したため既存データ 11件を維持しつつ、新規 15件を反映しています (baseline=25)"
+      }
+    ]
   },
   "dateAudit": {
     "announcementAfterBiddingCount": 0,
@@ -254,14 +268,14 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 32,
+        "totalCount": 33,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.kashihara.nara.jp": 32
+          "city.kashihara.nara.jp": 33
         },
         "announcementCount": 0,
-        "resultCount": 32,
-        "message": "橿原市: 32件 (公告0/結果32) / sources OK"
+        "resultCount": 33,
+        "message": "橿原市: 33件 (公告0/結果33) / sources OK"
       },
       {
         "expectation": {
@@ -359,15 +373,15 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 21,
+        "totalCount": 22,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.gojo.lg.jp": 13,
-          "epi-cloud.fwd.ne.jp": 8
+          "city.gojo.lg.jp": 4,
+          "epi-cloud.fwd.ne.jp": 18
         },
         "announcementCount": 3,
-        "resultCount": 18,
-        "message": "五條市: 21件 (公告3/結果18) / sources OK"
+        "resultCount": 19,
+        "message": "五條市: 22件 (公告3/結果19) / sources OK"
       },
       {
         "expectation": {
@@ -500,14 +514,14 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 16,
+        "totalCount": 20,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.kashiba.lg.jp": 9
+          "city.kashiba.lg.jp": 7
         },
-        "announcementCount": 5,
-        "resultCount": 11,
-        "message": "香芝市: 16件 (公告5/結果11) / sources OK"
+        "announcementCount": 6,
+        "resultCount": 14,
+        "message": "香芝市: 20件 (公告6/結果14) / sources OK"
       },
       {
         "expectation": {
@@ -620,14 +634,14 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 25,
+        "totalCount": 26,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "town.takatori.nara.jp": 25
+          "town.takatori.nara.jp": 26
         },
-        "announcementCount": 1,
+        "announcementCount": 2,
         "resultCount": 24,
-        "message": "高取町: 25件 (公告1/結果24) / sources OK"
+        "message": "高取町: 26件 (公告2/結果24) / sources OK"
       },
       {
         "expectation": {
@@ -721,22 +735,23 @@
         },
         "status": "ok",
         "severity": "warning",
-        "totalCount": 16,
+        "totalCount": 20,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "epi-cloud.fwd.ne.jp": 7
+          "epi-cloud.fwd.ne.jp": 13
         },
-        "announcementCount": 5,
-        "resultCount": 11,
-        "message": "香芝市: 16件 (公告5/結果11) / sources OK"
+        "announcementCount": 6,
+        "resultCount": 14,
+        "message": "香芝市: 20件 (公告6/結果14) / sources OK"
       }
     ]
   },
   "intelligence": {
-    "itemsWithPdf": 84,
-    "itemsWithDescription": 52,
-    "intelligenceExtractedCount": 49,
-    "geminiExtractedCount": 49,
-    "taggedCount": 50
+    "itemsWithPdf": 83,
+    "itemsWithDescription": 50,
+    "intelligenceExtractedCount": 47,
+    "geminiExtractedCount": 47,
+    "taggedCount": 48,
+    "lastAugmentedAt": "2026-09-24T06:20:38.294Z"
   }
 }

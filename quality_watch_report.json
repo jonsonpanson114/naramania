@@ -1,18 +1,14 @@
 {
-  "generatedAt": "2026-09-24T04:34:21.099Z",
-  "qualityGeneratedAt": "2026-09-24T04:34:15.446Z",
-  "itemCount": 306,
+  "generatedAt": "2026-09-24T06:26:10.019Z",
+  "qualityGeneratedAt": "2026-09-24T06:18:56.614Z",
+  "itemCount": 313,
   "resultFollowUp": {
-    "totalCount": 9,
-    "highCount": 9,
+    "totalCount": 6,
+    "highCount": 6,
     "mediumCount": 0,
     "lowCount": 0,
     "missingBiddingDateCount": 0,
     "byMunicipality": [
-      {
-        "municipality": "香芝市",
-        "count": 3
-      },
       {
         "municipality": "奈良県",
         "count": 3
@@ -40,38 +36,6 @@
           "biddingDate": "2026-04-21",
           "winningContractor": null,
           "link": "https://www.town.oyodo.lg.jp/./cmsfiles/contents/0000001/1945/so080421.pdf",
-          "pdfUrl": null
-        }
-      },
-      {
-        "priority": "high",
-        "ageDays": 149,
-        "reason": "開札日から149日経過",
-        "item": {
-          "id": "kashiba-web-f9a78168",
-          "municipality": "香芝市",
-          "title": "三和小学校校舎増築工事に伴う設計業務",
-          "status": "受付終了",
-          "announcementDate": "2026-04-09",
-          "biddingDate": "2026-04-28",
-          "winningContractor": "株式会社福本設計",
-          "link": "https://www.city.kashiba.lg.jp/uploaded/attachment/31836.pdf",
-          "pdfUrl": null
-        }
-      },
-      {
-        "priority": "high",
-        "ageDays": 121,
-        "reason": "開札日から121日経過",
-        "item": {
-          "id": "kashiba-web-1bf7b65a",
-          "municipality": "香芝市",
-          "title": "五位堂小学校改築工事に伴う実施設計業務",
-          "status": "受付終了",
-          "announcementDate": "2026-04-23",
-          "biddingDate": "2026-05-26",
-          "winningContractor": "株式会社綜企画設計 奈良支店",
-          "link": "https://www.city.kashiba.lg.jp/site/nyuusatsu/list288-1034.html",
           "pdfUrl": null
         }
       },
@@ -136,22 +100,6 @@
           "biddingDate": "2026-07-07",
           "winningContractor": null,
           "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29005007060120260015&gamenMode=0",
-          "pdfUrl": null
-        }
-      },
-      {
-        "priority": "high",
-        "ageDays": 76,
-        "reason": "開札日から76日経過",
-        "item": {
-          "id": "kashiba-web-65a0eda8",
-          "municipality": "香芝市",
-          "title": "志都美小学校改築工事に伴う実施設計業務",
-          "status": "受付終了",
-          "announcementDate": "2026-06-18",
-          "biddingDate": "2026-07-10",
-          "winningContractor": "株式会社長大 奈良事務所",
-          "link": "https://www.city.kashiba.lg.jp/site/nyuusatsu/67641.html",
           "pdfUrl": null
         }
       },
@@ -334,11 +282,11 @@
         "municipality": "五條市",
         "status": "ok",
         "severity": "error",
-        "count": 8,
+        "count": 18,
         "requiredLinkIncludes": [
           "epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction"
         ],
-        "message": "五條市 情報公開サイト: 8件確認",
+        "message": "五條市 情報公開サイト: 18件確認",
         "matches": [
           {
             "id": "gojo-epi-2601041",
@@ -418,6 +366,17 @@
             "pdfUrl": null
           },
           {
+            "id": "gojo-epi-2601002",
+            "municipality": "五條市",
+            "title": "宗桧公民館改修工事",
+            "status": "不調",
+            "announcementDate": "2026-05-01",
+            "biddingDate": "2026-05-27",
+            "winningContractor": null,
+            "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002601002",
+            "pdfUrl": null
+          },
+          {
             "id": "gojo-6fab770c",
             "municipality": "五條市",
             "title": "五條市立小学校トイレ改修工事",
@@ -426,6 +385,17 @@
             "biddingDate": "2026-05-29",
             "winningContractor": "有希建設（株）",
             "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002501076",
+            "pdfUrl": null
+          },
+          {
+            "id": "gojo-epi-2501056",
+            "municipality": "五條市",
+            "title": "川端住宅２２・２３号解体工事",
+            "status": "落札",
+            "announcementDate": "2025-12-16",
+            "biddingDate": "2026-01-09",
+            "winningContractor": "逢坂建設",
+            "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002501056",
             "pdfUrl": null
           }
         ]
@@ -499,15 +469,15 @@
         "municipality": "橿原市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 32,
+        "totalCount": 33,
         "requiredLinkIncludes": [
           "city.kashihara.nara.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.kashihara.nara.jp": 32
+          "city.kashihara.nara.jp": 33
         },
-        "message": "橿原市: 32件 (公告0/結果32) / sources OK"
+        "message": "橿原市: 33件 (公告0/結果33) / sources OK"
       },
       {
         "municipality": "生駒市",
@@ -573,17 +543,17 @@
         "municipality": "五條市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 21,
+        "totalCount": 22,
         "requiredLinkIncludes": [
           "city.gojo.lg.jp",
           "epi-cloud.fwd.ne.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.gojo.lg.jp": 13,
-          "epi-cloud.fwd.ne.jp": 8
+          "city.gojo.lg.jp": 4,
+          "epi-cloud.fwd.ne.jp": 18
         },
-        "message": "五條市: 21件 (公告3/結果18) / sources OK"
+        "message": "五條市: 22件 (公告3/結果19) / sources OK"
       },
       {
         "municipality": "御所市",
@@ -673,15 +643,15 @@
         "municipality": "香芝市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 16,
+        "totalCount": 20,
         "requiredLinkIncludes": [
           "city.kashiba.lg.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.kashiba.lg.jp": 9
+          "city.kashiba.lg.jp": 7
         },
-        "message": "香芝市: 16件 (公告5/結果11) / sources OK"
+        "message": "香芝市: 20件 (公告6/結果14) / sources OK"
       },
       {
         "municipality": "川西町",
@@ -757,15 +727,15 @@
         "municipality": "高取町",
         "status": "ok",
         "severity": "error",
-        "totalCount": 25,
+        "totalCount": 26,
         "requiredLinkIncludes": [
           "town.takatori.nara.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "town.takatori.nara.jp": 25
+          "town.takatori.nara.jp": 26
         },
-        "message": "高取町: 25件 (公告1/結果24) / sources OK"
+        "message": "高取町: 26件 (公告2/結果24) / sources OK"
       },
       {
         "municipality": "斑鳩町",
@@ -827,15 +797,15 @@
         "municipality": "香芝市",
         "status": "ok",
         "severity": "warning",
-        "totalCount": 16,
+        "totalCount": 20,
         "requiredLinkIncludes": [
           "epi-cloud.fwd.ne.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "epi-cloud.fwd.ne.jp": 7
+          "epi-cloud.fwd.ne.jp": 13
         },
-        "message": "香芝市: 16件 (公告5/結果11) / sources OK"
+        "message": "香芝市: 20件 (公告6/結果14) / sources OK"
       }
     ]
   }
