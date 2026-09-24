@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-24T09:52:23.689Z",
+  "generatedAt": "2026-09-24T11:15:57.245Z",
   "currentItemCount": 313,
   "checkedMunicipalities": [
     "奈良市",
@@ -36,14 +36,12 @@
   "scraperResults": [
     {
       "municipality": "奈良市",
-      "rawCount": 11,
-      "keptCount": 2,
-      "rejectedCount": 9,
-      "keptAnnouncementCount": 2,
+      "rawCount": 0,
+      "keptCount": 0,
+      "rejectedCount": 0,
+      "keptAnnouncementCount": 0,
       "keptResultCount": 0,
-      "warnings": [
-        "奈良市: 取得11件に落札結果が1件もありません。入札結果(開札情報)ページを見落としていないか確認が必要です。"
-      ],
+      "warnings": [],
       "errors": []
     },
     {
@@ -108,9 +106,9 @@
     },
     {
       "municipality": "御所市",
-      "rawCount": 17,
+      "rawCount": 16,
       "keptCount": 2,
-      "rejectedCount": 15,
+      "rejectedCount": 14,
       "keptAnnouncementCount": 0,
       "keptResultCount": 2,
       "warnings": [],
@@ -148,11 +146,11 @@
     },
     {
       "municipality": "田原本町",
-      "rawCount": 0,
-      "keptCount": 0,
-      "rejectedCount": 0,
+      "rawCount": 28,
+      "keptCount": 2,
+      "rejectedCount": 26,
       "keptAnnouncementCount": 0,
-      "keptResultCount": 0,
+      "keptResultCount": 2,
       "warnings": [],
       "errors": []
     },
@@ -489,7 +487,7 @@
       },
       {
         "municipality": "御所市",
-        "snapshotCount": 17,
+        "snapshotCount": 16,
         "expectedCount": 2,
         "matchedCount": 2,
         "missingCount": 0,
@@ -499,8 +497,8 @@
         "status": "ok"
       },
       {
-        "municipality": "奈良市",
-        "snapshotCount": 11,
+        "municipality": "田原本町",
+        "snapshotCount": 28,
         "expectedCount": 2,
         "matchedCount": 2,
         "missingCount": 0,
@@ -543,7 +541,7 @@
         "status": "ok"
       },
       {
-        "municipality": "田原本町",
+        "municipality": "奈良市",
         "snapshotCount": 0,
         "expectedCount": 0,
         "matchedCount": 0,
