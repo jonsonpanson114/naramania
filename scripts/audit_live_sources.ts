@@ -102,6 +102,10 @@ const TRANSIENT_ERROR_PATTERNS = [
   /timeout/i,
   /Navigation timeout/i,
   /net::ERR_/i,
+  // EPI(入札情報公開サービス)は夜間などに計画停止する。停止中は取得できないのが
+  // 正常で、次回には復帰する。これをエラー扱いにしていたため、停止時間帯に
+  // 当たった監査が毎回失敗していた(大和高田市・香芝市・桜井市など)。
+  /サービス停止中/,
 ];
 
 function isTransientError(message: string): boolean {
