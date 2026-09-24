@@ -55,6 +55,9 @@ jobs:
       - name: Validate filters
         run: npm run validate:filters
 
+      - name: Validate Takatori announcements
+        run: npm run validate:takatori
+
       - name: Validate quality
         run: npm run validate:quality
 

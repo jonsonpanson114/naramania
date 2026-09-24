@@ -468,6 +468,8 @@ function normalizeIntentPayload(payload: QueryIntentPayload, fallback: QueryInte
 
 async function interpretIntent(query: string, history: ChatTurn[], context?: ChatContext, apiKey?: string): Promise<QueryIntent> {
     const heuristicIntent = mergeIntentWithContext(inferIntent(query, history), context);
+    // 対象が確定している属性質問は、モデルによる文脈の再解釈を必要としない。
+    if (isAttributeFollowUp(query) && context?.lastResultIds?.length) return heuristicIntent;
     if (!apiKey) return heuristicIntent;
 
     try {

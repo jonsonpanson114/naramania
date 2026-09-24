@@ -68,6 +68,30 @@ async function main() {
     if (second.model !== 'local-answer') {
       fail(`続き質問はローカル確定回答で返すべきです: model=${second.model}`);
     }
+    const originalFetch = globalThis.fetch;
+    const originalKey = process.env.GOOGLE_GENERATIVE_AI_API_KEY;
+    try {
+      process.env.GOOGLE_GENERATIVE_AI_API_KEY = 'chat-validation-stub';
+      globalThis.fetch = async () => new Response(JSON.stringify({
+        candidates: [{ content: { parts: [{ text: JSON.stringify({ wantsCarryOver: false }) }] } }],
+      }), { status: 200, headers: { 'Content-Type': 'application/json' } });
+      const withModel = await answerBiddingQuestionWithContext(
+        '落札者は？',
+        [
+          { role: 'user', content: '五條市立小学校トイレ改修工事はある？' },
+          { role: 'assistant', content: first.answer },
+        ],
+        followContext,
+      );
+      assertIncludes(withModel.answer, '有希建設（株）', 'モデル利用時の続き質問回答');
+      if (withModel.localMatches.some(item => !followContext.lastResultIds?.includes(item.id))) {
+        fail('モデル利用時の続き質問が直前の候補以外を参照しています');
+      }
+    } finally {
+      globalThis.fetch = originalFetch;
+      if (originalKey === undefined) delete process.env.GOOGLE_GENERATIVE_AI_API_KEY;
+      else process.env.GOOGLE_GENERATIVE_AI_API_KEY = originalKey;
+    }
     checked += 1;
   } else {
     skip('個別案件＋続き質問', '五條市立小学校トイレ改修工事');
