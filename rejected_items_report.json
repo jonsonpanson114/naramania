@@ -1,12 +1,8 @@
 {
-  "generatedAt": "2026-09-25T06:16:09.187Z",
-  "totalRejected": 10236,
-  "totalBorderlineRescued": 36,
+  "generatedAt": "2026-09-25T11:22:36.732Z",
+  "totalRejected": 10146,
+  "totalBorderlineRescued": 33,
   "byMunicipality": {
-    "奈良市": {
-      "rejected": 96,
-      "borderlineRescued": 3
-    },
     "橿原市": {
       "rejected": 1278,
       "borderlineRescued": 3
@@ -20,7 +16,7 @@
       "borderlineRescued": 0
     },
     "大和郡山市": {
-      "rejected": 876,
+      "rejected": 882,
       "borderlineRescued": 0
     },
     "葛城市": {
@@ -98,747 +94,6 @@
   },
   "entries": [
     {
-      "municipality": "奈良市",
-      "title": "橋梁長寿命化修繕工事（東部第３１１号線（清楓橋）他）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋梁",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "橋梁長寿命化修繕工事（東部第３１１号線（清楓橋）他） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋梁",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "交通安全施設修繕工事（交安修９）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "交通"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "交通安全施設修繕工事（交安修９） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "交通"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "橋梁長寿命化修繕工事（南部第１０５号線（無名橋０１２）他）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋梁",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "橋梁長寿命化修繕工事（南部第１０５号線（無名橋０１２）他） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋梁",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "橋梁長寿命化修繕・耐震補強工事（六条奈良阪線（佐保橋））",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋梁",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "橋梁長寿命化修繕・耐震補強工事（六条奈良阪線（佐保橋）） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋梁",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "橋梁長寿命化修繕工事（南部第２０９号線（地蔵院橋）他）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋梁",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "橋梁長寿命化修繕工事（南部第２０９号線（地蔵院橋）他） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋梁",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "交通安全施設整備工事（右京三丁目地内・中部第１０６１号線）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "交通"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "交通安全施設整備工事（右京三丁目地内・中部第１０６１号線） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "交通"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "灰汚水処理装置点検整備補修",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "奈良市",
-      "title": "灰汚水処理装置点検整備補修 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "奈良市",
-      "title": "奈良市写真美術館軒裏改修工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "奈良市",
-      "title": "奈良市写真美術館軒裏改修工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "奈良市",
-      "title": "横断歩道橋長寿命化修繕及び橋梁排水施設改良工事（西部第７２２号線他（中町１号歩道橋）他）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋梁",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "横断歩道橋長寿命化修繕及び橋梁排水施設改良工事（西部第７２２号線他（中町１号歩道橋）他） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋梁",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "灰汚水処理装置点検整備補修",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "奈良市",
-      "title": "灰汚水処理装置点検整備補修 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "奈良市",
-      "title": "奈良市写真美術館軒裏改修工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "奈良市",
-      "title": "奈良市写真美術館軒裏改修工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "奈良市",
-      "title": "地山土留補強対策工事（北椿尾町地内・東部第３００号線）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "奈良市",
-      "title": "地山土留補強対策工事（北椿尾町地内・東部第３００号線） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "奈良市",
-      "title": "交通安全施設修繕工事（交安修８）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "交通"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "交通安全施設修繕工事（交安修８） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "交通"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "汚泥再生処理施設点検修繕",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "汚泥"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "汚泥再生処理施設点検修繕 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "汚泥"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "第３段電気透析装置部品取替修繕",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "奈良市",
-      "title": "第３段電気透析装置部品取替修繕 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "奈良市",
-      "title": "１号炉排ガス施設点検整備補修",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "奈良市",
-      "title": "１号炉排ガス施設点検整備補修 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "奈良市",
-      "title": "環境清美センター焼却炉棟防火戸改修その他工事",
-      "reason": "always_exclude_keyword",
-      "matchedKeywords": [
-        "焼却炉"
-      ],
-      "borderlineRescue": true
-    },
-    {
-      "municipality": "奈良市",
-      "title": "橋梁長寿命化修繕工事（東部第３１１号線（清楓橋）他）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋梁",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "橋梁長寿命化修繕工事（東部第３１１号線（清楓橋）他） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋梁",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "交通安全施設修繕工事（交安修９）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "交通"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "交通安全施設修繕工事（交安修９） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "交通"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "橋梁長寿命化修繕工事（南部第１０５号線（無名橋０１２）他）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋梁",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "橋梁長寿命化修繕工事（南部第１０５号線（無名橋０１２）他） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋梁",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "橋梁長寿命化修繕・耐震補強工事（六条奈良阪線（佐保橋））",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋梁",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "橋梁長寿命化修繕・耐震補強工事（六条奈良阪線（佐保橋）） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋梁",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "橋梁長寿命化修繕工事（南部第２０９号線（地蔵院橋）他）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋梁",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "橋梁長寿命化修繕工事（南部第２０９号線（地蔵院橋）他） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋梁",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "交通安全施設整備工事（右京三丁目地内・中部第１０６１号線）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "交通"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "交通安全施設整備工事（右京三丁目地内・中部第１０６１号線） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "交通"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "灰汚水処理装置点検整備補修",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "奈良市",
-      "title": "灰汚水処理装置点検整備補修 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "奈良市",
-      "title": "奈良市写真美術館軒裏改修工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "奈良市",
-      "title": "奈良市写真美術館軒裏改修工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "奈良市",
-      "title": "横断歩道橋長寿命化修繕及び橋梁排水施設改良工事（西部第７２２号線他（中町１号歩道橋）他）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋梁",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "横断歩道橋長寿命化修繕及び橋梁排水施設改良工事（西部第７２２号線他（中町１号歩道橋）他） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋梁",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "灰汚水処理装置点検整備補修",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "奈良市",
-      "title": "灰汚水処理装置点検整備補修 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "奈良市",
-      "title": "奈良市写真美術館軒裏改修工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "奈良市",
-      "title": "奈良市写真美術館軒裏改修工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "奈良市",
-      "title": "地山土留補強対策工事（北椿尾町地内・東部第３００号線）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "奈良市",
-      "title": "地山土留補強対策工事（北椿尾町地内・東部第３００号線） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "奈良市",
-      "title": "交通安全施設修繕工事（交安修８）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "交通"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "交通安全施設修繕工事（交安修８） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "交通"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "汚泥再生処理施設点検修繕",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "汚泥"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "汚泥再生処理施設点検修繕 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "汚泥"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "第３段電気透析装置部品取替修繕",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "奈良市",
-      "title": "第３段電気透析装置部品取替修繕 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "奈良市",
-      "title": "１号炉排ガス施設点検整備補修",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "奈良市",
-      "title": "１号炉排ガス施設点検整備補修 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "奈良市",
-      "title": "環境清美センター焼却炉棟防火戸改修その他工事",
-      "reason": "always_exclude_keyword",
-      "matchedKeywords": [
-        "焼却炉"
-      ],
-      "borderlineRescue": true
-    },
-    {
-      "municipality": "奈良市",
-      "title": "橋梁長寿命化修繕工事（東部第３１１号線（清楓橋）他）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋梁",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "橋梁長寿命化修繕工事（東部第３１１号線（清楓橋）他） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋梁",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "交通安全施設修繕工事（交安修９）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "交通"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "交通安全施設修繕工事（交安修９） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "交通"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "橋梁長寿命化修繕工事（南部第１０５号線（無名橋０１２）他）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋梁",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "橋梁長寿命化修繕工事（南部第１０５号線（無名橋０１２）他） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋梁",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "橋梁長寿命化修繕・耐震補強工事（六条奈良阪線（佐保橋））",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋梁",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "橋梁長寿命化修繕・耐震補強工事（六条奈良阪線（佐保橋）） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋梁",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "橋梁長寿命化修繕工事（南部第２０９号線（地蔵院橋）他）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋梁",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "橋梁長寿命化修繕工事（南部第２０９号線（地蔵院橋）他） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋梁",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "交通安全施設整備工事（右京三丁目地内・中部第１０６１号線）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "交通"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "交通安全施設整備工事（右京三丁目地内・中部第１０６１号線） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "交通"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "灰汚水処理装置点検整備補修",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "奈良市",
-      "title": "灰汚水処理装置点検整備補修 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "奈良市",
-      "title": "奈良市写真美術館軒裏改修工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "奈良市",
-      "title": "奈良市写真美術館軒裏改修工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "奈良市",
-      "title": "横断歩道橋長寿命化修繕及び橋梁排水施設改良工事（西部第７２２号線他（中町１号歩道橋）他）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋梁",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "横断歩道橋長寿命化修繕及び橋梁排水施設改良工事（西部第７２２号線他（中町１号歩道橋）他） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋梁",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "灰汚水処理装置点検整備補修",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "奈良市",
-      "title": "灰汚水処理装置点検整備補修 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "奈良市",
-      "title": "奈良市写真美術館軒裏改修工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "奈良市",
-      "title": "奈良市写真美術館軒裏改修工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "奈良市",
-      "title": "地山土留補強対策工事（北椿尾町地内・東部第３００号線）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "奈良市",
-      "title": "地山土留補強対策工事（北椿尾町地内・東部第３００号線） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "奈良市",
-      "title": "交通安全施設修繕工事（交安修８）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "交通"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "交通安全施設修繕工事（交安修８） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "交通"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "汚泥再生処理施設点検修繕",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "汚泥"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "汚泥再生処理施設点検修繕 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "汚泥"
-      ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "第３段電気透析装置部品取替修繕",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "奈良市",
-      "title": "第３段電気透析装置部品取替修繕 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "奈良市",
-      "title": "１号炉排ガス施設点検整備補修",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "奈良市",
-      "title": "１号炉排ガス施設点検整備補修 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "奈良市",
-      "title": "環境清美センター焼却炉棟防火戸改修その他工事",
-      "reason": "always_exclude_keyword",
-      "matchedKeywords": [
-        "焼却炉"
-      ],
-      "borderlineRescue": true
-    },
-    {
       "municipality": "橿原市",
       "title": "新橿原観光ガイドブック（日本語・外国語）作成業務 (圧縮ファイル: 507.7KB)",
       "reason": "exclusion_keyword",
@@ -24014,6 +23269,24 @@
         "用地",
         "補償",
         "技術"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "大和郡山市表彰式記念品購入",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入",
+        "記念品"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "大和郡山市表彰式記念品購入 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入",
+        "記念品"
       ]
     },
     {
@@ -26224,6 +25497,24 @@
     },
     {
       "municipality": "大和郡山市",
+      "title": "大和郡山市表彰式記念品購入",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入",
+        "記念品"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "大和郡山市表彰式記念品購入 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入",
+        "記念品"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
       "title": "伊豆七条高野線ほか4路線道路改良工事（1工区）",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -28427,6 +27718,24 @@
       "title": "西田中町共同浴場解体工事設計委託業務 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "大和郡山市表彰式記念品購入",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入",
+        "記念品"
+      ]
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "大和郡山市表彰式記念品購入 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入",
+        "記念品"
+      ]
     },
     {
       "municipality": "大和郡山市",
