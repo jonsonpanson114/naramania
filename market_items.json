@@ -24,6 +24,82 @@
     "isRelevant": false
   },
   {
+    "id": "ando-category-66",
+    "municipality": "安堵町",
+    "title": "条件付き一般競争入札の実施について（令和8年度「広報安堵」印刷製本並びにその付帯業務事業）",
+    "type": "建築",
+    "announcementDate": "2026-09-25",
+    "link": "https://www.town.ando.nara.jp/0000003977.html",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
+    "id": "ando-category-70",
+    "municipality": "安堵町",
+    "title": "【条件付き一般競争入札の結果】安堵町コロナ対策備品調達事業",
+    "type": "建築",
+    "announcementDate": "2026-09-25",
+    "link": "https://www.town.ando.nara.jp/0000003078.html",
+    "status": "落札",
+    "pdfUrl": "https://www.town.ando.nara.jp/cmsfiles/contents/0000003/3078/1.pdf",
+    "winningContractor": "株式会社 シミズ ７．",
+    "isRelevant": false
+  },
+  {
+    "id": "ikoma-b904ce9fe0",
+    "municipality": "生駒市",
+    "title": "再開発住宅外壁及び屋根改修工事",
+    "type": "建築",
+    "announcementDate": "2026-09-25",
+    "biddingDate": "2026-10-09",
+    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+    "status": "受付中",
+    "isRelevant": true
+  },
+  {
+    "id": "ikoma-0731704a64",
+    "municipality": "生駒市",
+    "title": "生駒市下水道事業管理・更新一体マネジメント方式導入可能性調査業務",
+    "type": "コンサル",
+    "announcementDate": "2026-09-25",
+    "biddingDate": "2026-10-09",
+    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
+    "id": "ikoma-1b5e33d387",
+    "municipality": "生駒市",
+    "title": "生駒市流域関連公共下水道有里町326号線工事に伴う測量設計業務",
+    "type": "コンサル",
+    "announcementDate": "2026-09-25",
+    "biddingDate": "2026-10-09",
+    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
+    "id": "ikoma-4c52b02d9c",
+    "municipality": "生駒市",
+    "title": "市営住宅（緑ヶ丘・第２元町・小平尾桜ヶ丘）ＬＥＤ改修工事設計業務",
+    "type": "コンサル",
+    "announcementDate": "2026-09-25",
+    "biddingDate": "2026-10-09",
+    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+    "status": "受付中",
+    "isRelevant": true
+  },
+  {
+    "id": "gose-御所市介護保険認定審査会システム等導入業-0",
+    "municipality": "御所市",
+    "title": "御所市介護保険認定審査会システム等導入業務委託に係る公募型プロポーザル",
+    "type": "その他",
+    "announcementDate": "2026-09-25",
+    "link": "",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
     "id": "nara-city-0000002531",
     "municipality": "奈良市",
     "title": "梅の郷月ヶ瀬温泉ボイラー設備改修その他工事に伴う建築設計業務委託",
@@ -131,28 +207,6 @@
     "announcementDate": "2026-09-24",
     "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
     "status": "不調",
-    "isRelevant": false
-  },
-  {
-    "id": "ando-category-66",
-    "municipality": "安堵町",
-    "title": "条件付き一般競争入札の実施について（令和8年度「広報安堵」印刷製本並びにその付帯業務事業）",
-    "type": "建築",
-    "announcementDate": "2026-09-24",
-    "link": "https://www.town.ando.nara.jp/0000003977.html",
-    "status": "受付中",
-    "isRelevant": false
-  },
-  {
-    "id": "ando-category-70",
-    "municipality": "安堵町",
-    "title": "【条件付き一般競争入札の結果】安堵町コロナ対策備品調達事業",
-    "type": "建築",
-    "announcementDate": "2026-09-24",
-    "link": "https://www.town.ando.nara.jp/0000003078.html",
-    "status": "落札",
-    "pdfUrl": "https://www.town.ando.nara.jp/cmsfiles/contents/0000003/3078/1.pdf",
-    "winningContractor": "株式会社 シミズ ７．",
     "isRelevant": false
   },
   {
@@ -1743,6 +1797,16 @@
     "isRelevant": false
   },
   {
+    "id": "gose-宅地造成等工事規制区域-15",
+    "municipality": "御所市",
+    "title": "宅地造成等工事規制区域",
+    "type": "建築",
+    "announcementDate": "2026-09-16",
+    "link": "",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
     "id": "nara-city-0000002656",
     "municipality": "奈良市",
     "title": "橋梁長寿命化修繕工事（東部第３１１号線（清楓橋）他）",
@@ -2267,7 +2331,8 @@
     "biddingDate": "2026-09-18",
     "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002601044",
     "status": "落札",
-    "estimatedPrice": "986,000円",
+    "winningContractor": "住川設備工業所",
+    "estimatedPrice": "901,000円",
     "isRelevant": false
   },
   {
@@ -2680,6 +2745,17 @@
     "type": "建築",
     "announcementDate": "2026-09-07",
     "biddingDate": "2026-09-07",
+    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+    "status": "不調",
+    "isRelevant": true
+  },
+  {
+    "id": "ikoma-3b336e0215",
+    "municipality": "生駒市",
+    "title": "学びの多様化学校整備工事",
+    "type": "建築",
+    "announcementDate": "2026-09-07",
+    "biddingDate": "2026-10-19",
     "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
     "status": "不調",
     "isRelevant": true
@@ -3617,6 +3693,18 @@
     "status": "落札",
     "winningContractor": "株式会社広成",
     "winnerType": "ゼネコン",
+    "isRelevant": false
+  },
+  {
+    "id": "gojo-epi-2601040",
+    "municipality": "五條市",
+    "title": "道路舗装工事",
+    "type": "建築",
+    "announcementDate": "2026-09-01",
+    "biddingDate": "2026-09-25",
+    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002601040",
+    "status": "受付終了",
+    "estimatedPrice": "13,427,000円",
     "isRelevant": false
   },
   {
