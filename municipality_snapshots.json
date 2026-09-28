@@ -657,7 +657,9 @@
       "announcementDate": "2026-09-01",
       "biddingDate": "2026-09-25",
       "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-      "status": "受付中"
+      "status": "落札",
+      "winningContractor": "株式会社弥杜工業",
+      "winnerType": "ゼネコン"
     },
     {
       "id": "nara-city-0000002650",
@@ -667,30 +669,8 @@
       "announcementDate": "2026-09-01",
       "biddingDate": "2026-09-28",
       "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-      "status": "受付中"
-    },
-    {
-      "id": "nara-city-0000002571",
-      "municipality": "奈良市",
-      "title": "環境清美センター焼却炉棟防火戸改修その他工事",
-      "type": "建築",
-      "announcementDate": "2026-07-31",
-      "biddingDate": "2026-07-31",
-      "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
       "status": "落札",
-      "winningContractor": "株式会社水野工務店",
-      "winnerType": "ゼネコン"
-    },
-    {
-      "id": "nara-city-0000002557",
-      "municipality": "奈良市",
-      "title": "ＪＲ奈良駅高架下公衆トイレ改修工事",
-      "type": "建築",
-      "announcementDate": "2026-07-30",
-      "biddingDate": "2026-07-30",
-      "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-      "status": "落札",
-      "winningContractor": "廣岡建設株式会社",
+      "winningContractor": "株式会社武部商会",
       "winnerType": "ゼネコン"
     },
     {
@@ -2684,7 +2664,7 @@
       "biddingDate": "2026-05-18",
       "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
       "status": "落札",
-      "winningContractor": "村本建設（株）奈良本店"
+      "winningContractor": "村本建設(株)奈良本店"
     }
   ],
   "広陵町": [

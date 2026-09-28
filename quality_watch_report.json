@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-09-28T03:13:22.352Z",
-  "qualityGeneratedAt": "2026-09-28T03:13:16.989Z",
-  "itemCount": 315,
+  "generatedAt": "2026-09-28T06:59:09.809Z",
+  "qualityGeneratedAt": "2026-09-28T06:51:14.270Z",
+  "itemCount": 313,
   "resultFollowUp": {
-    "totalCount": 8,
+    "totalCount": 7,
     "highCount": 6,
-    "mediumCount": 2,
+    "mediumCount": 1,
     "lowCount": 0,
     "missingBiddingDateCount": 0,
     "byMunicipality": [
@@ -19,7 +19,7 @@
       },
       {
         "municipality": "奈良市",
-        "count": 2
+        "count": 1
       }
     ],
     "samples": [
@@ -132,22 +132,6 @@
           "biddingDate": "2026-09-25",
           "winningContractor": null,
           "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013401020260007&gamenMode=0",
-          "pdfUrl": null
-        }
-      },
-      {
-        "priority": "medium",
-        "ageDays": 3,
-        "reason": "開札日から3日経過",
-        "item": {
-          "id": "nara-city-0000002637",
-          "municipality": "奈良市",
-          "title": "本庁舎中央棟地下売店等内部改修工事",
-          "status": "受付終了",
-          "announcementDate": "2026-09-01",
-          "biddingDate": "2026-09-25",
-          "winningContractor": null,
-          "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
           "pdfUrl": null
         }
       }
@@ -487,15 +471,15 @@
         "municipality": "奈良市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 12,
+        "totalCount": 10,
         "requiredLinkIncludes": [
           "nara.efftis.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "nara.efftis.jp": 12
+          "nara.efftis.jp": 10
         },
-        "message": "奈良市: 12件 (公告4/結果8) / sources OK"
+        "message": "奈良市: 10件 (公告2/結果8) / sources OK"
       },
       {
         "municipality": "橿原市",

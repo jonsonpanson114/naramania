@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-28T03:13:27.057Z",
+  "generatedAt": "2026-09-28T06:59:10.934Z",
   "checkedMunicipalityCount": 24,
-  "expectedItemCount": 315,
-  "matchedItemCount": 315,
+  "expectedItemCount": 313,
+  "matchedItemCount": 313,
   "missingItemCount": 0,
   "duplicateTitleGroupCount": 23,
   "duplicateTitleItemCount": 51,
@@ -107,10 +107,10 @@
       "status": "ok"
     },
     {
-      "municipality": "奈良市",
-      "snapshotCount": 12,
-      "expectedCount": 12,
-      "matchedCount": 12,
+      "municipality": "桜井市",
+      "snapshotCount": 10,
+      "expectedCount": 10,
+      "matchedCount": 10,
       "missingCount": 0,
       "duplicateTitleGroupCount": 0,
       "duplicateTitleItemCount": 0,
@@ -118,7 +118,7 @@
       "status": "ok"
     },
     {
-      "municipality": "桜井市",
+      "municipality": "奈良市",
       "snapshotCount": 10,
       "expectedCount": 10,
       "matchedCount": 10,
