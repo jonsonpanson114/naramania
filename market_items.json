@@ -46,116 +46,6 @@
     "isRelevant": false
   },
   {
-    "id": "nara-city-0000002531",
-    "municipality": "奈良市",
-    "title": "梅の郷月ヶ瀬温泉ボイラー設備改修その他工事に伴う建築設計業務委託",
-    "type": "コンサル",
-    "announcementDate": "2026-09-28",
-    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-    "status": "不調",
-    "isRelevant": false
-  },
-  {
-    "id": "nara-city-0000002532",
-    "municipality": "奈良市",
-    "title": "庁舎非常用発電機燃料タンク増設その他改修に伴う建築設計業務委託",
-    "type": "コンサル",
-    "announcementDate": "2026-09-28",
-    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-    "status": "不調",
-    "isRelevant": false
-  },
-  {
-    "id": "nara-city-0000002533",
-    "municipality": "奈良市",
-    "title": "奈良市総合医療検査センター空調設備改修その他工事に伴う建築設計業務委託",
-    "type": "コンサル",
-    "announcementDate": "2026-09-28",
-    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-    "status": "不調",
-    "isRelevant": false
-  },
-  {
-    "id": "nara-city-0000002474",
-    "municipality": "奈良市",
-    "title": "平城中学校他３校給水設備等改修に伴う設計業務委託",
-    "type": "コンサル",
-    "announcementDate": "2026-09-28",
-    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-    "status": "不調",
-    "isRelevant": false
-  },
-  {
-    "id": "nara-city-0000002475",
-    "municipality": "奈良市",
-    "title": "中央体育館汚水配管改修工事に伴う建築設計業務委託",
-    "type": "コンサル",
-    "announcementDate": "2026-09-28",
-    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-    "status": "不調",
-    "isRelevant": false
-  },
-  {
-    "id": "nara-city-0000002438",
-    "municipality": "奈良市",
-    "title": "ならまちセンター空調設備改修その他工事に伴う建築設計業務委託",
-    "type": "コンサル",
-    "announcementDate": "2026-09-28",
-    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-    "status": "不調",
-    "isRelevant": false
-  },
-  {
-    "id": "nara-city-0000002441",
-    "municipality": "奈良市",
-    "title": "庁舎非常用発電機燃料タンク増設その他改修に伴う建築設計業務委託",
-    "type": "コンサル",
-    "announcementDate": "2026-09-28",
-    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-    "status": "不調",
-    "isRelevant": false
-  },
-  {
-    "id": "nara-city-0000002442",
-    "municipality": "奈良市",
-    "title": "生涯学習センター吸収冷温水機改修に伴う設計業務委託",
-    "type": "コンサル",
-    "announcementDate": "2026-09-28",
-    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-    "status": "不調",
-    "isRelevant": false
-  },
-  {
-    "id": "nara-city-0000002444",
-    "municipality": "奈良市",
-    "title": "奈良市月ヶ瀬福祉センター温水設備改修工事に伴う建築設計業務委託",
-    "type": "コンサル",
-    "announcementDate": "2026-09-28",
-    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-    "status": "不調",
-    "isRelevant": false
-  },
-  {
-    "id": "nara-city-0000002445",
-    "municipality": "奈良市",
-    "title": "鴻ノ池球場放送設備改修工事に伴う建築設計業務委託",
-    "type": "コンサル",
-    "announcementDate": "2026-09-28",
-    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-    "status": "不調",
-    "isRelevant": false
-  },
-  {
-    "id": "nara-city-0000002597",
-    "municipality": "奈良市",
-    "title": "奈良市役所本庁舎他８施設設備改修工事に伴う建築設計業務委託",
-    "type": "コンサル",
-    "announcementDate": "2026-09-28",
-    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-    "status": "不調",
-    "isRelevant": false
-  },
-  {
     "id": "nara-city-0000002649",
     "municipality": "奈良市",
     "title": "大安寺小学校校舎屋上防水改修工事",
@@ -286,6 +176,16 @@
   },
   {
     "id": "gose-御所市介護保険認定審査会システム等導入業-2",
+    "municipality": "御所市",
+    "title": "御所市介護保険認定審査会システム等導入業務委託に係る公募型プロポーザル",
+    "type": "その他",
+    "announcementDate": "2026-09-25",
+    "link": "",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
+    "id": "gose-御所市介護保険認定審査会システム等導入業-5",
     "municipality": "御所市",
     "title": "御所市介護保険認定審査会システム等導入業務委託に係る公募型プロポーザル",
     "type": "その他",
@@ -1941,6 +1841,16 @@
     "isRelevant": false
   },
   {
+    "id": "gose-宅地造成等工事規制区域-20",
+    "municipality": "御所市",
+    "title": "宅地造成等工事規制区域",
+    "type": "建築",
+    "announcementDate": "2026-09-16",
+    "link": "",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
     "id": "nara-city-0000002656",
     "municipality": "奈良市",
     "title": "橋梁長寿命化修繕工事（東部第３１１号線（清楓橋）他）",
@@ -2945,19 +2855,6 @@
     "isRelevant": false
   },
   {
-    "id": "nara-city-0000002595",
-    "municipality": "奈良市",
-    "title": "市道路面下空洞調査業務委託",
-    "type": "コンサル",
-    "announcementDate": "2026-09-04",
-    "biddingDate": "2026-09-04",
-    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-    "status": "落札",
-    "winningContractor": "ジオ・サーチ株式会社",
-    "winnerType": "ゼネコン",
-    "isRelevant": false
-  },
-  {
     "id": "gose-御所市文書関係事務適正化支援業務委託プロ-5",
     "municipality": "御所市",
     "title": "御所市文書関係事務適正化支援業務委託プロポーザルを実施します（業務委託）",
@@ -3038,19 +2935,6 @@
     "announcementDate": "2026-09-04",
     "link": "",
     "status": "受付中",
-    "isRelevant": false
-  },
-  {
-    "id": "nara-city-0000002596",
-    "municipality": "奈良市",
-    "title": "電線共同溝整備工事に伴う現場技術業務委託",
-    "type": "コンサル",
-    "announcementDate": "2026-09-04",
-    "biddingDate": "2026-09-04",
-    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-    "status": "落札",
-    "winningContractor": "株式会社ティーネットジャパン",
-    "winnerType": "ゼネコン",
     "isRelevant": false
   },
   {
@@ -4410,32 +4294,6 @@
     "isRelevant": false
   },
   {
-    "id": "nara-city-0000002592",
-    "municipality": "奈良市",
-    "title": "中央体育館および鴻ノ池球場設備改修工事に伴う建築設計業務委託",
-    "type": "コンサル",
-    "announcementDate": "2026-08-27",
-    "biddingDate": "2026-08-27",
-    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-    "status": "落札",
-    "winningContractor": "簑原建築設計事務所",
-    "winnerType": "設計事務所",
-    "isRelevant": false
-  },
-  {
-    "id": "nara-city-0000002593",
-    "municipality": "奈良市",
-    "title": "庁舎中央棟地下書庫内部改修に伴う建築設計業務委託",
-    "type": "コンサル",
-    "announcementDate": "2026-08-27",
-    "biddingDate": "2026-08-27",
-    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-    "status": "落札",
-    "winningContractor": "岡田建築設計事務所",
-    "winnerType": "設計事務所",
-    "isRelevant": true
-  },
-  {
     "id": "nara-city-0000002587",
     "municipality": "奈良市",
     "title": "地山土留補強対策工事（北椿尾町地内・東部第３００号線）",
@@ -5352,7 +5210,7 @@
     "biddingDate": "2026-09-14",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "（株）西日本設計 奈良事務所",
+    "winningContractor": "(株)西日本設計 奈良事務所",
     "isRelevant": false
   },
   {
@@ -5397,7 +5255,7 @@
     "biddingDate": "2026-09-14",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "（株）北林組",
+    "winningContractor": "(株)北林組",
     "isRelevant": false
   },
   {
@@ -5409,7 +5267,7 @@
     "biddingDate": "2026-09-14",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "竹田建設（有）",
+    "winningContractor": "竹田建設(有)",
     "isRelevant": false
   },
   {
@@ -5421,7 +5279,7 @@
     "biddingDate": "2026-09-14",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "（有）吉田舗装",
+    "winningContractor": "(有)吉田舗装",
     "isRelevant": false
   },
   {
@@ -5433,7 +5291,7 @@
     "biddingDate": "2026-09-14",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "（株）仲谷組",
+    "winningContractor": "(株)仲谷組",
     "isRelevant": false
   },
   {
@@ -5445,7 +5303,7 @@
     "biddingDate": "2026-09-14",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "（株）堂浦土木",
+    "winningContractor": "(株)堂浦土木",
     "isRelevant": false
   },
   {
@@ -5892,7 +5750,7 @@
     "biddingDate": "2026-09-14",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "リコージャパン（株）デジタルサービス営業本部 奈良支社奈良営業部",
+    "winningContractor": "リコージャパン(株)デジタルサービス営業本部 奈良支社奈良営業部",
     "isRelevant": false
   },
   {
@@ -6431,58 +6289,6 @@
     "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
     "status": "落札",
     "winningContractor": "三機グリーンテック株式会社",
-    "winnerType": "ゼネコン",
-    "isRelevant": false
-  },
-  {
-    "id": "nara-city-0000002553",
-    "municipality": "奈良市",
-    "title": "史跡大安寺旧境内保存用地取得事業支障物件補償調査業務委託　発注番号③",
-    "type": "コンサル",
-    "announcementDate": "2026-08-05",
-    "biddingDate": "2026-08-05",
-    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-    "status": "落札",
-    "winningContractor": "株式会社技研",
-    "winnerType": "ゼネコン",
-    "isRelevant": false
-  },
-  {
-    "id": "nara-city-0000002573",
-    "municipality": "奈良市",
-    "title": "橋梁長寿命化修繕・耐震補強設計業務委託（登美ヶ丘中町線（無名橋０２７）他）",
-    "type": "コンサル",
-    "announcementDate": "2026-08-05",
-    "biddingDate": "2026-08-05",
-    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-    "status": "落札",
-    "winningContractor": "株式会社千代田コンサルタント",
-    "winnerType": "設計事務所",
-    "isRelevant": false
-  },
-  {
-    "id": "nara-city-0000002574",
-    "municipality": "奈良市",
-    "title": "トンネル定期点検業務委託（北部第６９７号線（奈良阪トンネル））",
-    "type": "コンサル",
-    "announcementDate": "2026-08-05",
-    "biddingDate": "2026-08-05",
-    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-    "status": "落札",
-    "winningContractor": "正和設計株式会社",
-    "winnerType": "設計事務所",
-    "isRelevant": false
-  },
-  {
-    "id": "nara-city-0000002575",
-    "municipality": "奈良市",
-    "title": "史跡大安寺旧境内保存用地取得事業支障物件補償調査業務委託　発注番号①",
-    "type": "コンサル",
-    "announcementDate": "2026-08-05",
-    "biddingDate": "2026-08-05",
-    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-    "status": "落札",
-    "winningContractor": "株式会社ＮＩＳＳＯ",
     "winnerType": "ゼネコン",
     "isRelevant": false
   },
@@ -7050,6 +6856,39 @@
     "pdfUrl": "https://www.town.takatori.nara.jp/cmsfiles/contents/0000002/2665/R8.8.3.pdf",
     "status": "受付中",
     "isRelevant": true
+  },
+  {
+    "id": "nara-city-0000002597",
+    "municipality": "奈良市",
+    "title": "奈良市役所本庁舎他８施設設備改修工事に伴う建築設計業務委託",
+    "type": "コンサル",
+    "announcementDate": "2026-08-03",
+    "biddingDate": "2026-09-04",
+    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
+    "id": "nara-city-0000002595",
+    "municipality": "奈良市",
+    "title": "市道路面下空洞調査業務委託",
+    "type": "コンサル",
+    "announcementDate": "2026-08-03",
+    "biddingDate": "2026-09-04",
+    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
+    "id": "nara-city-0000002596",
+    "municipality": "奈良市",
+    "title": "電線共同溝整備工事に伴う現場技術業務委託",
+    "type": "コンサル",
+    "announcementDate": "2026-08-03",
+    "biddingDate": "2026-09-04",
+    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+    "status": "受付中",
+    "isRelevant": false
   },
   {
     "id": "sakurai-2026-08-03-水路浚渫工事",
@@ -8113,19 +7952,6 @@
     "isRelevant": false
   },
   {
-    "id": "nara-city-0000002551",
-    "municipality": "奈良市",
-    "title": "橋梁定期点検業務委託（東部第３１１号線（清楓橋）他）",
-    "type": "コンサル",
-    "announcementDate": "2026-07-22",
-    "biddingDate": "2026-07-22",
-    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-    "status": "落札",
-    "winningContractor": "株式会社ジャスト",
-    "winnerType": "ゼネコン",
-    "isRelevant": false
-  },
-  {
     "id": "kashihara-result-5081000714",
     "municipality": "橿原市",
     "title": "電線共同溝敷設工事（第7－7工区）",
@@ -9146,6 +8972,28 @@
     "isRelevant": false
   },
   {
+    "id": "nara-city-0000002592",
+    "municipality": "奈良市",
+    "title": "中央体育館および鴻ノ池球場設備改修工事に伴う建築設計業務委託",
+    "type": "コンサル",
+    "announcementDate": "2026-07-15",
+    "biddingDate": "2026-08-27",
+    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
+    "id": "nara-city-0000002593",
+    "municipality": "奈良市",
+    "title": "庁舎中央棟地下書庫内部改修に伴う建築設計業務委託",
+    "type": "コンサル",
+    "announcementDate": "2026-07-15",
+    "biddingDate": "2026-08-27",
+    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+    "status": "受付中",
+    "isRelevant": true
+  },
+  {
     "id": "oji-aHR0cHM6Ly93",
     "municipality": "王寺町",
     "title": "やわらぎ会館改修工事（7月）",
@@ -9591,7 +9439,7 @@
     "biddingDate": "2026-08-03",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "(株)上田工務店",
+    "winningContractor": "(株) 上田工務店",
     "isRelevant": false
   },
   {
@@ -9615,7 +9463,7 @@
     "biddingDate": "2026-07-27",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "（株）間瀬コンサルタント 奈良営業所",
+    "winningContractor": "(株)間瀬コンサルタント 奈良営業所",
     "isRelevant": false
   },
   {
@@ -10028,32 +9876,6 @@
     "isRelevant": false
   },
   {
-    "id": "nara-city-0000002529",
-    "municipality": "奈良市",
-    "title": "測量設計業務委託（山町地内・南部第４７８号線他）",
-    "type": "コンサル",
-    "announcementDate": "2026-07-06",
-    "biddingDate": "2026-07-06",
-    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-    "status": "落札",
-    "winningContractor": "株式会社修成建設コンサルタント",
-    "winnerType": "設計事務所",
-    "isRelevant": false
-  },
-  {
-    "id": "nara-city-0000002530",
-    "municipality": "奈良市",
-    "title": "路面下空洞調査業務委託（市内一円）",
-    "type": "コンサル",
-    "announcementDate": "2026-07-06",
-    "biddingDate": "2026-07-06",
-    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-    "status": "落札",
-    "winningContractor": "ジオ・サーチ株式会社",
-    "winnerType": "ゼネコン",
-    "isRelevant": false
-  },
-  {
     "id": "oyodo-e1ddb29111",
     "municipality": "大淀町",
     "title": "宮生川河川護岸補修設計業務（緊急自然災害対策事業債）（第8－河川整備－委－1号）【令和8年7月6日執行】 （pdf, 61.79KB）",
@@ -10212,6 +10034,50 @@
     "announcementDate": "2026-07-02",
     "biddingDate": "2026-07-28",
     "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=06200640072006E0",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
+    "id": "nara-city-0000002553",
+    "municipality": "奈良市",
+    "title": "史跡大安寺旧境内保存用地取得事業支障物件補償調査業務委託　発注番号③",
+    "type": "コンサル",
+    "announcementDate": "2026-07-01",
+    "biddingDate": "2026-08-05",
+    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
+    "id": "nara-city-0000002573",
+    "municipality": "奈良市",
+    "title": "橋梁長寿命化修繕・耐震補強設計業務委託（登美ヶ丘中町線（無名橋０２７）他）",
+    "type": "コンサル",
+    "announcementDate": "2026-07-01",
+    "biddingDate": "2026-08-05",
+    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
+    "id": "nara-city-0000002574",
+    "municipality": "奈良市",
+    "title": "トンネル定期点検業務委託（北部第６９７号線（奈良阪トンネル））",
+    "type": "コンサル",
+    "announcementDate": "2026-07-01",
+    "biddingDate": "2026-08-05",
+    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
+    "id": "nara-city-0000002575",
+    "municipality": "奈良市",
+    "title": "史跡大安寺旧境内保存用地取得事業支障物件補償調査業務委託　発注番号①",
+    "type": "コンサル",
+    "announcementDate": "2026-07-01",
+    "biddingDate": "2026-08-05",
+    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
     "status": "受付中",
     "isRelevant": false
   },
@@ -11433,58 +11299,6 @@
     "isRelevant": false
   },
   {
-    "id": "nara-city-0000002470",
-    "municipality": "奈良市",
-    "title": "測量設計業務委託（池田町地内・南部第５０４号線）",
-    "type": "コンサル",
-    "announcementDate": "2026-06-19",
-    "biddingDate": "2026-06-19",
-    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-    "status": "落札",
-    "winningContractor": "中央コンサルタンツ株式会社",
-    "winnerType": "設計事務所",
-    "isRelevant": false
-  },
-  {
-    "id": "nara-city-0000002471",
-    "municipality": "奈良市",
-    "title": "測量設計業務委託（大和田町地内・西部第７１６号線）",
-    "type": "コンサル",
-    "announcementDate": "2026-06-19",
-    "biddingDate": "2026-06-19",
-    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-    "status": "落札",
-    "winningContractor": "協和設計株式会社",
-    "winnerType": "設計事務所",
-    "isRelevant": false
-  },
-  {
-    "id": "nara-city-0000002472",
-    "municipality": "奈良市",
-    "title": "市道南部第１号線道路予備設計業務委託",
-    "type": "コンサル",
-    "announcementDate": "2026-06-19",
-    "biddingDate": "2026-06-19",
-    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-    "status": "落札",
-    "winningContractor": "株式会社新土木開発コンサルタント",
-    "winnerType": "設計事務所",
-    "isRelevant": false
-  },
-  {
-    "id": "nara-city-0000002473",
-    "municipality": "奈良市",
-    "title": "測量設計業務委託（肘塚町地内他・北部第２９１号線）",
-    "type": "コンサル",
-    "announcementDate": "2026-06-19",
-    "biddingDate": "2026-06-19",
-    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-    "status": "落札",
-    "winningContractor": "株式会社ＣＴＩウイング",
-    "winnerType": "ゼネコン",
-    "isRelevant": false
-  },
-  {
     "id": "gojo-8f2520b4",
     "municipality": "五條市",
     "title": "中央公民館照明器具取替修繕",
@@ -11669,7 +11483,7 @@
     "biddingDate": "2026-07-13",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "(有) 吉田舗装",
+    "winningContractor": "（有）吉田舗装",
     "isRelevant": false
   },
   {
@@ -11681,7 +11495,7 @@
     "biddingDate": "2026-07-13",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "(株) キショウ",
+    "winningContractor": "（株）キショウ",
     "isRelevant": false
   },
   {
@@ -11693,7 +11507,7 @@
     "biddingDate": "2026-07-13",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "竹田建設 (有)",
+    "winningContractor": "竹田建設（有）",
     "isRelevant": false
   },
   {
@@ -11717,7 +11531,7 @@
     "biddingDate": "2026-07-13",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "大和電機工業 (株)",
+    "winningContractor": "大和電機工業（株）",
     "isRelevant": false
   },
   {
@@ -11729,7 +11543,7 @@
     "biddingDate": "2026-07-13",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "シマ産商 (株)",
+    "winningContractor": "シマ産商（株）",
     "isRelevant": false
   },
   {
@@ -11741,7 +11555,7 @@
     "biddingDate": "2026-08-03",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "(株)中西製作所 奈良営業所",
+    "winningContractor": "(株) 中西製作所 奈良営業所",
     "isRelevant": false
   },
   {
@@ -12070,6 +11884,17 @@
     "status": "不調",
     "winnerType": "設計事務所",
     "isRelevant": true
+  },
+  {
+    "id": "nara-city-0000002551",
+    "municipality": "奈良市",
+    "title": "橋梁定期点検業務委託（東部第３１１号線（清楓橋）他）",
+    "type": "コンサル",
+    "announcementDate": "2026-06-15",
+    "biddingDate": "2026-07-22",
+    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+    "status": "受付中",
+    "isRelevant": false
   },
   {
     "id": "yamato-koriyama-207e72b4",
@@ -12443,32 +12268,6 @@
     "isRelevant": false
   },
   {
-    "id": "nara-city-0000002436",
-    "municipality": "奈良市",
-    "title": "測量設計業務委託（法蓮町地内・北部第４８４号線他）",
-    "type": "コンサル",
-    "announcementDate": "2026-06-05",
-    "biddingDate": "2026-06-05",
-    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-    "status": "落札",
-    "winningContractor": "株式会社エンタコンサルタント",
-    "winnerType": "設計事務所",
-    "isRelevant": false
-  },
-  {
-    "id": "nara-city-0000002443",
-    "municipality": "奈良市",
-    "title": "西部図書館給水設備改修に伴う設計業務委託",
-    "type": "コンサル",
-    "announcementDate": "2026-06-05",
-    "biddingDate": "2026-06-05",
-    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-    "status": "落札",
-    "winningContractor": "株式会社システムクリエイト",
-    "winnerType": "ゼネコン",
-    "isRelevant": false
-  },
-  {
     "id": "ikoma-result-2601010025",
     "municipality": "生駒市",
     "title": "生駒南小学校・生駒南中学校整備事業に伴う生駒南小学校改修工事",
@@ -12672,71 +12471,6 @@
     "isRelevant": false
   },
   {
-    "id": "nara-city-0000002435",
-    "municipality": "奈良市",
-    "title": "橋梁長寿命化修繕設計業務委託（六条奈良阪線（佐保橋）他）",
-    "type": "コンサル",
-    "announcementDate": "2026-06-04",
-    "biddingDate": "2026-06-04",
-    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-    "status": "落札",
-    "winningContractor": "サンコーコンサルタント株式会社",
-    "winnerType": "設計事務所",
-    "isRelevant": false
-  },
-  {
-    "id": "nara-city-0000002437",
-    "municipality": "奈良市",
-    "title": "庁舎等ＬＥＤ照明器具改修事業に伴う建築設計業務委託",
-    "type": "コンサル",
-    "announcementDate": "2026-06-04",
-    "biddingDate": "2026-06-04",
-    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-    "status": "落札",
-    "winningContractor": "株式会社昭和設計",
-    "winnerType": "設計事務所",
-    "isRelevant": false
-  },
-  {
-    "id": "nara-city-0000002439",
-    "municipality": "奈良市",
-    "title": "飛鳥小学校他３校受水槽等改修に伴う設計業務委託",
-    "type": "コンサル",
-    "announcementDate": "2026-06-04",
-    "biddingDate": "2026-06-04",
-    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-    "status": "落札",
-    "winningContractor": "株式会社システムクリエイト",
-    "winnerType": "ゼネコン",
-    "isRelevant": false
-  },
-  {
-    "id": "nara-city-0000002440",
-    "municipality": "奈良市",
-    "title": "佐保バンビーホーム新築に伴う建築設計業務委託",
-    "type": "コンサル",
-    "announcementDate": "2026-06-04",
-    "biddingDate": "2026-06-04",
-    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-    "status": "落札",
-    "winningContractor": "株式会社システムクリエイト",
-    "winnerType": "ゼネコン",
-    "isRelevant": true
-  },
-  {
-    "id": "nara-city-0000002446",
-    "municipality": "奈良市",
-    "title": "支障物件調査業務委託（五条町地内・中部第４８５号線）",
-    "type": "コンサル",
-    "announcementDate": "2026-06-04",
-    "biddingDate": "2026-06-04",
-    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-    "status": "落札",
-    "winningContractor": "福田総合コンサルタント株式会社",
-    "winnerType": "設計事務所",
-    "isRelevant": false
-  },
-  {
     "id": "uda-14d83225dc",
     "municipality": "宇陀市",
     "title": "【第08-C019号】市単独事業 室生地域事務所庁舎耐震診断業務",
@@ -12757,7 +12491,7 @@
     "biddingDate": "2026-06-29",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "NTT西日本（株）奈良支店",
+    "winningContractor": "NTT西日本(株) 奈良支店",
     "isRelevant": false
   },
   {
@@ -13150,6 +12884,61 @@
     "isRelevant": false
   },
   {
+    "id": "nara-city-0000002531",
+    "municipality": "奈良市",
+    "title": "梅の郷月ヶ瀬温泉ボイラー設備改修その他工事に伴う建築設計業務委託",
+    "type": "コンサル",
+    "announcementDate": "2026-06-01",
+    "biddingDate": "2026-07-03",
+    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
+    "id": "nara-city-0000002532",
+    "municipality": "奈良市",
+    "title": "庁舎非常用発電機燃料タンク増設その他改修に伴う建築設計業務委託",
+    "type": "コンサル",
+    "announcementDate": "2026-06-01",
+    "biddingDate": "2026-07-03",
+    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
+    "id": "nara-city-0000002533",
+    "municipality": "奈良市",
+    "title": "奈良市総合医療検査センター空調設備改修その他工事に伴う建築設計業務委託",
+    "type": "コンサル",
+    "announcementDate": "2026-06-01",
+    "biddingDate": "2026-07-03",
+    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
+    "id": "nara-city-0000002529",
+    "municipality": "奈良市",
+    "title": "測量設計業務委託（山町地内・南部第４７８号線他）",
+    "type": "コンサル",
+    "announcementDate": "2026-06-01",
+    "biddingDate": "2026-07-06",
+    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
+    "id": "nara-city-0000002530",
+    "municipality": "奈良市",
+    "title": "路面下空洞調査業務委託（市内一円）",
+    "type": "コンサル",
+    "announcementDate": "2026-06-01",
+    "biddingDate": "2026-07-06",
+    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
     "id": "nara-city-0000002535",
     "municipality": "奈良市",
     "title": "史跡大安寺旧境内保存用地取得事業支障物件補償調査業務委託　発注番号①",
@@ -13478,19 +13267,6 @@
     "isRelevant": false
   },
   {
-    "id": "nara-city-0000002342",
-    "municipality": "奈良市",
-    "title": "鴻ノ池運動公園耐震性貯水槽設置工事に伴う実施設計業務委託",
-    "type": "コンサル",
-    "announcementDate": "2026-05-28",
-    "biddingDate": "2026-05-28",
-    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-    "status": "落札",
-    "winningContractor": "株式会社日建技術コンサルタント",
-    "winnerType": "設計事務所",
-    "isRelevant": false
-  },
-  {
     "id": "tawaramoto-2026062202",
     "municipality": "田原本町",
     "title": "町道環境整備工事第１期曽我川・飛鳥川筋",
@@ -13547,7 +13323,7 @@
     "biddingDate": "2026-06-29",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "（株）第一テクノ 関西支店",
+    "winningContractor": "(株) 第一テクノ 関西支店",
     "isRelevant": false
   },
   {
@@ -13559,7 +13335,7 @@
     "biddingDate": "2026-06-22",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "（株）タツタ環境分析センター 奈良営業所",
+    "winningContractor": "(株)タツタ環境分析センター 奈良営業所",
     "isRelevant": false
   },
   {
@@ -13571,7 +13347,7 @@
     "biddingDate": "2026-06-22",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "アスカ美装（株）",
+    "winningContractor": "アスカ美装(株)",
     "isRelevant": false
   },
   {
@@ -13595,7 +13371,7 @@
     "biddingDate": "2026-06-22",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "（株）ユイテック",
+    "winningContractor": "(株)ユイテック",
     "isRelevant": false
   },
   {
@@ -13607,7 +13383,7 @@
     "biddingDate": "2026-06-22",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "管清工業（株）奈良事業所",
+    "winningContractor": "管清工業(株) 奈良事業所",
     "isRelevant": false
   },
   {
@@ -13619,7 +13395,7 @@
     "biddingDate": "2026-06-29",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "奈良OAシステム（株）",
+    "winningContractor": "奈良OAシステム(株)",
     "isRelevant": false
   },
   {
@@ -13861,123 +13637,6 @@
     "winningContractor": "池田水道工業（株）",
     "winnerType": "ゼネコン",
     "estimatedPrice": "33,888,000円",
-    "isRelevant": false
-  },
-  {
-    "id": "nara-city-0000002340",
-    "municipality": "奈良市",
-    "title": "ＪＲ奈良駅南特定土地区画整理事業換地計画等作成業務委託",
-    "type": "コンサル",
-    "announcementDate": "2026-05-27",
-    "biddingDate": "2026-05-27",
-    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-    "status": "落札",
-    "winningContractor": "日本都市技術株式会社",
-    "winnerType": "ゼネコン",
-    "isRelevant": false
-  },
-  {
-    "id": "nara-city-0000002341",
-    "municipality": "奈良市",
-    "title": "ＪＲ奈良駅南特定土地区画整理事業土木技術補助業務委託",
-    "type": "コンサル",
-    "announcementDate": "2026-05-27",
-    "biddingDate": "2026-05-27",
-    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-    "status": "落札",
-    "winningContractor": "株式会社英晃コンサルタント",
-    "winnerType": "設計事務所",
-    "isRelevant": false
-  },
-  {
-    "id": "nara-city-0000002343",
-    "municipality": "奈良市",
-    "title": "鴻ノ池運動公園非常用自家発電設備設置工事に伴う基本・実施設計業務委託",
-    "type": "コンサル",
-    "announcementDate": "2026-05-27",
-    "biddingDate": "2026-05-27",
-    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-    "status": "落札",
-    "winningContractor": "株式会社ワールド設計",
-    "winnerType": "設計事務所",
-    "isRelevant": false
-  },
-  {
-    "id": "nara-city-0000002344",
-    "municipality": "奈良市",
-    "title": "南消防署外壁等改修その他工事に伴う建築設計業務委託",
-    "type": "コンサル",
-    "announcementDate": "2026-05-27",
-    "biddingDate": "2026-05-27",
-    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-    "status": "落札",
-    "winningContractor": "株式会社建綜研",
-    "winnerType": "ゼネコン",
-    "isRelevant": false
-  },
-  {
-    "id": "nara-city-0000002345",
-    "municipality": "奈良市",
-    "title": "第１０号市営住宅解体工事に伴う建築設計業務委託",
-    "type": "コンサル",
-    "announcementDate": "2026-05-27",
-    "biddingDate": "2026-05-27",
-    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-    "status": "落札",
-    "winningContractor": "株式会社ＵＬＴＲＡ　Ｃ",
-    "winnerType": "ゼネコン",
-    "isRelevant": true
-  },
-  {
-    "id": "nara-city-0000002347",
-    "municipality": "奈良市",
-    "title": "西部生涯スポーツセンタートイレ改修に伴う建築設計業務委託",
-    "type": "コンサル",
-    "announcementDate": "2026-05-27",
-    "biddingDate": "2026-05-27",
-    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-    "status": "落札",
-    "winningContractor": "岡田建築設計事務所",
-    "winnerType": "設計事務所",
-    "isRelevant": true
-  },
-  {
-    "id": "nara-city-0000002348",
-    "municipality": "奈良市",
-    "title": "鴻ノ池コートトイレ改修に伴う建築設計業務委託",
-    "type": "コンサル",
-    "announcementDate": "2026-05-27",
-    "biddingDate": "2026-05-27",
-    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-    "status": "落札",
-    "winningContractor": "株式会社建綜研",
-    "winnerType": "ゼネコン",
-    "isRelevant": true
-  },
-  {
-    "id": "nara-city-0000002349",
-    "municipality": "奈良市",
-    "title": "南部生涯スポーツセンタートイレ改修に伴う建築設計業務委託",
-    "type": "コンサル",
-    "announcementDate": "2026-05-27",
-    "biddingDate": "2026-05-27",
-    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-    "status": "落札",
-    "winningContractor": "株式会社システムクリエイト",
-    "winnerType": "ゼネコン",
-    "isRelevant": true
-  },
-  {
-    "id": "nara-city-0000002350",
-    "municipality": "奈良市",
-    "title": "中央消防署南部分署公共下水接続その他工事に伴う建築設計業務委託",
-    "type": "コンサル",
-    "announcementDate": "2026-05-27",
-    "biddingDate": "2026-05-27",
-    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-    "status": "落札",
-    "winningContractor": "株式会社建綜研",
-    "winnerType": "ゼネコン",
     "isRelevant": false
   },
   {
@@ -14569,7 +14228,7 @@
     "biddingDate": "2026-06-22",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "（株）トライグループ",
+    "winningContractor": "(株)トライグループ",
     "isRelevant": false
   },
   {
@@ -15931,6 +15590,72 @@
     "isRelevant": false
   },
   {
+    "id": "nara-city-0000002474",
+    "municipality": "奈良市",
+    "title": "平城中学校他３校給水設備等改修に伴う設計業務委託",
+    "type": "コンサル",
+    "announcementDate": "2026-05-15",
+    "biddingDate": "2026-06-19",
+    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
+    "id": "nara-city-0000002475",
+    "municipality": "奈良市",
+    "title": "中央体育館汚水配管改修工事に伴う建築設計業務委託",
+    "type": "コンサル",
+    "announcementDate": "2026-05-15",
+    "biddingDate": "2026-06-19",
+    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
+    "id": "nara-city-0000002470",
+    "municipality": "奈良市",
+    "title": "測量設計業務委託（池田町地内・南部第５０４号線）",
+    "type": "コンサル",
+    "announcementDate": "2026-05-15",
+    "biddingDate": "2026-06-19",
+    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
+    "id": "nara-city-0000002471",
+    "municipality": "奈良市",
+    "title": "測量設計業務委託（大和田町地内・西部第７１６号線）",
+    "type": "コンサル",
+    "announcementDate": "2026-05-15",
+    "biddingDate": "2026-06-19",
+    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
+    "id": "nara-city-0000002472",
+    "municipality": "奈良市",
+    "title": "市道南部第１号線道路予備設計業務委託",
+    "type": "コンサル",
+    "announcementDate": "2026-05-15",
+    "biddingDate": "2026-06-19",
+    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
+    "id": "nara-city-0000002473",
+    "municipality": "奈良市",
+    "title": "測量設計業務委託（肘塚町地内他・北部第２９１号線）",
+    "type": "コンサル",
+    "announcementDate": "2026-05-15",
+    "biddingDate": "2026-06-19",
+    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
     "id": "ikoma-result-2601100001",
     "municipality": "生駒市",
     "title": "宝山寺駅前線道路修景整備に伴う測量業務",
@@ -16036,7 +15761,7 @@
     "biddingDate": "2026-06-22",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "（株）木下エネルギーソリューションズ",
+    "winningContractor": "(株)木下エネルギーソリューションズ",
     "isRelevant": false
   },
   {
@@ -16575,6 +16300,138 @@
     "announcementDate": "2026-05-07",
     "biddingDate": "2026-05-28",
     "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200720",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
+    "id": "nara-city-0000002438",
+    "municipality": "奈良市",
+    "title": "ならまちセンター空調設備改修その他工事に伴う建築設計業務委託",
+    "type": "コンサル",
+    "announcementDate": "2026-05-01",
+    "biddingDate": "2026-06-04",
+    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
+    "id": "nara-city-0000002441",
+    "municipality": "奈良市",
+    "title": "庁舎非常用発電機燃料タンク増設その他改修に伴う建築設計業務委託",
+    "type": "コンサル",
+    "announcementDate": "2026-05-01",
+    "biddingDate": "2026-06-04",
+    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
+    "id": "nara-city-0000002442",
+    "municipality": "奈良市",
+    "title": "生涯学習センター吸収冷温水機改修に伴う設計業務委託",
+    "type": "コンサル",
+    "announcementDate": "2026-05-01",
+    "biddingDate": "2026-06-04",
+    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
+    "id": "nara-city-0000002444",
+    "municipality": "奈良市",
+    "title": "奈良市月ヶ瀬福祉センター温水設備改修工事に伴う建築設計業務委託",
+    "type": "コンサル",
+    "announcementDate": "2026-05-01",
+    "biddingDate": "2026-06-05",
+    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
+    "id": "nara-city-0000002445",
+    "municipality": "奈良市",
+    "title": "鴻ノ池球場放送設備改修工事に伴う建築設計業務委託",
+    "type": "コンサル",
+    "announcementDate": "2026-05-01",
+    "biddingDate": "2026-06-05",
+    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
+    "id": "nara-city-0000002436",
+    "municipality": "奈良市",
+    "title": "測量設計業務委託（法蓮町地内・北部第４８４号線他）",
+    "type": "コンサル",
+    "announcementDate": "2026-05-01",
+    "biddingDate": "2026-06-05",
+    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
+    "id": "nara-city-0000002443",
+    "municipality": "奈良市",
+    "title": "西部図書館給水設備改修に伴う設計業務委託",
+    "type": "コンサル",
+    "announcementDate": "2026-05-01",
+    "biddingDate": "2026-06-05",
+    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
+    "id": "nara-city-0000002435",
+    "municipality": "奈良市",
+    "title": "橋梁長寿命化修繕設計業務委託（六条奈良阪線（佐保橋）他）",
+    "type": "コンサル",
+    "announcementDate": "2026-05-01",
+    "biddingDate": "2026-06-04",
+    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
+    "id": "nara-city-0000002437",
+    "municipality": "奈良市",
+    "title": "庁舎等ＬＥＤ照明器具改修事業に伴う建築設計業務委託",
+    "type": "コンサル",
+    "announcementDate": "2026-05-01",
+    "biddingDate": "2026-06-04",
+    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
+    "id": "nara-city-0000002439",
+    "municipality": "奈良市",
+    "title": "飛鳥小学校他３校受水槽等改修に伴う設計業務委託",
+    "type": "コンサル",
+    "announcementDate": "2026-05-01",
+    "biddingDate": "2026-06-04",
+    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
+    "id": "nara-city-0000002440",
+    "municipality": "奈良市",
+    "title": "佐保バンビーホーム新築に伴う建築設計業務委託",
+    "type": "コンサル",
+    "announcementDate": "2026-05-01",
+    "biddingDate": "2026-06-04",
+    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+    "status": "受付中",
+    "isRelevant": true
+  },
+  {
+    "id": "nara-city-0000002446",
+    "municipality": "奈良市",
+    "title": "支障物件調査業務委託（五条町地内・中部第４８５号線）",
+    "type": "コンサル",
+    "announcementDate": "2026-05-01",
+    "biddingDate": "2026-06-04",
+    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
     "status": "受付中",
     "isRelevant": false
   },
@@ -17586,6 +17443,116 @@
     "isRelevant": false
   },
   {
+    "id": "nara-city-0000002342",
+    "municipality": "奈良市",
+    "title": "鴻ノ池運動公園耐震性貯水槽設置工事に伴う実施設計業務委託",
+    "type": "コンサル",
+    "announcementDate": "2026-04-15",
+    "biddingDate": "2026-05-28",
+    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
+    "id": "nara-city-0000002340",
+    "municipality": "奈良市",
+    "title": "ＪＲ奈良駅南特定土地区画整理事業換地計画等作成業務委託",
+    "type": "コンサル",
+    "announcementDate": "2026-04-15",
+    "biddingDate": "2026-05-27",
+    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
+    "id": "nara-city-0000002341",
+    "municipality": "奈良市",
+    "title": "ＪＲ奈良駅南特定土地区画整理事業土木技術補助業務委託",
+    "type": "コンサル",
+    "announcementDate": "2026-04-15",
+    "biddingDate": "2026-05-27",
+    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
+    "id": "nara-city-0000002343",
+    "municipality": "奈良市",
+    "title": "鴻ノ池運動公園非常用自家発電設備設置工事に伴う基本・実施設計業務委託",
+    "type": "コンサル",
+    "announcementDate": "2026-04-15",
+    "biddingDate": "2026-05-27",
+    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
+    "id": "nara-city-0000002344",
+    "municipality": "奈良市",
+    "title": "南消防署外壁等改修その他工事に伴う建築設計業務委託",
+    "type": "コンサル",
+    "announcementDate": "2026-04-15",
+    "biddingDate": "2026-05-27",
+    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
+    "id": "nara-city-0000002345",
+    "municipality": "奈良市",
+    "title": "第１０号市営住宅解体工事に伴う建築設計業務委託",
+    "type": "コンサル",
+    "announcementDate": "2026-04-15",
+    "biddingDate": "2026-05-27",
+    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+    "status": "受付中",
+    "isRelevant": true
+  },
+  {
+    "id": "nara-city-0000002347",
+    "municipality": "奈良市",
+    "title": "西部生涯スポーツセンタートイレ改修に伴う建築設計業務委託",
+    "type": "コンサル",
+    "announcementDate": "2026-04-15",
+    "biddingDate": "2026-05-27",
+    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+    "status": "受付中",
+    "isRelevant": true
+  },
+  {
+    "id": "nara-city-0000002348",
+    "municipality": "奈良市",
+    "title": "鴻ノ池コートトイレ改修に伴う建築設計業務委託",
+    "type": "コンサル",
+    "announcementDate": "2026-04-15",
+    "biddingDate": "2026-05-27",
+    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+    "status": "受付中",
+    "isRelevant": true
+  },
+  {
+    "id": "nara-city-0000002349",
+    "municipality": "奈良市",
+    "title": "南部生涯スポーツセンタートイレ改修に伴う建築設計業務委託",
+    "type": "コンサル",
+    "announcementDate": "2026-04-15",
+    "biddingDate": "2026-05-27",
+    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+    "status": "受付中",
+    "isRelevant": true
+  },
+  {
+    "id": "nara-city-0000002350",
+    "municipality": "奈良市",
+    "title": "中央消防署南部分署公共下水接続その他工事に伴う建築設計業務委託",
+    "type": "コンサル",
+    "announcementDate": "2026-04-15",
+    "biddingDate": "2026-05-27",
+    "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
     "id": "nara-city-0000002346",
     "municipality": "奈良市",
     "title": "庁舎中央棟地下書庫改修その他工事に伴う建築設計業務委託",
@@ -17880,7 +17847,7 @@
     "biddingDate": "2026-05-18",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "(株)森下組",
+    "winningContractor": "（株）森下組",
     "isRelevant": false
   },
   {
@@ -17892,7 +17859,7 @@
     "biddingDate": "2026-05-18",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "村本建設(株)奈良本店",
+    "winningContractor": "村本建設（株）奈良本店",
     "isRelevant": true
   },
   {
@@ -18567,7 +18534,7 @@
     "biddingDate": "2026-04-13",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "大和電機工業（株）",
+    "winningContractor": "大和電機工業(株)",
     "isRelevant": false
   },
   {
@@ -18579,7 +18546,7 @@
     "biddingDate": "2026-04-13",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "大和電機工業（株）",
+    "winningContractor": "大和電機工業(株)",
     "isRelevant": false
   },
   {

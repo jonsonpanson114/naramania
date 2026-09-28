@@ -1,14 +1,18 @@
 {
-  "generatedAt": "2026-09-28T06:59:09.809Z",
-  "qualityGeneratedAt": "2026-09-28T06:51:14.270Z",
+  "generatedAt": "2026-09-28T13:17:55.626Z",
+  "qualityGeneratedAt": "2026-09-28T13:10:34.574Z",
   "itemCount": 313,
   "resultFollowUp": {
-    "totalCount": 7,
-    "highCount": 6,
+    "totalCount": 13,
+    "highCount": 12,
     "mediumCount": 1,
     "lowCount": 0,
     "missingBiddingDateCount": 0,
     "byMunicipality": [
+      {
+        "municipality": "奈良市",
+        "count": 7
+      },
       {
         "municipality": "奈良県",
         "count": 4
@@ -16,10 +20,6 @@
       {
         "municipality": "大淀町",
         "count": 2
-      },
-      {
-        "municipality": "奈良市",
-        "count": 1
       }
     ],
     "samples": [
@@ -44,6 +44,22 @@
         "ageDays": 124,
         "reason": "開札日から124日経過",
         "item": {
+          "id": "nara-city-0000002345",
+          "municipality": "奈良市",
+          "title": "第１０号市営住宅解体工事に伴う建築設計業務委託",
+          "status": "受付終了",
+          "announcementDate": "2026-04-15",
+          "biddingDate": "2026-05-27",
+          "winningContractor": "株式会社ＵＬＴＲＡ　Ｃ",
+          "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+          "pdfUrl": null
+        }
+      },
+      {
+        "priority": "high",
+        "ageDays": 124,
+        "reason": "開札日から124日経過",
+        "item": {
           "id": "nara-city-0000002346",
           "municipality": "奈良市",
           "title": "庁舎中央棟地下書庫改修その他工事に伴う建築設計業務委託",
@@ -51,6 +67,70 @@
           "announcementDate": "2026-04-15",
           "biddingDate": "2026-05-27",
           "winningContractor": null,
+          "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+          "pdfUrl": null
+        }
+      },
+      {
+        "priority": "high",
+        "ageDays": 124,
+        "reason": "開札日から124日経過",
+        "item": {
+          "id": "nara-city-0000002347",
+          "municipality": "奈良市",
+          "title": "西部生涯スポーツセンタートイレ改修に伴う建築設計業務委託",
+          "status": "受付終了",
+          "announcementDate": "2026-04-15",
+          "biddingDate": "2026-05-27",
+          "winningContractor": "岡田建築設計事務所",
+          "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+          "pdfUrl": null
+        }
+      },
+      {
+        "priority": "high",
+        "ageDays": 124,
+        "reason": "開札日から124日経過",
+        "item": {
+          "id": "nara-city-0000002348",
+          "municipality": "奈良市",
+          "title": "鴻ノ池コートトイレ改修に伴う建築設計業務委託",
+          "status": "受付終了",
+          "announcementDate": "2026-04-15",
+          "biddingDate": "2026-05-27",
+          "winningContractor": "株式会社建綜研",
+          "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+          "pdfUrl": null
+        }
+      },
+      {
+        "priority": "high",
+        "ageDays": 124,
+        "reason": "開札日から124日経過",
+        "item": {
+          "id": "nara-city-0000002349",
+          "municipality": "奈良市",
+          "title": "南部生涯スポーツセンタートイレ改修に伴う建築設計業務委託",
+          "status": "受付終了",
+          "announcementDate": "2026-04-15",
+          "biddingDate": "2026-05-27",
+          "winningContractor": "株式会社システムクリエイト",
+          "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+          "pdfUrl": null
+        }
+      },
+      {
+        "priority": "high",
+        "ageDays": 116,
+        "reason": "開札日から116日経過",
+        "item": {
+          "id": "nara-city-0000002440",
+          "municipality": "奈良市",
+          "title": "佐保バンビーホーム新築に伴う建築設計業務委託",
+          "status": "受付終了",
+          "announcementDate": "2026-05-01",
+          "biddingDate": "2026-06-04",
+          "winningContractor": "株式会社システムクリエイト",
           "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
           "pdfUrl": null
         }
@@ -100,38 +180,6 @@
           "biddingDate": "2026-07-07",
           "winningContractor": null,
           "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29005007060120260015&gamenMode=0",
-          "pdfUrl": null
-        }
-      },
-      {
-        "priority": "high",
-        "ageDays": 73,
-        "reason": "開札日から73日経過",
-        "item": {
-          "id": "nara-pref-29005007060120260018",
-          "municipality": "奈良県",
-          "title": "送水施設受水地工事(田原本町第２)に伴う実施設計業務委託 その３",
-          "status": "受付終了",
-          "announcementDate": "2026-06-26",
-          "biddingDate": "2026-07-17",
-          "winningContractor": null,
-          "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29005007060120260018&gamenMode=0",
-          "pdfUrl": null
-        }
-      },
-      {
-        "priority": "medium",
-        "ageDays": 3,
-        "reason": "開札日から3日経過",
-        "item": {
-          "id": "nara-pref-29001013401020260007",
-          "municipality": "奈良県",
-          "title": "令和８年度秋津県営住宅55・56棟軒裏落下防止対策工事",
-          "status": "受付終了",
-          "announcementDate": "2026-08-28",
-          "biddingDate": "2026-09-25",
-          "winningContractor": null,
-          "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013401020260007&gamenMode=0",
           "pdfUrl": null
         }
       }
@@ -479,7 +527,7 @@
         "sourceCounts": {
           "nara.efftis.jp": 10
         },
-        "message": "奈良市: 10件 (公告2/結果8) / sources OK"
+        "message": "奈良市: 10件 (公告8/結果2) / sources OK"
       },
       {
         "municipality": "橿原市",
