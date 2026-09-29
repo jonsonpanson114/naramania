@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-29T07:55:25.335Z",
+  "generatedAt": "2026-09-29T11:19:24.507Z",
   "currentItemCount": 313,
   "checkedMunicipalities": [
     "奈良市",
@@ -228,12 +228,14 @@
     },
     {
       "municipality": "高取町",
-      "rawCount": 45,
+      "rawCount": 44,
       "keptCount": 15,
-      "rejectedCount": 30,
-      "keptAnnouncementCount": 2,
-      "keptResultCount": 13,
-      "warnings": [],
+      "rejectedCount": 29,
+      "keptAnnouncementCount": 0,
+      "keptResultCount": 15,
+      "warnings": [
+        "高取町: 取得44件がすべて開札済みです。入札公告(入札情報)ページを見落としていないか確認が必要です。"
+      ],
       "errors": []
     },
     {
@@ -377,7 +379,7 @@
       },
       {
         "municipality": "高取町",
-        "snapshotCount": 45,
+        "snapshotCount": 44,
         "expectedCount": 15,
         "matchedCount": 15,
         "missingCount": 0,
