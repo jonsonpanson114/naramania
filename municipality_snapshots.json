@@ -2634,17 +2634,6 @@
   ],
   "田原本町": [
     {
-      "id": "tawaramoto-1008062207",
-      "municipality": "田原本町",
-      "title": "平野幼稚園配膳室出入口改修等業務",
-      "type": "委託",
-      "announcementDate": "2026-05-28",
-      "biddingDate": "2026-06-22",
-      "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
-      "status": "落札",
-      "winningContractor": "福辻工務店"
-    },
-    {
       "id": "tawaramoto-2026062201",
       "municipality": "田原本町",
       "title": "南小学校⑪号棟トイレ改修工事",
@@ -2653,7 +2642,7 @@
       "biddingDate": "2026-06-22",
       "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
       "status": "落札",
-      "winningContractor": "塚竜（株）"
+      "winningContractor": "塚竜(株)"
     },
     {
       "id": "tawaramoto-2026051803",
@@ -2664,7 +2653,7 @@
       "biddingDate": "2026-05-18",
       "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
       "status": "落札",
-      "winningContractor": "村本建設(株) 奈良本店"
+      "winningContractor": "村本建設 (株) 奈良本店"
     }
   ],
   "広陵町": [
@@ -2939,6 +2928,16 @@
       "winnerType": "設計事務所"
     },
     {
+      "id": "高取町-2026-08-28-公営住宅丹生谷第1団地屋根葺替等改修工事監理業務",
+      "municipality": "高取町",
+      "title": "公営住宅丹生谷第1団地屋根葺替等改修工事監理業務",
+      "type": "コンサル",
+      "announcementDate": "2026-08-28",
+      "biddingDate": "2026-08-28",
+      "link": "https://www.town.takatori.nara.jp/contents_detail.php?co=cat&frmId=2205&frmCd=2-6-0-0-0",
+      "status": "不調"
+    },
+    {
       "id": "高取町-2026-08-28-公営住宅第5団地除却工事",
       "municipality": "高取町",
       "title": "公営住宅第5団地除却工事",
@@ -2949,16 +2948,6 @@
       "status": "落札",
       "winningContractor": "(株)中川組",
       "winnerType": "ゼネコン"
-    },
-    {
-      "id": "高取町-2026-08-28-公営住宅丹生谷第1団地屋根葺替等改修工事監理業務",
-      "municipality": "高取町",
-      "title": "公営住宅丹生谷第1団地屋根葺替等改修工事監理業務",
-      "type": "コンサル",
-      "announcementDate": "2026-08-28",
-      "biddingDate": "2026-08-28",
-      "link": "https://www.town.takatori.nara.jp/contents_detail.php?co=cat&frmId=2205&frmCd=2-6-0-0-0",
-      "status": "不調"
     },
     {
       "id": "高取町-2026-08-28-公営住宅丹生谷第1団地屋根葺替等改修工事",
