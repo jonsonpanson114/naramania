@@ -681,8 +681,9 @@
       "announcementDate": "2026-07-15",
       "biddingDate": "2026-08-27",
       "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-      "status": "受付終了",
-      "winningContractor": "岡田建築設計事務所"
+      "status": "落札",
+      "winningContractor": "岡田建築設計事務所",
+      "winnerType": "設計事務所"
     },
     {
       "id": "nara-city-0000002440",
@@ -692,8 +693,9 @@
       "announcementDate": "2026-05-01",
       "biddingDate": "2026-06-04",
       "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-      "status": "受付終了",
-      "winningContractor": "株式会社システムクリエイト"
+      "status": "落札",
+      "winningContractor": "株式会社システムクリエイト",
+      "winnerType": "ゼネコン"
     },
     {
       "id": "nara-city-0000002345",
@@ -703,8 +705,9 @@
       "announcementDate": "2026-04-15",
       "biddingDate": "2026-05-27",
       "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-      "status": "受付終了",
-      "winningContractor": "株式会社ＵＬＴＲＡ　Ｃ"
+      "status": "落札",
+      "winningContractor": "株式会社ＵＬＴＲＡ　Ｃ",
+      "winnerType": "ゼネコン"
     },
     {
       "id": "nara-city-0000002346",
@@ -724,8 +727,9 @@
       "announcementDate": "2026-04-15",
       "biddingDate": "2026-05-27",
       "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-      "status": "受付終了",
-      "winningContractor": "岡田建築設計事務所"
+      "status": "落札",
+      "winningContractor": "岡田建築設計事務所",
+      "winnerType": "設計事務所"
     },
     {
       "id": "nara-city-0000002348",
@@ -735,8 +739,9 @@
       "announcementDate": "2026-04-15",
       "biddingDate": "2026-05-27",
       "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-      "status": "受付終了",
-      "winningContractor": "株式会社建綜研"
+      "status": "落札",
+      "winningContractor": "株式会社建綜研",
+      "winnerType": "ゼネコン"
     },
     {
       "id": "nara-city-0000002349",
@@ -746,8 +751,9 @@
       "announcementDate": "2026-04-15",
       "biddingDate": "2026-05-27",
       "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-      "status": "受付終了",
-      "winningContractor": "株式会社システムクリエイト"
+      "status": "落札",
+      "winningContractor": "株式会社システムクリエイト",
+      "winnerType": "ゼネコン"
     }
   ],
   "橿原市": [
@@ -2255,7 +2261,7 @@
       "winnerType": "設計事務所"
     },
     {
-      "id": "gose-2026-07-17-市営住宅(サン柏原207号・今出団地99号・11-7",
+      "id": "gose-2026-07-17-市営住宅(サン柏原207号・今出団地99号・11-4",
       "municipality": "御所市",
       "title": "市営住宅(サン柏原207号・今出団地99号・110号)空家修繕",
       "type": "その他",
@@ -2658,7 +2664,7 @@
       "biddingDate": "2026-05-18",
       "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
       "status": "落札",
-      "winningContractor": "村本建設（株）奈良本店"
+      "winningContractor": "村本建設(株) 奈良本店"
     }
   ],
   "広陵町": [

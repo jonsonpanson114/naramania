@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-28T13:10:34.577Z",
-  "totalRejected": 10674,
+  "generatedAt": "2026-09-29T07:07:24.345Z",
+  "totalRejected": 10782,
   "totalBorderlineRescued": 33,
   "byMunicipality": {
     "奈良市": {
-      "rejected": 222,
+      "rejected": 342,
       "borderlineRescued": 0
     },
     "橿原市": {
@@ -32,7 +32,7 @@
       "borderlineRescued": 0
     },
     "御所市": {
-      "rejected": 30,
+      "rejected": 36,
       "borderlineRescued": 0
     },
     "天理市": {
@@ -72,7 +72,7 @@
       "borderlineRescued": 0
     },
     "三宅町": {
-      "rejected": 72,
+      "rejected": 54,
       "borderlineRescued": 3
     },
     "安堵町": {
@@ -701,6 +701,346 @@
     },
     {
       "municipality": "奈良市",
+      "title": "電線共同溝整備工事に伴う現場技術業務委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "技術"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "電線共同溝整備工事に伴う現場技術業務委託 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "技術"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "市道路面下空洞調査業務委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "市道路面下空洞調査業務委託 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "トンネル定期点検業務委託（北部第６９７号線（奈良阪トンネル））",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "トンネル",
+        "定期点検"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "トンネル定期点検業務委託（北部第６９７号線（奈良阪トンネル）） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "トンネル",
+        "定期点検"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "橋梁長寿命化修繕・耐震補強設計業務委託（登美ヶ丘中町線（無名橋０２７）他）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "橋梁長寿命化修繕・耐震補強設計業務委託（登美ヶ丘中町線（無名橋０２７）他） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "史跡大安寺旧境内保存用地取得事業支障物件補償調査業務委託　発注番号③",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "用地",
+        "補償",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "史跡大安寺旧境内保存用地取得事業支障物件補償調査業務委託　発注番号③ ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "用地",
+        "補償",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "史跡大安寺旧境内保存用地取得事業支障物件補償調査業務委託　発注番号①",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "用地",
+        "補償",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "史跡大安寺旧境内保存用地取得事業支障物件補償調査業務委託　発注番号① ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "用地",
+        "補償",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "橋梁定期点検業務委託（東部第３１１号線（清楓橋）他）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋",
+        "定期点検"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "橋梁定期点検業務委託（東部第３１１号線（清楓橋）他） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋",
+        "定期点検"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "測量設計業務委託（山町地内・南部第４７８号線他）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "測量"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "測量設計業務委託（山町地内・南部第４７８号線他） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "測量"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "路面下空洞調査業務委託（市内一円）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "路面下空洞調査業務委託（市内一円） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "庁舎非常用発電機燃料タンク増設その他改修に伴う建築設計業務委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "燃料"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "庁舎非常用発電機燃料タンク増設その他改修に伴う建築設計業務委託 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "燃料"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "測量設計業務委託（肘塚町地内他・北部第２９１号線）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "測量"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "測量設計業務委託（肘塚町地内他・北部第２９１号線） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "測量"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "市道南部第１号線道路予備設計業務委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "市道南部第１号線道路予備設計業務委託 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "測量設計業務委託（大和田町地内・西部第７１６号線）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "測量"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "測量設計業務委託（大和田町地内・西部第７１６号線） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "測量"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "測量設計業務委託（池田町地内・南部第５０４号線）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "測量"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "測量設計業務委託（池田町地内・南部第５０４号線） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "測量"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "測量設計業務委託（法蓮町地内・北部第４８４号線他）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "測量"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "測量設計業務委託（法蓮町地内・北部第４８４号線他） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "測量"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "支障物件調査業務委託（五条町地内・中部第４８５号線）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "物件調査",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "支障物件調査業務委託（五条町地内・中部第４８５号線） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "物件調査",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "庁舎非常用発電機燃料タンク増設その他改修に伴う建築設計業務委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "燃料"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "庁舎非常用発電機燃料タンク増設その他改修に伴う建築設計業務委託 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "燃料"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "橋梁長寿命化修繕設計業務委託（六条奈良阪線（佐保橋）他）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "橋梁長寿命化修繕設計業務委託（六条奈良阪線（佐保橋）他） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "ＪＲ奈良駅南特定土地区画整理事業土木技術補助業務委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "土木",
+        "技術"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "ＪＲ奈良駅南特定土地区画整理事業土木技術補助業務委託 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "土木",
+        "技術"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "ＪＲ奈良駅南特定土地区画整理事業換地計画等作成業務委託",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "奈良市",
+      "title": "ＪＲ奈良駅南特定土地区画整理事業換地計画等作成業務委託 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "奈良市",
       "title": "橋梁長寿命化修繕工事（東部第３１１号線（清楓橋）他）",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -1299,6 +1639,346 @@
     },
     {
       "municipality": "奈良市",
+      "title": "電線共同溝整備工事に伴う現場技術業務委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "技術"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "電線共同溝整備工事に伴う現場技術業務委託 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "技術"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "市道路面下空洞調査業務委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "市道路面下空洞調査業務委託 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "トンネル定期点検業務委託（北部第６９７号線（奈良阪トンネル））",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "トンネル",
+        "定期点検"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "トンネル定期点検業務委託（北部第６９７号線（奈良阪トンネル）） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "トンネル",
+        "定期点検"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "橋梁長寿命化修繕・耐震補強設計業務委託（登美ヶ丘中町線（無名橋０２７）他）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "橋梁長寿命化修繕・耐震補強設計業務委託（登美ヶ丘中町線（無名橋０２７）他） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "史跡大安寺旧境内保存用地取得事業支障物件補償調査業務委託　発注番号③",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "用地",
+        "補償",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "史跡大安寺旧境内保存用地取得事業支障物件補償調査業務委託　発注番号③ ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "用地",
+        "補償",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "史跡大安寺旧境内保存用地取得事業支障物件補償調査業務委託　発注番号①",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "用地",
+        "補償",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "史跡大安寺旧境内保存用地取得事業支障物件補償調査業務委託　発注番号① ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "用地",
+        "補償",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "橋梁定期点検業務委託（東部第３１１号線（清楓橋）他）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋",
+        "定期点検"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "橋梁定期点検業務委託（東部第３１１号線（清楓橋）他） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋",
+        "定期点検"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "測量設計業務委託（山町地内・南部第４７８号線他）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "測量"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "測量設計業務委託（山町地内・南部第４７８号線他） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "測量"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "路面下空洞調査業務委託（市内一円）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "路面下空洞調査業務委託（市内一円） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "庁舎非常用発電機燃料タンク増設その他改修に伴う建築設計業務委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "燃料"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "庁舎非常用発電機燃料タンク増設その他改修に伴う建築設計業務委託 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "燃料"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "測量設計業務委託（肘塚町地内他・北部第２９１号線）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "測量"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "測量設計業務委託（肘塚町地内他・北部第２９１号線） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "測量"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "市道南部第１号線道路予備設計業務委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "市道南部第１号線道路予備設計業務委託 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "測量設計業務委託（大和田町地内・西部第７１６号線）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "測量"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "測量設計業務委託（大和田町地内・西部第７１６号線） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "測量"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "測量設計業務委託（池田町地内・南部第５０４号線）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "測量"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "測量設計業務委託（池田町地内・南部第５０４号線） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "測量"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "測量設計業務委託（法蓮町地内・北部第４８４号線他）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "測量"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "測量設計業務委託（法蓮町地内・北部第４８４号線他） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "測量"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "支障物件調査業務委託（五条町地内・中部第４８５号線）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "物件調査",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "支障物件調査業務委託（五条町地内・中部第４８５号線） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "物件調査",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "庁舎非常用発電機燃料タンク増設その他改修に伴う建築設計業務委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "燃料"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "庁舎非常用発電機燃料タンク増設その他改修に伴う建築設計業務委託 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "燃料"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "橋梁長寿命化修繕設計業務委託（六条奈良阪線（佐保橋）他）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "橋梁長寿命化修繕設計業務委託（六条奈良阪線（佐保橋）他） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "ＪＲ奈良駅南特定土地区画整理事業土木技術補助業務委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "土木",
+        "技術"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "ＪＲ奈良駅南特定土地区画整理事業土木技術補助業務委託 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "土木",
+        "技術"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "ＪＲ奈良駅南特定土地区画整理事業換地計画等作成業務委託",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "奈良市",
+      "title": "ＪＲ奈良駅南特定土地区画整理事業換地計画等作成業務委託 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "奈良市",
       "title": "橋梁長寿命化修繕工事（東部第３１１号線（清楓橋）他）",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -1896,6 +2576,346 @@
       ]
     },
     {
+      "municipality": "奈良市",
+      "title": "電線共同溝整備工事に伴う現場技術業務委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "技術"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "電線共同溝整備工事に伴う現場技術業務委託 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "技術"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "市道路面下空洞調査業務委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "市道路面下空洞調査業務委託 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "トンネル定期点検業務委託（北部第６９７号線（奈良阪トンネル））",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "トンネル",
+        "定期点検"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "トンネル定期点検業務委託（北部第６９７号線（奈良阪トンネル）） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "トンネル",
+        "定期点検"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "橋梁長寿命化修繕・耐震補強設計業務委託（登美ヶ丘中町線（無名橋０２７）他）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "橋梁長寿命化修繕・耐震補強設計業務委託（登美ヶ丘中町線（無名橋０２７）他） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "史跡大安寺旧境内保存用地取得事業支障物件補償調査業務委託　発注番号③",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "用地",
+        "補償",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "史跡大安寺旧境内保存用地取得事業支障物件補償調査業務委託　発注番号③ ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "用地",
+        "補償",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "史跡大安寺旧境内保存用地取得事業支障物件補償調査業務委託　発注番号①",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "用地",
+        "補償",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "史跡大安寺旧境内保存用地取得事業支障物件補償調査業務委託　発注番号① ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "用地",
+        "補償",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "橋梁定期点検業務委託（東部第３１１号線（清楓橋）他）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋",
+        "定期点検"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "橋梁定期点検業務委託（東部第３１１号線（清楓橋）他） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋",
+        "定期点検"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "測量設計業務委託（山町地内・南部第４７８号線他）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "測量"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "測量設計業務委託（山町地内・南部第４７８号線他） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "測量"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "路面下空洞調査業務委託（市内一円）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "路面下空洞調査業務委託（市内一円） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "庁舎非常用発電機燃料タンク増設その他改修に伴う建築設計業務委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "燃料"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "庁舎非常用発電機燃料タンク増設その他改修に伴う建築設計業務委託 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "燃料"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "測量設計業務委託（肘塚町地内他・北部第２９１号線）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "測量"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "測量設計業務委託（肘塚町地内他・北部第２９１号線） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "測量"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "市道南部第１号線道路予備設計業務委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "市道南部第１号線道路予備設計業務委託 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "測量設計業務委託（大和田町地内・西部第７１６号線）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "測量"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "測量設計業務委託（大和田町地内・西部第７１６号線） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "測量"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "測量設計業務委託（池田町地内・南部第５０４号線）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "測量"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "測量設計業務委託（池田町地内・南部第５０４号線） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "測量"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "測量設計業務委託（法蓮町地内・北部第４８４号線他）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "測量"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "測量設計業務委託（法蓮町地内・北部第４８４号線他） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "測量"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "支障物件調査業務委託（五条町地内・中部第４８５号線）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "物件調査",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "支障物件調査業務委託（五条町地内・中部第４８５号線） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "物件調査",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "庁舎非常用発電機燃料タンク増設その他改修に伴う建築設計業務委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "燃料"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "庁舎非常用発電機燃料タンク増設その他改修に伴う建築設計業務委託 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "燃料"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "橋梁長寿命化修繕設計業務委託（六条奈良阪線（佐保橋）他）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "橋梁長寿命化修繕設計業務委託（六条奈良阪線（佐保橋）他） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "ＪＲ奈良駅南特定土地区画整理事業土木技術補助業務委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "土木",
+        "技術"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "ＪＲ奈良駅南特定土地区画整理事業土木技術補助業務委託 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "土木",
+        "技術"
+      ]
+    },
+    {
+      "municipality": "奈良市",
+      "title": "ＪＲ奈良駅南特定土地区画整理事業換地計画等作成業務委託",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "奈良市",
+      "title": "ＪＲ奈良駅南特定土地区画整理事業換地計画等作成業務委託 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
       "municipality": "橿原市",
       "title": "新橿原観光ガイドブック（日本語・外国語）作成業務 (圧縮ファイル: 507.7KB)",
       "reason": "exclusion_keyword",
@@ -12127,6 +13147,18 @@
       "matchedKeywords": [
         "定期点検"
       ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "壱分乙田線配水管布設替工事（R８）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "壱分乙田線配水管布設替工事（R８） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
     },
     {
       "municipality": "生駒市",
@@ -12184,18 +13216,6 @@
         "外壁"
       ],
       "borderlineRescue": true
-    },
-    {
-      "municipality": "生駒市",
-      "title": "壱分乙田線配水管布設替工事（R８）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "壱分乙田線配水管布設替工事（R８） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
     },
     {
       "municipality": "生駒市",
@@ -14365,6 +15385,18 @@
     },
     {
       "municipality": "生駒市",
+      "title": "壱分乙田線配水管布設替工事（R８）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "壱分乙田線配水管布設替工事（R８） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
       "title": "生駒市流域関連公共下水道壱分町306号線工事",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -14419,18 +15451,6 @@
         "外壁"
       ],
       "borderlineRescue": true
-    },
-    {
-      "municipality": "生駒市",
-      "title": "壱分乙田線配水管布設替工事（R８）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "壱分乙田線配水管布設替工事（R８） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
     },
     {
       "municipality": "生駒市",
@@ -16600,6 +17620,18 @@
     },
     {
       "municipality": "生駒市",
+      "title": "壱分乙田線配水管布設替工事（R８）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "壱分乙田線配水管布設替工事（R８） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
       "title": "生駒市流域関連公共下水道壱分町306号線工事",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -16654,18 +17686,6 @@
         "外壁"
       ],
       "borderlineRescue": true
-    },
-    {
-      "municipality": "生駒市",
-      "title": "壱分乙田線配水管布設替工事（R８）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "生駒市",
-      "title": "壱分乙田線配水管布設替工事（R８） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
     },
     {
       "municipality": "生駒市",
@@ -49561,61 +50581,13 @@
     },
     {
       "municipality": "御所市",
-      "title": "宅地造成等工事規制区域",
+      "title": "小林児童遊園7改修",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },
     {
       "municipality": "御所市",
-      "title": "宅地造成等工事規制区域 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "今住調整池維持 建 御所市大字",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "今住調整池維持 建 御所市大字 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "御所汚水9-1号幹線(2工区)管路築造",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "御所汚水9-1号幹線(2工区)管路築造 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "小林保育所解体",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "小林保育所解体 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "御所汚水9号幹線(10工区)管路築造",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "御所汚水9号幹線(10工区)管路築造 ",
+      "title": "小林児童遊園7改修 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },
@@ -49681,6 +50653,90 @@
     },
     {
       "municipality": "御所市",
+      "title": "小林児童遊園7改修",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "小林児童遊園7改修 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "宅地造成等工事規制区域",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "宅地造成等工事規制区域 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "今住調整池維持 建 御所市大字",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "今住調整池維持 建 御所市大字 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "御所汚水9-1号幹線(2工区)管路築造",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "御所汚水9-1号幹線(2工区)管路築造 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "小林保育所解体",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "小林保育所解体 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "御所汚水9号幹線(10工区)管路築造",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "御所汚水9号幹線(10工区)管路築造 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "小林児童遊園7改修",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "小林児童遊園7改修 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
       "title": "宅地造成等工事規制区域",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -68062,58 +69118,6 @@
       "title": "メールでのお問い合わせ ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
-    },
-    {
-      "municipality": "三宅町",
-      "title": "工業ゾーン三宅1号線道路改良工事（7期）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "三宅町",
-      "title": "工業ゾーン三宅1号線道路改良工事（7期） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "三宅町",
-      "title": "無名橋22補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋"
-      ]
-    },
-    {
-      "municipality": "三宅町",
-      "title": "無名橋22補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋"
-      ]
-    },
-    {
-      "municipality": "三宅町",
-      "title": "三宅2号線交通安全対策（県道交差点）用地測量業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "交通",
-        "測量",
-        "用地"
-      ]
-    },
-    {
-      "municipality": "三宅町",
-      "title": "三宅2号線交通安全対策（県道交差点）用地測量業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "交通",
-        "測量",
-        "用地"
-      ]
     },
     {
       "municipality": "三宅町",
@@ -68276,58 +69280,6 @@
     },
     {
       "municipality": "三宅町",
-      "title": "工業ゾーン三宅1号線道路改良工事（7期）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "三宅町",
-      "title": "工業ゾーン三宅1号線道路改良工事（7期） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "三宅町",
-      "title": "無名橋22補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋"
-      ]
-    },
-    {
-      "municipality": "三宅町",
-      "title": "無名橋22補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋"
-      ]
-    },
-    {
-      "municipality": "三宅町",
-      "title": "三宅2号線交通安全対策（県道交差点）用地測量業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "交通",
-        "測量",
-        "用地"
-      ]
-    },
-    {
-      "municipality": "三宅町",
-      "title": "三宅2号線交通安全対策（県道交差点）用地測量業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "交通",
-        "測量",
-        "用地"
-      ]
-    },
-    {
-      "municipality": "三宅町",
       "title": "伴堂第二児童公園改修工事",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -68481,58 +69433,6 @@
       "title": "三宅2号線用地測量業務 ",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
-        "測量",
-        "用地"
-      ]
-    },
-    {
-      "municipality": "三宅町",
-      "title": "工業ゾーン三宅1号線道路改良工事（7期）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "三宅町",
-      "title": "工業ゾーン三宅1号線道路改良工事（7期） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "三宅町",
-      "title": "無名橋22補修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋"
-      ]
-    },
-    {
-      "municipality": "三宅町",
-      "title": "無名橋22補修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋"
-      ]
-    },
-    {
-      "municipality": "三宅町",
-      "title": "三宅2号線交通安全対策（県道交差点）用地測量業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "交通",
-        "測量",
-        "用地"
-      ]
-    },
-    {
-      "municipality": "三宅町",
-      "title": "三宅2号線交通安全対策（県道交差点）用地測量業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "交通",
         "測量",
         "用地"
       ]
