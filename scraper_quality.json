@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-30T12:16:30.024Z",
+  "generatedAt": "2026-09-30T22:13:57.596Z",
   "source": "daily_scrape",
   "municipalityLastScraped": {
     "奈良市": "2026-09-30T12:16:30.024Z",
@@ -26,11 +26,11 @@
     "三郷町": "2026-09-30T12:16:30.024Z",
     "王寺町": "2026-09-30T12:16:30.024Z",
     "大淀町": "2026-09-30T12:16:30.024Z",
-    "奈良県": "2026-09-28T03:13:16.989Z"
+    "奈良県": "2026-09-30T22:13:57.596Z"
   },
-  "scrapedCount": 2699,
+  "scrapedCount": 57,
   "keptCount": 312,
-  "rejectedCount": 2434,
+  "rejectedCount": 1,
   "oldestAnnouncementDate": "2025-02-02",
   "latestAnnouncementDate": "2026-09-30",
   "municipalityCount": 24,
@@ -152,7 +152,7 @@
       {
         "municipality": "田原本町",
         "count": 2,
-        "changeFromPrevious": -1
+        "changeFromPrevious": 0
       },
       {
         "municipality": "斑鳩町",
@@ -165,16 +165,8 @@
         "changeFromPrevious": 0
       }
     ],
-    "retainedFromPrevious": [
-      "高取町"
-    ],
-    "issues": [
-      {
-        "municipality": "高取町",
-        "level": "warning",
-        "message": "[高取町] 取得件数が急減したため既存データ 26件を維持しつつ、新規 0件を反映しています (baseline=26)"
-      }
-    ]
+    "retainedFromPrevious": [],
+    "issues": []
   },
   "dateAudit": {
     "announcementAfterBiddingCount": 0,
@@ -745,7 +737,6 @@
     "itemsWithDescription": 50,
     "intelligenceExtractedCount": 47,
     "geminiExtractedCount": 47,
-    "taggedCount": 48,
-    "lastAugmentedAt": "2026-09-30T12:18:11.638Z"
+    "taggedCount": 48
   }
 }

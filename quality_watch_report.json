@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-30T12:24:45.772Z",
-  "qualityGeneratedAt": "2026-09-30T12:16:30.024Z",
+  "generatedAt": "2026-09-30T22:14:00.789Z",
+  "qualityGeneratedAt": "2026-09-30T22:13:57.596Z",
   "itemCount": 312,
   "resultFollowUp": {
     "totalCount": 9,
@@ -29,7 +29,7 @@
     "samples": [
       {
         "priority": "high",
-        "ageDays": 162,
+        "ageDays": 163,
         "reason": "落札済みだが落札者が空",
         "item": {
           "id": "oyodo-79dc14038b",
@@ -45,8 +45,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 126,
-        "reason": "開札日から126日経過",
+        "ageDays": 127,
+        "reason": "開札日から127日経過",
         "item": {
           "id": "nara-city-0000002346",
           "municipality": "奈良市",
@@ -61,7 +61,7 @@
       },
       {
         "priority": "high",
-        "ageDays": 107,
+        "ageDays": 108,
         "reason": "落札済みだが落札者が空",
         "item": {
           "id": "oyodo-46ab50dbc8",
@@ -77,8 +77,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 104,
-        "reason": "開札日から104日経過",
+        "ageDays": 105,
+        "reason": "開札日から105日経過",
         "item": {
           "id": "nara-pref-29001013060020260055",
           "municipality": "奈良県",
@@ -93,8 +93,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 85,
-        "reason": "開札日から85日経過",
+        "ageDays": 86,
+        "reason": "開札日から86日経過",
         "item": {
           "id": "nara-pref-29005007060120260015",
           "municipality": "奈良県",
@@ -109,8 +109,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 75,
-        "reason": "開札日から75日経過",
+        "ageDays": 76,
+        "reason": "開札日から76日経過",
         "item": {
           "id": "nara-pref-29005007060120260018",
           "municipality": "奈良県",
@@ -125,8 +125,8 @@
       },
       {
         "priority": "medium",
-        "ageDays": 5,
-        "reason": "開札日から5日経過",
+        "ageDays": 6,
+        "reason": "開札日から6日経過",
         "item": {
           "id": "nara-pref-29001013401020260007",
           "municipality": "奈良県",
@@ -141,7 +141,7 @@
       },
       {
         "priority": "low",
-        "ageDays": 1,
+        "ageDays": 2,
         "reason": "開札直後の結果待ち",
         "item": {
           "id": "高取町-2026-09-10-公営住宅丹生谷第1団地屋根葺替等改修工事",
@@ -157,7 +157,7 @@
       },
       {
         "priority": "low",
-        "ageDays": 1,
+        "ageDays": 2,
         "reason": "開札直後の結果待ち",
         "item": {
           "id": "高取町-2026-09-10-公営住宅丹生谷第1団地屋根葺替等改修工事監理業務",
