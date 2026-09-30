@@ -1,17 +1,21 @@
 {
-  "generatedAt": "2026-09-29T12:36:54.858Z",
-  "qualityGeneratedAt": "2026-09-29T12:28:49.755Z",
-  "itemCount": 312,
+  "generatedAt": "2026-09-30T06:53:53.045Z",
+  "qualityGeneratedAt": "2026-09-30T06:46:22.080Z",
+  "itemCount": 313,
   "resultFollowUp": {
-    "totalCount": 7,
+    "totalCount": 9,
     "highCount": 6,
     "mediumCount": 1,
-    "lowCount": 0,
+    "lowCount": 2,
     "missingBiddingDateCount": 0,
     "byMunicipality": [
       {
         "municipality": "奈良県",
         "count": 4
+      },
+      {
+        "municipality": "高取町",
+        "count": 2
       },
       {
         "municipality": "大淀町",
@@ -25,7 +29,7 @@
     "samples": [
       {
         "priority": "high",
-        "ageDays": 161,
+        "ageDays": 162,
         "reason": "落札済みだが落札者が空",
         "item": {
           "id": "oyodo-79dc14038b",
@@ -41,8 +45,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 125,
-        "reason": "開札日から125日経過",
+        "ageDays": 126,
+        "reason": "開札日から126日経過",
         "item": {
           "id": "nara-city-0000002346",
           "municipality": "奈良市",
@@ -57,7 +61,7 @@
       },
       {
         "priority": "high",
-        "ageDays": 106,
+        "ageDays": 107,
         "reason": "落札済みだが落札者が空",
         "item": {
           "id": "oyodo-46ab50dbc8",
@@ -73,8 +77,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 103,
-        "reason": "開札日から103日経過",
+        "ageDays": 104,
+        "reason": "開札日から104日経過",
         "item": {
           "id": "nara-pref-29001013060020260055",
           "municipality": "奈良県",
@@ -89,8 +93,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 84,
-        "reason": "開札日から84日経過",
+        "ageDays": 85,
+        "reason": "開札日から85日経過",
         "item": {
           "id": "nara-pref-29005007060120260015",
           "municipality": "奈良県",
@@ -105,8 +109,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 74,
-        "reason": "開札日から74日経過",
+        "ageDays": 75,
+        "reason": "開札日から75日経過",
         "item": {
           "id": "nara-pref-29005007060120260018",
           "municipality": "奈良県",
@@ -121,8 +125,8 @@
       },
       {
         "priority": "medium",
-        "ageDays": 4,
-        "reason": "開札日から4日経過",
+        "ageDays": 5,
+        "reason": "開札日から5日経過",
         "item": {
           "id": "nara-pref-29001013401020260007",
           "municipality": "奈良県",
@@ -132,6 +136,38 @@
           "biddingDate": "2026-09-25",
           "winningContractor": null,
           "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013401020260007&gamenMode=0",
+          "pdfUrl": null
+        }
+      },
+      {
+        "priority": "low",
+        "ageDays": 1,
+        "reason": "開札直後の結果待ち",
+        "item": {
+          "id": "高取町-2026-09-10-公営住宅丹生谷第1団地屋根葺替等改修工事",
+          "municipality": "高取町",
+          "title": "公営住宅丹生谷第1団地屋根葺替等改修工事",
+          "status": "受付終了",
+          "announcementDate": "2026-09-10",
+          "biddingDate": "2026-09-29",
+          "winningContractor": null,
+          "link": "https://www.town.takatori.nara.jp/contents_detail.php?co=cat&frmId=2674&frmCd=2-6-0-0-0",
+          "pdfUrl": null
+        }
+      },
+      {
+        "priority": "low",
+        "ageDays": 1,
+        "reason": "開札直後の結果待ち",
+        "item": {
+          "id": "高取町-2026-09-10-公営住宅丹生谷第1団地屋根葺替等改修工事監理業務",
+          "municipality": "高取町",
+          "title": "公営住宅丹生谷第1団地屋根葺替等改修工事監理業務",
+          "status": "受付終了",
+          "announcementDate": "2026-09-10",
+          "biddingDate": "2026-09-29",
+          "winningContractor": null,
+          "link": "https://www.town.takatori.nara.jp/contents_detail.php?co=cat&frmId=2674&frmCd=2-6-0-0-0",
           "pdfUrl": null
         }
       }
@@ -529,15 +565,15 @@
         "municipality": "大和郡山市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 19,
+        "totalCount": 20,
         "requiredLinkIncludes": [
           "city.yamatokoriyama.lg.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.yamatokoriyama.lg.jp": 19
+          "city.yamatokoriyama.lg.jp": 20
         },
-        "message": "大和郡山市: 19件 (公告0/結果19) / sources OK"
+        "message": "大和郡山市: 20件 (公告1/結果19) / sources OK"
       },
       {
         "municipality": "葛城市",
@@ -559,17 +595,17 @@
         "municipality": "五條市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 22,
+        "totalCount": 21,
         "requiredLinkIncludes": [
           "city.gojo.lg.jp",
           "epi-cloud.fwd.ne.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.gojo.lg.jp": 4,
+          "city.gojo.lg.jp": 3,
           "epi-cloud.fwd.ne.jp": 18
         },
-        "message": "五條市: 22件 (公告3/結果19) / sources OK"
+        "message": "五條市: 21件 (公告3/結果18) / sources OK"
       },
       {
         "municipality": "御所市",
@@ -631,15 +667,15 @@
         "municipality": "田原本町",
         "status": "ok",
         "severity": "error",
-        "totalCount": 2,
+        "totalCount": 3,
         "requiredLinkIncludes": [
           "tawaramoto.efftis.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "tawaramoto.efftis.jp": 2
+          "tawaramoto.efftis.jp": 3
         },
-        "message": "田原本町: 2件 (公告0/結果2) / sources OK"
+        "message": "田原本町: 3件 (公告0/結果3) / sources OK"
       },
       {
         "municipality": "広陵町",

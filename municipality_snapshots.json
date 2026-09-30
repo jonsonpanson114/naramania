@@ -1474,6 +1474,16 @@
   ],
   "大和郡山市": [
     {
+      "id": "yamato-koriyama-564d0d33",
+      "municipality": "大和郡山市",
+      "title": "大和郡山市立スポーツ会館体育室床修繕",
+      "type": "建築",
+      "announcementDate": "2026-09-30",
+      "biddingDate": "2026-10-30",
+      "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsu/R8/18111.html",
+      "status": "受付中"
+    },
+    {
       "id": "yamato-koriyama-9846d121",
       "municipality": "大和郡山市",
       "title": "市営住宅空家改修工事（市営向畑住宅11号、片桐東団地A棟202号・C棟202号、西田中改良住宅A18号・B81号）",
@@ -2001,17 +2011,6 @@
       "status": "落札",
       "winningContractor": "吉野塗装（株）",
       "estimatedPrice": "2,705,000円"
-    },
-    {
-      "id": "gojo-d18a21bd",
-      "municipality": "五條市",
-      "title": "田園体育館兼集会所カーテン取替修繕",
-      "type": "建築",
-      "announcementDate": "2026-08-28",
-      "biddingDate": "2026-08-28",
-      "link": "https://www.city.gojo.lg.jp/jigyousha/nyuusatsu/8/R8/19721.html",
-      "pdfUrl": "https://www.city.gojo.lg.jp/material/files/group/40/tikutailed_ns_dc01.pdf",
-      "status": "落札"
     },
     {
       "id": "gojo-epi-2601030",
@@ -2634,6 +2633,17 @@
   ],
   "田原本町": [
     {
+      "id": "tawaramoto-1008062207",
+      "municipality": "田原本町",
+      "title": "平野幼稚園配膳室出入口改修等業務",
+      "type": "委託",
+      "announcementDate": "2026-05-28",
+      "biddingDate": "2026-06-22",
+      "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
+      "status": "落札",
+      "winningContractor": "福辻工務店"
+    },
+    {
       "id": "tawaramoto-2026062201",
       "municipality": "田原本町",
       "title": "南小学校⑪号棟トイレ改修工事",
@@ -2642,7 +2652,7 @@
       "biddingDate": "2026-06-22",
       "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
       "status": "落札",
-      "winningContractor": "塚竜(株)"
+      "winningContractor": "塚竜（株）"
     },
     {
       "id": "tawaramoto-2026051803",
@@ -2653,7 +2663,7 @@
       "biddingDate": "2026-05-18",
       "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
       "status": "落札",
-      "winningContractor": "村本建設 (株) 奈良本店"
+      "winningContractor": "村本建設(株)奈良本店"
     }
   ],
   "広陵町": [
@@ -2903,7 +2913,7 @@
       "announcementDate": "2026-09-10",
       "biddingDate": "2026-09-29",
       "link": "https://www.town.takatori.nara.jp/contents_detail.php?co=cat&frmId=2674&frmCd=2-6-0-0-0",
-      "status": "受付中"
+      "status": "受付終了"
     },
     {
       "id": "高取町-2026-09-10-公営住宅丹生谷第1団地屋根葺替等改修工事監理業務",
@@ -2913,7 +2923,7 @@
       "announcementDate": "2026-09-10",
       "biddingDate": "2026-09-29",
       "link": "https://www.town.takatori.nara.jp/contents_detail.php?co=cat&frmId=2674&frmCd=2-6-0-0-0",
-      "status": "受付中"
+      "status": "受付終了"
     },
     {
       "id": "高取町-2026-08-28-公営住宅第5団地除却工事監理業務",

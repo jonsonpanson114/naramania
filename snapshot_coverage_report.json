@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-09-29T12:36:55.874Z",
+  "generatedAt": "2026-09-30T06:53:53.937Z",
   "checkedMunicipalityCount": 24,
-  "expectedItemCount": 312,
-  "matchedItemCount": 312,
+  "expectedItemCount": 313,
+  "matchedItemCount": 313,
   "missingItemCount": 0,
-  "duplicateTitleGroupCount": 23,
-  "duplicateTitleItemCount": 51,
+  "duplicateTitleGroupCount": 24,
+  "duplicateTitleItemCount": 53,
   "results": [
     {
       "municipality": "奈良県",
@@ -64,9 +64,9 @@
     },
     {
       "municipality": "五條市",
-      "snapshotCount": 22,
-      "expectedCount": 22,
-      "matchedCount": 22,
+      "snapshotCount": 21,
+      "expectedCount": 21,
+      "matchedCount": 21,
       "missingCount": 0,
       "duplicateTitleGroupCount": 2,
       "duplicateTitleItemCount": 5,
@@ -86,12 +86,12 @@
     },
     {
       "municipality": "大和郡山市",
-      "snapshotCount": 19,
-      "expectedCount": 19,
-      "matchedCount": 19,
+      "snapshotCount": 20,
+      "expectedCount": 20,
+      "matchedCount": 20,
       "missingCount": 0,
-      "duplicateTitleGroupCount": 1,
-      "duplicateTitleItemCount": 2,
+      "duplicateTitleGroupCount": 2,
+      "duplicateTitleItemCount": 4,
       "missingItems": [],
       "status": "ok"
     },
@@ -206,6 +206,17 @@
       "status": "ok"
     },
     {
+      "municipality": "田原本町",
+      "snapshotCount": 3,
+      "expectedCount": 3,
+      "matchedCount": 3,
+      "missingCount": 0,
+      "duplicateTitleGroupCount": 0,
+      "duplicateTitleItemCount": 0,
+      "missingItems": [],
+      "status": "ok"
+    },
+    {
       "municipality": "安堵町",
       "snapshotCount": 2,
       "expectedCount": 2,
@@ -229,17 +240,6 @@
     },
     {
       "municipality": "御所市",
-      "snapshotCount": 2,
-      "expectedCount": 2,
-      "matchedCount": 2,
-      "missingCount": 0,
-      "duplicateTitleGroupCount": 0,
-      "duplicateTitleItemCount": 0,
-      "missingItems": [],
-      "status": "ok"
-    },
-    {
-      "municipality": "田原本町",
       "snapshotCount": 2,
       "expectedCount": 2,
       "matchedCount": 2,
