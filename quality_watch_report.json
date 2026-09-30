@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-30T06:53:53.045Z",
-  "qualityGeneratedAt": "2026-09-30T06:46:22.080Z",
-  "itemCount": 313,
+  "generatedAt": "2026-09-30T12:24:45.772Z",
+  "qualityGeneratedAt": "2026-09-30T12:16:30.024Z",
+  "itemCount": 312,
   "resultFollowUp": {
     "totalCount": 9,
     "highCount": 6,
@@ -667,15 +667,15 @@
         "municipality": "田原本町",
         "status": "ok",
         "severity": "error",
-        "totalCount": 3,
+        "totalCount": 2,
         "requiredLinkIncludes": [
           "tawaramoto.efftis.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "tawaramoto.efftis.jp": 3
+          "tawaramoto.efftis.jp": 2
         },
-        "message": "田原本町: 3件 (公告0/結果3) / sources OK"
+        "message": "田原本町: 2件 (公告0/結果2) / sources OK"
       },
       {
         "municipality": "広陵町",

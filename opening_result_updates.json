@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-30T06:46:22.075Z",
+  "generatedAt": "2026-09-30T12:16:30.017Z",
   "source": "daily_scrape",
   "updates": [
     {
@@ -14,7 +14,22 @@
       "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5081000952k.pdf",
       "previousStatus": "落札",
       "previousWinningContractor": "浅山建設",
-      "detectedAt": "2026-09-30T06:46:22.075Z",
+      "detectedAt": "2026-09-30T12:16:30.017Z",
+      "kind": "new_winner"
+    },
+    {
+      "id": "miyake-2026-09-07-三宅老人憩いの家解体工事設計委託業務",
+      "municipality": "三宅町",
+      "title": "三宅老人憩いの家解体工事設計委託業務",
+      "announcementDate": "2026-09-07",
+      "biddingDate": "2026-09-07",
+      "status": "落札",
+      "winningContractor": "株式会社 礎建築事務所",
+      "link": "https://www.town.miyake.lg.jp/soshiki/1/9376.html",
+      "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5773.pdf",
+      "previousStatus": "落札",
+      "previousWinningContractor": "株式会社礎建築事務所",
+      "detectedAt": "2026-09-30T12:16:30.017Z",
       "kind": "new_winner"
     },
     {
@@ -29,7 +44,22 @@
       "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk_kekka8-070.pdf",
       "previousStatus": "落札",
       "previousWinningContractor": "(有)龍田",
-      "detectedAt": "2026-09-30T06:46:22.075Z",
+      "detectedAt": "2026-09-30T12:16:30.017Z",
+      "kind": "new_winner"
+    },
+    {
+      "id": "kashihara-result-5082000865",
+      "municipality": "橿原市",
+      "title": "八木中学校長寿命化改良工事(第1期)に伴う工事監理業務委託",
+      "announcementDate": "2026-08-27",
+      "biddingDate": "2026-08-27",
+      "status": "落札",
+      "winningContractor": "㈲坪岡建築事務所",
+      "link": "https://www.city.kashihara.nara.jp/soshiki/1019/gyomu/1/1/1/reiwa8nen/20258.html",
+      "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5082000865k.pdf",
+      "previousStatus": "落札",
+      "previousWinningContractor": "(有)坪岡建築事務所",
+      "detectedAt": "2026-09-30T12:16:30.017Z",
       "kind": "new_winner"
     },
     {
@@ -44,7 +74,7 @@
       "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk_kekka8-055.pdf",
       "previousStatus": "落札",
       "previousWinningContractor": "(有) 龍田",
-      "detectedAt": "2026-09-30T06:46:22.075Z",
+      "detectedAt": "2026-09-30T12:16:30.017Z",
       "kind": "new_winner"
     },
     {
@@ -58,8 +88,8 @@
       "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/1892.html",
       "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk_kekka8-050.pdf",
       "previousStatus": "落札",
-      "previousWinningContractor": "（株）松本コンサルタント 奈良支店",
-      "detectedAt": "2026-09-30T06:46:22.075Z",
+      "previousWinningContractor": "(株) 松本コンサルタント 奈良支店",
+      "detectedAt": "2026-09-30T12:16:30.017Z",
       "kind": "new_winner"
     },
     {
@@ -74,19 +104,7 @@
       "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5082000530k.pdf",
       "previousStatus": "落札",
       "previousWinningContractor": "(有)坪岡建築事務所",
-      "detectedAt": "2026-09-30T06:46:22.075Z",
-      "kind": "new_winner"
-    },
-    {
-      "id": "tawaramoto-1008062207",
-      "municipality": "田原本町",
-      "title": "平野幼稚園配膳室出入口改修等業務",
-      "announcementDate": "2026-05-28",
-      "biddingDate": "2026-06-22",
-      "status": "落札",
-      "winningContractor": "福辻工務店",
-      "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
-      "detectedAt": "2026-09-30T06:46:22.075Z",
+      "detectedAt": "2026-09-30T12:16:30.017Z",
       "kind": "new_winner"
     },
     {
@@ -96,11 +114,11 @@
       "announcementDate": "2026-05-14",
       "biddingDate": "2026-06-22",
       "status": "落札",
-      "winningContractor": "塚竜（株）",
+      "winningContractor": "塚竜(株)",
       "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
       "previousStatus": "落札",
-      "previousWinningContractor": "塚竜(株)",
-      "detectedAt": "2026-09-30T06:46:22.075Z",
+      "previousWinningContractor": "塚竜（株）",
+      "detectedAt": "2026-09-30T12:16:30.017Z",
       "kind": "new_winner"
     },
     {
@@ -115,7 +133,7 @@
       "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk_kekka8-042.pdf",
       "previousStatus": "落札",
       "previousWinningContractor": "(株)木村組",
-      "detectedAt": "2026-09-30T06:46:22.075Z",
+      "detectedAt": "2026-09-30T12:16:30.017Z",
       "kind": "new_winner"
     },
     {
@@ -130,36 +148,7 @@
       "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk_kekka8-026.pdf",
       "previousStatus": "落札",
       "previousWinningContractor": "(株)クラハラ",
-      "detectedAt": "2026-09-30T06:46:22.075Z",
-      "kind": "new_winner"
-    },
-    {
-      "id": "kashihara-result-5082000288",
-      "municipality": "橿原市",
-      "title": "市営住宅内装等改修工事に伴う設計委託",
-      "announcementDate": "2026-05-20",
-      "biddingDate": "2026-05-20",
-      "status": "落札",
-      "winningContractor": "㈲坪岡建築事務所",
-      "link": "https://www.city.kashihara.nara.jp/soshiki/1019/gyomu/1/1/1/reiwa8nen/20258.html",
-      "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5082000288k.pdf",
-      "previousStatus": "落札",
-      "previousWinningContractor": "(有)坪岡建築事務所",
-      "detectedAt": "2026-09-30T06:46:22.075Z",
-      "kind": "new_winner"
-    },
-    {
-      "id": "tawaramoto-2026051803",
-      "municipality": "田原本町",
-      "title": "田原本町立まほろば小学校新築工事",
-      "announcementDate": "2026-04-09",
-      "biddingDate": "2026-05-18",
-      "status": "落札",
-      "winningContractor": "村本建設(株)奈良本店",
-      "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
-      "previousStatus": "落札",
-      "previousWinningContractor": "村本建設 (株) 奈良本店",
-      "detectedAt": "2026-09-30T06:46:22.075Z",
+      "detectedAt": "2026-09-30T12:16:30.017Z",
       "kind": "new_winner"
     },
     {
@@ -174,7 +163,7 @@
       "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5082000046k.pdf",
       "previousStatus": "落札",
       "previousWinningContractor": "㈱トーニチコンサルタント 奈良事務所",
-      "detectedAt": "2026-09-30T06:46:22.075Z",
+      "detectedAt": "2026-09-30T12:16:30.017Z",
       "kind": "new_winner"
     },
     {
@@ -189,7 +178,7 @@
       "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5072001239k.pdf",
       "previousStatus": "落札",
       "previousWinningContractor": "(有)坪岡建築事務所",
-      "detectedAt": "2026-09-30T06:46:22.075Z",
+      "detectedAt": "2026-09-30T12:16:30.017Z",
       "kind": "new_winner"
     }
   ],
@@ -202,7 +191,7 @@
       "biddingDate": "2026-10-19",
       "status": "不調",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-      "detectedAt": "2026-09-30T06:46:22.075Z",
+      "detectedAt": "2026-09-30T12:16:30.017Z",
       "kind": "new_failure"
     },
     {
@@ -214,7 +203,7 @@
       "status": "落札",
       "winningContractor": "株式会社武部商会",
       "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-      "detectedAt": "2026-09-30T06:46:22.075Z",
+      "detectedAt": "2026-09-30T12:16:30.017Z",
       "kind": "new_winner"
     },
     {
@@ -226,7 +215,7 @@
       "status": "落札",
       "winningContractor": "株式会社弥杜工業",
       "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-      "detectedAt": "2026-09-30T06:46:22.075Z",
+      "detectedAt": "2026-09-30T12:16:30.017Z",
       "kind": "new_winner"
     },
     {
@@ -238,7 +227,7 @@
       "status": "落札",
       "winningContractor": "株式会社ふくろ工房",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0660064007200640",
-      "detectedAt": "2026-09-30T06:46:22.075Z",
+      "detectedAt": "2026-09-30T12:16:30.017Z",
       "kind": "new_winner"
     },
     {
@@ -251,7 +240,7 @@
       "winningContractor": "浅山建設  浅山",
       "link": "https://www.city.kashihara.nara.jp/soshiki/1019/gyomu/1/1/1/reiwa8nen/20256.html",
       "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5081000952k.pdf",
-      "detectedAt": "2026-09-30T06:46:22.075Z",
+      "detectedAt": "2026-09-30T12:16:30.017Z",
       "kind": "new_winner"
     },
     {
@@ -262,7 +251,7 @@
       "biddingDate": "2026-09-11",
       "status": "不調",
       "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260182&gamenMode=0",
-      "detectedAt": "2026-09-30T06:46:22.075Z",
+      "detectedAt": "2026-09-30T12:16:30.017Z",
       "kind": "new_failure"
     },
     {
@@ -273,7 +262,7 @@
       "biddingDate": "2026-09-11",
       "status": "不調",
       "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260181&gamenMode=0",
-      "detectedAt": "2026-09-30T06:46:22.075Z",
+      "detectedAt": "2026-09-30T12:16:30.017Z",
       "kind": "new_failure"
     },
     {
@@ -285,7 +274,7 @@
       "status": "落札",
       "winningContractor": "吉野塗装（株）",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002601041",
-      "detectedAt": "2026-09-30T06:46:22.075Z",
+      "detectedAt": "2026-09-30T12:16:30.017Z",
       "kind": "new_winner"
     },
     {
@@ -296,7 +285,7 @@
       "biddingDate": "2026-09-10",
       "status": "不調",
       "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260177&gamenMode=0",
-      "detectedAt": "2026-09-30T06:46:22.075Z",
+      "detectedAt": "2026-09-30T12:16:30.017Z",
       "kind": "new_failure"
     },
     {
@@ -307,7 +296,7 @@
       "biddingDate": "2026-09-10",
       "status": "不調",
       "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260168&gamenMode=0",
-      "detectedAt": "2026-09-30T06:46:22.075Z",
+      "detectedAt": "2026-09-30T12:16:30.017Z",
       "kind": "new_failure"
     },
     {
@@ -318,7 +307,7 @@
       "biddingDate": "2026-09-08",
       "status": "不調",
       "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260173&gamenMode=0",
-      "detectedAt": "2026-09-30T06:46:22.075Z",
+      "detectedAt": "2026-09-30T12:16:30.017Z",
       "kind": "new_failure"
     },
     {
@@ -329,7 +318,7 @@
       "biddingDate": "2026-09-08",
       "status": "不調",
       "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260171&gamenMode=0",
-      "detectedAt": "2026-09-30T06:46:22.075Z",
+      "detectedAt": "2026-09-30T12:16:30.017Z",
       "kind": "new_failure"
     }
   ]
