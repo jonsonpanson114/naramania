@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-01T07:20:10.543Z",
+  "generatedAt": "2026-10-01T12:46:42.295Z",
   "totalRejected": 10896,
   "totalBorderlineRescued": 33,
   "byMunicipality": {
@@ -28,7 +28,7 @@
       "borderlineRescued": 0
     },
     "五條市": {
-      "rejected": 996,
+      "rejected": 990,
       "borderlineRescued": 0
     },
     "御所市": {
@@ -80,7 +80,7 @@
       "borderlineRescued": 6
     },
     "高取町": {
-      "rejected": 144,
+      "rejected": 150,
       "borderlineRescued": 0
     },
     "斑鳩町": {
@@ -43601,22 +43601,6 @@
     },
     {
       "municipality": "五條市",
-      "title": "西吉野農業高等学校寄宿舎食事調理及び配送業務委託（令和8年9月1日）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "配送"
-      ]
-    },
-    {
-      "municipality": "五條市",
-      "title": "西吉野農業高等学校寄宿舎食事調理及び配送業務委託（令和8年9月1日） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "配送"
-      ]
-    },
-    {
-      "municipality": "五條市",
       "title": "道路維持修繕工事",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -46113,22 +46097,6 @@
     },
     {
       "municipality": "五條市",
-      "title": "西吉野農業高等学校寄宿舎食事調理及び配送業務委託（令和8年9月1日）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "配送"
-      ]
-    },
-    {
-      "municipality": "五條市",
-      "title": "西吉野農業高等学校寄宿舎食事調理及び配送業務委託（令和8年9月1日） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "配送"
-      ]
-    },
-    {
-      "municipality": "五條市",
       "title": "道路維持修繕工事",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -48621,22 +48589,6 @@
       "matchedKeywords": [
         "道路",
         "舗装"
-      ]
-    },
-    {
-      "municipality": "五條市",
-      "title": "西吉野農業高等学校寄宿舎食事調理及び配送業務委託（令和8年9月1日）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "配送"
-      ]
-    },
-    {
-      "municipality": "五條市",
-      "title": "西吉野農業高等学校寄宿舎食事調理及び配送業務委託（令和8年9月1日） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "配送"
       ]
     },
     {
@@ -51179,22 +51131,6 @@
     },
     {
       "municipality": "御所市",
-      "title": "現場説明書（仕様書）のダウンロード（測量・建設コンサルタント業務）（管財課）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "測量"
-      ]
-    },
-    {
-      "municipality": "御所市",
-      "title": "現場説明書（仕様書）のダウンロード（測量・建設コンサルタント業務）（管財課） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "測量"
-      ]
-    },
-    {
-      "municipality": "御所市",
       "title": "一般競争入札公告（建設コンサルタント等）（管財課）",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -51216,6 +51152,22 @@
       "title": "一般競争入札公告（建設工事）（管財課） ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "現場説明書（仕様書）のダウンロード（測量・建設コンサルタント業務）（管財課）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "測量"
+      ]
+    },
+    {
+      "municipality": "御所市",
+      "title": "現場説明書（仕様書）のダウンロード（測量・建設コンサルタント業務）（管財課） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "測量"
+      ]
     },
     {
       "municipality": "御所市",
@@ -51313,22 +51265,6 @@
     },
     {
       "municipality": "御所市",
-      "title": "現場説明書（仕様書）のダウンロード（測量・建設コンサルタント業務）（管財課）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "測量"
-      ]
-    },
-    {
-      "municipality": "御所市",
-      "title": "現場説明書（仕様書）のダウンロード（測量・建設コンサルタント業務）（管財課） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "測量"
-      ]
-    },
-    {
-      "municipality": "御所市",
       "title": "一般競争入札公告（建設コンサルタント等）（管財課）",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -51350,6 +51286,22 @@
       "title": "一般競争入札公告（建設工事）（管財課） ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "現場説明書（仕様書）のダウンロード（測量・建設コンサルタント業務）（管財課）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "測量"
+      ]
+    },
+    {
+      "municipality": "御所市",
+      "title": "現場説明書（仕様書）のダウンロード（測量・建設コンサルタント業務）（管財課） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "測量"
+      ]
     },
     {
       "municipality": "御所市",
@@ -51447,22 +51399,6 @@
     },
     {
       "municipality": "御所市",
-      "title": "現場説明書（仕様書）のダウンロード（測量・建設コンサルタント業務）（管財課）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "測量"
-      ]
-    },
-    {
-      "municipality": "御所市",
-      "title": "現場説明書（仕様書）のダウンロード（測量・建設コンサルタント業務）（管財課） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "測量"
-      ]
-    },
-    {
-      "municipality": "御所市",
       "title": "一般競争入札公告（建設コンサルタント等）（管財課）",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -51484,6 +51420,22 @@
       "title": "一般競争入札公告（建設工事）（管財課） ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "現場説明書（仕様書）のダウンロード（測量・建設コンサルタント業務）（管財課）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "測量"
+      ]
+    },
+    {
+      "municipality": "御所市",
+      "title": "現場説明書（仕様書）のダウンロード（測量・建設コンサルタント業務）（管財課） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "測量"
+      ]
     },
     {
       "municipality": "天理市",
@@ -70906,6 +70858,18 @@
     },
     {
       "municipality": "高取町",
+      "title": "R8.10.28執行分",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "高取町",
+      "title": "R8.10.28執行分 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "高取町",
       "title": "都市計画法第34条第11号に係る都市計画協議図書作成及び調査業務",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -71272,6 +71236,18 @@
     },
     {
       "municipality": "高取町",
+      "title": "R8.10.28執行分",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "高取町",
+      "title": "R8.10.28執行分 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "高取町",
       "title": "都市計画法第34条第11号に係る都市計画協議図書作成及び調査業務",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -71635,6 +71611,18 @@
       "matchedKeywords": [
         "舗装"
       ]
+    },
+    {
+      "municipality": "高取町",
+      "title": "R8.10.28執行分",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "高取町",
+      "title": "R8.10.28執行分 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
     },
     {
       "municipality": "斑鳩町",
