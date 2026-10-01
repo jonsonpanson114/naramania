@@ -1,10 +1,43 @@
 [
   {
+    "id": "斑鳩町-2027-04-01-斑鳩町公共下水道事業-第13処理分区17工区-2工事",
+    "municipality": "斑鳩町",
+    "title": "斑鳩町公共下水道事業 第13処理分区17工区－2工事",
+    "type": "建築",
+    "announcementDate": "2027-04-01",
+    "biddingDate": "2027-06-26",
+    "link": "https://www.town.ikaruga.nara.jp/0000001983.html",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
+    "id": "斑鳩町-2027-04-01-斑鳩町公共下水道事業-第15処理分区19工区-4工事",
+    "municipality": "斑鳩町",
+    "title": "斑鳩町公共下水道事業 第15処理分区19工区－4工事",
+    "type": "建築",
+    "announcementDate": "2027-04-01",
+    "biddingDate": "2027-06-26",
+    "link": "https://www.town.ikaruga.nara.jp/0000001983.html",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
+    "id": "斑鳩町-2027-04-01-斑鳩町公共下水道事業-第12処理分区10工区-8工事",
+    "municipality": "斑鳩町",
+    "title": "斑鳩町公共下水道事業 第12処理分区10工区－8工事",
+    "type": "建築",
+    "announcementDate": "2027-04-01",
+    "biddingDate": "2027-06-26",
+    "link": "https://www.town.ikaruga.nara.jp/0000001983.html",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
     "id": "ando-category-66",
     "municipality": "安堵町",
     "title": "条件付き一般競争入札の実施について（令和8年度「広報安堵」印刷製本並びにその付帯業務事業）",
     "type": "建築",
-    "announcementDate": "2026-09-30",
+    "announcementDate": "2026-10-01",
     "link": "https://www.town.ando.nara.jp/0000003977.html",
     "status": "受付中",
     "isRelevant": false
@@ -14,7 +47,7 @@
     "municipality": "安堵町",
     "title": "【条件付き一般競争入札の結果】安堵町コロナ対策備品調達事業",
     "type": "建築",
-    "announcementDate": "2026-09-30",
+    "announcementDate": "2026-10-01",
     "link": "https://www.town.ando.nara.jp/0000003078.html",
     "status": "落札",
     "pdfUrl": "https://www.town.ando.nara.jp/cmsfiles/contents/0000003/3078/1.pdf",
@@ -26,7 +59,7 @@
     "municipality": "奈良市",
     "title": "奈良市役所本庁舎他８施設設備改修工事に伴う建築設計業務委託",
     "type": "コンサル",
-    "announcementDate": "2026-09-30",
+    "announcementDate": "2026-10-01",
     "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
     "status": "不調",
     "isRelevant": false
@@ -36,7 +69,7 @@
     "municipality": "奈良市",
     "title": "梅の郷月ヶ瀬温泉ボイラー設備改修その他工事に伴う建築設計業務委託",
     "type": "コンサル",
-    "announcementDate": "2026-09-30",
+    "announcementDate": "2026-10-01",
     "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
     "status": "不調",
     "isRelevant": false
@@ -46,7 +79,7 @@
     "municipality": "奈良市",
     "title": "庁舎非常用発電機燃料タンク増設その他改修に伴う建築設計業務委託",
     "type": "コンサル",
-    "announcementDate": "2026-09-30",
+    "announcementDate": "2026-10-01",
     "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
     "status": "不調",
     "isRelevant": false
@@ -56,7 +89,7 @@
     "municipality": "奈良市",
     "title": "奈良市総合医療検査センター空調設備改修その他工事に伴う建築設計業務委託",
     "type": "コンサル",
-    "announcementDate": "2026-09-30",
+    "announcementDate": "2026-10-01",
     "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
     "status": "不調",
     "isRelevant": false
@@ -66,7 +99,7 @@
     "municipality": "奈良市",
     "title": "平城中学校他３校給水設備等改修に伴う設計業務委託",
     "type": "コンサル",
-    "announcementDate": "2026-09-30",
+    "announcementDate": "2026-10-01",
     "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
     "status": "不調",
     "isRelevant": false
@@ -76,7 +109,7 @@
     "municipality": "奈良市",
     "title": "中央体育館汚水配管改修工事に伴う建築設計業務委託",
     "type": "コンサル",
-    "announcementDate": "2026-09-30",
+    "announcementDate": "2026-10-01",
     "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
     "status": "不調",
     "isRelevant": false
@@ -86,7 +119,7 @@
     "municipality": "奈良市",
     "title": "ならまちセンター空調設備改修その他工事に伴う建築設計業務委託",
     "type": "コンサル",
-    "announcementDate": "2026-09-30",
+    "announcementDate": "2026-10-01",
     "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
     "status": "不調",
     "isRelevant": false
@@ -96,7 +129,7 @@
     "municipality": "奈良市",
     "title": "庁舎非常用発電機燃料タンク増設その他改修に伴う建築設計業務委託",
     "type": "コンサル",
-    "announcementDate": "2026-09-30",
+    "announcementDate": "2026-10-01",
     "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
     "status": "不調",
     "isRelevant": false
@@ -106,7 +139,7 @@
     "municipality": "奈良市",
     "title": "生涯学習センター吸収冷温水機改修に伴う設計業務委託",
     "type": "コンサル",
-    "announcementDate": "2026-09-30",
+    "announcementDate": "2026-10-01",
     "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
     "status": "不調",
     "isRelevant": false
@@ -116,7 +149,7 @@
     "municipality": "奈良市",
     "title": "奈良市月ヶ瀬福祉センター温水設備改修工事に伴う建築設計業務委託",
     "type": "コンサル",
-    "announcementDate": "2026-09-30",
+    "announcementDate": "2026-10-01",
     "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
     "status": "不調",
     "isRelevant": false
@@ -126,9 +159,456 @@
     "municipality": "奈良市",
     "title": "鴻ノ池球場放送設備改修工事に伴う建築設計業務委託",
     "type": "コンサル",
-    "announcementDate": "2026-09-30",
+    "announcementDate": "2026-10-01",
     "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
     "status": "不調",
+    "isRelevant": false
+  },
+  {
+    "id": "gose-2026-10-01-新田川護岸整備工事-0",
+    "municipality": "御所市",
+    "title": "新田川護岸整備工事",
+    "type": "建築",
+    "announcementDate": "2026-10-01",
+    "biddingDate": "2026-10-20",
+    "link": "https://www.city.gose.nara.jp/0000002746.html",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
+    "id": "gose-2026-10-01-令和8年度自動車騒音常時監視面的評価業務委託-0",
+    "municipality": "御所市",
+    "title": "令和8年度自動車騒音常時監視面的評価業務委託",
+    "type": "その他",
+    "announcementDate": "2026-10-01",
+    "biddingDate": "2026-10-20",
+    "link": "https://www.city.gose.nara.jp/0000002767.html",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
+    "id": "gose-現場説明書（仕様書）のダウンロード（測量-1",
+    "municipality": "御所市",
+    "title": "現場説明書（仕様書）のダウンロード（測量・建設コンサルタント業務）（管財課）",
+    "type": "コンサル",
+    "announcementDate": "2026-10-01",
+    "link": "",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
+    "id": "gose-一般競争入札公告（建設コンサルタント等）-2",
+    "municipality": "御所市",
+    "title": "一般競争入札公告（建設コンサルタント等）（管財課）",
+    "type": "コンサル",
+    "announcementDate": "2026-10-01",
+    "link": "",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
+    "id": "gose-一般競争入札公告（建設工事）（管財課）-3",
+    "municipality": "御所市",
+    "title": "一般競争入札公告（建設工事）（管財課）",
+    "type": "建築",
+    "announcementDate": "2026-10-01",
+    "link": "",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
+    "id": "sakurai-2026-10-01-道路改良工事",
+    "municipality": "桜井市",
+    "title": "道路改良工事",
+    "type": "建築",
+    "announcementDate": "2026-10-01",
+    "link": "https://www.city.sakurai.lg.jp/sosiki/soumu/kanzaikeiyaku/nyuusatukeiyakukensa/notice/6596.html",
+    "status": "受付中",
+    "description": "大西 地内",
+    "isRelevant": false
+  },
+  {
+    "id": "sakurai-2026-10-01-公園遊具更新工事-都公-11-12-",
+    "municipality": "桜井市",
+    "title": "公園遊具更新工事（都公－11、12）",
+    "type": "建築",
+    "announcementDate": "2026-10-01",
+    "link": "https://www.city.sakurai.lg.jp/sosiki/soumu/kanzaikeiyaku/nyuusatukeiyakukensa/notice/6596.html",
+    "status": "受付中",
+    "description": "忍阪・大福 地内",
+    "isRelevant": false
+  },
+  {
+    "id": "sakurai-2026-10-01-鹿路トンネル補修設計業務",
+    "municipality": "桜井市",
+    "title": "鹿路トンネル補修設計業務",
+    "type": "コンサル",
+    "announcementDate": "2026-10-01",
+    "link": "https://www.city.sakurai.lg.jp/sosiki/soumu/kanzaikeiyaku/nyuusatukeiyakukensa/notice/6596.html",
+    "status": "受付中",
+    "description": "鹿路 地内",
+    "isRelevant": false
+  },
+  {
+    "id": "sakurai-2026-10-01-桜井市立みなみこども園建設工事",
+    "municipality": "桜井市",
+    "title": "桜井市立みなみこども園建設工事",
+    "type": "建築",
+    "announcementDate": "2026-10-01",
+    "link": "https://www.city.sakurai.lg.jp/sosiki/soumu/kanzaikeiyaku/nyuusatukeiyakukensa/notice/6596.html",
+    "status": "受付中",
+    "description": "河西 地内",
+    "isRelevant": true
+  },
+  {
+    "id": "sakurai-epi-bd130fda07",
+    "municipality": "桜井市",
+    "title": "【土改第3号】道路改良工事",
+    "type": "建築",
+    "announcementDate": "2026-10-01",
+    "biddingDate": "2026-10-26",
+    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=06200640072006A0",
+    "status": "落札",
+    "winningContractor": "清川建設（株）",
+    "winnerType": "ゼネコン",
+    "isRelevant": false
+  },
+  {
+    "id": "sakurai-epi-1ecd97c21d",
+    "municipality": "桜井市",
+    "title": "【都計第8号】公園遊具更新工事（都公－11、12）",
+    "type": "建築",
+    "announcementDate": "2026-10-01",
+    "biddingDate": "2026-10-26",
+    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=06200640072006A0",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
+    "id": "sakurai-epi-c393dededc",
+    "municipality": "桜井市",
+    "title": "【土委第24号】鹿路トンネル補修設計業務",
+    "type": "コンサル",
+    "announcementDate": "2026-10-01",
+    "biddingDate": "2026-10-26",
+    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=06200640072006A0",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
+    "id": "kawanishi-2026-10-01-令和8年度執行分-入札結果の公表",
+    "municipality": "川西町",
+    "title": "令和8年度執行分 入札結果の公表",
+    "type": "建築",
+    "announcementDate": "2026-10-01",
+    "link": "https://www.town.nara-kawanishi.lg.jp/0000009009.html",
+    "status": "受付終了",
+    "isRelevant": false
+  },
+  {
+    "id": "miyake-2026-10-01-飛鳥川堤防除草作業",
+    "municipality": "三宅町",
+    "title": "飛鳥川堤防除草作業",
+    "type": "建築",
+    "announcementDate": "2026-10-01",
+    "biddingDate": "2026-10-01",
+    "link": "https://www.town.miyake.lg.jp/soshiki/1/9375.html",
+    "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5467.pdf",
+    "status": "落札",
+    "winningContractor": "新和建設",
+    "winnerType": "ゼネコン",
+    "isRelevant": false
+  },
+  {
+    "id": "miyake-2026-10-01-寺川・曽我川堤防除草作業",
+    "municipality": "三宅町",
+    "title": "寺川・曽我川堤防除草作業",
+    "type": "建築",
+    "announcementDate": "2026-10-01",
+    "biddingDate": "2026-10-01",
+    "link": "https://www.town.miyake.lg.jp/soshiki/1/9375.html",
+    "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5468.pdf",
+    "status": "落札",
+    "winningContractor": "成花建設",
+    "winnerType": "ゼネコン",
+    "isRelevant": false
+  },
+  {
+    "id": "miyake-2026-10-01-伴堂第二児童公園改修工事",
+    "municipality": "三宅町",
+    "title": "伴堂第二児童公園改修工事",
+    "type": "建築",
+    "announcementDate": "2026-10-01",
+    "biddingDate": "2026-10-01",
+    "link": "https://www.town.miyake.lg.jp/soshiki/1/9375.html",
+    "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5513.pdf",
+    "status": "落札",
+    "winningContractor": "有限会社 丸本建材 取締役 丸本 雅則 指名競争入札の場合の指名理由 三宅町建設工事請負業者選定要領の指名基準による",
+    "winnerType": "ゼネコン",
+    "isRelevant": false
+  },
+  {
+    "id": "miyake-2026-10-01-上但馬地区道路側溝清掃工事-2工区-",
+    "municipality": "三宅町",
+    "title": "上但馬地区道路側溝清掃工事（2工区）",
+    "type": "建築",
+    "announcementDate": "2026-10-01",
+    "biddingDate": "2026-10-01",
+    "link": "https://www.town.miyake.lg.jp/soshiki/1/9375.html",
+    "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5514.pdf",
+    "status": "落札",
+    "winningContractor": "新和建設 事業主 山田 静佳 指名競争入札の場合の指名理由 三宅町建設工事請負業者選定要領の指名基準による",
+    "winnerType": "ゼネコン",
+    "isRelevant": false
+  },
+  {
+    "id": "miyake-2026-10-01-ストックマネジメント基本計画に基づく更新工事",
+    "municipality": "三宅町",
+    "title": "ストックマネジメント基本計画に基づく更新工事",
+    "type": "建築",
+    "announcementDate": "2026-10-01",
+    "biddingDate": "2026-10-01",
+    "link": "https://www.town.miyake.lg.jp/soshiki/1/9375.html",
+    "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5515.pdf",
+    "status": "落札",
+    "winningContractor": "梶木建設",
+    "winnerType": "ゼネコン",
+    "isRelevant": false
+  },
+  {
+    "id": "miyake-2026-10-01-三宅59・61号線舗装補修工事",
+    "municipality": "三宅町",
+    "title": "三宅59・61号線舗装補修工事",
+    "type": "建築",
+    "announcementDate": "2026-10-01",
+    "biddingDate": "2026-10-01",
+    "link": "https://www.town.miyake.lg.jp/soshiki/1/9375.html",
+    "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5654.pdf",
+    "status": "落札",
+    "winningContractor": "株式会社 山本工業",
+    "winnerType": "ゼネコン",
+    "isRelevant": false
+  },
+  {
+    "id": "miyake-2026-10-01-三宅町文化ホールトイレ改修工事",
+    "municipality": "三宅町",
+    "title": "三宅町文化ホールトイレ改修工事",
+    "type": "建築",
+    "announcementDate": "2026-10-01",
+    "biddingDate": "2026-10-01",
+    "link": "https://www.town.miyake.lg.jp/soshiki/1/9375.html",
+    "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5776.pdf",
+    "status": "落札",
+    "winningContractor": "光栄工業",
+    "winnerType": "ゼネコン",
+    "isRelevant": true
+  },
+  {
+    "id": "miyake-2026-10-01-三宅9・27号線舗装維持補修工事",
+    "municipality": "三宅町",
+    "title": "三宅9・27号線舗装維持補修工事",
+    "type": "建築",
+    "announcementDate": "2026-10-01",
+    "biddingDate": "2026-10-01",
+    "link": "https://www.town.miyake.lg.jp/soshiki/1/9375.html",
+    "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5678.pdf",
+    "status": "落札",
+    "winningContractor": "三輪工業 株式会社",
+    "winnerType": "ゼネコン",
+    "isRelevant": false
+  },
+  {
+    "id": "miyake-2026-10-01-三宅1号線舗装補修工事-8-25修正-",
+    "municipality": "三宅町",
+    "title": "三宅1号線舗装補修工事（8／25修正）",
+    "type": "建築",
+    "announcementDate": "2026-10-01",
+    "biddingDate": "2026-10-01",
+    "link": "https://www.town.miyake.lg.jp/soshiki/1/9375.html",
+    "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5727.pdf",
+    "status": "落札",
+    "winningContractor": "株式会社 福寿建設 田原本営業所 指名競争入札の場合の指名理由 三宅町建設工事請負業者選定要領の指名基準による",
+    "winnerType": "ゼネコン",
+    "isRelevant": false
+  },
+  {
+    "id": "miyake-2026-10-01-三宅150号線道路改良工事",
+    "municipality": "三宅町",
+    "title": "三宅150号線道路改良工事",
+    "type": "建築",
+    "announcementDate": "2026-10-01",
+    "biddingDate": "2026-10-01",
+    "link": "https://www.town.miyake.lg.jp/soshiki/1/9375.html",
+    "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5680.pdf",
+    "status": "落札",
+    "winningContractor": "株式会社 松吉組",
+    "winnerType": "ゼネコン",
+    "isRelevant": false
+  },
+  {
+    "id": "miyake-2026-10-01-式下中学校体育館屋根・外壁その他改修工事",
+    "municipality": "三宅町",
+    "title": "式下中学校体育館屋根・外壁その他改修工事",
+    "type": "建築",
+    "announcementDate": "2026-10-01",
+    "biddingDate": "2026-10-01",
+    "link": "https://www.town.miyake.lg.jp/soshiki/1/9375.html",
+    "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5774.pdf",
+    "status": "落札",
+    "winningContractor": "株式会社ゴセケン",
+    "winnerType": "ゼネコン",
+    "isRelevant": true
+  },
+  {
+    "id": "miyake-2026-10-01-三宅63号線舗装補修工事",
+    "municipality": "三宅町",
+    "title": "三宅63号線舗装補修工事",
+    "type": "建築",
+    "announcementDate": "2026-10-01",
+    "biddingDate": "2026-10-01",
+    "link": "https://www.town.miyake.lg.jp/soshiki/1/9375.html",
+    "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5775.pdf",
+    "status": "落札",
+    "winningContractor": "有限会社 大和工業 取締役 山田 惠清 指名競争入札の場合の指名理由 三宅町建設工事請負業者選定要領の指名基準による",
+    "winnerType": "ゼネコン",
+    "isRelevant": false
+  },
+  {
+    "id": "miyake-2026-10-01-工業ゾーン三宅1号線道路改良工事-7期-",
+    "municipality": "三宅町",
+    "title": "工業ゾーン三宅1号線道路改良工事(7期)",
+    "type": "建築",
+    "announcementDate": "2026-10-01",
+    "biddingDate": "2026-10-01",
+    "link": "https://www.town.miyake.lg.jp/soshiki/1/9375.html",
+    "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5854.pdf",
+    "status": "落札",
+    "winningContractor": "輝登建設株式会社 三宅営業所",
+    "winnerType": "ゼネコン",
+    "isRelevant": false
+  },
+  {
+    "id": "miyake-2026-10-01-無名橋22補修工事",
+    "municipality": "三宅町",
+    "title": "無名橋22補修工事",
+    "type": "建築",
+    "announcementDate": "2026-10-01",
+    "biddingDate": "2026-10-01",
+    "link": "https://www.town.miyake.lg.jp/soshiki/1/9375.html",
+    "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5855.pdf",
+    "status": "落札",
+    "winningContractor": "新和建設",
+    "winnerType": "ゼネコン",
+    "isRelevant": false
+  },
+  {
+    "id": "miyake-2026-10-01-令和8年度三宅町公共下水道事業ウォーターPPPに関する基礎調査業務",
+    "municipality": "三宅町",
+    "title": "令和8年度三宅町公共下水道事業ウォーターPPPに関する基礎調査業務",
+    "type": "委託",
+    "announcementDate": "2026-10-01",
+    "biddingDate": "2026-10-01",
+    "link": "https://www.town.miyake.lg.jp/soshiki/1/9376.html",
+    "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5557.pdf",
+    "status": "落札",
+    "winningContractor": "株式会社日本インシーク 奈良支社 支社長 保宗 卓 指名競争入札の場合の指名理由 -",
+    "winnerType": "ゼネコン",
+    "isRelevant": false
+  },
+  {
+    "id": "miyake-2026-10-01-三宅2号線用地測量業務",
+    "municipality": "三宅町",
+    "title": "三宅2号線用地測量業務",
+    "type": "委託",
+    "announcementDate": "2026-10-01",
+    "biddingDate": "2026-10-01",
+    "link": "https://www.town.miyake.lg.jp/soshiki/1/9376.html",
+    "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5617.pdf",
+    "status": "落札",
+    "winningContractor": "株式会社オオバ 奈良営業所",
+    "winnerType": "ゼネコン",
+    "isRelevant": false
+  },
+  {
+    "id": "miyake-2026-10-01-式下中学校体育館空調機器設置等工事設計業務",
+    "municipality": "三宅町",
+    "title": "式下中学校体育館空調機器設置等工事設計業務",
+    "type": "コンサル",
+    "announcementDate": "2026-10-01",
+    "biddingDate": "2026-10-01",
+    "link": "https://www.town.miyake.lg.jp/soshiki/1/9376.html",
+    "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5618.pdf",
+    "status": "落札",
+    "winningContractor": "大和まちづくりコンサルタンツ株式会社",
+    "winnerType": "設計事務所",
+    "isRelevant": false
+  },
+  {
+    "id": "miyake-2026-10-01-上但馬保育所解体工事設計委託業務",
+    "municipality": "三宅町",
+    "title": "上但馬保育所解体工事設計委託業務",
+    "type": "コンサル",
+    "announcementDate": "2026-10-01",
+    "biddingDate": "2026-10-01",
+    "link": "https://www.town.miyake.lg.jp/soshiki/1/9376.html",
+    "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5619.pdf",
+    "status": "不調",
+    "isRelevant": true
+  },
+  {
+    "id": "miyake-2026-10-01-三宅町庁舎屋上防水改修工事設計委託業務",
+    "municipality": "三宅町",
+    "title": "三宅町庁舎屋上防水改修工事設計委託業務",
+    "type": "コンサル",
+    "announcementDate": "2026-10-01",
+    "biddingDate": "2026-10-01",
+    "link": "https://www.town.miyake.lg.jp/soshiki/1/9376.html",
+    "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5676.pdf",
+    "status": "落札",
+    "winningContractor": "-",
+    "winnerType": "ゼネコン",
+    "isRelevant": false
+  },
+  {
+    "id": "miyake-2026-10-01-三宅町地籍調査業務-伴堂第1地区-C-・E1工程-",
+    "municipality": "三宅町",
+    "title": "三宅町地籍調査業務（伴堂第1地区、C ・E1工程）",
+    "type": "委託",
+    "announcementDate": "2026-10-01",
+    "biddingDate": "2026-10-01",
+    "link": "https://www.town.miyake.lg.jp/soshiki/1/9376.html",
+    "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5682.pdf",
+    "status": "落札",
+    "winningContractor": "写測エンジニアリング 株式会社 奈良営業所",
+    "winnerType": "ゼネコン",
+    "isRelevant": false
+  },
+  {
+    "id": "miyake-2026-10-01-三宅老人憩いの家解体工事設計委託業務",
+    "municipality": "三宅町",
+    "title": "三宅老人憩いの家解体工事設計委託業務",
+    "type": "コンサル",
+    "announcementDate": "2026-10-01",
+    "biddingDate": "2026-10-01",
+    "link": "https://www.town.miyake.lg.jp/soshiki/1/9376.html",
+    "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5773.pdf",
+    "status": "落札",
+    "winningContractor": "株式会社 礎建築事務所",
+    "winnerType": "ゼネコン",
+    "isRelevant": true
+  },
+  {
+    "id": "miyake-2026-10-01-三宅2号線交通安全対策-県道交差点-用地測量業務",
+    "municipality": "三宅町",
+    "title": "三宅2号線交通安全対策(県道交差点)用地測量業務",
+    "type": "委託",
+    "announcementDate": "2026-10-01",
+    "biddingDate": "2026-10-01",
+    "link": "https://www.town.miyake.lg.jp/soshiki/1/9376.html",
+    "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5856.pdf",
+    "status": "落札",
+    "winningContractor": "株式会社ノア技術コンサルタント",
+    "winnerType": "設計事務所",
     "isRelevant": false
   },
   {
@@ -218,6 +698,45 @@
     "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsunooshirase/R8/18123.html",
     "status": "落札",
     "winningContractor": "青野スポーツ施設株式会社",
+    "isRelevant": false
+  },
+  {
+    "id": "高取町-2026-09-29-公営住宅丹生谷第1団地屋根葺替等改修工事監理業務",
+    "municipality": "高取町",
+    "title": "公営住宅丹生谷第1団地屋根葺替等改修工事監理業務",
+    "type": "コンサル",
+    "announcementDate": "2026-09-29",
+    "biddingDate": "2026-09-29",
+    "link": "https://www.town.takatori.nara.jp/contents_detail.php?co=cat&frmId=2205&frmCd=2-6-0-0-0",
+    "status": "落札",
+    "winningContractor": "(株)福井建築設計事務所",
+    "winnerType": "設計事務所",
+    "isRelevant": true
+  },
+  {
+    "id": "高取町-2026-09-29-公営住宅丹生谷第1団地屋根葺替等改修工事",
+    "municipality": "高取町",
+    "title": "公営住宅丹生谷第1団地屋根葺替等改修工事",
+    "type": "建築",
+    "announcementDate": "2026-09-29",
+    "biddingDate": "2026-09-29",
+    "link": "https://www.town.takatori.nara.jp/contents_detail.php?co=cat&frmId=2205&frmCd=2-6-0-0-0",
+    "status": "落札",
+    "winningContractor": "(株)上田工務店",
+    "winnerType": "ゼネコン",
+    "isRelevant": true
+  },
+  {
+    "id": "高取町-2026-09-29-都市計画法第34条第11号に係る都市計画協議図書作成及び調査業務",
+    "municipality": "高取町",
+    "title": "都市計画法第34条第11号に係る都市計画協議図書作成及び調査業務",
+    "type": "委託",
+    "announcementDate": "2026-09-29",
+    "biddingDate": "2026-09-29",
+    "link": "https://www.town.takatori.nara.jp/contents_detail.php?co=cat&frmId=2205&frmCd=2-6-0-0-0",
+    "status": "落札",
+    "winningContractor": "(株)パスコ",
+    "winnerType": "ゼネコン",
     "isRelevant": false
   },
   {
@@ -391,6 +910,16 @@
   },
   {
     "id": "gose-御所市介護保険認定審査会システム等導入業-13",
+    "municipality": "御所市",
+    "title": "御所市介護保険認定審査会システム等導入業務委託に係る公募型プロポーザル",
+    "type": "その他",
+    "announcementDate": "2026-09-25",
+    "link": "",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
+    "id": "gose-御所市介護保険認定審査会システム等導入業-21",
     "municipality": "御所市",
     "title": "御所市介護保険認定審査会システム等導入業務委託に係る公募型プロポーザル",
     "type": "その他",
@@ -9986,7 +10515,7 @@
     "biddingDate": "2026-08-03",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "(株) 上田工務店",
+    "winningContractor": "（株）上田工務店",
     "isRelevant": false
   },
   {
@@ -12090,7 +12619,7 @@
     "biddingDate": "2026-07-13",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "(有) 吉田舗装",
+    "winningContractor": "(有)吉田舗装",
     "isRelevant": false
   },
   {
@@ -12102,7 +12631,7 @@
     "biddingDate": "2026-07-13",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "(株) キショウ",
+    "winningContractor": "(株)キショウ",
     "isRelevant": false
   },
   {
@@ -12114,7 +12643,7 @@
     "biddingDate": "2026-07-13",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "竹田建設 (有)",
+    "winningContractor": "竹田建設(有)",
     "isRelevant": false
   },
   {
@@ -12126,7 +12655,7 @@
     "biddingDate": "2026-07-21",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "(株)ミズハ",
+    "winningContractor": "（株）ミズハ",
     "isRelevant": false
   },
   {
@@ -12162,7 +12691,7 @@
     "biddingDate": "2026-08-03",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "(株)中西製作所 奈良営業所",
+    "winningContractor": "（株）中西製作所 奈良営業所",
     "isRelevant": false
   },
   {
@@ -13113,7 +13642,7 @@
     "biddingDate": "2026-06-29",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "NTT西日本(株)奈良支店",
+    "winningContractor": "NTT西日本（株）奈良支店",
     "isRelevant": false
   },
   {
@@ -13907,7 +14436,7 @@
     "biddingDate": "2026-06-22",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "タイセイクレーン工事(株)",
+    "winningContractor": "タイセイクレーン工事（株）",
     "isRelevant": false
   },
   {
@@ -13955,7 +14484,7 @@
     "biddingDate": "2026-06-29",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "(株)第一テクノ 関西支店",
+    "winningContractor": "（株）第一テクノ 関西支店",
     "isRelevant": false
   },
   {
@@ -14027,7 +14556,7 @@
     "biddingDate": "2026-06-29",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "奈良OAシステム(株)",
+    "winningContractor": "奈良OAシステム（株）",
     "isRelevant": false
   },
   {
@@ -16445,7 +16974,7 @@
     "biddingDate": "2026-06-22",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "塚竜(株)",
+    "winningContractor": "塚竜（株）",
     "isRelevant": true
   },
   {
@@ -17551,7 +18080,7 @@
     "biddingDate": "2026-05-25",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "福源商事（株） 五條工場",
+    "winningContractor": "福源商事（株）五條工場",
     "isRelevant": false
   },
   {
@@ -17563,7 +18092,7 @@
     "biddingDate": "2026-05-11",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "大阪エンジニアリング (株) 奈良支店",
+    "winningContractor": "大阪エンジニアリング（株）　奈良支店",
     "isRelevant": false
   },
   {
@@ -18337,7 +18866,7 @@
     "biddingDate": "2026-05-11",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "クロカワ工芸 (株)",
+    "winningContractor": "クロカワ工芸（株）",
     "isRelevant": false
   },
   {
@@ -18349,7 +18878,7 @@
     "biddingDate": "2026-05-11",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "クロカワ工芸 (株)",
+    "winningContractor": "クロカワ工芸（株）",
     "isRelevant": false
   },
   {
@@ -18361,7 +18890,7 @@
     "biddingDate": "2026-05-11",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "大和 (株)",
+    "winningContractor": "大和（株）",
     "isRelevant": false
   },
   {
@@ -18385,7 +18914,7 @@
     "biddingDate": "2026-05-11",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "(株) ICHIKEN 田原本営業所",
+    "winningContractor": "（株）ＩＣＨＩＫＥＮ　田原本営業所",
     "isRelevant": false
   },
   {
@@ -18736,7 +19265,7 @@
     "biddingDate": "2026-05-11",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "三精テクノロジーズ (株)",
+    "winningContractor": "三精テクノロジーズ（株）",
     "isRelevant": false
   },
   {
@@ -18759,7 +19288,7 @@
     "biddingDate": "2026-05-11",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "ポシブル医学 (株)",
+    "winningContractor": "ポシブル医学（株）",
     "isRelevant": false
   },
   {
@@ -18771,7 +19300,7 @@
     "biddingDate": "2026-05-11",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "ポシブル医学 (株)",
+    "winningContractor": "ポシブル医学（株）",
     "isRelevant": false
   },
   {
@@ -18783,7 +19312,7 @@
     "biddingDate": "2026-05-11",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "高田紙業 (有)",
+    "winningContractor": "高田紙業（有）",
     "isRelevant": false
   },
   {
@@ -26271,7 +26800,7 @@
     "id": "山添村-山添村立小中学校建設工事における一般競争入札の結果について",
     "municipality": "山添村",
     "title": "山添村立小中学校建設工事",
-    "type": "委託",
+    "type": "建築",
     "announcementDate": "2025-08-08",
     "biddingDate": "2025-08-08",
     "link": "https://www.vill.yamazoe.nara.jp/life/news/25817",
@@ -28195,7 +28724,7 @@
     "id": "山添村-山添村立山添小中学校建設工事の一般競争入札について",
     "municipality": "山添村",
     "title": "山添村立山添小中学校建設工事",
-    "type": "委託",
+    "type": "建築",
     "announcementDate": "2025-07-01",
     "link": "https://www.vill.yamazoe.nara.jp/life/news/25298",
     "status": "受付中",

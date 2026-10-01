@@ -2322,11 +2322,11 @@
   ],
   "桜井市": [
     {
-      "id": "sakurai-2026-09-01-桜井市立みなみこども園-建設工事",
+      "id": "sakurai-2026-10-01-桜井市立みなみこども園建設工事",
       "municipality": "桜井市",
-      "title": "桜井市立みなみこども園 建設工事",
+      "title": "桜井市立みなみこども園建設工事",
       "type": "建築",
-      "announcementDate": "2026-09-01",
+      "announcementDate": "2026-10-01",
       "link": "https://www.city.sakurai.lg.jp/sosiki/soumu/kanzaikeiyaku/nyuusatukeiyakukensa/notice/6596.html",
       "status": "受付中",
       "description": "河西 地内"
@@ -2633,6 +2633,17 @@
   ],
   "田原本町": [
     {
+      "id": "tawaramoto-1008062207",
+      "municipality": "田原本町",
+      "title": "平野幼稚園配膳室出入口改修等業務",
+      "type": "委託",
+      "announcementDate": "2026-05-28",
+      "biddingDate": "2026-06-22",
+      "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
+      "status": "落札",
+      "winningContractor": "福辻工務店"
+    },
+    {
       "id": "tawaramoto-2026062201",
       "municipality": "田原本町",
       "title": "南小学校⑪号棟トイレ改修工事",
@@ -2641,7 +2652,7 @@
       "biddingDate": "2026-06-22",
       "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
       "status": "落札",
-      "winningContractor": "塚竜(株)"
+      "winningContractor": "塚竜（株）"
     },
     {
       "id": "tawaramoto-2026051803",
@@ -2772,12 +2783,12 @@
   ],
   "三宅町": [
     {
-      "id": "miyake-2026-09-07-三宅町文化ホールトイレ改修工事",
+      "id": "miyake-2026-10-01-三宅町文化ホールトイレ改修工事",
       "municipality": "三宅町",
       "title": "三宅町文化ホールトイレ改修工事",
       "type": "建築",
-      "announcementDate": "2026-09-07",
-      "biddingDate": "2026-09-07",
+      "announcementDate": "2026-10-01",
+      "biddingDate": "2026-10-01",
       "link": "https://www.town.miyake.lg.jp/soshiki/1/9375.html",
       "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5616.pdf",
       "status": "落札",
@@ -2785,12 +2796,12 @@
       "winnerType": "ゼネコン"
     },
     {
-      "id": "miyake-2026-09-07-式下中学校体育館屋根・外壁その他改修工事",
+      "id": "miyake-2026-10-01-式下中学校体育館屋根・外壁その他改修工事",
       "municipality": "三宅町",
       "title": "式下中学校体育館屋根・外壁その他改修工事",
       "type": "建築",
-      "announcementDate": "2026-09-07",
-      "biddingDate": "2026-09-07",
+      "announcementDate": "2026-10-01",
+      "biddingDate": "2026-10-01",
       "link": "https://www.town.miyake.lg.jp/soshiki/1/9375.html",
       "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5774.pdf",
       "status": "落札",
@@ -2798,23 +2809,23 @@
       "winnerType": "ゼネコン"
     },
     {
-      "id": "miyake-2026-09-07-上但馬保育所解体工事設計委託業務",
+      "id": "miyake-2026-10-01-上但馬保育所解体工事設計委託業務",
       "municipality": "三宅町",
       "title": "上但馬保育所解体工事設計委託業務",
       "type": "コンサル",
-      "announcementDate": "2026-09-07",
-      "biddingDate": "2026-09-07",
+      "announcementDate": "2026-10-01",
+      "biddingDate": "2026-10-01",
       "link": "https://www.town.miyake.lg.jp/soshiki/1/9376.html",
       "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5619.pdf",
       "status": "不調"
     },
     {
-      "id": "miyake-2026-09-07-三宅老人憩いの家解体工事設計委託業務",
+      "id": "miyake-2026-10-01-三宅老人憩いの家解体工事設計委託業務",
       "municipality": "三宅町",
       "title": "三宅老人憩いの家解体工事設計委託業務",
       "type": "コンサル",
-      "announcementDate": "2026-09-07",
-      "biddingDate": "2026-09-07",
+      "announcementDate": "2026-10-01",
+      "biddingDate": "2026-10-01",
       "link": "https://www.town.miyake.lg.jp/soshiki/1/9376.html",
       "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5773.pdf",
       "status": "落札",
@@ -2846,7 +2857,7 @@
       "id": "山添村-山添村立小中学校建設工事における一般競争入札の結果について",
       "municipality": "山添村",
       "title": "山添村立小中学校建設工事",
-      "type": "委託",
+      "type": "建築",
       "announcementDate": "2025-08-08",
       "biddingDate": "2025-08-08",
       "link": "https://www.vill.yamazoe.nara.jp/life/news/25817",
@@ -2858,7 +2869,7 @@
       "id": "山添村-山添村立山添小中学校建設工事の一般競争入札について",
       "municipality": "山添村",
       "title": "山添村立山添小中学校建設工事",
-      "type": "委託",
+      "type": "建築",
       "announcementDate": "2025-07-01",
       "link": "https://www.vill.yamazoe.nara.jp/life/news/25298",
       "status": "受付中"
@@ -2895,24 +2906,28 @@
   ],
   "高取町": [
     {
-      "id": "高取町-2026-09-10-公営住宅丹生谷第1団地屋根葺替等改修工事",
-      "municipality": "高取町",
-      "title": "公営住宅丹生谷第1団地屋根葺替等改修工事",
-      "type": "建築",
-      "announcementDate": "2026-09-10",
-      "biddingDate": "2026-09-29",
-      "link": "https://www.town.takatori.nara.jp/contents_detail.php?co=cat&frmId=2674&frmCd=2-6-0-0-0",
-      "status": "受付終了"
-    },
-    {
-      "id": "高取町-2026-09-10-公営住宅丹生谷第1団地屋根葺替等改修工事監理業務",
+      "id": "高取町-2026-09-29-公営住宅丹生谷第1団地屋根葺替等改修工事監理業務",
       "municipality": "高取町",
       "title": "公営住宅丹生谷第1団地屋根葺替等改修工事監理業務",
       "type": "コンサル",
-      "announcementDate": "2026-09-10",
+      "announcementDate": "2026-09-29",
       "biddingDate": "2026-09-29",
-      "link": "https://www.town.takatori.nara.jp/contents_detail.php?co=cat&frmId=2674&frmCd=2-6-0-0-0",
-      "status": "受付終了"
+      "link": "https://www.town.takatori.nara.jp/contents_detail.php?co=cat&frmId=2205&frmCd=2-6-0-0-0",
+      "status": "落札",
+      "winningContractor": "(株)福井建築設計事務所",
+      "winnerType": "設計事務所"
+    },
+    {
+      "id": "高取町-2026-09-29-公営住宅丹生谷第1団地屋根葺替等改修工事",
+      "municipality": "高取町",
+      "title": "公営住宅丹生谷第1団地屋根葺替等改修工事",
+      "type": "建築",
+      "announcementDate": "2026-09-29",
+      "biddingDate": "2026-09-29",
+      "link": "https://www.town.takatori.nara.jp/contents_detail.php?co=cat&frmId=2205&frmCd=2-6-0-0-0",
+      "status": "落札",
+      "winningContractor": "(株)上田工務店",
+      "winnerType": "ゼネコン"
     },
     {
       "id": "高取町-2026-08-28-公営住宅第5団地除却工事監理業務",
@@ -2927,16 +2942,6 @@
       "winnerType": "設計事務所"
     },
     {
-      "id": "高取町-2026-08-28-公営住宅丹生谷第1団地屋根葺替等改修工事監理業務",
-      "municipality": "高取町",
-      "title": "公営住宅丹生谷第1団地屋根葺替等改修工事監理業務",
-      "type": "コンサル",
-      "announcementDate": "2026-08-28",
-      "biddingDate": "2026-08-28",
-      "link": "https://www.town.takatori.nara.jp/contents_detail.php?co=cat&frmId=2205&frmCd=2-6-0-0-0",
-      "status": "不調"
-    },
-    {
       "id": "高取町-2026-08-28-公営住宅第5団地除却工事",
       "municipality": "高取町",
       "title": "公営住宅第5団地除却工事",
@@ -2947,6 +2952,16 @@
       "status": "落札",
       "winningContractor": "(株)中川組",
       "winnerType": "ゼネコン"
+    },
+    {
+      "id": "高取町-2026-08-28-公営住宅丹生谷第1団地屋根葺替等改修工事監理業務",
+      "municipality": "高取町",
+      "title": "公営住宅丹生谷第1団地屋根葺替等改修工事監理業務",
+      "type": "コンサル",
+      "announcementDate": "2026-08-28",
+      "biddingDate": "2026-08-28",
+      "link": "https://www.town.takatori.nara.jp/contents_detail.php?co=cat&frmId=2205&frmCd=2-6-0-0-0",
+      "status": "不調"
     },
     {
       "id": "高取町-2026-08-28-公営住宅丹生谷第1団地屋根葺替等改修工事",

@@ -1,38 +1,38 @@
 {
-  "generatedAt": "2026-09-30T22:13:57.596Z",
+  "generatedAt": "2026-10-01T07:20:10.540Z",
   "source": "daily_scrape",
   "municipalityLastScraped": {
-    "奈良市": "2026-09-30T12:16:30.024Z",
-    "橿原市": "2026-09-30T12:16:30.024Z",
-    "生駒市": "2026-09-30T12:16:30.024Z",
-    "大和高田市": "2026-09-30T12:16:30.024Z",
-    "大和郡山市": "2026-09-30T12:16:30.024Z",
-    "葛城市": "2026-09-30T12:16:30.024Z",
-    "五條市": "2026-09-30T12:16:30.024Z",
-    "御所市": "2026-09-30T12:16:30.024Z",
-    "天理市": "2026-09-30T12:16:30.024Z",
-    "桜井市": "2026-09-30T12:16:30.024Z",
-    "宇陀市": "2026-09-30T12:16:30.024Z",
-    "田原本町": "2026-09-30T12:16:30.024Z",
-    "広陵町": "2026-09-30T12:16:30.024Z",
-    "香芝市": "2026-09-30T12:16:30.024Z",
-    "川西町": "2026-09-30T12:16:30.024Z",
-    "山添村": "2026-09-30T12:16:30.024Z",
-    "平群町": "2026-09-30T12:16:30.024Z",
-    "三宅町": "2026-09-30T12:16:30.024Z",
-    "安堵町": "2026-09-30T12:16:30.024Z",
-    "高取町": "2026-09-30T12:16:30.024Z",
-    "斑鳩町": "2026-09-30T12:16:30.024Z",
-    "三郷町": "2026-09-30T12:16:30.024Z",
-    "王寺町": "2026-09-30T12:16:30.024Z",
-    "大淀町": "2026-09-30T12:16:30.024Z",
+    "奈良市": "2026-10-01T07:20:10.540Z",
+    "橿原市": "2026-10-01T07:20:10.540Z",
+    "生駒市": "2026-10-01T07:20:10.540Z",
+    "大和高田市": "2026-10-01T07:20:10.540Z",
+    "大和郡山市": "2026-10-01T07:20:10.540Z",
+    "葛城市": "2026-10-01T07:20:10.540Z",
+    "五條市": "2026-10-01T07:20:10.540Z",
+    "御所市": "2026-10-01T07:20:10.540Z",
+    "天理市": "2026-10-01T07:20:10.540Z",
+    "桜井市": "2026-10-01T07:20:10.540Z",
+    "宇陀市": "2026-10-01T07:20:10.540Z",
+    "田原本町": "2026-10-01T07:20:10.540Z",
+    "広陵町": "2026-10-01T07:20:10.540Z",
+    "香芝市": "2026-10-01T07:20:10.540Z",
+    "川西町": "2026-10-01T07:20:10.540Z",
+    "山添村": "2026-10-01T07:20:10.540Z",
+    "平群町": "2026-10-01T07:20:10.540Z",
+    "三宅町": "2026-10-01T07:20:10.540Z",
+    "安堵町": "2026-10-01T07:20:10.540Z",
+    "高取町": "2026-10-01T07:20:10.540Z",
+    "斑鳩町": "2026-10-01T07:20:10.540Z",
+    "三郷町": "2026-10-01T07:20:10.540Z",
+    "王寺町": "2026-10-01T07:20:10.540Z",
+    "大淀町": "2026-10-01T07:20:10.540Z",
     "奈良県": "2026-09-30T22:13:57.596Z"
   },
-  "scrapedCount": 57,
-  "keptCount": 312,
-  "rejectedCount": 1,
+  "scrapedCount": 2795,
+  "keptCount": 313,
+  "rejectedCount": 2514,
   "oldestAnnouncementDate": "2025-02-02",
-  "latestAnnouncementDate": "2026-09-30",
+  "latestAnnouncementDate": "2026-10-01",
   "municipalityCount": 24,
   "municipalityAudit": {
     "expectedMunicipalityCount": 25,
@@ -135,6 +135,11 @@
         "changeFromPrevious": 0
       },
       {
+        "municipality": "田原本町",
+        "count": 3,
+        "changeFromPrevious": 1
+      },
+      {
         "municipality": "安堵町",
         "count": 2,
         "changeFromPrevious": 0
@@ -150,11 +155,6 @@
         "changeFromPrevious": 0
       },
       {
-        "municipality": "田原本町",
-        "count": 2,
-        "changeFromPrevious": 0
-      },
-      {
         "municipality": "斑鳩町",
         "count": 2,
         "changeFromPrevious": 0
@@ -165,8 +165,16 @@
         "changeFromPrevious": 0
       }
     ],
-    "retainedFromPrevious": [],
-    "issues": []
+    "retainedFromPrevious": [
+      "高取町"
+    ],
+    "issues": [
+      {
+        "municipality": "高取町",
+        "level": "warning",
+        "message": "[高取町] 取得件数が急減したため既存データ 11件を維持しつつ、新規 15件を反映しています (baseline=26)"
+      }
+    ]
   },
   "dateAudit": {
     "announcementAfterBiddingCount": 0,
@@ -460,14 +468,14 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 2,
+        "totalCount": 3,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "tawaramoto.efftis.jp": 2
+          "tawaramoto.efftis.jp": 3
         },
         "announcementCount": 0,
-        "resultCount": 2,
-        "message": "田原本町: 2件 (公告0/結果2) / sources OK"
+        "resultCount": 3,
+        "message": "田原本町: 3件 (公告0/結果3) / sources OK"
       },
       {
         "expectation": {
@@ -625,9 +633,9 @@
         "sourceCounts": {
           "town.takatori.nara.jp": 26
         },
-        "announcementCount": 2,
-        "resultCount": 24,
-        "message": "高取町: 26件 (公告2/結果24) / sources OK"
+        "announcementCount": 0,
+        "resultCount": 26,
+        "message": "高取町: 26件 (公告0/結果26) / sources OK"
       },
       {
         "expectation": {
@@ -737,6 +745,7 @@
     "itemsWithDescription": 50,
     "intelligenceExtractedCount": 47,
     "geminiExtractedCount": 47,
-    "taggedCount": 48
+    "taggedCount": 49,
+    "lastAugmentedAt": "2026-10-01T07:21:55.922Z"
   }
 }

@@ -1,21 +1,17 @@
 {
-  "generatedAt": "2026-09-30T22:14:00.789Z",
-  "qualityGeneratedAt": "2026-09-30T22:13:57.596Z",
-  "itemCount": 312,
+  "generatedAt": "2026-10-01T07:29:44.514Z",
+  "qualityGeneratedAt": "2026-10-01T07:20:10.540Z",
+  "itemCount": 313,
   "resultFollowUp": {
-    "totalCount": 9,
+    "totalCount": 7,
     "highCount": 6,
     "mediumCount": 1,
-    "lowCount": 2,
+    "lowCount": 0,
     "missingBiddingDateCount": 0,
     "byMunicipality": [
       {
         "municipality": "奈良県",
         "count": 4
-      },
-      {
-        "municipality": "高取町",
-        "count": 2
       },
       {
         "municipality": "大淀町",
@@ -136,38 +132,6 @@
           "biddingDate": "2026-09-25",
           "winningContractor": null,
           "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013401020260007&gamenMode=0",
-          "pdfUrl": null
-        }
-      },
-      {
-        "priority": "low",
-        "ageDays": 2,
-        "reason": "開札直後の結果待ち",
-        "item": {
-          "id": "高取町-2026-09-10-公営住宅丹生谷第1団地屋根葺替等改修工事",
-          "municipality": "高取町",
-          "title": "公営住宅丹生谷第1団地屋根葺替等改修工事",
-          "status": "受付終了",
-          "announcementDate": "2026-09-10",
-          "biddingDate": "2026-09-29",
-          "winningContractor": null,
-          "link": "https://www.town.takatori.nara.jp/contents_detail.php?co=cat&frmId=2674&frmCd=2-6-0-0-0",
-          "pdfUrl": null
-        }
-      },
-      {
-        "priority": "low",
-        "ageDays": 2,
-        "reason": "開札直後の結果待ち",
-        "item": {
-          "id": "高取町-2026-09-10-公営住宅丹生谷第1団地屋根葺替等改修工事監理業務",
-          "municipality": "高取町",
-          "title": "公営住宅丹生谷第1団地屋根葺替等改修工事監理業務",
-          "status": "受付終了",
-          "announcementDate": "2026-09-10",
-          "biddingDate": "2026-09-29",
-          "winningContractor": null,
-          "link": "https://www.town.takatori.nara.jp/contents_detail.php?co=cat&frmId=2674&frmCd=2-6-0-0-0",
           "pdfUrl": null
         }
       }
@@ -667,15 +631,15 @@
         "municipality": "田原本町",
         "status": "ok",
         "severity": "error",
-        "totalCount": 2,
+        "totalCount": 3,
         "requiredLinkIncludes": [
           "tawaramoto.efftis.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "tawaramoto.efftis.jp": 2
+          "tawaramoto.efftis.jp": 3
         },
-        "message": "田原本町: 2件 (公告0/結果2) / sources OK"
+        "message": "田原本町: 3件 (公告0/結果3) / sources OK"
       },
       {
         "municipality": "広陵町",
@@ -787,7 +751,7 @@
         "sourceCounts": {
           "town.takatori.nara.jp": 26
         },
-        "message": "高取町: 26件 (公告2/結果24) / sources OK"
+        "message": "高取町: 26件 (公告0/結果26) / sources OK"
       },
       {
         "municipality": "斑鳩町",
