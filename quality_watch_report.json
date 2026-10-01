@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-01T12:54:09.818Z",
-  "qualityGeneratedAt": "2026-10-01T12:46:42.292Z",
+  "generatedAt": "2026-10-01T22:08:22.326Z",
+  "qualityGeneratedAt": "2026-10-01T22:08:18.506Z",
   "itemCount": 313,
   "resultFollowUp": {
     "totalCount": 7,
@@ -25,7 +25,7 @@
     "samples": [
       {
         "priority": "high",
-        "ageDays": 163,
+        "ageDays": 164,
         "reason": "落札済みだが落札者が空",
         "item": {
           "id": "oyodo-79dc14038b",
@@ -41,8 +41,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 127,
-        "reason": "開札日から127日経過",
+        "ageDays": 128,
+        "reason": "開札日から128日経過",
         "item": {
           "id": "nara-city-0000002346",
           "municipality": "奈良市",
@@ -57,7 +57,7 @@
       },
       {
         "priority": "high",
-        "ageDays": 108,
+        "ageDays": 109,
         "reason": "落札済みだが落札者が空",
         "item": {
           "id": "oyodo-46ab50dbc8",
@@ -73,8 +73,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 105,
-        "reason": "開札日から105日経過",
+        "ageDays": 106,
+        "reason": "開札日から106日経過",
         "item": {
           "id": "nara-pref-29001013060020260055",
           "municipality": "奈良県",
@@ -89,8 +89,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 86,
-        "reason": "開札日から86日経過",
+        "ageDays": 87,
+        "reason": "開札日から87日経過",
         "item": {
           "id": "nara-pref-29005007060120260015",
           "municipality": "奈良県",
@@ -105,8 +105,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 76,
-        "reason": "開札日から76日経過",
+        "ageDays": 77,
+        "reason": "開札日から77日経過",
         "item": {
           "id": "nara-pref-29005007060120260018",
           "municipality": "奈良県",
@@ -121,8 +121,8 @@
       },
       {
         "priority": "medium",
-        "ageDays": 6,
-        "reason": "開札日から6日経過",
+        "ageDays": 7,
+        "reason": "開札日から7日経過",
         "item": {
           "id": "nara-pref-29001013401020260007",
           "municipality": "奈良県",
