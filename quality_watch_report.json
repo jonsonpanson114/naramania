@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-01T22:08:22.326Z",
-  "qualityGeneratedAt": "2026-10-01T22:08:18.506Z",
-  "itemCount": 313,
+  "generatedAt": "2026-10-02T07:27:54.267Z",
+  "qualityGeneratedAt": "2026-10-02T07:13:27.580Z",
+  "itemCount": 312,
   "resultFollowUp": {
     "totalCount": 7,
     "highCount": 6,
@@ -485,15 +485,15 @@
         "municipality": "橿原市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 33,
+        "totalCount": 32,
         "requiredLinkIncludes": [
           "city.kashihara.nara.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.kashihara.nara.jp": 33
+          "city.kashihara.nara.jp": 32
         },
-        "message": "橿原市: 33件 (公告0/結果33) / sources OK"
+        "message": "橿原市: 32件 (公告0/結果32) / sources OK"
       },
       {
         "municipality": "生駒市",
