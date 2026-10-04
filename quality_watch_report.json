@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-10-02T12:22:15.787Z",
-  "qualityGeneratedAt": "2026-10-02T12:15:08.053Z",
+  "generatedAt": "2026-10-04T23:52:02.524Z",
+  "qualityGeneratedAt": "2026-10-04T23:51:59.023Z",
   "itemCount": 312,
   "resultFollowUp": {
-    "totalCount": 7,
+    "totalCount": 8,
     "highCount": 6,
-    "mediumCount": 1,
+    "mediumCount": 2,
     "lowCount": 0,
     "missingBiddingDateCount": 0,
     "byMunicipality": [
@@ -18,6 +18,10 @@
         "count": 2
       },
       {
+        "municipality": "生駒市",
+        "count": 1
+      },
+      {
         "municipality": "奈良市",
         "count": 1
       }
@@ -25,7 +29,7 @@
     "samples": [
       {
         "priority": "high",
-        "ageDays": 164,
+        "ageDays": 167,
         "reason": "落札済みだが落札者が空",
         "item": {
           "id": "oyodo-79dc14038b",
@@ -41,8 +45,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 128,
-        "reason": "開札日から128日経過",
+        "ageDays": 131,
+        "reason": "開札日から131日経過",
         "item": {
           "id": "nara-city-0000002346",
           "municipality": "奈良市",
@@ -57,7 +61,7 @@
       },
       {
         "priority": "high",
-        "ageDays": 109,
+        "ageDays": 112,
         "reason": "落札済みだが落札者が空",
         "item": {
           "id": "oyodo-46ab50dbc8",
@@ -73,8 +77,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 106,
-        "reason": "開札日から106日経過",
+        "ageDays": 109,
+        "reason": "開札日から109日経過",
         "item": {
           "id": "nara-pref-29001013060020260055",
           "municipality": "奈良県",
@@ -89,8 +93,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 87,
-        "reason": "開札日から87日経過",
+        "ageDays": 90,
+        "reason": "開札日から90日経過",
         "item": {
           "id": "nara-pref-29005007060120260015",
           "municipality": "奈良県",
@@ -105,8 +109,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 77,
-        "reason": "開札日から77日経過",
+        "ageDays": 80,
+        "reason": "開札日から80日経過",
         "item": {
           "id": "nara-pref-29005007060120260018",
           "municipality": "奈良県",
@@ -121,8 +125,8 @@
       },
       {
         "priority": "medium",
-        "ageDays": 7,
-        "reason": "開札日から7日経過",
+        "ageDays": 10,
+        "reason": "開札日から10日経過",
         "item": {
           "id": "nara-pref-29001013401020260007",
           "municipality": "奈良県",
@@ -132,6 +136,22 @@
           "biddingDate": "2026-09-25",
           "winningContractor": null,
           "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013401020260007&gamenMode=0",
+          "pdfUrl": null
+        }
+      },
+      {
+        "priority": "medium",
+        "ageDays": 3,
+        "reason": "開札日から3日経過",
+        "item": {
+          "id": "ikoma-92153d1de8",
+          "municipality": "生駒市",
+          "title": "元町住宅２号室空家改修工事",
+          "status": "受付終了",
+          "announcementDate": "2026-09-15",
+          "biddingDate": "2026-10-02",
+          "winningContractor": null,
+          "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
           "pdfUrl": null
         }
       }
