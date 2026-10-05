@@ -86,16 +86,27 @@ export function buildIntelligenceSummary(items: BiddingItem[], lastAugmentedAt?:
     };
 }
 
+/**
+ * 品質チェックで「止める」日付・状態の不整合を、案件1件ごとに判定する。
+ * 品質チェック(buildDateAuditSummary)と、書き出し前の隔離(scrapers/index.ts)が
+ * 同じ条件を使うためにここへ置く。条件を2か所に書くと必ずずれる。
+ */
+const isAnnouncementAfterBidding = (item: BiddingItem) =>
+    Boolean(item.biddingDate && item.announcementDate && item.announcementDate > item.biddingDate);
+const isAwardedWithoutBiddingDate = (item: BiddingItem) => item.status === '落札' && !item.biddingDate;
+const isOpenWithWinner = (item: BiddingItem) => item.status === '受付中' && Boolean(item.winningContractor);
+
+export function getDateIntegrityProblem(item: BiddingItem): string | null {
+    if (isAnnouncementAfterBidding(item)) return '公告日が開札日より後';
+    if (isAwardedWithoutBiddingDate(item)) return '落札なのに開札日がない';
+    if (isOpenWithWinner(item)) return '受付中なのに落札者が入っている';
+    return null;
+}
+
 export function buildDateAuditSummary(items: BiddingItem[]) {
-    const announcementAfterBidding = items.filter(item =>
-        item.biddingDate && item.announcementDate && item.announcementDate > item.biddingDate,
-    );
-    const awardedWithoutBiddingDate = items.filter(item =>
-        item.status === '落札' && !item.biddingDate,
-    );
-    const openWithWinner = items.filter(item =>
-        item.status === '受付中' && item.winningContractor,
-    );
+    const announcementAfterBidding = items.filter(isAnnouncementAfterBidding);
+    const awardedWithoutBiddingDate = items.filter(isAwardedWithoutBiddingDate);
+    const openWithWinner = items.filter(isOpenWithWinner);
     const awardedWithoutWinner = items.filter(item =>
         item.status === '落札' && !item.winningContractor,
     );

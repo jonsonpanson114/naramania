@@ -22,6 +22,7 @@ import { SangoTownScraper } from './sango_town';
 import { OjiTownScraper } from './oji_town';
 import { OyodoTownScraper } from './oyodo_town';
 import { BiddingItem, MarketItem, Scraper } from '../types/bidding';
+import { MAX_QUARANTINE_COUNT, quarantineInconsistentItems } from './common/quarantine';
 import fs from 'fs';
 import path from 'path';
 import { shouldKeepBiddingItem, setScrapeContext, getRejectionLog, clearRejectionLog, type RejectionLogEntry } from './common/filter';
@@ -746,7 +747,23 @@ async function main() {
     }
 
     console.log('\n=== 集計完了 ===');
-    const finalUnique = Array.from(seen.values()).map(item => reconcileStatusByDates(item, todayIso));
+    const reconciledAll = Array.from(seen.values()).map(item => reconcileStatusByDates(item, todayIso));
+    // 日付・状態が矛盾した案件が1件でもあると品質チェックがその日の更新を丸ごと止めるため、
+    // 少数ならその案件だけを前回の版に差し戻すか外して、残りは保存する。
+    const quarantine = quarantineInconsistentItems(reconciledAll, previousAllItems);
+    for (const entry of quarantine.quarantined) {
+        const action = entry.action === 'restored' ? '前回の版に差し戻しました' : '今回は載せずに次回取り直します';
+        const message = `[${entry.municipality}] 不整合のため隔離: ${entry.title}(${entry.problem})。${action}`;
+        console.warn(message);
+        municipalityIssues.set(entry.municipality, [
+            ...(municipalityIssues.get(entry.municipality) || []),
+            { municipality: entry.municipality as MunicipalityIssueEntry['municipality'], level: 'warning', message },
+        ]);
+    }
+    if (quarantine.skippedAsSystemic) {
+        console.warn(`不整合な案件が ${MAX_QUARANTINE_COUNT}件を超えたため隔離しません(スクレイパー故障の可能性。品質チェックで止めます)`);
+    }
+    const finalUnique = quarantine.items;
     finalUnique.sort((a, b) => {
         const dateA = a.announcementDate ? new Date(a.announcementDate).getTime() : 0;
         const dateB = b.announcementDate ? new Date(b.announcementDate).getTime() : 0;

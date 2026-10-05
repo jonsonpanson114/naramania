@@ -58,6 +58,9 @@ jobs:
       - name: Validate Takatori announcements
         run: npm run validate:takatori
 
+      - name: Validate quarantine
+        run: npm run validate:quarantine
+
       - name: Validate quality
         run: npm run validate:quality
 
