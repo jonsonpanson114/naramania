@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-10-05T02:58:11.289Z",
-  "qualityGeneratedAt": "2026-10-05T02:58:08.280Z",
-  "itemCount": 312,
+  "generatedAt": "2026-10-05T13:57:28.808Z",
+  "qualityGeneratedAt": "2026-10-05T13:50:13.158Z",
+  "itemCount": 313,
   "resultFollowUp": {
-    "totalCount": 8,
+    "totalCount": 10,
     "highCount": 6,
-    "mediumCount": 2,
+    "mediumCount": 4,
     "lowCount": 0,
     "missingBiddingDateCount": 0,
     "byMunicipality": [
@@ -14,15 +14,15 @@
         "count": 4
       },
       {
+        "municipality": "奈良市",
+        "count": 3
+      },
+      {
         "municipality": "大淀町",
         "count": 2
       },
       {
         "municipality": "生駒市",
-        "count": 1
-      },
-      {
-        "municipality": "奈良市",
         "count": 1
       }
     ],
@@ -136,6 +136,38 @@
           "biddingDate": "2026-09-25",
           "winningContractor": null,
           "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013401020260007&gamenMode=0",
+          "pdfUrl": null
+        }
+      },
+      {
+        "priority": "medium",
+        "ageDays": 10,
+        "reason": "開札日から10日経過",
+        "item": {
+          "id": "nara-city-0000002637",
+          "municipality": "奈良市",
+          "title": "本庁舎中央棟地下売店等内部改修工事",
+          "status": "受付終了",
+          "announcementDate": "2026-09-01",
+          "biddingDate": "2026-09-25",
+          "winningContractor": "株式会社弥杜工業",
+          "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+          "pdfUrl": null
+        }
+      },
+      {
+        "priority": "medium",
+        "ageDays": 7,
+        "reason": "開札日から7日経過",
+        "item": {
+          "id": "nara-city-0000002650",
+          "municipality": "奈良市",
+          "title": "都祁交流センター受電用高圧ケーブル改修工事",
+          "status": "受付終了",
+          "announcementDate": "2026-09-01",
+          "biddingDate": "2026-09-28",
+          "winningContractor": "株式会社武部商会",
+          "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
           "pdfUrl": null
         }
       },
@@ -499,7 +531,7 @@
         "sourceCounts": {
           "nara.efftis.jp": 10
         },
-        "message": "奈良市: 10件 (公告2/結果8) / sources OK"
+        "message": "奈良市: 10件 (公告4/結果6) / sources OK"
       },
       {
         "municipality": "橿原市",
@@ -519,15 +551,15 @@
         "municipality": "生駒市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 25,
+        "totalCount": 26,
         "requiredLinkIncludes": [
           "epi-cloud.fwd.ne.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "epi-cloud.fwd.ne.jp": 25
+          "epi-cloud.fwd.ne.jp": 26
         },
-        "message": "生駒市: 25件 (公告3/結果22) / sources OK"
+        "message": "生駒市: 26件 (公告4/結果22) / sources OK"
       },
       {
         "municipality": "大和高田市",

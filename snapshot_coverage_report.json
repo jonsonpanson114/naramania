@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-05T02:58:14.026Z",
+  "generatedAt": "2026-10-05T13:57:29.943Z",
   "checkedMunicipalityCount": 24,
-  "expectedItemCount": 312,
-  "matchedItemCount": 312,
+  "expectedItemCount": 313,
+  "matchedItemCount": 313,
   "missingItemCount": 0,
   "duplicateTitleGroupCount": 24,
   "duplicateTitleItemCount": 53,
@@ -41,6 +41,17 @@
       "status": "ok"
     },
     {
+      "municipality": "生駒市",
+      "snapshotCount": 26,
+      "expectedCount": 26,
+      "matchedCount": 26,
+      "missingCount": 0,
+      "duplicateTitleGroupCount": 0,
+      "duplicateTitleItemCount": 0,
+      "missingItems": [],
+      "status": "ok"
+    },
+    {
       "municipality": "葛城市",
       "snapshotCount": 25,
       "expectedCount": 25,
@@ -48,17 +59,6 @@
       "missingCount": 0,
       "duplicateTitleGroupCount": 5,
       "duplicateTitleItemCount": 10,
-      "missingItems": [],
-      "status": "ok"
-    },
-    {
-      "municipality": "生駒市",
-      "snapshotCount": 25,
-      "expectedCount": 25,
-      "matchedCount": 25,
-      "missingCount": 0,
-      "duplicateTitleGroupCount": 0,
-      "duplicateTitleItemCount": 0,
       "missingItems": [],
       "status": "ok"
     },
