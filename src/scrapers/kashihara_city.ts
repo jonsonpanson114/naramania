@@ -506,6 +506,11 @@ export class KashiharaCityScraper implements Scraper {
                                 title,
                                 type: classifyByTitle(title),
                                 announcementDate: currentDate,
+                                // 結果ページは開札日ごとの見出しの下に表が並ぶので、見出しの日付は開札日。
+                                // 以前は開札日をPDFからしか取らず、PDFの取得が1件失敗しただけで
+                                // 「落札なのに開札日がない」案件になり、品質チェックでその日の
+                                // データ更新ごと止まっていた(2026-10-05)。PDFで取れればそちらで上書きする。
+                                biddingDate: currentDate,
                                 link: url,
                                 pdfUrl: normalizePdfUrl(pdfHref),
                                 status: '落札',
