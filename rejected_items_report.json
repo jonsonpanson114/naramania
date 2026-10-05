@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-10-04T23:51:59.025Z",
-  "totalRejected": 499,
+  "generatedAt": "2026-10-05T00:37:34.000Z",
+  "totalRejected": 501,
   "totalBorderlineRescued": 47,
   "byMunicipality": {
     "奈良県": {
-      "rejected": 499,
+      "rejected": 501,
       "borderlineRescued": 47
     }
   },
@@ -2122,6 +2122,14 @@
     },
     {
       "municipality": "奈良県",
+      "title": "奈良公園 春日奥山道路測量業務委託（奈良公園施設魅力向上事業） ５０４－１－委－４",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "公園施設"
+      ]
+    },
+    {
+      "municipality": "奈良県",
       "title": "第ＫＪ－１－委－３号 大門ダム 堆砂量調査業務（ダム維持修繕事業）",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -2885,6 +2893,15 @@
         "砂防",
         "測量",
         "用地"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "大渕池公園 地質調査業務委託（補助都市計画公園事業（防災・安全交付金）他） 繰３－１０－Ｂ１－委－１他",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "地質",
+        "調査"
       ]
     },
     {
