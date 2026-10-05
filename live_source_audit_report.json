@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-02T13:27:53.998Z",
+  "generatedAt": "2026-10-05T08:05:40.846Z",
   "currentItemCount": 312,
   "checkedMunicipalities": [
     "奈良市",
@@ -36,14 +36,12 @@
   "scraperResults": [
     {
       "municipality": "奈良市",
-      "rawCount": 12,
-      "keptCount": 2,
-      "rejectedCount": 10,
-      "keptAnnouncementCount": 0,
-      "keptResultCount": 2,
-      "warnings": [
-        "奈良市: 取得12件がすべて開札済みです。入札公告(入札情報)ページを見落としていないか確認が必要です。"
-      ],
+      "rawCount": 112,
+      "keptCount": 18,
+      "rejectedCount": 94,
+      "keptAnnouncementCount": 10,
+      "keptResultCount": 8,
+      "warnings": [],
       "errors": []
     },
     {
@@ -58,19 +56,19 @@
     },
     {
       "municipality": "生駒市",
-      "rawCount": 215,
-      "keptCount": 25,
-      "rejectedCount": 190,
-      "keptAnnouncementCount": 3,
+      "rawCount": 218,
+      "keptCount": 26,
+      "rejectedCount": 192,
+      "keptAnnouncementCount": 4,
       "keptResultCount": 22,
       "warnings": [],
       "errors": []
     },
     {
       "municipality": "大和高田市",
-      "rawCount": 203,
+      "rawCount": 204,
       "keptCount": 0,
-      "rejectedCount": 203,
+      "rejectedCount": 204,
       "keptAnnouncementCount": 0,
       "keptResultCount": 0,
       "warnings": [],
@@ -148,21 +146,21 @@
     },
     {
       "municipality": "田原本町",
-      "rawCount": 45,
-      "keptCount": 1,
-      "rejectedCount": 44,
+      "rawCount": 73,
+      "keptCount": 3,
+      "rejectedCount": 70,
       "keptAnnouncementCount": 0,
-      "keptResultCount": 1,
+      "keptResultCount": 3,
       "warnings": [],
       "errors": []
     },
     {
       "municipality": "広陵町",
-      "rawCount": 47,
-      "keptCount": 5,
-      "rejectedCount": 42,
+      "rawCount": 0,
+      "keptCount": 0,
+      "rejectedCount": 0,
       "keptAnnouncementCount": 0,
-      "keptResultCount": 5,
+      "keptResultCount": 0,
       "warnings": [],
       "errors": []
     },
@@ -272,9 +270,9 @@
     },
     {
       "municipality": "大淀町",
-      "rawCount": 137,
+      "rawCount": 139,
       "keptCount": 9,
-      "rejectedCount": 128,
+      "rejectedCount": 130,
       "keptAnnouncementCount": 2,
       "keptResultCount": 7,
       "warnings": [],
@@ -283,12 +281,34 @@
   ],
   "coverage": {
     "checkedMunicipalityCount": 24,
-    "expectedItemCount": 262,
-    "matchedItemCount": 262,
-    "missingItemCount": 0,
-    "duplicateTitleGroupCount": 26,
-    "duplicateTitleItemCount": 59,
+    "expectedItemCount": 276,
+    "matchedItemCount": 275,
+    "missingItemCount": 1,
+    "duplicateTitleGroupCount": 34,
+    "duplicateTitleItemCount": 75,
     "results": [
+      {
+        "municipality": "生駒市",
+        "snapshotCount": 218,
+        "expectedCount": 26,
+        "matchedCount": 25,
+        "missingCount": 1,
+        "duplicateTitleGroupCount": 0,
+        "duplicateTitleItemCount": 0,
+        "missingItems": [
+          {
+            "id": "ikoma-80c3d47de8",
+            "municipality": "生駒市",
+            "title": "小平尾保育園遊戯室棟屋根改修工事",
+            "status": "受付中",
+            "announcementDate": "2026-10-05",
+            "biddingDate": "2026-10-20",
+            "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+            "reason": "snapshot item should be present in scraper_result"
+          }
+        ],
+        "status": "missing"
+      },
       {
         "municipality": "橿原市",
         "snapshotCount": 395,
@@ -334,17 +354,6 @@
         "status": "ok"
       },
       {
-        "municipality": "生駒市",
-        "snapshotCount": 215,
-        "expectedCount": 25,
-        "matchedCount": 25,
-        "missingCount": 0,
-        "duplicateTitleGroupCount": 0,
-        "duplicateTitleItemCount": 0,
-        "missingItems": [],
-        "status": "ok"
-      },
-      {
         "municipality": "大和郡山市",
         "snapshotCount": 230,
         "expectedCount": 23,
@@ -363,6 +372,17 @@
         "missingCount": 0,
         "duplicateTitleGroupCount": 0,
         "duplicateTitleItemCount": 0,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
+        "municipality": "奈良市",
+        "snapshotCount": 112,
+        "expectedCount": 18,
+        "matchedCount": 18,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 8,
+        "duplicateTitleItemCount": 16,
         "missingItems": [],
         "status": "ok"
       },
@@ -401,7 +421,7 @@
       },
       {
         "municipality": "大淀町",
-        "snapshotCount": 137,
+        "snapshotCount": 139,
         "expectedCount": 9,
         "matchedCount": 9,
         "missingCount": 0,
@@ -418,17 +438,6 @@
         "missingCount": 0,
         "duplicateTitleGroupCount": 1,
         "duplicateTitleItemCount": 2,
-        "missingItems": [],
-        "status": "ok"
-      },
-      {
-        "municipality": "広陵町",
-        "snapshotCount": 47,
-        "expectedCount": 5,
-        "matchedCount": 5,
-        "missingCount": 0,
-        "duplicateTitleGroupCount": 0,
-        "duplicateTitleItemCount": 0,
         "missingItems": [],
         "status": "ok"
       },
@@ -457,6 +466,17 @@
       {
         "municipality": "山添村",
         "snapshotCount": 4,
+        "expectedCount": 3,
+        "matchedCount": 3,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 0,
+        "duplicateTitleItemCount": 0,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
+        "municipality": "田原本町",
+        "snapshotCount": 73,
         "expectedCount": 3,
         "matchedCount": 3,
         "missingCount": 0,
@@ -499,17 +519,6 @@
         "status": "ok"
       },
       {
-        "municipality": "奈良市",
-        "snapshotCount": 12,
-        "expectedCount": 2,
-        "matchedCount": 2,
-        "missingCount": 0,
-        "duplicateTitleGroupCount": 0,
-        "duplicateTitleItemCount": 0,
-        "missingItems": [],
-        "status": "ok"
-      },
-      {
         "municipality": "斑鳩町",
         "snapshotCount": 37,
         "expectedCount": 2,
@@ -532,10 +541,10 @@
         "status": "ok"
       },
       {
-        "municipality": "田原本町",
-        "snapshotCount": 45,
-        "expectedCount": 1,
-        "matchedCount": 1,
+        "municipality": "広陵町",
+        "snapshotCount": 0,
+        "expectedCount": 0,
+        "matchedCount": 0,
         "missingCount": 0,
         "duplicateTitleGroupCount": 0,
         "duplicateTitleItemCount": 0,
@@ -544,7 +553,7 @@
       },
       {
         "municipality": "大和高田市",
-        "snapshotCount": 203,
+        "snapshotCount": 204,
         "expectedCount": 0,
         "matchedCount": 0,
         "missingCount": 0,
