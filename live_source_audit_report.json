@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-05T08:05:40.846Z",
+  "generatedAt": "2026-10-05T12:16:43.202Z",
   "currentItemCount": 312,
   "checkedMunicipalities": [
     "奈良市",
@@ -96,9 +96,9 @@
     },
     {
       "municipality": "五條市",
-      "rawCount": 249,
+      "rawCount": 250,
       "keptCount": 31,
-      "rejectedCount": 218,
+      "rejectedCount": 219,
       "keptAnnouncementCount": 3,
       "keptResultCount": 28,
       "warnings": [],
@@ -156,11 +156,11 @@
     },
     {
       "municipality": "広陵町",
-      "rawCount": 0,
-      "keptCount": 0,
-      "rejectedCount": 0,
+      "rawCount": 47,
+      "keptCount": 5,
+      "rejectedCount": 42,
       "keptAnnouncementCount": 0,
-      "keptResultCount": 0,
+      "keptResultCount": 5,
       "warnings": [],
       "errors": []
     },
@@ -281,8 +281,8 @@
   ],
   "coverage": {
     "checkedMunicipalityCount": 24,
-    "expectedItemCount": 276,
-    "matchedItemCount": 275,
+    "expectedItemCount": 281,
+    "matchedItemCount": 280,
     "missingItemCount": 1,
     "duplicateTitleGroupCount": 34,
     "duplicateTitleItemCount": 75,
@@ -322,7 +322,7 @@
       },
       {
         "municipality": "五條市",
-        "snapshotCount": 249,
+        "snapshotCount": 250,
         "expectedCount": 31,
         "matchedCount": 31,
         "missingCount": 0,
@@ -442,6 +442,17 @@
         "status": "ok"
       },
       {
+        "municipality": "広陵町",
+        "snapshotCount": 47,
+        "expectedCount": 5,
+        "matchedCount": 5,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 0,
+        "duplicateTitleItemCount": 0,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
         "municipality": "川西町",
         "snapshotCount": 14,
         "expectedCount": 5,
@@ -534,17 +545,6 @@
         "snapshotCount": 30,
         "expectedCount": 2,
         "matchedCount": 2,
-        "missingCount": 0,
-        "duplicateTitleGroupCount": 0,
-        "duplicateTitleItemCount": 0,
-        "missingItems": [],
-        "status": "ok"
-      },
-      {
-        "municipality": "広陵町",
-        "snapshotCount": 0,
-        "expectedCount": 0,
-        "matchedCount": 0,
         "missingCount": 0,
         "duplicateTitleGroupCount": 0,
         "duplicateTitleItemCount": 0,
