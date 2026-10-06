@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-06T11:57:40.089Z",
-  "currentItemCount": 313,
+  "generatedAt": "2026-10-06T14:01:26.462Z",
+  "currentItemCount": 314,
   "checkedMunicipalities": [
     "奈良市",
     "橿原市",
@@ -250,11 +250,11 @@
     },
     {
       "municipality": "三郷町",
-      "rawCount": 180,
+      "rawCount": 169,
       "keptCount": 9,
-      "rejectedCount": 171,
-      "keptAnnouncementCount": 0,
-      "keptResultCount": 9,
+      "rejectedCount": 160,
+      "keptAnnouncementCount": 3,
+      "keptResultCount": 6,
       "warnings": [],
       "errors": []
     },
@@ -282,32 +282,11 @@
   "coverage": {
     "checkedMunicipalityCount": 24,
     "expectedItemCount": 282,
-    "matchedItemCount": 281,
-    "missingItemCount": 1,
+    "matchedItemCount": 282,
+    "missingItemCount": 0,
     "duplicateTitleGroupCount": 34,
     "duplicateTitleItemCount": 75,
     "results": [
-      {
-        "municipality": "御所市",
-        "snapshotCount": 24,
-        "expectedCount": 3,
-        "matchedCount": 2,
-        "missingCount": 1,
-        "duplicateTitleGroupCount": 0,
-        "duplicateTitleItemCount": 0,
-        "missingItems": [
-          {
-            "id": "gose-令和8年度「耐震改修工事を行う事業者向け-29",
-            "municipality": "御所市",
-            "title": "令和8年度「耐震改修工事を行う事業者向け講習会（達人塾）」",
-            "status": "受付中",
-            "announcementDate": "2026-09-29",
-            "link": "",
-            "reason": "snapshot item should be present in scraper_result"
-          }
-        ],
-        "status": "missing"
-      },
       {
         "municipality": "橿原市",
         "snapshotCount": 395,
@@ -420,7 +399,7 @@
       },
       {
         "municipality": "三郷町",
-        "snapshotCount": 180,
+        "snapshotCount": 169,
         "expectedCount": 9,
         "matchedCount": 9,
         "missingCount": 0,
@@ -478,6 +457,17 @@
         "snapshotCount": 7,
         "expectedCount": 5,
         "matchedCount": 5,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 0,
+        "duplicateTitleItemCount": 0,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
+        "municipality": "御所市",
+        "snapshotCount": 24,
+        "expectedCount": 3,
+        "matchedCount": 3,
         "missingCount": 0,
         "duplicateTitleGroupCount": 0,
         "duplicateTitleItemCount": 0,
