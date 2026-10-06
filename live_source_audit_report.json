@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-06T08:31:07.187Z",
+  "generatedAt": "2026-10-06T11:57:40.089Z",
   "currentItemCount": 313,
   "checkedMunicipalities": [
     "奈良市",
@@ -106,10 +106,10 @@
     },
     {
       "municipality": "御所市",
-      "rawCount": 23,
-      "keptCount": 2,
+      "rawCount": 24,
+      "keptCount": 3,
       "rejectedCount": 21,
-      "keptAnnouncementCount": 0,
+      "keptAnnouncementCount": 1,
       "keptResultCount": 2,
       "warnings": [],
       "errors": []
@@ -281,12 +281,33 @@
   ],
   "coverage": {
     "checkedMunicipalityCount": 24,
-    "expectedItemCount": 281,
+    "expectedItemCount": 282,
     "matchedItemCount": 281,
-    "missingItemCount": 0,
+    "missingItemCount": 1,
     "duplicateTitleGroupCount": 34,
     "duplicateTitleItemCount": 75,
     "results": [
+      {
+        "municipality": "御所市",
+        "snapshotCount": 24,
+        "expectedCount": 3,
+        "matchedCount": 2,
+        "missingCount": 1,
+        "duplicateTitleGroupCount": 0,
+        "duplicateTitleItemCount": 0,
+        "missingItems": [
+          {
+            "id": "gose-令和8年度「耐震改修工事を行う事業者向け-29",
+            "municipality": "御所市",
+            "title": "令和8年度「耐震改修工事を行う事業者向け講習会（達人塾）」",
+            "status": "受付中",
+            "announcementDate": "2026-09-29",
+            "link": "",
+            "reason": "snapshot item should be present in scraper_result"
+          }
+        ],
+        "status": "missing"
+      },
       {
         "municipality": "橿原市",
         "snapshotCount": 395,
@@ -499,17 +520,6 @@
       {
         "municipality": "王寺町",
         "snapshotCount": 10,
-        "expectedCount": 2,
-        "matchedCount": 2,
-        "missingCount": 0,
-        "duplicateTitleGroupCount": 0,
-        "duplicateTitleItemCount": 0,
-        "missingItems": [],
-        "status": "ok"
-      },
-      {
-        "municipality": "御所市",
-        "snapshotCount": 23,
         "expectedCount": 2,
         "matchedCount": 2,
         "missingCount": 0,
