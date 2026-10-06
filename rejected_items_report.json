@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-06T07:43:36.861Z",
-  "totalRejected": 10986,
+  "generatedAt": "2026-10-06T13:09:39.101Z",
+  "totalRejected": 10992,
   "totalBorderlineRescued": 33,
   "byMunicipality": {
     "奈良市": {
@@ -28,7 +28,7 @@
       "borderlineRescued": 0
     },
     "五條市": {
-      "rejected": 1002,
+      "rejected": 1008,
       "borderlineRescued": 0
     },
     "御所市": {
@@ -44161,6 +44161,22 @@
     },
     {
       "municipality": "五條市",
+      "title": "道路改良工事（防災・安全交付金）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "五條市",
+      "title": "道路改良工事（防災・安全交付金） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "五條市",
       "title": "資源物売払い業務（カン・小型金属類）",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -46689,6 +46705,22 @@
     },
     {
       "municipality": "五條市",
+      "title": "道路改良工事（防災・安全交付金）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "五條市",
+      "title": "道路改良工事（防災・安全交付金） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "五條市",
       "title": "資源物売払い業務（カン・小型金属類）",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -49217,6 +49249,22 @@
     },
     {
       "municipality": "五條市",
+      "title": "道路改良工事（防災・安全交付金）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "五條市",
+      "title": "道路改良工事（防災・安全交付金） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "五條市",
       "title": "資源物売払い業務（カン・小型金属類）",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -65660,18 +65708,6 @@
     },
     {
       "municipality": "香芝市",
-      "title": "歩道バリアフリー整備工事 公－０６４号",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "歩道バリアフリー整備工事 公－０６４号 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
       "title": "令和８年度浸水対策工事（平野地区）",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -65697,6 +65733,18 @@
       "matchedKeywords": [
         "区画線"
       ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "歩道バリアフリー整備工事 公－０６４号",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "歩道バリアフリー整備工事 公－０６４号 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
     },
     {
       "municipality": "香芝市",
@@ -67036,18 +67084,6 @@
     },
     {
       "municipality": "香芝市",
-      "title": "歩道バリアフリー整備工事 公－０６４号",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "歩道バリアフリー整備工事 公－０６４号 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
       "title": "令和８年度浸水対策工事（平野地区）",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -67073,6 +67109,18 @@
       "matchedKeywords": [
         "区画線"
       ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "歩道バリアフリー整備工事 公－０６４号",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "歩道バリアフリー整備工事 公－０６４号 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
     },
     {
       "municipality": "香芝市",
@@ -68412,18 +68460,6 @@
     },
     {
       "municipality": "香芝市",
-      "title": "歩道バリアフリー整備工事 公－０６４号",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "歩道バリアフリー整備工事 公－０６４号 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
       "title": "令和８年度浸水対策工事（平野地区）",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -68449,6 +68485,18 @@
       "matchedKeywords": [
         "区画線"
       ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "歩道バリアフリー整備工事 公－０６４号",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "歩道バリアフリー整備工事 公－０６４号 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
     },
     {
       "municipality": "香芝市",

@@ -197,6 +197,26 @@
     "isRelevant": false
   },
   {
+    "id": "gose-電子入札ポータルサイト-6",
+    "municipality": "御所市",
+    "title": "電子入札ポータルサイト",
+    "type": "その他",
+    "announcementDate": "2026-10-06",
+    "link": "",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
+    "id": "gose-御所市の電子入札に参加するための準備-8",
+    "municipality": "御所市",
+    "title": "御所市の電子入札に参加するための準備",
+    "type": "その他",
+    "announcementDate": "2026-10-06",
+    "link": "",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
     "id": "yamato-takada-8a6fa8e2",
     "municipality": "大和高田市",
     "title": "大和高田市マテリアルリサイクル推進施設整備・運営事業",
@@ -286,6 +306,16 @@
   },
   {
     "id": "gose-御所市介護保険認定審査会システム等導入業-5",
+    "municipality": "御所市",
+    "title": "御所市介護保険認定審査会システム等導入業務委託に係る公募型プロポーザル",
+    "type": "その他",
+    "announcementDate": "2026-10-05",
+    "link": "",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
+    "id": "gose-御所市介護保険認定審査会システム等導入業-9",
     "municipality": "御所市",
     "title": "御所市介護保険認定審査会システム等導入業務委託に係る公募型プロポーザル",
     "type": "その他",
@@ -532,6 +562,26 @@
   },
   {
     "id": "gose-電子入札システムの導入-14",
+    "municipality": "御所市",
+    "title": "電子入札システムの導入",
+    "type": "その他",
+    "announcementDate": "2026-10-02",
+    "link": "",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
+    "id": "gose-電子入札システム説明会-17",
+    "municipality": "御所市",
+    "title": "電子入札システム説明会",
+    "type": "その他",
+    "announcementDate": "2026-10-02",
+    "link": "",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
+    "id": "gose-電子入札システムの導入-18",
     "municipality": "御所市",
     "title": "電子入札システムの導入",
     "type": "その他",
@@ -1102,6 +1152,36 @@
     "isRelevant": false
   },
   {
+    "id": "gose-一般競争入札公告（建設コンサルタント等）-20",
+    "municipality": "御所市",
+    "title": "一般競争入札公告（建設コンサルタント等）（管財課）",
+    "type": "コンサル",
+    "announcementDate": "2026-10-01",
+    "link": "",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
+    "id": "gose-現場説明書（仕様書）のダウンロード（測量-21",
+    "municipality": "御所市",
+    "title": "現場説明書（仕様書）のダウンロード（測量・建設コンサルタント業務）（管財課）",
+    "type": "コンサル",
+    "announcementDate": "2026-10-01",
+    "link": "",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
+    "id": "gose-一般競争入札公告（建設工事）（管財課）-22",
+    "municipality": "御所市",
+    "title": "一般競争入札公告（建設工事）（管財課）",
+    "type": "建築",
+    "announcementDate": "2026-10-01",
+    "link": "",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
     "id": "yamato-koriyama-564d0d33",
     "municipality": "大和郡山市",
     "title": "大和郡山市立スポーツ会館体育室床修繕",
@@ -1208,6 +1288,16 @@
     "winningContractor": "(株)パスコ",
     "winnerType": "ゼネコン",
     "isRelevant": false
+  },
+  {
+    "id": "gose-令和8年度「耐震改修工事を行う事業者向け-29",
+    "municipality": "御所市",
+    "title": "令和8年度「耐震改修工事を行う事業者向け講習会（達人塾）」",
+    "type": "建築",
+    "announcementDate": "2026-09-29",
+    "link": "",
+    "status": "受付中",
+    "isRelevant": true
   },
   {
     "id": "yamato-koriyama-8c520451",
@@ -1337,16 +1427,6 @@
   },
   {
     "id": "gose-御所市介護保険認定審査会システム等導入業-7",
-    "municipality": "御所市",
-    "title": "御所市介護保険認定審査会システム等導入業務委託に係る公募型プロポーザル",
-    "type": "その他",
-    "announcementDate": "2026-09-25",
-    "link": "",
-    "status": "受付中",
-    "isRelevant": false
-  },
-  {
-    "id": "gose-御所市介護保険認定審査会システム等導入業-9",
     "municipality": "御所市",
     "title": "御所市介護保険認定審査会システム等導入業務委託に係る公募型プロポーザル",
     "type": "その他",
@@ -6618,7 +6698,7 @@
     "biddingDate": "2026-09-14",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "（株）西日本設計　奈良事務所",
+    "winningContractor": "(株)西日本設計 奈良事務所",
     "isRelevant": false
   },
   {
@@ -6663,7 +6743,7 @@
     "biddingDate": "2026-09-14",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "（株）北林組",
+    "winningContractor": "(株)北林組",
     "isRelevant": false
   },
   {
@@ -6675,7 +6755,7 @@
     "biddingDate": "2026-09-14",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "竹田建設（有）",
+    "winningContractor": "竹田建設(有)",
     "isRelevant": false
   },
   {
@@ -6687,7 +6767,7 @@
     "biddingDate": "2026-09-14",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "（有）吉田舗装",
+    "winningContractor": "(有)吉田舗装",
     "isRelevant": false
   },
   {
@@ -6699,7 +6779,7 @@
     "biddingDate": "2026-09-14",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "（株）仲谷組",
+    "winningContractor": "(株)仲谷組",
     "isRelevant": false
   },
   {
@@ -6711,7 +6791,7 @@
     "biddingDate": "2026-09-14",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "（株）堂浦土木",
+    "winningContractor": "(株)堂浦土木",
     "isRelevant": false
   },
   {
@@ -7217,7 +7297,7 @@
     "biddingDate": "2026-09-14",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "リコージャパン（株）デジタルサービス営業本部　奈良支社奈良営業部",
+    "winningContractor": "リコージャパン（株）デジタルサービス営業本部 奈良支社奈良営業部",
     "isRelevant": false
   },
   {
@@ -8432,8 +8512,9 @@
     "announcementDate": "2026-08-03",
     "biddingDate": "2026-10-02",
     "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002601029",
-    "status": "受付終了",
-    "estimatedPrice": "50,462,000円",
+    "status": "落札",
+    "winningContractor": "檜尾建設（株）",
+    "estimatedPrice": "46,188,000円",
     "isRelevant": false
   },
   {
@@ -10989,7 +11070,7 @@
     "biddingDate": "2026-08-03",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "(株)上田工務店",
+    "winningContractor": "(株) 上田工務店",
     "isRelevant": false
   },
   {
@@ -13117,7 +13198,7 @@
     "biddingDate": "2026-07-13",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "竹田建設(有)",
+    "winningContractor": "竹田建設（有）",
     "isRelevant": false
   },
   {
@@ -13129,7 +13210,7 @@
     "biddingDate": "2026-07-21",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "(株)ミズハ",
+    "winningContractor": "（株）ミズハ",
     "isRelevant": false
   },
   {
@@ -13165,7 +13246,7 @@
     "biddingDate": "2026-08-03",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "(株)中西製作所 奈良営業所",
+    "winningContractor": "(株) 中西製作所 奈良営業所",
     "isRelevant": false
   },
   {
@@ -14116,7 +14197,7 @@
     "biddingDate": "2026-06-29",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "ＮＴＴ西日本（株）奈良支店",
+    "winningContractor": "NTT西日本（株）奈良支店",
     "isRelevant": false
   },
   {
@@ -14910,7 +14991,7 @@
     "biddingDate": "2026-06-22",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "タイセイクレーン工事(株)",
+    "winningContractor": "タイセイクレーン工事（株）",
     "isRelevant": false
   },
   {
@@ -14970,7 +15051,7 @@
     "biddingDate": "2026-06-22",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "(株)タツタ環境分析センター 奈良営業所",
+    "winningContractor": "（株）タツタ環境分析センター 奈良営業所",
     "isRelevant": false
   },
   {
@@ -14982,7 +15063,7 @@
     "biddingDate": "2026-06-22",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "アスカ美装(株)",
+    "winningContractor": "アスカ美装（株）",
     "isRelevant": false
   },
   {
@@ -15006,7 +15087,7 @@
     "biddingDate": "2026-06-22",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "(株)ユイテック",
+    "winningContractor": "（株）ユイテック",
     "isRelevant": false
   },
   {
@@ -15018,7 +15099,7 @@
     "biddingDate": "2026-06-22",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "管清工業(株)奈良事業所",
+    "winningContractor": "管清工業（株）奈良事業所",
     "isRelevant": false
   },
   {
@@ -15993,7 +16074,7 @@
     "biddingDate": "2026-06-22",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "(株)トライグループ",
+    "winningContractor": "（株）トライグループ",
     "isRelevant": false
   },
   {
@@ -17412,7 +17493,7 @@
     "biddingDate": "2026-06-08",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "(株)堂浦土木",
+    "winningContractor": "(株) 堂浦土木",
     "isRelevant": false
   },
   {
@@ -17424,7 +17505,7 @@
     "biddingDate": "2026-06-08",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "(有)吉田舗装",
+    "winningContractor": "(有) 吉田舗装",
     "isRelevant": false
   },
   {
@@ -17436,7 +17517,7 @@
     "biddingDate": "2026-06-08",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "(株)堂浦土木",
+    "winningContractor": "(株) 堂浦土木",
     "isRelevant": false
   },
   {
@@ -17448,7 +17529,7 @@
     "biddingDate": "2026-06-22",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "塚竜(株)",
+    "winningContractor": "塚竜（株）",
     "isRelevant": true
   },
   {
@@ -17460,7 +17541,7 @@
     "biddingDate": "2026-06-22",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "(株)木下エネルギーソリューションズ",
+    "winningContractor": "（株）木下エネルギーソリューションズ",
     "isRelevant": false
   },
   {
@@ -19304,7 +19385,7 @@
     "biddingDate": "2026-05-18",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "(株)森下組",
+    "winningContractor": "(株) 森下組",
     "isRelevant": false
   },
   {
@@ -19316,7 +19397,7 @@
     "biddingDate": "2026-05-18",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "村本建設(株)奈良本店",
+    "winningContractor": "村本建設(株) 奈良本店",
     "isRelevant": true
   },
   {
@@ -19762,7 +19843,7 @@
     "biddingDate": "2026-05-11",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "ポジプル医学（株）",
+    "winningContractor": "ポシブル医学（株）",
     "isRelevant": false
   },
   {
@@ -19774,7 +19855,7 @@
     "biddingDate": "2026-05-11",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "ポジプル医学（株）",
+    "winningContractor": "ポシブル医学（株）",
     "isRelevant": false
   },
   {
