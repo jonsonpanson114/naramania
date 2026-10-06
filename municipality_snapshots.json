@@ -657,8 +657,9 @@
       "announcementDate": "2026-09-01",
       "biddingDate": "2026-09-25",
       "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-      "status": "受付終了",
-      "winningContractor": "株式会社弥杜工業"
+      "status": "落札",
+      "winningContractor": "株式会社弥杜工業",
+      "winnerType": "ゼネコン"
     },
     {
       "id": "nara-city-0000002650",
@@ -668,8 +669,9 @@
       "announcementDate": "2026-09-01",
       "biddingDate": "2026-09-28",
       "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-      "status": "受付終了",
-      "winningContractor": "株式会社武部商会"
+      "status": "落札",
+      "winningContractor": "株式会社武部商会",
+      "winnerType": "ゼネコン"
     },
     {
       "id": "nara-city-0000002593",
@@ -1182,6 +1184,16 @@
       "status": "受付中"
     },
     {
+      "id": "ikoma-result-2601010072",
+      "municipality": "生駒市",
+      "title": "元町住宅２号室空家改修工事",
+      "type": "建築",
+      "announcementDate": "2026-10-02",
+      "biddingDate": "2026-10-02",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+      "status": "受付終了"
+    },
+    {
       "id": "ikoma-b904ce9fe0",
       "municipality": "生駒市",
       "title": "再開発住宅外壁及び屋根改修工事",
@@ -1200,16 +1212,6 @@
       "biddingDate": "2026-10-09",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
       "status": "受付中"
-    },
-    {
-      "id": "ikoma-92153d1de8",
-      "municipality": "生駒市",
-      "title": "元町住宅２号室空家改修工事",
-      "type": "建築",
-      "announcementDate": "2026-09-15",
-      "biddingDate": "2026-10-02",
-      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-      "status": "受付終了"
     },
     {
       "id": "ikoma-3b336e0215",

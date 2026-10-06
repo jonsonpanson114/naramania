@@ -1,36 +1,36 @@
 {
-  "generatedAt": "2026-10-06T01:45:10.662Z",
+  "generatedAt": "2026-10-06T07:43:36.857Z",
   "source": "daily_scrape",
   "municipalityLastScraped": {
-    "奈良市": "2026-10-05T13:50:13.158Z",
-    "橿原市": "2026-10-05T13:50:13.158Z",
-    "生駒市": "2026-10-05T13:50:13.158Z",
-    "大和高田市": "2026-10-05T13:50:13.158Z",
-    "大和郡山市": "2026-10-05T13:50:13.158Z",
-    "葛城市": "2026-10-05T13:50:13.158Z",
-    "五條市": "2026-10-05T13:50:13.158Z",
-    "御所市": "2026-10-05T13:50:13.158Z",
-    "天理市": "2026-10-05T13:50:13.158Z",
-    "桜井市": "2026-10-05T13:50:13.158Z",
-    "宇陀市": "2026-10-05T13:50:13.158Z",
-    "田原本町": "2026-10-05T13:50:13.158Z",
-    "広陵町": "2026-10-05T13:50:13.158Z",
-    "香芝市": "2026-10-05T13:50:13.158Z",
-    "川西町": "2026-10-05T13:50:13.158Z",
-    "山添村": "2026-10-05T13:50:13.158Z",
-    "平群町": "2026-10-05T13:50:13.158Z",
-    "三宅町": "2026-10-05T13:50:13.158Z",
-    "安堵町": "2026-10-05T13:50:13.158Z",
-    "高取町": "2026-10-05T13:50:13.158Z",
-    "斑鳩町": "2026-10-05T13:50:13.158Z",
-    "三郷町": "2026-10-05T13:50:13.158Z",
-    "王寺町": "2026-10-05T13:50:13.158Z",
-    "大淀町": "2026-10-05T13:50:13.158Z",
+    "奈良市": "2026-10-06T07:43:36.857Z",
+    "橿原市": "2026-10-06T07:43:36.857Z",
+    "生駒市": "2026-10-06T07:43:36.857Z",
+    "大和高田市": "2026-10-06T07:43:36.857Z",
+    "大和郡山市": "2026-10-06T07:43:36.857Z",
+    "葛城市": "2026-10-06T07:43:36.857Z",
+    "五條市": "2026-10-06T07:43:36.857Z",
+    "御所市": "2026-10-06T07:43:36.857Z",
+    "天理市": "2026-10-06T07:43:36.857Z",
+    "桜井市": "2026-10-06T07:43:36.857Z",
+    "宇陀市": "2026-10-06T07:43:36.857Z",
+    "田原本町": "2026-10-06T07:43:36.857Z",
+    "広陵町": "2026-10-06T07:43:36.857Z",
+    "香芝市": "2026-10-06T07:43:36.857Z",
+    "川西町": "2026-10-06T07:43:36.857Z",
+    "山添村": "2026-10-06T07:43:36.857Z",
+    "平群町": "2026-10-06T07:43:36.857Z",
+    "三宅町": "2026-10-06T07:43:36.857Z",
+    "安堵町": "2026-10-06T07:43:36.857Z",
+    "高取町": "2026-10-06T07:43:36.857Z",
+    "斑鳩町": "2026-10-06T07:43:36.857Z",
+    "三郷町": "2026-10-06T07:43:36.857Z",
+    "王寺町": "2026-10-06T07:43:36.857Z",
+    "大淀町": "2026-10-06T07:43:36.857Z",
     "奈良県": "2026-10-06T01:45:10.662Z"
   },
-  "scrapedCount": 56,
+  "scrapedCount": 2814,
   "keptCount": 313,
-  "rejectedCount": 0,
+  "rejectedCount": 2533,
   "oldestAnnouncementDate": "2025-02-02",
   "latestAnnouncementDate": "2026-10-05",
   "municipalityCount": 24,
@@ -165,47 +165,14 @@
         "changeFromPrevious": 0
       }
     ],
-    "retainedFromPrevious": [],
+    "retainedFromPrevious": [
+      "高取町"
+    ],
     "issues": [
       {
-        "municipality": "奈良県",
+        "municipality": "高取町",
         "level": "warning",
-        "message": "[奈良県] コンサル 0300000 2026 エラー: select option failed for selectors: #searchJyokenNendo, #PPJ0050_0010 #searchJyokenNendo"
-      },
-      {
-        "municipality": "奈良県",
-        "level": "warning",
-        "message": "[奈良県] コンサル 0200000 2026 エラー: select option failed for selectors: #searchJyokenNendo, #PPJ0050_0010 #searchJyokenNendo"
-      },
-      {
-        "municipality": "奈良県",
-        "level": "warning",
-        "message": "[奈良県] コンサル 0400000 2026 エラー: select option failed for selectors: #searchJyokenNendo, #PPJ0050_0010 #searchJyokenNendo"
-      },
-      {
-        "municipality": "奈良県",
-        "level": "warning",
-        "message": "[奈良県] コンサル 0500000 2026 エラー: select option failed for selectors: #searchJyokenNendo, #PPJ0050_0010 #searchJyokenNendo"
-      },
-      {
-        "municipality": "奈良県",
-        "level": "warning",
-        "message": "[奈良県] コンサル 0600000 2026 エラー: select option failed for selectors: #searchJyokenNendo, #PPJ0050_0010 #searchJyokenNendo"
-      },
-      {
-        "municipality": "奈良県",
-        "level": "warning",
-        "message": "[奈良県] 工事 0000200 2026 エラー: select option failed for selectors: #searchJyokenNendo, #PPJ0050_0010 #searchJyokenNendo"
-      },
-      {
-        "municipality": "奈良県",
-        "level": "warning",
-        "message": "[奈良県] 工事 0000900 2026 エラー: select option failed for selectors: #searchJyokenNendo, #PPJ0050_0010 #searchJyokenNendo"
-      },
-      {
-        "municipality": "奈良県",
-        "level": "warning",
-        "message": "[奈良県] 工事 0001700 2026 エラー: select option failed for selectors: #searchJyokenNendo, #PPJ0050_0010 #searchJyokenNendo"
+        "message": "[高取町] 取得件数が急減したため既存データ 11件を維持しつつ、新規 15件を反映しています (baseline=26)"
       }
     ]
   },
@@ -280,9 +247,9 @@
         "sourceCounts": {
           "nara.efftis.jp": 10
         },
-        "announcementCount": 4,
-        "resultCount": 6,
-        "message": "奈良市: 10件 (公告4/結果6) / sources OK"
+        "announcementCount": 2,
+        "resultCount": 8,
+        "message": "奈良市: 10件 (公告2/結果8) / sources OK"
       },
       {
         "expectation": {
@@ -778,6 +745,7 @@
     "itemsWithDescription": 50,
     "intelligenceExtractedCount": 47,
     "geminiExtractedCount": 47,
-    "taggedCount": 48
+    "taggedCount": 47,
+    "lastAugmentedAt": "2026-10-06T07:45:00.520Z"
   }
 }

@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-10-06T01:45:14.133Z",
-  "qualityGeneratedAt": "2026-10-06T01:45:10.662Z",
+  "generatedAt": "2026-10-06T07:54:02.614Z",
+  "qualityGeneratedAt": "2026-10-06T07:43:36.857Z",
   "itemCount": 313,
   "resultFollowUp": {
-    "totalCount": 11,
+    "totalCount": 9,
     "highCount": 6,
-    "mediumCount": 4,
+    "mediumCount": 2,
     "lowCount": 1,
     "missingBiddingDateCount": 0,
     "byMunicipality": [
@@ -14,15 +14,15 @@
         "count": 5
       },
       {
-        "municipality": "奈良市",
-        "count": 3
-      },
-      {
         "municipality": "大淀町",
         "count": 2
       },
       {
         "municipality": "生駒市",
+        "count": 1
+      },
+      {
+        "municipality": "奈良市",
         "count": 1
       }
     ],
@@ -141,49 +141,33 @@
       },
       {
         "priority": "medium",
-        "ageDays": 11,
-        "reason": "開札日から11日経過",
-        "item": {
-          "id": "nara-city-0000002637",
-          "municipality": "奈良市",
-          "title": "本庁舎中央棟地下売店等内部改修工事",
-          "status": "受付終了",
-          "announcementDate": "2026-09-01",
-          "biddingDate": "2026-09-25",
-          "winningContractor": "株式会社弥杜工業",
-          "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-          "pdfUrl": null
-        }
-      },
-      {
-        "priority": "medium",
-        "ageDays": 8,
-        "reason": "開札日から8日経過",
-        "item": {
-          "id": "nara-city-0000002650",
-          "municipality": "奈良市",
-          "title": "都祁交流センター受電用高圧ケーブル改修工事",
-          "status": "受付終了",
-          "announcementDate": "2026-09-01",
-          "biddingDate": "2026-09-28",
-          "winningContractor": "株式会社武部商会",
-          "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-          "pdfUrl": null
-        }
-      },
-      {
-        "priority": "medium",
         "ageDays": 4,
         "reason": "開札日から4日経過",
         "item": {
-          "id": "ikoma-92153d1de8",
+          "id": "ikoma-result-2601010072",
           "municipality": "生駒市",
           "title": "元町住宅２号室空家改修工事",
           "status": "受付終了",
-          "announcementDate": "2026-09-15",
+          "announcementDate": "2026-10-02",
           "biddingDate": "2026-10-02",
           "winningContractor": null,
           "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+          "pdfUrl": null
+        }
+      },
+      {
+        "priority": "low",
+        "ageDays": 1,
+        "reason": "開札直後の結果待ち",
+        "item": {
+          "id": "nara-pref-29001013060020260196",
+          "municipality": "奈良県",
+          "title": "奈良商工高校トイレ環境改善整備工事 第８－２６号",
+          "status": "受付終了",
+          "announcementDate": "2026-09-03",
+          "biddingDate": "2026-10-05",
+          "winningContractor": null,
+          "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260196&gamenMode=0",
           "pdfUrl": null
         }
       }
@@ -531,7 +515,7 @@
         "sourceCounts": {
           "nara.efftis.jp": 10
         },
-        "message": "奈良市: 10件 (公告4/結果6) / sources OK"
+        "message": "奈良市: 10件 (公告2/結果8) / sources OK"
       },
       {
         "municipality": "橿原市",
