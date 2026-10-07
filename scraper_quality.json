@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T13:00:25.938Z",
+  "generatedAt": "2026-10-07T21:56:17.437Z",
   "source": "daily_scrape",
   "municipalityLastScraped": {
     "奈良市": "2026-10-07T13:00:25.938Z",
@@ -26,11 +26,11 @@
     "三郷町": "2026-10-07T13:00:25.938Z",
     "王寺町": "2026-10-07T13:00:25.938Z",
     "大淀町": "2026-10-07T13:00:25.938Z",
-    "奈良県": "2026-10-06T01:45:10.662Z"
+    "奈良県": "2026-10-07T21:56:17.437Z"
   },
-  "scrapedCount": 2818,
+  "scrapedCount": 57,
   "keptCount": 313,
-  "rejectedCount": 2537,
+  "rejectedCount": 1,
   "oldestAnnouncementDate": "2025-02-02",
   "latestAnnouncementDate": "2026-10-05",
   "municipalityCount": 24,
@@ -165,16 +165,8 @@
         "changeFromPrevious": 0
       }
     ],
-    "retainedFromPrevious": [
-      "高取町"
-    ],
-    "issues": [
-      {
-        "municipality": "高取町",
-        "level": "warning",
-        "message": "[高取町] 取得件数が急減したため既存データ 11件を維持しつつ、新規 15件を反映しています (baseline=26)"
-      }
-    ]
+    "retainedFromPrevious": [],
+    "issues": []
   },
   "dateAudit": {
     "announcementAfterBiddingCount": 0,
@@ -227,9 +219,9 @@
         "sourceCounts": {
           "ppi.ebid-kouji-gyoumu.pref.nara.jp": 56
         },
-        "announcementCount": 9,
-        "resultCount": 47,
-        "message": "奈良県: 56件 (公告9/結果47) / sources OK"
+        "announcementCount": 8,
+        "resultCount": 48,
+        "message": "奈良県: 56件 (公告8/結果48) / sources OK"
       },
       {
         "expectation": {
@@ -745,7 +737,6 @@
     "itemsWithDescription": 50,
     "intelligenceExtractedCount": 47,
     "geminiExtractedCount": 47,
-    "taggedCount": 48,
-    "lastAugmentedAt": "2026-10-07T13:01:54.335Z"
+    "taggedCount": 48
   }
 }
