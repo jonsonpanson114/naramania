@@ -318,6 +318,37 @@
     "isRelevant": false
   },
   {
+    "id": "yamato-takada-8a6fa8e2",
+    "municipality": "大和高田市",
+    "title": "大和高田市マテリアルリサイクル推進施設整備・運営事業",
+    "type": "建築",
+    "announcementDate": "2026-10-08",
+    "link": "https://www.city.yamatotakada.nara.jp/soshikikarasagasu/somuka/keiyakukanri/nyusatsu_keiyaku/2/1422.html",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
+    "id": "yamato-takada-183c0154",
+    "municipality": "大和高田市",
+    "title": "令和8年度大和高田当麻線歩道・水路整備工事",
+    "type": "建築",
+    "announcementDate": "2026-10-08",
+    "link": "https://www.city.yamatotakada.nara.jp/soshikikarasagasu/somuka/keiyakukanri/nyusatsu_keiyaku/2/1422.html",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
+    "id": "yamato-takada-epi-37b943783a",
+    "municipality": "大和高田市",
+    "title": "大和高田市舗装個別施設計画策定業務委託",
+    "type": "コンサル",
+    "announcementDate": "2026-10-08",
+    "biddingDate": "2026-10-28",
+    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=06200640072006E0",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
     "id": "yamato-takada-epi-result-20261010",
     "municipality": "大和高田市",
     "title": "大和高田市地域防災計画等修正業務委託",
@@ -325,7 +356,10 @@
     "announcementDate": "2026-10-07",
     "biddingDate": "2026-10-07",
     "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=01129702060020261010",
-    "status": "受付終了",
+    "status": "落札",
+    "winningContractor": "（株）都市・計画・設計研究所 奈良事務所",
+    "winnerType": "設計事務所",
+    "estimatedPrice": "16,433,000円",
     "isRelevant": false
   },
   {
@@ -482,26 +516,6 @@
     "type": "その他",
     "announcementDate": "2026-10-06",
     "link": "",
-    "status": "受付中",
-    "isRelevant": false
-  },
-  {
-    "id": "yamato-takada-8a6fa8e2",
-    "municipality": "大和高田市",
-    "title": "大和高田市マテリアルリサイクル推進施設整備・運営事業",
-    "type": "建築",
-    "announcementDate": "2026-10-05",
-    "link": "https://www.city.yamatotakada.nara.jp/soshikikarasagasu/somuka/keiyakukanri/nyusatsu_keiyaku/2/1422.html",
-    "status": "受付中",
-    "isRelevant": false
-  },
-  {
-    "id": "yamato-takada-183c0154",
-    "municipality": "大和高田市",
-    "title": "令和8年度大和高田当麻線歩道・水路整備工事",
-    "type": "建築",
-    "announcementDate": "2026-10-05",
-    "link": "https://www.city.yamatotakada.nara.jp/soshikikarasagasu/somuka/keiyakukanri/nyusatsu_keiyaku/2/1422.html",
     "status": "受付中",
     "isRelevant": false
   },
@@ -4294,6 +4308,16 @@
     "isRelevant": false
   },
   {
+    "id": "yamato-takada-42bd8869",
+    "municipality": "大和高田市",
+    "title": "大和高田市舗装個別施設計画策定業務委託",
+    "type": "コンサル",
+    "announcementDate": "2026-09-08",
+    "link": "https://www.city.yamatotakada.nara.jp/soshikikarasagasu/somuka/keiyakukanri/nyusatsu_keiyaku/2/1427.html",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
     "id": "yamato-takada-93c9b314",
     "municipality": "大和高田市",
     "title": "曽6枝根成柿地内管渠工事（2）",
@@ -7260,7 +7284,7 @@
     "biddingDate": "2026-09-14",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "(株)西日本設計 奈良事務所",
+    "winningContractor": "（株）西日本設計 奈良事務所",
     "isRelevant": false
   },
   {
@@ -7305,7 +7329,7 @@
     "biddingDate": "2026-09-14",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "(株)北林組",
+    "winningContractor": "（株）北林組",
     "isRelevant": false
   },
   {
@@ -7317,7 +7341,7 @@
     "biddingDate": "2026-09-14",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "竹田建設(有)",
+    "winningContractor": "竹田建設（有）",
     "isRelevant": false
   },
   {
@@ -7329,7 +7353,7 @@
     "biddingDate": "2026-09-14",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "(有)吉田舗装",
+    "winningContractor": "（有）吉田舗装",
     "isRelevant": false
   },
   {
@@ -7341,7 +7365,7 @@
     "biddingDate": "2026-09-14",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "(株)仲谷組",
+    "winningContractor": "（株）仲谷組",
     "isRelevant": false
   },
   {
@@ -7353,7 +7377,7 @@
     "biddingDate": "2026-09-14",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "(株)堂浦土木",
+    "winningContractor": "（株）堂浦土木",
     "isRelevant": false
   },
   {
@@ -7883,7 +7907,7 @@
     "biddingDate": "2026-09-14",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "リコージャパン(株)デジタルサービス営業本部 奈良支社奈良営業部",
+    "winningContractor": "リコージャパン（株）デジタルサービス営業本部 奈良支社奈良営業部",
     "isRelevant": false
   },
   {
@@ -11667,7 +11691,7 @@
     "biddingDate": "2026-08-03",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "（株）上田工務店",
+    "winningContractor": "(株) 上田工務店",
     "isRelevant": false
   },
   {
@@ -13807,7 +13831,7 @@
     "biddingDate": "2026-07-21",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "(株)ミズハ",
+    "winningContractor": "（株）ミズハ",
     "isRelevant": false
   },
   {
@@ -13843,7 +13867,7 @@
     "biddingDate": "2026-08-03",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "（株）中西製作所 奈良営業所",
+    "winningContractor": "(株) 中西製作所 奈良営業所",
     "isRelevant": false
   },
   {
@@ -18102,7 +18126,7 @@
     "biddingDate": "2026-06-08",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "(株) 堂浦土木",
+    "winningContractor": "(株)堂浦土木",
     "isRelevant": false
   },
   {
@@ -18114,7 +18138,7 @@
     "biddingDate": "2026-06-08",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "(有) 吉田舗装",
+    "winningContractor": "(有)吉田舗装",
     "isRelevant": false
   },
   {
@@ -18126,7 +18150,7 @@
     "biddingDate": "2026-06-08",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "(株) 堂浦土木",
+    "winningContractor": "(株)堂浦土木",
     "isRelevant": false
   },
   {
@@ -18958,6 +18982,7 @@
     "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/508200002k.pdf",
     "status": "落札",
     "winnerType": "設計事務所",
+    "winningContractor": "㈱中和設計",
     "isRelevant": true
   },
   {
@@ -18971,6 +18996,7 @@
     "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5082000014k.pdf",
     "status": "落札",
     "winnerType": "設計事務所",
+    "winningContractor": "㈱内藤建築事務所",
     "isRelevant": false
   },
   {
@@ -18984,6 +19010,7 @@
     "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5082000004k.pdf",
     "status": "落札",
     "winnerType": "設計事務所",
+    "winningContractor": "㈱中西構造設計",
     "isRelevant": true
   },
   {
@@ -19991,7 +20018,7 @@
     "biddingDate": "2026-05-18",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "（株）森下組",
+    "winningContractor": "(株) 森下組",
     "isRelevant": false
   },
   {
@@ -20003,7 +20030,7 @@
     "biddingDate": "2026-05-18",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "村本建設（株）奈良本店",
+    "winningContractor": "村本建設(株) 奈良本店",
     "isRelevant": true
   },
   {

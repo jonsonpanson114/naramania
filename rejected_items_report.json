@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-08T07:32:21.775Z",
-  "totalRejected": 11106,
+  "generatedAt": "2026-10-08T13:11:17.850Z",
+  "totalRejected": 11112,
   "totalBorderlineRescued": 33,
   "byMunicipality": {
     "奈良市": {
@@ -16,7 +16,7 @@
       "borderlineRescued": 9
     },
     "大和高田市": {
-      "rejected": 972,
+      "rejected": 978,
       "borderlineRescued": 0
     },
     "大和郡山市": {
@@ -20201,15 +20201,19 @@
     },
     {
       "municipality": "大和高田市",
-      "title": "令和8年度大和高田市航空写真撮影業務委託",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
+      "title": "大和高田市舗装個別施設計画策定業務委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
     },
     {
       "municipality": "大和高田市",
-      "title": "令和8年度大和高田市航空写真撮影業務委託 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
+      "title": "大和高田市舗装個別施設計画策定業務委託 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
     },
     {
       "municipality": "大和高田市",
@@ -21950,6 +21954,22 @@
     {
       "municipality": "大和高田市",
       "title": "高２７６号線舗装維持工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "大和高田市舗装個別施設計画策定業務委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "大和高田市舗装個別施設計画策定業務委託 ",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
         "舗装"
@@ -22505,15 +22525,19 @@
     },
     {
       "municipality": "大和高田市",
-      "title": "令和8年度大和高田市航空写真撮影業務委託",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
+      "title": "大和高田市舗装個別施設計画策定業務委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
     },
     {
       "municipality": "大和高田市",
-      "title": "令和8年度大和高田市航空写真撮影業務委託 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
+      "title": "大和高田市舗装個別施設計画策定業務委託 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
     },
     {
       "municipality": "大和高田市",
@@ -24254,6 +24278,22 @@
     {
       "municipality": "大和高田市",
       "title": "高２７６号線舗装維持工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "大和高田市舗装個別施設計画策定業務委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "大和高田市舗装個別施設計画策定業務委託 ",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
         "舗装"
@@ -24809,15 +24849,19 @@
     },
     {
       "municipality": "大和高田市",
-      "title": "令和8年度大和高田市航空写真撮影業務委託",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
+      "title": "大和高田市舗装個別施設計画策定業務委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
     },
     {
       "municipality": "大和高田市",
-      "title": "令和8年度大和高田市航空写真撮影業務委託 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
+      "title": "大和高田市舗装個別施設計画策定業務委託 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
     },
     {
       "municipality": "大和高田市",
@@ -26558,6 +26602,22 @@
     {
       "municipality": "大和高田市",
       "title": "高２７６号線舗装維持工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "大和高田市舗装個別施設計画策定業務委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "大和高田市",
+      "title": "大和高田市舗装個別施設計画策定業務委託 ",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
         "舗装"
