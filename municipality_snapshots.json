@@ -2434,6 +2434,16 @@
   ],
   "宇陀市": [
     {
+      "id": "uda-93fb233059",
+      "municipality": "宇陀市",
+      "title": "【第08-A029号】旧多田小学校プール解体工事",
+      "type": "建築",
+      "announcementDate": "2026-10-08",
+      "biddingDate": "2026-10-22",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200700",
+      "status": "受付中"
+    },
+    {
       "id": "uda-fb22e3b0fc",
       "municipality": "宇陀市",
       "title": "【第08-C028号】宇陀市総合体育館施設改修基本計画策定支援業務",
@@ -2668,6 +2678,30 @@
   ],
   "広陵町": [
     {
+      "id": "koryo-2026-09-29-No42",
+      "municipality": "広陵町",
+      "title": "中公民館新築工事",
+      "type": "建築",
+      "announcementDate": "2026-09-29",
+      "biddingDate": "2026-09-29",
+      "link": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7919/NO42-2.pdf",
+      "pdfUrl": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7919/NO42-2.pdf",
+      "status": "落札",
+      "winningContractor": "株式会社上村組"
+    },
+    {
+      "id": "koryo-2026-09-29-No48",
+      "municipality": "広陵町",
+      "title": "中公民館解体工事設計業務委託",
+      "type": "コンサル",
+      "announcementDate": "2026-09-29",
+      "biddingDate": "2026-09-29",
+      "link": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7919/NO48-2.pdf",
+      "pdfUrl": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7919/NO48-2.pdf",
+      "status": "落札",
+      "winningContractor": "中村建築事務所"
+    },
+    {
       "id": "koryo-2026-07-29-No18",
       "municipality": "広陵町",
       "title": "真美北保育園改修工事",
@@ -2857,7 +2891,7 @@
       "id": "山添村-山添村立小中学校建設工事における一般競争入札の結果について",
       "municipality": "山添村",
       "title": "山添村立小中学校建設工事",
-      "type": "建築",
+      "type": "委託",
       "announcementDate": "2025-08-08",
       "biddingDate": "2025-08-08",
       "link": "https://www.vill.yamazoe.nara.jp/life/news/25817",
@@ -2869,7 +2903,7 @@
       "id": "山添村-山添村立山添小中学校建設工事の一般競争入札について",
       "municipality": "山添村",
       "title": "山添村立山添小中学校建設工事",
-      "type": "建築",
+      "type": "委託",
       "announcementDate": "2025-07-01",
       "link": "https://www.vill.yamazoe.nara.jp/life/news/25298",
       "status": "受付中"
@@ -3256,28 +3290,6 @@
     }
   ],
   "大淀町": [
-    {
-      "id": "oyodo-5pen5aSn5reA",
-      "municipality": "大淀町",
-      "title": "旧大淀町立第一保育所解体工事に伴う設計業務",
-      "type": "コンサル",
-      "announcementDate": "2026-09-18",
-      "description": "大淀町　桧垣本　地内",
-      "link": "https://www.town.oyodo.lg.jp/./cmsfiles/contents/0000000/218/nyusatsu_setsumei_080918.pdf",
-      "pdfUrl": "https://www.town.oyodo.lg.jp/./cmsfiles/contents/0000000/218/nyusatsu_setsumei_080918.pdf",
-      "status": "受付中"
-    },
-    {
-      "id": "oyodo-5Luk5ZKMOOW5",
-      "municipality": "大淀町",
-      "title": "令和8年度大淀町文化会館長寿命化改修工事に伴う設計業務",
-      "type": "コンサル",
-      "announcementDate": "2026-09-14",
-      "description": "大淀町桧垣本2090番地",
-      "link": "https://www.town.oyodo.lg.jp/./cmsfiles/contents/0000000/218/nyusatsu_setsumei_080914.pdf",
-      "pdfUrl": "https://www.town.oyodo.lg.jp/./cmsfiles/contents/0000000/218/nyusatsu_setsumei_080914.pdf",
-      "status": "受付中"
-    },
     {
       "id": "oyodo-46ab50dbc8",
       "municipality": "大淀町",

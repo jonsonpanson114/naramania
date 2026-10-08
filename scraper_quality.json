@@ -1,38 +1,38 @@
 {
-  "generatedAt": "2026-10-07T21:56:17.437Z",
+  "generatedAt": "2026-10-08T07:32:21.771Z",
   "source": "daily_scrape",
   "municipalityLastScraped": {
-    "奈良市": "2026-10-07T13:00:25.938Z",
-    "橿原市": "2026-10-07T13:00:25.938Z",
-    "生駒市": "2026-10-07T13:00:25.938Z",
-    "大和高田市": "2026-10-07T13:00:25.938Z",
-    "大和郡山市": "2026-10-07T13:00:25.938Z",
-    "葛城市": "2026-10-07T13:00:25.938Z",
-    "五條市": "2026-10-07T13:00:25.938Z",
-    "御所市": "2026-10-07T13:00:25.938Z",
-    "天理市": "2026-10-07T13:00:25.938Z",
-    "桜井市": "2026-10-07T13:00:25.938Z",
-    "宇陀市": "2026-10-07T13:00:25.938Z",
-    "田原本町": "2026-10-07T13:00:25.938Z",
-    "広陵町": "2026-10-07T13:00:25.938Z",
-    "香芝市": "2026-10-07T13:00:25.938Z",
-    "川西町": "2026-10-07T13:00:25.938Z",
-    "山添村": "2026-10-07T13:00:25.938Z",
-    "平群町": "2026-10-07T13:00:25.938Z",
-    "三宅町": "2026-10-07T13:00:25.938Z",
-    "安堵町": "2026-10-07T13:00:25.938Z",
-    "高取町": "2026-10-07T13:00:25.938Z",
-    "斑鳩町": "2026-10-07T13:00:25.938Z",
-    "三郷町": "2026-10-07T13:00:25.938Z",
-    "王寺町": "2026-10-07T13:00:25.938Z",
-    "大淀町": "2026-10-07T13:00:25.938Z",
+    "奈良市": "2026-10-08T07:32:21.771Z",
+    "橿原市": "2026-10-08T07:32:21.771Z",
+    "生駒市": "2026-10-08T07:32:21.771Z",
+    "大和高田市": "2026-10-08T07:32:21.771Z",
+    "大和郡山市": "2026-10-08T07:32:21.771Z",
+    "葛城市": "2026-10-08T07:32:21.771Z",
+    "五條市": "2026-10-08T07:32:21.771Z",
+    "御所市": "2026-10-08T07:32:21.771Z",
+    "天理市": "2026-10-08T07:32:21.771Z",
+    "桜井市": "2026-10-08T07:32:21.771Z",
+    "宇陀市": "2026-10-08T07:32:21.771Z",
+    "田原本町": "2026-10-08T07:32:21.771Z",
+    "広陵町": "2026-10-08T07:32:21.771Z",
+    "香芝市": "2026-10-08T07:32:21.771Z",
+    "川西町": "2026-10-08T07:32:21.771Z",
+    "山添村": "2026-10-08T07:32:21.771Z",
+    "平群町": "2026-10-08T07:32:21.771Z",
+    "三宅町": "2026-10-08T07:32:21.771Z",
+    "安堵町": "2026-10-08T07:32:21.771Z",
+    "高取町": "2026-10-08T07:32:21.771Z",
+    "斑鳩町": "2026-10-08T07:32:21.771Z",
+    "三郷町": "2026-10-08T07:32:21.771Z",
+    "王寺町": "2026-10-08T07:32:21.771Z",
+    "大淀町": "2026-10-08T07:32:21.771Z",
     "奈良県": "2026-10-07T21:56:17.437Z"
   },
-  "scrapedCount": 57,
-  "keptCount": 313,
-  "rejectedCount": 1,
+  "scrapedCount": 2841,
+  "keptCount": 314,
+  "rejectedCount": 2559,
   "oldestAnnouncementDate": "2025-02-02",
-  "latestAnnouncementDate": "2026-10-05",
+  "latestAnnouncementDate": "2026-10-08",
   "municipalityCount": 24,
   "municipalityAudit": {
     "expectedMunicipalityCount": 25,
@@ -86,8 +86,8 @@
       },
       {
         "municipality": "宇陀市",
-        "count": 18,
-        "changeFromPrevious": 0
+        "count": 19,
+        "changeFromPrevious": 1
       },
       {
         "municipality": "桜井市",
@@ -100,18 +100,18 @@
         "changeFromPrevious": 0
       },
       {
+        "municipality": "広陵町",
+        "count": 7,
+        "changeFromPrevious": 2
+      },
+      {
         "municipality": "大淀町",
-        "count": 9,
-        "changeFromPrevious": 0
+        "count": 7,
+        "changeFromPrevious": -2
       },
       {
         "municipality": "三宅町",
         "count": 6,
-        "changeFromPrevious": 0
-      },
-      {
-        "municipality": "広陵町",
-        "count": 5,
         "changeFromPrevious": 0
       },
       {
@@ -165,8 +165,16 @@
         "changeFromPrevious": 0
       }
     ],
-    "retainedFromPrevious": [],
-    "issues": []
+    "retainedFromPrevious": [
+      "高取町"
+    ],
+    "issues": [
+      {
+        "municipality": "高取町",
+        "level": "warning",
+        "message": "[高取町] 取得件数が急減したため既存データ 11件を維持しつつ、新規 15件を反映しています (baseline=26)"
+      }
+    ]
   },
   "dateAudit": {
     "announcementAfterBiddingCount": 0,
@@ -440,14 +448,14 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 18,
+        "totalCount": 19,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "epi-cloud.fwd.ne.jp": 18
+          "epi-cloud.fwd.ne.jp": 19
         },
-        "announcementCount": 1,
+        "announcementCount": 2,
         "resultCount": 17,
-        "message": "宇陀市: 18件 (公告1/結果17) / sources OK"
+        "message": "宇陀市: 19件 (公告2/結果17) / sources OK"
       },
       {
         "expectation": {
@@ -480,14 +488,14 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 5,
+        "totalCount": 7,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "town.koryo.nara.jp": 5
+          "town.koryo.nara.jp": 7
         },
         "announcementCount": 0,
-        "resultCount": 5,
-        "message": "広陵町: 5件 (公告0/結果5) / sources OK"
+        "resultCount": 7,
+        "message": "広陵町: 7件 (公告0/結果7) / sources OK"
       },
       {
         "expectation": {
@@ -700,14 +708,14 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 9,
+        "totalCount": 7,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "town.oyodo.lg.jp": 9
+          "town.oyodo.lg.jp": 7
         },
-        "announcementCount": 2,
+        "announcementCount": 0,
         "resultCount": 7,
-        "message": "大淀町: 9件 (公告2/結果7) / sources OK"
+        "message": "大淀町: 7件 (公告0/結果7) / sources OK"
       },
       {
         "expectation": {
@@ -735,8 +743,9 @@
   "intelligence": {
     "itemsWithPdf": 81,
     "itemsWithDescription": 50,
-    "intelligenceExtractedCount": 47,
-    "geminiExtractedCount": 47,
-    "taggedCount": 48
+    "intelligenceExtractedCount": 49,
+    "geminiExtractedCount": 49,
+    "taggedCount": 49,
+    "lastAugmentedAt": "2026-10-08T07:33:50.851Z"
   }
 }

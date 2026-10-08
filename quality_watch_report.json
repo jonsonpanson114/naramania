@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-07T21:56:21.371Z",
-  "qualityGeneratedAt": "2026-10-07T21:56:17.437Z",
-  "itemCount": 313,
+  "generatedAt": "2026-10-08T07:45:21.416Z",
+  "qualityGeneratedAt": "2026-10-08T07:32:21.771Z",
+  "itemCount": 314,
   "resultFollowUp": {
     "totalCount": 8,
     "highCount": 6,
@@ -633,15 +633,15 @@
         "municipality": "宇陀市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 18,
+        "totalCount": 19,
         "requiredLinkIncludes": [
           "epi-cloud.fwd.ne.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "epi-cloud.fwd.ne.jp": 18
+          "epi-cloud.fwd.ne.jp": 19
         },
-        "message": "宇陀市: 18件 (公告1/結果17) / sources OK"
+        "message": "宇陀市: 19件 (公告2/結果17) / sources OK"
       },
       {
         "municipality": "田原本町",
@@ -661,15 +661,15 @@
         "municipality": "広陵町",
         "status": "ok",
         "severity": "error",
-        "totalCount": 5,
+        "totalCount": 7,
         "requiredLinkIncludes": [
           "town.koryo.nara.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "town.koryo.nara.jp": 5
+          "town.koryo.nara.jp": 7
         },
-        "message": "広陵町: 5件 (公告0/結果5) / sources OK"
+        "message": "広陵町: 7件 (公告0/結果7) / sources OK"
       },
       {
         "municipality": "香芝市",
@@ -815,15 +815,15 @@
         "municipality": "大淀町",
         "status": "ok",
         "severity": "error",
-        "totalCount": 9,
+        "totalCount": 7,
         "requiredLinkIncludes": [
           "town.oyodo.lg.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "town.oyodo.lg.jp": 9
+          "town.oyodo.lg.jp": 7
         },
-        "message": "大淀町: 9件 (公告2/結果7) / sources OK"
+        "message": "大淀町: 7件 (公告0/結果7) / sources OK"
       },
       {
         "municipality": "香芝市",
