@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-09T11:57:28.311Z",
+  "generatedAt": "2026-10-09T14:03:12.056Z",
   "currentItemCount": 314,
   "checkedMunicipalities": [
     "奈良市",
@@ -166,11 +166,11 @@
     },
     {
       "municipality": "香芝市",
-      "rawCount": 144,
-      "keptCount": 27,
-      "rejectedCount": 117,
-      "keptAnnouncementCount": 11,
-      "keptResultCount": 16,
+      "rawCount": 22,
+      "keptCount": 13,
+      "rejectedCount": 9,
+      "keptAnnouncementCount": 9,
+      "keptResultCount": 4,
       "warnings": [],
       "errors": []
     },
@@ -250,11 +250,11 @@
     },
     {
       "municipality": "三郷町",
-      "rawCount": 180,
-      "keptCount": 9,
-      "rejectedCount": 171,
+      "rawCount": 89,
+      "keptCount": 0,
+      "rejectedCount": 89,
       "keptAnnouncementCount": 0,
-      "keptResultCount": 9,
+      "keptResultCount": 0,
       "warnings": [],
       "errors": []
     },
@@ -281,11 +281,11 @@
   ],
   "coverage": {
     "checkedMunicipalityCount": 24,
-    "expectedItemCount": 282,
-    "matchedItemCount": 282,
+    "expectedItemCount": 259,
+    "matchedItemCount": 259,
     "missingItemCount": 0,
-    "duplicateTitleGroupCount": 34,
-    "duplicateTitleItemCount": 75,
+    "duplicateTitleGroupCount": 28,
+    "duplicateTitleItemCount": 62,
     "results": [
       {
         "municipality": "橿原市",
@@ -306,17 +306,6 @@
         "missingCount": 0,
         "duplicateTitleGroupCount": 9,
         "duplicateTitleItemCount": 22,
-        "missingItems": [],
-        "status": "ok"
-      },
-      {
-        "municipality": "香芝市",
-        "snapshotCount": 144,
-        "expectedCount": 27,
-        "matchedCount": 27,
-        "missingCount": 0,
-        "duplicateTitleGroupCount": 6,
-        "duplicateTitleItemCount": 13,
         "missingItems": [],
         "status": "ok"
       },
@@ -387,10 +376,10 @@
         "status": "ok"
       },
       {
-        "municipality": "桜井市",
-        "snapshotCount": 131,
-        "expectedCount": 10,
-        "matchedCount": 10,
+        "municipality": "香芝市",
+        "snapshotCount": 22,
+        "expectedCount": 13,
+        "matchedCount": 13,
         "missingCount": 0,
         "duplicateTitleGroupCount": 0,
         "duplicateTitleItemCount": 0,
@@ -398,10 +387,10 @@
         "status": "ok"
       },
       {
-        "municipality": "三郷町",
-        "snapshotCount": 180,
-        "expectedCount": 9,
-        "matchedCount": 9,
+        "municipality": "桜井市",
+        "snapshotCount": 131,
+        "expectedCount": 10,
+        "matchedCount": 10,
         "missingCount": 0,
         "duplicateTitleGroupCount": 0,
         "duplicateTitleItemCount": 0,
@@ -534,6 +523,17 @@
         "snapshotCount": 30,
         "expectedCount": 2,
         "matchedCount": 2,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 0,
+        "duplicateTitleItemCount": 0,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
+        "municipality": "三郷町",
+        "snapshotCount": 89,
+        "expectedCount": 0,
+        "matchedCount": 0,
         "missingCount": 0,
         "duplicateTitleGroupCount": 0,
         "duplicateTitleItemCount": 0,
