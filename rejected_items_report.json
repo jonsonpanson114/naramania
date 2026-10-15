@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-10-14T11:33:10.843Z",
-  "totalRejected": 11184,
+  "generatedAt": "2026-10-15T06:04:55.155Z",
+  "totalRejected": 11208,
   "totalBorderlineRescued": 33,
   "byMunicipality": {
     "奈良市": {
-      "rejected": 360,
+      "rejected": 372,
       "borderlineRescued": 0
     },
     "橿原市": {
@@ -12,7 +12,7 @@
       "borderlineRescued": 3
     },
     "生駒市": {
-      "rejected": 870,
+      "rejected": 894,
       "borderlineRescued": 9
     },
     "大和高田市": {
@@ -32,7 +32,7 @@
       "borderlineRescued": 0
     },
     "御所市": {
-      "rejected": 72,
+      "rejected": 66,
       "borderlineRescued": 0
     },
     "天理市": {
@@ -56,7 +56,7 @@
       "borderlineRescued": 0
     },
     "香芝市": {
-      "rejected": 546,
+      "rejected": 540,
       "borderlineRescued": 0
     },
     "川西町": {
@@ -103,6 +103,42 @@
   "entries": [
     {
       "municipality": "奈良市",
+      "title": "市内街路灯工事（西部その２）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "奈良市",
+      "title": "市内街路灯工事（西部その２） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "奈良市",
+      "title": "市内街路灯工事（東部その２）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "奈良市",
+      "title": "市内街路灯工事（東部その２） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "奈良市",
+      "title": "奈良市弓道場シャッター改修その他工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "奈良市",
+      "title": "奈良市弓道場シャッター改修その他工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "奈良市",
       "title": "橋梁長寿命化修繕工事（東部第３１１号線（清楓橋）他）",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -204,18 +240,6 @@
       "matchedKeywords": [
         "交通"
       ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "灰汚水処理装置点検整備補修",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "奈良市",
-      "title": "灰汚水処理装置点検整備補修 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
     },
     {
       "municipality": "奈良市",
@@ -1099,6 +1123,42 @@
     },
     {
       "municipality": "奈良市",
+      "title": "市内街路灯工事（西部その２）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "奈良市",
+      "title": "市内街路灯工事（西部その２） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "奈良市",
+      "title": "市内街路灯工事（東部その２）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "奈良市",
+      "title": "市内街路灯工事（東部その２） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "奈良市",
+      "title": "奈良市弓道場シャッター改修その他工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "奈良市",
+      "title": "奈良市弓道場シャッター改修その他工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "奈良市",
       "title": "橋梁長寿命化修繕工事（東部第３１１号線（清楓橋）他）",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -1200,18 +1260,6 @@
       "matchedKeywords": [
         "交通"
       ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "灰汚水処理装置点検整備補修",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "奈良市",
-      "title": "灰汚水処理装置点検整備補修 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
     },
     {
       "municipality": "奈良市",
@@ -2095,6 +2143,42 @@
     },
     {
       "municipality": "奈良市",
+      "title": "市内街路灯工事（西部その２）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "奈良市",
+      "title": "市内街路灯工事（西部その２） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "奈良市",
+      "title": "市内街路灯工事（東部その２）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "奈良市",
+      "title": "市内街路灯工事（東部その２） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "奈良市",
+      "title": "奈良市弓道場シャッター改修その他工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "奈良市",
+      "title": "奈良市弓道場シャッター改修その他工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "奈良市",
       "title": "橋梁長寿命化修繕工事（東部第３１１号線（清楓橋）他）",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -2196,18 +2280,6 @@
       "matchedKeywords": [
         "交通"
       ]
-    },
-    {
-      "municipality": "奈良市",
-      "title": "灰汚水処理装置点検整備補修",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "奈良市",
-      "title": "灰汚水処理装置点検整備補修 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
     },
     {
       "municipality": "奈良市",
@@ -13465,6 +13537,50 @@
       "matchedKeywords": [
         "定期点検"
       ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "東旭ケ丘線舗装補修工事及び人孔鉄蓋入替工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "東旭ケ丘線舗装補修工事及び人孔鉄蓋入替工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市道門前町鬼取線道路災害復旧工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市道門前町鬼取線道路災害復旧工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "菜畑壱分線交差点安全対策工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "菜畑壱分線交差点安全対策工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
     },
     {
       "municipality": "生駒市",
@@ -13496,6 +13612,22 @@
       "reason": "exclusion_keyword",
       "matchedKeywords": [
         "橋"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "都市計画道路上町芝線道路予備設計業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "都市計画道路上町芝線道路予備設計業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
       ]
     },
     {
@@ -15735,6 +15867,50 @@
     },
     {
       "municipality": "生駒市",
+      "title": "東旭ケ丘線舗装補修工事及び人孔鉄蓋入替工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "東旭ケ丘線舗装補修工事及び人孔鉄蓋入替工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市道門前町鬼取線道路災害復旧工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市道門前町鬼取線道路災害復旧工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "菜畑壱分線交差点安全対策工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "菜畑壱分線交差点安全対策工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
       "title": "令和８年度東生駒３丁目他地内ＴＶカメラ調査等業務",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -15763,6 +15939,22 @@
       "reason": "exclusion_keyword",
       "matchedKeywords": [
         "橋"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "都市計画道路上町芝線道路予備設計業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "都市計画道路上町芝線道路予備設計業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
       ]
     },
     {
@@ -18002,6 +18194,50 @@
     },
     {
       "municipality": "生駒市",
+      "title": "東旭ケ丘線舗装補修工事及び人孔鉄蓋入替工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "東旭ケ丘線舗装補修工事及び人孔鉄蓋入替工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市道門前町鬼取線道路災害復旧工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "生駒市道門前町鬼取線道路災害復旧工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "菜畑壱分線交差点安全対策工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "菜畑壱分線交差点安全対策工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
       "title": "令和８年度東生駒３丁目他地内ＴＶカメラ調査等業務",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -18030,6 +18266,22 @@
       "reason": "exclusion_keyword",
       "matchedKeywords": [
         "橋"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "都市計画道路上町芝線道路予備設計業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "生駒市",
+      "title": "都市計画道路上町芝線道路予備設計業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
       ]
     },
     {
@@ -52461,13 +52713,153 @@
     },
     {
       "municipality": "御所市",
-      "title": "一般競争入札公告（建設工事）（管財課）",
+      "title": "新田川護岸整備工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "護岸"
+      ]
+    },
+    {
+      "municipality": "御所市",
+      "title": "新田川護岸整備工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "護岸"
+      ]
+    },
+    {
+      "municipality": "御所市",
+      "title": "令和8年度自動車騒音常時監視面的評価業務委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "騒音",
+        "自動車"
+      ]
+    },
+    {
+      "municipality": "御所市",
+      "title": "令和8年度自動車騒音常時監視面的評価業務委託 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "騒音",
+        "自動車"
+      ]
+    },
+    {
+      "municipality": "御所市",
+      "title": "今住調整池維持 建 御所市大字",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },
     {
       "municipality": "御所市",
-      "title": "一般競争入札公告（建設工事）（管財課） ",
+      "title": "今住調整池維持 建 御所市大字 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "御所汚水9-1号幹線(2工区)管路築造",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "御所汚水9-1号幹線(2工区)管路築造 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "小林保育所解体",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "小林保育所解体 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "御所汚水9号幹線(10工区)管路築造",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "御所汚水9号幹線(10工区)管路築造 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "小林児童遊園7改修",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "小林児童遊園7改修 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "【奈良県葛城地区清掃事務組合】し尿処理施設（アクアセンター）包括的運転管理業務委託に関する計画書の呈示者募集",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "清掃",
+        "清掃"
+      ]
+    },
+    {
+      "municipality": "御所市",
+      "title": "【奈良県葛城地区清掃事務組合】し尿処理施設（アクアセンター）包括的運転管理業務委託に関する計画書の呈示者募集 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "清掃",
+        "清掃"
+      ]
+    },
+    {
+      "municipality": "御所市",
+      "title": "電子入札ポータルサイト",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "ポータルサイト"
+      ]
+    },
+    {
+      "municipality": "御所市",
+      "title": "電子入札ポータルサイト ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "ポータルサイト"
+      ]
+    },
+    {
+      "municipality": "御所市",
+      "title": "御所市の電子入札に参加するための準備",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "御所市の電子入札に参加するための準備 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "一般競争入札公告（建設コンサルタント等）（管財課）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "一般競争入札公告（建設コンサルタント等）（管財課） ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },
@@ -52624,182 +53016,6 @@
       "matchedKeywords": []
     },
     {
-      "municipality": "御所市",
-      "title": "一般競争入札公告（建設工事）（管財課）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "一般競争入札公告（建設工事）（管財課） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "新田川護岸整備工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "護岸"
-      ]
-    },
-    {
-      "municipality": "御所市",
-      "title": "新田川護岸整備工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "護岸"
-      ]
-    },
-    {
-      "municipality": "御所市",
-      "title": "令和8年度自動車騒音常時監視面的評価業務委託",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "騒音",
-        "自動車"
-      ]
-    },
-    {
-      "municipality": "御所市",
-      "title": "令和8年度自動車騒音常時監視面的評価業務委託 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "騒音",
-        "自動車"
-      ]
-    },
-    {
-      "municipality": "御所市",
-      "title": "今住調整池維持 建 御所市大字",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "今住調整池維持 建 御所市大字 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "御所汚水9-1号幹線(2工区)管路築造",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "御所汚水9-1号幹線(2工区)管路築造 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "小林保育所解体",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "小林保育所解体 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "御所汚水9号幹線(10工区)管路築造",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "御所汚水9号幹線(10工区)管路築造 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "小林児童遊園7改修",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "小林児童遊園7改修 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "【奈良県葛城地区清掃事務組合】し尿処理施設（アクアセンター）包括的運転管理業務委託に関する計画書の呈示者募集",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "清掃",
-        "清掃"
-      ]
-    },
-    {
-      "municipality": "御所市",
-      "title": "【奈良県葛城地区清掃事務組合】し尿処理施設（アクアセンター）包括的運転管理業務委託に関する計画書の呈示者募集 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "清掃",
-        "清掃"
-      ]
-    },
-    {
-      "municipality": "御所市",
-      "title": "電子入札ポータルサイト",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "ポータルサイト"
-      ]
-    },
-    {
-      "municipality": "御所市",
-      "title": "電子入札ポータルサイト ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "ポータルサイト"
-      ]
-    },
-    {
-      "municipality": "御所市",
-      "title": "御所市の電子入札に参加するための準備",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "御所市の電子入札に参加するための準備 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "一般競争入札公告（建設コンサルタント等）（管財課）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "一般競争入札公告（建設コンサルタント等）（管財課） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "一般競争入札公告（建設工事）（管財課）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "一般競争入札公告（建設工事）（管財課） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
       "municipality": "天理市",
       "title": "建設工事入札結果",
       "reason": "no_architecture_context",
@@ -66602,6 +66818,22 @@
     },
     {
       "municipality": "香芝市",
+      "title": "令和８年度浸水対策水路明示業務（平野地区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "水路"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "令和８年度浸水対策水路明示業務（平野地区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "水路"
+      ]
+    },
+    {
+      "municipality": "香芝市",
       "title": "香芝市橋梁定期点検委託業務 公－５５４号",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -67124,22 +67356,6 @@
     },
     {
       "municipality": "香芝市",
-      "title": "令和８年度浸水対策水路明示業務（平野地区）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "水路"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "令和８年度浸水対策水路明示業務（平野地区） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "水路"
-      ]
-    },
-    {
-      "municipality": "香芝市",
       "title": "区画線設置工事 公－091号",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -67257,22 +67473,6 @@
       "title": "令和8年度浸水対策工事（平野地区） ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "令和8年度浸水対策水路明示業務（平野地区）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "水路"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "令和8年度浸水対策水路明示業務（平野地区） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "水路"
-      ]
     },
     {
       "municipality": "香芝市",
@@ -67994,6 +68194,22 @@
     },
     {
       "municipality": "香芝市",
+      "title": "令和８年度浸水対策水路明示業務（平野地区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "水路"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "令和８年度浸水対策水路明示業務（平野地区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "水路"
+      ]
+    },
+    {
+      "municipality": "香芝市",
       "title": "香芝市橋梁定期点検委託業務 公－５５４号",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -68516,22 +68732,6 @@
     },
     {
       "municipality": "香芝市",
-      "title": "令和８年度浸水対策水路明示業務（平野地区）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "水路"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "令和８年度浸水対策水路明示業務（平野地区） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "水路"
-      ]
-    },
-    {
-      "municipality": "香芝市",
       "title": "区画線設置工事 公－091号",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -68649,22 +68849,6 @@
       "title": "令和8年度浸水対策工事（平野地区） ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "令和8年度浸水対策水路明示業務（平野地区）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "水路"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "令和8年度浸水対策水路明示業務（平野地区） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "水路"
-      ]
     },
     {
       "municipality": "香芝市",
@@ -69386,6 +69570,22 @@
     },
     {
       "municipality": "香芝市",
+      "title": "令和８年度浸水対策水路明示業務（平野地区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "水路"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "令和８年度浸水対策水路明示業務（平野地区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "水路"
+      ]
+    },
+    {
+      "municipality": "香芝市",
       "title": "香芝市橋梁定期点検委託業務 公－５５４号",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -69908,22 +70108,6 @@
     },
     {
       "municipality": "香芝市",
-      "title": "令和８年度浸水対策水路明示業務（平野地区）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "水路"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "令和８年度浸水対策水路明示業務（平野地区） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "水路"
-      ]
-    },
-    {
-      "municipality": "香芝市",
       "title": "区画線設置工事 公－091号",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -70041,22 +70225,6 @@
       "title": "令和8年度浸水対策工事（平野地区） ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "令和8年度浸水対策水路明示業務（平野地区）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "水路"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "令和8年度浸水対策水路明示業務（平野地区） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "水路"
-      ]
     },
     {
       "municipality": "川西町",

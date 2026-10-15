@@ -1,17 +1,21 @@
 {
-  "generatedAt": "2026-10-14T11:42:41.324Z",
-  "qualityGeneratedAt": "2026-10-14T11:33:10.840Z",
-  "itemCount": 314,
+  "generatedAt": "2026-10-15T06:14:08.033Z",
+  "qualityGeneratedAt": "2026-10-15T06:04:55.152Z",
+  "itemCount": 318,
   "resultFollowUp": {
-    "totalCount": 10,
+    "totalCount": 15,
     "highCount": 7,
     "mediumCount": 2,
-    "lowCount": 1,
+    "lowCount": 6,
     "missingBiddingDateCount": 0,
     "byMunicipality": [
       {
         "municipality": "奈良県",
-        "count": 6
+        "count": 7
+      },
+      {
+        "municipality": "香芝市",
+        "count": 4
       },
       {
         "municipality": "大淀町",
@@ -29,7 +33,7 @@
     "samples": [
       {
         "priority": "high",
-        "ageDays": 176,
+        "ageDays": 177,
         "reason": "落札済みだが落札者が空",
         "item": {
           "id": "oyodo-79dc14038b",
@@ -45,8 +49,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 140,
-        "reason": "開札日から140日経過",
+        "ageDays": 141,
+        "reason": "開札日から141日経過",
         "item": {
           "id": "nara-city-0000002346",
           "municipality": "奈良市",
@@ -61,7 +65,7 @@
       },
       {
         "priority": "high",
-        "ageDays": 121,
+        "ageDays": 122,
         "reason": "落札済みだが落札者が空",
         "item": {
           "id": "oyodo-46ab50dbc8",
@@ -77,8 +81,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 118,
-        "reason": "開札日から118日経過",
+        "ageDays": 119,
+        "reason": "開札日から119日経過",
         "item": {
           "id": "nara-pref-29001013060020260055",
           "municipality": "奈良県",
@@ -93,8 +97,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 99,
-        "reason": "開札日から99日経過",
+        "ageDays": 100,
+        "reason": "開札日から100日経過",
         "item": {
           "id": "nara-pref-29005007060120260015",
           "municipality": "奈良県",
@@ -109,8 +113,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 89,
-        "reason": "開札日から89日経過",
+        "ageDays": 90,
+        "reason": "開札日から90日経過",
         "item": {
           "id": "nara-pref-29005007060120260018",
           "municipality": "奈良県",
@@ -125,8 +129,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 19,
-        "reason": "開札日から19日経過",
+        "ageDays": 20,
+        "reason": "開札日から20日経過",
         "item": {
           "id": "nara-pref-29001013401020260007",
           "municipality": "奈良県",
@@ -141,8 +145,8 @@
       },
       {
         "priority": "medium",
-        "ageDays": 8,
-        "reason": "開札日から8日経過",
+        "ageDays": 9,
+        "reason": "開札日から9日経過",
         "item": {
           "id": "nara-pref-29001013052520260089",
           "municipality": "奈良県",
@@ -157,8 +161,8 @@
       },
       {
         "priority": "medium",
-        "ageDays": 5,
-        "reason": "開札日から5日経過",
+        "ageDays": 6,
+        "reason": "開札日から6日経過",
         "item": {
           "id": "ikoma-result-2601010074",
           "municipality": "生駒市",
@@ -173,7 +177,7 @@
       },
       {
         "priority": "low",
-        "ageDays": 1,
+        "ageDays": 2,
         "reason": "開札直後の結果待ち",
         "item": {
           "id": "nara-pref-29005007060120260031",
@@ -523,15 +527,15 @@
         "municipality": "奈良市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 10,
+        "totalCount": 13,
         "requiredLinkIncludes": [
           "nara.efftis.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "nara.efftis.jp": 10
+          "nara.efftis.jp": 13
         },
-        "message": "奈良市: 10件 (公告2/結果8) / sources OK"
+        "message": "奈良市: 13件 (公告5/結果8) / sources OK"
       },
       {
         "municipality": "橿原市",
@@ -551,15 +555,15 @@
         "municipality": "生駒市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 26,
+        "totalCount": 27,
         "requiredLinkIncludes": [
           "epi-cloud.fwd.ne.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "epi-cloud.fwd.ne.jp": 26
+          "epi-cloud.fwd.ne.jp": 27
         },
-        "message": "生駒市: 26件 (公告2/結果24) / sources OK"
+        "message": "生駒市: 27件 (公告3/結果24) / sources OK"
       },
       {
         "municipality": "大和高田市",

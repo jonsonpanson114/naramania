@@ -640,6 +640,48 @@
   ],
   "奈良市": [
     {
+      "id": "nara-city-0000002676",
+      "municipality": "奈良市",
+      "title": "東市コミュニティスポーツ会館トイレ改修工事",
+      "type": "建築",
+      "announcementDate": "2026-10-15",
+      "biddingDate": "2026-11-06",
+      "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+      "status": "受付中"
+    },
+    {
+      "id": "nara-city-0000002688",
+      "municipality": "奈良市",
+      "title": "青和バンビーホーム他１ホーム増築に伴う建築設計業務委託",
+      "type": "コンサル",
+      "announcementDate": "2026-10-15",
+      "biddingDate": "2026-11-19",
+      "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+      "status": "受付中"
+    },
+    {
+      "id": "nara-city-0000002689",
+      "municipality": "奈良市",
+      "title": "東消防署東部分署自家給油取扱所新築に伴う建築設計業務委託",
+      "type": "コンサル",
+      "announcementDate": "2026-10-15",
+      "biddingDate": "2026-11-19",
+      "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+      "status": "受付中"
+    },
+    {
+      "id": "nara-city-0000002650",
+      "municipality": "奈良市",
+      "title": "都祁交流センター受電用高圧ケーブル改修工事",
+      "type": "建築",
+      "announcementDate": "2026-09-28",
+      "biddingDate": "2026-09-28",
+      "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+      "status": "落札",
+      "winningContractor": "株式会社武部商会",
+      "winnerType": "ゼネコン"
+    },
+    {
       "id": "nara-city-0000002661",
       "municipality": "奈良市",
       "title": "史跡大安寺旧境内六条大路整備工事実施設計業務委託",
@@ -662,18 +704,6 @@
       "winnerType": "ゼネコン"
     },
     {
-      "id": "nara-city-0000002650",
-      "municipality": "奈良市",
-      "title": "都祁交流センター受電用高圧ケーブル改修工事",
-      "type": "建築",
-      "announcementDate": "2026-09-01",
-      "biddingDate": "2026-09-28",
-      "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-      "status": "落札",
-      "winningContractor": "株式会社武部商会",
-      "winnerType": "ゼネコン"
-    },
-    {
       "id": "nara-city-0000002593",
       "municipality": "奈良市",
       "title": "庁舎中央棟地下書庫内部改修に伴う建築設計業務委託",
@@ -684,6 +714,30 @@
       "status": "落札",
       "winningContractor": "岡田建築設計事務所",
       "winnerType": "設計事務所"
+    },
+    {
+      "id": "nara-city-0000002349",
+      "municipality": "奈良市",
+      "title": "南部生涯スポーツセンタートイレ改修に伴う建築設計業務委託",
+      "type": "コンサル",
+      "announcementDate": "2026-05-27",
+      "biddingDate": "2026-05-27",
+      "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+      "status": "落札",
+      "winningContractor": "株式会社システムクリエイト",
+      "winnerType": "ゼネコン"
+    },
+    {
+      "id": "nara-city-0000002348",
+      "municipality": "奈良市",
+      "title": "鴻ノ池コートトイレ改修に伴う建築設計業務委託",
+      "type": "コンサル",
+      "announcementDate": "2026-05-27",
+      "biddingDate": "2026-05-27",
+      "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+      "status": "落札",
+      "winningContractor": "株式会社建綜研",
+      "winnerType": "ゼネコン"
     },
     {
       "id": "nara-city-0000002440",
@@ -730,30 +784,6 @@
       "status": "落札",
       "winningContractor": "岡田建築設計事務所",
       "winnerType": "設計事務所"
-    },
-    {
-      "id": "nara-city-0000002348",
-      "municipality": "奈良市",
-      "title": "鴻ノ池コートトイレ改修に伴う建築設計業務委託",
-      "type": "コンサル",
-      "announcementDate": "2026-04-15",
-      "biddingDate": "2026-05-27",
-      "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-      "status": "落札",
-      "winningContractor": "株式会社建綜研",
-      "winnerType": "ゼネコン"
-    },
-    {
-      "id": "nara-city-0000002349",
-      "municipality": "奈良市",
-      "title": "南部生涯スポーツセンタートイレ改修に伴う建築設計業務委託",
-      "type": "コンサル",
-      "announcementDate": "2026-04-15",
-      "biddingDate": "2026-05-27",
-      "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-      "status": "落札",
-      "winningContractor": "株式会社システムクリエイト",
-      "winnerType": "ゼネコン"
     }
   ],
   "橿原市": [
@@ -1174,6 +1204,16 @@
   ],
   "生駒市": [
     {
+      "id": "ikoma-056c44edf1",
+      "municipality": "生駒市",
+      "title": "生駒南中学校校舎等解体工事",
+      "type": "建築",
+      "announcementDate": "2026-10-15",
+      "biddingDate": "2026-11-06",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+      "status": "受付中"
+    },
+    {
       "id": "ikoma-result-2601010074",
       "municipality": "生駒市",
       "title": "再開発住宅外壁及び屋根改修工事",
@@ -1322,12 +1362,12 @@
       "winnerType": "設計事務所"
     },
     {
-      "id": "ikoma-result-2601010028",
+      "id": "ikoma-272dc164eb",
       "municipality": "生駒市",
       "title": "生駒市立病院施設整備工事",
       "type": "建築",
       "announcementDate": "2026-06-26",
-      "biddingDate": "2026-06-26",
+      "biddingDate": "2026-11-06",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
       "status": "不調"
     },
@@ -2662,7 +2702,7 @@
       "biddingDate": "2026-06-22",
       "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
       "status": "落札",
-      "winningContractor": "塚竜(株)"
+      "winningContractor": "塚竜（株）"
     },
     {
       "id": "tawaramoto-2026051803",
@@ -3373,7 +3413,7 @@
       "announcementDate": "2026-09-24",
       "biddingDate": "2026-10-14",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=062006E007200640",
-      "status": "受付中"
+      "status": "受付終了"
     },
     {
       "id": "kashiba-epi-68ca31a9ea",
@@ -3383,7 +3423,7 @@
       "announcementDate": "2026-09-24",
       "biddingDate": "2026-10-14",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=062006E007200640",
-      "status": "受付中"
+      "status": "受付終了"
     },
     {
       "id": "kashiba-web-333408e6",
@@ -3393,7 +3433,7 @@
       "announcementDate": "2026-09-24",
       "biddingDate": "2026-10-14",
       "link": "https://www.city.kashiba.lg.jp/site/nyuusatsu/69581.html",
-      "status": "受付中"
+      "status": "受付終了"
     },
     {
       "id": "kashiba-web-fe2b32b0",
@@ -3403,7 +3443,7 @@
       "announcementDate": "2026-09-24",
       "biddingDate": "2026-10-14",
       "link": "https://www.city.kashiba.lg.jp/site/nyuusatsu/69581.html",
-      "status": "受付中"
+      "status": "受付終了"
     },
     {
       "id": "kashiba-r8-k5-12",

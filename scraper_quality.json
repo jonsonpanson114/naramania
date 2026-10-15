@@ -1,38 +1,38 @@
 {
-  "generatedAt": "2026-10-14T11:33:10.840Z",
+  "generatedAt": "2026-10-15T06:04:55.152Z",
   "source": "daily_scrape",
   "municipalityLastScraped": {
-    "奈良市": "2026-10-14T11:33:10.840Z",
-    "橿原市": "2026-10-14T11:33:10.840Z",
-    "生駒市": "2026-10-14T11:33:10.840Z",
-    "大和高田市": "2026-10-14T11:33:10.840Z",
-    "大和郡山市": "2026-10-14T11:33:10.840Z",
-    "葛城市": "2026-10-14T11:33:10.840Z",
-    "五條市": "2026-10-14T11:33:10.840Z",
-    "御所市": "2026-10-14T11:33:10.840Z",
-    "天理市": "2026-10-14T11:33:10.840Z",
-    "桜井市": "2026-10-14T11:33:10.840Z",
-    "宇陀市": "2026-10-14T11:33:10.840Z",
-    "田原本町": "2026-10-14T11:33:10.840Z",
-    "広陵町": "2026-10-14T11:33:10.840Z",
-    "香芝市": "2026-10-14T11:33:10.840Z",
-    "川西町": "2026-10-14T11:33:10.840Z",
-    "山添村": "2026-10-14T11:33:10.840Z",
-    "平群町": "2026-10-14T11:33:10.840Z",
-    "三宅町": "2026-10-14T11:33:10.840Z",
-    "安堵町": "2026-10-14T11:33:10.840Z",
-    "高取町": "2026-10-14T11:33:10.840Z",
-    "斑鳩町": "2026-10-14T11:33:10.840Z",
-    "三郷町": "2026-10-14T11:33:10.840Z",
-    "王寺町": "2026-10-14T11:33:10.840Z",
-    "大淀町": "2026-10-14T11:33:10.840Z",
+    "奈良市": "2026-10-15T06:04:55.152Z",
+    "橿原市": "2026-10-15T06:04:55.152Z",
+    "生駒市": "2026-10-15T06:04:55.152Z",
+    "大和高田市": "2026-10-15T06:04:55.152Z",
+    "大和郡山市": "2026-10-15T06:04:55.152Z",
+    "葛城市": "2026-10-15T06:04:55.152Z",
+    "五條市": "2026-10-15T06:04:55.152Z",
+    "御所市": "2026-10-15T06:04:55.152Z",
+    "天理市": "2026-10-15T06:04:55.152Z",
+    "桜井市": "2026-10-15T06:04:55.152Z",
+    "宇陀市": "2026-10-15T06:04:55.152Z",
+    "田原本町": "2026-10-15T06:04:55.152Z",
+    "広陵町": "2026-10-15T06:04:55.152Z",
+    "香芝市": "2026-10-15T06:04:55.152Z",
+    "川西町": "2026-10-15T06:04:55.152Z",
+    "山添村": "2026-10-15T06:04:55.152Z",
+    "平群町": "2026-10-15T06:04:55.152Z",
+    "三宅町": "2026-10-15T06:04:55.152Z",
+    "安堵町": "2026-10-15T06:04:55.152Z",
+    "高取町": "2026-10-15T06:04:55.152Z",
+    "斑鳩町": "2026-10-15T06:04:55.152Z",
+    "三郷町": "2026-10-15T06:04:55.152Z",
+    "王寺町": "2026-10-15T06:04:55.152Z",
+    "大淀町": "2026-10-15T06:04:55.152Z",
     "奈良県": "2026-10-07T21:56:17.437Z"
   },
-  "scrapedCount": 2854,
-  "keptCount": 314,
-  "rejectedCount": 2572,
+  "scrapedCount": 2861,
+  "keptCount": 318,
+  "rejectedCount": 2578,
   "oldestAnnouncementDate": "2025-02-02",
-  "latestAnnouncementDate": "2026-10-09",
+  "latestAnnouncementDate": "2026-10-15",
   "municipalityCount": 24,
   "municipalityAudit": {
     "expectedMunicipalityCount": 25,
@@ -55,12 +55,12 @@
         "changeFromPrevious": 0
       },
       {
-        "municipality": "高取町",
-        "count": 26,
-        "changeFromPrevious": 0
+        "municipality": "生駒市",
+        "count": 27,
+        "changeFromPrevious": 1
       },
       {
-        "municipality": "生駒市",
+        "municipality": "高取町",
         "count": 26,
         "changeFromPrevious": 0
       },
@@ -90,12 +90,12 @@
         "changeFromPrevious": 0
       },
       {
-        "municipality": "桜井市",
-        "count": 10,
-        "changeFromPrevious": 0
+        "municipality": "奈良市",
+        "count": 13,
+        "changeFromPrevious": 3
       },
       {
-        "municipality": "奈良市",
+        "municipality": "桜井市",
         "count": 10,
         "changeFromPrevious": 0
       },
@@ -242,14 +242,14 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 10,
+        "totalCount": 13,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "nara.efftis.jp": 10
+          "nara.efftis.jp": 13
         },
-        "announcementCount": 2,
+        "announcementCount": 5,
         "resultCount": 8,
-        "message": "奈良市: 10件 (公告2/結果8) / sources OK"
+        "message": "奈良市: 13件 (公告5/結果8) / sources OK"
       },
       {
         "expectation": {
@@ -282,14 +282,14 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 26,
+        "totalCount": 27,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "epi-cloud.fwd.ne.jp": 26
+          "epi-cloud.fwd.ne.jp": 27
         },
-        "announcementCount": 2,
+        "announcementCount": 3,
         "resultCount": 24,
-        "message": "生駒市: 26件 (公告2/結果24) / sources OK"
+        "message": "生駒市: 27件 (公告3/結果24) / sources OK"
       },
       {
         "expectation": {
@@ -745,7 +745,7 @@
     "itemsWithDescription": 50,
     "intelligenceExtractedCount": 49,
     "geminiExtractedCount": 49,
-    "taggedCount": 50,
-    "lastAugmentedAt": "2026-10-14T11:34:32.636Z"
+    "taggedCount": 49,
+    "lastAugmentedAt": "2026-10-15T06:06:20.810Z"
   }
 }
