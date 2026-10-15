@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-15T06:14:08.033Z",
-  "qualityGeneratedAt": "2026-10-15T06:04:55.152Z",
-  "itemCount": 318,
+  "generatedAt": "2026-10-15T11:22:38.650Z",
+  "qualityGeneratedAt": "2026-10-15T11:12:41.911Z",
+  "itemCount": 317,
   "resultFollowUp": {
     "totalCount": 15,
     "highCount": 7,
@@ -841,15 +841,15 @@
         "municipality": "王寺町",
         "status": "ok",
         "severity": "error",
-        "totalCount": 2,
+        "totalCount": 1,
         "requiredLinkIncludes": [
           "town.oji.nara.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "town.oji.nara.jp": 2
+          "town.oji.nara.jp": 1
         },
-        "message": "王寺町: 2件 (公告1/結果1) / sources OK"
+        "message": "王寺町: 1件 (公告0/結果1) / sources OK"
       },
       {
         "municipality": "大淀町",

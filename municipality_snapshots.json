@@ -2713,7 +2713,7 @@
       "biddingDate": "2026-05-18",
       "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
       "status": "落札",
-      "winningContractor": "村本建設（株）奈良本店"
+      "winningContractor": "村本建設(株)奈良本店"
     }
   ],
   "広陵町": [
@@ -3629,24 +3629,15 @@
   ],
   "王寺町": [
     {
-      "id": "oji-ffe0646cd8",
-      "municipality": "王寺町",
-      "title": "やわらぎ会館改修工事（7月）",
-      "type": "建築",
-      "announcementDate": "2026-09-04",
-      "link": "https://www.town.oji.nara.jp/kakuka/somu/somu/gyomuannai/nyuusatu/nyuusatukouhyou/11747.html",
-      "status": "受付中"
-    },
-    {
-      "id": "oji-79445a548a",
+      "id": "oji-supplemental-79445a548a",
       "municipality": "王寺町",
       "title": "やわらぎ会館改修工事",
       "type": "建築",
       "announcementDate": "2026-04-27",
       "biddingDate": "2026-05-18",
       "link": "https://www.town.oji.nara.jp/kakuka/somu/somu/gyomuannai/nyuusatu/nyuusatukouhyou/11512.html",
-      "status": "不調",
-      "pdfUrl": "https://www.town.oji.nara.jp/material/files/group/4/jigokohyou_20260525_yawaragi.pdf"
+      "pdfUrl": "https://www.town.oji.nara.jp/material/files/group/4/jigokohyou_20260525_yawaragi.pdf",
+      "status": "不調"
     }
   ],
   "安堵町": [

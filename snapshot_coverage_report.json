@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-15T06:14:09.151Z",
+  "generatedAt": "2026-10-15T11:22:39.391Z",
   "checkedMunicipalityCount": 24,
-  "expectedItemCount": 318,
-  "matchedItemCount": 318,
+  "expectedItemCount": 317,
+  "matchedItemCount": 317,
   "missingItemCount": 0,
   "duplicateTitleGroupCount": 24,
   "duplicateTitleItemCount": 53,
@@ -228,17 +228,6 @@
       "status": "ok"
     },
     {
-      "municipality": "王寺町",
-      "snapshotCount": 2,
-      "expectedCount": 2,
-      "matchedCount": 2,
-      "missingCount": 0,
-      "duplicateTitleGroupCount": 0,
-      "duplicateTitleItemCount": 0,
-      "missingItems": [],
-      "status": "ok"
-    },
-    {
       "municipality": "御所市",
       "snapshotCount": 2,
       "expectedCount": 2,
@@ -265,6 +254,17 @@
       "snapshotCount": 2,
       "expectedCount": 2,
       "matchedCount": 2,
+      "missingCount": 0,
+      "duplicateTitleGroupCount": 0,
+      "duplicateTitleItemCount": 0,
+      "missingItems": [],
+      "status": "ok"
+    },
+    {
+      "municipality": "王寺町",
+      "snapshotCount": 1,
+      "expectedCount": 1,
+      "matchedCount": 1,
       "missingCount": 0,
       "duplicateTitleGroupCount": 0,
       "duplicateTitleItemCount": 0,

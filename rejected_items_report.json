@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-15T06:04:55.155Z",
-  "totalRejected": 11208,
+  "generatedAt": "2026-10-15T11:12:41.913Z",
+  "totalRejected": 11172,
   "totalBorderlineRescued": 33,
   "byMunicipality": {
     "奈良市": {
@@ -32,7 +32,7 @@
       "borderlineRescued": 0
     },
     "御所市": {
-      "rejected": 66,
+      "rejected": 60,
       "borderlineRescued": 0
     },
     "天理市": {
@@ -92,7 +92,7 @@
       "borderlineRescued": 0
     },
     "王寺町": {
-      "rejected": 36,
+      "rejected": 6,
       "borderlineRescued": 0
     },
     "大淀町": {
@@ -52701,13 +52701,141 @@
     },
     {
       "municipality": "御所市",
-      "title": "一般競争入札公告（建設コンサルタント等）（管財課）",
+      "title": "新田川護岸整備工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "護岸"
+      ]
+    },
+    {
+      "municipality": "御所市",
+      "title": "新田川護岸整備工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "護岸"
+      ]
+    },
+    {
+      "municipality": "御所市",
+      "title": "令和8年度自動車騒音常時監視面的評価業務委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "騒音",
+        "自動車"
+      ]
+    },
+    {
+      "municipality": "御所市",
+      "title": "令和8年度自動車騒音常時監視面的評価業務委託 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "騒音",
+        "自動車"
+      ]
+    },
+    {
+      "municipality": "御所市",
+      "title": "今住調整池維持 建 御所市大字",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },
     {
       "municipality": "御所市",
-      "title": "一般競争入札公告（建設コンサルタント等）（管財課） ",
+      "title": "今住調整池維持 建 御所市大字 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "御所汚水9-1号幹線(2工区)管路築造",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "御所汚水9-1号幹線(2工区)管路築造 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "小林保育所解体",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "小林保育所解体 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "御所汚水9号幹線(10工区)管路築造",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "御所汚水9号幹線(10工区)管路築造 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "小林児童遊園7改修",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "小林児童遊園7改修 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "【奈良県葛城地区清掃事務組合】し尿処理施設（アクアセンター）包括的運転管理業務委託に関する計画書の呈示者募集",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "清掃",
+        "清掃"
+      ]
+    },
+    {
+      "municipality": "御所市",
+      "title": "【奈良県葛城地区清掃事務組合】し尿処理施設（アクアセンター）包括的運転管理業務委託に関する計画書の呈示者募集 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "清掃",
+        "清掃"
+      ]
+    },
+    {
+      "municipality": "御所市",
+      "title": "電子入札ポータルサイト",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "ポータルサイト"
+      ]
+    },
+    {
+      "municipality": "御所市",
+      "title": "電子入札ポータルサイト ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "ポータルサイト"
+      ]
+    },
+    {
+      "municipality": "御所市",
+      "title": "御所市の電子入札に参加するための準備",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "御所市の電子入札に参加するための準備 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },
@@ -52852,170 +52980,6 @@
       "matchedKeywords": []
     },
     {
-      "municipality": "御所市",
-      "title": "一般競争入札公告（建設コンサルタント等）（管財課）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "一般競争入札公告（建設コンサルタント等）（管財課） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "新田川護岸整備工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "護岸"
-      ]
-    },
-    {
-      "municipality": "御所市",
-      "title": "新田川護岸整備工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "護岸"
-      ]
-    },
-    {
-      "municipality": "御所市",
-      "title": "令和8年度自動車騒音常時監視面的評価業務委託",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "騒音",
-        "自動車"
-      ]
-    },
-    {
-      "municipality": "御所市",
-      "title": "令和8年度自動車騒音常時監視面的評価業務委託 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "騒音",
-        "自動車"
-      ]
-    },
-    {
-      "municipality": "御所市",
-      "title": "今住調整池維持 建 御所市大字",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "今住調整池維持 建 御所市大字 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "御所汚水9-1号幹線(2工区)管路築造",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "御所汚水9-1号幹線(2工区)管路築造 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "小林保育所解体",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "小林保育所解体 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "御所汚水9号幹線(10工区)管路築造",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "御所汚水9号幹線(10工区)管路築造 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "小林児童遊園7改修",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "小林児童遊園7改修 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "【奈良県葛城地区清掃事務組合】し尿処理施設（アクアセンター）包括的運転管理業務委託に関する計画書の呈示者募集",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "清掃",
-        "清掃"
-      ]
-    },
-    {
-      "municipality": "御所市",
-      "title": "【奈良県葛城地区清掃事務組合】し尿処理施設（アクアセンター）包括的運転管理業務委託に関する計画書の呈示者募集 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "清掃",
-        "清掃"
-      ]
-    },
-    {
-      "municipality": "御所市",
-      "title": "電子入札ポータルサイト",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "ポータルサイト"
-      ]
-    },
-    {
-      "municipality": "御所市",
-      "title": "電子入札ポータルサイト ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "ポータルサイト"
-      ]
-    },
-    {
-      "municipality": "御所市",
-      "title": "御所市の電子入札に参加するための準備",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "御所市の電子入札に参加するための準備 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "一般競争入札公告（建設コンサルタント等）（管財課）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "一般競争入札公告（建設コンサルタント等）（管財課） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
       "municipality": "天理市",
       "title": "建設工事入札結果",
       "reason": "no_architecture_context",
@@ -80479,76 +80443,6 @@
         "家屋調査",
         "調査"
       ]
-    },
-    {
-      "municipality": "王寺町",
-      "title": "塵芥車2t積載車調達",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "調達"
-      ]
-    },
-    {
-      "municipality": "王寺町",
-      "title": "塵芥車2t積載車調達 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "調達"
-      ]
-    },
-    {
-      "municipality": "王寺町",
-      "title": "久度中央広場整備工事（R7－2期工事）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "王寺町",
-      "title": "久度中央広場整備工事（R7－2期工事） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "王寺町",
-      "title": "泉の広場防災公園整備工事（第2期）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "王寺町",
-      "title": "泉の広場防災公園整備工事（第2期） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "王寺町",
-      "title": "マイクロバス購入",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "購入",
-        "バス"
-      ]
-    },
-    {
-      "municipality": "王寺町",
-      "title": "マイクロバス購入 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "購入",
-        "バス"
-      ]
-    },
-    {
-      "municipality": "王寺町",
-      "title": "久度中央広場整備工事（R8－3期工事）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "王寺町",
-      "title": "久度中央広場整備工事（R8－3期工事） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
     },
     {
       "municipality": "王寺町",
@@ -80568,76 +80462,6 @@
     },
     {
       "municipality": "王寺町",
-      "title": "塵芥車2t積載車調達",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "調達"
-      ]
-    },
-    {
-      "municipality": "王寺町",
-      "title": "塵芥車2t積載車調達 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "調達"
-      ]
-    },
-    {
-      "municipality": "王寺町",
-      "title": "久度中央広場整備工事（R7－2期工事）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "王寺町",
-      "title": "久度中央広場整備工事（R7－2期工事） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "王寺町",
-      "title": "泉の広場防災公園整備工事（第2期）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "王寺町",
-      "title": "泉の広場防災公園整備工事（第2期） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "王寺町",
-      "title": "マイクロバス購入",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "購入",
-        "バス"
-      ]
-    },
-    {
-      "municipality": "王寺町",
-      "title": "マイクロバス購入 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "購入",
-        "バス"
-      ]
-    },
-    {
-      "municipality": "王寺町",
-      "title": "久度中央広場整備工事（R8－3期工事）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "王寺町",
-      "title": "久度中央広場整備工事（R8－3期工事） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "王寺町",
       "title": "最低制限価格及び低入札価格調査制度について",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -80651,76 +80475,6 @@
       "matchedKeywords": [
         "調査"
       ]
-    },
-    {
-      "municipality": "王寺町",
-      "title": "塵芥車2t積載車調達",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "調達"
-      ]
-    },
-    {
-      "municipality": "王寺町",
-      "title": "塵芥車2t積載車調達 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "調達"
-      ]
-    },
-    {
-      "municipality": "王寺町",
-      "title": "久度中央広場整備工事（R7－2期工事）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "王寺町",
-      "title": "久度中央広場整備工事（R7－2期工事） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "王寺町",
-      "title": "泉の広場防災公園整備工事（第2期）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "王寺町",
-      "title": "泉の広場防災公園整備工事（第2期） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "王寺町",
-      "title": "マイクロバス購入",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "購入",
-        "バス"
-      ]
-    },
-    {
-      "municipality": "王寺町",
-      "title": "マイクロバス購入 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "購入",
-        "バス"
-      ]
-    },
-    {
-      "municipality": "王寺町",
-      "title": "久度中央広場整備工事（R8－3期工事）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "王寺町",
-      "title": "久度中央広場整備工事（R8－3期工事） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
     },
     {
       "municipality": "王寺町",
