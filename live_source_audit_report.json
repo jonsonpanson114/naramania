@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-14T12:42:52.297Z",
-  "currentItemCount": 314,
+  "generatedAt": "2026-10-15T06:50:12.635Z",
+  "currentItemCount": 318,
   "checkedMunicipalities": [
     "奈良市",
     "橿原市",
@@ -36,9 +36,9 @@
   "scraperResults": [
     {
       "municipality": "奈良市",
-      "rawCount": 115,
+      "rawCount": 117,
       "keptCount": 18,
-      "rejectedCount": 97,
+      "rejectedCount": 99,
       "keptAnnouncementCount": 10,
       "keptResultCount": 8,
       "warnings": [],
@@ -56,10 +56,10 @@
     },
     {
       "municipality": "生駒市",
-      "rawCount": 218,
-      "keptCount": 26,
-      "rejectedCount": 192,
-      "keptAnnouncementCount": 2,
+      "rawCount": 225,
+      "keptCount": 27,
+      "rejectedCount": 198,
+      "keptAnnouncementCount": 3,
       "keptResultCount": 24,
       "warnings": [],
       "errors": []
@@ -106,9 +106,9 @@
     },
     {
       "municipality": "御所市",
-      "rawCount": 23,
+      "rawCount": 22,
       "keptCount": 2,
-      "rejectedCount": 21,
+      "rejectedCount": 20,
       "keptAnnouncementCount": 0,
       "keptResultCount": 2,
       "warnings": [],
@@ -166,9 +166,9 @@
     },
     {
       "municipality": "香芝市",
-      "rawCount": 144,
+      "rawCount": 143,
       "keptCount": 27,
-      "rejectedCount": 117,
+      "rejectedCount": 116,
       "keptAnnouncementCount": 11,
       "keptResultCount": 16,
       "warnings": [],
@@ -281,11 +281,11 @@
   ],
   "coverage": {
     "checkedMunicipalityCount": 24,
-    "expectedItemCount": 282,
-    "matchedItemCount": 282,
+    "expectedItemCount": 283,
+    "matchedItemCount": 283,
     "missingItemCount": 0,
-    "duplicateTitleGroupCount": 34,
-    "duplicateTitleItemCount": 75,
+    "duplicateTitleGroupCount": 31,
+    "duplicateTitleItemCount": 69,
     "results": [
       {
         "municipality": "橿原市",
@@ -311,7 +311,7 @@
       },
       {
         "municipality": "香芝市",
-        "snapshotCount": 144,
+        "snapshotCount": 143,
         "expectedCount": 27,
         "matchedCount": 27,
         "missingCount": 0,
@@ -322,9 +322,9 @@
       },
       {
         "municipality": "生駒市",
-        "snapshotCount": 218,
-        "expectedCount": 26,
-        "matchedCount": 26,
+        "snapshotCount": 225,
+        "expectedCount": 27,
+        "matchedCount": 27,
         "missingCount": 0,
         "duplicateTitleGroupCount": 0,
         "duplicateTitleItemCount": 0,
@@ -366,12 +366,12 @@
       },
       {
         "municipality": "奈良市",
-        "snapshotCount": 115,
+        "snapshotCount": 117,
         "expectedCount": 18,
         "matchedCount": 18,
         "missingCount": 0,
-        "duplicateTitleGroupCount": 8,
-        "duplicateTitleItemCount": 16,
+        "duplicateTitleGroupCount": 5,
+        "duplicateTitleItemCount": 10,
         "missingItems": [],
         "status": "ok"
       },
@@ -509,7 +509,7 @@
       },
       {
         "municipality": "御所市",
-        "snapshotCount": 23,
+        "snapshotCount": 22,
         "expectedCount": 2,
         "matchedCount": 2,
         "missingCount": 0,
