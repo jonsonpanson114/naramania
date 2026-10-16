@@ -1221,7 +1221,9 @@
       "announcementDate": "2026-10-09",
       "biddingDate": "2026-10-09",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-      "status": "受付終了"
+      "status": "落札",
+      "winningContractor": "日本宣伝株式会社",
+      "winnerType": "ゼネコン"
     },
     {
       "id": "ikoma-result-2601100026",
@@ -2702,7 +2704,7 @@
       "biddingDate": "2026-06-22",
       "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
       "status": "落札",
-      "winningContractor": "塚竜（株）"
+      "winningContractor": "塚竜(株)"
     },
     {
       "id": "tawaramoto-2026051803",
@@ -2713,7 +2715,7 @@
       "biddingDate": "2026-05-18",
       "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
       "status": "落札",
-      "winningContractor": "村本建設(株)奈良本店"
+      "winningContractor": "村本建設（株）奈良本店"
     }
   ],
   "広陵町": [
@@ -3331,6 +3333,17 @@
   ],
   "大淀町": [
     {
+      "id": "oyodo-f54973c2fe",
+      "municipality": "大淀町",
+      "title": "旧大淀西部幼稚園トイレ等改修工事（第8－総工1号）【令和8年10月16日執行】 （pdf, 87.73KB）",
+      "type": "建築",
+      "announcementDate": "2026-10-16",
+      "biddingDate": "2026-10-16",
+      "link": "https://www.town.oyodo.lg.jp/./cmsfiles/contents/0000001/1945/ko08101601.pdf",
+      "status": "落札",
+      "winningContractor": "伊野工務店㈱ ９．"
+    },
+    {
       "id": "oyodo-46ab50dbc8",
       "municipality": "大淀町",
       "title": "大淀町立平畑運動公園体育館大規模改修工事に伴う実施設計業務【令和8年6月15日執行】 （pdf, 47.46KB）",
@@ -3406,44 +3419,52 @@
   ],
   "香芝市": [
     {
-      "id": "kashiba-epi-e912736bf5",
-      "municipality": "香芝市",
-      "title": "香芝市立小学校防犯カメラ設置工事（１工区）",
-      "type": "建築",
-      "announcementDate": "2026-09-24",
-      "biddingDate": "2026-10-14",
-      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=062006E007200640",
-      "status": "受付終了"
-    },
-    {
-      "id": "kashiba-epi-68ca31a9ea",
-      "municipality": "香芝市",
-      "title": "香芝市立小学校防犯カメラ設置工事（２工区）",
-      "type": "建築",
-      "announcementDate": "2026-09-24",
-      "biddingDate": "2026-10-14",
-      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=062006E007200640",
-      "status": "受付終了"
-    },
-    {
-      "id": "kashiba-web-333408e6",
-      "municipality": "香芝市",
-      "title": "香芝市立中学校防犯カメラ設置工事",
-      "type": "建築",
-      "announcementDate": "2026-09-24",
-      "biddingDate": "2026-10-14",
-      "link": "https://www.city.kashiba.lg.jp/site/nyuusatsu/69581.html",
-      "status": "受付終了"
-    },
-    {
-      "id": "kashiba-web-fe2b32b0",
+      "id": "kashiba-r8-k8-03",
       "municipality": "香芝市",
       "title": "三和幼稚園トイレ改修工事",
       "type": "建築",
-      "announcementDate": "2026-09-24",
+      "announcementDate": "2026-10-14",
       "biddingDate": "2026-10-14",
-      "link": "https://www.city.kashiba.lg.jp/site/nyuusatsu/69581.html",
-      "status": "受付終了"
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=001792050100r8-k8-03",
+      "status": "落札",
+      "winningContractor": "株式会社シナジー",
+      "estimatedPrice": "15,226,000円"
+    },
+    {
+      "id": "kashiba-r8-k9-03",
+      "municipality": "香芝市",
+      "title": "香芝市立中学校防犯カメラ設置工事",
+      "type": "建築",
+      "announcementDate": "2026-10-14",
+      "biddingDate": "2026-10-14",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=001792050100r8-k9-03",
+      "status": "落札",
+      "winningContractor": "株式会社共生システム",
+      "estimatedPrice": "14,380,000円"
+    },
+    {
+      "id": "kashiba-r8-k9-02",
+      "municipality": "香芝市",
+      "title": "香芝市立小学校防犯カメラ設置工事（２工区）",
+      "type": "建築",
+      "announcementDate": "2026-10-14",
+      "biddingDate": "2026-10-14",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=001792050100r8-k9-02",
+      "status": "落札",
+      "winningContractor": "株式会社共生システム",
+      "estimatedPrice": "15,970,000円"
+    },
+    {
+      "id": "kashiba-r8-k9-01",
+      "municipality": "香芝市",
+      "title": "香芝市立小学校防犯カメラ設置工事（１工区）",
+      "type": "建築",
+      "announcementDate": "2026-10-14",
+      "biddingDate": "2026-10-14",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=001792050100r8-k9-01",
+      "status": "落札",
+      "winningContractor": "株式会社共生システム",
+      "estimatedPrice": "10,950,000円"
     },
     {
       "id": "kashiba-r8-k5-12",
@@ -3629,15 +3650,24 @@
   ],
   "王寺町": [
     {
-      "id": "oji-supplemental-79445a548a",
+      "id": "oji-ffe0646cd8",
+      "municipality": "王寺町",
+      "title": "やわらぎ会館改修工事（7月）",
+      "type": "建築",
+      "announcementDate": "2026-09-04",
+      "link": "https://www.town.oji.nara.jp/kakuka/somu/somu/gyomuannai/nyuusatu/nyuusatukouhyou/11747.html",
+      "status": "受付中"
+    },
+    {
+      "id": "oji-79445a548a",
       "municipality": "王寺町",
       "title": "やわらぎ会館改修工事",
       "type": "建築",
       "announcementDate": "2026-04-27",
       "biddingDate": "2026-05-18",
       "link": "https://www.town.oji.nara.jp/kakuka/somu/somu/gyomuannai/nyuusatu/nyuusatukouhyou/11512.html",
-      "pdfUrl": "https://www.town.oji.nara.jp/material/files/group/4/jigokohyou_20260525_yawaragi.pdf",
-      "status": "不調"
+      "status": "不調",
+      "pdfUrl": "https://www.town.oji.nara.jp/material/files/group/4/jigokohyou_20260525_yawaragi.pdf"
     }
   ],
   "安堵町": [

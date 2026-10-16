@@ -1,20 +1,82 @@
 {
-  "generatedAt": "2026-10-15T11:12:41.906Z",
+  "generatedAt": "2026-10-16T05:59:36.514Z",
   "source": "daily_scrape",
   "updates": [
     {
-      "id": "miyake-2026-10-01-三宅老人憩いの家解体工事設計委託業務",
-      "municipality": "三宅町",
-      "title": "三宅老人憩いの家解体工事設計委託業務",
-      "announcementDate": "2026-10-01",
-      "biddingDate": "2026-10-01",
+      "id": "oyodo-f54973c2fe",
+      "municipality": "大淀町",
+      "title": "旧大淀西部幼稚園トイレ等改修工事（第8－総工1号）【令和8年10月16日執行】 （pdf, 87.73KB）",
+      "announcementDate": "2026-10-16",
+      "biddingDate": "2026-10-16",
       "status": "落札",
-      "winningContractor": "株式会社 礎建築事務所",
-      "link": "https://www.town.miyake.lg.jp/soshiki/1/9376.html",
-      "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5773.pdf",
-      "previousStatus": "落札",
-      "previousWinningContractor": "株式会社礎建築事務所",
-      "detectedAt": "2026-10-15T11:12:41.906Z",
+      "winningContractor": "伊野工務店㈱ ９．",
+      "link": "https://www.town.oyodo.lg.jp/./cmsfiles/contents/0000001/1945/ko08101601.pdf",
+      "detectedAt": "2026-10-16T05:59:36.514Z",
+      "kind": "new_winner"
+    },
+    {
+      "id": "kashiba-r8-k8-03",
+      "municipality": "香芝市",
+      "title": "三和幼稚園トイレ改修工事",
+      "announcementDate": "2026-10-14",
+      "biddingDate": "2026-10-14",
+      "status": "落札",
+      "winningContractor": "株式会社シナジー",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=001792050100r8-k8-03",
+      "previousStatus": "受付終了",
+      "detectedAt": "2026-10-16T05:59:36.514Z",
+      "kind": "new_winner"
+    },
+    {
+      "id": "kashiba-r8-k9-03",
+      "municipality": "香芝市",
+      "title": "香芝市立中学校防犯カメラ設置工事",
+      "announcementDate": "2026-10-14",
+      "biddingDate": "2026-10-14",
+      "status": "落札",
+      "winningContractor": "株式会社共生システム",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=001792050100r8-k9-03",
+      "previousStatus": "受付終了",
+      "detectedAt": "2026-10-16T05:59:36.514Z",
+      "kind": "new_winner"
+    },
+    {
+      "id": "kashiba-r8-k9-02",
+      "municipality": "香芝市",
+      "title": "香芝市立小学校防犯カメラ設置工事（２工区）",
+      "announcementDate": "2026-10-14",
+      "biddingDate": "2026-10-14",
+      "status": "落札",
+      "winningContractor": "株式会社共生システム",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=001792050100r8-k9-02",
+      "previousStatus": "受付終了",
+      "detectedAt": "2026-10-16T05:59:36.514Z",
+      "kind": "new_winner"
+    },
+    {
+      "id": "kashiba-r8-k9-01",
+      "municipality": "香芝市",
+      "title": "香芝市立小学校防犯カメラ設置工事（１工区）",
+      "announcementDate": "2026-10-14",
+      "biddingDate": "2026-10-14",
+      "status": "落札",
+      "winningContractor": "株式会社共生システム",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=001792050100r8-k9-01",
+      "previousStatus": "受付終了",
+      "detectedAt": "2026-10-16T05:59:36.514Z",
+      "kind": "new_winner"
+    },
+    {
+      "id": "ikoma-result-2601010074",
+      "municipality": "生駒市",
+      "title": "再開発住宅外壁及び屋根改修工事",
+      "announcementDate": "2026-10-09",
+      "biddingDate": "2026-10-09",
+      "status": "落札",
+      "winningContractor": "日本宣伝株式会社",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+      "previousStatus": "受付終了",
+      "detectedAt": "2026-10-16T05:59:36.514Z",
       "kind": "new_winner"
     },
     {
@@ -29,7 +91,7 @@
       "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5081000952k.pdf",
       "previousStatus": "落札",
       "previousWinningContractor": "浅山建設",
-      "detectedAt": "2026-10-15T11:12:41.906Z",
+      "detectedAt": "2026-10-16T05:59:36.514Z",
       "kind": "new_winner"
     },
     {
@@ -44,7 +106,7 @@
       "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk_kekka8-070.pdf",
       "previousStatus": "落札",
       "previousWinningContractor": "(有)龍田",
-      "detectedAt": "2026-10-15T11:12:41.906Z",
+      "detectedAt": "2026-10-16T05:59:36.514Z",
       "kind": "new_winner"
     },
     {
@@ -59,7 +121,7 @@
       "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5082000865k.pdf",
       "previousStatus": "落札",
       "previousWinningContractor": "(有)坪岡建築事務所",
-      "detectedAt": "2026-10-15T11:12:41.906Z",
+      "detectedAt": "2026-10-16T05:59:36.514Z",
       "kind": "new_winner"
     },
     {
@@ -74,7 +136,7 @@
       "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk_kekka8-055.pdf",
       "previousStatus": "落札",
       "previousWinningContractor": "(有)龍田",
-      "detectedAt": "2026-10-15T11:12:41.906Z",
+      "detectedAt": "2026-10-16T05:59:36.514Z",
       "kind": "new_winner"
     },
     {
@@ -89,7 +151,7 @@
       "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk_kekka8-050.pdf",
       "previousStatus": "落札",
       "previousWinningContractor": "（株）松本コンサルタント 奈良支店",
-      "detectedAt": "2026-10-15T11:12:41.906Z",
+      "detectedAt": "2026-10-16T05:59:36.514Z",
       "kind": "new_winner"
     },
     {
@@ -104,7 +166,21 @@
       "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5082000530k.pdf",
       "previousStatus": "落札",
       "previousWinningContractor": "(有)坪岡建築事務所",
-      "detectedAt": "2026-10-15T11:12:41.906Z",
+      "detectedAt": "2026-10-16T05:59:36.514Z",
+      "kind": "new_winner"
+    },
+    {
+      "id": "tawaramoto-2026062201",
+      "municipality": "田原本町",
+      "title": "南小学校⑪号棟トイレ改修工事",
+      "announcementDate": "2026-05-14",
+      "biddingDate": "2026-06-22",
+      "status": "落札",
+      "winningContractor": "塚竜(株)",
+      "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
+      "previousStatus": "落札",
+      "previousWinningContractor": "塚竜（株）",
+      "detectedAt": "2026-10-16T05:59:36.514Z",
       "kind": "new_winner"
     },
     {
@@ -119,7 +195,7 @@
       "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk_kekka8-042.pdf",
       "previousStatus": "落札",
       "previousWinningContractor": "(株)木村組",
-      "detectedAt": "2026-10-15T11:12:41.906Z",
+      "detectedAt": "2026-10-16T05:59:36.514Z",
       "kind": "new_winner"
     },
     {
@@ -133,8 +209,8 @@
       "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/1892.html",
       "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk_kekka8-026.pdf",
       "previousStatus": "落札",
-      "previousWinningContractor": "(株) クラハラ",
-      "detectedAt": "2026-10-15T11:12:41.906Z",
+      "previousWinningContractor": "(株)クラハラ",
+      "detectedAt": "2026-10-16T05:59:36.514Z",
       "kind": "new_winner"
     },
     {
@@ -149,7 +225,7 @@
       "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5082000288k.pdf",
       "previousStatus": "落札",
       "previousWinningContractor": "(有)坪岡建築事務所",
-      "detectedAt": "2026-10-15T11:12:41.906Z",
+      "detectedAt": "2026-10-16T05:59:36.514Z",
       "kind": "new_winner"
     },
     {
@@ -159,11 +235,11 @@
       "announcementDate": "2026-04-09",
       "biddingDate": "2026-05-18",
       "status": "落札",
-      "winningContractor": "村本建設(株)奈良本店",
+      "winningContractor": "村本建設（株）奈良本店",
       "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
       "previousStatus": "落札",
-      "previousWinningContractor": "村本建設（株）奈良本店",
-      "detectedAt": "2026-10-15T11:12:41.906Z",
+      "previousWinningContractor": "村本建設(株)奈良本店",
+      "detectedAt": "2026-10-16T05:59:36.514Z",
       "kind": "new_winner"
     },
     {
@@ -178,7 +254,7 @@
       "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5082000046k.pdf",
       "previousStatus": "落札",
       "previousWinningContractor": "㈱トーニチコンサルタント 奈良事務所",
-      "detectedAt": "2026-10-15T11:12:41.906Z",
+      "detectedAt": "2026-10-16T05:59:36.514Z",
       "kind": "new_winner"
     },
     {
@@ -193,7 +269,7 @@
       "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5072001239k.pdf",
       "previousStatus": "落札",
       "previousWinningContractor": "(有)坪岡建築事務所",
-      "detectedAt": "2026-10-15T11:12:41.906Z",
+      "detectedAt": "2026-10-16T05:59:36.514Z",
       "kind": "new_winner"
     }
   ],
@@ -206,7 +282,7 @@
       "biddingDate": "2026-11-06",
       "status": "不調",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-      "detectedAt": "2026-10-15T11:12:41.906Z",
+      "detectedAt": "2026-10-16T05:59:36.514Z",
       "kind": "new_failure"
     },
     {
@@ -217,8 +293,68 @@
       "biddingDate": "2026-10-19",
       "status": "不調",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-      "detectedAt": "2026-10-15T11:12:41.906Z",
+      "detectedAt": "2026-10-16T05:59:36.514Z",
       "kind": "new_failure"
+    },
+    {
+      "id": "oyodo-f54973c2fe",
+      "municipality": "大淀町",
+      "title": "旧大淀西部幼稚園トイレ等改修工事（第8－総工1号）【令和8年10月16日執行】 （pdf, 87.73KB）",
+      "announcementDate": "2026-10-16",
+      "biddingDate": "2026-10-16",
+      "status": "落札",
+      "winningContractor": "伊野工務店㈱ ９．",
+      "link": "https://www.town.oyodo.lg.jp/./cmsfiles/contents/0000001/1945/ko08101601.pdf",
+      "detectedAt": "2026-10-16T05:59:36.514Z",
+      "kind": "new_winner"
+    },
+    {
+      "id": "kashiba-r8-k8-03",
+      "municipality": "香芝市",
+      "title": "三和幼稚園トイレ改修工事",
+      "announcementDate": "2026-10-14",
+      "biddingDate": "2026-10-14",
+      "status": "落札",
+      "winningContractor": "株式会社シナジー",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=001792050100r8-k8-03",
+      "detectedAt": "2026-10-16T05:59:36.514Z",
+      "kind": "new_winner"
+    },
+    {
+      "id": "kashiba-r8-k9-03",
+      "municipality": "香芝市",
+      "title": "香芝市立中学校防犯カメラ設置工事",
+      "announcementDate": "2026-10-14",
+      "biddingDate": "2026-10-14",
+      "status": "落札",
+      "winningContractor": "株式会社共生システム",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=001792050100r8-k9-03",
+      "detectedAt": "2026-10-16T05:59:36.514Z",
+      "kind": "new_winner"
+    },
+    {
+      "id": "kashiba-r8-k9-02",
+      "municipality": "香芝市",
+      "title": "香芝市立小学校防犯カメラ設置工事（２工区）",
+      "announcementDate": "2026-10-14",
+      "biddingDate": "2026-10-14",
+      "status": "落札",
+      "winningContractor": "株式会社共生システム",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=001792050100r8-k9-02",
+      "detectedAt": "2026-10-16T05:59:36.514Z",
+      "kind": "new_winner"
+    },
+    {
+      "id": "kashiba-r8-k9-01",
+      "municipality": "香芝市",
+      "title": "香芝市立小学校防犯カメラ設置工事（１工区）",
+      "announcementDate": "2026-10-14",
+      "biddingDate": "2026-10-14",
+      "status": "落札",
+      "winningContractor": "株式会社共生システム",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=001792050100r8-k9-01",
+      "detectedAt": "2026-10-16T05:59:36.514Z",
+      "kind": "new_winner"
     },
     {
       "id": "ikoma-result-2601100026",
@@ -228,8 +364,20 @@
       "biddingDate": "2026-10-09",
       "status": "不調",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-      "detectedAt": "2026-10-15T11:12:41.906Z",
+      "detectedAt": "2026-10-16T05:59:36.514Z",
       "kind": "new_failure"
+    },
+    {
+      "id": "ikoma-result-2601010074",
+      "municipality": "生駒市",
+      "title": "再開発住宅外壁及び屋根改修工事",
+      "announcementDate": "2026-10-09",
+      "biddingDate": "2026-10-09",
+      "status": "落札",
+      "winningContractor": "日本宣伝株式会社",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+      "detectedAt": "2026-10-16T05:59:36.514Z",
+      "kind": "new_winner"
     },
     {
       "id": "nara-pref-29001013060020260196",
@@ -239,7 +387,7 @@
       "biddingDate": "2026-10-05",
       "status": "不調",
       "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260196&gamenMode=0",
-      "detectedAt": "2026-10-15T11:12:41.906Z",
+      "detectedAt": "2026-10-16T05:59:36.514Z",
       "kind": "new_failure"
     },
     {
@@ -251,7 +399,7 @@
       "status": "落札",
       "winningContractor": "株式会社下西工務店",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-      "detectedAt": "2026-10-15T11:12:41.906Z",
+      "detectedAt": "2026-10-16T05:59:36.514Z",
       "kind": "new_winner"
     },
     {
@@ -263,85 +411,8 @@
       "status": "不調",
       "link": "https://www.town.miyake.lg.jp/soshiki/1/9376.html",
       "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5619.pdf",
-      "detectedAt": "2026-10-15T11:12:41.906Z",
+      "detectedAt": "2026-10-16T05:59:36.514Z",
       "kind": "new_failure"
-    },
-    {
-      "id": "miyake-2026-10-01-式下中学校体育館屋根・外壁その他改修工事",
-      "municipality": "三宅町",
-      "title": "式下中学校体育館屋根・外壁その他改修工事",
-      "announcementDate": "2026-10-01",
-      "biddingDate": "2026-10-01",
-      "status": "落札",
-      "winningContractor": "株式会社ゴセケン",
-      "link": "https://www.town.miyake.lg.jp/soshiki/1/9375.html",
-      "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5774.pdf",
-      "detectedAt": "2026-10-15T11:12:41.906Z",
-      "kind": "new_winner"
-    },
-    {
-      "id": "miyake-2026-10-01-三宅老人憩いの家解体工事設計委託業務",
-      "municipality": "三宅町",
-      "title": "三宅老人憩いの家解体工事設計委託業務",
-      "announcementDate": "2026-10-01",
-      "biddingDate": "2026-10-01",
-      "status": "落札",
-      "winningContractor": "株式会社 礎建築事務所",
-      "link": "https://www.town.miyake.lg.jp/soshiki/1/9376.html",
-      "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5773.pdf",
-      "detectedAt": "2026-10-15T11:12:41.906Z",
-      "kind": "new_winner"
-    },
-    {
-      "id": "miyake-2026-10-01-三宅町文化ホールトイレ改修工事",
-      "municipality": "三宅町",
-      "title": "三宅町文化ホールトイレ改修工事",
-      "announcementDate": "2026-10-01",
-      "biddingDate": "2026-10-01",
-      "status": "落札",
-      "winningContractor": "光栄工業",
-      "link": "https://www.town.miyake.lg.jp/soshiki/1/9375.html",
-      "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5616.pdf",
-      "detectedAt": "2026-10-15T11:12:41.906Z",
-      "kind": "new_winner"
-    },
-    {
-      "id": "koryo-2026-09-29-No42",
-      "municipality": "広陵町",
-      "title": "中公民館新築工事",
-      "announcementDate": "2026-09-29",
-      "biddingDate": "2026-09-29",
-      "status": "落札",
-      "winningContractor": "株式会社上村組",
-      "link": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7919/NO42-2.pdf",
-      "pdfUrl": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7919/NO42-2.pdf",
-      "detectedAt": "2026-10-15T11:12:41.906Z",
-      "kind": "new_winner"
-    },
-    {
-      "id": "koryo-2026-09-29-No48",
-      "municipality": "広陵町",
-      "title": "中公民館解体工事設計業務委託",
-      "announcementDate": "2026-09-29",
-      "biddingDate": "2026-09-29",
-      "status": "落札",
-      "winningContractor": "中村建築事務所",
-      "link": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7919/NO48-2.pdf",
-      "pdfUrl": "https://www.town.koryo.nara.jp/cmsfiles/contents/0000007/7919/NO48-2.pdf",
-      "detectedAt": "2026-10-15T11:12:41.906Z",
-      "kind": "new_winner"
-    },
-    {
-      "id": "高取町-2026-09-29-公営住宅丹生谷第1団地屋根葺替等改修工事監理業務",
-      "municipality": "高取町",
-      "title": "公営住宅丹生谷第1団地屋根葺替等改修工事監理業務",
-      "announcementDate": "2026-09-29",
-      "biddingDate": "2026-09-29",
-      "status": "落札",
-      "winningContractor": "(株)福井建築設計事務所",
-      "link": "https://www.town.takatori.nara.jp/contents_detail.php?co=cat&frmId=2205&frmCd=2-6-0-0-0",
-      "detectedAt": "2026-10-15T11:12:41.906Z",
-      "kind": "new_winner"
     }
   ]
 }

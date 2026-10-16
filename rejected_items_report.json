@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-15T11:12:41.913Z",
-  "totalRejected": 11172,
+  "generatedAt": "2026-10-16T05:59:36.524Z",
+  "totalRejected": 11160,
   "totalBorderlineRescued": 33,
   "byMunicipality": {
     "奈良市": {
@@ -20,7 +20,7 @@
       "borderlineRescued": 0
     },
     "大和郡山市": {
-      "rejected": 906,
+      "rejected": 912,
       "borderlineRescued": 0
     },
     "葛城市": {
@@ -28,7 +28,7 @@
       "borderlineRescued": 0
     },
     "五條市": {
-      "rejected": 1008,
+      "rejected": 1014,
       "borderlineRescued": 0
     },
     "御所市": {
@@ -56,7 +56,7 @@
       "borderlineRescued": 0
     },
     "香芝市": {
-      "rejected": 540,
+      "rejected": 492,
       "borderlineRescued": 0
     },
     "川西町": {
@@ -88,11 +88,11 @@
       "borderlineRescued": 0
     },
     "三郷町": {
-      "rejected": 720,
+      "rejected": 714,
       "borderlineRescued": 0
     },
     "王寺町": {
-      "rejected": 6,
+      "rejected": 36,
       "borderlineRescued": 0
     },
     "大淀町": {
@@ -27541,6 +27541,18 @@
     },
     {
       "municipality": "大和郡山市",
+      "title": "九条公園プール更新工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "九条公園プール更新工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和郡山市",
       "title": "地域防災緊急整備型事業に係る防災倉庫購入",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -29829,6 +29841,18 @@
     },
     {
       "municipality": "大和郡山市",
+      "title": "九条公園プール更新工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "九条公園プール更新工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和郡山市",
       "title": "地域防災緊急整備型事業に係る防災倉庫購入",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -32112,6 +32136,18 @@
     {
       "municipality": "大和郡山市",
       "title": "西田中町共同浴場解体工事設計委託業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "九条公園プール更新工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大和郡山市",
+      "title": "九条公園プール更新工事 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },
@@ -44941,6 +44977,22 @@
       "reason": "exclusion_keyword",
       "matchedKeywords": [
         "売却"
+      ]
+    },
+    {
+      "municipality": "五條市",
+      "title": "道路維持修繕工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "五條市",
+      "title": "道路維持修繕工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
       ]
     },
     {
@@ -47521,6 +47573,22 @@
     },
     {
       "municipality": "五條市",
+      "title": "道路維持修繕工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "五條市",
+      "title": "道路維持修繕工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "五條市",
       "title": "道路舗装工事",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -50029,6 +50097,22 @@
       "reason": "exclusion_keyword",
       "matchedKeywords": [
         "売却"
+      ]
+    },
+    {
+      "municipality": "五條市",
+      "title": "道路維持修繕工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "五條市",
+      "title": "道路維持修繕工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
       ]
     },
     {
@@ -66064,1110 +66148,6 @@
     },
     {
       "municipality": "香芝市",
-      "title": "舗装維持工事 公－０２１号",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "舗装維持工事 公－０２１号 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "香芝西中学校南側法面整備工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "法面"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "香芝西中学校南側法面整備工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "法面"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "藤山7-60号線他配水管布設替工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "藤山7-60号線他配水管布設替工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "関屋北2-137号線他配水管布設替工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "関屋北2-137号線他配水管布設替工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "公共下水道工事に伴う舗装復旧工事（２５－補５－３）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装",
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "公共下水道工事に伴う舗装復旧工事（２５－補５－３） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装",
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "令和８年度香芝市スポーツ公園整備事業に係る造成工事（その１）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "令和８年度香芝市スポーツ公園整備事業に係る造成工事（その１） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "舗装維持工事 公－０６８号",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "舗装維持工事 公－０６８号 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "公共下水道工事（２６－単１０３－４）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "公共下水道工事（２６－単１０３－４） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "公共下水道工事（２６－補８－３）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "公共下水道工事（２６－補８－３） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "五位堂10-167号線南側配水管布設替工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "五位堂10-167号線南側配水管布設替工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "北今市7-183号線西配水管布設替工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "北今市7-183号線西配水管布設替工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "磯壁9-109号線配水管布設替工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "磯壁9-109号線配水管布設替工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "上中5-19号線配水管布設替工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "上中5-19号線配水管布設替工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "今泉1-40号線他配水管布設替工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "今泉1-40号線他配水管布設替工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "関屋2-157号線他配水管布設替工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "関屋2-157号線他配水管布設替工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "香芝市総合公園等維持管理業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "香芝市総合公園等維持管理業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "公共下水道工事（２６－補３－３）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "公共下水道工事（２６－補３－３） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "舗装維持工事 公－０２２号",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "舗装維持工事 公－０２２号 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "舗装維持工事 公－０１７号",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "舗装維持工事 公－０１７号 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "舗装維持工事 公－０１９号",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "舗装維持工事 公－０１９号 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "舗装維持工事 公－０１８号",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "舗装維持工事 公－０１８号 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "真美ヶ丘西小学校児童用ロッカー改修工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "ロッカー"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "真美ヶ丘西小学校児童用ロッカー改修工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "ロッカー"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "公共下水道工事（２６－補１－５）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "公共下水道工事（２６－補１－５） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "公共下水道工事（２６－補４－４）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "公共下水道工事（２６－補４－４） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "国道168号西側配水管布設替工事（1工区）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "国道"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "国道168号西側配水管布設替工事（1工区） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "国道"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "下田東8-288号線他配水管布設替工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "下田東8-288号線他配水管布設替工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "穴虫国道165号北側配水管布設替工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "国道"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "穴虫国道165号北側配水管布設替工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "国道"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "西真美8-18号線他配水管布設替工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "西真美8-18号線他配水管布設替工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "穴虫4-80号線他配水管布設替工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "穴虫4-80号線他配水管布設替工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "舗装維持工事 公－０１３号",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "舗装維持工事 公－０１３号 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "舗装維持工事 公－０１２号",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "舗装維持工事 公－０１２号 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "令和８年度畑分川線（１工区）築造工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "令和８年度畑分川線（１工区）築造工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "公共下水道工事に伴う舗装復旧工事（２５－補４－４）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装",
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "公共下水道工事に伴う舗装復旧工事（２５－補４－４） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装",
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "公共下水道工事に伴う舗装復旧工事（２４－補５－４、２５－単１０１－４）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装",
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "公共下水道工事に伴う舗装復旧工事（２４－補５－４、２５－単１０１－４） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装",
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "公共下水道工事（２６－補５－５）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "公共下水道工事（２６－補５－５） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "公共下水道工事（２６－補７－６）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "公共下水道工事（２６－補７－６） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "公共下水道工事（２６－単１０２－４）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "公共下水道工事（２６－単１０２－４） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "都市公園維持管理業務（その４） 公－５０８号",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "都市公園維持管理業務（その４） 公－５０８号 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "都市公園維持管理業務（その３） 公－５０７号",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "都市公園維持管理業務（その３） 公－５０７号 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "都市公園維持管理業務（その２） 公－５０６号",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "都市公園維持管理業務（その２） 公－５０６号 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "都市公園維持管理業務（その１） 公－５０５号",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "都市公園維持管理業務（その１） 公－５０５号 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "街路維持管理業務（その４） 公－５０４号",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "街路維持管理業務（その４） 公－５０４号 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "街路維持管理業務（その３） 公－５０３号",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "街路維持管理業務（その３） 公－５０３号 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "街路維持管理業務（その２） 公－５０２号",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "街路維持管理業務（その２） 公－５０２号 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "街路維持管理業務（その１） 公－５０１号",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "街路維持管理業務（その１） 公－５０１号 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "排水路浚渫工事 公－００４号",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "浚渫",
-        "排水路",
-        "水路"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "排水路浚渫工事 公－００４号 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "浚渫",
-        "排水路",
-        "水路"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "中学校草刈業務",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "中学校草刈業務 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "小学校草刈業務",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "小学校草刈業務 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "令和８年度浸水対策水路明示業務（平野地区）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "水路"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "令和８年度浸水対策水路明示業務（平野地区） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "水路"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "香芝市橋梁定期点検委託業務 公－５５４号",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋梁",
-        "橋",
-        "定期点検"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "香芝市橋梁定期点検委託業務 公－５５４号 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋梁",
-        "橋",
-        "定期点検"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "市道１０－５２号線他道路拡幅事業に係る測量設計業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "測量"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "市道１０－５２号線他道路拡幅事業に係る測量設計業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "測量"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "市道８－２９０号線交差点改良事業に係る測量設計業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "測量"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "市道８－２９０号線交差点改良事業に係る測量設計業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "測量"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "市道１０－１３４号線道路拡幅事業に係る測量設計業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "測量"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "市道１０－１３４号線道路拡幅事業に係る測量設計業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "測量"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "公共下水道工事に伴う設計業務（２６－単１）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "公共下水道工事に伴う設計業務（２６－単１） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "市道１０－３６号線道路改良事業に係る詳細設計業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "市道１０－３６号線道路改良事業に係る詳細設計業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "配水本管φ600更新工事（3工区）基本及び詳細設計業務",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "配水本管φ600更新工事（3工区）基本及び詳細設計業務 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "路面性状調査業務 公－５４５号",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "調査"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "路面性状調査業務 公－５４５号 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "調査"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "西の川第１雨水幹線暗渠化設計業務",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "西の川第１雨水幹線暗渠化設計業務 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "市道１０－１３号線他道路拡幅事業に係る測量設計業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "測量"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "市道１０－１３号線他道路拡幅事業に係る測量設計業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "測量"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "令和８年度香芝市スポーツ公園整備事業に係る補償再算定業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "補償"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "令和８年度香芝市スポーツ公園整備事業に係る補償再算定業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "補償"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "市道５－７３号線道路拡幅事業に係る測量設計業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "測量"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "市道５－７３号線道路拡幅事業に係る測量設計業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "測量"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "二上小学校擁壁改修工事に伴う測量設計業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "擁壁",
-        "測量"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "二上小学校擁壁改修工事に伴う測量設計業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "擁壁",
-        "測量"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "中和幹線法面設計業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "法面"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "中和幹線法面設計業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "法面"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "狐井中央公園整備事業に係る概略設計業務",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "狐井中央公園整備事業に係る概略設計業務 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "市道4-42号線改良事業に係る概略設計業務",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "市道4-42号線改良事業に係る概略設計業務 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "香芝市総合公園設計業務",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "香芝市総合公園設計業務 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "市道2-171号線道路改良に伴う測量設計業務 公－５３３号",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "測量"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "市道2-171号線道路改良に伴う測量設計業務 公－５３３号 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "測量"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "市道1-25号線道路改良に伴う測量設計業務 公－５２２号",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "測量"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "市道1-25号線道路改良に伴う測量設計業務 公－５２２号 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "測量"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "令和８年度香芝市流域関連公共下水道全体計画変更業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "令和８年度香芝市流域関連公共下水道全体計画変更業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "公共下水道工事に伴う設計業務（２６－補１）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "公共下水道工事に伴う設計業務（２６－補１） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "香芝西中学校法面測量調査設計業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "法面",
-        "測量",
-        "調査"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "香芝西中学校法面測量調査設計業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "法面",
-        "測量",
-        "調査"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "国道168号西側配水管布設替工事(2工区)",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "国道"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "国道168号西側配水管布設替工事(2工区) ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "国道"
-      ]
-    },
-    {
-      "municipality": "香芝市",
       "title": "令和８年度浸水対策工事（平野地区）",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -67177,22 +66157,6 @@
       "title": "令和８年度浸水対策工事（平野地区） ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "区画線設置工事 公－０９１号",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "区画線"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "区画線設置工事 公－０９１号 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "区画線"
-      ]
     },
     {
       "municipality": "香芝市",
@@ -67226,15 +66190,35 @@
     },
     {
       "municipality": "香芝市",
-      "title": "都市公園園路更新工事 公－０６７号",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
+      "title": "旭ケ丘近隣公園調整池浚渫工事 公－０９７号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "浚渫"
+      ]
     },
     {
       "municipality": "香芝市",
-      "title": "都市公園園路更新工事 公－０６７号 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
+      "title": "旭ケ丘近隣公園調整池浚渫工事 公－０９７号 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "浚渫"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "高山台調整池土砂撤去工事 公－０９５号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "土砂"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "高山台調整池土砂撤去工事 公－０９５号 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "土砂"
+      ]
     },
     {
       "municipality": "香芝市",
@@ -67256,50 +66240,30 @@
     },
     {
       "municipality": "香芝市",
-      "title": "高山台調整池土砂撤去工事 公－０９５号",
+      "title": "都市公園園路更新工事 公－０６７号",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "都市公園園路更新工事 公－０６７号 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "区画線設置工事 公－０９１号",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
-        "土砂"
+        "区画線"
       ]
     },
     {
       "municipality": "香芝市",
-      "title": "高山台調整池土砂撤去工事 公－０９５号 ",
+      "title": "区画線設置工事 公－０９１号 ",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
-        "土砂"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "旭ケ丘調整池浚渫工事 公－０９７号",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "浚渫"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "旭ケ丘調整池浚渫工事 公－０９７号 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "浚渫"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "漏水修理跡の舗装復旧工事(北地区)",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "漏水修理跡の舗装復旧工事(北地区) ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
+        "区画線"
       ]
     },
     {
@@ -67320,123 +66284,19 @@
     },
     {
       "municipality": "香芝市",
-      "title": "区画線設置工事 公－091号",
+      "title": "漏水修理跡の舗装復旧工事(北地区)",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
-        "区画線"
+        "舗装"
       ]
     },
     {
       "municipality": "香芝市",
-      "title": "区画線設置工事 公－091号 ",
+      "title": "漏水修理跡の舗装復旧工事(北地区) ",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
-        "区画線"
+        "舗装"
       ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "都市公園園路更新工事 公－067号",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "都市公園園路更新工事 公－067号 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "河川土砂撤去工事 公－094号",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "河川",
-        "土砂"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "河川土砂撤去工事 公－094号 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "河川",
-        "土砂"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "高山台調整池土砂撤去工事 公－095号",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "土砂"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "高山台調整池土砂撤去工事 公－095号 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "土砂"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "旭ケ丘調整池浚渫工事 公－097号",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "浚渫"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "旭ケ丘調整池浚渫工事 公－097号 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "浚渫"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "橋梁（無名橋14）修繕工事 公－065号",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋梁",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "橋梁（無名橋14）修繕工事 公－065号 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋梁",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "歩道バリアフリー整備工事 公－064号",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "歩道バリアフリー整備工事 公－064号 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "令和8年度浸水対策工事（平野地区）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "令和8年度浸水対策工事（平野地区） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
     },
     {
       "municipality": "香芝市",
@@ -68556,22 +67416,6 @@
     },
     {
       "municipality": "香芝市",
-      "title": "区画線設置工事 公－０９１号",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "区画線"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "区画線設置工事 公－０９１号 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "区画線"
-      ]
-    },
-    {
-      "municipality": "香芝市",
       "title": "歩道バリアフリー整備工事 公－０６４号",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -68602,15 +67446,35 @@
     },
     {
       "municipality": "香芝市",
-      "title": "都市公園園路更新工事 公－０６７号",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
+      "title": "旭ケ丘近隣公園調整池浚渫工事 公－０９７号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "浚渫"
+      ]
     },
     {
       "municipality": "香芝市",
-      "title": "都市公園園路更新工事 公－０６７号 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
+      "title": "旭ケ丘近隣公園調整池浚渫工事 公－０９７号 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "浚渫"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "高山台調整池土砂撤去工事 公－０９５号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "土砂"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "高山台調整池土砂撤去工事 公－０９５号 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "土砂"
+      ]
     },
     {
       "municipality": "香芝市",
@@ -68632,50 +67496,30 @@
     },
     {
       "municipality": "香芝市",
-      "title": "高山台調整池土砂撤去工事 公－０９５号",
+      "title": "都市公園園路更新工事 公－０６７号",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "都市公園園路更新工事 公－０６７号 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "区画線設置工事 公－０９１号",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
-        "土砂"
+        "区画線"
       ]
     },
     {
       "municipality": "香芝市",
-      "title": "高山台調整池土砂撤去工事 公－０９５号 ",
+      "title": "区画線設置工事 公－０９１号 ",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
-        "土砂"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "旭ケ丘調整池浚渫工事 公－０９７号",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "浚渫"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "旭ケ丘調整池浚渫工事 公－０９７号 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "浚渫"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "漏水修理跡の舗装復旧工事(北地区)",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "漏水修理跡の舗装復旧工事(北地区) ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
+        "区画線"
       ]
     },
     {
@@ -68696,123 +67540,19 @@
     },
     {
       "municipality": "香芝市",
-      "title": "区画線設置工事 公－091号",
+      "title": "漏水修理跡の舗装復旧工事(北地区)",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
-        "区画線"
+        "舗装"
       ]
     },
     {
       "municipality": "香芝市",
-      "title": "区画線設置工事 公－091号 ",
+      "title": "漏水修理跡の舗装復旧工事(北地区) ",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
-        "区画線"
+        "舗装"
       ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "都市公園園路更新工事 公－067号",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "都市公園園路更新工事 公－067号 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "河川土砂撤去工事 公－094号",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "河川",
-        "土砂"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "河川土砂撤去工事 公－094号 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "河川",
-        "土砂"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "高山台調整池土砂撤去工事 公－095号",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "土砂"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "高山台調整池土砂撤去工事 公－095号 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "土砂"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "旭ケ丘調整池浚渫工事 公－097号",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "浚渫"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "旭ケ丘調整池浚渫工事 公－097号 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "浚渫"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "橋梁（無名橋14）修繕工事 公－065号",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋梁",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "橋梁（無名橋14）修繕工事 公－065号 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋梁",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "歩道バリアフリー整備工事 公－064号",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "歩道バリアフリー整備工事 公－064号 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "令和8年度浸水対策工事（平野地区）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "香芝市",
-      "title": "令和8年度浸水対策工事（平野地区） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
     },
     {
       "municipality": "香芝市",
@@ -69932,22 +68672,6 @@
     },
     {
       "municipality": "香芝市",
-      "title": "区画線設置工事 公－０９１号",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "区画線"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "区画線設置工事 公－０９１号 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "区画線"
-      ]
-    },
-    {
-      "municipality": "香芝市",
       "title": "歩道バリアフリー整備工事 公－０６４号",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -69978,15 +68702,35 @@
     },
     {
       "municipality": "香芝市",
-      "title": "都市公園園路更新工事 公－０６７号",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
+      "title": "旭ケ丘近隣公園調整池浚渫工事 公－０９７号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "浚渫"
+      ]
     },
     {
       "municipality": "香芝市",
-      "title": "都市公園園路更新工事 公－０６７号 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
+      "title": "旭ケ丘近隣公園調整池浚渫工事 公－０９７号 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "浚渫"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "高山台調整池土砂撤去工事 公－０９５号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "土砂"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "高山台調整池土砂撤去工事 公－０９５号 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "土砂"
+      ]
     },
     {
       "municipality": "香芝市",
@@ -70008,50 +68752,30 @@
     },
     {
       "municipality": "香芝市",
-      "title": "高山台調整池土砂撤去工事 公－０９５号",
+      "title": "都市公園園路更新工事 公－０６７号",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "都市公園園路更新工事 公－０６７号 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "区画線設置工事 公－０９１号",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
-        "土砂"
+        "区画線"
       ]
     },
     {
       "municipality": "香芝市",
-      "title": "高山台調整池土砂撤去工事 公－０９５号 ",
+      "title": "区画線設置工事 公－０９１号 ",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
-        "土砂"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "旭ケ丘調整池浚渫工事 公－０９７号",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "浚渫"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "旭ケ丘調整池浚渫工事 公－０９７号 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "浚渫"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "漏水修理跡の舗装復旧工事(北地区)",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "香芝市",
-      "title": "漏水修理跡の舗装復旧工事(北地区) ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
+        "区画線"
       ]
     },
     {
@@ -70072,123 +68796,1123 @@
     },
     {
       "municipality": "香芝市",
-      "title": "区画線設置工事 公－091号",
+      "title": "漏水修理跡の舗装復旧工事(北地区)",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
-        "区画線"
+        "舗装"
       ]
     },
     {
       "municipality": "香芝市",
-      "title": "区画線設置工事 公－091号 ",
+      "title": "漏水修理跡の舗装復旧工事(北地区) ",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
-        "区画線"
+        "舗装"
       ]
     },
     {
       "municipality": "香芝市",
-      "title": "都市公園園路更新工事 公－067号",
+      "title": "舗装維持工事 公－０２１号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "舗装維持工事 公－０２１号 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "香芝西中学校南側法面整備工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "法面"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "香芝西中学校南側法面整備工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "法面"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "藤山7-60号線他配水管布設替工事",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },
     {
       "municipality": "香芝市",
-      "title": "都市公園園路更新工事 公－067号 ",
+      "title": "藤山7-60号線他配水管布設替工事 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },
     {
       "municipality": "香芝市",
-      "title": "河川土砂撤去工事 公－094号",
+      "title": "関屋北2-137号線他配水管布設替工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "関屋北2-137号線他配水管布設替工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "公共下水道工事に伴う舗装復旧工事（２５－補５－３）",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
-        "河川",
-        "土砂"
+        "舗装",
+        "下水道"
       ]
     },
     {
       "municipality": "香芝市",
-      "title": "河川土砂撤去工事 公－094号 ",
+      "title": "公共下水道工事に伴う舗装復旧工事（２５－補５－３） ",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
-        "河川",
-        "土砂"
+        "舗装",
+        "下水道"
       ]
     },
     {
       "municipality": "香芝市",
-      "title": "高山台調整池土砂撤去工事 公－095号",
+      "title": "令和８年度香芝市スポーツ公園整備事業に係る造成工事（その１）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "令和８年度香芝市スポーツ公園整備事業に係る造成工事（その１） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "舗装維持工事 公－０６８号",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
-        "土砂"
+        "舗装"
       ]
     },
     {
       "municipality": "香芝市",
-      "title": "高山台調整池土砂撤去工事 公－095号 ",
+      "title": "舗装維持工事 公－０６８号 ",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
-        "土砂"
+        "舗装"
       ]
     },
     {
       "municipality": "香芝市",
-      "title": "旭ケ丘調整池浚渫工事 公－097号",
+      "title": "公共下水道工事（２６－単１０３－４）",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
-        "浚渫"
+        "下水道"
       ]
     },
     {
       "municipality": "香芝市",
-      "title": "旭ケ丘調整池浚渫工事 公－097号 ",
+      "title": "公共下水道工事（２６－単１０３－４） ",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
-        "浚渫"
+        "下水道"
       ]
     },
     {
       "municipality": "香芝市",
-      "title": "橋梁（無名橋14）修繕工事 公－065号",
+      "title": "公共下水道工事（２６－補８－３）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "公共下水道工事（２６－補８－３） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "五位堂10-167号線南側配水管布設替工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "五位堂10-167号線南側配水管布設替工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "北今市7-183号線西配水管布設替工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "北今市7-183号線西配水管布設替工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "磯壁9-109号線配水管布設替工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "磯壁9-109号線配水管布設替工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "上中5-19号線配水管布設替工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "上中5-19号線配水管布設替工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "今泉1-40号線他配水管布設替工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "今泉1-40号線他配水管布設替工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "関屋2-157号線他配水管布設替工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "関屋2-157号線他配水管布設替工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "香芝市総合公園等維持管理業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "香芝市総合公園等維持管理業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "公共下水道工事（２６－補３－３）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "公共下水道工事（２６－補３－３） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "舗装維持工事 公－０２２号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "舗装維持工事 公－０２２号 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "舗装維持工事 公－０１７号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "舗装維持工事 公－０１７号 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "舗装維持工事 公－０１９号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "舗装維持工事 公－０１９号 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "舗装維持工事 公－０１８号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "舗装維持工事 公－０１８号 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "真美ヶ丘西小学校児童用ロッカー改修工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "ロッカー"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "真美ヶ丘西小学校児童用ロッカー改修工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "ロッカー"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "公共下水道工事（２６－補１－５）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "公共下水道工事（２６－補１－５） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "公共下水道工事（２６－補４－４）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "公共下水道工事（２６－補４－４） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "国道168号西側配水管布設替工事（1工区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "国道"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "国道168号西側配水管布設替工事（1工区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "国道"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "下田東8-288号線他配水管布設替工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "下田東8-288号線他配水管布設替工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "穴虫国道165号北側配水管布設替工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "国道"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "穴虫国道165号北側配水管布設替工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "国道"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "西真美8-18号線他配水管布設替工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "西真美8-18号線他配水管布設替工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "穴虫4-80号線他配水管布設替工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "穴虫4-80号線他配水管布設替工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "舗装維持工事 公－０１３号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "舗装維持工事 公－０１３号 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "舗装維持工事 公－０１２号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "舗装維持工事 公－０１２号 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "令和８年度畑分川線（１工区）築造工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "令和８年度畑分川線（１工区）築造工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "公共下水道工事に伴う舗装復旧工事（２５－補４－４）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装",
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "公共下水道工事に伴う舗装復旧工事（２５－補４－４） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装",
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "公共下水道工事に伴う舗装復旧工事（２４－補５－４、２５－単１０１－４）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装",
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "公共下水道工事に伴う舗装復旧工事（２４－補５－４、２５－単１０１－４） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装",
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "公共下水道工事（２６－補５－５）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "公共下水道工事（２６－補５－５） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "公共下水道工事（２６－補７－６）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "公共下水道工事（２６－補７－６） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "公共下水道工事（２６－単１０２－４）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "公共下水道工事（２６－単１０２－４） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "都市公園維持管理業務（その４） 公－５０８号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "都市公園維持管理業務（その４） 公－５０８号 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "都市公園維持管理業務（その３） 公－５０７号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "都市公園維持管理業務（その３） 公－５０７号 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "都市公園維持管理業務（その２） 公－５０６号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "都市公園維持管理業務（その２） 公－５０６号 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "都市公園維持管理業務（その１） 公－５０５号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "都市公園維持管理業務（その１） 公－５０５号 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "街路維持管理業務（その４） 公－５０４号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "街路維持管理業務（その４） 公－５０４号 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "街路維持管理業務（その３） 公－５０３号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "街路維持管理業務（その３） 公－５０３号 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "街路維持管理業務（その２） 公－５０２号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "街路維持管理業務（その２） 公－５０２号 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "街路維持管理業務（その１） 公－５０１号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "街路維持管理業務（その１） 公－５０１号 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "排水路浚渫工事 公－００４号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "浚渫",
+        "排水路",
+        "水路"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "排水路浚渫工事 公－００４号 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "浚渫",
+        "排水路",
+        "水路"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "中学校草刈業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "中学校草刈業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "小学校草刈業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "小学校草刈業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "令和８年度浸水対策水路明示業務（平野地区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "水路"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "令和８年度浸水対策水路明示業務（平野地区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "水路"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "香芝市橋梁定期点検委託業務 公－５５４号",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
         "橋梁",
-        "橋"
+        "橋",
+        "定期点検"
       ]
     },
     {
       "municipality": "香芝市",
-      "title": "橋梁（無名橋14）修繕工事 公－065号 ",
+      "title": "香芝市橋梁定期点検委託業務 公－５５４号 ",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
         "橋梁",
-        "橋"
+        "橋",
+        "定期点検"
       ]
     },
     {
       "municipality": "香芝市",
-      "title": "歩道バリアフリー整備工事 公－064号",
+      "title": "市道１０－５２号線他道路拡幅事業に係る測量設計業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "測量"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "市道１０－５２号線他道路拡幅事業に係る測量設計業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "測量"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "市道８－２９０号線交差点改良事業に係る測量設計業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "測量"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "市道８－２９０号線交差点改良事業に係る測量設計業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "測量"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "市道１０－１３４号線道路拡幅事業に係る測量設計業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "測量"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "市道１０－１３４号線道路拡幅事業に係る測量設計業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "測量"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "公共下水道工事に伴う設計業務（２６－単１）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "公共下水道工事に伴う設計業務（２６－単１） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "市道１０－３６号線道路改良事業に係る詳細設計業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "市道１０－３６号線道路改良事業に係る詳細設計業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "配水本管φ600更新工事（3工区）基本及び詳細設計業務",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },
     {
       "municipality": "香芝市",
-      "title": "歩道バリアフリー整備工事 公－064号 ",
+      "title": "配水本管φ600更新工事（3工区）基本及び詳細設計業務 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },
     {
       "municipality": "香芝市",
-      "title": "令和8年度浸水対策工事（平野地区）",
+      "title": "路面性状調査業務 公－５４５号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "路面性状調査業務 公－５４５号 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "西の川第１雨水幹線暗渠化設計業務",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },
     {
       "municipality": "香芝市",
-      "title": "令和8年度浸水対策工事（平野地区） ",
+      "title": "西の川第１雨水幹線暗渠化設計業務 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "市道１０－１３号線他道路拡幅事業に係る測量設計業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "測量"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "市道１０－１３号線他道路拡幅事業に係る測量設計業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "測量"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "令和８年度香芝市スポーツ公園整備事業に係る補償再算定業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "補償"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "令和８年度香芝市スポーツ公園整備事業に係る補償再算定業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "補償"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "市道５－７３号線道路拡幅事業に係る測量設計業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "測量"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "市道５－７３号線道路拡幅事業に係る測量設計業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "測量"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "二上小学校擁壁改修工事に伴う測量設計業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "擁壁",
+        "測量"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "二上小学校擁壁改修工事に伴う測量設計業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "擁壁",
+        "測量"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "中和幹線法面設計業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "法面"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "中和幹線法面設計業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "法面"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "狐井中央公園整備事業に係る概略設計業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "狐井中央公園整備事業に係る概略設計業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "市道4-42号線改良事業に係る概略設計業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "市道4-42号線改良事業に係る概略設計業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "香芝市総合公園設計業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "香芝市総合公園設計業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "香芝市",
+      "title": "市道2-171号線道路改良に伴う測量設計業務 公－５３３号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "測量"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "市道2-171号線道路改良に伴う測量設計業務 公－５３３号 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "測量"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "市道1-25号線道路改良に伴う測量設計業務 公－５２２号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "測量"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "市道1-25号線道路改良に伴う測量設計業務 公－５２２号 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "測量"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "令和８年度香芝市流域関連公共下水道全体計画変更業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "令和８年度香芝市流域関連公共下水道全体計画変更業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "公共下水道工事に伴う設計業務（２６－補１）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "公共下水道工事に伴う設計業務（２６－補１） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "香芝西中学校法面測量調査設計業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "法面",
+        "測量",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "香芝西中学校法面測量調査設計業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "法面",
+        "測量",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "国道168号西側配水管布設替工事(2工区)",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "国道"
+      ]
+    },
+    {
+      "municipality": "香芝市",
+      "title": "国道168号西側配水管布設替工事(2工区) ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "国道"
+      ]
     },
     {
       "municipality": "川西町",
@@ -76446,13 +76170,1735 @@
     },
     {
       "municipality": "三郷町",
-      "title": "指名競争入札10月16日実施分",
+      "title": "入札参加資格者入札参加停止措置一覧",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },
     {
       "municipality": "三郷町",
-      "title": "指名競争入札10月16日実施分 ",
+      "title": "入札参加資格者入札参加停止措置一覧 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8・9年度競争入札参加資格審査申請書について",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "資格審査"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8・9年度競争入札参加資格審査申請書について ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "資格審査"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "三郷町競争入札発注基準・格付基準について",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "三郷町競争入札発注基準・格付基準について ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "入札に関する様式集",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "入札に関する様式集 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "入札結果",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "入札結果 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "一般競争入札",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "一般競争入札 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 勢野グラウンド改修工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 勢野グラウンド改修工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 立野汚水中継ポンプ場着水ゲート分解整備工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 立野汚水中継ポンプ場着水ゲート分解整備工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 汚水ポンプ3号分解整備修繕",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 汚水ポンプ3号分解整備修繕 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 町道勢野2号線他舗装修繕工事（長寿命化事業）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 町道勢野2号線他舗装修繕工事（長寿命化事業） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 町道立野162号線舗装修繕工事（長寿命化事業）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 町道立野162号線舗装修繕工事（長寿命化事業） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 三郷町水質改善下水道汚水管築造工事（勢野東14工区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 三郷町水質改善下水道汚水管築造工事（勢野東14工区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 大門ダムマンホールポンプ場2号ポンプ等取替工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "ダム"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 大門ダムマンホールポンプ場2号ポンプ等取替工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "ダム"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和８年度 城山台ポンプ場ＬＥＤ化工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和８年度 城山台ポンプ場ＬＥＤ化工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 公共下水道人孔蓋更新工事（城山台）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 公共下水道人孔蓋更新工事（城山台） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 三郷町浸水対策下水道雨水管築造工事（勢野東2工区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 三郷町浸水対策下水道雨水管築造工事（勢野東2工区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 町道三室7号線他舗装修繕工事（長寿命化事業）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 町道三室7号線他舗装修繕工事（長寿命化事業） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 町道立野124号線他舗装修繕工事（長寿命化事業）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 町道立野124号線他舗装修繕工事（長寿命化事業） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 町道城山台35号線舗装修繕工事（長寿命化事業）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 町道城山台35号線舗装修繕工事（長寿命化事業） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 三郷町水質改善下水道汚水管築造工事（惣持寺5-2工区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 三郷町水質改善下水道汚水管築造工事（惣持寺5-2工区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 大型看板取替等工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "看板"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 大型看板取替等工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "看板"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 汚水ポンプ分解整備修繕",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 汚水ポンプ分解整備修繕 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 勢野地域し尿処理場流量計更新等工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 勢野地域し尿処理場流量計更新等工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 町道立野163号線他舗装修繕工事（長寿命化事業）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 町道立野163号線他舗装修繕工事（長寿命化事業） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 町道美松ヶ丘38号線他舗装修繕工事（長寿命化事業）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 町道美松ヶ丘38号線他舗装修繕工事（長寿命化事業） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 町道立野31号線舗装修繕工事（長寿命化事業）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 町道立野31号線舗装修繕工事（長寿命化事業） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 竜の子斎場火葬炉耐火物等修繕工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 竜の子斎場火葬炉耐火物等修繕工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 三郷町水質改善下水道汚水管築造工事（勢野東1）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 三郷町水質改善下水道汚水管築造工事（勢野東1） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 ウォーターパーク汚水ポンプ等取替工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 ウォーターパーク汚水ポンプ等取替工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 三郷町雨水排水台帳図作成業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 三郷町雨水排水台帳図作成業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 マンホールトイレ詳細設計業務（給食センター）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "給食"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 マンホールトイレ詳細設計業務（給食センター） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "給食"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和８年度 三郷町水質改善下水道汚水管築造工事（勢野東14工区）家屋調査",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道",
+        "家屋調査",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和８年度 三郷町水質改善下水道汚水管築造工事（勢野東14工区）家屋調査 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道",
+        "家屋調査",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和８年度 学校施設特定建築物定期調査及び非構造部材の耐震点検業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和８年度 学校施設特定建築物定期調査及び非構造部材の耐震点検業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 三郷町水質改善下水道汚水管築造工事（惣持寺5-2工区）家屋調査",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道",
+        "家屋調査",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 三郷町水質改善下水道汚水管築造工事（惣持寺5-2工区）家屋調査 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道",
+        "家屋調査",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 公共下水道人孔防食工事（3工区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 公共下水道人孔防食工事（3工区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "メニュー 検索 <p>JavaScriptが無効のため、文字の大きさ・背景色を変更する機能を使用できません。</p> 本文へ Foreign Language 文字サイズ標準拡大 背景色白黒青 危険箇所をおしらせください 防犯・安心情報 休日・夜間救急 検索コーナー キーワード検索 Googleカスタム検索 検索対象 すべて ページ PDF ページID検索 暮らし・手続き 健康・福祉・子育て 教育・文化・スポーツ 産業・ビジネス 行政情報",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "メニュー 検索 <p>JavaScriptが無効のため、文字の大きさ・背景色を変更する機能を使用できません。</p> 本文へ Foreign Language 文字サイズ標準拡大 背景色白黒青 危険箇所をおしらせください 防犯・安心情報 休日・夜間救急 検索コーナー キーワード検索 Googleカスタム検索 検索対象 すべて ページ PDF ページID検索 暮らし・手続き 健康・福祉・子育て 教育・文化・スポーツ 産業・ビジネス 行政情報 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "Foreign Language",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "Foreign Language ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "文字サイズ標準拡大",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "文字サイズ標準拡大 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "拡大",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "拡大 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "黒",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "黒 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "青",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "青 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "防犯・安心情報",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "防犯・安心情報 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "休日・夜間救急",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "休日・夜間救急 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "健康・福祉・子育て",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "健康・福祉・子育て ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "教育・文化・スポーツ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "教育・文化・スポーツ ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "産業・ビジネス",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "産業・ビジネス ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "行政情報",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "行政情報 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": ">",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "> ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "指名競争入札5月1日",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "指名競争入札5月1日 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "指名競争入札5月22日",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "指名競争入札5月22日 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "指名競争入札6月4日",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "指名競争入札6月4日 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "指名競争入札6月18日",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "指名競争入札6月18日 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "指名競争入札7月9日",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "指名競争入札7月9日 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "指名競争入札9月3日",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "指名競争入札9月3日 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "指名競争入札9月17日",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "指名競争入札9月17日 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 城山台第2児童公園他樹木伐採業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 城山台第2児童公園他樹木伐採業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 街路樹剪定業務（1工区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 街路樹剪定業務（1工区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 街路樹剪定業務（2工区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 街路樹剪定業務（2工区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "街路樹"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 軽自動車購入",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入",
+        "自動車"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 軽自動車購入 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入",
+        "自動車"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 三郷小学校植木剪定及び薬剤散布業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "薬剤"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 三郷小学校植木剪定及び薬剤散布業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "薬剤"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 三郷北小学校植木剪定及び薬剤散布業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "薬剤"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 三郷北小学校植木剪定及び薬剤散布業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "薬剤"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 公用車購入",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 公用車購入 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 勢野グラウンド草刈業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 勢野グラウンド草刈業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 竜田運動公園草刈業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 竜田運動公園草刈業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 学校電子黒板購入",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 学校電子黒板購入 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 三郷小学校施設清掃業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "清掃",
+        "清掃"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 三郷小学校施設清掃業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "清掃",
+        "清掃"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 三郷北小学校施設清掃業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "清掃",
+        "清掃"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 三郷北小学校施設清掃業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "清掃",
+        "清掃"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 中学校施設清掃業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "清掃",
+        "清掃"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 中学校施設清掃業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "清掃",
+        "清掃"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 図書館外周等樹木剪定等業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 図書館外周等樹木剪定等業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度（繰） 避難所生活環境向上事業（地域未来交付金）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度（繰） 避難所生活環境向上事業（地域未来交付金） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度（繰） 物資運搬用車両購入（地域未来交付金）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入",
+        "車両",
+        "運搬"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度（繰） 物資運搬用車両購入（地域未来交付金） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入",
+        "車両",
+        "運搬"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 公用車（軽自動車）購入",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入",
+        "自動車"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 公用車（軽自動車）購入 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入",
+        "自動車"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 宅地等適正管理業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 宅地等適正管理業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 都市公園等維持管理業務（1工区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 都市公園等維持管理業務（1工区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 都市公園等維持管理業務（2工区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 都市公園等維持管理業務（2工区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 ごみ中継施設環境測定業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 ごみ中継施設環境測定業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 南畑幼稚園剪定等業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 南畑幼稚園剪定等業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度立野汚水中継ポンプ場維持管理業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度立野汚水中継ポンプ場維持管理業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度マンホールポンプ場及び城山台ポンプ場等維持管理業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度マンホールポンプ場及び城山台ポンプ場等維持管理業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度廃プラスチック類運搬及び再生処理業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "運搬"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度廃プラスチック類運搬及び再生処理業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "運搬"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度間伐材等搬送業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "搬送"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度間伐材等搬送業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "搬送"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度三郷町ごみ収集運搬等業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "運搬",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度三郷町ごみ収集運搬等業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "運搬",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度南畑地域し尿処理場等維持管理業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度南畑地域し尿処理場等維持管理業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度勢野地域し尿処理場維持管理業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度勢野地域し尿処理場維持管理業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度椿井処理場等維持管理業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度椿井処理場等維持管理業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "維持管理"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度図書館施設環境衛生管理業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度図書館施設環境衛生管理業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度三郷町議会反訳業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "議会"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度三郷町議会反訳業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "議会"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度「ふれあい交流センター等清掃業務」",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "清掃",
+        "清掃"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度「ふれあい交流センター等清掃業務」 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "清掃",
+        "清掃"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "PDF形式のファイルをご覧いただく場合には、Adobe社が提供するAdobe Readerが必要です。 Adobe Readerをお持ちでない方は、バナーのリンク先からダウンロードしてください。（無料）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "PDF形式のファイルをご覧いただく場合には、Adobe社が提供するAdobe Readerが必要です。 Adobe Readerをお持ちでない方は、バナーのリンク先からダウンロードしてください。（無料） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "document.write('<div class=\"fb-like\" data-href=\"'+htmlspecialchars_URL(location.href)+'\" data-layout=\"button\" data-action=\"like\" data-size=\"small\" data-show-faces=\"false\" data-share=\"true\"></div>');",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "document.write('<div class=\"fb-like\" data-href=\"'+htmlspecialchars_URL(location.href)+'\" data-layout=\"button\" data-action=\"like\" data-size=\"small\" data-show-faces=\"false\" data-share=\"true\"></div>'); ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "よくある質問と回答",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "よくある質問と回答 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "リンク・著作権 個人情報利用規定 サイト利用案内 RSS利用案内 ウェブアクセシビリティ指針 サイトマップ バナー広告",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "案内",
+        "サイトマップ"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "リンク・著作権 個人情報利用規定 サイト利用案内 RSS利用案内 ウェブアクセシビリティ指針 サイトマップ バナー広告 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "案内",
+        "サイトマップ"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "個人情報利用規定",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "個人情報利用規定 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "サイト利用案内",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "案内"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "サイト利用案内 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "案内"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "RSS利用案内",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "案内"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "RSS利用案内 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "案内"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "ウェブアクセシビリティ指針",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "ウェブアクセシビリティ指針 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "サイトマップ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "サイトマップ"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "サイトマップ ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "サイトマップ"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "バナー広告",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "バナー広告 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "〒636-8535 奈良県生駒郡三郷町勢野西1丁目1番1号",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "〒636-8535 奈良県生駒郡三郷町勢野西1丁目1番1号 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "＜外部リンク＞ 閉じる",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "＜外部リンク＞ 閉じる ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 三郷町水質改善下水道汚水管築造工事（信貴山東4-1工区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 三郷町水質改善下水道汚水管築造工事（信貴山東4-1工区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 公共下水道人孔蓋更新工事（立野2工区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 公共下水道人孔蓋更新工事（立野2工区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 三郷町道路台帳更新業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 三郷町道路台帳更新業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 道路施設定期点検業務（橋梁点検）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "橋梁",
+        "橋",
+        "定期点検"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 道路施設定期点検業務（橋梁点検） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "橋梁",
+        "橋",
+        "定期点検"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 公共下水道人孔蓋更新工事（立野1工区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 公共下水道人孔蓋更新工事（立野1工区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 町営住宅特定建築物定期調査業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 町営住宅特定建築物定期調査業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 竜の子斎場火葬炉耐火物等修繕工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 竜の子斎場火葬炉耐火物等修繕工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 町道立野81号線舗装修繕工事（長寿命化事業）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 町道立野81号線舗装修繕工事（長寿命化事業） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 町道城山台14号線他舗装修繕工事（長寿命化事業）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 町道城山台14号線他舗装修繕工事（長寿命化事業） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 三郷町雨水排水台帳図書作成業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 三郷町雨水排水台帳図書作成業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 宅地耐震化推進事業簡易地盤調査業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 宅地耐震化推進事業簡易地盤調査業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 三郷町水質改善下水道舗装復旧工事（勢野西）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装",
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 三郷町水質改善下水道舗装復旧工事（勢野西） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装",
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 下水道耐震化解析業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 下水道耐震化解析業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 三郷町水質改善下水道地質調査業務（勢野東11-1工区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道",
+        "地質",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 三郷町水質改善下水道地質調査業務（勢野東11-1工区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道",
+        "地質",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 町道立野116号線他舗装修繕工事（長寿命化事業）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 町道立野116号線他舗装修繕工事（長寿命化事業） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 FSS35スポーツパーク屋内練習場環境改善工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 FSS35スポーツパーク屋内練習場環境改善工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 宅地耐震化推進事業簡易地盤調査業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 宅地耐震化推進事業簡易地盤調査業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 道路施設定期点検業務（橋梁点検）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "橋梁",
+        "橋",
+        "定期点検"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 道路施設定期点検業務（橋梁点検） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "橋梁",
+        "橋",
+        "定期点検"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 三郷町3D都市モデル整備業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和7年度 三郷町3D都市モデル整備業務 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },
@@ -78192,1764 +79638,6 @@
     },
     {
       "municipality": "三郷町",
-      "title": "指名競争入札10月16日実施分",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "指名競争入札10月16日実施分 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "入札参加資格者入札参加停止措置一覧",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "入札参加資格者入札参加停止措置一覧 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8・9年度競争入札参加資格審査申請書について",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "資格審査"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8・9年度競争入札参加資格審査申請書について ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "資格審査"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "三郷町競争入札発注基準・格付基準について",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "三郷町競争入札発注基準・格付基準について ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "入札に関する様式集",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "入札に関する様式集 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "入札結果",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "入札結果 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "一般競争入札",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "一般競争入札 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 勢野グラウンド改修工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 勢野グラウンド改修工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 立野汚水中継ポンプ場着水ゲート分解整備工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 立野汚水中継ポンプ場着水ゲート分解整備工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 汚水ポンプ3号分解整備修繕",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 汚水ポンプ3号分解整備修繕 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 町道勢野2号線他舗装修繕工事（長寿命化事業）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 町道勢野2号線他舗装修繕工事（長寿命化事業） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 町道立野162号線舗装修繕工事（長寿命化事業）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 町道立野162号線舗装修繕工事（長寿命化事業） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 三郷町水質改善下水道汚水管築造工事（勢野東14工区）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 三郷町水質改善下水道汚水管築造工事（勢野東14工区） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 大門ダムマンホールポンプ場2号ポンプ等取替工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "ダム"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 大門ダムマンホールポンプ場2号ポンプ等取替工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "ダム"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和８年度 城山台ポンプ場ＬＥＤ化工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和８年度 城山台ポンプ場ＬＥＤ化工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和7年度 公共下水道人孔蓋更新工事（城山台）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和7年度 公共下水道人孔蓋更新工事（城山台） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和7年度 三郷町浸水対策下水道雨水管築造工事（勢野東2工区）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和7年度 三郷町浸水対策下水道雨水管築造工事（勢野東2工区） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和7年度 町道三室7号線他舗装修繕工事（長寿命化事業）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和7年度 町道三室7号線他舗装修繕工事（長寿命化事業） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和7年度 町道立野124号線他舗装修繕工事（長寿命化事業）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和7年度 町道立野124号線他舗装修繕工事（長寿命化事業） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和7年度 町道城山台35号線舗装修繕工事（長寿命化事業）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和7年度 町道城山台35号線舗装修繕工事（長寿命化事業） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和7年度 三郷町水質改善下水道汚水管築造工事（惣持寺5-2工区）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和7年度 三郷町水質改善下水道汚水管築造工事（惣持寺5-2工区） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和7年度 大型看板取替等工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "看板"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和7年度 大型看板取替等工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "看板"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和7年度 汚水ポンプ分解整備修繕",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和7年度 汚水ポンプ分解整備修繕 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和7年度 勢野地域し尿処理場流量計更新等工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和7年度 勢野地域し尿処理場流量計更新等工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和7年度 町道立野163号線他舗装修繕工事（長寿命化事業）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和7年度 町道立野163号線他舗装修繕工事（長寿命化事業） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和7年度 町道美松ヶ丘38号線他舗装修繕工事（長寿命化事業）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和7年度 町道美松ヶ丘38号線他舗装修繕工事（長寿命化事業） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和7年度 町道立野31号線舗装修繕工事（長寿命化事業）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和7年度 町道立野31号線舗装修繕工事（長寿命化事業） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和7年度 竜の子斎場火葬炉耐火物等修繕工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和7年度 竜の子斎場火葬炉耐火物等修繕工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和7年度 三郷町水質改善下水道汚水管築造工事（勢野東1）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和7年度 三郷町水質改善下水道汚水管築造工事（勢野東1） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和7年度 ウォーターパーク汚水ポンプ等取替工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和7年度 ウォーターパーク汚水ポンプ等取替工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 三郷町雨水排水台帳図作成業務",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 三郷町雨水排水台帳図作成業務 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 マンホールトイレ詳細設計業務（給食センター）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "給食"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 マンホールトイレ詳細設計業務（給食センター） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "給食"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和８年度 三郷町水質改善下水道汚水管築造工事（勢野東14工区）家屋調査",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道",
-        "家屋調査",
-        "調査"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和８年度 三郷町水質改善下水道汚水管築造工事（勢野東14工区）家屋調査 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道",
-        "家屋調査",
-        "調査"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和８年度 学校施設特定建築物定期調査及び非構造部材の耐震点検業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "調査"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和８年度 学校施設特定建築物定期調査及び非構造部材の耐震点検業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "調査"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和7年度 三郷町水質改善下水道汚水管築造工事（惣持寺5-2工区）家屋調査",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道",
-        "家屋調査",
-        "調査"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和7年度 三郷町水質改善下水道汚水管築造工事（惣持寺5-2工区）家屋調査 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道",
-        "家屋調査",
-        "調査"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 公共下水道人孔防食工事（3工区）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 公共下水道人孔防食工事（3工区） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "メニュー 検索 <p>JavaScriptが無効のため、文字の大きさ・背景色を変更する機能を使用できません。</p> 本文へ Foreign Language 文字サイズ標準拡大 背景色白黒青 危険箇所をおしらせください 防犯・安心情報 休日・夜間救急 検索コーナー キーワード検索 Googleカスタム検索 検索対象 すべて ページ PDF ページID検索 暮らし・手続き 健康・福祉・子育て 教育・文化・スポーツ 産業・ビジネス 行政情報",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "メニュー 検索 <p>JavaScriptが無効のため、文字の大きさ・背景色を変更する機能を使用できません。</p> 本文へ Foreign Language 文字サイズ標準拡大 背景色白黒青 危険箇所をおしらせください 防犯・安心情報 休日・夜間救急 検索コーナー キーワード検索 Googleカスタム検索 検索対象 すべて ページ PDF ページID検索 暮らし・手続き 健康・福祉・子育て 教育・文化・スポーツ 産業・ビジネス 行政情報 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "Foreign Language",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "Foreign Language ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "文字サイズ標準拡大",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "文字サイズ標準拡大 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "拡大",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "拡大 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "黒",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "黒 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "青",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "青 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "防犯・安心情報",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "防犯・安心情報 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "休日・夜間救急",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "休日・夜間救急 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "健康・福祉・子育て",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "健康・福祉・子育て ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "教育・文化・スポーツ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "教育・文化・スポーツ ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "産業・ビジネス",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "産業・ビジネス ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "行政情報",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "行政情報 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": ">",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "> ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "指名競争入札5月1日",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "指名競争入札5月1日 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "指名競争入札5月22日",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "指名競争入札5月22日 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "指名競争入札6月4日",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "指名競争入札6月4日 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "指名競争入札6月18日",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "指名競争入札6月18日 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "指名競争入札7月9日",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "指名競争入札7月9日 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "指名競争入札9月3日",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "指名競争入札9月3日 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "指名競争入札9月17日",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "指名競争入札9月17日 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 城山台第2児童公園他樹木伐採業務",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 城山台第2児童公園他樹木伐採業務 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 街路樹剪定業務（1工区）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "街路樹"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 街路樹剪定業務（1工区） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "街路樹"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 街路樹剪定業務（2工区）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "街路樹"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 街路樹剪定業務（2工区） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "街路樹"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 軽自動車購入",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "購入",
-        "自動車"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 軽自動車購入 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "購入",
-        "自動車"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 三郷小学校植木剪定及び薬剤散布業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "薬剤"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 三郷小学校植木剪定及び薬剤散布業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "薬剤"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 三郷北小学校植木剪定及び薬剤散布業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "薬剤"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 三郷北小学校植木剪定及び薬剤散布業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "薬剤"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 公用車購入",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "購入"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 公用車購入 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "購入"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 勢野グラウンド草刈業務",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 勢野グラウンド草刈業務 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 竜田運動公園草刈業務",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 竜田運動公園草刈業務 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 学校電子黒板購入",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "購入"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 学校電子黒板購入 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "購入"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 三郷小学校施設清掃業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "清掃",
-        "清掃"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 三郷小学校施設清掃業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "清掃",
-        "清掃"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 三郷北小学校施設清掃業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "清掃",
-        "清掃"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 三郷北小学校施設清掃業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "清掃",
-        "清掃"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 中学校施設清掃業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "清掃",
-        "清掃"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 中学校施設清掃業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "清掃",
-        "清掃"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 図書館外周等樹木剪定等業務",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 図書館外周等樹木剪定等業務 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和7年度（繰） 避難所生活環境向上事業（地域未来交付金）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和7年度（繰） 避難所生活環境向上事業（地域未来交付金） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和7年度（繰） 物資運搬用車両購入（地域未来交付金）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "購入",
-        "車両",
-        "運搬"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和7年度（繰） 物資運搬用車両購入（地域未来交付金） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "購入",
-        "車両",
-        "運搬"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 公用車（軽自動車）購入",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "購入",
-        "自動車"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 公用車（軽自動車）購入 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "購入",
-        "自動車"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 宅地等適正管理業務",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 宅地等適正管理業務 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 都市公園等維持管理業務（1工区）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 都市公園等維持管理業務（1工区） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 都市公園等維持管理業務（2工区）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 都市公園等維持管理業務（2工区） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 ごみ中継施設環境測定業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "ごみ"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 ごみ中継施設環境測定業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "ごみ"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 南畑幼稚園剪定等業務",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 南畑幼稚園剪定等業務 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度立野汚水中継ポンプ場維持管理業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度立野汚水中継ポンプ場維持管理業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度マンホールポンプ場及び城山台ポンプ場等維持管理業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度マンホールポンプ場及び城山台ポンプ場等維持管理業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度廃プラスチック類運搬及び再生処理業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "運搬"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度廃プラスチック類運搬及び再生処理業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "運搬"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度間伐材等搬送業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "搬送"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度間伐材等搬送業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "搬送"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度三郷町ごみ収集運搬等業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "運搬",
-        "ごみ"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度三郷町ごみ収集運搬等業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "運搬",
-        "ごみ"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度南畑地域し尿処理場等維持管理業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度南畑地域し尿処理場等維持管理業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度勢野地域し尿処理場維持管理業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度勢野地域し尿処理場維持管理業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度椿井処理場等維持管理業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度椿井処理場等維持管理業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "維持管理"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度図書館施設環境衛生管理業務",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度図書館施設環境衛生管理業務 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度三郷町議会反訳業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "議会"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度三郷町議会反訳業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "議会"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度「ふれあい交流センター等清掃業務」",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "清掃",
-        "清掃"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度「ふれあい交流センター等清掃業務」 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "清掃",
-        "清掃"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "PDF形式のファイルをご覧いただく場合には、Adobe社が提供するAdobe Readerが必要です。 Adobe Readerをお持ちでない方は、バナーのリンク先からダウンロードしてください。（無料）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "PDF形式のファイルをご覧いただく場合には、Adobe社が提供するAdobe Readerが必要です。 Adobe Readerをお持ちでない方は、バナーのリンク先からダウンロードしてください。（無料） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "document.write('<div class=\"fb-like\" data-href=\"'+htmlspecialchars_URL(location.href)+'\" data-layout=\"button\" data-action=\"like\" data-size=\"small\" data-show-faces=\"false\" data-share=\"true\"></div>');",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "document.write('<div class=\"fb-like\" data-href=\"'+htmlspecialchars_URL(location.href)+'\" data-layout=\"button\" data-action=\"like\" data-size=\"small\" data-show-faces=\"false\" data-share=\"true\"></div>'); ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "よくある質問と回答",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "よくある質問と回答 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "リンク・著作権 個人情報利用規定 サイト利用案内 RSS利用案内 ウェブアクセシビリティ指針 サイトマップ バナー広告",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "案内",
-        "サイトマップ"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "リンク・著作権 個人情報利用規定 サイト利用案内 RSS利用案内 ウェブアクセシビリティ指針 サイトマップ バナー広告 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "案内",
-        "サイトマップ"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "個人情報利用規定",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "個人情報利用規定 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "サイト利用案内",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "案内"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "サイト利用案内 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "案内"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "RSS利用案内",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "案内"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "RSS利用案内 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "案内"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "ウェブアクセシビリティ指針",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "ウェブアクセシビリティ指針 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "サイトマップ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "サイトマップ"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "サイトマップ ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "サイトマップ"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "バナー広告",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "バナー広告 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "〒636-8535 奈良県生駒郡三郷町勢野西1丁目1番1号",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "〒636-8535 奈良県生駒郡三郷町勢野西1丁目1番1号 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "＜外部リンク＞ 閉じる",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "＜外部リンク＞ 閉じる ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 三郷町水質改善下水道汚水管築造工事（信貴山東4-1工区）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 三郷町水質改善下水道汚水管築造工事（信貴山東4-1工区） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 公共下水道人孔蓋更新工事（立野2工区）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 公共下水道人孔蓋更新工事（立野2工区） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 三郷町道路台帳更新業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 三郷町道路台帳更新業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 道路施設定期点検業務（橋梁点検）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "橋梁",
-        "橋",
-        "定期点検"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 道路施設定期点検業務（橋梁点検） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "橋梁",
-        "橋",
-        "定期点検"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 公共下水道人孔蓋更新工事（立野1工区）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 公共下水道人孔蓋更新工事（立野1工区） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 町営住宅特定建築物定期調査業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "調査"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 町営住宅特定建築物定期調査業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "調査"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 竜の子斎場火葬炉耐火物等修繕工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 竜の子斎場火葬炉耐火物等修繕工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 町道立野81号線舗装修繕工事（長寿命化事業）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 町道立野81号線舗装修繕工事（長寿命化事業） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 町道城山台14号線他舗装修繕工事（長寿命化事業）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 町道城山台14号線他舗装修繕工事（長寿命化事業） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 三郷町雨水排水台帳図書作成業務",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 三郷町雨水排水台帳図書作成業務 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 宅地耐震化推進事業簡易地盤調査業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "調査"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 宅地耐震化推進事業簡易地盤調査業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "調査"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 三郷町水質改善下水道舗装復旧工事（勢野西）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装",
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 三郷町水質改善下水道舗装復旧工事（勢野西） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装",
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 下水道耐震化解析業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 下水道耐震化解析業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和7年度 三郷町水質改善下水道地質調査業務（勢野東11-1工区）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道",
-        "地質",
-        "調査"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和7年度 三郷町水質改善下水道地質調査業務（勢野東11-1工区） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道",
-        "地質",
-        "調査"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和7年度 町道立野116号線他舗装修繕工事（長寿命化事業）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和7年度 町道立野116号線他舗装修繕工事（長寿命化事業） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和7年度 FSS35スポーツパーク屋内練習場環境改善工事",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和7年度 FSS35スポーツパーク屋内練習場環境改善工事 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和7年度 宅地耐震化推進事業簡易地盤調査業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "調査"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和7年度 宅地耐震化推進事業簡易地盤調査業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "調査"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和7年度 道路施設定期点検業務（橋梁点検）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "橋梁",
-        "橋",
-        "定期点検"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和7年度 道路施設定期点検業務（橋梁点検） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "橋梁",
-        "橋",
-        "定期点検"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和7年度 三郷町3D都市モデル整備業務",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和7年度 三郷町3D都市モデル整備業務 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "指名競争入札10月16日実施分",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "指名競争入札10月16日実施分 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
       "title": "入札参加資格者入札参加停止措置一覧",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -80446,6 +80134,76 @@
     },
     {
       "municipality": "王寺町",
+      "title": "塵芥車2t積載車調達",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調達"
+      ]
+    },
+    {
+      "municipality": "王寺町",
+      "title": "塵芥車2t積載車調達 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調達"
+      ]
+    },
+    {
+      "municipality": "王寺町",
+      "title": "久度中央広場整備工事（R7－2期工事）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "王寺町",
+      "title": "久度中央広場整備工事（R7－2期工事） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "王寺町",
+      "title": "泉の広場防災公園整備工事（第2期）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "王寺町",
+      "title": "泉の広場防災公園整備工事（第2期） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "王寺町",
+      "title": "マイクロバス購入",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入",
+        "バス"
+      ]
+    },
+    {
+      "municipality": "王寺町",
+      "title": "マイクロバス購入 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入",
+        "バス"
+      ]
+    },
+    {
+      "municipality": "王寺町",
+      "title": "久度中央広場整備工事（R8－3期工事）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "王寺町",
+      "title": "久度中央広場整備工事（R8－3期工事） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "王寺町",
       "title": "最低制限価格及び低入札価格調査制度について",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -80462,6 +80220,76 @@
     },
     {
       "municipality": "王寺町",
+      "title": "塵芥車2t積載車調達",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調達"
+      ]
+    },
+    {
+      "municipality": "王寺町",
+      "title": "塵芥車2t積載車調達 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調達"
+      ]
+    },
+    {
+      "municipality": "王寺町",
+      "title": "久度中央広場整備工事（R7－2期工事）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "王寺町",
+      "title": "久度中央広場整備工事（R7－2期工事） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "王寺町",
+      "title": "泉の広場防災公園整備工事（第2期）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "王寺町",
+      "title": "泉の広場防災公園整備工事（第2期） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "王寺町",
+      "title": "マイクロバス購入",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入",
+        "バス"
+      ]
+    },
+    {
+      "municipality": "王寺町",
+      "title": "マイクロバス購入 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入",
+        "バス"
+      ]
+    },
+    {
+      "municipality": "王寺町",
+      "title": "久度中央広場整備工事（R8－3期工事）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "王寺町",
+      "title": "久度中央広場整備工事（R8－3期工事） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "王寺町",
       "title": "最低制限価格及び低入札価格調査制度について",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -80478,6 +80306,76 @@
     },
     {
       "municipality": "王寺町",
+      "title": "塵芥車2t積載車調達",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調達"
+      ]
+    },
+    {
+      "municipality": "王寺町",
+      "title": "塵芥車2t積載車調達 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調達"
+      ]
+    },
+    {
+      "municipality": "王寺町",
+      "title": "久度中央広場整備工事（R7－2期工事）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "王寺町",
+      "title": "久度中央広場整備工事（R7－2期工事） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "王寺町",
+      "title": "泉の広場防災公園整備工事（第2期）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "王寺町",
+      "title": "泉の広場防災公園整備工事（第2期） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "王寺町",
+      "title": "マイクロバス購入",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入",
+        "バス"
+      ]
+    },
+    {
+      "municipality": "王寺町",
+      "title": "マイクロバス購入 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入",
+        "バス"
+      ]
+    },
+    {
+      "municipality": "王寺町",
+      "title": "久度中央広場整備工事（R8－3期工事）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "王寺町",
+      "title": "久度中央広場整備工事（R8－3期工事） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "王寺町",
       "title": "最低制限価格及び低入札価格調査制度について",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -80491,6 +80389,62 @@
       "matchedKeywords": [
         "調査"
       ]
+    },
+    {
+      "municipality": "大淀町",
+      "title": "入札結果（建設工事）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大淀町",
+      "title": "入札結果（建設工事） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大淀町",
+      "title": "入札結果（測量・建設コンサルタント等）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "測量"
+      ]
+    },
+    {
+      "municipality": "大淀町",
+      "title": "入札結果（測量・建設コンサルタント等） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "測量"
+      ]
+    },
+    {
+      "municipality": "大淀町",
+      "title": "入札結果（物品・役務等）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "物品"
+      ]
+    },
+    {
+      "municipality": "大淀町",
+      "title": "入札結果（物品・役務等） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "物品"
+      ]
+    },
+    {
+      "municipality": "大淀町",
+      "title": "お問い合わせフォーム",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大淀町",
+      "title": "お問い合わせフォーム ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
     },
     {
       "municipality": "大淀町",
@@ -80554,50 +80508,6 @@
     },
     {
       "municipality": "大淀町",
-      "title": "入札結果（建設工事）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大淀町",
-      "title": "入札結果（建設工事） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大淀町",
-      "title": "入札結果（測量・建設コンサルタント等）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "測量"
-      ]
-    },
-    {
-      "municipality": "大淀町",
-      "title": "入札結果（測量・建設コンサルタント等） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "測量"
-      ]
-    },
-    {
-      "municipality": "大淀町",
-      "title": "入札結果（物品・役務等）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "物品"
-      ]
-    },
-    {
-      "municipality": "大淀町",
-      "title": "入札結果（物品・役務等） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "物品"
-      ]
-    },
-    {
-      "municipality": "大淀町",
       "title": "越部地内道路改良工事（第8－道改－工－1号）【令和8年8月31日執行】 （pdf, 64.16KB）",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -80639,18 +80549,6 @@
     {
       "municipality": "大淀町",
       "title": "大淀町長選挙ポスター掲示場製作、設置等業務【令和8年8月31日執行】 （pdf, 84.56KB） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大淀町",
-      "title": "お問い合わせフォーム",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大淀町",
-      "title": "お問い合わせフォーム ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },
@@ -82178,6 +82076,62 @@
     },
     {
       "municipality": "大淀町",
+      "title": "入札結果（建設工事）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大淀町",
+      "title": "入札結果（建設工事） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大淀町",
+      "title": "入札結果（測量・建設コンサルタント等）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "測量"
+      ]
+    },
+    {
+      "municipality": "大淀町",
+      "title": "入札結果（測量・建設コンサルタント等） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "測量"
+      ]
+    },
+    {
+      "municipality": "大淀町",
+      "title": "入札結果（物品・役務等）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "物品"
+      ]
+    },
+    {
+      "municipality": "大淀町",
+      "title": "入札結果（物品・役務等） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "物品"
+      ]
+    },
+    {
+      "municipality": "大淀町",
+      "title": "お問い合わせフォーム",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大淀町",
+      "title": "お問い合わせフォーム ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大淀町",
       "title": "比曽地内河川維持工事",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -82238,50 +82192,6 @@
     },
     {
       "municipality": "大淀町",
-      "title": "入札結果（建設工事）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大淀町",
-      "title": "入札結果（建設工事） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大淀町",
-      "title": "入札結果（測量・建設コンサルタント等）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "測量"
-      ]
-    },
-    {
-      "municipality": "大淀町",
-      "title": "入札結果（測量・建設コンサルタント等） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "測量"
-      ]
-    },
-    {
-      "municipality": "大淀町",
-      "title": "入札結果（物品・役務等）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "物品"
-      ]
-    },
-    {
-      "municipality": "大淀町",
-      "title": "入札結果（物品・役務等） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "物品"
-      ]
-    },
-    {
-      "municipality": "大淀町",
       "title": "越部地内道路改良工事（第8－道改－工－1号）【令和8年8月31日執行】 （pdf, 64.16KB）",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -82323,18 +82233,6 @@
     {
       "municipality": "大淀町",
       "title": "大淀町長選挙ポスター掲示場製作、設置等業務【令和8年8月31日執行】 （pdf, 84.56KB） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大淀町",
-      "title": "お問い合わせフォーム",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大淀町",
-      "title": "お問い合わせフォーム ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },
@@ -83862,6 +83760,62 @@
     },
     {
       "municipality": "大淀町",
+      "title": "入札結果（建設工事）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大淀町",
+      "title": "入札結果（建設工事） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大淀町",
+      "title": "入札結果（測量・建設コンサルタント等）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "測量"
+      ]
+    },
+    {
+      "municipality": "大淀町",
+      "title": "入札結果（測量・建設コンサルタント等） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "測量"
+      ]
+    },
+    {
+      "municipality": "大淀町",
+      "title": "入札結果（物品・役務等）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "物品"
+      ]
+    },
+    {
+      "municipality": "大淀町",
+      "title": "入札結果（物品・役務等） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "物品"
+      ]
+    },
+    {
+      "municipality": "大淀町",
+      "title": "お問い合わせフォーム",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大淀町",
+      "title": "お問い合わせフォーム ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "大淀町",
       "title": "比曽地内河川維持工事",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -83922,50 +83876,6 @@
     },
     {
       "municipality": "大淀町",
-      "title": "入札結果（建設工事）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大淀町",
-      "title": "入札結果（建設工事） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大淀町",
-      "title": "入札結果（測量・建設コンサルタント等）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "測量"
-      ]
-    },
-    {
-      "municipality": "大淀町",
-      "title": "入札結果（測量・建設コンサルタント等） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "測量"
-      ]
-    },
-    {
-      "municipality": "大淀町",
-      "title": "入札結果（物品・役務等）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "物品"
-      ]
-    },
-    {
-      "municipality": "大淀町",
-      "title": "入札結果（物品・役務等） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "物品"
-      ]
-    },
-    {
-      "municipality": "大淀町",
       "title": "越部地内道路改良工事（第8－道改－工－1号）【令和8年8月31日執行】 （pdf, 64.16KB）",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -84007,18 +83917,6 @@
     {
       "municipality": "大淀町",
       "title": "大淀町長選挙ポスター掲示場製作、設置等業務【令和8年8月31日執行】 （pdf, 84.56KB） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大淀町",
-      "title": "お問い合わせフォーム",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大淀町",
-      "title": "お問い合わせフォーム ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },

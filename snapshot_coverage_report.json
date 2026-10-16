@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-15T11:22:39.391Z",
+  "generatedAt": "2026-10-16T06:08:53.110Z",
   "checkedMunicipalityCount": 24,
-  "expectedItemCount": 317,
-  "matchedItemCount": 317,
+  "expectedItemCount": 319,
+  "matchedItemCount": 319,
   "missingItemCount": 0,
   "duplicateTitleGroupCount": 24,
   "duplicateTitleItemCount": 53,
@@ -129,10 +129,10 @@
       "status": "ok"
     },
     {
-      "municipality": "広陵町",
-      "snapshotCount": 7,
-      "expectedCount": 7,
-      "matchedCount": 7,
+      "municipality": "大淀町",
+      "snapshotCount": 8,
+      "expectedCount": 8,
+      "matchedCount": 8,
       "missingCount": 0,
       "duplicateTitleGroupCount": 0,
       "duplicateTitleItemCount": 0,
@@ -140,7 +140,7 @@
       "status": "ok"
     },
     {
-      "municipality": "大淀町",
+      "municipality": "広陵町",
       "snapshotCount": 7,
       "expectedCount": 7,
       "matchedCount": 7,
@@ -228,6 +228,17 @@
       "status": "ok"
     },
     {
+      "municipality": "王寺町",
+      "snapshotCount": 2,
+      "expectedCount": 2,
+      "matchedCount": 2,
+      "missingCount": 0,
+      "duplicateTitleGroupCount": 0,
+      "duplicateTitleItemCount": 0,
+      "missingItems": [],
+      "status": "ok"
+    },
+    {
       "municipality": "御所市",
       "snapshotCount": 2,
       "expectedCount": 2,
@@ -254,17 +265,6 @@
       "snapshotCount": 2,
       "expectedCount": 2,
       "matchedCount": 2,
-      "missingCount": 0,
-      "duplicateTitleGroupCount": 0,
-      "duplicateTitleItemCount": 0,
-      "missingItems": [],
-      "status": "ok"
-    },
-    {
-      "municipality": "王寺町",
-      "snapshotCount": 1,
-      "expectedCount": 1,
-      "matchedCount": 1,
       "missingCount": 0,
       "duplicateTitleGroupCount": 0,
       "duplicateTitleItemCount": 0,
