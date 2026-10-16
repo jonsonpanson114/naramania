@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-16T06:44:27.796Z",
+  "generatedAt": "2026-10-16T09:44:42.394Z",
   "currentItemCount": 319,
   "checkedMunicipalities": [
     "奈良市",
@@ -32,7 +32,7 @@
     "奈良県"
   ],
   "scraperErrorCount": 0,
-  "transientWarningCount": 1,
+  "transientWarningCount": 0,
   "scraperResults": [
     {
       "municipality": "奈良市",
@@ -96,21 +96,19 @@
     },
     {
       "municipality": "五條市",
-      "rawCount": 229,
+      "rawCount": 251,
       "keptCount": 31,
-      "rejectedCount": 198,
+      "rejectedCount": 220,
       "keptAnnouncementCount": 3,
       "keptResultCount": 28,
-      "warnings": [
-        "一時的な取得失敗（次回再試行）: [五條市] フィード取得エラー: Request failed with status code 502"
-      ],
+      "warnings": [],
       "errors": []
     },
     {
       "municipality": "御所市",
-      "rawCount": 20,
+      "rawCount": 19,
       "keptCount": 2,
-      "rejectedCount": 18,
+      "rejectedCount": 17,
       "keptAnnouncementCount": 0,
       "keptResultCount": 2,
       "warnings": [],
@@ -302,7 +300,7 @@
       },
       {
         "municipality": "五條市",
-        "snapshotCount": 229,
+        "snapshotCount": 251,
         "expectedCount": 31,
         "matchedCount": 31,
         "missingCount": 0,
@@ -511,7 +509,7 @@
       },
       {
         "municipality": "御所市",
-        "snapshotCount": 20,
+        "snapshotCount": 19,
         "expectedCount": 2,
         "matchedCount": 2,
         "missingCount": 0,
