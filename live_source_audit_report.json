@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-15T12:26:33.942Z",
-  "currentItemCount": 317,
+  "generatedAt": "2026-10-16T06:44:27.796Z",
+  "currentItemCount": 319,
   "checkedMunicipalities": [
     "奈良市",
     "橿原市",
@@ -32,7 +32,7 @@
     "奈良県"
   ],
   "scraperErrorCount": 0,
-  "transientWarningCount": 0,
+  "transientWarningCount": 1,
   "scraperResults": [
     {
       "municipality": "奈良市",
@@ -59,8 +59,8 @@
       "rawCount": 225,
       "keptCount": 27,
       "rejectedCount": 198,
-      "keptAnnouncementCount": 3,
-      "keptResultCount": 24,
+      "keptAnnouncementCount": 2,
+      "keptResultCount": 25,
       "warnings": [],
       "errors": []
     },
@@ -76,9 +76,9 @@
     },
     {
       "municipality": "大和郡山市",
-      "rawCount": 234,
+      "rawCount": 235,
       "keptCount": 23,
-      "rejectedCount": 211,
+      "rejectedCount": 212,
       "keptAnnouncementCount": 3,
       "keptResultCount": 20,
       "warnings": [],
@@ -96,19 +96,21 @@
     },
     {
       "municipality": "五條市",
-      "rawCount": 250,
+      "rawCount": 229,
       "keptCount": 31,
-      "rejectedCount": 219,
+      "rejectedCount": 198,
       "keptAnnouncementCount": 3,
       "keptResultCount": 28,
-      "warnings": [],
+      "warnings": [
+        "一時的な取得失敗（次回再試行）: [五條市] フィード取得エラー: Request failed with status code 502"
+      ],
       "errors": []
     },
     {
       "municipality": "御所市",
-      "rawCount": 21,
+      "rawCount": 20,
       "keptCount": 2,
-      "rejectedCount": 19,
+      "rejectedCount": 18,
       "keptAnnouncementCount": 0,
       "keptResultCount": 2,
       "warnings": [],
@@ -166,11 +168,11 @@
     },
     {
       "municipality": "香芝市",
-      "rawCount": 143,
-      "keptCount": 27,
-      "rejectedCount": 116,
-      "keptAnnouncementCount": 11,
-      "keptResultCount": 16,
+      "rawCount": 133,
+      "keptCount": 25,
+      "rejectedCount": 108,
+      "keptAnnouncementCount": 5,
+      "keptResultCount": 20,
       "warnings": [],
       "errors": []
     },
@@ -250,9 +252,9 @@
     },
     {
       "municipality": "三郷町",
-      "rawCount": 180,
+      "rawCount": 179,
       "keptCount": 9,
-      "rejectedCount": 171,
+      "rejectedCount": 170,
       "keptAnnouncementCount": 0,
       "keptResultCount": 9,
       "warnings": [],
@@ -270,44 +272,23 @@
     },
     {
       "municipality": "大淀町",
-      "rawCount": 139,
-      "keptCount": 7,
+      "rawCount": 140,
+      "keptCount": 8,
       "rejectedCount": 132,
       "keptAnnouncementCount": 0,
-      "keptResultCount": 7,
+      "keptResultCount": 8,
       "warnings": [],
       "errors": []
     }
   ],
   "coverage": {
     "checkedMunicipalityCount": 24,
-    "expectedItemCount": 283,
+    "expectedItemCount": 282,
     "matchedItemCount": 282,
-    "missingItemCount": 1,
-    "duplicateTitleGroupCount": 31,
-    "duplicateTitleItemCount": 69,
+    "missingItemCount": 0,
+    "duplicateTitleGroupCount": 29,
+    "duplicateTitleItemCount": 65,
     "results": [
-      {
-        "municipality": "王寺町",
-        "snapshotCount": 10,
-        "expectedCount": 2,
-        "matchedCount": 1,
-        "missingCount": 1,
-        "duplicateTitleGroupCount": 0,
-        "duplicateTitleItemCount": 0,
-        "missingItems": [
-          {
-            "id": "oji-ffe0646cd8",
-            "municipality": "王寺町",
-            "title": "やわらぎ会館改修工事（7月）",
-            "status": "受付中",
-            "announcementDate": "2026-09-04",
-            "link": "https://www.town.oji.nara.jp/kakuka/somu/somu/gyomuannai/nyuusatu/nyuusatukouhyou/11747.html",
-            "reason": "snapshot item should be present in scraper_result"
-          }
-        ],
-        "status": "missing"
-      },
       {
         "municipality": "橿原市",
         "snapshotCount": 395,
@@ -321,23 +302,12 @@
       },
       {
         "municipality": "五條市",
-        "snapshotCount": 250,
+        "snapshotCount": 229,
         "expectedCount": 31,
         "matchedCount": 31,
         "missingCount": 0,
         "duplicateTitleGroupCount": 9,
         "duplicateTitleItemCount": 22,
-        "missingItems": [],
-        "status": "ok"
-      },
-      {
-        "municipality": "香芝市",
-        "snapshotCount": 143,
-        "expectedCount": 27,
-        "matchedCount": 27,
-        "missingCount": 0,
-        "duplicateTitleGroupCount": 6,
-        "duplicateTitleItemCount": 13,
         "missingItems": [],
         "status": "ok"
       },
@@ -364,8 +334,19 @@
         "status": "ok"
       },
       {
+        "municipality": "香芝市",
+        "snapshotCount": 133,
+        "expectedCount": 25,
+        "matchedCount": 25,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 4,
+        "duplicateTitleItemCount": 9,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
         "municipality": "大和郡山市",
-        "snapshotCount": 234,
+        "snapshotCount": 235,
         "expectedCount": 23,
         "matchedCount": 23,
         "missingCount": 0,
@@ -420,9 +401,20 @@
       },
       {
         "municipality": "三郷町",
-        "snapshotCount": 180,
+        "snapshotCount": 179,
         "expectedCount": 9,
         "matchedCount": 9,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 0,
+        "duplicateTitleItemCount": 0,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
+        "municipality": "大淀町",
+        "snapshotCount": 140,
+        "expectedCount": 8,
+        "matchedCount": 8,
         "missingCount": 0,
         "duplicateTitleGroupCount": 0,
         "duplicateTitleItemCount": 0,
@@ -448,17 +440,6 @@
         "missingCount": 0,
         "duplicateTitleGroupCount": 1,
         "duplicateTitleItemCount": 2,
-        "missingItems": [],
-        "status": "ok"
-      },
-      {
-        "municipality": "大淀町",
-        "snapshotCount": 139,
-        "expectedCount": 7,
-        "matchedCount": 7,
-        "missingCount": 0,
-        "duplicateTitleGroupCount": 0,
-        "duplicateTitleItemCount": 0,
         "missingItems": [],
         "status": "ok"
       },
@@ -518,8 +499,19 @@
         "status": "ok"
       },
       {
+        "municipality": "王寺町",
+        "snapshotCount": 10,
+        "expectedCount": 2,
+        "matchedCount": 2,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 0,
+        "duplicateTitleItemCount": 0,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
         "municipality": "御所市",
-        "snapshotCount": 21,
+        "snapshotCount": 20,
         "expectedCount": 2,
         "matchedCount": 2,
         "missingCount": 0,
