@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-16T05:59:36.524Z",
+  "generatedAt": "2026-10-16T11:03:51.605Z",
   "totalRejected": 11160,
   "totalBorderlineRescued": 33,
   "byMunicipality": {
@@ -13632,15 +13632,6 @@
     },
     {
       "municipality": "生駒市",
-      "title": "再開発住宅外壁及び屋根改修工事",
-      "reason": "always_exclude_keyword",
-      "matchedKeywords": [
-        "外壁"
-      ],
-      "borderlineRescue": true
-    },
-    {
-      "municipality": "生駒市",
       "title": "壱分乙田線配水管布設替工事（R８）",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -13650,6 +13641,15 @@
       "title": "壱分乙田線配水管布設替工事（R８） ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "再開発住宅外壁及び屋根改修工事",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "外壁"
+      ],
+      "borderlineRescue": true
     },
     {
       "municipality": "生駒市",
@@ -15959,15 +15959,6 @@
     },
     {
       "municipality": "生駒市",
-      "title": "再開発住宅外壁及び屋根改修工事",
-      "reason": "always_exclude_keyword",
-      "matchedKeywords": [
-        "外壁"
-      ],
-      "borderlineRescue": true
-    },
-    {
-      "municipality": "生駒市",
       "title": "壱分乙田線配水管布設替工事（R８）",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -15977,6 +15968,15 @@
       "title": "壱分乙田線配水管布設替工事（R８） ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "再開発住宅外壁及び屋根改修工事",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "外壁"
+      ],
+      "borderlineRescue": true
     },
     {
       "municipality": "生駒市",
@@ -18286,15 +18286,6 @@
     },
     {
       "municipality": "生駒市",
-      "title": "再開発住宅外壁及び屋根改修工事",
-      "reason": "always_exclude_keyword",
-      "matchedKeywords": [
-        "外壁"
-      ],
-      "borderlineRescue": true
-    },
-    {
-      "municipality": "生駒市",
       "title": "壱分乙田線配水管布設替工事（R８）",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -18304,6 +18295,15 @@
       "title": "壱分乙田線配水管布設替工事（R８） ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
+    },
+    {
+      "municipality": "生駒市",
+      "title": "再開発住宅外壁及び屋根改修工事",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "外壁"
+      ],
+      "borderlineRescue": true
     },
     {
       "municipality": "生駒市",
@@ -52757,6 +52757,18 @@
     },
     {
       "municipality": "御所市",
+      "title": "御所市の電子入札に参加するための準備",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "御所市の電子入札に参加するための準備 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
       "title": "電子入札ポータルサイト",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -52770,18 +52782,6 @@
       "matchedKeywords": [
         "ポータルサイト"
       ]
-    },
-    {
-      "municipality": "御所市",
-      "title": "御所市の電子入札に参加するための準備",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "御所市の電子入札に参加するための準備 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
     },
     {
       "municipality": "御所市",
@@ -52897,6 +52897,18 @@
     },
     {
       "municipality": "御所市",
+      "title": "御所市の電子入札に参加するための準備",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "御所市の電子入札に参加するための準備 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
       "title": "電子入札ポータルサイト",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -52910,18 +52922,6 @@
       "matchedKeywords": [
         "ポータルサイト"
       ]
-    },
-    {
-      "municipality": "御所市",
-      "title": "御所市の電子入札に参加するための準備",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "御所市の電子入札に参加するための準備 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
     },
     {
       "municipality": "御所市",
@@ -53037,6 +53037,18 @@
     },
     {
       "municipality": "御所市",
+      "title": "御所市の電子入札に参加するための準備",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
+      "title": "御所市の電子入札に参加するための準備 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "御所市",
       "title": "電子入札ポータルサイト",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -53050,18 +53062,6 @@
       "matchedKeywords": [
         "ポータルサイト"
       ]
-    },
-    {
-      "municipality": "御所市",
-      "title": "御所市の電子入札に参加するための準備",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "御所市の電子入札に参加するための準備 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
     },
     {
       "municipality": "天理市",

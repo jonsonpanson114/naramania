@@ -755,7 +755,9 @@
     "announcementDate": "2026-10-09",
     "biddingDate": "2026-10-09",
     "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-    "status": "受付終了",
+    "status": "落札",
+    "winningContractor": "株式会社森岡興産 生駒営業所",
+    "winnerType": "ゼネコン",
     "isRelevant": false
   },
   {
@@ -1340,6 +1342,16 @@
     "isRelevant": false
   },
   {
+    "id": "gose-【奈良県葛城地区清掃事務組合】し尿処理施-13",
+    "municipality": "御所市",
+    "title": "【奈良県葛城地区清掃事務組合】し尿処理施設（アクアセンター）包括的運転管理業務委託に関する計画書の呈示者募集",
+    "type": "その他",
+    "announcementDate": "2026-10-06",
+    "link": "",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
     "id": "ikoma-80c3d47de8",
     "municipality": "生駒市",
     "title": "小平尾保育園遊戯室棟屋根改修工事",
@@ -1501,6 +1513,16 @@
     "id": "gose-御所市介護保険認定審査会システム等導入業-22",
     "municipality": "御所市",
     "title": "御所市介護保険認定審査会システム等導入業務委託に係る公募型プロポーザル",
+    "type": "その他",
+    "announcementDate": "2026-10-05",
+    "link": "",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
+    "id": "gose-電子入札ポータルサイト-23",
+    "municipality": "御所市",
+    "title": "電子入札ポータルサイト",
     "type": "その他",
     "announcementDate": "2026-10-05",
     "link": "",
@@ -8308,7 +8330,7 @@
     "biddingDate": "2026-09-14",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "（株）北林組",
+    "winningContractor": "(株) 北林組",
     "isRelevant": false
   },
   {
@@ -8344,7 +8366,7 @@
     "biddingDate": "2026-09-14",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "（株）仲谷組",
+    "winningContractor": "(株) 仲谷組",
     "isRelevant": false
   },
   {
@@ -8356,7 +8378,7 @@
     "biddingDate": "2026-09-14",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "（株）堂浦土木",
+    "winningContractor": "(株) 堂浦土木",
     "isRelevant": false
   },
   {
@@ -14821,7 +14843,7 @@
     "biddingDate": "2026-07-21",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "(株)ミズハ",
+    "winningContractor": "（株）ミズハ",
     "isRelevant": false
   },
   {
@@ -15808,7 +15830,7 @@
     "biddingDate": "2026-06-29",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "NTT西日本(株) 奈良支店",
+    "winningContractor": "NTT西日本(株)奈良支店",
     "isRelevant": false
   },
   {
@@ -16614,7 +16636,7 @@
     "biddingDate": "2026-06-22",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "タイセイクレーン工事(株)",
+    "winningContractor": "タイセイクレーン工事（株）",
     "isRelevant": false
   },
   {
@@ -16674,7 +16696,7 @@
     "biddingDate": "2026-06-22",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "(株)タツタ環境分析センター 奈良営業所",
+    "winningContractor": "（株）タツタ環境分析センター 奈良営業所",
     "isRelevant": false
   },
   {
@@ -16686,7 +16708,7 @@
     "biddingDate": "2026-06-22",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "アスカ美装(株)",
+    "winningContractor": "アスカ美装（株）",
     "isRelevant": false
   },
   {
@@ -16710,7 +16732,7 @@
     "biddingDate": "2026-06-22",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "(株)ユイテック",
+    "winningContractor": "（株）ユイテック",
     "isRelevant": false
   },
   {
@@ -16722,7 +16744,7 @@
     "biddingDate": "2026-06-22",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "管清工業(株) 奈良事業所",
+    "winningContractor": "管清工業（株）奈良事業所",
     "isRelevant": false
   },
   {
@@ -17697,7 +17719,7 @@
     "biddingDate": "2026-06-22",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "(株)トライグループ",
+    "winningContractor": "（株）トライグループ",
     "isRelevant": false
   },
   {
@@ -19152,7 +19174,7 @@
     "biddingDate": "2026-06-22",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "塚竜(株)",
+    "winningContractor": "塚竜（株）",
     "isRelevant": true
   },
   {
@@ -19164,7 +19186,7 @@
     "biddingDate": "2026-06-22",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "(株)木下エネルギーソリューションズ",
+    "winningContractor": "（株）木下エネルギーソリューションズ",
     "isRelevant": false
   },
   {
@@ -19826,7 +19848,7 @@
     "biddingDate": "2026-05-25",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "（有）泉電機工業",
+    "winningContractor": "(有)泉電機工業",
     "isRelevant": false
   },
   {
@@ -19838,7 +19860,7 @@
     "biddingDate": "2026-05-25",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "（株）吉田生物研究所",
+    "winningContractor": "(株)吉田生物研究所",
     "isRelevant": false
   },
   {
@@ -21020,7 +21042,7 @@
     "biddingDate": "2026-05-18",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "(株)森下組",
+    "winningContractor": "（株）森下組",
     "isRelevant": false
   },
   {
@@ -21478,7 +21500,7 @@
     "biddingDate": "2026-05-11",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "ポシブル医科学（株）",
+    "winningContractor": "ポジプル医科学（株）",
     "isRelevant": false
   },
   {
@@ -21490,7 +21512,7 @@
     "biddingDate": "2026-05-11",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "ポシブル医科学（株）",
+    "winningContractor": "ポジプル医科学（株）",
     "isRelevant": false
   },
   {
