@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-16T11:03:51.605Z",
-  "totalRejected": 11160,
+  "generatedAt": "2026-10-19T06:15:57.449Z",
+  "totalRejected": 11190,
   "totalBorderlineRescued": 33,
   "byMunicipality": {
     "奈良市": {
@@ -24,7 +24,7 @@
       "borderlineRescued": 0
     },
     "葛城市": {
-      "rejected": 1344,
+      "rejected": 1356,
       "borderlineRescued": 0
     },
     "五條市": {
@@ -32,7 +32,7 @@
       "borderlineRescued": 0
     },
     "御所市": {
-      "rejected": 60,
+      "rejected": 54,
       "borderlineRescued": 0
     },
     "天理市": {
@@ -68,11 +68,11 @@
       "borderlineRescued": 0
     },
     "平群町": {
-      "rejected": 162,
+      "rejected": 168,
       "borderlineRescued": 0
     },
     "三宅町": {
-      "rejected": 72,
+      "rejected": 78,
       "borderlineRescued": 3
     },
     "安堵町": {
@@ -88,7 +88,7 @@
       "borderlineRescued": 0
     },
     "三郷町": {
-      "rejected": 714,
+      "rejected": 726,
       "borderlineRescued": 0
     },
     "王寺町": {
@@ -34441,6 +34441,30 @@
     },
     {
       "municipality": "葛城市",
+      "title": "第8-301号 忍海池底樋等改修工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "葛城市",
+      "title": "第8-301号 忍海池底樋等改修工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "葛城市",
+      "title": "クビアカツヤカミキリ防除対策業務委託",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "葛城市",
+      "title": "クビアカツヤカミキリ防除対策業務委託 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "葛城市",
       "title": "第8-113号 弁之庄5号線他道路舗装工事",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -37949,6 +37973,30 @@
     },
     {
       "municipality": "葛城市",
+      "title": "第8-301号 忍海池底樋等改修工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "葛城市",
+      "title": "第8-301号 忍海池底樋等改修工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "葛城市",
+      "title": "クビアカツヤカミキリ防除対策業務委託",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "葛城市",
+      "title": "クビアカツヤカミキリ防除対策業務委託 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "葛城市",
       "title": "第8-113号 弁之庄5号線他道路舗装工事",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -41452,6 +41500,30 @@
     {
       "municipality": "葛城市",
       "title": "新庄第1健民運動場及び新町公園球技場芝生管理アドバイザー業務委託 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "葛城市",
+      "title": "第8-301号 忍海池底樋等改修工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "葛城市",
+      "title": "第8-301号 忍海池底樋等改修工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "葛城市",
+      "title": "クビアカツヤカミキリ防除対策業務委託",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "葛城市",
+      "title": "クビアカツヤカミキリ防除対策業務委託 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },
@@ -52736,24 +52808,6 @@
       "title": "小林児童遊園7改修 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "【奈良県葛城地区清掃事務組合】し尿処理施設（アクアセンター）包括的運転管理業務委託に関する計画書の呈示者募集",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "清掃",
-        "清掃"
-      ]
-    },
-    {
-      "municipality": "御所市",
-      "title": "【奈良県葛城地区清掃事務組合】し尿処理施設（アクアセンター）包括的運転管理業務委託に関する計画書の呈示者募集 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "清掃",
-        "清掃"
-      ]
     },
     {
       "municipality": "御所市",
@@ -52879,24 +52933,6 @@
     },
     {
       "municipality": "御所市",
-      "title": "【奈良県葛城地区清掃事務組合】し尿処理施設（アクアセンター）包括的運転管理業務委託に関する計画書の呈示者募集",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "清掃",
-        "清掃"
-      ]
-    },
-    {
-      "municipality": "御所市",
-      "title": "【奈良県葛城地区清掃事務組合】し尿処理施設（アクアセンター）包括的運転管理業務委託に関する計画書の呈示者募集 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "清掃",
-        "清掃"
-      ]
-    },
-    {
-      "municipality": "御所市",
       "title": "御所市の電子入札に参加するための準備",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -53016,24 +53052,6 @@
       "title": "小林児童遊園7改修 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
-    },
-    {
-      "municipality": "御所市",
-      "title": "【奈良県葛城地区清掃事務組合】し尿処理施設（アクアセンター）包括的運転管理業務委託に関する計画書の呈示者募集",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "清掃",
-        "清掃"
-      ]
-    },
-    {
-      "municipality": "御所市",
-      "title": "【奈良県葛城地区清掃事務組合】し尿処理施設（アクアセンター）包括的運転管理業務委託に関する計画書の呈示者募集 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "清掃",
-        "清掃"
-      ]
     },
     {
       "municipality": "御所市",
@@ -70677,357 +70695,13 @@
     },
     {
       "municipality": "平群町",
-      "title": "平群町入札参加資格審査申請と変更届のご案内",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "案内",
-        "資格審査"
-      ]
-    },
-    {
-      "municipality": "平群町",
-      "title": "平群町入札参加資格審査申請と変更届のご案内 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "案内",
-        "資格審査"
-      ]
-    },
-    {
-      "municipality": "平群町",
-      "title": "見つからないときは",
+      "title": "庁内ネットワーク整備業務にかかる一般競争入札（条件付）",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },
     {
       "municipality": "平群町",
-      "title": "見つからないときは ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "平群町",
-      "title": "よくある質問と回答",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "平群町",
-      "title": "よくある質問と回答 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "平群町",
-      "title": "このページのトップへ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "平群町",
-      "title": "このページのトップへ ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "平群町",
-      "title": "リンク・著作権・免責事項",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "平群町",
-      "title": "リンク・著作権・免責事項 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "平群町",
-      "title": "個人情報保護",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "平群町",
-      "title": "個人情報保護 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "平群町",
-      "title": "アクセシビリティ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "平群町",
-      "title": "アクセシビリティ ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "平群町",
-      "title": "広告バナーについて",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "平群町",
-      "title": "広告バナーについて ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "平群町",
-      "title": "町役場へのアクセス",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "平群町",
-      "title": "町役場へのアクセス ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "平群町",
-      "title": "メールでのお問い合わせ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "平群町",
-      "title": "メールでのお問い合わせ ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "平群町",
-      "title": "入札",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "平群町",
-      "title": "入札 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "平群町",
-      "title": "入札 - 平群町ホームページ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "平群町",
-      "title": "入札 - 平群町ホームページ ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "平群町",
-      "title": "メニューを飛ばして本文へ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "平群町",
-      "title": "メニューを飛ばして本文へ ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "平群町",
-      "title": "ご利用ガイド",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "ガイド"
-      ]
-    },
-    {
-      "municipality": "平群町",
-      "title": "ご利用ガイド ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "ガイド"
-      ]
-    },
-    {
-      "municipality": "平群町",
-      "title": "サイトマップ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "サイトマップ"
-      ]
-    },
-    {
-      "municipality": "平群町",
-      "title": "サイトマップ ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "サイトマップ"
-      ]
-    },
-    {
-      "municipality": "平群町",
-      "title": "Foreign language",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "平群町",
-      "title": "Foreign language ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "平群町",
-      "title": "ごみカレンダー",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "ごみ",
-        "カレンダー"
-      ]
-    },
-    {
-      "municipality": "平群町",
-      "title": "ごみカレンダー ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "ごみ",
-        "カレンダー"
-      ]
-    },
-    {
-      "municipality": "平群町",
-      "title": "総合文化センター",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "平群町",
-      "title": "総合文化センター ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "平群町",
-      "title": "デマンドタクシー",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "タクシー"
-      ]
-    },
-    {
-      "municipality": "平群町",
-      "title": "デマンドタクシー ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "タクシー"
-      ]
-    },
-    {
-      "municipality": "平群町",
-      "title": "平群町防災計画",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "平群町",
-      "title": "平群町防災計画 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "平群町",
-      "title": "組織でさがす",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "平群町",
-      "title": "組織でさがす ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "平群町",
-      "title": "カレンダーでさがす",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "カレンダー"
-      ]
-    },
-    {
-      "municipality": "平群町",
-      "title": "カレンダーでさがす ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "カレンダー"
-      ]
-    },
-    {
-      "municipality": "平群町",
-      "title": "地図でさがす",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "地図でさがす"
-      ]
-    },
-    {
-      "municipality": "平群町",
-      "title": "地図でさがす ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "地図でさがす"
-      ]
-    },
-    {
-      "municipality": "平群町",
-      "title": "くらしの情報",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "平群町",
-      "title": "くらしの情報 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "平群町",
-      "title": "しごとの情報",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "平群町",
-      "title": "しごとの情報 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "平群町",
-      "title": "トップページ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "平群町",
-      "title": "トップページ ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "平群町",
-      "title": "分類でさがす",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "平群町",
-      "title": "分類でさがす ",
+      "title": "庁内ネットワーク整備業務にかかる一般競争入札（条件付） ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },
@@ -71389,6 +71063,386 @@
     },
     {
       "municipality": "平群町",
+      "title": "庁内ネットワーク整備業務にかかる一般競争入札（条件付）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "平群町",
+      "title": "庁内ネットワーク整備業務にかかる一般競争入札（条件付） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "平群町",
+      "title": "平群町入札参加資格審査申請と変更届のご案内",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "案内",
+        "資格審査"
+      ]
+    },
+    {
+      "municipality": "平群町",
+      "title": "平群町入札参加資格審査申請と変更届のご案内 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "案内",
+        "資格審査"
+      ]
+    },
+    {
+      "municipality": "平群町",
+      "title": "見つからないときは",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "平群町",
+      "title": "見つからないときは ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "平群町",
+      "title": "よくある質問と回答",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "平群町",
+      "title": "よくある質問と回答 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "平群町",
+      "title": "このページのトップへ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "平群町",
+      "title": "このページのトップへ ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "平群町",
+      "title": "リンク・著作権・免責事項",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "平群町",
+      "title": "リンク・著作権・免責事項 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "平群町",
+      "title": "個人情報保護",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "平群町",
+      "title": "個人情報保護 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "平群町",
+      "title": "アクセシビリティ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "平群町",
+      "title": "アクセシビリティ ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "平群町",
+      "title": "広告バナーについて",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "平群町",
+      "title": "広告バナーについて ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "平群町",
+      "title": "町役場へのアクセス",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "平群町",
+      "title": "町役場へのアクセス ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "平群町",
+      "title": "メールでのお問い合わせ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "平群町",
+      "title": "メールでのお問い合わせ ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "平群町",
+      "title": "入札",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "平群町",
+      "title": "入札 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "平群町",
+      "title": "入札 - 平群町ホームページ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "平群町",
+      "title": "入札 - 平群町ホームページ ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "平群町",
+      "title": "メニューを飛ばして本文へ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "平群町",
+      "title": "メニューを飛ばして本文へ ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "平群町",
+      "title": "ご利用ガイド",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "ガイド"
+      ]
+    },
+    {
+      "municipality": "平群町",
+      "title": "ご利用ガイド ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "ガイド"
+      ]
+    },
+    {
+      "municipality": "平群町",
+      "title": "サイトマップ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "サイトマップ"
+      ]
+    },
+    {
+      "municipality": "平群町",
+      "title": "サイトマップ ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "サイトマップ"
+      ]
+    },
+    {
+      "municipality": "平群町",
+      "title": "Foreign language",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "平群町",
+      "title": "Foreign language ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "平群町",
+      "title": "ごみカレンダー",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "ごみ",
+        "カレンダー"
+      ]
+    },
+    {
+      "municipality": "平群町",
+      "title": "ごみカレンダー ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "ごみ",
+        "カレンダー"
+      ]
+    },
+    {
+      "municipality": "平群町",
+      "title": "総合文化センター",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "平群町",
+      "title": "総合文化センター ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "平群町",
+      "title": "デマンドタクシー",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "タクシー"
+      ]
+    },
+    {
+      "municipality": "平群町",
+      "title": "デマンドタクシー ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "タクシー"
+      ]
+    },
+    {
+      "municipality": "平群町",
+      "title": "平群町防災計画",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "平群町",
+      "title": "平群町防災計画 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "平群町",
+      "title": "組織でさがす",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "平群町",
+      "title": "組織でさがす ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "平群町",
+      "title": "カレンダーでさがす",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "カレンダー"
+      ]
+    },
+    {
+      "municipality": "平群町",
+      "title": "カレンダーでさがす ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "カレンダー"
+      ]
+    },
+    {
+      "municipality": "平群町",
+      "title": "地図でさがす",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "地図でさがす"
+      ]
+    },
+    {
+      "municipality": "平群町",
+      "title": "地図でさがす ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "地図でさがす"
+      ]
+    },
+    {
+      "municipality": "平群町",
+      "title": "くらしの情報",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "平群町",
+      "title": "くらしの情報 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "平群町",
+      "title": "しごとの情報",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "平群町",
+      "title": "しごとの情報 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "平群町",
+      "title": "トップページ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "平群町",
+      "title": "トップページ ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "平群町",
+      "title": "分類でさがす",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "平群町",
+      "title": "分類でさがす ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "平群町",
+      "title": "庁内ネットワーク整備業務にかかる一般競争入札（条件付）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "平群町",
+      "title": "庁内ネットワーク整備業務にかかる一般競争入札（条件付） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "平群町",
       "title": "平群町入札参加資格審査申請と変更届のご案内",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -71515,6 +71569,22 @@
     },
     {
       "municipality": "三宅町",
+      "title": "三宅5号線道路改良工事（1期）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "三宅町",
+      "title": "三宅5号線道路改良工事（1期） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "三宅町",
       "title": "伴堂第二児童公園改修工事",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -71726,6 +71796,22 @@
     },
     {
       "municipality": "三宅町",
+      "title": "三宅5号線道路改良工事（1期）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "三宅町",
+      "title": "三宅5号線道路改良工事（1期） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "三宅町",
       "title": "伴堂第二児童公園改修工事",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -71933,6 +72019,22 @@
         "交通",
         "測量",
         "用地"
+      ]
+    },
+    {
+      "municipality": "三宅町",
+      "title": "三宅5号線道路改良工事（1期）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "三宅町",
+      "title": "三宅5号線道路改良工事（1期） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
       ]
     },
     {
@@ -74929,22 +75031,6 @@
       "title": "○ ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 公共下水道人孔防食工事（3工区）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 公共下水道人孔防食工事（3工区） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
     },
     {
       "municipality": "三郷町",
@@ -75185,6 +75271,38 @@
       "title": "指名競争入札9月17日 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "指名競争入札10月16日",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "指名競争入札10月16日 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 清掃センター保管容器購入",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "清掃",
+        "清掃",
+        "購入"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 清掃センター保管容器購入 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "清掃",
+        "清掃",
+        "購入"
+      ]
     },
     {
       "municipality": "三郷町",
@@ -75861,6 +75979,22 @@
       "title": "＜外部リンク＞ 閉じる ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 公共下水道人孔防食工事（3工区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 公共下水道人孔防食工事（3工区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
     },
     {
       "municipality": "三郷町",
@@ -76666,22 +76800,6 @@
     },
     {
       "municipality": "三郷町",
-      "title": "令和8年度 公共下水道人孔防食工事（3工区）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 公共下水道人孔防食工事（3工区） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "三郷町",
       "title": "メニュー 検索 <p>JavaScriptが無効のため、文字の大きさ・背景色を変更する機能を使用できません。</p> 本文へ Foreign Language 文字サイズ標準拡大 背景色白黒青 危険箇所をおしらせください 防犯・安心情報 休日・夜間救急 検索コーナー キーワード検索 Googleカスタム検索 検索対象 すべて ページ PDF ページID検索 暮らし・手続き 健康・福祉・子育て 教育・文化・スポーツ 産業・ビジネス 行政情報",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -76919,6 +77037,38 @@
       "title": "指名競争入札9月17日 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "指名競争入札10月16日",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "指名競争入札10月16日 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 清掃センター保管容器購入",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "清掃",
+        "清掃",
+        "購入"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 清掃センター保管容器購入 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "清掃",
+        "清掃",
+        "購入"
+      ]
     },
     {
       "municipality": "三郷町",
@@ -77595,6 +77745,22 @@
       "title": "＜外部リンク＞ 閉じる ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 公共下水道人孔防食工事（3工区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 公共下水道人孔防食工事（3工区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
     },
     {
       "municipality": "三郷町",
@@ -78400,22 +78566,6 @@
     },
     {
       "municipality": "三郷町",
-      "title": "令和8年度 公共下水道人孔防食工事（3工区）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "三郷町",
-      "title": "令和8年度 公共下水道人孔防食工事（3工区） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "三郷町",
       "title": "メニュー 検索 <p>JavaScriptが無効のため、文字の大きさ・背景色を変更する機能を使用できません。</p> 本文へ Foreign Language 文字サイズ標準拡大 背景色白黒青 危険箇所をおしらせください 防犯・安心情報 休日・夜間救急 検索コーナー キーワード検索 Googleカスタム検索 検索対象 すべて ページ PDF ページID検索 暮らし・手続き 健康・福祉・子育て 教育・文化・スポーツ 産業・ビジネス 行政情報",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -78653,6 +78803,38 @@
       "title": "指名競争入札9月17日 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "指名競争入札10月16日",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "指名競争入札10月16日 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 清掃センター保管容器購入",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "清掃",
+        "清掃",
+        "購入"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 清掃センター保管容器購入 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "清掃",
+        "清掃",
+        "購入"
+      ]
     },
     {
       "municipality": "三郷町",
@@ -79329,6 +79511,22 @@
       "title": "＜外部リンク＞ 閉じる ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 公共下水道人孔防食工事（3工区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "三郷町",
+      "title": "令和8年度 公共下水道人孔防食工事（3工区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
     },
     {
       "municipality": "三郷町",

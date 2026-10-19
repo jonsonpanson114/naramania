@@ -2715,7 +2715,7 @@
       "biddingDate": "2026-05-18",
       "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
       "status": "落札",
-      "winningContractor": "村本建設（株）奈良本店"
+      "winningContractor": "村本建設(株)奈良本店"
     }
   ],
   "広陵町": [
@@ -2858,6 +2858,16 @@
     }
   ],
   "三宅町": [
+    {
+      "id": "miyake-2026-10-19-三宅町デイサービスセンター介護浴槽改修工事",
+      "municipality": "三宅町",
+      "title": "三宅町デイサービスセンター介護浴槽改修工事",
+      "type": "建築",
+      "announcementDate": "2026-10-19",
+      "link": "https://www.town.miyake.lg.jp/uploaded/attachment/5877.pdf",
+      "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5877.pdf",
+      "status": "受付中"
+    },
     {
       "id": "miyake-2026-10-01-三宅町文化ホールトイレ改修工事",
       "municipality": "三宅町",

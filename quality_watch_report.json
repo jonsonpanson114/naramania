@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-10-16T11:12:34.940Z",
-  "qualityGeneratedAt": "2026-10-16T11:03:51.602Z",
-  "itemCount": 319,
+  "generatedAt": "2026-10-19T06:25:15.234Z",
+  "qualityGeneratedAt": "2026-10-19T06:15:57.446Z",
+  "itemCount": 320,
   "resultFollowUp": {
     "totalCount": 11,
     "highCount": 7,
-    "mediumCount": 2,
-    "lowCount": 2,
+    "mediumCount": 4,
+    "lowCount": 0,
     "missingBiddingDateCount": 0,
     "byMunicipality": [
       {
@@ -25,7 +25,7 @@
     "samples": [
       {
         "priority": "high",
-        "ageDays": 178,
+        "ageDays": 181,
         "reason": "落札済みだが落札者が空",
         "item": {
           "id": "oyodo-79dc14038b",
@@ -41,8 +41,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 142,
-        "reason": "開札日から142日経過",
+        "ageDays": 145,
+        "reason": "開札日から145日経過",
         "item": {
           "id": "nara-city-0000002346",
           "municipality": "奈良市",
@@ -57,7 +57,7 @@
       },
       {
         "priority": "high",
-        "ageDays": 123,
+        "ageDays": 126,
         "reason": "落札済みだが落札者が空",
         "item": {
           "id": "oyodo-46ab50dbc8",
@@ -73,8 +73,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 120,
-        "reason": "開札日から120日経過",
+        "ageDays": 123,
+        "reason": "開札日から123日経過",
         "item": {
           "id": "nara-pref-29001013060020260055",
           "municipality": "奈良県",
@@ -89,8 +89,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 101,
-        "reason": "開札日から101日経過",
+        "ageDays": 104,
+        "reason": "開札日から104日経過",
         "item": {
           "id": "nara-pref-29005007060120260015",
           "municipality": "奈良県",
@@ -105,8 +105,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 91,
-        "reason": "開札日から91日経過",
+        "ageDays": 94,
+        "reason": "開札日から94日経過",
         "item": {
           "id": "nara-pref-29005007060120260018",
           "municipality": "奈良県",
@@ -121,8 +121,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 21,
-        "reason": "開札日から21日経過",
+        "ageDays": 24,
+        "reason": "開札日から24日経過",
         "item": {
           "id": "nara-pref-29001013401020260007",
           "municipality": "奈良県",
@@ -137,8 +137,8 @@
       },
       {
         "priority": "medium",
-        "ageDays": 10,
-        "reason": "開札日から10日経過",
+        "ageDays": 13,
+        "reason": "開札日から13日経過",
         "item": {
           "id": "nara-pref-29001013052520260089",
           "municipality": "奈良県",
@@ -153,8 +153,8 @@
       },
       {
         "priority": "medium",
-        "ageDays": 3,
-        "reason": "開札日から3日経過",
+        "ageDays": 6,
+        "reason": "開札日から6日経過",
         "item": {
           "id": "nara-pref-29005007060120260031",
           "municipality": "奈良県",
@@ -168,9 +168,9 @@
         }
       },
       {
-        "priority": "low",
-        "ageDays": 2,
-        "reason": "開札直後の結果待ち",
+        "priority": "medium",
+        "ageDays": 5,
+        "reason": "開札日から5日経過",
         "item": {
           "id": "nara-pref-29004060025020260077",
           "municipality": "奈良県",
@@ -735,15 +735,15 @@
         "municipality": "三宅町",
         "status": "ok",
         "severity": "error",
-        "totalCount": 6,
+        "totalCount": 7,
         "requiredLinkIncludes": [
           "town.miyake.lg.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "town.miyake.lg.jp": 6
+          "town.miyake.lg.jp": 7
         },
-        "message": "三宅町: 6件 (公告2/結果4) / sources OK"
+        "message": "三宅町: 7件 (公告3/結果4) / sources OK"
       },
       {
         "municipality": "山添村",
