@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-16T12:15:49.973Z",
-  "currentItemCount": 319,
+  "generatedAt": "2026-10-19T07:13:13.368Z",
+  "currentItemCount": 320,
   "checkedMunicipalities": [
     "奈良市",
     "橿原市",
@@ -86,9 +86,9 @@
     },
     {
       "municipality": "葛城市",
-      "rawCount": 383,
+      "rawCount": 385,
       "keptCount": 25,
-      "rejectedCount": 358,
+      "rejectedCount": 360,
       "keptAnnouncementCount": 0,
       "keptResultCount": 25,
       "warnings": [],
@@ -196,22 +196,22 @@
     },
     {
       "municipality": "平群町",
-      "rawCount": 30,
+      "rawCount": 31,
       "keptCount": 2,
-      "rejectedCount": 28,
+      "rejectedCount": 29,
       "keptAnnouncementCount": 2,
       "keptResultCount": 0,
       "warnings": [
-        "平群町: 取得30件に落札結果が1件もありません。入札結果(開札情報)ページを見落としていないか確認が必要です。"
+        "平群町: 取得31件に落札結果が1件もありません。入札結果(開札情報)ページを見落としていないか確認が必要です。"
       ],
       "errors": []
     },
     {
       "municipality": "三宅町",
-      "rawCount": 25,
-      "keptCount": 7,
-      "rejectedCount": 18,
-      "keptAnnouncementCount": 2,
+      "rawCount": 27,
+      "keptCount": 8,
+      "rejectedCount": 19,
+      "keptAnnouncementCount": 3,
       "keptResultCount": 5,
       "warnings": [],
       "errors": []
@@ -250,9 +250,9 @@
     },
     {
       "municipality": "三郷町",
-      "rawCount": 179,
+      "rawCount": 181,
       "keptCount": 9,
-      "rejectedCount": 170,
+      "rejectedCount": 172,
       "keptAnnouncementCount": 0,
       "keptResultCount": 9,
       "warnings": [],
@@ -281,8 +281,8 @@
   ],
   "coverage": {
     "checkedMunicipalityCount": 24,
-    "expectedItemCount": 282,
-    "matchedItemCount": 282,
+    "expectedItemCount": 283,
+    "matchedItemCount": 283,
     "missingItemCount": 0,
     "duplicateTitleGroupCount": 29,
     "duplicateTitleItemCount": 65,
@@ -322,7 +322,7 @@
       },
       {
         "municipality": "葛城市",
-        "snapshotCount": 383,
+        "snapshotCount": 385,
         "expectedCount": 25,
         "matchedCount": 25,
         "missingCount": 0,
@@ -399,12 +399,23 @@
       },
       {
         "municipality": "三郷町",
-        "snapshotCount": 179,
+        "snapshotCount": 181,
         "expectedCount": 9,
         "matchedCount": 9,
         "missingCount": 0,
         "duplicateTitleGroupCount": 0,
         "duplicateTitleItemCount": 0,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
+        "municipality": "三宅町",
+        "snapshotCount": 27,
+        "expectedCount": 8,
+        "matchedCount": 8,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 1,
+        "duplicateTitleItemCount": 2,
         "missingItems": [],
         "status": "ok"
       },
@@ -427,17 +438,6 @@
         "missingCount": 0,
         "duplicateTitleGroupCount": 0,
         "duplicateTitleItemCount": 0,
-        "missingItems": [],
-        "status": "ok"
-      },
-      {
-        "municipality": "三宅町",
-        "snapshotCount": 25,
-        "expectedCount": 7,
-        "matchedCount": 7,
-        "missingCount": 0,
-        "duplicateTitleGroupCount": 1,
-        "duplicateTitleItemCount": 2,
         "missingItems": [],
         "status": "ok"
       },
@@ -531,7 +531,7 @@
       },
       {
         "municipality": "平群町",
-        "snapshotCount": 30,
+        "snapshotCount": 31,
         "expectedCount": 2,
         "matchedCount": 2,
         "missingCount": 0,
