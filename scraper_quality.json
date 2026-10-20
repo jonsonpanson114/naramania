@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-20T00:09:25.758Z",
+  "generatedAt": "2026-10-20T01:03:06.740Z",
   "source": "daily_scrape",
   "municipalityLastScraped": {
     "奈良市": "2026-10-19T12:26:57.364Z",
@@ -26,7 +26,7 @@
     "三郷町": "2026-10-19T12:26:57.364Z",
     "王寺町": "2026-10-19T12:26:57.364Z",
     "大淀町": "2026-10-19T12:26:57.364Z",
-    "奈良県": "2026-10-20T00:09:25.758Z"
+    "奈良県": "2026-10-20T01:03:06.740Z"
   },
   "scrapedCount": 65,
   "keptCount": 328,
@@ -47,7 +47,7 @@
       {
         "municipality": "奈良県",
         "count": 64,
-        "changeFromPrevious": 8
+        "changeFromPrevious": 0
       },
       {
         "municipality": "橿原市",
