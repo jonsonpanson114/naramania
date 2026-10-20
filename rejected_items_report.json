@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-10-20T01:03:06.742Z",
-  "totalRejected": 535,
+  "generatedAt": "2026-10-20T01:41:46.055Z",
+  "totalRejected": 537,
   "totalBorderlineRescued": 47,
   "byMunicipality": {
     "奈良県": {
-      "rejected": 535,
+      "rejected": 537,
       "borderlineRescued": 47
     }
   },
@@ -194,6 +194,25 @@
       "title": "主要地方道高野天川線 庵住橋 耐震補強設計委託（緊急防災・減災事業） ６４３－３－委１",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
+        "橋"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "浄化センター水処理中央監視制御設備更新詳細設計委託（防災・安全交付金事業） Ｒ８浄化委第６号",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "設備",
+        "設備更新",
+        "浄化センター"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "（都）大安寺柏木線 大安寺西地区 高橋橋梁構造検討業務（無電柱化推進事業（街路）） １－Ｇ１－委－１",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
         "橋"
       ]
     },
