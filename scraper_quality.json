@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-19T12:26:57.364Z",
+  "generatedAt": "2026-10-20T00:09:25.758Z",
   "source": "daily_scrape",
   "municipalityLastScraped": {
     "奈良市": "2026-10-19T12:26:57.364Z",
@@ -26,11 +26,11 @@
     "三郷町": "2026-10-19T12:26:57.364Z",
     "王寺町": "2026-10-19T12:26:57.364Z",
     "大淀町": "2026-10-19T12:26:57.364Z",
-    "奈良県": "2026-10-07T21:56:17.437Z"
+    "奈良県": "2026-10-20T00:09:25.758Z"
   },
-  "scrapedCount": 2857,
-  "keptCount": 320,
-  "rejectedCount": 2574,
+  "scrapedCount": 65,
+  "keptCount": 328,
+  "rejectedCount": 1,
   "oldestAnnouncementDate": "2025-02-02",
   "latestAnnouncementDate": "2026-10-19",
   "municipalityCount": 24,
@@ -46,8 +46,8 @@
     "breakdown": [
       {
         "municipality": "奈良県",
-        "count": 56,
-        "changeFromPrevious": 0
+        "count": 64,
+        "changeFromPrevious": 8
       },
       {
         "municipality": "橿原市",
@@ -165,16 +165,8 @@
         "changeFromPrevious": 0
       }
     ],
-    "retainedFromPrevious": [
-      "高取町"
-    ],
-    "issues": [
-      {
-        "municipality": "高取町",
-        "level": "warning",
-        "message": "[高取町] 取得件数が急減したため既存データ 11件を維持しつつ、新規 15件を反映しています (baseline=26)"
-      }
-    ]
+    "retainedFromPrevious": [],
+    "issues": []
   },
   "dateAudit": {
     "announcementAfterBiddingCount": 0,
@@ -222,14 +214,14 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 56,
+        "totalCount": 64,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "ppi.ebid-kouji-gyoumu.pref.nara.jp": 56
+          "ppi.ebid-kouji-gyoumu.pref.nara.jp": 64
         },
         "announcementCount": 8,
-        "resultCount": 48,
-        "message": "奈良県: 56件 (公告8/結果48) / sources OK"
+        "resultCount": 56,
+        "message": "奈良県: 64件 (公告8/結果56) / sources OK"
       },
       {
         "expectation": {
@@ -745,7 +737,6 @@
     "itemsWithDescription": 49,
     "intelligenceExtractedCount": 48,
     "geminiExtractedCount": 48,
-    "taggedCount": 48,
-    "lastAugmentedAt": "2026-10-19T12:28:16.865Z"
+    "taggedCount": 48
   }
 }

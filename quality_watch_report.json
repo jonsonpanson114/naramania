@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-10-19T12:36:30.616Z",
-  "qualityGeneratedAt": "2026-10-19T12:26:57.364Z",
-  "itemCount": 320,
+  "generatedAt": "2026-10-20T00:09:31.089Z",
+  "qualityGeneratedAt": "2026-10-20T00:09:25.758Z",
+  "itemCount": 328,
   "resultFollowUp": {
-    "totalCount": 11,
+    "totalCount": 10,
     "highCount": 7,
-    "mediumCount": 4,
+    "mediumCount": 3,
     "lowCount": 0,
     "missingBiddingDateCount": 0,
     "byMunicipality": [
       {
         "municipality": "奈良県",
-        "count": 8
+        "count": 7
       },
       {
         "municipality": "大淀町",
@@ -25,7 +25,7 @@
     "samples": [
       {
         "priority": "high",
-        "ageDays": 181,
+        "ageDays": 182,
         "reason": "落札済みだが落札者が空",
         "item": {
           "id": "oyodo-79dc14038b",
@@ -41,8 +41,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 145,
-        "reason": "開札日から145日経過",
+        "ageDays": 146,
+        "reason": "開札日から146日経過",
         "item": {
           "id": "nara-city-0000002346",
           "municipality": "奈良市",
@@ -57,7 +57,7 @@
       },
       {
         "priority": "high",
-        "ageDays": 126,
+        "ageDays": 127,
         "reason": "落札済みだが落札者が空",
         "item": {
           "id": "oyodo-46ab50dbc8",
@@ -73,8 +73,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 123,
-        "reason": "開札日から123日経過",
+        "ageDays": 124,
+        "reason": "開札日から124日経過",
         "item": {
           "id": "nara-pref-29001013060020260055",
           "municipality": "奈良県",
@@ -89,8 +89,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 104,
-        "reason": "開札日から104日経過",
+        "ageDays": 105,
+        "reason": "開札日から105日経過",
         "item": {
           "id": "nara-pref-29005007060120260015",
           "municipality": "奈良県",
@@ -105,8 +105,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 94,
-        "reason": "開札日から94日経過",
+        "ageDays": 95,
+        "reason": "開札日から95日経過",
         "item": {
           "id": "nara-pref-29005007060120260018",
           "municipality": "奈良県",
@@ -121,8 +121,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 24,
-        "reason": "開札日から24日経過",
+        "ageDays": 25,
+        "reason": "開札日から25日経過",
         "item": {
           "id": "nara-pref-29001013401020260007",
           "municipality": "奈良県",
@@ -137,24 +137,8 @@
       },
       {
         "priority": "medium",
-        "ageDays": 13,
-        "reason": "開札日から13日経過",
-        "item": {
-          "id": "nara-pref-29001013052520260089",
-          "municipality": "奈良県",
-          "title": "県営畑地帯総合整備事業 大宇陀政始北部地区 パイプライン実施設計業務委託 第Ｒ８Ｃ１委４号",
-          "status": "受付終了",
-          "announcementDate": "2026-09-16",
-          "biddingDate": "2026-10-06",
-          "winningContractor": null,
-          "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013052520260089&gamenMode=0",
-          "pdfUrl": null
-        }
-      },
-      {
-        "priority": "medium",
-        "ageDays": 6,
-        "reason": "開札日から6日経過",
+        "ageDays": 7,
+        "reason": "開札日から7日経過",
         "item": {
           "id": "nara-pref-29005007060120260031",
           "municipality": "奈良県",
@@ -169,8 +153,8 @@
       },
       {
         "priority": "medium",
-        "ageDays": 5,
-        "reason": "開札日から5日経過",
+        "ageDays": 6,
+        "reason": "開札日から6日経過",
         "item": {
           "id": "nara-pref-29004060025020260077",
           "municipality": "奈良県",
@@ -180,6 +164,22 @@
           "biddingDate": "2026-10-14",
           "winningContractor": null,
           "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29004060025020260077&gamenMode=0",
+          "pdfUrl": null
+        }
+      },
+      {
+        "priority": "medium",
+        "ageDays": 5,
+        "reason": "開札日から5日経過",
+        "item": {
+          "id": "nara-pref-29001013051020260142",
+          "municipality": "奈良県",
+          "title": "第Ｒ８Ａ１委１号 令和８年度 県営畑地帯総合整備事業 上庄・梨本地区 実施設計業務（その２）委託",
+          "status": "受付終了",
+          "announcementDate": "2026-09-17",
+          "biddingDate": "2026-10-15",
+          "winningContractor": null,
+          "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013051020260142&gamenMode=0",
           "pdfUrl": null
         }
       }
@@ -505,15 +505,15 @@
         "municipality": "奈良県",
         "status": "ok",
         "severity": "error",
-        "totalCount": 56,
+        "totalCount": 64,
         "requiredLinkIncludes": [
           "ppi.ebid-kouji-gyoumu.pref.nara.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "ppi.ebid-kouji-gyoumu.pref.nara.jp": 56
+          "ppi.ebid-kouji-gyoumu.pref.nara.jp": 64
         },
-        "message": "奈良県: 56件 (公告8/結果48) / sources OK"
+        "message": "奈良県: 64件 (公告8/結果56) / sources OK"
       },
       {
         "municipality": "奈良市",

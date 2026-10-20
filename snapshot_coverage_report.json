@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-10-19T12:36:31.665Z",
+  "generatedAt": "2026-10-20T00:09:35.557Z",
   "checkedMunicipalityCount": 24,
-  "expectedItemCount": 320,
-  "matchedItemCount": 320,
+  "expectedItemCount": 328,
+  "matchedItemCount": 328,
   "missingItemCount": 0,
   "duplicateTitleGroupCount": 24,
   "duplicateTitleItemCount": 53,
   "results": [
     {
       "municipality": "奈良県",
-      "snapshotCount": 56,
-      "expectedCount": 56,
-      "matchedCount": 56,
+      "snapshotCount": 64,
+      "expectedCount": 64,
+      "matchedCount": 64,
       "missingCount": 0,
       "duplicateTitleGroupCount": 6,
       "duplicateTitleItemCount": 12,
