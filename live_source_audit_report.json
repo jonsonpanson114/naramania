@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-20T12:29:20.925Z",
+  "generatedAt": "2026-10-21T06:58:16.766Z",
   "currentItemCount": 328,
   "checkedMunicipalities": [
     "奈良市",
@@ -66,9 +66,9 @@
     },
     {
       "municipality": "大和高田市",
-      "rawCount": 207,
+      "rawCount": 208,
       "keptCount": 0,
-      "rejectedCount": 207,
+      "rejectedCount": 208,
       "keptAnnouncementCount": 0,
       "keptResultCount": 0,
       "warnings": [],
@@ -106,9 +106,9 @@
     },
     {
       "municipality": "御所市",
-      "rawCount": 19,
+      "rawCount": 18,
       "keptCount": 2,
-      "rejectedCount": 17,
+      "rejectedCount": 16,
       "keptAnnouncementCount": 0,
       "keptResultCount": 2,
       "warnings": [],
@@ -196,13 +196,13 @@
     },
     {
       "municipality": "平群町",
-      "rawCount": 31,
+      "rawCount": 32,
       "keptCount": 2,
-      "rejectedCount": 29,
+      "rejectedCount": 30,
       "keptAnnouncementCount": 2,
       "keptResultCount": 0,
       "warnings": [
-        "平群町: 取得31件に落札結果が1件もありません。入札結果(開札情報)ページを見落としていないか確認が必要です。"
+        "平群町: 取得32件に落札結果が1件もありません。入札結果(開札情報)ページを見落としていないか確認が必要です。"
       ],
       "errors": []
     },
@@ -509,7 +509,7 @@
       },
       {
         "municipality": "御所市",
-        "snapshotCount": 19,
+        "snapshotCount": 18,
         "expectedCount": 2,
         "matchedCount": 2,
         "missingCount": 0,
@@ -531,7 +531,7 @@
       },
       {
         "municipality": "平群町",
-        "snapshotCount": 31,
+        "snapshotCount": 32,
         "expectedCount": 2,
         "matchedCount": 2,
         "missingCount": 0,
@@ -542,7 +542,7 @@
       },
       {
         "municipality": "大和高田市",
-        "snapshotCount": 207,
+        "snapshotCount": 208,
         "expectedCount": 0,
         "matchedCount": 0,
         "missingCount": 0,
