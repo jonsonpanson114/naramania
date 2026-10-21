@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-21T06:14:20.398Z",
-  "totalRejected": 11208,
+  "generatedAt": "2026-10-21T11:32:05.303Z",
+  "totalRejected": 11196,
   "totalBorderlineRescued": 33,
   "byMunicipality": {
     "奈良市": {
@@ -32,7 +32,7 @@
       "borderlineRescued": 0
     },
     "御所市": {
-      "rejected": 54,
+      "rejected": 42,
       "borderlineRescued": 0
     },
     "天理市": {
@@ -52729,40 +52729,6 @@
     },
     {
       "municipality": "御所市",
-      "title": "新田川護岸整備工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "護岸"
-      ]
-    },
-    {
-      "municipality": "御所市",
-      "title": "新田川護岸整備工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "護岸"
-      ]
-    },
-    {
-      "municipality": "御所市",
-      "title": "令和8年度自動車騒音常時監視面的評価業務委託",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "騒音",
-        "自動車"
-      ]
-    },
-    {
-      "municipality": "御所市",
-      "title": "令和8年度自動車騒音常時監視面的評価業務委託 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "騒音",
-        "自動車"
-      ]
-    },
-    {
-      "municipality": "御所市",
       "title": "今住調整池維持 建 御所市大字",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -52851,40 +52817,6 @@
     },
     {
       "municipality": "御所市",
-      "title": "新田川護岸整備工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "護岸"
-      ]
-    },
-    {
-      "municipality": "御所市",
-      "title": "新田川護岸整備工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "護岸"
-      ]
-    },
-    {
-      "municipality": "御所市",
-      "title": "令和8年度自動車騒音常時監視面的評価業務委託",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "騒音",
-        "自動車"
-      ]
-    },
-    {
-      "municipality": "御所市",
-      "title": "令和8年度自動車騒音常時監視面的評価業務委託 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "騒音",
-        "自動車"
-      ]
-    },
-    {
-      "municipality": "御所市",
       "title": "今住調整池維持 建 御所市大字",
       "reason": "no_architecture_context",
       "matchedKeywords": []
@@ -52969,40 +52901,6 @@
       "reason": "exclusion_keyword",
       "matchedKeywords": [
         "ポータルサイト"
-      ]
-    },
-    {
-      "municipality": "御所市",
-      "title": "新田川護岸整備工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "護岸"
-      ]
-    },
-    {
-      "municipality": "御所市",
-      "title": "新田川護岸整備工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "護岸"
-      ]
-    },
-    {
-      "municipality": "御所市",
-      "title": "令和8年度自動車騒音常時監視面的評価業務委託",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "騒音",
-        "自動車"
-      ]
-    },
-    {
-      "municipality": "御所市",
-      "title": "令和8年度自動車騒音常時監視面的評価業務委託 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "騒音",
-        "自動車"
       ]
     },
     {
