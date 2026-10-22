@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T10:04:15.044Z",
+  "generatedAt": "2026-10-22T12:54:13.166Z",
   "currentItemCount": 328,
   "checkedMunicipalities": [
     "奈良市",
@@ -88,9 +88,9 @@
     },
     {
       "municipality": "葛城市",
-      "rawCount": 385,
+      "rawCount": 386,
       "keptCount": 25,
-      "rejectedCount": 360,
+      "rejectedCount": 361,
       "keptAnnouncementCount": 0,
       "keptResultCount": 25,
       "warnings": [],
@@ -378,7 +378,7 @@
       },
       {
         "municipality": "葛城市",
-        "snapshotCount": 385,
+        "snapshotCount": 386,
         "expectedCount": 25,
         "matchedCount": 25,
         "missingCount": 0,
