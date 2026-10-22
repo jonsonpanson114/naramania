@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-10-22T18:00:00.544Z",
-  "totalRejected": 544,
+  "generatedAt": "2026-10-22T23:54:45.110Z",
+  "totalRejected": 543,
   "totalBorderlineRescued": 47,
   "byMunicipality": {
     "奈良県": {
-      "rejected": 544,
+      "rejected": 543,
       "borderlineRescued": 47
     }
   },
@@ -4787,17 +4787,6 @@
       "reason": "always_exclude_keyword",
       "matchedKeywords": [
         "設備"
-      ]
-    },
-    {
-      "municipality": "奈良県",
-      "title": "第二浄化センター低段ポンプ棟２号汚水ポンプ更新工事（防災・安全交付金事業） Ｒ８第二第３３０号",
-      "reason": "always_exclude_keyword",
-      "matchedKeywords": [
-        "設備",
-        "ポンプ更新",
-        "浄化センター",
-        "ポンプ棟"
       ]
     },
     {
