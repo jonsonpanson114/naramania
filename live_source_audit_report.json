@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T12:54:13.166Z",
+  "generatedAt": "2026-10-23T07:00:27.263Z",
   "currentItemCount": 328,
   "checkedMunicipalities": [
     "奈良市",
@@ -36,9 +36,9 @@
   "scraperResults": [
     {
       "municipality": "奈良市",
-      "rawCount": 119,
+      "rawCount": 116,
       "keptCount": 18,
-      "rejectedCount": 101,
+      "rejectedCount": 98,
       "keptAnnouncementCount": 10,
       "keptResultCount": 8,
       "warnings": [],
@@ -78,9 +78,9 @@
     },
     {
       "municipality": "大和郡山市",
-      "rawCount": 234,
+      "rawCount": 235,
       "keptCount": 23,
-      "rejectedCount": 211,
+      "rejectedCount": 212,
       "keptAnnouncementCount": 3,
       "keptResultCount": 20,
       "warnings": [],
@@ -88,9 +88,9 @@
     },
     {
       "municipality": "葛城市",
-      "rawCount": 386,
+      "rawCount": 385,
       "keptCount": 25,
-      "rejectedCount": 361,
+      "rejectedCount": 360,
       "keptAnnouncementCount": 0,
       "keptResultCount": 25,
       "warnings": [],
@@ -98,9 +98,9 @@
     },
     {
       "municipality": "五條市",
-      "rawCount": 252,
+      "rawCount": 253,
       "keptCount": 32,
-      "rejectedCount": 220,
+      "rejectedCount": 221,
       "keptAnnouncementCount": 3,
       "keptResultCount": 29,
       "warnings": [],
@@ -128,9 +128,9 @@
     },
     {
       "municipality": "桜井市",
-      "rawCount": 131,
+      "rawCount": 132,
       "keptCount": 10,
-      "rejectedCount": 121,
+      "rejectedCount": 122,
       "keptAnnouncementCount": 4,
       "keptResultCount": 6,
       "warnings": [],
@@ -291,7 +291,7 @@
     "results": [
       {
         "municipality": "五條市",
-        "snapshotCount": 252,
+        "snapshotCount": 253,
         "expectedCount": 32,
         "matchedCount": 31,
         "missingCount": 1,
@@ -343,7 +343,7 @@
         "duplicateTitleItemCount": 0,
         "missingItems": [
           {
-            "id": "gose-（仮称）御所市北部認定こども園整備工事設-8",
+            "id": "gose-（仮称）御所市北部認定こども園整備工事設-14",
             "municipality": "御所市",
             "title": "（仮称）御所市北部認定こども園整備工事設計業務委託に係る公募型プロポーザル",
             "status": "受付中",
@@ -378,7 +378,7 @@
       },
       {
         "municipality": "葛城市",
-        "snapshotCount": 386,
+        "snapshotCount": 385,
         "expectedCount": 25,
         "matchedCount": 25,
         "missingCount": 0,
@@ -389,7 +389,7 @@
       },
       {
         "municipality": "大和郡山市",
-        "snapshotCount": 234,
+        "snapshotCount": 235,
         "expectedCount": 23,
         "matchedCount": 23,
         "missingCount": 0,
@@ -411,7 +411,7 @@
       },
       {
         "municipality": "奈良市",
-        "snapshotCount": 119,
+        "snapshotCount": 116,
         "expectedCount": 18,
         "matchedCount": 18,
         "missingCount": 0,
@@ -422,7 +422,7 @@
       },
       {
         "municipality": "桜井市",
-        "snapshotCount": 131,
+        "snapshotCount": 132,
         "expectedCount": 10,
         "matchedCount": 10,
         "missingCount": 0,
