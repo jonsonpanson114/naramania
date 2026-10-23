@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-10-23T00:33:28.831Z",
-  "totalRejected": 546,
+  "generatedAt": "2026-10-23T01:20:28.211Z",
+  "totalRejected": 547,
   "totalBorderlineRescued": 47,
   "byMunicipality": {
     "奈良県": {
-      "rejected": 546,
+      "rejected": 547,
       "borderlineRescued": 47
     }
   },
@@ -2485,6 +2485,14 @@
       "reason": "exclusion_keyword",
       "matchedKeywords": [
         "砂防",
+        "測量"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "奈良公園 鹿苑測量業務（飛火野周辺地区整備事業（社会資本）） 第繰２０１－２－委４号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
         "測量"
       ]
     },
