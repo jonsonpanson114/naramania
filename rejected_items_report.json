@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-10-22T23:54:45.110Z",
-  "totalRejected": 543,
+  "generatedAt": "2026-10-23T00:33:28.831Z",
+  "totalRejected": 546,
   "totalBorderlineRescued": 47,
   "byMunicipality": {
     "奈良県": {
-      "rejected": 543,
+      "rejected": 546,
       "borderlineRescued": 47
     }
   },
@@ -196,6 +196,12 @@
         "設備"
       ],
       "borderlineRescue": true
+    },
+    {
+      "municipality": "奈良県",
+      "title": "大和民俗公園基本計画策定業務委託（単独都市計画公園事業） 第１－３０－Ｃ－１号",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
     },
     {
       "municipality": "奈良県",
@@ -2484,14 +2490,6 @@
     },
     {
       "municipality": "奈良県",
-      "title": "奈良公園 鹿苑測量業務（飛火野周辺地区整備事業（社会資本）） 第繰２０１－２－委４号",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "測量"
-      ]
-    },
-    {
-      "municipality": "奈良県",
       "title": "第Ｒ８Ａ１委２号 令和８年度 県営畑地帯総合整備事業 上庄・梨本地区 測量業務（その３）委託",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -3603,6 +3601,27 @@
       "matchedKeywords": [
         "道路",
         "地質",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "生子谷 地盤変動影響調査（事前調査）業務委託（緊急自然災害防止事業（砂防）） ７０１－１－用委１",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "砂防",
+        "補償",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "五條吉野線 用地調査等業務委託（防災・安全交付金事業（道路改良）） ７－３－Ａ１０－用委３",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "用地",
+        "補償",
         "調査"
       ]
     },
@@ -4787,6 +4806,17 @@
       "reason": "always_exclude_keyword",
       "matchedKeywords": [
         "設備"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "第二浄化センター低段ポンプ棟２号汚水ポンプ更新工事（防災・安全交付金事業） Ｒ８第二第３３０号",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "設備",
+        "ポンプ更新",
+        "浄化センター",
+        "ポンプ棟"
       ]
     },
     {
