@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-23T07:00:27.263Z",
+  "generatedAt": "2026-10-23T09:59:05.993Z",
   "currentItemCount": 328,
   "checkedMunicipalities": [
     "奈良市",
@@ -108,9 +108,9 @@
     },
     {
       "municipality": "御所市",
-      "rawCount": 14,
+      "rawCount": 13,
       "keptCount": 3,
-      "rejectedCount": 11,
+      "rejectedCount": 10,
       "keptAnnouncementCount": 1,
       "keptResultCount": 2,
       "warnings": [],
@@ -335,7 +335,7 @@
       },
       {
         "municipality": "御所市",
-        "snapshotCount": 14,
+        "snapshotCount": 13,
         "expectedCount": 3,
         "matchedCount": 2,
         "missingCount": 1,
@@ -343,7 +343,7 @@
         "duplicateTitleItemCount": 0,
         "missingItems": [
           {
-            "id": "gose-（仮称）御所市北部認定こども園整備工事設-14",
+            "id": "gose-（仮称）御所市北部認定こども園整備工事設-15",
             "municipality": "御所市",
             "title": "（仮称）御所市北部認定こども園整備工事設計業務委託に係る公募型プロポーザル",
             "status": "受付中",
