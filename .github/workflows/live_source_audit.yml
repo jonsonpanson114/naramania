@@ -29,7 +29,10 @@ permissions:
 
 jobs:
   audit-live-sources:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
+    # ubuntu-latest は 2026-10 に Ubuntu 26.04 へ切り替わり、Playwright 1.58.2 が
+    # 「chromium on ubuntu26.04-x64 は未対応」で落ちて収集が止まった(10/21 以降)。
+    # OS を固定して、GitHub 側の切り替えに巻き込まれないようにする。
     env:
       # 監査は本番のスクレイプと同じ条件で走らせる必要がある。
       # 高取町のようにスキャンPDFからGeminiで案件名を読む自治体があり、
