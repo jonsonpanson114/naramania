@@ -271,6 +271,11 @@ function compactJapaneseText(text: string): string {
         .trim();
 }
 
+/** 公告日が開札日より後にならないようにする。開札日が無ければそのまま返す */
+function clampToBiddingDate(announcementDate: string, biddingDate?: string): string {
+    return biddingDate && announcementDate > biddingDate ? biddingDate : announcementDate;
+}
+
 function gojoItemKey(title: string, biddingDate?: string, link?: string): string {
     if (biddingDate) {
         return `${title}::${biddingDate}`;
@@ -797,7 +802,13 @@ export class GojoCityScraper implements Scraper {
                         municipality: '五條市',
                         title: normalizedTitle,
                         type: classifyType(page.page_name),
-                        announcementDate: page.publish_datetime.split('T')[0],
+                        // 結果ページには「公告日」が無く、掲載日時(結果を載せた日)を使っている。
+                        // 結果は開札の後に載るので、そのままだと必ず「公告日が開札日より後」になる
+                        // (例: 10/20開札の結果を10/22に掲載)。品質チェックはこの矛盾で
+                        // 案件を隔離し、スナップショット照合が「あるはずの案件が無い」と
+                        // 失敗して日次更新が止まった(2026-10-27)。開札日が分かるなら、
+                        // 公告日は開札日を超えないようにする。
+                        announcementDate: clampToBiddingDate(page.publish_datetime.split('T')[0], detail.biddingDate),
                         biddingDate: detail.biddingDate,
                         link: page.url,
                         pdfUrl: detail.pdfUrl,

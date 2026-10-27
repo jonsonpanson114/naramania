@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { MAX_QUARANTINE_COUNT, quarantineInconsistentItems } from '../src/scrapers/common/quarantine';
+import { MAX_QUARANTINE_COUNT, quarantineInconsistentItems, removeDroppedFromSnapshots } from '../src/scrapers/common/quarantine';
 import { buildDateAuditSummary } from '../src/lib/quality_summary';
 import type { BiddingItem } from '../src/types/bidding';
 
@@ -54,4 +54,25 @@ const base = (id: string, patch: Partial<BiddingItem> = {}): BiddingItem => ({
     assert.equal(result.quarantined.length, 0);
 }
 
-console.log('隔離検証: 4 scenarios passed (差し戻し・新規除外・故障時は隔離しない・正常時は無変更)');
+// 5) 2026-10-27 の再現: 隔離で外した案件が、スナップショットの期待に残って
+//    スナップショット照合を失敗させた。外した案件だけをスナップショットから除く
+{
+    const dropped = base('gojo', { municipality: '五條市', title: '大塔体育館床修繕', announcementDate: '2026-10-22', biddingDate: '2026-10-20' });
+    const result = quarantineInconsistentItems([dropped, base('ok', { municipality: '五條市' })], []);
+    assert.equal(result.quarantined[0].action, 'dropped');
+    const snapshots = removeDroppedFromSnapshots(
+        { 五條市: [dropped, base('ok', { municipality: '五條市' })], 橿原市: [base('k1')] },
+        result.quarantined,
+    );
+    assert.deepEqual(snapshots['五條市']?.map(item => item.id), ['ok'], '外した案件を期待から除く');
+    assert.equal(snapshots['橿原市']?.length, 1, '他の自治体には触れない');
+
+    // 差し戻した案件は正常な版が掲載側に残るので、スナップショットはそのまま
+    const previous = [base('a')];
+    const restored = quarantineInconsistentItems([base('a', { biddingDate: undefined })], previous);
+    assert.equal(restored.quarantined[0].action, 'restored');
+    const kept = removeDroppedFromSnapshots({ 橿原市: [base('a')] }, restored.quarantined);
+    assert.equal(kept['橿原市']?.length, 1, '差し戻した案件は期待から外さない');
+}
+
+console.log('隔離検証: 5 scenarios passed (差し戻し・新規除外・故障時は隔離しない・正常時は無変更・隔離案件をスナップショットから除く)');

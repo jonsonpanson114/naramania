@@ -65,3 +65,29 @@ export function quarantineInconsistentItems(
 
     return { items: result, quarantined, skippedAsSystemic: false };
 }
+
+/**
+ * 隔離で外した案件を、スナップショットから取り除く。
+ *
+ * スナップショットは収集の途中(隔離より前)に書かれるため、外した案件が残ったままだと
+ * スナップショット照合が「あるはずの案件が掲載DBに無い」と失敗する。
+ * 外した案件は次回の収集で取り直すので、期待からも外す。
+ * 差し戻した案件は正常な版が掲載側に残っているので対象外。
+ */
+export function removeDroppedFromSnapshots<T extends { municipality: string; title: string }>(
+    snapshots: Record<string, T[] | undefined>,
+    quarantined: QuarantinedItem[],
+): Record<string, T[] | undefined> {
+    const dropped = new Set(
+        quarantined.filter(entry => entry.action === 'dropped')
+            .map(entry => `${entry.municipality}::${entry.title}`),
+    );
+    if (dropped.size === 0) return snapshots;
+
+    return Object.fromEntries(
+        Object.entries(snapshots).map(([municipality, items]) => [
+            municipality,
+            (items || []).filter(item => !dropped.has(`${item.municipality}::${item.title}`)),
+        ]),
+    );
+}

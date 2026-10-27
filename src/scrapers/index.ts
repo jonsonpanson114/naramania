@@ -22,7 +22,7 @@ import { SangoTownScraper } from './sango_town';
 import { OjiTownScraper } from './oji_town';
 import { OyodoTownScraper } from './oyodo_town';
 import { BiddingItem, MarketItem, Scraper } from '../types/bidding';
-import { MAX_QUARANTINE_COUNT, quarantineInconsistentItems } from './common/quarantine';
+import { MAX_QUARANTINE_COUNT, quarantineInconsistentItems, removeDroppedFromSnapshots } from './common/quarantine';
 import fs from 'fs';
 import path from 'path';
 import { shouldKeepBiddingItem, setScrapeContext, getRejectionLog, clearRejectionLog, type RejectionLogEntry } from './common/filter';
@@ -776,6 +776,9 @@ async function main() {
         JSON.stringify(openingResultReport, null, 2),
         'utf-8',
     );
+    // 隔離で「載せずに外した」案件は、スナップショットの期待からも外す
+    // (残すとスナップショット照合が失敗する。2026-10-27 五條市)。
+    Object.assign(snapshots, removeDroppedFromSnapshots(snapshots, quarantine.quarantined));
     writeMunicipalitySnapshots(snapshots);
     writeQualitySummary(
         finalUnique,
