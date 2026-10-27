@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-10-27T13:38:01.946Z",
-  "qualityGeneratedAt": "2026-10-27T13:37:57.599Z",
-  "itemCount": 329,
+  "generatedAt": "2026-10-27T23:03:41.939Z",
+  "qualityGeneratedAt": "2026-10-27T22:54:26.982Z",
+  "itemCount": 332,
   "resultFollowUp": {
-    "totalCount": 12,
-    "highCount": 7,
-    "mediumCount": 5,
+    "totalCount": 9,
+    "highCount": 8,
+    "mediumCount": 1,
     "lowCount": 0,
     "missingBiddingDateCount": 0,
     "byMunicipality": [
@@ -19,21 +19,13 @@
       },
       {
         "municipality": "奈良市",
-        "count": 2
-      },
-      {
-        "municipality": "宇陀市",
-        "count": 1
-      },
-      {
-        "municipality": "生駒市",
         "count": 1
       }
     ],
     "samples": [
       {
         "priority": "high",
-        "ageDays": 189,
+        "ageDays": 190,
         "reason": "落札済みだが落札者が空",
         "item": {
           "id": "oyodo-79dc14038b",
@@ -49,8 +41,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 153,
-        "reason": "開札日から153日経過",
+        "ageDays": 154,
+        "reason": "開札日から154日経過",
         "item": {
           "id": "nara-city-0000002346",
           "municipality": "奈良市",
@@ -65,7 +57,7 @@
       },
       {
         "priority": "high",
-        "ageDays": 134,
+        "ageDays": 135,
         "reason": "落札済みだが落札者が空",
         "item": {
           "id": "oyodo-46ab50dbc8",
@@ -81,8 +73,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 131,
-        "reason": "開札日から131日経過",
+        "ageDays": 132,
+        "reason": "開札日から132日経過",
         "item": {
           "id": "nara-pref-29001013060020260055",
           "municipality": "奈良県",
@@ -97,8 +89,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 112,
-        "reason": "開札日から112日経過",
+        "ageDays": 113,
+        "reason": "開札日から113日経過",
         "item": {
           "id": "nara-pref-29005007060120260015",
           "municipality": "奈良県",
@@ -113,8 +105,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 102,
-        "reason": "開札日から102日経過",
+        "ageDays": 103,
+        "reason": "開札日から103日経過",
         "item": {
           "id": "nara-pref-29005007060120260018",
           "municipality": "奈良県",
@@ -129,8 +121,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 32,
-        "reason": "開札日から32日経過",
+        "ageDays": 33,
+        "reason": "開札日から33日経過",
         "item": {
           "id": "nara-pref-29001013401020260007",
           "municipality": "奈良県",
@@ -144,9 +136,9 @@
         }
       },
       {
-        "priority": "medium",
-        "ageDays": 13,
-        "reason": "開札日から13日経過",
+        "priority": "high",
+        "ageDays": 14,
+        "reason": "開札日から14日経過",
         "item": {
           "id": "nara-pref-29004060025020260077",
           "municipality": "奈良県",
@@ -161,8 +153,8 @@
       },
       {
         "priority": "medium",
-        "ageDays": 12,
-        "reason": "開札日から12日経過",
+        "ageDays": 13,
+        "reason": "開札日から13日経過",
         "item": {
           "id": "nara-pref-29001013051020260142",
           "municipality": "奈良県",
@@ -172,22 +164,6 @@
           "biddingDate": "2026-10-15",
           "winningContractor": null,
           "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013051020260142&gamenMode=0",
-          "pdfUrl": null
-        }
-      },
-      {
-        "priority": "medium",
-        "ageDays": 7,
-        "reason": "開札日から7日経過",
-        "item": {
-          "id": "ikoma-80c3d47de8",
-          "municipality": "生駒市",
-          "title": "小平尾保育園遊戯室棟屋根改修工事",
-          "status": "受付終了",
-          "announcementDate": "2026-10-05",
-          "biddingDate": "2026-10-20",
-          "winningContractor": null,
-          "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
           "pdfUrl": null
         }
       }
@@ -535,7 +511,7 @@
         "sourceCounts": {
           "nara.efftis.jp": 13
         },
-        "message": "奈良市: 13件 (公告5/結果8) / sources OK"
+        "message": "奈良市: 13件 (公告4/結果9) / sources OK"
       },
       {
         "municipality": "橿原市",
@@ -563,7 +539,7 @@
         "sourceCounts": {
           "epi-cloud.fwd.ne.jp": 27
         },
-        "message": "生駒市: 27件 (公告2/結果25) / sources OK"
+        "message": "生駒市: 27件 (公告1/結果26) / sources OK"
       },
       {
         "municipality": "大和高田市",
@@ -615,31 +591,31 @@
         "municipality": "五條市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 21,
+        "totalCount": 22,
         "requiredLinkIncludes": [
           "city.gojo.lg.jp",
           "epi-cloud.fwd.ne.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.gojo.lg.jp": 3,
+          "city.gojo.lg.jp": 4,
           "epi-cloud.fwd.ne.jp": 18
         },
-        "message": "五條市: 21件 (公告3/結果18) / sources OK"
+        "message": "五條市: 22件 (公告3/結果19) / sources OK"
       },
       {
         "municipality": "御所市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 2,
+        "totalCount": 3,
         "requiredLinkIncludes": [
           "city.gose.nara.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.gose.nara.jp": 2
+          "city.gose.nara.jp": 3
         },
-        "message": "御所市: 2件 (公告0/結果2) / sources OK"
+        "message": "御所市: 3件 (公告1/結果2) / sources OK"
       },
       {
         "municipality": "天理市",
@@ -681,7 +657,7 @@
         "sourceCounts": {
           "epi-cloud.fwd.ne.jp": 19
         },
-        "message": "宇陀市: 19件 (公告2/結果17) / sources OK"
+        "message": "宇陀市: 19件 (公告1/結果18) / sources OK"
       },
       {
         "municipality": "田原本町",
@@ -715,7 +691,7 @@
         "municipality": "香芝市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 20,
+        "totalCount": 21,
         "requiredLinkIncludes": [
           "city.kashiba.lg.jp"
         ],
@@ -723,7 +699,7 @@
         "sourceCounts": {
           "city.kashiba.lg.jp": 5
         },
-        "message": "香芝市: 20件 (公告2/結果18) / sources OK"
+        "message": "香芝市: 21件 (公告3/結果18) / sources OK"
       },
       {
         "municipality": "川西町",
@@ -869,15 +845,15 @@
         "municipality": "香芝市",
         "status": "ok",
         "severity": "warning",
-        "totalCount": 20,
+        "totalCount": 21,
         "requiredLinkIncludes": [
           "epi-cloud.fwd.ne.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "epi-cloud.fwd.ne.jp": 15
+          "epi-cloud.fwd.ne.jp": 16
         },
-        "message": "香芝市: 20件 (公告2/結果18) / sources OK"
+        "message": "香芝市: 21件 (公告3/結果18) / sources OK"
       }
     ]
   }

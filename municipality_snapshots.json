@@ -797,7 +797,9 @@
       "announcementDate": "2026-09-15",
       "biddingDate": "2026-10-21",
       "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-      "status": "受付中"
+      "status": "落札",
+      "winningContractor": "株式会社アーバンパイオニア設計",
+      "winnerType": "設計事務所"
     },
     {
       "id": "nara-city-0000002637",
@@ -1312,6 +1314,18 @@
   ],
   "生駒市": [
     {
+      "id": "ikoma-result-2601010076",
+      "municipality": "生駒市",
+      "title": "小平尾保育園遊戯室棟屋根改修工事",
+      "type": "建築",
+      "announcementDate": "2026-10-20",
+      "biddingDate": "2026-10-20",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
+      "status": "落札",
+      "winningContractor": "株式会社イシハラ工務店",
+      "winnerType": "ゼネコン"
+    },
+    {
       "id": "ikoma-056c44edf1",
       "municipality": "生駒市",
       "title": "生駒南中学校校舎等解体工事",
@@ -1342,16 +1356,6 @@
       "biddingDate": "2026-10-09",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
       "status": "不調"
-    },
-    {
-      "id": "ikoma-80c3d47de8",
-      "municipality": "生駒市",
-      "title": "小平尾保育園遊戯室棟屋根改修工事",
-      "type": "建築",
-      "announcementDate": "2026-10-05",
-      "biddingDate": "2026-10-20",
-      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-      "status": "受付終了"
     },
     {
       "id": "ikoma-result-2601010072",
@@ -2151,6 +2155,17 @@
   ],
   "五條市": [
     {
+      "id": "gojo-8049123f",
+      "municipality": "五條市",
+      "title": "五條市立大塔体育館床修繕",
+      "type": "建築",
+      "announcementDate": "2026-10-20",
+      "biddingDate": "2026-10-20",
+      "link": "https://www.city.gojo.lg.jp/jigyousha/nyuusatsu/8/R8/19914.html",
+      "pdfUrl": "https://www.city.gojo.lg.jp/material/files/group/40/ototaiyuka_ns_dc01.pdf",
+      "status": "落札"
+    },
+    {
       "id": "gojo-epi-2601041",
       "municipality": "五條市",
       "title": "奥谷老人憩の家屋根修繕工事",
@@ -2398,6 +2413,16 @@
   ],
   "御所市": [
     {
+      "id": "gose-（仮称）御所市北部認定こども園整備工事設-17",
+      "municipality": "御所市",
+      "title": "（仮称）御所市北部認定こども園整備工事設計業務委託に係る公募型プロポーザル",
+      "type": "コンサル",
+      "announcementDate": "2026-10-22",
+      "biddingDate": "",
+      "link": "https://www.city.gose.nara.jp/0000004649.html",
+      "status": "受付中"
+    },
+    {
       "id": "gose-2026-08-10-御所市義務教育学校建設に関する基本設計及び実施設-fallback",
       "municipality": "御所市",
       "title": "御所市義務教育学校建設に関する基本設計及び実施設計業務に係る公募型プロポーザル",
@@ -2410,7 +2435,7 @@
       "winnerType": "設計事務所"
     },
     {
-      "id": "gose-2026-07-17-市営住宅(サン柏原207号・今出団地99号・11-4",
+      "id": "gose-2026-07-17-市営住宅(サン柏原207号・今出団地99号・11-2",
       "municipality": "御所市",
       "title": "市営住宅(サン柏原207号・今出団地99号・110号)空家修繕",
       "type": "その他",
@@ -2591,7 +2616,8 @@
       "announcementDate": "2026-10-08",
       "biddingDate": "2026-10-22",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200700",
-      "status": "受付中"
+      "status": "落札",
+      "winningContractor": "（株）北脇組"
     },
     {
       "id": "uda-fb22e3b0fc",
@@ -2812,7 +2838,7 @@
       "biddingDate": "2026-06-22",
       "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
       "status": "落札",
-      "winningContractor": "塚竜(株)"
+      "winningContractor": "塚竜（株）"
     },
     {
       "id": "tawaramoto-2026051803",
@@ -3536,6 +3562,16 @@
     }
   ],
   "香芝市": [
+    {
+      "id": "kashiba-epi-f89b374059",
+      "municipality": "香芝市",
+      "title": "鎌田学童保育所新設工事に伴う設計業務",
+      "type": "コンサル",
+      "announcementDate": "2026-10-22",
+      "biddingDate": "2026-11-10",
+      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=062006E007200640",
+      "status": "受付中"
+    },
     {
       "id": "kashiba-r8-k8-03",
       "municipality": "香芝市",
