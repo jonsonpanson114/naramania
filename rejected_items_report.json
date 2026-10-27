@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-10-23T02:30:06.903Z",
-  "totalRejected": 547,
+  "generatedAt": "2026-10-27T13:37:57.604Z",
+  "totalRejected": 557,
   "totalBorderlineRescued": 47,
   "byMunicipality": {
     "奈良県": {
-      "rejected": 547,
+      "rejected": 557,
       "borderlineRescued": 47
     }
   },
@@ -199,9 +199,58 @@
     },
     {
       "municipality": "奈良県",
+      "title": "令和８年度 県営ため池整備事業 上鍋池地区 実施設計業務委託 第Ｒ８Ａ１委６号",
+      "reason": "infra_exclude_keyword",
+      "matchedKeywords": [
+        "ため池"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "北今市（イ）地区 急傾斜地崩壊防止施設対策検討業務委託（砂防関係調査費） 第 ３－２－委２ 号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "砂防",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "曽我川 氾濫解析及び対策施設検討 他 業務委託（緊急自然災害防止対策事業債対象事業（臨時・特別）） 第 Ｔ－１２３－委１ 号",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "奈良県",
+      "title": "飛鳥川 護岸詳細設計業務委託（緊自債（臨時・特別）） Ｃ－１２６－委－１",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "護岸"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "一般国道１６８号 神野工区 道路補修設計業務委託（緊急自然災害防止対策事業） ７４０－委３",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "国道"
+      ]
+    },
+    {
+      "municipality": "奈良県",
       "title": "大和民俗公園基本計画策定業務委託（単独都市計画公園事業） 第１－３０－Ｃ－１号",
       "reason": "no_architecture_context",
       "matchedKeywords": []
+    },
+    {
+      "municipality": "奈良県",
+      "title": "一般国道１６９号他 舗装修繕設計業務委託（単独舗装道補修費） 第 １１３－２－委－４他 号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装",
+        "国道"
+      ]
     },
     {
       "municipality": "奈良県",
@@ -265,16 +314,6 @@
     },
     {
       "municipality": "奈良県",
-      "title": "慈恩寺桜井線 鯉ヶ淵橋 橋梁補修設計委託（道路メンテナンス（橋梁）） 繰３－Ｂ－４－委－１",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "橋梁",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "奈良県",
       "title": "一般国道１６９号 市道橋 橋梁補修設計委託（道路メンテナンス（橋梁）） 繰３－Ａ－４－委－４",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -298,17 +337,6 @@
     {
       "municipality": "奈良県",
       "title": "一般国道１６９号 観覚寺橋（側道橋２） 橋梁補修設計委託（道路メンテナンス（橋梁）） 繰３－Ａ－４－委－７",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "橋梁",
-        "橋",
-        "国道"
-      ]
-    },
-    {
-      "municipality": "奈良県",
-      "title": "一般国道１６９号 観覚寺橋（側道橋１）橋梁補修設計委託（道路メンテナンス（橋梁）） 繰３－Ａ－４－委－６",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
         "道路",
@@ -345,6 +373,27 @@
     },
     {
       "municipality": "奈良県",
+      "title": "慈恩寺桜井線 鯉ヶ淵橋 橋梁補修設計委託（道路メンテナンス（橋梁）） 繰３－Ｂ－４－委－１",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "橋梁",
+        "橋"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "一般国道１６９号 観覚寺橋（側道橋１）橋梁補修設計委託（道路メンテナンス（橋梁）） 繰３－Ａ－４－委－６",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "橋梁",
+        "橋",
+        "国道"
+      ]
+    },
+    {
+      "municipality": "奈良県",
       "title": "寺川 護岸補修詳細設計業務委託（緊自債（臨時・特別）） Ｃ－１０５－委－３",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -362,7 +411,7 @@
     },
     {
       "municipality": "奈良県",
-      "title": "【一括審査方式】中和幹線 小規模附属物点検業務委託（公共施設等適正管理推進事業（標識）他） 第３４５－委１他号",
+      "title": "中和幹線 小規模附属物点検業務委託（公共施設等適正管理推進事業（標識）他） 第３４５－委１他号",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
         "標識"
@@ -370,13 +419,13 @@
     },
     {
       "municipality": "奈良県",
-      "title": "【一括審査方式】主要地方道奈良生駒線 小規模附属物点検業務委託（公共施設等適正管理推進事業他） 第１４５－委－１他号",
+      "title": "主要地方道奈良生駒線 小規模附属物点検業務委託（公共施設等適正管理推進事業他） 第１４５－委－１他号",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },
     {
       "municipality": "奈良県",
-      "title": "【一括審査方式】一般国道１６８号 小規模附属物点検業務委託（公共施設等適正管理推進事業（標識）） 第２４５－委－１号",
+      "title": "一般国道１６８号 小規模附属物点検業務委託（公共施設等適正管理推進事業（標識）） 第２４５－委－１号",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
         "標識",
@@ -385,7 +434,7 @@
     },
     {
       "municipality": "奈良県",
-      "title": "【一括審査方式】一般国道１６９号 小規模附属物点検業務委託（公共施設等適正管理推進事業） 第４４５－委－１号",
+      "title": "一般国道１６９号 小規模附属物点検業務委託（公共施設等適正管理推進事業） 第４４５－委－１号",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
         "国道"
@@ -2370,6 +2419,26 @@
     },
     {
       "municipality": "奈良県",
+      "title": "芳野川 堆積土砂測量業務委託（緊急浚渫推進事業（臨時・特別）他） 第 Ｕ－２０１－委１他 号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "浚渫",
+        "土砂",
+        "測量"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "宇陀川 堆積土砂測量業務委託（緊急浚渫推進事業（臨時・特別）他） 第 Ｕ－２０２－委１他 号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "浚渫",
+        "土砂",
+        "測量"
+      ]
+    },
+    {
+      "municipality": "奈良県",
       "title": "桜井都祁線他 舗装調査業務委託（防災・安全（地方道舗装修繕・国補正）他） 繰補２－Ｂ３８－４－委－１他",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -2444,14 +2513,6 @@
     },
     {
       "municipality": "奈良県",
-      "title": "家畜保健衛生所業務第二課周辺 土地測量業務委託",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "測量"
-      ]
-    },
-    {
-      "municipality": "奈良県",
       "title": "黒滝川 砂防河川測量業務委託（事業間連携砂防等事業（砂防）） ６９－４－委２",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -2466,6 +2527,14 @@
       "reason": "exclusion_keyword",
       "matchedKeywords": [
         "河川",
+        "測量"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "家畜保健衛生所業務第二課周辺 土地測量業務委託",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
         "測量"
       ]
     },
@@ -3610,6 +3679,17 @@
         "道路",
         "地質",
         "調査"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "（都）西九条佐保線 三条桧町他地区用地調査点検等技術業務委託（（仮称）奈良ＩＣ周辺整備補助街路事業） ８－１０－ＡＧ２－用委－１１他",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "用地",
+        "補償",
+        "調査",
+        "技術"
       ]
     },
     {
@@ -4798,6 +4878,14 @@
         "設備"
       ],
       "borderlineRescue": true
+    },
+    {
+      "municipality": "奈良県",
+      "title": "御所浄水場２系ろ過池表洗弁・３,４号沈殿池流調弁更新工事",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "設備"
+      ]
     },
     {
       "municipality": "奈良県",

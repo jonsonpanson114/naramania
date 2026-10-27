@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-23T02:30:06.894Z",
+  "generatedAt": "2026-10-27T13:37:57.587Z",
   "source": "daily_scrape",
   "updates": [],
   "latestResults": [
@@ -11,7 +11,7 @@
       "biddingDate": "2026-11-06",
       "status": "不調",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-      "detectedAt": "2026-10-23T02:30:06.894Z",
+      "detectedAt": "2026-10-27T13:37:57.587Z",
       "kind": "new_failure"
     },
     {
@@ -22,7 +22,7 @@
       "biddingDate": "2026-10-19",
       "status": "不調",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-      "detectedAt": "2026-10-23T02:30:06.894Z",
+      "detectedAt": "2026-10-27T13:37:57.587Z",
       "kind": "new_failure"
     },
     {
@@ -34,7 +34,7 @@
       "status": "落札",
       "winningContractor": "伊野工務店㈱ ９．",
       "link": "https://www.town.oyodo.lg.jp/./cmsfiles/contents/0000001/1945/ko08101601.pdf",
-      "detectedAt": "2026-10-23T02:30:06.894Z",
+      "detectedAt": "2026-10-27T13:37:57.587Z",
       "kind": "new_winner"
     },
     {
@@ -46,7 +46,7 @@
       "status": "落札",
       "winningContractor": "株式会社シナジー",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=001792050100r8-k8-03",
-      "detectedAt": "2026-10-23T02:30:06.894Z",
+      "detectedAt": "2026-10-27T13:37:57.587Z",
       "kind": "new_winner"
     },
     {
@@ -58,7 +58,7 @@
       "status": "落札",
       "winningContractor": "株式会社共生システム",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=001792050100r8-k9-03",
-      "detectedAt": "2026-10-23T02:30:06.894Z",
+      "detectedAt": "2026-10-27T13:37:57.587Z",
       "kind": "new_winner"
     },
     {
@@ -70,7 +70,7 @@
       "status": "落札",
       "winningContractor": "株式会社共生システム",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=001792050100r8-k9-02",
-      "detectedAt": "2026-10-23T02:30:06.894Z",
+      "detectedAt": "2026-10-27T13:37:57.587Z",
       "kind": "new_winner"
     },
     {
@@ -82,7 +82,7 @@
       "status": "落札",
       "winningContractor": "株式会社共生システム",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=001792050100r8-k9-01",
-      "detectedAt": "2026-10-23T02:30:06.894Z",
+      "detectedAt": "2026-10-27T13:37:57.587Z",
       "kind": "new_winner"
     },
     {
@@ -94,7 +94,7 @@
       "status": "落札",
       "winningContractor": "株式会社ジャパックス",
       "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29005007060120260031&gamenMode=0",
-      "detectedAt": "2026-10-23T02:30:06.894Z",
+      "detectedAt": "2026-10-27T13:37:57.587Z",
       "kind": "new_winner"
     },
     {
@@ -105,7 +105,7 @@
       "biddingDate": "2026-10-09",
       "status": "不調",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-      "detectedAt": "2026-10-23T02:30:06.894Z",
+      "detectedAt": "2026-10-27T13:37:57.587Z",
       "kind": "new_failure"
     },
     {
@@ -117,7 +117,7 @@
       "status": "落札",
       "winningContractor": "日本宣伝株式会社",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-      "detectedAt": "2026-10-23T02:30:06.894Z",
+      "detectedAt": "2026-10-27T13:37:57.587Z",
       "kind": "new_winner"
     },
     {
@@ -129,7 +129,7 @@
       "status": "落札",
       "winningContractor": "株式会社なんば技研",
       "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013052520260089&gamenMode=0",
-      "detectedAt": "2026-10-23T02:30:06.894Z",
+      "detectedAt": "2026-10-27T13:37:57.587Z",
       "kind": "new_winner"
     },
     {
@@ -140,7 +140,7 @@
       "biddingDate": "2026-10-05",
       "status": "不調",
       "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260196&gamenMode=0",
-      "detectedAt": "2026-10-23T02:30:06.894Z",
+      "detectedAt": "2026-10-27T13:37:57.587Z",
       "kind": "new_failure"
     }
   ]
