@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-28T02:08:58.417Z",
+  "generatedAt": "2026-10-28T02:59:08.513Z",
   "source": "daily_scrape",
   "updates": [],
   "latestResults": [
@@ -11,7 +11,7 @@
       "biddingDate": "2026-11-06",
       "status": "不調",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-      "detectedAt": "2026-10-28T02:08:58.417Z",
+      "detectedAt": "2026-10-28T02:59:08.513Z",
       "kind": "new_failure"
     },
     {
@@ -23,7 +23,7 @@
       "status": "落札",
       "winningContractor": "（株）北脇組",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200700",
-      "detectedAt": "2026-10-28T02:08:58.417Z",
+      "detectedAt": "2026-10-28T02:59:08.513Z",
       "kind": "new_winner"
     },
     {
@@ -35,7 +35,7 @@
       "status": "落札",
       "winningContractor": "株式会社アーバンパイオニア設計",
       "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-      "detectedAt": "2026-10-28T02:08:58.417Z",
+      "detectedAt": "2026-10-28T02:59:08.513Z",
       "kind": "new_winner"
     },
     {
@@ -47,7 +47,7 @@
       "status": "落札",
       "winningContractor": "株式会社イシハラ工務店",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-      "detectedAt": "2026-10-28T02:08:58.417Z",
+      "detectedAt": "2026-10-28T02:59:08.513Z",
       "kind": "new_winner"
     },
     {
@@ -60,7 +60,7 @@
       "winningContractor": "G.Sスポーツ",
       "link": "https://www.city.gojo.lg.jp/jigyousha/nyuusatsu/8/R8/19914.html",
       "pdfUrl": "https://www.city.gojo.lg.jp/material/files/group/40/ototaiyuka_ns_dc01.pdf",
-      "detectedAt": "2026-10-28T02:08:58.417Z",
+      "detectedAt": "2026-10-28T02:59:08.513Z",
       "kind": "new_winner"
     },
     {
@@ -71,7 +71,7 @@
       "biddingDate": "2026-10-19",
       "status": "不調",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-      "detectedAt": "2026-10-28T02:08:58.417Z",
+      "detectedAt": "2026-10-28T02:59:08.513Z",
       "kind": "new_failure"
     },
     {
@@ -83,7 +83,7 @@
       "status": "落札",
       "winningContractor": "伊野工務店㈱ ９．",
       "link": "https://www.town.oyodo.lg.jp/./cmsfiles/contents/0000001/1945/ko08101601.pdf",
-      "detectedAt": "2026-10-28T02:08:58.417Z",
+      "detectedAt": "2026-10-28T02:59:08.513Z",
       "kind": "new_winner"
     },
     {
@@ -95,7 +95,7 @@
       "status": "落札",
       "winningContractor": "株式会社シナジー",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=001792050100r8-k8-03",
-      "detectedAt": "2026-10-28T02:08:58.417Z",
+      "detectedAt": "2026-10-28T02:59:08.513Z",
       "kind": "new_winner"
     },
     {
@@ -107,7 +107,7 @@
       "status": "落札",
       "winningContractor": "株式会社共生システム",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=001792050100r8-k9-03",
-      "detectedAt": "2026-10-28T02:08:58.417Z",
+      "detectedAt": "2026-10-28T02:59:08.513Z",
       "kind": "new_winner"
     },
     {
@@ -119,7 +119,7 @@
       "status": "落札",
       "winningContractor": "株式会社共生システム",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=001792050100r8-k9-02",
-      "detectedAt": "2026-10-28T02:08:58.417Z",
+      "detectedAt": "2026-10-28T02:59:08.513Z",
       "kind": "new_winner"
     },
     {
@@ -131,7 +131,7 @@
       "status": "落札",
       "winningContractor": "株式会社共生システム",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=001792050100r8-k9-01",
-      "detectedAt": "2026-10-28T02:08:58.417Z",
+      "detectedAt": "2026-10-28T02:59:08.513Z",
       "kind": "new_winner"
     },
     {
@@ -143,7 +143,7 @@
       "status": "落札",
       "winningContractor": "株式会社ジャパックス",
       "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29005007060120260031&gamenMode=0",
-      "detectedAt": "2026-10-28T02:08:58.417Z",
+      "detectedAt": "2026-10-28T02:59:08.513Z",
       "kind": "new_winner"
     }
   ]
