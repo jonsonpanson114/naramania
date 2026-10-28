@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-28T07:48:36.962Z",
+  "generatedAt": "2026-10-28T11:14:48.500Z",
   "currentItemCount": 332,
   "checkedMunicipalities": [
     "奈良市",
@@ -230,9 +230,9 @@
     },
     {
       "municipality": "高取町",
-      "rawCount": 53,
+      "rawCount": 48,
       "keptCount": 15,
-      "rejectedCount": 38,
+      "rejectedCount": 33,
       "keptAnnouncementCount": 0,
       "keptResultCount": 15,
       "warnings": [],
@@ -379,7 +379,7 @@
       },
       {
         "municipality": "高取町",
-        "snapshotCount": 53,
+        "snapshotCount": 48,
         "expectedCount": 15,
         "matchedCount": 15,
         "missingCount": 0,
