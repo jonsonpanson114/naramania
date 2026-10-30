@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-30T08:08:46.854Z",
+  "generatedAt": "2026-10-30T11:28:16.312Z",
   "currentItemCount": 331,
   "checkedMunicipalities": [
     "奈良市",
@@ -208,9 +208,9 @@
     },
     {
       "municipality": "三宅町",
-      "rawCount": 27,
+      "rawCount": 28,
       "keptCount": 8,
-      "rejectedCount": 19,
+      "rejectedCount": 20,
       "keptAnnouncementCount": 3,
       "keptResultCount": 5,
       "warnings": [],
@@ -410,7 +410,7 @@
       },
       {
         "municipality": "三宅町",
-        "snapshotCount": 27,
+        "snapshotCount": 28,
         "expectedCount": 8,
         "matchedCount": 8,
         "missingCount": 0,
