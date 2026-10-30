@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-30T07:17:43.787Z",
-  "totalRejected": 11442,
+  "generatedAt": "2026-10-30T12:30:10.045Z",
+  "totalRejected": 11436,
   "totalBorderlineRescued": 33,
   "byMunicipality": {
     "奈良市": {
@@ -72,7 +72,7 @@
       "borderlineRescued": 3
     },
     "安堵町": {
-      "rejected": 12,
+      "rejected": 6,
       "borderlineRescued": 6
     },
     "高取町": {
@@ -73740,24 +73740,6 @@
     },
     {
       "municipality": "安堵町",
-      "title": "安堵町庁内ネットワークサーバー機器等機器調達事業の条件付き一般競争入札の実施について",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "サーバー",
-        "調達"
-      ]
-    },
-    {
-      "municipality": "安堵町",
-      "title": "安堵町庁内ネットワークサーバー機器等機器調達事業の条件付き一般競争入札の実施について ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "サーバー",
-        "調達"
-      ]
-    },
-    {
-      "municipality": "安堵町",
       "title": "安堵こども園南館外壁改修、トイレ乾式化および洋式化改修工事",
       "reason": "always_exclude_keyword",
       "matchedKeywords": [
@@ -73796,24 +73778,6 @@
     },
     {
       "municipality": "安堵町",
-      "title": "安堵町庁内ネットワークサーバー機器等機器調達事業の条件付き一般競争入札の実施について",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "サーバー",
-        "調達"
-      ]
-    },
-    {
-      "municipality": "安堵町",
-      "title": "安堵町庁内ネットワークサーバー機器等機器調達事業の条件付き一般競争入札の実施について ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "サーバー",
-        "調達"
-      ]
-    },
-    {
-      "municipality": "安堵町",
       "title": "安堵こども園南館外壁改修、トイレ乾式化および洋式化改修工事",
       "reason": "always_exclude_keyword",
       "matchedKeywords": [
@@ -73849,24 +73813,6 @@
         "外壁改修"
       ],
       "borderlineRescue": true
-    },
-    {
-      "municipality": "安堵町",
-      "title": "安堵町庁内ネットワークサーバー機器等機器調達事業の条件付き一般競争入札の実施について",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "サーバー",
-        "調達"
-      ]
-    },
-    {
-      "municipality": "安堵町",
-      "title": "安堵町庁内ネットワークサーバー機器等機器調達事業の条件付き一般競争入札の実施について ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "サーバー",
-        "調達"
-      ]
     },
     {
       "municipality": "安堵町",
