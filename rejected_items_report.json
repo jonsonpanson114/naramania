@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-29T12:40:24.551Z",
-  "totalRejected": 11286,
+  "generatedAt": "2026-10-30T07:17:43.787Z",
+  "totalRejected": 11442,
   "totalBorderlineRescued": 33,
   "byMunicipality": {
     "奈良市": {
@@ -8,7 +8,7 @@
       "borderlineRescued": 0
     },
     "橿原市": {
-      "rejected": 1284,
+      "rejected": 1434,
       "borderlineRescued": 3
     },
     "生駒市": {
@@ -20,7 +20,7 @@
       "borderlineRescued": 0
     },
     "大和郡山市": {
-      "rejected": 912,
+      "rejected": 906,
       "borderlineRescued": 0
     },
     "葛城市": {
@@ -63,10 +63,6 @@
       "rejected": 48,
       "borderlineRescued": 3
     },
-    "山添村": {
-      "rejected": 6,
-      "borderlineRescued": 0
-    },
     "平群町": {
       "rejected": 174,
       "borderlineRescued": 0
@@ -80,7 +76,7 @@
       "borderlineRescued": 6
     },
     "高取町": {
-      "rejected": 162,
+      "rejected": 180,
       "borderlineRescued": 0
     },
     "斑鳩町": {
@@ -3133,6 +3129,404 @@
     },
     {
       "municipality": "橿原市",
+      "title": "山之坊井堰改修工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "山之坊井堰改修工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "大和八木駅情報発信モニター設置工事に伴う設計業務委託",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "大和八木駅情報発信モニター設置工事に伴う設計業務委託 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "かしはら万葉ホール排気ファン取替業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "かしはら万葉ホール排気ファン取替業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "安全・安心カメラ整備業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "安全・安心カメラ整備業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "庁舎間専用線等使用業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "庁舎間専用線等使用業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "閉域接続モバイル網等構築委託業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "閉域接続モバイル網等構築委託業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度・9年度人材派遣業務（選挙管理委員会事務局 奈良県知事・県議会議員選挙）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "議会"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度・9年度人材派遣業務（選挙管理委員会事務局 奈良県知事・県議会議員選挙） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "議会"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度第3回ごみ処理施設排出資源物（新聞）の売却業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度第3回ごみ処理施設排出資源物（新聞）の売却業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第3回ごみ処理施設排出資源物（ダンボール）の売却業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第3回ごみ処理施設排出資源物（ダンボール）の売却業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第3回ごみ処理施設排出資源物（雑誌）の売却業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第3回ごみ処理施設排出資源物（雑誌）の売却業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第3回ごみ処理施設排出資源物（アルミ缶プレス品）の売却業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第3回ごみ処理施設排出資源物（アルミ缶プレス品）の売却業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第3回ごみ処理施設排出資源物（破砕鉄）の売却業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第3回ごみ処理施設排出資源物（破砕鉄）の売却業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第3回ごみ処理施設排出資源物（破砕アルミ）の売却業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第3回ごみ処理施設排出資源物（破砕アルミ）の売却業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第3回ごみ処理施設排出資源物（スチール缶プレス品）の売却業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第3回ごみ処理施設排出資源物（スチール缶プレス品）の売却業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第3回ごみ処理施設排出資源物（金属不適物）の売却業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第3回ごみ処理施設排出資源物（金属不適物）の売却業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "ポスター掲示場等の調査・製作・設置及び撤去業務(奈良県知事選挙及び奈良県議会議員選挙)",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "議会",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "ポスター掲示場等の調査・製作・設置及び撤去業務(奈良県知事選挙及び奈良県議会議員選挙) ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "議会",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 児童・生徒用デスク等の購入",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 児童・生徒用デスク等の購入 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "第55回全国林業後継者大会木製記念品購入",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入",
+        "記念品"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "第55回全国林業後継者大会木製記念品購入 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入",
+        "記念品"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 ペットボトル・プラスチックボトル回収専用ネット購入",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 ペットボトル・プラスチックボトル回収専用ネット購入 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 小中学校理科振興備品購入",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "備品",
+        "購入"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 小中学校理科振興備品購入 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "備品",
+        "購入"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "白橿小学校 グランドピアノ購入",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "白橿小学校 グランドピアノ購入 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "藤原宮跡ガイダンス方針作成業務委託 (圧縮ファイル: 1.5MB)",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "藤原宮跡ガイダンス方針作成業務委託 (圧縮ファイル: 1.5MB) ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原市立小中学校における外国人英語指導助手（ALT）派遣業務 (圧縮ファイル: 104.6KB)",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原市立小中学校における外国人英語指導助手（ALT）派遣業務 (圧縮ファイル: 104.6KB) ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原市地域包括支援センター運営委託業務（南圏域） 【修正版】 (圧縮ファイル: 5.3MB)",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原市地域包括支援センター運営委託業務（南圏域） 【修正版】 (圧縮ファイル: 5.3MB) ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原市地域包括支援センター運営委託業務（北圏域） 【修正版】 (圧縮ファイル: 5.3MB)",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原市地域包括支援センター運営委託業務（北圏域） 【修正版】 (圧縮ファイル: 5.3MB) ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
       "title": "市道路改良工事(慈明寺町・大谷町)",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -6574,6 +6968,404 @@
     },
     {
       "municipality": "橿原市",
+      "title": "山之坊井堰改修工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "山之坊井堰改修工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "大和八木駅情報発信モニター設置工事に伴う設計業務委託",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "大和八木駅情報発信モニター設置工事に伴う設計業務委託 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "かしはら万葉ホール排気ファン取替業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "かしはら万葉ホール排気ファン取替業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "安全・安心カメラ整備業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "安全・安心カメラ整備業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "庁舎間専用線等使用業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "庁舎間専用線等使用業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "閉域接続モバイル網等構築委託業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "閉域接続モバイル網等構築委託業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度・9年度人材派遣業務（選挙管理委員会事務局 奈良県知事・県議会議員選挙）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "議会"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度・9年度人材派遣業務（選挙管理委員会事務局 奈良県知事・県議会議員選挙） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "議会"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度第3回ごみ処理施設排出資源物（新聞）の売却業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度第3回ごみ処理施設排出資源物（新聞）の売却業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第3回ごみ処理施設排出資源物（ダンボール）の売却業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第3回ごみ処理施設排出資源物（ダンボール）の売却業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第3回ごみ処理施設排出資源物（雑誌）の売却業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第3回ごみ処理施設排出資源物（雑誌）の売却業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第3回ごみ処理施設排出資源物（アルミ缶プレス品）の売却業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第3回ごみ処理施設排出資源物（アルミ缶プレス品）の売却業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第3回ごみ処理施設排出資源物（破砕鉄）の売却業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第3回ごみ処理施設排出資源物（破砕鉄）の売却業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第3回ごみ処理施設排出資源物（破砕アルミ）の売却業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第3回ごみ処理施設排出資源物（破砕アルミ）の売却業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第3回ごみ処理施設排出資源物（スチール缶プレス品）の売却業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第3回ごみ処理施設排出資源物（スチール缶プレス品）の売却業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第3回ごみ処理施設排出資源物（金属不適物）の売却業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第3回ごみ処理施設排出資源物（金属不適物）の売却業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "ポスター掲示場等の調査・製作・設置及び撤去業務(奈良県知事選挙及び奈良県議会議員選挙)",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "議会",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "ポスター掲示場等の調査・製作・設置及び撤去業務(奈良県知事選挙及び奈良県議会議員選挙) ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "議会",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 児童・生徒用デスク等の購入",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 児童・生徒用デスク等の購入 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "第55回全国林業後継者大会木製記念品購入",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入",
+        "記念品"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "第55回全国林業後継者大会木製記念品購入 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入",
+        "記念品"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 ペットボトル・プラスチックボトル回収専用ネット購入",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 ペットボトル・プラスチックボトル回収専用ネット購入 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 小中学校理科振興備品購入",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "備品",
+        "購入"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 小中学校理科振興備品購入 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "備品",
+        "購入"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "白橿小学校 グランドピアノ購入",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "白橿小学校 グランドピアノ購入 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "藤原宮跡ガイダンス方針作成業務委託 (圧縮ファイル: 1.5MB)",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "藤原宮跡ガイダンス方針作成業務委託 (圧縮ファイル: 1.5MB) ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原市立小中学校における外国人英語指導助手（ALT）派遣業務 (圧縮ファイル: 104.6KB)",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原市立小中学校における外国人英語指導助手（ALT）派遣業務 (圧縮ファイル: 104.6KB) ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原市地域包括支援センター運営委託業務（南圏域） 【修正版】 (圧縮ファイル: 5.3MB)",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原市地域包括支援センター運営委託業務（南圏域） 【修正版】 (圧縮ファイル: 5.3MB) ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原市地域包括支援センター運営委託業務（北圏域） 【修正版】 (圧縮ファイル: 5.3MB)",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原市地域包括支援センター運営委託業務（北圏域） 【修正版】 (圧縮ファイル: 5.3MB) ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
       "title": "市道路改良工事(慈明寺町・大谷町)",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -10012,6 +10804,404 @@
       "matchedKeywords": [
         "定期点検"
       ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "山之坊井堰改修工事",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "山之坊井堰改修工事 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "大和八木駅情報発信モニター設置工事に伴う設計業務委託",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "大和八木駅情報発信モニター設置工事に伴う設計業務委託 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "かしはら万葉ホール排気ファン取替業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "かしはら万葉ホール排気ファン取替業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "安全・安心カメラ整備業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "安全・安心カメラ整備業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "庁舎間専用線等使用業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "庁舎間専用線等使用業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "閉域接続モバイル網等構築委託業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "閉域接続モバイル網等構築委託業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度・9年度人材派遣業務（選挙管理委員会事務局 奈良県知事・県議会議員選挙）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "議会"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度・9年度人材派遣業務（選挙管理委員会事務局 奈良県知事・県議会議員選挙） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "議会"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度第3回ごみ処理施設排出資源物（新聞）の売却業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度第3回ごみ処理施設排出資源物（新聞）の売却業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第3回ごみ処理施設排出資源物（ダンボール）の売却業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第3回ごみ処理施設排出資源物（ダンボール）の売却業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第3回ごみ処理施設排出資源物（雑誌）の売却業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第3回ごみ処理施設排出資源物（雑誌）の売却業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第3回ごみ処理施設排出資源物（アルミ缶プレス品）の売却業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第3回ごみ処理施設排出資源物（アルミ缶プレス品）の売却業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第3回ごみ処理施設排出資源物（破砕鉄）の売却業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第3回ごみ処理施設排出資源物（破砕鉄）の売却業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第3回ごみ処理施設排出資源物（破砕アルミ）の売却業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第3回ごみ処理施設排出資源物（破砕アルミ）の売却業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第3回ごみ処理施設排出資源物（スチール缶プレス品）の売却業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第3回ごみ処理施設排出資源物（スチール缶プレス品）の売却業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第3回ごみ処理施設排出資源物（金属不適物）の売却業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 第3回ごみ処理施設排出資源物（金属不適物）の売却業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "売却",
+        "資源",
+        "ごみ"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "ポスター掲示場等の調査・製作・設置及び撤去業務(奈良県知事選挙及び奈良県議会議員選挙)",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "議会",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "ポスター掲示場等の調査・製作・設置及び撤去業務(奈良県知事選挙及び奈良県議会議員選挙) ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "議会",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 児童・生徒用デスク等の購入",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 児童・生徒用デスク等の購入 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "第55回全国林業後継者大会木製記念品購入",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入",
+        "記念品"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "第55回全国林業後継者大会木製記念品購入 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入",
+        "記念品"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 ペットボトル・プラスチックボトル回収専用ネット購入",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 ペットボトル・プラスチックボトル回収専用ネット購入 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 小中学校理科振興備品購入",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "備品",
+        "購入"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "令和8年度 小中学校理科振興備品購入 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "備品",
+        "購入"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "白橿小学校 グランドピアノ購入",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "白橿小学校 グランドピアノ購入 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入"
+      ]
+    },
+    {
+      "municipality": "橿原市",
+      "title": "藤原宮跡ガイダンス方針作成業務委託 (圧縮ファイル: 1.5MB)",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "藤原宮跡ガイダンス方針作成業務委託 (圧縮ファイル: 1.5MB) ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原市立小中学校における外国人英語指導助手（ALT）派遣業務 (圧縮ファイル: 104.6KB)",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原市立小中学校における外国人英語指導助手（ALT）派遣業務 (圧縮ファイル: 104.6KB) ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原市地域包括支援センター運営委託業務（南圏域） 【修正版】 (圧縮ファイル: 5.3MB)",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原市地域包括支援センター運営委託業務（南圏域） 【修正版】 (圧縮ファイル: 5.3MB) ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原市地域包括支援センター運営委託業務（北圏域） 【修正版】 (圧縮ファイル: 5.3MB)",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "橿原市",
+      "title": "橿原市地域包括支援センター運営委託業務（北圏域） 【修正版】 (圧縮ファイル: 5.3MB) ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
     },
     {
       "municipality": "橿原市",
@@ -28742,18 +29932,6 @@
     {
       "municipality": "大和郡山市",
       "title": "総務課・西田中町・人権施策推進課市有地草刈業務 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大和郡山市",
-      "title": "令和8年度上半期ベール化ペットボトル売払単価",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大和郡山市",
-      "title": "令和8年度上半期ベール化ペットボトル売払単価 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },
@@ -31053,18 +32231,6 @@
     },
     {
       "municipality": "大和郡山市",
-      "title": "令和8年度上半期ベール化ペットボトル売払単価",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大和郡山市",
-      "title": "令和8年度上半期ベール化ペットボトル売払単価 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大和郡山市",
       "title": "地域スポーツ会館自動体外式除細動器(AED)購入",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -33354,18 +34520,6 @@
     {
       "municipality": "大和郡山市",
       "title": "総務課・西田中町・人権施策推進課市有地草刈業務 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大和郡山市",
-      "title": "令和8年度上半期ベール化ペットボトル売払単価",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "大和郡山市",
-      "title": "令和8年度上半期ベール化ペットボトル売払単価 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },
@@ -70764,54 +71918,6 @@
       "borderlineRescue": true
     },
     {
-      "municipality": "山添村",
-      "title": "令和８年度水道メーターバーター購入業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "購入"
-      ]
-    },
-    {
-      "municipality": "山添村",
-      "title": "令和８年度水道メーターバーター購入業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "購入"
-      ]
-    },
-    {
-      "municipality": "山添村",
-      "title": "令和８年度水道メーターバーター購入業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "購入"
-      ]
-    },
-    {
-      "municipality": "山添村",
-      "title": "令和８年度水道メーターバーター購入業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "購入"
-      ]
-    },
-    {
-      "municipality": "山添村",
-      "title": "令和８年度水道メーターバーター購入業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "購入"
-      ]
-    },
-    {
-      "municipality": "山添村",
-      "title": "令和８年度水道メーターバーター購入業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "購入"
-      ]
-    },
-    {
       "municipality": "平群町",
       "title": "入札",
       "reason": "no_architecture_context",
@@ -72802,455 +73908,43 @@
     },
     {
       "municipality": "高取町",
-      "title": "1.町単道路維持改良工事（市尾地区外）",
+      "title": "ハイブリッドIPトランシーバー及びデジタル簡易無線機 購入事業",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
-        "道路"
+        "購入",
+        "無線機"
       ]
     },
     {
       "municipality": "高取町",
-      "title": "1.町単道路維持改良工事（市尾地区外） ",
+      "title": "ハイブリッドIPトランシーバー及びデジタル簡易無線機 購入事業 ",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
-        "道路"
+        "購入",
+        "無線機"
       ]
     },
     {
       "municipality": "高取町",
-      "title": "2.町単道路維持改良工事（市尾地区外）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "2.町単道路維持改良工事（市尾地区外） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "R8.11.2執行分",
+      "title": "高取町立学校電子黒板整備業務",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },
     {
       "municipality": "高取町",
-      "title": "R8.11.2執行分 ",
+      "title": "高取町立学校電子黒板整備業務 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },
     {
       "municipality": "高取町",
-      "title": "都市計画法第34条第11号に係る都市計画協議図書作成及び調査業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "調査"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "都市計画法第34条第11号に係る都市計画協議図書作成及び調査業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "調査"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "小型動力ポンプ付軽四輪駆動消防車購入事業",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "購入"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "小型動力ポンプ付軽四輪駆動消防車購入事業 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "購入"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "道路メンテナンス事業 橋梁補修工事（上子島16号橋）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "橋梁",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "道路メンテナンス事業 橋梁補修工事（上子島16号橋） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "橋梁",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道管布設工事（8－1工区）",
+      "title": "令和8年度高取町水道施設台帳作成業務",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },
     {
       "municipality": "高取町",
-      "title": "水道管布設工事（8－1工区） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "塵芥収集用軽ダンプトラック購入事業",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "購入"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "塵芥収集用軽ダンプトラック購入事業 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "購入"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道施設修繕等業務委託",
-      "reason": "infra_exclude_keyword",
-      "matchedKeywords": [
-        "水道"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道施設修繕等業務委託 ",
-      "reason": "infra_exclude_keyword",
-      "matchedKeywords": [
-        "水道"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "高取町立学校教職員用端末整備業務",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "高取町立学校教職員用端末整備業務 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "高取町公共下水道工事7－1工区",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "高取町公共下水道工事7－1工区 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "防災・安全交付金事業 舗装補修工事（8－1工区）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "防災・安全交付金事業 舗装補修工事（8－1工区） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "道路メンテナンス事業 橋梁定期点検業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "橋梁",
-        "橋",
-        "定期点検"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "道路メンテナンス事業 橋梁定期点検業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "橋梁",
-        "橋",
-        "定期点検"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "公用車購入",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "購入"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "公用車購入 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "購入"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "壺阪山駅周辺地区拠点にかかる整地設計業務（観覚寺地区）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "壺阪山駅周辺地区拠点にかかる整地設計業務（観覚寺地区） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "町単道路測量設計業務（下子島地区外）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "測量"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "町単道路測量設計業務（下子島地区外） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "測量"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道管布設工事（7－3工区）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道管布設工事（7－3工区） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道管布設工事（7－4工区）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道管布設工事（7－4工区） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道メーター検針業務",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "検針"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道メーター検針業務 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "検針"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道営業窓口補助業務",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道営業窓口補助業務 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道管布設工事（7－1工区）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道管布設工事（7－1工区） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道管布設工事（7－2工区）",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "水道管布設工事（7－2工区） ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "道路メンテナンス事業 橋梁補修工事(下土佐4号橋)",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "橋梁",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "道路メンテナンス事業 橋梁補修工事(下土佐4号橋) ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "橋梁",
-        "橋"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "高取町公共下水道工事に伴う舗装本復旧工事",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装",
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "高取町公共下水道工事に伴う舗装本復旧工事 ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装",
-        "下水道"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "令和7年度 高取町水道施設台帳作成業務",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "令和7年度 高取町水道施設台帳作成業務 ",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "町単道路歩道改良工事（清水谷地区）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "町単道路歩道改良工事（清水谷地区） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "防災・安全交付金事業舗装補修工事(7-1工区)",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "防災・安全交付金事業舗装補修工事(7-1工区) ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "1.町単道路維持改良工事（市尾地区外）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "1.町単道路維持改良工事（市尾地区外） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "2.町単道路維持改良工事（市尾地区外）",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "2.町単道路維持改良工事（市尾地区外） ",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路"
-      ]
-    },
-    {
-      "municipality": "高取町",
-      "title": "R8.11.2執行分",
-      "reason": "no_architecture_context",
-      "matchedKeywords": []
-    },
-    {
-      "municipality": "高取町",
-      "title": "R8.11.2執行分 ",
+      "title": "令和8年度高取町水道施設台帳作成業務 ",
       "reason": "no_architecture_context",
       "matchedKeywords": []
     },
@@ -73666,6 +74360,48 @@
     },
     {
       "municipality": "高取町",
+      "title": "ハイブリッドIPトランシーバー及びデジタル簡易無線機 購入事業",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入",
+        "無線機"
+      ]
+    },
+    {
+      "municipality": "高取町",
+      "title": "ハイブリッドIPトランシーバー及びデジタル簡易無線機 購入事業 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入",
+        "無線機"
+      ]
+    },
+    {
+      "municipality": "高取町",
+      "title": "高取町立学校電子黒板整備業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "高取町",
+      "title": "高取町立学校電子黒板整備業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "高取町",
+      "title": "令和8年度高取町水道施設台帳作成業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "高取町",
+      "title": "令和8年度高取町水道施設台帳作成業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "高取町",
       "title": "都市計画法第34条第11号に係る都市計画協議図書作成及び調査業務",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -74029,6 +74765,502 @@
       "matchedKeywords": [
         "舗装"
       ]
+    },
+    {
+      "municipality": "高取町",
+      "title": "1.町単道路維持改良工事（市尾地区外）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "高取町",
+      "title": "1.町単道路維持改良工事（市尾地区外） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "高取町",
+      "title": "2.町単道路維持改良工事（市尾地区外）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "高取町",
+      "title": "2.町単道路維持改良工事（市尾地区外） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "高取町",
+      "title": "R8.11.2執行分",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "高取町",
+      "title": "R8.11.2執行分 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "高取町",
+      "title": "ハイブリッドIPトランシーバー及びデジタル簡易無線機 購入事業",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入",
+        "無線機"
+      ]
+    },
+    {
+      "municipality": "高取町",
+      "title": "ハイブリッドIPトランシーバー及びデジタル簡易無線機 購入事業 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入",
+        "無線機"
+      ]
+    },
+    {
+      "municipality": "高取町",
+      "title": "高取町立学校電子黒板整備業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "高取町",
+      "title": "高取町立学校電子黒板整備業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "高取町",
+      "title": "令和8年度高取町水道施設台帳作成業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "高取町",
+      "title": "令和8年度高取町水道施設台帳作成業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "高取町",
+      "title": "都市計画法第34条第11号に係る都市計画協議図書作成及び調査業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "高取町",
+      "title": "都市計画法第34条第11号に係る都市計画協議図書作成及び調査業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "高取町",
+      "title": "小型動力ポンプ付軽四輪駆動消防車購入事業",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入"
+      ]
+    },
+    {
+      "municipality": "高取町",
+      "title": "小型動力ポンプ付軽四輪駆動消防車購入事業 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入"
+      ]
+    },
+    {
+      "municipality": "高取町",
+      "title": "道路メンテナンス事業 橋梁補修工事（上子島16号橋）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "橋梁",
+        "橋"
+      ]
+    },
+    {
+      "municipality": "高取町",
+      "title": "道路メンテナンス事業 橋梁補修工事（上子島16号橋） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "橋梁",
+        "橋"
+      ]
+    },
+    {
+      "municipality": "高取町",
+      "title": "水道管布設工事（8－1工区）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "高取町",
+      "title": "水道管布設工事（8－1工区） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "高取町",
+      "title": "塵芥収集用軽ダンプトラック購入事業",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入"
+      ]
+    },
+    {
+      "municipality": "高取町",
+      "title": "塵芥収集用軽ダンプトラック購入事業 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入"
+      ]
+    },
+    {
+      "municipality": "高取町",
+      "title": "水道施設修繕等業務委託",
+      "reason": "infra_exclude_keyword",
+      "matchedKeywords": [
+        "水道"
+      ]
+    },
+    {
+      "municipality": "高取町",
+      "title": "水道施設修繕等業務委託 ",
+      "reason": "infra_exclude_keyword",
+      "matchedKeywords": [
+        "水道"
+      ]
+    },
+    {
+      "municipality": "高取町",
+      "title": "高取町立学校教職員用端末整備業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "高取町",
+      "title": "高取町立学校教職員用端末整備業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "高取町",
+      "title": "高取町公共下水道工事7－1工区",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "高取町",
+      "title": "高取町公共下水道工事7－1工区 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "高取町",
+      "title": "防災・安全交付金事業 舗装補修工事（8－1工区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "高取町",
+      "title": "防災・安全交付金事業 舗装補修工事（8－1工区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "高取町",
+      "title": "道路メンテナンス事業 橋梁定期点検業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "橋梁",
+        "橋",
+        "定期点検"
+      ]
+    },
+    {
+      "municipality": "高取町",
+      "title": "道路メンテナンス事業 橋梁定期点検業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "橋梁",
+        "橋",
+        "定期点検"
+      ]
+    },
+    {
+      "municipality": "高取町",
+      "title": "公用車購入",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入"
+      ]
+    },
+    {
+      "municipality": "高取町",
+      "title": "公用車購入 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "購入"
+      ]
+    },
+    {
+      "municipality": "高取町",
+      "title": "壺阪山駅周辺地区拠点にかかる整地設計業務（観覚寺地区）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "高取町",
+      "title": "壺阪山駅周辺地区拠点にかかる整地設計業務（観覚寺地区） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "高取町",
+      "title": "町単道路測量設計業務（下子島地区外）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "測量"
+      ]
+    },
+    {
+      "municipality": "高取町",
+      "title": "町単道路測量設計業務（下子島地区外） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "測量"
+      ]
+    },
+    {
+      "municipality": "高取町",
+      "title": "水道管布設工事（7－3工区）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "高取町",
+      "title": "水道管布設工事（7－3工区） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "高取町",
+      "title": "水道管布設工事（7－4工区）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "高取町",
+      "title": "水道管布設工事（7－4工区） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "高取町",
+      "title": "水道メーター検針業務",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "検針"
+      ]
+    },
+    {
+      "municipality": "高取町",
+      "title": "水道メーター検針業務 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "検針"
+      ]
+    },
+    {
+      "municipality": "高取町",
+      "title": "水道営業窓口補助業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "高取町",
+      "title": "水道営業窓口補助業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "高取町",
+      "title": "水道管布設工事（7－1工区）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "高取町",
+      "title": "水道管布設工事（7－1工区） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "高取町",
+      "title": "水道管布設工事（7－2工区）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "高取町",
+      "title": "水道管布設工事（7－2工区） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "高取町",
+      "title": "道路メンテナンス事業 橋梁補修工事(下土佐4号橋)",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "橋梁",
+        "橋"
+      ]
+    },
+    {
+      "municipality": "高取町",
+      "title": "道路メンテナンス事業 橋梁補修工事(下土佐4号橋) ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "橋梁",
+        "橋"
+      ]
+    },
+    {
+      "municipality": "高取町",
+      "title": "高取町公共下水道工事に伴う舗装本復旧工事",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装",
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "高取町",
+      "title": "高取町公共下水道工事に伴う舗装本復旧工事 ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装",
+        "下水道"
+      ]
+    },
+    {
+      "municipality": "高取町",
+      "title": "令和7年度 高取町水道施設台帳作成業務",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "高取町",
+      "title": "令和7年度 高取町水道施設台帳作成業務 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "高取町",
+      "title": "町単道路歩道改良工事（清水谷地区）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "高取町",
+      "title": "町単道路歩道改良工事（清水谷地区） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "高取町",
+      "title": "防災・安全交付金事業舗装補修工事(7-1工区)",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "高取町",
+      "title": "防災・安全交付金事業舗装補修工事(7-1工区) ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "高取町",
+      "title": "1.町単道路維持改良工事（市尾地区外）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "高取町",
+      "title": "1.町単道路維持改良工事（市尾地区外） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "高取町",
+      "title": "2.町単道路維持改良工事（市尾地区外）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "高取町",
+      "title": "2.町単道路維持改良工事（市尾地区外） ",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "高取町",
+      "title": "R8.11.2執行分",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "高取町",
+      "title": "R8.11.2執行分 ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
     },
     {
       "municipality": "斑鳩町",
