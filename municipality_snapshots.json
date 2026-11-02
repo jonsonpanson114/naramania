@@ -748,6 +748,16 @@
   ],
   "奈良市": [
     {
+      "id": "nara-city-0000002706",
+      "municipality": "奈良市",
+      "title": "中央体育館屋根改修に伴う建築設計業務委託",
+      "type": "コンサル",
+      "announcementDate": "2026-11-02",
+      "biddingDate": "2026-12-03",
+      "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+      "status": "受付中"
+    },
+    {
       "id": "nara-city-0000002676",
       "municipality": "奈良市",
       "title": "東市コミュニティスポーツ会館トイレ改修工事",
@@ -790,6 +800,18 @@
       "winnerType": "ゼネコン"
     },
     {
+      "id": "nara-city-0000002637",
+      "municipality": "奈良市",
+      "title": "本庁舎中央棟地下売店等内部改修工事",
+      "type": "建築",
+      "announcementDate": "2026-09-25",
+      "biddingDate": "2026-09-25",
+      "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+      "status": "落札",
+      "winningContractor": "株式会社弥杜工業",
+      "winnerType": "ゼネコン"
+    },
+    {
       "id": "nara-city-0000002661",
       "municipality": "奈良市",
       "title": "史跡大安寺旧境内六条大路整備工事実施設計業務委託",
@@ -800,18 +822,6 @@
       "status": "落札",
       "winningContractor": "株式会社アーバンパイオニア設計",
       "winnerType": "設計事務所"
-    },
-    {
-      "id": "nara-city-0000002637",
-      "municipality": "奈良市",
-      "title": "本庁舎中央棟地下売店等内部改修工事",
-      "type": "建築",
-      "announcementDate": "2026-09-01",
-      "biddingDate": "2026-09-25",
-      "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-      "status": "落札",
-      "winningContractor": "株式会社弥杜工業",
-      "winnerType": "ゼネコン"
     },
     {
       "id": "nara-city-0000002593",
@@ -850,6 +860,18 @@
       "winnerType": "ゼネコン"
     },
     {
+      "id": "nara-city-0000002347",
+      "municipality": "奈良市",
+      "title": "西部生涯スポーツセンタートイレ改修に伴う建築設計業務委託",
+      "type": "コンサル",
+      "announcementDate": "2026-05-27",
+      "biddingDate": "2026-05-27",
+      "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
+      "status": "落札",
+      "winningContractor": "岡田建築設計事務所",
+      "winnerType": "設計事務所"
+    },
+    {
       "id": "nara-city-0000002440",
       "municipality": "奈良市",
       "title": "佐保バンビーホーム新築に伴う建築設計業務委託",
@@ -872,28 +894,6 @@
       "status": "落札",
       "winningContractor": "株式会社ＵＬＴＲＡ　Ｃ",
       "winnerType": "ゼネコン"
-    },
-    {
-      "id": "nara-city-0000002346",
-      "municipality": "奈良市",
-      "title": "庁舎中央棟地下書庫改修その他工事に伴う建築設計業務委託",
-      "type": "コンサル",
-      "announcementDate": "2026-04-15",
-      "biddingDate": "2026-05-27",
-      "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-      "status": "受付終了"
-    },
-    {
-      "id": "nara-city-0000002347",
-      "municipality": "奈良市",
-      "title": "西部生涯スポーツセンタートイレ改修に伴う建築設計業務委託",
-      "type": "コンサル",
-      "announcementDate": "2026-04-15",
-      "biddingDate": "2026-05-27",
-      "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-      "status": "落札",
-      "winningContractor": "岡田建築設計事務所",
-      "winnerType": "設計事務所"
     }
   ],
   "橿原市": [
@@ -1628,14 +1628,26 @@
   ],
   "大和郡山市": [
     {
-      "id": "yamato-koriyama-564d0d33",
+      "id": "yamato-koriyama-be417053",
+      "municipality": "大和郡山市",
+      "title": "【事前申請】市営北山西住宅（3号～7号）解体整備工事",
+      "type": "建築",
+      "announcementDate": "2026-11-02",
+      "biddingDate": "2026-11-25",
+      "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/9328.html",
+      "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk261125_01k.pdf",
+      "status": "受付中"
+    },
+    {
+      "id": "yamato-koriyama-284f45d7",
       "municipality": "大和郡山市",
       "title": "大和郡山市立スポーツ会館体育室床修繕",
       "type": "建築",
       "announcementDate": "2026-09-30",
       "biddingDate": "2026-10-30",
-      "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsu/R8/18111.html",
-      "status": "受付中"
+      "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsunooshirase/R8/18176.html",
+      "status": "落札",
+      "winningContractor": "マツダ塗装株式会社"
     },
     {
       "id": "yamato-koriyama-9846d121",
@@ -2413,6 +2425,16 @@
   ],
   "御所市": [
     {
+      "id": "gose-2026-11-02-御所汚水9-1号幹線他実施設計業務委託-0",
+      "municipality": "御所市",
+      "title": "御所汚水9-1号幹線他実施設計業務委託",
+      "type": "コンサル",
+      "announcementDate": "2026-11-02",
+      "biddingDate": "2026-11-20",
+      "link": "https://www.city.gose.nara.jp/0000002767.html",
+      "status": "受付中"
+    },
+    {
       "id": "gose-2026-08-10-御所市義務教育学校建設に関する基本設計及び実施設-fallback",
       "municipality": "御所市",
       "title": "御所市義務教育学校建設に関する基本設計及び実施設計業務に係る公募型プロポーザル",
@@ -2487,11 +2509,11 @@
   ],
   "桜井市": [
     {
-      "id": "sakurai-2026-10-01-桜井市立みなみこども園建設工事",
+      "id": "sakurai-2026-11-02-桜井市立みなみこども園建設工事",
       "municipality": "桜井市",
       "title": "桜井市立みなみこども園建設工事",
       "type": "建築",
-      "announcementDate": "2026-10-01",
+      "announcementDate": "2026-11-02",
       "link": "https://www.city.sakurai.lg.jp/sosiki/soumu/kanzaikeiyaku/nyuusatukeiyakukensa/notice/6596.html",
       "status": "受付中",
       "description": "河西 地内"
@@ -2839,7 +2861,7 @@
       "biddingDate": "2026-05-18",
       "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
       "status": "落札",
-      "winningContractor": "村本建設（株）奈良本店"
+      "winningContractor": "村本建設(株) 奈良本店"
     }
   ],
   "広陵町": [

@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-10-30T12:40:00.821Z",
-  "qualityGeneratedAt": "2026-10-30T12:30:10.041Z",
-  "itemCount": 331,
+  "generatedAt": "2026-11-02T08:07:40.351Z",
+  "qualityGeneratedAt": "2026-11-02T07:56:46.546Z",
+  "itemCount": 333,
   "resultFollowUp": {
-    "totalCount": 9,
-    "highCount": 9,
+    "totalCount": 8,
+    "highCount": 8,
     "mediumCount": 0,
     "lowCount": 0,
     "missingBiddingDateCount": 0,
@@ -16,16 +16,12 @@
       {
         "municipality": "大淀町",
         "count": 2
-      },
-      {
-        "municipality": "奈良市",
-        "count": 1
       }
     ],
     "samples": [
       {
         "priority": "high",
-        "ageDays": 192,
+        "ageDays": 195,
         "reason": "落札済みだが落札者が空",
         "item": {
           "id": "oyodo-79dc14038b",
@@ -41,23 +37,7 @@
       },
       {
         "priority": "high",
-        "ageDays": 156,
-        "reason": "開札日から156日経過",
-        "item": {
-          "id": "nara-city-0000002346",
-          "municipality": "奈良市",
-          "title": "庁舎中央棟地下書庫改修その他工事に伴う建築設計業務委託",
-          "status": "受付終了",
-          "announcementDate": "2026-04-15",
-          "biddingDate": "2026-05-27",
-          "winningContractor": null,
-          "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-          "pdfUrl": null
-        }
-      },
-      {
-        "priority": "high",
-        "ageDays": 137,
+        "ageDays": 140,
         "reason": "落札済みだが落札者が空",
         "item": {
           "id": "oyodo-46ab50dbc8",
@@ -73,8 +53,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 134,
-        "reason": "開札日から134日経過",
+        "ageDays": 137,
+        "reason": "開札日から137日経過",
         "item": {
           "id": "nara-pref-29001013060020260055",
           "municipality": "奈良県",
@@ -89,8 +69,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 115,
-        "reason": "開札日から115日経過",
+        "ageDays": 118,
+        "reason": "開札日から118日経過",
         "item": {
           "id": "nara-pref-29005007060120260015",
           "municipality": "奈良県",
@@ -105,8 +85,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 105,
-        "reason": "開札日から105日経過",
+        "ageDays": 108,
+        "reason": "開札日から108日経過",
         "item": {
           "id": "nara-pref-29005007060120260018",
           "municipality": "奈良県",
@@ -121,8 +101,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 35,
-        "reason": "開札日から35日経過",
+        "ageDays": 38,
+        "reason": "開札日から38日経過",
         "item": {
           "id": "nara-pref-29001013401020260007",
           "municipality": "奈良県",
@@ -137,8 +117,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 16,
-        "reason": "開札日から16日経過",
+        "ageDays": 19,
+        "reason": "開札日から19日経過",
         "item": {
           "id": "nara-pref-29004060025020260077",
           "municipality": "奈良県",
@@ -153,8 +133,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 15,
-        "reason": "開札日から15日経過",
+        "ageDays": 18,
+        "reason": "開札日から18日経過",
         "item": {
           "id": "nara-pref-29001013051020260142",
           "municipality": "奈良県",
@@ -561,15 +541,15 @@
         "municipality": "大和郡山市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 20,
+        "totalCount": 21,
         "requiredLinkIncludes": [
           "city.yamatokoriyama.lg.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.yamatokoriyama.lg.jp": 20
+          "city.yamatokoriyama.lg.jp": 21
         },
-        "message": "大和郡山市: 20件 (公告1/結果19) / sources OK"
+        "message": "大和郡山市: 21件 (公告1/結果20) / sources OK"
       },
       {
         "municipality": "葛城市",
@@ -607,15 +587,15 @@
         "municipality": "御所市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 2,
+        "totalCount": 3,
         "requiredLinkIncludes": [
           "city.gose.nara.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.gose.nara.jp": 2
+          "city.gose.nara.jp": 3
         },
-        "message": "御所市: 2件 (公告0/結果2) / sources OK"
+        "message": "御所市: 3件 (公告1/結果2) / sources OK"
       },
       {
         "municipality": "天理市",

@@ -1,38 +1,38 @@
 {
-  "generatedAt": "2026-10-30T12:30:10.041Z",
+  "generatedAt": "2026-11-02T07:56:46.546Z",
   "source": "daily_scrape",
   "municipalityLastScraped": {
-    "奈良市": "2026-10-30T12:30:10.041Z",
-    "橿原市": "2026-10-30T12:30:10.041Z",
-    "生駒市": "2026-10-30T12:30:10.041Z",
-    "大和高田市": "2026-10-30T12:30:10.041Z",
-    "大和郡山市": "2026-10-30T12:30:10.041Z",
-    "葛城市": "2026-10-30T12:30:10.041Z",
-    "五條市": "2026-10-30T12:30:10.041Z",
-    "御所市": "2026-10-30T12:30:10.041Z",
-    "天理市": "2026-10-30T12:30:10.041Z",
-    "桜井市": "2026-10-30T12:30:10.041Z",
-    "宇陀市": "2026-10-30T12:30:10.041Z",
-    "田原本町": "2026-10-30T12:30:10.041Z",
-    "広陵町": "2026-10-30T12:30:10.041Z",
-    "香芝市": "2026-10-30T12:30:10.041Z",
-    "川西町": "2026-10-30T12:30:10.041Z",
-    "山添村": "2026-10-30T12:30:10.041Z",
-    "平群町": "2026-10-30T12:30:10.041Z",
-    "三宅町": "2026-10-30T12:30:10.041Z",
-    "安堵町": "2026-10-30T12:30:10.041Z",
-    "高取町": "2026-10-30T12:30:10.041Z",
-    "斑鳩町": "2026-10-30T12:30:10.041Z",
-    "三郷町": "2026-10-30T12:30:10.041Z",
-    "王寺町": "2026-10-30T12:30:10.041Z",
-    "大淀町": "2026-10-30T12:30:10.041Z",
+    "奈良市": "2026-11-02T07:56:46.546Z",
+    "橿原市": "2026-11-02T07:56:46.546Z",
+    "生駒市": "2026-11-02T07:56:46.546Z",
+    "大和高田市": "2026-11-02T07:56:46.546Z",
+    "大和郡山市": "2026-11-02T07:56:46.546Z",
+    "葛城市": "2026-11-02T07:56:46.546Z",
+    "五條市": "2026-11-02T07:56:46.546Z",
+    "御所市": "2026-11-02T07:56:46.546Z",
+    "天理市": "2026-11-02T07:56:46.546Z",
+    "桜井市": "2026-11-02T07:56:46.546Z",
+    "宇陀市": "2026-11-02T07:56:46.546Z",
+    "田原本町": "2026-11-02T07:56:46.546Z",
+    "広陵町": "2026-11-02T07:56:46.546Z",
+    "香芝市": "2026-11-02T07:56:46.546Z",
+    "川西町": "2026-11-02T07:56:46.546Z",
+    "山添村": "2026-11-02T07:56:46.546Z",
+    "平群町": "2026-11-02T07:56:46.546Z",
+    "三宅町": "2026-11-02T07:56:46.546Z",
+    "安堵町": "2026-11-02T07:56:46.546Z",
+    "高取町": "2026-11-02T07:56:46.546Z",
+    "斑鳩町": "2026-11-02T07:56:46.546Z",
+    "三郷町": "2026-11-02T07:56:46.546Z",
+    "王寺町": "2026-11-02T07:56:46.546Z",
+    "大淀町": "2026-11-02T07:56:46.546Z",
     "奈良県": "2026-10-28T21:47:11.788Z"
   },
-  "scrapedCount": 2908,
-  "keptCount": 331,
-  "rejectedCount": 2622,
+  "scrapedCount": 2919,
+  "keptCount": 333,
+  "rejectedCount": 2632,
   "oldestAnnouncementDate": "2025-02-02",
-  "latestAnnouncementDate": "2026-10-27",
+  "latestAnnouncementDate": "2026-11-02",
   "municipalityCount": 24,
   "municipalityAudit": {
     "expectedMunicipalityCount": 25,
@@ -81,8 +81,8 @@
       },
       {
         "municipality": "大和郡山市",
-        "count": 20,
-        "changeFromPrevious": 0
+        "count": 21,
+        "changeFromPrevious": 1
       },
       {
         "municipality": "宇陀市",
@@ -125,6 +125,11 @@
         "changeFromPrevious": 0
       },
       {
+        "municipality": "御所市",
+        "count": 3,
+        "changeFromPrevious": 1
+      },
+      {
         "municipality": "三郷町",
         "count": 3,
         "changeFromPrevious": 0
@@ -146,11 +151,6 @@
       },
       {
         "municipality": "王寺町",
-        "count": 2,
-        "changeFromPrevious": 0
-      },
-      {
-        "municipality": "御所市",
         "count": 2,
         "changeFromPrevious": 0
       },
@@ -324,14 +324,14 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 20,
+        "totalCount": 21,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.yamatokoriyama.lg.jp": 20
+          "city.yamatokoriyama.lg.jp": 21
         },
         "announcementCount": 1,
-        "resultCount": 19,
-        "message": "大和郡山市: 20件 (公告1/結果19) / sources OK"
+        "resultCount": 20,
+        "message": "大和郡山市: 21件 (公告1/結果20) / sources OK"
       },
       {
         "expectation": {
@@ -388,14 +388,14 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 2,
+        "totalCount": 3,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.gose.nara.jp": 2
+          "city.gose.nara.jp": 3
         },
-        "announcementCount": 0,
+        "announcementCount": 1,
         "resultCount": 2,
-        "message": "御所市: 2件 (公告0/結果2) / sources OK"
+        "message": "御所市: 3件 (公告1/結果2) / sources OK"
       },
       {
         "expectation": {
@@ -741,11 +741,11 @@
     ]
   },
   "intelligence": {
-    "itemsWithPdf": 83,
+    "itemsWithPdf": 84,
     "itemsWithDescription": 49,
     "intelligenceExtractedCount": 48,
     "geminiExtractedCount": 48,
     "taggedCount": 48,
-    "lastAugmentedAt": "2026-10-30T12:31:40.736Z"
+    "lastAugmentedAt": "2026-11-02T07:57:32.058Z"
   }
 }
