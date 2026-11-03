@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-11-02T22:32:11.945Z",
-  "qualityGeneratedAt": "2026-11-02T22:32:08.345Z",
+  "generatedAt": "2026-11-03T02:49:14.526Z",
+  "qualityGeneratedAt": "2026-11-03T02:49:10.580Z",
   "itemCount": 333,
   "resultFollowUp": {
-    "totalCount": 11,
+    "totalCount": 10,
     "highCount": 10,
     "mediumCount": 0,
-    "lowCount": 1,
+    "lowCount": 0,
     "missingBiddingDateCount": 0,
     "byMunicipality": [
       {
         "municipality": "奈良県",
-        "count": 6
+        "count": 5
       },
       {
         "municipality": "香芝市",
@@ -491,7 +491,7 @@
         "sourceCounts": {
           "ppi.ebid-kouji-gyoumu.pref.nara.jp": 65
         },
-        "message": "奈良県: 65件 (公告7/結果58) / sources OK"
+        "message": "奈良県: 65件 (公告6/結果59) / sources OK"
       },
       {
         "municipality": "奈良市",

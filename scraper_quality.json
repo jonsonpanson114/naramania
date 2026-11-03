@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T22:32:08.345Z",
+  "generatedAt": "2026-11-03T02:49:10.580Z",
   "source": "daily_scrape",
   "municipalityLastScraped": {
     "奈良市": "2026-11-02T14:59:55.484Z",
@@ -26,7 +26,7 @@
     "三郷町": "2026-11-02T14:59:55.484Z",
     "王寺町": "2026-11-02T14:59:55.484Z",
     "大淀町": "2026-11-02T14:59:55.484Z",
-    "奈良県": "2026-11-02T22:32:08.345Z"
+    "奈良県": "2026-11-03T02:49:10.580Z"
   },
   "scrapedCount": 66,
   "keptCount": 333,
@@ -219,9 +219,9 @@
         "sourceCounts": {
           "ppi.ebid-kouji-gyoumu.pref.nara.jp": 65
         },
-        "announcementCount": 7,
-        "resultCount": 58,
-        "message": "奈良県: 65件 (公告7/結果58) / sources OK"
+        "announcementCount": 6,
+        "resultCount": 59,
+        "message": "奈良県: 65件 (公告6/結果59) / sources OK"
       },
       {
         "expectation": {
