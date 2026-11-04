@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-03T14:53:39.325Z",
-  "currentItemCount": 333,
+  "generatedAt": "2026-11-04T08:27:22.973Z",
+  "currentItemCount": 334,
   "checkedMunicipalities": [
     "奈良市",
     "橿原市",
@@ -32,7 +32,7 @@
     "奈良県"
   ],
   "scraperErrorCount": 0,
-  "transientWarningCount": 1,
+  "transientWarningCount": 0,
   "scraperResults": [
     {
       "municipality": "奈良市",
@@ -56,26 +56,22 @@
     },
     {
       "municipality": "生駒市",
-      "rawCount": 0,
-      "keptCount": 0,
-      "rejectedCount": 0,
-      "keptAnnouncementCount": 0,
-      "keptResultCount": 0,
-      "warnings": [
-        "[生駒市] EPI 情報公開サービス停止中のため取得をスキップします。"
-      ],
+      "rawCount": 227,
+      "keptCount": 27,
+      "rejectedCount": 200,
+      "keptAnnouncementCount": 1,
+      "keptResultCount": 26,
+      "warnings": [],
       "errors": []
     },
     {
       "municipality": "大和高田市",
-      "rawCount": 31,
+      "rawCount": 210,
       "keptCount": 0,
-      "rejectedCount": 31,
+      "rejectedCount": 210,
       "keptAnnouncementCount": 0,
       "keptResultCount": 0,
-      "warnings": [
-        "一時的な取得失敗（次回再試行）: [大和高田市] EPIがサービス停止中のため取得をスキップしました(サイト側の一時停止。次回実行で復帰します)"
-      ],
+      "warnings": [],
       "errors": []
     },
     {
@@ -90,21 +86,21 @@
     },
     {
       "municipality": "葛城市",
-      "rawCount": 262,
-      "keptCount": 15,
-      "rejectedCount": 247,
+      "rawCount": 386,
+      "keptCount": 25,
+      "rejectedCount": 361,
       "keptAnnouncementCount": 0,
-      "keptResultCount": 15,
+      "keptResultCount": 25,
       "warnings": [],
       "errors": []
     },
     {
       "municipality": "五條市",
-      "rawCount": 62,
-      "keptCount": 15,
-      "rejectedCount": 47,
+      "rawCount": 254,
+      "keptCount": 32,
+      "rejectedCount": 222,
       "keptAnnouncementCount": 3,
-      "keptResultCount": 12,
+      "keptResultCount": 29,
       "warnings": [],
       "errors": []
     },
@@ -130,24 +126,21 @@
     },
     {
       "municipality": "桜井市",
-      "rawCount": 5,
-      "keptCount": 3,
-      "rejectedCount": 2,
-      "keptAnnouncementCount": 3,
-      "keptResultCount": 0,
-      "warnings": [
-        "[桜井市] EPIがサービス停止中のため取得をスキップしました(サイト側の一時停止。次回実行で復帰します)",
-        "桜井市: 取得5件に落札結果が1件もありません。入札結果(開札情報)ページを見落としていないか確認が必要です。"
-      ],
+      "rawCount": 131,
+      "keptCount": 10,
+      "rejectedCount": 121,
+      "keptAnnouncementCount": 4,
+      "keptResultCount": 6,
+      "warnings": [],
       "errors": []
     },
     {
       "municipality": "宇陀市",
-      "rawCount": 0,
-      "keptCount": 0,
-      "rejectedCount": 0,
-      "keptAnnouncementCount": 0,
-      "keptResultCount": 0,
+      "rawCount": 116,
+      "keptCount": 19,
+      "rejectedCount": 97,
+      "keptAnnouncementCount": 1,
+      "keptResultCount": 18,
       "warnings": [],
       "errors": []
     },
@@ -173,11 +166,11 @@
     },
     {
       "municipality": "香芝市",
-      "rawCount": 16,
-      "keptCount": 9,
-      "rejectedCount": 7,
-      "keptAnnouncementCount": 5,
-      "keptResultCount": 4,
+      "rawCount": 144,
+      "keptCount": 26,
+      "rejectedCount": 118,
+      "keptAnnouncementCount": 6,
+      "keptResultCount": 20,
       "warnings": [],
       "errors": []
     },
@@ -215,9 +208,9 @@
     },
     {
       "municipality": "三宅町",
-      "rawCount": 28,
+      "rawCount": 29,
       "keptCount": 8,
-      "rejectedCount": 20,
+      "rejectedCount": 21,
       "keptAnnouncementCount": 3,
       "keptResultCount": 5,
       "warnings": [],
@@ -235,9 +228,9 @@
     },
     {
       "municipality": "高取町",
-      "rawCount": 49,
+      "rawCount": 50,
       "keptCount": 15,
-      "rejectedCount": 34,
+      "rejectedCount": 35,
       "keptAnnouncementCount": 0,
       "keptResultCount": 15,
       "warnings": [],
@@ -257,11 +250,11 @@
     },
     {
       "municipality": "三郷町",
-      "rawCount": 91,
-      "keptCount": 0,
-      "rejectedCount": 91,
+      "rawCount": 182,
+      "keptCount": 9,
+      "rejectedCount": 173,
       "keptAnnouncementCount": 0,
-      "keptResultCount": 0,
+      "keptResultCount": 9,
       "warnings": [],
       "errors": []
     },
@@ -288,11 +281,11 @@
   ],
   "coverage": {
     "checkedMunicipalityCount": 24,
-    "expectedItemCount": 182,
-    "matchedItemCount": 182,
+    "expectedItemCount": 288,
+    "matchedItemCount": 288,
     "missingItemCount": 0,
-    "duplicateTitleGroupCount": 15,
-    "duplicateTitleItemCount": 33,
+    "duplicateTitleGroupCount": 28,
+    "duplicateTitleItemCount": 64,
     "results": [
       {
         "municipality": "橿原市",
@@ -302,6 +295,50 @@
         "missingCount": 0,
         "duplicateTitleGroupCount": 2,
         "duplicateTitleItemCount": 4,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
+        "municipality": "五條市",
+        "snapshotCount": 254,
+        "expectedCount": 32,
+        "matchedCount": 32,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 9,
+        "duplicateTitleItemCount": 22,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
+        "municipality": "生駒市",
+        "snapshotCount": 227,
+        "expectedCount": 27,
+        "matchedCount": 27,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 0,
+        "duplicateTitleItemCount": 0,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
+        "municipality": "香芝市",
+        "snapshotCount": 144,
+        "expectedCount": 26,
+        "matchedCount": 26,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 4,
+        "duplicateTitleItemCount": 9,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
+        "municipality": "葛城市",
+        "snapshotCount": 386,
+        "expectedCount": 25,
+        "matchedCount": 25,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 5,
+        "duplicateTitleItemCount": 10,
         "missingItems": [],
         "status": "ok"
       },
@@ -317,6 +354,17 @@
         "status": "ok"
       },
       {
+        "municipality": "宇陀市",
+        "snapshotCount": 116,
+        "expectedCount": 19,
+        "matchedCount": 19,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 0,
+        "duplicateTitleItemCount": 0,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
         "municipality": "奈良市",
         "snapshotCount": 113,
         "expectedCount": 17,
@@ -328,30 +376,8 @@
         "status": "ok"
       },
       {
-        "municipality": "葛城市",
-        "snapshotCount": 262,
-        "expectedCount": 15,
-        "matchedCount": 15,
-        "missingCount": 0,
-        "duplicateTitleGroupCount": 4,
-        "duplicateTitleItemCount": 8,
-        "missingItems": [],
-        "status": "ok"
-      },
-      {
-        "municipality": "五條市",
-        "snapshotCount": 62,
-        "expectedCount": 15,
-        "matchedCount": 15,
-        "missingCount": 0,
-        "duplicateTitleGroupCount": 1,
-        "duplicateTitleItemCount": 2,
-        "missingItems": [],
-        "status": "ok"
-      },
-      {
         "municipality": "高取町",
-        "snapshotCount": 49,
+        "snapshotCount": 50,
         "expectedCount": 15,
         "matchedCount": 15,
         "missingCount": 0,
@@ -361,8 +387,19 @@
         "status": "ok"
       },
       {
-        "municipality": "香芝市",
-        "snapshotCount": 16,
+        "municipality": "桜井市",
+        "snapshotCount": 131,
+        "expectedCount": 10,
+        "matchedCount": 10,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 0,
+        "duplicateTitleItemCount": 0,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
+        "municipality": "三郷町",
+        "snapshotCount": 182,
         "expectedCount": 9,
         "matchedCount": 9,
         "missingCount": 0,
@@ -384,7 +421,7 @@
       },
       {
         "municipality": "三宅町",
-        "snapshotCount": 28,
+        "snapshotCount": 29,
         "expectedCount": 8,
         "matchedCount": 8,
         "missingCount": 0,
@@ -429,17 +466,6 @@
       {
         "municipality": "御所市",
         "snapshotCount": 22,
-        "expectedCount": 3,
-        "matchedCount": 3,
-        "missingCount": 0,
-        "duplicateTitleGroupCount": 0,
-        "duplicateTitleItemCount": 0,
-        "missingItems": [],
-        "status": "ok"
-      },
-      {
-        "municipality": "桜井市",
-        "snapshotCount": 5,
         "expectedCount": 3,
         "matchedCount": 3,
         "missingCount": 0,
@@ -515,41 +541,8 @@
         "status": "ok"
       },
       {
-        "municipality": "宇陀市",
-        "snapshotCount": 0,
-        "expectedCount": 0,
-        "matchedCount": 0,
-        "missingCount": 0,
-        "duplicateTitleGroupCount": 0,
-        "duplicateTitleItemCount": 0,
-        "missingItems": [],
-        "status": "ok"
-      },
-      {
-        "municipality": "三郷町",
-        "snapshotCount": 91,
-        "expectedCount": 0,
-        "matchedCount": 0,
-        "missingCount": 0,
-        "duplicateTitleGroupCount": 0,
-        "duplicateTitleItemCount": 0,
-        "missingItems": [],
-        "status": "ok"
-      },
-      {
-        "municipality": "生駒市",
-        "snapshotCount": 0,
-        "expectedCount": 0,
-        "matchedCount": 0,
-        "missingCount": 0,
-        "duplicateTitleGroupCount": 0,
-        "duplicateTitleItemCount": 0,
-        "missingItems": [],
-        "status": "ok"
-      },
-      {
         "municipality": "大和高田市",
-        "snapshotCount": 31,
+        "snapshotCount": 210,
         "expectedCount": 0,
         "matchedCount": 0,
         "missingCount": 0,
