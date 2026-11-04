@@ -2851,7 +2851,7 @@
       "biddingDate": "2026-06-22",
       "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
       "status": "落札",
-      "winningContractor": "塚竜(株)"
+      "winningContractor": "塚竜（株）"
     },
     {
       "id": "tawaramoto-2026051803",
@@ -2861,8 +2861,8 @@
       "announcementDate": "2026-04-09",
       "biddingDate": "2026-05-18",
       "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
-      "status": "受付終了",
-      "winningContractor": "村本建設（株）奈良本店"
+      "status": "落札",
+      "winningContractor": "村本建設(株)奈良本店"
     }
   ],
   "広陵町": [
@@ -3006,6 +3006,30 @@
   ],
   "三宅町": [
     {
+      "id": "miyake-2026-11-04-上但馬保育所解体工事設計委託業務",
+      "municipality": "三宅町",
+      "title": "上但馬保育所解体工事設計委託業務",
+      "type": "コンサル",
+      "announcementDate": "2026-11-04",
+      "biddingDate": "2026-11-04",
+      "link": "https://www.town.miyake.lg.jp/soshiki/1/9376.html",
+      "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5619.pdf",
+      "status": "不調"
+    },
+    {
+      "id": "miyake-2026-11-04-三宅老人憩いの家解体工事設計委託業務",
+      "municipality": "三宅町",
+      "title": "三宅老人憩いの家解体工事設計委託業務",
+      "type": "コンサル",
+      "announcementDate": "2026-11-04",
+      "biddingDate": "2026-11-04",
+      "link": "https://www.town.miyake.lg.jp/soshiki/1/9376.html",
+      "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5773.pdf",
+      "status": "落札",
+      "winningContractor": "株式会社 礎建築事務所",
+      "winnerType": "ゼネコン"
+    },
+    {
       "id": "miyake-2026-10-19-三宅町デイサービスセンター介護浴槽改修工事",
       "municipality": "三宅町",
       "title": "三宅町デイサービスセンター介護浴槽改修工事",
@@ -3039,30 +3063,6 @@
       "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5774.pdf",
       "status": "落札",
       "winningContractor": "株式会社ゴセケン",
-      "winnerType": "ゼネコン"
-    },
-    {
-      "id": "miyake-2026-10-01-上但馬保育所解体工事設計委託業務",
-      "municipality": "三宅町",
-      "title": "上但馬保育所解体工事設計委託業務",
-      "type": "コンサル",
-      "announcementDate": "2026-10-01",
-      "biddingDate": "2026-10-01",
-      "link": "https://www.town.miyake.lg.jp/soshiki/1/9376.html",
-      "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5619.pdf",
-      "status": "不調"
-    },
-    {
-      "id": "miyake-2026-10-01-三宅老人憩いの家解体工事設計委託業務",
-      "municipality": "三宅町",
-      "title": "三宅老人憩いの家解体工事設計委託業務",
-      "type": "コンサル",
-      "announcementDate": "2026-10-01",
-      "biddingDate": "2026-10-01",
-      "link": "https://www.town.miyake.lg.jp/soshiki/1/9376.html",
-      "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5773.pdf",
-      "status": "落札",
-      "winningContractor": "株式会社 礎建築事務所",
       "winnerType": "ゼネコン"
     },
     {
@@ -3669,14 +3669,14 @@
       "estimatedPrice": "3,250,000円"
     },
     {
-      "id": "kashiba-r8-g5-5",
+      "id": "kashiba-web-65a0eda8",
       "municipality": "香芝市",
       "title": "志都美小学校改築工事に伴う実施設計業務",
       "type": "コンサル",
       "announcementDate": "2026-06-18",
       "biddingDate": "2026-07-10",
-      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=011792050100r8-g5-5",
-      "status": "落札",
+      "link": "https://www.city.kashiba.lg.jp/site/nyuusatsu/67641.html",
+      "status": "受付終了",
       "winningContractor": "株式会社長大 奈良事務所",
       "estimatedPrice": "67,260,000円"
     },
@@ -3737,38 +3737,38 @@
       "status": "不調"
     },
     {
-      "id": "kashiba-r8-k4-19",
-      "municipality": "香芝市",
-      "title": "下田小学校長寿命化改修工事",
-      "type": "建築",
-      "announcementDate": "2026-04-23",
-      "biddingDate": "2026-05-21",
-      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=001792050100r8-k4-19",
-      "status": "落札",
-      "winningContractor": "株式会社上村組",
-      "estimatedPrice": "618,000,000円"
-    },
-    {
-      "id": "kashiba-r8-g4-06",
+      "id": "kashiba-web-1bf7b65a",
       "municipality": "香芝市",
       "title": "五位堂小学校改築工事に伴う実施設計業務",
       "type": "コンサル",
       "announcementDate": "2026-04-23",
       "biddingDate": "2026-05-26",
-      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=011792050100r8-g4-06",
-      "status": "落札",
+      "link": "https://www.city.kashiba.lg.jp/site/nyuusatsu/list288-1034.html",
+      "status": "受付終了",
       "winningContractor": "株式会社綜企画設計 奈良支店",
       "estimatedPrice": "126,593,000円"
     },
     {
-      "id": "kashiba-r8-g4-05",
+      "id": "kashiba-web-b1d487b5",
+      "municipality": "香芝市",
+      "title": "下田小学校長寿命化改修工事",
+      "type": "建築",
+      "announcementDate": "2026-04-23",
+      "biddingDate": "2026-05-21",
+      "link": "https://www.city.kashiba.lg.jp/site/nyuusatsu/65857.html",
+      "status": "落札",
+      "winningContractor": "株式会社上村組",
+      "estimatedPrice": "618,000,000円"
+    },
+    {
+      "id": "kashiba-web-f9a78168",
       "municipality": "香芝市",
       "title": "三和小学校校舎増築工事に伴う設計業務",
       "type": "コンサル",
       "announcementDate": "2026-04-09",
       "biddingDate": "2026-04-28",
-      "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=011792050100r8-g4-05",
-      "status": "落札",
+      "link": "https://www.city.kashiba.lg.jp/uploaded/attachment/31836.pdf",
+      "status": "受付終了",
       "winningContractor": "株式会社福本設計",
       "estimatedPrice": "18,224,800円"
     },

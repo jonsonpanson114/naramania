@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-04T07:55:56.641Z",
-  "qualityGeneratedAt": "2026-11-04T07:45:42.073Z",
+  "generatedAt": "2026-11-04T14:17:17.141Z",
+  "qualityGeneratedAt": "2026-11-04T14:05:55.980Z",
   "itemCount": 334,
   "resultFollowUp": {
-    "totalCount": 8,
-    "highCount": 8,
+    "totalCount": 10,
+    "highCount": 10,
     "mediumCount": 0,
     "lowCount": 0,
     "missingBiddingDateCount": 0,
@@ -14,12 +14,12 @@
         "count": 5
       },
       {
-        "municipality": "大淀町",
-        "count": 2
+        "municipality": "香芝市",
+        "count": 3
       },
       {
-        "municipality": "田原本町",
-        "count": 1
+        "municipality": "大淀町",
+        "count": 2
       }
     ],
     "samples": [
@@ -41,17 +41,33 @@
       },
       {
         "priority": "high",
-        "ageDays": 170,
-        "reason": "開札日から170日経過",
+        "ageDays": 190,
+        "reason": "開札日から190日経過",
         "item": {
-          "id": "tawaramoto-2026051803",
-          "municipality": "田原本町",
-          "title": "田原本町立まほろば小学校新築工事",
+          "id": "kashiba-web-f9a78168",
+          "municipality": "香芝市",
+          "title": "三和小学校校舎増築工事に伴う設計業務",
           "status": "受付終了",
           "announcementDate": "2026-04-09",
-          "biddingDate": "2026-05-18",
-          "winningContractor": "村本建設（株）奈良本店",
-          "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
+          "biddingDate": "2026-04-28",
+          "winningContractor": "株式会社福本設計",
+          "link": "https://www.city.kashiba.lg.jp/uploaded/attachment/31836.pdf",
+          "pdfUrl": null
+        }
+      },
+      {
+        "priority": "high",
+        "ageDays": 162,
+        "reason": "開札日から162日経過",
+        "item": {
+          "id": "kashiba-web-1bf7b65a",
+          "municipality": "香芝市",
+          "title": "五位堂小学校改築工事に伴う実施設計業務",
+          "status": "受付終了",
+          "announcementDate": "2026-04-23",
+          "biddingDate": "2026-05-26",
+          "winningContractor": "株式会社綜企画設計 奈良支店",
+          "link": "https://www.city.kashiba.lg.jp/site/nyuusatsu/list288-1034.html",
           "pdfUrl": null
         }
       },
@@ -100,6 +116,22 @@
           "biddingDate": "2026-07-07",
           "winningContractor": null,
           "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29005007060120260015&gamenMode=0",
+          "pdfUrl": null
+        }
+      },
+      {
+        "priority": "high",
+        "ageDays": 117,
+        "reason": "開札日から117日経過",
+        "item": {
+          "id": "kashiba-web-65a0eda8",
+          "municipality": "香芝市",
+          "title": "志都美小学校改築工事に伴う実施設計業務",
+          "status": "受付終了",
+          "announcementDate": "2026-06-18",
+          "biddingDate": "2026-07-10",
+          "winningContractor": "株式会社長大 奈良事務所",
+          "link": "https://www.city.kashiba.lg.jp/site/nyuusatsu/67641.html",
           "pdfUrl": null
         }
       },
@@ -655,7 +687,7 @@
         "sourceCounts": {
           "tawaramoto.efftis.jp": 3
         },
-        "message": "田原本町: 3件 (公告1/結果2) / sources OK"
+        "message": "田原本町: 3件 (公告0/結果3) / sources OK"
       },
       {
         "municipality": "広陵町",
@@ -681,9 +713,9 @@
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.kashiba.lg.jp": 5
+          "city.kashiba.lg.jp": 9
         },
-        "message": "香芝市: 21件 (公告3/結果18) / sources OK"
+        "message": "香芝市: 21件 (公告6/結果15) / sources OK"
       },
       {
         "municipality": "川西町",
@@ -835,9 +867,9 @@
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "epi-cloud.fwd.ne.jp": 16
+          "epi-cloud.fwd.ne.jp": 12
         },
-        "message": "香芝市: 21件 (公告3/結果18) / sources OK"
+        "message": "香芝市: 21件 (公告6/結果15) / sources OK"
       }
     ]
   }
