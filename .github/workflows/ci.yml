@@ -64,6 +64,9 @@ jobs:
       - name: Validate news
         run: npm run validate:news
 
+      - name: Validate project briefs
+        run: npm run validate:briefs
+
       - name: Validate quality
         run: npm run validate:quality
 

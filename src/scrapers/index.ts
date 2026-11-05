@@ -23,6 +23,7 @@ import { OjiTownScraper } from './oji_town';
 import { OyodoTownScraper } from './oyodo_town';
 import { BiddingItem, MarketItem, Scraper } from '../types/bidding';
 import { MAX_QUARANTINE_COUNT, quarantineInconsistentItems, removeDroppedFromSnapshots } from './common/quarantine';
+import { carryForwardMunicipalityEnrichment, dedupeKey, reconcileStatusByDates, titleKey } from './common/item_carryover';
 import fs from 'fs';
 import path from 'path';
 import { shouldKeepBiddingItem, setScrapeContext, getRejectionLog, clearRejectionLog, type RejectionLogEntry } from './common/filter';
@@ -45,29 +46,6 @@ function parseMunicipalityEnvList(value?: string): Set<string> {
             .map((entry) => entry.trim())
             .filter(Boolean),
     );
-}
-
-function normalizeComparisonTitle(title: string): string {
-    return title
-        .normalize('NFKC')
-        .replace(/\s*(?:入札|開札)?結果$/u, '')
-        .replace(/[（(]\s*(?:[0-9]+|[IVX]+)\s*期\s*[)）]/gi, '')
-        .replace(/\s*\(圧縮ファイル:[^)]+\)$/u, '')
-        .replace(/\s+/g, '')
-        .replace(/[・･]/g, '')
-        .trim();
-}
-
-function dedupeKey(item: BiddingItem): string {
-    return [item.municipality, item.announcementDate, item.title].join('|');
-}
-
-function comparisonDate(item: BiddingItem): string {
-    return item.biddingDate || item.announcementDate;
-}
-
-function titleKey(item: BiddingItem): string {
-    return [item.municipality, normalizeComparisonTitle(item.title), comparisonDate(item)].join('|');
 }
 
 function daysBetween(dateA?: string, dateB?: string): number {
@@ -116,47 +94,8 @@ function mergeBiddingItem(existing: BiddingItem, candidate: BiddingItem) {
         existing.isIntelligenceExtracted = candidate.isIntelligenceExtracted;
     }
     if (candidate.tags?.length && !existing.tags?.length) existing.tags = candidate.tags;
+    if (candidate.brief && !existing.brief) existing.brief = candidate.brief;
     existing.announcementDate = keepEarlierDate(existing.announcementDate, candidate.announcementDate);
-}
-
-function carryForwardEnrichment(candidate: BiddingItem, previous?: BiddingItem): BiddingItem {
-    if (!previous) return candidate;
-
-    return {
-        ...candidate,
-        estimatedPrice: candidate.estimatedPrice || previous.estimatedPrice,
-        winningContractor: candidate.status === '不調'
-            ? undefined
-            : candidate.winningContractor || previous.winningContractor,
-        cancelled: candidate.status === '不調' ? candidate.cancelled ?? previous.cancelled : undefined,
-        designFirm: candidate.designFirm || previous.designFirm,
-        constructionPeriod: candidate.constructionPeriod || previous.constructionPeriod,
-        description: candidate.description || previous.description,
-        tags: candidate.tags?.length ? candidate.tags : previous.tags,
-        isIntelligenceExtracted: candidate.isIntelligenceExtracted ?? previous.isIntelligenceExtracted,
-        extractionSource: candidate.extractionSource || previous.extractionSource,
-    };
-}
-
-function buildPreviousLookup(items: BiddingItem[]): Map<string, BiddingItem> {
-    const lookup = new Map<string, BiddingItem>();
-    for (const item of items) {
-        lookup.set(item.id, item);
-        lookup.set(dedupeKey(item), item);
-        lookup.set(titleKey(item), item);
-    }
-    return lookup;
-}
-
-function carryForwardMunicipalityEnrichment(candidates: BiddingItem[], previousItems: BiddingItem[]): BiddingItem[] {
-    const previousLookup = buildPreviousLookup(previousItems);
-
-    return candidates.map(candidate => carryForwardEnrichment(
-        candidate,
-        previousLookup.get(candidate.id)
-            || previousLookup.get(dedupeKey(candidate))
-            || previousLookup.get(titleKey(candidate)),
-    ));
 }
 
 function upsertSeenItem(
@@ -266,33 +205,6 @@ function readMunicipalitySnapshots(): MunicipalitySnapshots {
 
 function writeMunicipalitySnapshots(snapshots: MunicipalitySnapshots) {
     fs.writeFileSync(SNAPSHOT_PATH, JSON.stringify(snapshots, null, 2), 'utf-8');
-}
-
-function reconcileStatusByDates(item: BiddingItem, todayIso: string): BiddingItem {
-    if (
-        item.status === '落札'
-        && !item.winningContractor
-        && item.biddingDate
-        && item.biddingDate >= todayIso
-    ) {
-        return {
-            ...item,
-            status: '受付中',
-        };
-    }
-
-    if (
-        item.status === '受付中'
-        && item.biddingDate
-        && item.biddingDate < todayIso
-    ) {
-        return {
-            ...item,
-            status: '受付終了',
-        };
-    }
-
-    return item;
 }
 
 function getTodayIsoInTokyo(): string {

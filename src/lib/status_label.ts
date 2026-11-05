@@ -9,3 +9,8 @@ export type DisplayStatus = BiddingStatus | '中止';
 export function displayStatus(item: Pick<BiddingItem, 'status' | 'cancelled'>): DisplayStatus {
     return item.status === '不調' && item.cancelled ? '中止' : item.status;
 }
+
+/** 画面に出す文字。「不明」だけでは何が不明か分からないので言葉を足す */
+export function statusLabel(status: DisplayStatus): string {
+    return status === '不明' ? '状況不明' : status;
+}

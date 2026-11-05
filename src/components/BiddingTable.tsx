@@ -77,8 +77,14 @@ const STATUS_TONES: Record<DisplayStatus, { label: string; pill: string; dot: st
     '落札': { label: '落札', pill: 'border-emerald-200 bg-emerald-50 text-emerald-700', dot: 'bg-emerald-500' },
     '不調': { label: '不調', pill: 'border-amber-200 bg-amber-50 text-amber-700', dot: 'bg-amber-500' },
     '中止': { label: '中止', pill: 'border-stone-300 bg-stone-100 text-stone-700', dot: 'bg-stone-500' },
-    '不明': { label: '不明', pill: 'border-zinc-200 bg-zinc-50 text-zinc-600', dot: 'bg-zinc-400' },
+    '不明': { label: '状況不明', pill: 'border-zinc-200 bg-zinc-50 text-zinc-600', dot: 'bg-zinc-400' },
 };
+
+/** 詳細検索で読む文章。資料から読み取った内容も探せるようにする */
+function detailText(item: BiddingItem): string {
+    const { summary, location, scale, qualification } = item.brief || {};
+    return [item.description, summary, location, scale, qualification].filter(Boolean).join(' ');
+}
 
 function matchesTab(item: BiddingItem, tab: ViewTab): boolean {
     return matchesViewTab(item, tab);
@@ -137,8 +143,8 @@ function exportCsv(items: BiddingItem[]) {
         item.biddingDate || '',
         item.winningContractor || '',
         item.designFirm || '',
-        item.estimatedPrice || '',
-        item.constructionPeriod || '',
+        item.estimatedPrice || item.brief?.price || '',
+        item.constructionPeriod || item.brief?.period || '',
         item.link,
     ].map(esc).join(','));
 
@@ -282,7 +288,7 @@ export function BiddingTable({
                     ...(item.tags || []),
                 ].join(' ').toLowerCase();
                 const matchesBasic = searchable.includes(kw);
-                const matchesDescription = detailedSearch && item.description?.toLowerCase().includes(kw);
+                const matchesDescription = detailedSearch && detailText(item).toLowerCase().includes(kw);
                 if (!matchesBasic && !matchesDescription) return false;
             }
 
@@ -634,10 +640,10 @@ export function BiddingTable({
                                             <p className="text-[9px] font-bold uppercase tracking-[0.16em] text-stone-400">落札者</p>
                                             <p className="truncate text-xs font-bold text-emerald-800">{item.winningContractor}</p>
                                         </>
-                                    ) : item.estimatedPrice ? (
+                                    ) : item.estimatedPrice || item.brief?.price ? (
                                         <>
                                             <p className="text-[9px] font-bold uppercase tracking-[0.16em] text-stone-400">予定価格</p>
-                                            <p className="truncate text-xs font-bold text-stone-700">{item.estimatedPrice}</p>
+                                            <p className="truncate text-xs font-bold text-stone-700">{item.estimatedPrice || item.brief?.price}</p>
                                         </>
                                     ) : (
                                         <p className="text-[10px] tracking-[0.1em] text-stone-300">-</p>
@@ -654,9 +660,13 @@ export function BiddingTable({
                     {shownItems.map(item => {
                         const distance = biddingDistance(item.biddingDate);
                         const isNew = isNewItem(item.announcementDate) || Boolean(item.biddingDate && isNewItem(item.biddingDate));
+                        const price = item.estimatedPrice || item.brief?.price;
+                        const period = item.constructionPeriod || item.brief?.period;
                         const infoBoxes = [
-                            item.estimatedPrice ? { label: '予定価格', value: item.estimatedPrice } : null,
-                            item.constructionPeriod ? { label: '工期', value: item.constructionPeriod } : null,
+                            price ? { label: '予定価格', value: price } : null,
+                            period ? { label: '工期', value: period } : null,
+                            item.brief?.location ? { label: '場所', value: item.brief.location } : null,
+                            item.brief?.scale ? { label: '規模', value: item.brief.scale } : null,
                             item.pdfUrl ? { label: '資料', value: 'PDFあり' } : null,
                         ].filter((box): box is { label: string; value: string } => Boolean(box));
 
@@ -719,12 +729,16 @@ export function BiddingTable({
                                             {item.title}
                                         </a>
 
+                                        {item.brief?.summary && (
+                                            <p className="mt-2 line-clamp-2 text-sm leading-6 text-stone-600">{item.brief.summary}</p>
+                                        )}
+
                                         {infoBoxes.length > 0 && (
                                             <div className="mt-4 grid gap-2 sm:grid-cols-3">
                                                 {infoBoxes.map(box => (
                                                     <div key={box.label} className="rounded-xl border border-stone-200 bg-stone-50 px-3 py-2">
                                                         <p className="text-[9px] font-bold uppercase tracking-[0.18em] text-stone-400">{box.label}</p>
-                                                        <p className="mt-1 line-clamp-1 text-xs font-bold tracking-[0.04em] text-stone-700">{box.value}</p>
+                                                        <p className="mt-1 line-clamp-2 text-xs font-bold leading-5 tracking-[0.04em] text-stone-700">{box.value}</p>
                                                     </div>
                                                 ))}
                                             </div>
@@ -740,12 +754,12 @@ export function BiddingTable({
                                             </div>
                                         )}
 
-                                        {detailedSearch && keyword && renderSnippet(item.description || '', keyword)}
+                                        {detailedSearch && keyword && renderSnippet(detailText(item), keyword)}
                                     </div>
 
                                     <div className="border-t border-stone-100 bg-gradient-to-br from-stone-50 to-white p-3 lg:border-l lg:border-t-0">
                                         <div className="rounded-xl border border-stone-200 bg-white p-3">
-                                            {(item.winningContractor || !['落札', '不調', '受付終了'].includes(item.status)) && (
+                                            {(item.winningContractor || !['落札', '不調', '受付終了', '不明'].includes(item.status)) && (
                                                 <div className={item.designFirm ? 'border-b border-stone-100 pb-2' : ''}>
                                                     <p className="flex items-center gap-1.5 text-[9px] font-bold uppercase tracking-[0.18em] text-stone-400">
                                                         <Trophy size={12} /> 落札者

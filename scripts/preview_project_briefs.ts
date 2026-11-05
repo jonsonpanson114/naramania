@@ -2,6 +2,7 @@ import fs from 'fs';
 import type { BiddingItem } from '../src/types/bidding';
 import { extractProjectBrief } from '../src/services/gemini_service';
 import { gatherProjectSource } from '../src/services/project_source';
+import { sanitizeProjectBrief } from '../src/scrapers/common/project_brief';
 
 /**
  * 受付中の案件で概要の抽出を試し、結果を表示するだけのスクリプト。データは書き換えない。
@@ -21,10 +22,11 @@ async function main() {
             lines.push(`- 読めず: ${source.noSource}`, '');
             continue;
         }
-        const brief = await extractProjectBrief(item, source);
+        const raw = await extractProjectBrief(item, source);
+        const brief = sanitizeProjectBrief(item.title, raw, new Date().toISOString());
         lines.push(`- 読んだ資料: ページ${source.pageText ? 'あり' : 'なし'} / PDF ${source.pdfs.length}件`);
-        if (!brief?.found) {
-            lines.push(`- 結果: この案件の記述が資料に無い${brief ? '' : '(AIの応答なし)'}`, '');
+        if (!brief.found) {
+            lines.push(`- 結果: この案件の記述が資料に無い${raw ? '' : '(AIの応答なし)'}`, '');
         } else {
             ok += 1;
             for (const [label, value] of [

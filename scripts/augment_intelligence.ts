@@ -3,6 +3,9 @@ import { downloadPDFBuffer } from '../src/utils/pdf_utils';
 import { extractBiddingInfoFromPDF, extractBiddingInfoFromText } from '../src/services/gemini_service';
 import { extractPdfText } from '../src/scrapers/common/pdf_text';
 import { buildDateAuditSummary, buildIntelligenceSummary, readQualitySummary, writeQualitySummary } from '../src/lib/quality_summary';
+import { extractProjectBrief } from '../src/services/gemini_service';
+import { gatherProjectSource } from '../src/services/project_source';
+import { sanitizeProjectBrief, selectBriefTargets } from '../src/scrapers/common/project_brief';
 import type { BiddingItem } from '../src/types/bidding';
 
 const RESULT_PATH = 'scraper_result.json';
@@ -31,6 +34,31 @@ function parseMunicipalityEnvList(value?: string): Set<string> {
     );
 }
 
+/** 公告ページやPDFから案件の中身を読み取る。1件の失敗で全体を止めない */
+async function enrichProjectBriefs(items: BiddingItem[], allItems: BiddingItem[]) {
+    const targets = selectBriefTargets(items, new Date());
+    console.log(`[brief] 読み取り対象 ${targets.length}件`);
+    let found = 0;
+
+    for (const [index, item] of targets.entries()) {
+        const checkedAt = new Date().toISOString();
+        try {
+            const source = await gatherProjectSource(item);
+            item.brief = source.noSource
+                ? { checkedAt, found: false }
+                : sanitizeProjectBrief(item.title, await extractProjectBrief(item, source), checkedAt);
+            if (item.brief.found) found += 1;
+        } catch (e: unknown) {
+            console.error(`[brief] ${item.id}:`, e instanceof Error ? e.message : String(e));
+        }
+        if (index % 5 === 0) fs.writeFileSync(RESULT_PATH, JSON.stringify(allItems, null, 2));
+        await delay(1500);
+    }
+
+    fs.writeFileSync(RESULT_PATH, JSON.stringify(allItems, null, 2), 'utf-8');
+    console.log(`[brief] 中身を読み取れた案件 ${found} / ${targets.length}件`);
+}
+
 async function main() {
     console.log('--- 🚀 Gemini Intelligence Processor ---');
     console.log('[Native PDF + JSON Schema Enforcement]');
@@ -57,6 +85,13 @@ async function main() {
     if (exceptMunicipalities.size > 0) {
         console.log(`[intelligence] 除外自治体: ${Array.from(exceptMunicipalities).join(', ')}`);
     }
+
+    await enrichProjectBriefs(
+        items.filter((item) =>
+            (onlyMunicipalities.size === 0 || onlyMunicipalities.has(item.municipality))
+            && !exceptMunicipalities.has(item.municipality)),
+        items,
+    );
 
     // Target items:
     // 1. PDF exists, can be parsed, and AI summary has not been generated yet

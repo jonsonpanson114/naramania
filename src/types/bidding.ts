@@ -4,6 +4,22 @@ export type BiddingType = '工事' | '委託' | 'コンサル' | '建築' | 'そ
 
 export type BiddingStatus = '受付中' | '締切' | '締切間近' | '締切切迫' | '受付終了' | '落札' | '不調' | '不明';
 
+/**
+ * 公告ページやPDFから読み取った案件の中身。
+ * description とは分けている。description は建築フィルタの判定にも使うので、
+ * ここに長文を入れると除外語に当たって案件が消えるおそれがある。
+ */
+export interface ProjectBriefRecord {
+  checkedAt: string; // 読み取りを試した日時
+  found: boolean; // 資料にこの案件の記述があったか
+  summary?: string; // 何をする工事・業務か
+  location?: string; // 施工場所
+  scale?: string; // 構造・階数・面積など
+  period?: string; // 工期
+  price?: string; // 予定価格など
+  qualification?: string; // 参加資格
+}
+
 export interface BiddingItem {
   id: string; // Unique ID (hash of URL or composite key)
   municipality: Municipality;
@@ -26,6 +42,7 @@ export interface BiddingItem {
   isIntelligenceExtracted?: boolean; // True if Gemini has processed the PDF
   extractionSource?: 'scraper' | 'gemini' | 'gemini_3.1'; // Where the data came from
   tags?: string[]; // AI generated tags for filtering
+  brief?: ProjectBriefRecord; // 資料から読み取った案件の中身
 }
 
 /**

@@ -19,7 +19,8 @@
     "scripts/validate_quarantine.ts",
     "scripts/collect_news.ts",
     "scripts/validate_news.ts",
-    "scripts/preview_project_briefs.ts"
+    "scripts/preview_project_briefs.ts",
+    "scripts/validate_project_briefs.ts"
   ],
   "exclude": [
     "node_modules"

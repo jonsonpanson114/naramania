@@ -8,7 +8,7 @@ import Link from 'next/link';
 import { ArrowLeft, ExternalLink, Trophy, Ruler, Calendar, Banknote, FileText, Building2, Clock, Tag, Sparkles, CheckCircle2, AlertTriangle, Search } from 'lucide-react';
 import { getBiddingLabel } from '@/lib/bidding_schedule';
 import { isOpenedItem, isSchoolToiletItem } from '@/lib/practical_filters';
-import { displayStatus } from '@/lib/status_label';
+import { displayStatus, statusLabel } from '@/lib/status_label';
 
 interface PageProps {
     params: Promise<{ id: string }>;
@@ -150,7 +150,15 @@ export default async function ProjectDetailPage({ params }: PageProps) {
         .sort((a, b) => new Date(b.announcementDate).getTime() - new Date(a.announcementDate).getTime())
         .slice(0, 3);
 
-    const detectedMaterials = detectMaterials(item.description);
+    const brief = item.brief?.found ? item.brief : undefined;
+    const price = item.estimatedPrice || brief?.price;
+    const period = item.constructionPeriod || brief?.period;
+    const briefRows = [
+        { label: '場所', value: brief?.location },
+        { label: '規模', value: brief?.scale },
+        { label: '参加資格', value: brief?.qualification },
+    ].filter((row): row is { label: string; value: string } => Boolean(row.value));
+    const detectedMaterials = detectMaterials([item.description, brief?.summary, brief?.scale].filter(Boolean).join(' '));
     const resultAudit = getResultAudit(item);
     const isSchoolToilet = isSchoolToiletItem(item);
 
@@ -180,7 +188,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
                             item.status === '締切切迫' ? 'text-amber-600 border-amber-200 bg-amber-50' :
                             'text-gray-300 border-gray-100'
                         }`}>
-                            {displayStatus(item)}
+                            {statusLabel(displayStatus(item))}
                         </span>
                         <h2 className="text-2xl font-serif tracking-wider leading-relaxed text-primary">{item.title}</h2>
                     </div>
@@ -376,26 +384,47 @@ export default async function ProjectDetailPage({ params }: PageProps) {
                     </div>
                 )}
 
-                {item.estimatedPrice && (
+                {price && (
                     <div className="bg-white/80 backdrop-blur-xl shadow-premium p-8 rounded-2xl border border-slate-100">
                         <div className="flex items-center gap-3 mb-3">
                             <Banknote className="w-5 h-5 text-accent" />
                             <span className="text-[10px] tracking-[0.3em] text-secondary/50 uppercase font-bold">予定価格</span>
                         </div>
-                        <p className="text-xl font-serif font-bold tracking-wider text-primary">{item.estimatedPrice}</p>
+                        <p className="text-xl font-serif font-bold tracking-wider text-primary">{price}</p>
                     </div>
                 )}
 
-                {item.constructionPeriod && (
+                {period && (
                     <div className="bg-white/80 backdrop-blur-xl shadow-premium p-8 rounded-2xl border border-slate-100">
                         <div className="flex items-center gap-3 mb-3">
                             <Calendar className="w-5 h-5 text-accent" />
                             <span className="text-[10px] tracking-[0.3em] text-secondary/50 uppercase font-bold">工期</span>
                         </div>
-                        <p className="text-xl font-serif font-bold tracking-wider text-primary">{item.constructionPeriod}</p>
+                        <p className="text-xl font-serif font-bold tracking-wider text-primary">{period}</p>
                     </div>
                 )}
             </div>
+
+            {/* 資料から読み取った内容 */}
+            {brief && (brief.summary || briefRows.length > 0) && (
+                <div className="bg-white/80 backdrop-blur-xl shadow-premium p-8 rounded-2xl border border-white/50 mb-12">
+                    <h3 className="text-[10px] tracking-[0.3em] text-secondary/50 uppercase font-bold mb-4">案件の内容</h3>
+                    {brief.summary && (
+                        <p className="text-sm leading-relaxed text-secondary tracking-wider whitespace-pre-wrap">{brief.summary}</p>
+                    )}
+                    {briefRows.length > 0 && (
+                        <dl className="mt-4 grid gap-3 text-sm">
+                            {briefRows.map(row => (
+                                <div key={row.label} className="grid gap-1 sm:grid-cols-[6rem_minmax(0,1fr)]">
+                                    <dt className="text-secondary/50 tracking-wider">{row.label}</dt>
+                                    <dd className="text-secondary tracking-wider">{row.value}</dd>
+                                </div>
+                            ))}
+                        </dl>
+                    )}
+                    <p className="mt-4 text-xs text-secondary/50 tracking-wider">公告ページやPDFからAIが読み取った内容です。正式な条件は原本で確認してください。</p>
+                </div>
+            )}
 
             {/* Description */}
             {item.description && (

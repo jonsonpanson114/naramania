@@ -1,6 +1,7 @@
 import axios from 'axios';
 import * as cheerio from 'cheerio';
 import type { BiddingItem } from '../types/bidding';
+import { isGatedLink } from '../scrapers/common/project_brief';
 import { fetchUrl } from './news_service';
 
 /**
@@ -17,7 +18,6 @@ export interface ProjectSource {
     noSource?: string;
 }
 
-const GATED_SYSTEM = /epi-cloud\.fwd\.ne\.jp|efftis\.jp|ebid-kouji-gyoumu\.pref\.nara\.jp/;
 const SUPPORT_DOCUMENT = /注意事項|手引き|様式|記載例|記入例|質問書|質疑|回答|委任状|申請書|参加表明書/;
 const MAX_PAGE_TEXT = 24000;
 const MAX_PDFS = 2;
@@ -80,7 +80,7 @@ export async function gatherProjectSource(item: Pick<BiddingItem, 'title' | 'lin
     const isPdfLink = /\.pdf(?:$|[?#])/i.test(item.link || '');
     if (isPdfLink) {
         urls.add(item.link);
-    } else if (item.link && !GATED_SYSTEM.test(item.link)) {
+    } else if (item.link && !isGatedLink(item.link)) {
         try {
             const html = await fetchUrl(item.link);
             const $ = cheerio.load(html);
@@ -100,7 +100,7 @@ export async function gatherProjectSource(item: Pick<BiddingItem, 'title' | 'lin
         return {
             pdfs,
             pdfUrls,
-            noSource: GATED_SYSTEM.test(item.link || '') ? '電子入札システムの案件で、URLから詳細へ入れない' : '資料を取得できなかった',
+            noSource: isGatedLink(item.link) ? '電子入札システムの案件で、URLから詳細へ入れない' : '資料を取得できなかった',
         };
     }
     return { pageText, pdfs, pdfUrls };
