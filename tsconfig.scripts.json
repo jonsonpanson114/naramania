@@ -16,7 +16,9 @@
     "scripts/validate_chat.ts",
     "scripts/validate_snapshot_coverage.ts",
     "scripts/validate_takatori_announcements.ts",
-    "scripts/validate_quarantine.ts"
+    "scripts/validate_quarantine.ts",
+    "scripts/collect_news.ts",
+    "scripts/validate_news.ts"
   ],
   "exclude": [
     "node_modules"

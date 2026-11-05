@@ -4,16 +4,18 @@ import { ExternalLink } from 'lucide-react';
 import { MUNICIPALITY_SOURCES } from '@/lib/municipality_sources';
 import { loadDashboardData } from '@/lib/dashboard_data';
 import { getStaleMunicipalities } from '@/lib/data_freshness';
+import { loadNewsStore } from '@/lib/news_store';
 
 function formatDateTime(iso?: string): string | null {
     if (!iso) return null;
     const d = new Date(iso);
     if (Number.isNaN(d.getTime())) return null;
-    return d.toLocaleString('ja-JP', { month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' });
+    return d.toLocaleString('ja-JP', { timeZone: 'Asia/Tokyo', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' });
 }
 
 export default function SourcesPage() {
     const { allItems, qualitySummary } = loadDashboardData();
+    const newsStore = loadNewsStore();
     const lastScraped = qualitySummary?.municipalityLastScraped;
     // 「古い」と「記録が無くて状態不明」は原因も対処も違うので分けて出す。
     const freshnessIssues = getStaleMunicipalities(lastScraped);
@@ -95,6 +97,26 @@ export default function SourcesPage() {
                     );
                 })}
             </div>
+
+            {/* 取れなくなった媒体に気づけるよう、前回の巡回結果を出す */}
+            <section className="mt-12">
+                <h2 className="text-xl tracking-widest font-serif">ニュースの収集元</h2>
+                <p className="mt-2 text-sm tracking-wider text-secondary/60">
+                    1日3回自動で巡回しています。最終巡回 {formatDateTime(newsStore.generatedAt ?? undefined) ?? '記録なし'}、保存 {newsStore.items.length}件
+                </p>
+                <ul className="mt-4 divide-y divide-stone-200 rounded-2xl border border-stone-200 bg-white/80">
+                    {newsStore.sources.map(source => (
+                        <li key={source.id} className="flex items-center justify-between gap-4 px-4 py-3 text-[13px]">
+                            <span className="font-bold text-primary">{source.label}</span>
+                            <span className={source.error ? 'font-bold text-amber-700' : 'text-secondary/60'}>
+                                {source.error
+                                    ? `取得に失敗しています`
+                                    : `最新${source.fetched}件を確認 / 奈良の記事 ${source.kept}件`}
+                            </span>
+                        </li>
+                    ))}
+                </ul>
+            </section>
         </AppShell>
     );
 }

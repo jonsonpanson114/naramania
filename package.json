@@ -16,6 +16,8 @@
     "validate:chat": "tsx scripts/validate_chat.ts",
     "validate:takatori": "tsx scripts/validate_takatori_announcements.ts",
     "validate:quarantine": "tsx scripts/validate_quarantine.ts",
+    "validate:news": "tsx scripts/validate_news.ts",
+    "collect:news": "tsx scripts/collect_news.ts",
     "validate:snapshots": "tsx scripts/validate_snapshot_coverage.ts",
     "audit:live-sources": "tsx scripts/audit_live_sources.ts",
     "report:coverage": "tsx scripts/print_coverage_summary.ts"

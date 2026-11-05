@@ -4,14 +4,16 @@ import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, ExternalLink, RefreshCw, Search, X } from 'lucide-react';
 import Link from 'next/link';
-import { NewsItem } from '@/services/news_service';
+import type { NewsItem } from '@/services/news_service';
 
 const SOURCE_LABEL_COLOR: Record<string, string> = {
     shinpou: '#1d4ed8',
     constnews: '#7c3aed',
     decn: '#065f46',
     naranp: '#991b1b',
-    kentsu: '#92400e',
+    kensetsu: '#92400e',
+    xtech: '#0f766e',
+    googlenews: '#6b7280',
 };
 
 const WEEKDAYS = ['日', '月', '火', '水', '木', '金', '土'];
@@ -42,12 +44,6 @@ function formatDateHeading(dateStr: string): { main: string; relative?: string }
     if (diff === 1) return { main, relative: '昨日' };
     if (diff >= 2 && diff <= 6) return { main, relative: `${diff}日前` };
     return { main };
-}
-
-type CategoryFilter = 'all' | 'construction' | 'general';
-
-function isConstructionNews(item: NewsItem): boolean {
-    return item.category === 'construction' || ['constnews', 'kentsu', 'decn'].includes(item.source);
 }
 
 function hasResults(item: NewsItem): boolean {
@@ -117,7 +113,7 @@ function Article({ item, index }: { item: NewsItem; index: number }) {
                     className="shrink-0 text-[10px] tracking-wider"
                     style={{ color: SOURCE_LABEL_COLOR[item.source] ?? '#9ca3af' }}
                 >
-                    {item.sourceLabel}
+                    {item.publisher ?? item.sourceLabel}
                 </span>
             </div>
 
@@ -153,7 +149,6 @@ interface NewsSectionProps {
 export function NewsSection({ detailed = false, pageSize = 6, showAllLink = false }: NewsSectionProps) {
     const [news, setNews] = useState<NewsItem[]>([]);
     const [loading, setLoading] = useState(true);
-    const [activeCategory, setActiveCategory] = useState<CategoryFilter>('construction');
     const [activeSource, setActiveSource] = useState<string>('all');
     const [onlyResults, setOnlyResults] = useState(false);
     const [refreshing, setRefreshing] = useState(false);
@@ -181,16 +176,10 @@ export function NewsSection({ detailed = false, pageSize = 6, showAllLink = fals
         load();
     };
 
-    const filteredByCategory = activeCategory === 'all'
-        ? news
-        : activeCategory === 'construction'
-            ? news.filter(isConstructionNews)
-            : news.filter(n => !isConstructionNews(n));
-
-    const sources = Array.from(new Set(filteredByCategory.map(n => n.source)));
+    const sources = Array.from(new Set(news.map(n => n.source)));
     const filteredBySource = activeSource === 'all'
-        ? filteredByCategory
-        : filteredByCategory.filter(n => n.source === activeSource);
+        ? news
+        : news.filter(n => n.source === activeSource);
 
     const trimmedKeyword = keyword.trim();
     const filtered = filteredBySource.filter(n => {
@@ -203,12 +192,7 @@ export function NewsSection({ detailed = false, pageSize = 6, showAllLink = fals
     // 絞り込みを変えたら表示件数を初期値に戻す
     useEffect(() => {
         setVisibleCount(pageSize);
-    }, [activeCategory, activeSource, trimmedKeyword, onlyResults, pageSize]);
-
-    const handleCategoryChange = (cat: CategoryFilter) => {
-        setActiveCategory(cat);
-        setActiveSource('all');
-    };
+    }, [activeSource, trimmedKeyword, onlyResults, pageSize]);
 
     const visible = filtered.slice(0, visibleCount);
     const groups = groupByDate(visible);
@@ -235,22 +219,6 @@ export function NewsSection({ detailed = false, pageSize = 6, showAllLink = fals
 
             {!loading && news.length > 0 && (
                 <div className="mb-6 flex flex-wrap items-center justify-center gap-3">
-                    <div className="flex items-center gap-1 rounded-full border border-border/20 bg-white/40 p-1 shadow-inner">
-                        {([
-                            ['all', 'すべて'],
-                            ['construction', '建設系'],
-                            ['general', '一般ニュース'],
-                        ] as Array<[CategoryFilter, string]>).map(([value, label]) => (
-                            <button
-                                key={value}
-                                onClick={() => handleCategoryChange(value)}
-                                className={`rounded-full px-6 py-2 text-[10px] tracking-[0.2em] transition-all ${activeCategory === value ? 'bg-primary text-white shadow-md' : 'text-secondary hover:bg-white/60'}`}
-                            >
-                                {label}
-                            </button>
-                        ))}
-                    </div>
-
                     {/* 落札結果を追いたいときの絞り込み */}
                     <button
                         onClick={() => setOnlyResults(v => !v)}
@@ -295,7 +263,7 @@ export function NewsSection({ detailed = false, pageSize = 6, showAllLink = fals
                 <div className="mb-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 border-b border-border/30 px-8 pb-5">
                     {(['all', ...sources]).map(src => {
                         const label = src === 'all' ? 'すべて' : (news.find(n => n.source === src)?.sourceLabel ?? src);
-                        const count = src === 'all' ? filteredByCategory.length : filteredByCategory.filter(n => n.source === src).length;
+                        const count = src === 'all' ? news.length : news.filter(n => n.source === src).length;
                         const isActive = activeSource === src;
                         return (
                             <button

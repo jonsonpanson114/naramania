@@ -1,16 +1,10 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { NewsItem } from '@/services/news_service';
+import type { NewsItem } from '@/services/news_service';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronRight, Newspaper } from 'lucide-react';
 import Link from 'next/link';
-
-const CONSTRUCTION_SOURCES = ['constnews', 'kentsu', 'decn'];
-
-function isConstructionNews(item: NewsItem): boolean {
-    return item.category === 'construction' || CONSTRUCTION_SOURCES.includes(item.source);
-}
 
 export function NewsTicker() {
     const [news, setNews] = useState<NewsItem[]>([]);
@@ -26,8 +20,7 @@ export function NewsTicker() {
                     return;
                 }
 
-                const constructionNews = data.filter((item: NewsItem) => isConstructionNews(item));
-                setNews((constructionNews.length > 0 ? constructionNews : data).slice(0, 5));
+                setNews(data.slice(0, 5));
             } catch {
                 setNews([]);
             }
@@ -71,7 +64,7 @@ export function NewsTicker() {
                                 rel="noopener noreferrer"
                                 className="text-xs text-primary font-serif truncate hover:text-accent transition-colors block w-full"
                             >
-                                <span className="text-[10px] text-gray-400 mr-3">{current.sourceLabel}</span>
+                                <span className="text-[10px] text-gray-400 mr-3">{current.publisher ?? current.sourceLabel}</span>
                                 {current.title}
                             </a>
                         </motion.div>

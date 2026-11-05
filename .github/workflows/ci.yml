@@ -61,6 +61,9 @@ jobs:
       - name: Validate quarantine
         run: npm run validate:quarantine
 
+      - name: Validate news
+        run: npm run validate:news
+
       - name: Validate quality
         run: npm run validate:quality
 
