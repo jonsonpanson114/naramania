@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-05T04:20:04.362Z",
+  "generatedAt": "2026-11-05T17:32:51.037Z",
   "sources": [
     {
       "id": "constnews",
@@ -40,8 +40,8 @@
     {
       "id": "googlenews",
       "label": "一般紙・Web(Googleニュース)",
-      "fetched": 41,
-      "kept": 3
+      "fetched": 43,
+      "kept": 2
     }
   ],
   "items": [
@@ -68,6 +68,19 @@
       "category": "construction",
       "relevanceScore": 6,
       "results": []
+    },
+    {
+      "id": "news-c72f6a3b8130",
+      "source": "constnews",
+      "sourceLabel": "建設ニュース",
+      "title": "中尾組・中和コンストラクションＪＶが落札／市立みなみこども園建設工事／桜井市",
+      "date": "2026-11-05",
+      "link": "https://www.constnews.com/?p=161211",
+      "excerpt": "奈良県桜井市は、「桜井市立みなみこども園建設工事」を一般競争入札し、２３億４６００万円（税別）で中尾組・中和コンストラクションＪＶに決めた。予定価格は、２３億４６０７万５０００円（税別）。４日に開札した。 園舎棟の規模は [&#8230;]",
+      "orderer": "桜井市",
+      "results": [],
+      "category": "construction",
+      "relevanceScore": 14
     },
     {
       "id": "news-69202210caee",
