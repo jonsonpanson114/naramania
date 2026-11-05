@@ -169,6 +169,9 @@ export default function SavedPage() {
                             <p className="mt-3 max-w-3xl text-sm leading-7 tracking-[0.04em] text-stone-200/75">
                                 保存した案件を、公告日・開札日・残り日数・営業状況で確認できます。近い開札から優先して並べています。
                             </p>
+                            <Link href="/design-map" className="mt-4 inline-flex rounded-full border border-white/25 px-4 py-2 text-xs font-bold tracking-[0.12em] text-white transition hover:bg-white/10">
+                                設計案件マップで見る
+                            </Link>
                         </div>
                         <div className="grid w-full max-w-xl grid-cols-3 gap-2 rounded-3xl border border-white/10 bg-white/10 p-2 text-center backdrop-blur">
                             <div className="rounded-2xl bg-white/10 px-3 py-3">

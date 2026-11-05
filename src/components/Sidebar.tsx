@@ -1,6 +1,6 @@
 'use client';
 
-import { LayoutDashboard, Search, Briefcase, Settings, MessageSquareText, ChartColumn, Wrench, Store, Newspaper, Link2 } from 'lucide-react';
+import { LayoutDashboard, Search, Briefcase, Settings, MessageSquareText, ChartColumn, Wrench, Store, Newspaper, Link2, Map as MapIcon } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -12,13 +12,14 @@ const navItems = [
     { href: '/market', label: '市場全体', icon: Store },
     { href: '/sources', label: '収集元サイト', icon: Link2 },
     { href: '/saved', label: '営業管理', icon: Briefcase },
+    { href: '/design-map', label: '設計案件マップ', icon: MapIcon },
     { href: '/chat', label: '入札チャット', icon: MessageSquareText },
     { href: '/settings', label: '設定', icon: Settings },
 ];
 
 // スマホは横幅が限られるため、下部タブには主要項目だけを出す
 const MOBILE_TAB_ITEMS = navItems.filter(
-    item => !['/settings', '/news', '/sources'].includes(item.href),
+    item => !['/settings', '/news', '/sources', '/design-map'].includes(item.href),
 );
 
 export function Sidebar() {
