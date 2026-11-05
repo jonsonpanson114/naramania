@@ -3,9 +3,12 @@ import path from 'path';
 import { chromium, Frame, Page } from 'playwright';
 import { BiddingItem, Scraper, BiddingStatus, BiddingType } from '../types/bidding';
 import { shouldKeepItem } from './common/filter';
+import { loadBriefedIds, readSystemBriefs } from './common/system_detail';
 
 const PPI_SEARCH_URL = 'https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPJ0050_0010/';
 const PPI_DETAIL_BASE = 'https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/';
+/** 県のrunnerは動く日が限られるので、1回で多めに読む */
+const NARA_PREF_BRIEF_LIMIT = 40;
 const RESULT_PATH = path.join(process.cwd(), 'scraper_result.json');
 
 const KOJI_GYOSHU_SKIP = [
@@ -677,6 +680,12 @@ export class NaraPrefScraper implements Scraper {
             if (detailFetchCount >= detailFetchLimit) {
                 this.recordWarning(`[奈良県] 結果詳細確認が上限 ${detailFetchLimit} 件に到達しました。必要なら NARA_PREF_DETAIL_FETCH_LIMIT を増やしてください。`);
             }
+
+            await readSystemBriefs(
+                detailPage,
+                Array.from(items.values()).map(item => ({ item, url: item.link })),
+                { briefedIds: loadBriefedIds(), limit: NARA_PREF_BRIEF_LIMIT, deadline: scrapeDeadline },
+            );
         } catch (error) {
             this.recordError(`[奈良県] スクレイパーエラー: ${error instanceof Error ? error.message : String(error)}`);
         } finally {

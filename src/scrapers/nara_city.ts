@@ -1,6 +1,7 @@
 import { chromium } from 'playwright';
 import { BiddingItem, Scraper, BiddingType } from '../types/bidding';
 import { classifyWinner } from './common/filter';
+import { efftisDetailUrl, loadBriefedIds, readSystemBriefs, type DetailTarget } from './common/system_detail';
 // 奈良市の入札情報公開システム（efftis）
 const EFFTIS_BASE = 'https://nara.efftis.jp/PPI/Public';
 const EFFTIS_TOP = `${EFFTIS_BASE}/PPUBC00100?kikanno=0201`;
@@ -82,8 +83,11 @@ export class NaraCityScraper implements Scraper {
                 }
             });
 
+            const briefedIds = loadBriefedIds();
+
             for (const { screenId, chotatsu_kbn, status, label } of SEARCH_TARGETS) {
                 console.log(`[奈良市] ${label} 取得中...`);
+                const detailTargets: DetailTarget[] = [];
                 try {
                     // トップページでセッション確立
                     await page.goto(EFFTIS_TOP, { waitUntil: 'domcontentloaded', timeout: 30000 });
@@ -175,7 +179,7 @@ export class NaraCityScraper implements Scraper {
                         const winningContractor = status === '落札' && !isCancelled && cell5 ? cell5 : undefined;
                         const itemStatus = isCancelled ? '不調' : status;
 
-                        allItems.push({
+                        const item: BiddingItem = {
                             id: `nara-city-${contractNo}`,
                             municipality: '奈良市',
                             title,
@@ -187,10 +191,15 @@ export class NaraCityScraper implements Scraper {
                             winningContractor: winningContractor,
                             cancelled: isCancelled || undefined,
                             winnerType: classifyWinner(winningContractor || ''),
-                        });
+                        };
+                        allItems.push(item);
+
+                        const detailUrl = efftisDetailUrl(EFFTIS_BASE, screenId, await linkEl.getAttribute('onclick', { timeout: 2000 }).catch(() => null));
+                        if (detailUrl) detailTargets.push({ item, url: detailUrl });
                     }
 
                     console.log(`[奈良市] ${label}: ${allItems.length}件（累計）`);
+                    await readSystemBriefs(page, detailTargets, { briefedIds });
 
                 } catch (e: unknown) {
                     console.warn(`[奈良市] ${label} エラー:`, e instanceof Error ? e.message : String(e)?.split('\n')[0]);

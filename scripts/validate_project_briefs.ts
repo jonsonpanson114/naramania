@@ -6,6 +6,7 @@ import {
 } from '../src/scrapers/common/item_carryover';
 import { sanitizeProjectBrief, selectBriefTargets } from '../src/scrapers/common/project_brief';
 import { shouldKeepBiddingItem } from '../src/scrapers/common/filter';
+import { briefFromDetailPairs, efftisDetailUrl } from '../src/scrapers/common/system_detail';
 import type { BiddingItem } from '../src/types/bidding';
 
 // 案件の中身の読み取りと、再収集での引き継ぎ、受付中の補正を検証する。
@@ -94,4 +95,52 @@ const item = (id: string, patch: Partial<BiddingItem> = {}): BiddingItem => ({
     assert.equal(shouldKeepBiddingItem(withBrief, NOW), shouldKeepBiddingItem(base, NOW));
 }
 
-console.log('案件概要の検証: 5 scenarios passed (引き継ぎ・受付中の補正・読む順番・答えの検証・フィルタへの非影響)');
+// 6) 電子入札システムの詳細ページ: 実際の画面の項目名と値で読む
+{
+    const epi = briefFromDetailPairs('令和8年度尼寺関屋線整備事業に係る用地測量業務', [
+        ['業務名', '令和8年度尼寺関屋線整備事業に係る用地測量業務'],
+        ['入札方式', '一般競争入札'],
+        ['業種', '土地家屋調査'],
+        ['業務場所', '香芝市関屋北4丁目地内他'],
+        ['業務内容', '用地測量業務 A＝2.05ha'],
+        ['予定価格(税抜)', '*********'],
+        ['条件１', '県内'],
+        ['条件２', '奈良県内に本店、支店又は営業所を有するものであること。'],
+    ], CHECKED);
+    assert.equal(epi?.location, '香芝市関屋北4丁目地内他');
+    assert.equal(epi?.summary, '用地測量業務 A=2.05ha');
+    assert.equal(epi?.price, undefined, '伏せ字は金額にしない');
+    assert.match(epi?.qualification || '', /一般競争入札 \/ 土地家屋調査 \/ 県内/);
+
+    const efftis = briefFromDetailPairs('中央体育館屋根改修に伴う建築設計業務委託', [
+        ['件名', '中央体育館屋根改修に伴う建築設計業務委託'],
+        ['概要', '電子契約が可能な案件です。'],
+        ['予定価格\n(消費税を除く)', '４,０８７,０００円'],
+        ['入札方式', '一般競争入札'],
+        ['業種1', '建築関係建設コンサルタント'],
+        ['等級1', '－'],
+        ['所在地区分', '制限なし'],
+        ['資格要件', '入札公告文のとおり'],
+    ], CHECKED);
+    assert.equal(efftis?.summary, undefined, '定型文は概要にしない');
+    assert.equal(efftis?.price, '4,087,000円(税抜)');
+    assert.equal(efftis?.qualification, '一般競争入札 / 建築関係建設コンサルタント');
+
+    const pref = briefFromDetailPairs('県営ほ場整備事業 実施設計業務', [
+        ['業務名', '県営ほ場整備事業 実施設計業務'],
+        ['履行場所', '天理市福住町、山田町 地内'],
+        ['履行期限', '令和　８年１２月　７日　から　令和１０年　１月２８日　まで'],
+        ['業務概要', ''],
+    ], CHECKED);
+    assert.equal(pref?.period, '令和8年12月7日 から 令和10年1月28日 まで');
+    assert.equal(pref?.location, '天理市福住町、山田町 地内');
+
+    assert.equal(briefFromDetailPairs('案件', [['', 'タイムアウト']], CHECKED), null, 'セッション切れは読了扱いにしない');
+    assert.equal(
+        efftisDetailUrl('https://nara.efftis.jp/PPI/Public', 'PPUBC00400', "link('0201', '2026', '0000002706');return false;"),
+        'https://nara.efftis.jp/PPI/Public/PPUBC00500!kenmeiLink?organizationNumber=0201&nendo=2026&keiyakuNo=0000002706',
+    );
+    assert.equal(efftisDetailUrl('https://x', 'PPUBC00400', null), undefined);
+}
+
+console.log('案件概要の検証: 6 scenarios passed (引き継ぎ・受付中の補正・読む順番・答えの検証・フィルタへの非影響・電子入札の詳細)');

@@ -4,6 +4,7 @@ import { chromium } from 'playwright';
 import { BiddingItem, Scraper, BiddingType } from '../types/bidding';
 import { downloadPDFBuffer } from '../utils/pdf_utils';
 import { extractTargetedResultsFromPDF } from '../services/gemini_service';
+import { efftisDetailUrl, loadBriefedIds, readSystemBriefs, type DetailTarget } from './common/system_detail';
 // 田原本町の入札情報サービス（EffTis PPI）
 const EFFTIS_BASE = 'https://tawaramoto.efftis.jp/PPI/Public';
 const EFFTIS_TOP = `${EFFTIS_BASE}/PPUBC00100`;
@@ -157,8 +158,11 @@ export class TawaramotoTownScraper implements Scraper {
                 }
             });
 
+            const briefedIds = loadBriefedIds();
+
             for (const { screenId, chotatsu_kbn, status, label } of SEARCH_TARGETS) {
                 console.log(`[田原本町] ${label} 取得中...`);
+                const detailTargets: DetailTarget[] = [];
                 try {
                     await page.goto(EFFTIS_TOP, { waitUntil: 'domcontentloaded', timeout: 30000 });
                     await page.waitForTimeout(1000);
@@ -235,7 +239,7 @@ export class TawaramotoTownScraper implements Scraper {
                             if (href && href.startsWith('http')) link = href;
                         } catch { }
 
-                        allItems.push({
+                        const item: BiddingItem = {
                             id: `tawaramoto-${contractNo}`,
                             municipality: '田原本町',
                             title,
@@ -247,10 +251,15 @@ export class TawaramotoTownScraper implements Scraper {
                             winningContractor: status === '落札' && !isCancelled && cell5 && !/入札|申請|終了|未公開|なし|－|-/.test(cell5)
                                 ? cell5
                                 : undefined,
-                        });
+                        };
+                        allItems.push(item);
+
+                        const detailUrl = efftisDetailUrl(EFFTIS_BASE, screenId, await linkEl.getAttribute('onclick', { timeout: 2000 }).catch(() => null));
+                        if (detailUrl) detailTargets.push({ item, url: detailUrl });
                     }
 
                     console.log(`[田原本町] ${label}: ${allItems.length}件（累計）`);
+                    await readSystemBriefs(page, detailTargets, { briefedIds });
 
                 } catch (e: unknown) {
                     console.warn(`[田原本町] ${label} エラー:`, e instanceof Error ? e.message : String(e)?.split('\n')[0]);
