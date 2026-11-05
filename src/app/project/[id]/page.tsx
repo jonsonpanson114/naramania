@@ -8,6 +8,7 @@ import Link from 'next/link';
 import { ArrowLeft, ExternalLink, Trophy, Ruler, Calendar, Banknote, FileText, Building2, Clock, Tag, Sparkles, CheckCircle2, AlertTriangle, Search } from 'lucide-react';
 import { getBiddingLabel } from '@/lib/bidding_schedule';
 import { isOpenedItem, isSchoolToiletItem } from '@/lib/practical_filters';
+import { displayStatus } from '@/lib/status_label';
 
 interface PageProps {
     params: Promise<{ id: string }>;
@@ -179,7 +180,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
                             item.status === '締切切迫' ? 'text-amber-600 border-amber-200 bg-amber-50' :
                             'text-gray-300 border-gray-100'
                         }`}>
-                            {item.status}
+                            {displayStatus(item)}
                         </span>
                         <h2 className="text-2xl font-serif tracking-wider leading-relaxed text-primary">{item.title}</h2>
                     </div>
@@ -422,7 +423,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
                                     r.status === '受付中' ? 'text-secondary border-secondary/20' :
                                     'text-gray-300 border-gray-100'
                                 }`}>
-                                    {r.status}
+                                    {displayStatus(r)}
                                 </span>
                                 <p className="text-sm font-serif font-semibold tracking-wider mt-3 group-hover:text-accent transition-colors truncate">
                                     {r.title}

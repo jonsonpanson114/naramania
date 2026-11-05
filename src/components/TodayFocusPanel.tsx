@@ -6,6 +6,7 @@ import { ArrowRight, CalendarClock } from 'lucide-react';
 import type { BiddingItem } from '@/types/bidding';
 import type { OpeningResultUpdate } from '@/lib/opening_result_updates';
 import type { ResultFollowUpEntry } from '@/lib/result_follow_up';
+import { displayStatus } from '@/lib/status_label';
 
 const LAST_VISIT_KEY = 'naramania_last_visit';
 
@@ -232,7 +233,7 @@ export function TodayFocusPanel({
                             href={`/project/${result.id}`}
                             municipality={result.municipality}
                             title={result.title}
-                            meta={result.winningContractor || (result.status === '不調' ? '不調' : result.status)}
+                            meta={result.winningContractor || displayStatus(result)}
                             emphasis="good"
                         />
                     )) : <Empty text="新しい開札結果はありません" />)}

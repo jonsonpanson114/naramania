@@ -185,6 +185,7 @@ export class NaraCityScraper implements Scraper {
                             link,
                             status: itemStatus,
                             winningContractor: winningContractor,
+                            cancelled: isCancelled || undefined,
                             winnerType: classifyWinner(winningContractor || ''),
                         });
                     }

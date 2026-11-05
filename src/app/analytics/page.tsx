@@ -93,13 +93,16 @@ export default async function AnalyticsPage() {
     const maxItem = scatterData[0];
 
     // --- 自治体別の動き ---
-    const municipalityStats = new Map<string, { total: number; active: number; awarded: number; failed: number }>();
+    const municipalityStats = new Map<string, { total: number; active: number; awarded: number; failed: number; cancelled: number }>();
     items.forEach((item) => {
-        const stats = municipalityStats.get(item.municipality) || { total: 0, active: 0, awarded: 0, failed: 0 };
+        const stats = municipalityStats.get(item.municipality) || { total: 0, active: 0, awarded: 0, failed: 0, cancelled: 0 };
         stats.total += 1;
         if (item.status === '受付中') stats.active += 1;
         if (item.status === '落札') stats.awarded += 1;
-        if (item.status === '不調') stats.failed += 1;
+        if (item.status === '不調') {
+            if (item.cancelled) stats.cancelled += 1;
+            else stats.failed += 1;
+        }
         municipalityStats.set(item.municipality, stats);
     });
     const municipalityRows = Array.from(municipalityStats.entries())
@@ -183,7 +186,7 @@ export default async function AnalyticsPage() {
                     </div>
 
                     <div className="bg-white rounded-3xl p-6 border border-amber-900/10 shadow-sm overflow-x-auto">
-                        <h3 className="text-sm font-bold text-gray-700 mb-4">掲載・落札・不調の内訳（不調率 = 不調 ÷ 開札結果）</h3>
+                        <h3 className="text-sm font-bold text-gray-700 mb-4">掲載・落札・不調の内訳（不調率 = 不調 ÷ 開札結果。中止は開札前のため含めない）</h3>
                         <table className="w-full min-w-[480px] text-sm">
                             <thead>
                                 <tr className="text-[11px] font-bold text-gray-400 border-b border-gray-100">
@@ -192,6 +195,7 @@ export default async function AnalyticsPage() {
                                     <th className="text-right py-2 px-2">受付中</th>
                                     <th className="text-right py-2 px-2">落札</th>
                                     <th className="text-right py-2 px-2">不調</th>
+                                    <th className="text-right py-2 px-2">中止</th>
                                     <th className="text-right py-2 px-2">不調率</th>
                                 </tr>
                             </thead>
@@ -203,6 +207,7 @@ export default async function AnalyticsPage() {
                                         <td className="py-2 px-2 text-right tabular-nums text-sky-700">{row.active || ''}</td>
                                         <td className="py-2 px-2 text-right tabular-nums text-emerald-700">{row.awarded || ''}</td>
                                         <td className="py-2 px-2 text-right tabular-nums text-amber-700">{row.failed || ''}</td>
+                                        <td className="py-2 px-2 text-right tabular-nums text-stone-600">{row.cancelled || ''}</td>
                                         <td className={`py-2 px-2 text-right tabular-nums font-bold ${row.failRate !== null && row.failRate >= 30 ? 'text-rose-600' : 'text-gray-500'}`}>
                                             {row.failRate !== null ? `${row.failRate}%` : '-'}
                                         </td>

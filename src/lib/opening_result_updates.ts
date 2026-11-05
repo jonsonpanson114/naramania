@@ -9,6 +9,7 @@ export type OpeningResultUpdate = {
   announcementDate: string;
   biddingDate?: string;
   status: BiddingItem['status'];
+  cancelled?: boolean;
   winningContractor?: string;
   link: string;
   pdfUrl?: string;
@@ -76,6 +77,7 @@ function toUpdate(
     announcementDate: item.announcementDate,
     biddingDate: item.biddingDate,
     status: item.status,
+    cancelled: item.cancelled,
     winningContractor: item.winningContractor,
     link: item.link,
     pdfUrl: item.pdfUrl,

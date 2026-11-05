@@ -90,6 +90,9 @@ function mergeBiddingItem(existing: BiddingItem, candidate: BiddingItem) {
         if (candidate.status === '不調') {
             delete existing.winningContractor;
             delete existing.winnerType;
+            if (candidate.cancelled) existing.cancelled = true;
+        } else {
+            delete existing.cancelled;
         }
     } else if (
         candidate.status === '受付終了' &&
@@ -125,6 +128,7 @@ function carryForwardEnrichment(candidate: BiddingItem, previous?: BiddingItem):
         winningContractor: candidate.status === '不調'
             ? undefined
             : candidate.winningContractor || previous.winningContractor,
+        cancelled: candidate.status === '不調' ? candidate.cancelled ?? previous.cancelled : undefined,
         designFirm: candidate.designFirm || previous.designFirm,
         constructionPeriod: candidate.constructionPeriod || previous.constructionPeriod,
         description: candidate.description || previous.description,

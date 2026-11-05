@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { CheckCircle2, Clock3, ExternalLink, Sparkles, Trophy } from 'lucide-react';
 import type { BiddingItem } from '@/types/bidding';
+import { displayStatus } from '@/lib/status_label';
 import {
   buildLatestOpeningResults,
   type OpeningResultUpdate,
@@ -28,13 +29,13 @@ function formatGeneratedAt(dateStr?: string): string {
 
 function getResultLabel(item: OpeningResultUpdate): string {
   if (item.kind === 'new_winner') return '落札者取得';
-  if (item.kind === 'new_failure') return '不調取得';
+  if (item.kind === 'new_failure') return `${displayStatus(item)}取得`;
   return '開札状態更新';
 }
 
 function getResultBody(item: OpeningResultUpdate): string {
   if (item.winningContractor) return item.winningContractor;
-  if (item.status === '不調') return '不調として確認';
+  if (item.status === '不調') return `${displayStatus(item)}として確認`;
   return `${item.status}として確認`;
 }
 

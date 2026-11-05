@@ -51,6 +51,7 @@ type SearchRow = {
 type DetailInfo = {
     status: BiddingStatus;
     winningContractor?: string;
+    cancelled?: boolean;
     skip: boolean;
 };
 
@@ -458,6 +459,8 @@ async function readVisibleDetailInfo(page: Page, fallbackStatus: BiddingStatus):
         return {
             status: winningContractor ? '落札' : hasResult && isUnsuccessful ? '不調' : fallback,
             winningContractor,
+            cancelled: !winningContractor && hasResult && isUnsuccessful
+                && (isCanceled || /中止しました|落札結果\s*中止/.test(text)),
             skip: isCanceled && !hasResult,
         };
     }, fallbackStatus);
@@ -602,6 +605,7 @@ export class NaraPrefScraper implements Scraper {
                                 detail = {
                                     status: existingResolved.status,
                                     winningContractor: existingResolved.winningContractor,
+                                    cancelled: existingResolved.cancelled,
                                     skip: false,
                                 };
                             } else if (
@@ -626,6 +630,7 @@ export class NaraPrefScraper implements Scraper {
                                 link: `${PPI_DETAIL_BASE}?kanriNo=${row.kanriNo}&gamenMode=0`,
                                 status: detail.status,
                                 winningContractor: detail.winningContractor,
+                                cancelled: detail.cancelled || undefined,
                                 winnerType: target.type === '建築' ? 'ゼネコン' : '設計事務所',
                             });
                         }
@@ -662,6 +667,7 @@ export class NaraPrefScraper implements Scraper {
                             ...retainedItem,
                             status: detail.status,
                             winningContractor: detail.winningContractor || retainedItem.winningContractor,
+                            cancelled: detail.cancelled || retainedItem.cancelled,
                         };
                     }
                 }

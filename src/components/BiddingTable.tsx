@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useMemo, useState } from 'react';
-import { BiddingItem, BiddingStatus } from '@/types/bidding';
+import { BiddingItem } from '@/types/bidding';
 import { getBiddingLabel } from '@/lib/bidding_schedule';
 import { assessBiddingScope } from '@/lib/relevance_guard';
 import { matchesViewTab, type ViewTab } from '@/lib/practical_filters';
@@ -24,6 +24,7 @@ import {
     X,
 } from 'lucide-react';
 import { WatchButton } from '@/components/WatchButton';
+import { displayStatus, type DisplayStatus } from '@/lib/status_label';
 
 // タブの判定条件は practical_filters に集約している(トップの件数と揃えるため)
 export type { ViewTab };
@@ -67,7 +68,7 @@ const TABS: Array<{ id: ViewTab; label: string; hint: string }> = [
     { id: 'all', label: 'すべて', hint: '対象案件を全部見る' },
 ];
 
-const STATUS_TONES: Record<BiddingStatus, { label: string; pill: string; dot: string }> = {
+const STATUS_TONES: Record<DisplayStatus, { label: string; pill: string; dot: string }> = {
     '受付中': { label: '受付中', pill: 'border-sky-200 bg-sky-50 text-sky-700', dot: 'bg-sky-500' },
     '締切': { label: '締切', pill: 'border-stone-200 bg-stone-50 text-stone-600', dot: 'bg-stone-400' },
     '締切間近': { label: '締切間近', pill: 'border-rose-200 bg-rose-50 text-rose-700', dot: 'bg-rose-500' },
@@ -75,6 +76,7 @@ const STATUS_TONES: Record<BiddingStatus, { label: string; pill: string; dot: st
     '受付終了': { label: '受付終了', pill: 'border-stone-200 bg-stone-50 text-stone-600', dot: 'bg-stone-400' },
     '落札': { label: '落札', pill: 'border-emerald-200 bg-emerald-50 text-emerald-700', dot: 'bg-emerald-500' },
     '不調': { label: '不調', pill: 'border-amber-200 bg-amber-50 text-amber-700', dot: 'bg-amber-500' },
+    '中止': { label: '中止', pill: 'border-stone-300 bg-stone-100 text-stone-700', dot: 'bg-stone-500' },
     '不明': { label: '不明', pill: 'border-zinc-200 bg-zinc-50 text-zinc-600', dot: 'bg-zinc-400' },
 };
 
@@ -130,7 +132,7 @@ function exportCsv(items: BiddingItem[]) {
         item.municipality,
         item.title,
         item.type,
-        item.status,
+        displayStatus(item),
         item.announcementDate,
         item.biddingDate || '',
         item.winningContractor || '',
@@ -153,7 +155,7 @@ function exportCsv(items: BiddingItem[]) {
     URL.revokeObjectURL(url);
 }
 
-function StatusPill({ status }: { status: BiddingStatus }) {
+function StatusPill({ status }: { status: DisplayStatus }) {
     const tone = STATUS_TONES[status] || STATUS_TONES['不明'];
     return (
         <span className={`inline-flex items-center gap-1.5 rounded-full border px-2.5 py-0.5 text-[10px] font-bold tracking-[0.1em] ${tone.pill}`}>
@@ -274,7 +276,7 @@ export function BiddingTable({
                     item.title,
                     item.municipality,
                     item.type,
-                    item.status,
+                    displayStatus(item),
                     item.winningContractor || '',
                     item.designFirm || '',
                     ...(item.tags || []),
@@ -611,7 +613,7 @@ export function BiddingTable({
 
                                 <div className="min-w-0">
                                     <div className="flex flex-wrap items-center gap-2">
-                                        <StatusPill status={item.status} />
+                                        <StatusPill status={displayStatus(item)} />
                                         <span className="inline-flex items-center gap-1 text-[10px] font-bold tracking-[0.08em] text-stone-500">
                                             <MapPin size={10} />
                                             {item.municipality}
@@ -694,7 +696,7 @@ export function BiddingTable({
 
                                     <div className="p-4 lg:p-5">
                                         <div className="flex flex-wrap items-center gap-2.5">
-                                            <StatusPill status={item.status} />
+                                            <StatusPill status={displayStatus(item)} />
                                             <span className="inline-flex items-center gap-1.5 rounded-full border border-stone-200 bg-stone-50 px-2.5 py-1 text-[10px] font-bold tracking-[0.12em] text-stone-600">
                                                 <MapPin size={12} />
                                                 {item.municipality}
