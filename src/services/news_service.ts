@@ -58,7 +58,7 @@ const GENERAL_NEWS_NOISE_KEYWORDS = [
     'グルメ', 'イベント', '祭り', '訃報',
 ];
 
-async function fetchUrl(url: string): Promise<string> {
+export async function fetchUrl(url: string): Promise<string> {
     const res = await axios.get<ArrayBuffer>(url, {
         headers: HEADERS,
         timeout: 15000,
