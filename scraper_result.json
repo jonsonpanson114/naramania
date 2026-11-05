@@ -294,7 +294,8 @@
     "biddingDate": "2026-11-02",
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260223&gamenMode=0",
     "status": "不調",
-    "winnerType": "設計事務所"
+    "winnerType": "設計事務所",
+    "cancelled": true
   },
   {
     "id": "uda-93fb233059",
@@ -587,7 +588,8 @@
     "biddingDate": "2026-10-05",
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260196&gamenMode=0",
     "status": "不調",
-    "winnerType": "ゼネコン"
+    "winnerType": "ゼネコン",
+    "cancelled": true
   },
   {
     "id": "yamato-koriyama-9846d121",
@@ -783,7 +785,8 @@
     "biddingDate": "2026-09-10",
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260168&gamenMode=0",
     "status": "不調",
-    "winnerType": "設計事務所"
+    "winnerType": "設計事務所",
+    "cancelled": true
   },
   {
     "id": "nara-pref-29001013060020260177",
@@ -794,7 +797,8 @@
     "biddingDate": "2026-09-10",
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260177&gamenMode=0",
     "status": "不調",
-    "winnerType": "設計事務所"
+    "winnerType": "設計事務所",
+    "cancelled": true
   },
   {
     "id": "ikoma-result-2601010049",
@@ -817,7 +821,8 @@
     "biddingDate": "2026-09-11",
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260182&gamenMode=0",
     "status": "不調",
-    "winnerType": "設計事務所"
+    "winnerType": "設計事務所",
+    "cancelled": true
   },
   {
     "id": "nara-pref-29001013060020260181",
@@ -828,7 +833,8 @@
     "biddingDate": "2026-09-11",
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260181&gamenMode=0",
     "status": "不調",
-    "winnerType": "ゼネコン"
+    "winnerType": "ゼネコン",
+    "cancelled": true
   },
   {
     "id": "yamato-koriyama-1cf310ec",
@@ -872,7 +878,8 @@
     "biddingDate": "2026-09-08",
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260171&gamenMode=0",
     "status": "不調",
-    "winnerType": "設計事務所"
+    "winnerType": "設計事務所",
+    "cancelled": true
   },
   {
     "id": "nara-pref-29001013060020260173",
@@ -883,7 +890,8 @@
     "biddingDate": "2026-09-08",
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260173&gamenMode=0",
     "status": "不調",
-    "winnerType": "設計事務所"
+    "winnerType": "設計事務所",
+    "cancelled": true
   },
   {
     "id": "ikoma-result-2601010047",
@@ -1104,7 +1112,8 @@
     "biddingDate": "2026-08-18",
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260135&gamenMode=0",
     "status": "不調",
-    "winnerType": "設計事務所"
+    "winnerType": "設計事務所",
+    "cancelled": true
   },
   {
     "id": "yamato-koriyama-e4987f3a",
@@ -1184,7 +1193,8 @@
     "biddingDate": "2026-08-05",
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260131&gamenMode=0",
     "status": "不調",
-    "winnerType": "ゼネコン"
+    "winnerType": "ゼネコン",
+    "cancelled": true
   },
   {
     "id": "nara-pref-29001013060020260127",
@@ -1194,7 +1204,8 @@
     "announcementDate": "2026-07-10",
     "biddingDate": "2026-08-05",
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260127&gamenMode=0",
-    "status": "不調"
+    "status": "不調",
+    "cancelled": true
   },
   {
     "id": "nara-pref-29001013060020260132",
@@ -1204,7 +1215,8 @@
     "announcementDate": "2026-07-10",
     "biddingDate": "2026-08-05",
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260132&gamenMode=0",
-    "status": "不調"
+    "status": "不調",
+    "cancelled": true
   },
   {
     "id": "katsuragi-web-42be9c8c",
@@ -1319,7 +1331,8 @@
     "announcementDate": "2026-07-03",
     "biddingDate": "2026-07-30",
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260116&gamenMode=0",
-    "status": "不調"
+    "status": "不調",
+    "cancelled": true
   },
   {
     "id": "uda-fb22e3b0fc",
@@ -1351,7 +1364,8 @@
     "announcementDate": "2026-07-01",
     "biddingDate": "2026-07-30",
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260118&gamenMode=0",
-    "status": "不調"
+    "status": "不調",
+    "cancelled": true
   },
   {
     "id": "yamato-koriyama-02bb39f9",
@@ -1520,7 +1534,8 @@
     "announcementDate": "2026-06-23",
     "biddingDate": "2026-07-14",
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260115&gamenMode=0",
-    "status": "不調"
+    "status": "不調",
+    "cancelled": true
   },
   {
     "id": "kashihara-result-5081000510",
@@ -1622,7 +1637,8 @@
     "biddingDate": "2026-07-08",
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260093&gamenMode=0",
     "status": "不調",
-    "winnerType": "設計事務所"
+    "winnerType": "設計事務所",
+    "cancelled": true
   },
   {
     "id": "nara-pref-29001013060020260095",
@@ -1633,7 +1649,8 @@
     "biddingDate": "2026-07-09",
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260095&gamenMode=0",
     "status": "不調",
-    "winnerType": "設計事務所"
+    "winnerType": "設計事務所",
+    "cancelled": true
   },
   {
     "id": "nara-pref-29005007050120260004",
@@ -1882,7 +1899,8 @@
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260057&gamenMode=0",
     "status": "不調",
     "winnerType": "設計事務所",
-    "municipality": "奈良県"
+    "municipality": "奈良県",
+    "cancelled": true
   },
   {
     "id": "sakurai-epi-c968939638",
@@ -2036,7 +2054,8 @@
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260050&gamenMode=0",
     "status": "不調",
     "winnerType": "設計事務所",
-    "municipality": "奈良県"
+    "municipality": "奈良県",
+    "cancelled": true
   },
   {
     "id": "nara-city-0000002349",
@@ -2116,7 +2135,8 @@
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260026&gamenMode=0",
     "status": "不調",
     "winnerType": "設計事務所",
-    "municipality": "奈良県"
+    "municipality": "奈良県",
+    "cancelled": true
   },
   {
     "id": "nara-pref-29001013060020260049",
@@ -2127,7 +2147,8 @@
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260049&gamenMode=0",
     "status": "不調",
     "winnerType": "ゼネコン",
-    "municipality": "奈良県"
+    "municipality": "奈良県",
+    "cancelled": true
   },
   {
     "id": "yamato-koriyama-aa7e00ef",
@@ -2218,7 +2239,8 @@
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260014&gamenMode=0",
     "status": "不調",
     "winnerType": "ゼネコン",
-    "municipality": "奈良県"
+    "municipality": "奈良県",
+    "cancelled": true
   },
   {
     "id": "nara-pref-29001013060020260016",
@@ -2229,7 +2251,8 @@
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260016&gamenMode=0",
     "status": "不調",
     "winnerType": "ゼネコン",
-    "municipality": "奈良県"
+    "municipality": "奈良県",
+    "cancelled": true
   },
   {
     "id": "kashihara-result-5082000350",

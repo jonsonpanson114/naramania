@@ -40,7 +40,8 @@
     "announcementDate": "2026-11-04",
     "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
     "status": "不調",
-    "isRelevant": false
+    "isRelevant": false,
+    "cancelled": true
   },
   {
     "id": "nara-city-0000002531",
@@ -50,7 +51,8 @@
     "announcementDate": "2026-11-04",
     "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
     "status": "不調",
-    "isRelevant": false
+    "isRelevant": false,
+    "cancelled": true
   },
   {
     "id": "nara-city-0000002532",
@@ -60,7 +62,8 @@
     "announcementDate": "2026-11-04",
     "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
     "status": "不調",
-    "isRelevant": false
+    "isRelevant": false,
+    "cancelled": true
   },
   {
     "id": "nara-city-0000002533",
@@ -70,7 +73,8 @@
     "announcementDate": "2026-11-04",
     "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
     "status": "不調",
-    "isRelevant": false
+    "isRelevant": false,
+    "cancelled": true
   },
   {
     "id": "nara-city-0000002474",
@@ -80,7 +84,8 @@
     "announcementDate": "2026-11-04",
     "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
     "status": "不調",
-    "isRelevant": false
+    "isRelevant": false,
+    "cancelled": true
   },
   {
     "id": "nara-city-0000002475",
@@ -90,7 +95,8 @@
     "announcementDate": "2026-11-04",
     "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
     "status": "不調",
-    "isRelevant": false
+    "isRelevant": false,
+    "cancelled": true
   },
   {
     "id": "nara-city-0000002438",
@@ -100,7 +106,8 @@
     "announcementDate": "2026-11-04",
     "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
     "status": "不調",
-    "isRelevant": false
+    "isRelevant": false,
+    "cancelled": true
   },
   {
     "id": "nara-city-0000002441",
@@ -110,7 +117,8 @@
     "announcementDate": "2026-11-04",
     "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
     "status": "不調",
-    "isRelevant": false
+    "isRelevant": false,
+    "cancelled": true
   },
   {
     "id": "nara-city-0000002442",
@@ -120,7 +128,8 @@
     "announcementDate": "2026-11-04",
     "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
     "status": "不調",
-    "isRelevant": false
+    "isRelevant": false,
+    "cancelled": true
   },
   {
     "id": "nara-city-0000002444",
@@ -130,7 +139,8 @@
     "announcementDate": "2026-11-04",
     "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
     "status": "不調",
-    "isRelevant": false
+    "isRelevant": false,
+    "cancelled": true
   },
   {
     "id": "nara-city-0000002445",
@@ -140,7 +150,8 @@
     "announcementDate": "2026-11-04",
     "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
     "status": "不調",
-    "isRelevant": false
+    "isRelevant": false,
+    "cancelled": true
   },
   {
     "id": "ando-category-70",
@@ -3611,7 +3622,8 @@
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260223&gamenMode=0",
     "status": "不調",
     "winnerType": "設計事務所",
-    "isRelevant": true
+    "isRelevant": true,
+    "cancelled": true
   },
   {
     "id": "yamato-takada-epi-result-20261010",
@@ -8026,7 +8038,8 @@
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260196&gamenMode=0",
     "status": "不調",
     "winnerType": "ゼネコン",
-    "isRelevant": true
+    "isRelevant": true,
+    "cancelled": true
   },
   {
     "id": "katsuragi-epi-4bcb90bd",
@@ -10129,7 +10142,8 @@
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260168&gamenMode=0",
     "status": "不調",
     "winnerType": "設計事務所",
-    "isRelevant": true
+    "isRelevant": true,
+    "cancelled": true
   },
   {
     "id": "nara-pref-29001013060020260177",
@@ -10141,7 +10155,8 @@
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260177&gamenMode=0",
     "status": "不調",
     "winnerType": "設計事務所",
-    "isRelevant": true
+    "isRelevant": true,
+    "cancelled": true
   },
   {
     "id": "nara-pref-29001013060020260187",
@@ -10598,7 +10613,8 @@
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260182&gamenMode=0",
     "status": "不調",
     "winnerType": "設計事務所",
-    "isRelevant": true
+    "isRelevant": true,
+    "cancelled": true
   },
   {
     "id": "nara-pref-29001013060020260181",
@@ -10610,7 +10626,8 @@
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260181&gamenMode=0",
     "status": "不調",
     "winnerType": "ゼネコン",
-    "isRelevant": true
+    "isRelevant": true,
+    "cancelled": true
   },
   {
     "id": "yamato-takada-9c7dbe6b",
@@ -10681,7 +10698,8 @@
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260171&gamenMode=0",
     "status": "不調",
     "winnerType": "設計事務所",
-    "isRelevant": true
+    "isRelevant": true,
+    "cancelled": true
   },
   {
     "id": "nara-pref-29001013060020260172",
@@ -10705,7 +10723,8 @@
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260173&gamenMode=0",
     "status": "不調",
     "winnerType": "設計事務所",
-    "isRelevant": true
+    "isRelevant": true,
+    "cancelled": true
   },
   {
     "id": "yamato-koriyama-3fb922e8",
@@ -13325,7 +13344,8 @@
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260135&gamenMode=0",
     "status": "不調",
     "winnerType": "設計事務所",
-    "isRelevant": true
+    "isRelevant": true,
+    "cancelled": true
   },
   {
     "id": "nara-pref-29001013060020260136",
@@ -14621,7 +14641,8 @@
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260131&gamenMode=0",
     "status": "不調",
     "winnerType": "ゼネコン",
-    "isRelevant": true
+    "isRelevant": true,
+    "cancelled": true
   },
   {
     "id": "nara-pref-29001013060020260127",
@@ -14632,7 +14653,8 @@
     "biddingDate": "2026-08-05",
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260127&gamenMode=0",
     "status": "不調",
-    "isRelevant": true
+    "isRelevant": true,
+    "cancelled": true
   },
   {
     "id": "nara-pref-29001013060020260132",
@@ -14643,7 +14665,8 @@
     "biddingDate": "2026-08-05",
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260132&gamenMode=0",
     "status": "不調",
-    "isRelevant": true
+    "isRelevant": true,
+    "cancelled": true
   },
   {
     "id": "katsuragi-web-8f648627",
@@ -15262,7 +15285,8 @@
     "biddingDate": "2026-07-30",
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260116&gamenMode=0",
     "status": "不調",
-    "isRelevant": true
+    "isRelevant": true,
+    "cancelled": true
   },
   {
     "id": "gojo-5407699c",
@@ -15439,7 +15463,8 @@
     "biddingDate": "2026-07-30",
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260118&gamenMode=0",
     "status": "不調",
-    "isRelevant": true
+    "isRelevant": true,
+    "cancelled": true
   },
   {
     "id": "yamato-takada-d8ac611f",
@@ -16394,7 +16419,8 @@
     "biddingDate": "2026-07-14",
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260115&gamenMode=0",
     "status": "不調",
-    "isRelevant": true
+    "isRelevant": true,
+    "cancelled": true
   },
   {
     "id": "kashiba-r8-k5-07",
@@ -17283,7 +17309,8 @@
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260093&gamenMode=0",
     "status": "不調",
     "winnerType": "設計事務所",
-    "isRelevant": true
+    "isRelevant": true,
+    "cancelled": true
   },
   {
     "id": "nara-pref-29001013060020260095",
@@ -17295,7 +17322,8 @@
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260095&gamenMode=0",
     "status": "不調",
     "winnerType": "設計事務所",
-    "isRelevant": true
+    "isRelevant": true,
+    "cancelled": true
   },
   {
     "id": "yamato-koriyama-207e72b4",
@@ -18468,7 +18496,8 @@
     "status": "不調",
     "winnerType": "設計事務所",
     "municipality": "奈良県",
-    "isRelevant": true
+    "isRelevant": true,
+    "cancelled": true
   },
   {
     "id": "yamato-takada-13b33ca0",
@@ -19196,7 +19225,8 @@
     "status": "不調",
     "winnerType": "設計事務所",
     "municipality": "奈良県",
-    "isRelevant": true
+    "isRelevant": true,
+    "cancelled": true
   },
   {
     "id": "nara-pref-29001013060020260051",
@@ -19508,7 +19538,8 @@
     "status": "不調",
     "winnerType": "設計事務所",
     "municipality": "奈良県",
-    "isRelevant": true
+    "isRelevant": true,
+    "cancelled": true
   },
   {
     "id": "nara-pref-29001013060020260049",
@@ -19520,7 +19551,8 @@
     "status": "不調",
     "winnerType": "ゼネコン",
     "municipality": "奈良県",
-    "isRelevant": true
+    "isRelevant": true,
+    "cancelled": true
   },
   {
     "id": "gojo-epi-2601004",
@@ -19722,7 +19754,8 @@
     "status": "不調",
     "winnerType": "ゼネコン",
     "municipality": "奈良県",
-    "isRelevant": true
+    "isRelevant": true,
+    "cancelled": true
   },
   {
     "id": "nara-pref-29001013060020260016",
@@ -19734,7 +19767,8 @@
     "status": "不調",
     "winnerType": "ゼネコン",
     "municipality": "奈良県",
-    "isRelevant": true
+    "isRelevant": true,
+    "cancelled": true
   },
   {
     "id": "yamato-koriyama-4392d854",
