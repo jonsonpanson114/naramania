@@ -1,7 +1,22 @@
 {
-  "generatedAt": "2026-11-06T13:01:34.568Z",
+  "generatedAt": "2026-11-06T13:40:25.681Z",
   "source": "daily_scrape",
-  "updates": [],
+  "updates": [
+    {
+      "id": "tawaramoto-2026062201",
+      "municipality": "田原本町",
+      "title": "南小学校⑪号棟トイレ改修工事",
+      "announcementDate": "2026-05-14",
+      "biddingDate": "2026-06-22",
+      "status": "落札",
+      "winningContractor": "塚竜（株）",
+      "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
+      "previousStatus": "落札",
+      "previousWinningContractor": "塚竜(株)",
+      "detectedAt": "2026-11-06T13:40:25.681Z",
+      "kind": "new_winner"
+    }
+  ],
   "latestResults": [
     {
       "id": "ikoma-214ad57211",
@@ -11,7 +26,7 @@
       "biddingDate": "2026-11-19",
       "status": "不調",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-      "detectedAt": "2026-11-06T13:01:34.568Z",
+      "detectedAt": "2026-11-06T13:40:25.681Z",
       "kind": "new_failure"
     },
     {
@@ -22,7 +37,7 @@
       "biddingDate": "2026-11-06",
       "status": "不調",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-      "detectedAt": "2026-11-06T13:01:34.568Z",
+      "detectedAt": "2026-11-06T13:40:25.681Z",
       "kind": "new_failure"
     },
     {
@@ -34,7 +49,7 @@
       "status": "不調",
       "link": "https://www.town.miyake.lg.jp/soshiki/1/9376.html",
       "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5619.pdf",
-      "detectedAt": "2026-11-06T13:01:34.568Z",
+      "detectedAt": "2026-11-06T13:40:25.681Z",
       "kind": "new_failure"
     },
     {
@@ -47,7 +62,7 @@
       "winningContractor": "株式会社 礎建築事務所",
       "link": "https://www.town.miyake.lg.jp/soshiki/1/9376.html",
       "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5773.pdf",
-      "detectedAt": "2026-11-06T13:01:34.568Z",
+      "detectedAt": "2026-11-06T13:40:25.681Z",
       "kind": "new_winner"
     },
     {
@@ -59,7 +74,7 @@
       "status": "落札",
       "winningContractor": "中尾・中和特定建設工事共同企業体",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=06200640072006A0",
-      "detectedAt": "2026-11-06T13:01:34.568Z",
+      "detectedAt": "2026-11-06T13:40:25.681Z",
       "kind": "new_winner"
     },
     {
@@ -71,7 +86,7 @@
       "status": "不調",
       "cancelled": true,
       "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260223&gamenMode=0",
-      "detectedAt": "2026-11-06T13:01:34.568Z",
+      "detectedAt": "2026-11-06T13:40:25.681Z",
       "kind": "new_failure"
     },
     {
@@ -83,7 +98,7 @@
       "status": "落札",
       "winningContractor": "マツダ塗装株式会社",
       "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsunooshirase/R8/18176.html",
-      "detectedAt": "2026-11-06T13:01:34.568Z",
+      "detectedAt": "2026-11-06T13:40:25.681Z",
       "kind": "new_winner"
     },
     {
@@ -95,7 +110,7 @@
       "status": "落札",
       "winningContractor": "（株）北脇組",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200700",
-      "detectedAt": "2026-11-06T13:01:34.568Z",
+      "detectedAt": "2026-11-06T13:40:25.681Z",
       "kind": "new_winner"
     },
     {
@@ -107,7 +122,7 @@
       "status": "落札",
       "winningContractor": "株式会社アーバンパイオニア設計",
       "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-      "detectedAt": "2026-11-06T13:01:34.568Z",
+      "detectedAt": "2026-11-06T13:40:25.681Z",
       "kind": "new_winner"
     },
     {
@@ -119,7 +134,7 @@
       "status": "落札",
       "winningContractor": "株式会社イシハラ工務店",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-      "detectedAt": "2026-11-06T13:01:34.568Z",
+      "detectedAt": "2026-11-06T13:40:25.681Z",
       "kind": "new_winner"
     },
     {
@@ -132,7 +147,7 @@
       "winningContractor": "G.Sスポーツ 辻川 祐介",
       "link": "https://www.city.gojo.lg.jp/jigyousha/nyuusatsu/8/R8/19914.html",
       "pdfUrl": "https://www.city.gojo.lg.jp/material/files/group/40/ototaiyuka_ns_dc01.pdf",
-      "detectedAt": "2026-11-06T13:01:34.568Z",
+      "detectedAt": "2026-11-06T13:40:25.681Z",
       "kind": "new_winner"
     },
     {
@@ -143,7 +158,7 @@
       "biddingDate": "2026-10-19",
       "status": "不調",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-      "detectedAt": "2026-11-06T13:01:34.568Z",
+      "detectedAt": "2026-11-06T13:40:25.681Z",
       "kind": "new_failure"
     }
   ]
