@@ -47,6 +47,16 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
+      # self-hosted は作業フォルダが次の実行に残る。rebase が途中で止まった跡があると、
+      # 以後の pull がすべて失敗し、実行中に main が進んだ回の push が全部落ちる
+      # (2026-06-03 の跡が11月まで残っていた)。--abort だと checkout した中身が
+      # 古い版へ戻るので --quit を使う。
+      - name: Clear interrupted rebase
+        run: |
+          if ((Test-Path .git/rebase-merge) -or (Test-Path .git/rebase-apply)) {
+            git rebase --quit
+          }
+
       - name: Setup Node.js
         uses: actions/setup-node@v6
         with:
