@@ -254,6 +254,7 @@ async function extractResultRows(
     frame: Frame,
     options: EpiScrapeOptions,
     fallbackLink: string,
+    detailTargets: DetailTarget[],
 ): Promise<BiddingItem[]> {
     const items: BiddingItem[] = [];
     const rows = await frame.locator('table tr').all().catch(() => []);
@@ -285,7 +286,7 @@ async function extractResultRows(
             ? `${EPI_BASE}/koukai/do/KK402ShowAction?control_no=${controlNo}`
             : toAbsoluteUrl(href || '', fallbackLink);
 
-        items.push({
+        const item: BiddingItem = {
             id: contractNo
                 ? `${options.idPrefix}-epi-result-${contractNo}`
                 : hashId(`${options.idPrefix}-epi-result`, `${title}|${publishedDate}`),
@@ -299,7 +300,9 @@ async function extractResultRows(
             winningContractor: isFailed ? undefined : winner || undefined,
             winnerType: classifyWinner(winner),
             estimatedPrice: Number.isFinite(parsedAmount) ? `${parsedAmount.toLocaleString()}円` : undefined,
-        });
+        };
+        items.push(item);
+        addEpiDetailTarget(detailTargets, item, href);
     }
 
     return items;
@@ -379,7 +382,7 @@ async function scrapeWithBrowser(options: EpiScrapeOptions, browser: Browser): P
     if (includeResults) {
         menus.push({
             label: '入札・契約結果情報',
-            extract: frame => extractResultRows(frame, options, fallbackLink),
+            extract: frame => extractResultRows(frame, options, fallbackLink, detailTargets),
         });
     }
 

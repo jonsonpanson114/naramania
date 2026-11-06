@@ -8,6 +8,7 @@ import { BiddingItem, Scraper } from '../types/bidding';
 import { extractTargetedResultsFromPDF } from '../services/gemini_service';
 import { downloadPDFBuffer } from '../utils/pdf_utils';
 import { scrapeEpiCloud } from './common/epi_cloud';
+import { addEpiDetailTarget, readEpiBriefs, type DetailTarget } from './common/system_detail';
 
 const EPI_URL = 'https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=062006E007200640';
 // EPI では「入札・契約結果情報」だけを見ていたため、開札済みの案件しか拾えず、
@@ -231,8 +232,12 @@ async function openKashibaMenu(page: Page, categoryText: string, menuText: strin
 // しか出てこないため、工事だけ見ていると設計事務所の受注案件が丸ごと欠落する。
 const EPI_CATEGORIES = ['工事', 'コンサル'];
 
+/** 結果の詳細を読んでよい時間。これを過ぎると下の全体の時間切れで一覧まで失う */
+const KASHIBA_DETAIL_DEADLINE_MS = 170000;
+
 async function scrapeKashibaCity(): Promise<BiddingItem[]> {
     const itemsMap = new Map<string, BiddingItem>();
+    const detailDeadline = Date.now() + KASHIBA_DETAIL_DEADLINE_MS;
 
     const browser = await chromium.launch({ headless: true });
     const context = await browser.newContext();
@@ -271,6 +276,7 @@ async function scrapeKashibaCity(): Promise<BiddingItem[]> {
                 await page.waitForTimeout(5000);
 
                 // 6) データiframe (KFK401FrameShow/KFC401FrameShow, name='right') からデータ取得
+                const detailTargets: DetailTarget[] = [];
                 let page_num = 1;
                 while (true) {
                     const dataFrame = await getKashibaDataFrame(page, /KFK4|KFC4|KK401SearchAction/);
@@ -309,7 +315,7 @@ async function scrapeKashibaCity(): Promise<BiddingItem[]> {
                         if (!title || !pubDate) continue;
 
                         const id = `kashiba-${contractNo || pubDate + '-' + title.slice(0, 10)}`;
-                        itemsMap.set(id, {
+                        const item: BiddingItem = {
                             id,
                             municipality: '香芝市',
                             title,
@@ -326,7 +332,9 @@ async function scrapeKashibaCity(): Promise<BiddingItem[]> {
                             status: winner ? '落札' : isCancelled ? '不調' : (knownSchedule?.status || '受付終了'),
                             winningContractor: isCancelled ? undefined : (winner || knownSchedule?.winningContractor),
                             estimatedPrice: Number.isFinite(parsedAmount) ? `${parsedAmount.toLocaleString()}円` : undefined,
-                        });
+                        };
+                        itemsMap.set(id, item);
+                        addEpiDetailTarget(detailTargets, item, href);
                     }
 
                     // ページネーション: 「次へ」リンクは結果データとは別に、外側の
@@ -342,6 +350,8 @@ async function scrapeKashibaCity(): Promise<BiddingItem[]> {
                     await nextLink.click();
                     await page.waitForTimeout(4000);
                 }
+
+                await readEpiBriefs(page, detailTargets, detailDeadline);
 
                 // 検索画面に戻るために一旦初期画面へ
                 await openKashibaIssuePage(page, categoryText);
@@ -527,8 +537,9 @@ export class KashibaCityScraper implements Scraper {
                 scrapeKashibaCity(),
                 // 工事・コンサルの2区分を順に見るようになったため、1区分あたり
                 // ~50秒として余裕を持たせる(以前は工事1区分だけで90秒)。
+                // 詳細の読み取りは KASHIBA_DETAIL_DEADLINE_MS までに打ち切る。
                 new Promise<BiddingItem[]>((_, reject) => {
-                    setTimeout(() => reject(new Error('EPI timeout')), 180000);
+                    setTimeout(() => reject(new Error('EPI timeout')), 240000);
                 }),
             ]);
         } catch (error) {

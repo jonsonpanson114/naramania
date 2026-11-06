@@ -162,7 +162,7 @@ async function submitResultSearch(frame: Frame, nendo: string) {
     await frame.locator('input[type="button"][value="検索"]').first().click({ force: true, timeout: 30000 });
 }
 
-async function extractResultResults(frame: Frame): Promise<BiddingItem[]> {
+async function extractResultResults(frame: Frame, detailTargets: DetailTarget[]): Promise<BiddingItem[]> {
     const items: BiddingItem[] = [];
     const rows = await frame.locator('table tr').all().catch(() => []);
 
@@ -182,7 +182,7 @@ async function extractResultResults(frame: Frame): Promise<BiddingItem[]> {
         const titleLink = row.locator('a').first();
         const href = await titleLink.getAttribute('href').catch(() => null);
 
-        items.push({
+        const item: BiddingItem = {
             id: `sango-epi-result-${Buffer.from(`${title}|${href || ''}|${biddingDate || ''}`).toString('base64').slice(0, 12)}`,
             municipality: '三郷町',
             title,
@@ -192,7 +192,9 @@ async function extractResultResults(frame: Frame): Promise<BiddingItem[]> {
             link: toAbsoluteEpiUrl(href || ''),
             status: isFailed ? '不調' : '落札',
             winningContractor: isFailed ? undefined : winner,
-        });
+        };
+        items.push(item);
+        addEpiDetailTarget(detailTargets, item, href);
     }
 
     return items;
@@ -256,6 +258,7 @@ export class SangoTownScraper implements Scraper {
             if (item.link && (!existing.link || existing.link === SANGO_EPI_FORM)) existing.link = item.link;
             if (item.winningContractor && !existing.winningContractor) existing.winningContractor = item.winningContractor;
             if (item.status === '落札' || item.status === '不調') existing.status = item.status;
+            if (item.brief && !existing.brief) existing.brief = item.brief;
         };
 
         try {
@@ -332,6 +335,7 @@ export class SangoTownScraper implements Scraper {
                         await page.waitForTimeout(3000);
                         const resultFrame = await clickRightMenu(page, '入札・契約結果情報');
                         if (!resultFrame) continue;
+                        const resultTargets: DetailTarget[] = [];
 
                         for (const nendo of TARGET_NENDOS) {
                             const optionCount = await resultFrame.locator(`select[name="nendo"] option[value="${nendo}"]`).count();
@@ -341,7 +345,7 @@ export class SangoTownScraper implements Scraper {
                             await page.waitForTimeout(2500);
                             let dataFrame = await getDataFrame(page);
                             while (dataFrame) {
-                                const resultItems = await extractResultResults(dataFrame);
+                                const resultItems = await extractResultResults(dataFrame, resultTargets);
                                 resultItems.forEach(item => upsert(item));
 
                                 const nextLink = dataFrame.locator('a').filter({ hasText: '次へ' }).first();
@@ -351,6 +355,12 @@ export class SangoTownScraper implements Scraper {
                                 dataFrame = await getDataFrame(page);
                             }
                         }
+
+                        // 公告と同じ案件はそちらへまとめられているので、残っている方へ書く
+                        await readEpiBriefs(page, resultTargets.map(target => ({
+                            ...target,
+                            item: itemsByTitle.get(normalizeSangoTitle(target.item.title)) || target.item,
+                        })));
                     }
                 }
             } finally {

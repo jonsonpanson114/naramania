@@ -57,7 +57,7 @@ export function briefFromDetailPairs(title: string, pairs: DetailPair[], checked
     const taxExcluded = pick('予定価格(消費税を除く)', '予定価格(税抜)');
     const qualification = [
         pick('入札方式'),
-        pick('業種', '業種1', '求める業種1'),
+        pick('業種', '工種', '業種1', '求める業種1'),
         pick('等級1', '求める格付1'),
         pick('所在地区分', '条件1'),
         pick('条件2'),
@@ -120,11 +120,22 @@ export function efftisDetailUrl(base: string, screenId: string, onclick?: string
     return `${base}/${screen}!kenmeiLink?organizationNumber=${args[1]}&nendo=${args[2]}&keiyakuNo=${args[3]}`;
 }
 
-/** EPIの件名リンク javascript:doEdit('番号') から詳細のURLを作る。パスワードが要る案件(doEditPwd)は読まない */
+/** EPIの件名リンクの関数と、開く詳細画面の対応 */
+const EPI_DETAIL_SCREENS: Record<string, string> = {
+    doEdit: 'KK302ShowAction', // 発注情報
+    doEdit030: 'KK402ShowAction', // 入札結果
+    doEdit040: 'KK405ShowAction', // 契約結果
+};
+
+/**
+ * EPIの件名リンク javascript:doEdit('番号') から詳細のURLを作る。
+ * パスワードが要る案件(doEditPwd など)は読まない。
+ * 工事の詳細はコンサルの画面からは開けない(500になる)ので、同じ業務区分の中で開くこと。
+ */
 export function epiDetailUrl(href?: string | null): string | undefined {
-    const controlNo = href?.match(/doEdit\('([^']+)'\)/)?.[1];
-    return controlNo
-        ? `https://www.epi-cloud.fwd.ne.jp/koukai/do/KK302ShowAction?control_no=${controlNo}`
+    const match = href?.match(/(doEdit(?:030|040)?)\('([^']+)'\)/);
+    return match
+        ? `https://www.epi-cloud.fwd.ne.jp/koukai/do/${EPI_DETAIL_SCREENS[match[1]]}?control_no=${match[2]}`
         : undefined;
 }
 

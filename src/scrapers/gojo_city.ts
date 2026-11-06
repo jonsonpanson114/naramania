@@ -4,6 +4,7 @@ import crypto from 'crypto';
 import { chromium } from 'playwright';
 import type { Browser, BrowserContext, Frame, Page } from 'playwright';
 import { BiddingItem, BiddingStatus, BiddingType, Scraper } from '../types/bidding';
+import { epiDetailUrl, readEpiBriefs } from './common/system_detail';
 
 const BASE_URL = 'https://www.city.gojo.lg.jp';
 const GOJO_EPI_URL = 'https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=06200640072006C0';
@@ -615,6 +616,7 @@ async function scrapeGojoEpiResults(diagnostics?: GojoDiagnostics): Promise<Bidd
             await rightFrame.locator('input[type=button][value="検索"]').first().click({ timeout: 30000 });
             await page.waitForTimeout(4000);
 
+            const detailUrls = new Map<string, string>();
             while (true) {
                 rightFrame = await getRightFrame(page);
                 const dataFrame = await getDataFrame(page);
@@ -661,6 +663,8 @@ async function scrapeGojoEpiResults(diagnostics?: GojoDiagnostics): Promise<Bidd
                     };
                     const key = gojoItemKey(normalizedTitle, biddingDate, contractNo || detailUrl);
                     items.set(key, mergeGojoItem(items.get(key), item));
+                    const briefUrl = epiDetailUrl(href);
+                    if (briefUrl) detailUrls.set(key, briefUrl);
                 }
 
                 const nextLink = rightFrame.locator('a').filter({ hasText: '次へ>>' }).first();
@@ -668,6 +672,8 @@ async function scrapeGojoEpiResults(diagnostics?: GojoDiagnostics): Promise<Bidd
                 await nextLink.click({ timeout: 30000 });
                 await page.waitForTimeout(3000);
             }
+
+            await readEpiBriefs(page, Array.from(detailUrls, ([key, url]) => ({ item: items.get(key)!, url })));
         }
     } catch (e: unknown) {
         const message = `[五條市] EPI取得エラー: ${e instanceof Error ? e.message : String(e)}`;

@@ -251,7 +251,7 @@ async function submitResultSearch(frame: Frame, nendo: string) {
     await frame.locator('input[type="button"][value="検索"]').first().click({ force: true, timeout: 30000 });
 }
 
-async function extractResultResults(frame: Frame): Promise<BiddingItem[]> {
+async function extractResultResults(frame: Frame, detailTargets: DetailTarget[]): Promise<BiddingItem[]> {
     const items: BiddingItem[] = [];
     const rows = await frame.locator('table tr').all().catch(() => []);
 
@@ -271,7 +271,7 @@ async function extractResultResults(frame: Frame): Promise<BiddingItem[]> {
         const titleLink = row.locator('a').first();
         const href = await titleLink.getAttribute('href').catch(() => null);
 
-        items.push({
+        const item: BiddingItem = {
             id: contractNo
                 ? `ikoma-result-${contractNo}`
                 : `ikoma-result-${crypto.createHash('md5').update(`${title}|${href || ''}|${biddingDate || ''}`).digest('hex').slice(0, 10)}`,
@@ -284,7 +284,9 @@ async function extractResultResults(frame: Frame): Promise<BiddingItem[]> {
             status: isFailed ? '不調' : (winner ? '落札' : '受付終了'),
             winningContractor: isFailed ? undefined : winner,
             winnerType: classifyWinner(winner || ''),
-        });
+        };
+        items.push(item);
+        addEpiDetailTarget(detailTargets, item, href);
     }
 
     return items;
@@ -338,6 +340,7 @@ export class IkomaCityScraper implements Scraper {
                 existing.winnerType = item.winnerType;
             }
             if (item.status === '落札' || item.status === '不調') existing.status = item.status;
+            if (item.brief && !existing.brief) existing.brief = item.brief;
         };
 
         try {
@@ -367,6 +370,7 @@ export class IkomaCityScraper implements Scraper {
 
                 const resultFrame = await clickRightMenu(page, '入札・契約結果情報');
                 if (!resultFrame) continue;
+                const resultTargets: DetailTarget[] = [];
 
                 for (const nendo of TARGET_NENDOS) {
                     const optionCount = await resultFrame.locator(`select[name="nendo"] option[value="${nendo}"]`).count();
@@ -376,7 +380,7 @@ export class IkomaCityScraper implements Scraper {
                     await page.waitForTimeout(2500);
                     let dataFrame = await getDataFrame(page);
                     while (dataFrame) {
-                        const items = await extractResultResults(dataFrame);
+                        const items = await extractResultResults(dataFrame, resultTargets);
                         for (const item of items) {
                             upsert(item);
                         }
@@ -389,6 +393,12 @@ export class IkomaCityScraper implements Scraper {
                         dataFrame = await getDataFrame(page);
                     }
                 }
+
+                // 公告と同じ案件はそちらへまとめられているので、残っている方へ書く
+                await readEpiBriefs(page, resultTargets.map(target => ({
+                    ...target,
+                    item: itemsByTitle.get(normalizeIkomaTitle(target.item.title)) || target.item,
+                })));
             }
         } catch (error) {
             this.addError(`[生駒市] スクレイパーエラー: ${error instanceof Error ? error.message : String(error)}`);

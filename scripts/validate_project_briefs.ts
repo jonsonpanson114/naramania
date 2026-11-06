@@ -146,6 +146,23 @@ const item = (id: string, patch: Partial<BiddingItem> = {}): BiddingItem => ({
         'https://www.epi-cloud.fwd.ne.jp/koukai/do/KK302ShowAction?control_no=011792050100r8-g10-01',
     );
     assert.equal(epiDetailUrl("javascript:doEditPwd('0117','案件','1');"), undefined, 'パスワードが要る案件は開かない');
+    assert.equal(
+        epiDetailUrl("javascript:doEdit030('001792050100r8-k8-03');"),
+        'https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=001792050100r8-k8-03',
+    );
+    assert.equal(epiDetailUrl("javascript:doEdit030Pwd('0017','案件');"), undefined);
+
+    const result = briefFromDetailPairs('三和幼稚園トイレ改修工事', [
+        ['工事名', '三和幼稚園トイレ改修工事'],
+        ['入札方式', '事後審査型条件付一般競争入札'],
+        ['工種', '建築一式工事'],
+        ['工事場所', '香芝市良福寺666番地'],
+        ['予定価格(税抜)', '16,550,000円'],
+        ['条件１', '市内'],
+    ], CHECKED);
+    assert.equal(result?.location, '香芝市良福寺666番地');
+    assert.equal(result?.price, '16,550,000円(税抜)');
+    assert.equal(result?.qualification, '事後審査型条件付一般競争入札 / 建築一式工事 / 市内');
 
     const target = (id: string, title: string, announcementDate: string) => ({
         item: item(id, { title, announcementDate, status: '落札', winningContractor: '株式会社テスト' }),

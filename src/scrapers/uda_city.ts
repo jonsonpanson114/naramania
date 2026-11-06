@@ -136,7 +136,7 @@ async function submitResultSearch(frame: Frame, nendo: string) {
     await frame.locator('input[type="button"][value="検索"]').first().click({ force: true, timeout: 30000 });
 }
 
-async function extractResultResults(frame: Frame): Promise<BiddingItem[]> {
+async function extractResultResults(frame: Frame, detailTargets: DetailTarget[]): Promise<BiddingItem[]> {
     const items: BiddingItem[] = [];
     const rows = await frame.locator('table tr').all().catch(() => []);
 
@@ -157,7 +157,7 @@ async function extractResultResults(frame: Frame): Promise<BiddingItem[]> {
         const titleLink = row.locator('a').first();
         const href = await titleLink.getAttribute('href').catch(() => null);
 
-        items.push({
+        const item: BiddingItem = {
             id: contractNo
                 ? `uda-result-${contractNo}`
                 : `uda-result-${crypto.createHash('md5').update(`${title}|${href || ''}|${biddingDate || ''}`).digest('hex').slice(0, 10)}`,
@@ -169,7 +169,9 @@ async function extractResultResults(frame: Frame): Promise<BiddingItem[]> {
             link: toAbsoluteUrl(href || ''),
             status: isFailed ? '不調' : '落札',
             winningContractor: isFailed ? undefined : winner,
-        });
+        };
+        items.push(item);
+        addEpiDetailTarget(detailTargets, item, href);
     }
 
     return items;
@@ -241,6 +243,7 @@ export class UdaCityScraper implements Scraper {
             if (item.link && (!existing.link || existing.link === EPI_CLOUD_FORM)) existing.link = item.link;
             if (item.winningContractor && !existing.winningContractor) existing.winningContractor = item.winningContractor;
             if (item.status === '落札' || item.status === '不調') existing.status = item.status;
+            if (item.brief && !existing.brief) existing.brief = item.brief;
         };
 
         try {
@@ -270,6 +273,7 @@ export class UdaCityScraper implements Scraper {
 
                 const resultFrame = await clickRightMenu(page, '入札・契約結果情報');
                 if (!resultFrame) continue;
+                const resultTargets: DetailTarget[] = [];
 
                 for (const nendo of TARGET_NENDOS) {
                     const optionCount = await resultFrame.locator(`select[name="nendo"] option[value="${nendo}"]`).count();
@@ -279,7 +283,7 @@ export class UdaCityScraper implements Scraper {
                     await page.waitForTimeout(2500);
                     let dataFrame = await getDataFrame(page);
                     while (dataFrame) {
-                        const items = await extractResultResults(dataFrame);
+                        const items = await extractResultResults(dataFrame, resultTargets);
                         for (const item of items) {
                             upsert(item);
                         }
@@ -292,6 +296,12 @@ export class UdaCityScraper implements Scraper {
                         dataFrame = await getDataFrame(page);
                     }
                 }
+
+                // 公告と同じ案件はそちらへまとめられているので、残っている方へ書く
+                await readEpiBriefs(page, resultTargets.map(target => ({
+                    ...target,
+                    item: itemsByTitle.get(normalizeUdaTitle(target.item.title)) || target.item,
+                })));
             }
         } catch (error) {
             console.error('[宇陀市] スクレイパーエラー:', error instanceof Error ? error.message : String(error));

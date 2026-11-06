@@ -330,7 +330,7 @@ async function extractIssueResults(frame: Frame, detailTargets: DetailTarget[]):
     return items;
 }
 
-async function extractResultResults(frame: Frame): Promise<BiddingItem[]> {
+async function extractResultResults(frame: Frame, detailTargets: DetailTarget[]): Promise<BiddingItem[]> {
     const items: BiddingItem[] = [];
     const rows = await frame.locator('table tr').all().catch(() => []);
 
@@ -348,7 +348,7 @@ async function extractResultResults(frame: Frame): Promise<BiddingItem[]> {
         const href = await row.locator('a').first().getAttribute('href').catch(() => null);
         const isFailed = /取止め|不調|中止/.test(amountText);
 
-        items.push({
+        const item: BiddingItem = {
             id: controlNo ? `katsuragi-result-${controlNo}` : makeId('katsuragi-result', title, href || biddingDate || ''),
             municipality: '葛城市',
             title,
@@ -358,7 +358,9 @@ async function extractResultResults(frame: Frame): Promise<BiddingItem[]> {
             link: toAbsoluteUrl(href || ''),
             status: isFailed ? '不調' : '落札',
             winningContractor: isFailed || !winnerRaw || winnerRaw === '-' ? undefined : winnerRaw,
-        });
+        };
+        items.push(item);
+        addEpiDetailTarget(detailTargets, item, href);
     }
 
     return items;
@@ -404,6 +406,7 @@ async function scrapeEpi(page: Page): Promise<BiddingItem[]> {
 
         const resultFrame = await clickRightMenu(page, '入札・契約結果情報');
         if (!resultFrame) continue;
+        const resultTargets: DetailTarget[] = [];
 
         for (const nendo of TARGET_NENDOS) {
             const optionCount = await resultFrame.locator(`select[name="nendo"] option[value="${nendo}"]`).count();
@@ -413,7 +416,7 @@ async function scrapeEpi(page: Page): Promise<BiddingItem[]> {
             await page.waitForTimeout(2500);
             let dataFrame = await getDataFrame(page);
             while (dataFrame) {
-                items.push(...await extractResultResults(dataFrame));
+                items.push(...await extractResultResults(dataFrame, resultTargets));
                 const nextLink = dataFrame.locator('a').filter({ hasText: '次へ' }).first();
                 if (await nextLink.count() === 0) break;
                 await nextLink.click({ force: true, timeout: 10000 }).catch(() => undefined);
@@ -421,6 +424,7 @@ async function scrapeEpi(page: Page): Promise<BiddingItem[]> {
                 dataFrame = await getDataFrame(page);
             }
         }
+        await readEpiBriefs(page, resultTargets);
     }
 
     return items;
@@ -504,6 +508,7 @@ export class KatsuragiCityScraper implements Scraper {
             if (item.biddingDate && !existing.biddingDate) existing.biddingDate = item.biddingDate;
             if (item.link && (!existing.link || existing.link === ANNOUNCE_URL)) existing.link = item.link;
             if (item.pdfUrl && !existing.pdfUrl) existing.pdfUrl = item.pdfUrl;
+            if (item.brief && !existing.brief) existing.brief = item.brief;
             if (item.winningContractor && !existing.winningContractor) existing.winningContractor = item.winningContractor;
             if (item.status === '落札' || item.status === '不調') {
                 existing.status = item.status;
