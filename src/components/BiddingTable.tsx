@@ -738,7 +738,7 @@ export function BiddingTable({
                                                 {infoBoxes.map(box => (
                                                     <div key={box.label} className="rounded-xl border border-stone-200 bg-stone-50 px-3 py-2">
                                                         <p className="text-[9px] font-bold uppercase tracking-[0.18em] text-stone-400">{box.label}</p>
-                                                        <p className="mt-1 line-clamp-2 text-xs font-bold leading-5 tracking-[0.04em] text-stone-700">{box.value}</p>
+                                                        <p className="mt-1 line-clamp-2 text-xs font-bold leading-5 tracking-[0.04em] text-stone-700 [overflow-wrap:anywhere]">{box.value}</p>
                                                     </div>
                                                 ))}
                                             </div>
