@@ -26,7 +26,12 @@ jobs:
       SCRAPE_EXCEPT_MUNICIPALITIES: 奈良県
       QUALITY_GUARDED_MUNICIPALITIES: ""
     steps:
+      # 既定の checkout は起動時点のコミットを取る。前の実行の順番待ちをしていると
+      # 古いデータから始まり、最後の push で必ず衝突する(2026-11-06 に実例)。
+      # ブランチの最新を取るようにして、待った分の更新を含めて始める。
       - uses: actions/checkout@v6
+        with:
+          ref: ${{ github.ref }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v6

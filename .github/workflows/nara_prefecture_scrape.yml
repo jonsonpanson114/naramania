@@ -45,7 +45,12 @@ jobs:
       NARA_PREF_RESULT_LOOKBACK_DAYS: "370"
       NARA_PREF_DETAIL_FETCH_LIMIT: "150"
     steps:
+      # 既定の checkout は起動時点のコミットを取る。前の実行の順番待ちをしていると
+      # 古いデータから始まり、最後の push で必ず衝突する(2026-11-06 に実例)。
+      # ブランチの最新を取るようにして、待った分の更新を含めて始める。
       - uses: actions/checkout@v6
+        with:
+          ref: ${{ github.ref }}
 
       # self-hosted は作業フォルダが次の実行に残る。rebase が途中で止まった跡があると、
       # 以後の pull がすべて失敗し、実行中に main が進んだ回の push が全部落ちる
