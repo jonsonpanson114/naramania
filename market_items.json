@@ -967,6 +967,42 @@
     "isRelevant": false
   },
   {
+    "id": "nara-pref-29005007050120260005",
+    "municipality": "奈良県",
+    "title": "広域化に伴う施設整備に係る通信回線等デジタル化対応工事設計業務委託（その４）",
+    "type": "コンサル",
+    "announcementDate": "2026-11-04",
+    "biddingDate": "2026-11-27",
+    "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29005007050120260005&gamenMode=0",
+    "status": "受付中",
+    "winnerType": "設計事務所",
+    "brief": {
+      "checkedAt": "2026-11-06T12:26:57.976Z",
+      "found": true,
+      "period": "令和8年12月14日(予定) から 令和9年11月19日 まで",
+      "qualification": "一般競争入札[参加申請型](総合評価) / 建設コンサルタント"
+    },
+    "isRelevant": true
+  },
+  {
+    "id": "nara-pref-29005007050120260006",
+    "municipality": "奈良県",
+    "title": "広域化に伴う施設整備に係る通信回線等デジタル化対応工事設計業務委託（その５）",
+    "type": "コンサル",
+    "announcementDate": "2026-11-04",
+    "biddingDate": "2026-11-27",
+    "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29005007050120260006&gamenMode=0",
+    "status": "受付中",
+    "winnerType": "設計事務所",
+    "brief": {
+      "checkedAt": "2026-11-06T12:26:59.064Z",
+      "found": true,
+      "period": "令和8年12月14日(予定) から 令和9年10月29日 まで",
+      "qualification": "一般競争入札[参加申請型](総合評価) / 建設コンサルタント"
+    },
+    "isRelevant": true
+  },
+  {
     "id": "gose-現場説明書（仕様書）のダウンロード（測量-1",
     "municipality": "御所市",
     "title": "現場説明書（仕様書）のダウンロード（測量・建設コンサルタント業務）（管財課）",
@@ -2028,6 +2064,13 @@
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013050520260203&gamenMode=0",
     "status": "受付中",
     "winnerType": "設計事務所",
+    "brief": {
+      "checkedAt": "2026-11-06T12:27:00.136Z",
+      "found": true,
+      "location": "天理市福住町、山田町 地内",
+      "period": "令和8年12月7日 から 令和10年1月28日 まで",
+      "qualification": "一般競争入札[参加申請型](総合評価) / 建設コンサルタント"
+    },
     "isRelevant": true
   },
   {
@@ -4697,8 +4740,13 @@
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260223&gamenMode=0",
     "status": "不調",
     "winnerType": "設計事務所",
-    "isRelevant": true,
-    "cancelled": true
+    "cancelled": true,
+    "brief": {
+      "checkedAt": "2026-11-06T12:27:01.287Z",
+      "found": true,
+      "qualification": "一般競争入札[参加申請型](総合評価) / 建設コンサルタント"
+    },
+    "isRelevant": true
   },
   {
     "id": "yamato-takada-epi-result-20261010",
@@ -6472,7 +6520,8 @@
     "announcementDate": "2026-09-30",
     "biddingDate": "2026-10-22",
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260214&gamenMode=0",
-    "status": "受付終了",
+    "status": "落札",
+    "winningContractor": "有限会社三都設計",
     "winnerType": "設計事務所",
     "isRelevant": false
   },
@@ -7529,6 +7578,13 @@
     "status": "落札",
     "winningContractor": "株式会社ジャパックス",
     "winnerType": "設計事務所",
+    "brief": {
+      "checkedAt": "2026-11-06T12:27:02.359Z",
+      "found": true,
+      "location": "天理市櫟本町地内",
+      "period": "令和09年03月25日",
+      "qualification": "指名競争入札(価格競争) / 建設コンサルタント"
+    },
     "isRelevant": true
   },
   {
@@ -7574,6 +7630,13 @@
     "status": "落札",
     "winningContractor": "中央開発株式会社",
     "winnerType": "設計事務所",
+    "brief": {
+      "checkedAt": "2026-11-06T12:27:03.547Z",
+      "found": true,
+      "location": "生駒郡平群町上庄、梨本 地内",
+      "period": "令和09年05月21日",
+      "qualification": "一般競争入札(参加申請なし) / 建設コンサルタント"
+    },
     "isRelevant": true
   },
   {
@@ -7868,6 +7931,14 @@
     "status": "落札",
     "winningContractor": "株式会社なんば技研",
     "winnerType": "設計事務所",
+    "brief": {
+      "checkedAt": "2026-11-06T12:27:05.651Z",
+      "found": true,
+      "location": "宇陀市大宇陀岩清水 地内",
+      "period": "令和09年03月19日",
+      "price": "¥7,550,000(税抜)",
+      "qualification": "一般競争入札(参加申請なし) / 建設コンサルタント"
+    },
     "isRelevant": true
   },
   {
@@ -9335,8 +9406,14 @@
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260196&gamenMode=0",
     "status": "不調",
     "winnerType": "ゼネコン",
-    "isRelevant": true,
-    "cancelled": true
+    "cancelled": true,
+    "brief": {
+      "checkedAt": "2026-11-06T12:27:06.704Z",
+      "found": true,
+      "price": "¥(税抜)",
+      "qualification": "一般競争入札[参加申請型](総合評価)"
+    },
+    "isRelevant": true
   },
   {
     "id": "katsuragi-epi-4bcb90bd",
@@ -11559,8 +11636,14 @@
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260168&gamenMode=0",
     "status": "不調",
     "winnerType": "設計事務所",
-    "isRelevant": true,
-    "cancelled": true
+    "cancelled": true,
+    "brief": {
+      "checkedAt": "2026-11-06T12:27:08.784Z",
+      "found": true,
+      "price": "¥(税抜)",
+      "qualification": "一般競争入札(参加申請なし) / 建築設計"
+    },
+    "isRelevant": true
   },
   {
     "id": "nara-pref-29001013060020260177",
@@ -11572,8 +11655,14 @@
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260177&gamenMode=0",
     "status": "不調",
     "winnerType": "設計事務所",
-    "isRelevant": true,
-    "cancelled": true
+    "cancelled": true,
+    "brief": {
+      "checkedAt": "2026-11-06T12:27:09.859Z",
+      "found": true,
+      "price": "¥(税抜)",
+      "qualification": "一般競争入札(参加申請なし) / 建築設計"
+    },
+    "isRelevant": true
   },
   {
     "id": "nara-pref-29001013060020260187",
@@ -12067,8 +12156,14 @@
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260182&gamenMode=0",
     "status": "不調",
     "winnerType": "設計事務所",
-    "isRelevant": true,
-    "cancelled": true
+    "cancelled": true,
+    "brief": {
+      "checkedAt": "2026-11-06T12:27:10.942Z",
+      "found": true,
+      "price": "¥(税抜)",
+      "qualification": "一般競争入札(参加申請なし) / 建築設計"
+    },
+    "isRelevant": true
   },
   {
     "id": "nara-pref-29001013060020260181",
@@ -12080,8 +12175,14 @@
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260181&gamenMode=0",
     "status": "不調",
     "winnerType": "ゼネコン",
-    "isRelevant": true,
-    "cancelled": true
+    "cancelled": true,
+    "brief": {
+      "checkedAt": "2026-11-06T12:27:12.012Z",
+      "found": true,
+      "price": "¥(税抜)",
+      "qualification": "一般競争入札[参加申請型](総合評価)"
+    },
+    "isRelevant": true
   },
   {
     "id": "yamato-takada-9c7dbe6b",
@@ -12148,6 +12249,13 @@
     "status": "落札",
     "winningContractor": "コンストラクションインベストメントマネジャーズ株式会社",
     "winnerType": "設計事務所",
+    "brief": {
+      "checkedAt": "2026-11-06T12:27:13.087Z",
+      "found": true,
+      "period": "令和8年9月24日 から 令和9年3月24日 まで",
+      "price": "¥6,610,000(税抜)",
+      "qualification": "一般競争入札(参加申請なし) / 建築設計"
+    },
     "isRelevant": true
   },
   {
@@ -12160,8 +12268,14 @@
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260171&gamenMode=0",
     "status": "不調",
     "winnerType": "設計事務所",
-    "isRelevant": true,
-    "cancelled": true
+    "cancelled": true,
+    "brief": {
+      "checkedAt": "2026-11-06T12:27:14.141Z",
+      "found": true,
+      "price": "¥(税抜)",
+      "qualification": "一般競争入札(参加申請なし) / 建築設計"
+    },
+    "isRelevant": true
   },
   {
     "id": "nara-pref-29001013060020260172",
@@ -12185,8 +12299,14 @@
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260173&gamenMode=0",
     "status": "不調",
     "winnerType": "設計事務所",
-    "isRelevant": true,
-    "cancelled": true
+    "cancelled": true,
+    "brief": {
+      "checkedAt": "2026-11-06T12:27:15.195Z",
+      "found": true,
+      "price": "¥(税抜)",
+      "qualification": "一般競争入札(参加申請なし) / 建築設計"
+    },
+    "isRelevant": true
   },
   {
     "id": "yamato-koriyama-3fb922e8",
@@ -14927,8 +15047,15 @@
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260135&gamenMode=0",
     "status": "不調",
     "winnerType": "設計事務所",
-    "isRelevant": true,
-    "cancelled": true
+    "cancelled": true,
+    "brief": {
+      "checkedAt": "2026-11-06T12:27:22.595Z",
+      "found": true,
+      "period": "令和8年9月4日 から 令和9年2月26日 まで",
+      "price": "¥(税抜)",
+      "qualification": "一般競争入札(参加申請なし) / 建築設計"
+    },
+    "isRelevant": true
   },
   {
     "id": "nara-pref-29001013060020260136",
@@ -14941,6 +15068,13 @@
     "status": "落札",
     "winningContractor": "吉井建築事務所",
     "winnerType": "設計事務所",
+    "brief": {
+      "checkedAt": "2026-11-06T12:27:16.272Z",
+      "found": true,
+      "period": "令和8年9月4日 から 令和9年12月24日 まで",
+      "price": "¥21,650,000(税抜)",
+      "qualification": "一般競争入札(参加申請なし) / 建築設計"
+    },
     "isRelevant": true
   },
   {
@@ -14954,6 +15088,13 @@
     "status": "落札",
     "winningContractor": "株式会社尾川建築設計事務所",
     "winnerType": "設計事務所",
+    "brief": {
+      "checkedAt": "2026-11-06T12:27:17.341Z",
+      "found": true,
+      "period": "令和8年9月4日 から 令和9年2月26日 まで",
+      "price": "¥4,150,000(税抜)",
+      "qualification": "一般競争入札(参加申請なし) / 建築設計"
+    },
     "isRelevant": true
   },
   {
@@ -14967,6 +15108,13 @@
     "status": "落札",
     "winningContractor": "松田電気工業株式会社",
     "winnerType": "ゼネコン",
+    "brief": {
+      "checkedAt": "2026-11-06T12:27:18.399Z",
+      "found": true,
+      "period": "令和8年9月4日 から 令和9年12月24日 まで",
+      "price": "¥286,300,000(税抜)",
+      "qualification": "一般競争入札[参加申請型](総合評価)"
+    },
     "isRelevant": true
   },
   {
@@ -14980,6 +15128,13 @@
     "status": "落札",
     "winningContractor": "株式会社森村設備",
     "winnerType": "ゼネコン",
+    "brief": {
+      "checkedAt": "2026-11-06T12:27:20.500Z",
+      "found": true,
+      "period": "令和8年9月4日 から 令和9年2月26日 まで",
+      "price": "¥38,150,000(税抜)",
+      "qualification": "一般競争入札(参加申請なし)"
+    },
     "isRelevant": true
   },
   {
@@ -14993,6 +15148,13 @@
     "status": "落札",
     "winningContractor": "株式会社岡本設備",
     "winnerType": "ゼネコン",
+    "brief": {
+      "checkedAt": "2026-11-06T12:27:19.457Z",
+      "found": true,
+      "period": "令和8年9月4日 から 令和9年12月24日 まで",
+      "price": "¥284,920,000(税抜)",
+      "qualification": "一般競争入札[参加申請型](総合評価)"
+    },
     "isRelevant": true
   },
   {
@@ -15006,6 +15168,13 @@
     "status": "落札",
     "winningContractor": "株式会社博電工業",
     "winnerType": "ゼネコン",
+    "brief": {
+      "checkedAt": "2026-11-06T12:27:21.537Z",
+      "found": true,
+      "period": "令和8年9月4日 から 令和9年8月31日 まで",
+      "price": "¥285,550,000(税抜)",
+      "qualification": "一般競争入札[参加申請型](総合評価)"
+    },
     "isRelevant": true
   },
   {
@@ -15153,6 +15322,13 @@
     "status": "落札",
     "winningContractor": "合同会社眉目山デザインスタジオ",
     "winnerType": "設計事務所",
+    "brief": {
+      "checkedAt": "2026-11-06T12:27:23.634Z",
+      "found": true,
+      "period": "令和8年8月27日 から 令和9年3月12日 まで",
+      "price": "¥2,770,000(税抜)",
+      "qualification": "一般競争入札(参加申請なし) / 建築設計"
+    },
     "isRelevant": true
   },
   {
@@ -15794,6 +15970,14 @@
     "status": "落札",
     "winningContractor": "株式会社エイト日本技術開発",
     "winnerType": "設計事務所",
+    "brief": {
+      "checkedAt": "2026-11-06T12:27:24.675Z",
+      "found": true,
+      "location": "磯城郡田原本町法貴寺 地内",
+      "period": "令和09年03月26日",
+      "price": "¥7,280,000(税抜)",
+      "qualification": "一般競争入札(参加申請なし) / 建設コンサルタント"
+    },
     "isRelevant": true
   },
   {
@@ -16229,8 +16413,15 @@
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260131&gamenMode=0",
     "status": "不調",
     "winnerType": "ゼネコン",
-    "isRelevant": true,
-    "cancelled": true
+    "cancelled": true,
+    "brief": {
+      "checkedAt": "2026-11-06T12:27:25.729Z",
+      "found": true,
+      "period": "令和8年8月21日 から 令和9年3月24日 まで",
+      "price": "¥68,150,000(税抜)",
+      "qualification": "一般競争入札[参加申請型](総合評価)"
+    },
+    "isRelevant": true
   },
   {
     "id": "nara-pref-29001013060020260127",
@@ -16241,8 +16432,15 @@
     "biddingDate": "2026-08-05",
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260127&gamenMode=0",
     "status": "不調",
-    "isRelevant": true,
-    "cancelled": true
+    "cancelled": true,
+    "brief": {
+      "checkedAt": "2026-11-06T12:27:26.802Z",
+      "found": true,
+      "period": "令和8年8月21日 から 令和9年3月24日 まで",
+      "price": "¥(税抜)",
+      "qualification": "一般競争入札(参加申請なし) / 建築設計"
+    },
+    "isRelevant": true
   },
   {
     "id": "nara-pref-29001013060020260132",
@@ -16253,8 +16451,15 @@
     "biddingDate": "2026-08-05",
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260132&gamenMode=0",
     "status": "不調",
-    "isRelevant": true,
-    "cancelled": true
+    "cancelled": true,
+    "brief": {
+      "checkedAt": "2026-11-06T12:27:27.874Z",
+      "found": true,
+      "period": "令和8年8月21日 から 令和9年3月24日 まで",
+      "price": "¥50,920,000(税抜)",
+      "qualification": "一般競争入札[参加申請型](総合評価)"
+    },
+    "isRelevant": true
   },
   {
     "id": "katsuragi-web-8f648627",
@@ -16839,6 +17044,14 @@
     "status": "落札",
     "winningContractor": "株式会社修成建設コンサルタント",
     "winnerType": "設計事務所",
+    "brief": {
+      "checkedAt": "2026-11-06T12:27:28.919Z",
+      "found": true,
+      "location": "北葛城郡広陵町寺戸・河合町佐味田",
+      "period": "令和09年02月26日",
+      "price": "¥5,700,000(税抜)",
+      "qualification": "一般競争入札(参加申請なし) / 建設コンサルタント"
+    },
     "isRelevant": true
   },
   {
@@ -16852,6 +17065,14 @@
     "status": "落札",
     "winningContractor": "株式会社日建技術コンサルタント",
     "winnerType": "設計事務所",
+    "brief": {
+      "checkedAt": "2026-11-06T12:27:29.989Z",
+      "found": true,
+      "location": "北葛城郡河合町佐味田",
+      "period": "令和09年02月26日",
+      "price": "¥8,190,000(税抜)",
+      "qualification": "一般競争入札(参加申請なし) / 建設コンサルタント"
+    },
     "isRelevant": true
   },
   {
@@ -16865,6 +17086,14 @@
     "status": "落札",
     "winningContractor": "株式会社スペースビジョン研究所",
     "winnerType": "設計事務所",
+    "brief": {
+      "checkedAt": "2026-11-06T12:27:31.059Z",
+      "found": true,
+      "location": "北葛城郡広陵町寺戸",
+      "period": "令和09年02月26日",
+      "price": "¥8,230,000(税抜)",
+      "qualification": "一般競争入札(参加申請なし) / 建設コンサルタント"
+    },
     "isRelevant": true
   },
   {
@@ -16924,8 +17153,14 @@
     "biddingDate": "2026-07-30",
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260116&gamenMode=0",
     "status": "不調",
-    "isRelevant": true,
-    "cancelled": true
+    "cancelled": true,
+    "brief": {
+      "checkedAt": "2026-11-06T12:27:32.115Z",
+      "found": true,
+      "price": "¥(税抜)",
+      "qualification": "一般競争入札(参加申請なし) / 建築設計"
+    },
+    "isRelevant": true
   },
   {
     "id": "gojo-5407699c",
@@ -17134,8 +17369,14 @@
     "biddingDate": "2026-07-30",
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260118&gamenMode=0",
     "status": "不調",
-    "isRelevant": true,
-    "cancelled": true
+    "cancelled": true,
+    "brief": {
+      "checkedAt": "2026-11-06T12:27:33.202Z",
+      "found": true,
+      "price": "¥(税抜)",
+      "qualification": "一般競争入札[参加申請型](総合評価)"
+    },
+    "isRelevant": true
   },
   {
     "id": "yamato-takada-d8ac611f",
@@ -18141,8 +18382,15 @@
     "biddingDate": "2026-07-14",
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260115&gamenMode=0",
     "status": "不調",
-    "isRelevant": true,
-    "cancelled": true
+    "cancelled": true,
+    "brief": {
+      "checkedAt": "2026-11-06T12:27:35.328Z",
+      "found": true,
+      "period": "令和8年8月3日 から 令和8年12月28日 まで",
+      "price": "¥(税抜)",
+      "qualification": "一般競争入札(参加申請なし) / 建築設計"
+    },
+    "isRelevant": true
   },
   {
     "id": "kashiba-r8-k5-07",
@@ -19056,8 +19304,15 @@
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260093&gamenMode=0",
     "status": "不調",
     "winnerType": "設計事務所",
-    "isRelevant": true,
-    "cancelled": true
+    "cancelled": true,
+    "brief": {
+      "checkedAt": "2026-11-06T12:27:37.422Z",
+      "found": true,
+      "period": "令和8年7月29日 から 令和9年1月29日 まで",
+      "price": "¥(税抜)",
+      "qualification": "一般競争入札(参加申請なし) / 建築設計"
+    },
+    "isRelevant": true
   },
   {
     "id": "nara-pref-29001013060020260095",
@@ -19069,8 +19324,15 @@
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260095&gamenMode=0",
     "status": "不調",
     "winnerType": "設計事務所",
-    "isRelevant": true,
-    "cancelled": true
+    "cancelled": true,
+    "brief": {
+      "checkedAt": "2026-11-06T12:27:38.479Z",
+      "found": true,
+      "period": "令和8年7月30日 から 令和9年1月29日 まで",
+      "price": "¥(税抜)",
+      "qualification": "一般競争入札(参加申請なし) / 建築設計"
+    },
+    "isRelevant": true
   },
   {
     "id": "yamato-koriyama-207e72b4",
@@ -19105,6 +19367,12 @@
     "status": "落札",
     "winningContractor": "株式会社日水コン",
     "winnerType": "設計事務所",
+    "brief": {
+      "checkedAt": "2026-11-06T12:27:39.524Z",
+      "found": true,
+      "price": "¥31,860,000(税抜)",
+      "qualification": "一般競争入札[参加申請型](総合評価) / 建設コンサルタント"
+    },
     "isRelevant": true
   },
   {
@@ -20299,8 +20567,8 @@
     "status": "不調",
     "winnerType": "設計事務所",
     "municipality": "奈良県",
-    "isRelevant": true,
-    "cancelled": true
+    "cancelled": true,
+    "isRelevant": true
   },
   {
     "id": "yamato-takada-13b33ca0",
@@ -21049,8 +21317,8 @@
     "status": "不調",
     "winnerType": "設計事務所",
     "municipality": "奈良県",
-    "isRelevant": true,
-    "cancelled": true
+    "cancelled": true,
+    "isRelevant": true
   },
   {
     "id": "nara-pref-29001013060020260051",
@@ -21362,8 +21630,8 @@
     "status": "不調",
     "winnerType": "設計事務所",
     "municipality": "奈良県",
-    "isRelevant": true,
-    "cancelled": true
+    "cancelled": true,
+    "isRelevant": true
   },
   {
     "id": "nara-pref-29001013060020260049",
@@ -21375,8 +21643,8 @@
     "status": "不調",
     "winnerType": "ゼネコン",
     "municipality": "奈良県",
-    "isRelevant": true,
-    "cancelled": true
+    "cancelled": true,
+    "isRelevant": true
   },
   {
     "id": "gojo-epi-2601004",
@@ -21578,8 +21846,8 @@
     "status": "不調",
     "winnerType": "ゼネコン",
     "municipality": "奈良県",
-    "isRelevant": true,
-    "cancelled": true
+    "cancelled": true,
+    "isRelevant": true
   },
   {
     "id": "nara-pref-29001013060020260016",
@@ -21591,8 +21859,8 @@
     "status": "不調",
     "winnerType": "ゼネコン",
     "municipality": "奈良県",
-    "isRelevant": true,
-    "cancelled": true
+    "cancelled": true,
+    "isRelevant": true
   },
   {
     "id": "yamato-koriyama-4392d854",

@@ -1,232 +1,7 @@
 {
-  "generatedAt": "2026-11-06T11:57:56.257Z",
+  "generatedAt": "2026-11-06T12:27:39.655Z",
   "source": "daily_scrape",
-  "updates": [
-    {
-      "id": "tawaramoto-2026062201",
-      "municipality": "田原本町",
-      "title": "南小学校⑪号棟トイレ改修工事",
-      "announcementDate": "2026-05-14",
-      "biddingDate": "2026-06-22",
-      "status": "落札",
-      "winningContractor": "塚竜(株)",
-      "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
-      "previousStatus": "落札",
-      "previousWinningContractor": "塚竜（株）",
-      "detectedAt": "2026-11-06T11:57:56.257Z",
-      "kind": "new_winner"
-    },
-    {
-      "id": "kashihara-result-5072000944",
-      "municipality": "橿原市",
-      "title": "畝傍中学校EV棟増築工事に伴う工事監理業務委託",
-      "announcementDate": "2025-09-30",
-      "biddingDate": "2025-09-30",
-      "status": "落札",
-      "winningContractor": "㈱内藤建築事務所",
-      "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18375.html",
-      "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5072000944k.pdf",
-      "previousStatus": "落札",
-      "previousWinningContractor": "㈱内藤建築事務所 奈良事務所",
-      "detectedAt": "2026-11-06T11:57:56.257Z",
-      "kind": "new_winner"
-    },
-    {
-      "id": "yamato-koriyama-bf3ca00a",
-      "municipality": "大和郡山市",
-      "title": "大和郡山市立小泉西方スポーツ会館補修工事",
-      "announcementDate": "2025-09-10",
-      "biddingDate": "2025-09-10",
-      "status": "落札",
-      "winningContractor": "株式会社 亀岡土木",
-      "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/1893.html",
-      "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk_kekka7-059.pdf",
-      "previousStatus": "落札",
-      "previousWinningContractor": "（株）亀岡土木",
-      "detectedAt": "2026-11-06T11:57:56.257Z",
-      "kind": "new_winner"
-    },
-    {
-      "id": "yamato-koriyama-c3389eb1",
-      "municipality": "大和郡山市",
-      "title": "稗田中央児童公園トイレ改修工事",
-      "announcementDate": "2025-09-03",
-      "biddingDate": "2025-09-03",
-      "status": "落札",
-      "winningContractor": "有限会社 いわき",
-      "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/1893.html",
-      "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk_kekka7-057.pdf",
-      "previousStatus": "落札",
-      "previousWinningContractor": "(有)いわき",
-      "detectedAt": "2026-11-06T11:57:56.257Z",
-      "kind": "new_winner"
-    },
-    {
-      "id": "yamato-koriyama-641659e3",
-      "municipality": "大和郡山市",
-      "title": "市営住宅空家改修工事（市営片桐東団地C棟101号・C棟102号、千日町9号、西田中改良住宅A66号・A41号）",
-      "announcementDate": "2025-08-27",
-      "biddingDate": "2025-08-27",
-      "status": "落札",
-      "winningContractor": "株式会社 周防組",
-      "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/1893.html",
-      "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk_kekka7-052.pdf",
-      "previousStatus": "落札",
-      "previousWinningContractor": "(株)周防組",
-      "detectedAt": "2026-11-06T11:57:56.257Z",
-      "kind": "new_winner"
-    },
-    {
-      "id": "kashihara-result-5072000836",
-      "municipality": "橿原市",
-      "title": "旧中央公民館・分館解体跡増築工事に伴う工事監理業務委託",
-      "announcementDate": "2025-08-21",
-      "biddingDate": "2025-08-21",
-      "status": "落札",
-      "winningContractor": "㈱内藤建築事務所",
-      "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18375.html",
-      "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5072000836k.pdf",
-      "previousStatus": "落札",
-      "previousWinningContractor": "㈱内藤建築事務所 奈良事務所",
-      "detectedAt": "2026-11-06T11:57:56.257Z",
-      "kind": "new_winner"
-    },
-    {
-      "id": "yamato-koriyama-5d4735c6",
-      "municipality": "大和郡山市",
-      "title": "DMGMORIやまと郡山城ホールトイレ改修工事",
-      "announcementDate": "2025-08-06",
-      "biddingDate": "2025-08-06",
-      "status": "落札",
-      "winningContractor": "有限会社 いわき",
-      "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/1893.html",
-      "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk_kekka7-048.pdf",
-      "previousStatus": "落札",
-      "previousWinningContractor": "(有)いわき",
-      "detectedAt": "2026-11-06T11:57:56.257Z",
-      "kind": "new_winner"
-    },
-    {
-      "id": "yamato-koriyama-f3c1131f",
-      "municipality": "大和郡山市",
-      "title": "旧平和保育園解体整備工事",
-      "announcementDate": "2025-07-02",
-      "biddingDate": "2025-07-02",
-      "status": "落札",
-      "winningContractor": "和光建設 株式会社",
-      "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/1893.html",
-      "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk_kekka7-039.pdf",
-      "previousStatus": "落札",
-      "previousWinningContractor": "和光建設（株）",
-      "detectedAt": "2026-11-06T11:57:56.257Z",
-      "kind": "new_winner"
-    },
-    {
-      "id": "kashihara-result-5072000523",
-      "municipality": "橿原市",
-      "title": "各小学校便所改修工事に伴う設計委託",
-      "announcementDate": "2025-06-26",
-      "biddingDate": "2025-06-26",
-      "status": "落札",
-      "winningContractor": "㈲坪岡建築事務所",
-      "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18375.html",
-      "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5072000523k.pdf",
-      "previousStatus": "落札",
-      "previousWinningContractor": "(有)坪岡建築事務所",
-      "detectedAt": "2026-11-06T11:57:56.257Z",
-      "kind": "new_winner"
-    },
-    {
-      "id": "yamato-koriyama-666a0c25",
-      "municipality": "大和郡山市",
-      "title": "大和郡山市耐震改修促進計画改定業務委託",
-      "announcementDate": "2025-06-18",
-      "biddingDate": "2025-06-18",
-      "status": "落札",
-      "winningContractor": "昭和 株式会社 奈良営業所",
-      "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/1893.html",
-      "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk_kekka7-036.pdf",
-      "previousStatus": "落札",
-      "previousWinningContractor": "昭和（株） 奈良営業所",
-      "detectedAt": "2026-11-06T11:57:56.257Z",
-      "kind": "new_winner"
-    },
-    {
-      "id": "yamato-koriyama-b4bbe50e",
-      "municipality": "大和郡山市",
-      "title": "昭和学童保育所移転工事",
-      "announcementDate": "2025-06-18",
-      "biddingDate": "2025-06-18",
-      "status": "落札",
-      "winningContractor": "株式会社 クラハラ",
-      "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/1893.html",
-      "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk_kekka7-032.pdf",
-      "previousStatus": "落札",
-      "previousWinningContractor": "(株)クラハラ",
-      "detectedAt": "2026-11-06T11:57:56.257Z",
-      "kind": "new_winner"
-    },
-    {
-      "id": "yamato-koriyama-8219fab2",
-      "municipality": "大和郡山市",
-      "title": "大和郡山市消防団第三分団庫建設工事",
-      "announcementDate": "2025-06-04",
-      "biddingDate": "2025-06-04",
-      "status": "落札",
-      "winningContractor": "株式会社 クラハラ",
-      "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/1893.html",
-      "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk_kekka7-026.pdf",
-      "previousStatus": "落札",
-      "previousWinningContractor": "（株）クラハラ",
-      "detectedAt": "2026-11-06T11:57:56.257Z",
-      "kind": "new_winner"
-    },
-    {
-      "id": "yamato-koriyama-58755b6d",
-      "municipality": "大和郡山市",
-      "title": "市立郡山南小学校廊下改修工事",
-      "announcementDate": "2025-05-28",
-      "biddingDate": "2025-05-28",
-      "status": "落札",
-      "winningContractor": "株式会社 木村組",
-      "link": "https://www.city.yamatokoriyama.lg.jp/soshiki/nyusatsukensaka/nyusatsu_keiyaku/2/1893.html",
-      "pdfUrl": "https://www.city.yamatokoriyama.lg.jp/material/files/group/26/nk_kekka7-022.pdf",
-      "previousStatus": "落札",
-      "previousWinningContractor": "(株)木村組",
-      "detectedAt": "2026-11-06T11:57:56.257Z",
-      "kind": "new_winner"
-    },
-    {
-      "id": "kashihara-result-5072000223",
-      "municipality": "橿原市",
-      "title": "令和7年度橿原市耐震改修促進計画改定業務委託",
-      "announcementDate": "2025-05-15",
-      "biddingDate": "2025-05-15",
-      "status": "落札",
-      "winningContractor": "国際航業㈱",
-      "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18375.html",
-      "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5072000223k.pdf",
-      "previousStatus": "落札",
-      "previousWinningContractor": "国際航業㈱ 奈良営業所",
-      "detectedAt": "2026-11-06T11:57:56.257Z",
-      "kind": "new_winner"
-    },
-    {
-      "id": "kashihara-result-5071000096",
-      "municipality": "橿原市",
-      "title": "畝傍東幼稚園及び晩成幼稚園トイレ改修工事",
-      "announcementDate": "2025-04-22",
-      "biddingDate": "2025-04-22",
-      "status": "落札",
-      "winningContractor": "㈱ＡＺ",
-      "link": "https://www.city.kashihara.nara.jp/jigyosha/nyusatsu_keiyaku/1/8/reiwa7/18371.html",
-      "pdfUrl": "https://www.city.kashihara.nara.jp/material/files/group/20/5071000096k.pdf",
-      "previousStatus": "落札",
-      "previousWinningContractor": "㈱AZ",
-      "detectedAt": "2026-11-06T11:57:56.257Z",
-      "kind": "new_winner"
-    }
-  ],
+  "updates": [],
   "latestResults": [
     {
       "id": "ikoma-214ad57211",
@@ -236,7 +11,7 @@
       "biddingDate": "2026-11-19",
       "status": "不調",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-      "detectedAt": "2026-11-06T11:57:56.257Z",
+      "detectedAt": "2026-11-06T12:27:39.655Z",
       "kind": "new_failure"
     },
     {
@@ -247,7 +22,7 @@
       "biddingDate": "2026-11-06",
       "status": "不調",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-      "detectedAt": "2026-11-06T11:57:56.257Z",
+      "detectedAt": "2026-11-06T12:27:39.655Z",
       "kind": "new_failure"
     },
     {
@@ -259,7 +34,7 @@
       "status": "不調",
       "link": "https://www.town.miyake.lg.jp/soshiki/1/9376.html",
       "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5619.pdf",
-      "detectedAt": "2026-11-06T11:57:56.257Z",
+      "detectedAt": "2026-11-06T12:27:39.655Z",
       "kind": "new_failure"
     },
     {
@@ -272,7 +47,7 @@
       "winningContractor": "株式会社 礎建築事務所",
       "link": "https://www.town.miyake.lg.jp/soshiki/1/9376.html",
       "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5773.pdf",
-      "detectedAt": "2026-11-06T11:57:56.257Z",
+      "detectedAt": "2026-11-06T12:27:39.655Z",
       "kind": "new_winner"
     },
     {
@@ -284,7 +59,7 @@
       "status": "落札",
       "winningContractor": "中尾・中和特定建設工事共同企業体",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=06200640072006A0",
-      "detectedAt": "2026-11-06T11:57:56.257Z",
+      "detectedAt": "2026-11-06T12:27:39.655Z",
       "kind": "new_winner"
     },
     {
@@ -296,7 +71,7 @@
       "status": "不調",
       "cancelled": true,
       "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260223&gamenMode=0",
-      "detectedAt": "2026-11-06T11:57:56.257Z",
+      "detectedAt": "2026-11-06T12:27:39.655Z",
       "kind": "new_failure"
     },
     {
@@ -308,7 +83,7 @@
       "status": "落札",
       "winningContractor": "マツダ塗装株式会社",
       "link": "https://www.city.yamatokoriyama.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsunooshirase/R8/18176.html",
-      "detectedAt": "2026-11-06T11:57:56.257Z",
+      "detectedAt": "2026-11-06T12:27:39.655Z",
       "kind": "new_winner"
     },
     {
@@ -320,7 +95,7 @@
       "status": "落札",
       "winningContractor": "（株）北脇組",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200700",
-      "detectedAt": "2026-11-06T11:57:56.257Z",
+      "detectedAt": "2026-11-06T12:27:39.655Z",
       "kind": "new_winner"
     },
     {
@@ -332,7 +107,7 @@
       "status": "落札",
       "winningContractor": "株式会社アーバンパイオニア設計",
       "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-      "detectedAt": "2026-11-06T11:57:56.257Z",
+      "detectedAt": "2026-11-06T12:27:39.655Z",
       "kind": "new_winner"
     },
     {
@@ -344,7 +119,7 @@
       "status": "落札",
       "winningContractor": "株式会社イシハラ工務店",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-      "detectedAt": "2026-11-06T11:57:56.257Z",
+      "detectedAt": "2026-11-06T12:27:39.655Z",
       "kind": "new_winner"
     },
     {
@@ -357,7 +132,7 @@
       "winningContractor": "G.Sスポーツ 辻川 祐介",
       "link": "https://www.city.gojo.lg.jp/jigyousha/nyuusatsu/8/R8/19914.html",
       "pdfUrl": "https://www.city.gojo.lg.jp/material/files/group/40/ototaiyuka_ns_dc01.pdf",
-      "detectedAt": "2026-11-06T11:57:56.257Z",
+      "detectedAt": "2026-11-06T12:27:39.655Z",
       "kind": "new_winner"
     },
     {
@@ -368,7 +143,7 @@
       "biddingDate": "2026-10-19",
       "status": "不調",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-      "detectedAt": "2026-11-06T11:57:56.257Z",
+      "detectedAt": "2026-11-06T12:27:39.655Z",
       "kind": "new_failure"
     }
   ]
