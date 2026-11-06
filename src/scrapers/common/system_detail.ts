@@ -92,6 +92,9 @@ const READ_PAIRS_SCRIPT = `(() => {
     return pairs;
 })()`;
 
+/** 公開が終わった案件は枠だけの画面が返る。読むものが無いと記録し、開き直さない */
+const NOT_PUBLIC_SCRIPT = `document.body.innerText.includes('公開中の案件情報がありません')`;
+
 async function readDetailPairs(surface: Page | Frame): Promise<DetailPair[]> {
     return surface.evaluate<DetailPair[]>(READ_PAIRS_SCRIPT);
 }
@@ -178,10 +181,13 @@ export async function readSystemBriefs(
         try {
             await surface.goto(url, { waitUntil: 'domcontentloaded', timeout: 15000 });
             await surface.waitForTimeout(800);
-            const brief = briefFromDetailPairs(item.title, await readDetailPairs(surface), new Date().toISOString());
+            const checkedAt = new Date().toISOString();
+            const brief = briefFromDetailPairs(item.title, await readDetailPairs(surface), checkedAt);
             if (brief) {
                 item.brief = brief;
                 read += 1;
+            } else if (await surface.evaluate<boolean>(NOT_PUBLIC_SCRIPT)) {
+                item.brief = { checkedAt, found: false };
             }
         } catch (error) {
             console.warn(`[案件詳細] ${item.id}: ${error instanceof Error ? error.message.split('\n')[0] : String(error)}`);

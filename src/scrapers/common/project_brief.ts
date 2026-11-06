@@ -6,7 +6,7 @@ import type { BiddingItem, ProjectBriefRecord } from '../../types/bidding';
  */
 
 /** 1回の実行で読む件数。AIの呼び出し回数と実行時間の上限になる */
-export const BRIEF_BATCH_SIZE = 40;
+export const BRIEF_BATCH_SIZE = 120;
 /** 受付中で読めなかった案件を読み直すまでの日数。公告ページが後から更新されることがある */
 export const BRIEF_RECHECK_DAYS = 7;
 
