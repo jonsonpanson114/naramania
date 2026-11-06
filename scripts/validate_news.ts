@@ -93,4 +93,15 @@ const article = (link: string, patch: Partial<NewsItem> = {}): NewsItem => ({
     assert.equal(merged.find(item => item.link.endsWith('nodate'))?.date, '2026-11-05');
 }
 
-console.log('ニュース検証: 5 scenarios passed (RSS解析・奈良新聞解析・絞り込み・蓄積・重複除去)');
+// 6) RSSの本文に残った文字コードは、保存済みの記事も含めて文字へ戻す
+{
+    const merged = mergeNewsItems(
+        [article('stored', { excerpt: '技術提案書を２５日まで、 [&#8230;]' })],
+        [article('incoming', { excerpt: '開札した。&#8230;' })],
+        now,
+    );
+    assert.equal(merged.find(item => item.id === 'stored')?.excerpt, '技術提案書を２５日まで、…');
+    assert.equal(merged.find(item => item.id === 'incoming')?.excerpt, '開札した。…');
+}
+
+console.log('ニュース検証: 6 scenarios passed (RSS解析・奈良新聞解析・絞り込み・蓄積・重複除去・文字コード)');

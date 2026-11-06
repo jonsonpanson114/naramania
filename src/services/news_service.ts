@@ -105,6 +105,13 @@ function parseFlexibleDate(text: string): string {
     return '';
 }
 
+/** RSSの本文に残る &#8230; を文字へ戻し、末尾の「[…]」を省略記号だけにする */
+function cleanExcerpt(text?: string): string | undefined {
+    return text
+        ?.replace(/&#(\d+);/g, (_, code: string) => String.fromCodePoint(Number(code)))
+        .replace(/\s*\[…\]\s*$/, '…');
+}
+
 function stripHtml(html: string): string {
     return html
         .replace(/<[^>]+>/g, '')
@@ -549,12 +556,12 @@ function normalizedHeadline(title: string): string {
  * 貯めていかないと過去の記事がすぐ読めなくなる。
  */
 export function mergeNewsItems(existing: NewsItem[], incoming: NewsItem[], now: Date = new Date()): NewsItem[] {
-    const byLink = new Map(existing.map(item => [item.link, item]));
+    const byLink = new Map(existing.map(item => [item.link, { ...item, excerpt: cleanExcerpt(item.excerpt) }]));
     const today = toJstDateKey(now);
     for (const item of incoming) {
         const previous = byLink.get(item.link);
         // 日付が取れない記事は、最初に見つけた日を載せる(末尾に沈むと読まれない)
-        byLink.set(item.link, { ...item, date: item.date || previous?.date || today });
+        byLink.set(item.link, { ...item, excerpt: cleanExcerpt(item.excerpt), date: item.date || previous?.date || today });
     }
 
     const oldest = addDaysJstDateKey(-NEWS_RETENTION_DAYS, now);
