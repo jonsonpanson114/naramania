@@ -7156,6 +7156,10 @@
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29004060025020260077&gamenMode=0",
     "status": "受付終了",
     "winnerType": "設計事務所",
+    "brief": {
+      "checkedAt": "2026-11-06T22:32:32.128Z",
+      "found": false
+    },
     "isRelevant": true
   },
   {
@@ -9803,6 +9807,10 @@
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013401020260007&gamenMode=0",
     "status": "受付終了",
     "winnerType": "ゼネコン",
+    "brief": {
+      "checkedAt": "2026-11-06T22:32:33.219Z",
+      "found": false
+    },
     "isRelevant": true
   },
   {
@@ -16924,6 +16932,10 @@
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29005007060120260018&gamenMode=0",
     "status": "受付終了",
     "winnerType": "設計事務所",
+    "brief": {
+      "checkedAt": "2026-11-06T22:32:34.306Z",
+      "found": false
+    },
     "isRelevant": true
   },
   {
@@ -17736,6 +17748,10 @@
     "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29005007060120260015&gamenMode=0",
     "status": "受付終了",
     "winnerType": "設計事務所",
+    "brief": {
+      "checkedAt": "2026-11-06T22:32:35.422Z",
+      "found": false
+    },
     "isRelevant": true
   },
   {
@@ -18544,12 +18560,6 @@
     "status": "落札",
     "winningContractor": "有限会社優建築工房",
     "winnerType": "設計事務所",
-    "brief": {
-      "checkedAt": "2026-11-06T13:01:04.054Z",
-      "found": true,
-      "price": "¥12,670,000(税抜)",
-      "qualification": "一般競争入札(参加申請なし) / 建築設計"
-    },
     "isRelevant": true
   },
   {
@@ -19245,14 +19255,6 @@
     "status": "落札",
     "winningContractor": "株式会社緑景",
     "winnerType": "設計事務所",
-    "brief": {
-      "checkedAt": "2026-11-06T13:01:05.226Z",
-      "found": true,
-      "location": "北葛城郡広陵町大野",
-      "period": "令和09年01月29日",
-      "price": "¥7,960,000(税抜)",
-      "qualification": "一般競争入札(参加申請なし) / 建設コンサルタント"
-    },
     "isRelevant": true
   },
   {
@@ -19266,14 +19268,6 @@
     "status": "落札",
     "winningContractor": "三井共同建設コンサルタント株式会社",
     "winnerType": "設計事務所",
-    "brief": {
-      "checkedAt": "2026-11-06T13:01:06.346Z",
-      "found": true,
-      "location": "北葛城郡広陵町寺戸",
-      "period": "令和09年01月29日",
-      "price": "¥11,460,000(税抜)",
-      "qualification": "一般競争入札(参加申請なし) / 建設コンサルタント"
-    },
     "isRelevant": true
   },
   {
@@ -19287,14 +19281,6 @@
     "status": "落札",
     "winningContractor": "三井共同建設コンサルタント株式会社",
     "winnerType": "設計事務所",
-    "brief": {
-      "checkedAt": "2026-11-06T13:01:07.480Z",
-      "found": true,
-      "location": "北葛城郡広陵町三吉",
-      "period": "令和09年01月29日",
-      "price": "¥7,430,000(税抜)",
-      "qualification": "一般競争入札(参加申請なし) / 建設コンサルタント"
-    },
     "isRelevant": true
   },
   {
@@ -19308,14 +19294,6 @@
     "status": "落札",
     "winningContractor": "株式会社スペースビジョン研究所",
     "winnerType": "設計事務所",
-    "brief": {
-      "checkedAt": "2026-11-06T13:01:08.630Z",
-      "found": true,
-      "location": "北葛城郡河合町佐味田",
-      "period": "令和09年01月29日",
-      "price": "¥6,320,000(税抜)",
-      "qualification": "一般競争入札(参加申請なし) / 建設コンサルタント"
-    },
     "isRelevant": true
   },
   {
@@ -19511,13 +19489,6 @@
     "status": "落札",
     "winningContractor": "株式会社北和設計",
     "winnerType": "設計事務所",
-    "brief": {
-      "checkedAt": "2026-11-06T13:01:09.774Z",
-      "found": true,
-      "period": "令和8年7月8日 から 令和9年1月8日 まで",
-      "price": "¥16,350,000(税抜)",
-      "qualification": "一般競争入札(参加申請なし) / 建築設計"
-    },
     "isRelevant": true
   },
   {
@@ -19531,13 +19502,6 @@
     "status": "落札",
     "winningContractor": "株式会社桝谷設計",
     "winnerType": "設計事務所",
-    "brief": {
-      "checkedAt": "2026-11-06T13:01:10.881Z",
-      "found": true,
-      "period": "令和8年7月7日 から 令和9年3月8日 まで",
-      "price": "¥18,010,000(税抜)",
-      "qualification": "一般競争入札(参加申請なし) / 建築設計"
-    },
     "isRelevant": true
   },
   {
@@ -20210,12 +20174,6 @@
     "status": "落札",
     "winningContractor": "ニッタ建築事務所",
     "winnerType": "設計事務所",
-    "brief": {
-      "checkedAt": "2026-11-06T13:01:13.052Z",
-      "found": true,
-      "price": "¥5,490,000(税抜)",
-      "qualification": "一般競争入札(参加申請なし) / 建築設計"
-    },
     "isRelevant": true
   },
   {
@@ -20229,13 +20187,6 @@
     "status": "落札",
     "winningContractor": "株式会社中和コンストラクション",
     "winnerType": "ゼネコン",
-    "brief": {
-      "checkedAt": "2026-11-06T13:01:14.173Z",
-      "found": true,
-      "period": "令和8年7月7日 から 令和9年3月12日 まで",
-      "price": "¥114,300,000(税抜)",
-      "qualification": "一般競争入札[参加申請型](総合評価)"
-    },
     "isRelevant": true
   },
   {
@@ -20248,6 +20199,10 @@
     "status": "受付終了",
     "winnerType": "設計事務所",
     "municipality": "奈良県",
+    "brief": {
+      "checkedAt": "2026-11-06T22:32:36.510Z",
+      "found": false
+    },
     "isRelevant": true
   },
   {
@@ -20427,13 +20382,6 @@
     "status": "落札",
     "winningContractor": "株式会社桝谷設計",
     "winnerType": "設計事務所",
-    "brief": {
-      "checkedAt": "2026-11-06T13:01:16.399Z",
-      "found": true,
-      "period": "令和8年7月6日 から 令和9年7月30日 まで",
-      "price": "¥9,540,000(税抜)",
-      "qualification": "一般競争入札(参加申請なし) / 建築設計"
-    },
     "isRelevant": true
   },
   {
@@ -20467,13 +20415,6 @@
     "status": "落札",
     "winningContractor": "株式会社タケガミ電気水道",
     "winnerType": "ゼネコン",
-    "brief": {
-      "checkedAt": "2026-11-06T13:01:17.569Z",
-      "found": true,
-      "period": "令和8年7月6日 から 令和8年12月28日 まで",
-      "price": "¥48,350,000(税抜)",
-      "qualification": "一般競争入札(参加申請なし)"
-    },
     "isRelevant": true
   },
   {
@@ -20786,13 +20727,6 @@
     "status": "落札",
     "winningContractor": "株式会社尾川建築設計事務所",
     "winnerType": "設計事務所",
-    "brief": {
-      "checkedAt": "2026-11-06T13:01:19.893Z",
-      "found": true,
-      "period": "令和8年7月3日 から 令和9年8月20日 まで",
-      "price": "¥13,440,000(税抜)",
-      "qualification": "一般競争入札(参加申請なし) / 建築設計"
-    },
     "isRelevant": true
   },
   {
@@ -20806,13 +20740,6 @@
     "status": "落札",
     "winningContractor": "米杉・谷特定建設工事共同企業体",
     "winnerType": "ゼネコン",
-    "brief": {
-      "checkedAt": "2026-11-06T13:01:21.022Z",
-      "found": true,
-      "period": "令和8年7月3日 から 令和9年7月2日 まで",
-      "price": "¥360,190,000(税抜)",
-      "qualification": "一般競争入札[参加申請型](総合評価)"
-    },
     "isRelevant": true
   },
   {
@@ -20953,13 +20880,6 @@
     "status": "落札",
     "winningContractor": "松塚建設株式会社",
     "winnerType": "ゼネコン",
-    "brief": {
-      "checkedAt": "2026-11-06T13:01:24.630Z",
-      "found": true,
-      "period": "令和8年7月6日 から 令和9年7月30日 まで",
-      "price": "¥198,770,000(税抜)",
-      "qualification": "一般競争入札[参加申請型](総合評価)"
-    },
     "isRelevant": true
   },
   {
@@ -21037,13 +20957,6 @@
     "status": "落札",
     "winningContractor": "株式会社クラハラ",
     "winnerType": "ゼネコン",
-    "brief": {
-      "checkedAt": "2026-11-06T13:01:25.933Z",
-      "found": true,
-      "period": "令和8年7月3日 から 令和9年8月20日 まで",
-      "price": "¥250,380,000(税抜)",
-      "qualification": "一般競争入札[参加申請型](総合評価)"
-    },
     "isRelevant": true
   },
   {
@@ -21057,13 +20970,6 @@
     "status": "落札",
     "winningContractor": "株式会社中尾組",
     "winnerType": "ゼネコン",
-    "brief": {
-      "checkedAt": "2026-11-06T13:01:27.174Z",
-      "found": true,
-      "period": "令和8年7月3日 から 令和9年7月30日 まで",
-      "price": "¥290,970,000(税抜)",
-      "qualification": "一般競争入札[参加申請型](総合評価)"
-    },
     "isRelevant": true
   },
   {
@@ -23117,12 +23023,6 @@
     "status": "落札",
     "winningContractor": "エム・アイ・エー・アーキテクツ有限会社",
     "winnerType": "設計事務所",
-    "brief": {
-      "checkedAt": "2026-11-06T13:01:30.717Z",
-      "found": true,
-      "price": "¥8,000,000(税抜)",
-      "qualification": "一般競争入札(参加申請なし) / 建築設計"
-    },
     "isRelevant": true
   },
   {
@@ -23136,12 +23036,6 @@
     "status": "落札",
     "winningContractor": "エム・アイ・エー・アーキテクツ有限会社",
     "winnerType": "設計事務所",
-    "brief": {
-      "checkedAt": "2026-11-06T13:01:31.916Z",
-      "found": true,
-      "price": "¥10,660,000(税抜)",
-      "qualification": "一般競争入札(参加申請なし) / 建築設計"
-    },
     "isRelevant": true
   },
   {
@@ -25215,12 +25109,6 @@
     "status": "落札",
     "winningContractor": "株式会社潮技術コンサルタント",
     "winnerType": "設計事務所",
-    "brief": {
-      "checkedAt": "2026-11-06T13:01:33.202Z",
-      "found": true,
-      "price": "¥75,750,000(税抜)",
-      "qualification": "一般競争入札[参加申請型](総合評価) / 建設コンサルタント"
-    },
     "isRelevant": true
   },
   {
@@ -25234,12 +25122,6 @@
     "status": "落札",
     "winningContractor": "株式会社潮技術コンサルタント",
     "winnerType": "設計事務所",
-    "brief": {
-      "checkedAt": "2026-11-06T13:01:34.408Z",
-      "found": true,
-      "price": "¥33,080,000(税抜)",
-      "qualification": "一般競争入札[参加申請型](総合評価) / 建設コンサルタント"
-    },
     "isRelevant": true
   },
   {
