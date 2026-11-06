@@ -42,6 +42,13 @@ Set-Location C:\Users\jonso\.gemini\antigravity\playground\azimuthal-pioneer\nar
 このノートパソコンでは、Windows のスタートアップに登録した `NaramaniaNaraRunner` がログオン時に `run.cmd` を起動する。
 22:00 の実行時に、ログオン済みで、パソコンが起動中・ネット接続中・スリープしていないことが必要。
 
+PCをつけたまま runner だけが落ちたときは、タスク `NaramaniaNaraRunnerWatchdog` が15分ごとに確認して起動し直す。
+起動した記録は `%LOCALAPPDATA%\naramania-runner-watchdog.log` に残る。登録は次のコマンドで行う。
+
+```powershell
+.\scripts\ensure_nara_runner.ps1 -Register
+```
+
 Windows サービスとして常駐させる場合は、GitHub Docs の Windows runner service 手順に従う。
 
 参考:
