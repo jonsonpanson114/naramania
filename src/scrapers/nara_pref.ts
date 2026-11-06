@@ -7,8 +7,8 @@ import { loadBriefedIds, readSystemBriefs } from './common/system_detail';
 
 const PPI_SEARCH_URL = 'https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPJ0050_0010/';
 const PPI_DETAIL_BASE = 'https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/';
-/** 県のrunnerは動く日が限られるので、1回で多めに読む */
-const NARA_PREF_BRIEF_LIMIT = 40;
+/** 1件1秒ほどで読める。未読の案件だけを開くので、全件が1回で終わる数にしておく */
+const NARA_PREF_BRIEF_LIMIT = 150;
 const RESULT_PATH = path.join(process.cwd(), 'scraper_result.json');
 
 const KOJI_GYOSHU_SKIP = [

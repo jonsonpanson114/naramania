@@ -14,8 +14,8 @@ import { sanitizeProjectBrief } from './project_brief';
  * 収集の処理の中から呼ぶ。
  */
 
-/** 1回の検索で開く詳細ページの上限。読み終えた案件は開かないので、数日で全件に届く */
-export const SYSTEM_DETAIL_LIMIT = 12;
+/** 1回の検索で開く詳細ページの上限。1件1秒ほどで、読み終えた案件は開かない */
+export const SYSTEM_DETAIL_LIMIT = 40;
 
 export type DetailPair = [label: string, value: string];
 export type DetailTarget = { item: BiddingItem; url: string };
