@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-11-06T12:27:39.668Z",
+  "generatedAt": "2026-11-06T13:01:34.584Z",
   "totalRejected": 583,
-  "totalBorderlineRescued": 54,
+  "totalBorderlineRescued": 52,
   "byMunicipality": {
     "奈良県": {
       "rejected": 583,
-      "borderlineRescued": 54
+      "borderlineRescued": 52
     }
   },
   "entries": [
@@ -5346,16 +5346,6 @@
     },
     {
       "municipality": "奈良県",
-      "title": "果樹・薬草研究所本館、加工展示施設及び農機用舎屋根・外壁改修工事設計業務 委（設）第８－１３号",
-      "reason": "always_exclude_keyword",
-      "matchedKeywords": [
-        "外壁",
-        "外壁改修"
-      ],
-      "borderlineRescue": true
-    },
-    {
-      "municipality": "奈良県",
       "title": "奈良東養護学校（管理普通特別教室棟（５１），普通特別教室棟（５２））外壁・内装改修工事、奈良北高校屋内運動場（６）等屋根・外壁改修工事及び明日香養護学校教室棟（3，１０）屋上防水改修工事設計業務 委（設）第８－１８号",
       "reason": "always_exclude_keyword",
       "matchedKeywords": [
@@ -5406,16 +5396,6 @@
       "matchedKeywords": [
         "外壁",
         "外壁等"
-      ],
-      "borderlineRescue": true
-    },
-    {
-      "municipality": "奈良県",
-      "title": "洞川エコミュージアムセンター本館及び屋外トイレ等屋根・外壁改修工事設計業務（自然環境整備交付金） 委（設）第８－６号",
-      "reason": "always_exclude_keyword",
-      "matchedKeywords": [
-        "外壁",
-        "外壁改修"
       ],
       "borderlineRescue": true
     },
