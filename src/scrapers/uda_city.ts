@@ -2,6 +2,7 @@ import { chromium } from 'playwright';
 import type { Frame, Page } from 'playwright';
 import crypto from 'crypto';
 import { BiddingItem, BiddingType, Scraper } from '../types/bidding';
+import { addEpiDetailTarget, readEpiBriefs, type DetailTarget } from './common/system_detail';
 
 const EPI_CLOUD_FORM = 'https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200700';
 const EPI_BASE = 'https://www.epi-cloud.fwd.ne.jp';
@@ -81,7 +82,7 @@ async function submitIssueSearch(frame: Frame, nendo: string) {
     await frame.locator('input[type="button"][value="検索"]').first().click({ force: true, timeout: 30000 });
 }
 
-async function extractIssueResults(frame: Frame): Promise<BiddingItem[]> {
+async function extractIssueResults(frame: Frame, detailTargets: DetailTarget[]): Promise<BiddingItem[]> {
     const items: BiddingItem[] = [];
     const rows = await frame.locator('table tr').all().catch(() => []);
 
@@ -108,7 +109,7 @@ async function extractIssueResults(frame: Frame): Promise<BiddingItem[]> {
         const biddingDate = dates[1] || undefined;
         if (!announcementDate) continue;
 
-        items.push({
+        const item: BiddingItem = {
             id: `uda-${crypto.createHash('md5').update(`${title}|${fullLink}|${announcementDate}`).digest('hex').slice(0, 10)}`,
             municipality: '宇陀市',
             title,
@@ -117,7 +118,9 @@ async function extractIssueResults(frame: Frame): Promise<BiddingItem[]> {
             biddingDate,
             link: fullLink,
             status: '受付中',
-        });
+        };
+        items.push(item);
+        addEpiDetailTarget(detailTargets, item, href);
     }
 
     return items;
@@ -179,6 +182,7 @@ async function scrapeCategory(page: Page, categoryLabel: string): Promise<Biddin
     await page.waitForTimeout(3000);
 
     const results: BiddingItem[] = [];
+    const detailTargets: DetailTarget[] = [];
     const issueFrame = await clickRightMenu(page, '発注情報の検索');
     if (!issueFrame) {
         console.warn(`[宇陀市] ${categoryLabel}: 発注情報の検索メニューが見つかりません。`);
@@ -194,7 +198,7 @@ async function scrapeCategory(page: Page, categoryLabel: string): Promise<Biddin
             await page.waitForTimeout(2500);
             let dataFrame = await getDataFrame(page);
             while (dataFrame) {
-                const items = await extractIssueResults(dataFrame);
+                const items = await extractIssueResults(dataFrame, detailTargets);
                 results.push(...items);
 
                 const nextLink = dataFrame.locator('a').filter({ hasText: '次へ' }).first();
@@ -209,6 +213,7 @@ async function scrapeCategory(page: Page, categoryLabel: string): Promise<Biddin
         }
     }
 
+    await readEpiBriefs(page, detailTargets);
     return results;
 }
 

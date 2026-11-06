@@ -119,6 +119,27 @@ export function efftisDetailUrl(base: string, screenId: string, onclick?: string
     return `${base}/${screen}!kenmeiLink?organizationNumber=${args[1]}&nendo=${args[2]}&keiyakuNo=${args[3]}`;
 }
 
+/** EPIの件名リンク javascript:doEdit('番号') から詳細のURLを作る。パスワードが要る案件(doEditPwd)は読まない */
+export function epiDetailUrl(href?: string | null): string | undefined {
+    const controlNo = href?.match(/doEdit\('([^']+)'\)/)?.[1];
+    return controlNo
+        ? `https://www.epi-cloud.fwd.ne.jp/koukai/do/KK302ShowAction?control_no=${controlNo}`
+        : undefined;
+}
+
+/** 一覧の1行を、詳細を読む対象に加える */
+export function addEpiDetailTarget(targets: DetailTarget[], item: BiddingItem, href?: string | null): void {
+    const url = epiDetailUrl(href);
+    if (url) targets.push({ item, url });
+}
+
+/** EPIの詳細は業務区分を開いたセッションの右フレームでしか読めない */
+export async function readEpiBriefs(page: Page, targets: DetailTarget[], deadline?: number): Promise<number> {
+    const frame = page.frames().find(candidate => candidate.name() === 'frmRIGHT');
+    if (!frame || targets.length === 0) return 0;
+    return readSystemBriefs(frame, targets, { briefedIds: loadBriefedIds(), deadline });
+}
+
 /** 新しい案件から詳細を開き、読めたものを item.brief に入れる。失敗しても収集は止めない */
 export async function readSystemBriefs(
     surface: Page | Frame,

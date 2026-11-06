@@ -4,6 +4,7 @@ import crypto from 'crypto';
 import { chromium } from 'playwright';
 import type { Frame, Page } from 'playwright';
 import { BiddingItem, Scraper, BiddingType } from '../types/bidding';
+import { addEpiDetailTarget, readEpiBriefs, type DetailTarget } from './common/system_detail';
 
 const SANGO_INDEX = 'https://www.town.sango.nara.jp/soshiki/list8-1.html';
 const SANGO_CONTRACT = 'https://www.town.sango.nara.jp/soshiki/4/13385.html';
@@ -107,7 +108,7 @@ async function submitIssueSearch(frame: Frame, nendo: string) {
     await frame.locator('input[type="button"][value="検索"]').first().click({ force: true, timeout: 30000 });
 }
 
-async function extractIssueResults(frame: Frame): Promise<BiddingItem[]> {
+async function extractIssueResults(frame: Frame, detailTargets: DetailTarget[]): Promise<BiddingItem[]> {
     const items: BiddingItem[] = [];
     const rows = await frame.locator('table tr').all().catch(() => []);
 
@@ -134,7 +135,7 @@ async function extractIssueResults(frame: Frame): Promise<BiddingItem[]> {
         const biddingDate = dates[1] || undefined;
         if (!announcementDate) continue;
 
-        items.push({
+        const item: BiddingItem = {
             id: `sango-epi-${Buffer.from(`${title}|${fullLink}|${announcementDate}`).toString('base64').slice(0, 12)}`,
             municipality: '三郷町',
             title,
@@ -143,7 +144,9 @@ async function extractIssueResults(frame: Frame): Promise<BiddingItem[]> {
             biddingDate,
             link: fullLink,
             status: '受付中',
-        });
+        };
+        items.push(item);
+        addEpiDetailTarget(detailTargets, item, href);
     }
 
     return items;
@@ -202,6 +205,7 @@ async function scrapeEpiCategory(page: Page, categoryLabel: string): Promise<Bid
     await page.waitForTimeout(3000);
 
     const results: BiddingItem[] = [];
+    const detailTargets: DetailTarget[] = [];
     const issueFrame = await clickRightMenu(page, '発注情報の検索');
     if (!issueFrame) return results;
 
@@ -213,7 +217,7 @@ async function scrapeEpiCategory(page: Page, categoryLabel: string): Promise<Bid
         await page.waitForTimeout(2500);
         let dataFrame = await getDataFrame(page);
         while (dataFrame) {
-            const items = await extractIssueResults(dataFrame);
+            const items = await extractIssueResults(dataFrame, detailTargets);
             results.push(...items);
 
             const nextLink = dataFrame.locator('a').filter({ hasText: '次へ' }).first();
@@ -225,6 +229,7 @@ async function scrapeEpiCategory(page: Page, categoryLabel: string): Promise<Bid
         }
     }
 
+    await readEpiBriefs(page, detailTargets);
     return results;
 }
 

@@ -4,7 +4,7 @@ import type { Browser, Frame, Page } from 'playwright';
 import type { BiddingItem, BiddingType, Municipality } from '../../types/bidding';
 import { classifyWinner } from './filter';
 import { getFiscalYearStart } from './fiscal_year';
-import { loadBriefedIds, readSystemBriefs } from './system_detail';
+import { addEpiDetailTarget, readEpiBriefs, type DetailTarget } from './system_detail';
 
 /**
  * 入札情報公開サービス(EPI Cloud / epi-cloud.fwd.ne.jp)の共通スクレイパー。
@@ -208,7 +208,7 @@ async function extractAnnouncementRows(
     frame: Frame,
     options: EpiScrapeOptions,
     fallbackLink: string,
-    controlNos: Map<string, string>,
+    detailTargets: DetailTarget[],
 ): Promise<BiddingItem[]> {
     const items: BiddingItem[] = [];
     const rows = await frame.locator('table tr').all().catch(() => []);
@@ -232,13 +232,8 @@ async function extractAnnouncementRows(
         const announcementDate = dates[0] || '';
         if (!announcementDate) continue;
 
-        const id = hashId(`${options.idPrefix}-epi`, `${title}|${fullLink}|${announcementDate}`);
-        // パスワードが要る案件は doEditPwd になるので読まない
-        const controlNo = href?.match(/doEdit\('([^']+)'\)/)?.[1];
-        if (controlNo) controlNos.set(id, controlNo);
-
-        items.push({
-            id,
+        const item: BiddingItem = {
+            id: hashId(`${options.idPrefix}-epi`, `${title}|${fullLink}|${announcementDate}`),
             municipality: options.municipality,
             title,
             type: classifyEpiType(title, gyoshu),
@@ -246,7 +241,9 @@ async function extractAnnouncementRows(
             biddingDate: dates[1],
             link: fullLink,
             status: '受付中',
-        });
+        };
+        items.push(item);
+        addEpiDetailTarget(detailTargets, item, href);
     }
 
     return items;
@@ -348,8 +345,7 @@ async function scrapeWithBrowser(options: EpiScrapeOptions, browser: Browser): P
     const entryUrls = normalizeEntryUrls(options.entryUrls);
     const fallbackLink = entryUrls[0];
 
-    const briefedIds = loadBriefedIds();
-    const controlNos = new Map<string, string>();
+    let detailTargets: DetailTarget[] = [];
     let detailSpentMs = 0;
 
     const page = await browser.newPage();
@@ -377,7 +373,7 @@ async function scrapeWithBrowser(options: EpiScrapeOptions, browser: Browser): P
     if (includeAnnouncements) {
         menus.push({
             label: '発注情報の検索',
-            extract: frame => extractAnnouncementRows(frame, options, fallbackLink, controlNos),
+            extract: frame => extractAnnouncementRows(frame, options, fallbackLink, detailTargets),
         });
     }
     if (includeResults) {
@@ -423,20 +419,15 @@ async function scrapeWithBrowser(options: EpiScrapeOptions, browser: Browser): P
             }
 
             // 詳細は開いた業務区分のセッションの中でしか読めない
-            const rightFrame = await getRightFrame(page);
-            if (rightFrame && controlNos.size > 0) {
-                const startedAt = Date.now();
-                const targets = Array.from(controlNos, ([id, controlNo]) => ({
-                    item: itemsById.get(id),
-                    url: `${EPI_BASE}/koukai/do/KK302ShowAction?control_no=${controlNo}`,
-                })).filter((target): target is { item: BiddingItem; url: string } => Boolean(target.item));
-                await readSystemBriefs(rightFrame, targets, {
-                    briefedIds,
-                    deadline: startedAt + EPI_DETAIL_BUDGET_MS - detailSpentMs,
-                });
-                detailSpentMs += Date.now() - startedAt;
-            }
-            controlNos.clear();
+            // 一覧に同じ案件が2度出ると、残っている方の item に書かないと結果に載らない
+            const startedAt = Date.now();
+            await readEpiBriefs(
+                page,
+                detailTargets.map(target => ({ ...target, item: itemsById.get(target.item.id) || target.item })),
+                startedAt + EPI_DETAIL_BUDGET_MS - detailSpentMs,
+            );
+            detailSpentMs += Date.now() - startedAt;
+            detailTargets = [];
         }
     }
 

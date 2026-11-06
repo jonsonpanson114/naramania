@@ -6,7 +6,7 @@ import {
 } from '../src/scrapers/common/item_carryover';
 import { sanitizeProjectBrief, selectBriefTargets } from '../src/scrapers/common/project_brief';
 import { shouldKeepBiddingItem } from '../src/scrapers/common/filter';
-import { briefFromDetailPairs, efftisDetailUrl } from '../src/scrapers/common/system_detail';
+import { briefFromDetailPairs, efftisDetailUrl, epiDetailUrl } from '../src/scrapers/common/system_detail';
 import type { BiddingItem } from '../src/types/bidding';
 
 // 案件の中身の読み取りと、再収集での引き継ぎ、受付中の補正を検証する。
@@ -141,6 +141,11 @@ const item = (id: string, patch: Partial<BiddingItem> = {}): BiddingItem => ({
         'https://nara.efftis.jp/PPI/Public/PPUBC00500!kenmeiLink?organizationNumber=0201&nendo=2026&keiyakuNo=0000002706',
     );
     assert.equal(efftisDetailUrl('https://x', 'PPUBC00400', null), undefined);
+    assert.equal(
+        epiDetailUrl("javascript:doEdit('011792050100r8-g10-01');"),
+        'https://www.epi-cloud.fwd.ne.jp/koukai/do/KK302ShowAction?control_no=011792050100r8-g10-01',
+    );
+    assert.equal(epiDetailUrl("javascript:doEditPwd('0117','案件','1');"), undefined, 'パスワードが要る案件は開かない');
 }
 
 console.log('案件概要の検証: 6 scenarios passed (引き継ぎ・受付中の補正・読む順番・答えの検証・フィルタへの非影響・電子入札の詳細)');
