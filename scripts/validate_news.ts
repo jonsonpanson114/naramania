@@ -8,6 +8,7 @@ import {
     parseNaraNpTagPage,
     type NewsItem,
 } from '../src/services/news_service';
+import { groupNewsByTopic } from '../src/lib/news_topics';
 
 // ニュース収集の解析・絞り込み・蓄積を、外部サイトへ触らずに検証する。
 
@@ -104,4 +105,22 @@ const article = (link: string, patch: Partial<NewsItem> = {}): NewsItem => ({
     assert.equal(merged.find(item => item.id === 'incoming')?.excerpt, '開札した。…');
 }
 
-console.log('ニュース検証: 6 scenarios passed (RSS解析・奈良新聞解析・絞り込み・蓄積・重複除去・文字コード)');
+// 7) 同じ話題はまとめ、定型句だけが同じ別案件はまとめない(見出しは実データ)
+{
+    const titles = [
+        '大和ハウスなど6社／奈良県中央卸売市場の再整備事業で基本協定、総事業費約400億円',
+        '「奈良県中央卸売市場再整備推進事業（市場エリア整備事業）」に係る基本協定を締結',
+        '「奈良県中央卸売市場再整備推進事業（市場エリア整備事業）」に係る基本協定を締結 (2026年11月6日掲載)',
+        '１１月６日まで参加受付 板屋ヶ瀬橋橋梁補修工事',
+        '広域水道Ｃ １１月６日まで参加受付 御所浄水場表洗弁・流調弁更新工事',
+        '１１月１３日まで参加受付 西部生涯スポーツＣトイレ改修工事',
+    ];
+    const groups = groupNewsByTopic(titles.map((title, index) => article(`topic${index}`, { title })));
+    assert.deepEqual(groups.map(group => group.length), [3, 1, 1, 1]);
+    assert.equal(groupNewsByTopic([
+        article('near', { title: titles[1], date: '2026-11-04' }),
+        article('far', { title: titles[1], date: '2026-09-01' }),
+    ]).length, 2, '日が離れた記事はまとめない');
+}
+
+console.log('ニュース検証: 7 scenarios passed (RSS解析・奈良新聞解析・絞り込み・蓄積・重複除去・文字コード・話題まとめ)');

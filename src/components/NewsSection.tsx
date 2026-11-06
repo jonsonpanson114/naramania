@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { ArrowRight, Bookmark, ChevronDown, Search, X } from 'lucide-react';
 import Link from 'next/link';
+import { groupNewsByTopic } from '@/lib/news_topics';
 import { toggleSavedNews, useSavedNews } from '@/lib/saved_news';
 import type { NewsItem } from '@/services/news_service';
 
@@ -27,7 +28,7 @@ function ordererOf(item: NewsItem): string {
 }
 
 /** 1行1記事。見出しを読み比べやすいよう、抜粋は開いたときだけ出す */
-function NewsRow({ item, saved }: { item: NewsItem; saved: boolean }) {
+function NewsRow({ item, related, saved }: { item: NewsItem; related: NewsItem[]; saved: boolean }) {
     const [open, setOpen] = useState(false);
     const date = parseLocalDate(item.date);
     const orderer = ordererOf(item);
@@ -53,6 +54,15 @@ function NewsRow({ item, saved }: { item: NewsItem; saved: boolean }) {
                     >
                         {item.title}
                     </a>
+                    {related.length > 0 && (
+                        <button
+                            type="button"
+                            onClick={() => setOpen(value => !value)}
+                            className="ml-2 rounded bg-stone-100 px-1.5 py-0.5 text-xs font-bold text-stone-600 hover:bg-amber-100"
+                        >
+                            同じ話題 他{related.length}件
+                        </button>
+                    )}
                     <p className="mt-0.5 truncate text-xs text-stone-500 lg:hidden">
                         {[orderer, media].filter(Boolean).join(' / ')}
                     </p>
@@ -64,6 +74,18 @@ function NewsRow({ item, saved }: { item: NewsItem; saved: boolean }) {
                     {open && item.excerpt && (
                         <p className="mt-1.5 text-sm leading-6 text-stone-600">{item.excerpt}</p>
                     )}
+                    {open && related.map(other => (
+                        <a
+                            key={other.link}
+                            href={other.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="mt-1.5 block text-sm leading-6 text-stone-700 hover:text-amber-700 hover:underline"
+                        >
+                            {other.title}
+                            <span className="ml-2 text-xs text-stone-500">{other.publisher ?? other.sourceLabel}</span>
+                        </a>
+                    ))}
                 </div>
 
                 <span className="hidden truncate pt-0.5 text-xs text-stone-500 lg:block" title={media}>
@@ -74,10 +96,10 @@ function NewsRow({ item, saved }: { item: NewsItem; saved: boolean }) {
                     <button
                         type="button"
                         onClick={() => setOpen(value => !value)}
-                        disabled={!item.excerpt}
+                        disabled={!item.excerpt && related.length === 0}
                         aria-expanded={open}
-                        aria-label={open ? '抜粋を閉じる' : '抜粋を開く'}
-                        title={open ? '抜粋を閉じる' : '抜粋を開く'}
+                        aria-label={open ? '閉じる' : '抜粋を開く'}
+                        title={open ? '閉じる' : '抜粋を開く'}
                         className="flex h-7 w-7 items-center justify-center rounded text-stone-400 transition hover:bg-stone-100 hover:text-stone-700 disabled:invisible"
                     >
                         <ChevronDown size={15} className={`transition-transform ${open ? 'rotate-180' : ''}`} />
@@ -162,8 +184,10 @@ export function NewsSection({ detailed = false, pageSize = 6, showAllLink = fals
     // 絞り込みを変えたら表示件数を初期値に戻す
     const filterKey = [activeSource, trimmedKeyword, onlyResults, onlySaved].join('|');
     const visibleCount = paging.filterKey === filterKey ? paging.count : pageSize;
-    const visible = filtered.slice(0, visibleCount);
-    const remaining = filtered.length - visible.length;
+    // 保存した記事は、ほかの記事の下に隠れないよう1件ずつ出す
+    const rows = onlySaved ? filtered.map(item => [item]) : groupNewsByTopic(filtered);
+    const visible = rows.slice(0, visibleCount);
+    const remaining = rows.length - visible.length;
 
     return (
         <section className="mt-6" id="news">
@@ -235,15 +259,15 @@ export function NewsSection({ detailed = false, pageSize = 6, showAllLink = fals
 
             {!loading && visible.length > 0 && (
                 <ul className="overflow-hidden rounded-xl border border-stone-200 bg-white">
-                    {visible.map(item => (
-                        <NewsRow key={item.link} item={item} saved={savedLinks.has(item.link)} />
+                    {visible.map(([item, ...related]) => (
+                        <NewsRow key={item.link} item={item} related={related} saved={savedLinks.has(item.link)} />
                     ))}
                 </ul>
             )}
 
             {!loading && filtered.length > 0 && (
                 <div className="mt-3 flex items-center justify-between gap-3">
-                    <p className="text-xs text-stone-500">全 {filtered.length} 件中 {visible.length} 件を表示</p>
+                    <p className="text-xs text-stone-500">全 {rows.length} 件中 {visible.length} 件を表示</p>
                     {remaining > 0 && (showAllLink ? (
                         <Link href="/news" className="flex items-center gap-1 text-[13px] font-bold text-amber-700 hover:underline">
                             ニュースをすべて見る（他 {remaining} 件）
