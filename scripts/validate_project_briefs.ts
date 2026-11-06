@@ -6,7 +6,7 @@ import {
 } from '../src/scrapers/common/item_carryover';
 import { sanitizeProjectBrief, selectBriefTargets } from '../src/scrapers/common/project_brief';
 import { shouldKeepBiddingItem } from '../src/scrapers/common/filter';
-import { briefFromDetailPairs, efftisDetailUrl, epiDetailUrl } from '../src/scrapers/common/system_detail';
+import { briefFromDetailPairs, efftisDetailUrl, epiDetailUrl, pickDetailTargets } from '../src/scrapers/common/system_detail';
 import type { BiddingItem } from '../src/types/bidding';
 
 // 案件の中身の読み取りと、再収集での引き継ぎ、受付中の補正を検証する。
@@ -146,6 +146,18 @@ const item = (id: string, patch: Partial<BiddingItem> = {}): BiddingItem => ({
         'https://www.epi-cloud.fwd.ne.jp/koukai/do/KK302ShowAction?control_no=011792050100r8-g10-01',
     );
     assert.equal(epiDetailUrl("javascript:doEditPwd('0117','案件','1');"), undefined, 'パスワードが要る案件は開かない');
+
+    const target = (id: string, title: string, announcementDate: string) => ({
+        item: item(id, { title, announcementDate, status: '落札', winningContractor: '株式会社テスト' }),
+        url: 'https://x',
+    });
+    const picked = pickDetailTargets([
+        target('road', '舗装道補修工事', '2026-11-05'),
+        target('old', '市立小学校校舎改修工事', '2026-10-01'),
+        target('new', '市立中学校校舎改修工事', '2026-11-01'),
+        target('done', '市立体育館改修工事', '2026-11-04'),
+    ], new Set(['done']), 2).map(({ item: picked }) => picked.id);
+    assert.deepEqual(picked, ['new', 'old'], '掲載しない案件と読了済みは開かず、上限を使わない');
 }
 
 console.log('案件概要の検証: 6 scenarios passed (引き継ぎ・受付中の補正・読む順番・答えの検証・フィルタへの非影響・電子入札の詳細)');

@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import type { Frame, Page } from 'playwright';
 import type { BiddingItem, ProjectBriefRecord } from '../../types/bidding';
+import { shouldKeepBiddingItem } from './filter';
 import { sanitizeProjectBrief } from './project_brief';
 
 /**
@@ -140,16 +141,25 @@ export async function readEpiBriefs(page: Page, targets: DetailTarget[], deadlin
     return readSystemBriefs(frame, targets, { briefedIds: loadBriefedIds(), deadline });
 }
 
+/**
+ * 今回開く案件を選ぶ。掲載しない案件は読んでも保存されないので除く。
+ * 除かないと、読了扱いにならないまま毎回同じ案件を開き続け、上限を使い切って
+ * 掲載する案件の順番が永久に来ない(奈良市は43件開いて8件しか残らなかった)。
+ */
+export function pickDetailTargets(targets: DetailTarget[], briefedIds: Set<string>, limit = SYSTEM_DETAIL_LIMIT): DetailTarget[] {
+    return targets
+        .filter(({ item }) => !briefedIds.has(item.id) && shouldKeepBiddingItem(item))
+        .sort((a, b) => (b.item.announcementDate || '').localeCompare(a.item.announcementDate || ''))
+        .slice(0, limit);
+}
+
 /** 新しい案件から詳細を開き、読めたものを item.brief に入れる。失敗しても収集は止めない */
 export async function readSystemBriefs(
     surface: Page | Frame,
     targets: DetailTarget[],
     options: { briefedIds: Set<string>; limit?: number; deadline?: number },
 ): Promise<number> {
-    const pending = targets
-        .filter(({ item }) => !options.briefedIds.has(item.id))
-        .sort((a, b) => (b.item.announcementDate || '').localeCompare(a.item.announcementDate || ''))
-        .slice(0, options.limit ?? SYSTEM_DETAIL_LIMIT);
+    const pending = pickDetailTargets(targets, options.briefedIds, options.limit);
     let read = 0;
 
     for (const { item, url } of pending) {
