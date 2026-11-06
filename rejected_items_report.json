@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-06T08:28:30.202Z",
-  "totalRejected": 11700,
+  "generatedAt": "2026-11-06T11:57:56.269Z",
+  "totalRejected": 11706,
   "totalBorderlineRescued": 33,
   "byMunicipality": {
     "奈良市": {
@@ -28,7 +28,7 @@
       "borderlineRescued": 0
     },
     "五條市": {
-      "rejected": 1038,
+      "rejected": 1044,
       "borderlineRescued": 0
     },
     "御所市": {
@@ -46857,6 +46857,18 @@
     },
     {
       "municipality": "五條市",
+      "title": "文書溶解等処分業務委託（令和8年10月30日）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "五條市",
+      "title": "文書溶解等処分業務委託（令和8年10月30日） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "五條市",
       "title": "道路舗装工事（防災・安全交付金）",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -49487,6 +49499,18 @@
     },
     {
       "municipality": "五條市",
+      "title": "文書溶解等処分業務委託（令和8年10月30日）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "五條市",
+      "title": "文書溶解等処分業務委託（令和8年10月30日） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "五條市",
       "title": "道路舗装工事（防災・安全交付金）",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -52114,6 +52138,18 @@
       "matchedKeywords": [
         "道路"
       ]
+    },
+    {
+      "municipality": "五條市",
+      "title": "文書溶解等処分業務委託（令和8年10月30日）",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "五條市",
+      "title": "文書溶解等処分業務委託（令和8年10月30日） ",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
     },
     {
       "municipality": "五條市",
