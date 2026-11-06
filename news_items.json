@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-05T17:32:51.037Z",
+  "generatedAt": "2026-11-06T02:42:59.399Z",
   "sources": [
     {
       "id": "constnews",
@@ -40,11 +40,24 @@
     {
       "id": "googlenews",
       "label": "一般紙・Web(Googleニュース)",
-      "fetched": 43,
+      "fetched": 46,
       "kept": 2
     }
   ],
   "items": [
+    {
+      "id": "news-8f6ad99a53ff",
+      "source": "constnews",
+      "sourceLabel": "建設ニュース",
+      "title": "高田こども家庭相談センター新築等工事基本・実施設計を公告／参加申込書を１３日まで受付／奈良県",
+      "date": "2026-11-06",
+      "link": "https://www.constnews.com/?p=161242",
+      "excerpt": "奈良県は、「高田こども家庭相談センター新築等工事基本・実施設計業務」の一般競争入札を公告した。参加申込書を１３日までこども・女性局こども家庭課児童虐待対策係で持参または書留郵便によって受け付ける。技術提案書を２５日まで、 [&#8230;]",
+      "orderer": "奈良県",
+      "results": [],
+      "category": "construction",
+      "relevanceScore": 18
+    },
     {
       "id": "news-c4779eb49300",
       "source": "kensetsu",
