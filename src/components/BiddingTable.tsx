@@ -606,6 +606,11 @@ export function BiddingTable({
                     {shownItems.map(item => {
                         const supplemental = item.winningContractor || item.estimatedPrice || item.brief?.price;
                         const supplementalLabel = item.winningContractor ? '落札者' : '予定価格';
+                        // 資料から読んだ中身は一覧でも1行だけ見せる。詳しくは案件ページで読む
+                        const briefLine = item.brief?.found
+                            ? [item.brief.location && `場所：${item.brief.location}`, item.brief.summary].filter(Boolean).join('　')
+                                || (item.brief.period && !item.constructionPeriod ? `工期：${item.brief.period}` : '')
+                            : '';
                         const distance = biddingDistance(item.biddingDate);
                         const isNew = isNewItem(item.announcementDate) || Boolean(item.biddingDate && isNewItem(item.biddingDate));
                         return (
@@ -617,6 +622,9 @@ export function BiddingTable({
                                     {isNew && <span className="ml-2 inline-block text-xs font-bold text-amber-800">新着</span>}
                                     {supplemental && (
                                         <p className="mt-0.5 text-xs leading-relaxed text-secondary">{supplementalLabel}：{supplemental}</p>
+                                    )}
+                                    {briefLine && (
+                                        <p className="mt-0.5 line-clamp-1 text-xs leading-relaxed text-secondary" title={briefLine}>{briefLine}</p>
                                     )}
                                     {detailedSearch && keyword && renderSnippet(detailText(item), keyword)}
                                 </div>
