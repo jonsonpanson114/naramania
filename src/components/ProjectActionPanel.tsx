@@ -1,19 +1,19 @@
 ﻿'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { BiddingItem } from '@/types/bidding';
-import { Bookmark, Briefcase, Trash2, Award, AlertTriangle, Layers, Send, TrendingUp, type LucideIcon } from 'lucide-react';
+import { Bookmark, Trash2, Award, AlertTriangle, Layers, Send, TrendingUp, type LucideIcon } from 'lucide-react';
 import { WatchButton } from '@/components/WatchButton';
 
 type SalesStatus = 'pending' | 'active' | 'negotiating' | 'won' | 'lost';
 type SavedBiddingItem = BiddingItem & { salesStatus?: SalesStatus };
 
-const statusConfig: Record<SalesStatus, { label: string; color: string; bg: string; border: string; icon: LucideIcon }> = {
-    pending: { label: 'アプローチ前', color: 'text-slate-600', bg: 'bg-slate-50', border: 'border-slate-200', icon: Layers },
-    active: { label: '元請け営業中', color: 'text-blue-600', bg: 'bg-blue-50', border: 'border-blue-200', icon: Send },
-    negotiating: { label: '見積提示中', color: 'text-amber-600', bg: 'bg-amber-50', border: 'border-amber-200', icon: TrendingUp },
-    won: { label: '受注確定！', color: 'text-green-600', bg: 'bg-green-50', border: 'border-green-200', icon: Award },
-    lost: { label: '失注', color: 'text-red-600', bg: 'bg-red-50', border: 'border-red-200', icon: AlertTriangle }
+const statusConfig: Record<SalesStatus, { label: string; icon: LucideIcon }> = {
+    pending: { label: 'アプローチ前', icon: Layers },
+    active: { label: '元請け営業中', icon: Send },
+    negotiating: { label: '見積提示中', icon: TrendingUp },
+    won: { label: '受注確定！', icon: Award },
+    lost: { label: '失注', icon: AlertTriangle }
 };
 
 interface ProjectActionPanelProps {
@@ -34,9 +34,17 @@ function readSavedItem(itemId: string): SavedBiddingItem | undefined {
 }
 
 export function ProjectActionPanel({ item }: ProjectActionPanelProps) {
-    const initialSavedItem = readSavedItem(item.id);
-    const [isSaved, setIsSaved] = useState(Boolean(initialSavedItem));
-    const [salesStatus, setSalesStatus] = useState<SalesStatus>(initialSavedItem?.salesStatus || 'pending');
+    const [isSaved, setIsSaved] = useState(false);
+    const [salesStatus, setSalesStatus] = useState<SalesStatus>('pending');
+
+    useEffect(() => {
+        const timer = window.setTimeout(() => {
+            const savedItem = readSavedItem(item.id);
+            setIsSaved(Boolean(savedItem));
+            setSalesStatus(savedItem?.salesStatus || 'pending');
+        }, 0);
+        return () => window.clearTimeout(timer);
+    }, [item.id]);
 
     const handleSave = () => {
         const stored = localStorage.getItem('naramania_saved');
@@ -92,65 +100,41 @@ export function ProjectActionPanel({ item }: ProjectActionPanelProps) {
         }
     };
 
-    const config = statusConfig[salesStatus];
-    const StatusIcon = config.icon;
+    const StatusIcon = statusConfig[salesStatus].icon;
 
     return (
-        <div className="bg-white/80 backdrop-blur-xl shadow-premium p-6 rounded-2xl border border-white/50 mb-8 flex flex-col md:flex-row md:items-center justify-between gap-6">
-            <div className="flex-1">
-                <div className="flex items-center gap-2 mb-1.5">
-                    <Briefcase className="w-4 h-4 text-accent" />
-                    <span className="text-[10px] tracking-[0.25em] text-accent font-bold uppercase">下請け営業管理</span>
-                </div>
-                <h4 className="text-sm font-serif font-semibold tracking-wider text-primary">
-                    {isSaved
-                        ? `この案件をお気に入り保存中（ステータス: ${config.label}）`
-                        : 'この案件をお気に入りに保存して、元請け営業管理を始めましょう！'}
-                </h4>
-                <p className="text-xs text-secondary/55 tracking-wider mt-1">
-                    お気に入りに登録すると、営業のアプローチ状況（交渉中、受注確定など）をダッシュボードで進捗管理できます。
-                </p>
+        <>
+            <div className="min-w-32 [&>button]:min-h-9 [&>button]:rounded-[5px] [&>button]:text-sm [&>button]:tracking-normal">
+                <WatchButton itemId={item.id} />
             </div>
-
-            <div className="flex items-center gap-3 shrink-0">
-                <div className="w-40">
-                    <WatchButton itemId={item.id} />
-                </div>
-                {isSaved ? (
-                    <>
-                        <div className="flex items-center gap-2 bg-slate-50 border border-border/20 px-4 py-2.5 rounded-lg shadow-sm">
-                            <StatusIcon size={14} className={config.color} />
-                            <span className="text-xs font-semibold tracking-wider text-secondary/50 uppercase font-mono">営業進捗:</span>
-                            <select
-                                value={salesStatus}
-                                onChange={(e) => handleStatusChange(e.target.value as SalesStatus)}
-                                className={`text-xs font-bold tracking-wider bg-transparent border-none focus:outline-none cursor-pointer ${config.color}`}
-                            >
-                                {(Object.keys(statusConfig) as SalesStatus[]).map((status) => (
-                                    <option key={status} value={status} className="text-secondary font-sans font-normal">
-                                        {statusConfig[status].label}
-                                    </option>
-                                ))}
-                            </select>
-                        </div>
-                        <button
-                            onClick={handleRemove}
-                            className="bg-red-50 hover:bg-red-100 text-red-600 border border-red-100 px-4 py-2.5 rounded-lg text-xs font-bold tracking-wider flex items-center gap-2 transition-all cursor-pointer"
+            {isSaved ? (
+                <>
+                    <label className="inline-flex min-h-9 items-center gap-1.5 rounded-[5px] border border-border bg-paper-tint px-2.5 text-sm">
+                        <StatusIcon size={15} className="text-accent" aria-hidden="true" />
+                        <span className="font-semibold">営業進捗</span>
+                        <select
+                            value={salesStatus}
+                            onChange={(e) => handleStatusChange(e.target.value as SalesStatus)}
+                            className="min-w-0 cursor-pointer rounded bg-transparent py-1 pr-1 font-bold text-primary"
                         >
-                            <Trash2 size={14} />
-                            解除
-                        </button>
-                    </>
-                ) : (
-                    <button
-                        onClick={handleSave}
-                        className="bg-accent hover:bg-accent/90 text-white px-6 py-2.5 rounded-lg text-xs font-bold tracking-widest flex items-center gap-2 transition-all cursor-pointer shadow-md"
-                    >
-                        <Bookmark className="w-4 h-4" />
-                        営業管理に保存
+                            {(Object.keys(statusConfig) as SalesStatus[]).map((status) => (
+                                <option key={status} value={status}>
+                                    {statusConfig[status].label}
+                                </option>
+                            ))}
+                        </select>
+                    </label>
+                    <button type="button" onClick={handleRemove} className="paper-button">
+                        <Trash2 size={15} aria-hidden="true" />
+                        保存を解除
                     </button>
-                )}
-            </div>
-        </div>
+                </>
+            ) : (
+                <button type="button" onClick={handleSave} className="paper-button">
+                    <Bookmark size={16} aria-hidden="true" />
+                    営業管理に保存
+                </button>
+            )}
+        </>
     );
 }

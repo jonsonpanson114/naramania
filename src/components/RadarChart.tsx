@@ -1,6 +1,6 @@
 'use client';
 
-import { ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, Cell } from 'recharts';
+import { ResponsiveContainer, ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, Cell } from 'recharts';
 import type { Municipality, BiddingType } from '@/types/bidding';
 
 interface DataPoint {
@@ -45,9 +45,9 @@ export default function RadarChart({ data }: { data: DataPoint[] }) {
     }));
 
     return (
-        <div className="h-96 w-full animate-fade-in" style={{ minHeight: '320px' }}>
-            <div style={{ width: '100%', height: '100%' }}>
-                <ScatterChart margin={{ top: 20, right: 20, bottom: 20, left: 60 }}>
+        <div className="min-w-0">
+            <ResponsiveContainer width="100%" height={320} minWidth={0}>
+                <ScatterChart margin={{ top: 16, right: 12, bottom: 12, left: 4 }}>
                     <CartesianGrid strokeDasharray="3 3" stroke="#f3f4f6" />
                     <XAxis type="number" dataKey="xIndex" name="Project" hide />
                     <YAxis
@@ -56,6 +56,7 @@ export default function RadarChart({ data }: { data: DataPoint[] }) {
                         name="予定価格"
                         tickFormatter={(val) => `¥${(val / 10000).toLocaleString()}万`}
                         tick={{ fill: '#6b7280', fontSize: 12 }}
+                        width={100}
                         axisLine={false}
                         tickLine={false}
                     />
@@ -66,7 +67,7 @@ export default function RadarChart({ data }: { data: DataPoint[] }) {
                         ))}
                     </Scatter>
                 </ScatterChart>
-            </div>
+            </ResponsiveContainer>
         </div>
     );
 }

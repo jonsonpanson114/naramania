@@ -14,6 +14,7 @@ import {
     CalendarClock,
     ChevronDown,
     Download,
+    ExternalLink,
     FileText,
     LayoutGrid,
     List,
@@ -69,7 +70,7 @@ const TABS: Array<{ id: ViewTab; label: string; hint: string }> = [
 ];
 
 const STATUS_TONES: Record<DisplayStatus, { label: string; pill: string; dot: string }> = {
-    '受付中': { label: '受付中', pill: 'border-sky-200 bg-sky-50 text-sky-700', dot: 'bg-sky-500' },
+    '受付中': { label: '受付中', pill: 'border-border bg-paper-tint text-accent', dot: 'bg-accent' },
     '締切': { label: '締切', pill: 'border-stone-200 bg-stone-50 text-stone-600', dot: 'bg-stone-400' },
     '締切間近': { label: '締切間近', pill: 'border-rose-200 bg-rose-50 text-rose-700', dot: 'bg-rose-500' },
     '締切切迫': { label: '締切切迫', pill: 'border-red-200 bg-red-50 text-red-700', dot: 'bg-red-500' },
@@ -164,7 +165,7 @@ function exportCsv(items: BiddingItem[]) {
 function StatusPill({ status }: { status: DisplayStatus }) {
     const tone = STATUS_TONES[status] || STATUS_TONES['不明'];
     return (
-        <span className={`inline-flex items-center gap-1.5 rounded-full border px-2.5 py-0.5 text-[10px] font-bold tracking-[0.1em] ${tone.pill}`}>
+        <span className={`inline-flex items-center gap-1.5 whitespace-nowrap rounded-sm border px-2 py-0.5 text-xs font-bold ${tone.pill}`}>
             <span className={`h-1.5 w-1.5 rounded-full ${tone.dot}`} />
             {tone.label}
         </span>
@@ -197,7 +198,7 @@ export function BiddingTable({
     const [detailedSearch, setDetailedSearch] = useState(false);
     const [hideOutOfScope, setHideOutOfScope] = useState(true);
     const [showDetailFilters, setShowDetailFilters] = useState(false);
-    const [viewMode, setViewMode] = useState<ViewMode>('card');
+    const [viewMode, setViewMode] = useState<ViewMode>('compact');
     // 表示件数は「何ページ分めくったか」だけを状態に持ち、実際の件数は描画時に出す。
     // 絶対値を状態に持つと、設定の表示件数が変わったときに effect で
     // 書き直す必要があり、描画が二重になる(lintのset-state-in-effectにも触れる)。
@@ -364,8 +365,8 @@ export function BiddingTable({
 
     return (
         <section id="project-board" className="space-y-5 scroll-mt-24" aria-label="案件一覧">
-            <div className="overflow-hidden rounded-[2rem] border border-stone-200/80 bg-white/80 shadow-sm backdrop-blur-xl">
-                <div className="space-y-4 p-5 lg:p-6">
+            <div className="paper-panel">
+                <div className="space-y-3 p-3.5 md:p-4">
                     {/* 用途別の絞り込みが効いていることを明示する。
                         黙って件数だけ減っていると、押した本人にも理由が分からない */}
                     {quickFilter && quickActive && (
@@ -399,10 +400,8 @@ export function BiddingTable({
                                         setTab(id);
                                         if (id !== 'results') setWinnerFilter('すべて');
                                     })}
-                                    className={`rounded-full border px-4 py-2 text-xs font-bold tracking-[0.12em] transition ${active
-                                        ? 'border-stone-950 bg-stone-950 text-white shadow-sm'
-                                        : 'border-stone-200 bg-white text-stone-500 hover:border-stone-400 hover:text-stone-900'
-                                    }`}
+                                    aria-pressed={active}
+                                    className={`paper-button ${active ? 'paper-button-primary' : ''}`}
                                 >
                                     {label}
                                     <span className={`ml-2 rounded-full px-2 py-0.5 text-[10px] ${active ? 'bg-white/15 text-white' : 'bg-stone-100 text-stone-500'}`}>
@@ -412,31 +411,33 @@ export function BiddingTable({
                             );
                         })}
 
-                        <div className="ml-auto flex items-center gap-2">
+                        <div className="flex flex-wrap items-center gap-2 md:ml-auto">
                             <button
                                 type="button"
                                 onClick={() => exportCsv(filteredItems)}
                                 title="現在の絞り込み結果をCSVで保存（営業リスト用）"
-                                className="flex items-center gap-1.5 rounded-full border border-stone-200 bg-white px-3 py-1.5 text-[10px] font-bold tracking-[0.1em] text-stone-500 transition hover:border-emerald-400 hover:text-emerald-700"
+                                className="paper-button"
                             >
                                 <Download size={13} />
-                                CSV
+                                CSV出力
                             </button>
-                            <div className="flex items-center gap-1 rounded-full border border-stone-200 bg-stone-50 p-1">
+                            <div className="flex gap-1">
                                 <button
                                     type="button"
                                     onClick={() => setViewMode('compact')}
                                     title="コンパクト表示"
-                                    className={`flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[10px] font-bold tracking-[0.1em] transition ${viewMode === 'compact' ? 'bg-stone-950 text-white' : 'text-stone-500 hover:text-stone-900'}`}
+                                    aria-pressed={viewMode === 'compact'}
+                                    className={`paper-button ${viewMode === 'compact' ? 'paper-button-primary' : ''}`}
                                 >
                                     <List size={13} />
-                                    リスト
+                                    一覧
                                 </button>
                                 <button
                                     type="button"
                                     onClick={() => setViewMode('card')}
                                     title="カード表示"
-                                    className={`flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[10px] font-bold tracking-[0.1em] transition ${viewMode === 'card' ? 'bg-stone-950 text-white' : 'text-stone-500 hover:text-stone-900'}`}
+                                    aria-pressed={viewMode === 'card'}
+                                    className={`paper-button ${viewMode === 'card' ? 'paper-button-primary' : ''}`}
                                 >
                                     <LayoutGrid size={13} />
                                     カード
@@ -468,14 +469,15 @@ export function BiddingTable({
                     )}
 
                     {/* 検索・絞り込み */}
-                    <div className="grid gap-3 xl:grid-cols-[minmax(0,1fr)_170px_170px_190px]">
-                        <div className="relative">
+                    <div className="grid gap-2 sm:grid-cols-3 xl:grid-cols-[minmax(0,1fr)_170px_170px_190px]">
+                        <div className="relative sm:col-span-3 xl:col-span-1">
                             <Search className="absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-stone-400" />
                             <input
                                 value={keyword}
                                 onChange={(e) => changeFilter(() => setKeyword(e.target.value))}
                                 placeholder="案件名、業者名、タグで検索"
-                                className="w-full rounded-2xl border border-stone-200 bg-white py-3 pl-11 pr-10 text-sm tracking-[0.04em] text-stone-900 shadow-sm outline-none transition focus:border-amber-400 focus:ring-4 focus:ring-amber-100"
+                                aria-label="案件名、業者名、タグで検索"
+                                className="w-full rounded-md border border-border bg-white py-2.5 pl-11 pr-10 text-base text-primary"
                             />
                             {keyword && (
                                 <button
@@ -490,8 +492,9 @@ export function BiddingTable({
                         </div>
                         <select
                             value={selectedMunicipality}
+                            aria-label="自治体"
                             onChange={(e) => changeFilter(() => setSelectedMunicipality(e.target.value))}
-                            className="rounded-2xl border border-stone-200 bg-white px-4 py-3 text-xs font-bold tracking-[0.08em] text-stone-600 shadow-sm outline-none transition focus:border-amber-400 focus:ring-4 focus:ring-amber-100"
+                            className="min-w-0 rounded-md border border-border bg-white px-3 py-2.5 text-sm text-primary"
                         >
                             <option value="すべて">自治体すべて ({municipalities.length})</option>
                             {municipalities.map(municipality => (
@@ -500,8 +503,9 @@ export function BiddingTable({
                         </select>
                         <select
                             value={typeFilter}
+                            aria-label="種別"
                             onChange={(e) => changeFilter(() => setTypeFilter(e.target.value as TypeFilter))}
-                            className="rounded-2xl border border-stone-200 bg-white px-4 py-3 text-xs font-bold tracking-[0.08em] text-stone-600 shadow-sm outline-none transition focus:border-amber-400 focus:ring-4 focus:ring-amber-100"
+                            className="min-w-0 rounded-md border border-border bg-white px-3 py-2.5 text-sm text-primary"
                         >
                             <option value="すべて">種別すべて</option>
                             <option value="建築">建築（工事）</option>
@@ -511,8 +515,9 @@ export function BiddingTable({
                             <ArrowUpDown className="absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-stone-400" />
                             <select
                                 value={sortMode}
+                                aria-label="並び順"
                                 onChange={(e) => setSortMode(e.target.value as SortMode)}
-                                className="w-full rounded-2xl border border-stone-200 bg-white py-3 pl-11 pr-4 text-xs font-bold tracking-[0.08em] text-stone-600 shadow-sm outline-none transition focus:border-amber-400 focus:ring-4 focus:ring-amber-100"
+                                className="w-full rounded-md border border-border bg-white py-2.5 pl-10 pr-3 text-sm text-primary"
                             >
                                 <option value="newest">公告が新しい順</option>
                                 <option value="oldest">公告が古い順</option>
@@ -528,7 +533,8 @@ export function BiddingTable({
                         <button
                             type="button"
                             onClick={() => setShowDetailFilters(!showDetailFilters)}
-                            className="inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.14em] text-stone-500 transition hover:text-stone-900"
+                            aria-expanded={showDetailFilters}
+                            className="paper-button"
                         >
                             <SlidersHorizontal size={13} />
                             詳細フィルタ
@@ -583,75 +589,56 @@ export function BiddingTable({
                         )}
                     </div>
 
-                    <p className="text-[11px] tracking-[0.1em] text-stone-400">
-                        {filteredItems.length}件中 {shownItems.length}件を表示
-                    </p>
                 </div>
             </div>
 
+            <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1 border-l-4 border-accent pl-3">
+                <h2 className="font-serif text-xl font-bold">検索結果 <span className="font-sans tabular-nums">{filteredItems.length}</span> 件</h2>
+                <p className="text-sm text-secondary" aria-live="polite">{shownItems.length}件を表示</p>
+            </div>
+
             {/* 一覧 */}
-            {viewMode === 'compact' ? (
-                <div className="overflow-hidden rounded-[1.5rem] border border-stone-200/90 bg-white shadow-sm">
-                    {shownItems.map((item, index) => {
+            {viewMode === 'compact' ? shownItems.length > 0 && (
+                <div className="paper-panel search-ledger">
+                    <div className="search-ledger-head" aria-hidden="true">
+                        <span>案件名</span><span>自治体</span><span>種別</span><span>公告日</span><span>開札・審査</span>
+                        <span>状態</span><span>追跡</span><span>原文</span>
+                    </div>
+                    {shownItems.map(item => {
+                        const supplemental = item.winningContractor || item.estimatedPrice || item.brief?.price;
+                        const supplementalLabel = item.winningContractor ? '落札者' : '予定価格';
                         const distance = biddingDistance(item.biddingDate);
                         const isNew = isNewItem(item.announcementDate) || Boolean(item.biddingDate && isNewItem(item.biddingDate));
-
                         return (
-                            <a
-                                key={item.id}
-                                href={`/project/${item.id}`}
-                                className={`grid grid-cols-[92px_minmax(0,1fr)_36px] items-center gap-4 px-5 py-5 transition hover:bg-amber-50/60 md:grid-cols-[92px_minmax(0,1fr)_190px_36px] lg:gap-5 ${index > 0 ? 'border-t border-stone-100' : ''}`}
-                            >
-                                <div className={`rounded-xl px-2 py-2.5 text-center ${distance.urgent
-                                    ? 'bg-rose-50'
-                                    : distance.done
-                                        ? 'bg-stone-50'
-                                        : 'bg-amber-50/70'
-                                }`}
-                                >
-                                    <p className={`text-[9px] font-bold tracking-[0.08em] ${distance.urgent ? 'text-rose-600' : 'text-stone-400'}`}>
-                                        {distance.label}
-                                    </p>
-                                    <p className={`text-sm font-bold tabular-nums ${distance.urgent ? 'text-rose-700' : 'text-stone-800'}`}>
-                                        {formatDate(item.biddingDate)}
-                                    </p>
-                                </div>
-
-                                <div className="min-w-0">
-                                    <div className="flex flex-wrap items-center gap-2">
-                                        <StatusPill status={displayStatus(item)} />
-                                        <span className="inline-flex items-center gap-1 text-[10px] font-bold tracking-[0.08em] text-stone-500">
-                                            <MapPin size={10} />
-                                            {item.municipality}
-                                        </span>
-                                        <span className="text-[10px] font-bold tracking-[0.08em] text-amber-700">{item.type}</span>
-                                        {isNew && (
-                                            <span className="rounded-full bg-rose-50 px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-[0.1em] text-rose-600">New</span>
-                                        )}
-                                    </div>
-                                    <p className="mt-2 truncate text-[14px] font-bold leading-6 tracking-[0.02em] text-stone-900">
+                            <article key={item.id} className="search-ledger-row">
+                                <div className="search-ledger-name">
+                                    <a href={`/project/${item.id}`} className="font-bold leading-relaxed hover:text-accent hover:underline">
                                         {item.title}
-                                    </p>
+                                    </a>
+                                    {isNew && <span className="ml-2 inline-block text-xs font-bold text-amber-800">新着</span>}
+                                    {supplemental && (
+                                        <p className="mt-0.5 text-xs leading-relaxed text-secondary">{supplementalLabel}：{supplemental}</p>
+                                    )}
+                                    {detailedSearch && keyword && renderSnippet(detailText(item), keyword)}
                                 </div>
-
-                                <div className="hidden min-w-0 text-right md:block">
-                                    {item.winningContractor ? (
-                                        <>
-                                            <p className="text-[9px] font-bold uppercase tracking-[0.16em] text-stone-400">落札者</p>
-                                            <p className="truncate text-xs font-bold text-emerald-800">{item.winningContractor}</p>
-                                        </>
-                                    ) : item.estimatedPrice || item.brief?.price ? (
-                                        <>
-                                            <p className="text-[9px] font-bold uppercase tracking-[0.16em] text-stone-400">予定価格</p>
-                                            <p className="truncate text-xs font-bold text-stone-700">{item.estimatedPrice || item.brief?.price}</p>
-                                        </>
-                                    ) : (
-                                        <p className="text-[10px] tracking-[0.1em] text-stone-300">-</p>
+                                <span className="search-ledger-municipality">{item.municipality}</span>
+                                <span className="search-ledger-type">{item.type}</span>
+                                <span className="search-ledger-date search-ledger-announcement">
+                                    <span className="search-ledger-mobile-label">公告</span> {formatDate(item.announcementDate)}
+                                </span>
+                                <span className={`search-ledger-date search-ledger-opening ${distance.urgent ? 'font-bold text-amber-800' : ''}`} title={distance.label}>
+                                    <span className="search-ledger-mobile-label">{getBiddingLabel(item)}</span> {formatDate(item.biddingDate)}
+                                </span>
+                                <div className="search-ledger-status"><StatusPill status={displayStatus(item)} /></div>
+                                <div className="search-ledger-watch"><WatchButton itemId={item.id} compact /></div>
+                                <div className="search-ledger-source">
+                                    {item.link && (
+                                        <a href={item.link} target="_blank" rel="noopener noreferrer" className="search-ledger-original" aria-label={`${item.title}の原文を開く`} title="原文を開く">
+                                            <ExternalLink size={16} aria-hidden />
+                                        </a>
                                     )}
                                 </div>
-
-                                <WatchButton itemId={item.id} compact />
-                            </a>
+                            </article>
                         );
                     })}
                 </div>
@@ -673,7 +660,7 @@ export function BiddingTable({
                         return (
                             <article
                                 key={item.id}
-                                className="group overflow-hidden rounded-[1.25rem] border border-stone-200/90 bg-white shadow-sm transition hover:-translate-y-0.5 hover:border-amber-300/80 hover:shadow-md"
+                                className="paper-panel overflow-hidden"
                             >
                                 <div className="grid gap-0 lg:grid-cols-[128px_minmax(0,1fr)_238px]">
                                     <div className={`border-b p-4 lg:border-b-0 lg:border-r ${distance.urgent
@@ -724,7 +711,7 @@ export function BiddingTable({
 
                                         <a
                                             href={`/project/${item.id}`}
-                                            className="mt-3 block text-[18px] font-bold leading-8 tracking-[0.02em] text-stone-950 transition group-hover:text-amber-700 lg:text-[20px]"
+                                            className="mt-3 block break-words text-lg font-bold leading-7 text-primary hover:text-accent hover:underline lg:text-xl"
                                         >
                                             {item.title}
                                         </a>
@@ -757,7 +744,7 @@ export function BiddingTable({
                                         {detailedSearch && keyword && renderSnippet(detailText(item), keyword)}
                                     </div>
 
-                                    <div className="border-t border-stone-100 bg-gradient-to-br from-stone-50 to-white p-3 lg:border-l lg:border-t-0">
+                                    <div className="border-t border-border bg-paper-tint/55 p-3 lg:border-l lg:border-t-0">
                                         <div className="rounded-xl border border-stone-200 bg-white p-3">
                                             {(item.winningContractor || !['落札', '不調', '受付終了', '不明'].includes(item.status)) && (
                                                 <div className={item.designFirm ? 'border-b border-stone-100 pb-2' : ''}>
@@ -781,7 +768,7 @@ export function BiddingTable({
                                             )}
                                             <a
                                                 href={`/project/${item.id}`}
-                                                className="mt-3 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-stone-950 px-4 py-2.5 text-[11px] font-bold uppercase tracking-[0.16em] text-white transition hover:bg-amber-700"
+                                                className="paper-button paper-button-primary mt-3 w-full"
                                             >
                                                 詳細を見る
                                             </a>

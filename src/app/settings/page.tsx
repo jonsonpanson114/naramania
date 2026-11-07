@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import { AppShell } from '@/components/AppShell';
-import { Header } from '@/components/Header';
 import { motion } from 'framer-motion';
 import { CheckCircle, MessageSquareText, Bell, Tag } from 'lucide-react';
 import { ITEMS_PER_PAGE_OPTIONS, type UserSettings } from '@/lib/user_settings';
@@ -45,14 +44,13 @@ export default function SettingsPage() {
 
     return (
         <AppShell>
-            <Header />
 
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
             >
-                <h2 className="text-3xl tracking-widest mb-4 font-serif">設定</h2>
+                <h1 className="paper-title mb-4">設定</h1>
                 <p className="text-secondary/60 text-sm tracking-wider mb-12">
                     対象自治体や、アラート通知用の商材キーワードを変更できます。
                 </p>

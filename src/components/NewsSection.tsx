@@ -28,29 +28,30 @@ function ordererOf(item: NewsItem): string {
 }
 
 /** 1行1記事。見出しを読み比べやすいよう、抜粋は開いたときだけ出す */
-function NewsRow({ item, related, saved }: { item: NewsItem; related: NewsItem[]; saved: boolean }) {
+function NewsRow({ item, related, saved, compact }: { item: NewsItem; related: NewsItem[]; saved: boolean; compact: boolean }) {
     const [open, setOpen] = useState(false);
     const date = parseLocalDate(item.date);
     const orderer = ordererOf(item);
     const media = item.publisher ?? item.sourceLabel;
 
     return (
-        <li className="border-b border-stone-200 last:border-b-0">
-            <div className="grid grid-cols-[2.75rem_minmax(0,1fr)_auto] items-start gap-x-3 px-3 py-2.5 transition-colors hover:bg-amber-50/60 lg:grid-cols-[2.75rem_6.5rem_minmax(0,1fr)_7.5rem_auto]">
+        <li className={compact ? 'border-b border-border odd:bg-paper-stripe last:border-b-0' : 'border-b border-stone-200 last:border-b-0'}>
+            <div className={`grid grid-cols-[2.75rem_minmax(0,1fr)_auto] items-start transition-colors ${compact
+                ? 'gap-x-1.5 px-2.5 py-2 hover:bg-paper-tint'
+                : 'gap-x-3 px-3 py-2.5 hover:bg-amber-50/60 lg:grid-cols-[2.75rem_6.5rem_minmax(0,1fr)_7.5rem_auto]'
+            }`}>
                 <span className={`pt-0.5 text-[13px] tabular-nums ${date && isToday(date) ? 'font-bold text-amber-700' : 'text-stone-500'}`}>
                     {date ? `${date.getMonth() + 1}/${date.getDate()}` : '-'}
                 </span>
 
-                <span className="hidden truncate pt-0.5 text-[13px] font-bold text-stone-700 lg:block" title={orderer}>
-                    {orderer}
-                </span>
+                {!compact && <span className="hidden truncate pt-0.5 text-[13px] font-bold text-stone-700 lg:block" title={orderer}>{orderer}</span>}
 
                 <div className="min-w-0">
                     <a
                         href={item.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-[15px] font-medium leading-6 text-stone-900 hover:text-amber-700 hover:underline"
+                        className={compact ? 'text-sm leading-6 font-semibold break-words text-primary hover:text-accent hover:underline' : 'text-[15px] font-medium leading-6 text-stone-900 hover:text-amber-700 hover:underline'}
                     >
                         {item.title}
                     </a>
@@ -63,7 +64,7 @@ function NewsRow({ item, related, saved }: { item: NewsItem; related: NewsItem[]
                             同じ話題 他{related.length}件
                         </button>
                     )}
-                    <p className="mt-0.5 truncate text-xs text-stone-500 lg:hidden">
+                    <p className={`mt-0.5 text-xs ${compact ? 'break-words text-secondary' : 'truncate text-stone-500 lg:hidden'}`}>
                         {[orderer, media].filter(Boolean).join(' / ')}
                     </p>
                     {item.results?.map((result, index) => (
@@ -88,9 +89,7 @@ function NewsRow({ item, related, saved }: { item: NewsItem; related: NewsItem[]
                     ))}
                 </div>
 
-                <span className="hidden truncate pt-0.5 text-xs text-stone-500 lg:block" title={media}>
-                    {media}
-                </span>
+                {!compact && <span className="hidden truncate pt-0.5 text-xs text-stone-500 lg:block" title={media}>{media}</span>}
 
                 <div className="flex items-center gap-1">
                     <button
@@ -143,9 +142,10 @@ interface NewsSectionProps {
     pageSize?: number;
     /** ニュース一覧ページへの導線を出す（トップページ用） */
     showAllLink?: boolean;
+    compact?: boolean;
 }
 
-export function NewsSection({ detailed = false, pageSize = 6, showAllLink = false }: NewsSectionProps) {
+export function NewsSection({ detailed = false, pageSize = 6, showAllLink = false, compact = false }: NewsSectionProps) {
     const [news, setNews] = useState<NewsItem[]>([]);
     const [loading, setLoading] = useState(true);
     const [activeSource, setActiveSource] = useState<string>('all');
@@ -190,8 +190,15 @@ export function NewsSection({ detailed = false, pageSize = 6, showAllLink = fals
     const remaining = rows.length - visible.length;
 
     return (
-        <section className="mt-6" id="news">
-            {!detailed && (
+        <section className={compact ? 'paper-panel p-2.5' : 'mt-6'} id="news">
+            {compact ? (
+                <div className="paper-heading flex flex-wrap items-center justify-between gap-x-3 gap-y-1">
+                    <h2>奈良の建設ニュース</h2>
+                    <Link href="/news" className="inline-flex items-center gap-1 font-sans text-xs font-bold text-accent hover:underline">
+                        一覧 <ArrowRight size={13} aria-hidden="true" />
+                    </Link>
+                </div>
+            ) : !detailed && (
                 <h2 className="mb-3 text-lg font-bold text-stone-900">奈良ニュース</h2>
             )}
 
@@ -239,7 +246,7 @@ export function NewsSection({ detailed = false, pageSize = 6, showAllLink = fals
             )}
 
             {loading && (
-                <div className="h-48 animate-pulse rounded-xl border border-stone-200 bg-white/60" />
+                <div className={`${compact ? 'mt-2 h-20' : 'h-48'} animate-pulse rounded-xl border border-stone-200 bg-white/60`} />
             )}
 
             {!loading && news.length === 0 && !onlySaved && (
@@ -258,14 +265,14 @@ export function NewsSection({ detailed = false, pageSize = 6, showAllLink = fals
             )}
 
             {!loading && visible.length > 0 && (
-                <ul className="overflow-hidden rounded-xl border border-stone-200 bg-white">
+                <ul className={compact ? 'mt-1' : 'overflow-hidden rounded-xl border border-stone-200 bg-white'}>
                     {visible.map(([item, ...related]) => (
-                        <NewsRow key={item.link} item={item} related={related} saved={savedLinks.has(item.link)} />
+                        <NewsRow key={item.link} item={item} related={related} saved={savedLinks.has(item.link)} compact={compact} />
                     ))}
                 </ul>
             )}
 
-            {!loading && filtered.length > 0 && (
+            {!compact && !loading && filtered.length > 0 && (
                 <div className="mt-3 flex items-center justify-between gap-3">
                     <p className="text-xs text-stone-500">全 {rows.length} 件中 {visible.length} 件を表示</p>
                     {remaining > 0 && (showAllLink ? (

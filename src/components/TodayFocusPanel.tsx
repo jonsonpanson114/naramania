@@ -1,85 +1,51 @@
 'use client';
 
 import { useEffect, useMemo, useState } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight, CalendarClock } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import type { BiddingItem } from '@/types/bidding';
 import type { OpeningResultUpdate } from '@/lib/opening_result_updates';
 import type { ResultFollowUpEntry } from '@/lib/result_follow_up';
+import { addDaysJstDateKey, toJstDateKey } from '@/lib/jst_date';
 import { displayStatus } from '@/lib/status_label';
 
 const LAST_VISIT_KEY = 'naramania_last_visit';
 
 type TabKey = 'new' | 'upcoming' | 'results' | 'followUp';
 
-function toDateOnly(value: string): string {
-    return value.slice(0, 10);
-}
-
-function formatDate(dateStr?: string): string {
-    if (!dateStr) return '-';
-    const date = new Date(dateStr);
-    if (Number.isNaN(date.getTime())) return dateStr;
-    return date.toLocaleDateString('ja-JP', { month: 'numeric', day: 'numeric' });
-}
-
-function daysUntilLabel(dateStr?: string): string {
-    if (!dateStr) return '日程未定';
-    const today = new Date();
-    const target = new Date(dateStr);
-    today.setHours(0, 0, 0, 0);
-    target.setHours(0, 0, 0, 0);
-    const diff = Math.round((target.getTime() - today.getTime()) / 86400000);
-    if (Number.isNaN(diff)) return '日程未定';
-    if (diff < 0) return '終了';
-    if (diff === 0) return '本日';
-    if (diff === 1) return '明日';
-    return `${diff}日後`;
-}
-
-/** 全タブ共通の1行。左に自治体、中央に案件名、右に日付や結果を置く */
-function Row({
-    href,
-    municipality,
-    title,
-    meta,
-    emphasis,
-}: {
-    href: string;
+type FocusEntry = {
+    id: string;
     municipality: string;
     title: string;
     meta: string;
-    emphasis?: 'warn' | 'good';
-}) {
-    const metaColor =
-        emphasis === 'warn' ? 'text-rose-600'
-        : emphasis === 'good' ? 'text-emerald-700'
-        : 'text-secondary/60';
-    return (
-        <Link
-            href={href}
-            className="group flex items-center gap-4 border-b border-border/30 px-2 py-4 transition-colors last:border-b-0 hover:bg-accent/[0.04]"
-        >
-            <span className="w-28 shrink-0 truncate text-[15px] tracking-wider text-secondary/70">
-                {municipality}
-            </span>
-            <span className="min-w-0 flex-1 truncate text-[18px] leading-8 text-primary transition-colors group-hover:text-accent">
-                {title}
-            </span>
-            <span className={`shrink-0 text-[15px] font-semibold tabular-nums tracking-wider ${metaColor}`}>
-                {meta}
-            </span>
-        </Link>
-    );
+};
+
+const tabDetails: Record<TabKey, { label: string; href: string; empty: string }> = {
+    new: { label: '新着公告', href: '/search?quick=newArrivals', empty: '新しい公告はありません' },
+    upcoming: { label: '直近開札', href: '/search?quick=upcomingBidding', empty: '直近の開札予定はありません' },
+    results: { label: '開札結果', href: '/search?quick=opened', empty: '新しい開札結果はありません' },
+    followUp: { label: '追跡待ち', href: '/search?quick=resultFollowUp', empty: '追跡待ちの案件はありません' },
+};
+
+function formatDate(dateStr?: string): string {
+    if (!dateStr) return '日程未定';
+    const date = new Date(dateStr);
+    if (Number.isNaN(date.getTime())) return dateStr;
+    return date.toLocaleDateString('ja-JP', { month: 'numeric', day: 'numeric', timeZone: 'Asia/Tokyo' });
+}
+
+function announcementEntry(item: BiddingItem): FocusEntry {
+    return { ...item, meta: `公告 ${formatDate(item.announcementDate)}` };
 }
 
 interface TodayFocusPanelProps {
-    /** 新着公告の判定に使う全件 */
     items: BiddingItem[];
     upcoming: BiddingItem[];
     openingResults: OpeningResultUpdate[];
     followUp: ResultFollowUpEntry[];
     activeCount: number;
+    today: string;
 }
 
 export function TodayFocusPanel({
@@ -88,184 +54,140 @@ export function TodayFocusPanel({
     openingResults,
     followUp,
     activeCount,
+    today,
 }: TodayFocusPanelProps) {
-    // 未選択のうちはデータから既定タブを決める（effectでsetStateしないため派生値にする）
     const [selectedTab, setSelectedTab] = useState<TabKey | null>(null);
-    const [sinceDate, setSinceDate] = useState<string | null>(null);
-    const [isFirstVisit, setIsFirstVisit] = useState(false);
+    const [lastVisit, setLastVisit] = useState<string | null>(null);
+    const sinceDate = lastVisit ?? addDaysJstDateKey(-7, new Date(`${today}T12:00:00+09:00`));
 
-    // 前回訪問日はブラウザにしか無いので、マウント後に読む
     useEffect(() => {
         const timer = window.setTimeout(() => {
-            const stored = localStorage.getItem(LAST_VISIT_KEY);
-            const today = new Date();
-            const fallback = new Date(today);
-            fallback.setDate(fallback.getDate() - 7);
-            const pad = (n: number) => String(n).padStart(2, '0');
-            const fallbackIso = `${fallback.getFullYear()}-${pad(fallback.getMonth() + 1)}-${pad(fallback.getDate())}`;
-
-            setSinceDate(stored ? toDateOnly(stored) : fallbackIso);
-            setIsFirstVisit(!stored);
-
-            const todayIso = `${today.getFullYear()}-${pad(today.getMonth() + 1)}-${pad(today.getDate())}`;
-            localStorage.setItem(LAST_VISIT_KEY, todayIso);
+            try {
+                const stored = localStorage.getItem(LAST_VISIT_KEY);
+                setLastVisit(stored?.slice(0, 10) || null);
+                localStorage.setItem(LAST_VISIT_KEY, toJstDateKey());
+            } catch {
+                // 保存できない環境では初回と同じ直近7日を表示する。
+            }
         }, 0);
         return () => window.clearTimeout(timer);
     }, []);
 
-    const newItems = useMemo(() => {
-        if (!sinceDate) return [];
-        return items
-            .filter(item => item.announcementDate && toDateOnly(item.announcementDate) >= sinceDate)
-            .sort((a, b) => (b.announcementDate || '').localeCompare(a.announcementDate || ''));
-    }, [items, sinceDate]);
-
-    // 新着が無い日は直近開札を初期表示にする
-    const tab: TabKey = selectedTab ?? (sinceDate && newItems.length === 0 ? 'upcoming' : 'new');
-    const setTab = setSelectedTab;
-
-    const tabs: Array<{ key: TabKey; label: string; count: number }> = [
-        { key: 'new', label: '新着公告', count: newItems.length },
-        { key: 'upcoming', label: '直近開札', count: upcoming.length },
-        { key: 'results', label: '開札結果', count: openingResults.length },
-        { key: 'followUp', label: '追跡待ち', count: followUp.length },
-    ];
-
-    const stats: Array<{ label: string; value: number; tone: string; tab?: TabKey; href?: string }> = [
-        { label: '受付中', value: activeCount, tone: 'text-emerald-200', href: '/search?quick=active' },
-        { label: '直近開札', value: upcoming.length, tone: 'text-amber-200', tab: 'upcoming' },
-        { label: '新着', value: newItems.length, tone: 'text-sky-200', tab: 'new' },
-        { label: '追跡待ち', value: followUp.length, tone: 'text-rose-200', tab: 'followUp' },
-        { label: '落札判明', value: openingResults.length, tone: 'text-stone-100', tab: 'results' },
-    ];
-
-    // 「新着公告」「直近開札」も専用の入口へ送る。
-    // 以前はこの2つが両方とも受付中一覧へ飛んでおり、
-    // タブで見ていた内容と違うものが出ていた。
-    const seeAllHref =
-        tab === 'followUp' ? '/search?quick=resultFollowUp'
-        : tab === 'results' ? '/search?quick=opened'
-        : tab === 'upcoming' ? '/search?quick=upcomingBidding'
-        : tab === 'new' ? '/search?quick=newArrivals'
-        : '/search?quick=active';
+    const newItems = useMemo(() => items
+        .filter(item => item.announcementDate && item.announcementDate.slice(0, 10) >= sinceDate)
+        .sort((a, b) => b.announcementDate.localeCompare(a.announcementDate)), [items, sinceDate]);
+    const tab = selectedTab ?? (newItems.length === 0 ? 'upcoming' : 'new');
+    const results = openingResults.map(result => ({
+        ...result,
+        meta: result.winningContractor || displayStatus(result),
+    }));
+    const openings = upcoming.map(item => ({ ...item, meta: `開札 ${formatDate(item.biddingDate)}` }));
+    const entries: Record<TabKey, FocusEntry[]> = {
+        new: newItems.map(announcementEntry),
+        upcoming: openings,
+        results,
+        followUp: followUp.map(({ item, ageDays }) => ({
+            ...item,
+            meta: ageDays !== null ? `${ageDays}日経過` : '開札日なし',
+        })),
+    };
+    const digest: Array<FocusEntry & { label: string }> = [];
+    if (entries.new[0]) digest.push({ ...entries.new[0], label: '新着公告' });
+    if (openings[0] && !digest.some(entry => entry.id === openings[0].id)) {
+        digest.push({ ...openings[0], label: '直近開札' });
+    }
+    const recentResult = results.find(entry => !digest.some(featured => featured.id === entry.id));
+    if (recentResult) digest.push({ ...recentResult, label: '開札結果' });
+    if (digest.length === 0) {
+        const latest = items.find(item => !item.isForecast && item.announcementDate && item.announcementDate.slice(0, 10) <= today);
+        if (latest) digest.push({ ...announcementEntry(latest), label: '最近の公告' });
+    }
 
     return (
-        <section className="mb-8" aria-label="今日見るところ">
-            {/* 数字だけの横1行。詳細は下のタブで切り替える */}
-            <div className="rounded-t-[2rem] border border-amber-200/70 bg-gradient-to-br from-stone-950 via-stone-900 to-amber-950 px-5 py-4 text-white shadow-soft lg:px-7">
-                <div className="mb-3 flex items-center gap-2">
-                    <CalendarClock size={16} className="text-amber-200" />
-                    <span className="text-[13px] font-bold uppercase tracking-[0.24em] text-amber-100">
-                        Today Focus
-                    </span>
-                    {sinceDate && (
-                        <span className="ml-auto text-[13px] tracking-wider text-stone-400">
-                            {isFirstVisit ? '直近7日' : `前回確認 ${formatDate(sinceDate)} 以降`}
-                        </span>
+        <>
+            <section className="paper-panel p-2.5" aria-labelledby="today-digest">
+                <h2 className="paper-heading" id="today-digest">今日のダイジェスト</h2>
+                <div className="grid items-center gap-3 xl:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)]">
+                    {digest.length > 0 ? (
+                        <ol className="min-w-0">
+                            {digest.map((entry, index) => (
+                                <li key={entry.id} className="border-b border-border last:border-b-0">
+                                    <Link href={`/project/${entry.id}`} className="group flex items-start gap-3 rounded px-2.5 py-2.5 hover:bg-paper-tint sm:py-3">
+                                        <span aria-hidden="true" className="font-serif text-2xl leading-none font-bold text-amber-800">{index + 1}</span>
+                                        <div className="min-w-0">
+                                            <p className="text-xs leading-5 font-bold text-accent">{entry.label}</p>
+                                            <p className="mt-0.5 text-[15px] leading-6 font-bold break-words group-hover:underline sm:text-base">{entry.title}</p>
+                                            <p className="mt-0.5 text-[13px] leading-5 break-words text-secondary">{entry.municipality} · {entry.meta}</p>
+                                        </div>
+                                    </Link>
+                                </li>
+                            ))}
+                        </ol>
+                    ) : (
+                        <p className="px-3 py-5 text-sm leading-6 text-secondary">現在表示できる案件はありません。</p>
                     )}
+                    <div className="hidden overflow-hidden rounded bg-paper-tint xl:block">
+                        <Image
+                            src="/morning-civic-illustration.png"
+                            alt=""
+                            width={640}
+                            height={400}
+                            className="aspect-[1.75] w-full object-cover"
+                            sizes="(min-width: 1280px) 360px, 1px"
+                        />
+                    </div>
                 </div>
-                <div className="grid grid-cols-3 gap-2 sm:grid-cols-5">
-                    {stats.map(stat => {
-                        const inner = (
-                            <>
-                                <p className="text-[14px] tracking-[0.1em] text-stone-300">{stat.label}</p>
-                                <p className={`mt-1 text-4xl font-light tabular-nums ${stat.tone}`}>{stat.value}</p>
-                            </>
-                        );
-                        const cls = `rounded-2xl bg-white/10 px-2 py-2.5 text-center transition hover:bg-white/20 ${
-                            stat.tab && stat.tab === tab ? 'ring-1 ring-amber-200/60' : ''
-                        }`;
-                        return stat.href ? (
-                            <Link key={stat.label} href={stat.href} className={cls}>{inner}</Link>
-                        ) : (
-                            <button key={stat.label} onClick={() => stat.tab && setTab(stat.tab)} className={cls}>
-                                {inner}
-                            </button>
-                        );
-                    })}
-                </div>
-            </div>
+            </section>
 
-            {/* 4つのパネルを1つにまとめ、タブで切り替える */}
-            <div className="rounded-b-[2rem] border border-t-0 border-stone-200 bg-white/80 px-3 pb-3 shadow-sm lg:px-5">
-                <div className="flex flex-wrap items-center gap-1 border-b border-border/40 pt-3">
-                    {tabs.map(t => (
+            <section className="paper-panel p-2.5" aria-labelledby="today-list">
+                <div className="paper-heading flex flex-wrap items-center justify-between gap-x-3 gap-y-1">
+                    <h2 id="today-list">案件の動き</h2>
+                    <Link href="/search?quick=active" className="font-sans text-xs font-bold whitespace-nowrap text-accent hover:underline">
+                        受付中 <span className="tabular-nums">{activeCount}件</span>
+                    </Link>
+                </div>
+                <div className="flex flex-wrap gap-1.5 px-0.5 py-2.5" role="group" aria-label="案件の表示切替">
+                    {(Object.keys(tabDetails) as TabKey[]).map(key => (
                         <button
-                            key={t.key}
-                            onClick={() => setTab(t.key)}
-                            className={`rounded-t-lg px-4 py-3.5 text-[17px] tracking-wider transition-colors ${
-                                tab === t.key
-                                    ? 'border-b-2 border-accent font-semibold text-primary'
-                                    : 'text-secondary/60 hover:text-accent'
+                            key={key}
+                            type="button"
+                            onClick={() => setSelectedTab(key)}
+                            aria-pressed={tab === key}
+                            className={`rounded border px-2.5 py-1.5 text-[13px] leading-5 font-semibold transition-colors sm:px-3 sm:text-sm ${
+                                tab === key ? 'border-accent bg-accent text-white' : 'border-border text-secondary hover:bg-paper-tint'
                             }`}
                         >
-                            {t.label}
-                            <span className="ml-2 tabular-nums text-[15px] text-secondary/50">{t.count}</span>
+                            {tabDetails[key].label} <span className="ml-0.5 tabular-nums">{entries[key].length}</span>
                         </button>
                     ))}
                 </div>
-
-                <div className="min-h-[160px]">
-                    {tab === 'new' && (newItems.length > 0 ? newItems.slice(0, 5).map(item => (
-                        <Row
-                            key={item.id}
-                            href={`/project/${item.id}`}
-                            municipality={item.municipality}
-                            title={item.title}
-                            meta={`公告 ${formatDate(item.announcementDate)}`}
-                        />
-                    )) : <Empty text="新しい公告はありません" />)}
-
-                    {tab === 'upcoming' && (upcoming.length > 0 ? upcoming.slice(0, 5).map(item => (
-                        <Row
-                            key={item.id}
-                            href={`/project/${item.id}`}
-                            municipality={item.municipality}
-                            title={item.title}
-                            meta={daysUntilLabel(item.biddingDate)}
-                            emphasis="warn"
-                        />
-                    )) : <Empty text="直近の開札予定はありません" />)}
-
-                    {tab === 'results' && (openingResults.length > 0 ? openingResults.slice(0, 5).map(result => (
-                        <Row
-                            key={result.id}
-                            href={`/project/${result.id}`}
-                            municipality={result.municipality}
-                            title={result.title}
-                            meta={result.winningContractor || displayStatus(result)}
-                            emphasis="good"
-                        />
-                    )) : <Empty text="新しい開札結果はありません" />)}
-
-                    {tab === 'followUp' && (followUp.length > 0 ? followUp.slice(0, 5).map(entry => (
-                        <Row
-                            key={entry.item.id}
-                            href={`/project/${entry.item.id}`}
-                            municipality={entry.item.municipality}
-                            title={entry.item.title}
-                            meta={entry.ageDays !== null ? `${entry.ageDays}日経過` : '開札日なし'}
-                            emphasis="warn"
-                        />
-                    )) : <Empty text="追跡待ちの案件はありません" />)}
+                <div className="px-1 pb-1.5 text-xs leading-5 text-secondary">
+                    {tab === 'new' && (lastVisit ? `前回確認 ${formatDate(sinceDate)} 以降` : '直近7日')}
+                    {tab === 'upcoming' && '本日から7日後までの開札予定'}
                 </div>
-
-                <div className="flex justify-end pt-2">
-                    <Link
-                        href={seeAllHref}
-                        className="inline-flex items-center gap-1.5 text-[15px] tracking-wider text-secondary/60 transition-colors hover:text-accent"
-                    >
-                        一覧で見る
-                        <ArrowRight size={16} />
-                    </Link>
-                </div>
-            </div>
-        </section>
-    );
-}
-
-function Empty({ text }: { text: string }) {
-    return (
-        <p className="py-12 text-center text-[16px] tracking-wider text-secondary/40">{text}</p>
+                {entries[tab].length > 0 ? (
+                    <ul className="border-t border-border">
+                        {entries[tab].slice(0, 5).map(entry => (
+                            <li key={entry.id} className="border-b border-border odd:bg-paper-stripe">
+                                <Link
+                                    href={`/project/${entry.id}`}
+                                    className="group grid grid-cols-[minmax(0,1fr)_auto] items-baseline gap-x-3 gap-y-0.5 px-2.5 py-2.5 hover:bg-paper-tint sm:grid-cols-[minmax(0,1fr)_6rem_minmax(5rem,auto)]"
+                                >
+                                    <span className="col-span-2 text-[15px] leading-6 font-semibold break-words group-hover:underline sm:col-span-1">{entry.title}</span>
+                                    <span className="text-[13px] leading-5 text-secondary">{entry.municipality}</span>
+                                    <span className="max-w-[10rem] text-right text-[13px] leading-5 break-words text-secondary tabular-nums">{entry.meta}</span>
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
+                ) : (
+                    <p className="border-t border-border px-3 py-5 text-sm text-secondary">{tabDetails[tab].empty}</p>
+                )}
+                <Link href={tabDetails[tab].href} className="flex w-fit items-center gap-1.5 rounded px-2.5 py-2.5 text-sm font-bold text-accent hover:underline">
+                    {tabDetails[tab].label}の一覧
+                    <ArrowRight size={15} aria-hidden="true" />
+                </Link>
+            </section>
+        </>
     );
 }

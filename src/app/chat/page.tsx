@@ -2,7 +2,6 @@
 
 import { useMemo, useState } from 'react';
 import { AppShell } from '@/components/AppShell';
-import { Header } from '@/components/Header';
 import { AlertCircle, ArrowUpRight, Bot, CalendarDays, ExternalLink, Loader2, MessageSquareText, Search, Sparkles, Trophy } from 'lucide-react';
 import type { ChatContext } from '@/services/chat_service';
 
@@ -127,7 +126,6 @@ export default function ChatPage() {
 
     return (
         <AppShell>
-            <Header />
 
             <div className="mx-auto max-w-7xl">
                 <div className="mb-10 flex flex-col gap-5 rounded-[2rem] border border-border/60 bg-white/80 p-8 shadow-soft">

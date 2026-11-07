@@ -1,5 +1,4 @@
 import { AppShell } from '@/components/AppShell';
-import { Header } from '@/components/Header';
 import { BiddingTable } from '@/components/BiddingTable';
 import { loadDashboardData } from '@/lib/dashboard_data';
 import { resolveQuickLink } from '@/lib/quick_links';
@@ -58,15 +57,14 @@ export default async function SearchPage({ searchParams }: PageProps) {
 
     return (
         <AppShell>
-            <Header />
-            <div className="mb-8">
-                <h2 className="text-3xl tracking-widest font-serif">案件検索</h2>
-                <p className="mt-3 text-secondary/60 text-sm tracking-wider">
+            <header className="mb-5 flex flex-wrap items-baseline gap-x-6 gap-y-1">
+                <h1 className="paper-title">案件検索</h1>
+                <p className="text-sm leading-relaxed text-secondary md:border-l md:border-border md:pl-5 md:text-base">
                     {quick.key === 'all'
                         ? 'タブとキーワード、自治体で案件を絞り込めます。'
                         : `「${quick.label}」で絞り込んでいます。${quick.description}`}
                 </p>
-            </div>
+            </header>
             <BiddingTable
                 items={allItems}
                 initialTab={initialTab}

@@ -1,14 +1,14 @@
-﻿import { BiddingItem } from '@/types/bidding';
+import { BiddingItem } from '@/types/bidding';
 import { AppShell } from '@/components/AppShell';
-import { Header } from '@/components/Header';
 import { ProjectActionPanel } from '@/components/ProjectActionPanel';
 import fs from 'fs';
 import path from 'path';
 import Link from 'next/link';
-import { ArrowLeft, ExternalLink, Trophy, Ruler, Calendar, Banknote, FileText, Building2, Clock, Tag, Sparkles, CheckCircle2, AlertTriangle, Search } from 'lucide-react';
+import { ArrowLeft, ExternalLink, FileText, CheckCircle2, AlertTriangle, Search } from 'lucide-react';
 import { getBiddingLabel } from '@/lib/bidding_schedule';
 import { isOpenedItem, isSchoolToiletItem } from '@/lib/practical_filters';
 import { displayStatus, statusLabel } from '@/lib/status_label';
+import { formatJstDateLabel } from '@/lib/jst_date';
 
 interface PageProps {
     params: Promise<{ id: string }>;
@@ -18,7 +18,7 @@ function formatDate(dateStr?: string): string {
     if (!dateStr) return '未設定';
     const date = new Date(dateStr);
     if (Number.isNaN(date.getTime())) return dateStr;
-    return date.toLocaleDateString('ja-JP', { year: 'numeric', month: 'long', day: 'numeric' });
+    return formatJstDateLabel(date);
 }
 
 // Materials detection logic for subcontractors
@@ -133,11 +133,10 @@ export default async function ProjectDetailPage({ params }: PageProps) {
     if (!item) {
         return (
             <AppShell>
-                <Header />
-                <div className="text-center py-20">
-                    <p className="text-3xl tracking-widest mb-4">案件が見つかりません</p>
-                    <Link href="/" className="text-accent hover:underline tracking-wider">
-                        ダッシュボードに戻る
+                <div className="paper-panel px-5 py-12 text-center">
+                    <h1 className="paper-title mb-5">案件が見つかりません</h1>
+                    <Link href="/search" className="paper-button">
+                        <ArrowLeft size={16} aria-hidden="true" /> 案件検索に戻る
                     </Link>
                 </div>
             </AppShell>
@@ -161,307 +160,210 @@ export default async function ProjectDetailPage({ params }: PageProps) {
     const detectedMaterials = detectMaterials([item.description, brief?.summary, brief?.scale].filter(Boolean).join(' '));
     const resultAudit = getResultAudit(item);
     const isSchoolToilet = isSchoolToiletItem(item);
+    const status = displayStatus(item);
+    const statusTone = status === '落札' || status === '受付中'
+        ? 'border-emerald-200 bg-emerald-50 text-emerald-900'
+        : status === '不調' || status === '中止' || status === '締切切迫' || status === '締切間近'
+            ? 'border-amber-200 bg-amber-50 text-amber-900'
+            : 'border-border bg-background text-secondary';
+    const sourceUrl = item.link || item.pdfUrl;
+    const dateLabel = getBiddingLabel(item);
+    const dates = [
+        { label: '公告日', value: item.announcementDate },
+        { label: dateLabel, value: item.biddingDate },
+    ];
 
     return (
         <AppShell>
-            <Header />
+            <nav aria-label="パンくずリスト" className="mb-3 flex flex-wrap items-center gap-2 text-sm text-secondary">
+                <Link href="/search" className="inline-flex items-center gap-1.5 font-bold text-accent hover:underline">
+                    <ArrowLeft size={15} aria-hidden="true" /> 案件検索
+                </Link>
+                <span aria-hidden="true">/</span>
+                <span aria-current="page">案件詳細</span>
+            </nav>
 
-            {/* Back Link */}
-            <Link
-                href="/"
-                className="inline-flex items-center gap-2 text-secondary/60 hover:text-accent transition-colors text-sm tracking-wider mb-8"
-            >
-                <ArrowLeft size={14} />
-                <span>ダッシュボードに戻る</span>
-            </Link>
-
-            {/* Project Action Panel (Sales Progress & Bookmarking) */}
-            <ProjectActionPanel item={item} />
-
-            {/* Project Title & Status */}
-            <div className="mb-12">
-                <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 mb-4">
-                    <div className="flex items-start gap-4">
-                        <span className={`text-[9px] tracking-[0.2em] border px-3 py-1.5 rounded-sm uppercase font-bold mt-1 shrink-0 ${
-                            item.status === '落札' ? 'text-green-600 border-green-200 bg-green-50' :
-                            item.status === '受付中' ? 'text-secondary border-secondary/20 bg-secondary/5' :
-                            item.status === '締切切迫' ? 'text-amber-600 border-amber-200 bg-amber-50' :
-                            'text-gray-300 border-gray-100'
-                        }`}>
-                            {statusLabel(displayStatus(item))}
-                        </span>
-                        <h2 className="text-2xl font-serif tracking-wider leading-relaxed text-primary">{item.title}</h2>
+            <header className="mb-5">
+                <h1 className="paper-title">{item.title}</h1>
+                <div className="mt-3 flex flex-wrap items-center justify-between gap-x-6 gap-y-3">
+                    <div className="flex flex-wrap items-center gap-2 text-sm font-semibold">
+                        <span className="rounded-sm border border-border bg-surface px-2.5 py-1">{item.municipality}</span>
+                        <span className="rounded-sm border border-border bg-surface px-2.5 py-1">{item.type}</span>
+                        <span className={`rounded-sm border px-2.5 py-1 ${statusTone}`}>{statusLabel(status)}</span>
                     </div>
-                    <div className="flex flex-wrap gap-3 lg:justify-end shrink-0">
-                        {item.pdfUrl && (
-                            <a
-                                href={item.pdfUrl}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 text-red-700 bg-red-50 border border-red-100 px-4 py-2.5 rounded-md hover:bg-red-100 transition-colors text-xs font-semibold tracking-wider shadow-sm"
-                            >
-                                <FileText size={14} />
-                                <span>仕様書・PDF</span>
+                    <div className="flex flex-wrap items-center gap-2">
+                        {sourceUrl && (
+                            <a href={sourceUrl} target="_blank" rel="noopener noreferrer" className="paper-button paper-button-primary">
+                                <ExternalLink size={16} aria-hidden="true" /> {item.link ? '公式ページを開く' : '掲載資料を開く'}
                             </a>
                         )}
-                        {item.link && (
-                            <a
-                                href={item.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 text-accent border border-accent/20 bg-white px-4 py-2.5 rounded-md hover:bg-accent/5 transition-colors text-xs font-semibold tracking-wider shadow-sm"
-                            >
-                                <ExternalLink size={14} />
-                                <span>公式告示ページ</span>
-                            </a>
-                        )}
+                        <ProjectActionPanel key={item.id} item={item} />
                     </div>
                 </div>
-                <p className="text-secondary/50 text-xs tracking-wider ml-16">{item.municipality}</p>
-            </div>
+            </header>
 
-            <div className={`mb-12 rounded-[2rem] border p-6 shadow-sm lg:p-8 ${
-                resultAudit.tone === 'ok'
-                    ? 'border-emerald-200 bg-emerald-50/70'
-                    : resultAudit.tone === 'warn'
-                        ? 'border-amber-200 bg-amber-50/80'
-                        : resultAudit.tone === 'active'
-                            ? 'border-blue-200 bg-blue-50/70'
-                            : 'border-slate-200 bg-white/80'
-            }`}>
-                <div className="flex flex-col gap-6 xl:flex-row xl:items-start xl:justify-between">
-                    <div className="flex items-start gap-4">
-                        <div className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl ${
-                            resultAudit.tone === 'ok'
-                                ? 'bg-emerald-100 text-emerald-700'
-                                : resultAudit.tone === 'warn'
-                                    ? 'bg-amber-100 text-amber-800'
-                                    : resultAudit.tone === 'active'
-                                        ? 'bg-blue-100 text-blue-700'
-                                        : 'bg-slate-100 text-slate-600'
-                        }`}>
-                            {resultAudit.tone === 'ok' ? <CheckCircle2 size={22} /> : <AlertTriangle size={22} />}
-                        </div>
-                        <div>
-                            <p className="text-[10px] font-bold tracking-[0.24em] text-secondary/50 uppercase">Result Audit</p>
-                            <h3 className="mt-2 text-xl font-bold tracking-[0.04em] text-primary">{resultAudit.title}</h3>
-                            <p className="mt-2 max-w-3xl text-sm leading-7 tracking-[0.04em] text-secondary/70">{resultAudit.message}</p>
-                        </div>
-                    </div>
-                    <div className="grid min-w-full gap-3 sm:grid-cols-2 xl:min-w-[420px]">
-                        <div className="rounded-2xl bg-white/75 p-4">
-                            <p className="text-[9px] tracking-[0.18em] text-secondary/45 uppercase">開札日</p>
-                            <p className="mt-1 text-sm font-bold tracking-[0.06em] text-primary">{formatDate(item.biddingDate)}</p>
-                        </div>
-                        <div className="rounded-2xl bg-white/75 p-4">
-                            <p className="text-[9px] tracking-[0.18em] text-secondary/45 uppercase">落札者</p>
-                            <p className="mt-1 line-clamp-2 text-sm font-bold tracking-[0.04em] text-primary">{item.winningContractor || '未取得'}</p>
-                        </div>
-                        <Link
-                            href="/search?quick=missingWinner"
-                            className="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/80 bg-white/85 px-4 py-3 text-[10px] font-bold tracking-[0.16em] text-secondary transition hover:border-accent/30 hover:text-accent"
-                        >
-                            <Search size={13} />
-                            落札者未取得を見る
-                        </Link>
-                        {isSchoolToilet ? (
-                            <Link
-                                href="/search?quick=schoolToilet"
-                                className="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/80 bg-white/85 px-4 py-3 text-[10px] font-bold tracking-[0.16em] text-secondary transition hover:border-accent/30 hover:text-accent"
-                            >
-                                <Search size={13} />
-                                学校トイレ案件を見る
-                            </Link>
-                        ) : (
-                            <Link
-                                href="/search?quick=opened"
-                                className="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/80 bg-white/85 px-4 py-3 text-[10px] font-bold tracking-[0.16em] text-secondary transition hover:border-accent/30 hover:text-accent"
-                            >
-                                <Search size={13} />
-                                開札済みを見る
-                            </Link>
-                        )}
-                    </div>
-                </div>
-            </div>
-
-            {/* AI Materials Detection (For Subcontractors) */}
-            {detectedMaterials.length > 0 && (
-                <div className="bg-gradient-to-r from-blue-50/50 to-indigo-50/20 backdrop-blur-xl border border-blue-100 p-8 rounded-2xl shadow-premium mb-12">
-                    <div className="flex items-center gap-3 mb-4 text-blue-700">
-                        <Sparkles className="w-5 h-5" />
-                        <h3 className="text-xs tracking-[0.25em] font-bold uppercase font-serif">AI 検知資材・部材（下請け向け営業チャンス）</h3>
-                    </div>
-                    <p className="text-xs text-secondary/60 tracking-wider mb-6">
-                        仕様書PDFや案件サマリーから、自社の商材が使われそうな主要な部材・設備カテゴリーをAIが検知しました。元請け（落札ゼネコン）への売込チャンスです！
-                    </p>
-                    <div className="flex flex-wrap gap-4">
-                        {detectedMaterials.map((m) => (
-                            <div
-                                key={m.name}
-                                className="bg-white border border-blue-200/50 px-4 py-3 rounded-xl flex items-center gap-3 shadow-sm hover:border-blue-300 transition-all"
-                            >
-                                <span className="text-xl">{m.icon}</span>
-                                <div>
-                                    <h5 className="text-xs font-bold text-primary font-serif">{m.name}</h5>
-                                    <p className="text-[10px] text-secondary/40 font-mono mt-0.5">検知キーワード: &quot;{m.match}&quot;</p>
-                                </div>
+            <div className="grid items-start gap-5 lg:grid-cols-[minmax(0,1.7fr)_minmax(0,1fr)]">
+                <div className="min-w-0 space-y-4">
+                    <dl className="paper-panel grid grid-cols-2 gap-1.5 p-1.5">
+                        {dates.map(({ label, value }) => (
+                            <div key={label} className={`min-w-0 rounded px-3 py-2.5 sm:px-4 ${label === dateLabel ? 'bg-paper-tint' : ''}`}>
+                                <dt className="text-sm font-bold text-secondary">{label}</dt>
+                                <dd className="mt-1 text-base font-bold tabular-nums sm:text-xl">{formatDate(value)}</dd>
                             </div>
                         ))}
-                    </div>
-                </div>
-            )}
+                    </dl>
 
-            {/* Summary Panel */}
-            <div className="bg-white/80 backdrop-blur-xl shadow-premium p-8 rounded-lg border border-white/50 mb-12">
-                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
-                    <div className="flex items-start gap-3">
-                        <Building2 className="w-5 h-5 text-accent mt-0.5" />
-                        <div>
-                            <p className="text-[9px] tracking-[0.2em] text-secondary/40 uppercase mb-1">自治体 / 種別</p>
-                            <p className="text-sm tracking-wider font-semibold">{item.municipality} / {item.type}</p>
-                        </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                        <Clock className="w-5 h-5 text-accent mt-0.5" />
-                        <div>
-                            <p className="text-[9px] tracking-[0.2em] text-secondary/40 uppercase mb-1">公告日</p>
-                            <p className="text-sm tracking-wider font-semibold">{formatDate(item.announcementDate)}</p>
-                        </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                        <Calendar className="w-5 h-5 text-accent mt-0.5" />
-                        <div>
-                            <p className="text-[9px] tracking-[0.2em] text-secondary/40 uppercase mb-1">{getBiddingLabel(item)}</p>
-                            <p className="text-sm tracking-wider font-semibold">{formatDate(item.biddingDate)}</p>
-                        </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                        <FileText className="w-5 h-5 text-accent mt-0.5" />
-                        <div>
-                            <p className="text-[9px] tracking-[0.2em] text-secondary/40 uppercase mb-1">資料</p>
-                            <p className="text-sm tracking-wider font-semibold">{item.pdfUrl ? '仕様書PDFあり' : '公式ホームページのみ'}</p>
-                        </div>
-                    </div>
-                </div>
-                {item.tags && item.tags.length > 0 && (
-                    <div className="flex items-center gap-2 mt-8 pt-6 border-t border-border/30">
-                        <Tag className="w-4 h-4 text-secondary/40" />
-                        <div className="flex flex-wrap gap-2">
-                            {item.tags.map(tag => (
-                                <span key={tag} className="text-[10px] bg-blue-50 text-blue-600 px-2.5 py-0.5 rounded-full border border-blue-100 font-bold tracking-wider">
-                                    #{tag}
-                                </span>
-                            ))}
-                        </div>
-                    </div>
-                )}
-            </div>
-
-            {/* Info Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-                {/* Intelligence Cards */}
-                {item.winningContractor && (
-                    <div className="bg-white/80 backdrop-blur-xl shadow-premium p-8 rounded-2xl border border-green-100">
-                        <div className="flex items-center gap-3 mb-3">
-                            <Trophy className="w-5 h-5 text-green-600" />
-                            <span className="text-[10px] tracking-[0.3em] text-green-600/70 uppercase font-bold">落札業者（元請け）</span>
-                        </div>
-                        <p className="text-xl font-serif font-bold tracking-wider text-green-800">{item.winningContractor}</p>
-                        <p className="text-xs text-green-600/60 tracking-wider mt-2">
-                            ※下請けメーカーはこの落札ゼネコンへ資材や専門工事のアプローチを行いましょう。
-                        </p>
-                    </div>
-                )}
-
-                {item.designFirm && (
-                    <div className="bg-white/80 backdrop-blur-xl shadow-premium p-8 rounded-2xl border border-blue-100">
-                        <div className="flex items-center gap-3 mb-3">
-                            <Ruler className="w-5 h-5 text-blue-600" />
-                            <span className="text-[10px] tracking-[0.3em] text-blue-600/70 uppercase font-bold">設計事務所</span>
-                        </div>
-                        <p className="text-xl font-serif font-bold tracking-wider text-blue-800">{item.designFirm}</p>
-                    </div>
-                )}
-
-                {price && (
-                    <div className="bg-white/80 backdrop-blur-xl shadow-premium p-8 rounded-2xl border border-slate-100">
-                        <div className="flex items-center gap-3 mb-3">
-                            <Banknote className="w-5 h-5 text-accent" />
-                            <span className="text-[10px] tracking-[0.3em] text-secondary/50 uppercase font-bold">予定価格</span>
-                        </div>
-                        <p className="text-xl font-serif font-bold tracking-wider text-primary">{price}</p>
-                    </div>
-                )}
-
-                {period && (
-                    <div className="bg-white/80 backdrop-blur-xl shadow-premium p-8 rounded-2xl border border-slate-100">
-                        <div className="flex items-center gap-3 mb-3">
-                            <Calendar className="w-5 h-5 text-accent" />
-                            <span className="text-[10px] tracking-[0.3em] text-secondary/50 uppercase font-bold">工期</span>
-                        </div>
-                        <p className="text-xl font-serif font-bold tracking-wider text-primary">{period}</p>
-                    </div>
-                )}
-            </div>
-
-            {/* 資料から読み取った内容 */}
-            {brief && (brief.summary || briefRows.length > 0) && (
-                <div className="bg-white/80 backdrop-blur-xl shadow-premium p-8 rounded-2xl border border-white/50 mb-12">
-                    <h3 className="text-[10px] tracking-[0.3em] text-secondary/50 uppercase font-bold mb-4">案件の内容</h3>
-                    {brief.summary && (
-                        <p className="text-sm leading-relaxed text-secondary tracking-wider whitespace-pre-wrap">{brief.summary}</p>
-                    )}
-                    {briefRows.length > 0 && (
-                        <dl className="mt-4 grid gap-3 text-sm">
-                            {briefRows.map(row => (
-                                <div key={row.label} className="grid gap-1 sm:grid-cols-[6rem_minmax(0,1fr)]">
-                                    <dt className="text-secondary/50 tracking-wider">{row.label}</dt>
-                                    <dd className="text-secondary tracking-wider">{row.value}</dd>
+                    <section className="paper-panel p-2">
+                        <h2 className="paper-heading">工事・業務の概要</h2>
+                        <div className="space-y-4 px-2 py-3 sm:px-3">
+                            {brief?.summary && <p className="whitespace-pre-wrap text-base leading-7 [overflow-wrap:anywhere]">{brief.summary}</p>}
+                            {(briefRows.length > 0 || period || item.designFirm) && (
+                                <dl className="overflow-hidden rounded border border-border text-sm leading-6 sm:text-[15px]">
+                                    {[
+                                        ...briefRows,
+                                        { label: '工期', value: period },
+                                        { label: '設計事務所', value: item.designFirm },
+                                    ].filter(row => row.value).map(({ label, value }) => (
+                                        <div key={label} className="grid border-b border-border last:border-0 even:bg-background/60 sm:grid-cols-[8rem_minmax(0,1fr)]">
+                                            <dt className="bg-paper-tint px-3 py-1 font-bold sm:py-2">{label}</dt>
+                                            <dd className="px-3 py-2 [overflow-wrap:anywhere]">{value}</dd>
+                                        </div>
+                                    ))}
+                                </dl>
+                            )}
+                            {brief && (brief.summary || briefRows.length > 0) && (
+                                <p className="text-sm leading-6 text-secondary">公告ページやPDFからAIが読み取った内容です。正式な条件は原本で確認してください。</p>
+                            )}
+                            {item.description && (
+                                <div>
+                                    <h3 className="mb-1.5 text-sm font-bold text-accent">AI 案件サマリー</h3>
+                                    <p className="whitespace-pre-wrap text-base leading-7 [overflow-wrap:anywhere]">{item.description}</p>
                                 </div>
-                            ))}
-                        </dl>
+                            )}
+                            {!brief?.summary && briefRows.length === 0 && !period && !item.designFirm && !item.description && (
+                                <p className="text-sm leading-6 text-secondary">概要は未取得です。詳細は発注元の資料をご確認ください。</p>
+                            )}
+                            {item.tags && item.tags.length > 0 && (
+                                <ul aria-label="案件タグ" className="flex flex-wrap gap-1.5">
+                                    {item.tags.map(tag => (
+                                        <li key={tag} className="rounded border border-border bg-paper-tint px-2 py-0.5 text-xs font-semibold text-accent [overflow-wrap:anywhere]">#{tag}</li>
+                                    ))}
+                                </ul>
+                            )}
+                        </div>
+                    </section>
+
+                    <section className="paper-panel p-2">
+                        <h2 className="paper-heading">開札・落札情報</h2>
+                        <div className="space-y-3 px-2 py-3 sm:px-3">
+                            <dl className="overflow-hidden rounded border border-border text-sm sm:text-base">
+                                <div className="grid border-b border-border last:border-0 sm:grid-cols-[8rem_minmax(0,1fr)]">
+                                    <dt className="bg-paper-tint px-3 py-2 font-bold">落札者</dt>
+                                    <dd className="px-3 py-2 font-bold [overflow-wrap:anywhere]">{item.winningContractor || '未取得'}</dd>
+                                </div>
+                                {price && (
+                                    <div className="grid bg-background/60 sm:grid-cols-[8rem_minmax(0,1fr)]">
+                                        <dt className="bg-paper-tint px-3 py-2 font-bold">予定価格</dt>
+                                        <dd className="px-3 py-2 font-bold tabular-nums [overflow-wrap:anywhere]">{price}</dd>
+                                    </div>
+                                )}
+                            </dl>
+                            <div className={`flex gap-2.5 rounded p-3 ${resultAudit.tone === 'warn' ? 'bg-amber-50 text-amber-950' : 'bg-paper-tint text-primary'}`}>
+                                {resultAudit.tone === 'ok' ? <CheckCircle2 size={18} className="mt-0.5 shrink-0 text-accent" aria-hidden="true" /> : <AlertTriangle size={18} className="mt-0.5 shrink-0" aria-hidden="true" />}
+                                <div>
+                                    <h3 className="text-sm font-bold">{resultAudit.title}</h3>
+                                    <p className="mt-1 text-sm leading-6">{resultAudit.message}</p>
+                                </div>
+                            </div>
+                            <div className="flex flex-wrap gap-2">
+                                <Link href="/search?quick=missingWinner" className="paper-button">
+                                    <Search size={14} aria-hidden="true" /> 落札者未取得を見る
+                                </Link>
+                                <Link href={isSchoolToilet ? '/search?quick=schoolToilet' : '/search?quick=opened'} className="paper-button">
+                                    <Search size={14} aria-hidden="true" /> {isSchoolToilet ? '学校トイレ案件を見る' : '開札済みを見る'}
+                                </Link>
+                            </div>
+                        </div>
+                    </section>
+
+                    {detectedMaterials.length > 0 && (
+                        <section className="paper-panel p-2">
+                            <h2 className="paper-heading">AI 検知資材・部材</h2>
+                            <div className="space-y-3 px-2 py-3 sm:px-3">
+                                <p className="text-sm leading-6 text-secondary">仕様書PDFや案件サマリーから、使用される可能性のある部材・設備を検知しました。</p>
+                                <ul className="grid gap-2 sm:grid-cols-2">
+                                    {detectedMaterials.map(m => (
+                                        <li key={m.name} className="flex items-start gap-2 rounded border border-border bg-background/60 p-2.5">
+                                            <span aria-hidden="true">{m.icon}</span>
+                                            <div>
+                                                <p className="text-sm font-bold">{m.name}</p>
+                                                <p className="mt-0.5 text-xs leading-5 text-secondary">検知キーワード: {m.match}</p>
+                                            </div>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </section>
                     )}
-                    <p className="mt-4 text-xs text-secondary/50 tracking-wider">公告ページやPDFからAIが読み取った内容です。正式な条件は原本で確認してください。</p>
                 </div>
-            )}
 
-            {/* Description */}
-            {item.description && (
-                <div className="bg-white/80 backdrop-blur-xl shadow-premium p-8 rounded-2xl border border-white/50 mb-12">
-                    <h3 className="text-[10px] tracking-[0.3em] text-secondary/50 uppercase font-bold mb-4">AI 案件サマリー</h3>
-                    <p className="text-sm leading-relaxed text-secondary tracking-wider whitespace-pre-wrap">{item.description}</p>
-                </div>
-            )}
+                <aside aria-label="資料と関連案件" className="paper-panel space-y-3 p-2">
+                    <section>
+                        <h2 className="paper-heading">資料</h2>
+                        <div className="space-y-2 px-2 py-3">
+                            {item.link && (
+                                <a href={item.link} target="_blank" rel="noopener noreferrer" className="flex min-h-11 items-center gap-2 rounded border border-border bg-background/60 px-3 py-2 text-sm font-semibold hover:bg-paper-tint">
+                                    <ExternalLink size={16} className="shrink-0 text-accent" aria-hidden="true" />
+                                    公式告示ページ
+                                    <span className="ml-auto shrink-0 text-xs text-accent">開く ↗</span>
+                                </a>
+                            )}
+                            {item.pdfUrl && (
+                                <a href={item.pdfUrl} target="_blank" rel="noopener noreferrer" className="flex min-h-11 items-center gap-2 rounded border border-border bg-background/60 px-3 py-2 text-sm font-semibold hover:bg-paper-tint">
+                                    <FileText size={16} className="shrink-0 text-accent" aria-hidden="true" />
+                                    掲載資料（PDF）
+                                    <span className="ml-auto shrink-0 text-xs text-accent">PDFを開く ↗</span>
+                                </a>
+                            )}
+                            {!sourceUrl && <p className="text-sm leading-6 text-secondary">資料へのリンクは未取得です。</p>}
+                        </div>
+                    </section>
 
-            {/* Related Projects */}
-            {related.length > 0 && (
-                <div className="mt-16">
-                    <h3 className="text-[10px] tracking-[0.3em] text-secondary/50 uppercase font-bold mb-6">
-                        同じ自治体の他の案件
-                    </h3>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        {related.map((r) => (
-                            <Link
-                                key={r.id}
-                                href={`/project/${r.id}`}
-                                className="bg-white/80 backdrop-blur-xl shadow-premium p-6 rounded-xl border border-white/50 hover:border-accent/30 transition-all group"
-                            >
-                                <span className={`text-[8px] tracking-[0.2em] border px-2 py-0.5 rounded-sm uppercase font-bold ${
-                                    r.status === '落札' ? 'text-green-600 border-green-200' :
-                                    r.status === '受付中' ? 'text-secondary border-secondary/20' :
-                                    'text-gray-300 border-gray-100'
-                                }`}>
-                                    {displayStatus(r)}
-                                </span>
-                                <p className="text-sm font-serif font-semibold tracking-wider mt-3 group-hover:text-accent transition-colors truncate">
-                                    {r.title}
-                                </p>
-                            </Link>
-                        ))}
-                    </div>
-                </div>
-            )}
+                    {(item.announcementDate || item.biddingDate) && (
+                        <section>
+                            <h2 className="paper-heading">案件の日程</h2>
+                            <ol className="space-y-3 px-3 py-4">
+                                {dates.filter(date => date.value).map(({ label, value }) => (
+                                    <li key={label} className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm">
+                                        <span className="h-2 w-2 shrink-0 rounded-full bg-accent" aria-hidden="true" />
+                                        <span className="font-semibold tabular-nums">{formatDate(value)}</span>
+                                        <span className="text-secondary">{label}</span>
+                                    </li>
+                                ))}
+                            </ol>
+                        </section>
+                    )}
+
+                    {related.length > 0 && (
+                        <section>
+                            <h2 className="paper-heading">同じ自治体の他の案件</h2>
+                            <ul className="px-2 py-2">
+                                {related.map(project => (
+                                    <li key={project.id} className="rounded even:bg-background/60">
+                                        <Link href={`/project/${project.id}`} className="block px-2.5 py-2.5 transition hover:bg-paper-tint">
+                                            <div className="flex flex-wrap items-center justify-between gap-1.5 text-xs font-medium text-secondary">
+                                                <span className="tabular-nums">{formatDate(project.announcementDate)}</span>
+                                                <span className="rounded border border-border bg-surface px-1.5 py-0.5">{statusLabel(displayStatus(project))}</span>
+                                            </div>
+                                            <p className="mt-1 text-sm font-semibold leading-6 text-accent [overflow-wrap:anywhere]">{project.title}</p>
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </section>
+                    )}
+                </aside>
+            </div>
         </AppShell>
     );
 }

@@ -1,5 +1,4 @@
 import { AppShell } from '@/components/AppShell';
-import { Header } from '@/components/Header';
 import { ExternalLink } from 'lucide-react';
 import { MUNICIPALITY_SOURCES } from '@/lib/municipality_sources';
 import { loadDashboardData } from '@/lib/dashboard_data';
@@ -29,9 +28,8 @@ export default function SourcesPage() {
 
     return (
         <AppShell>
-            <Header />
             <div className="mb-8">
-                <h2 className="text-3xl tracking-widest font-serif">入札情報の収集元</h2>
+                <h1 className="paper-title">入札情報の収集元</h1>
                 <p className="mt-3 max-w-3xl text-sm leading-7 tracking-wider text-secondary/60">
                     各自治体の入札情報ページへのリンクです。ここに載せているのは実際にこのサイトが
                     見に行っているページなので、原本を自分で確認したいときにも、正しいページを

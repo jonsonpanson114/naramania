@@ -3,6 +3,7 @@ import { AppShell } from '@/components/AppShell';
 import RankingChart from '@/components/RankingChart';
 import RadarChart from '@/components/RadarChart';
 import { loadDashboardData } from '@/lib/dashboard_data';
+import { getMonthlyAnnouncements } from '@/lib/monthly_announcements';
 
 interface ScatterDataPoint {
     name: string;
@@ -115,204 +116,239 @@ export default async function AnalyticsPage() {
         }))
         .sort((a, b) => b.total - a.total);
 
-    // 月×自治体マトリクス（直近6ヶ月・公告日ベース）
-    const now = new Date();
-    const months: string[] = [];
-    for (let i = 5; i >= 0; i -= 1) {
-        const d = new Date(now.getFullYear(), now.getMonth() - i, 1);
-        months.push(`${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}`);
-    }
+    const { months: monthlyAnnouncements, countsByMunicipality: monthCounts } = getMonthlyAnnouncements(items);
+    const currentMonth = Number(monthlyAnnouncements.at(-1)?.month.slice(5));
+    const announcementTotal = monthlyAnnouncements.reduce((total, { count }) => total + count, 0);
+    const maxAnnouncements = Math.max(0, ...monthlyAnnouncements.map(({ count }) => count));
+    const tickStep = Math.max(1, maxAnnouncements <= 20 ? Math.ceil(maxAnnouncements / 4) : Math.ceil(maxAnnouncements / 20) * 5);
     const heatMunicipalities = municipalityRows.slice(0, 12).map(row => row.municipality);
-    const monthCounts = new Map<string, number>();
-    items.forEach((item) => {
-        const month = (item.announcementDate || '').slice(0, 7);
-        if (!months.includes(month)) return;
-        const key = `${item.municipality}:${month}`;
-        monthCounts.set(key, (monthCounts.get(key) || 0) + 1);
-    });
     const maxMonthCount = Math.max(1, ...Array.from(monthCounts.values()));
 
     const heatColor = (count: number): string => {
-        if (count === 0) return 'bg-stone-50 text-stone-300';
+        if (count === 0) return 'text-secondary';
         const ratio = count / maxMonthCount;
-        if (ratio > 0.66) return 'bg-amber-500 text-white';
-        if (ratio > 0.33) return 'bg-amber-300 text-stone-900';
-        return 'bg-amber-100 text-stone-700';
+        if (ratio > 0.66) return 'bg-accent text-white';
+        if (ratio > 0.33) return 'bg-emerald-200 text-primary';
+        return 'bg-paper-tint text-primary';
     };
 
     return (
         <AppShell>
-            <div className="space-y-12">
-                <div>
-                    <h1 className="text-3xl font-light tracking-[0.08em] text-primary font-serif mb-2">分析</h1>
-                    <p className="text-secondary/60 text-sm tracking-wider">
-                        落札実績のランキングと価格相場をまとめた分析ページです。
-                    </p>
-                </div>
+            <header className="mb-6 flex flex-wrap items-baseline gap-x-5 gap-y-2 border-b border-border pb-4">
+                <h1 className="paper-title">市場分析</h1>
+                <p className="text-sm font-semibold text-accent sm:text-base">奈良県の公告・落札の動き</p>
+            </header>
 
-                {/* 自治体別の動き */}
-                <section aria-label="自治体別の動き">
-                    <h2 className="text-xl font-bold text-gray-900 mb-6">自治体別の動き</h2>
-
-                    <div className="bg-white rounded-3xl p-6 border border-amber-900/10 shadow-sm overflow-x-auto mb-6">
-                        <h3 className="text-sm font-bold text-gray-700 mb-4">月別の公告件数（直近6ヶ月・上位{heatMunicipalities.length}自治体）</h3>
-                        <table className="w-full min-w-[560px] border-separate border-spacing-1 text-center">
-                            <thead>
-                                <tr>
-                                    <th className="text-left text-[11px] font-bold text-gray-400 px-2">自治体</th>
-                                    {months.map(month => (
-                                        <th key={month} className="text-[11px] font-bold text-gray-400 px-1 tabular-nums">
-                                            {Number(month.slice(5, 7))}月
-                                        </th>
+            <div className="grid min-w-0 gap-5 lg:grid-cols-[minmax(0,7fr)_minmax(0,4fr)]">
+                <div className="min-w-0 space-y-5">
+                    <section className="paper-panel" aria-labelledby="monthly-announcement-heading">
+                        <h2 id="monthly-announcement-heading" className="paper-heading">月別の公告件数</h2>
+                        <div className="grid gap-5 p-4 sm:p-5 xl:grid-cols-[minmax(0,2fr)_minmax(0,1fr)]">
+                            <div
+                                role="img"
+                                aria-label={monthlyAnnouncements.map(({ month, count }) => `${month}：${count}件`).join('、')}
+                                className="relative mt-4 mb-8 ml-11 min-w-0"
+                            >
+                                <div className="pointer-events-none absolute inset-0" aria-hidden="true">
+                                    {[4, 3, 2, 1, 0].map(tick => (
+                                        <div key={tick} className="absolute w-full border-t border-border" style={{ bottom: `${tick * 25}%` }}>
+                                            <span className="absolute right-full mr-2 -translate-y-1/2 whitespace-nowrap text-xs tabular-nums text-secondary">
+                                                {tick * tickStep}件
+                                            </span>
+                                        </div>
                                     ))}
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {heatMunicipalities.map(municipality => (
-                                    <tr key={municipality}>
-                                        <td className="text-left text-xs font-bold text-gray-700 px-2 whitespace-nowrap">{municipality}</td>
-                                        {months.map(month => {
-                                            const count = monthCounts.get(`${municipality}:${month}`) || 0;
-                                            return (
-                                                <td key={month} className={`rounded-lg py-2 text-xs font-bold tabular-nums ${heatColor(count)}`}>
-                                                    {count > 0 ? count : ''}
-                                                </td>
-                                            );
-                                        })}
-                                    </tr>
-                                ))}
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <div className="bg-white rounded-3xl p-6 border border-amber-900/10 shadow-sm overflow-x-auto">
-                        <h3 className="text-sm font-bold text-gray-700 mb-4">掲載・落札・不調の内訳（不調率 = 不調 ÷ 開札結果。中止は開札前のため含めない）</h3>
-                        <table className="w-full min-w-[480px] text-sm">
-                            <thead>
-                                <tr className="text-[11px] font-bold text-gray-400 border-b border-gray-100">
-                                    <th className="text-left py-2 px-2">自治体</th>
-                                    <th className="text-right py-2 px-2">掲載</th>
-                                    <th className="text-right py-2 px-2">受付中</th>
-                                    <th className="text-right py-2 px-2">落札</th>
-                                    <th className="text-right py-2 px-2">不調</th>
-                                    <th className="text-right py-2 px-2">中止</th>
-                                    <th className="text-right py-2 px-2">不調率</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {municipalityRows.map(row => (
-                                    <tr key={row.municipality} className="border-b border-gray-50 hover:bg-amber-50/40">
-                                        <td className="py-2 px-2 font-bold text-gray-800">{row.municipality}</td>
-                                        <td className="py-2 px-2 text-right tabular-nums text-gray-600">{row.total}</td>
-                                        <td className="py-2 px-2 text-right tabular-nums text-sky-700">{row.active || ''}</td>
-                                        <td className="py-2 px-2 text-right tabular-nums text-emerald-700">{row.awarded || ''}</td>
-                                        <td className="py-2 px-2 text-right tabular-nums text-amber-700">{row.failed || ''}</td>
-                                        <td className="py-2 px-2 text-right tabular-nums text-stone-600">{row.cancelled || ''}</td>
-                                        <td className={`py-2 px-2 text-right tabular-nums font-bold ${row.failRate !== null && row.failRate >= 30 ? 'text-rose-600' : 'text-gray-500'}`}>
-                                            {row.failRate !== null ? `${row.failRate}%` : '-'}
-                                        </td>
-                                    </tr>
-                                ))}
-                            </tbody>
-                        </table>
-                    </div>
-                </section>
-
-                {/* 落札実績ランキング */}
-                <section aria-label="落札実績ランキング">
-                    <h2 className="text-xl font-bold text-gray-900 mb-6">落札実績ランキング</h2>
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                        <div className="space-y-8">
-                            <div className="bg-white rounded-3xl p-8 border border-amber-900/10 shadow-sm">
-                                <div className="flex justify-between items-center mb-6">
-                                    <h3 className="text-lg font-bold text-gray-900 flex items-center gap-2">
-                                        <span className="text-2xl">🏗️</span> 受注件数（ゼネコン）
-                                    </h3>
-                                    <span className="text-[10px] bg-amber-50 text-amber-600 px-3 py-1 rounded-full border border-amber-100 font-bold uppercase tracking-widest">Count Ranking</span>
                                 </div>
-                                {topContractorsByCount.length > 0 ? (
-                                    <RankingChart data={topContractorsByCount} color="#d97706" />
-                                ) : (
-                                    <p className="text-gray-500 text-sm italic">NO DATA AVAILABLE</p>
-                                )}
-                            </div>
-
-                            <div className="bg-white rounded-3xl p-8 border border-indigo-900/10 shadow-sm">
-                                <div className="flex justify-between items-center mb-6">
-                                    <h3 className="text-lg font-bold text-gray-900 flex items-center gap-2">
-                                        <span className="text-2xl">💰</span> 受注金額（推計合計）
-                                    </h3>
-                                    <span className="text-[10px] bg-indigo-50 text-indigo-600 px-3 py-1 rounded-full border border-indigo-100 font-bold uppercase tracking-widest">Revenue Ranking</span>
-                                </div>
-                                <div className="space-y-4">
-                                    {topContractorsByAmount.map((c, i) => (
-                                        <div key={c.name} className="flex items-center group">
-                                            <div className="w-8 text-xl font-serif italic text-gray-300 group-hover:text-indigo-600 transition-colors">{i + 1}</div>
-                                            <div className="flex-1 bg-gray-50/50 p-3 rounded-lg border border-gray-100 group-hover:bg-indigo-50/30 group-hover:border-indigo-100 transition-all flex justify-between items-center">
-                                                <span className="text-sm font-serif font-bold text-gray-800">{c.name}</span>
-                                                <div className="text-right">
-                                                    <div className="text-xs font-bold text-indigo-600 font-sans">{formatCurrency(c.amount)}</div>
-                                                    <div className="text-[8px] text-gray-400 font-sans uppercase tracking-tighter">{c.count} PROJECTS</div>
-                                                </div>
-                                            </div>
+                                <div aria-hidden="true" className="relative grid h-48 grid-cols-6 items-end gap-2 px-1 sm:h-56 sm:gap-3">
+                                    {monthlyAnnouncements.map(({ month, count }, index) => (
+                                        <div
+                                            key={month}
+                                            className={`relative mx-auto w-full max-w-24 rounded-t-sm ${index === monthlyAnnouncements.length - 1 ? 'bg-emerald-200' : 'bg-accent'}`}
+                                            style={{ height: `${(count / (tickStep * 4)) * 100}%` }}
+                                        >
+                                            <span className="absolute inset-x-0 bottom-full pb-1 text-center text-sm font-bold tabular-nums">{count}</span>
+                                            <span className="absolute inset-x-0 top-full mt-1.5 text-center text-xs font-semibold tabular-nums">{Number(month.slice(5))}月</span>
                                         </div>
                                     ))}
                                 </div>
                             </div>
-                        </div>
-
-                        <div className="space-y-8">
-                            <div className="bg-white rounded-3xl p-8 border border-emerald-900/10 shadow-sm">
-                                <div className="flex justify-between items-center mb-6">
-                                    <h3 className="text-lg font-bold text-gray-900 flex items-center gap-2">
-                                        <span className="text-2xl">📐</span> 設計回数（事務所）
-                                    </h3>
-                                    <span className="text-[10px] bg-emerald-50 text-emerald-600 px-3 py-1 rounded-full border border-emerald-100 font-bold uppercase tracking-widest">Consulting Count</span>
-                                </div>
-                                {topDesignFirmsByCount.length > 0 ? (
-                                    <RankingChart data={topDesignFirmsByCount} color="#059669" />
-                                ) : (
-                                    <p className="text-gray-500 text-sm italic">NO DATA AVAILABLE</p>
-                                )}
+                            <div className="border-t border-border pt-4 xl:border-l xl:border-t-0 xl:pl-5 xl:pt-0">
+                                <p className="paper-eyebrow">直近6か月</p>
+                                <p className="mt-2 text-lg font-bold leading-7">
+                                    収集した公告は計 <span className="tabular-nums text-accent">{announcementTotal.toLocaleString('ja-JP')}</span> 件
+                                </p>
+                                <p className="mt-2 text-sm leading-7 text-secondary">
+                                    公告日をもとに集計しています。発注見通しは含みません。{currentMonth}月は月途中の集計です。
+                                </p>
                             </div>
                         </div>
-                    </div>
-                </section>
+                    </section>
 
-                {/* 価格相場 */}
-                <section aria-label="価格相場">
-                    <h2 className="text-xl font-bold text-gray-900 mb-6">価格相場</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                        <div className="bg-white rounded-3xl p-6 border border-amber-900/10 shadow-sm flex flex-col justify-center">
-                            <p className="text-sm text-gray-500 font-medium mb-1">解析完了データ数</p>
-                            <p className="text-4xl font-extrabold text-amber-900">{totalWithPrice}<span className="text-lg text-gray-400 font-medium ml-1">件</span></p>
+                    <section className="paper-panel" aria-labelledby="municipality-heatmap-heading">
+                        <h2 id="municipality-heatmap-heading" className="paper-heading">自治体別の公告件数</h2>
+                        <div className="p-4 sm:p-5">
+                            <p className="mb-3 text-sm text-secondary">直近6か月・掲載件数上位{heatMunicipalities.length}自治体</p>
+                            <div className="overflow-x-auto">
+                                <table className="w-full min-w-[480px] border-separate border-spacing-1 text-center text-sm tabular-nums">
+                                    <thead className="bg-paper-tint">
+                                        <tr>
+                                            <th scope="col" className="px-2 py-2 text-left">自治体</th>
+                                            {monthlyAnnouncements.map(({ month }) => (
+                                                <th key={month} scope="col" className="px-1 py-2">{Number(month.slice(5))}月</th>
+                                            ))}
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {heatMunicipalities.map(municipality => (
+                                            <tr key={municipality} className="odd:bg-background/65">
+                                                <th scope="row" className="whitespace-nowrap px-2 py-2 text-left font-semibold">{municipality}</th>
+                                                {monthlyAnnouncements.map(({ month }) => {
+                                                    const count = monthCounts.get(`${municipality}:${month}`) ?? 0;
+                                                    return (
+                                                        <td key={month} className={`rounded-sm py-2 font-semibold ${heatColor(count)}`}>
+                                                            {count}
+                                                        </td>
+                                                    );
+                                                })}
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
-                        <div className="bg-white rounded-3xl p-6 border border-amber-900/10 shadow-sm flex flex-col justify-center">
-                            <p className="text-sm text-gray-500 font-medium mb-1">平均予定価格</p>
-                            <p className="text-3xl font-extrabold text-indigo-900">
-                                {new Intl.NumberFormat('ja-JP').format(avgPrice)}<span className="text-lg text-gray-400 font-medium ml-1">円</span>
-                            </p>
-                        </div>
-                        <div className="bg-white rounded-3xl p-6 border border-emerald-900/10 shadow-sm flex flex-col justify-center">
-                            <p className="text-sm text-gray-500 font-medium mb-1">最高額トップ案件</p>
-                            <p className="text-xl font-extrabold text-emerald-900 truncate" title={maxItem?.name || ''}>
-                                {maxItem ? `${new Intl.NumberFormat('ja-JP').format(maxItem.price)}円` : '-'}
-                            </p>
-                            <p className="text-xs text-gray-400 mt-1 truncate">{maxItem?.municipality} | {maxItem?.contractor}</p>
-                        </div>
-                    </div>
+                    </section>
+                </div>
 
-                    <div className="bg-white rounded-3xl p-8 border border-amber-900/10 shadow-sm">
-                        <h3 className="text-lg font-bold text-gray-900 mb-6 flex items-center gap-2">
-                            <span className="text-2xl">📊</span> 案件規模の分布チャート
-                        </h3>
+                <div className="min-w-0 space-y-5">
+                    <section className="paper-panel" aria-labelledby="award-ranking-heading">
+                        <h2 id="award-ranking-heading" className="paper-heading">落札実績ランキング</h2>
+                        <div className="p-4">
+                            <p className="mb-3 text-sm text-secondary">落札者別の予定価格合計・収集データ全期間</p>
+                            {topContractorsByAmount.length > 0 ? (
+                                <table className="w-full text-sm tabular-nums">
+                                    <thead className="bg-paper-tint">
+                                        <tr>
+                                            <th scope="col" className="px-2 py-2 text-left">事業者名</th>
+                                            <th scope="col" className="px-2 py-2 text-right">件数</th>
+                                            <th scope="col" className="px-2 py-2 text-right">合計</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {topContractorsByAmount.map((contractor, index) => (
+                                            <tr key={contractor.name} className="border-b border-border/70 first:bg-paper-tint/75 even:bg-background/65 last:border-0">
+                                                <th scope="row" className="px-2 py-2.5 text-left font-semibold [overflow-wrap:anywhere]">
+                                                    <span className="mr-2 inline-block font-bold text-accent">{index + 1}</span>
+                                                    {contractor.name}
+                                                </th>
+                                                <td className="whitespace-nowrap px-2 py-2.5 text-right">{contractor.count}</td>
+                                                <td className="whitespace-nowrap px-2 py-2.5 text-right font-semibold">{contractor.amount > 0 ? formatCurrency(contractor.amount) : '—'}</td>
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                            ) : (
+                                <p className="text-sm text-secondary">落札者のデータがありません。</p>
+                            )}
+                        </div>
+                    </section>
+
+                    <section className="paper-panel" aria-labelledby="price-overview-heading">
+                        <h2 id="price-overview-heading" className="paper-heading">価格相場</h2>
+                        <dl className="divide-y divide-border p-4 text-sm">
+                            <div className="flex items-baseline justify-between gap-3 py-3 first:pt-0">
+                                <dt className="text-secondary">予定価格のある案件</dt>
+                                <dd className="shrink-0 font-bold tabular-nums">{totalWithPrice.toLocaleString('ja-JP')} 件</dd>
+                            </div>
+                            <div className="flex items-baseline justify-between gap-3 py-3">
+                                <dt className="text-secondary">平均予定価格</dt>
+                                <dd className="shrink-0 font-bold tabular-nums">{totalWithPrice ? `${avgPrice.toLocaleString('ja-JP')} 円` : '—'}</dd>
+                            </div>
+                            <div className="flex items-baseline justify-between gap-3 pt-3">
+                                <dt className="text-secondary">最高予定価格</dt>
+                                <dd className="shrink-0 font-bold tabular-nums">{maxItem ? `${maxItem.price.toLocaleString('ja-JP')} 円` : '—'}</dd>
+                            </div>
+                            {maxItem && (
+                                <div className="mt-3 pt-3">
+                                    <dt className="sr-only">最高予定価格の案件</dt>
+                                    <dd className="text-sm leading-6">
+                                        <span className="font-semibold">{maxItem.name}</span>
+                                        <span className="block text-secondary">{maxItem.municipality} · {maxItem.contractor}</span>
+                                    </dd>
+                                </div>
+                            )}
+                        </dl>
+                    </section>
+                </div>
+            </div>
+
+            <div className="mt-5 space-y-5">
+                <div className="grid min-w-0 gap-5 lg:grid-cols-2">
+                    <section className="paper-panel min-w-0" aria-labelledby="contractor-count-heading">
+                        <h2 id="contractor-count-heading" className="paper-heading">受注件数（ゼネコン）</h2>
+                        <div className="p-4">
+                            {topContractorsByCount.length > 0 ? (
+                                <RankingChart data={topContractorsByCount} color="#174b38" />
+                            ) : (
+                                <p className="text-sm text-secondary">落札者のデータがありません。</p>
+                            )}
+                        </div>
+                    </section>
+                    <section className="paper-panel min-w-0" aria-labelledby="design-count-heading">
+                        <h2 id="design-count-heading" className="paper-heading">設計回数（事務所）</h2>
+                        <div className="p-4">
+                            {topDesignFirmsByCount.length > 0 ? (
+                                <RankingChart data={topDesignFirmsByCount} color="#47785f" />
+                            ) : (
+                                <p className="text-sm text-secondary">設計事務所のデータがありません。</p>
+                            )}
+                        </div>
+                    </section>
+                </div>
+
+                <section className="paper-panel" aria-labelledby="price-distribution-heading">
+                    <h2 id="price-distribution-heading" className="paper-heading">予定価格の分布</h2>
+                    <div className="p-4">
                         {scatterData.length > 0 ? (
                             <RadarChart data={scatterData} />
                         ) : (
-                            <div className="h-64 flex items-center justify-center bg-gray-50 rounded-2xl border border-dashed border-gray-200">
-                                <p className="text-gray-400 font-medium">価格データが存在しません。PDF解析を実行してください。</p>
-                            </div>
+                            <p className="py-8 text-center text-sm text-secondary">予定価格のデータがありません。</p>
                         )}
+                    </div>
+                </section>
+
+                <section className="paper-panel" aria-labelledby="municipality-status-heading">
+                    <h2 id="municipality-status-heading" className="paper-heading">自治体別の掲載・落札・不調</h2>
+                    <div className="p-4 sm:p-5">
+                        <p className="mb-3 text-sm leading-6 text-secondary">不調率は開札結果（落札・不調）に占める不調の割合です。開札前の中止は不調率に含みません。</p>
+                        <div className="overflow-x-auto">
+                            <table className="w-full min-w-[480px] text-sm tabular-nums">
+                                <thead className="bg-paper-tint">
+                                    <tr>
+                                        <th scope="col" className="px-3 py-2 text-left">自治体</th>
+                                        <th scope="col" className="px-3 py-2 text-right">掲載</th>
+                                        <th scope="col" className="px-3 py-2 text-right">受付中</th>
+                                        <th scope="col" className="px-3 py-2 text-right">落札</th>
+                                        <th scope="col" className="px-3 py-2 text-right">不調</th>
+                                        <th scope="col" className="px-3 py-2 text-right">中止</th>
+                                        <th scope="col" className="px-3 py-2 text-right">不調率</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {municipalityRows.map(row => (
+                                        <tr key={row.municipality} className="border-b border-border/70 even:bg-background/65 last:border-0">
+                                            <th scope="row" className="px-3 py-2 text-left font-semibold">{row.municipality}</th>
+                                            <td className="px-3 py-2 text-right">{row.total}</td>
+                                            <td className="px-3 py-2 text-right">{row.active || '—'}</td>
+                                            <td className="px-3 py-2 text-right text-accent">{row.awarded || '—'}</td>
+                                            <td className="px-3 py-2 text-right text-amber-800">{row.failed || '—'}</td>
+                                            <td className="px-3 py-2 text-right">{row.cancelled || '—'}</td>
+                                            <td className={`px-3 py-2 text-right font-semibold ${row.failRate !== null && row.failRate >= 30 ? 'text-amber-800' : 'text-secondary'}`}>
+                                                {row.failRate !== null ? `${row.failRate}%` : '—'}
+                                            </td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </section>
             </div>

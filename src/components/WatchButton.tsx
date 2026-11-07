@@ -34,9 +34,10 @@ export function WatchButton({ itemId, compact = false }: { itemId: string; compa
                 onClick={handleClick}
                 title={watched ? '結果ウォッチ中（クリックで解除）' : '開札結果をウォッチする'}
                 aria-label={watched ? '結果ウォッチを解除' : '開札結果をウォッチ'}
-                className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full border transition ${watched
+                aria-pressed={watched}
+                className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-md border transition ${watched
                     ? 'border-amber-400 bg-amber-100 text-amber-700'
-                    : 'border-stone-200 bg-white text-stone-300 hover:border-amber-300 hover:text-amber-600'
+                    : 'border-border bg-surface text-secondary hover:border-accent hover:text-accent'
                 }`}
             >
                 {watched ? <BellRing size={14} /> : <Bell size={14} />}
@@ -48,6 +49,7 @@ export function WatchButton({ itemId, compact = false }: { itemId: string; compa
         <button
             type="button"
             onClick={handleClick}
+            aria-pressed={watched}
             className={`inline-flex w-full items-center justify-center gap-2 rounded-xl border px-4 py-2 text-[11px] font-bold tracking-[0.12em] transition ${watched
                 ? 'border-amber-400 bg-amber-100 text-amber-800 hover:bg-amber-200'
                 : 'border-stone-200 bg-white text-stone-500 hover:border-amber-300 hover:text-amber-700'

@@ -1,14 +1,16 @@
-import { Sidebar } from '@/components/Sidebar';
+import { SiteMasthead } from '@/components/SiteMasthead';
+import { formatJstDateLabel } from '@/lib/jst_date';
 
 interface AppShellProps {
     children: React.ReactNode;
+    updatedAt?: string | null;
 }
 
-export function AppShell({ children }: AppShellProps) {
+export function AppShell({ children, updatedAt }: AppShellProps) {
     return (
-        <div className="flex min-h-screen bg-background text-primary">
-            <Sidebar />
-            <main className="w-full flex-1 px-4 py-6 pt-24 pb-24 md:px-8 lg:ml-56 lg:p-10 xl:p-12">
+        <div className="min-h-screen bg-background text-primary">
+            <SiteMasthead date={formatJstDateLabel()} updatedAt={updatedAt} />
+            <main className="paper-content" id="main-content">
                 {children}
             </main>
         </div>
