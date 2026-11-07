@@ -12,26 +12,29 @@ import { getDataFreshness, getStaleMunicipalities } from '@/lib/data_freshness';
 import { loadDashboardData } from '@/lib/dashboard_data';
 import { addDaysJstDateKey, toJstDateKey } from '@/lib/jst_date';
 import { getMonthlyAnnouncements } from '@/lib/monthly_announcements';
+import { MunicipalityBadge } from '@/components/ProjectLabels';
 import type { BiddingItem } from '@/types/bidding';
 import { Activity, AlertTriangle, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
 function OpeningSchedule({ items }: { items: BiddingItem[] }) {
   return (
-    <section className="paper-panel p-2.5" aria-labelledby="opening-schedule">
-      <h2 id="opening-schedule" className="paper-heading">直近の開札</h2>
-      <p className="px-2.5 pt-2 text-xs leading-5 text-secondary">本日から7日後まで</p>
+    <section className="paper-panel" aria-labelledby="opening-schedule">
+      <div className="home-section-heading">
+        <h2 id="opening-schedule">直近の開札</h2>
+        <span>7日後まで</span>
+      </div>
       {items.length > 0 ? (
         <ul className="mt-1 divide-y divide-border">
           {items.slice(0, 5).map(item => (
             <li key={item.id} className="odd:bg-paper-stripe">
-              <Link href={`/project/${item.id}`} className="group grid grid-cols-[3.25rem_minmax(0,1fr)] gap-2.5 rounded px-2.5 py-2 hover:bg-paper-tint">
-                <time dateTime={item.biddingDate} className="text-sm leading-6 font-bold text-accent tabular-nums">
+              <Link href={`/project/${item.id}`} className="group grid grid-cols-[3.5rem_minmax(0,1fr)] items-start gap-3 px-4 py-3 hover:bg-paper-tint">
+                <time dateTime={item.biddingDate} className="rounded-md border border-amber-200 bg-amber-50 py-2 text-center text-lg font-bold text-amber-900 tabular-nums">
                   {new Date(item.biddingDate!).toLocaleDateString('ja-JP', { month: 'numeric', day: 'numeric', timeZone: 'Asia/Tokyo' })}
                 </time>
                 <span className="min-w-0">
                   <span className="block text-sm leading-6 font-semibold break-words group-hover:underline">{item.title}</span>
-                  <span className="block text-xs leading-5 text-secondary">{item.municipality}</span>
+                  <span className="mt-1.5 block"><MunicipalityBadge name={item.municipality} /></span>
                 </span>
               </Link>
             </li>
@@ -121,9 +124,14 @@ export default async function Home() {
 
   return (
     <AppShell updatedAt={qualitySummary?.generatedAt}>
-        <header className="mb-3 flex flex-wrap items-baseline gap-x-5 gap-y-1 sm:mb-4">
-          <h1 className="paper-title">奈良の動き、朝の3分で。</h1>
-          <p className="paper-eyebrow hidden border-l border-border pl-4 sm:block">新着公告・開札結果・奈良の建設ニュース</p>
+        <header className="mb-5 flex flex-wrap items-end justify-between gap-3">
+          <div>
+            <h1 className="paper-title">奈良の動き、朝の3分で。</h1>
+            <p className="mt-1.5 hidden text-sm text-secondary sm:block">公告の新着、開札の予定、判明した結果をまとめて確認。</p>
+          </div>
+          <div className="hidden sm:block">
+            <Link href="/search" className="paper-button">案件を探す <ArrowRight size={15} aria-hidden /></Link>
+          </div>
         </header>
 
         <DataFreshnessBanner
@@ -131,8 +139,7 @@ export default async function Home() {
           municipalityLastScraped={qualitySummary?.municipalityLastScraped}
         />
 
-        <div className="grid min-w-0 items-start gap-4 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] lg:grid-rows-[auto_1fr]">
-          <div className="grid min-w-0 gap-4">
+        <div className="home-layout">
             <TodayFocusPanel
               items={allItems}
               upcoming={upcomingBiddings}
@@ -140,16 +147,15 @@ export default async function Home() {
               followUp={followUpEntries}
               activeCount={activeCount}
               today={today}
+              watchPanel={<WatchResultsPanel items={allItems} />}
             />
-          </div>
 
-          <aside className="grid min-w-0 gap-4 lg:row-span-2" aria-label="ウォッチ・開札予定・ニュース">
-            <WatchResultsPanel items={allItems} />
+          <aside className="home-sidebar" aria-label="開札予定・ニュース">
             <OpeningSchedule items={upcomingBiddings} />
             <NewsSection pageSize={5} showAllLink compact />
           </aside>
 
-          <div className="grid min-w-0 gap-4">
+          <div className="home-extras">
             <AnnouncementTrend months={months} />
             <AlertNotificationPanel items={allItems} />
             <ProjectListLink items={allItems} />

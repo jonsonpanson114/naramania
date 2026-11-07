@@ -2,9 +2,11 @@
 
 import { useEffect, useState } from 'react';
 import { BiddingItem } from '@/types/bidding';
-import { CheckCircle2, X } from 'lucide-react';
+import { ArrowRight, Bell, CheckCircle2, X } from 'lucide-react';
 import Link from 'next/link';
 import { WATCH_CHANGE_EVENT, getWatchedIds, removeWatch } from '@/lib/watchlist';
+import { MunicipalityBadge } from '@/components/ProjectLabels';
+import { displayStatus } from '@/lib/status_label';
 
 function formatDate(dateStr?: string): string {
     if (!dateStr) return '-';
@@ -28,16 +30,25 @@ export function WatchResultsPanel({ items }: { items: BiddingItem[] }) {
 
     const watchedItems = items.filter(item => watchedIds.includes(item.id));
     const resolved = watchedItems.filter(item => item.status === '落札' || item.status === '不調');
-    const waiting = watchedItems.length - resolved.length;
+    const waitingItems = watchedItems.filter(item => item.status !== '落札' && item.status !== '不調');
+    const waiting = waitingItems.length;
 
     return (
-        <section className="paper-panel p-2.5" aria-labelledby="watch-results-heading">
-            <h2 className="paper-heading" id="watch-results-heading">あなたのウォッチ</h2>
-            <p className="px-2.5 py-2 text-sm leading-6 text-secondary">
+        <section className="paper-panel home-watch" aria-labelledby="watch-results-heading">
+            <div className="home-section-heading">
+                <h2 id="watch-results-heading"><Bell size={17} aria-hidden /> あなたのウォッチ</h2>
+                {watchedItems.length > 0 && <span>{watchedItems.length}件をウォッチ</span>}
+            </div>
+            <p className="px-4 py-3 text-sm leading-6 text-secondary">
                 {watchedItems.length === 0
                     ? '案件詳細で結果をウォッチすると、ここで確認できます。'
-                    : `結果 ${resolved.length}件 · 開札待ち ${waiting}件`}
+                    : `結果 ${resolved.length}件 · 結果待ち ${waiting}件`}
             </p>
+            {watchedItems.length === 0 && (
+                <Link href="/search" className="mb-4 ml-4 inline-flex items-center gap-1.5 text-sm font-bold text-accent hover:underline">
+                    ウォッチする案件を探す <ArrowRight size={14} aria-hidden />
+                </Link>
+            )}
 
             {resolved.length > 0 && (
                 <div className="divide-y divide-border border-t border-border">
@@ -54,9 +65,9 @@ export function WatchResultsPanel({ items }: { items: BiddingItem[] }) {
                                     }`}
                                     >
                                         <CheckCircle2 size={11} />
-                                        {item.status}
+                                        {displayStatus(item)}
                                     </span>
-                                    <span className="text-secondary">{item.municipality}</span>
+                                    <MunicipalityBadge name={item.municipality} />
                                     {item.biddingDate && <span className="text-secondary tabular-nums">開札 {formatDate(item.biddingDate)}</span>}
                                 </div>
                                 <p className="mt-1.5 text-sm leading-6 font-bold break-words text-primary group-hover:text-accent group-hover:underline">
@@ -77,6 +88,19 @@ export function WatchResultsPanel({ items }: { items: BiddingItem[] }) {
                             </button>
                         </div>
                     ))}
+                </div>
+            )}
+            {waitingItems.length > 0 && (
+                <div className="border-t border-border px-4 py-3">
+                    <p className="mb-2 text-xs font-semibold text-secondary">結果を待っている案件</p>
+                    <ul className="space-y-2.5">
+                        {waitingItems.map(item => (
+                            <li key={item.id}>
+                                <Link href={`/project/${item.id}`} className="block text-sm font-semibold leading-6 hover:text-accent hover:underline">{item.title}</Link>
+                                <span className="text-xs text-secondary">{item.municipality} · {item.biddingDate ? `開札 ${formatDate(item.biddingDate)}` : '開札日未定'}</span>
+                            </li>
+                        ))}
+                    </ul>
                 </div>
             )}
         </section>
