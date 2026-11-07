@@ -2,13 +2,13 @@
 
 import { useMemo, useState } from 'react';
 import Link from 'next/link';
+import { MunicipalityBadge, ProjectTypeBadge } from '@/components/ProjectLabels';
 import {
     ArrowUpDown,
     Building2,
     ChevronDown,
     Download,
     ExternalLink,
-    MapPin,
     Search,
     Trophy,
     Users,
@@ -335,12 +335,9 @@ export function MarketClient({ items }: { items: MarketRow[] }) {
                                                     .map(item => (
                                                         <div key={item.id} className="rounded-xl border border-stone-200 bg-white px-4 py-3">
                                                             <div className="flex flex-wrap items-center gap-2 text-[10px] font-bold tracking-[0.1em]">
-                                                                <span className="inline-flex items-center gap-1 text-stone-500">
-                                                                    <MapPin size={10} />
-                                                                    {item.municipality}
-                                                                </span>
+                                                                <MunicipalityBadge name={item.municipality} />
                                                                 <span className="tabular-nums text-stone-400">{formatDate(item.announcementDate)}</span>
-                                                                <span className="text-amber-700">{item.type}</span>
+                                                                <ProjectTypeBadge type={item.type} />
                                                                 {!item.isRelevant && (
                                                                     <span className="rounded-full bg-stone-100 px-1.5 py-0.5 text-[9px] text-stone-500">掲載対象外</span>
                                                                 )}
@@ -460,12 +457,9 @@ export function MarketClient({ items }: { items: MarketRow[] }) {
                             >
                                 <div className="min-w-0">
                                     <div className="flex flex-wrap items-center gap-2 text-[10px] font-bold tracking-[0.1em]">
-                                        <span className="inline-flex items-center gap-1 text-stone-500">
-                                            <MapPin size={10} />
-                                            {item.municipality}
-                                        </span>
+                                        <MunicipalityBadge name={item.municipality} />
                                         <span className="tabular-nums text-stone-400">{formatDate(item.announcementDate)}</span>
-                                        <span className="text-amber-700">{item.type}</span>
+                                        <ProjectTypeBadge type={item.type} />
                                         <span className="text-stone-500">{item.status}</span>
                                         {item.isRelevant ? (
                                             <span className="rounded-full bg-emerald-50 px-1.5 py-0.5 text-[9px] text-emerald-700">掲載対象</span>

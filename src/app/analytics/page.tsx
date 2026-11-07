@@ -4,6 +4,7 @@ import RankingChart from '@/components/RankingChart';
 import RadarChart from '@/components/RadarChart';
 import { loadDashboardData } from '@/lib/dashboard_data';
 import { getMonthlyAnnouncements } from '@/lib/monthly_announcements';
+import { MunicipalityBadge } from '@/components/ProjectLabels';
 
 interface ScatterDataPoint {
     name: string;
@@ -200,7 +201,7 @@ export default async function AnalyticsPage() {
                                     <tbody>
                                         {heatMunicipalities.map(municipality => (
                                             <tr key={municipality} className="odd:bg-background/65">
-                                                <th scope="row" className="whitespace-nowrap px-2 py-2 text-left font-semibold">{municipality}</th>
+                                                <th scope="row" className="whitespace-nowrap px-2 py-2 text-left font-semibold"><MunicipalityBadge name={municipality} /></th>
                                                 {monthlyAnnouncements.map(({ month }) => {
                                                     const count = monthCounts.get(`${municipality}:${month}`) ?? 0;
                                                     return (
@@ -335,7 +336,7 @@ export default async function AnalyticsPage() {
                                 <tbody>
                                     {municipalityRows.map(row => (
                                         <tr key={row.municipality} className="border-b border-border/70 even:bg-background/65 last:border-0">
-                                            <th scope="row" className="px-3 py-2 text-left font-semibold">{row.municipality}</th>
+                                            <th scope="row" className="px-3 py-2 text-left font-semibold"><MunicipalityBadge name={row.municipality} /></th>
                                             <td className="px-3 py-2 text-right">{row.total}</td>
                                             <td className="px-3 py-2 text-right">{row.active || '—'}</td>
                                             <td className="px-3 py-2 text-right text-accent">{row.awarded || '—'}</td>

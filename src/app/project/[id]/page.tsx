@@ -1,6 +1,7 @@
 import { BiddingItem } from '@/types/bidding';
 import { AppShell } from '@/components/AppShell';
 import { ProjectActionPanel } from '@/components/ProjectActionPanel';
+import { MunicipalityBadge, ProjectTypeBadge } from '@/components/ProjectLabels';
 import fs from 'fs';
 import path from 'path';
 import Link from 'next/link';
@@ -187,8 +188,8 @@ export default async function ProjectDetailPage({ params }: PageProps) {
                 <h1 className="paper-title">{item.title}</h1>
                 <div className="mt-3 flex flex-wrap items-center justify-between gap-x-6 gap-y-3">
                     <div className="flex flex-wrap items-center gap-2 text-sm font-semibold">
-                        <span className="rounded-sm border border-border bg-surface px-2.5 py-1">{item.municipality}</span>
-                        <span className="rounded-sm border border-border bg-surface px-2.5 py-1">{item.type}</span>
+                        <MunicipalityBadge name={item.municipality} />
+                        <ProjectTypeBadge type={item.type} />
                         <span className={`rounded-sm border px-2.5 py-1 ${statusTone}`}>{statusLabel(status)}</span>
                     </div>
                     <div className="flex flex-wrap items-center gap-2">

@@ -10,7 +10,6 @@ import { getEnabledMunicipalityNames } from '@/lib/user_settings';
 import { useUserSettings } from '@/lib/use_user_settings';
 import {
     ArrowUpDown,
-    Building2,
     CalendarClock,
     ChevronDown,
     Download,
@@ -18,13 +17,13 @@ import {
     FileText,
     LayoutGrid,
     List,
-    MapPin,
     Search,
     SlidersHorizontal,
     Trophy,
     X,
 } from 'lucide-react';
 import { WatchButton } from '@/components/WatchButton';
+import { MunicipalityBadge, ProjectTypeBadge } from '@/components/ProjectLabels';
 import { displayStatus, type DisplayStatus } from '@/lib/status_label';
 
 // タブの判定条件は practical_filters に集約している(トップの件数と揃えるため)
@@ -621,8 +620,8 @@ export function BiddingTable({
                                     )}
                                     {detailedSearch && keyword && renderSnippet(detailText(item), keyword)}
                                 </div>
-                                <span className="search-ledger-municipality">{item.municipality}</span>
-                                <span className="search-ledger-type">{item.type}</span>
+                                <span className="search-ledger-municipality"><MunicipalityBadge name={item.municipality} /></span>
+                                <span className="search-ledger-type"><ProjectTypeBadge type={item.type} /></span>
                                 <span className="search-ledger-date search-ledger-announcement">
                                     <span className="search-ledger-mobile-label">公告</span> {formatDate(item.announcementDate)}
                                 </span>
@@ -694,14 +693,8 @@ export function BiddingTable({
                                     <div className="p-4 lg:p-5">
                                         <div className="flex flex-wrap items-center gap-2.5">
                                             <StatusPill status={displayStatus(item)} />
-                                            <span className="inline-flex items-center gap-1.5 rounded-full border border-stone-200 bg-stone-50 px-2.5 py-1 text-[10px] font-bold tracking-[0.12em] text-stone-600">
-                                                <MapPin size={12} />
-                                                {item.municipality}
-                                            </span>
-                                            <span className="inline-flex items-center gap-1.5 rounded-full border border-amber-100 bg-amber-50 px-2.5 py-1 text-[10px] font-bold tracking-[0.12em] text-amber-700">
-                                                <Building2 size={12} />
-                                                {item.type}
-                                            </span>
+                                            <MunicipalityBadge name={item.municipality} />
+                                            <ProjectTypeBadge type={item.type} />
                                             {isNew && (
                                                 <span className="rounded-full border border-rose-200 bg-rose-50 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-rose-700">
                                                     New

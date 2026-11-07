@@ -248,7 +248,7 @@ body {
 .search-ledger-head,
 .search-ledger-row {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 6.5rem 4rem 4.5rem 5.5rem 6.5rem 2.5rem 2.5rem;
+  grid-template-columns: minmax(0, 1fr) 6.5rem 4.5rem 4.5rem 5.5rem 6.5rem 2.5rem 2.5rem;
   align-items: center;
   gap: 12px;
   padding: 10px 15px;
@@ -287,6 +287,44 @@ body {
 
 .search-ledger-date {
   font-variant-numeric: tabular-nums;
+}
+
+.project-type-badge,
+.municipality-badge {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 7px;
+  border: 1px solid;
+  border-radius: 4px;
+  font-size: .8125rem;
+  font-weight: 700;
+  line-height: 1.45;
+  letter-spacing: normal;
+  white-space: nowrap;
+}
+
+.project-type-badge {
+  color: var(--project-type-color);
+  border-color: color-mix(in srgb, var(--project-type-color) 28%, white);
+  background: color-mix(in srgb, var(--project-type-color) 9%, white);
+}
+
+.municipality-badge {
+  --municipality-hue: 150;
+  color: hsl(var(--municipality-hue) 36% 27%);
+  border-color: hsl(var(--municipality-hue) 24% 74%);
+  background: hsl(var(--municipality-hue) 28% 93%);
+}
+
+.municipality-badge::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: hsl(var(--municipality-hue) 38% 43%);
 }
 
 .search-ledger-mobile-label {

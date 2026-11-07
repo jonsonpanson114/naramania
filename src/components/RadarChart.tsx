@@ -2,6 +2,8 @@
 
 import { ResponsiveContainer, ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, Cell } from 'recharts';
 import type { Municipality, BiddingType } from '@/types/bidding';
+import { MunicipalityBadge, ProjectTypeBadge } from '@/components/ProjectLabels';
+import { getProjectTypeColor } from '@/lib/project_colors';
 
 interface DataPoint {
     name: string;
@@ -12,22 +14,15 @@ interface DataPoint {
     type: BiddingType;
 }
 
-const getColor = (type: string) => {
-    if (type === '建築') return '#8b5cf6'; // Violet
-    if (type === '設計' || type === 'コンサル') return '#059669'; // Emerald
-    if (type === '設備') return '#d97706'; // Amber
-    return '#6b7280'; // Gray
-};
-
 const CustomTooltip = ({ active, payload }: { active?: boolean; payload?: Array<{ payload: DataPoint }> }) => {
     if (active && payload && payload.length) {
         const data = payload[0].payload;
         return (
             <div className="bg-white p-4 rounded-2xl shadow-xl border border-gray-100 max-w-sm">
                 <p className="font-bold text-gray-900 mb-1">{data.name}</p>
-                <div className="flex justify-between items-center text-sm text-gray-500 mb-2">
-                    <span>{data.municipality}</span>
-                    <span className="px-2 py-0.5 rounded-md text-xs font-bold" style={{ backgroundColor: getColor(data.type) + '20', color: getColor(data.type) }}>{data.type}</span>
+                <div className="mb-2 flex flex-wrap items-center gap-2">
+                    <MunicipalityBadge name={data.municipality} />
+                    <ProjectTypeBadge type={data.type} />
                 </div>
                 <p className="text-xl font-black text-amber-900 mb-1">{new Intl.NumberFormat('ja-JP').format(data.price)}円</p>
                 <p className="text-xs text-gray-400">落札者: <span className="text-gray-600 font-medium">{data.contractor}</span></p>
@@ -46,6 +41,9 @@ export default function RadarChart({ data }: { data: DataPoint[] }) {
 
     return (
         <div className="min-w-0">
+            <div className="mb-2 flex flex-wrap items-center gap-2" aria-label="グラフの種別凡例">
+                {Array.from(new Set(data.map(item => item.type))).sort().map(type => <ProjectTypeBadge key={type} type={type} />)}
+            </div>
             <ResponsiveContainer width="100%" height={320} minWidth={0}>
                 <ScatterChart margin={{ top: 16, right: 12, bottom: 12, left: 4 }}>
                     <CartesianGrid strokeDasharray="3 3" stroke="#f3f4f6" />
@@ -63,7 +61,7 @@ export default function RadarChart({ data }: { data: DataPoint[] }) {
                     <Tooltip content={<CustomTooltip />} cursor={{ strokeDasharray: '3 3', stroke: '#cbd5e1' }} />
                     <Scatter name="Projects" data={chartData}>
                         {chartData.map((entry, index) => (
-                            <Cell key={`cell-${index}`} fill={getColor(entry.type)} />
+                            <Cell key={`cell-${index}`} fill={getProjectTypeColor(entry.type)} />
                         ))}
                     </Scatter>
                 </ScatterChart>
