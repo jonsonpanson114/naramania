@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-07T10:36:45.737Z",
+  "generatedAt": "2026-11-07T15:50:19.241Z",
   "sources": [
     {
       "id": "constnews",
@@ -40,8 +40,8 @@
     {
       "id": "googlenews",
       "label": "一般紙・Web(Googleニュース)",
-      "fetched": 30,
-      "kept": 6
+      "fetched": 28,
+      "kept": 5
     }
   ],
   "items": [
