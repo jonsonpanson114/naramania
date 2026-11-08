@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-07T15:50:19.241Z",
+  "generatedAt": "2026-11-08T01:42:28.099Z",
   "sources": [
     {
       "id": "constnews",
@@ -23,7 +23,7 @@
       "id": "kensetsu",
       "label": "建設通信新聞",
       "fetched": 30,
-      "kept": 1
+      "kept": 2
     },
     {
       "id": "xtech",
@@ -40,8 +40,8 @@
     {
       "id": "googlenews",
       "label": "一般紙・Web(Googleニュース)",
-      "fetched": 28,
-      "kept": 5
+      "fetched": 31,
+      "kept": 6
     }
   ],
   "items": [
