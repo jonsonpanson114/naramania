@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-08T01:42:28.099Z",
+  "generatedAt": "2026-11-08T10:41:42.215Z",
   "sources": [
     {
       "id": "constnews",
@@ -23,7 +23,7 @@
       "id": "kensetsu",
       "label": "建設通信新聞",
       "fetched": 30,
-      "kept": 2
+      "kept": 1
     },
     {
       "id": "xtech",
@@ -40,7 +40,7 @@
     {
       "id": "googlenews",
       "label": "一般紙・Web(Googleニュース)",
-      "fetched": 31,
+      "fetched": 33,
       "kept": 6
     }
   ],
@@ -53,6 +53,18 @@
       "title": "奈良県中央卸売市場の再整備・基本協定を締結",
       "date": "2026-11-07",
       "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE0wQ3I1N0dENldkQ1lrSG44MnBiVndHTkZ6U3UtbEVYTnhadldRaTRCeW52WUViOVhabHFGU3ZFVGF2VGtlU0lNbUVqalRTM1gzcGdCWDh3UQ?oc=5",
+      "category": "construction",
+      "relevanceScore": 8,
+      "results": []
+    },
+    {
+      "id": "news-38e0d5618630",
+      "source": "googlenews",
+      "sourceLabel": "一般紙・Web",
+      "publisher": "ニコニコニュース",
+      "title": "「奈良県中央卸売市場再整備推進事業（市場エリア整備事業）」に係る基本協定を締結(ニュースレター)",
+      "date": "2026-11-07",
+      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBlTFI1dXhJQVdNODVQREhYZjV0MXgzc19NOGxkYVZiRTEwVk8wTFVKeDAyNk5RS3E4QzdlU1diM29fQ3dhU1AzOXhaY3FiU2I4dWY5VQ?oc=5",
       "category": "construction",
       "relevanceScore": 8,
       "results": []
