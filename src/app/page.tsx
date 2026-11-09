@@ -5,6 +5,7 @@ import { DataFreshnessBanner } from '@/components/DataFreshnessBanner';
 import { WatchResultsPanel } from '@/components/WatchResultsPanel';
 import { ProjectListLink } from '@/components/ProjectListLink';
 import { NewsSection } from '@/components/NewsSection';
+import { DesignMapEntry } from '@/components/DesignMapEntry';
 import { countPracticalFilter } from '@/lib/practical_filters';
 import { buildLatestOpeningResults } from '@/lib/opening_result_updates';
 import { buildResultFollowUpSummary } from '@/lib/result_follow_up';
@@ -152,6 +153,7 @@ export default async function Home() {
 
           <aside className="home-sidebar" aria-label="開札予定・ニュース">
             <OpeningSchedule items={upcomingBiddings} />
+            <DesignMapEntry />
             <NewsSection pageSize={5} showAllLink compact />
           </aside>
 
