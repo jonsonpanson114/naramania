@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-09T01:50:21.362Z",
+  "generatedAt": "2026-11-09T11:59:32.729Z",
   "sources": [
     {
       "id": "constnews",
@@ -40,11 +40,24 @@
     {
       "id": "googlenews",
       "label": "一般紙・Web(Googleニュース)",
-      "fetched": 34,
+      "fetched": 35,
       "kept": 5
     }
   ],
   "items": [
+    {
+      "id": "news-913e696c9495",
+      "source": "constnews",
+      "sourceLabel": "建設ニュース",
+      "title": "奥村組に決まる／市立病院施設整備工事／生駒市",
+      "date": "2026-11-09",
+      "link": "https://www.constnews.com/?p=161336",
+      "excerpt": "奈良県生駒市は、「生駒市立病院施設整備工事」を一般競争入札し、１２億６７００万円（税別）で奥村組奈良支店（奈良市）に決めた。６日に開札した。５月に公告したが、応札者がなく、不調となっていた。 予定価格は、１２億６７１５万…",
+      "orderer": "生駒市",
+      "results": [],
+      "category": "construction",
+      "relevanceScore": 12
+    },
     {
       "id": "news-d0cc33de58be",
       "source": "googlenews",
