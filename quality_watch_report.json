@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-11-06T22:32:41.145Z",
-  "qualityGeneratedAt": "2026-11-06T22:32:36.788Z",
+  "generatedAt": "2026-11-09T08:16:05.862Z",
+  "qualityGeneratedAt": "2026-11-09T08:12:12.245Z",
   "itemCount": 335,
   "resultFollowUp": {
-    "totalCount": 9,
+    "totalCount": 8,
     "highCount": 7,
-    "mediumCount": 0,
-    "lowCount": 2,
+    "mediumCount": 1,
+    "lowCount": 0,
     "missingBiddingDateCount": 0,
     "byMunicipality": [
       {
@@ -20,16 +20,12 @@
       {
         "municipality": "生駒市",
         "count": 1
-      },
-      {
-        "municipality": "奈良市",
-        "count": 1
       }
     ],
     "samples": [
       {
         "priority": "high",
-        "ageDays": 200,
+        "ageDays": 202,
         "reason": "落札済みだが落札者が空",
         "item": {
           "id": "oyodo-79dc14038b",
@@ -45,7 +41,7 @@
       },
       {
         "priority": "high",
-        "ageDays": 145,
+        "ageDays": 147,
         "reason": "落札済みだが落札者が空",
         "item": {
           "id": "oyodo-46ab50dbc8",
@@ -61,8 +57,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 142,
-        "reason": "開札日から142日経過",
+        "ageDays": 144,
+        "reason": "開札日から144日経過",
         "item": {
           "id": "nara-pref-29001013060020260055",
           "municipality": "奈良県",
@@ -77,8 +73,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 123,
-        "reason": "開札日から123日経過",
+        "ageDays": 125,
+        "reason": "開札日から125日経過",
         "item": {
           "id": "nara-pref-29005007060120260015",
           "municipality": "奈良県",
@@ -93,8 +89,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 113,
-        "reason": "開札日から113日経過",
+        "ageDays": 115,
+        "reason": "開札日から115日経過",
         "item": {
           "id": "nara-pref-29005007060120260018",
           "municipality": "奈良県",
@@ -109,8 +105,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 43,
-        "reason": "開札日から43日経過",
+        "ageDays": 45,
+        "reason": "開札日から45日経過",
         "item": {
           "id": "nara-pref-29001013401020260007",
           "municipality": "奈良県",
@@ -125,8 +121,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 24,
-        "reason": "開札日から24日経過",
+        "ageDays": 26,
+        "reason": "開札日から26日経過",
         "item": {
           "id": "nara-pref-29004060025020260077",
           "municipality": "奈良県",
@@ -140,9 +136,9 @@
         }
       },
       {
-        "priority": "low",
-        "ageDays": 1,
-        "reason": "開札直後の結果待ち",
+        "priority": "medium",
+        "ageDays": 3,
+        "reason": "開札日から3日経過",
         "item": {
           "id": "ikoma-056c44edf1",
           "municipality": "生駒市",
@@ -152,22 +148,6 @@
           "biddingDate": "2026-11-06",
           "winningContractor": null,
           "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-          "pdfUrl": null
-        }
-      },
-      {
-        "priority": "low",
-        "ageDays": 1,
-        "reason": "開札直後の結果待ち",
-        "item": {
-          "id": "nara-city-0000002676",
-          "municipality": "奈良市",
-          "title": "東市コミュニティスポーツ会館トイレ改修工事",
-          "status": "受付終了",
-          "announcementDate": "2026-10-15",
-          "biddingDate": "2026-11-06",
-          "winningContractor": null,
-          "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
           "pdfUrl": null
         }
       }
@@ -507,15 +487,15 @@
         "municipality": "奈良市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 13,
+        "totalCount": 12,
         "requiredLinkIncludes": [
           "nara.efftis.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "nara.efftis.jp": 13
+          "nara.efftis.jp": 12
         },
-        "message": "奈良市: 13件 (公告4/結果9) / sources OK"
+        "message": "奈良市: 12件 (公告3/結果9) / sources OK"
       },
       {
         "municipality": "橿原市",
@@ -723,15 +703,15 @@
         "municipality": "三宅町",
         "status": "ok",
         "severity": "error",
-        "totalCount": 6,
+        "totalCount": 7,
         "requiredLinkIncludes": [
           "town.miyake.lg.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "town.miyake.lg.jp": 6
+          "town.miyake.lg.jp": 7
         },
-        "message": "三宅町: 6件 (公告2/結果4) / sources OK"
+        "message": "三宅町: 7件 (公告2/結果5) / sources OK"
       },
       {
         "municipality": "山添村",

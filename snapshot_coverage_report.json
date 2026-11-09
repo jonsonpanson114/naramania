@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-06T22:32:44.328Z",
+  "generatedAt": "2026-11-09T08:16:06.588Z",
   "checkedMunicipalityCount": 24,
   "expectedItemCount": 335,
   "matchedItemCount": 335,
@@ -108,9 +108,9 @@
     },
     {
       "municipality": "奈良市",
-      "snapshotCount": 13,
-      "expectedCount": 13,
-      "matchedCount": 13,
+      "snapshotCount": 12,
+      "expectedCount": 12,
+      "matchedCount": 12,
       "missingCount": 0,
       "duplicateTitleGroupCount": 0,
       "duplicateTitleItemCount": 0,
@@ -152,9 +152,9 @@
     },
     {
       "municipality": "三宅町",
-      "snapshotCount": 6,
-      "expectedCount": 6,
-      "matchedCount": 6,
+      "snapshotCount": 7,
+      "expectedCount": 7,
+      "matchedCount": 7,
       "missingCount": 0,
       "duplicateTitleGroupCount": 0,
       "duplicateTitleItemCount": 0,

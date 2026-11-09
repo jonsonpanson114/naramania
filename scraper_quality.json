@@ -1,38 +1,38 @@
 {
-  "generatedAt": "2026-11-06T22:32:36.788Z",
+  "generatedAt": "2026-11-09T08:12:12.245Z",
   "source": "daily_scrape",
   "municipalityLastScraped": {
-    "奈良市": "2026-11-06T13:40:25.689Z",
-    "橿原市": "2026-11-06T13:40:25.689Z",
-    "生駒市": "2026-11-06T13:40:25.689Z",
-    "大和高田市": "2026-11-06T13:40:25.689Z",
-    "大和郡山市": "2026-11-06T13:40:25.689Z",
-    "葛城市": "2026-11-06T13:40:25.689Z",
-    "五條市": "2026-11-06T13:40:25.689Z",
-    "御所市": "2026-11-06T13:40:25.689Z",
-    "天理市": "2026-11-06T13:40:25.689Z",
-    "桜井市": "2026-11-06T13:40:25.689Z",
-    "宇陀市": "2026-11-06T13:40:25.689Z",
-    "田原本町": "2026-11-06T13:40:25.689Z",
-    "広陵町": "2026-11-06T13:40:25.689Z",
-    "香芝市": "2026-11-06T13:40:25.689Z",
-    "川西町": "2026-11-06T13:40:25.689Z",
-    "山添村": "2026-11-06T13:40:25.689Z",
-    "平群町": "2026-11-06T13:40:25.689Z",
-    "三宅町": "2026-11-06T13:40:25.689Z",
-    "安堵町": "2026-11-06T13:40:25.689Z",
-    "高取町": "2026-11-06T13:40:25.689Z",
-    "斑鳩町": "2026-11-06T13:40:25.689Z",
-    "三郷町": "2026-11-06T13:40:25.689Z",
-    "王寺町": "2026-11-06T13:40:25.689Z",
-    "大淀町": "2026-11-06T13:40:25.689Z",
+    "奈良市": "2026-11-09T08:12:12.245Z",
+    "橿原市": "2026-11-09T08:12:12.245Z",
+    "生駒市": "2026-11-09T08:12:12.245Z",
+    "大和高田市": "2026-11-09T08:12:12.245Z",
+    "大和郡山市": "2026-11-09T08:12:12.245Z",
+    "葛城市": "2026-11-09T08:12:12.245Z",
+    "五條市": "2026-11-09T08:12:12.245Z",
+    "御所市": "2026-11-09T08:12:12.245Z",
+    "天理市": "2026-11-09T08:12:12.245Z",
+    "桜井市": "2026-11-09T08:12:12.245Z",
+    "宇陀市": "2026-11-09T08:12:12.245Z",
+    "田原本町": "2026-11-09T08:12:12.245Z",
+    "広陵町": "2026-11-09T08:12:12.245Z",
+    "香芝市": "2026-11-09T08:12:12.245Z",
+    "川西町": "2026-11-09T08:12:12.245Z",
+    "山添村": "2026-11-09T08:12:12.245Z",
+    "平群町": "2026-11-09T08:12:12.245Z",
+    "三宅町": "2026-11-09T08:12:12.245Z",
+    "安堵町": "2026-11-09T08:12:12.245Z",
+    "高取町": "2026-11-09T08:12:12.245Z",
+    "斑鳩町": "2026-11-09T08:12:12.245Z",
+    "三郷町": "2026-11-09T08:12:12.245Z",
+    "王寺町": "2026-11-09T08:12:12.245Z",
+    "大淀町": "2026-11-09T08:12:12.245Z",
     "奈良県": "2026-11-06T22:32:36.788Z"
   },
-  "scrapedCount": 68,
+  "scrapedCount": 2962,
   "keptCount": 335,
-  "rejectedCount": 1,
+  "rejectedCount": 2674,
   "oldestAnnouncementDate": "2025-02-02",
-  "latestAnnouncementDate": "2026-11-04",
+  "latestAnnouncementDate": "2026-11-09",
   "municipalityCount": 24,
   "municipalityAudit": {
     "expectedMunicipalityCount": 25,
@@ -91,8 +91,8 @@
       },
       {
         "municipality": "奈良市",
-        "count": 13,
-        "changeFromPrevious": 0
+        "count": 12,
+        "changeFromPrevious": -1
       },
       {
         "municipality": "桜井市",
@@ -111,8 +111,8 @@
       },
       {
         "municipality": "三宅町",
-        "count": 6,
-        "changeFromPrevious": 0
+        "count": 7,
+        "changeFromPrevious": 1
       },
       {
         "municipality": "川西町",
@@ -165,8 +165,16 @@
         "changeFromPrevious": 0
       }
     ],
-    "retainedFromPrevious": [],
-    "issues": []
+    "retainedFromPrevious": [
+      "高取町"
+    ],
+    "issues": [
+      {
+        "municipality": "高取町",
+        "level": "warning",
+        "message": "[高取町] 取得件数が急減したため既存データ 11件を維持しつつ、新規 15件を反映しています (baseline=26)"
+      }
+    ]
   },
   "dateAudit": {
     "announcementAfterBiddingCount": 0,
@@ -234,14 +242,14 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 13,
+        "totalCount": 12,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "nara.efftis.jp": 13
+          "nara.efftis.jp": 12
         },
-        "announcementCount": 4,
+        "announcementCount": 3,
         "resultCount": 9,
-        "message": "奈良市: 13件 (公告4/結果9) / sources OK"
+        "message": "奈良市: 12件 (公告3/結果9) / sources OK"
       },
       {
         "expectation": {
@@ -540,14 +548,14 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 6,
+        "totalCount": 7,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "town.miyake.lg.jp": 6
+          "town.miyake.lg.jp": 7
         },
         "announcementCount": 2,
-        "resultCount": 4,
-        "message": "三宅町: 6件 (公告2/結果4) / sources OK"
+        "resultCount": 5,
+        "message": "三宅町: 7件 (公告2/結果5) / sources OK"
       },
       {
         "expectation": {
@@ -733,10 +741,11 @@
     ]
   },
   "intelligence": {
-    "itemsWithPdf": 84,
-    "itemsWithDescription": 84,
-    "intelligenceExtractedCount": 82,
-    "geminiExtractedCount": 82,
-    "taggedCount": 82
+    "itemsWithPdf": 85,
+    "itemsWithDescription": 85,
+    "intelligenceExtractedCount": 83,
+    "geminiExtractedCount": 83,
+    "taggedCount": 83,
+    "lastAugmentedAt": "2026-11-09T08:15:23.919Z"
   }
 }
