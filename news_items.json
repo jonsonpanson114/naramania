@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10T11:37:40.749Z",
+  "generatedAt": "2026-11-10T17:13:26.876Z",
   "sources": [
     {
       "id": "constnews",
@@ -40,8 +40,8 @@
     {
       "id": "googlenews",
       "label": "一般紙・Web(Googleニュース)",
-      "fetched": 36,
-      "kept": 7
+      "fetched": 39,
+      "kept": 8
     }
   ],
   "items": [
@@ -79,6 +79,18 @@
       "title": "奈良県、中央卸売市場再整備で大和ハウスと基本協定締結",
       "date": "2026-11-10",
       "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5hSjJmLWVlMWswd1AzN0c2NXNUUThEU3piMmljSXltemdteU1UYTJjUFJJNG9mREFtd19BQ2hrSlRCMEtrb0hEaG5hRVFoWmkwUkNZ?oc=5",
+      "category": "construction",
+      "relevanceScore": 8,
+      "results": []
+    },
+    {
+      "id": "news-8b7da21da84b",
+      "source": "googlenews",
+      "sourceLabel": "一般紙・Web",
+      "publisher": "Yahoo!ニュース",
+      "title": "建設業に興味を 高校生に出前講座（奈良テレビ放送）",
+      "date": "2026-11-10",
+      "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9JOGhyaklzZk01UTBpcXRScWJuZ2RlZVFNb3pRTVlXdFF5LXlEWC1BT2NuVHNoLUFTZ1FYWmZtd0hwZ2dFM3BIS0d5cE1rb1BKenBiYWEzT25pTWdCZVo1OEllTW1vTWNZMG5lZVBiMXYwN1JyckJaWTFNODM5YkU?oc=5",
       "category": "construction",
       "relevanceScore": 8,
       "results": []
