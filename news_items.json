@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10T04:15:17.399Z",
+  "generatedAt": "2026-11-10T11:37:40.749Z",
   "sources": [
     {
       "id": "constnews",
@@ -40,9 +40,8 @@
     {
       "id": "googlenews",
       "label": "一般紙・Web(Googleニュース)",
-      "fetched": 0,
-      "kept": 0,
-      "error": "Request failed with status code 503"
+      "fetched": 36,
+      "kept": 7
     }
   ],
   "items": [
@@ -58,6 +57,31 @@
       "results": [],
       "category": "construction",
       "relevanceScore": 10
+    },
+    {
+      "id": "news-f1c6963789de",
+      "source": "constnews",
+      "sourceLabel": "建設ニュース",
+      "title": "くじ結果１位はエイト日本技術開発／学研高山地区Ｆエリアまちづくり基本調査／生駒市",
+      "date": "2026-11-10",
+      "link": "https://www.constnews.com/?p=161346",
+      "excerpt": "奈良県生駒市は１０日、「学研高山地区Ｆエリアまちづくり基本調査等業務」の一般競争入札を開札した。結果は選定中で、くじ結果１位は６４２万８０００円（税別）のエイト日本技術開発奈良事務所（奈良市）となっている。 予定価格は、…",
+      "orderer": "生駒市",
+      "results": [],
+      "category": "construction",
+      "relevanceScore": 8
+    },
+    {
+      "id": "news-d8513a38f4e6",
+      "source": "googlenews",
+      "sourceLabel": "一般紙・Web",
+      "publisher": "日刊建産速報",
+      "title": "奈良県、中央卸売市場再整備で大和ハウスと基本協定締結",
+      "date": "2026-11-10",
+      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5hSjJmLWVlMWswd1AzN0c2NXNUUThEU3piMmljSXltemdteU1UYTJjUFJJNG9mREFtd19BQ2hrSlRCMEtrb0hEaG5hRVFoWmkwUkNZ?oc=5",
+      "category": "construction",
+      "relevanceScore": 8,
+      "results": []
     },
     {
       "id": "news-913e696c9495",
@@ -360,6 +384,18 @@
       "title": "「奈良県中央卸売市場再整備推進事業（市場エリア整備事業）」に係る基本協定を締結 (2026年11月6日掲載)",
       "date": "2026-11-06",
       "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9icmhCM1BXalNyWWNpVVB5VzZ3VUI2MlFacjM3d2FRY0dKRldCODY3MnZlbEhHRW1FdUdkbjlyX0M5dGNlbWxweVR4dWo0bU0wbGwyTGJwQ0JkSE81bzhDdGt3?oc=5",
+      "category": "construction",
+      "relevanceScore": 8,
+      "results": []
+    },
+    {
+      "id": "news-caf2960374a2",
+      "source": "googlenews",
+      "sourceLabel": "一般紙・Web",
+      "publisher": "ライブドアニュース",
+      "title": "「奈良県中央卸売市場再整備推進事業（市場エリア整備事業）」に係る基本協定を締結(ニュースレター) (2026年11月6日掲載)",
+      "date": "2026-11-06",
+      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFA0ajRpZWtwcVozS3daUFk4UTVmcE05d19UdmNwdm1JbFN4NUZHeHd1X2loblVEcjN4SDNBQW9aSnJ4Y1dXV3V5VXlJNGdmWEVCcHN2SUhXXy1iaGZCem5XSDV3?oc=5",
       "category": "construction",
       "relevanceScore": 8,
       "results": []
