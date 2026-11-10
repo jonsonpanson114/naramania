@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-09T19:57:58.056Z",
+  "generatedAt": "2026-11-10T04:15:17.399Z",
   "sources": [
     {
       "id": "constnews",
@@ -40,11 +40,25 @@
     {
       "id": "googlenews",
       "label": "一般紙・Web(Googleニュース)",
-      "fetched": 32,
-      "kept": 4
+      "fetched": 0,
+      "kept": 0,
+      "error": "Request failed with status code 503"
     }
   ],
   "items": [
+    {
+      "id": "news-07731e2ee550",
+      "source": "constnews",
+      "sourceLabel": "建設ニュース",
+      "title": "御所ＩＣ工業団地の３区画を分譲／２８年３月ごろに契約／奈良県",
+      "date": "2026-11-10",
+      "link": "https://www.constnews.com/?p=161338",
+      "excerpt": "奈良県は、「御所ＩＣ工業団地」（奈良県御所市）の第２期企業を選ぶ公募型プロポーザルを公告した。対象地はＡ地区の３区画で、立地可能施設は工場、立地可能施設の業種は製造業。事業提案書を２０２７年３月１日から４月３０日に産業部…",
+      "orderer": "奈良県",
+      "results": [],
+      "category": "construction",
+      "relevanceScore": 10
+    },
     {
       "id": "news-913e696c9495",
       "source": "constnews",
