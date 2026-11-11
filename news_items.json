@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10T17:13:26.876Z",
+  "generatedAt": "2026-11-11T02:04:23.722Z",
   "sources": [
     {
       "id": "constnews",
@@ -40,11 +40,33 @@
     {
       "id": "googlenews",
       "label": "一般紙・Web(Googleニュース)",
-      "fetched": 39,
-      "kept": 8
+      "fetched": 44,
+      "kept": 9
     }
   ],
   "items": [
+    {
+      "id": "news-6b3cb87622d0",
+      "source": "naranp",
+      "sourceLabel": "奈良新聞",
+      "title": "奈良県高取町土地開発公社の請求棄却 取得地に廃棄物、売り主へ撤去求めた訴訟 奈良地裁判決「23年に時効消滅」",
+      "date": "2026-11-11",
+      "link": "https://www.nara-np.co.jp/news/20261111204540.html",
+      "category": "construction",
+      "relevanceScore": 6,
+      "results": []
+    },
+    {
+      "id": "news-0a2fab9a53ed",
+      "source": "naranp",
+      "sourceLabel": "奈良新聞",
+      "title": "ものづくり知って 奈良県建設業協会が高校生向け出前講座",
+      "date": "2026-11-11",
+      "link": "https://www.nara-np.co.jp/news/20261111204916.html",
+      "category": "construction",
+      "relevanceScore": 8,
+      "results": []
+    },
     {
       "id": "news-07731e2ee550",
       "source": "constnews",
@@ -408,6 +430,18 @@
       "title": "「奈良県中央卸売市場再整備推進事業（市場エリア整備事業）」に係る基本協定を締結(ニュースレター) (2026年11月6日掲載)",
       "date": "2026-11-06",
       "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFA0ajRpZWtwcVozS3daUFk4UTVmcE05d19UdmNwdm1JbFN4NUZHeHd1X2loblVEcjN4SDNBQW9aSnJ4Y1dXV3V5VXlJNGdmWEVCcHN2SUhXXy1iaGZCem5XSDV3?oc=5",
+      "category": "construction",
+      "relevanceScore": 8,
+      "results": []
+    },
+    {
+      "id": "news-2734cc8f1fa7",
+      "source": "googlenews",
+      "sourceLabel": "一般紙・Web",
+      "publisher": "福島民友新聞社",
+      "title": "「奈良県中央卸売市場再整備推進事業（市場エリア整備事業）」に係る基本協定を締結:共同通信PRワイヤー",
+      "date": "2026-11-06",
+      "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE4wUVFUUm1HTkF2bDBNTllNWk52ekhEYWJYRVA2UTZfX1ZncjJmeXRJbDZKamZ0TFlXYXRBWm5nX0pocHAzcXN6dlowalRLSDNxcVV5UUoxTnJ4NUQyVjZDYnNwUXAwVVZjTnA4Y1VmdmxFV2lmR3dMbDVn?oc=5",
       "category": "construction",
       "relevanceScore": 8,
       "results": []
