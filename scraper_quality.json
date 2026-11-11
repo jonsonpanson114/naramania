@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-11T13:57:38.959Z",
+  "generatedAt": "2026-11-11T22:20:35.850Z",
   "source": "daily_scrape",
   "municipalityLastScraped": {
     "奈良市": "2026-11-11T13:57:38.959Z",
@@ -26,13 +26,13 @@
     "三郷町": "2026-11-11T13:57:38.959Z",
     "王寺町": "2026-11-11T13:57:38.959Z",
     "大淀町": "2026-11-11T13:57:38.959Z",
-    "奈良県": "2026-11-10T07:49:01.978Z"
+    "奈良県": "2026-11-11T22:20:35.850Z"
   },
-  "scrapedCount": 2957,
-  "keptCount": 336,
-  "rejectedCount": 2669,
+  "scrapedCount": 70,
+  "keptCount": 337,
+  "rejectedCount": 1,
   "oldestAnnouncementDate": "2025-02-02",
-  "latestAnnouncementDate": "2026-11-10",
+  "latestAnnouncementDate": "2026-11-11",
   "municipalityCount": 24,
   "municipalityAudit": {
     "expectedMunicipalityCount": 25,
@@ -46,8 +46,8 @@
     "breakdown": [
       {
         "municipality": "奈良県",
-        "count": 68,
-        "changeFromPrevious": 0
+        "count": 69,
+        "changeFromPrevious": 1
       },
       {
         "municipality": "橿原市",
@@ -165,16 +165,8 @@
         "changeFromPrevious": 0
       }
     ],
-    "retainedFromPrevious": [
-      "高取町"
-    ],
-    "issues": [
-      {
-        "municipality": "高取町",
-        "level": "warning",
-        "message": "[高取町] 取得件数が急減したため既存データ 11件を維持しつつ、新規 15件を反映しています (baseline=26)"
-      }
-    ]
+    "retainedFromPrevious": [],
+    "issues": []
   },
   "dateAudit": {
     "announcementAfterBiddingCount": 0,
@@ -222,14 +214,14 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 68,
+        "totalCount": 69,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "ppi.ebid-kouji-gyoumu.pref.nara.jp": 68
+          "ppi.ebid-kouji-gyoumu.pref.nara.jp": 69
         },
-        "announcementCount": 9,
+        "announcementCount": 10,
         "resultCount": 59,
-        "message": "奈良県: 68件 (公告9/結果59) / sources OK"
+        "message": "奈良県: 69件 (公告10/結果59) / sources OK"
       },
       {
         "expectation": {
@@ -745,7 +737,6 @@
     "itemsWithDescription": 85,
     "intelligenceExtractedCount": 83,
     "geminiExtractedCount": 83,
-    "taggedCount": 83,
-    "lastAugmentedAt": "2026-11-11T13:59:56.801Z"
+    "taggedCount": 83
   }
 }
