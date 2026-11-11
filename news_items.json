@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-11T02:04:23.722Z",
+  "generatedAt": "2026-11-11T11:23:29.288Z",
   "sources": [
     {
       "id": "constnews",
@@ -23,7 +23,7 @@
       "id": "kensetsu",
       "label": "建設通信新聞",
       "fetched": 30,
-      "kept": 1
+      "kept": 0
     },
     {
       "id": "xtech",
@@ -40,8 +40,8 @@
     {
       "id": "googlenews",
       "label": "一般紙・Web(Googleニュース)",
-      "fetched": 44,
-      "kept": 9
+      "fetched": 43,
+      "kept": 13
     }
   ],
   "items": [
@@ -63,6 +63,18 @@
       "title": "ものづくり知って 奈良県建設業協会が高校生向け出前講座",
       "date": "2026-11-11",
       "link": "https://www.nara-np.co.jp/news/20261111204916.html",
+      "category": "construction",
+      "relevanceScore": 8,
+      "results": []
+    },
+    {
+      "id": "news-a7b213c93da6",
+      "source": "googlenews",
+      "sourceLabel": "一般紙・Web",
+      "publisher": "Dellows News",
+      "title": "奈良県と大和ハウス工業らの企業体、県中央卸売市場の再整備で基本協定を締結",
+      "date": "2026-11-11",
+      "link": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE5UZ2FFaWlET1VBTnFhLUw1UmRpTkhzSVlqUjlaMnA3SHRKS0J5TGU3QUpOcTBMYkRrakV0MzJHZlI5c0l0UDVN?oc=5",
       "category": "construction",
       "relevanceScore": 8,
       "results": []
