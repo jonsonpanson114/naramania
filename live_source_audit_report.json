@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-11T12:35:34.179Z",
-  "currentItemCount": 336,
+  "generatedAt": "2026-11-12T09:15:18.098Z",
+  "currentItemCount": 337,
   "checkedMunicipalities": [
     "奈良市",
     "橿原市",
@@ -106,9 +106,9 @@
     },
     {
       "municipality": "御所市",
-      "rawCount": 18,
+      "rawCount": 17,
       "keptCount": 3,
-      "rejectedCount": 15,
+      "rejectedCount": 14,
       "keptAnnouncementCount": 1,
       "keptResultCount": 2,
       "warnings": [],
@@ -146,9 +146,9 @@
     },
     {
       "municipality": "田原本町",
-      "rawCount": 79,
+      "rawCount": 81,
       "keptCount": 3,
-      "rejectedCount": 76,
+      "rejectedCount": 78,
       "keptAnnouncementCount": 0,
       "keptResultCount": 3,
       "warnings": [],
@@ -166,9 +166,9 @@
     },
     {
       "municipality": "香芝市",
-      "rawCount": 160,
+      "rawCount": 157,
       "keptCount": 26,
-      "rejectedCount": 134,
+      "rejectedCount": 131,
       "keptAnnouncementCount": 5,
       "keptResultCount": 21,
       "warnings": [],
@@ -228,9 +228,9 @@
     },
     {
       "municipality": "高取町",
-      "rawCount": 50,
+      "rawCount": 53,
       "keptCount": 15,
-      "rejectedCount": 35,
+      "rejectedCount": 38,
       "keptAnnouncementCount": 0,
       "keptResultCount": 15,
       "warnings": [],
@@ -322,7 +322,7 @@
       },
       {
         "municipality": "香芝市",
-        "snapshotCount": 160,
+        "snapshotCount": 157,
         "expectedCount": 26,
         "matchedCount": 26,
         "missingCount": 0,
@@ -377,7 +377,7 @@
       },
       {
         "municipality": "高取町",
-        "snapshotCount": 50,
+        "snapshotCount": 53,
         "expectedCount": 15,
         "matchedCount": 15,
         "missingCount": 0,
@@ -465,7 +465,7 @@
       },
       {
         "municipality": "御所市",
-        "snapshotCount": 18,
+        "snapshotCount": 17,
         "expectedCount": 3,
         "matchedCount": 3,
         "missingCount": 0,
@@ -487,7 +487,7 @@
       },
       {
         "municipality": "田原本町",
-        "snapshotCount": 79,
+        "snapshotCount": 81,
         "expectedCount": 3,
         "matchedCount": 3,
         "missingCount": 0,
