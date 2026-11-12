@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-12T03:14:41.594Z",
+  "generatedAt": "2026-11-12T11:43:16.750Z",
   "sources": [
     {
       "id": "constnews",
@@ -40,11 +40,35 @@
     {
       "id": "googlenews",
       "label": "一般紙・Web(Googleニュース)",
-      "fetched": 43,
-      "kept": 14
+      "fetched": 38,
+      "kept": 11
     }
   ],
   "items": [
+    {
+      "id": "news-91ec863bc279",
+      "source": "constnews",
+      "sourceLabel": "建設ニュース",
+      "title": "セントラルコンサルタントに決まる／南部中核拠点（五條県有地）整備基本計画検討／奈良県",
+      "date": "2026-11-12",
+      "link": "https://www.constnews.com/?p=161441",
+      "excerpt": "奈良県は、「南部中核拠点（五條県有地）整備基本計画検討業務」を一般競争入札し、２９０３万円（税別）でセントラルコンサルタント奈良営業所（奈良市）に決めた。４日に開札した。 予定価格は、３６１６万円（税別）。 業務は、南部…",
+      "orderer": "奈良県",
+      "results": [],
+      "category": "construction",
+      "relevanceScore": 10
+    },
+    {
+      "id": "news-0ad73d55958b",
+      "source": "naranp",
+      "sourceLabel": "奈良新聞",
+      "title": "「日本炭鉱労働組合」の解散・平成16（2004）年11月",
+      "date": "2026-11-12",
+      "link": "https://www.nara-np.co.jp/news/20261112125909.html",
+      "category": "construction",
+      "relevanceScore": 6,
+      "results": []
+    },
     {
       "id": "news-6b3cb87622d0",
       "source": "naranp",
