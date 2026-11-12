@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-11T22:20:35.842Z",
+  "generatedAt": "2026-11-12T06:32:27.691Z",
   "source": "daily_scrape",
   "updates": [],
   "latestResults": [
@@ -11,7 +11,7 @@
       "biddingDate": "2026-11-19",
       "status": "不調",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-      "detectedAt": "2026-11-11T22:20:35.842Z",
+      "detectedAt": "2026-11-12T06:32:27.691Z",
       "kind": "new_failure"
     },
     {
@@ -23,7 +23,7 @@
       "status": "落札",
       "winningContractor": "株式会社ＳＴＵＤＩＯ Ｃ",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=011792050100r8-g10-01",
-      "detectedAt": "2026-11-11T22:20:35.842Z",
+      "detectedAt": "2026-11-12T06:32:27.691Z",
       "kind": "new_winner"
     },
     {
@@ -36,7 +36,7 @@
       "winningContractor": "株式会社ゴセケン",
       "link": "https://www.town.miyake.lg.jp/soshiki/1/9375.html",
       "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5774.pdf",
-      "detectedAt": "2026-11-11T22:20:35.842Z",
+      "detectedAt": "2026-11-12T06:32:27.691Z",
       "kind": "new_winner"
     },
     {
@@ -49,7 +49,7 @@
       "winningContractor": "光栄工業",
       "link": "https://www.town.miyake.lg.jp/soshiki/1/9375.html",
       "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5616.pdf",
-      "detectedAt": "2026-11-11T22:20:35.842Z",
+      "detectedAt": "2026-11-12T06:32:27.691Z",
       "kind": "new_winner"
     },
     {
@@ -62,7 +62,7 @@
       "winningContractor": "大倭殖産 株式会社",
       "link": "https://www.town.miyake.lg.jp/soshiki/1/9375.html",
       "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5906.pdf",
-      "detectedAt": "2026-11-11T22:20:35.842Z",
+      "detectedAt": "2026-11-12T06:32:27.691Z",
       "kind": "new_winner"
     },
     {
@@ -74,7 +74,7 @@
       "status": "落札",
       "winningContractor": "株式会社尾崎建設",
       "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-      "detectedAt": "2026-11-11T22:20:35.842Z",
+      "detectedAt": "2026-11-12T06:32:27.691Z",
       "kind": "new_winner"
     },
     {
@@ -86,7 +86,7 @@
       "status": "落札",
       "winningContractor": "株式会社前田産業 大阪支店",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-      "detectedAt": "2026-11-11T22:20:35.842Z",
+      "detectedAt": "2026-11-12T06:32:27.691Z",
       "kind": "new_winner"
     },
     {
@@ -97,7 +97,7 @@
       "biddingDate": "2026-11-06",
       "status": "不調",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-      "detectedAt": "2026-11-11T22:20:35.842Z",
+      "detectedAt": "2026-11-12T06:32:27.691Z",
       "kind": "new_failure"
     },
     {
@@ -109,7 +109,7 @@
       "status": "不調",
       "link": "https://www.town.miyake.lg.jp/soshiki/1/9376.html",
       "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5619.pdf",
-      "detectedAt": "2026-11-11T22:20:35.842Z",
+      "detectedAt": "2026-11-12T06:32:27.691Z",
       "kind": "new_failure"
     },
     {
@@ -122,7 +122,7 @@
       "winningContractor": "株式会社 礎建築事務所",
       "link": "https://www.town.miyake.lg.jp/soshiki/1/9376.html",
       "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5773.pdf",
-      "detectedAt": "2026-11-11T22:20:35.842Z",
+      "detectedAt": "2026-11-12T06:32:27.691Z",
       "kind": "new_winner"
     },
     {
@@ -134,7 +134,7 @@
       "status": "落札",
       "winningContractor": "中尾・中和特定建設工事共同企業体",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=06200640072006A0",
-      "detectedAt": "2026-11-11T22:20:35.842Z",
+      "detectedAt": "2026-11-12T06:32:27.691Z",
       "kind": "new_winner"
     },
     {
@@ -146,7 +146,7 @@
       "status": "不調",
       "cancelled": true,
       "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29001013060020260223&gamenMode=0",
-      "detectedAt": "2026-11-11T22:20:35.842Z",
+      "detectedAt": "2026-11-12T06:32:27.691Z",
       "kind": "new_failure"
     }
   ]

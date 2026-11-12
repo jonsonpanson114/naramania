@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-11T22:20:35.852Z",
-  "totalRejected": 585,
+  "generatedAt": "2026-11-12T06:32:27.721Z",
+  "totalRejected": 600,
   "totalBorderlineRescued": 53,
   "byMunicipality": {
     "奈良県": {
-      "rejected": 585,
+      "rejected": 600,
       "borderlineRescued": 53
     }
   },
@@ -208,6 +208,60 @@
         "設備"
       ],
       "borderlineRescue": true
+    },
+    {
+      "municipality": "奈良県",
+      "title": "一般県道毛原切幡線 道路詳細設計業務委託（道路改良事業等基礎調査費） 第 １５－委－２ 号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "一般国道２５号 道路詳細設計業務委託（道路改良事業等基礎調査費） 第 １５－委－３ 号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "調査",
+        "国道"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "主要地方道高野天川線 道路詳細修正設計委託（道路施設維持修繕費 他） ６０１－３－委２ 他",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "奈良公園 鹿苑管理用道路実施設計業務（飛火野周辺地区整備事業（社会資本）他） 第繰２０１－２－委６他号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "大和川水系河川整備計画（生駒いかるが圏域）進捗点検業務委託（河川水辺の国勢調査） 第１－委－２号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "河川",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "一般国道３０９号 舗装調査及び設計業務委託（防災・安全交付金事業（国道舗装修繕）他） 繰２－Ａ３０９－６－委１ 他",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装",
+        "調査",
+        "国道"
+      ]
     },
     {
       "municipality": "奈良県",
@@ -529,6 +583,15 @@
       "reason": "exclusion_keyword",
       "matchedKeywords": [
         "護岸"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "（都）西九条佐保線 大安寺地区 ランプ橋橋梁詳細設計委託（（仮称）奈良ＩＣ周辺整備補助街路事業） ８－１０－ＡＧ２－委－７",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋"
       ]
     },
     {
@@ -2530,6 +2593,66 @@
     },
     {
       "municipality": "奈良県",
+      "title": "初瀬ダム 堆砂測量業務委託（ダム維持 他） ＣＤ－１－委－４他",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "ダム",
+        "測量"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "大池川他 測量業務委託（緊急自然災害防止対策事業債対象事業（臨時・特別））第 Ｎ－１０７－委－１他 号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "測量"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "布目川 測量業務委託（緊急自然災害防止対策事業債対象事業（臨時・特別）） 第 Ｎ－１０５－委－１ 号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "測量"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "佐保川 測量業務委託（水辺の憩い空間整備事業） 第 ＮＵ－１－委－１ 号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "測量"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "一般県道才谷吉野山線 測量業務委託（防災・安全交付金事業（地方道災害防除・国補正）他） 繰補０１－Ｂ２５７－６－委１ 他",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "測量"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "第Ｋ－３－委－４号他 秋篠川 現地測量業務（河川維持修繕事業（護岸等修繕）他）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "河川",
+        "護岸",
+        "測量"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "紀の川 測量委託（臨時単独河川改良事業第２種） Ｙ－２１－委１",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "河川",
+        "測量"
+      ]
+    },
+    {
+      "municipality": "奈良県",
       "title": "千股堰堤 堆積土砂撤去工事測量業務委託（緊急浚渫推進事業） ６０５－１－委１",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -3434,6 +3557,15 @@
         "砂防",
         "測量",
         "用地"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "寺川 地質調査業務委託（緊自債（臨時・特別）） Ｃ－１０５－委－４",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "地質",
+        "調査"
       ]
     },
     {
@@ -4767,11 +4899,10 @@
     },
     {
       "municipality": "奈良県",
-      "title": "交通信号機改良等工事設計委託 第15号",
+      "title": "大型灯火式固定標識等撤去工事設計委託 第15号",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
-        "信号機",
-        "交通"
+        "標識"
       ]
     },
     {
