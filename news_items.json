@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T02:46:42.298Z",
+  "generatedAt": "2026-11-13T11:26:48.768Z",
   "sources": [
     {
       "id": "constnews",
@@ -40,11 +40,174 @@
     {
       "id": "googlenews",
       "label": "一般紙・Web(Googleニュース)",
-      "fetched": 40,
-      "kept": 12
+      "fetched": 37,
+      "kept": 13
     }
   ],
   "items": [
+    {
+      "id": "news-9be87c54f77c",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "景観法に基づく届出等は市提出に 香芝市、景観行政団体へ移行",
+      "date": "2026-11-13",
+      "link": "https://shinpou-nara.com/140891/",
+      "excerpt": "香芝市は、11月から景観行政団体へ移行した。移行に伴い、景観法に基づく届出等の提出先が奈良県から同市へ変更となる。届出等の提出先は都市政策交通課で、審査基準は令和９年６月30日まで県景観計画で定められた景観形成基準、７月以降は市景観計画で定められた景観形成基準とする予定。 今後「",
+      "orderer": "香芝市",
+      "results": [],
+      "category": "construction",
+      "relevanceScore": 6
+    },
+    {
+      "id": "news-e71d6a401f56",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "指定期間12年３月31日 まちや館の指定管理",
+      "date": "2026-11-13",
+      "link": "https://shinpou-nara.com/140889/",
+      "excerpt": "五條市は、五條市新町まちや館の指定管理候補者に五條市観光ボランティアガイドの会を選定した。指定期間は令和12年３月31日までの３年間。 指定管理の対象となる新町まちや館は本町２丁目６番６号に位置し、Ｗ造瓦葺２階建延べ床面積４７５・73平方㍍。管理については、五條新町地区の町並みを",
+      "orderer": "五條市",
+      "results": [],
+      "category": "construction",
+      "relevanceScore": 4
+    },
+    {
+      "id": "news-f5c74922212e",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "大和社中を選定 五條新町市有建物等活用",
+      "date": "2026-11-13",
+      "link": "https://shinpou-nara.com/140885/",
+      "excerpt": "五條市は、公募型プロポーザル「五條新町市有建物等活用事業」にて、特定非営利活動法人大和社中を受託候補者に選定した。委託期間は19年３月31日。 同市では公共施設の老朽化や人口減少、商業機能の衰退により、市民が集い交流する場が不足し、地域の活力が低下。市民交流施設やＪＲ五条駅前バス",
+      "orderer": "五條市",
+      "results": [
+        {
+          "kind": "選定",
+          "contractor": "特定非営利活動法人大和社中"
+        }
+      ],
+      "category": "construction",
+      "relevanceScore": 8
+    },
+    {
+      "id": "news-9d7b0ca329ab",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "奈良国道 一吾が落札 大和御所道路他保全作業",
+      "date": "2026-11-13",
+      "link": "https://shinpou-nara.com/140861/",
+      "excerpt": "近畿地方整備局奈良国道事務所は１０月２２日に開札（１１月１１日に落札決定）した一般競争入札「Ｒ８大和御所道路他保全作業」は一吾が２億３７８８万円（評価値６３・６８８）で落札した。予定価格２億６０４２万円。他の参加者は福嶋組、中造園（無効）。 工事場所は橿原市曽我町～十津川村七色。",
+      "orderer": "近畿地方整備局",
+      "results": [
+        {
+          "kind": "落札",
+          "contractor": "一吾",
+          "amount": "2億3788万円"
+        }
+      ],
+      "category": "construction",
+      "relevanceScore": 12
+    },
+    {
+      "id": "news-fa77c8761529",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "近畿技術事務所 １１月２０日まで参加受付 近畿地整人材育成ツール構築業務 委託期間９年８月３１日",
+      "date": "2026-11-13",
+      "link": "https://shinpou-nara.com/140859/",
+      "excerpt": "近畿地方整備局近畿技術事務所は、簡易公募型プロポーザルを適用して去る１３日に公示した「Ｒ８近畿地方整備局人材育成ツール構築業務」に係る参加表明書を１１月２０日正午まで、技術提案書を１２月１８日正午まで受け付ける。説明書等は１１月２０日正午まで交付する。 業務は、近畿地方整備局土木",
+      "orderer": "近畿地方整備局",
+      "results": [],
+      "category": "construction",
+      "relevanceScore": 6
+    },
+    {
+      "id": "news-dd2b67d1e7f5",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "県防災統括室 セントラルコンサルへ 南部中核拠点整備基本計画検討",
+      "date": "2026-11-13",
+      "link": "https://shinpou-nara.com/140857/",
+      "excerpt": "奈良県防災統括室が去る４日に開札（１１月１８日に契約予定）の一般競争入札「南部中核拠点（五條県有地）整備基本計画検討業務委託第１―委―９号」はセントラルコンサルタントが２９０３万円（評価値６８・４９）で落札した。入札書比較価格３６１６万円。他の参加者は建設技術研究所、日本工営、三",
+      "orderer": "県総務部",
+      "results": [
+        {
+          "kind": "落札",
+          "contractor": "セントラルコンサルタント",
+          "amount": "2903万円"
+        }
+      ],
+      "category": "construction",
+      "relevanceScore": 18
+    },
+    {
+      "id": "news-aec0603d28c4",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "広域水道Ｃ １１月２４日まで参加受付 河原橋水管橋支障移転工事 １２月１０日に開札",
+      "date": "2026-11-13",
+      "link": "https://shinpou-nara.com/140854/",
+      "excerpt": "奈良県広域水道企業団広域水道センターは「河原橋水管橋支障移転工事」に総合評価落札方式一般競争入札を適用して去る１２日に公告した。入札参加申込書を１１月２４日まで、入札書・入札金額の内訳書及び低入札価格調査を受ける旨の届出を１１月３０日〜１２月４日に受け付けて１２月１０日に開札する",
+      "orderer": "県広域水道企業団",
+      "results": [],
+      "category": "construction",
+      "relevanceScore": 14
+    },
+    {
+      "id": "news-87e0ab8e7344",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "県農村振興課 セピオに業務を委託 農業農村整備事業資材単価調査 積算設計の基礎資料へ",
+      "date": "2026-11-13",
+      "link": "https://shinpou-nara.com/140852/",
+      "excerpt": "奈良県食農部農村振興課は、農業農村整備事業の設計・積算に用いる設計資材単価を決定するための基礎資料を得るため、令和８年度に県内における建設資材等の実勢取引価格を調査する。 一般競争入札「令和８年度県単独農業農村整備事業資材単価調査業務委託」によりセピオ（岡山市、片山恭平代表取締役",
+      "orderer": "県食と農の振興部",
+      "results": [
+        {
+          "kind": "選定",
+          "contractor": "セピオ"
+        }
+      ],
+      "category": "construction",
+      "relevanceScore": 14
+    },
+    {
+      "id": "news-3389035a41b4",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "下水道マネジメント課 ９年度内に改定へ 大和川上流・宇陀川流域下水道他 全体計画と事業計画を見直し",
+      "date": "2026-11-13",
+      "link": "https://shinpou-nara.com/140850/",
+      "excerpt": "奈良県県土マネジメント部下水道マネジメント課は、大和川上流・宇陀川流域下水道他について令和９年度内に改定するための検討を行う。これは７年度に大和川流域別下水道整備総合計画及び木津川流域別下水道整備総合計画を、また６年度に紀の川流域別下水道整備総合計画を改定したことから、下位計画で",
+      "orderer": "県土マネジメント部",
+      "results": [],
+      "category": "construction",
+      "relevanceScore": 6
+    },
+    {
+      "id": "news-88c0a6290a87",
+      "source": "googlenews",
+      "sourceLabel": "一般紙・Web",
+      "publisher": "Yahoo!ニュース",
+      "title": "シカ侵入相次ぎドア改修 奈良県庁",
+      "date": "2026-11-13",
+      "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE85WEZGNU9CLV82NW54cHlYYzhpWW9IbUZxTFpPOFNiQ1M3Y0ZfMUZOLUFlUHotZmxKNmhjZkFTQVFUU2UzZWkwMWsyQmJ1MHp5?oc=5",
+      "category": "construction",
+      "relevanceScore": 8,
+      "results": []
+    },
+    {
+      "id": "news-034cf27cdb8d",
+      "source": "googlenews",
+      "sourceLabel": "一般紙・Web",
+      "publisher": "NHKニュース",
+      "title": "障害者が建設機械を遠隔操作する社会実験 奈良 十津川村",
+      "date": "2026-11-13",
+      "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE4zeURxTXpwZ0JDTFV3RGtTUkJFTVlEQVhhRE5GNWx6OTlTbV9YOEJDWnJSRnJOZk1wb0lzUFlzUWZGUTNXZTUxT21fTXVmUDltZE1PS3FiT2JEVnp4U0ZR?oc=5",
+      "category": "construction",
+      "relevanceScore": 8,
+      "results": []
+    },
     {
       "id": "news-91ec863bc279",
       "source": "constnews",
