@@ -1,36 +1,36 @@
 {
-  "generatedAt": "2026-11-12T22:39:09.092Z",
+  "generatedAt": "2026-11-13T08:09:39.939Z",
   "source": "daily_scrape",
   "municipalityLastScraped": {
-    "奈良市": "2026-11-12T14:53:03.525Z",
-    "橿原市": "2026-11-12T14:53:03.525Z",
-    "生駒市": "2026-11-12T14:53:03.525Z",
-    "大和高田市": "2026-11-12T14:53:03.525Z",
-    "大和郡山市": "2026-11-12T14:53:03.525Z",
-    "葛城市": "2026-11-12T14:53:03.525Z",
-    "五條市": "2026-11-12T14:53:03.525Z",
-    "御所市": "2026-11-12T14:53:03.525Z",
-    "天理市": "2026-11-12T14:53:03.525Z",
-    "桜井市": "2026-11-12T14:53:03.525Z",
-    "宇陀市": "2026-11-12T14:53:03.525Z",
-    "田原本町": "2026-11-12T14:53:03.525Z",
-    "広陵町": "2026-11-12T14:53:03.525Z",
-    "香芝市": "2026-11-12T14:53:03.525Z",
-    "川西町": "2026-11-12T14:53:03.525Z",
-    "山添村": "2026-11-12T14:53:03.525Z",
-    "平群町": "2026-11-12T14:53:03.525Z",
-    "三宅町": "2026-11-12T14:53:03.525Z",
-    "安堵町": "2026-11-12T14:53:03.525Z",
-    "高取町": "2026-11-12T14:53:03.525Z",
-    "斑鳩町": "2026-11-12T14:53:03.525Z",
-    "三郷町": "2026-11-12T14:53:03.525Z",
-    "王寺町": "2026-11-12T14:53:03.525Z",
-    "大淀町": "2026-11-12T14:53:03.525Z",
+    "奈良市": "2026-11-13T08:09:39.939Z",
+    "橿原市": "2026-11-13T08:09:39.939Z",
+    "生駒市": "2026-11-13T08:09:39.939Z",
+    "大和高田市": "2026-11-13T08:09:39.939Z",
+    "大和郡山市": "2026-11-13T08:09:39.939Z",
+    "葛城市": "2026-11-13T08:09:39.939Z",
+    "五條市": "2026-11-13T08:09:39.939Z",
+    "御所市": "2026-11-13T08:09:39.939Z",
+    "天理市": "2026-11-13T08:09:39.939Z",
+    "桜井市": "2026-11-13T08:09:39.939Z",
+    "宇陀市": "2026-11-13T08:09:39.939Z",
+    "田原本町": "2026-11-13T08:09:39.939Z",
+    "広陵町": "2026-11-13T08:09:39.939Z",
+    "香芝市": "2026-11-13T08:09:39.939Z",
+    "川西町": "2026-11-13T08:09:39.939Z",
+    "山添村": "2026-11-13T08:09:39.939Z",
+    "平群町": "2026-11-13T08:09:39.939Z",
+    "三宅町": "2026-11-13T08:09:39.939Z",
+    "安堵町": "2026-11-13T08:09:39.939Z",
+    "高取町": "2026-11-13T08:09:39.939Z",
+    "斑鳩町": "2026-11-13T08:09:39.939Z",
+    "三郷町": "2026-11-13T08:09:39.939Z",
+    "王寺町": "2026-11-13T08:09:39.939Z",
+    "大淀町": "2026-11-13T08:09:39.939Z",
     "奈良県": "2026-11-12T22:39:09.092Z"
   },
-  "scrapedCount": 70,
-  "keptCount": 336,
-  "rejectedCount": 1,
+  "scrapedCount": 2961,
+  "keptCount": 337,
+  "rejectedCount": 2673,
   "oldestAnnouncementDate": "2025-02-02",
   "latestAnnouncementDate": "2026-11-11",
   "municipalityCount": 24,
@@ -71,8 +71,8 @@
       },
       {
         "municipality": "五條市",
-        "count": 21,
-        "changeFromPrevious": 0
+        "count": 22,
+        "changeFromPrevious": 1
       },
       {
         "municipality": "香芝市",
@@ -165,8 +165,16 @@
         "changeFromPrevious": 0
       }
     ],
-    "retainedFromPrevious": [],
-    "issues": []
+    "retainedFromPrevious": [
+      "高取町"
+    ],
+    "issues": [
+      {
+        "municipality": "高取町",
+        "level": "warning",
+        "message": "[高取町] 取得件数が急減したため既存データ 11件を維持しつつ、新規 15件を反映しています (baseline=26)"
+      }
+    ]
   },
   "dateAudit": {
     "announcementAfterBiddingCount": 0,
@@ -359,15 +367,15 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 21,
+        "totalCount": 22,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.gojo.lg.jp": 13,
-          "epi-cloud.fwd.ne.jp": 8
+          "city.gojo.lg.jp": 4,
+          "epi-cloud.fwd.ne.jp": 18
         },
         "announcementCount": 3,
-        "resultCount": 18,
-        "message": "五條市: 21件 (公告3/結果18) / sources OK"
+        "resultCount": 19,
+        "message": "五條市: 22件 (公告3/結果19) / sources OK"
       },
       {
         "expectation": {
@@ -503,11 +511,11 @@
         "totalCount": 21,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.kashiba.lg.jp": 9
+          "city.kashiba.lg.jp": 5
         },
-        "announcementCount": 5,
-        "resultCount": 16,
-        "message": "香芝市: 21件 (公告5/結果16) / sources OK"
+        "announcementCount": 2,
+        "resultCount": 19,
+        "message": "香芝市: 21件 (公告2/結果19) / sources OK"
       },
       {
         "expectation": {
@@ -724,11 +732,11 @@
         "totalCount": 21,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "epi-cloud.fwd.ne.jp": 12
+          "epi-cloud.fwd.ne.jp": 16
         },
-        "announcementCount": 5,
-        "resultCount": 16,
-        "message": "香芝市: 21件 (公告5/結果16) / sources OK"
+        "announcementCount": 2,
+        "resultCount": 19,
+        "message": "香芝市: 21件 (公告2/結果19) / sources OK"
       }
     ]
   },
@@ -737,6 +745,7 @@
     "itemsWithDescription": 85,
     "intelligenceExtractedCount": 83,
     "geminiExtractedCount": 83,
-    "taggedCount": 83
+    "taggedCount": 83,
+    "lastAugmentedAt": "2026-11-13T08:12:05.145Z"
   }
 }
