@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T11:26:48.768Z",
+  "generatedAt": "2026-11-13T17:19:35.754Z",
   "sources": [
     {
       "id": "constnews",
@@ -40,8 +40,8 @@
     {
       "id": "googlenews",
       "label": "一般紙・Web(Googleニュース)",
-      "fetched": 37,
-      "kept": 13
+      "fetched": 36,
+      "kept": 14
     }
   ],
   "items": [
@@ -204,6 +204,30 @@
       "title": "障害者が建設機械を遠隔操作する社会実験 奈良 十津川村",
       "date": "2026-11-13",
       "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE4zeURxTXpwZ0JDTFV3RGtTUkJFTVlEQVhhRE5GNWx6OTlTbV9YOEJDWnJSRnJOZk1wb0lzUFlzUWZGUTNXZTUxT21fTXVmUDltZE1PS3FiT2JEVnp4U0ZR?oc=5",
+      "category": "construction",
+      "relevanceScore": 8,
+      "results": []
+    },
+    {
+      "id": "news-75a1c2dd9570",
+      "source": "googlenews",
+      "sourceLabel": "一般紙・Web",
+      "publisher": "Yahoo!ニュース",
+      "title": "奈良県庁 シカ侵入でドア改修",
+      "date": "2026-11-13",
+      "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE4yQjdyZGtleFJOZjRCSGtGTi1UZ3BLYkd4b0hkdTFCdlhpYTlSaWxNMzJXTGxvVXJ6TnMzR2pwT0dwTzZIRTB6MXBCQXJoWTdE?oc=5",
+      "category": "construction",
+      "relevanceScore": 8,
+      "results": []
+    },
+    {
+      "id": "news-7bfcf209ced4",
+      "source": "googlenews",
+      "sourceLabel": "一般紙・Web",
+      "publisher": "note",
+      "title": "『奈良県庁 シカ侵入でドア改修』 日本 20261113｜極論空手形 / Extreme Argument Fictitious Bill",
+      "date": "2026-11-13",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFAzQlhUMndkZUFLSEJORGdQdnc5VWszVlZpOHBTcHhuNXAtb3dJNUdjWkF0YW9jMzVsXzJVMkp4RTBtNmY1dVh6akN0QVJKZ094Ukk4Sl93Yk5UNnM?oc=5",
       "category": "construction",
       "relevanceScore": 8,
       "results": []
