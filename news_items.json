@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-12T17:41:59.981Z",
+  "generatedAt": "2026-11-13T02:46:42.298Z",
   "sources": [
     {
       "id": "constnews",
@@ -40,8 +40,8 @@
     {
       "id": "googlenews",
       "label": "一般紙・Web(Googleニュース)",
-      "fetched": 38,
-      "kept": 10
+      "fetched": 40,
+      "kept": 12
     }
   ],
   "items": [
@@ -68,6 +68,135 @@
       "category": "construction",
       "relevanceScore": 6,
       "results": []
+    },
+    {
+      "id": "news-34314656365a",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "不法投棄防止や路上喫煙の適正化など みんなのまち・きれいなまち条例（素案）",
+      "date": "2026-11-12",
+      "link": "https://shinpou-nara.com/140834/",
+      "excerpt": "田原本町は「田原本町みんなのまち・きれいなまち条例（素案）」についてのパブリックコメントの結果を公表した。今回の意見募集は10月６日～11月４日に実施し、意見は９件提出された。 同条例は、清潔で快適な生活環境づくりの促進に係る町や事業者及び町民等の責務を明らかにするとともに、ポイ",
+      "orderer": "田原本町",
+      "results": [],
+      "category": "construction",
+      "relevanceScore": 6
+    },
+    {
+      "id": "news-6cae16209a57",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "指定管理候補者を選定 道の駅阿騎野宿など２施設",
+      "date": "2026-11-12",
+      "link": "https://shinpou-nara.com/140832/",
+      "excerpt": "宇陀市は道の駅「宇陀路大宇陀阿騎野宿」の指定管理候補者に奈良交通を選定。宇陀市心の森「多世代交流プラザ」にツルカメＯ＆Ｅを指定管理候補者としてそれぞれ選定した。指定管理期間は、両施設とも12年３月31日までの３年間。施設概要などは次の通り。 ▽道の駅「宇陀路大宇陀阿騎野宿」（大宇",
+      "orderer": "宇陀市",
+      "results": [],
+      "category": "construction",
+      "relevanceScore": 6
+    },
+    {
+      "id": "news-4f2ff1d80c2c",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "12月７日まで参加受付 生活支援体制整備事業",
+      "date": "2026-11-12",
+      "link": "https://shinpou-nara.com/140830/",
+      "excerpt": "天理市は公募型プロポーザルにて「天理市生活支援体制整備事業第１層業務」を公告した。参加申請書の提出期限が12月７日、事業提案書等の提出期間が12月８日～９年１月12日、書類審査を１月中旬～下旬に実施、書類及びヒアリング審査を２月上旬～中旬に実施し事業者を決定する予定。委託費上限額",
+      "orderer": "天理市",
+      "results": [],
+      "category": "construction",
+      "relevanceScore": 8
+    },
+    {
+      "id": "news-84273323cafd",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "県建設産業課 １１月２４日まで参加受付 和田と大又ヌ急傾斜地崩壊対策工事",
+      "date": "2026-11-12",
+      "link": "https://shinpou-nara.com/140760/",
+      "excerpt": "奈良県建設産業課は和田地区と大又（ヌ）地区急傾斜地崩壊対策工事に総合評価落札方式一般競争入札を適用して去る１１日に公告した。入札参加申込書を１１月２４日まで、入札書・入札金額の内訳書及び低入札価格調査を受ける旨の届出を１１月３０日〜１２月４日に受け付けて１２月１４日に開札する。 ",
+      "orderer": "県土マネジメント部",
+      "results": [],
+      "category": "construction",
+      "relevanceScore": 16
+    },
+    {
+      "id": "news-ec82696a0385",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "県建設産業課 藤本・上村ＪＶが落札 佐保川幹線長寿命化対策工事その２",
+      "date": "2026-11-12",
+      "link": "https://shinpou-nara.com/140758/",
+      "excerpt": "奈良県建設産業課が１０月２８日に開札（１１月１２日に契約）した一般競争入札「佐保川幹線（Ｍ№６７～６８）長寿命化対策工事（その２）（重要下水道管路更新事業他）Ｒ８浄化管渠第７号」は藤本・上村ＪＶが３億９４９３万１０００円（評価値２８・７２４）で落札した。入札書比較価格４億３０５６",
+      "orderer": "県土マネジメント部",
+      "results": [
+        {
+          "kind": "落札",
+          "contractor": "藤本・上村ＪＶ",
+          "amount": "3億9493万1000円"
+        }
+      ],
+      "category": "construction",
+      "relevanceScore": 16
+    },
+    {
+      "id": "news-4f19fab3be3d",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "前田産業が落札 生駒南中学校校舎等解体工事",
+      "date": "2026-11-12",
+      "link": "https://shinpou-nara.com/140755/",
+      "excerpt": "生駒市が去る６日に開札した一般競争入札「生駒南中学校校舎等解体工事」は前田産業が２億７８９０万円（予定価格５億５５７６万円）で落札した。他の参加者は米杉建設、平井建設、大倭殖産、中川組。 工事場所は萩原町。工事概要は解体撤去工事（既存建物解体〈基礎・杭含む〉工事、敷地内外構構造物",
+      "orderer": "生駒市",
+      "results": [
+        {
+          "kind": "落札",
+          "contractor": "前田産業",
+          "amount": "2億7890万円"
+        }
+      ],
+      "category": "construction",
+      "relevanceScore": 20
+    },
+    {
+      "id": "news-8f47a9fb0310",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "天理 １２月９日に開札 配水管改良工事（２４―７４工区） １２月４日から受付",
+      "date": "2026-11-12",
+      "link": "https://shinpou-nara.com/140753/",
+      "excerpt": "奈良県広域水道企業団天理事務所は「重要給水施設配水管改良工事（２４―７４工区）」に事後審査型一般競争入札を適用して去る９日に公告した。入札書及び工事費内訳書を１２月４日～８日に受け付けて１２月９日に開札する。 参加資格は▽天理市建設工事執行規則に規定する競争入札参加資格審査におい",
+      "orderer": "県広域水道企業団",
+      "results": [],
+      "category": "construction",
+      "relevanceScore": 14
+    },
+    {
+      "id": "news-874b70433528",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "ＮＴＣで実施設計 古池（香芝２地区）耐震化改修",
+      "date": "2026-11-12",
+      "link": "https://shinpou-nara.com/140750/",
+      "excerpt": "奈良県中部農林振興事務所は、県営ため池整備事業香芝２地区に存するため池のうち古池が、耐震性調査によりレベル２震動発生時に許容沈下量を超えると判定されたため、事業計画において作成された耐震計画を踏まえて令和９年度第１四半期にかけて実施設計を行う。 一般競争入札「県営ため池整備事業香",
+      "orderer": "県中部農林振興事務所",
+      "results": [],
+      "category": "construction",
+      "relevanceScore": 16
+    },
+    {
+      "id": "news-5d37a4640e1d",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "県こども家庭課 基本・実施設計を 高田こども家庭相談Ｃ移転整備 ４階建延べ約４２００平方㍍ １１～１２年度に建設工事を想定",
+      "date": "2026-11-12",
+      "link": "https://shinpou-nara.com/140747/",
+      "excerpt": "奈良県地域創造部こども・女性局こども家庭課は、内藤建築事務所奈良事務所に業務委託して策定した「高田こども家庭相談センター移転整備基本計画書」に基づき、高田こども家庭相談センター新築工事に係る基本・実施設計業務を令和１０年夏にかけて行う。９年度から既存建物の除却・建設工事を進め、建",
+      "orderer": "県文化・教育・くらし創造部",
+      "results": [],
+      "category": "construction",
+      "relevanceScore": 22
     },
     {
       "id": "news-6b3cb87622d0",
@@ -125,6 +254,154 @@
       "link": "https://www.constnews.com/?p=161346",
       "excerpt": "奈良県生駒市は１０日、「学研高山地区Ｆエリアまちづくり基本調査等業務」の一般競争入札を開札した。結果は選定中で、くじ結果１位は６４２万８０００円（税別）のエイト日本技術開発奈良事務所（奈良市）となっている。 予定価格は、…",
       "orderer": "生駒市",
+      "results": [],
+      "category": "construction",
+      "relevanceScore": 8
+    },
+    {
+      "id": "news-44c3c57b66db",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "移転 中村建設 本社を奈良市佐紀町へ",
+      "date": "2026-11-10",
+      "link": "https://shinpou-nara.com/135727/",
+      "excerpt": "中村建設（代表取締役・中村光良）は、本社を奈良市佐紀町に移転し、１１月１６日から新所在地で業務を開始する。今回の移転に伴い、郵便番号及び本社所在地が変更となる。新住所は〒６３０―８００３ 奈良市佐紀町３１１３番地の１、電話番号０７４２―３３―１００１とＦＡＸ番号０７４２―３５―４",
+      "orderer": "民間",
+      "results": [],
+      "category": "construction",
+      "relevanceScore": 8
+    },
+    {
+      "id": "news-6ed7e28c4943",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "令和９年２月に選定を予定 照明設備ＬＥＤ化設計・施工",
+      "date": "2026-11-10",
+      "link": "https://shinpou-nara.com/135724/",
+      "excerpt": "大和郡山市は、公募型プロポーザルにて「令和８年度大和郡山市立学校等照明設備ＬＥＤ化設計・施工一括委託業務」を再公告した。参加表明書の受付が11月25日まで、現地調査期間（資格合格者のみ）が資格審査合格日～９年１月25日、提案書の受付期限が１月25日、プレゼンテーションとヒアリング",
+      "orderer": "大和郡山市",
+      "results": [],
+      "category": "construction",
+      "relevanceScore": 14
+    },
+    {
+      "id": "news-c9e2fd5983c3",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "鉄筋組立・圧接などを体験 高校生合同出前講座",
+      "date": "2026-11-10",
+      "link": "https://shinpou-nara.com/135715/",
+      "excerpt": "測量 一般社団法人奈良県建設業協会（山辺元康会長）は去る10日「高校生合同出前講座」を奈良県立高等技術専門校（三宅町石見４４０）にて開催した。出前講座には関西鉄筋工業協同組合、関西圧接業協同組合、奈良県測量設計業協会から建設現場で働く職人が講師として参加した。 当日は、奈良商工高",
+      "orderer": "組合",
+      "results": [],
+      "category": "construction",
+      "relevanceScore": 10
+    },
+    {
+      "id": "news-bf5f6ab9f002",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "県建設産業課 明電舎が落札 第二浄化コントロールセンタ等更新",
+      "date": "2026-11-10",
+      "link": "https://shinpou-nara.com/135668/",
+      "excerpt": "奈良県建設産業課が１０月２７日に開札（１１月１１日に契約）した一般競争入札「第二浄化センター２系水処理コントロールセンタ等更新工事（防災・安全交付金事業）Ｒ８第二第３２９号」は明電舎が３億７００万円（評価値３４・０９７）で落札した。入札書比較価格３億１０５２万５０００円。参加は明",
+      "orderer": "県土マネジメント部",
+      "results": [
+        {
+          "kind": "落札",
+          "contractor": "明電舎",
+          "amount": "3億700万円"
+        }
+      ],
+      "category": "construction",
+      "relevanceScore": 16
+    },
+    {
+      "id": "news-b084b6aefd4a",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "奥村組が落札 生駒市立病院施設整備工事",
+      "date": "2026-11-10",
+      "link": "https://shinpou-nara.com/135665/",
+      "excerpt": "生駒市が去る６日に開札した一般競争入札「生駒市立病院施設整備工事」は奥村組が１２億６７００万円（予定価格１２億６７１５万円）で落札した。参加は奥村組のみ。 工事場所は東生駒１丁目。工事概要は６階倉庫２を病棟へ改修、その他諸室の内装・設備改修。設計は石本建築事務所が担当。工期１０年",
+      "orderer": "生駒市",
+      "results": [
+        {
+          "kind": "落札",
+          "contractor": "奥村組",
+          "amount": "12億6700万円"
+        }
+      ],
+      "category": "construction",
+      "relevanceScore": 18
+    },
+    {
+      "id": "news-4d4120508833",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "１１月１７日～２４日参加受付 上野公園多目的グラウンド人工芝",
+      "date": "2026-11-10",
+      "link": "https://shinpou-nara.com/135663/",
+      "excerpt": "五條市は「ベストラインフィールド（上野公園多目的グラウンド）人工芝張替工事２６０１０５９号」に総合評価落札方式（簡易型）一般競争入札（事後審査型）を適用して去る６日に公告した。入札参加申込書を１１月１７日～２４日、技術提案書等を１１月２４日まで、入札書及び入札金額の内訳書及び配置",
+      "orderer": "五條市",
+      "results": [],
+      "category": "construction",
+      "relevanceScore": 14
+    },
+    {
+      "id": "news-737c890c9dfc",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "国営飛鳥歴史公園 内外エンジニアと契約 平城宮跡調整池再整備検討他",
+      "date": "2026-11-10",
+      "link": "https://shinpou-nara.com/135661/",
+      "excerpt": "近畿地方整備局国営飛鳥歴史公園事務所は、簡易公募型プロポーザル「Ｒ８平城宮跡歴史公園調整池再整備検討他業務」について、技術提案書の提出希望者を公募したところ、申請期間内に３２者から業務説明書等のダウンロードがなされ、３者から参加表明書の提出があり、参加資格を有するその３者を技術提",
+      "orderer": "近畿地方整備局",
+      "results": [],
+      "category": "construction",
+      "relevanceScore": 10
+    },
+    {
+      "id": "news-db79c9c7dac0",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "下水道マネジメント課 １２月下旬に実施方針 流域下水道ウォーターＰＰＰ 第二浄化Ｃと管路施設を対象に 来年１０月頃に落札者決定",
+      "date": "2026-11-10",
+      "link": "https://shinpou-nara.com/135657/",
+      "excerpt": "奈良県県土マネジメント部下水道マネジメント課は、（仮称）大和川上流・宇陀川流域下水道（第二処理区）「水の官民連携」包括業務委託の実施方針等を１２月下旬に公表することにしている。水の官民連携（ウォーターＰＰＰ）のうち「管理・更新一体マネジメント方式（更新支援型）」の導入するもの。 ",
+      "orderer": "県土マネジメント部",
+      "results": [],
+      "category": "construction",
+      "relevanceScore": 10
+    },
+    {
+      "id": "news-6d50051699b3",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "奈良森林 太田建設が落札 今西渓間工事",
+      "date": "2026-11-10",
+      "link": "https://shinpou-nara.com/135655/",
+      "excerpt": "近畿中国森林管理局奈良森林管理事務所が去る４日に開札した一般競争入札「今西渓間工事」は太田建設が１億９８５０万円（評価値７・９３８）で落札した。他の参加者は岸尾産業、泉組。工事場所は十津川村今西。工期９年１０月２２日。",
+      "orderer": "省庁",
+      "results": [
+        {
+          "kind": "落札",
+          "contractor": "太田建設",
+          "amount": "1億9850万円"
+        }
+      ],
+      "category": "construction",
+      "relevanceScore": 14
+    },
+    {
+      "id": "news-9f74430625c2",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "県建築安全課 ２点で指導を実施 県内一斉建築パトロール",
+      "date": "2026-11-10",
+      "link": "https://shinpou-nara.com/135653/",
+      "excerpt": "奈良県土マネジメント部まちづくり推進局 建築安全課は、令和８年度違反建築防止週間の１０月１５日に県内の一斉建築パトロールを６班１３名で実施し、確認表示板の未掲示１件と確認表示板の記載内容不備８件を確認してこの２点について口頭指導を行った。 県が、奈良市・橿原市及び生駒市と合同で中",
+      "orderer": "県地域デザイン推進局",
       "results": [],
       "category": "construction",
       "relevanceScore": 8
