@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-15T02:02:29.890Z",
+  "generatedAt": "2026-11-15T11:24:25.422Z",
   "sources": [
     {
       "id": "constnews",
@@ -40,8 +40,8 @@
     {
       "id": "googlenews",
       "label": "一般紙・Web(Googleニュース)",
-      "fetched": 40,
-      "kept": 10
+      "fetched": 39,
+      "kept": 11
     }
   ],
   "items": [
@@ -50,9 +50,21 @@
       "source": "googlenews",
       "sourceLabel": "一般紙・Web",
       "publisher": "毎日新聞",
-      "title": "シカ：県庁出禁 あシカらず 奈良 侵入相次ぎドア改修",
+      "title": "シカ：県庁出禁、あシカらず 侵入相次ぎドア改修 奈良",
       "date": "2026-11-15",
       "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBLbzlJWkFEMnIzWEF0a3VmMDBrZWFEVEhFMlg5SVNYcFdMUnNHdThnQmtjOWRmUkFOUktxdl9oOGFJcnpmLW9qSHc4S0lzZVQxY1lZZFlQNkZWdzhSUnlscDlhSUdwUHFl?oc=5",
+      "category": "construction",
+      "relevanceScore": 8,
+      "results": []
+    },
+    {
+      "id": "news-683a5cee98cf",
+      "source": "googlenews",
+      "sourceLabel": "一般紙・Web",
+      "publisher": "Yahoo!ニュース",
+      "title": "村本建設など ムスブグループが広陵町で清掃活動（奈良テレビ放送）",
+      "date": "2026-11-15",
+      "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE50Rk0zY18xQ21ic0owUndlTzdCTHZIVi1aNVFJdlB1bDdVYlJFWGxhV0w5N1RjWHNpeVMxbmhZZDJzV0dGZ0JtUHYwcmpnR1RGMWEtbzF5NmZuMXZsbEU0QW5YOUZVMWtFX3VHTFF4VWhlOG1tV2pjaTQteGZoRzQ?oc=5",
       "category": "construction",
       "relevanceScore": 8,
       "results": []
