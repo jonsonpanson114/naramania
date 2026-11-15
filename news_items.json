@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-14T15:56:53.880Z",
+  "generatedAt": "2026-11-15T02:02:29.890Z",
   "sources": [
     {
       "id": "constnews",
@@ -40,11 +40,23 @@
     {
       "id": "googlenews",
       "label": "一般紙・Web(Googleニュース)",
-      "fetched": 39,
-      "kept": 9
+      "fetched": 40,
+      "kept": 10
     }
   ],
   "items": [
+    {
+      "id": "news-3e715c941f0f",
+      "source": "googlenews",
+      "sourceLabel": "一般紙・Web",
+      "publisher": "毎日新聞",
+      "title": "シカ：県庁出禁 あシカらず 奈良 侵入相次ぎドア改修",
+      "date": "2026-11-15",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBLbzlJWkFEMnIzWEF0a3VmMDBrZWFEVEhFMlg5SVNYcFdMUnNHdThnQmtjOWRmUkFOUktxdl9oOGFJcnpmLW9qSHc4S0lzZVQxY1lZZFlQNkZWdzhSUnlscDlhSUdwUHFl?oc=5",
+      "category": "construction",
+      "relevanceScore": 8,
+      "results": []
+    },
     {
       "id": "news-5800c80a6235",
       "source": "naranp",
