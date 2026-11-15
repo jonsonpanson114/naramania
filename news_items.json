@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-15T11:24:25.422Z",
+  "generatedAt": "2026-11-15T16:30:31.732Z",
   "sources": [
     {
       "id": "constnews",
@@ -40,8 +40,9 @@
     {
       "id": "googlenews",
       "label": "一般紙・Web(Googleニュース)",
-      "fetched": 39,
-      "kept": 11
+      "fetched": 0,
+      "kept": 0,
+      "error": "Request failed with status code 503"
     }
   ],
   "items": [
