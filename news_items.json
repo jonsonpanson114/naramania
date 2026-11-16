@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-16T11:56:10.848Z",
+  "generatedAt": "2026-11-16T19:45:55.850Z",
   "sources": [
     {
       "id": "constnews",
@@ -40,8 +40,8 @@
     {
       "id": "googlenews",
       "label": "一般紙・Web(Googleニュース)",
-      "fetched": 39,
-      "kept": 13
+      "fetched": 40,
+      "kept": 14
     }
   ],
   "items": [
@@ -103,6 +103,18 @@
       "title": "奈良県生駒市に古民家カフェJIDOが11月6日オープンへ 築55年の建物を改修",
       "date": "2026-11-16",
       "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE82aWZwUURTREZwbjN0NlVYdUpURHpyV0Vra1V5SWZSZUhzUzVCd253VWFHa0xTNXdteFhXM2lZNnVHTE42Qnc?oc=5",
+      "category": "construction",
+      "relevanceScore": 8,
+      "results": []
+    },
+    {
+      "id": "news-171ed14a4832",
+      "source": "googlenews",
+      "sourceLabel": "一般紙・Web",
+      "publisher": "Dellows News",
+      "title": "BOCO防災事業コンテスト2026開催 奈良建設が最優秀賞を受賞",
+      "date": "2026-11-16",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFB0Y1ZGbkFVU19mQXpvMnZ5YnVsZUtINVRtSW9fbTJkMmJoSHJUakZaTzNfNG0wVTEwd19pdTdmby1RYmVVV29NcGVERmdGUTdjZWZPcFdaTjktLTMtOWUyRUpyTnJoampr?oc=5",
       "category": "construction",
       "relevanceScore": 8,
       "results": []
