@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-13T20:33:14.533Z",
-  "totalRejected": 599,
+  "generatedAt": "2026-11-16T00:43:39.512Z",
+  "totalRejected": 600,
   "totalBorderlineRescued": 53,
   "byMunicipality": {
     "奈良県": {
-      "rejected": 599,
+      "rejected": 600,
       "borderlineRescued": 53
     }
   },
@@ -199,6 +199,16 @@
         "設備"
       ],
       "borderlineRescue": true
+    },
+    {
+      "municipality": "奈良県",
+      "title": "一般国道１６５号 整備効果分析業務委託（道路改良事業等基礎調査費） 第１－委－２号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "調査",
+        "国道"
+      ]
     },
     {
       "municipality": "奈良県",
