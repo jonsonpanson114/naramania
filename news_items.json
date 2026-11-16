@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-16T02:19:24.001Z",
+  "generatedAt": "2026-11-16T11:56:10.848Z",
   "sources": [
     {
       "id": "constnews",
@@ -40,8 +40,8 @@
     {
       "id": "googlenews",
       "label": "一般紙・Web(Googleニュース)",
-      "fetched": 40,
-      "kept": 12
+      "fetched": 39,
+      "kept": 13
     }
   ],
   "items": [
@@ -68,6 +68,32 @@
       "category": "construction",
       "relevanceScore": 6,
       "results": []
+    },
+    {
+      "id": "news-a873469e6bf8",
+      "source": "constnews",
+      "sourceLabel": "建設ニュース",
+      "title": "道の駅導入可能性調査で公募型プロポ／企画提案書を１２月７日まで受付／生駒市",
+      "date": "2026-11-16",
+      "link": "https://www.constnews.com/?p=161564",
+      "excerpt": "奈良県生駒市は１６日、「道の駅導入可能性調査業務」の公募型プロポーザルを公告した。企画提案書を１２月７日まで経営企画部企画政策課で持参または郵送によって受け付ける。結果は２０２７年１月に通知する。 予定価格は、２００２万…",
+      "orderer": "生駒市",
+      "results": [],
+      "category": "construction",
+      "relevanceScore": 8
+    },
+    {
+      "id": "news-71b94e2948fa",
+      "source": "constnews",
+      "sourceLabel": "建設ニュース",
+      "title": "エイト日本技術開発が落札／学研高山地区Ｆエリアまちづくり基本調査／生駒市",
+      "date": "2026-11-16",
+      "link": "https://www.constnews.com/?p=161562",
+      "excerpt": "奈良県生駒市は、「学研高山地区Ｆエリアまちづくり基本調査等業務」を一般競争入札し、６４２万８０００円（税別）でエイト日本技術開発奈良事務所（奈良市）に決めた。１０日に開札した。予定価格は、８１９万円（税別）としていた。…",
+      "orderer": "生駒市",
+      "results": [],
+      "category": "construction",
+      "relevanceScore": 10
     },
     {
       "id": "news-274ed809d5de",
