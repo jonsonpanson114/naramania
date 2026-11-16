@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-15T16:30:31.732Z",
+  "generatedAt": "2026-11-16T02:19:24.001Z",
   "sources": [
     {
       "id": "constnews",
@@ -17,7 +17,7 @@
       "id": "decn",
       "label": "建設工業新聞",
       "fetched": 30,
-      "kept": 0
+      "kept": 1
     },
     {
       "id": "kensetsu",
@@ -40,12 +40,47 @@
     {
       "id": "googlenews",
       "label": "一般紙・Web(Googleニュース)",
-      "fetched": 0,
-      "kept": 0,
-      "error": "Request failed with status code 503"
+      "fetched": 40,
+      "kept": 12
     }
   ],
   "items": [
+    {
+      "id": "news-5425d7766c1c",
+      "source": "decn",
+      "sourceLabel": "建設工業新聞",
+      "title": "奈良女子大ら／木津川（京都府）の砂州を１年調査／小さな水辺が川の生き物支える",
+      "date": "2026-11-16",
+      "link": "https://www.decn.co.jp/?p=189333",
+      "excerpt": "川の生き物を守るには本流とその周りにできる小さな水辺を一体で捉えることが大切だ。奈良女子大学や大阪公立大学らの研究チームは京都府内の木津川で、砂州にできる小さな水辺が多様な生き物のすみかになっていることを確かめた。成果は１２日、米科学誌『ＰＬＯＳ Ｏｎｅ』に掲載された。 研究チー",
+      "orderer": "川の生き物を守るに",
+      "results": [],
+      "category": "construction",
+      "relevanceScore": 6
+    },
+    {
+      "id": "news-d5aea91adb63",
+      "source": "naranp",
+      "sourceLabel": "奈良新聞",
+      "title": "命守る教訓生かして 紀伊半島大水害15年、奈良県大淀町で講演会 防災気象情報の活用啓発",
+      "date": "2026-11-16",
+      "link": "https://www.nara-np.co.jp/news/20261116210611.html",
+      "category": "construction",
+      "relevanceScore": 6,
+      "results": []
+    },
+    {
+      "id": "news-274ed809d5de",
+      "source": "googlenews",
+      "sourceLabel": "一般紙・Web",
+      "publisher": "Dellows News",
+      "title": "奈良県生駒市に古民家カフェJIDOが11月6日オープンへ 築55年の建物を改修",
+      "date": "2026-11-16",
+      "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE82aWZwUURTREZwbjN0NlVYdUpURHpyV0Vra1V5SWZSZUhzUzVCd253VWFHa0xTNXdteFhXM2lZNnVHTE42Qnc?oc=5",
+      "category": "construction",
+      "relevanceScore": 8,
+      "results": []
+    },
     {
       "id": "news-3e715c941f0f",
       "source": "googlenews",
