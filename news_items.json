@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-17T04:42:22.046Z",
+  "generatedAt": "2026-11-17T12:21:07.501Z",
   "sources": [
     {
       "id": "constnews",
@@ -40,11 +40,175 @@
     {
       "id": "googlenews",
       "label": "一般紙・Web(Googleニュース)",
-      "fetched": 34,
-      "kept": 12
+      "fetched": 35,
+      "kept": 13
     }
   ],
   "items": [
+    {
+      "id": "news-907b15ef76b0",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "働き方や環境改善等話し合い 建設業女子会を開催",
+      "date": "2026-11-17",
+      "link": "https://shinpou-nara.com/141000/",
+      "excerpt": "八向で開催（橿原市内膳町） 一般社団法人奈良県建設業協会青年部会（植田真広部会長）は、去る13日に「第２回奈良県建設業女子会２０２６」を八向（橿原市内膳町）で開催した。女子会は、県建設業協会青年部会により開催され女性部会立ち上げの前段階としての試み。主催は奈良県建設業協会青年部会",
+      "orderer": "組合",
+      "results": [],
+      "category": "construction",
+      "relevanceScore": 8
+    },
+    {
+      "id": "news-6ad807b2ee67",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "パシフィックコンサルタンツで 総合公園体育施設リニューアル基本・実施設計",
+      "date": "2026-11-17",
+      "link": "https://shinpou-nara.com/140981/",
+      "excerpt": "生駒市は、公募型プロポーザル「生駒市総合公園体育施設リニューアル事業基本設計・実施設計業務」にて、パシフィックコンサルタンツを受託候補者に選定した。委託期間は10年４月30日。 同業務は、都市基幹公園の一つである「総合公園」として、都市住民全般の休息、鑑賞、散歩、遊戯、運動等総合",
+      "orderer": "生駒市",
+      "results": [
+        {
+          "kind": "選定",
+          "contractor": "パシフィックコンサルタンツ"
+        }
+      ],
+      "category": "construction",
+      "relevanceScore": 12
+    },
+    {
+      "id": "news-490c5d34994b",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "12月７日まで受付 道の駅導入可能性調査",
+      "date": "2026-11-17",
+      "link": "https://shinpou-nara.com/140978/",
+      "excerpt": "生駒市は、公募型プロポーザルにて「道の駅導入可能性調査業務」を公告した。企画提案書の受付締切が12月７日、第１次審査を12月11日に、第２次審査を12月23日に実施し選定する予定。予定価格は２００２万円込、委託期間は10年３月31日。参加資格は▽会社更生法または民事再生法に基づく",
+      "orderer": "生駒市",
+      "results": [],
+      "category": "construction",
+      "relevanceScore": 8
+    },
+    {
+      "id": "news-5b58c89a99f5",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "エイト日本技術開発へ 高山Ｆエリアまちづくり基本調査等",
+      "date": "2026-11-17",
+      "link": "https://shinpou-nara.com/140957/",
+      "excerpt": "生駒市が去る１０日に開札した一般競争入札「学研高山地区Ｆエリアまちづくり基本調査等業務」はエイト日本技術開発が６４２万８０００円（予定価格８１９万円）で落札した。他の参加者は日本都市技術（失格）、日本工営都市空間。 業務場所は高山町。業務概要はまちづくり基本調査等業務（基礎調査及",
+      "orderer": "生駒市",
+      "results": [
+        {
+          "kind": "落札",
+          "contractor": "エイト日本技術開発",
+          "amount": "642万8000円"
+        }
+      ],
+      "category": "construction",
+      "relevanceScore": 10
+    },
+    {
+      "id": "news-76334c12ddf2",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "大和郡山 翔星建設が落札 配水管布設替工事小泉町第１工区",
+      "date": "2026-11-17",
+      "link": "https://shinpou-nara.com/140954/",
+      "excerpt": "奈良県広域水道企業団大和郡山事務所が去る１１日に開札した一般競争入札「配水管布設替工事小泉町（第１工区）」は翔星建設が７５０４万８０００円（入札書比較価格８２７４万３０００円）で落札した。他の参加者は世紀東急工業、オオスミ工業（辞退）。 工事場所は大和郡山市小泉町。工事概要は工事",
+      "orderer": "県広域水道企業団",
+      "results": [
+        {
+          "kind": "落札",
+          "contractor": "翔星建設",
+          "amount": "7504万8000円"
+        }
+      ],
+      "category": "construction",
+      "relevanceScore": 14
+    },
+    {
+      "id": "news-2467109c8dcb",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "北山工業が落札 池郷川流域小又川１号堰堤改築３",
+      "date": "2026-11-17",
+      "link": "https://shinpou-nara.com/140952/",
+      "excerpt": "奈良県吉野土木事務所が１０月２８日に開札（１１月１２日に契約）した一般競争入札「池郷川流域小又川１号堰堤改築工事（その３）（事業間連携砂防等事業（砂防））６９―３―２号」は北山工業が８１６０万円（評価値１３・２９６）で落札した。入札書比較価格８９８６万５０００円。他の参加者は大七",
+      "orderer": "県吉野土木事務所",
+      "results": [
+        {
+          "kind": "落札",
+          "contractor": "北山工業",
+          "amount": "8160万円"
+        }
+      ],
+      "category": "construction",
+      "relevanceScore": 14
+    },
+    {
+      "id": "news-907db8c81192",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "１１月２４日まで参加受付 紀の川河川改修工事など２件",
+      "date": "2026-11-17",
+      "link": "https://shinpou-nara.com/140950/",
+      "excerpt": "奈良県吉野土木事務所は紀の川河川改修工事など２件に総合評価落札方式一般競争入札を適用して去る１２日に公告した。入札参加申込書を１１月２４日まで、入札書・入札金額の内訳書及び低入札価格調査を受ける旨の届出を１１月３０日〜１２月４日に受け付けて１２月１０日に開札する。 ▽紀の川河川改",
+      "orderer": "県吉野土木事務所",
+      "results": [],
+      "category": "construction",
+      "relevanceScore": 16
+    },
+    {
+      "id": "news-f9cae03073fd",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "奈良国道 中和と清川が落札 大和北南側ＯＦＦＰ３下部他など",
+      "date": "2026-11-17",
+      "link": "https://shinpou-nara.com/140948/",
+      "excerpt": "近畿地方整備局奈良国道事務所が去る５日に開札した一般競争入札は大和北道路南側ランプ橋（ＯＦＦＰ３）下部他を中和コンストラクション、いかるがパークウェイ興留地区電線共同溝他を清川組が落札した。 ▼Ｒ８大和北道路南側ランプ橋（ＯＦＦＰ３）下部他工事（大和郡山市美濃庄町）＝中和コンスト",
+      "orderer": "近畿地方整備局",
+      "results": [
+        {
+          "kind": "落札",
+          "contractor": "中和コンストラクション",
+          "amount": "1億4588万円"
+        },
+        {
+          "kind": "落札",
+          "contractor": "清川組",
+          "amount": "1億6800万円"
+        }
+      ],
+      "category": "construction",
+      "relevanceScore": 12
+    },
+    {
+      "id": "news-622fbc256ce3",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "新設橋梁の予備設計を 小金打川（大和高田市松塚）断面拡大 井堰や既設道路線形等の設計も",
+      "date": "2026-11-17",
+      "link": "https://shinpou-nara.com/140945/",
+      "excerpt": "奈良県高田土木事務所は、小金打川の対象区間（大和高田市松塚）において河川断面を拡大する際に河川を付け替えることに伴い、新設する橋梁の予備設計を令和９年度にかけて行う。また、既存設計の河川法線及び井堰の位置等の妥当性の整理・確認を行ったうえで、地元条件や周辺環境等を踏まえつつ設計を",
+      "orderer": "県高田土木事務所",
+      "results": [],
+      "category": "construction",
+      "relevanceScore": 8
+    },
+    {
+      "id": "news-7049367ca62a",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "県産業創造課 ３月１日～４月３０日提案 御所ＩＣ工業団地第２期企業募集 ３区画で９年８月上旬～９月末頃に二次審査",
+      "date": "2026-11-17",
+      "link": "https://shinpou-nara.com/140942/",
+      "excerpt": "奈良県産業部産業創造課は、「御所ＩＣ工業団地（御所東高校跡地）第２期企業募集」に係る工場の立地を希望する企業を募集する公募型プロポーザルを１１月１０日に公告した。９年１月２９日まで質問を受け付けて翌月末までに回答をホームページへ掲載、事業提案書等を９年３月１日～４月３０日に受け付",
+      "orderer": "県産業・観光・雇用振興部",
+      "results": [],
+      "category": "construction",
+      "relevanceScore": 8
+    },
     {
       "id": "news-0bd47de12b21",
       "source": "googlenews",
@@ -53,6 +217,18 @@
       "title": "奈良県大和郡山市・九条駅徒歩2分の新築一戸建てを一度に比較！11月21日～23日「モデルハウス5棟見比べ見学会」開催",
       "date": "2026-11-17",
       "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9wbHVmSUxuV3kwN01BbE9LX2R5cHBNOUNTSFliVTRHUFNvYkxqRUE1Nk9GQkdoODF3UlUzLXVwR2ZfalJSdjFzT3FMek5BY3Awek04WnoyQnFEQnB2bkYxYm05SFRJNXRVbHZ5TVlIVGVjMVBqQkRsRW1EVQ?oc=5",
+      "category": "construction",
+      "relevanceScore": 8,
+      "results": []
+    },
+    {
+      "id": "news-4e8496556fa1",
+      "source": "googlenews",
+      "sourceLabel": "一般紙・Web",
+      "publisher": "PrettyOnline",
+      "title": "【奈良】改修中の国宝五重塔に青龍が出現！室生寺の紅葉ライトアップが幻想的",
+      "date": "2026-11-17",
+      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE00UnJzWWNlV0NiNWM1em80VWozdjJsUHdBd25DVmZFbHBfekhpWTFxdG1QVFNERVJzRW4zUk1QS3Z2Wnl6Q2dJNDE0QVY2VXJPSXc?oc=5",
       "category": "construction",
       "relevanceScore": 8,
       "results": []
