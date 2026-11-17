@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-16T19:45:55.850Z",
+  "generatedAt": "2026-11-17T04:42:22.046Z",
   "sources": [
     {
       "id": "constnews",
@@ -17,7 +17,7 @@
       "id": "decn",
       "label": "建設工業新聞",
       "fetched": 30,
-      "kept": 1
+      "kept": 0
     },
     {
       "id": "kensetsu",
@@ -40,11 +40,23 @@
     {
       "id": "googlenews",
       "label": "一般紙・Web(Googleニュース)",
-      "fetched": 40,
-      "kept": 14
+      "fetched": 34,
+      "kept": 12
     }
   ],
   "items": [
+    {
+      "id": "news-0bd47de12b21",
+      "source": "googlenews",
+      "sourceLabel": "一般紙・Web",
+      "publisher": "ニコニコニュース",
+      "title": "奈良県大和郡山市・九条駅徒歩2分の新築一戸建てを一度に比較！11月21日～23日「モデルハウス5棟見比べ見学会」開催",
+      "date": "2026-11-17",
+      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9wbHVmSUxuV3kwN01BbE9LX2R5cHBNOUNTSFliVTRHUFNvYkxqRUE1Nk9GQkdoODF3UlUzLXVwR2ZfalJSdjFzT3FMek5BY3Awek04WnoyQnFEQnB2bkYxYm05SFRJNXRVbHZ5TVlIVGVjMVBqQkRsRW1EVQ?oc=5",
+      "category": "construction",
+      "relevanceScore": 8,
+      "results": []
+    },
     {
       "id": "news-5425d7766c1c",
       "source": "decn",
