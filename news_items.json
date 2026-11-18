@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-17T18:43:15.383Z",
+  "generatedAt": "2026-11-18T03:46:51.183Z",
   "sources": [
     {
       "id": "constnews",
@@ -17,7 +17,7 @@
       "id": "decn",
       "label": "建設工業新聞",
       "fetched": 30,
-      "kept": 0
+      "kept": 1
     },
     {
       "id": "kensetsu",
@@ -40,11 +40,48 @@
     {
       "id": "googlenews",
       "label": "一般紙・Web(Googleニュース)",
-      "fetched": 34,
-      "kept": 12
+      "fetched": 32,
+      "kept": 11
     }
   ],
   "items": [
+    {
+      "id": "news-29b1e4cc2ef2",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "国交省 ９月 建設工事受注動態調査 県内合計２９４億円に減少 公共・民間とも前年割れ",
+      "date": "2026-11-18",
+      "link": "https://shinpou-nara.com/141017/",
+      "excerpt": "国土交通省が公表した９月分の建設工事受注動態統計調査報告によると、奈良県内に本社を置く建設業者の受注高合計は前年同月比３６・１％減の２９４億９２００万円となり、大幅な減少を記録した。全国合計の受注高が前年同月比１・３％増（１２兆１０１３億円）と６ヵ月連続の増加となるなか、奈良県内",
+      "orderer": "国交省",
+      "results": [],
+      "category": "construction",
+      "relevanceScore": 10
+    },
+    {
+      "id": "news-fd687cf89a2c",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "奈良県空調衛生工業協会 安全衛生大会を開催 「安全最優先」を全現場で共有",
+      "date": "2026-11-18",
+      "link": "https://shinpou-nara.com/141010/",
+      "excerpt": "優良工事７件称え無災害誓う 奈良県空調衛生工業協会（森村彰博会長）は去る６日、奈良市内の奈良ロイヤルホテルで「令和８年度安全衛生大会」を開催した。会員企業の経営者や現場担当者らが参加し、労働災害の撲滅と健康管理の徹底に向けて意識を高めた。 森村会長を囲んで記念撮影する受賞者 冒頭",
+      "orderer": "団体",
+      "results": [],
+      "category": "construction",
+      "relevanceScore": 8
+    },
+    {
+      "id": "news-2fe2b21b2938",
+      "source": "naranp",
+      "sourceLabel": "奈良新聞",
+      "title": "議長は藤井本氏、副議長に吉村氏選任",
+      "date": "2026-11-18",
+      "link": "https://www.nara-np.co.jp/news/20261118205543.html",
+      "category": "construction",
+      "relevanceScore": 6,
+      "results": []
+    },
     {
       "id": "news-907b15ef76b0",
       "source": "shinpou",
