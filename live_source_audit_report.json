@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-18T09:32:40.180Z",
+  "generatedAt": "2026-11-18T14:02:30.225Z",
   "currentItemCount": 336,
   "checkedMunicipalities": [
     "奈良市",
@@ -166,9 +166,9 @@
     },
     {
       "municipality": "香芝市",
-      "rawCount": 157,
+      "rawCount": 146,
       "keptCount": 26,
-      "rejectedCount": 131,
+      "rejectedCount": 120,
       "keptAnnouncementCount": 5,
       "keptResultCount": 21,
       "warnings": [],
@@ -250,11 +250,11 @@
     },
     {
       "municipality": "三郷町",
-      "rawCount": 184,
-      "keptCount": 9,
-      "rejectedCount": 175,
+      "rawCount": 93,
+      "keptCount": 0,
+      "rejectedCount": 93,
       "keptAnnouncementCount": 0,
-      "keptResultCount": 9,
+      "keptResultCount": 0,
       "warnings": [],
       "errors": []
     },
@@ -281,8 +281,8 @@
   ],
   "coverage": {
     "checkedMunicipalityCount": 24,
-    "expectedItemCount": 286,
-    "matchedItemCount": 286,
+    "expectedItemCount": 277,
+    "matchedItemCount": 277,
     "missingItemCount": 0,
     "duplicateTitleGroupCount": 28,
     "duplicateTitleItemCount": 64,
@@ -322,7 +322,7 @@
       },
       {
         "municipality": "香芝市",
-        "snapshotCount": 157,
+        "snapshotCount": 146,
         "expectedCount": 26,
         "matchedCount": 26,
         "missingCount": 0,
@@ -391,17 +391,6 @@
         "snapshotCount": 131,
         "expectedCount": 10,
         "matchedCount": 10,
-        "missingCount": 0,
-        "duplicateTitleGroupCount": 0,
-        "duplicateTitleItemCount": 0,
-        "missingItems": [],
-        "status": "ok"
-      },
-      {
-        "municipality": "三郷町",
-        "snapshotCount": 184,
-        "expectedCount": 9,
-        "matchedCount": 9,
         "missingCount": 0,
         "duplicateTitleGroupCount": 0,
         "duplicateTitleItemCount": 0,
@@ -534,6 +523,17 @@
         "snapshotCount": 31,
         "expectedCount": 2,
         "matchedCount": 2,
+        "missingCount": 0,
+        "duplicateTitleGroupCount": 0,
+        "duplicateTitleItemCount": 0,
+        "missingItems": [],
+        "status": "ok"
+      },
+      {
+        "municipality": "三郷町",
+        "snapshotCount": 93,
+        "expectedCount": 0,
+        "matchedCount": 0,
         "missingCount": 0,
         "duplicateTitleGroupCount": 0,
         "duplicateTitleItemCount": 0,
