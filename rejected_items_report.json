@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-17T22:23:37.276Z",
-  "totalRejected": 600,
+  "generatedAt": "2026-11-18T02:47:02.211Z",
+  "totalRejected": 608,
   "totalBorderlineRescued": 53,
   "byMunicipality": {
     "奈良県": {
-      "rejected": 600,
+      "rejected": 608,
       "borderlineRescued": 53
     }
   },
@@ -199,6 +199,32 @@
         "設備"
       ],
       "borderlineRescue": true
+    },
+    {
+      "municipality": "奈良県",
+      "title": "【一括審査】桜井田原本王寺線 舗装修繕設計業務委託（単独舗装（拡大）） ４１３－２－委－２",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "【一括審査】一般国道１６９号 舗装修繕設計業務委託（単独舗装（拡大）） ４１３－２－委－３",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装",
+        "国道"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "笠間川 他 オオサンショウウオ保護調査業務委託（単独河川改良事業） 第 Ｕ－１１ー委２ 号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "河川",
+        "調査"
+      ]
     },
     {
       "municipality": "奈良県",
@@ -490,6 +516,14 @@
     },
     {
       "municipality": "奈良県",
+      "title": "県営ため池整備事業 香芝地区 調査計画設計業務委託 第 Ｒ８Ｂ１委１５ 号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "調査"
+      ]
+    },
+    {
+      "municipality": "奈良県",
       "title": "主要地方道高野天川線 庵住橋 耐震補強設計委託（緊急防災・減災事業） ６４３－３－委１",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -649,6 +683,17 @@
       "matchedKeywords": [
         "環境調査",
         "調査"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "一般国道１６８号 新天辻工区 環境調査業務委託（猛禽類）（単独道路整備事業（通常分）（臨時）他） ７１０－委２他",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "環境調査",
+        "調査",
+        "国道"
       ]
     },
     {
@@ -2602,6 +2647,33 @@
     },
     {
       "municipality": "奈良県",
+      "title": "青蓮寺川 他 測量業務委託（緊急浚渫推進事業（臨時・特別）） 第 Ｕ－２０８－委２ 号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "浚渫",
+        "測量"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "笠間川 他 測量業務委託（緊急浚渫推進事業（臨時・特別）） 第 Ｕ－２０４－委１ 号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "浚渫",
+        "測量"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "青蓮寺川 測量業務委託（緊急浚渫推進事業（臨時・特別）） 第 Ｕ－２０８－委１ 号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "浚渫",
+        "測量"
+      ]
+    },
+    {
+      "municipality": "奈良県",
       "title": "初瀬ダム 堆砂測量業務委託（ダム維持 他） ＣＤ－１－委－４他",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -4022,13 +4094,15 @@
     },
     {
       "municipality": "奈良県",
-      "title": "西ノ辻地区 用地調査業務委託（砂防メンテナンス事業（急傾斜）他） 第 ５９－３－用委１他 号",
+      "title": "一般国道１６９号御所高取バイパス 用地調査点検等技術業務委託（防災・安全（道路改良）） ４－１０－Ａ４－委－１０",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
-        "砂防",
+        "道路",
         "用地",
         "補償",
-        "調査"
+        "調査",
+        "国道",
+        "技術"
       ]
     },
     {
