@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-19T02:17:08.406Z",
-  "totalRejected": 624,
+  "generatedAt": "2026-11-19T03:03:04.994Z",
+  "totalRejected": 626,
   "totalBorderlineRescued": 53,
   "byMunicipality": {
     "奈良県": {
-      "rejected": 624,
+      "rejected": 626,
       "borderlineRescued": 53
     }
   },
@@ -2722,6 +2722,15 @@
     },
     {
       "municipality": "奈良県",
+      "title": "主要地方道上野南山城線他 測量業務委託（道路復旧緊急対策事業） 第１４４－委－１号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "測量"
+      ]
+    },
+    {
+      "municipality": "奈良県",
       "title": "白川ダム他 堆砂測量委託（緊急浚渫推進事業（臨時・特別））第 Ｎ－２０２－委－１ 号",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -2753,6 +2762,16 @@
     {
       "municipality": "奈良県",
       "title": "布留川北流 河川測量業務委託（緊急浚渫推進事業（臨時・特別））第 Ｎ－２１１－委－１号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "河川",
+        "浚渫",
+        "測量"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "佐保川 河川測量業務委託（緊急浚渫推進事業（臨時・特別））第Ｎ－２１２－委－１号",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
         "河川",
