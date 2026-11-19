@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-19T03:44:44.698Z",
+  "generatedAt": "2026-11-19T12:01:16.494Z",
   "sources": [
     {
       "id": "constnews",
@@ -40,8 +40,9 @@
     {
       "id": "googlenews",
       "label": "一般紙・Web(Googleニュース)",
-      "fetched": 35,
-      "kept": 12
+      "fetched": 25,
+      "kept": 12,
+      "error": "Request failed with status code 429"
     }
   ],
   "items": [
@@ -56,6 +57,153 @@
       "results": [],
       "category": "construction",
       "relevanceScore": 20
+    },
+    {
+      "id": "news-f62d4a39ffda",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "西保証奈良支店 １０月 県公共工事動向 １４７件で対前年同月比１７・４％減、７１億円に 請負金額は７１億４４００万円で３・８％減",
+      "date": "2026-11-19",
+      "link": "https://shinpou-nara.com/141122/",
+      "excerpt": "累計は１０３９億円超で大幅増を維持 西日本建設業保証奈良支店がまとめた１０月の県内公共工事動向（前払金保証実績）によると、同月の保証契約実績は件数が１４７件で前年同月比１７・４％の減、請負金額は７１億４４００万円で同３・８％の減となり、件数・金額ともに前年同月を下回った。 単月の",
+      "orderer": "民間",
+      "results": [],
+      "category": "construction",
+      "relevanceScore": 12
+    },
+    {
+      "id": "news-c25f7697d30a",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "国交省 ９月の建設市場、５兆６２１１億円に拡大 前年比５・５％増、民間・公共ともに好調",
+      "date": "2026-11-19",
+      "link": "https://shinpou-nara.com/141120/",
+      "excerpt": "国土交通省総合政策局建設経済統計調査室は１７日、令和８年９月分の「建設総合統計」を公表した。同月の建設出来高総計は５兆６２１１億円となり、前年同月比で５・５％増と好調な伸びを示した。民間部門及び公共部門の双方が前年実績を上回り、建設市場全体として堅調な推移を維持している。 民間部",
+      "orderer": "国交省",
+      "results": [],
+      "category": "construction",
+      "relevanceScore": 8
+    },
+    {
+      "id": "news-daab0b054a51",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "県建協が合同企業説明会 地元企業２１社が魅力発信",
+      "date": "2026-11-19",
+      "link": "https://shinpou-nara.com/141114/",
+      "excerpt": "奈良県建設業協会（山辺元康会長）は去る７日、奈良市内のホテル日航奈良で「合同企業説明会」を開いた。会員企業２１社が参加し、地元建設業の魅力を認識してもらう事で業界に対する興味を持ち、地元企業で働くきっかけになることを目的に行なうもの。６回目の開催となった今回は６９人のエントリーが",
+      "orderer": "団体",
+      "results": [],
+      "category": "construction",
+      "relevanceScore": 8
+    },
+    {
+      "id": "news-6dd7d6faad36",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "再公募に向け調整 青垣生涯学習Ｃの空調設備更新",
+      "date": "2026-11-19",
+      "link": "https://shinpou-nara.com/141112/",
+      "excerpt": "田原本町は公募型プロポーザルにて「田原本青垣生涯学習センター空調設備更新業務」を公告していたが、不調となった。今後は再公募に向けて調整を行う予定。 同業務は、田原本青垣生涯学習センターの施設環境を向上させ指定避難所としての機能強化及び省エネルギー性能の高い設備の導入による環境負荷",
+      "orderer": "田原本町",
+      "results": [],
+      "category": "construction",
+      "relevanceScore": 8
+    },
+    {
+      "id": "news-757694d79ff9",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "公募対象公園施設設置等予定者など 中登美ヶ丘近隣公園魅力向上事業",
+      "date": "2026-11-19",
+      "link": "https://shinpou-nara.com/141097/",
+      "excerpt": "奈良市は中登美ヶ丘近隣公園魅力向上事業として、公募対象公園施設設置等予定者及び指定管理者を再募集した。参加表明書の受付期間が12月７日～21日、応募書類の受付期間が９年１月６日～20日、プレゼンテーション及びヒアリング審査を２月上旬頃に実施し候補者を選定する予定。指定管理料の上限",
+      "orderer": "奈良市",
+      "results": [],
+      "category": "construction",
+      "relevanceScore": 6
+    },
+    {
+      "id": "news-6df4b10f94b7",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "町社会福祉協議会を選定 ふれあいＣの指定管理",
+      "date": "2026-11-19",
+      "link": "https://shinpou-nara.com/141092/",
+      "excerpt": "田原本町は、田原本町ふれあいセンターの指定管理の最適候補者に社会福祉法人田原本町社会福祉協議会を選定した。指定管理期間は12年３月31日までの３年間。指定管理の対象となる田原本町ふれあいセンターは、大字為川北方１１５番地の６に位置し延べ床面積１０５４平方㍍、敷地面積２９７１平方㍍",
+      "orderer": "田原本町",
+      "results": [],
+      "category": "construction",
+      "relevanceScore": 6
+    },
+    {
+      "id": "news-3dc59dcf17ef",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "県管財課 １２月４日～１０日受付 低圧施設照明ＬＥＤ化更新",
+      "date": "2026-11-19",
+      "link": "https://shinpou-nara.com/141067/",
+      "excerpt": "奈良県管財課は「低圧施設照明ＬＥＤ化更新業務委託保第Ｒ８―委１５号」に総合評価落札方式一般競争入札を適用して去る１９日に公告した。入札参加申込書・入札参加資格確認申請書及び入札参加資格確認資料を１２月４日～１０日、技術提案書等を１２月２２日まで、入札書・入札金額の内訳書等を１２月",
+      "orderer": "県総務部",
+      "results": [],
+      "category": "construction",
+      "relevanceScore": 14
+    },
+    {
+      "id": "news-9fa88795fd5f",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "１２月１日まで参加受付 中和幹線と大和郡山広陵線舗装補修 １２月１７日に開札",
+      "date": "2026-11-19",
+      "link": "https://shinpou-nara.com/141063/",
+      "excerpt": "奈良県高田土木事務所は中和幹線と大和郡山広陵線の舗装補修工事に総合評価落札方式一般競争入札を適用して去る１９日に公告した。入札参加申込書を１２月１日まで、入札書及び入札金額の内訳書を１２月７日～１１日に受け付けて１２月１７日に開札する。 参加資格は建設業者２者または３者で構成され",
+      "orderer": "県高田土木事務所",
+      "results": [],
+      "category": "construction",
+      "relevanceScore": 16
+    },
+    {
+      "id": "news-3e5c0f91e7d9",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "極東技工と日水コンで 高取線管路更新（ＤＢ方式）基本設計 第１工区φ４５０㍉Ｌ約４・３㌔㍍ 第２工区φ４００㍉Ｌ約５・２㌔㍍",
+      "date": "2026-11-19",
+      "link": "https://shinpou-nara.com/141059/",
+      "excerpt": "奈良県広域水道企業団は、管路の更新を計画している高取線について２工区に分け、令和９年度上半期にかけて比較案について技術的・社会的・経済的な側面からの評価・検討を加え、更新管路の布設ルート及び布設工法の最適案を選定したうえで平面図・縦横断面図・構造物等の一般図と計画概要書・概略数量",
+      "orderer": "県広域水道企業団",
+      "results": [
+        {
+          "kind": "選定",
+          "contractor": "更新管路の布設ルート及び布設工法の最適案"
+        }
+      ],
+      "category": "construction",
+      "relevanceScore": 10
+    },
+    {
+      "id": "news-8cb5ba087347",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "奈良公園室 一般競争１２月４日に開札 鹿苑北側エリア建築基本計画策定",
+      "date": "2026-11-19",
+      "link": "https://shinpou-nara.com/141057/",
+      "excerpt": "奈良県観光局奈良公園室は、令和９年夏にかけてシカの保護管理施設である鹿苑の北側エリアにおいて管理棟やシカ啓発展示エリアなどの建築物設置とシカの収容エリアの確保を想定した建築基本計画を策定する。 県建設産業課で一般競争入札「奈良公園鹿苑北側エリア建築基本計画策定業務（飛火野周辺地区",
+      "orderer": "県産業・観光・雇用振興部",
+      "results": [],
+      "category": "construction",
+      "relevanceScore": 12
+    },
+    {
+      "id": "news-f9fe3f9790b8",
+      "source": "googlenews",
+      "sourceLabel": "一般紙・Web",
+      "publisher": "日本経済新聞",
+      "title": "近鉄不動産、奈良「西の成城」学園前で再開発 マンション・戸建て569戸",
+      "date": "2026-11-19",
+      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1pVFV0dTZNaEVDQ1BrbUxpVlhKZGdaVkk0TGhMWXRRZkZmdllrcEJpMnhmZTdJQ1VhZDRWdm1SMmZXWWRtSjBuYllrTFI2clRWbW4xOGdWUWFsWnNFTEo2RkNQa0Utd0RuQXRlOA?oc=5",
+      "category": "construction",
+      "relevanceScore": 6,
+      "results": []
     },
     {
       "id": "news-29b1e4cc2ef2",
