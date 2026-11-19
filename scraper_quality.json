@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-18T21:19:53.350Z",
+  "generatedAt": "2026-11-19T02:17:08.401Z",
   "source": "daily_scrape",
   "municipalityLastScraped": {
     "奈良市": "2026-11-18T15:22:28.822Z",
@@ -26,13 +26,13 @@
     "三郷町": "2026-11-18T15:22:28.822Z",
     "王寺町": "2026-11-18T15:22:28.822Z",
     "大淀町": "2026-11-18T15:22:28.822Z",
-    "奈良県": "2026-11-18T21:19:53.350Z"
+    "奈良県": "2026-11-19T02:17:08.401Z"
   },
-  "scrapedCount": 70,
-  "keptCount": 335,
+  "scrapedCount": 71,
+  "keptCount": 336,
   "rejectedCount": 1,
   "oldestAnnouncementDate": "2025-02-02",
-  "latestAnnouncementDate": "2026-11-11",
+  "latestAnnouncementDate": "2026-11-19",
   "municipalityCount": 24,
   "municipalityAudit": {
     "expectedMunicipalityCount": 25,
@@ -46,8 +46,8 @@
     "breakdown": [
       {
         "municipality": "奈良県",
-        "count": 69,
-        "changeFromPrevious": 0
+        "count": 70,
+        "changeFromPrevious": 1
       },
       {
         "municipality": "橿原市",
@@ -214,14 +214,14 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 69,
+        "totalCount": 70,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "ppi.ebid-kouji-gyoumu.pref.nara.jp": 69
+          "ppi.ebid-kouji-gyoumu.pref.nara.jp": 70
         },
-        "announcementCount": 10,
+        "announcementCount": 11,
         "resultCount": 59,
-        "message": "奈良県: 69件 (公告10/結果59) / sources OK"
+        "message": "奈良県: 70件 (公告11/結果59) / sources OK"
       },
       {
         "expectation": {

@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-18T21:19:53.357Z",
-  "totalRejected": 608,
+  "generatedAt": "2026-11-19T02:17:08.406Z",
+  "totalRejected": 624,
   "totalBorderlineRescued": 53,
   "byMunicipality": {
     "奈良県": {
-      "rejected": 608,
+      "rejected": 624,
       "borderlineRescued": 53
     }
   },
@@ -199,6 +199,71 @@
         "設備"
       ],
       "borderlineRescue": true
+    },
+    {
+      "municipality": "奈良県",
+      "title": "一般県道月瀬梅林山添線 一般構造物設計委託（防災・安全交付金事業（道路改良）他） 第 １－３－Ａ５－委－１他 号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "白川ダム 排水ポンプ改良設計業務委託（ダムメンテナンス事業（中計分）（国補正）他） 第 繰補２１－２－委－３他 号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "ダム"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "紀の川 菜摘工区 護岸詳細設計業務委託（緊急自然災害防止対策事業債対象事業（臨時・特別）） Ｙ－１０３－委１",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "護岸"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "主要地方道洞川下市線 道路詳細設計業務委託（道路改良事業等基礎調査費） ６５－委５",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "下市（ロ）地区 一般構造物詳細設計業務委託（緊急自然災害防止対策事業（急傾斜）） ６０３－１－委３",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
+    },
+    {
+      "municipality": "奈良県",
+      "title": "第繰補２１－委－４号 大門ダム 現場技術業務（ダムメンテナンス事業（中計分）（国補正））",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "ダム",
+        "技術"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "第２－１０－Ａ５－委－３号他 一般国道１６８号 小平尾バイパス 平面交差点設計業務（防災・安全交付金事業（道路改良）他）",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "国道"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "第２０１－１－委－１号 キトラ川 砂防指定地申請図書作成業務（緊急自然災害防止事業（砂防））",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "砂防"
+      ]
     },
     {
       "municipality": "奈良県",
@@ -2647,6 +2712,75 @@
     },
     {
       "municipality": "奈良県",
+      "title": "一般国道１６９号 測量業務委託（道路維持） ４０１－委－７",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "測量",
+        "国道"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "白川ダム他 堆砂測量委託（緊急浚渫推進事業（臨時・特別））第 Ｎ－２０２－委－１ 号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "ダム",
+        "浚渫",
+        "測量"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "天理ダム 堆砂測量委託（緊急浚渫推進事業（臨時・特別））第 Ｎ－２０３－委－１ 号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "ダム",
+        "浚渫",
+        "測量"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "一般県道毛原切幡線他 測量業務委託（道路改良事業等基礎調査費） 第 １５－委－１ 号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "測量",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "布留川北流 河川測量業務委託（緊急浚渫推進事業（臨時・特別））第 Ｎ－２１１－委－１号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "河川",
+        "浚渫",
+        "測量"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "一般国道４２５号下池原地区 測量業務委託（その２）（土砂災害対策道路事業（国道災害防除・国補正）他） 繰補１－Ａ４２５－６土－２－委３他",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "土砂",
+        "測量",
+        "国道"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "下市（ロ）地区 測量業務委託（緊急自然災害防止対策事業（急傾斜）） ６０３－１－委１",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "測量"
+      ]
+    },
+    {
+      "municipality": "奈良県",
       "title": "青蓮寺川 他 測量業務委託（緊急浚渫推進事業（臨時・特別）） 第 Ｕ－２０８－委２ 号",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -3638,6 +3772,15 @@
         "砂防",
         "測量",
         "用地"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "下市（ロ）地区 地質調査業務委託（緊急自然災害防止対策事業（急傾斜）） ６０３－１－委２",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "地質",
+        "調査"
       ]
     },
     {
