@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-19T12:01:16.494Z",
+  "generatedAt": "2026-11-19T18:30:11.659Z",
   "sources": [
     {
       "id": "constnews",
@@ -40,9 +40,8 @@
     {
       "id": "googlenews",
       "label": "一般紙・Web(Googleニュース)",
-      "fetched": 25,
-      "kept": 12,
-      "error": "Request failed with status code 429"
+      "fetched": 38,
+      "kept": 14
     }
   ],
   "items": [
@@ -203,6 +202,18 @@
       "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1pVFV0dTZNaEVDQ1BrbUxpVlhKZGdaVkk0TGhMWXRRZkZmdllrcEJpMnhmZTdJQ1VhZDRWdm1SMmZXWWRtSjBuYllrTFI2clRWbW4xOGdWUWFsWnNFTEo2RkNQa0Utd0RuQXRlOA?oc=5",
       "category": "construction",
       "relevanceScore": 6,
+      "results": []
+    },
+    {
+      "id": "news-b1f191e97f82",
+      "source": "googlenews",
+      "sourceLabel": "一般紙・Web",
+      "publisher": "LOGI-BIZ online",
+      "title": "EC物流代行「ウルロジ」のDMソリューションズ、初の関西物流拠点を奈良・大和郡山の戸田建設開発施設内に開設へ",
+      "date": "2026-11-19",
+      "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBxdGd4SnJwajlsUWFGaEUtczlGc2RsNllVNHhRdjRoT1BrRzBUZHRmZ0NKd2RhRUxIckhibEFpem05cDNodFhVc3VMMA?oc=5",
+      "category": "construction",
+      "relevanceScore": 8,
       "results": []
     },
     {
