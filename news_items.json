@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-18T18:18:57.221Z",
+  "generatedAt": "2026-11-19T03:44:44.698Z",
   "sources": [
     {
       "id": "constnews",
@@ -16,8 +16,8 @@
     {
       "id": "decn",
       "label": "建設工業新聞",
-      "fetched": 30,
-      "kept": 1
+      "fetched": 22,
+      "kept": 0
     },
     {
       "id": "kensetsu",
@@ -29,7 +29,7 @@
       "id": "xtech",
       "label": "日経クロステック",
       "fetched": 100,
-      "kept": 0
+      "kept": 1
     },
     {
       "id": "naranp",
@@ -40,11 +40,23 @@
     {
       "id": "googlenews",
       "label": "一般紙・Web(Googleニュース)",
-      "fetched": 32,
+      "fetched": 35,
       "kept": 12
     }
   ],
   "items": [
+    {
+      "id": "news-1c56bc7d56b6",
+      "source": "xtech",
+      "sourceLabel": "日経クロステック",
+      "title": "奈良県「中央卸売市場」大和ハウスが整備、マルシェや物流施設の併設計画も",
+      "date": "2026-11-19",
+      "link": "https://xtech.nikkei.com/atcl/nxt/column/18/00154/02983/",
+      "excerpt": "BT（建設・譲渡）方式を採用したPFI（民間資金を活用した社会資本整備）事業「奈良県中央卸売市場再整備推進事業」の総合評価一般競争入札で、大和ハウス工業を代表とするグループが落札した。2026年内に奈良県と契約し、31年度の開業を目指して整備を進める。",
+      "results": [],
+      "category": "construction",
+      "relevanceScore": 20
+    },
     {
       "id": "news-29b1e4cc2ef2",
       "source": "shinpou",
