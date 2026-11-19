@@ -1,27 +1,35 @@
 {
-  "generatedAt": "2026-11-19T09:00:15.795Z",
-  "qualityGeneratedAt": "2026-11-19T08:57:41.452Z",
-  "itemCount": 337,
+  "generatedAt": "2026-11-19T15:34:14.606Z",
+  "qualityGeneratedAt": "2026-11-19T15:30:15.032Z",
+  "itemCount": 336,
   "resultFollowUp": {
-    "totalCount": 7,
-    "highCount": 7,
+    "totalCount": 13,
+    "highCount": 10,
     "mediumCount": 0,
-    "lowCount": 0,
+    "lowCount": 3,
     "missingBiddingDateCount": 0,
     "byMunicipality": [
       {
         "municipality": "奈良県",
-        "count": 5
+        "count": 6
+      },
+      {
+        "municipality": "香芝市",
+        "count": 3
       },
       {
         "municipality": "大淀町",
+        "count": 2
+      },
+      {
+        "municipality": "奈良市",
         "count": 2
       }
     ],
     "samples": [
       {
         "priority": "high",
-        "ageDays": 212,
+        "ageDays": 213,
         "reason": "落札済みだが落札者が空",
         "item": {
           "id": "oyodo-79dc14038b",
@@ -37,7 +45,39 @@
       },
       {
         "priority": "high",
-        "ageDays": 157,
+        "ageDays": 206,
+        "reason": "開札日から206日経過",
+        "item": {
+          "id": "kashiba-web-f9a78168",
+          "municipality": "香芝市",
+          "title": "三和小学校校舎増築工事に伴う設計業務",
+          "status": "受付終了",
+          "announcementDate": "2026-04-09",
+          "biddingDate": "2026-04-28",
+          "winningContractor": "株式会社福本設計",
+          "link": "https://www.city.kashiba.lg.jp/uploaded/attachment/31836.pdf",
+          "pdfUrl": null
+        }
+      },
+      {
+        "priority": "high",
+        "ageDays": 178,
+        "reason": "開札日から178日経過",
+        "item": {
+          "id": "kashiba-web-1bf7b65a",
+          "municipality": "香芝市",
+          "title": "五位堂小学校改築工事に伴う実施設計業務",
+          "status": "受付終了",
+          "announcementDate": "2026-04-23",
+          "biddingDate": "2026-05-26",
+          "winningContractor": "株式会社綜企画設計 奈良支店",
+          "link": "https://www.city.kashiba.lg.jp/site/nyuusatsu/list288-1034.html",
+          "pdfUrl": null
+        }
+      },
+      {
+        "priority": "high",
+        "ageDays": 158,
         "reason": "落札済みだが落札者が空",
         "item": {
           "id": "oyodo-46ab50dbc8",
@@ -53,8 +93,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 154,
-        "reason": "開札日から154日経過",
+        "ageDays": 155,
+        "reason": "開札日から155日経過",
         "item": {
           "id": "nara-pref-29001013060020260055",
           "municipality": "奈良県",
@@ -69,8 +109,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 135,
-        "reason": "開札日から135日経過",
+        "ageDays": 136,
+        "reason": "開札日から136日経過",
         "item": {
           "id": "nara-pref-29005007060120260015",
           "municipality": "奈良県",
@@ -85,8 +125,24 @@
       },
       {
         "priority": "high",
-        "ageDays": 125,
-        "reason": "開札日から125日経過",
+        "ageDays": 133,
+        "reason": "開札日から133日経過",
+        "item": {
+          "id": "kashiba-web-65a0eda8",
+          "municipality": "香芝市",
+          "title": "志都美小学校改築工事に伴う実施設計業務",
+          "status": "受付終了",
+          "announcementDate": "2026-06-18",
+          "biddingDate": "2026-07-10",
+          "winningContractor": "株式会社長大 奈良事務所",
+          "link": "https://www.city.kashiba.lg.jp/site/nyuusatsu/67641.html",
+          "pdfUrl": null
+        }
+      },
+      {
+        "priority": "high",
+        "ageDays": 126,
+        "reason": "開札日から126日経過",
         "item": {
           "id": "nara-pref-29005007060120260018",
           "municipality": "奈良県",
@@ -101,8 +157,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 55,
-        "reason": "開札日から55日経過",
+        "ageDays": 56,
+        "reason": "開札日から56日経過",
         "item": {
           "id": "nara-pref-29001013401020260007",
           "municipality": "奈良県",
@@ -117,8 +173,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 36,
-        "reason": "開札日から36日経過",
+        "ageDays": 37,
+        "reason": "開札日から37日経過",
         "item": {
           "id": "nara-pref-29004060025020260077",
           "municipality": "奈良県",
@@ -294,11 +350,11 @@
         "municipality": "五條市",
         "status": "ok",
         "severity": "error",
-        "count": 18,
+        "count": 8,
         "requiredLinkIncludes": [
           "epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction"
         ],
-        "message": "五條市 情報公開サイト: 18件確認",
+        "message": "五條市 情報公開サイト: 8件確認",
         "matches": [
           {
             "id": "gojo-epi-2601041",
@@ -378,17 +434,6 @@
             "pdfUrl": null
           },
           {
-            "id": "gojo-epi-2601002",
-            "municipality": "五條市",
-            "title": "宗桧公民館改修工事",
-            "status": "不調",
-            "announcementDate": "2026-05-01",
-            "biddingDate": "2026-05-27",
-            "winningContractor": null,
-            "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002601002",
-            "pdfUrl": null
-          },
-          {
             "id": "gojo-6fab770c",
             "municipality": "五條市",
             "title": "五條市立小学校トイレ改修工事",
@@ -397,17 +442,6 @@
             "biddingDate": "2026-05-29",
             "winningContractor": "有希建設（株）",
             "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002501076",
-            "pdfUrl": null
-          },
-          {
-            "id": "gojo-epi-2501056",
-            "municipality": "五條市",
-            "title": "川端住宅２２・２３号解体工事",
-            "status": "落札",
-            "announcementDate": "2025-12-16",
-            "biddingDate": "2026-01-09",
-            "winningContractor": "逢坂建設",
-            "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=0012960102002501056",
             "pdfUrl": null
           }
         ]
@@ -555,17 +589,17 @@
         "municipality": "五條市",
         "status": "ok",
         "severity": "error",
-        "totalCount": 22,
+        "totalCount": 21,
         "requiredLinkIncludes": [
           "city.gojo.lg.jp",
           "epi-cloud.fwd.ne.jp"
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.gojo.lg.jp": 4,
-          "epi-cloud.fwd.ne.jp": 18
+          "city.gojo.lg.jp": 13,
+          "epi-cloud.fwd.ne.jp": 8
         },
-        "message": "五條市: 22件 (公告3/結果19) / sources OK"
+        "message": "五條市: 21件 (公告3/結果18) / sources OK"
       },
       {
         "municipality": "御所市",
@@ -661,9 +695,9 @@
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.kashiba.lg.jp": 5
+          "city.kashiba.lg.jp": 9
         },
-        "message": "香芝市: 21件 (公告2/結果19) / sources OK"
+        "message": "香芝市: 21件 (公告5/結果16) / sources OK"
       },
       {
         "municipality": "川西町",
@@ -815,9 +849,9 @@
         ],
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "epi-cloud.fwd.ne.jp": 16
+          "epi-cloud.fwd.ne.jp": 12
         },
-        "message": "香芝市: 21件 (公告2/結果19) / sources OK"
+        "message": "香芝市: 21件 (公告5/結果16) / sources OK"
       }
     ]
   }
