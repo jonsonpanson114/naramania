@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-19T18:30:11.659Z",
+  "generatedAt": "2026-11-20T03:38:59.942Z",
   "sources": [
     {
       "id": "constnews",
@@ -16,7 +16,7 @@
     {
       "id": "decn",
       "label": "建設工業新聞",
-      "fetched": 22,
+      "fetched": 21,
       "kept": 0
     },
     {
@@ -29,7 +29,7 @@
       "id": "xtech",
       "label": "日経クロステック",
       "fetched": 100,
-      "kept": 1
+      "kept": 0
     },
     {
       "id": "naranp",
@@ -40,11 +40,22 @@
     {
       "id": "googlenews",
       "label": "一般紙・Web(Googleニュース)",
-      "fetched": 38,
+      "fetched": 43,
       "kept": 14
     }
   ],
   "items": [
+    {
+      "id": "news-bfd2f876f838",
+      "source": "naranp",
+      "sourceLabel": "奈良新聞",
+      "title": "近鉄不動産などの大規模開発 名称は「学園前ヒルズ」 11月21日から分譲案内会",
+      "date": "2026-11-20",
+      "link": "https://www.nara-np.co.jp/news/20261120210202.html",
+      "category": "construction",
+      "relevanceScore": 6,
+      "results": []
+    },
     {
       "id": "news-1c56bc7d56b6",
       "source": "xtech",
