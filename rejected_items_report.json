@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-19T22:09:49.336Z",
-  "totalRejected": 626,
+  "generatedAt": "2026-11-20T02:04:17.521Z",
+  "totalRejected": 627,
   "totalBorderlineRescued": 53,
   "byMunicipality": {
     "奈良県": {
-      "rejected": 626,
+      "rejected": 627,
       "borderlineRescued": 53
     }
   },
@@ -199,6 +199,15 @@
         "設備"
       ],
       "borderlineRescue": true
+    },
+    {
+      "municipality": "奈良県",
+      "title": "中和幹線 他 平面交差点予備設計委託（道路改良事業等基礎調査費） 第 ３５－委１ 号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "調査"
+      ]
     },
     {
       "municipality": "奈良県",
@@ -2916,16 +2925,6 @@
     },
     {
       "municipality": "奈良県",
-      "title": "一般県道大台河合線 測量業務委託（土砂災害対策道路事業（地方道災害防除・国補正）他） 繰補１－Ｂ２２６－６土－委２ 他",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
-        "土砂",
-        "測量"
-      ]
-    },
-    {
-      "municipality": "奈良県",
       "title": "主要地方道天理環状線他 道路台帳補正業務委託（単独道路整備事業（通常分）（臨時）他） 第 １０５－委－１他 号",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -2940,6 +2939,16 @@
       "matchedKeywords": [
         "道路",
         "交通",
+        "測量"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "一般県道大台河合線 測量業務委託（土砂災害対策道路事業（地方道災害防除・国補正）他） 繰補１－Ｂ２２６－６土－委２ 他",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "土砂",
         "測量"
       ]
     },
