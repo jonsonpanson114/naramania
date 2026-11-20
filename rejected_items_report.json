@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-20T03:58:07.651Z",
-  "totalRejected": 626,
+  "generatedAt": "2026-11-20T04:50:08.614Z",
+  "totalRejected": 627,
   "totalBorderlineRescued": 53,
   "byMunicipality": {
     "奈良県": {
-      "rejected": 626,
+      "rejected": 627,
       "borderlineRescued": 53
     }
   },
@@ -612,6 +612,15 @@
         "設備",
         "設備更新",
         "浄化センター"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "（都）大安寺柏木線 大安寺西地区 高橋橋梁構造検討業務（無電柱化推進事業（街路）） １－Ｇ１－委－１",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋"
       ]
     },
     {
