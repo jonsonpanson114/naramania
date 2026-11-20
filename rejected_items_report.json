@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-20T02:04:17.521Z",
-  "totalRejected": 627,
+  "generatedAt": "2026-11-20T02:58:18.756Z",
+  "totalRejected": 626,
   "totalBorderlineRescued": 53,
   "byMunicipality": {
     "奈良県": {
-      "rejected": 627,
+      "rejected": 626,
       "borderlineRescued": 53
     }
   },
@@ -2920,15 +2920,6 @@
       "reason": "exclusion_keyword",
       "matchedKeywords": [
         "砂防",
-        "測量"
-      ]
-    },
-    {
-      "municipality": "奈良県",
-      "title": "主要地方道天理環状線他 道路台帳補正業務委託（単独道路整備事業（通常分）（臨時）他） 第 １０５－委－１他 号",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "道路",
         "測量"
       ]
     },
