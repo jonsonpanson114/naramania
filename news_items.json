@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-21T03:21:29.484Z",
+  "generatedAt": "2026-11-21T11:38:11.709Z",
   "sources": [
     {
       "id": "constnews",
@@ -29,7 +29,7 @@
       "id": "xtech",
       "label": "日経クロステック",
       "fetched": 100,
-      "kept": 0
+      "kept": 1
     },
     {
       "id": "naranp",
@@ -40,7 +40,7 @@
     {
       "id": "googlenews",
       "label": "一般紙・Web(Googleニュース)",
-      "fetched": 68,
+      "fetched": 69,
       "kept": 13
     }
   ],
