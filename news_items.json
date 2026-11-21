@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-20T17:56:14.513Z",
+  "generatedAt": "2026-11-21T03:21:29.484Z",
   "sources": [
     {
       "id": "constnews",
@@ -40,11 +40,22 @@
     {
       "id": "googlenews",
       "label": "一般紙・Web(Googleニュース)",
-      "fetched": 45,
-      "kept": 11
+      "fetched": 68,
+      "kept": 13
     }
   ],
   "items": [
+    {
+      "id": "news-fcbff32a7179",
+      "source": "naranp",
+      "sourceLabel": "奈良新聞",
+      "title": "奈良県立美術館の移転・再整備 コンセプトは「共に創る」 マンガなど含め多様な展示",
+      "date": "2026-11-21",
+      "link": "https://www.nara-np.co.jp/news/20261121205918.html",
+      "category": "construction",
+      "relevanceScore": 8,
+      "results": []
+    },
     {
       "id": "news-bfd2f876f838",
       "source": "naranp",
