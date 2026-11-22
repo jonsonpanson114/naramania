@@ -11,11 +11,12 @@ import {
     type OsakaPrefResult,
 } from '../src/services/osaka_pref_awards';
 import { collectSakaiDesignResults, SAKAI_PPI_URL, type SakaiResult } from '../src/services/sakai_awards';
+import { collectOsakaCityDesignResults, type OsakaCityResult } from '../src/services/osaka_city_awards';
 
 /**
- * 大阪府と堺市の入札結果から、奈良の事務所が取った建築設計・設備設計を探す。
+ * 大阪府・堺市・大阪市の入札結果から、奈良の事務所が取った建築設計・設備設計を探す。
  * - 大阪府: 落札者の住所が載るので、住所が奈良なら奈良の事務所とみなす
- * - 堺市: 住所が載らないので、落札者の名前を奈良の設計事務所の名簿と照らす
+ * - 堺市・大阪市: 住所が載らないので、落札者の名前を奈良の設計事務所の名簿と照らす
  * 読んだ結果は osaka_awards.json に貯める。見つけたものはニュースの「大阪で受注」に足し、
  * NEWS_ALERT_FILE に知らせる文を書き足す(workflow がそれで Issue を立てる)。
  */
@@ -27,11 +28,12 @@ interface Store {
     /** 大阪府 */
     results: OsakaPrefResult[];
     sakai?: SakaiResult[];
+    osakaCity?: OsakaCityResult[];
 }
 
 interface Award {
     key: string;
-    source: '大阪府' | '堺市';
+    source: '大阪府' | '堺市' | '大阪市';
     winner: string;
     address?: string;
     title: string;
@@ -51,7 +53,7 @@ function loadStore(): Store {
 function toNewsItem(award: Award): NewsItem {
     return {
         id: `osaka-award-${award.key}`,
-        source: award.source === '大阪府' ? 'osaka-pref' : 'sakai',
+        source: award.source === '大阪府' ? 'osaka-pref' : award.source === '堺市' ? 'sakai' : 'osaka-city',
         sourceLabel: `${award.source} 入札結果`,
         title: `${award.winner}が落札／${award.title}／${award.source}`,
         date: award.openDate,
@@ -110,13 +112,36 @@ async function sakaiAwards(store: Store): Promise<Award[]> {
     }));
 }
 
+/** 大阪市: 一覧は落札者が決まった案件だけ。前回から増えた案件を新しいものとする */
+async function osakaCityAwards(store: Store): Promise<Award[]> {
+    const firms = loadWatchedFirms();
+    const known = new Map((store.osakaCity ?? []).map(result => [result.id, result]));
+    const fetched = await collectOsakaCityDesignResults();
+    const newlyDecided = fetched.filter(result => result.winner && known.get(result.id)?.winner !== result.winner);
+    const nara = newlyDecided.filter(result => findWatchedFirms(result.winner ?? '', firms).length > 0);
+    for (const result of fetched) known.set(result.id, result);
+    store.osakaCity = Array.from(known.values()).sort((a, b) => b.openDate.localeCompare(a.openDate));
+
+    console.log(`[osaka] 大阪市: 建築設計・設備設計の結果 ${fetched.length}件(新しく落札者が決まった ${newlyDecided.length}件)、うち奈良の事務所 ${nara.length}件`);
+    return nara.map(result => ({
+        key: `city-${result.id}`,
+        source: '大阪市',
+        winner: result.winner ?? '',
+        title: result.title,
+        openDate: result.openDate || toJstDateKey(new Date()),
+        amount: result.amount,
+        link: `https://www.osaka.city.beneproc.com/#/anken-list/supplier-decided?keyword=${encodeURIComponent(result.id)}`,
+    }));
+}
+
 async function main() {
     const store = loadStore();
     const awards: Award[] = [];
     const failures: string[] = [];
 
     // 片方のサイトの不調で、もう片方まで止めない
-    for (const [name, run] of [['大阪府', prefAwards], ['堺市', sakaiAwards]] as const) {
+    const sources = [['大阪府', prefAwards], ['堺市', sakaiAwards], ['大阪市', osakaCityAwards]] as const;
+    for (const [name, run] of sources) {
         try {
             awards.push(...await run(store));
         } catch (error) {
@@ -143,7 +168,7 @@ async function main() {
         }
     }
 
-    if (failures.length === 2) process.exit(1);
+    if (failures.length === sources.length) process.exit(1);
 }
 
 main().catch((error) => {

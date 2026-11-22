@@ -13,11 +13,13 @@ import { buildWatchedFirms, osakaAwardFirms, resolveWatchedFirms } from '../src/
 import type { BiddingItem } from '../src/types/bidding';
 import { isNaraAddress, parseReiwaSlash, parseResultDetail } from '../src/services/osaka_pref_awards';
 import { parseSakaiDate, sakaiWinner } from '../src/services/sakai_awards';
+import { parseOsakaCityTable } from '../src/services/osaka_city_awards';
 import { findWatchedFirms } from '../src/lib/watched_firms';
 
 // ニュース収集の解析・絞り込み・蓄積を、外部サイトへ触らずに検証する。
 
 const now = new Date('2026-11-05T03:00:00Z');
+const CHECKED_AT = '2026-11-22T00:00:00.000Z';
 const article = (link: string, patch: Partial<NewsItem> = {}): NewsItem => ({
     id: link,
     source: 'constnews',
@@ -202,4 +204,22 @@ const article = (link: string, patch: Partial<NewsItem> = {}): NewsItem => ({
     assert.deepEqual(findWatchedFirms('ＨＡＤ株式会社', firms), []);
 }
 
-console.log('ニュース検証: 10 scenarios passed (RSS解析・奈良新聞解析・絞り込み・蓄積・重複除去・文字コード・話題まとめ・大阪の受注・大阪府の結果・堺市の結果)');
+// 11) 大阪市の一覧(実際の見出し)から、建築設計・監理の案件だけを読む
+{
+    const head = ['', '案件番号', '調達種別', '調達方式', '案件名', 'ステータス', '場所（区域）', 'ＷＴＯ', '種目',
+        '登録／承認種目１', '登録／承認種目２', '登録／承認種目３', '物件等級', '事業担当', '入札担当', '契約担当', '案件公開開始日',
+        '開札日', '予定価格(円)税抜', '最低制限／調査基準価格(円)税抜', '落札金額または決定金額（円）税抜', '契約者または契約の相手方'];
+    const row = (id: string, type: string, kind: string, winner: string) => ['', id, type, '一般競争入札', `案件${id}`, '結果公開中', '', '非該当', '',
+        kind, '-', '-', '', '', '', '', '2026/10/01', '2026/11/11', '', '', '2,700,000 円', winner];
+    const results = parseOsakaCityTable(head, [
+        row('A', '測量・建設コンサルタント等', '300 建築設計・監理', '(有) 一級建築士事務所キーノート'),
+        row('B', '測量・建設コンサルタント等', '500 建設コンサルタント', '(株) 土木'),
+        row('C', '物品', '-', 'ジェイテック(株)'),
+    ], CHECKED_AT);
+    assert.deepEqual(results.map(result => result.id), ['A']);
+    assert.equal(results[0].openDate, '2026-11-11');
+    assert.equal(results[0].winner, '(有) 一級建築士事務所キーノート');
+    assert.throws(() => parseOsakaCityTable(['案件番号'], [], CHECKED_AT), /見出しが変わった/);
+}
+
+console.log('ニュース検証: 11 scenarios passed (RSS解析・奈良新聞解析・絞り込み・蓄積・重複除去・文字コード・話題まとめ・大阪の受注・大阪府の結果・堺市の結果・大阪市の結果)');
