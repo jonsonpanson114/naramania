@@ -22,7 +22,7 @@ permissions:
 jobs:
   collect-news:
     runs-on: ubuntu-24.04
-    timeout-minutes: 15
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v6
 
@@ -36,14 +36,27 @@ jobs:
         run: npm ci
 
       - name: Collect news
-        id: collect
         env:
           # 作業フォルダの外に書く。git add -A で知らせの文までコミットしないため
           NEWS_ALERT_FILE: ${{ runner.temp }}/news_alerts.md
-        run: |
-          npx tsx scripts/collect_news.ts
-          # hashFiles は作業フォルダの中しか見ないので、知らせの有無は出力で渡す
-          if [ -s "$NEWS_ALERT_FILE" ]; then echo "alert=true" >> "$GITHUB_OUTPUT"; fi
+        run: npx tsx scripts/collect_news.ts
+
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps chromium
+
+      # 府のサイトの不調でニュースの保存まで止めない
+      - name: Collect Osaka prefecture design results
+        continue-on-error: true
+        env:
+          NEWS_ALERT_FILE: ${{ runner.temp }}/news_alerts.md
+        run: npx tsx scripts/collect_osaka_awards.ts
+
+      # hashFiles は作業フォルダの中しか見ないので、知らせの有無は出力で渡す
+      - name: Check alerts
+        id: alerts
+        env:
+          NEWS_ALERT_FILE: ${{ runner.temp }}/news_alerts.md
+        run: if [ -s "$NEWS_ALERT_FILE" ]; then echo "alert=true" >> "$GITHUB_OUTPUT"; fi
 
       - name: Commit and Push changes
         env:
@@ -64,7 +77,7 @@ jobs:
 
       # データを保存できた回だけ知らせる。Issue を立てると GitHub からメールが届く
       - name: Notify Osaka awards by Nara design firms
-        if: ${{ github.ref == 'refs/heads/main' && steps.collect.outputs.alert == 'true' }}
+        if: ${{ github.ref == 'refs/heads/main' && steps.alerts.outputs.alert == 'true' }}
         env:
           GH_TOKEN: ${{ github.token }}
           ALERT_FILE: ${{ runner.temp }}/news_alerts.md

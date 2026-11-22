@@ -20,7 +20,8 @@
     "scripts/collect_news.ts",
     "scripts/validate_news.ts",
     "scripts/preview_project_briefs.ts",
-    "scripts/validate_project_briefs.ts"
+    "scripts/validate_project_briefs.ts",
+    "scripts/collect_osaka_awards.ts"
   ],
   "exclude": [
     "node_modules"

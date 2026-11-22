@@ -11,6 +11,7 @@ import {
 import { groupNewsByTopic } from '../src/lib/news_topics';
 import { buildWatchedFirms, osakaAwardFirms, resolveWatchedFirms } from '../src/lib/watched_firms';
 import type { BiddingItem } from '../src/types/bidding';
+import { isNaraAddress, parseReiwaSlash, parseResultDetail } from '../src/services/osaka_pref_awards';
 
 // ニュース収集の解析・絞り込み・蓄積を、外部サイトへ触らずに検証する。
 
@@ -163,4 +164,28 @@ const article = (link: string, patch: Partial<NewsItem> = {}): NewsItem => ({
         '大阪カテゴリの記事は地名が無くても大阪とみなす');
 }
 
-console.log('ニュース検証: 8 scenarios passed (RSS解析・奈良新聞解析・絞り込み・蓄積・重複除去・文字コード・話題まとめ・大阪の受注)');
+// 9) 大阪府の入札結果の詳細(実際の画面の文)から、落札者と住所を読む
+{
+    const decided = parseResultDetail([
+        '落札企業名称', '（落札企業体名称）', '株式会社土屋総合設計', '落札企業住所', '泉佐野市湊４丁目５‐２２',
+        '落札金額', '\\4,110,000（消費税及び地方消費税相当額を除く）', '入札書比較予定価格', '\\4,439,000', '入札結果', '落札者決定', '備考',
+    ].join('\n'));
+    assert.equal(decided.winner, '株式会社土屋総合設計');
+    assert.equal(decided.address, '泉佐野市湊４丁目５‐２２');
+    assert.equal(decided.decided, true);
+
+    const pending = parseResultDetail([
+        '落札企業名称', '（落札企業体名称）', '落札企業住所', '落札金額', '入札書比較予定価格', '\\7,823,000', '入札結果', '確認中', '備考',
+    ].join('\n'));
+    assert.equal(pending.winner, undefined, '落札者が決まる前は空');
+    assert.equal(pending.decided, false);
+
+    assert.equal(isNaraAddress('奈良県橿原市八木町1丁目'), true);
+    assert.equal(isNaraAddress('橿原市八木町1丁目'), true, '県名を省いた住所');
+    assert.equal(isNaraAddress('北葛城郡広陵町'), true);
+    assert.equal(isNaraAddress('大阪府大阪市中央区南船場2丁目'), false);
+    assert.equal(isNaraAddress('泉佐野市湊4丁目'), false);
+    assert.equal(parseReiwaSlash('R08/11/10'), '2026-11-10');
+}
+
+console.log('ニュース検証: 9 scenarios passed (RSS解析・奈良新聞解析・絞り込み・蓄積・重複除去・文字コード・話題まとめ・大阪の受注・大阪府の結果)');
