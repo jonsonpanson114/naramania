@@ -229,6 +229,13 @@ const article = (link: string, patch: Partial<NewsItem> = {}): NewsItem => ({
         article('old', { date: '2025-06-04' }),
     ], now);
     assert.deepEqual(merged.map(item => item.id), ['award']);
+
+    // 同じ事務所の別の案件は、見出しが似ていてもまとめない
+    const awards = groupNewsByTopic([
+        article('a1', { title: '奈良屋建築設計事務所が落札／向丘小学校入側間仕切改修工事設計業務／堺市', watchedFirms: ['奈良屋'] }),
+        article('a2', { title: '奈良屋建築設計事務所が落札／神石小学校ほか１校入側間仕切改修工事設計業務／堺市', watchedFirms: ['奈良屋'] }),
+    ]);
+    assert.equal(awards.length, 2);
 }
 
 console.log('ニュース検証: 12 scenarios passed (RSS解析・奈良新聞解析・絞り込み・蓄積・重複除去・文字コード・話題まとめ・大阪の受注・大阪府の結果・堺市の結果・大阪市の結果・受注の記事は残す)');

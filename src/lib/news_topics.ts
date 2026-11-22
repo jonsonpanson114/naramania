@@ -42,6 +42,11 @@ export function groupNewsByTopic<T extends NewsItem>(items: T[]): T[][] {
 
     for (const item of items) {
         const grams = trigrams(item.title);
+        // 入札結果から作った受注の記事は1件が1案件。見出しの型が同じでも別の案件なのでまとめない
+        if (item.watchedFirms?.length) {
+            groups.push({ items: [item], grams: [new Set()] });
+            continue;
+        }
         const group = groups.find(candidate =>
             candidate.items.some((other, index) =>
                 daysApart(other.date, item.date) <= TOPIC_WINDOW_DAYS && isSameTopic(candidate.grams[index], grams)));
