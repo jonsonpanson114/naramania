@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-22T23:46:44.636Z",
+  "generatedAt": "2026-11-22T23:51:35.627Z",
   "sources": [
     {
       "id": "constnews",
@@ -46,7 +46,7 @@
     {
       "id": "googlenews",
       "label": "一般紙・Web(Googleニュース)",
-      "fetched": 47,
+      "fetched": 46,
       "kept": 8
     }
   ],
@@ -2605,6 +2605,111 @@
       "category": "construction",
       "relevanceScore": 8,
       "results": []
+    },
+    {
+      "id": "osaka-award-sakai-5082000054",
+      "source": "sakai",
+      "sourceLabel": "堺市 入札結果",
+      "title": "奈良屋建築設計事務所が落札／向丘小学校入側間仕切改修工事設計業務／堺市",
+      "date": "2026-05-12",
+      "link": "https://sakai.efftis.jp/ebid01/PPI/Public/PPUBC00100#5082000054",
+      "excerpt": "落札金額: 1,740,000円",
+      "category": "construction",
+      "orderer": "堺市",
+      "results": [
+        {
+          "kind": "落札",
+          "contractor": "奈良屋建築設計事務所",
+          "amount": "1,740,000円"
+        }
+      ],
+      "watchedFirms": [
+        "奈良屋建築設計事務所"
+      ]
+    },
+    {
+      "id": "osaka-award-sakai-5082000087",
+      "source": "sakai",
+      "sourceLabel": "堺市 入札結果",
+      "title": "株式会社彩都建築設計が落札／榎小学校外壁改修ほか工事設計業務／堺市",
+      "date": "2026-05-12",
+      "link": "https://sakai.efftis.jp/ebid01/PPI/Public/PPUBC00100#5082000087",
+      "excerpt": "落札金額: 4,200,000円",
+      "category": "construction",
+      "orderer": "堺市",
+      "results": [
+        {
+          "kind": "落札",
+          "contractor": "株式会社彩都建築設計",
+          "amount": "4,200,000円"
+        }
+      ],
+      "watchedFirms": [
+        "株式会社彩都建築設計"
+      ]
+    },
+    {
+      "id": "osaka-award-sakai-5082000082",
+      "source": "sakai",
+      "sourceLabel": "堺市 入札結果",
+      "title": "奈良屋建築設計事務所が落札／神石小学校ほか１校入側間仕切改修工事設計業務／堺市",
+      "date": "2026-05-11",
+      "link": "https://sakai.efftis.jp/ebid01/PPI/Public/PPUBC00100#5082000082",
+      "excerpt": "落札金額: 4,780,000円",
+      "category": "construction",
+      "orderer": "堺市",
+      "results": [
+        {
+          "kind": "落札",
+          "contractor": "奈良屋建築設計事務所",
+          "amount": "4,780,000円"
+        }
+      ],
+      "watchedFirms": [
+        "奈良屋建築設計事務所"
+      ]
+    },
+    {
+      "id": "osaka-award-sakai-5072000091",
+      "source": "sakai",
+      "sourceLabel": "堺市 入札結果",
+      "title": "奈良屋建築設計事務所が落札／協和町西団地２３号館外壁改修ほか工事設計業務／堺市",
+      "date": "2025-06-09",
+      "link": "https://sakai.efftis.jp/ebid01/PPI/Public/PPUBC00100#5072000091",
+      "excerpt": "落札金額: 3,280,000円",
+      "category": "construction",
+      "orderer": "堺市",
+      "results": [
+        {
+          "kind": "落札",
+          "contractor": "奈良屋建築設計事務所",
+          "amount": "3,280,000円"
+        }
+      ],
+      "watchedFirms": [
+        "奈良屋建築設計事務所"
+      ]
+    },
+    {
+      "id": "osaka-award-sakai-5072000094",
+      "source": "sakai",
+      "sourceLabel": "堺市 入札結果",
+      "title": "奈良屋建築設計事務所が落札／協和町東団地１５号館外壁改修ほか工事設計業務／堺市",
+      "date": "2025-06-04",
+      "link": "https://sakai.efftis.jp/ebid01/PPI/Public/PPUBC00100#5072000094",
+      "excerpt": "落札金額: 2,920,000円",
+      "category": "construction",
+      "orderer": "堺市",
+      "results": [
+        {
+          "kind": "落札",
+          "contractor": "奈良屋建築設計事務所",
+          "amount": "2,920,000円"
+        }
+      ],
+      "watchedFirms": [
+        "奈良屋建築設計事務所"
+      ]
     }
   ]
 }
