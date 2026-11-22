@@ -1,8 +1,7 @@
 import fs from 'fs';
 import { collectNews, mergeNewsItems, type NewsItem } from '../src/services/news_service';
 import { loadNewsStore, NEWS_STORE_FILE } from '../src/lib/news_store';
-import { resolveWatchedFirms, type WatchedFirmsConfig } from '../src/lib/watched_firms';
-import type { BiddingItem } from '../src/types/bidding';
+import { loadWatchedFirms } from '../src/lib/watched_firms_store';
 
 /**
  * 奈良の建築ニュースを全媒体から集めて news_items.json に貯める。
@@ -11,25 +10,6 @@ import type { BiddingItem } from '../src/types/bidding';
  * あわせて、奈良の設計事務所が大阪で仕事を取った記事を探す。新しく見つかったら
  * NEWS_ALERT_FILE に知らせる文を書き、workflow がそれで Issue を立てる(メールが届く)。
  */
-
-function readJson<T>(path: string, fallback: T): T {
-    try {
-        return JSON.parse(fs.readFileSync(path, 'utf-8')) as T;
-    } catch {
-        return fallback;
-    }
-}
-
-/** 奈良の公共の設計業務を取っている事務所。名簿は入札の収集データから毎回作り直す */
-function loadWatchedFirms() {
-    const items = readJson<BiddingItem[]>('scraper_result.json', []);
-    const market = readJson<BiddingItem[] | { items?: BiddingItem[] }>('market_items.json', []);
-    const marketItems = Array.isArray(market) ? market : market.items ?? [];
-    // 自治体ごとの過去データには、今の一覧から落ちた案件の落札者や入札者も残っている
-    const snapshots = Object.values(readJson<Record<string, BiddingItem[]>>('municipality_snapshots.json', {})).flat();
-    const config = readJson<WatchedFirmsConfig>('config/watched_firms.json', {});
-    return resolveWatchedFirms([...items, ...marketItems, ...snapshots], config);
-}
 
 function alertBody(items: NewsItem[]): string {
     const lines = items.map(item =>

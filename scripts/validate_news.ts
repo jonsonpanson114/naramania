@@ -12,6 +12,8 @@ import { groupNewsByTopic } from '../src/lib/news_topics';
 import { buildWatchedFirms, osakaAwardFirms, resolveWatchedFirms } from '../src/lib/watched_firms';
 import type { BiddingItem } from '../src/types/bidding';
 import { isNaraAddress, parseReiwaSlash, parseResultDetail } from '../src/services/osaka_pref_awards';
+import { parseSakaiDate, sakaiWinner } from '../src/services/sakai_awards';
+import { findWatchedFirms } from '../src/lib/watched_firms';
 
 // ニュース収集の解析・絞り込み・蓄積を、外部サイトへ触らずに検証する。
 
@@ -188,4 +190,16 @@ const article = (link: string, patch: Partial<NewsItem> = {}): NewsItem => ({
     assert.equal(parseReiwaSlash('R08/11/10'), '2026-11-10');
 }
 
-console.log('ニュース検証: 9 scenarios passed (RSS解析・奈良新聞解析・絞り込み・蓄積・重複除去・文字コード・話題まとめ・大阪の受注・大阪府の結果)');
+// 10) 堺市の一覧の落札者と開札日。落札者は名簿の名前と照らす
+{
+    assert.equal(sakaiWinner('保留'), undefined);
+    assert.equal(sakaiWinner('取止め'), undefined);
+    assert.equal(sakaiWinner(' 奈良屋建築設計事務所 '), '奈良屋建築設計事務所');
+    assert.equal(parseSakaiDate('令和8年05月12日'), '2026-05-12');
+    assert.equal(parseSakaiDate('2026/05/12'), '2026-05-12');
+    const firms = resolveWatchedFirms([], { include: ['奈良屋建築設計事務所', '株式会社彩都建築設計'] });
+    assert.deepEqual(findWatchedFirms('株式会社彩都建築設計', firms).map(firm => firm.key), ['彩都建築設計']);
+    assert.deepEqual(findWatchedFirms('ＨＡＤ株式会社', firms), []);
+}
+
+console.log('ニュース検証: 10 scenarios passed (RSS解析・奈良新聞解析・絞り込み・蓄積・重複除去・文字コード・話題まとめ・大阪の受注・大阪府の結果・堺市の結果)');
