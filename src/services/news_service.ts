@@ -584,8 +584,10 @@ export function mergeNewsItems(existing: NewsItem[], incoming: NewsItem[], now: 
     }
 
     const oldest = addDaysJstDateKey(-NEWS_RETENTION_DAYS, now);
+    // 奈良の事務所が大阪で受注した記事は数が少なく、古くても営業の手がかりになるので消さない
+    const isAward = (item: NewsItem) => Boolean(item.watchedFirms?.length);
     const sorted = Array.from(byLink.values())
-        .filter(item => item.date >= oldest)
+        .filter(item => isAward(item) || item.date >= oldest)
         // 同じ見出しが複数の媒体にあるときは、専門紙の記事を残す
         .sort((a, b) => Number(a.source === 'googlenews') - Number(b.source === 'googlenews'));
 
@@ -598,5 +600,5 @@ export function mergeNewsItems(existing: NewsItem[], incoming: NewsItem[], now: 
             return true;
         })
         .sort((a, b) => b.date.localeCompare(a.date))
-        .slice(0, NEWS_MAX_ITEMS);
+        .filter((item, index) => isAward(item) || index < NEWS_MAX_ITEMS);
 }

@@ -222,4 +222,13 @@ const article = (link: string, patch: Partial<NewsItem> = {}): NewsItem => ({
     assert.throws(() => parseOsakaCityTable(['案件番号'], [], CHECKED_AT), /見出しが変わった/);
 }
 
-console.log('ニュース検証: 11 scenarios passed (RSS解析・奈良新聞解析・絞り込み・蓄積・重複除去・文字コード・話題まとめ・大阪の受注・大阪府の結果・堺市の結果・大阪市の結果)');
+// 12) 大阪で受注した記事は、保存期間(180日)を過ぎても消さない
+{
+    const merged = mergeNewsItems([], [
+        article('award', { date: '2025-06-04', watchedFirms: ['奈良屋建築設計事務所'] }),
+        article('old', { date: '2025-06-04' }),
+    ], now);
+    assert.deepEqual(merged.map(item => item.id), ['award']);
+}
+
+console.log('ニュース検証: 12 scenarios passed (RSS解析・奈良新聞解析・絞り込み・蓄積・重複除去・文字コード・話題まとめ・大阪の受注・大阪府の結果・堺市の結果・大阪市の結果・受注の記事は残す)');

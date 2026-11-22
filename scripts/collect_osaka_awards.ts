@@ -42,6 +42,54 @@ interface Award {
     link: string;
 }
 
+/** これまでに見つけた受注すべて。ニュースから消えていても、毎回書き足して戻す */
+function allAwards(store: Store): Award[] {
+    const firms = loadWatchedFirms();
+    const isNaraFirm = (winner?: string) => Boolean(winner) && findWatchedFirms(winner ?? '', firms).length > 0;
+    return [
+        ...store.results.filter(result => result.decided && isNaraAddress(result.address)).map(prefAward),
+        ...(store.sakai ?? []).filter(result => isNaraFirm(result.winner)).map(sakaiAward),
+        ...(store.osakaCity ?? []).filter(result => isNaraFirm(result.winner)).map(cityAward),
+    ];
+}
+
+function prefAward(result: OsakaPrefResult): Award {
+    return {
+        key: `pref-${result.id}`,
+        source: '大阪府',
+        winner: result.winner ?? '',
+        address: result.address,
+        title: result.title,
+        openDate: result.openDate,
+        amount: result.amount,
+        link: `${OSAKA_PREF_RESULTS_URL}#${result.id}`,
+    };
+}
+
+function sakaiAward(result: SakaiResult): Award {
+    return {
+        key: `sakai-${result.id}`,
+        source: '堺市',
+        winner: result.winner ?? '',
+        title: result.title,
+        openDate: result.openDate || toJstDateKey(new Date()),
+        amount: result.amount && `${result.amount}円`,
+        link: `${SAKAI_PPI_URL}#${result.id}`,
+    };
+}
+
+function cityAward(result: OsakaCityResult): Award {
+    return {
+        key: `city-${result.id}`,
+        source: '大阪市',
+        winner: result.winner ?? '',
+        title: result.title,
+        openDate: result.openDate || toJstDateKey(new Date()),
+        amount: result.amount,
+        link: `https://www.osaka.city.beneproc.com/#/anken-list/supplier-decided?keyword=${encodeURIComponent(result.id)}`,
+    };
+}
+
 function loadStore(): Store {
     try {
         return JSON.parse(fs.readFileSync(STORE_FILE, 'utf-8')) as Store;
@@ -78,16 +126,7 @@ async function prefAwards(store: Store): Promise<Award[]> {
     const decided = fetched.filter(result => result.decided);
     const nara = decided.filter(result => isNaraAddress(result.address));
     console.log(`[osaka] 大阪府: 建築設計・設備設計の結果 ${fetched.length}件を読み、落札者決定 ${decided.length}件、うち奈良の事務所 ${nara.length}件`);
-    return nara.map(result => ({
-        key: `pref-${result.id}`,
-        source: '大阪府',
-        winner: result.winner ?? '',
-        address: result.address,
-        title: result.title,
-        openDate: result.openDate,
-        amount: result.amount,
-        link: `${OSAKA_PREF_RESULTS_URL}#${result.id}`,
-    }));
+    return nara.map(prefAward);
 }
 
 /** 堺市: 一覧に落札者が出るので毎回読み直し、前回から落札者が決まった案件だけを新しいものとする */
@@ -101,15 +140,7 @@ async function sakaiAwards(store: Store): Promise<Award[]> {
     store.sakai = Array.from(known.values()).sort((a, b) => b.openDate.localeCompare(a.openDate));
 
     console.log(`[osaka] 堺市: 建築設計・設備設計の結果 ${fetched.length}件(新しく落札者が決まった ${newlyDecided.length}件)、うち奈良の事務所 ${nara.length}件 / 名簿 ${firms.length}社`);
-    return nara.map(result => ({
-        key: `sakai-${result.id}`,
-        source: '堺市',
-        winner: result.winner ?? '',
-        title: result.title,
-        openDate: result.openDate || toJstDateKey(new Date()),
-        amount: result.amount && `${result.amount}円`,
-        link: `${SAKAI_PPI_URL}#${result.id}`,
-    }));
+    return nara.map(sakaiAward);
 }
 
 /** 大阪市: 一覧は落札者が決まった案件だけ。前回から増えた案件を新しいものとする */
@@ -123,15 +154,7 @@ async function osakaCityAwards(store: Store): Promise<Award[]> {
     store.osakaCity = Array.from(known.values()).sort((a, b) => b.openDate.localeCompare(a.openDate));
 
     console.log(`[osaka] 大阪市: 建築設計・設備設計の結果 ${fetched.length}件(新しく落札者が決まった ${newlyDecided.length}件)、うち奈良の事務所 ${nara.length}件`);
-    return nara.map(result => ({
-        key: `city-${result.id}`,
-        source: '大阪市',
-        winner: result.winner ?? '',
-        title: result.title,
-        openDate: result.openDate || toJstDateKey(new Date()),
-        amount: result.amount,
-        link: `https://www.osaka.city.beneproc.com/#/anken-list/supplier-decided?keyword=${encodeURIComponent(result.id)}`,
-    }));
+    return nara.map(cityAward);
 }
 
 async function main() {
@@ -154,11 +177,17 @@ async function main() {
     fs.writeFileSync(STORE_FILE, `${JSON.stringify({ ...store, generatedAt: new Date().toISOString() }, null, 2)}\n`, 'utf-8');
     for (const award of awards) console.log(`  ${award.source} ${award.openDate} ${award.winner}: ${award.title}`);
 
-    if (awards.length > 0) {
+    // ニュースには、これまでに見つけた受注をすべて載せる(同じ記事は1件にまとまる)
+    const known = allAwards(store);
+    if (known.length > 0) {
         const news = loadNewsStore();
-        const merged = mergeNewsItems(news.items, awards.map(toNewsItem));
+        const merged = mergeNewsItems(news.items, known.map(toNewsItem));
         fs.writeFileSync(NEWS_STORE_FILE, `${JSON.stringify({ ...news, items: merged }, null, 2)}\n`, 'utf-8');
+        console.log(`[osaka] ニュースの「大阪で受注」: ${known.length}件`);
+    }
 
+    // 知らせは今回新しく見つけたものだけ
+    if (awards.length > 0) {
         if (process.env.NEWS_ALERT_FILE) {
             const lines = awards.map(award =>
                 `- **${award.winner}**${award.address ? `(${award.address})` : ''} — ${award.title}(${award.source}、開札 ${award.openDate}${award.amount ? `、${award.amount}` : ''})`);
