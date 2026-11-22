@@ -10,6 +10,11 @@ on:
     - cron: '30 3 * * *'  # 日本時間 12:30
     - cron: '30 9 * * *'  # 日本時間 18:30
   workflow_dispatch:
+    inputs:
+      notify_test:
+        description: '知らせのメールが届くかを試す(テスト用の Issue を立てて閉じる)'
+        type: boolean
+        default: false
 
 concurrency:
   group: naramania-news-collect
@@ -75,13 +80,28 @@ jobs:
             git push origin main
           fi
 
-      # データを保存できた回だけ知らせる。Issue を立てると GitHub からメールが届く
+      # データを保存できた回だけ知らせる。リポジトリをウォッチしていなくてもメールが届くよう、
+      # 持ち主を担当者にする(ウォッチしていないと Issue を立てただけではメールが来なかった)
       - name: Notify Osaka awards by Nara design firms
         if: ${{ github.ref == 'refs/heads/main' && steps.alerts.outputs.alert == 'true' }}
         env:
           GH_TOKEN: ${{ github.token }}
           ALERT_FILE: ${{ runner.temp }}/news_alerts.md
+          OWNER: ${{ github.repository_owner }}
         run: |
           gh issue create \
             --title "奈良の設計事務所が大阪で受注 ($(TZ=Asia/Tokyo date +%m/%d))" \
-            --body-file "$ALERT_FILE"
+            --body-file "$ALERT_FILE" \
+            --assignee "$OWNER"
+
+      - name: Test notification
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.notify_test }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+          OWNER: ${{ github.repository_owner }}
+        run: |
+          url=$(gh issue create \
+            --title "通知のテスト ($(TZ=Asia/Tokyo date '+%m/%d %H:%M'))" \
+            --body "奈良の設計事務所が大阪で受注したときの知らせが、メールで届くかを確かめるためのテストです。" \
+            --assignee "$OWNER")
+          gh issue close "$url" --comment "テストなので閉じました。"
