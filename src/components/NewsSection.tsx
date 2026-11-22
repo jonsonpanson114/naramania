@@ -67,6 +67,11 @@ function NewsRow({ item, related, saved, compact }: { item: NewsItem; related: N
                     <p className={`mt-0.5 text-xs ${compact ? 'break-words text-secondary' : 'truncate text-stone-500 lg:hidden'}`}>
                         {[orderer, media].filter(Boolean).join(' / ')}
                     </p>
+                    {item.watchedFirms?.length ? (
+                        <p className="mt-0.5 text-[13px] font-bold text-sky-800">
+                            奈良の事務所が大阪で受注：{item.watchedFirms.join('、')}
+                        </p>
+                    ) : null}
                     {item.results?.map((result, index) => (
                         <p key={`${result.contractor}-${index}`} className="mt-0.5 text-[13px] font-bold text-emerald-800">
                             {result.kind} {result.contractor}{result.amount ? ` ${result.amount}` : ''}
@@ -151,6 +156,7 @@ export function NewsSection({ detailed = false, pageSize = 6, showAllLink = fals
     const [activeSource, setActiveSource] = useState<string>('all');
     const [onlyResults, setOnlyResults] = useState(false);
     const [onlySaved, setOnlySaved] = useState(false);
+    const [onlyOsaka, setOnlyOsaka] = useState(false);
     const [keyword, setKeyword] = useState('');
     const [paging, setPaging] = useState({ filterKey: '', count: pageSize });
     const savedNews = useSavedNews();
@@ -176,13 +182,14 @@ export function NewsSection({ detailed = false, pageSize = 6, showAllLink = fals
     const filtered = base.filter(n => {
         if (activeSource !== 'all' && n.source !== activeSource) return false;
         if (onlyResults && !hasResults(n)) return false;
+        if (onlyOsaka && !n.watchedFirms?.length) return false;
         if (!trimmedKeyword) return true;
         const haystack = `${n.title} ${n.excerpt ?? ''} ${n.orderer ?? ''} ${(n.results ?? []).map(r => r.contractor).join(' ')}`;
         return haystack.includes(trimmedKeyword);
     });
 
     // 絞り込みを変えたら表示件数を初期値に戻す
-    const filterKey = [activeSource, trimmedKeyword, onlyResults, onlySaved].join('|');
+    const filterKey = [activeSource, trimmedKeyword, onlyResults, onlySaved, onlyOsaka].join('|');
     const visibleCount = paging.filterKey === filterKey ? paging.count : pageSize;
     // 保存した記事は、ほかの記事の下に隠れないよう1件ずつ出す
     const rows = onlySaved ? filtered.map(item => [item]) : groupNewsByTopic(filtered);
@@ -239,6 +246,9 @@ export function NewsSection({ detailed = false, pageSize = 6, showAllLink = fals
                     <FilterButton active={onlyResults} onClick={() => setOnlyResults(v => !v)}>
                         落札・選定（{news.filter(hasResults).length}）
                     </FilterButton>
+                    <FilterButton active={onlyOsaka} onClick={() => setOnlyOsaka(v => !v)}>
+                        大阪で受注（{news.filter(n => n.watchedFirms?.length).length}）
+                    </FilterButton>
                     <FilterButton active={onlySaved} onClick={() => setOnlySaved(v => !v)}>
                         保存した記事（{savedNews.length}）
                     </FilterButton>
@@ -258,6 +268,8 @@ export function NewsSection({ detailed = false, pageSize = 6, showAllLink = fals
                         ? `「${trimmedKeyword}」に一致するニュースは見つかりませんでした`
                         : onlySaved
                             ? '保存した記事はまだありません。記事の右端のしおりで保存できます'
+                            : onlyOsaka
+                                ? '奈良の設計事務所が大阪で受注した記事は、まだ見つかっていません'
                             : onlyResults
                                 ? '落札・選定の結果が出た記事はまだありません'
                                 : '該当するニュースがありません'}

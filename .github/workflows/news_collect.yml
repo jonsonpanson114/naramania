@@ -17,6 +17,7 @@ concurrency:
 
 permissions:
   contents: write
+  issues: write
 
 jobs:
   collect-news:
@@ -35,7 +36,14 @@ jobs:
         run: npm ci
 
       - name: Collect news
-        run: npx tsx scripts/collect_news.ts
+        id: collect
+        env:
+          # 作業フォルダの外に書く。git add -A で知らせの文までコミットしないため
+          NEWS_ALERT_FILE: ${{ runner.temp }}/news_alerts.md
+        run: |
+          npx tsx scripts/collect_news.ts
+          # hashFiles は作業フォルダの中しか見ないので、知らせの有無は出力で渡す
+          if [ -s "$NEWS_ALERT_FILE" ]; then echo "alert=true" >> "$GITHUB_OUTPUT"; fi
 
       - name: Commit and Push changes
         env:
@@ -53,3 +61,14 @@ jobs:
             git pull --rebase --autostash origin main
             git push origin main
           fi
+
+      # データを保存できた回だけ知らせる。Issue を立てると GitHub からメールが届く
+      - name: Notify Osaka awards by Nara design firms
+        if: ${{ github.ref == 'refs/heads/main' && steps.collect.outputs.alert == 'true' }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ALERT_FILE: ${{ runner.temp }}/news_alerts.md
+        run: |
+          gh issue create \
+            --title "奈良の設計事務所が大阪で受注 ($(TZ=Asia/Tokyo date +%m/%d))" \
+            --body-file "$ALERT_FILE"

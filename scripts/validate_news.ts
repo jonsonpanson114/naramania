@@ -9,6 +9,8 @@ import {
     type NewsItem,
 } from '../src/services/news_service';
 import { groupNewsByTopic } from '../src/lib/news_topics';
+import { buildWatchedFirms, osakaAwardFirms, resolveWatchedFirms } from '../src/lib/watched_firms';
+import type { BiddingItem } from '../src/types/bidding';
 
 // ニュース収集の解析・絞り込み・蓄積を、外部サイトへ触らずに検証する。
 
@@ -123,4 +125,32 @@ const article = (link: string, patch: Partial<NewsItem> = {}): NewsItem => ({
     ]).length, 2, '日が離れた記事はまとめない');
 }
 
-console.log('ニュース検証: 7 scenarios passed (RSS解析・奈良新聞解析・絞り込み・蓄積・重複除去・文字コード・話題まとめ)');
+// 8) 奈良の設計事務所の名簿と、大阪で取った記事の判定
+{
+    const won = (id: string, name: string): BiddingItem => ({
+        id, municipality: '橿原市', title: `設計業務${id}`, type: 'コンサル', announcementDate: '2026-10-01',
+        link: 'https://x', status: '落札', winningContractor: name, winnerType: '設計事務所',
+    });
+    const firms = buildWatchedFirms([
+        won('a', '(株)福井建築設計事務所'),
+        won('b', '株式会社福井建築設計事務所'),
+        won('c', '協和設計株式会社'),
+        won('d', '協和設計株式会社 奈良営業所'),
+        won('e', '三井共同建設コンサルタント株式会社'),
+        won('f', '石本・シード設計共同体'),
+        won('g', '空間設計'),
+    ]);
+    assert.deepEqual(firms.map(firm => firm.key), ['福井建築設計事務所'],
+        '表記ゆれは1社、奈良営業所のある本社は外、土木系・共同体・一般語は外');
+    assert.deepEqual(resolveWatchedFirms([won('a', '㈱中和設計')], { exclude: ['株式会社中和設計'], include: ['株式会社北和設計'] })
+        .map(firm => firm.key), ['北和設計']);
+
+    const watch = buildWatchedFirms([won('a', '(株)福井建築設計事務所')]);
+    assert.deepEqual(osakaAwardFirms('福井建築設計事務所を特定／市立小学校改築基本設計／堺市', '', watch), ['(株)福井建築設計事務所']);
+    assert.deepEqual(osakaAwardFirms('市立小学校改築基本設計を公告／堺市', '福井建築設計事務所', watch), [], '公告は拾わない');
+    assert.deepEqual(osakaAwardFirms('福井建築設計事務所を特定／市立小学校改築／橿原市', '', watch), [], '奈良の案件は拾わない');
+    assert.deepEqual(osakaAwardFirms('体育館改修設計を特定', '福井建築設計事務所が受託', watch, true), ['(株)福井建築設計事務所'],
+        '大阪カテゴリの記事は地名が無くても大阪とみなす');
+}
+
+console.log('ニュース検証: 8 scenarios passed (RSS解析・奈良新聞解析・絞り込み・蓄積・重複除去・文字コード・話題まとめ・大阪の受注)');

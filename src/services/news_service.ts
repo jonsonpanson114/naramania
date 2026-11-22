@@ -1,6 +1,7 @@
 import crypto from 'crypto';
 import axios from 'axios';
 import * as cheerio from 'cheerio';
+import { osakaAwardFirms, type WatchedFirm } from '../lib/watched_firms';
 import { addDaysJstDateKey, toJstDateKey } from '../lib/jst_date';
 
 /** 記事本文から読み取った落札・選定の結果 */
@@ -27,6 +28,8 @@ export interface NewsItem {
     results?: NewsResultEntry[];
     /** Googleニュース経由の記事の、実際の掲載元(朝日新聞など) */
     publisher?: string;
+    /** 奈良の設計事務所が大阪で仕事を取った記事なら、その事務所名 */
+    watchedFirms?: string[];
 }
 
 /** 媒体ごとの収集結果。取れなくなった媒体に気づけるよう保存する */
@@ -361,6 +364,8 @@ type FeedSource = {
     urls: string[];
     /** 全国紙なので奈良の記事だけを残す */
     naraOnly?: boolean;
+    /** 大阪の記事。奈良の設計事務所が取った記事だけを残す */
+    osakaWatch?: boolean;
 };
 
 const FEED_SOURCES: FeedSource[] = [
@@ -372,6 +377,16 @@ const FEED_SOURCES: FeedSource[] = [
             'https://www.constnews.com/?cat=14&feed=rss2',
             'https://www.constnews.com/?cat=14&feed=rss2&paged=2',
         ],
+    },
+    {
+        // 大阪カテゴリ。奈良の設計事務所が大阪で取った案件を見つけるためだけに読む
+        id: 'constnews-osaka',
+        label: '建設ニュース(大阪)',
+        urls: [
+            'https://www.constnews.com/?cat=10&feed=rss2',
+            'https://www.constnews.com/?cat=10&feed=rss2&paged=2',
+        ],
+        osakaWatch: true,
     },
     {
         id: 'shinpou',
@@ -411,7 +426,7 @@ const FEED_SOURCES: FeedSource[] = [
     },
 ];
 
-async function fetchFeedSource(source: FeedSource): Promise<{ items: NewsItem[]; report: NewsSourceReport }> {
+async function fetchFeedSource(source: FeedSource, watchedFirms: WatchedFirm[]): Promise<{ items: NewsItem[]; report: NewsSourceReport }> {
     const items: NewsItem[] = [];
     const errors: string[] = [];
     let fetched = 0;
@@ -422,11 +437,14 @@ async function fetchFeedSource(source: FeedSource): Promise<{ items: NewsItem[];
             const feedItems = parseFeedItems(await fetchUrl(url), url);
             fetched += feedItems.length;
             for (const feedItem of feedItems) {
+                const firms = osakaAwardFirms(feedItem.title, feedItem.body, watchedFirms, source.osakaWatch);
+                if (source.osakaWatch && firms.length === 0) continue;
                 // 全国紙は本文の奥で触れているだけの記事を除くため、冒頭だけを見る
-                if (source.naraOnly && !isNaraRelated(`${feedItem.title} ${feedItem.body.slice(0, 200)}`)) continue;
+                if (source.naraOnly && firms.length === 0
+                    && !isNaraRelated(`${feedItem.title} ${feedItem.body.slice(0, 200)}`)) continue;
 
                 // 建設ニュースの見出しは「…／…／桜井市」のように末尾が発注者
-                const titleOrderer = source.id === 'constnews' ? feedItem.title.split('／').pop()?.trim() : undefined;
+                const titleOrderer = source.id.startsWith('constnews') ? feedItem.title.split('／').pop()?.trim() : undefined;
                 items.push({
                     id: '',
                     source: source.id,
@@ -437,6 +455,7 @@ async function fetchFeedSource(source: FeedSource): Promise<{ items: NewsItem[];
                     excerpt: feedItem.body.slice(0, 140) || undefined,
                     orderer: source.id === 'shinpou' ? feedItem.category : titleOrderer,
                     results: extractResults(`${feedItem.title} ${feedItem.body}`),
+                    watchedFirms: firms.length > 0 ? firms : undefined,
                 });
             }
         } catch (e) {
@@ -529,9 +548,9 @@ async function fetchGoogleNews(): Promise<{ items: NewsItem[]; report: NewsSourc
 }
 
 /** 全媒体を巡回する。1媒体の失敗で全体を止めない */
-export async function collectNews(): Promise<{ items: NewsItem[]; sources: NewsSourceReport[] }> {
+export async function collectNews(watchedFirms: WatchedFirm[] = []): Promise<{ items: NewsItem[]; sources: NewsSourceReport[] }> {
     const results = await Promise.all([
-        ...FEED_SOURCES.map(fetchFeedSource),
+        ...FEED_SOURCES.map(source => fetchFeedSource(source, watchedFirms)),
         fetchNaraNp(),
         fetchGoogleNews(),
     ]);
