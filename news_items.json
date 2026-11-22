@@ -1,11 +1,17 @@
 {
-  "generatedAt": "2026-11-22T02:29:19.493Z",
+  "generatedAt": "2026-11-22T09:54:47.856Z",
   "sources": [
     {
       "id": "constnews",
       "label": "建設ニュース",
       "fetched": 20,
       "kept": 20
+    },
+    {
+      "id": "constnews-osaka",
+      "label": "建設ニュース(大阪)",
+      "fetched": 20,
+      "kept": 0
     },
     {
       "id": "shinpou",
@@ -29,7 +35,7 @@
       "id": "xtech",
       "label": "日経クロステック",
       "fetched": 100,
-      "kept": 0
+      "kept": 1
     },
     {
       "id": "naranp",
@@ -40,7 +46,7 @@
     {
       "id": "googlenews",
       "label": "一般紙・Web(Googleニュース)",
-      "fetched": 63,
+      "fetched": 72,
       "kept": 10
     }
   ],
@@ -54,6 +60,18 @@
       "link": "https://www.nara-np.co.jp/news/20261122231059.html",
       "category": "construction",
       "relevanceScore": 6,
+      "results": []
+    },
+    {
+      "id": "news-171ed14a4832",
+      "source": "googlenews",
+      "sourceLabel": "一般紙・Web",
+      "publisher": "Dellows News",
+      "title": "BOCO防災事業コンテスト2026開催 奈良建設が最優秀賞を受賞",
+      "date": "2026-11-22",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFB0Y1ZGbkFVU19mQXpvMnZ5YnVsZUtINVRtSW9fbTJkMmJoSHJUakZaTzNfNG0wVTEwd19pdTdmby1RYmVVV29NcGVERmdGUTdjZWZPcFdaTjktLTMtOWUyRUpyTnJoampr?oc=5",
+      "category": "construction",
+      "relevanceScore": 8,
       "results": []
     },
     {
@@ -76,18 +94,6 @@
       "link": "https://www.nara-np.co.jp/news/20261120210202.html",
       "category": "construction",
       "relevanceScore": 6,
-      "results": []
-    },
-    {
-      "id": "news-171ed14a4832",
-      "source": "googlenews",
-      "sourceLabel": "一般紙・Web",
-      "publisher": "Dellows News",
-      "title": "BOCO防災事業コンテスト2026開催 奈良建設が最優秀賞を受賞",
-      "date": "2026-11-20",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFB0Y1ZGbkFVU19mQXpvMnZ5YnVsZUtINVRtSW9fbTJkMmJoSHJUakZaTzNfNG0wVTEwd19pdTdmby1RYmVVV29NcGVERmdGUTdjZWZPcFdaTjktLTMtOWUyRUpyTnJoampr?oc=5",
-      "category": "construction",
-      "relevanceScore": 8,
       "results": []
     },
     {
