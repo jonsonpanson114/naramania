@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-22T10:53:39.311Z",
+  "generatedAt": "2026-11-22T11:52:00.258Z",
   "sources": [
     {
       "id": "constnews",
@@ -46,7 +46,7 @@
     {
       "id": "googlenews",
       "label": "一般紙・Web(Googleニュース)",
-      "fetched": 50,
+      "fetched": 49,
       "kept": 7
     }
   ],
@@ -60,18 +60,6 @@
       "link": "https://www.nara-np.co.jp/news/20261122231059.html",
       "category": "construction",
       "relevanceScore": 6,
-      "results": []
-    },
-    {
-      "id": "news-171ed14a4832",
-      "source": "googlenews",
-      "sourceLabel": "一般紙・Web",
-      "publisher": "Dellows News",
-      "title": "BOCO防災事業コンテスト2026開催 奈良建設が最優秀賞を受賞",
-      "date": "2026-11-22",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFB0Y1ZGbkFVU19mQXpvMnZ5YnVsZUtINVRtSW9fbTJkMmJoSHJUakZaTzNfNG0wVTEwd19pdTdmby1RYmVVV29NcGVERmdGUTdjZWZPcFdaTjktLTMtOWUyRUpyTnJoampr?oc=5",
-      "category": "construction",
-      "relevanceScore": 8,
       "results": []
     },
     {
@@ -94,6 +82,18 @@
       "link": "https://www.nara-np.co.jp/news/20261120210202.html",
       "category": "construction",
       "relevanceScore": 6,
+      "results": []
+    },
+    {
+      "id": "news-171ed14a4832",
+      "source": "googlenews",
+      "sourceLabel": "一般紙・Web",
+      "publisher": "Dellows News",
+      "title": "BOCO防災事業コンテスト2026開催 奈良建設が最優秀賞を受賞",
+      "date": "2026-11-20",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFB0Y1ZGbkFVU19mQXpvMnZ5YnVsZUtINVRtSW9fbTJkMmJoSHJUakZaTzNfNG0wVTEwd19pdTdmby1RYmVVV29NcGVERmdGUTdjZWZPcFdaTjktLTMtOWUyRUpyTnJoampr?oc=5",
+      "category": "construction",
+      "relevanceScore": 8,
       "results": []
     },
     {
