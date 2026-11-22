@@ -25,8 +25,10 @@ function loadWatchedFirms() {
     const items = readJson<BiddingItem[]>('scraper_result.json', []);
     const market = readJson<BiddingItem[] | { items?: BiddingItem[] }>('market_items.json', []);
     const marketItems = Array.isArray(market) ? market : market.items ?? [];
+    // 自治体ごとの過去データには、今の一覧から落ちた案件の落札者や入札者も残っている
+    const snapshots = Object.values(readJson<Record<string, BiddingItem[]>>('municipality_snapshots.json', {})).flat();
     const config = readJson<WatchedFirmsConfig>('config/watched_firms.json', {});
-    return resolveWatchedFirms([...items, ...marketItems], config);
+    return resolveWatchedFirms([...items, ...marketItems, ...snapshots], config);
 }
 
 function alertBody(items: NewsItem[]): string {

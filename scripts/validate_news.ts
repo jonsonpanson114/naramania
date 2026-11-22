@@ -139,9 +139,19 @@ const article = (link: string, patch: Partial<NewsItem> = {}): NewsItem => ({
         won('e', '三井共同建設コンサルタント株式会社'),
         won('f', '石本・シード設計共同体'),
         won('g', '空間設計'),
+        won('h', 'オリエンタルコンサルタンツ奈良事務所'),
+        won('i', '(株)都市企画設計コンサルタント'),
     ]);
-    assert.deepEqual(firms.map(firm => firm.key), ['福井建築設計事務所'],
-        '表記ゆれは1社、奈良営業所のある本社は外、土木系・共同体・一般語は外');
+    assert.deepEqual(firms.map(firm => firm.key), ['シード設計', '都市企画設計コンサルタント', '福井建築設計事務所'],
+        '表記ゆれは1社、奈良営業所のある本社は外、土木系・一般語は外、共同体は構成員ごと、設計の付くコンサルタントは残す');
+
+    // 入札者の一覧がそのまま入った欄(御所市の実例)からも、設計事務所だけを拾う。施工会社は拾わない
+    const bidders = buildWatchedFirms([{
+        id: 'x', municipality: '御所市', title: '令和8年5月20日 入札金額(税抜き)', type: 'その他', announcementDate: '2026-05-20',
+        link: 'https://x', status: '落札',
+        winningContractor: '辞退 (株)村井設計 村井 利光 辞退 (株)和光設計 永友 光 (株)辰巳建築 辰巳 宗士 (有)樫本設計 山本',
+    }]);
+    assert.deepEqual(bidders.map(firm => firm.key), ['樫本設計', '村井設計', '和光設計']);
     assert.deepEqual(resolveWatchedFirms([won('a', '㈱中和設計')], { exclude: ['株式会社中和設計'], include: ['株式会社北和設計'] })
         .map(firm => firm.key), ['北和設計']);
 
