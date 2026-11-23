@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-23T13:32:05.464Z",
+  "generatedAt": "2026-11-23T21:37:12.305Z",
   "sources": [
     {
       "id": "constnews",
@@ -46,11 +46,22 @@
     {
       "id": "googlenews",
       "label": "一般紙・Web(Googleニュース)",
-      "fetched": 43,
-      "kept": 8
+      "fetched": 45,
+      "kept": 9
     }
   ],
   "items": [
+    {
+      "id": "news-5c07090d1d8b",
+      "source": "naranp",
+      "sourceLabel": "奈良新聞",
+      "title": "奈良市・鼓阪小跡地活用、構想策定へ 住民説明会が始まる",
+      "date": "2026-11-24",
+      "link": "https://www.nara-np.co.jp/news/20261124205633.html",
+      "category": "construction",
+      "relevanceScore": 6,
+      "results": []
+    },
     {
       "id": "news-13d624183a12",
       "source": "naranp",
