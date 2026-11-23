@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-11-20T15:12:41.878Z",
-  "qualityGeneratedAt": "2026-11-20T15:08:31.800Z",
+  "generatedAt": "2026-11-23T01:26:05.369Z",
+  "qualityGeneratedAt": "2026-11-23T01:26:00.788Z",
   "itemCount": 336,
   "resultFollowUp": {
-    "totalCount": 11,
+    "totalCount": 12,
     "highCount": 10,
-    "mediumCount": 0,
-    "lowCount": 1,
+    "mediumCount": 2,
+    "lowCount": 0,
     "missingBiddingDateCount": 0,
     "byMunicipality": [
       {
@@ -20,12 +20,16 @@
       {
         "municipality": "大淀町",
         "count": 2
+      },
+      {
+        "municipality": "御所市",
+        "count": 1
       }
     ],
     "samples": [
       {
         "priority": "high",
-        "ageDays": 214,
+        "ageDays": 216,
         "reason": "落札済みだが落札者が空",
         "item": {
           "id": "oyodo-79dc14038b",
@@ -41,8 +45,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 207,
-        "reason": "開札日から207日経過",
+        "ageDays": 209,
+        "reason": "開札日から209日経過",
         "item": {
           "id": "kashiba-web-f9a78168",
           "municipality": "香芝市",
@@ -57,8 +61,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 179,
-        "reason": "開札日から179日経過",
+        "ageDays": 181,
+        "reason": "開札日から181日経過",
         "item": {
           "id": "kashiba-web-1bf7b65a",
           "municipality": "香芝市",
@@ -73,7 +77,7 @@
       },
       {
         "priority": "high",
-        "ageDays": 159,
+        "ageDays": 161,
         "reason": "落札済みだが落札者が空",
         "item": {
           "id": "oyodo-46ab50dbc8",
@@ -89,8 +93,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 156,
-        "reason": "開札日から156日経過",
+        "ageDays": 158,
+        "reason": "開札日から158日経過",
         "item": {
           "id": "nara-pref-29001013060020260055",
           "municipality": "奈良県",
@@ -105,8 +109,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 137,
-        "reason": "開札日から137日経過",
+        "ageDays": 139,
+        "reason": "開札日から139日経過",
         "item": {
           "id": "nara-pref-29005007060120260015",
           "municipality": "奈良県",
@@ -121,8 +125,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 134,
-        "reason": "開札日から134日経過",
+        "ageDays": 136,
+        "reason": "開札日から136日経過",
         "item": {
           "id": "kashiba-web-65a0eda8",
           "municipality": "香芝市",
@@ -137,8 +141,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 127,
-        "reason": "開札日から127日経過",
+        "ageDays": 129,
+        "reason": "開札日から129日経過",
         "item": {
           "id": "nara-pref-29005007060120260018",
           "municipality": "奈良県",
@@ -153,8 +157,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 57,
-        "reason": "開札日から57日経過",
+        "ageDays": 59,
+        "reason": "開札日から59日経過",
         "item": {
           "id": "nara-pref-29001013401020260007",
           "municipality": "奈良県",
@@ -169,8 +173,8 @@
       },
       {
         "priority": "high",
-        "ageDays": 38,
-        "reason": "開札日から38日経過",
+        "ageDays": 40,
+        "reason": "開札日から40日経過",
         "item": {
           "id": "nara-pref-29004060025020260077",
           "municipality": "奈良県",
