@@ -515,6 +515,22 @@ export class NaraPrefScraper implements Scraper {
         console.error(message);
     }
 
+    /**
+     * 詳細ページを読む。1件の読み込みが時間切れになっても、収集全体を止めない。
+     * 以前はこの失敗がそのまま外へ抜け、収集全体がエラー扱いになって品質チェックで止まっていた
+     * (2026-11-23: 1件の時間切れで、52件まで取れていた回が保存されなかった)。
+     * 読めなかった案件は今の状態のまま残し、次回の収集で読み直す。
+     */
+    private async fetchDetailSafely(page: Page, kanriNo: string, fallbackStatus: BiddingStatus): Promise<DetailInfo> {
+        try {
+            return await fetchDetailInfo(page, kanriNo, fallbackStatus);
+        } catch (error) {
+            const message = error instanceof Error ? error.message.split('\n')[0] : String(error);
+            this.recordWarning(`[奈良県] 案件 ${kanriNo} の詳細を読めませんでした(次回に読み直します): ${message}`);
+            return { status: fallbackStatus, winningContractor: undefined, skip: false };
+        }
+    }
+
     getDiagnostics() {
         return {
             warnings: [...this.warnings],
@@ -617,7 +633,7 @@ export class NaraPrefScraper implements Scraper {
                                 biddingDate >= resultLookbackIso &&
                                 detailFetchCount < detailFetchLimit
                             ) {
-                                detail = await fetchDetailInfo(detailPage, row.kanriNo, detail.status);
+                                detail = await this.fetchDetailSafely(detailPage, row.kanriNo, detail.status);
                                 detailFetchCount += 1;
                             }
 
@@ -663,7 +679,7 @@ export class NaraPrefScraper implements Scraper {
                         existingItem.status === '落札' && !existingItem.winningContractor
                             ? '受付終了'
                             : existingItem.status;
-                    const detail = await fetchDetailInfo(detailPage, kanriNo, fallbackStatus);
+                    const detail = await this.fetchDetailSafely(detailPage, kanriNo, fallbackStatus);
                     detailFetchCount += 1;
                     if (!detail.skip) {
                         retainedItem = {
