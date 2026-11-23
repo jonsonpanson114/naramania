@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-23T02:57:31.435Z",
+  "generatedAt": "2026-11-23T13:32:05.464Z",
   "sources": [
     {
       "id": "constnews",
@@ -46,8 +46,8 @@
     {
       "id": "googlenews",
       "label": "一般紙・Web(Googleニュース)",
-      "fetched": 47,
-      "kept": 9
+      "fetched": 43,
+      "kept": 8
     }
   ],
   "items": [
@@ -500,6 +500,18 @@
       "title": "【奈良】改修中の国宝五重塔に青龍が出現！室生寺の紅葉ライトアップが幻想的",
       "date": "2026-11-17",
       "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE00UnJzWWNlV0NiNWM1em80VWozdjJsUHdBd25DVmZFbHBfekhpWTFxdG1QVFNERVJzRW4zUk1QS3Z2Wnl6Q2dJNDE0QVY2VXJPSXc?oc=5",
+      "category": "construction",
+      "relevanceScore": 8,
+      "results": []
+    },
+    {
+      "id": "news-39d969012a87",
+      "source": "googlenews",
+      "sourceLabel": "一般紙・Web",
+      "publisher": "47NEWS",
+      "title": "10月の奈良県公共工事動向 件数、請負金額とも6カ月ぶり前年同月下回る",
+      "date": "2026-11-17",
+      "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1YTlplRGc0WmdaUTdqWjBPX1BqX21zWVQ5NFdUUm4yTFdzcW03T2F1bmEwSDhSa1pZS2NQbElOaDJhY3k4YjFRWGNaSQ?oc=5",
       "category": "construction",
       "relevanceScore": 8,
       "results": []
