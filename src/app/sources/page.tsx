@@ -4,6 +4,7 @@ import { MUNICIPALITY_SOURCES } from '@/lib/municipality_sources';
 import { loadDashboardData } from '@/lib/dashboard_data';
 import { getStaleMunicipalities } from '@/lib/data_freshness';
 import { loadNewsStore } from '@/lib/news_store';
+import { loadOsakaAwardsView } from '@/lib/osaka_awards_store';
 
 function formatDateTime(iso?: string): string | null {
     if (!iso) return null;
@@ -15,6 +16,7 @@ function formatDateTime(iso?: string): string | null {
 export default function SourcesPage() {
     const { allItems, qualitySummary } = loadDashboardData();
     const newsStore = loadNewsStore();
+    const osakaView = loadOsakaAwardsView();
     const lastScraped = qualitySummary?.municipalityLastScraped;
     // 「古い」と「記録が無くて状態不明」は原因も対処も違うので分けて出す。
     const freshnessIssues = getStaleMunicipalities(lastScraped);
@@ -95,6 +97,55 @@ export default function SourcesPage() {
                     );
                 })}
             </div>
+
+            {/* 大阪エリア（大阪府・大阪市・堺市）の入札結果チェック */}
+            <section className="mt-12">
+                <h2 className="text-xl tracking-widest font-serif">大阪エリアの入札結果チェック（奈良の設計事務所）</h2>
+                <p className="mt-2 text-sm tracking-wider text-secondary/60">
+                    大阪府・大阪市・堺市の設計系入札結果を定期的に確認し、奈良の設計事務所が落札した案件を自動抽出しています。
+                    最終巡回 {formatDateTime(osakaView.generatedAt ?? undefined) ?? '記録なし'}、
+                    確認済み {osakaView.records.length}件 ／ 奈良の事務所ヒット {osakaView.naraAwards.length}件
+                </p>
+                <div className="mt-4 grid gap-3 md:grid-cols-3">
+                    {osakaView.summaries.map(summary => {
+                        const checked = formatDateTime(summary.lastCheckedAt ?? undefined);
+                        return (
+                            <section
+                                key={summary.source}
+                                className="rounded-2xl border border-stone-200 bg-white/80 p-4 shadow-sm transition hover:shadow-md"
+                            >
+                                <div className="flex items-baseline justify-between gap-2">
+                                    <h3 className="text-base font-bold tracking-[0.06em] text-primary">
+                                        {summary.source}
+                                    </h3>
+                                    <span className={`shrink-0 rounded-full px-2 py-0.5 text-[11px] font-bold tabular-nums ${
+                                        summary.naraHitCount > 0
+                                            ? 'bg-sky-100 text-sky-800'
+                                            : 'bg-stone-100 text-stone-600'
+                                    }`}>
+                                        奈良ヒット {summary.naraHitCount}件
+                                    </span>
+                                </div>
+                                <p className="mt-1 text-[11px] tracking-wider text-secondary/60 tabular-nums">
+                                    最終確認 {checked ?? '記録なし'} ／ 確認 {summary.checkedCount}件（決定 {summary.decidedCount}件）
+                                </p>
+                                <p className="mt-2 text-[12px] leading-5 text-secondary/70">
+                                    {summary.note}
+                                </p>
+                                <a
+                                    href={summary.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="mt-3 inline-flex items-center gap-1.5 text-[12px] font-bold text-primary hover:text-accent hover:underline"
+                                >
+                                    <ExternalLink size={12} className="shrink-0 text-gray-400" />
+                                    {summary.label}
+                                </a>
+                            </section>
+                        );
+                    })}
+                </div>
+            </section>
 
             {/* 取れなくなった媒体に気づけるよう、前回の巡回結果を出す */}
             <section className="mt-12">

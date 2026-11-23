@@ -6,19 +6,20 @@ import { usePathname } from 'next/navigation';
 
 const primaryLinks = [
     { href: '/', label: '今日' },
+    { href: '/firms', label: '設計事務所' },
     { href: '/search', label: '案件検索' },
-    { href: '/analytics', label: '分析' },
-    { href: '/saved', label: '営業管理' },
     { href: '/news', label: 'ニュース' },
+    { href: '/saved', label: '営業管理' },
 ];
 
 const secondaryLinks = [
+    { href: '/analytics', label: '分析' },
     { href: '/market', label: '市場全体' },
     { href: '/design-map', label: '設計案件マップ' },
     { href: '/chat', label: '入札チャット' },
     { href: '/sources', label: '収集元サイト' },
-    { href: '/settings', label: '設定' },
     { href: '/admin', label: '運用状況' },
+    { href: '/settings', label: '設定' },
 ];
 
 interface SiteMastheadProps {

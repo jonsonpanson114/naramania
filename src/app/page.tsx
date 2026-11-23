@@ -6,6 +6,11 @@ import { WatchResultsPanel } from '@/components/WatchResultsPanel';
 import { ProjectListLink } from '@/components/ProjectListLink';
 import { NewsSection } from '@/components/NewsSection';
 import { DesignMapEntry } from '@/components/DesignMapEntry';
+import { OsakaAwardsHomePanel } from '@/components/OsakaAwardsHomePanel';
+import { PinnedFirmsHomePanel } from '@/components/PinnedFirmsHomePanel';
+import { loadNewsStore } from '@/lib/news_store';
+import { loadOsakaAwardsView } from '@/lib/osaka_awards_store';
+import { buildFirmDirectory } from '@/lib/firms_directory';
 import { countPracticalFilter } from '@/lib/practical_filters';
 import { buildLatestOpeningResults } from '@/lib/opening_result_updates';
 import { buildResultFollowUpSummary } from '@/lib/result_follow_up';
@@ -83,6 +88,9 @@ function AnnouncementTrend({ months }: { months: ReturnType<typeof getMonthlyAnn
 // Async Server Component
 export default async function Home() {
   const { allItems, qualitySummary, liveAuditReport, openingResultReport } = loadDashboardData();
+  const osakaView = loadOsakaAwardsView();
+  const newsStore = loadNewsStore();
+  const firmDirectory = buildFirmDirectory(allItems, osakaView.naraAwards, newsStore.items);
 
   // UTCで動くサーバーだと toISOString() は日本時間 0:00〜9:00 のあいだ前日を返し、
   // 「直近開札」の期間が丸一日ずれる。日本時間で組み立てる。
@@ -140,6 +148,10 @@ export default async function Home() {
           municipalityLastScraped={qualitySummary?.municipalityLastScraped}
         />
 
+        <div className="mb-4">
+          <PinnedFirmsHomePanel firms={firmDirectory} />
+        </div>
+
         <div className="home-layout">
             <TodayFocusPanel
               items={allItems}
@@ -155,6 +167,12 @@ export default async function Home() {
             <OpeningSchedule items={upcomingBiddings} />
             <DesignMapEntry />
             <NewsSection pageSize={5} showAllLink compact />
+            <OsakaAwardsHomePanel
+              naraAwards={osakaView.naraAwards}
+              summaries={osakaView.summaries}
+              totalRecords={osakaView.records.length}
+              today={today}
+            />
           </aside>
 
           <div className="home-extras">

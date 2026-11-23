@@ -19,12 +19,14 @@ import {
     List,
     Search,
     SlidersHorizontal,
+    Sparkles,
     Trophy,
     X,
 } from 'lucide-react';
 import { WatchButton } from '@/components/WatchButton';
 import { MunicipalityBadge, ProjectTypeBadge } from '@/components/ProjectLabels';
 import { displayStatus, type DisplayStatus } from '@/lib/status_label';
+import { estimateDesignTiming, evaluateSalesFit } from '@/lib/sales_fit';
 
 // タブの判定条件は practical_filters に集約している(トップの件数と揃えるため)
 export type { ViewTab };
@@ -196,6 +198,7 @@ export function BiddingTable({
     const [sortMode, setSortMode] = useState<SortMode>(initialSort);
     const [detailedSearch, setDetailedSearch] = useState(false);
     const [hideOutOfScope, setHideOutOfScope] = useState(true);
+    const [onlySalesTarget, setOnlySalesTarget] = useState(false);
     const [showDetailFilters, setShowDetailFilters] = useState(false);
     const [viewMode, setViewMode] = useState<ViewMode>('compact');
     // 表示件数は「何ページ分めくったか」だけを状態に持ち、実際の件数は描画時に出す。
@@ -297,6 +300,7 @@ export function BiddingTable({
             if (!matchesTab(item, tab)) return false;
             if (!matchesType(item, typeFilter)) return false;
             if (tab === 'results' && winnerFilter !== 'すべて' && item.winnerType !== winnerFilter) return false;
+            if (onlySalesTarget && !evaluateSalesFit(item.title, detailText(item)).isTarget) return false;
 
             return true;
         }).sort((a, b) => {
@@ -321,7 +325,7 @@ export function BiddingTable({
             }
             return sortMode === 'oldest' ? announcementA - announcementB : announcementB - announcementA;
         });
-    }, [detailedSearch, keyword, selectedMunicipality, selectedTag, sortMode, tab, typeFilter, visibleItems, winnerFilter]);
+    }, [detailedSearch, keyword, onlySalesTarget, selectedMunicipality, selectedTag, sortMode, tab, typeFilter, visibleItems, winnerFilter]);
 
     const tabCounts = useMemo(() => Object.fromEntries(
         TABS.map(({ id }) => [id, visibleItems.filter(item => matchesTab(item, id)).length]),
@@ -527,8 +531,20 @@ export function BiddingTable({
                         </div>
                     </div>
 
-                    {/* 詳細フィルタ（折りたたみ） */}
-                    <div>
+                    {/* 詳細フィルタ（折りたたみ）＆狙い目ワンクリック絞り込み */}
+                    <div className="flex flex-wrap items-center gap-2">
+                        <button
+                            type="button"
+                            onClick={() => changeFilter(() => setOnlySalesTarget(v => !v))}
+                            aria-pressed={onlySalesTarget}
+                            className={`inline-flex items-center gap-1.5 rounded-md border px-3 py-2 text-xs font-bold transition ${onlySalesTarget
+                                ? 'border-rose-500 bg-rose-100 text-rose-900'
+                                : 'border-border bg-white text-primary hover:border-rose-400'
+                            }`}
+                        >
+                            <Sparkles size={13} />
+                            内装・建具狙い目だけ表示
+                        </button>
                         <button
                             type="button"
                             onClick={() => setShowDetailFilters(!showDetailFilters)}
@@ -539,6 +555,9 @@ export function BiddingTable({
                             詳細フィルタ
                             <ChevronDown size={13} className={`transition-transform ${showDetailFilters ? 'rotate-180' : ''}`} />
                         </button>
+                    </div>
+
+                    <div>
 
                         {showDetailFilters && (
                             <div className="mt-3 space-y-3 rounded-2xl border border-stone-200 bg-stone-50/80 p-4">
@@ -613,6 +632,8 @@ export function BiddingTable({
                             : '';
                         const distance = biddingDistance(item.biddingDate);
                         const isNew = isNewItem(item.announcementDate) || Boolean(item.biddingDate && isNewItem(item.biddingDate));
+                        const fit = evaluateSalesFit(item.title, detailText(item));
+                        const timing = estimateDesignTiming(item.title, item.biddingDate || item.announcementDate, item.type);
                         return (
                             <article key={item.id} className="search-ledger-row">
                                 <div className="search-ledger-name">
@@ -620,8 +641,17 @@ export function BiddingTable({
                                         {item.title}
                                     </a>
                                     {isNew && <span className="ml-2 inline-block text-xs font-bold text-amber-800">新着</span>}
+                                    <span className={`ml-2 inline-block rounded border px-1.5 py-0.5 text-[10px] font-bold align-middle ${fit.badgeClass}`}>
+                                        {fit.shortLabel}
+                                    </span>
                                     {supplemental && (
                                         <p className="mt-0.5 text-xs leading-relaxed text-secondary">{supplementalLabel}：{supplemental}</p>
+                                    )}
+                                    {timing && (
+                                        <p className={`mt-0.5 text-[11px] font-semibold ${timing.isNowHot ? 'text-amber-800' : 'text-stone-500'}`}>
+                                            {timing.isNowHot ? '今が提案どき · ' : ''}仕様提案目安：{timing.proposalWindow}
+                                            {timing.constructionWindow ? `（本体工事 ${timing.constructionWindow}）` : ''}
+                                        </p>
                                     )}
                                     {briefLine && (
                                         <p className="mt-0.5 line-clamp-1 text-xs leading-relaxed text-secondary" title={briefLine}>{briefLine}</p>
