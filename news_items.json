@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-23T21:37:12.305Z",
+  "generatedAt": "2026-11-24T06:15:47.879Z",
   "sources": [
     {
       "id": "constnews",
@@ -46,8 +46,9 @@
     {
       "id": "googlenews",
       "label": "一般紙・Web(Googleニュース)",
-      "fetched": 45,
-      "kept": 9
+      "fetched": 0,
+      "kept": 0,
+      "error": "Request failed with status code 503"
     }
   ],
   "items": [
@@ -63,10 +64,23 @@
       "results": []
     },
     {
+      "id": "news-9104a6a9d426",
+      "source": "constnews",
+      "sourceLabel": "建設ニュース",
+      "title": "長大を特定／庁舎整備基本計画策定の公募型プロポ／吉野町",
+      "date": "2026-11-24",
+      "link": "https://www.constnews.com/?p=161731",
+      "excerpt": "奈良県吉野町は、「吉野町庁舎整備基本計画策定業務」の公募型プロポーザルを実施し、長大奈良事務所（奈良県三郷町）を受託候補者に特定した。合同会社デロイトトーマツと長大の２者を審査した。 委託費上限額は、１８５０万円（税込）…",
+      "orderer": "吉野町",
+      "results": [],
+      "category": "construction",
+      "relevanceScore": 10
+    },
+    {
       "id": "news-13d624183a12",
       "source": "naranp",
       "sourceLabel": "奈良新聞",
-      "title": "車いすでも重機を操作 遠隔無人化施行の実証実験 奈良県十津川村",
+      "title": "車いすでも重機を操作 遠隔無人化施行の実証実験",
       "date": "2026-11-22",
       "link": "https://www.nara-np.co.jp/news/20261122231059.html",
       "category": "construction",
