@@ -36,6 +36,14 @@ export interface ForecastRow {
 
 export interface BigProject {
     n: string;
+    /** 決まっている事務所（またはグループ）。決まっていなければ書かない */
+    firm?: string;
+    /** その事務所がいま受けている業務（例：基本設計） */
+    work?: string;
+    /** その業務がいつまでか。YYYY-MM-DD か YYYY-MM。資料に書いてあるときだけ */
+    until?: string;
+    /** まだ決まっていないとき、いつ決まる予定か（資料に書いてある言い方のまま） */
+    decide?: string;
     m: string;
     /** 0 構想 / 1 基本計画 / 2 基本設計 / 3 実施設計 / 4 工事。この段階が「いま」 */
     s: number;
@@ -47,6 +55,12 @@ export interface BigProject {
 
 export interface PropoRow {
     status: string;
+    /** 募集の締切（参加表明・申請・提案書）。YYYY-MM-DD */
+    deadline?: string;
+    /** 決まった事務所 */
+    firm?: string;
+    /** 決まった業務がいつまでか。YYYY-MM-DD か YYYY-MM。資料に書いてあるときだけ */
+    until?: string;
     issuer: string;
     title: string;
     note: string;
@@ -275,6 +289,9 @@ export const FORECAST_ROWS: ForecastRow[] = [
 export const BIG_PROJECTS: BigProject[] = [
     {
         n: "橿原運動公園 体育館・屋内プール",
+        firm: "東畑建築事務所",
+        work: "基本設計",
+        until: "2027-07-30",
         m: "橿原市",
         s: 2,
         now: "東畑建築事務所が基本設計中（令和9年7月30日まで）。CMは日建設計CM",
@@ -284,6 +301,8 @@ export const BIG_PROJECTS: BigProject[] = [
     },
     {
         n: "御所市 義務教育学校",
+        firm: "石本・シード設計共同体",
+        work: "基本設計・実施設計",
         m: "御所市",
         s: 2,
         now: "石本・シード設計共同体が優先交渉権者。次点は山下設計",
@@ -293,6 +312,8 @@ export const BIG_PROJECTS: BigProject[] = [
     },
     {
         n: "桜井市 芝運動公園 総合体育館",
+        firm: "桝谷設計",
+        work: "建築基本設計",
         m: "桜井市",
         s: 2,
         now: "桝谷設計が建築基本設計を落札",
@@ -302,6 +323,7 @@ export const BIG_PROJECTS: BigProject[] = [
     },
     {
         n: "大和高田市 マテリアルリサイクル推進施設",
+        decide: "12月下旬に落札者が決まる",
         m: "大和高田市",
         s: 2,
         now: "事業提案書を受付済み（10月23日）。12月中旬にヒアリングと開札",
@@ -311,6 +333,8 @@ export const BIG_PROJECTS: BigProject[] = [
     },
     {
         n: "生駒市 総合公園体育施設リニューアル",
+        decide: "第3四半期（10〜12月）に契約の予定",
+        until: "2028-04-30",
         m: "生駒市",
         s: 2,
         now: "基本設計・実施設計のプロポで、企画提案書の提出が10月6日に締め切られた。受託候補者の発表は確認できていない",
@@ -320,6 +344,7 @@ export const BIG_PROJECTS: BigProject[] = [
     },
     {
         n: "天理市 山の辺小学校 建替え",
+        until: "2027-03",
         m: "天理市",
         s: 2,
         now: "設計と施工を一括で公募する方式。公告は令和7年10月17日。選ばれた事業者は確認できていない",
@@ -329,6 +354,8 @@ export const BIG_PROJECTS: BigProject[] = [
     },
     {
         n: "奈良県 中央卸売市場 再整備",
+        firm: "大和ハウス工業が代表のグループ（報道）",
+        work: "設計・施工",
         m: "奈良県（大和郡山市）",
         s: 2,
         now: "PFI法に基づく市場エリアの整備事業。令和8年7月10日付の入札説明書で再公告。10月7日の報道で、大和ハウス工業が代表のグループに決まったとされる",
@@ -347,6 +374,7 @@ export const BIG_PROJECTS: BigProject[] = [
     },
     {
         n: "香芝市 複合施設",
+        decide: "設計者選定の時期は未公表",
         m: "香芝市",
         s: 1,
         now: "基本計画が完了（佐藤総合計画）",
@@ -356,6 +384,8 @@ export const BIG_PROJECTS: BigProject[] = [
     },
     {
         n: "県立特別支援学校 移転整備",
+        firm: "内藤建築事務所",
+        work: "基本計画",
         m: "奈良県（奈良市平松）",
         s: 1,
         now: "基本計画の業務は随意契約、約15か月。内藤建築事務所を特定（10月13日の報道）",
@@ -365,6 +395,9 @@ export const BIG_PROJECTS: BigProject[] = [
     },
     {
         n: "新西和医療センター",
+        firm: "日本経営",
+        work: "基本計画の策定支援",
+        until: "2026-12-28",
         m: "奈良県（斑鳩町）",
         s: 1,
         now: "基本計画の策定支援は日本経営。委託は12月28日まで。地質調査が第3四半期",
@@ -392,6 +425,9 @@ export const BIG_PROJECTS: BigProject[] = [
     },
     {
         n: "奈良市 東部出張所 移転・整備",
+        firm: "昭和設計",
+        work: "基本構想・基本計画",
+        until: "2027-03",
         m: "奈良市",
         s: 1,
         now: "昭和設計が基本構想・基本計画を支援（令和9年3月まで）",
@@ -401,6 +437,8 @@ export const BIG_PROJECTS: BigProject[] = [
     },
     {
         n: "宇陀市 総合体育館 改修",
+        firm: "福本設計",
+        work: "基本計画策定支援",
         m: "宇陀市",
         s: 1,
         now: "福本設計が基本計画策定支援を落札",
@@ -417,6 +455,7 @@ export const PROPO_ROWS: PropoRow[] = [
         status: "募集中",
         issuer: "高取町",
         title: "多機能複合型未来拠点施設 整備基本計画策定支援",
+        deadline: "2026-11-13",
         note: "申請書は11月13日まで",
         href: "https://www.constnews.com/?p=160772"
     },
@@ -424,6 +463,7 @@ export const PROPO_ROWS: PropoRow[] = [
         status: "募集中",
         issuer: "野迫川村",
         title: "本庁舎等活用基本構想策定",
+        deadline: "2026-11-10",
         note: "参加表明書は11月10日まで",
         href: "https://www.constnews.com/?p=160991"
     },
@@ -431,6 +471,7 @@ export const PROPO_ROWS: PropoRow[] = [
         status: "募集中",
         issuer: "奈良市",
         title: "大和西大寺駅北側の市有地 活用事業",
+        deadline: "2027-01-05",
         note: "参加表明書は令和9年1月5日まで。定期借地での公募が2度不調で、売却に切り替えた（10月28日の報道）",
         href: "https://www.nara-np.co.jp/news/20261028210239.html"
     },
@@ -445,6 +486,8 @@ export const PROPO_ROWS: PropoRow[] = [
         status: "提案済",
         issuer: "生駒市",
         title: "総合公園体育施設リニューアル 基本設計・実施設計",
+        deadline: "2026-10-06",
+        until: "2028-04-30",
         note: "予定価格約3.9億円。企画提案書は10月6日に締切済みで、受託候補者は未確認",
         href: "https://www.city.ikoma.lg.jp/cmsfiles/contents/0000042/42095/02_jissiyouryou.pdf"
     },
@@ -452,6 +495,7 @@ export const PROPO_ROWS: PropoRow[] = [
         status: "決定",
         issuer: "奈良県",
         title: "（仮称）県立特別支援学校 移転整備基本計画",
+        firm: "内藤建築事務所",
         note: "内藤建築事務所（10月13日の報道）",
         href: "https://www.constnews.com/?p=160506"
     },
@@ -459,6 +503,7 @@ export const PROPO_ROWS: PropoRow[] = [
         status: "決定",
         issuer: "御所市",
         title: "（仮称）北部認定こども園 整備工事設計",
+        firm: "浦辺設計",
         note: "浦辺設計",
         href: "https://www.constnews.com/?p=160873"
     },
@@ -466,6 +511,7 @@ export const PROPO_ROWS: PropoRow[] = [
         status: "決定",
         issuer: "奈良市",
         title: "鼓阪小学校跡地を活用した周辺地域活性化構想",
+        firm: "STUDIO C",
         note: "STUDIO C",
         href: "https://www.constnews.com/?p=160589"
     },
@@ -473,6 +519,8 @@ export const PROPO_ROWS: PropoRow[] = [
         status: "決定",
         issuer: "奈良市",
         title: "東部出張所 移転・整備 基本構想・基本計画",
+        firm: "昭和設計",
+        until: "2027-03",
         note: "昭和設計。3者参加、上限1,400万円",
         href: "https://www.city.nara.lg.jp/uploaded/attachment/215861.pdf"
     },
@@ -480,6 +528,7 @@ export const PROPO_ROWS: PropoRow[] = [
         status: "決定",
         issuer: "五條市",
         title: "五条駅周辺地区整備基本構想検討支援",
+        firm: "大日本ダイヤコンサルタント",
         note: "大日本ダイヤコンサルタント",
         href: "https://www.constnews.com/?p=160770"
     },
@@ -487,6 +536,7 @@ export const PROPO_ROWS: PropoRow[] = [
         status: "決定",
         issuer: "御所市",
         title: "義務教育学校 基本設計・実施設計",
+        firm: "石本・シード設計共同体",
         note: "石本・シード設計共同体（次点 山下設計）",
         href: "https://www.city.gose.nara.jp/0000004589.html"
     },
@@ -494,6 +544,8 @@ export const PROPO_ROWS: PropoRow[] = [
         status: "決定",
         issuer: "橿原市",
         title: "運動公園 体育館・屋内プール 基本設計",
+        firm: "東畑建築事務所",
+        until: "2027-07-30",
         note: "東畑建築事務所。9,108万円、413点",
         href: "https://www.city.kashihara.nara.jp/material/files/group/20/5082000026k.pdf"
     },
@@ -501,6 +553,8 @@ export const PROPO_ROWS: PropoRow[] = [
         status: "決定",
         issuer: "橿原市",
         title: "運動公園再整備 CM業務",
+        firm: "日建設計CM",
+        until: "2031-03",
         note: "日建設計CM。1億9,591万円、令和13年3月まで",
         href: "https://www.city.kashihara.nara.jp/material/files/group/20/5082000042k.pdf"
     },
@@ -508,6 +562,8 @@ export const PROPO_ROWS: PropoRow[] = [
         status: "決定",
         issuer: "奈良県",
         title: "新西和医療センター 基本計画策定支援",
+        firm: "日本経営",
+        until: "2026-12-28",
         note: "日本経営。3者応募",
         href: "https://www.pref.nara.lg.jp/n083/p004005.html"
     },
@@ -515,6 +571,7 @@ export const PROPO_ROWS: PropoRow[] = [
         status: "昨年度",
         issuer: "生駒市",
         title: "生駒南小・中学校 基本設計・実施設計",
+        firm: "類設計室",
         note: "類設計室",
         href: "https://www.city.ikoma.lg.jp/cmsfiles/contents/0000025/25624/20250731.pdf"
     }

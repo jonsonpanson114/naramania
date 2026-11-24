@@ -64,6 +64,10 @@ jobs:
       - name: Validate news
         run: npm run validate:news
 
+      # 設計案件マップの写し（営業支援アプリが読む）が、元の design_map.ts と合っているか
+      - name: Validate design map export
+        run: npm run validate:design-map
+
       - name: Validate project briefs
         run: npm run validate:briefs
 
