@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-24T05:51:07.274Z",
+  "generatedAt": "2026-11-24T06:53:14.150Z",
   "source": "daily_scrape",
   "updates": [],
   "latestResults": [
@@ -12,7 +12,7 @@
       "status": "落札",
       "winningContractor": "簑原建築設計事務所",
       "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-      "detectedAt": "2026-11-24T05:51:07.274Z",
+      "detectedAt": "2026-11-24T06:53:14.150Z",
       "kind": "new_winner"
     },
     {
@@ -24,7 +24,7 @@
       "status": "落札",
       "winningContractor": "ＣＩＭパブリックファシリティーズ＆アソシエイツ株式会社",
       "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-      "detectedAt": "2026-11-24T05:51:07.274Z",
+      "detectedAt": "2026-11-24T06:53:14.150Z",
       "kind": "new_winner"
     },
     {
@@ -35,7 +35,7 @@
       "biddingDate": "2026-11-19",
       "status": "不調",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-      "detectedAt": "2026-11-24T05:51:07.274Z",
+      "detectedAt": "2026-11-24T06:53:14.150Z",
       "kind": "new_failure"
     },
     {
@@ -47,7 +47,7 @@
       "status": "落札",
       "winningContractor": "株式会社ＳＴＵＤＩＯ Ｃ",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=011792050100r8-g10-01",
-      "detectedAt": "2026-11-24T05:51:07.274Z",
+      "detectedAt": "2026-11-24T06:53:14.150Z",
       "kind": "new_winner"
     },
     {
@@ -60,7 +60,7 @@
       "winningContractor": "株式会社ゴセケン",
       "link": "https://www.town.miyake.lg.jp/soshiki/1/9375.html",
       "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5774.pdf",
-      "detectedAt": "2026-11-24T05:51:07.274Z",
+      "detectedAt": "2026-11-24T06:53:14.150Z",
       "kind": "new_winner"
     },
     {
@@ -73,7 +73,7 @@
       "winningContractor": "光栄工業",
       "link": "https://www.town.miyake.lg.jp/soshiki/1/9375.html",
       "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5616.pdf",
-      "detectedAt": "2026-11-24T05:51:07.274Z",
+      "detectedAt": "2026-11-24T06:53:14.150Z",
       "kind": "new_winner"
     },
     {
@@ -86,7 +86,7 @@
       "winningContractor": "大倭殖産 株式会社",
       "link": "https://www.town.miyake.lg.jp/soshiki/1/9375.html",
       "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5906.pdf",
-      "detectedAt": "2026-11-24T05:51:07.274Z",
+      "detectedAt": "2026-11-24T06:53:14.150Z",
       "kind": "new_winner"
     },
     {
@@ -98,7 +98,7 @@
       "status": "落札",
       "winningContractor": "株式会社尾崎建設",
       "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-      "detectedAt": "2026-11-24T05:51:07.274Z",
+      "detectedAt": "2026-11-24T06:53:14.150Z",
       "kind": "new_winner"
     },
     {
@@ -110,7 +110,7 @@
       "status": "落札",
       "winningContractor": "株式会社前田産業 大阪支店",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-      "detectedAt": "2026-11-24T05:51:07.274Z",
+      "detectedAt": "2026-11-24T06:53:14.150Z",
       "kind": "new_winner"
     },
     {
@@ -121,7 +121,7 @@
       "biddingDate": "2026-11-06",
       "status": "不調",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-      "detectedAt": "2026-11-24T05:51:07.274Z",
+      "detectedAt": "2026-11-24T06:53:14.150Z",
       "kind": "new_failure"
     },
     {
@@ -133,7 +133,7 @@
       "status": "不調",
       "link": "https://www.town.miyake.lg.jp/soshiki/1/9376.html",
       "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5619.pdf",
-      "detectedAt": "2026-11-24T05:51:07.274Z",
+      "detectedAt": "2026-11-24T06:53:14.150Z",
       "kind": "new_failure"
     },
     {
@@ -146,7 +146,7 @@
       "winningContractor": "株式会社 礎建築事務所",
       "link": "https://www.town.miyake.lg.jp/soshiki/1/9376.html",
       "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5773.pdf",
-      "detectedAt": "2026-11-24T05:51:07.274Z",
+      "detectedAt": "2026-11-24T06:53:14.150Z",
       "kind": "new_winner"
     }
   ]
