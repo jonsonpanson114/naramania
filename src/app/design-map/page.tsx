@@ -22,6 +22,11 @@ export const metadata: Metadata = {
     description: '奈良県内の公共建築について、今後の設計案件、今年出た設計案件、プロポーザルの動きをまとめた調査台帳。',
 };
 
+/** 「決まる／設計／工事」欄。資料に書いていないものは「未確認」と出す */
+function Sched({ text }: { text?: string }) {
+    return text ? <>{text}</> : <span className={styles.unknown}>未確認</span>;
+}
+
 export default function DesignMapPage() {
     return (
         <AppShell>
@@ -62,11 +67,11 @@ export default function DesignMapPage() {
 
                 <section className={styles.section}>
                     <h2>今後の設計案件</h2>
-                    <h3>公告中で、日付が決まっているもの</h3>
+                    <h3>公告中と、最近決まったもの</h3>
                     <div className={`${styles.panel} ${styles.scroll}`}>
-                        <table className={styles.table}>
+                        <table className={`${styles.table} ${styles.wide}`}>
                             <thead>
-                                <tr><th>開札</th><th>発注者</th><th>業務</th><th>内容</th></tr>
+                                <tr><th>決まる日（開札）</th><th>発注者</th><th>業務</th><th>結果</th><th>設計はいつまで</th><th>工事</th><th>内容</th></tr>
                             </thead>
                             <tbody>
                                 {OPEN_BIDS.map(bid => (
@@ -74,6 +79,11 @@ export default function DesignMapPage() {
                                         <td className={`${styles.nw} ${styles.mono} ${bid.hot ? styles.hot : ''}`}>{bid.when}</td>
                                         <td className={styles.nw}>{bid.issuer}</td>
                                         <td className={styles.t}>{bid.href ? <MapLink href={bid.href}>{bid.title}</MapLink> : bid.title}</td>
+                                        <td className={styles.sched}>
+                                            {bid.result ? <b>{bid.result}</b> : <span className={styles.unknown}>まだ</span>}
+                                        </td>
+                                        <td className={styles.sched}><Sched text={bid.design} /></td>
+                                        <td className={styles.sched}><Sched text={bid.build} /></td>
                                         <td>{bid.note}</td>
                                     </tr>
                                 ))}
@@ -86,7 +96,7 @@ export default function DesignMapPage() {
                     <div className={`${styles.panel} ${styles.scroll}`}>
                         <table className={styles.table}>
                             <thead>
-                                <tr><th>時期</th><th>発注者</th><th>業務</th><th>履行</th></tr>
+                                <tr><th>出る時期</th><th>発注者</th><th>業務</th><th>設計・監理の期間</th></tr>
                             </thead>
                             <tbody>
                                 {FORECAST_ROWS.map(row => (
@@ -120,6 +130,12 @@ export default function DesignMapPage() {
                                         <i key={step} className={step < project.s ? styles.on : step === project.s ? styles.now : ''} />
                                     ))}
                                 </div>
+                                <dl className={styles.schedList}>
+                                    <dt>決まる</dt>
+                                    <dd>{project.firm ? <><b>決定：{project.firm}</b>{project.work ? `（${project.work}）` : ''}</> : <Sched text={project.decide} />}</dd>
+                                    <dt>設計</dt><dd><Sched text={project.design} /></dd>
+                                    <dt>工事</dt><dd><Sched text={project.build} /></dd>
+                                </dl>
                                 <dl>
                                     <dt>今</dt><dd>{project.now}</dd>
                                     <dt>次</dt><dd>{project.next}</dd>
@@ -134,9 +150,9 @@ export default function DesignMapPage() {
                     <h2>プロポの動き</h2>
                     <p className={styles.lead}>{PROPO_LEAD}</p>
                     <div className={`${styles.panel} ${styles.scroll}`}>
-                        <table className={styles.table}>
+                        <table className={`${styles.table} ${styles.wide}`}>
                             <thead>
-                                <tr><th>状況</th><th>発注者</th><th>案件</th><th>相手・要点</th></tr>
+                                <tr><th>状況</th><th>発注者</th><th>案件</th><th>いつ決まる</th><th>設計はいつまで</th><th>工事</th><th>相手・要点</th></tr>
                             </thead>
                             <tbody>
                                 {PROPO_ROWS.map(row => (
@@ -148,6 +164,9 @@ export default function DesignMapPage() {
                                         </td>
                                         <td className={styles.nw}>{row.issuer}</td>
                                         <td className={styles.t}><MapLink href={row.href}>{row.title}</MapLink></td>
+                                        <td className={styles.sched}><Sched text={row.decide} /></td>
+                                        <td className={styles.sched}><Sched text={row.design} /></td>
+                                        <td className={styles.sched}><Sched text={row.build} /></td>
                                         <td>{row.note}</td>
                                     </tr>
                                 ))}

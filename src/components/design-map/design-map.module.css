@@ -64,6 +64,12 @@
 .big dl { margin: 4px 0 0; display: grid; grid-template-columns: auto 1fr; gap: 2px 10px; font-size: 13px; }
 .big dt { color: var(--sub); }
 .big dd { margin: 0; min-width: 0; }
+/* 決まる／設計／工事 */
+.sched { min-width: 130px; font-size: 13px; }
+.unknown { color: var(--sub); font-size: 12px; }
+.table.wide { min-width: 1040px; }
+.big dl.schedList { background: var(--sunk); padding: 8px 10px; margin-top: 8px; border-left: 3px solid var(--accent); }
+.schedList dt { font-weight: 700; color: var(--ink); }
 .stage { display: grid; grid-template-columns: repeat(5, 1fr); gap: 2px; width: 190px; margin-top: 6px; }
 .stage i { height: 6px; background: var(--line); display: block; }
 .stage i.on { background: var(--ink); }
