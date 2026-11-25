@@ -1,38 +1,38 @@
 {
-  "generatedAt": "2026-11-25T06:03:23.365Z",
+  "generatedAt": "2026-11-25T10:05:47.731Z",
   "source": "daily_scrape",
   "municipalityLastScraped": {
-    "奈良市": "2026-11-24T17:10:16.372Z",
-    "橿原市": "2026-11-24T17:10:16.372Z",
-    "生駒市": "2026-11-24T17:10:16.372Z",
-    "大和高田市": "2026-11-24T17:10:16.372Z",
-    "大和郡山市": "2026-11-24T17:10:16.372Z",
-    "葛城市": "2026-11-24T17:10:16.372Z",
-    "五條市": "2026-11-24T17:10:16.372Z",
-    "御所市": "2026-11-24T17:10:16.372Z",
-    "天理市": "2026-11-24T17:10:16.372Z",
-    "桜井市": "2026-11-24T17:10:16.372Z",
-    "宇陀市": "2026-11-24T17:10:16.372Z",
-    "田原本町": "2026-11-24T17:10:16.372Z",
-    "広陵町": "2026-11-24T17:10:16.372Z",
-    "香芝市": "2026-11-24T17:10:16.372Z",
-    "川西町": "2026-11-24T17:10:16.372Z",
-    "山添村": "2026-11-24T17:10:16.372Z",
-    "平群町": "2026-11-24T17:10:16.372Z",
-    "三宅町": "2026-11-24T17:10:16.372Z",
-    "安堵町": "2026-11-24T17:10:16.372Z",
-    "高取町": "2026-11-24T17:10:16.372Z",
-    "斑鳩町": "2026-11-24T17:10:16.372Z",
-    "三郷町": "2026-11-24T17:10:16.372Z",
-    "王寺町": "2026-11-24T17:10:16.372Z",
-    "大淀町": "2026-11-24T17:10:16.372Z",
+    "奈良市": "2026-11-25T10:05:47.731Z",
+    "橿原市": "2026-11-25T10:05:47.731Z",
+    "生駒市": "2026-11-25T10:05:47.731Z",
+    "大和高田市": "2026-11-25T10:05:47.731Z",
+    "大和郡山市": "2026-11-25T10:05:47.731Z",
+    "葛城市": "2026-11-25T10:05:47.731Z",
+    "五條市": "2026-11-25T10:05:47.731Z",
+    "御所市": "2026-11-25T10:05:47.731Z",
+    "天理市": "2026-11-25T10:05:47.731Z",
+    "桜井市": "2026-11-25T10:05:47.731Z",
+    "宇陀市": "2026-11-25T10:05:47.731Z",
+    "田原本町": "2026-11-25T10:05:47.731Z",
+    "広陵町": "2026-11-25T10:05:47.731Z",
+    "香芝市": "2026-11-25T10:05:47.731Z",
+    "川西町": "2026-11-25T10:05:47.731Z",
+    "山添村": "2026-11-25T10:05:47.731Z",
+    "平群町": "2026-11-25T10:05:47.731Z",
+    "三宅町": "2026-11-25T10:05:47.731Z",
+    "安堵町": "2026-11-25T10:05:47.731Z",
+    "高取町": "2026-11-25T10:05:47.731Z",
+    "斑鳩町": "2026-11-25T10:05:47.731Z",
+    "三郷町": "2026-11-25T10:05:47.731Z",
+    "王寺町": "2026-11-25T10:05:47.731Z",
+    "大淀町": "2026-11-25T10:05:47.731Z",
     "奈良県": "2026-11-25T06:03:23.365Z"
   },
-  "scrapedCount": 71,
-  "keptCount": 335,
-  "rejectedCount": 1,
+  "scrapedCount": 2998,
+  "keptCount": 338,
+  "rejectedCount": 2709,
   "oldestAnnouncementDate": "2025-02-02",
-  "latestAnnouncementDate": "2026-11-19",
+  "latestAnnouncementDate": "2026-11-20",
   "municipalityCount": 24,
   "municipalityAudit": {
     "expectedMunicipalityCount": 25,
@@ -71,8 +71,8 @@
       },
       {
         "municipality": "五條市",
-        "count": 21,
-        "changeFromPrevious": 0
+        "count": 22,
+        "changeFromPrevious": 1
       },
       {
         "municipality": "香芝市",
@@ -101,8 +101,8 @@
       },
       {
         "municipality": "大淀町",
-        "count": 8,
-        "changeFromPrevious": 0
+        "count": 10,
+        "changeFromPrevious": 2
       },
       {
         "municipality": "広陵町",
@@ -165,35 +165,43 @@
         "changeFromPrevious": 0
       }
     ],
-    "retainedFromPrevious": [],
-    "issues": []
+    "retainedFromPrevious": [
+      "高取町"
+    ],
+    "issues": [
+      {
+        "municipality": "高取町",
+        "level": "warning",
+        "message": "[高取町] 取得件数が急減したため既存データ 11件を維持しつつ、新規 15件を反映しています (baseline=26)"
+      }
+    ]
   },
   "dateAudit": {
     "announcementAfterBiddingCount": 0,
     "awardedWithoutBiddingDateCount": 0,
-    "awardedWithoutWinnerCount": 4,
+    "awardedWithoutWinnerCount": 6,
     "openWithWinnerCount": 0,
     "sampleTitles": [
+      {
+        "municipality": "大淀町",
+        "title": "岩壺地区農業用施設復旧工事（第8－農災－工－1号）【令和8年11月20日執行】 （pdf, 78.10KB）",
+        "status": "落札",
+        "announcementDate": "2026-11-20",
+        "biddingDate": "2026-11-20"
+      },
+      {
+        "municipality": "大淀町",
+        "title": "矢走地区農業用施設復旧工事（第8－農災－工－2号）【令和8年11月20日執行】 （pdf, 76.72KB）",
+        "status": "落札",
+        "announcementDate": "2026-11-20",
+        "biddingDate": "2026-11-20"
+      },
       {
         "municipality": "大淀町",
         "title": "大淀町立平畑運動公園体育館大規模改修工事に伴う実施設計業務【令和8年6月15日執行】 （pdf, 47.46KB）",
         "status": "落札",
         "announcementDate": "2026-06-15",
         "biddingDate": "2026-06-15"
-      },
-      {
-        "municipality": "大淀町",
-        "title": "大淀町立緑ヶ丘小学校プレジャールーム移転改修工事に伴う設計業務【令和8年4月21日執行 （pdf, 36.64KB）",
-        "status": "落札",
-        "announcementDate": "2026-04-21",
-        "biddingDate": "2026-04-21"
-      },
-      {
-        "municipality": "大淀町",
-        "title": "マンホールトイレシステム築造工事（第7－総工3号）【令和8年1月16日執行】",
-        "status": "落札",
-        "announcementDate": "2026-01-16",
-        "biddingDate": "2026-01-16"
       }
     ]
   },
@@ -359,15 +367,15 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 21,
+        "totalCount": 22,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.gojo.lg.jp": 13,
-          "epi-cloud.fwd.ne.jp": 8
+          "city.gojo.lg.jp": 4,
+          "epi-cloud.fwd.ne.jp": 18
         },
         "announcementCount": 3,
-        "resultCount": 18,
-        "message": "五條市: 21件 (公告3/結果18) / sources OK"
+        "resultCount": 19,
+        "message": "五條市: 22件 (公告3/結果19) / sources OK"
       },
       {
         "expectation": {
@@ -503,11 +511,11 @@
         "totalCount": 21,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "city.kashiba.lg.jp": 9
+          "city.kashiba.lg.jp": 5
         },
-        "announcementCount": 5,
-        "resultCount": 16,
-        "message": "香芝市: 21件 (公告5/結果16) / sources OK"
+        "announcementCount": 2,
+        "resultCount": 19,
+        "message": "香芝市: 21件 (公告2/結果19) / sources OK"
       },
       {
         "expectation": {
@@ -700,14 +708,14 @@
         },
         "status": "ok",
         "severity": "error",
-        "totalCount": 8,
+        "totalCount": 10,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "town.oyodo.lg.jp": 8
+          "town.oyodo.lg.jp": 10
         },
         "announcementCount": 0,
-        "resultCount": 8,
-        "message": "大淀町: 8件 (公告0/結果8) / sources OK"
+        "resultCount": 10,
+        "message": "大淀町: 10件 (公告0/結果10) / sources OK"
       },
       {
         "expectation": {
@@ -724,11 +732,11 @@
         "totalCount": 21,
         "missingLinkIncludes": [],
         "sourceCounts": {
-          "epi-cloud.fwd.ne.jp": 12
+          "epi-cloud.fwd.ne.jp": 16
         },
-        "announcementCount": 5,
-        "resultCount": 16,
-        "message": "香芝市: 21件 (公告5/結果16) / sources OK"
+        "announcementCount": 2,
+        "resultCount": 19,
+        "message": "香芝市: 21件 (公告2/結果19) / sources OK"
       }
     ]
   },
@@ -737,6 +745,7 @@
     "itemsWithDescription": 84,
     "intelligenceExtractedCount": 83,
     "geminiExtractedCount": 83,
-    "taggedCount": 83
+    "taggedCount": 83,
+    "lastAugmentedAt": "2026-11-25T10:08:44.657Z"
   }
 }
