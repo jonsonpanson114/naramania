@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-25T05:21:24.138Z",
+  "generatedAt": "2026-11-25T06:03:23.369Z",
   "totalRejected": 630,
   "totalBorderlineRescued": 53,
   "byMunicipality": {
@@ -489,15 +489,6 @@
     },
     {
       "municipality": "奈良県",
-      "title": "一般国道１６８号 舗装補修設計業務委託（単独舗装道補修費） ７１２－１－委４",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "舗装",
-        "国道"
-      ]
-    },
-    {
-      "municipality": "奈良県",
       "title": "大和高田斑鳩線 他 道路案内標識配置設計業務委託（防災・安全交付金事業（道路環境整備）） 第 ８－Ｐ３－５６－３－委１ 号",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -514,6 +505,15 @@
         "道路",
         "標識",
         "案内"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "一般国道１６８号 舗装補修設計業務委託（単独舗装道補修費） ７１２－１－委４",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "舗装",
+        "国道"
       ]
     },
     {
