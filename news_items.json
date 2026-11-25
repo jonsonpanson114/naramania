@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-24T20:18:06.627Z",
+  "generatedAt": "2026-11-25T04:58:47.381Z",
   "sources": [
     {
       "id": "constnews",
@@ -22,7 +22,7 @@
     {
       "id": "decn",
       "label": "建設工業新聞",
-      "fetched": 21,
+      "fetched": 26,
       "kept": 0
     },
     {
@@ -46,11 +46,48 @@
     {
       "id": "googlenews",
       "label": "一般紙・Web(Googleニュース)",
-      "fetched": 74,
-      "kept": 14
+      "fetched": 78,
+      "kept": 16
     }
   ],
   "items": [
+    {
+      "id": "news-01e2ad095e30",
+      "source": "constnews",
+      "sourceLabel": "建設ニュース",
+      "title": "特定事業に選定／警察運転免許センター新庁舎整備事業／奈良県警察本部",
+      "date": "2026-11-25",
+      "link": "https://www.constnews.com/?p=161759",
+      "excerpt": "奈良県警察本部は、「奈良県警察運転免許センター新庁舎整備事業」を特定事業に選定した。事業者が施設を設計・建設した後、施設の所有者を県に移転した後、事業者が維持管理・運営期間（約１５年）を通じて、施設の維持管理・運営を行う…",
+      "orderer": "奈良県警察本部",
+      "results": [],
+      "category": "construction",
+      "relevanceScore": 12
+    },
+    {
+      "id": "news-e03df26be0d6",
+      "source": "googlenews",
+      "sourceLabel": "一般紙・Web",
+      "publisher": "47NEWS",
+      "title": "奈良市の道の駅「針テラス」北館など売却、改修へ 市がイオンモールに 南館は譲渡解体",
+      "date": "2026-11-25",
+      "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBMNVc2b041Z01KazdvSlQwamNxRmdLM2taZFJiWlpJMld2N3dlakJBLWxVREk4VUI5WDFMNUlzbHlRaWp4M1I3akpFNA?oc=5",
+      "category": "construction",
+      "relevanceScore": 10,
+      "results": []
+    },
+    {
+      "id": "news-c7c80874708a",
+      "source": "googlenews",
+      "sourceLabel": "一般紙・Web",
+      "publisher": "選挙ドットコム",
+      "title": "奈良・平群町メガソーラー建設工事差し止め訴訟 今後を注視する",
+      "date": "2026-11-25",
+      "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFAyUUp3M2tZbW15SlJjdHVaU05xbHd1R3JCTndfTzZMWkRkUG42QVUwQmVuYXJodkNwYlA1dENVRE1PMkpnWGlnMGtEM2JXeFJhQlNOb21zUHdCYnBIck93?oc=5",
+      "category": "construction",
+      "relevanceScore": 10,
+      "results": []
+    },
     {
       "id": "news-5c07090d1d8b",
       "source": "naranp",
