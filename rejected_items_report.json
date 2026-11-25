@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-24T23:02:38.009Z",
-  "totalRejected": 627,
+  "generatedAt": "2026-11-25T04:01:55.629Z",
+  "totalRejected": 630,
   "totalBorderlineRescued": 53,
   "byMunicipality": {
     "奈良県": {
-      "rejected": 627,
+      "rejected": 630,
       "borderlineRescued": 53
     }
   },
@@ -606,21 +606,21 @@
     },
     {
       "municipality": "奈良県",
+      "title": "（都）大安寺柏木線 大安寺西地区 高橋橋梁構造検討業務（無電柱化推進事業（街路）） １－Ｇ１－委－１",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "橋梁",
+        "橋"
+      ]
+    },
+    {
+      "municipality": "奈良県",
       "title": "浄化センター水処理中央監視制御設備更新詳細設計委託（防災・安全交付金事業） Ｒ８浄化委第６号",
       "reason": "always_exclude_keyword",
       "matchedKeywords": [
         "設備",
         "設備更新",
         "浄化センター"
-      ]
-    },
-    {
-      "municipality": "奈良県",
-      "title": "（都）大安寺柏木線 大安寺西地区 高橋橋梁構造検討業務（無電柱化推進事業（街路）） １－Ｇ１－委－１",
-      "reason": "exclusion_keyword",
-      "matchedKeywords": [
-        "橋梁",
-        "橋"
       ]
     },
     {
@@ -2721,6 +2721,16 @@
     },
     {
       "municipality": "奈良県",
+      "title": "桜井田原本王寺線他 道路台帳整備測量委託（道路改良基礎調査） ４５－委－４",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "測量",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "奈良県",
       "title": "主要地方道吉野室生寺針線 道路台帳補正業務委託（防災・安全交付金事業（道路改良）他） 第 ５－１０－Ａ３－委１他 号",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -2929,6 +2939,15 @@
       "reason": "exclusion_keyword",
       "matchedKeywords": [
         "砂防",
+        "測量"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "主要地方道天理環状線他 道路台帳補正業務委託（単独道路整備事業（通常分）（臨時）他） 第 １０５－委－１他 号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
         "測量"
       ]
     },
@@ -4260,6 +4279,17 @@
       "matchedKeywords": [
         "道路",
         "地質",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "西ノ辻地区 用地調査業務委託（砂防メンテナンス事業（急傾斜）他） 第 ５９－３－用委２他 号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "砂防",
+        "用地",
+        "補償",
         "調査"
       ]
     },
