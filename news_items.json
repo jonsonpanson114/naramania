@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-25T19:30:13.359Z",
+  "generatedAt": "2026-11-26T04:16:45.364Z",
   "sources": [
     {
       "id": "constnews",
@@ -22,7 +22,7 @@
     {
       "id": "decn",
       "label": "建設工業新聞",
-      "fetched": 30,
+      "fetched": 21,
       "kept": 0
     },
     {
@@ -46,11 +46,23 @@
     {
       "id": "googlenews",
       "label": "一般紙・Web(Googleニュース)",
-      "fetched": 50,
-      "kept": 12
+      "fetched": 0,
+      "kept": 0,
+      "error": "Request failed with status code 503"
     }
   ],
   "items": [
+    {
+      "id": "news-6ad67fc60f33",
+      "source": "naranp",
+      "sourceLabel": "奈良新聞",
+      "title": "奈良県田原本町、100万人規模の人流創出へ 学習センターにキッズスペース、カフェ、活動支援のマネジャーも配置",
+      "date": "2026-11-26",
+      "link": "https://www.nara-np.co.jp/news/20261126205908.html",
+      "category": "construction",
+      "relevanceScore": 6,
+      "results": []
+    },
     {
       "id": "news-01e2ad095e30",
       "source": "constnews",
