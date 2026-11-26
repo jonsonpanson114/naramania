@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-26T13:02:29.668Z",
+  "generatedAt": "2026-11-26T19:13:35.925Z",
   "sources": [
     {
       "id": "constnews",
@@ -46,9 +46,8 @@
     {
       "id": "googlenews",
       "label": "一般紙・Web(Googleニュース)",
-      "fetched": 0,
-      "kept": 0,
-      "error": "Request failed with status code 503"
+      "fetched": 67,
+      "kept": 18
     }
   ],
   "items": [
@@ -172,6 +171,54 @@
       "results": [],
       "category": "construction",
       "relevanceScore": 16
+    },
+    {
+      "id": "news-dbd71b6bb5c9",
+      "source": "googlenews",
+      "sourceLabel": "一般紙・Web",
+      "publisher": "NHKニュース",
+      "title": "奈良市ごみ処理施設の大規模改修終了 持ち込みも再開へ",
+      "date": "2026-11-26",
+      "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9TYk9VdVV0c1BiNXZfQ1ZycFlMOUxLZVJycVFFQzgzYTBLeDZkVDRlZXhwSHktUU9DTUdrekVtbHpIYUp3NnJqM2ltSGdCNU9aVWkwa29NaEdSSXNqM3FV?oc=5",
+      "category": "construction",
+      "relevanceScore": 8,
+      "results": []
+    },
+    {
+      "id": "news-3b18cd16871e",
+      "source": "googlenews",
+      "sourceLabel": "一般紙・Web",
+      "publisher": "PR TIMES",
+      "title": "奈良建設、代表取締役社長の異動に関するお知らせ",
+      "date": "2026-11-26",
+      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFAxRXh2MkJ5TElLRUdBUlBwQ3RJVHVqRmFJOVBSMXRoOUNfenc1NHlXTElRb0tmdnZmTDB0bHh5ZlMydkRITEJlanVRQ01PT0xienR0Wnd6VmhHcEFJeENIVnlXNGxBSUdXY2c?oc=5",
+      "category": "construction",
+      "relevanceScore": 8,
+      "results": []
+    },
+    {
+      "id": "news-5d4079f9c673",
+      "source": "googlenews",
+      "sourceLabel": "一般紙・Web",
+      "publisher": "Yahoo!ニュース",
+      "title": "新たな木造校舎の模型をお披露目 建て替え整備中の奈良・天理の小学校でワークショップ（産経新聞）",
+      "date": "2026-11-26",
+      "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9sSTNnVjk5YjU1T2FSMDFaS2lPNzJLd0RFajV1UkZzdzRBVkdzWi1TQlUtT2haUm82VzJ0Ykd1OXZNclM1SjNwc2dsSnVJUDIyLWowZnFFMnpxT21NcjBhb3BRMkVoMlEwaUZxMFNmMXBDVEs3Nzc3aXBXOXFrU1k?oc=5",
+      "category": "construction",
+      "relevanceScore": 10,
+      "results": []
+    },
+    {
+      "id": "news-e3da89e25238",
+      "source": "googlenews",
+      "sourceLabel": "一般紙・Web",
+      "publisher": "Infoseek",
+      "title": "新たな木造校舎の模型をお披露目 建て替え整備中の奈良・天理の小学校でワークショップ",
+      "date": "2026-11-26",
+      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNZ0doam15VERqMXZiTzZaRTJ3bzRzVG1tNi1jbEw1YU02ZWliWERmcERSM01oczR2UUxVLXd1VFdrdmVOTXpZeExpNXdZaVJkdnhIWEs2TUs5UlByZXNuQjFBTlR6OWV5TGRMRXY1cXZuM21GM3VHcEd0bVZYSEFpdUdYTTJwTnNGR0xheURwaHFkQ1BaOFHSAZYBQVVfeXFMTWdHaGpteVREajF2Yk82WkUyd280c1RtbTYtY2xMNWFNNmVpYlhEZnBEUjNNaHM0dlFMVS13dVRXa3ZlTk16WXhMaTV3WWlSZHZ4SFhLNk1LOVJQcmVzbkIxQU5UejlleUxkTEV2NXF2bjNtRjN1R3BHdG1WWEhBaXVHWE0ycE5zRkdMYXlEcGhxZENQWjhR?oc=5",
+      "category": "construction",
+      "relevanceScore": 10,
+      "results": []
     },
     {
       "id": "news-01e2ad095e30",
