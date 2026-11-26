@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-26T04:16:45.364Z",
+  "generatedAt": "2026-11-26T13:02:29.668Z",
   "sources": [
     {
       "id": "constnews",
@@ -62,6 +62,116 @@
       "category": "construction",
       "relevanceScore": 6,
       "results": []
+    },
+    {
+      "id": "news-5d9f412f5153",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "令和10年度の開設目指して 再整備基本構想を策定",
+      "date": "2026-11-26",
+      "link": "https://shinpou-nara.com/141304/",
+      "excerpt": "田原本町は「つどいろ構想」と「青垣ネクストプラットフォームプロジェクト（田原本青垣生涯学習センター再整備基本構想）」を策定した。基本構想時点での全体スケジュールでは、８年度に空間デザイン設計とコミュニティ育成業務を一体的に公募し設計に着手、９年度に工事を進めながらコミュニティ育成",
+      "orderer": "田原本町",
+      "results": [],
+      "category": "construction",
+      "relevanceScore": 12
+    },
+    {
+      "id": "news-1d5bae625ef5",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "12月16日まで参加受付 学研高山地区ゲートエリア等調査",
+      "date": "2026-11-26",
+      "link": "https://shinpou-nara.com/141302/",
+      "excerpt": "生駒市は公募型プロポーザルにて「学研高山地区ゲートエリア及び広域環境調査等業務」を公告した。企画提案書等の受付締切が12月16日15時、第１次審査を12月24日に、第２次審査を９年１月６日に実施し優先交渉権者を決定する予定。提案上限額は５２８０万円、委託期間は10年3月31日。 ",
+      "orderer": "生駒市",
+      "results": [],
+      "category": "construction",
+      "relevanceScore": 8
+    },
+    {
+      "id": "news-7a4b874a36a5",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "奈良国道 長大が落札 十津川道路２期他環境調査業務",
+      "date": "2026-11-26",
+      "link": "https://shinpou-nara.com/141300/",
+      "excerpt": "近畿地方整備局奈良国道事務所が去る１２日に開札（１１月１９日に落札決定）した簡易公募型競争入札「Ｒ８国道１６８号十津川道路２期他環境調査業務」は長大が４１９３万円（評価値６８・２６０）で落札した。予定価格５２２４万円。他の参加者はＫＡＮＳＯテクノス、東京建設コンサルタント、オリエ",
+      "orderer": "近畿地方整備局",
+      "results": [
+        {
+          "kind": "落札",
+          "contractor": "長大",
+          "amount": "4193万円"
+        }
+      ],
+      "category": "construction",
+      "relevanceScore": 12
+    },
+    {
+      "id": "news-bff6910b7539",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "広域水道Ｃ １２月１５日に開札 照明設備更新工事詳細設計業務",
+      "date": "2026-11-26",
+      "link": "https://shinpou-nara.com/141297/",
+      "excerpt": "奈良県広域水道企業団広域水道センターは「照明設備更新工事詳細設計業務委託」に施工体制確認型一般競争入札を適用して去る２６日に公告した。入札書及び入札金額の内訳書を１２月１４日まで受け付けて１２月１５日に開札する。 参加資格は▽県建設工事等競争入札参加資格のうち建築設計業務に登録し",
+      "orderer": "県広域水道企業団",
+      "results": [],
+      "category": "construction",
+      "relevanceScore": 22
+    },
+    {
+      "id": "news-ecbb97f739d2",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "県高校教育課 １２月４日まで参加受付 畝傍・磯城野高校新築・改修設計 １２月１７日に開札",
+      "date": "2026-11-26",
+      "link": "https://shinpou-nara.com/141295/",
+      "excerpt": "奈良県高校教育課は「産業イノベーション人材育成等に資する高等学校等教育改革促進事業における高等学校（畝傍・磯城野高校）新築・改修工事等設計業務委（設）第８―１号」に総合評価落札方式一般競争入札を適用して去る２５日に公告した。入札参加申込書を１２月４日まで、技術提案書を１２月１５日",
+      "orderer": "県教育委員会",
+      "results": [],
+      "category": "construction",
+      "relevanceScore": 22
+    },
+    {
+      "id": "news-20392e710e0f",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "ントラルで検討 御所高取バイパス雨水流出抑制案 調整池設置、河川への直接放流等",
+      "date": "2026-11-26",
+      "link": "https://shinpou-nara.com/141292/",
+      "excerpt": "奈良県中和土木事務所は、一般国道１６９号御所高取バイパスのうち、事務所が所管する高取町兵庫～車木Ｌ１４２０㍍の道路整備に伴う道路排水計画について、令和８年度に既往成果を踏まえて検討を行う。 計画路線周辺では、現状において既設排水路の流下能力不足等により降雨時に溢水及び浸水被害が発",
+      "orderer": "県中和土木事務所",
+      "results": [],
+      "category": "construction",
+      "relevanceScore": 6
+    },
+    {
+      "id": "news-2c8b1d0524f5",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "道路建設課 ９年内に整備効果分析 一般国道１６５号「中和津道路」 桜井市脇本～宇陀市室生三本松２０㌔㍍",
+      "date": "2026-11-26",
+      "link": "https://shinpou-nara.com/141289/",
+      "excerpt": "奈良県県土マネジメント部道路建設課は、一般国道１６５号のうち桜井市脇本～宇陀市室生三本松間の約２０㌔㍍について、令和９年内に道路特性・地域特性の収集と課題の抽出を行い、その課題を解決するために検討した道路整備方針によってどのような効果が期待できるかを分析する。一般国道１６５号は道",
+      "orderer": "県土マネジメント部",
+      "results": [],
+      "category": "construction",
+      "relevanceScore": 8
+    },
+    {
+      "id": "news-7ff2dff034bb",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "流域下水道Ｃ 積算用の基礎資料に 発注工事の単価特別調査２",
+      "date": "2026-11-26",
+      "link": "https://shinpou-nara.com/141287/",
+      "excerpt": "奈良県流域下水道センターは、発注する工事の積算用設計資材価格の基礎資料を得るために建設資材の市場における実勢価格を調査する。一般競争入札「単価特別調査（２）（防災・安全交付金事業）Ｒ８浄化委第９号・第二委第１２号・宇陀委第６号・浄化県単委第２号・第二県単委第１号」を１２月１１日に",
+      "orderer": "県土マネジメント部",
+      "results": [],
+      "category": "construction",
+      "relevanceScore": 16
     },
     {
       "id": "news-01e2ad095e30",
