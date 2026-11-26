@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-25T22:36:37.506Z",
-  "totalRejected": 631,
+  "generatedAt": "2026-11-26T03:27:10.329Z",
+  "totalRejected": 641,
   "totalBorderlineRescued": 53,
   "byMunicipality": {
     "奈良県": {
-      "rejected": 631,
+      "rejected": 641,
       "borderlineRescued": 53
     }
   },
@@ -209,6 +209,48 @@
         "設備"
       ],
       "borderlineRescue": true
+    },
+    {
+      "municipality": "奈良県",
+      "title": "一般国道２５号 法面詳細設計業務（道路復旧緊急対策事業（補正）） 第 １４６－委－２ 号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "法面",
+        "国道"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "主要地方道上野南山城線 法面詳細設計業務（道路復旧緊急対策事業（補正）） 第 １４６－委－１ 号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "法面"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "瀬ノ上 砂防指定地申請書作成業務委託（防災・安全交付金事業（南部・東部）（重点・砂防）他） 繰６１－９－委１他",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "砂防"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "赤滝地区 土砂災害基礎調査及び指定促進業務委託（防災・安全交付金事業（基礎調査）） ６５－１－委６",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "土砂",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "第Ｒ８Ａ１委１３号 令和８年度 県営防災対策事業 斑鳩ため池地区 機能診断業務委託",
+      "reason": "no_architecture_context",
+      "matchedKeywords": []
     },
     {
       "municipality": "奈良県",
@@ -2731,6 +2773,16 @@
     },
     {
       "municipality": "奈良県",
+      "title": "中和幹線 他 測量委託（道路改良事業等基礎調査費 他） 第 ３５－委２ 他 号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "測量",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "奈良県",
       "title": "桜井田原本王寺線他 道路台帳整備測量委託（道路改良基礎調査） ４５－委－４",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -3829,6 +3881,37 @@
         "砂防",
         "測量",
         "用地"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "一般国道２５号 地質調査業務委託（道路復旧緊急対策事業） 第 １４４－委－２ 号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "地質",
+        "調査",
+        "国道"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "紀の川 六田工区 地質調査委託（単独河川改良事業） Ｙ－１０－委１",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "河川",
+        "地質",
+        "調査"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "主要地方道上野南山城線 地質調査業務委託（道路復旧緊急対策事業） 第１４４－委－３号",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "地質",
+        "調査"
       ]
     },
     {
@@ -5534,6 +5617,15 @@
         "設備"
       ],
       "borderlineRescue": true
+    },
+    {
+      "municipality": "奈良県",
+      "title": "第二浄化センター２－２号終沈汚泥掻寄機修繕工事 Ｒ８二工第８号",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "設備",
+        "浄化センター"
+      ]
     },
     {
       "municipality": "奈良県",
