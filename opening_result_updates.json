@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-26T03:27:10.306Z",
+  "generatedAt": "2026-11-26T04:05:21.709Z",
   "source": "daily_scrape",
   "updates": [],
   "latestResults": [
@@ -11,7 +11,7 @@
       "biddingDate": "2026-11-20",
       "status": "落札",
       "link": "https://www.town.oyodo.lg.jp/./cmsfiles/contents/0000001/1945/ko08112005.pdf",
-      "detectedAt": "2026-11-26T03:27:10.306Z",
+      "detectedAt": "2026-11-26T04:05:21.709Z",
       "kind": "new_opened_status"
     },
     {
@@ -22,7 +22,7 @@
       "biddingDate": "2026-11-20",
       "status": "落札",
       "link": "https://www.town.oyodo.lg.jp/./cmsfiles/contents/0000001/1945/ko08112004.pdf",
-      "detectedAt": "2026-11-26T03:27:10.306Z",
+      "detectedAt": "2026-11-26T04:05:21.709Z",
       "kind": "new_opened_status"
     },
     {
@@ -34,7 +34,7 @@
       "status": "落札",
       "winningContractor": "簑原建築設計事務所",
       "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-      "detectedAt": "2026-11-26T03:27:10.306Z",
+      "detectedAt": "2026-11-26T04:05:21.709Z",
       "kind": "new_winner"
     },
     {
@@ -46,7 +46,7 @@
       "status": "落札",
       "winningContractor": "ＣＩＭパブリックファシリティーズ＆アソシエイツ株式会社",
       "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-      "detectedAt": "2026-11-26T03:27:10.306Z",
+      "detectedAt": "2026-11-26T04:05:21.709Z",
       "kind": "new_winner"
     },
     {
@@ -57,7 +57,7 @@
       "biddingDate": "2026-11-19",
       "status": "不調",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-      "detectedAt": "2026-11-26T03:27:10.306Z",
+      "detectedAt": "2026-11-26T04:05:21.709Z",
       "kind": "new_failure"
     },
     {
@@ -69,7 +69,7 @@
       "status": "落札",
       "winningContractor": "株式会社ＳＴＵＤＩＯ Ｃ",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=011792050100r8-g10-01",
-      "detectedAt": "2026-11-26T03:27:10.306Z",
+      "detectedAt": "2026-11-26T04:05:21.709Z",
       "kind": "new_winner"
     },
     {
@@ -82,7 +82,7 @@
       "winningContractor": "株式会社ゴセケン",
       "link": "https://www.town.miyake.lg.jp/soshiki/1/9375.html",
       "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5774.pdf",
-      "detectedAt": "2026-11-26T03:27:10.306Z",
+      "detectedAt": "2026-11-26T04:05:21.709Z",
       "kind": "new_winner"
     },
     {
@@ -95,7 +95,7 @@
       "winningContractor": "光栄工業",
       "link": "https://www.town.miyake.lg.jp/soshiki/1/9375.html",
       "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5616.pdf",
-      "detectedAt": "2026-11-26T03:27:10.306Z",
+      "detectedAt": "2026-11-26T04:05:21.709Z",
       "kind": "new_winner"
     },
     {
@@ -108,7 +108,7 @@
       "winningContractor": "大倭殖産 株式会社",
       "link": "https://www.town.miyake.lg.jp/soshiki/1/9375.html",
       "pdfUrl": "https://www.town.miyake.lg.jp/uploaded/attachment/5906.pdf",
-      "detectedAt": "2026-11-26T03:27:10.306Z",
+      "detectedAt": "2026-11-26T04:05:21.709Z",
       "kind": "new_winner"
     },
     {
@@ -120,7 +120,7 @@
       "status": "落札",
       "winningContractor": "株式会社尾崎建設",
       "link": "https://nara.efftis.jp/PPI/Public/PPUBC00100?kikanno=0201",
-      "detectedAt": "2026-11-26T03:27:10.306Z",
+      "detectedAt": "2026-11-26T04:05:21.709Z",
       "kind": "new_winner"
     },
     {
@@ -132,7 +132,7 @@
       "status": "落札",
       "winningContractor": "株式会社前田産業 大阪支店",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-      "detectedAt": "2026-11-26T03:27:10.306Z",
+      "detectedAt": "2026-11-26T04:05:21.709Z",
       "kind": "new_winner"
     },
     {
@@ -143,7 +143,7 @@
       "biddingDate": "2026-11-06",
       "status": "不調",
       "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200680",
-      "detectedAt": "2026-11-26T03:27:10.306Z",
+      "detectedAt": "2026-11-26T04:05:21.709Z",
       "kind": "new_failure"
     }
   ]
