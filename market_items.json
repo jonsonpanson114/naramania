@@ -180,7 +180,7 @@
     "municipality": "安堵町",
     "title": "【条件付き一般競争入札の結果】安堵町コロナ対策備品調達事業",
     "type": "建築",
-    "announcementDate": "2026-11-25",
+    "announcementDate": "2026-11-26",
     "link": "https://www.town.ando.nara.jp/0000003078.html",
     "status": "落札",
     "pdfUrl": "https://www.town.ando.nara.jp/cmsfiles/contents/0000003/3078/1.pdf",
@@ -192,8 +192,19 @@
     "municipality": "安堵町",
     "title": "条件付き一般競争入札の実施について（令和8年度「広報安堵」印刷製本並びにその付帯業務事業）",
     "type": "建築",
-    "announcementDate": "2026-11-25",
+    "announcementDate": "2026-11-26",
     "link": "https://www.town.ando.nara.jp/0000003977.html",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
+    "id": "uda-880383dbde",
+    "municipality": "宇陀市",
+    "title": "10-R8GT4-002 水道未普及地域解消事業 舗装復旧工事（14工区）",
+    "type": "建築",
+    "announcementDate": "2026-11-26",
+    "biddingDate": "2026-12-11",
+    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200700",
     "status": "受付中",
     "isRelevant": false
   },
@@ -250,6 +261,42 @@
     "link": "https://www.city.tenri.nara.jp/kakuka/soumubu/nyuusatsushinsashitsu/construction_work/kouji_hattyuu_kanren/1395912138562.html",
     "pdfUrl": "https://www.city.tenri.nara.jp/material/files/group/12/nyuusatsukekka8-11.pdf",
     "status": "不調",
+    "isRelevant": false
+  },
+  {
+    "id": "gose-【奈良県葛城地区清掃事務組合】かもきみの-4",
+    "municipality": "御所市",
+    "title": "【奈良県葛城地区清掃事務組合】かもきみの湯脱衣所ロッカー（制作物供給）一式の一般競争入札を行います",
+    "type": "その他",
+    "announcementDate": "2026-11-25",
+    "link": "",
+    "status": "受付中",
+    "isRelevant": false
+  },
+  {
+    "id": "kashiba-r8-g10-02",
+    "municipality": "香芝市",
+    "title": "令和８年度尼寺関屋線整備事業に係る用地測量業務",
+    "type": "建築",
+    "announcementDate": "2026-11-25",
+    "biddingDate": "2026-11-25",
+    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=011792050100r8-g10-02",
+    "status": "落札",
+    "winningContractor": "株式会社エイコー測量設計事務所",
+    "estimatedPrice": "12,980,000円",
+    "isRelevant": false
+  },
+  {
+    "id": "kashiba-r8-g10-03",
+    "municipality": "香芝市",
+    "title": "市道１－４０号線他道路拡幅事業に係る測量設計業務",
+    "type": "コンサル",
+    "announcementDate": "2026-11-25",
+    "biddingDate": "2026-11-25",
+    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KK402ShowAction?control_no=011792050100r8-g10-03",
+    "status": "落札",
+    "winningContractor": "株式会社東光コンサルタンツ 奈良営業所",
+    "estimatedPrice": "13,089,000円",
     "isRelevant": false
   },
   {
@@ -956,6 +1003,17 @@
     "status": "落札",
     "winningContractor": "株式会社西本組",
     "winnerType": "ゼネコン",
+    "isRelevant": false
+  },
+  {
+    "id": "oyodo-74bec0f402",
+    "municipality": "大淀町",
+    "title": "管路送煙調査及び点検調査業務（第8－都委2号）【令和8年11月19日執行】 （pdf, 58.14KB）",
+    "type": "委託",
+    "announcementDate": "2026-11-19",
+    "biddingDate": "2026-11-19",
+    "link": "https://www.town.oyodo.lg.jp/./cmsfiles/contents/0000001/1945/so081119.pdf",
+    "status": "落札",
     "isRelevant": false
   },
   {
@@ -5644,6 +5702,18 @@
     "isRelevant": true
   },
   {
+    "id": "uda-result-2640010001",
+    "municipality": "宇陀市",
+    "title": "10-R8GT4-003 舗装復旧工事（第R8-1号）",
+    "type": "建築",
+    "announcementDate": "2026-10-09",
+    "biddingDate": "2026-10-09",
+    "link": "https://www.epi-cloud.fwd.ne.jp/koukai/do/KF001ShowAction?name1=0620064007200700",
+    "status": "落札",
+    "winningContractor": "松塚建設（株）",
+    "isRelevant": false
+  },
+  {
     "id": "katsuragi-epi-5227f10b",
     "municipality": "葛城市",
     "title": "第8-206号 鍋塚・的場池線他道路舗装修繕工事",
@@ -8243,7 +8313,7 @@
     "biddingDate": "2026-10-19",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "竹田建設（有）",
+    "winningContractor": "竹田建設(有)",
     "isRelevant": false
   },
   {
@@ -8255,7 +8325,7 @@
     "biddingDate": "2026-10-19",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "（株）北林組",
+    "winningContractor": "(株)北林組",
     "isRelevant": false
   },
   {
@@ -8267,7 +8337,7 @@
     "biddingDate": "2026-10-19",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "（株）堂浦土木",
+    "winningContractor": "(株)堂浦土木",
     "isRelevant": false
   },
   {
@@ -8279,7 +8349,7 @@
     "biddingDate": "2026-10-19",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "（株）北林組",
+    "winningContractor": "(株)北林組",
     "isRelevant": false
   },
   {
@@ -8291,7 +8361,7 @@
     "biddingDate": "2026-10-19",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "タイセイクレーン工事（株）",
+    "winningContractor": "タイセイクレーン工事(株)",
     "isRelevant": false
   },
   {
@@ -8303,7 +8373,7 @@
     "biddingDate": "2026-10-19",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "（株）桜工業",
+    "winningContractor": "(株)桜工業",
     "isRelevant": false
   },
   {
@@ -12541,7 +12611,7 @@
     "biddingDate": "2026-09-14",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "(株) 北林組",
+    "winningContractor": "（株）北林組",
     "isRelevant": false
   },
   {
@@ -16928,6 +16998,14 @@
     "status": "落札",
     "biddingDate": "2026-08-04",
     "winningContractor": "(株)関鉄",
+    "brief": {
+      "checkedAt": "2026-11-26T09:26:19.971Z",
+      "found": true,
+      "summary": "市営住宅堂の久保団地の空家4戸を耐用年数超過のため解体する。",
+      "location": "林堂",
+      "price": "12,650,000円(税抜)",
+      "qualification": "一般競争入札(入札後資格確認型) / その他の工事"
+    },
     "isRelevant": true
   },
   {
@@ -17096,7 +17174,7 @@
     "biddingDate": "2026-08-03",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "（株）上田工務店",
+    "winningContractor": "(株)上田工務店",
     "isRelevant": false
   },
   {
@@ -19295,7 +19373,7 @@
     "biddingDate": "2026-07-13",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "(有)吉田舗装",
+    "winningContractor": "（有）吉田舗装",
     "isRelevant": false
   },
   {
@@ -19307,7 +19385,7 @@
     "biddingDate": "2026-07-13",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "(株)キショウ",
+    "winningContractor": "（株）キショウ",
     "isRelevant": false
   },
   {
@@ -19319,7 +19397,7 @@
     "biddingDate": "2026-07-13",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "竹田建設(有)",
+    "winningContractor": "竹田建設（有）",
     "isRelevant": false
   },
   {
@@ -19331,7 +19409,7 @@
     "biddingDate": "2026-07-21",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "（株）ミズハ",
+    "winningContractor": "(株) ミズハ",
     "isRelevant": false
   },
   {
@@ -19343,7 +19421,7 @@
     "biddingDate": "2026-07-13",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "大和電機工業(株)",
+    "winningContractor": "大和電機工業（株）",
     "isRelevant": false
   },
   {
@@ -19355,7 +19433,7 @@
     "biddingDate": "2026-07-13",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "シマ産商(株)",
+    "winningContractor": "シマ産商（株）",
     "isRelevant": false
   },
   {
@@ -19367,7 +19445,7 @@
     "biddingDate": "2026-08-03",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "（株）中西製作所 奈良営業所",
+    "winningContractor": "(株)中西製作所 奈良営業所",
     "isRelevant": false
   },
   {
@@ -19393,7 +19471,7 @@
     "winningContractor": "株式会社長大 奈良事務所",
     "estimatedPrice": "67,260,000円",
     "brief": {
-      "checkedAt": "2026-11-25T10:03:14.882Z",
+      "checkedAt": "2026-11-26T09:39:04.987Z",
       "found": true,
       "location": "香芝市今泉104番地1",
       "price": "82,131,000円(税抜)",
@@ -19413,7 +19491,7 @@
     "winningContractor": "有限会社創和建築事務所",
     "estimatedPrice": "68,000,000円",
     "brief": {
-      "checkedAt": "2026-11-25T10:03:15.930Z",
+      "checkedAt": "2026-11-26T09:39:06.018Z",
       "found": true,
       "location": "香芝市今泉104番地1",
       "price": "82,131,000円(税抜)",
@@ -19973,6 +20051,14 @@
     "status": "落札",
     "biddingDate": "2026-07-13",
     "winningContractor": "矢羽田建設(株)",
+    "brief": {
+      "checkedAt": "2026-11-26T09:26:20.957Z",
+      "found": true,
+      "summary": "令和6年3月31日をもって閉所した磐城第1保育所の除却工事",
+      "location": "兵家",
+      "price": "48,980,000円(税抜)",
+      "qualification": "一般競争入札(入札後資格確認型) / その他の工事"
+    },
     "isRelevant": true
   },
   {
@@ -20360,7 +20446,7 @@
     "biddingDate": "2026-06-29",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "NTT西日本(株)奈良支店",
+    "winningContractor": "NTT西日本（株）奈良支店",
     "isRelevant": false
   },
   {
@@ -21226,7 +21312,7 @@
     "biddingDate": "2026-06-22",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "タイセイクレーン工事 (株)",
+    "winningContractor": "タイセイクレーン工事（株）",
     "isRelevant": false
   },
   {
@@ -21274,7 +21360,7 @@
     "biddingDate": "2026-06-29",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "(株)第一テクノ 関西支店",
+    "winningContractor": "（株）第一テクノ 関西支店",
     "isRelevant": false
   },
   {
@@ -21286,7 +21372,7 @@
     "biddingDate": "2026-06-22",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "(株) タツタ環境分析センター 奈良営業所",
+    "winningContractor": "（株）タツタ環境分析センター 奈良営業所",
     "isRelevant": false
   },
   {
@@ -21298,7 +21384,7 @@
     "biddingDate": "2026-06-22",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "アスカ美装 (株)",
+    "winningContractor": "アスカ美装（株）",
     "isRelevant": false
   },
   {
@@ -21322,7 +21408,7 @@
     "biddingDate": "2026-06-22",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "(株) ユイテック",
+    "winningContractor": "（株）ユイテック",
     "isRelevant": false
   },
   {
@@ -21334,7 +21420,7 @@
     "biddingDate": "2026-06-22",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "管清工業 (株) 奈良事業所",
+    "winningContractor": "管清工業（株）奈良事業所",
     "isRelevant": false
   },
   {
@@ -21346,7 +21432,7 @@
     "biddingDate": "2026-06-29",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "奈良OAシステム(株)",
+    "winningContractor": "奈良OAシステム（株）",
     "isRelevant": false
   },
   {
@@ -22340,7 +22426,7 @@
     "biddingDate": "2026-06-22",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "(株) トライグループ",
+    "winningContractor": "（株）トライグループ",
     "isRelevant": false
   },
   {
@@ -23736,6 +23822,14 @@
     "status": "落札",
     "biddingDate": "2026-06-12",
     "winningContractor": "(同)むしめがね",
+    "brief": {
+      "checkedAt": "2026-11-26T09:26:55.089Z",
+      "found": true,
+      "summary": "新庄中学校の南棟1F~3Fトイレ及び屋外トイレの改修設計 白鳳中学校の北棟1F~3Fトイレ及び屋内運動場内トイレ改修設計と1F~4F防火戸の改修設計",
+      "location": "新庄 他",
+      "price": "13,320,000円(税抜)",
+      "qualification": "一般競争入札(入札後資格確認型) / 建築関係コンサルタント"
+    },
     "isRelevant": true
   },
   {
@@ -23759,7 +23853,7 @@
     "biddingDate": "2026-06-08",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "(株) 堂浦土木",
+    "winningContractor": "(株)堂浦土木",
     "isRelevant": false
   },
   {
@@ -23771,7 +23865,7 @@
     "biddingDate": "2026-06-08",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "(有) 吉田舗装",
+    "winningContractor": "(有)吉田舗装",
     "isRelevant": false
   },
   {
@@ -23783,7 +23877,7 @@
     "biddingDate": "2026-06-08",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "(株) 堂浦土木",
+    "winningContractor": "(株)堂浦土木",
     "isRelevant": false
   },
   {
@@ -23795,7 +23889,7 @@
     "biddingDate": "2026-06-22",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "塚竜 (株)",
+    "winningContractor": "塚竜（株）",
     "isRelevant": true
   },
   {
@@ -23807,7 +23901,7 @@
     "biddingDate": "2026-06-22",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "(株) 木下エネルギーソリューションズ",
+    "winningContractor": "（株）木下エネルギーソリューションズ",
     "isRelevant": false
   },
   {
@@ -23818,7 +23912,7 @@
     "announcementDate": "2026-05-14",
     "link": "https://www.city.katsuragi.nara.jp/material/files/group/6/2-5-3-2026-1.pdf",
     "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/2-5-3-2026-1.pdf",
-    "status": "不調",
+    "status": "落札",
     "biddingDate": "2026-06-19",
     "winningContractor": "(株)久保総合設備",
     "isRelevant": false
@@ -24360,7 +24454,7 @@
     "status": "不調",
     "estimatedPrice": "44,460,000円",
     "brief": {
-      "checkedAt": "2026-11-25T09:53:09.923Z",
+      "checkedAt": "2026-11-26T09:28:07.365Z",
       "found": true,
       "location": "五條市西吉野町宗川野97 地内",
       "price": "44,460,000円(税抜)",
@@ -24932,7 +25026,7 @@
     "biddingDate": "2026-05-11",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "大阪エンジニアリング(株) 奈良支店",
+    "winningContractor": "大阪エンジニアリング（株）　奈良支店",
     "isRelevant": false
   },
   {
@@ -24970,7 +25064,7 @@
     "winningContractor": "株式会社上村組",
     "estimatedPrice": "618,000,000円",
     "brief": {
-      "checkedAt": "2026-11-25T10:02:39.114Z",
+      "checkedAt": "2026-11-26T09:38:24.903Z",
       "found": true,
       "location": "香芝市下田西二丁目9番41号",
       "price": "623,320,000円(税抜)",
@@ -24990,7 +25084,7 @@
     "winningContractor": "株式会社綜企画設計 奈良支店",
     "estimatedPrice": "126,593,000円",
     "brief": {
-      "checkedAt": "2026-11-25T10:03:16.975Z",
+      "checkedAt": "2026-11-26T09:39:07.045Z",
       "found": true,
       "location": "香芝市五位堂二丁目300番地1",
       "price": "164,503,000円(税抜)",
@@ -25164,6 +25258,13 @@
     "status": "落札",
     "winningContractor": "有希建設（株）",
     "estimatedPrice": "23,970,000円",
+    "brief": {
+      "checkedAt": "2026-11-26T09:28:08.392Z",
+      "found": true,
+      "location": "五條市 今井町 地内外",
+      "price": "26,570,000円(税抜)",
+      "qualification": "総合評価落札方式一般競争入札 / 建築一式"
+    },
     "isRelevant": true
   },
   {
@@ -25460,6 +25561,14 @@
     "status": "落札",
     "biddingDate": "2026-05-12",
     "winningContractor": "(株)米杉建設",
+    "brief": {
+      "checkedAt": "2026-11-26T09:26:21.938Z",
+      "found": true,
+      "summary": "忍海小学校区学童保育所の建替工事 ・規模構造(新築工事):・鉄骨造2階建・延べ面積359.22m2 ・規模構造(除却工事):・鉄骨造平屋建・延べ面積105.63m2 建築工事一式 電気設備工事一式 他",
+      "location": "忍海",
+      "price": "169,400,000円(税抜)",
+      "qualification": "一般競争入札(入札後資格確認型) / 建築一式工事"
+    },
     "isRelevant": true
   },
   {
@@ -25695,7 +25804,7 @@
     "biddingDate": "2026-05-18",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "（株）森下組",
+    "winningContractor": "(株)森下組",
     "isRelevant": false
   },
   {
@@ -25707,7 +25816,7 @@
     "biddingDate": "2026-05-18",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "村本建設（株）奈良本店",
+    "winningContractor": "村本建設(株)奈良本店",
     "isRelevant": true
   },
   {
@@ -25731,7 +25840,7 @@
     "biddingDate": "2026-05-11",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "クロカワ工芸(株)",
+    "winningContractor": "クロカワ工芸（株）",
     "isRelevant": false
   },
   {
@@ -25743,7 +25852,7 @@
     "biddingDate": "2026-05-11",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "クロカワ工芸(株)",
+    "winningContractor": "クロカワ工芸（株）",
     "isRelevant": false
   },
   {
@@ -25755,7 +25864,7 @@
     "biddingDate": "2026-05-11",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "大和(株)",
+    "winningContractor": "大和（株）",
     "isRelevant": false
   },
   {
@@ -25779,7 +25888,7 @@
     "biddingDate": "2026-05-11",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "(株) ICHIKEN 田原本営業所",
+    "winningContractor": "（株）ＩＣＨＩＫＥＮ　田原本営業所",
     "isRelevant": false
   },
   {
@@ -25817,7 +25926,7 @@
     "winningContractor": "株式会社福本設計",
     "estimatedPrice": "18,224,800円",
     "brief": {
-      "checkedAt": "2026-11-25T10:03:18.018Z",
+      "checkedAt": "2026-11-26T09:39:08.076Z",
       "found": true,
       "location": "香芝市良福寺665番地2",
       "price": "22,781,000円(税抜)",
@@ -26137,7 +26246,7 @@
     "biddingDate": "2026-05-11",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "三精テクノロジーズ(株)",
+    "winningContractor": "三精テクノロジーズ（株）",
     "isRelevant": false
   },
   {
@@ -26160,7 +26269,7 @@
     "biddingDate": "2026-05-11",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "ポシブル医科学(株)",
+    "winningContractor": "ポシブル医科学（株）",
     "isRelevant": false
   },
   {
@@ -26172,7 +26281,7 @@
     "biddingDate": "2026-05-11",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "ポシブル医科学(株)",
+    "winningContractor": "ポシブル医科学（株）",
     "isRelevant": false
   },
   {
@@ -26184,7 +26293,7 @@
     "biddingDate": "2026-05-11",
     "link": "https://tawaramoto.efftis.jp/PPI/Public/PPUBC00100",
     "status": "落札",
-    "winningContractor": "高田紙業(有)",
+    "winningContractor": "高田紙業（有）",
     "isRelevant": false
   },
   {
@@ -28889,7 +28998,7 @@
     "winningContractor": "逢坂建設",
     "estimatedPrice": "3,188,000円",
     "brief": {
-      "checkedAt": "2026-11-25T09:53:26.150Z",
+      "checkedAt": "2026-11-26T09:28:22.898Z",
       "found": true,
       "location": "五條市 二見5丁目 地内",
       "price": "3,570,000円(税抜)",
@@ -30165,7 +30274,7 @@
     "winningContractor": "グローバル工業（株）",
     "estimatedPrice": "4,085,000円",
     "brief": {
-      "checkedAt": "2026-11-25T09:53:27.229Z",
+      "checkedAt": "2026-11-26T09:28:24.338Z",
       "found": true,
       "location": "五條市 西吉野町向加名生 地内",
       "price": "4,580,000円(税抜)",
@@ -30658,7 +30767,7 @@
     "winningContractor": "（株）森岡組",
     "estimatedPrice": "43,258,000円",
     "brief": {
-      "checkedAt": "2026-11-25T09:53:28.272Z",
+      "checkedAt": "2026-11-26T09:28:25.361Z",
       "found": true,
       "location": "五條市 上野町 地内",
       "price": "47,867,000円(税抜)",
@@ -31450,7 +31559,7 @@
     "winningContractor": "前根建設",
     "estimatedPrice": "5,213,000円",
     "brief": {
-      "checkedAt": "2026-11-25T09:53:29.618Z",
+      "checkedAt": "2026-11-26T09:28:26.399Z",
       "found": true,
       "location": "五條市 五條3丁目 地内外",
       "price": "5,870,000円(税抜)",
@@ -31794,7 +31903,7 @@
     "winningContractor": "たけや興業（株）",
     "estimatedPrice": "929,000円",
     "brief": {
-      "checkedAt": "2026-11-25T09:53:30.991Z",
+      "checkedAt": "2026-11-26T09:28:27.450Z",
       "found": true,
       "location": "五條市 須恵3丁目8 地内",
       "price": "1,070,000円(税抜)",
@@ -33898,6 +34007,14 @@
     "status": "落札",
     "biddingDate": "2025-09-09",
     "winningContractor": "新和建設(株)",
+    "brief": {
+      "checkedAt": "2026-11-26T09:26:23.583Z",
+      "found": true,
+      "summary": "當麻スポーツセンター1、2階トイレおよび多目的トイレの乾式化・洋式化",
+      "location": "竹内",
+      "price": "48,640,000円(税抜)",
+      "qualification": "一般競争入札(入札後資格確認型) / 建築一式工事"
+    },
     "isRelevant": true
   },
   {
@@ -33911,6 +34028,14 @@
     "status": "落札",
     "biddingDate": "2025-09-09",
     "winningContractor": "(株)生野建設",
+    "brief": {
+      "checkedAt": "2026-11-26T09:26:24.561Z",
+      "found": true,
+      "summary": "白鳳中学校武道場のトイレ改修工事及び剣道場・柔道場に空気調和設備(EHP)8台の設置工事",
+      "location": "長尾",
+      "price": "57,510,000円(税抜)",
+      "qualification": "一般競争入札(入札後資格確認型) / 建築一式工事"
+    },
     "isRelevant": true
   },
   {
@@ -33924,6 +34049,14 @@
     "status": "落札",
     "biddingDate": "2025-09-08",
     "winningContractor": "(株)森組 奈良営業所",
+    "brief": {
+      "checkedAt": "2026-11-26T09:26:25.538Z",
+      "found": true,
+      "summary": "本事業は、既存の當麻文化会館を全面改修するとともに、周辺施設である當麻庁舎及び當麻図書館を複合し、新たに市民活動センター機能・図書館機能・庁舎機能を併せ持った(仮称)當麻複合施設の整備工事を実施する",
+      "location": "竹内",
+      "price": "2,445,000,000円(税抜)",
+      "qualification": "一般競争入札(入札後資格確認型) / 建築一式工事"
+    },
     "isRelevant": true
   },
   {
@@ -35522,7 +35655,7 @@
     "winningContractor": "（株）福嶋組",
     "estimatedPrice": "2,992,000円",
     "brief": {
-      "checkedAt": "2026-11-25T09:53:32.050Z",
+      "checkedAt": "2026-11-26T09:28:28.792Z",
       "found": true,
       "location": "五條市 三在町 地内",
       "price": "3,380,000円(税抜)",
@@ -35735,7 +35868,7 @@
     "winningContractor": "（株）福嶋組",
     "estimatedPrice": "886,000円",
     "brief": {
-      "checkedAt": "2026-11-25T09:53:33.148Z",
+      "checkedAt": "2026-11-26T09:28:29.829Z",
       "found": true,
       "location": "五條市 田園4丁目 地内",
       "price": "1,020,000円(税抜)",
@@ -36943,7 +37076,7 @@
     "winningContractor": "逢坂建設",
     "estimatedPrice": "2,715,000円",
     "brief": {
-      "checkedAt": "2026-11-25T09:53:34.218Z",
+      "checkedAt": "2026-11-26T09:28:31.394Z",
       "found": true,
       "location": "五條市 西吉野町平沼田1466番地 地内",
       "price": "3,060,000円(税抜)",
@@ -37140,6 +37273,14 @@
     "status": "落札",
     "biddingDate": "2025-07-02",
     "winningContractor": "(株)村井設計",
+    "brief": {
+      "checkedAt": "2026-11-26T09:26:56.064Z",
+      "found": true,
+      "summary": "葛城市立新庄小学校管理棟及び屋内運動場長寿命化改修工事の実施設計図書に基づく工事監理",
+      "location": "南道穗",
+      "price": "19,740,000円(税抜)",
+      "qualification": "一般競争入札(入札後資格確認型) / 建築関係コンサルタント"
+    },
     "isRelevant": true
   },
   {
@@ -37883,7 +38024,7 @@
     "winningContractor": "（株）近井工務店",
     "estimatedPrice": "7,698,000円",
     "brief": {
-      "checkedAt": "2026-11-25T09:53:35.263Z",
+      "checkedAt": "2026-11-26T09:28:32.419Z",
       "found": true,
       "location": "五條市 五條3丁目 地内外",
       "price": "8,630,000円(税抜)",
@@ -38893,6 +39034,14 @@
     "pdfUrl": "https://www.city.katsuragi.nara.jp/material/files/group/6/2-05-01-2025-1-2.pdf",
     "status": "不調",
     "biddingDate": "2025-06-30",
+    "brief": {
+      "checkedAt": "2026-11-26T09:26:26.814Z",
+      "found": true,
+      "summary": "本事業は、既存の當麻文化会館を全面改修するとともに、周辺施設である當麻庁舎及び當麻図書館を複合し、新たに市民活動センター機能・図書館機能・庁舎機能を併せ持った(仮称)當麻複合施設の整備工事を実施するも",
+      "location": "竹内",
+      "price": "2,445,000,000円(税抜)",
+      "qualification": "一般競争入札(入札後資格確認型) / 建築一式工事"
+    },
     "isRelevant": true
   },
   {
@@ -40258,6 +40407,14 @@
     "status": "落札",
     "biddingDate": "2025-05-15",
     "winningContractor": "(株)中和設計",
+    "brief": {
+      "checkedAt": "2026-11-26T09:26:57.043Z",
+      "found": true,
+      "summary": "忍海小学校区学童保育所の整備(既存施設の解体及び新施設の建築)に係る設計業務及びその他協議・申請業務を適切に行うべく専門知識を有する業者に委託するもの。",
+      "location": "忍海",
+      "price": "11,022,000円(税抜)",
+      "qualification": "一般競争入札(入札後資格確認型) / 建築関係コンサルタント"
+    },
     "isRelevant": true
   },
   {
@@ -40271,6 +40428,14 @@
     "status": "落札",
     "biddingDate": "2025-05-15",
     "winningContractor": "和光建設(株)",
+    "brief": {
+      "checkedAt": "2026-11-26T09:26:27.790Z",
+      "found": true,
+      "summary": "管理棟及び屋内運動場の長寿命化改修工事(1管理棟:鉄筋コンクリート造、3階建、1,311m2 2屋内運動場:鉄筋コンクリート造、1階建、1,177m2)仮設校舎及び仮設渡り廊下の設置・撤去工事(3仮設",
+      "location": "南道穗",
+      "price": "917,770,000円(税抜)",
+      "qualification": "一般競争入札(入札後資格確認型) / 建築一式工事"
+    },
     "isRelevant": true
   },
   {

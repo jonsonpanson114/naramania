@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-11-26T05:55:19.170Z",
+  "generatedAt": "2026-11-26T09:44:25.712Z",
   "checkedMunicipalityCount": 24,
-  "expectedItemCount": 337,
-  "matchedItemCount": 337,
+  "expectedItemCount": 338,
+  "matchedItemCount": 338,
   "missingItemCount": 0,
   "duplicateTitleGroupCount": 24,
-  "duplicateTitleItemCount": 52,
+  "duplicateTitleItemCount": 53,
   "results": [
     {
       "municipality": "奈良県",
@@ -64,12 +64,12 @@
     },
     {
       "municipality": "五條市",
-      "snapshotCount": 21,
-      "expectedCount": 21,
-      "matchedCount": 21,
+      "snapshotCount": 22,
+      "expectedCount": 22,
+      "matchedCount": 22,
       "missingCount": 0,
       "duplicateTitleGroupCount": 2,
-      "duplicateTitleItemCount": 4,
+      "duplicateTitleItemCount": 5,
       "missingItems": [],
       "status": "ok"
     },
