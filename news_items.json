@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-27T04:25:04.106Z",
+  "generatedAt": "2026-11-27T13:00:01.096Z",
   "sources": [
     {
       "id": "constnews",
@@ -46,11 +46,162 @@
     {
       "id": "googlenews",
       "label": "一般紙・Web(Googleニュース)",
-      "fetched": 67,
-      "kept": 16
+      "fetched": 48,
+      "kept": 17
     }
   ],
   "items": [
+    {
+      "id": "news-d8c27ca62ee2",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "福泉を選定 公式HPリニューアル",
+      "date": "2026-11-27",
+      "link": "https://shinpou-nara.com/141447/",
+      "excerpt": "桜井市は、公募型プロポーザル「桜井市公式ホームページリニューアル業務委託」にて福泉を優先高所権者に選定した。委託期間は10年３月31日。 同市公式ホームページは、平成25年度のリニューアル以降、アクセシビリティ対応や多様化する閲覧者ニーズへの適合が困難な運用状況となっている。今後",
+      "orderer": "桜井市",
+      "results": [],
+      "category": "construction",
+      "relevanceScore": 8
+    },
+    {
+      "id": "news-57810059db62",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "再公告を予定 （仮称）高取町多機能複合型未来拠点施設",
+      "date": "2026-11-27",
+      "link": "https://shinpou-nara.com/141445/",
+      "excerpt": "高取町は、公募型プロポーザルにて「（仮称）高取町多機能複合型未来拠点施設整備基本計画策定支援業務」を公告していたが、不調とな ったため調整を行い、再公告を予定している。 同業務は、町において人口減少や少子高齢化、地域コミュニティの希薄化といった構造的課題に対応するため、「稼ぐ力の",
+      "orderer": "高取町",
+      "results": [],
+      "category": "construction",
+      "relevanceScore": 10
+    },
+    {
+      "id": "news-5c33ab789f25",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "ナスカを選定 本庁舎等活用基本構想策定",
+      "date": "2026-11-27",
+      "link": "https://shinpou-nara.com/141443/",
+      "excerpt": "野迫川村は、公募型プロポーザル「野迫川村本庁舎等活用基本構想策定業務委託」にてナスカを委託事業者に選定した。委託期間は９年３月２日。同業務は本庁舎等の老朽化や耐震性、防災拠点としての機能、行政サービス、職員の執務環境、将来の人口・行政需要及び財政状況等を踏まえ、現状と課題を整理。",
+      "orderer": "野迫川村",
+      "results": [],
+      "category": "construction",
+      "relevanceScore": 12
+    },
+    {
+      "id": "news-c4767c460edb",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "１２月９日まで参加受付 八木中学校長寿命化改良第２期",
+      "date": "2026-11-27",
+      "link": "https://shinpou-nara.com/141409/",
+      "excerpt": "橿原市は「八木中学校長寿命化改良工事（第２期）」に総合評価落札方式一般競争入札を適用して去る２７日に公告した。入札参加資格確認申請書等を１２月９日正午まで、技術提案書を９年１月１８日正午まで（持参に限る）、入札書を９年３月４日まで受け付けて９年３月５日に開札する。 参加資格は同市",
+      "orderer": "橿原市",
+      "results": [],
+      "category": "construction",
+      "relevanceScore": 16
+    },
+    {
+      "id": "news-22cd1e2ff578",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "１月２５日～２月５日参加受付 運転免許センター新庁舎整備事業",
+      "date": "2026-11-27",
+      "link": "https://shinpou-nara.com/141407/",
+      "excerpt": "奈良県警察本部は「奈良県警察運転免許センター新庁舎整備事業」にＰＦＩ手法総合評価落札方式一般競争入札（ＷＴＯ適用）を適用して去る２７日に公告した。入札参加表明書等を９年１月２５日～２月５日、入札提案書類を郵便は９年５月２１日まで、持参は９年５月２４日１３時～１６時に受け付けて９年",
+      "orderer": "県警察本部",
+      "results": [],
+      "category": "construction",
+      "relevanceScore": 14
+    },
+    {
+      "id": "news-4d7947b70fa9",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "県建設産業課 ３ＪＶが落札 奈良生駒線など舗装補修工事",
+      "date": "2026-11-27",
+      "link": "https://shinpou-nara.com/141405/",
+      "excerpt": "奈良県建設産業課が去る１３日に開札（１１月２７日に契約）した一般競争入札の奈良生駒線など舗装補修工事３件は中西・山上ＪＶ、畠山・森髙ＪＶ、福寿・アトニスＪＶが落札した。 ▼主要地方道奈良生駒線他舗装補修工事（単独舗装道補修費）第１１３―１―４他号（奈良市二条大路南４丁目外）＝中西",
+      "orderer": "県土マネジメント部",
+      "results": [
+        {
+          "kind": "落札",
+          "contractor": "中西・山上ＪＶ",
+          "amount": "2億2660万円"
+        },
+        {
+          "kind": "落札",
+          "contractor": "畠山・森髙ＪＶ",
+          "amount": "2億1250万円"
+        },
+        {
+          "kind": "落札",
+          "contractor": "福寿・アトニスＪＶ",
+          "amount": "1億5304万4000円"
+        }
+      ],
+      "category": "construction",
+      "relevanceScore": 16
+    },
+    {
+      "id": "news-608d42b1b300",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "国営飛鳥歴史公園 １２月４日まで参加受付 高松塚周辺地区東側再整備設計他",
+      "date": "2026-11-27",
+      "link": "https://shinpou-nara.com/141403/",
+      "excerpt": "近畿地方整備局国営飛鳥歴史公園事務所は、簡易公募型プロポーザルを適用して去る２４日に公示した「Ｒ８国営飛鳥歴史公園高松塚周辺地区東側再整備設計他業務」に係る参加表明書を１２月４日正午まで、技術提案書を１２月２５日正午まで受け付ける。説明書等は１２月４日正午まで交付する。 業務は、",
+      "orderer": "近畿地方整備局",
+      "results": [],
+      "category": "construction",
+      "relevanceScore": 10
+    },
+    {
+      "id": "news-f80e5efb7dec",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "太洋エンジニアで地質調査 国道１６９号「前鬼橋」架替 現橋南側への新設に伴い道路も付替",
+      "date": "2026-11-27",
+      "link": "https://shinpou-nara.com/141400/",
+      "excerpt": "奈良県吉野土木事務所は、一般国道１６９号で池原ダムを渡河している前鬼橋の架替に併せて道路も付替することとなり、橋梁・付替道路の計画検討及び設計に必要となる基礎資料の作成を目的に令和８年度に地質調査を実施する。 一般競争入札「一般国道１６９号地質調査委託（道路メンテナンス事業（国道",
+      "orderer": "県吉野土木事務所",
+      "results": [
+        {
+          "kind": "選定",
+          "contractor": "落札した太洋エンジニアリング"
+        }
+      ],
+      "category": "construction",
+      "relevanceScore": 10
+    },
+    {
+      "id": "news-e716abcb49c1",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "県文化財課 ８年度に対処方針策定 「史跡高取城跡」石垣保存管理 石垣の予備診断も実施",
+      "date": "2026-11-27",
+      "link": "https://shinpou-nara.com/141397/",
+      "excerpt": "奈良県地域創造部文化財課は、史跡高取城跡の保存活用について今後具体的に事業を進めるに当たり、令和５年に国が示した「文化財石垣耐震診断指針（案）」に基づき８年度に「文化財石垣予備診断」を実施するとともに、同じく国の示す「文化財石垣対処方針」の策定を行って事業実施の方針とすることによ",
+      "orderer": "県文化・教育・くらし創造部",
+      "results": [],
+      "category": "construction",
+      "relevanceScore": 6
+    },
+    {
+      "id": "news-68676a05965d",
+      "source": "shinpou",
+      "sourceLabel": "建設新報",
+      "title": "河川部 国土技術研究Ｃで進む 災害リスクの自分事化等検討業務",
+      "date": "2026-11-27",
+      "link": "https://shinpou-nara.com/141395/",
+      "excerpt": "近畿地方整備局河川部は、簡易公募型プロポーザル「Ｒ８災害リスクの自分事化等検討業務」について、一般財団法人国土技術研究センター（東京都港区虎ノ門）と１９７７万８０００円込（予定価格と同額）で契約を締結して委託、業務を進めている。 業務は、災害伝承に繋がるコンテンツを認定する制度で",
+      "orderer": "近畿地方整備局",
+      "results": [],
+      "category": "construction",
+      "relevanceScore": 8
+    },
     {
       "id": "news-fa4afe0a2f88",
       "source": "googlenews",
