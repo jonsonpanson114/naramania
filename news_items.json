@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-27T13:00:01.096Z",
+  "generatedAt": "2026-11-27T19:07:51.904Z",
   "sources": [
     {
       "id": "constnews",
@@ -46,8 +46,8 @@
     {
       "id": "googlenews",
       "label": "一般紙・Web(Googleニュース)",
-      "fetched": 48,
-      "kept": 17
+      "fetched": 66,
+      "kept": 19
     }
   ],
   "items": [
@@ -210,6 +210,18 @@
       "title": "「ふるなび」で、奈良県桜井市がガイダンス施設の建設を目的としたクラウドファンディングプロジェクトへの寄附受付を開始。",
       "date": "2026-11-27",
       "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBmaVNRSFp3MHF0NFg4OVExVEpubE9SWWNpTmp6MWZxb1JmczU0bmFYMHpEbU5ydktBMVNtNkQ4OWNGTlNIcG5BTnRZXzFkQzB3cGJIeGFaekhKbGRmTFBZZnVNT01rRDVKdEE?oc=5",
+      "category": "construction",
+      "relevanceScore": 8,
+      "results": []
+    },
+    {
+      "id": "news-de069f4428aa",
+      "source": "googlenews",
+      "sourceLabel": "一般紙・Web",
+      "publisher": "47NEWS",
+      "title": "バイクに追突、救護せず逃走 奈良の建設業の男逮捕",
+      "date": "2026-11-27",
+      "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBsZkJRdGd1Njluc3BtQ0tRbFVLeEY1b0FndDVaYTdEZlZEcU9vbVB0dDZjRFRjRE04b3BhMHBMR05vR01UXzdlYy1DUQ?oc=5",
       "category": "construction",
       "relevanceScore": 8,
       "results": []
