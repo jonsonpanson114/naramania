@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-26T19:13:35.925Z",
+  "generatedAt": "2026-11-27T04:25:04.106Z",
   "sources": [
     {
       "id": "constnews",
@@ -22,8 +22,8 @@
     {
       "id": "decn",
       "label": "建設工業新聞",
-      "fetched": 21,
-      "kept": 0
+      "fetched": 30,
+      "kept": 1
     },
     {
       "id": "kensetsu",
@@ -47,10 +47,22 @@
       "id": "googlenews",
       "label": "一般紙・Web(Googleニュース)",
       "fetched": 67,
-      "kept": 18
+      "kept": 16
     }
   ],
   "items": [
+    {
+      "id": "news-fa4afe0a2f88",
+      "source": "googlenews",
+      "sourceLabel": "一般紙・Web",
+      "publisher": "PR TIMES",
+      "title": "「ふるなび」で、奈良県桜井市がガイダンス施設の建設を目的としたクラウドファンディングプロジェクトへの寄附受付を開始。",
+      "date": "2026-11-27",
+      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBmaVNRSFp3MHF0NFg4OVExVEpubE9SWWNpTmp6MWZxb1JmczU0bmFYMHpEbU5ydktBMVNtNkQ4OWNGTlNIcG5BTnRZXzFkQzB3cGJIeGFaekhKbGRmTFBZZnVNT01rRDVKdEE?oc=5",
+      "category": "construction",
+      "relevanceScore": 8,
+      "results": []
+    },
     {
       "id": "news-6ad67fc60f33",
       "source": "naranp",
@@ -171,6 +183,19 @@
       "results": [],
       "category": "construction",
       "relevanceScore": 16
+    },
+    {
+      "id": "news-a3c156667eba",
+      "source": "decn",
+      "sourceLabel": "建設工業新聞",
+      "title": "奈良県／美術館再整備基本計画素案（奈良市）を策定／計画規模は約１・３万平米",
+      "date": "2026-11-26",
+      "link": "https://www.decn.co.jp/?p=189862",
+      "excerpt": "奈良県は、老朽化が進む県立美術館（奈良市登大路町）の再整備に向けた基本計画の素案をまとめた。奈良公園内にある奈良春日野国際フォーラム甍（いらか）（奈良市春日野町）を改修し、本館西側に収蔵庫棟を増築する。全体の計画規模は現美術館の約２・４倍となる延べ１万３１１０平方メートルで、整備",
+      "orderer": "奈良県",
+      "results": [],
+      "category": "construction",
+      "relevanceScore": 12
     },
     {
       "id": "news-dbd71b6bb5c9",
