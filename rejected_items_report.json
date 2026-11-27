@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-26T22:17:30.839Z",
-  "totalRejected": 638,
+  "generatedAt": "2026-11-27T03:31:11.138Z",
+  "totalRejected": 644,
   "totalBorderlineRescued": 53,
   "byMunicipality": {
     "奈良県": {
-      "rejected": 638,
+      "rejected": 644,
       "borderlineRescued": 53
     }
   },
@@ -209,6 +209,33 @@
         "設備"
       ],
       "borderlineRescue": true
+    },
+    {
+      "municipality": "奈良県",
+      "title": "伊ノ谷 水路設計委託（防災・安全交付金事業（南部・東部）（砂防）） ６１－１７－委３",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "砂防",
+        "水路"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "一般国道１６９号 上池原地区 交差点設計委託（道路改良事業等基礎調査費） ６５－委２",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "調査",
+        "国道"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "小橡川 護岸詳細設計委託（緊急自然災害防止対策事業債対象事業（臨時・特別）） Ｙ－１２７－委１",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "護岸"
+      ]
     },
     {
       "municipality": "奈良県",
@@ -2773,6 +2800,27 @@
     },
     {
       "municipality": "奈良県",
+      "title": "一般国道１６９号 白川深瀬工区 測量業務委託（土砂災害対策道路事業（国道災害防除）他） 繰１－Ａ１６９－６土－４－委４他",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "道路",
+        "土砂",
+        "測量",
+        "国道"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "伊ノ谷 水路測量業務委託（防災・安全交付金事業（南部・東部）（砂防）） ６１－１７－委２",
+      "reason": "exclusion_keyword",
+      "matchedKeywords": [
+        "砂防",
+        "水路",
+        "測量"
+      ]
+    },
+    {
+      "municipality": "奈良県",
       "title": "中和幹線 他 測量委託（道路改良事業等基礎調査費 他） 第 ３５－委２ 他 号",
       "reason": "exclusion_keyword",
       "matchedKeywords": [
@@ -5237,6 +5285,14 @@
         "道路",
         "補償",
         "調査"
+      ]
+    },
+    {
+      "municipality": "奈良県",
+      "title": "黒滝川 嘱託登記業務委託（事業間連携砂防等事業（砂防）） ６９－０４－用委１",
+      "reason": "always_exclude_keyword",
+      "matchedKeywords": [
+        "登記"
       ]
     },
     {

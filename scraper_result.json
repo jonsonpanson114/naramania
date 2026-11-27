@@ -263,23 +263,6 @@
     }
   },
   {
-    "id": "nara-pref-29005007050120260005",
-    "municipality": "奈良県",
-    "title": "広域化に伴う施設整備に係る通信回線等デジタル化対応工事設計業務委託（その４）",
-    "type": "コンサル",
-    "announcementDate": "2026-11-04",
-    "biddingDate": "2026-11-27",
-    "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29005007050120260005&gamenMode=0",
-    "status": "受付中",
-    "winnerType": "設計事務所",
-    "brief": {
-      "checkedAt": "2026-11-06T12:26:57.976Z",
-      "found": true,
-      "period": "令和8年12月14日(予定) から 令和9年11月19日 まで",
-      "qualification": "一般競争入札[参加申請型](総合評価) / 建設コンサルタント"
-    }
-  },
-  {
     "id": "nara-pref-29005007050120260006",
     "municipality": "奈良県",
     "title": "広域化に伴う施設整備に係る通信回線等デジタル化対応工事設計業務委託（その５）",
@@ -293,6 +276,23 @@
       "checkedAt": "2026-11-06T12:26:59.064Z",
       "found": true,
       "period": "令和8年12月14日(予定) から 令和9年10月29日 まで",
+      "qualification": "一般競争入札[参加申請型](総合評価) / 建設コンサルタント"
+    }
+  },
+  {
+    "id": "nara-pref-29005007050120260005",
+    "municipality": "奈良県",
+    "title": "広域化に伴う施設整備に係る通信回線等デジタル化対応工事設計業務委託（その４）",
+    "type": "コンサル",
+    "announcementDate": "2026-11-04",
+    "biddingDate": "2026-11-27",
+    "link": "https://ppi.ebid-kouji-gyoumu.pref.nara.jp/DENCHO/PPJ/PPC0050_0020/?kanriNo=29005007050120260005&gamenMode=0",
+    "status": "受付中",
+    "winnerType": "設計事務所",
+    "brief": {
+      "checkedAt": "2026-11-06T12:26:57.976Z",
+      "found": true,
+      "period": "令和8年12月14日(予定) から 令和9年11月19日 まで",
       "qualification": "一般競争入札[参加申請型](総合評価) / 建設コンサルタント"
     }
   },
