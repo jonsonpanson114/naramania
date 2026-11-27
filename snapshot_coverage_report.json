@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-11-27T05:50:48.772Z",
+  "generatedAt": "2026-11-27T10:00:49.278Z",
   "checkedMunicipalityCount": 24,
-  "expectedItemCount": 337,
-  "matchedItemCount": 337,
+  "expectedItemCount": 340,
+  "matchedItemCount": 340,
   "missingItemCount": 0,
   "duplicateTitleGroupCount": 24,
-  "duplicateTitleItemCount": 52,
+  "duplicateTitleItemCount": 54,
   "results": [
     {
       "municipality": "奈良県",
@@ -20,9 +20,9 @@
     },
     {
       "municipality": "橿原市",
-      "snapshotCount": 32,
-      "expectedCount": 32,
-      "matchedCount": 32,
+      "snapshotCount": 34,
+      "expectedCount": 34,
+      "matchedCount": 34,
       "missingCount": 0,
       "duplicateTitleGroupCount": 2,
       "duplicateTitleItemCount": 4,
@@ -64,9 +64,20 @@
     },
     {
       "municipality": "五條市",
-      "snapshotCount": 21,
-      "expectedCount": 21,
-      "matchedCount": 21,
+      "snapshotCount": 23,
+      "expectedCount": 23,
+      "matchedCount": 23,
+      "missingCount": 0,
+      "duplicateTitleGroupCount": 2,
+      "duplicateTitleItemCount": 6,
+      "missingItems": [],
+      "status": "ok"
+    },
+    {
+      "municipality": "大和郡山市",
+      "snapshotCount": 22,
+      "expectedCount": 22,
+      "matchedCount": 22,
       "missingCount": 0,
       "duplicateTitleGroupCount": 2,
       "duplicateTitleItemCount": 4,
@@ -85,17 +96,6 @@
       "status": "ok"
     },
     {
-      "municipality": "大和郡山市",
-      "snapshotCount": 21,
-      "expectedCount": 21,
-      "matchedCount": 21,
-      "missingCount": 0,
-      "duplicateTitleGroupCount": 2,
-      "duplicateTitleItemCount": 4,
-      "missingItems": [],
-      "status": "ok"
-    },
-    {
       "municipality": "宇陀市",
       "snapshotCount": 19,
       "expectedCount": 19,
@@ -108,9 +108,9 @@
     },
     {
       "municipality": "奈良市",
-      "snapshotCount": 12,
-      "expectedCount": 12,
-      "matchedCount": 12,
+      "snapshotCount": 11,
+      "expectedCount": 11,
+      "matchedCount": 11,
       "missingCount": 0,
       "duplicateTitleGroupCount": 0,
       "duplicateTitleItemCount": 0,
@@ -239,17 +239,6 @@
       "status": "ok"
     },
     {
-      "municipality": "御所市",
-      "snapshotCount": 2,
-      "expectedCount": 2,
-      "matchedCount": 2,
-      "missingCount": 0,
-      "duplicateTitleGroupCount": 0,
-      "duplicateTitleItemCount": 0,
-      "missingItems": [],
-      "status": "ok"
-    },
-    {
       "municipality": "斑鳩町",
       "snapshotCount": 2,
       "expectedCount": 2,
@@ -265,6 +254,17 @@
       "snapshotCount": 2,
       "expectedCount": 2,
       "matchedCount": 2,
+      "missingCount": 0,
+      "duplicateTitleGroupCount": 0,
+      "duplicateTitleItemCount": 0,
+      "missingItems": [],
+      "status": "ok"
+    },
+    {
+      "municipality": "御所市",
+      "snapshotCount": 1,
+      "expectedCount": 1,
+      "matchedCount": 1,
       "missingCount": 0,
       "duplicateTitleGroupCount": 0,
       "duplicateTitleItemCount": 0,
